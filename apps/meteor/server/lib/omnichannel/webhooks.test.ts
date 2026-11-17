@@ -110,7 +110,7 @@ describe('livechat/server/lib/webhooks sendRequest', () => {
 			body: postData,
 			timeout: values.Livechat_http_timeout,
 		});
-		expect(calledOpts.headers).to.have.property('X-RocketChat-Livechat-Token', secret);
+		expect(calledOpts.headers).to.have.property('X-YasChat-Livechat-Token', secret);
 
 		// success metrics and callback
 		expect(stubs.metrics.totalLivechatWebhooksSuccess.inc.calledOnce).to.be.true;
@@ -126,7 +126,7 @@ describe('livechat/server/lib/webhooks sendRequest', () => {
 		expect(stubs.logger.error.notCalled).to.be.true;
 	});
 
-	it('omits X-RocketChat-Livechat-Token header when secret token is falsy', async () => {
+	it('omits X-YasChat-Livechat-Token header when secret token is falsy', async () => {
 		const { sendRequest, stubs } = buildSubject({
 			fetchOnce: { status: 200, text: 'OK' },
 			settings: {
@@ -137,7 +137,7 @@ describe('livechat/server/lib/webhooks sendRequest', () => {
 		await sendRequest({ type: 'NoSecret' });
 
 		const [, calledOpts] = stubs.fetchStub.getCall(0).args;
-		expect(calledOpts.headers).to.not.have.property('X-RocketChat-Livechat-Token');
+		expect(calledOpts.headers).to.not.have.property('X-YasChat-Livechat-Token');
 	});
 
 	it('logs and does not retry on non-retryable status (e.g., 400)', async () => {

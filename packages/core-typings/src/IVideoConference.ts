@@ -1,5 +1,5 @@
 import type { IMessage } from './IMessage';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IRoom } from './IRoom';
 import type { IUser } from './IUser';
 import type { AtLeast } from './utils';
@@ -113,7 +113,7 @@ export const isRingingVideoConferenceMember = (
 	return now - user.ringingAt.getTime() < VIDEO_CONF_RINGING_WINDOW_MS;
 };
 
-export interface IVideoConference extends IRocketChatRecord {
+export interface IVideoConference extends IYasChatRecord {
 	type: VideoConferenceType;
 	rid: string;
 	users: IVideoConferenceUser[];

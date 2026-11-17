@@ -37,8 +37,8 @@ const getFeatureSet = (modules: string[], isEnterprise: boolean): FeatureSet[] =
 		},
 		{
 			success: modules.includes('hide-watermark'),
-			title: 'Remove_RocketChat_Watermark',
-			infoText: 'Remove_RocketChat_Watermark_InfoText',
+			title: 'Remove_YasChat_Watermark',
+			infoText: 'Remove_YasChat_Watermark_InfoText',
 		},
 		{
 			success: modules.includes('scalability'),

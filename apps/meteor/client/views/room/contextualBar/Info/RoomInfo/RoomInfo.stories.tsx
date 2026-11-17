@@ -33,13 +33,13 @@ const roomArgs = {
 	msgs: 5,
 	usersCount: 1,
 	u: {
-		_id: 'rocketchat.internal.admin.test',
-		username: 'rocketchat.internal.admin.test',
+		_id: 'yaschat.internal.admin.test',
+		username: 'yaschat.internal.admin.test',
 	},
 	ts: new Date(),
 	autoTranslateLanguage: 'en',
 	_updatedAt: new Date(),
-	fname: 'rocketchat-frontend-team',
+	fname: 'yaschat-frontend-team',
 	description:
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis nisi vel arcu bibendum vehicula. Integer vitae suscipit libero',
 	announcement:

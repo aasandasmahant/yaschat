@@ -204,7 +204,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, eae3fb3136bd0b48294c050a71b0a36d05ca02b0]:</summary>
   - @rocket.chat/models@2.1.2
@@ -262,7 +262,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, eae3fb3136bd0b48294c050a71b0a36d05ca02b0]:</summary>
   - @rocket.chat/models@2.1.2-rc.0

@@ -6,7 +6,7 @@ import { api } from './api-data';
 import type { IRequestConfig } from './users.helper';
 
 /**
- * Uploads a file to Rocket.Chat using the two-step process (rooms.media then rooms.mediaConfirm).
+ * Uploads a file to YasChat using the two-step process (rooms.media then rooms.mediaConfirm).
  *
  * @param roomId - The room ID where the file will be uploaded
  * @param filePath - Path to the file to upload

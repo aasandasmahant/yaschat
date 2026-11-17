@@ -10,14 +10,14 @@ tests: []
 
 ## Summary
 
-A Rocket.Chat user sees when their XMPP contact is typing, and the XMPP contact sees when
-the Rocket.Chat user is. XEP-0085 Chat State Notifications is the mechanism; Rocket.Chat
+A YasChat user sees when their XMPP contact is typing, and the XMPP contact sees when
+the YasChat user is. XEP-0085 Chat State Notifications is the mechanism; YasChat
 already has typing indicators on both the client and the server side.
 
 ## Motivation
 
 Typing indicators are the most visible day-to-day signal after messages themselves, and
-every XMPP client shows them. Rocket.Chat publishes a user's activity in a room as the
+every XMPP client shows them. YasChat publishes a user's activity in a room as the
 broker event `room.user-activity`, which the Matrix service already consumes, and renders
 remote activity through the same stream clients listen to. The mapping costs little.
 
@@ -53,7 +53,7 @@ calls the same user-activity notification local typing uses.
 
 ## Out of scope
 
-- `inactive` and `gone` as distinct states on the Rocket.Chat side; both clear the indicator.
+- `inactive` and `gone` as distinct states on the YasChat side; both clear the indicator.
 - Recording or uploading activity (`user-recording`, `user-uploading`): no XEP-0085 state
   matches; they are sent as `composing` or not at all, per the open question.
 
@@ -68,7 +68,7 @@ None; not implemented.
   states to rooms; rooms reflect them to every occupant, which in a large room is a lot of
   traffic.
 - **Q2** Should `user-recording` and `user-uploading` be sent as `composing`?
-- **Q3** Rocket.Chat's typing event fires repeatedly while the user types; R1 needs the
+- **Q3** YasChat's typing event fires repeatedly while the user types; R1 needs the
   service to collapse that into one `<composing/>` until the state changes. Is the broker
   event already debounced enough?
 

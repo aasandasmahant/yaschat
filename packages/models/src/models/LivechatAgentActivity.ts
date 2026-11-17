@@ -1,4 +1,4 @@
-import type { ILivechatAgentActivity, IServiceHistory, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ILivechatAgentActivity, IServiceHistory, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ILivechatAgentActivityModel } from '@rocket.chat/model-typings';
 import { format } from 'date-fns/format';
 import { parseISO } from 'date-fns/parseISO';
@@ -8,7 +8,7 @@ import { BaseRaw } from './BaseRaw';
 import { readSecondaryPreferred } from '../readSecondaryPreferred';
 
 export class LivechatAgentActivityRaw extends BaseRaw<ILivechatAgentActivity> implements ILivechatAgentActivityModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatAgentActivity>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatAgentActivity>>) {
 		super(db, 'livechat_agent_activity', trash);
 	}
 
@@ -99,7 +99,7 @@ export class LivechatAgentActivityRaw extends BaseRaw<ILivechatAgentActivity> im
 		const match = { $match: { date } };
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_livechat_department_agents',
+				from: 'yaschat_livechat_department_agents',
 				localField: 'agentId',
 				foreignField: 'agentId',
 				as: 'departments',

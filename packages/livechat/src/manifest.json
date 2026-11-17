@@ -1,6 +1,6 @@
 {
-  "name": "Rocket.Chat.Livechat",
-  "short_name": "Rocket.Chat.Livechat",
+  "name": "YasChat.Livechat",
+  "short_name": "YasChat.Livechat",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

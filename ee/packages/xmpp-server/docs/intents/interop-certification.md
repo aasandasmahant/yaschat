@@ -15,7 +15,7 @@ is not the production path and will be decommissioned.
 
 ## Proposed outcome
 
-- One command brings up Rocket.Chat, the XMPP server service and a chosen peer (Prosody,
+- One command brings up YasChat, the XMPP server service and a chosen peer (Prosody,
   Openfire or ejabberd) from a compose file, already configured to federate with each other,
   and runs the end-to-end suite against that peer.
 - Every implemented requirement in [specs/](../specs/) is proven against Openfire first,
@@ -26,7 +26,7 @@ is not the production path and will be decommissioned.
 
 ## Affected users and systems
 
-- Engineers running the suite; administrators federating with those servers; Rocket.Chat
+- Engineers running the suite; administrators federating with those servers; YasChat
   users of the Bifrost path.
 - `tests/end-to-end/` and [operations.md](../operations.md#running-the-end-to-end-suite);
   every spec, through new `D` entries; [compliance.md](../compliance.md) (the XEP-0114 note
@@ -48,7 +48,7 @@ is not the production path and will be decommissioned.
   test against) are out of scope for this phase. JChat is checked later through a partner.
 - Results live in this package as `docs/interop/<peer>.md`, one file per peer, linked from
   [compliance.md](../compliance.md) with the version and date last proven. Each records the
-  peer version with its image digest, the S2S profile, the Rocket.Chat commit, the date and
+  peer version with its image digest, the S2S profile, the YasChat commit, the date and
   who ran it, and one row per requirement (test, result, the `D` entry for a failure),
   generated from the test reporter output rather than typed by hand.
 - Inside the compose setup each container gets network aliases for its domain and its

@@ -10,7 +10,7 @@ import { validateFederatedUsername } from './validateFederatedUsername';
 const logger = new Logger('federation-matrix:user');
 
 /**
- * `name` is deliberately not required: Rocket.Chat users are valid with a username and no
+ * `name` is deliberately not required: YasChat users are valid with a username and no
  * display name (`Accounts_RequireNameForSignUp` off), so demanding it would drop membership
  * events for nameless local users. Consumers must fall back to the username when displaying.
  */

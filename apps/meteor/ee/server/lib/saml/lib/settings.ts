@@ -339,7 +339,7 @@ export const addSettings = async function (name: string): Promise<void> {
 						type: 'select',
 						values: [
 							{ key: 'SAML', i18nLabel: 'SAML_Custom_Logout_Behaviour_Terminate_SAML_Session' },
-							{ key: 'Local', i18nLabel: 'SAML_Custom_Logout_Behaviour_End_Only_RocketChat' },
+							{ key: 'Local', i18nLabel: 'SAML_Custom_Logout_Behaviour_End_Only_YasChat' },
 						],
 						i18nLabel: 'SAML_Custom_Logout_Behaviour',
 						public: true,

@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IOmnichannelBusinessUnit extends IRocketChatRecord {
+export interface IOmnichannelBusinessUnit extends IYasChatRecord {
 	name: string;
 	visibility: 'public' | 'private';
 	type: string;

@@ -40,7 +40,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 		super();
 		this.scheduler = new Agenda({
 			mongo: client.db(),
-			db: { collection: 'rocketchat_apps_scheduler' },
+			db: { collection: 'yaschat_apps_scheduler' },
 			// this ensures the same job doesn't get executed multiple times in a cluster
 			defaultConcurrency: 1,
 		});
@@ -85,7 +85,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 					);
 					break;
 				default:
-					this.orch.getRocketChatLogger().error({ msg: 'Unknown startup setting type', type: (startupSetting as any).type });
+					this.orch.getYasChatLogger().error({ msg: 'Unknown startup setting type', type: (startupSetting as any).type });
 					break;
 			}
 		});
@@ -105,7 +105,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 			const job = await this.scheduler.schedule(when, id, this.decorateJobData(data, appId));
 			return job.attrs._id.toString();
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ err });
+			this.orch.getYasChatLogger().error({ err });
 		}
 	}
 
@@ -140,7 +140,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 			});
 			return job.attrs._id.toString();
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ err });
+			this.orch.getYasChatLogger().error({ err });
 		}
 	}
 
@@ -167,7 +167,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 		try {
 			await this.scheduler.cancel(cancelQuery);
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ err });
+			this.orch.getYasChatLogger().error({ err });
 		}
 	}
 
@@ -185,7 +185,7 @@ export class AppSchedulerBridge extends SchedulerBridge {
 		try {
 			await this.scheduler.cancel({ name: { $regex: matcher } });
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ err });
+			this.orch.getYasChatLogger().error({ err });
 		}
 	}
 

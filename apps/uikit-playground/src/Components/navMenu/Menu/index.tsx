@@ -73,7 +73,7 @@ const Menu = ({ isOpen }: MenuProps) => {
 						});
 					}}
 				/>
-				<MenuItem name='Send to RocketChat' />
+				<MenuItem name='Send to YasChat' />
 			</Wrapper>
 		</Box>
 	);

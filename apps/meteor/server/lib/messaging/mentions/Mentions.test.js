@@ -9,7 +9,7 @@ let mention;
 beforeEach(() => {
 	mention = new MentionsServer({
 		pattern: () => '[0-9a-zA-Z-_.]+',
-		messageMaxAll: () => 4, // || RocketChat.settings.get('Message_MaxAll')
+		messageMaxAll: () => 4, // || YasChat.settings.get('Message_MaxAll')
 		getUsers: async (usernames) =>
 			[
 				{
@@ -28,7 +28,7 @@ beforeEach(() => {
 					name: 'general',
 				},
 			].filter((channel) => channels.includes(channel.name));
-			// return RocketChat.models.Rooms.find({ name: {$in: _.unique(channels)}, t: 'c'	}, { fields: {_id: 1, name: 1 }}).fetch();
+			// return YasChat.models.Rooms.find({ name: {$in: _.unique(channels)}, t: 'c'	}, { fields: {_id: 1, name: 1 }}).fetch();
 		},
 		getUser: (userId) => ({ _id: userId, language: 'en' }),
 		getTotalChannelMembers: (/* rid*/) => 2,

@@ -1,7 +1,7 @@
-import type { RocketChatAssociationRecord } from '../metadata';
+import type { YasChatAssociationRecord } from '../metadata';
 
 export interface IPersistenceItem {
 	appId: string;
 	data: Record<string, unknown>;
-	associations?: Array<RocketChatAssociationRecord>;
+	associations?: Array<YasChatAssociationRecord>;
 }

@@ -1,12 +1,12 @@
 # `@rocket.chat/core-typings`
 
-> TypeScript types for Rocket.Chat's data model: users, rooms, messages, subscriptions, settings, Omnichannel and more.
+> TypeScript types for YasChat's data model: users, rooms, messages, subscriptions, settings, Omnichannel and more.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/core-typings) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/core-typings)
 
-This package defines the shapes of the records Rocket.Chat stores and sends: `IUser`, `IRoom`, `IMessage`, `ISubscription`, `ISetting`, `ILivechatVisitor`, `IOmnichannelRoom`, and many others. The server, the web client and the other Rocket.Chat packages share these types.
+This package defines the shapes of the records YasChat stores and sends: `IUser`, `IRoom`, `IMessage`, `ISubscription`, `ISetting`, `ILivechatVisitor`, `IOmnichannelRoom`, and many others. The server, the web client and the other YasChat packages share these types.
 
-[`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) build on it to type REST results and realtime events. Use it directly when your code handles Rocket.Chat objects, for example in a bot, an integration or a custom client.
+[`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) build on it to type REST results and realtime events. Use it directly when your code handles YasChat objects, for example in a bot, an integration or a custom client.
 
 Besides types, it exports a few runtime helpers: type guards such as `isThreadMessage` and `isDirectMessageRoom`, enums such as `UserStatus`, and JSON Schemas generated from the types.
 
@@ -20,7 +20,7 @@ The package is published as CommonJS with TypeScript declarations.
 
 ## Usage
 
-### Typing Rocket.Chat objects
+### Typing YasChat objects
 
 ```ts
 import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
@@ -102,11 +102,11 @@ The package re-exports a large number of types. The main groups are:
 - Enums such as `UserStatus`.
 - `getUserDisplayName(name, username, useRealName)` and `normalizeUsername(username)`.
 - `isNotUndefined(value)`, a type guard for filtering arrays.
-- `schemas`: OpenAPI components with JSON Schemas generated from the main types. The Rocket.Chat server registers them with AJV to validate REST responses and to build its OpenAPI document.
+- `schemas`: OpenAPI components with JSON Schemas generated from the main types. The YasChat server registers them with AJV to validate REST responses and to build its OpenAPI document.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/core-typings). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/core-typings). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/core-typings build
@@ -119,4 +119,4 @@ yarn workspace @rocket.chat/core-typings typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

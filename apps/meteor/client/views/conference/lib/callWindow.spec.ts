@@ -1,4 +1,4 @@
-import type { IRocketChatDesktop, IVideoCallWindow } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop, IVideoCallWindow } from '@rocket.chat/desktop-api';
 
 import { closeCallWindow } from './callWindow';
 
@@ -19,13 +19,13 @@ describe('closeCallWindow', () => {
 	afterEach(() => {
 		jest.useRealTimers();
 		windowClose.mockRestore();
-		delete window.RocketChatDesktop;
+		delete window.YasChatDesktop;
 		delete window.videoCallWindow;
 	});
 
-	it('closes the desktop app 4.18+ call window through RocketChatDesktop.videoCall', () => {
+	it('closes the desktop app 4.18+ call window through YasChatDesktop.videoCall', () => {
 		const videoCall = bridge();
-		window.RocketChatDesktop = { videoCall } as unknown as IRocketChatDesktop;
+		window.YasChatDesktop = { videoCall } as unknown as IYasChatDesktop;
 
 		closeCallWindow();
 		jest.runAllTimers();

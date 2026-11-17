@@ -33,7 +33,7 @@ export type APIActionContext = {
 
 export type APIActionHandler = (this: APIActionContext, request: Request) => Promise<ResponseSchema<TypedOptions>>;
 
-export class RocketChatAPIRouter<
+export class YasChatAPIRouter<
 	TBasePath extends string,
 	TOperations extends {
 		[x: string]: unknown;
@@ -77,5 +77,5 @@ export const convertHonoContextToApiActionContext = (
 	};
 };
 
-export type ExtractRouterEndpoints<TRoute extends RocketChatAPIRouter<any, any>> =
-	TRoute extends RocketChatAPIRouter<any, infer TOperations> ? TOperations : never;
+export type ExtractRouterEndpoints<TRoute extends YasChatAPIRouter<any, any>> =
+	TRoute extends YasChatAPIRouter<any, infer TOperations> ? TOperations : never;

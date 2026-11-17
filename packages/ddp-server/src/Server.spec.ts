@@ -362,7 +362,7 @@ describe('Server subscriptions', () => {
 
 		const subscription = server.subscribe(session, makeSubscription());
 
-		expect(metrics.timer).toHaveBeenCalledWith('rocketchat_subscription', { subscription: 'messages' });
+		expect(metrics.timer).toHaveBeenCalledWith('yaschat_subscription', { subscription: 'messages' });
 		expect(handler).toHaveBeenCalledTimes(1);
 		expect(jest.mocked(metrics.timer).mock.invocationCallOrder[0]).toBeLessThan(handler.mock.invocationCallOrder[0]);
 		expect(end).not.toHaveBeenCalled();

@@ -413,7 +413,7 @@ SpoilerContentItem = !"||" @InlineItemPattern / !"||" @Any
  *
  * URL
  * e.g:
- * Reference: [Rocket.Chat Website](https://rocket.chat), [](https://rocket.chat), <rocket.chat|Rocket.Chat Website>
+ * Reference: [YasChat Website](https://rocket.chat), [](https://rocket.chat), <rocket.chat|YasChat Website>
  * Image: ![](https://rocket.chat/logo.png)
  *
  */

@@ -4,55 +4,55 @@
 
 ### Major Changes
 
-- ([#41948](https://github.com/RocketChat/Rocket.Chat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
+- ([#41948](https://github.com/YasChat/YasChat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
 
   Endpoints that validate their query string now reject both with `400 error-invalid-params` instead of ignoring them; the few without validation keep accepting and ignoring them. `users.create` likewise rejects a `fields` property in its body. `channels.online` and `groups.online` now require `_id`. On `users.list`, fields outside the default projection — `customFields`, `utcOffset`, `nickname`, `bio`, `statusText`, `federated` and `freeSwitchExtension` — are no longer reachable in bulk; use `users.info` instead. Callers should move to the dedicated filter parameters each endpoint exposes, such as `name`, `type`, `_id` and `text`.
 
-- ([#41908](https://github.com/RocketChat/Rocket.Chat/pull/41908)) Removes the deprecated `checkFederationConfiguration` Meteor method, which verified the configuration of the no-longer-supported Matrix bridge federation.
+- ([#41908](https://github.com/YasChat/YasChat/pull/41908)) Removes the deprecated `checkFederationConfiguration` Meteor method, which verified the configuration of the no-longer-supported Matrix bridge federation.
 
-- ([#41940](https://github.com/RocketChat/Rocket.Chat/pull/41940)) Removes dead code left behind by the old Matrix bridge federation: the `Federation`/`FederationEE` service proxies and `IFederationService`/`IFederationServiceEE` interfaces (no service implemented them anymore), the never-implemented `/v1/federation/*` REST endpoint typings (`searchPublicRooms`, `joinExternalPublicRoom`, `listServersByUser`, `addServerByUser`, `removeServerByUser`), the listener-less `federation.userRoleChanged` event, unused federation v1 statistics fields and types, the old two-server federation E2E test suite, and orphaned translation keys.
+- ([#41940](https://github.com/YasChat/YasChat/pull/41940)) Removes dead code left behind by the old Matrix bridge federation: the `Federation`/`FederationEE` service proxies and `IFederationService`/`IFederationServiceEE` interfaces (no service implemented them anymore), the never-implemented `/v1/federation/*` REST endpoint typings (`searchPublicRooms`, `joinExternalPublicRoom`, `listServersByUser`, `addServerByUser`, `removeServerByUser`), the listener-less `federation.userRoleChanged` event, unused federation v1 statistics fields and types, the old two-server federation E2E test suite, and orphaned translation keys.
 
 ### Minor Changes
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Adds workspace-wide ABAC enforcement. Turning on **Enforce ABAC across all workspace rooms** locks every public channel and discussion, and every private channel and team that has no ABAC attributes or is missing one listed in **Attributes required in all ABAC rooms**. Nobody can post in a locked room or be added to one, and a callout in place of the composer explains why. Direct messages, Omnichannel conversations and federated rooms are never locked.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Adds workspace-wide ABAC enforcement. Turning on **Enforce ABAC across all workspace rooms** locks every public channel and discussion, and every private channel and team that has no ABAC attributes or is missing one listed in **Attributes required in all ABAC rooms**. Nobody can post in a locked room or be added to one, and a callout in place of the composer explains why. Direct messages, Omnichannel conversations and federated rooms are never locked.
 
   While enforcement is on, new non-federated public channels, discussions, and private rooms without the required attributes cannot be created, and **Discussion > Enable** is switched off, then restored to its earlier value when enforcement ends. Removing the ABAC license turns enforcement off, and switching the attribute store clears the required attributes. `GET /v1/abac/attributes.listKeys` lists the keys available for the required attributes, and `GET /v1/rooms.info` returns `abacRequiredAttributes` while enforcement is on.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Adds the **Edit room ABAC attributes** permission, scoped to a room and held by administrators and room owners by default. In private channels and teams that carry attributes or are locked by enforcement, its holders and ABAC administrators get an **Attribute-based access control** panel to view and change the room's attributes, and a locked room offers them **Manage attributes** in place of the composer. Before anything is saved, this panel and editing a room in **Administration > ABAC > Rooms** preview which members lose or keep access.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Adds the **Edit room ABAC attributes** permission, scoped to a room and held by administrators and room owners by default. In private channels and teams that carry attributes or are locked by enforcement, its holders and ABAC administrators get an **Attribute-based access control** panel to view and change the room's attributes, and a locked room offers them **Manage attributes** in place of the composer. Before anything is saved, this panel and editing a room in **Administration > ABAC > Rooms** preview which members lose or keep access.
 
   With the local Policy Decision Point and **Restrict room creators and editors to attributes they hold** on, the default, holders can only add values they hold. While enforcement is on and attributes are required, they cannot remove a required attribute or every attribute. ABAC administrators are not restricted by either rule. `POST /v1/abac/rooms/:rid/attributes` accepts an empty set to clear a room, and `attributes.listAssignable` and `rooms.evaluateMembership` accept a room id. With Virtru, an attribute change by a user also removes members whose access cannot be decided.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
 
   Users can only assign values they hold, or, with Virtru, values Virtru entitles them to. Members who do not qualify are not added and are listed in `skippedMembers`. While enforcement is on, new private channels and teams must be ABAC-managed and carry the workspace's required attributes.
 
   Adds `GET /v1/abac/attributes.listAssignable` and `POST /v1/abac/rooms.evaluateMembership`. Apps with room write access and the new `abac.write` permission can create attributed private rooms under the same rules, and the audit log names the app.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Removes a room's ABAC attributes when it is converted to a team, when a team is converted to a channel (the team's own room only), and when it is moved into a team; moving a room out of a team keeps them. The removal applies whether ABAC is enabled or not, is recorded in the audit log, and leaves the room locked while ABAC enforcement is on. The UI warns before each of these actions, and before making an ABAC-managed room or team public while ABAC is disabled.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Removes a room's ABAC attributes when it is converted to a team, when a team is converted to a channel (the team's own room only), and when it is moved into a team; moving a room out of a team keeps them. The removal applies whether ABAC is enabled or not, is recorded in the audit log, and leaves the room locked while ABAC enforcement is on. The UI warns before each of these actions, and before making an ABAC-managed room or team public while ABAC is disabled.
 
   While ABAC is enabled, `POST /v1/teams.update` now refuses to make an ABAC-managed team public with `error-action-not-allowed`, as **Edit team** does, and the **Private** toggle is disabled for ABAC-managed rooms.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows default and team default rooms to carry ABAC attributes. Assigning attributes to a default room, making an ABAC room a default and making an attributed team channel a team default no longer return `error-cannot-convert-default-room-to-abac`, `error-action-not-allowed` or `error-room-is-abac-managed`. With ABAC enabled, new users, team joins and new team defaults only add members to the attributed rooms they qualify for, and skip rooms locked by enforcement.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows default and team default rooms to carry ABAC attributes. Assigning attributes to a default room, making an ABAC room a default and making an attributed team channel a team default no longer return `error-cannot-convert-default-room-to-abac`, `error-action-not-allowed` or `error-room-is-abac-managed`. With ABAC enabled, new users, team joins and new team defaults only add members to the attributed rooms they qualify for, and skip rooms locked by enforcement.
 
   `/invite-all-to` and `/invite-all-from` likewise add only the members an ABAC-managed room allows and name the ones they skipped, instead of failing on the first refusal. A locked target room, or one whose access cannot be decided, is refused and nobody is added.
 
-- ([#42050](https://github.com/RocketChat/Rocket.Chat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
+- ([#42050](https://github.com/YasChat/YasChat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
 ### Patch Changes
 
-- ([#41382](https://github.com/RocketChat/Rocket.Chat/pull/41382)) Indexes the push token string by storing each token as a flat `tokenValue`/`tokenType` pair, with VoIP tokens now kept in their own document instead of as an extra field on the device token. Changes the `POST /v1/push.token` response to return flat `tokenValue` and `tokenType` fields instead of the nested `token` object.
+- ([#41382](https://github.com/YasChat/YasChat/pull/41382)) Indexes the push token string by storing each token as a flat `tokenValue`/`tokenType` pair, with VoIP tokens now kept in their own document instead of as an extra field on the device token. Changes the `POST /v1/push.token` response to return flat `tokenValue` and `tokenType` fields instead of the nested `token` object.
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
 
 - Fixes federated requests being rejected when the remote server sends unquoted parameters in its `X-Matrix` authorization header
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes real-time updates emitted by the main Rocket.Chat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes real-time updates emitted by the main YasChat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 0285f08c086dae6beb0f1365a85f522fb4818435, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c9aa43916295df79a799e53b8e09c58011991a97, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, a838cc5af0652f59d0ab30aa1a488abded0622b1, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, bff76c34b21caddbc316d69b62fac858a73d7164, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -82,53 +82,53 @@
 
 ### Major Changes
 
-- ([#41948](https://github.com/RocketChat/Rocket.Chat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
+- ([#41948](https://github.com/YasChat/YasChat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
 
   Endpoints that validate their query string now reject both with `400 error-invalid-params` instead of ignoring them; the few without validation keep accepting and ignoring them. `users.create` likewise rejects a `fields` property in its body. `channels.online` and `groups.online` now require `_id`. On `users.list`, fields outside the default projection — `customFields`, `utcOffset`, `nickname`, `bio`, `statusText`, `federated` and `freeSwitchExtension` — are no longer reachable in bulk; use `users.info` instead. Callers should move to the dedicated filter parameters each endpoint exposes, such as `name`, `type`, `_id` and `text`.
 
-- ([#41908](https://github.com/RocketChat/Rocket.Chat/pull/41908)) Removes the deprecated `checkFederationConfiguration` Meteor method, which verified the configuration of the no-longer-supported Matrix bridge federation.
+- ([#41908](https://github.com/YasChat/YasChat/pull/41908)) Removes the deprecated `checkFederationConfiguration` Meteor method, which verified the configuration of the no-longer-supported Matrix bridge federation.
 
-- ([#41940](https://github.com/RocketChat/Rocket.Chat/pull/41940)) Removes dead code left behind by the old Matrix bridge federation: the `Federation`/`FederationEE` service proxies and `IFederationService`/`IFederationServiceEE` interfaces (no service implemented them anymore), the never-implemented `/v1/federation/*` REST endpoint typings (`searchPublicRooms`, `joinExternalPublicRoom`, `listServersByUser`, `addServerByUser`, `removeServerByUser`), the listener-less `federation.userRoleChanged` event, unused federation v1 statistics fields and types, the old two-server federation E2E test suite, and orphaned translation keys.
+- ([#41940](https://github.com/YasChat/YasChat/pull/41940)) Removes dead code left behind by the old Matrix bridge federation: the `Federation`/`FederationEE` service proxies and `IFederationService`/`IFederationServiceEE` interfaces (no service implemented them anymore), the never-implemented `/v1/federation/*` REST endpoint typings (`searchPublicRooms`, `joinExternalPublicRoom`, `listServersByUser`, `addServerByUser`, `removeServerByUser`), the listener-less `federation.userRoleChanged` event, unused federation v1 statistics fields and types, the old two-server federation E2E test suite, and orphaned translation keys.
 
 ### Minor Changes
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Adds workspace-wide ABAC enforcement. Turning on **Enforce ABAC across all workspace rooms** locks every public channel and discussion, and every private channel and team that has no ABAC attributes or is missing one listed in **Attributes required in all ABAC rooms**. Nobody can post in a locked room or be added to one, and a callout in place of the composer explains why. Direct messages, Omnichannel conversations and federated rooms are never locked.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Adds workspace-wide ABAC enforcement. Turning on **Enforce ABAC across all workspace rooms** locks every public channel and discussion, and every private channel and team that has no ABAC attributes or is missing one listed in **Attributes required in all ABAC rooms**. Nobody can post in a locked room or be added to one, and a callout in place of the composer explains why. Direct messages, Omnichannel conversations and federated rooms are never locked.
 
   While enforcement is on, new non-federated public channels, discussions, and private rooms without the required attributes cannot be created, and **Discussion > Enable** is switched off, then restored to its earlier value when enforcement ends. Removing the ABAC license turns enforcement off, and switching the attribute store clears the required attributes. `GET /v1/abac/attributes.listKeys` lists the keys available for the required attributes, and `GET /v1/rooms.info` returns `abacRequiredAttributes` while enforcement is on.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Adds the **Edit room ABAC attributes** permission, scoped to a room and held by administrators and room owners by default. In private channels and teams that carry attributes or are locked by enforcement, its holders and ABAC administrators get an **Attribute-based access control** panel to view and change the room's attributes, and a locked room offers them **Manage attributes** in place of the composer. Before anything is saved, this panel and editing a room in **Administration > ABAC > Rooms** preview which members lose or keep access.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Adds the **Edit room ABAC attributes** permission, scoped to a room and held by administrators and room owners by default. In private channels and teams that carry attributes or are locked by enforcement, its holders and ABAC administrators get an **Attribute-based access control** panel to view and change the room's attributes, and a locked room offers them **Manage attributes** in place of the composer. Before anything is saved, this panel and editing a room in **Administration > ABAC > Rooms** preview which members lose or keep access.
 
   With the local Policy Decision Point and **Restrict room creators and editors to attributes they hold** on, the default, holders can only add values they hold. While enforcement is on and attributes are required, they cannot remove a required attribute or every attribute. ABAC administrators are not restricted by either rule. `POST /v1/abac/rooms/:rid/attributes` accepts an empty set to clear a room, and `attributes.listAssignable` and `rooms.evaluateMembership` accept a room id. With Virtru, an attribute change by a user also removes members whose access cannot be decided.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
 
   Users can only assign values they hold, or, with Virtru, values Virtru entitles them to. Members who do not qualify are not added and are listed in `skippedMembers`. While enforcement is on, new private channels and teams must be ABAC-managed and carry the workspace's required attributes.
 
   Adds `GET /v1/abac/attributes.listAssignable` and `POST /v1/abac/rooms.evaluateMembership`. Apps with room write access and the new `abac.write` permission can create attributed private rooms under the same rules, and the audit log names the app.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Removes a room's ABAC attributes when it is converted to a team, when a team is converted to a channel (the team's own room only), and when it is moved into a team; moving a room out of a team keeps them. The removal applies whether ABAC is enabled or not, is recorded in the audit log, and leaves the room locked while ABAC enforcement is on. The UI warns before each of these actions, and before making an ABAC-managed room or team public while ABAC is disabled.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Removes a room's ABAC attributes when it is converted to a team, when a team is converted to a channel (the team's own room only), and when it is moved into a team; moving a room out of a team keeps them. The removal applies whether ABAC is enabled or not, is recorded in the audit log, and leaves the room locked while ABAC enforcement is on. The UI warns before each of these actions, and before making an ABAC-managed room or team public while ABAC is disabled.
 
   While ABAC is enabled, `POST /v1/teams.update` now refuses to make an ABAC-managed team public with `error-action-not-allowed`, as **Edit team** does, and the **Private** toggle is disabled for ABAC-managed rooms.
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows default and team default rooms to carry ABAC attributes. Assigning attributes to a default room, making an ABAC room a default and making an attributed team channel a team default no longer return `error-cannot-convert-default-room-to-abac`, `error-action-not-allowed` or `error-room-is-abac-managed`. With ABAC enabled, new users, team joins and new team defaults only add members to the attributed rooms they qualify for, and skip rooms locked by enforcement.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows default and team default rooms to carry ABAC attributes. Assigning attributes to a default room, making an ABAC room a default and making an attributed team channel a team default no longer return `error-cannot-convert-default-room-to-abac`, `error-action-not-allowed` or `error-room-is-abac-managed`. With ABAC enabled, new users, team joins and new team defaults only add members to the attributed rooms they qualify for, and skip rooms locked by enforcement.
 
   `/invite-all-to` and `/invite-all-from` likewise add only the members an ABAC-managed room allows and name the ones they skipped, instead of failing on the first refusal. A locked target room, or one whose access cannot be decided, is refused and nobody is added.
 
-- ([#42050](https://github.com/RocketChat/Rocket.Chat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
+- ([#42050](https://github.com/YasChat/YasChat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
 ### Patch Changes
 
-- ([#41382](https://github.com/RocketChat/Rocket.Chat/pull/41382)) Indexes the push token string by storing each token as a flat `tokenValue`/`tokenType` pair, with VoIP tokens now kept in their own document instead of as an extra field on the device token. Changes the `POST /v1/push.token` response to return flat `tokenValue` and `tokenType` fields instead of the nested `token` object.
+- ([#41382](https://github.com/YasChat/YasChat/pull/41382)) Indexes the push token string by storing each token as a flat `tokenValue`/`tokenType` pair, with VoIP tokens now kept in their own document instead of as an extra field on the device token. Changes the `POST /v1/push.token` response to return flat `tokenValue` and `tokenType` fields instead of the nested `token` object.
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes real-time updates emitted by the main Rocket.Chat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes real-time updates emitted by the main YasChat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 0285f08c086dae6beb0f1365a85f522fb4818435, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c9aa43916295df79a799e53b8e09c58011991a97, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, a838cc5af0652f59d0ab30aa1a488abded0622b1, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -146,9 +146,9 @@
 
 ### Minor Changes
 
-- ([#42102](https://github.com/RocketChat/Rocket.Chat/pull/42102)) Adds hybrid retrieval to AI Search. A single search balance setting decides how much semantic retrieval contributes relative to keyword search, so a workspace can find messages by meaning without losing exact matches on error codes, ticket ids or function names. An optional recency boost, disabled by default, promotes newer messages after relevance ranking.
+- ([#42102](https://github.com/YasChat/YasChat/pull/42102)) Adds hybrid retrieval to AI Search. A single search balance setting decides how much semantic retrieval contributes relative to keyword search, so a workspace can find messages by meaning without losing exact matches on error codes, ticket ids or function names. An optional recency boost, disabled by default, promotes newer messages after relevance ranking.
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -156,7 +156,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -168,7 +168,7 @@
 
 ### Patch Changes
 
-- ([#41910](https://github.com/RocketChat/Rocket.Chat/pull/41910)) Fixes federated typing indicators being dropped, or attributed to the wrong person, when `UI_Use_Real_Name` is enabled
+- ([#41910](https://github.com/YasChat/YasChat/pull/41910)) Fixes federated typing indicators being dropped, or attributed to the wrong person, when `UI_Use_Real_Name` is enabled
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/media-signaling@1.3.0
@@ -184,9 +184,9 @@
 
 ### Minor Changes
 
-- ([#42102](https://github.com/RocketChat/Rocket.Chat/pull/42102)) Adds hybrid retrieval to AI Search. A single search balance setting decides how much semantic retrieval contributes relative to keyword search, so a workspace can find messages by meaning without losing exact matches on error codes, ticket ids or function names. An optional recency boost, disabled by default, promotes newer messages after relevance ranking.
+- ([#42102](https://github.com/YasChat/YasChat/pull/42102)) Adds hybrid retrieval to AI Search. A single search balance setting decides how much semantic retrieval contributes relative to keyword search, so a workspace can find messages by meaning without losing exact matches on error codes, ticket ids or function names. An optional recency boost, disabled by default, promotes newer messages after relevance ranking.
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -194,7 +194,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -206,7 +206,7 @@
 
 ### Patch Changes
 
-- ([#41910](https://github.com/RocketChat/Rocket.Chat/pull/41910)) Fixes federated typing indicators being dropped, or attributed to the wrong person, when `UI_Use_Real_Name` is enabled
+- ([#41910](https://github.com/YasChat/YasChat/pull/41910)) Fixes federated typing indicators being dropped, or attributed to the wrong person, when `UI_Use_Real_Name` is enabled
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/media-signaling@1.3.0-rc.0
@@ -222,7 +222,7 @@
 
 ### Minor Changes
 
-- ([#41747](https://github.com/RocketChat/Rocket.Chat/pull/41747)) Adds status visibility, letting users hide their presence and status message from specific people they choose. Blocked people see that user as offline, indistinguishable from genuinely offline, and the block can be lifted at any time — changes apply live, without a reload.
+- ([#41747](https://github.com/YasChat/YasChat/pull/41747)) Adds status visibility, letting users hide their presence and status message from specific people they choose. Blocked people see that user as offline, indistinguishable from genuinely offline, and the block can be lifted at any time — changes apply live, without a reload.
 
 ### Patch Changes
 
@@ -238,7 +238,7 @@
 
 ### Minor Changes
 
-- ([#41747](https://github.com/RocketChat/Rocket.Chat/pull/41747)) Adds status visibility, letting users hide their presence and status message from specific people they choose. Blocked people see that user as offline, indistinguishable from genuinely offline, and the block can be lifted at any time — changes apply live, without a reload.
+- ([#41747](https://github.com/YasChat/YasChat/pull/41747)) Adds status visibility, letting users hide their presence and status message from specific people they choose. Blocked people see that user as offline, indistinguishable from genuinely offline, and the block can be lifted at any time — changes apply live, without a reload.
 
 ### Patch Changes
 
@@ -257,7 +257,7 @@
 
 ### Minor Changes
 
-- ([#40890](https://github.com/RocketChat/Rocket.Chat/pull/40890)) Adds AI Search with semantic message results, optional OpenAI-compatible answers, and AI Center configuration.
+- ([#40890](https://github.com/YasChat/YasChat/pull/40890)) Adds AI Search with semantic message results, optional OpenAI-compatible answers, and AI Center configuration.
 
 ### Patch Changes
 
@@ -273,7 +273,7 @@
 
 ### Minor Changes
 
-- ([#40890](https://github.com/RocketChat/Rocket.Chat/pull/40890)) Adds AI Search with semantic message results, optional OpenAI-compatible answers, and AI Center configuration.
+- ([#40890](https://github.com/YasChat/YasChat/pull/40890)) Adds AI Search with semantic message results, optional OpenAI-compatible answers, and AI Center configuration.
 
 ### Patch Changes
 
@@ -289,9 +289,9 @@
 
 ### Patch Changes
 
-- ([#41009](https://github.com/RocketChat/Rocket.Chat/pull/41009)) Fixes an issue where updating an app in quick succession could crash the server.
+- ([#41009](https://github.com/YasChat/YasChat/pull/41009)) Fixes an issue where updating an app in quick succession could crash the server.
 
-- ([#40274](https://github.com/RocketChat/Rocket.Chat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
+- ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, ebc9c17b6ba63ee754320eadfba20c024c53c18f, 7380c44c751eff9ee624d80bf26370411ffed78b, f4f361234f00bd44efe348df4355e9d3cf80efe0, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53, 5d5edd8520ddb424bd336e3ec802c1f4a4e7d1ce]:</summary>
   - @rocket.chat/models@2.3.1
@@ -305,9 +305,9 @@
 
 ### Patch Changes
 
-- ([#41009](https://github.com/RocketChat/Rocket.Chat/pull/41009)) Fixes an issue where updating an app in quick succession could crash the server.
+- ([#41009](https://github.com/YasChat/YasChat/pull/41009)) Fixes an issue where updating an app in quick succession could crash the server.
 
-- ([#40274](https://github.com/RocketChat/Rocket.Chat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
+- ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, ebc9c17b6ba63ee754320eadfba20c024c53c18f, 7380c44c751eff9ee624d80bf26370411ffed78b, f4f361234f00bd44efe348df4355e9d3cf80efe0, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53]:</summary>
   - @rocket.chat/models@2.3.1-rc.0
@@ -345,11 +345,11 @@
 
 ### Minor Changes
 
-- ([#40141](https://github.com/RocketChat/Rocket.Chat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
+- ([#40141](https://github.com/YasChat/YasChat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
 
-- ([#40093](https://github.com/RocketChat/Rocket.Chat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
+- ([#40093](https://github.com/YasChat/YasChat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
 
-- ([#39845](https://github.com/RocketChat/Rocket.Chat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
+- ([#39845](https://github.com/YasChat/YasChat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
 
 ### Patch Changes
 
@@ -416,11 +416,11 @@
 
 ### Minor Changes
 
-- ([#40141](https://github.com/RocketChat/Rocket.Chat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
+- ([#40141](https://github.com/YasChat/YasChat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
 
-- ([#40093](https://github.com/RocketChat/Rocket.Chat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
+- ([#40093](https://github.com/YasChat/YasChat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
 
-- ([#39845](https://github.com/RocketChat/Rocket.Chat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
+- ([#39845](https://github.com/YasChat/YasChat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
 
 ### Patch Changes
 
@@ -438,7 +438,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, cd2fc208d351032c0b729755af4886665dca08b6, 87f9262af4a543d52642a54e1ef546d509a79e23, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/models@2.1.2
@@ -504,7 +504,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, cd2fc208d351032c0b729755af4886665dca08b6, 87f9262af4a543d52642a54e1ef546d509a79e23, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/models@2.1.2-rc.0
@@ -534,13 +534,13 @@
 
 ### Minor Changes
 
-- ([#38173](https://github.com/RocketChat/Rocket.Chat/pull/38173)) Adds a new endpoint to delete uploaded files individually
+- ([#38173](https://github.com/YasChat/YasChat/pull/38173)) Adds a new endpoint to delete uploaded files individually
 
 ### Patch Changes
 
-- ([#38616](https://github.com/RocketChat/Rocket.Chat/pull/38616)) Fixes device management logout not redirecting to login page.
+- ([#38616](https://github.com/YasChat/YasChat/pull/38616)) Fixes device management logout not redirecting to login page.
 
-- ([#38415](https://github.com/RocketChat/Rocket.Chat/pull/38415)) Fixes delete message permission check in read-only rooms to validate the deleting user's unmuted status instead of the message sender's
+- ([#38415](https://github.com/YasChat/YasChat/pull/38415)) Fixes delete message permission check in read-only rooms to validate the deleting user's unmuted status instead of the message sender's
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, 098f0a7467332f10a7bea5d435ae2ca3b5431fc9, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 562d5ce6ad8afc67bef61e91939f8c21c4501610, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
   - @rocket.chat/core-typings@8.2.0
@@ -579,13 +579,13 @@
 
 ### Minor Changes
 
-- ([#38173](https://github.com/RocketChat/Rocket.Chat/pull/38173)) Adds a new endpoint to delete uploaded files individually
+- ([#38173](https://github.com/YasChat/YasChat/pull/38173)) Adds a new endpoint to delete uploaded files individually
 
 ### Patch Changes
 
-- ([#38616](https://github.com/RocketChat/Rocket.Chat/pull/38616)) Fixes device management logout not redirecting to login page.
+- ([#38616](https://github.com/YasChat/YasChat/pull/38616)) Fixes device management logout not redirecting to login page.
 
-- ([#38415](https://github.com/RocketChat/Rocket.Chat/pull/38415)) Fixes delete message permission check in read-only rooms to validate the deleting user's unmuted status instead of the message sender's
+- ([#38415](https://github.com/YasChat/YasChat/pull/38415)) Fixes delete message permission check in read-only rooms to validate the deleting user's unmuted status instead of the message sender's
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, 098f0a7467332f10a7bea5d435ae2ca3b5431fc9, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 562d5ce6ad8afc67bef61e91939f8c21c4501610, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
   - @rocket.chat/core-typings@8.2.0-rc.0
@@ -612,7 +612,7 @@
 
 ### Patch Changes
 
-- ([#38151](https://github.com/RocketChat/Rocket.Chat/pull/38151)) Changes OEmbed URL processing. Now, the processing is done asynchronously and has a configurable timeout for each request. Additionally, the `API_EmbedIgnoredHosts` setting now accepts wildcard domains.
+- ([#38151](https://github.com/YasChat/YasChat/pull/38151)) Changes OEmbed URL processing. Now, the processing is done asynchronously and has a configurable timeout for each request. Additionally, the `API_EmbedIgnoredHosts` setting now accepts wildcard domains.
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, fd319d58a621d66c20029fd962ddb24a1a24ecc3, 5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, bed615ef323d4018f779cda013255ac9147e4cde, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e, ccd76942bf74322f21deb855af5348856463b82a]:</summary>
   - @rocket.chat/models@2.0.2
@@ -652,7 +652,7 @@
 
 ### Patch Changes
 
-- ([#38151](https://github.com/RocketChat/Rocket.Chat/pull/38151)) Changes OEmbed URL processing. Now, the processing is done asynchronously and has a configurable timeout for each request. Additionally, the `API_EmbedIgnoredHosts` setting now accepts wildcard domains.
+- ([#38151](https://github.com/YasChat/YasChat/pull/38151)) Changes OEmbed URL processing. Now, the processing is done asynchronously and has a configurable timeout for each request. Additionally, the `API_EmbedIgnoredHosts` setting now accepts wildcard domains.
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, 5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e, ccd76942bf74322f21deb855af5348856463b82a]:</summary>
   - @rocket.chat/models@2.0.1-rc.0
@@ -678,17 +678,17 @@
 
 ### Minor Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes Deprecated FreeSwitch integration
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes Deprecated FreeSwitch integration
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ### Patch Changes
 
-- ([#37791](https://github.com/RocketChat/Rocket.Chat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
+- ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, d3538e7045c41f91b8c561d44e5485ff93b93745, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, ae1e2faaeb6f7a086f8affde4c8a81e55e2a0e04, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0
@@ -765,17 +765,17 @@
 
 ### Minor Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes Deprecated FreeSwitch integration
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes Deprecated FreeSwitch integration
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ### Patch Changes
 
-- ([#37791](https://github.com/RocketChat/Rocket.Chat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
+- ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, d3538e7045c41f91b8c561d44e5485ff93b93745, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0-rc.0
@@ -791,7 +791,7 @@
 
 ### Patch Changes
 
-- ([#37883](https://github.com/RocketChat/Rocket.Chat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37883](https://github.com/YasChat/YasChat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@7.13.2
@@ -817,7 +817,7 @@
 
 ### Minor Changes
 
-- ([#36807](https://github.com/RocketChat/Rocket.Chat/pull/36807) by [@tiagoevanp](https://github.com/tiagoevanp)) Adds a `deletedRooms` field to the `users.delete` endpoint response, indicating which rooms were deleted as part of the user deletion process.
+- ([#36807](https://github.com/YasChat/YasChat/pull/36807) by [@tiagoevanp](https://github.com/tiagoevanp)) Adds a `deletedRooms` field to the `users.delete` endpoint response, indicating which rooms were deleted as part of the user deletion process.
 
 ### Patch Changes
 
@@ -858,7 +858,7 @@
 
 ### Minor Changes
 
-- ([#36807](https://github.com/RocketChat/Rocket.Chat/pull/36807) by [@tiagoevanp](https://github.com/tiagoevanp)) Adds a `deletedRooms` field to the `users.delete` endpoint response, indicating which rooms were deleted as part of the user deletion process.
+- ([#36807](https://github.com/YasChat/YasChat/pull/36807) by [@tiagoevanp](https://github.com/tiagoevanp)) Adds a `deletedRooms` field to the `users.delete` endpoint response, indicating which rooms were deleted as part of the user deletion process.
 
 ### Patch Changes
 
@@ -972,7 +972,7 @@
 
 ### Patch Changes
 
-- ([#36852](https://github.com/RocketChat/Rocket.Chat/pull/36852)) Fixes `teams.addMembers` API to assign team member roles properly.
+- ([#36852](https://github.com/YasChat/YasChat/pull/36852)) Fixes `teams.addMembers` API to assign team member roles properly.
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, d76a5578ed0e14fae2a041c0e09d565b28630d76, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 276c270f34293729182e9ebab61e1ff2c35398fc, b0a4602a4461200b9872b2b073ec56fa55ecb466, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1]:</summary>
   - @rocket.chat/models@1.7.0
@@ -1069,7 +1069,7 @@
 
 ### Patch Changes
 
-- ([#36852](https://github.com/RocketChat/Rocket.Chat/pull/36852)) Fixes `teams.addMembers` API to assign team member roles properly.
+- ([#36852](https://github.com/YasChat/YasChat/pull/36852)) Fixes `teams.addMembers` API to assign team member roles properly.
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, d76a5578ed0e14fae2a041c0e09d565b28630d76, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 276c270f34293729182e9ebab61e1ff2c35398fc, b0a4602a4461200b9872b2b073ec56fa55ecb466, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1]:</summary>
   - @rocket.chat/models@1.7.0-rc.0
@@ -1105,7 +1105,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1185,7 +1185,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1232,7 +1232,7 @@
 
 ### Patch Changes
 
-- ([#36099](https://github.com/RocketChat/Rocket.Chat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
+- ([#36099](https://github.com/YasChat/YasChat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
 
 - <details><summary>Updated dependencies [459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
   - @rocket.chat/models@1.5.12
@@ -1267,7 +1267,7 @@
 
 ### Patch Changes
 
-- ([#36099](https://github.com/RocketChat/Rocket.Chat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
+- ([#36099](https://github.com/YasChat/YasChat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
 
 - <details><summary>Updated dependencies [459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
   - @rocket.chat/models@1.5.11-rc.0
@@ -1584,11 +1584,11 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
-- ([#35757](https://github.com/RocketChat/Rocket.Chat/pull/35757)) Fixes an issue where the bypass to call methods over microservices always returns to `{}`
+- ([#35757](https://github.com/YasChat/YasChat/pull/35757)) Fixes an issue where the bypass to call methods over microservices always returns to `{}`
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
   - @rocket.chat/core-typings@7.6.0
@@ -1689,11 +1689,11 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
-- ([#35757](https://github.com/RocketChat/Rocket.Chat/pull/35757)) Fixes an issue where the bypass to call methods over microservices always returns to `{}`
+- ([#35757](https://github.com/YasChat/YasChat/pull/35757)) Fixes an issue where the bypass to call methods over microservices always returns to `{}`
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
   - @rocket.chat/core-typings@7.6.0-rc.0
@@ -1717,7 +1717,7 @@
 
 ### Minor Changes
 
-- ([#35474](https://github.com/RocketChat/Rocket.Chat/pull/35474)) Adds automatic presence sync based on calendar events, updating the user’s status to “busy” when a meeting starts and reverting it afterward.
+- ([#35474](https://github.com/YasChat/YasChat/pull/35474)) Adds automatic presence sync based on calendar events, updating the user’s status to “busy” when a meeting starts and reverting it afterward.
 
 ### Patch Changes
 
@@ -1766,7 +1766,7 @@
 
 ### Minor Changes
 
-- ([#35474](https://github.com/RocketChat/Rocket.Chat/pull/35474)) Adds automatic presence sync based on calendar events, updating the user’s status to “busy” when a meeting starts and reverting it afterward.
+- ([#35474](https://github.com/YasChat/YasChat/pull/35474)) Adds automatic presence sync based on calendar events, updating the user’s status to “busy” when a meeting starts and reverting it afterward.
 
 ### Patch Changes
 
@@ -2067,7 +2067,7 @@
 
 ### Patch Changes
 
-- ([#33719](https://github.com/RocketChat/Rocket.Chat/pull/33719)) stops calling an object through proxy calling getQueueWorker
+- ([#33719](https://github.com/YasChat/YasChat/pull/33719)) stops calling an object through proxy calling getQueueWorker
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0]:</summary>
   - @rocket.chat/core-typings@7.1.0
@@ -2113,7 +2113,7 @@
 
 ### Patch Changes
 
-- ([#33719](https://github.com/RocketChat/Rocket.Chat/pull/33719)) stops calling an object through proxy calling getQueueWorker
+- ([#33719](https://github.com/YasChat/YasChat/pull/33719)) stops calling an object through proxy calling getQueueWorker
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0]:</summary>
   - @rocket.chat/core-typings@7.1.0-rc.0
@@ -2126,9 +2126,9 @@
 
 ### Patch Changes
 
-- ([#33346](https://github.com/RocketChat/Rocket.Chat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
+- ([#33346](https://github.com/YasChat/YasChat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
 
-- ([#33328](https://github.com/RocketChat/Rocket.Chat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
+- ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [3395c8290b, 6b5b91fd14, d1e14a0a85, 687f1efd5f, bcacbb1cee, b167db0b37, f4365b7dd4, b338807d76, bf05700542, debd3ffa22, 1bdfd201b1, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 81998f3450, 2bc9692de0, 50943a02e8, 509143d6dd, fa501ecb53]:</summary>
   - @rocket.chat/rest-typings@7.0.0
@@ -2208,9 +2208,9 @@
 
 ### Patch Changes
 
-- ([#33346](https://github.com/RocketChat/Rocket.Chat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
+- ([#33346](https://github.com/YasChat/YasChat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
 
-- ([#33328](https://github.com/RocketChat/Rocket.Chat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
+- ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [3395c8290b, 6b5b91fd14, 7726d68374, 687f1efd5f, bcacbb1cee, b167db0b37, f4365b7dd4, b338807d76, debd3ffa22, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 81998f3450, 50943a02e8, 509143d6dd, fa501ecb53]:</summary>
   - @rocket.chat/rest-typings@7.0.0-rc.0
@@ -2224,11 +2224,11 @@
 
 ### Minor Changes
 
-- ([#33011](https://github.com/RocketChat/Rocket.Chat/pull/33011)) Return `parent` and `team` information when calling `rooms.info` endpoint
+- ([#33011](https://github.com/YasChat/YasChat/pull/33011)) Return `parent` and `team` information when calling `rooms.info` endpoint
 
-- ([#33177](https://github.com/RocketChat/Rocket.Chat/pull/33177)) New `teams.listChildren` endpoint that allows users listing rooms & discussions from teams. Only the discussions from the team's main room are returned.
+- ([#33177](https://github.com/YasChat/YasChat/pull/33177)) New `teams.listChildren` endpoint that allows users listing rooms & discussions from teams. Only the discussions from the team's main room are returned.
 
-- ([#33225](https://github.com/RocketChat/Rocket.Chat/pull/33225)) Implemented new feature preview for Sidepanel
+- ([#33225](https://github.com/YasChat/YasChat/pull/33225)) Implemented new feature preview for Sidepanel
 
 ### Patch Changes
 
@@ -2310,11 +2310,11 @@
 
 ### Minor Changes
 
-- ([#33011](https://github.com/RocketChat/Rocket.Chat/pull/33011)) Return `parent` and `team` information when calling `rooms.info` endpoint
+- ([#33011](https://github.com/YasChat/YasChat/pull/33011)) Return `parent` and `team` information when calling `rooms.info` endpoint
 
-- ([#33177](https://github.com/RocketChat/Rocket.Chat/pull/33177)) New `teams.listChildren` endpoint that allows users listing rooms & discussions from teams. Only the discussions from the team's main room are returned.
+- ([#33177](https://github.com/YasChat/YasChat/pull/33177)) New `teams.listChildren` endpoint that allows users listing rooms & discussions from teams. Only the discussions from the team's main room are returned.
 
-- ([#33225](https://github.com/RocketChat/Rocket.Chat/pull/33225)) Implemented new feature preview for Sidepanel
+- ([#33225](https://github.com/YasChat/YasChat/pull/33225)) Implemented new feature preview for Sidepanel
 
 ### Patch Changes
 
@@ -2342,7 +2342,7 @@
 
 ### Minor Changes
 
-- ([#32868](https://github.com/RocketChat/Rocket.Chat/pull/32868)) Added `sidepanel` field to `teams.create` and `rooms.saveRoomSettings` endpoints
+- ([#32868](https://github.com/YasChat/YasChat/pull/32868)) Added `sidepanel` field to `teams.create` and `rooms.saveRoomSettings` endpoints
 
 ### Patch Changes
 
@@ -2424,7 +2424,7 @@
 
 ### Minor Changes
 
-- ([#32868](https://github.com/RocketChat/Rocket.Chat/pull/32868)) Added `sidepanel` field to `teams.create` and `rooms.saveRoomSettings` endpoints
+- ([#32868](https://github.com/YasChat/YasChat/pull/32868)) Added `sidepanel` field to `teams.create` and `rooms.saveRoomSettings` endpoints
 
 ### Patch Changes
 
@@ -2461,18 +2461,18 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier Rocket.Chat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier YasChat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/core-typings@6.11.0
@@ -2552,18 +2552,18 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier Rocket.Chat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier YasChat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/core-typings@6.11.0-rc.0
@@ -2577,13 +2577,13 @@
 
 ### Patch Changes
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
   - @rocket.chat/core-typings@6.10.2
@@ -2607,7 +2607,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2700,7 +2700,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2747,9 +2747,9 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
-- ([#32318](https://github.com/RocketChat/Rocket.Chat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
+- ([#32318](https://github.com/YasChat/YasChat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
 
 - <details><summary>Updated dependencies [ff4e396416, f83bd56cc5, ee5cdfc367, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0
@@ -2785,9 +2785,9 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
-- ([#32318](https://github.com/RocketChat/Rocket.Chat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
+- ([#32318](https://github.com/YasChat/YasChat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
 
 - <details><summary>Updated dependencies [ff4e396416, f83bd56cc5, ee5cdfc367, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0-rc.0
@@ -2801,11 +2801,11 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
-- ([#32230](https://github.com/RocketChat/Rocket.Chat/pull/32230)) Fixed a problem that caused OTR Session messages' to not being transmitted from one peer to another when running Rocket.Chat as microservices. This was caused by a legacy streamer that tried to use the websocket directly, which works on monolith but doesn't on microservices, cause these events are routed through DDP Streamer service.
+- ([#32230](https://github.com/YasChat/YasChat/pull/32230)) Fixed a problem that caused OTR Session messages' to not being transmitted from one peer to another when running YasChat as microservices. This was caused by a legacy streamer that tried to use the websocket directly, which works on monolith but doesn't on microservices, cause these events are routed through DDP Streamer service.
 
 - <details><summary>Updated dependencies [845fd64f45, c47a8e3514, 9a6a7d0a40, 845fd64f45, b94ca7c30b, 9902554388, 4aba7c8a26]:</summary>
   - @rocket.chat/rest-typings@6.8.0
@@ -2820,7 +2820,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -2846,7 +2846,7 @@
 
 ### Patch Changes
 
-- ([#32230](https://github.com/RocketChat/Rocket.Chat/pull/32230)) Fixed a problem that caused OTR Session messages' to not being transmitted from one peer to another when running Rocket.Chat as microservices. This was caused by a legacy streamer that tried to use the websocket directly, which works on monolith but doesn't on microservices, cause these events are routed through DDP Streamer service.
+- ([#32230](https://github.com/YasChat/YasChat/pull/32230)) Fixed a problem that caused OTR Session messages' to not being transmitted from one peer to another when running YasChat as microservices. This was caused by a legacy streamer that tried to use the websocket directly, which works on monolith but doesn't on microservices, cause these events are routed through DDP Streamer service.
 
 - <details><summary>Updated dependencies [845fd64f45, c47a8e3514, 9a6a7d0a40, 845fd64f45, 9902554388, 4aba7c8a26]:</summary>
   - @rocket.chat/rest-typings@6.8.0-rc.0
@@ -2881,7 +2881,7 @@
 
 ### Patch Changes
 
-- ([#31927](https://github.com/RocketChat/Rocket.Chat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
+- ([#31927](https://github.com/YasChat/YasChat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, d1b1ffe9e5, b9e897a8f5, 5ad65ff3da, e203c40471]:</summary>
   - @rocket.chat/core-typings@6.7.0
@@ -2940,7 +2940,7 @@
 
 ### Patch Changes
 
-- ([#31927](https://github.com/RocketChat/Rocket.Chat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
+- ([#31927](https://github.com/YasChat/YasChat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, d1b1ffe9e5, b9e897a8f5, 5ad65ff3da, e203c40471]:</summary>
   - @rocket.chat/core-typings@6.7.0-rc.0
@@ -2977,7 +2977,7 @@
 
 ### Patch Changes
 
-- ([#31927](https://github.com/RocketChat/Rocket.Chat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
+- ([#31927](https://github.com/YasChat/YasChat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@6.6.4
@@ -3023,11 +3023,11 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31349](https://github.com/RocketChat/Rocket.Chat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
+- ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
-- ([#31371](https://github.com/RocketChat/Rocket.Chat/pull/31371)) Fixed an issue that caused login buttons to not be reactively removed from the login page when the related authentication service was disabled by an admin.
+- ([#31371](https://github.com/YasChat/YasChat/pull/31371)) Fixed an issue that caused login buttons to not be reactively removed from the login page when the related authentication service was disabled by an admin.
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, 748e57984d, 7c6198f49f, fdd9852079, 2260c04ec6, b4b2cd20a8]:</summary>
   - @rocket.chat/ui-kit@0.33.0

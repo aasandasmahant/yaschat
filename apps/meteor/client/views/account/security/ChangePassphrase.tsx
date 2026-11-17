@@ -20,7 +20,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 
 import SecuritySection from './layout/SecuritySection';
-import { e2e } from '../../../lib/e2ee/rocketchat.e2e';
+import { e2e } from '../../../lib/e2ee/yaschat.e2e';
 import { useE2EEState } from '../../room/hooks/useE2EEState';
 
 const PASSPHRASE_POLICY = Object.freeze({

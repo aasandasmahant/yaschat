@@ -245,19 +245,19 @@ export const createRoom = async <T extends RoomType>(
 
 	if (!isValidName(name)) {
 		throw new ClientSafeError('error-invalid-name', 'Invalid name', {
-			function: 'RocketChat.createRoom',
+			function: 'YasChat.createRoom',
 		});
 	}
 
 	if (!owner) {
 		throw new ClientSafeError('error-invalid-user', 'Invalid user', {
-			function: 'RocketChat.createRoom',
+			function: 'YasChat.createRoom',
 		});
 	}
 
 	if (!owner?.username) {
 		throw new ClientSafeError('error-invalid-user', 'Invalid user', {
-			function: 'RocketChat.createRoom',
+			function: 'YasChat.createRoom',
 		});
 	}
 
@@ -313,7 +313,7 @@ export const createRoom = async <T extends RoomType>(
 	});
 
 	if (prevent) {
-		throw new ClientSafeError('error-app-prevented', 'A Rocket.Chat App prevented the room creation.');
+		throw new ClientSafeError('error-app-prevented', 'A YasChat App prevented the room creation.');
 	}
 
 	const eventResult = await Apps.self?.triggerEvent(

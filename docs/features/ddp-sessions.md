@@ -55,7 +55,7 @@ connected, logged in, activity, logged out, disconnected). Their consumers:
 
 - **Presence (EE):** a logged-in session is a presence connection of this instance, refreshed on activity and removed
   on logout or disconnection. The instance's connection count follows the sessions.
-- **Metrics:** `rocketchat_ddp_sessions_count`, `rocketchat_ddp_sessions_auth` and `rocketchat_ddp_connected_users`
+- **Metrics:** `yaschat_ddp_sessions_count`, `yaschat_ddp_sessions_auth` and `yaschat_ddp_connected_users`
   count these sessions.
 - **`RealtimeService`:** closes the sessions of a forced logout, keeps the login services and client versions the
   publications serve up to date, and terminates every session when the server stops.

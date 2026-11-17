@@ -37,7 +37,7 @@ const { executeDownloadPublicImportFile } = proxyquire.noCallThru().load('./down
 	'../../lib/authorization/hasPermission': { hasPermissionAsync: sinon.stub() },
 	'../../lib/deprecationWarningLogger': { methodDeprecationLogger: { method: sinon.stub() } },
 	'../../lib/import': { Importers: { get: stubs.importersGet } },
-	'../../lib/import/startup/store': { RocketChatImportFileInstance: { createWriteStream: stubs.createWriteStream } },
+	'../../lib/import/startup/store': { YasChatImportFileInstance: { createWriteStream: stubs.createWriteStream } },
 	'../../lib/logger/system': { SystemLogger: { error: stubs.systemLoggerError } },
 	'../../settings': { settings: { get: sinon.stub().returns('') } },
 	'../../../lib/importer/ImporterProgressStep': { ProgressStep: progressStep },

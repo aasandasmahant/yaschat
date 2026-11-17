@@ -26,7 +26,7 @@
 
 ### Patch Changes
 
-- ([#41548](https://github.com/RocketChat/Rocket.Chat/pull/41548)) Improves performance of several hot code paths without changing behavior: generates random IDs with a single `crypto.randomBytes` call instead of one per character, caches constant regular expressions used by the markdown/mention/autotranslate parsers instead of recompiling them for every message, skips the channel-mention database query for messages without channel mentions, deduplicates the room member count query when a message contains both `@all` and `@here`, and replaces linear array scans and spread-accumulators with Map/Set lookups in API response shaping (files, DM members, directory search and team listing).
+- ([#41548](https://github.com/YasChat/YasChat/pull/41548)) Improves performance of several hot code paths without changing behavior: generates random IDs with a single `crypto.randomBytes` call instead of one per character, caches constant regular expressions used by the markdown/mention/autotranslate parsers instead of recompiling them for every message, skips the channel-mention database query for messages without channel mentions, deduplicates the room member count query when a message contains both `@all` and `@here`, and replaces linear array scans and spread-accumulators with Map/Set lookups in API response shaping (files, DM members, directory search and team listing).
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
   - @rocket.chat/core-typings@8.9.0
@@ -37,7 +37,7 @@
 
 ### Patch Changes
 
-- ([#41548](https://github.com/RocketChat/Rocket.Chat/pull/41548)) Improves performance of several hot code paths without changing behavior: generates random IDs with a single `crypto.randomBytes` call instead of one per character, caches constant regular expressions used by the markdown/mention/autotranslate parsers instead of recompiling them for every message, skips the channel-mention database query for messages without channel mentions, deduplicates the room member count query when a message contains both `@all` and `@here`, and replaces linear array scans and spread-accumulators with Map/Set lookups in API response shaping (files, DM members, directory search and team listing).
+- ([#41548](https://github.com/YasChat/YasChat/pull/41548)) Improves performance of several hot code paths without changing behavior: generates random IDs with a single `crypto.randomBytes` call instead of one per character, caches constant regular expressions used by the markdown/mention/autotranslate parsers instead of recompiling them for every message, skips the channel-mention database query for messages without channel mentions, deduplicates the room member count query when a message contains both `@all` and `@here`, and replaces linear array scans and spread-accumulators with Map/Set lookups in API response shaping (files, DM members, directory search and team listing).
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
   - @rocket.chat/core-typings@8.9.0-rc.0
@@ -48,13 +48,13 @@
 
 ### Minor Changes
 
-- ([#40916](https://github.com/RocketChat/Rocket.Chat/pull/40916)) Adds a new `licenses.validate` REST endpoint that validates a Rocket.Chat license (V2 or V3 JWT) against the current workspace without applying it, so a license can be previewed before it is applied from the UI. A valid license responds with success; an invalid one responds with the validation behaviors that rejected it.
+- ([#40916](https://github.com/YasChat/YasChat/pull/40916)) Adds a new `licenses.validate` REST endpoint that validates a YasChat license (V2 or V3 JWT) against the current workspace without applying it, so a license can be previewed before it is applied from the UI. A valid license responds with success; an invalid one responds with the validation behaviors that rejected it.
 
-- ([#41148](https://github.com/RocketChat/Rocket.Chat/pull/41148)) Adds support for the `offline` license flag, suppressing every outbound connection to Rocket.Chat Cloud services and the Push Gateway at its source, so air-gapped workspaces never initiate calls that would violate their security compliance.
+- ([#41148](https://github.com/YasChat/YasChat/pull/41148)) Adds support for the `offline` license flag, suppressing every outbound connection to YasChat Cloud services and the Push Gateway at its source, so air-gapped workspaces never initiate calls that would violate their security compliance.
 
 ### Patch Changes
 
-- ([#41472](https://github.com/RocketChat/Rocket.Chat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
+- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17]:</summary>
   - @rocket.chat/core-typings@8.7.0
@@ -65,13 +65,13 @@
 
 ### Minor Changes
 
-- ([#40916](https://github.com/RocketChat/Rocket.Chat/pull/40916)) Adds a new `licenses.validate` REST endpoint that validates a Rocket.Chat license (V2 or V3 JWT) against the current workspace without applying it, so a license can be previewed before it is applied from the UI. A valid license responds with success; an invalid one responds with the validation behaviors that rejected it.
+- ([#40916](https://github.com/YasChat/YasChat/pull/40916)) Adds a new `licenses.validate` REST endpoint that validates a YasChat license (V2 or V3 JWT) against the current workspace without applying it, so a license can be previewed before it is applied from the UI. A valid license responds with success; an invalid one responds with the validation behaviors that rejected it.
 
-- ([#41148](https://github.com/RocketChat/Rocket.Chat/pull/41148)) Adds support for the `offline` license flag, suppressing every outbound connection to Rocket.Chat Cloud services and the Push Gateway at its source, so air-gapped workspaces never initiate calls that would violate their security compliance.
+- ([#41148](https://github.com/YasChat/YasChat/pull/41148)) Adds support for the `offline` license flag, suppressing every outbound connection to YasChat Cloud services and the Push Gateway at its source, so air-gapped workspaces never initiate calls that would violate their security compliance.
 
 ### Patch Changes
 
-- ([#41472](https://github.com/RocketChat/Rocket.Chat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
+- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17]:</summary>
   - @rocket.chat/core-typings@8.7.0-rc.0
@@ -136,7 +136,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/core-typings@8.3.0
@@ -185,7 +185,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/core-typings@8.3.0-rc.0
@@ -252,7 +252,7 @@
 
 ### Patch Changes
 
-- ([#37950](https://github.com/RocketChat/Rocket.Chat/pull/37950)) Fixes premium capability popup showing despite active enterprise license.
+- ([#37950](https://github.com/YasChat/YasChat/pull/37950)) Fixes premium capability popup showing despite active enterprise license.
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/core-typings@8.1.0
@@ -280,7 +280,7 @@
 
 ### Patch Changes
 
-- ([#37950](https://github.com/RocketChat/Rocket.Chat/pull/37950)) Fixes premium capability popup showing despite active enterprise license.
+- ([#37950](https://github.com/YasChat/YasChat/pull/37950)) Fixes premium capability popup showing despite active enterprise license.
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/core-typings@8.1.0-rc.0
@@ -492,7 +492,7 @@
 
 ### Minor Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 ### Patch Changes
 
@@ -567,7 +567,7 @@
 
 ### Minor Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 ### Patch Changes
 
@@ -1330,11 +1330,11 @@
 
 ### Major Changes
 
-- ([#33241](https://github.com/RocketChat/Rocket.Chat/pull/33241)) Adds restrictions to air-gapped environments without a license
+- ([#33241](https://github.com/YasChat/YasChat/pull/33241)) Adds restrictions to air-gapped environments without a license
 
 ### Minor Changes
 
-- ([#33433](https://github.com/RocketChat/Rocket.Chat/pull/33433)) Added support for interacting with add-ons issued in the license
+- ([#33433](https://github.com/YasChat/YasChat/pull/33433)) Added support for interacting with add-ons issued in the license
 
 ### Patch Changes
 
@@ -1401,11 +1401,11 @@
 
 ### Major Changes
 
-- ([#33241](https://github.com/RocketChat/Rocket.Chat/pull/33241)) Adds restrictions to air-gapped environments without a license
+- ([#33241](https://github.com/YasChat/YasChat/pull/33241)) Adds restrictions to air-gapped environments without a license
 
 ### Minor Changes
 
-- ([#33433](https://github.com/RocketChat/Rocket.Chat/pull/33433)) Added support for interacting with add-ons issued in the license
+- ([#33433](https://github.com/YasChat/YasChat/pull/33433)) Added support for interacting with add-ons issued in the license
 
 ### Patch Changes
 
@@ -1679,7 +1679,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1755,7 +1755,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1989,7 +1989,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fdd9852079, b4b2cd20a8]:</summary>
   - @rocket.chat/core-typings@6.6.0

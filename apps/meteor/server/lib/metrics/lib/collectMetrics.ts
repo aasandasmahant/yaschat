@@ -8,7 +8,7 @@ import client from 'prom-client';
 import gcStats from 'prometheus-gc-stats';
 
 import { metrics } from './metrics';
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { settings } from '../../../settings';
 import { SystemLogger } from '../../logger/system';
 import { getControl } from '../../migrations';
@@ -104,10 +104,10 @@ app.use('/metrics', (_req, res) => {
 app.use('/', (_req, res) => {
 	const html = `<html>
 		<head>
-			<title>Rocket.Chat Prometheus Exporter</title>
+			<title>YasChat Prometheus Exporter</title>
 		</head>
 		<body>
-			<h1>Rocket.Chat Prometheus Exporter</h1>
+			<h1>YasChat Prometheus Exporter</h1>
 			<p><a href="/metrics">Metrics</a></p>
 		</body>
 	</html>`;

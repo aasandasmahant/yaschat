@@ -18,7 +18,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'gcm',
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(200)
 				.expect((res) => {
@@ -35,7 +35,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(200)
 				.expect((res) => {
@@ -52,7 +52,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'gcm',
 					value: 'gcm-device-token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-token-rejected-for-gcm',
 				})
 				.expect(200)
@@ -70,7 +70,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-device-token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-token-kept-for-apn',
 				})
 				.expect(200)
@@ -88,7 +88,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-device-token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-token-to-be-dropped',
 				})
 				.expect(200);
@@ -99,7 +99,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-device-token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(200);
 
@@ -113,7 +113,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-echo-check',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-echo-check',
 				})
 				.expect(200)
@@ -128,7 +128,7 @@ describe('[Push]', () => {
 				request
 					.post(api('push.token'))
 					.set(credentials)
-					.send({ type: 'apn', value: 'apn-kept', appName: 'com.example.rocketchat', ...extra })
+					.send({ type: 'apn', value: 'apn-kept', appName: 'com.example.yaschat', ...extra })
 					.expect(200);
 
 			await send({ voipToken: 'voip-dropped-on-rereg' });
@@ -143,7 +143,7 @@ describe('[Push]', () => {
 				request
 					.post(api('push.token'))
 					.set(credentials)
-					.send({ type: 'apn', value: 'apn-twice', appName: 'com.example.rocketchat' })
+					.send({ type: 'apn', value: 'apn-twice', appName: 'com.example.yaschat' })
 					.expect(200);
 
 			await send();
@@ -157,13 +157,13 @@ describe('[Push]', () => {
 			await request
 				.post(api('push.token'))
 				.set(credentials)
-				.send({ type: 'apn', value: 'apn-before-rotation', appName: 'com.example.rocketchat', voipToken: 'voip-across-rotation' })
+				.send({ type: 'apn', value: 'apn-before-rotation', appName: 'com.example.yaschat', voipToken: 'voip-across-rotation' })
 				.expect(200);
 
 			await request
 				.post(api('push.token'))
 				.set(credentials)
-				.send({ type: 'apn', value: 'apn-after-rotation', appName: 'com.example.rocketchat', voipToken: 'voip-across-rotation' })
+				.send({ type: 'apn', value: 'apn-after-rotation', appName: 'com.example.yaschat', voipToken: 'voip-across-rotation' })
 				.expect(200);
 
 			await request.delete(api('push.token')).set(credentials).send({ token: 'apn-before-rotation' }).expect(404);
@@ -177,13 +177,13 @@ describe('[Push]', () => {
 			await request
 				.post(api('push.token'))
 				.set(credentials)
-				.send({ type: 'apn', value: 'apn-handed-over', appName: 'com.example.rocketchat' })
+				.send({ type: 'apn', value: 'apn-handed-over', appName: 'com.example.yaschat' })
 				.expect(200);
 
 			await request
 				.post(api('push.token'))
 				.set(otherCredentials)
-				.send({ type: 'apn', value: 'apn-handed-over', appName: 'com.example.rocketchat' })
+				.send({ type: 'apn', value: 'apn-handed-over', appName: 'com.example.yaschat' })
 				.expect(200);
 
 			await request.delete(api('push.token')).set(credentials).send({ token: 'apn-handed-over' }).expect(404);
@@ -198,7 +198,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'gcm',
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(401)
 				.expect((res) => {
@@ -213,7 +213,7 @@ describe('[Push]', () => {
 				.set(credentials)
 				.send({
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(400)
 				.expect((res) => {
@@ -229,7 +229,7 @@ describe('[Push]', () => {
 				.set(credentials)
 				.send({
 					type: 'gcm',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(400)
 				.expect((res) => {
@@ -262,7 +262,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'unknownPlatform',
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(400)
 				.expect((res) => {
@@ -278,7 +278,7 @@ describe('[Push]', () => {
 				.set(credentials)
 				.send({
 					type: 'gcm',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					value: '',
 				})
 				.expect(400)
@@ -352,7 +352,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'token',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 				})
 				.expect(200);
 
@@ -375,7 +375,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-device-retired',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-sibling-retired',
 				})
 				.expect(200);
@@ -392,7 +392,7 @@ describe('[Push]', () => {
 				.send({
 					type: 'apn',
 					value: 'apn-device-kept',
-					appName: 'com.example.rocketchat',
+					appName: 'com.example.yaschat',
 					voipToken: 'voip-only-deleted',
 				})
 				.expect(200);
@@ -424,7 +424,7 @@ describe('[Push]', () => {
 			await request
 				.post(api('push.token'))
 				.set(session)
-				.send({ type: 'apn', value: 'apn-session-scoped', appName: 'com.example.rocketchat', voipToken: 'voip-session-scoped' })
+				.send({ type: 'apn', value: 'apn-session-scoped', appName: 'com.example.yaschat', voipToken: 'voip-session-scoped' })
 				.expect(200);
 
 			await request.post(api('logout')).set(session).expect(200);

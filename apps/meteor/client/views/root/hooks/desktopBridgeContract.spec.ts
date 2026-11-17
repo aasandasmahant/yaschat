@@ -7,7 +7,7 @@ import { useDesktopBridgeContract } from './useDesktopBridgeContract';
 import { useDesktopOutlookCredentials } from './useDesktopOutlookCredentials';
 import { useDesktopUserLoggedIn } from './useDesktopUserLoggedIn';
 
-jest.mock('../../../../rocketchat.info', () => ({
+jest.mock('../../../../yaschat.info', () => ({
 	Info: { version: '9.0.0', commit: { hash: 'abc123' } },
 }));
 
@@ -38,7 +38,7 @@ const mockDesktop = () => {
 		setOutlookExchangeUrl: jest.fn(),
 		clearOutlookCredentials: jest.fn(),
 	};
-	Object.assign(window, { RocketChatDesktop: desktop });
+	Object.assign(window, { YasChatDesktop: desktop });
 	return desktop;
 };
 
@@ -47,7 +47,7 @@ afterEach(() => {
 	mockUser = null;
 	mockUserId = null;
 	jest.restoreAllMocks();
-	delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+	delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 });
 
 describe('useDesktopBridgeContract', () => {
@@ -63,7 +63,7 @@ describe('useDesktopBridgeContract', () => {
 
 	it('should still send the server build to desktop apps that predate the handshake', () => {
 		const { setWebClientBridgeVersion: _, ...desktop } = mockDesktop();
-		Object.assign(window, { RocketChatDesktop: desktop });
+		Object.assign(window, { YasChatDesktop: desktop });
 
 		renderHook(() => useDesktopBridgeContract(), { wrapper: mockAppRoot().build() });
 
@@ -274,7 +274,7 @@ describe('useDesktopOutlookCredentials', () => {
 
 	it('should skip the Outlook calls quietly on desktop apps that predate the Outlook integration', () => {
 		const { setUserToken: _token, setOutlookExchangeUrl: _url, clearOutlookCredentials: _clear, ...desktop } = mockDesktop();
-		Object.assign(window, { RocketChatDesktop: desktop });
+		Object.assign(window, { YasChatDesktop: desktop });
 		const warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
 		mockUser = outlookUser(true);
 

@@ -37,7 +37,7 @@ const withDisplayName = (callUrl: string, displayName?: string): string => {
 
 	try {
 		// No base: a provider's url is absolute, and resolving a relative one against *our* origin would hand the
-		// call window a Rocket.Chat address instead of failing at naming, which is the harmless outcome.
+		// call window a YasChat address instead of failing at naming, which is the harmless outcome.
 		const url = new URL(callUrl);
 		url.searchParams.set('name', displayName);
 		return url.toString();
@@ -283,7 +283,7 @@ export const useConferenceEmbedded = (callId: string) => {
 				wasRung: !!ownMember?.ringingAt,
 			}),
 			/**
-			 * A provider that runs the call inside Rocket.Chat rather than at a URL of its own. The server says so
+			 * A provider that runs the call inside YasChat rather than at a URL of its own. The server says so
 			 * by answering the join with an empty url — there is no page to send anyone to — so that is what this
 			 * reads, rather than a second capability the two sides would have to keep in step.
 			 *

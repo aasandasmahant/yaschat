@@ -22,7 +22,7 @@ tests:
 
 ## Summary
 
-Rocket.Chat accepts server-to-server connections from other XMPP servers and opens
+YasChat accepts server-to-server connections from other XMPP servers and opens
 connections to them on demand, authenticates the remote domain on every connection, and only
 dispatches stanzas whose origin was authenticated. Everything else in this package rides on
 these streams.
@@ -102,7 +102,7 @@ spoof check, domain lists) and the authentication (STARTTLS, SASL EXTERNAL, dial
   stream (RFC 6120 §8.1.2.2: the `from` domain must be one the sending server validated).
 - **R16** After three consecutive failed connection attempts to a remote domain, every stanza
   queued for it MUST be rejected with the connection failure, alongside R10's
-  `connection.failed`. The limit is a Rocket.Chat choice, not a protocol rule.
+  `connection.failed`. The limit is a YasChat choice, not a protocol rule.
 - **R18** Stopping the server ends each outbound stream with the closing
   `</stream:stream>` (RFC 6120 §4.4), after everything already written to it, so a stanza
   whose send resolved is not lost to the stop.
@@ -134,7 +134,7 @@ The dialback secret is generated at start and never persisted
 
 ## Out of scope
 
-- Client-to-server connections, BOSH, WebSocket. Rocket.Chat clients are not XMPP clients.
+- Client-to-server connections, BOSH, WebSocket. YasChat clients are not XMPP clients.
 - Direct TLS, XEP-0368 ([ADR 0004](../adr/0004-starttls-required-sasl-external-preferred-dialback-fallback.md)).
 - Bidirectional streams (XEP-0288): each direction is its own connection.
 - Stream management (XEP-0198): no acknowledgements, no resumption. Pending triage in

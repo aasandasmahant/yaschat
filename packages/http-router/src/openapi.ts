@@ -135,7 +135,7 @@ const SUCCESS_RESPONSE_REF = { $ref: '#/components/schemas/ApiSuccessV1' } as co
 export const openAPIErrorComponents: Record<string, AnySchema> = {
 	ApiSuccessV1: {
 		type: 'object',
-		description: 'Rocket.Chat REST API success payload whose shape is not documented yet',
+		description: 'YasChat REST API success payload whose shape is not documented yet',
 		properties: {
 			success: { type: 'boolean', enum: [true] },
 		},
@@ -143,7 +143,7 @@ export const openAPIErrorComponents: Record<string, AnySchema> = {
 	},
 	ApiFailureV1: {
 		type: 'object',
-		description: 'Standard Rocket.Chat REST API error payload',
+		description: 'Standard YasChat REST API error payload',
 		properties: {
 			success: { type: 'boolean', enum: [false] },
 			error: { type: 'string', example: 'error-invalid-params' },

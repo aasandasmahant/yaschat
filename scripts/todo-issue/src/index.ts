@@ -13,8 +13,8 @@ function loadConfig(): Config {
 
 	return {
 		token,
-		owner: process.env.GITHUB_REPOSITORY_OWNER || 'RocketChat',
-		repo: process.env.GITHUB_REPOSITORY_NAME || 'Rocket.Chat',
+		owner: process.env.GITHUB_REPOSITORY_OWNER || 'YasChat',
+		repo: process.env.GITHUB_REPOSITORY_NAME || 'YasChat',
 		importAll: process.env.IMPORT_ALL === 'true',
 		shaInput: process.env.SHA_INPUT || '',
 		pathFilter: process.env.PATH_FILTER || '',

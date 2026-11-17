@@ -3,7 +3,7 @@ import type {
 	IAuditServerActor,
 	IServerEvent,
 	IServerEvents,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import { ServerEventType } from '@rocket.chat/core-typings';
 import type { InsertionModel, IServerEventsModel } from '@rocket.chat/model-typings';
@@ -12,7 +12,7 @@ import type { Collection, Db, IndexDescription } from 'mongodb';
 import { BaseRaw } from './BaseRaw';
 
 export class ServerEventsRaw extends BaseRaw<IServerEvent> implements IServerEventsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IServerEvent>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IServerEvent>>) {
 		super(db, 'server_events', trash);
 	}
 

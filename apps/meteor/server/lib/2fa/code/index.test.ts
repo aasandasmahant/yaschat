@@ -143,7 +143,7 @@ describe('checkCodeForUser - remembered two-factor authorization', () => {
 	const browserConnection = {
 		id: 'connection-id',
 		clientAddress: '10.0.0.1',
-		httpHeaders: { 'user-agent': 'Mozilla/5.0 Rocket.Chat test browser' },
+		httpHeaders: { 'user-agent': 'Mozilla/5.0 YasChat test browser' },
 	} as any;
 
 	// Registered long before the post-registration grace window; TOTP is enabled through the mocked check.

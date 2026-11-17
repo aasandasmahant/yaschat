@@ -1,16 +1,16 @@
 import { settings } from '../../../settings';
-import { RocketChatFile } from '../../media/file';
+import { YasChatFile } from '../../media/file';
 
-const RocketChatStore = RocketChatFile.FileSystem;
+const YasChatStore = YasChatFile.FileSystem;
 
-let path = '/tmp/rocketchat-importer';
+let path = '/tmp/yaschat-importer';
 if (settings.get('ImportFile_FileSystemPath') != null) {
 	if (settings.get('ImportFile_FileSystemPath').trim() !== '') {
 		path = settings.get('ImportFile_FileSystemPath');
 	}
 }
 
-export const RocketChatImportFileInstance = new RocketChatStore({
+export const YasChatImportFileInstance = new YasChatStore({
 	name: 'import_files',
 	absolutePath: path,
 });

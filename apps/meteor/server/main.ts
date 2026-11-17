@@ -17,7 +17,7 @@ import { settings } from './settings';
 import { startup } from './startup';
 import { startCronJobs } from './startup/cron';
 import { startupApp } from '../ee/server';
-import { startRocketChat } from '../startRocketChat';
+import { startYasChat } from '../startYasChat';
 
 import './routes';
 import './lib/realtime/routes';
@@ -32,7 +32,7 @@ import './features/EmailInbox/index';
 try {
 	await Promise.all([configureServer(settings), registerServices(), startup()]);
 
-	await startRocketChat();
+	await startYasChat();
 
 	setImmediate(() => {
 		startCronJobs().catch((err) => {

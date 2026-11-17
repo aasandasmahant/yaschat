@@ -1,12 +1,12 @@
 # `@rocket.chat/fuselage-tokens`
 
-> Design tokens for Fuselage, Rocket.Chat's design system, as JSON and SCSS.
+> Design tokens for Fuselage, YasChat's design system, as JSON and SCSS.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-tokens) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-tokens)
 
-The colors, typography, breakpoints, border and spacing values that Fuselage and the Rocket.Chat clients are styled with. They are defined once and built with [Style Dictionary](https://styledictionary.com/) into JSON files (with TypeScript declarations) and SCSS maps.
+The colors, typography, breakpoints, border and spacing values that Fuselage and the YasChat clients are styled with. They are defined once and built with [Style Dictionary](https://styledictionary.com/) into JSON files (with TypeScript declarations) and SCSS maps.
 
-Use this package when you need Rocket.Chat's design values outside of Fuselage's React components: charts, emails, PDFs, native code, or your own stylesheets. If you use `@rocket.chat/fuselage`, its `Box` props and `Palette` already read from these tokens.
+Use this package when you need YasChat's design values outside of Fuselage's React components: charts, emails, PDFs, native code, or your own stylesheets. If you use `@rocket.chat/fuselage`, its `Box` props and `Palette` already read from these tokens.
 
 ## Installation
 
@@ -90,7 +90,7 @@ In the JSON files, sizes are plain numbers in pixels and colors are hex strings.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage-tokens). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-tokens). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/fuselage-tokens build
@@ -102,4 +102,4 @@ Token sources live in `src/` as Style Dictionary JSON. `build.js` and `config.js
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -8,7 +8,7 @@ it.each([
 	'zoommtg://zoom.us/join?confno=123',
 	'msteams:/l/meetup-join/abc',
 	'sip:alice@example.com',
-	'rocketchat://room?host=open.rocket.chat&rid=GENERAL',
+	'yaschat://room?host=open.rocket.chat&rid=GENERAL',
 	'//cdn.example.com/file.pdf',
 	'/admin/apps',
 	'admin/apps',

@@ -15,7 +15,7 @@ accepts everything and falls behind silently ([operations.md](../operations.md#o
 ## Proposed outcome
 
 The server's capacity in each dimension below, measured by a repeatable load test and
-published as the numbers Rocket.Chat states:
+published as the numbers YasChat states:
 
 - concurrent S2S connections and federation peers;
 - concurrent federated identities;
@@ -60,7 +60,7 @@ does not delay or corrupt another's traffic.
   Adding HA is too complex for the value it brings.
 - Back-pressure acts per inbound stream: handlers run through a bounded, ordered queue per
   stream, and the socket stops reading at a high watermark and resumes at a low one, the
-  way ejabberd and Prosody throttle peers. When the global limit on Rocket.Chat-side
+  way ejabberd and Prosody throttle peers. When the global limit on YasChat-side
   handlers is reached, only streams holding more than their share of in-flight handlers
   pause; a peer within its share keeps being read. Outbound writes wait for the socket to
   drain, and a peer that never drains is closed. `resource-constraint` (type `wait`) answers only IQ get and set when the global

@@ -66,7 +66,7 @@ export type DesktopWindowEvent =
 	| 'Custom_Script_Logged_In'
 	| 'Custom_Script_Logged_Out';
 
-export interface IRocketChatDesktop {
+export interface IYasChatDesktop {
 	/** Announces which version of this contract the web client implements (see `WebClientBridgeVersion`). */
 	setWebClientBridgeVersion?: (version: WebClientBridgeVersion) => void;
 	/** Whether the user wants the unread indicator in the badge (the `unreadAlert` preference). */
@@ -114,7 +114,7 @@ export interface IRocketChatDesktop {
 	getE2ePdfPreviewSizeLimit: () => number;
 	openInBrowser: (url: string) => void;
 	/**
-	 * Present only in the desktop app's video call window (4.18 and later), whose `RocketChatDesktop` carries this and
+	 * Present only in the desktop app's video call window (4.18 and later), whose `YasChatDesktop` carries this and
 	 * nothing of the main window's but no-op setters.
 	 */
 	videoCall?: IVideoCallWindow;

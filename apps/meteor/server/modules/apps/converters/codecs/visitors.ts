@@ -5,7 +5,7 @@ import * as z from 'zod';
 import { mappedDecode } from './mappedData';
 
 /**
- * Rocket.Chat `ILivechatVisitor` <-> Apps-Engine `IAppsVisitor`.
+ * YasChat `ILivechatVisitor` <-> Apps-Engine `IAppsVisitor`.
  *
  * `decode` is a plain field-rename with an `_unmappedProperties_` bucket (mirrors the legacy
  * `convertVisitor`). `encode` is bespoke: it mirrors `convertAppVisitor`, which defaults `status`,

@@ -7,7 +7,7 @@ import { xml } from '../xml/build';
 import { buildReplace, parseReplaceId } from '../xml/correction';
 import { NS_MUC, NS_MUC_USER, NS_OCCUPANT_ID, NS_SID } from '../xml/namespaces';
 
-const REMOTE_RESOURCE = 'rocketchat';
+const REMOTE_RESOURCE = 'yaschat';
 
 export type RemoteMucSessionState = 'joining' | 'joined' | 'leaving' | 'closed';
 
@@ -35,7 +35,7 @@ export type RemoteMucSessionDeps = {
 	}) => void;
 };
 
-/** The client side of joining a MUC hosted on a remote server, on behalf of a local Rocket.Chat user. */
+/** The client side of joining a MUC hosted on a remote server, on behalf of a local YasChat user. */
 export class RemoteMucSession {
 	state: RemoteMucSessionState = 'closed';
 

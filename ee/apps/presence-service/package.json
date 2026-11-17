@@ -2,11 +2,11 @@
 	"name": "@rocket.chat/presence-service",
 	"version": "0.6.3",
 	"private": true,
-	"description": "Rocket.Chat Presence service",
+	"description": "YasChat Presence service",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/ee/apps/presence-service/src/service.js",
 	"files": [
 		"/dist"

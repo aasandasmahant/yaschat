@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, LivechatDepartmentDTO, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment, LivechatDepartmentDTO, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import { escapeRegExp } from '@rocket.chat/tools';
 import type { Collection, FindCursor, Db, Filter, FindOptions, UpdateResult, Document, IndexDescription, AggregationCursor } from 'mongodb';
@@ -7,7 +7,7 @@ import { LivechatDepartmentAgents, LivechatUnitMonitors } from '../index';
 import { BaseRaw } from './BaseRaw';
 
 export class LivechatDepartmentRaw extends BaseRaw<ILivechatDepartment> implements ILivechatDepartmentModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatDepartment>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatDepartment>>) {
 		super(db, 'livechat_department', trash);
 	}
 

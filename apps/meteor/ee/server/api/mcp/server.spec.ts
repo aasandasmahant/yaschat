@@ -73,7 +73,7 @@ describe('MCP JSON-RPC server', () => {
 			result: {
 				protocolVersion: '2025-06-18',
 				capabilities: { tools: { listChanged: false } },
-				serverInfo: { name: 'rocketchat', version: '9.0' },
+				serverInfo: { name: 'yaschat', version: '9.0' },
 			},
 		});
 	});

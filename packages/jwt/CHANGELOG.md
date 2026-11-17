@@ -4,43 +4,43 @@
 
 ### Minor Changes
 
-- ([#42439](https://github.com/RocketChat/Rocket.Chat/pull/42439)) Adds LiveKit as a built-in video conference provider (alpha, off by default), configurable under Video Conference settings with a server URL, API key and secret. It is offered only while the conference window is enabled, since its calls run there, and only with the new `video-conference-native` license add-on.
+- ([#42439](https://github.com/YasChat/YasChat/pull/42439)) Adds LiveKit as a built-in video conference provider (alpha, off by default), configurable under Video Conference settings with a server URL, API key and secret. It is offered only while the conference window is enabled, since its calls run there, and only with the new `video-conference-native` license add-on.
 
 ## 0.3.0-rc.0
 
 ### Minor Changes
 
-- ([#42439](https://github.com/RocketChat/Rocket.Chat/pull/42439)) Adds LiveKit as a built-in video conference provider (alpha, off by default), configurable under Video Conference settings with a server URL, API key and secret. It is offered only while the conference window is enabled, since its calls run there, and only with the new `video-conference-native` license add-on.
+- ([#42439](https://github.com/YasChat/YasChat/pull/42439)) Adds LiveKit as a built-in video conference provider (alpha, off by default), configurable under Video Conference settings with a server URL, API key and secret. It is offered only while the conference window is enabled, since its calls run there, and only with the new `video-conference-native` license add-on.
 
 ## 0.2.1
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.2.1-rc.0
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.2.0
 
 ### Minor Changes
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ## 0.2.0-rc.0
 
 ### Minor Changes
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ## 0.1.1
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 ## 0.1.1-rc.0
 

@@ -15,7 +15,7 @@ import { roomCoordinator } from '../roomCoordinator';
 export const assertAbacRoomStaysPrivate = (room: Pick<IRoom, 't' | 'abacAttributes'>, roomType: IRoom['t']): void => {
 	if (isPublicRoom({ t: roomType }) && isABACManagedRoom(room)) {
 		throw new ClientSafeError('error-action-not-allowed', 'Changing an ABAC managed private room to public is not allowed', {
-			function: 'RocketChat.saveRoomType',
+			function: 'YasChat.saveRoomType',
 			action: 'Change_Room_Type',
 		});
 	}
@@ -29,21 +29,21 @@ export const saveRoomType = async function (
 ): Promise<UpdateResult | Document> {
 	if (roomType !== 'c' && roomType !== 'p') {
 		throw new ClientSafeError('error-invalid-room-type', 'error-invalid-room-type', {
-			function: 'RocketChat.saveRoomType',
+			function: 'YasChat.saveRoomType',
 			type: roomType,
 		});
 	}
 	const room = await Rooms.findOneById(rid);
 	if (room == null) {
 		throw new ClientSafeError('error-invalid-room', 'error-invalid-room', {
-			function: 'RocketChat.saveRoomType',
+			function: 'YasChat.saveRoomType',
 			_id: rid,
 		});
 	}
 
 	if (!(await roomCoordinator.getRoomDirectives(room.t)?.allowRoomSettingChange(room, RoomSettingsEnum.TYPE))) {
 		throw new ClientSafeError('error-direct-room', "Can't change type of direct rooms", {
-			function: 'RocketChat.saveRoomType',
+			function: 'YasChat.saveRoomType',
 		});
 	}
 

@@ -737,7 +737,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 			let federatedRoomId: IRoom['_id'];
 			let discussionId: IRoom['_id'];
 
-			const rooms = () => connection.db().collection<Pick<IRoom, '_id' | 'federated' | 'abacAttributes'>>('rocketchat_room');
+			const rooms = () => connection.db().collection<Pick<IRoom, '_id' | 'federated' | 'abacAttributes'>>('yaschat_room');
 
 			before(async () => {
 				parentRoomId = (await createRoom({ type: 'p', name: `abac-parent-${Date.now()}` })).body.group._id;
@@ -4307,7 +4307,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 
 					await storeConnection
 						.db()
-						.collection('rocketchat_room')
+						.collection('yaschat_room')
 						.updateOne({ _id: room._id as any }, { $set: { abacAttributes: [{ key: 'clearance', values: ['secret'] }] } });
 				},
 				{ timeout: 20000 },
@@ -4656,7 +4656,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 				const room = (await createRoom({ type: 'p', name: `vstore-bypass-mod-${Date.now()}` })).body.group;
 				await storeConnection
 					.db()
-					.collection('rocketchat_room')
+					.collection('yaschat_room')
 					.updateOne({ _id: room._id as any }, { $set: { abacAttributes: [{ key: 'clearance', values: ['secret'] }] } });
 
 				await mockServerReset();
@@ -4685,7 +4685,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 
 					await storeConnection
 						.db()
-						.collection('rocketchat_room')
+						.collection('yaschat_room')
 						.updateOne({ _id: room._id as any }, { $set: { abacAttributes: [{ key: 'clearance', values: ['secret'] }] } });
 				},
 				{ timeout: 15000 },
@@ -4825,7 +4825,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 
 					await storeConnection
 						.db()
-						.collection('rocketchat_room')
+						.collection('yaschat_room')
 						.updateOne({ _id: room._id as any }, { $set: { abacAttributes: [{ key: 'clearance', values: ['secret'] }] } });
 				},
 				{ timeout: 15000 },
@@ -4939,7 +4939,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 			it('switching ABAC_Attribute_Store local → virtru wipes abacAttributes from existing rooms', { timeout: 20000 }, async () => {
 				await updateSetting('ABAC_Attribute_Store', 'virtru');
 
-				const rooms = storeConnection.db().collection('rocketchat_room');
+				const rooms = storeConnection.db().collection('yaschat_room');
 				let r1: any = null;
 				let r2: any = null;
 				for (let i = 0; i < 30; i++) {

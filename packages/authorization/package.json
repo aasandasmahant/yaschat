@@ -2,7 +2,7 @@
 	"name": "@rocket.chat/authorization",
 	"version": "0.0.3",
 	"private": true,
-	"description": "Rocket.Chat Authorization service",
+	"description": "YasChat Authorization service",
 	"main": "./dist/Authorization.js",
 	"types": "./dist/Authorization.d.ts",
 	"files": [

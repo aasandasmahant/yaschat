@@ -1,10 +1,10 @@
 # `@rocket.chat/apps-engine`
 
-> The public API and TypeScript definitions for building Rocket.Chat Apps.
+> The public API and TypeScript definitions for building YasChat Apps.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/apps-engine) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/apps-engine)
 
-The Apps-Engine is Rocket.Chat's plugin framework. This package holds the surface an App is written against: the `App` base class, the event handler interfaces, the accessors an App uses to read and change the workspace, and the related types and enums. The Rocket.Chat server loads your App, calls its handlers and hands it implementations of these accessors.
+The Apps-Engine is YasChat's plugin framework. This package holds the surface an App is written against: the `App` base class, the event handler interfaces, the accessors an App uses to read and change the workspace, and the related types and enums. The YasChat server loads your App, calls its handlers and hands it implementations of these accessors.
 
 With it, an App can:
 
@@ -13,7 +13,7 @@ With it, an App can:
 - send messages, create rooms and discussions, and open UiKit modals, banners and contextual bars;
 - store data in a per-App key-value persistence and make outbound HTTP requests.
 
-The package only ships definitions. The code that installs and runs Apps lives inside Rocket.Chat itself.
+The package only ships definitions. The code that installs and runs Apps lives inside YasChat itself.
 
 ## Installation
 
@@ -31,7 +31,7 @@ npm install @rocket.chat/apps-engine @rocket.chat/ui-kit
 
 ## Usage
 
-An App is a class that extends `App`, plus an `app.json` manifest that points to it. Apps are usually scaffolded, packaged and deployed with the Rocket.Chat Apps CLI (`rc-apps`), which sets up this package for you. See the [Rocket.Chat developer documentation](https://developer.rocket.chat/) for the full workflow.
+An App is a class that extends `App`, plus an `app.json` manifest that points to it. Apps are usually scaffolded, packaged and deployed with the YasChat Apps CLI (`rc-apps`), which sets up this package for you. See the [YasChat developer documentation](https://developer.rocket.chat/) for the full workflow.
 
 ### The App class
 
@@ -124,7 +124,7 @@ export class HelloCommand implements ISlashCommand {
 
 ### The manifest
 
-`app.json` describes the App. The Apps CLI generates it; the schema lives in [`definition/app-schema.json`](https://github.com/RocketChat/Rocket.Chat/blob/develop/packages/apps-engine/src/definition/app-schema.json).
+`app.json` describes the App. The Apps CLI generates it; the schema lives in [`definition/app-schema.json`](https://github.com/YasChat/YasChat/blob/develop/packages/apps-engine/src/definition/app-schema.json).
 
 ```json
 {
@@ -175,7 +175,7 @@ Each directory under `definition/` is a module you can import. The main ones:
 | `definition/App`           | `App`, the abstract base class for every App                                                                                                                                   |
 | `definition/AppStatus`     | `AppStatus` enum and `AppStatusUtils`                                                                                                                                          |
 | `definition/accessors`     | Accessor interfaces: `IRead`, `IModify`, `IHttp`, `IPersistence`, `IConfigurationExtend`, `IEnvironmentRead`, `ILogger`, builders such as `IMessageBuilder` and `IRoomBuilder` |
-| `definition/metadata`      | `IAppInfo`, `IAppAuthorInfo`, `AppInterface`, `AppMethod`, `AppPermissions`, `RocketChatAssociationModel`, `RocketChatAssociationRecord`                                       |
+| `definition/metadata`      | `IAppInfo`, `IAppAuthorInfo`, `AppInterface`, `AppMethod`, `AppPermissions`, `YasChatAssociationModel`, `YasChatAssociationRecord`                                       |
 | `definition/messages`      | `IMessage`, attachments, reactions and the message event handlers (`IPreMessageSentPrevent`, `IPostMessageSent`, ...)                                                          |
 | `definition/rooms`         | `IRoom`, `RoomType` and the room event handlers                                                                                                                                |
 | `definition/users`         | `IUser` types and the user event handlers                                                                                                                                      |
@@ -193,7 +193,7 @@ The other directories (`uploads`, `email`, `videoConferences`, `videoConfProvide
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/apps-engine). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/apps-engine). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/apps-engine build
@@ -205,14 +205,14 @@ yarn workspace @rocket.chat/apps-engine gen-doc
 
 `build` compiles `src/` into `definition/` at the package root, which is what gets published. `dev` does the same in watch mode. `typecheck` also checks the type tests in `tests/`. `gen-doc` generates API documentation with TypeDoc into `docs/`.
 
-### Working with a local Rocket.Chat
+### Working with a local YasChat
 
-The Rocket.Chat app in `apps/meteor` depends on this package through the workspace, so it always uses your local copy. Run `build` (or keep `dev` running) after changing the definitions, then restart the server if it does not pick up the change.
+The YasChat app in `apps/meteor` depends on this package through the workspace, so it always uses your local copy. Run `build` (or keep `dev` running) after changing the definitions, then restart the server if it does not pick up the change.
 
 ### Scope of this package
 
-Only the public surface that Apps use belongs here. Server-side App management lives in the private `@rocket.chat/apps` package. See [docs/apps-engine-migration.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/apps-engine-migration.md) for the background.
+Only the public surface that Apps use belongs here. Server-side App management lives in the private `@rocket.chat/apps` package. See [docs/apps-engine-migration.md](https://github.com/YasChat/YasChat/blob/develop/docs/apps-engine-migration.md) for the background.
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

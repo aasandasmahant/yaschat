@@ -3176,7 +3176,7 @@ describe('[Users]', () => {
 			await retry('wait for the user.changed audit event', async () => {
 				const event = await withDatabase((db) =>
 					db
-						.collection('rocketchat_server_events')
+						.collection('yaschat_server_events')
 						.findOne({ t: 'user.changed', data: { $elemMatch: { 'key': 'operation', 'value.$set.username': username } } }),
 				);
 				expect(event).to.not.be.null;
@@ -7357,7 +7357,7 @@ describe('[Users]', () => {
 	describe('[/twoFactorChallenges.verifyChallenge]', () => {
 		const insertChallenge = (challenge: Record<string, unknown>) =>
 			withDatabase((db) =>
-				db.collection('rocketchat_two_factor_challenges').insertOne({
+				db.collection('yaschat_two_factor_challenges').insertOne({
 					userId: credentials['X-User-Id'],
 					method: 'email',
 					createdAt: new Date(),

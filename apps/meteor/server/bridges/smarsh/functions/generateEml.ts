@@ -132,7 +132,7 @@ export const generateEml = async (): Promise<void> => {
 
 				await sendEmail({
 					body: result,
-					subject: `Rocket.Chat, ${data.users.length} Users, ${data.msgs} Messages, ${data.files.length} Files, ${data.time} Minutes, in ${data.room}`,
+					subject: `YasChat, ${data.users.length} Users, ${data.msgs} Messages, ${data.files.length} Files, ${data.time} Minutes, in ${data.room}`,
 					files: data.files,
 				});
 			}

@@ -158,7 +158,7 @@ export default class RocketAdapter {
 					continue;
 				}
 
-				// A new message from Rocket.Chat
+				// A new message from YasChat
 				await this.processSendMessage(rocketMessage, slack);
 			} catch (err) {
 				rocketLogger.error({ msg: 'Unhandled error onMessage', err });
@@ -224,7 +224,7 @@ export default class RocketAdapter {
 				return;
 			}
 
-			// This was a change from Rocket.Chat
+			// This was a change from YasChat
 			const slackChannel = slack.getSlackChannel(rocketMessage.rid);
 			await slack.postMessageUpdate(slackChannel, rocketMessage);
 		}
@@ -264,7 +264,7 @@ export default class RocketAdapter {
 	}
 
 	async addChannel(slackChannelID, hasRetried = false) {
-		rocketLogger.debug({ msg: 'Adding Rocket.Chat channel from Slack', slackChannelID });
+		rocketLogger.debug({ msg: 'Adding YasChat channel from Slack', slackChannelID });
 		let addedRoom;
 
 		for await (const slack of this.slackAdapters) {
@@ -347,7 +347,7 @@ export default class RocketAdapter {
 	}
 
 	async addUser(slackUserID) {
-		rocketLogger.debug({ msg: 'Adding Rocket.Chat user from Slack', slackUserID });
+		rocketLogger.debug({ msg: 'Adding YasChat user from Slack', slackUserID });
 		let addedUser;
 		for await (const slack of this.slackAdapters) {
 			if (addedUser) {
@@ -386,7 +386,7 @@ export default class RocketAdapter {
 
 					rocketUserData.rocketId = await Accounts.createUserAsync(newUser);
 					const userUpdate = {
-						utcOffset: rocketUserData.tz_offset / 3600, // Slack's is -18000 which translates to Rocket.Chat's after dividing by 3600,
+						utcOffset: rocketUserData.tz_offset / 3600, // Slack's is -18000 which translates to YasChat's after dividing by 3600,
 						roles: isBot ? ['bot'] : ['user'],
 					};
 
@@ -507,7 +507,7 @@ export default class RocketAdapter {
 					}
 				}, 500);
 			} else {
-				rocketLogger.debug('Send message to Rocket.Chat');
+				rocketLogger.debug('Send message to YasChat');
 				await sendMessage(rocketUser, rocketMsgObj, rocketChannel, { upsert: true });
 			}
 		}

@@ -4,12 +4,12 @@ import type { ILivechatPriority } from './ILivechatPriority';
 import type { ILivechatVisitor } from './ILivechatVisitor';
 import type { IMessage, MessageTypesValues } from './IMessage';
 import type { IOmnichannelServiceLevelAgreements } from './IOmnichannelServiceLevelAgreements';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IUser } from './IUser';
 import type { RoomType } from './RoomType';
 import type { Branded } from './utils';
 
-export interface IRoom extends IRocketChatRecord {
+export interface IRoom extends IYasChatRecord {
 	t: RoomType;
 	name?: string;
 	fname?: string;

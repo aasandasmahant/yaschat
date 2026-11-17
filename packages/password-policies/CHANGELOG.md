@@ -4,31 +4,31 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.1.1-rc.0
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.1.0
 
 ### Minor Changes
 
-- ([#37327](https://github.com/RocketChat/Rocket.Chat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
+- ([#37327](https://github.com/YasChat/YasChat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
 
 ## 0.1.0-rc.0
 
 ### Minor Changes
 
-- ([#37327](https://github.com/RocketChat/Rocket.Chat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
+- ([#37327](https://github.com/YasChat/YasChat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
 
 ## 0.0.2
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 ## 0.0.2-rc.0
 

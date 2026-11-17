@@ -10,7 +10,7 @@ import type { IUploadCreator } from '@rocket.chat/apps-engine/definition/accesso
 import type { IUserBuilder } from '@rocket.chat/apps-engine/definition/accessors/IUserBuilder';
 import type { IVideoConferenceBuilder } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceBuilder';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
 import type { IBotUser } from '@rocket.chat/apps-engine/definition/users/IBotUser';
@@ -122,17 +122,17 @@ export class ModifyCreator implements IModifyCreator {
 		builder: IMessageBuilder | ILivechatMessageBuilder | IRoomBuilder | IDiscussionBuilder | IVideoConferenceBuilder | IUserBuilder,
 	): Promise<string> {
 		switch (builder.kind) {
-			case RocketChatAssociationModel.MESSAGE:
+			case YasChatAssociationModel.MESSAGE:
 				return this._finishMessage(builder as IMessageBuilder);
-			case RocketChatAssociationModel.LIVECHAT_MESSAGE:
+			case YasChatAssociationModel.LIVECHAT_MESSAGE:
 				return this._finishLivechatMessage(builder as ILivechatMessageBuilder);
-			case RocketChatAssociationModel.ROOM:
+			case YasChatAssociationModel.ROOM:
 				return this._finishRoom(builder as IRoomBuilder);
-			case RocketChatAssociationModel.DISCUSSION:
+			case YasChatAssociationModel.DISCUSSION:
 				return this._finishDiscussion(builder as DiscussionBuilder);
-			case RocketChatAssociationModel.VIDEO_CONFERENCE:
+			case YasChatAssociationModel.VIDEO_CONFERENCE:
 				return this._finishVideoConference(builder as IVideoConferenceBuilder);
-			case RocketChatAssociationModel.USER:
+			case YasChatAssociationModel.USER:
 				return this._finishUser(builder as IUserBuilder);
 			default:
 				throw new Error('Invalid builder passed to the ModifyCreator.finish function.');

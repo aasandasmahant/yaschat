@@ -9,7 +9,7 @@ import { createAgent, makeAgentAvailable } from '../utils/omnichannel/agents';
 import { test, expect } from '../utils/test';
 
 declare const window: Window & {
-	RocketChat: {
+	YasChat: {
 		livechat: {
 			setTheme: (theme: { guestBubbleBackgroundColor?: string; agentBubbleBackgroundColor?: string }) => void;
 		};
@@ -76,7 +76,7 @@ test.describe('OC - Livechat - Bubble background color', async () => {
 
 		await test.step('expect to change bubble background color', async () => {
 			await poLiveChat.page.evaluate(() =>
-				window.RocketChat.livechat.setTheme({
+				window.YasChat.livechat.setTheme({
 					guestBubbleBackgroundColor: 'rgb(186, 218, 85)',
 					agentBubbleBackgroundColor: 'rgb(0, 100, 250)',
 				}),
@@ -88,7 +88,7 @@ test.describe('OC - Livechat - Bubble background color', async () => {
 
 		await test.step('expect to reset bubble background color to defaults', async () => {
 			await poLiveChat.page.evaluate(() =>
-				window.RocketChat.livechat.setTheme({ guestBubbleBackgroundColor: undefined, agentBubbleBackgroundColor: undefined }),
+				window.YasChat.livechat.setTheme({ guestBubbleBackgroundColor: undefined, agentBubbleBackgroundColor: undefined }),
 			);
 
 			expect(await poLiveChat.messageBubbleBackground('message_from_user')).toBe('rgb(193, 39, 45)');

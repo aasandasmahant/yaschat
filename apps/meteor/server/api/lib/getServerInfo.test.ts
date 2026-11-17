@@ -13,7 +13,7 @@ describe.skip('#getServerInfo()', () => {
 
 	before(() => {
 		const { getServerInfo: importedGetServerInfo } = proxyquire.noCallThru().load('./getServerInfo', {
-			'../../../rocketchat.info': {
+			'../../../yaschat.info': {
 				Info: {
 					version: '3.0.1',
 				},

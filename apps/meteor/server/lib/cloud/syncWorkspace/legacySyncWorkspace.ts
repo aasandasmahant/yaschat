@@ -37,9 +37,9 @@ const fetchWorkspaceClientPayload = async ({
 	if (!response.ok) {
 		try {
 			const { error } = await response.json();
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 		} catch (error) {
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${response.statusText}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${response.statusText}`);
 		}
 	}
 
@@ -52,7 +52,7 @@ const fetchWorkspaceClientPayload = async ({
 	const result = Cloud.WorkspaceSyncPayloadSchema.safeParse(payload);
 
 	if (!result.success) {
-		throw new CloudWorkspaceConnectionError('Invalid response from Rocket.Chat Cloud', {
+		throw new CloudWorkspaceConnectionError('Invalid response from YasChat Cloud', {
 			cause: z.prettifyError(result.error),
 		});
 	}

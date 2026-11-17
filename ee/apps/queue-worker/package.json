@@ -2,11 +2,11 @@
 	"name": "@rocket.chat/queue-worker",
 	"version": "0.5.3",
 	"private": true,
-	"description": "Rocket.Chat service",
+	"description": "YasChat service",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/ee/apps/queue-worker/src/service.js",
 	"files": [
 		"/dist"

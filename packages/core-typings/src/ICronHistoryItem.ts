@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface ICronHistoryItem extends IRocketChatRecord {
+export interface ICronHistoryItem extends IYasChatRecord {
 	name: string;
 	intendedAt: Date;
 	startedAt: Date;

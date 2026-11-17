@@ -25,7 +25,7 @@ tests:
 ## Summary
 
 How the server is switched on, configured, reconfigured and switched off, and what the
-microservice exposes to operate it. Settings live in Rocket.Chat; the service reads them over
+microservice exposes to operate it. Settings live in YasChat; the service reads them over
 the broker and keeps the listener in line with them.
 
 ## Motivation
@@ -42,7 +42,7 @@ under load.
   [operations.md](../operations.md#admin-settings) and from the license.
 - **R2** The server is enabled only when the license has the `federation` module and
   `XMPP_Server_Enabled` is on and `XMPP_Server_Domain` is a valid domain; a blank or
-  malformed one counts as unset. Otherwise it is stopped, and Rocket.Chat treats XMPP as
+  malformed one counts as unset. Otherwise it is stopped, and YasChat treats XMPP as
   off: it neither offers XMPP rooms nor takes typed JIDs as XMPP users.
 - **R3** TLS is required when both certificate and key are set. With either missing, the
   server starts without STARTTLS ([ADR 0004](../adr/0004-starttls-required-sasl-external-preferred-dialback-fallback.md)).
@@ -67,7 +67,7 @@ under load.
 **Microservice**
 
 - **R10** `XMPP_DECODE_ONLY=true` parses, routes and answers at the protocol level but
-  forwards nothing to Rocket.Chat, admits every hosted-room join and requests no history on
+  forwards nothing to YasChat, admits every hosted-room join and requests no history on
   remote-room joins.
 - **R11** `XMPP_DNS_OVERRIDES` replaces resolution for the listed domains only.
 - **R12** `LOG_LEVEL` sets the process log level; `debug` logs every inbound event.

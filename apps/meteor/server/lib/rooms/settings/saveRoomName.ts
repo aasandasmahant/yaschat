@@ -24,7 +24,7 @@ const updateRoomName = async (rid: string, displayName: string, slugifiedRoomNam
 	// Check if the name is available
 	if (!(await checkUsernameAvailability(slugifiedRoomName, 'room'))) {
 		throw new ClientSafeError('error-duplicate-handle', `A room, team or user with name '${slugifiedRoomName}' already exists`, {
-			function: 'RocketChat.updateRoomName',
+			function: 'YasChat.updateRoomName',
 			handle: slugifiedRoomName,
 		});
 	}
@@ -50,13 +50,13 @@ export async function saveRoomName(
 	const room = await Rooms.findOneById(rid);
 	if (!room) {
 		throw new ClientSafeError('error-invalid-room', 'Invalid room', {
-			function: 'RocketChat.saveRoomdisplayName',
+			function: 'YasChat.saveRoomdisplayName',
 		});
 	}
 
 	if (roomCoordinator.getRoomDirectives(room.t).preventRenaming()) {
 		throw new ClientSafeError('error-not-allowed', 'Not allowed', {
-			function: 'RocketChat.saveRoomdisplayName',
+			function: 'YasChat.saveRoomdisplayName',
 		});
 	}
 

@@ -473,7 +473,7 @@
 }(this || {}));
 
 (function(w) {
-	w.RocketChat = w.RocketChat || { _: [] };
+	w.YasChat = w.YasChat || { _: [] };
 	var config = {};
 	var widget;
 	var iframe;
@@ -519,7 +519,7 @@
 			return hookQueue.push(arguments);
 		}
 		var data = {
-			src: 'rocketchat',
+			src: 'yaschat',
 			fn: action,
 			args: params
 		};
@@ -559,7 +559,7 @@
 		widget.dataset.state = 'opened';
 		widget.style.height = widgetHeightOpened;
 		callHook('widgetOpened');
-		document.querySelector('.rocketchat-widget iframe').focus();
+		document.querySelector('.yaschat-widget iframe').focus();
 
 		emitCallback('chat-maximized');
 	};
@@ -693,10 +693,10 @@
 
 		var chatWidget = document.createElement('div');
 		chatWidget.dataset.state = 'closed';
-		chatWidget.className = 'rocketchat-widget';
-		chatWidget.innerHTML = '<div class="rocketchat-container" style="width:100%;height:100%">' +
-			'<iframe id="rocketchat-iframe" src="' + url + '" style="width:100%;height:100%;border:none;background-color:transparent" allowTransparency="true" allow="microphone; camera"></iframe> ' +
-			'</div><div class="rocketchat-overlay"></div>';
+		chatWidget.className = 'yaschat-widget';
+		chatWidget.innerHTML = '<div class="yaschat-container" style="width:100%;height:100%">' +
+			'<iframe id="yaschat-iframe" src="' + url + '" style="width:100%;height:100%;border:none;background-color:transparent" allowTransparency="true" allow="microphone; camera"></iframe> ' +
+			'</div><div class="yaschat-overlay"></div>';
 
 		chatWidget.style.position = 'fixed';
 		chatWidget.style.width = widgetWidth;
@@ -709,11 +709,11 @@
 
 		document.getElementsByTagName('body')[0].appendChild(chatWidget);
 
-		widget = document.querySelector('.rocketchat-widget');
-		iframe = document.getElementById('rocketchat-iframe');
+		widget = document.querySelector('.yaschat-widget');
+		iframe = document.getElementById('yaschat-iframe');
 
 		w.addEventListener('message', function(msg) {
-			if (typeof msg.data === 'object' && msg.data.src !== undefined && msg.data.src === 'rocketchat') {
+			if (typeof msg.data === 'object' && msg.data.src !== undefined && msg.data.src === 'yaschat') {
 				if (api[msg.data.fn] !== undefined && typeof api[msg.data.fn] === 'function') {
 					var args = [].concat(msg.data.args || []);
 					api[msg.data.fn].apply(null, args);
@@ -747,18 +747,18 @@
 		init(w.initRocket[0]);
 	}
 
-	if (typeof w.RocketChat.url !== 'undefined') {
-		init(w.RocketChat.url);
+	if (typeof w.YasChat.url !== 'undefined') {
+		init(w.YasChat.url);
 	}
 
-	var queue = w.RocketChat._;
+	var queue = w.YasChat._;
 
-	w.RocketChat = w.RocketChat._.push = function(c) {
-		c.call(w.RocketChat.livechat);
+	w.YasChat = w.YasChat._.push = function(c) {
+		c.call(w.YasChat.livechat);
 	};
 
 	// exports
-	w.RocketChat.livechat = {
+	w.YasChat.livechat = {
 		// methods
 		pageVisited: pageVisited,
 		setCustomField: setCustomField,
@@ -781,6 +781,6 @@
 
 	// proccess queue
 	queue.forEach(function(c) {
-		c.call(w.RocketChat.livechat);
+		c.call(w.YasChat.livechat);
 	});
 }(window));

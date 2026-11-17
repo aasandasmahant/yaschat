@@ -1,24 +1,24 @@
 {
 	"name": "@rocket.chat/apps-engine",
 	"version": "1.68.0",
-	"description": "The public API and type definitions for Rocket.Chat App development.",
+	"description": "The public API and type definitions for YasChat App development.",
 	"keywords": [
 		"rocket.chat",
 		"team chat",
 		"apps engine"
 	],
-	"homepage": "https://github.com/RocketChat/Rocket.Chat.Apps-engine#readme",
+	"homepage": "https://github.com/YasChat/YasChat.Apps-engine#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues"
+		"url": "https://github.com/YasChat/YasChat.Apps-engine/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/apps-engine"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"contributors": [

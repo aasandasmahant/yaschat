@@ -1,6 +1,6 @@
 # HTTP server
 
-The Rocket.Chat server answers HTTP on a server of its own, not on Meteor's. Meteor's `webapp` still builds its
+The YasChat server answers HTTP on a server of its own, not on Meteor's. Meteor's `webapp` still builds its
 server but never binds it: our server owns the listening socket and hands Meteor only what it does not route itself.
 This page explains how a request finds its handler and where to add a new one. The decision is recorded in
 [ADR 0010](../adr/0010-own-http-server-in-front-of-meteor.md).

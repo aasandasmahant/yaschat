@@ -2,14 +2,14 @@
 	"name": "rocket.chat",
 	"version": "9.1.0-develop",
 	"private": true,
-	"description": "Rocket.Chat Monorepo",
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"description": "YasChat Monorepo",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git"
+		"url": "git+https://github.com/YasChat/YasChat.git"
 	},
 	"license": "MIT",
 	"author": "",
@@ -241,18 +241,18 @@
 	},
 	"packageManager": "yarn@4.18.1",
 	"engines": {
-		"node": ">=22.22.3 <23 || >=24.15.0 <25",
+		"node": ">=22.22.3 <27",
 		"yarn": "4.18.1"
 	},
 	"volta": {
-		"node": "24.15.0",
+		"node": ">=22.22.3 <27",
 		"yarn": "4.18.1"
 	},
 	"houston": {
 		"minTag": "0.55.0-rc.0",
 		"updateFiles": [
 			"package.json",
-			"apps/meteor/rocketchat.info"
+			"apps/meteor/yaschat.info"
 		]
 	}
 }

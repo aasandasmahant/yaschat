@@ -192,7 +192,7 @@ describe('AbacService integration (onRoomAttributesChanged)', () => {
 		const warmupAttributeKey = `warmup_seed_${uniqueSuffix}`;
 		const warmupUserId = `warmup-abac-user-${uniqueSuffix}`;
 		const warmupRid = await insertRoom([]);
-		const subscriptionCol = db.collection<any>('rocketchat_subscription');
+		const subscriptionCol = db.collection<any>('yaschat_subscription');
 		const seedSubscriptionId = `warmup-${uniqueSuffix}`;
 
 		await subscriptionCol.insertOne({
@@ -217,7 +217,7 @@ describe('AbacService integration (onRoomAttributesChanged)', () => {
 				_id: { $in: [seedSubscriptionId, `warmup-sub-${uniqueSuffix}`] },
 			});
 			await subscriptionCol.deleteMany({ rid: warmupRid });
-			await db.collection<any>('rocketchat_abac_attributes').deleteOne({ key: warmupAttributeKey });
+			await db.collection<any>('yaschat_abac_attributes').deleteOne({ key: warmupAttributeKey });
 		}
 	};
 
@@ -231,7 +231,7 @@ describe('AbacService integration (onRoomAttributesChanged)', () => {
 		debugSpy = jest.spyOn(logger, 'debug').mockImplementation(() => undefined);
 		auditSpy = jest.spyOn(Audit, 'actionPerformed').mockResolvedValue();
 
-		roomsCol = db.collection<IRoom>('rocketchat_room');
+		roomsCol = db.collection<IRoom>('yaschat_room');
 		usersCol = db.collection<IUser>('users');
 		await usersCol.deleteMany({ _id: { $in: staticUserIds } });
 		await insertUsers(staticTestUsers);

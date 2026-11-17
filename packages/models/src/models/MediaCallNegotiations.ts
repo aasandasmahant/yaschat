@@ -1,5 +1,5 @@
 import type {
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	IMediaCallNegotiation,
 	MediaCallNegotiationStream,
 	RTCSessionDescriptionInit,
@@ -10,7 +10,7 @@ import type { IndexDescription, Collection, Db, Document, UpdateResult } from 'm
 import { BaseRaw } from './BaseRaw';
 
 export class MediaCallNegotiationsRaw extends BaseRaw<IMediaCallNegotiation> implements IMediaCallNegotiationsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IMediaCallNegotiation>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IMediaCallNegotiation>>) {
 		super(db, 'media_call_negotiations', trash);
 	}
 

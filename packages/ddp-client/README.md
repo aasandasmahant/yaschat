@@ -1,19 +1,19 @@
 # `@rocket.chat/ddp-client`
 
-> A WebSocket (DDP) client SDK for Rocket.Chat: connection, login, method calls, realtime streams and a typed REST client.
+> A WebSocket (DDP) client SDK for YasChat: connection, login, method calls, realtime streams and a typed REST client.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ddp-client) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ddp-client)
 
-Rocket.Chat sends realtime data over [DDP](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md), Meteor's WebSocket protocol. This package speaks DDP without Meteor. `DDPSDK` bundles everything a client needs:
+YasChat sends realtime data over [DDP](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md), Meteor's WebSocket protocol. This package speaks DDP without Meteor. `DDPSDK` bundles everything a client needs:
 
 - **Connection**: opens the WebSocket, reports its status and reconnects with an exponential backoff.
 - **Account**: logs in with a password or a resume token, logs out, and tracks the current user.
 - **ClientStream**: calls server methods and manages subscriptions.
-- **Streams**: listens to Rocket.Chat's realtime streams (`room-messages`, `notify-room`, `notify-user`, ...).
+- **Streams**: listens to YasChat's realtime streams (`room-messages`, `notify-room`, `notify-user`, ...).
 - **TimeoutControl**: sends heartbeat pings and drops a socket that stops answering, so it can reconnect.
 - **REST**: a [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) `RestClient` that reuses the DDP login.
 
-The package also exports `LivechatClientImpl`, the client the Omnichannel Livechat widget uses, and the types that describe Rocket.Chat's streams and server methods.
+The package also exports `LivechatClientImpl`, the client the Omnichannel Livechat widget uses, and the types that describe YasChat's streams and server methods.
 
 ## Installation
 
@@ -203,13 +203,13 @@ await livechat.connection.connect();
 ### Other exports
 
 - `LivechatClientImpl`: the Livechat visitor client. Its interfaces `LivechatStream`, `LivechatEndpoints` and the `LivechatRoomEvents` type are exported too.
-- `RocketchatSdkLegacyImpl`: a compatibility layer that mirrors the method names of the older Rocket.Chat JS SDK (`login`, `joinRoom`, `sendMessage`, `subscribeRoom`, `onMessage`, ...).
+- `RocketchatSdkLegacyImpl`: a compatibility layer that mirrors the method names of the older YasChat JS SDK (`login`, `joinRoom`, `sendMessage`, `subscribeRoom`, `onMessage`, ...).
 - `ConnectionLostError`: the rejection of a method call whose connection dropped before the result arrived.
 - Types: `SDK`, `DDPSDKOptions`, `ClientStream`, `ConnectionStatus`, `StreamerEvents`, `StreamNames`, `StreamKeys`, `StreamerConfigs`, `StreamerConfig`, `StreamerCallbackArgs`, `StreamerCallback`, `ServerMethods`, `ServerMethodName`, `ServerMethodParameters`, `ServerMethodReturn`.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/ddp-client). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/ddp-client). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/ddp-client build
@@ -219,14 +219,14 @@ yarn workspace @rocket.chat/ddp-client typecheck
 yarn workspace @rocket.chat/ddp-client testunit
 ```
 
-A runnable example lives in [`__examples__/simple.ts`](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/ddp-client/__examples__/simple.ts).
+A runnable example lives in [`__examples__/simple.ts`](https://github.com/YasChat/YasChat/tree/develop/packages/ddp-client/__examples__/simple.ts).
 
 ### How streams work
 
-Meteor DDP normally syncs collections through publications and a server-side merge box. The merge box is expensive and scales poorly with many clients, so Rocket.Chat streams skip it.
+Meteor DDP normally syncs collections through publications and a server-side merge box. The merge box is expensive and scales poorly with many clients, so YasChat streams skip it.
 
 Each stream is a virtual collection named `stream-<name>`. The server stores nothing in it; it only sends `changed` messages whose fields carry an `eventName` (the stream key) and `args` (the event payload). The client listens on that collection and hands `args` to the callback registered for the key. Client and server must agree on this convention.
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -1,7 +1,7 @@
 {
 	"name": "@rocket.chat/message-parser",
 	"version": "0.33.0",
-	"description": "Rocket.Chat parser for messages",
+	"description": "YasChat parser for messages",
 	"type": "module",
 	"exports": {
 		".": {
@@ -9,18 +9,18 @@
 			"default": "./dist/messageParser.js"
 		}
 	},
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/message-parser"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"main": "dist/messageParser.js",

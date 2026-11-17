@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface ILivechatDepartmentAgents extends IRocketChatRecord {
+export interface ILivechatDepartmentAgents extends IYasChatRecord {
 	departmentId: string;
 	departmentEnabled: boolean;
 	agentId: string;

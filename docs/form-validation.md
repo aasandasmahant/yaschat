@@ -1,6 +1,6 @@
 # Form Validation Guidelines
 
-This document outlines the standardized form validation patterns and guidelines established in PR [#39590](https://github.com/RocketChat/Rocket.Chat/pull/39590) to ensure consistent user experience across Rocket.Chat forms.
+This document outlines the standardized form validation patterns and guidelines established in PR [#39590](https://github.com/YasChat/YasChat/pull/39590) to ensure consistent user experience across YasChat forms.
 
 ## Overview
 
@@ -232,4 +232,4 @@ useForm({
 
 - [React Hook Form Documentation](https://react-hook-form.com/)
 - [WCAG 2.1 Form Guidelines](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=332#error-identification)
-- [PR #39590 - Form Validation Standardization](https://github.com/RocketChat/Rocket.Chat/pull/39590)
+- [PR #39590 - Form Validation Standardization](https://github.com/YasChat/YasChat/pull/39590)

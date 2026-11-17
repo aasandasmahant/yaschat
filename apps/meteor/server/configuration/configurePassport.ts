@@ -38,7 +38,7 @@ export const configurePassport = (settings: ICachedSettings) => {
 			proxy: true,
 			store: MongoStore.create({
 				client,
-				collectionName: 'rocketchat_oauth_sessions',
+				collectionName: 'yaschat_oauth_sessions',
 				ttl: 5 * 60,
 				autoRemove: 'native',
 			}),

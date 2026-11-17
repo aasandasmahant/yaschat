@@ -1,7 +1,7 @@
 Package.describe({
-	name: 'rocketchat:livechat',
+	name: 'yaschat:livechat',
 	version: '0.0.1',
-	summary: 'Livechat plugin for Rocket.Chat',
+	summary: 'Livechat plugin for YasChat',
 });
 
 Package.registerBuildPlugin({

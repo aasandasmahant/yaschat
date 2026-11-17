@@ -85,7 +85,7 @@ export class AppUserBridge extends UserBridge {
 		const user = this.orch
 			.getConverters()
 			?.get('users')
-			.convertToRocketChat(userDescriptor as IUser);
+			.convertToYasChat(userDescriptor as IUser);
 
 		if (!user._id) {
 			user._id = Random.id();

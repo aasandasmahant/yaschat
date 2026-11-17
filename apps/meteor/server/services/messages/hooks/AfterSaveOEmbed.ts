@@ -17,7 +17,7 @@ import ipRangeCheck from 'ip-range-check';
 import jschardet from 'jschardet';
 import { camelCase } from 'lodash';
 
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { settings } from '../../../settings';
 import { afterParseUrlContent, beforeGetUrlContent } from '../lib/oembed/providers';
 
@@ -143,7 +143,7 @@ const getUrlContent = async (urlObj: URL, redirectCount = 5): Promise<OEmbedUrlC
 			compress: true,
 			follow: redirectCount,
 			headers: {
-				'User-Agent': `${settings.get('API_Embed_UserAgent')} Rocket.Chat/${Info.version}`,
+				'User-Agent': `${settings.get('API_Embed_UserAgent')} YasChat/${Info.version}`,
 				'Accept-Language': settings.get('Language') || 'en',
 				...data.headerOverrides,
 			},

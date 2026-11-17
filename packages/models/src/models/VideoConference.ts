@@ -4,7 +4,7 @@ import type {
 	ILivechatVideoConference,
 	IUser,
 	IRoom,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	IVoIPVideoConference,
 	VideoConferenceLeaveReason,
 } from '@rocket.chat/core-typings';
@@ -24,7 +24,7 @@ import type {
 import { BaseRaw } from './BaseRaw';
 
 export class VideoConferenceRaw extends BaseRaw<VideoConference> implements IVideoConferenceModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<VideoConference>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<VideoConference>>) {
 		super(db, 'video_conference', trash);
 	}
 

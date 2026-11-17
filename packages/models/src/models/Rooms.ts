@@ -7,7 +7,7 @@ import type {
 	IRoomNativeFederated,
 	ITeam,
 	IUser,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import type { FindPaginated, IRoomsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import { escapeRegExp } from '@rocket.chat/tools';
@@ -35,7 +35,7 @@ import { readSecondaryPreferred } from '../readSecondaryPreferred';
 import type { Updater } from '../updater';
 
 export class RoomsRaw extends BaseRaw<IRoom> implements IRoomsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IRoom>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IRoom>>) {
 		super(db, 'room', trash);
 	}
 
@@ -2095,7 +2095,7 @@ export class RoomsRaw extends BaseRaw<IRoom> implements IRoomsModel {
 					{ $match: { encrypted: true } },
 					{
 						$lookup: {
-							from: 'rocketchat_subscription',
+							from: 'yaschat_subscription',
 							localField: '_id',
 							foreignField: 'rid',
 							as: 'subs',
@@ -2215,7 +2215,7 @@ export class RoomsRaw extends BaseRaw<IRoom> implements IRoomsModel {
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_subscription',
+					from: 'yaschat_subscription',
 					let: {
 						roomId: '$_id',
 					},

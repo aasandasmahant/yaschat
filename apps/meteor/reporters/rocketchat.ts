@@ -1,7 +1,7 @@
 import type { Reporter, TestCase, TestResult } from '@playwright/test/reporter';
 import fetch from 'node-fetch';
 
-class RocketChatReporter implements Reporter {
+class YasChatReporter implements Reporter {
 	private url: string;
 
 	private apiKey: string;
@@ -48,12 +48,12 @@ class RocketChatReporter implements Reporter {
 			});
 
 			if (!res.ok) {
-				console.error('Error sending test result to Rocket.Chat', JSON.stringify(payload), res);
+				console.error('Error sending test result to YasChat', JSON.stringify(payload), res);
 			}
 		} catch (error) {
-			console.error('Unknown error while sending test result to Rocket.Chat', JSON.stringify(payload), error);
+			console.error('Unknown error while sending test result to YasChat', JSON.stringify(payload), error);
 		}
 	}
 }
 
-export default RocketChatReporter;
+export default YasChatReporter;

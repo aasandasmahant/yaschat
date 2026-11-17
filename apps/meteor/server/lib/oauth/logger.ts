@@ -1,3 +1,3 @@
 import { Logger } from '@rocket.chat/logger';
 
-export const logger = new Logger('rocketchat:lib');
+export const logger = new Logger('yaschat:lib');

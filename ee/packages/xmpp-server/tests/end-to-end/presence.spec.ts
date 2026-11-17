@@ -15,8 +15,8 @@ import {
 	teardown,
 	waitForDirectMessageWith,
 	waitForMessage,
-} from './helper/rocketchat';
-import type { LocalUser, RocketChat } from './helper/rocketchat';
+} from './helper/yaschat';
+import type { LocalUser, YasChat } from './helper/yaschat';
 import { assertFederationReachable, registerXmppUser, setupSuite } from './helper/suite';
 import type { XmppUser } from './helper/xmpp-client';
 import { retry } from '../../../../../apps/meteor/tests/data/retry';
@@ -31,7 +31,7 @@ const isSubscriptionReply =
 		isPresenceFrom(from)(stanza) && stanza.attrs.type === type;
 
 describe('XMPP federation: presence', () => {
-	let rc: RocketChat;
+	let rc: YasChat;
 	let alice: XmppUser;
 	let bob: XmppUser;
 	let local: LocalUser;
@@ -101,8 +101,8 @@ describe('XMPP federation: presence', () => {
 		}
 	});
 
-	// Known defect: ../../docs/specs/presence.md#d2-rocketchat-status-changes-do-not-reach-xmpp-contacts
-	it.skip('relays a Rocket.Chat status change to subscribed contacts (D2)', async () => {
+	// Known defect: ../../docs/specs/presence.md#d2-yaschat-status-changes-do-not-reach-xmpp-contacts
+	it.skip('relays a YasChat status change to subscribed contacts (D2)', async () => {
 		const after = alice.cursor();
 		await setStatus(local, 'away');
 		await alice.waitFor((stanza) => isPresenceFrom(local.jid)(stanza) && stanza.getChildText('show') === 'away', 'presence show=away', {
@@ -110,7 +110,7 @@ describe('XMPP federation: presence', () => {
 		});
 	});
 
-	it("applies a contact's presence to their Rocket.Chat user (R2)", async () => {
+	it("applies a contact's presence to their YasChat user (R2)", async () => {
 		await alice.sendPresence({ to: local.jid, show: 'dnd' });
 		await retry(
 			"alice's status to become busy",

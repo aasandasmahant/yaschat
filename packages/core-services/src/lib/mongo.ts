@@ -2,7 +2,7 @@ import { isTracingEnabled } from '@rocket.chat/tracing';
 import { MongoClient } from 'mongodb';
 import type { Db, Collection, MongoClientOptions, Document } from 'mongodb';
 
-const { MONGO_URL = 'mongodb://localhost:27017/rocketchat' } = process.env;
+const { MONGO_URL = 'mongodb://localhost:27017/yaschat' } = process.env;
 
 const name = /^mongodb:\/\/.*?(?::[0-9]+)?\/([^?]*)/.exec(MONGO_URL)?.[1];
 
@@ -43,5 +43,5 @@ export async function getTrashCollection<T extends Document>(): Promise<Collecti
 		const { db: clientDb } = await getConnection();
 		db = clientDb;
 	}
-	return db.collection<T>('rocketchat__trash');
+	return db.collection<T>('yaschat__trash');
 }

@@ -6,11 +6,11 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import sharp from 'sharp';
 
-import RocketChatLogo from '../dist/cjs/RocketChatLogo/index.js';
+import YasChatLogo from '../dist/cjs/YasChatLogo/index.js';
 
 const distDir = fileURLToPath(new URL('../dist/', import.meta.url));
 
-const html = ReactDOMServer.renderToStaticMarkup(React.createElement(RocketChatLogo.default));
+const html = ReactDOMServer.renderToStaticMarkup(React.createElement(YasChatLogo.default));
 
 const prettySvg = await prettier.format(html, { parser: 'html' });
 

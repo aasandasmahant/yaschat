@@ -54,7 +54,7 @@ meant to differ between rooms, so it cannot link a person across rooms.
 
 ## Why
 
-Rocket.Chat has one name per user and no per-room nick, so mapping a person to one user
+YasChat has one name per user and no per-room nick, so mapping a person to one user
 means one record and a name that follows their latest nick. The only party that knows who
 an occupant is, is the room, so its disclosure is the only sound key.
 
@@ -82,7 +82,7 @@ skipped. A room naming one of them is either echoing us or impersonating a local
 
 ## Consequences
 
-- In rooms that disclose real JIDs, a person is one Rocket.Chat user across every room and
+- In rooms that disclose real JIDs, a person is one YasChat user across every room and
   their DMs. In semi-anonymous rooms they are one user per room, all named by their nick.
 - A remote MUC service can attribute messages to any remote account, including one a local
   user has a DM with. It already could under its own nicks; now it reaches the shared record.
@@ -94,5 +94,5 @@ skipped. A room naming one of them is either echoing us or impersonating a local
   so a correction that arrives under the other record is stored as a new message.
 - A user's display name changes whenever they speak or join under another nick. Messages
   already stored keep the name they were stored with: the upsert does not rewrite them the
-  way a rename through Rocket.Chat does.
+  way a rename through YasChat does.
 - Per-room records are never deleted and have no real address, as ADR 0006 already notes.

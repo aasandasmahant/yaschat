@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- ([#43234](https://github.com/RocketChat/Rocket.Chat/pull/43234)) Fixes native and custom emojis rendering at different sizes, and inline emojis making message lines and reaction pills taller
+- ([#43234](https://github.com/YasChat/YasChat/pull/43234)) Fixes native and custom emojis rendering at different sizes, and inline emojis making message lines and reaction pills taller
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, daa677895dad92d6aab1e84a09f190efd2755ef9, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 982270a515cc061aafccb82a0605a36ce929d56c]:</summary>
   - @rocket.chat/fuselage@1.0.0
@@ -16,7 +16,7 @@
 
 ### Patch Changes
 
-- ([#43234](https://github.com/RocketChat/Rocket.Chat/pull/43234)) Fixes native and custom emojis rendering at different sizes, and inline emojis making message lines and reaction pills taller
+- ([#43234](https://github.com/YasChat/YasChat/pull/43234)) Fixes native and custom emojis rendering at different sizes, and inline emojis making message lines and reaction pills taller
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
   - @rocket.chat/fuselage@1.0.0-rc.1
@@ -179,7 +179,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0
@@ -226,7 +226,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0-rc.0
@@ -524,7 +524,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0
@@ -597,7 +597,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0-rc.0
@@ -1101,7 +1101,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-contexts@17.0.0
@@ -1157,7 +1157,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-contexts@17.0.0-rc.0
@@ -1338,11 +1338,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, c43220dcd8c1df86a6143d6553964ad2173903b3, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/ui-contexts@14.0.0
@@ -1380,11 +1380,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/ui-contexts@14.0.0-rc.0
@@ -1440,7 +1440,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1507,7 +1507,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1520,7 +1520,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -1587,7 +1587,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -1608,7 +1608,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@10.0.0
@@ -1672,7 +1672,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@10.0.0-rc.0
@@ -1791,7 +1791,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1867,7 +1867,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 

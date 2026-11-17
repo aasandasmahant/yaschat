@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- ([#42974](https://github.com/RocketChat/Rocket.Chat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
+- ([#42974](https://github.com/YasChat/YasChat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
 
   **fuselage**
 
@@ -107,7 +107,7 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
@@ -131,7 +131,7 @@
 
 ### Patch Changes
 
-- ([#42974](https://github.com/RocketChat/Rocket.Chat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
+- ([#42974](https://github.com/YasChat/YasChat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
 
   **fuselage**
 
@@ -234,7 +234,7 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
@@ -249,7 +249,7 @@
 
 ### Patch Changes
 
-- ([#41127](https://github.com/RocketChat/Rocket.Chat/pull/41127)) Improves the mobile web experience: the page background now follows the active theme so Safari no longer shows white strips in the overscroll/safe-area regions (and tints its toolbar) in dark mode; the login "Welcome to <workspace>" title is scaled down on small screens; focusing a field no longer triggers iOS Safari's auto zoom-in (inputs use a 16px minimum on mobile); the login email/username field no longer auto-capitalizes/auto-corrects; and the connection status bar layout no longer truncates its "Connect" button on narrow screens.
+- ([#41127](https://github.com/YasChat/YasChat/pull/41127)) Improves the mobile web experience: the page background now follows the active theme so Safari no longer shows white strips in the overscroll/safe-area regions (and tints its toolbar) in dark mode; the login "Welcome to <workspace>" title is scaled down on small screens; focusing a field no longer triggers iOS Safari's auto zoom-in (inputs use a 16px minimum on mobile); the login email/username field no longer auto-capitalizes/auto-corrects; and the connection status bar layout no longer truncates its "Connect" button on narrow screens.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@35.0.0
@@ -260,7 +260,7 @@
 
 ### Patch Changes
 
-- ([#41127](https://github.com/RocketChat/Rocket.Chat/pull/41127)) Improves the mobile web experience: the page background now follows the active theme so Safari no longer shows white strips in the overscroll/safe-area regions (and tints its toolbar) in dark mode; the login "Welcome to <workspace>" title is scaled down on small screens; focusing a field no longer triggers iOS Safari's auto zoom-in (inputs use a 16px minimum on mobile); the login email/username field no longer auto-capitalizes/auto-corrects; and the connection status bar layout no longer truncates its "Connect" button on narrow screens.
+- ([#41127](https://github.com/YasChat/YasChat/pull/41127)) Improves the mobile web experience: the page background now follows the active theme so Safari no longer shows white strips in the overscroll/safe-area regions (and tints its toolbar) in dark mode; the login "Welcome to <workspace>" title is scaled down on small screens; focusing a field no longer triggers iOS Safari's auto zoom-in (inputs use a 16px minimum on mobile); the login email/username field no longer auto-capitalizes/auto-corrects; and the connection status bar layout no longer truncates its "Connect" button on narrow screens.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@35.0.0-rc.0
@@ -291,7 +291,7 @@
 
 ### Minor Changes
 
-- ([#40721](https://github.com/RocketChat/Rocket.Chat/pull/40721)) ## Phishing-Resistant Multi-Factor Authentication
+- ([#40721](https://github.com/YasChat/YasChat/pull/40721)) ## Phishing-Resistant Multi-Factor Authentication
 
   Introduces a more secure and reliable server-side OAuth authentication flow.
 
@@ -318,7 +318,7 @@
 
 ### Minor Changes
 
-- ([#40721](https://github.com/RocketChat/Rocket.Chat/pull/40721)) ## Phishing-Resistant Multi-Factor Authentication
+- ([#40721](https://github.com/YasChat/YasChat/pull/40721)) ## Phishing-Resistant Multi-Factor Authentication
 
   Introduces a more secure and reliable server-side OAuth authentication flow.
 
@@ -372,7 +372,7 @@
 
 ### Minor Changes
 
-- ([#39760](https://github.com/RocketChat/Rocket.Chat/pull/39760)) ## Phishing-Resistant Multi-Factor Authentication
+- ([#39760](https://github.com/YasChat/YasChat/pull/39760)) ## Phishing-Resistant Multi-Factor Authentication
 
   Introduces a more secure and reliable server-side OAuth authentication flow.
 
@@ -453,9 +453,9 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
-- ([#38955](https://github.com/RocketChat/Rocket.Chat/pull/38955) by [@mossae](https://github.com/mossae)) Fixes invalid email domain error not being displayed on the registration form.
+- ([#38955](https://github.com/YasChat/YasChat/pull/38955) by [@mossae](https://github.com/mossae)) Fixes invalid email domain error not being displayed on the registration form.
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0
@@ -503,9 +503,9 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
-- ([#38955](https://github.com/RocketChat/Rocket.Chat/pull/38955) by [@mossae](https://github.com/mossae)) Fixes invalid email domain error not being displayed on the registration form.
+- ([#38955](https://github.com/YasChat/YasChat/pull/38955) by [@mossae](https://github.com/mossae)) Fixes invalid email domain error not being displayed on the registration form.
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0-rc.0
@@ -615,7 +615,7 @@
 
 ### Major Changes
 
-- ([#36829](https://github.com/RocketChat/Rocket.Chat/pull/36829)) Removes the deprecated sendConfirmationEmail method
+- ([#36829](https://github.com/YasChat/YasChat/pull/36829)) Removes the deprecated sendConfirmationEmail method
 
 ### Patch Changes
 
@@ -674,7 +674,7 @@
 
 ### Major Changes
 
-- ([#36829](https://github.com/RocketChat/Rocket.Chat/pull/36829)) Removes the deprecated sendConfirmationEmail method
+- ([#36829](https://github.com/YasChat/YasChat/pull/36829)) Removes the deprecated sendConfirmationEmail method
 
 ### Patch Changes
 
@@ -812,7 +812,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0
@@ -885,7 +885,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0-rc.0
@@ -1010,7 +1010,7 @@
 
 ### Patch Changes
 
-- ([#35277](https://github.com/RocketChat/Rocket.Chat/pull/35277) by [@Anxhul10](https://github.com/Anxhul10)) Fixes email validation in the registration form to prevent users from registering with an already existing email address.
+- ([#35277](https://github.com/YasChat/YasChat/pull/35277) by [@Anxhul10](https://github.com/Anxhul10)) Fixes email validation in the registration form to prevent users from registering with an already existing email address.
 
 - <details><summary>Updated dependencies [fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/tools@0.2.3
@@ -1040,7 +1040,7 @@
 
 ### Patch Changes
 
-- ([#35277](https://github.com/RocketChat/Rocket.Chat/pull/35277) by [@Anxhul10](https://github.com/Anxhul10)) Fixes email validation in the registration form to prevent users from registering with an already existing email address.
+- ([#35277](https://github.com/YasChat/YasChat/pull/35277) by [@Anxhul10](https://github.com/Anxhul10)) Fixes email validation in the registration form to prevent users from registering with an already existing email address.
 
 - <details><summary>Updated dependencies [fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/tools@0.2.3-rc.0
@@ -1079,7 +1079,7 @@
 
 ### Patch Changes
 
-- ([#36062](https://github.com/RocketChat/Rocket.Chat/pull/36062)) Removes the `Change to Default` language button from the login page
+- ([#36062](https://github.com/YasChat/YasChat/pull/36062)) Removes the `Change to Default` language button from the login page
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@20.0.0
@@ -1170,7 +1170,7 @@
 
 ### Patch Changes
 
-- ([#36062](https://github.com/RocketChat/Rocket.Chat/pull/36062)) Removes the `Change to Default` language button from the login page
+- ([#36062](https://github.com/YasChat/YasChat/pull/36062)) Removes the `Change to Default` language button from the login page
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@20.0.0-rc.0
@@ -1215,7 +1215,7 @@
 
 ### Patch Changes
 
-- ([#35885](https://github.com/RocketChat/Rocket.Chat/pull/35885)) Fixes registration pages a11y color contrast and apply browser theme configuration
+- ([#35885](https://github.com/YasChat/YasChat/pull/35885)) Fixes registration pages a11y color contrast and apply browser theme configuration
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@19.0.0
@@ -1279,7 +1279,7 @@
 
 ### Patch Changes
 
-- ([#35885](https://github.com/RocketChat/Rocket.Chat/pull/35885)) Fixes registration pages a11y color contrast and apply browser theme configuration
+- ([#35885](https://github.com/YasChat/YasChat/pull/35885)) Fixes registration pages a11y color contrast and apply browser theme configuration
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@19.0.0-rc.0
@@ -1407,7 +1407,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-contexts@17.0.0
@@ -1463,7 +1463,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-contexts@17.0.0-rc.0
@@ -1734,7 +1734,7 @@
 
 ### Patch Changes
 
-- ([#33333](https://github.com/RocketChat/Rocket.Chat/pull/33333)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
+- ([#33333](https://github.com/YasChat/YasChat/pull/33333)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
 
   Added a warning on all settings which allow admins to change OAuth button colors, so that they can be alerted about WCAG (Web Content Accessibility Guidelines) compliance.
 
@@ -1801,7 +1801,7 @@
 
 ### Patch Changes
 
-- ([#33333](https://github.com/RocketChat/Rocket.Chat/pull/33333)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
+- ([#33333](https://github.com/YasChat/YasChat/pull/33333)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
 
   Added a warning on all settings which allow admins to change OAuth button colors, so that they can be alerted about WCAG (Web Content Accessibility Guidelines) compliance.
 
@@ -1894,7 +1894,7 @@
 
 ### Patch Changes
 
-- ([#32743](https://github.com/RocketChat/Rocket.Chat/pull/32743)) Fixes an issue where creating a new user with an invalid username (containing special characters) resulted in an error message, but the user was still created. The user creation process now properly aborts when an invalid username is provided.
+- ([#32743](https://github.com/YasChat/YasChat/pull/32743)) Fixes an issue where creating a new user with an invalid username (containing special characters) resulted in an error message, but the user was still created. The user creation process now properly aborts when an invalid username is provided.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@10.0.0
@@ -1959,7 +1959,7 @@
 
 ### Patch Changes
 
-- ([#32743](https://github.com/RocketChat/Rocket.Chat/pull/32743)) Fixes an issue where creating a new user with an invalid username (containing special characters) resulted in an error message, but the user was still created. The user creation process now properly aborts when an invalid username is provided.
+- ([#32743](https://github.com/YasChat/YasChat/pull/32743)) Fixes an issue where creating a new user with an invalid username (containing special characters) resulted in an error message, but the user was still created. The user creation process now properly aborts when an invalid username is provided.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@10.0.0-rc.0
@@ -1988,7 +1988,7 @@
 
 ### Patch Changes
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 2d89a0c448, 4e8aa575a6]:</summary>
   - @rocket.chat/tools@0.2.2
@@ -2054,11 +2054,11 @@
 
 ### Patch Changes
 
-- ([#32570](https://github.com/RocketChat/Rocket.Chat/pull/32570)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
+- ([#32570](https://github.com/YasChat/YasChat/pull/32570)) Login services button was not respecting the button color and text color settings. Implemented a fix to respect these settings and change the button colors accordingly.
 
   Added a warning on all settings which allow admins to change OAuth button colors, so that they can be alerted about WCAG (Web Content Accessibility Guidelines) compliance.
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 2d89a0c448, 4e8aa575a6]:</summary>
   - @rocket.chat/tools@0.2.2-rc.0
@@ -2088,7 +2088,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2164,7 +2164,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2290,11 +2290,11 @@
 
 ### Patch Changes
 
-- ([#31583](https://github.com/RocketChat/Rocket.Chat/pull/31583)) Fixed login email verification flow when a user tries to join with username
+- ([#31583](https://github.com/YasChat/YasChat/pull/31583)) Fixed login email verification flow when a user tries to join with username
 
-- ([#31804](https://github.com/RocketChat/Rocket.Chat/pull/31804)) fixed the login page crashing when receiving unexpected errors
+- ([#31804](https://github.com/YasChat/YasChat/pull/31804)) fixed the login page crashing when receiving unexpected errors
 
-- ([#31625](https://github.com/RocketChat/Rocket.Chat/pull/31625) by [@abhipatel0211](https://github.com/abhipatel0211)) Fixed a bug that caused the Login page to crash when closing the Two-Factor Authentication modal using the Cancel button or the X button.
+- ([#31625](https://github.com/YasChat/YasChat/pull/31625) by [@abhipatel0211](https://github.com/abhipatel0211)) Fixed a bug that caused the Login page to crash when closing the Two-Factor Authentication modal using the Cancel button or the X button.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@5.0.0
@@ -2341,11 +2341,11 @@
 
 ### Patch Changes
 
-- ([#31583](https://github.com/RocketChat/Rocket.Chat/pull/31583)) Fixed login email verification flow when a user tries to join with username
+- ([#31583](https://github.com/YasChat/YasChat/pull/31583)) Fixed login email verification flow when a user tries to join with username
 
-- ([#31804](https://github.com/RocketChat/Rocket.Chat/pull/31804)) fixed the login page crashing when receiving unexpected errors
+- ([#31804](https://github.com/YasChat/YasChat/pull/31804)) fixed the login page crashing when receiving unexpected errors
 
-- ([#31625](https://github.com/RocketChat/Rocket.Chat/pull/31625) by [@abhipatel0211](https://github.com/abhipatel0211)) Fixed a bug that caused the Login page to crash when closing the Two-Factor Authentication modal using the Cancel button or the X button.
+- ([#31625](https://github.com/YasChat/YasChat/pull/31625) by [@abhipatel0211](https://github.com/abhipatel0211)) Fixed a bug that caused the Login page to crash when closing the Two-Factor Authentication modal using the Cancel button or the X button.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@5.0.0-rc.0
@@ -2410,11 +2410,11 @@
 
 ### Minor Changes
 
-- ([#30680](https://github.com/RocketChat/Rocket.Chat/pull/30680)) feat: Skip to main content shortcut and useDocumentTitle
+- ([#30680](https://github.com/YasChat/YasChat/pull/30680)) feat: Skip to main content shortcut and useDocumentTitle
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162]:</summary>
   - @rocket.chat/ui-contexts@4.0.0

@@ -37,7 +37,7 @@ const OauthAuthorizationPage = ({ clientName, onClickAuthorizeOAuth, error }: Oa
 							<Trans i18nKey='page.oauthAuthorizationPage.allowLogin' values={{ name: clientName }}>
 								Do you wish to allow
 								<strong>{clientName}</strong>
-								to login with your Rocket.Chat Cloud Account?
+								to login with your YasChat Cloud Account?
 							</Trans>
 
 							<Box marginBlockStart={24}>

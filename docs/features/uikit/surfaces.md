@@ -19,4 +19,4 @@ A surface is a place in the client where a list of blocks is drawn. Each one has
 
 ## Internal surfaces
 
-The host also renders UiKit for features that are not apps, using app IDs that end in `-core` (for example `videoconf-core`, `media-call-core`, `cloud-announcements-core`). Their interactions go to core handlers in `apps/meteor/server/services/uikit-core-app/` instead of the apps-engine. Texts on those surfaces are translated with the default Rocket.Chat namespace (see [text-objects.md](text-objects.md#i18n)).
+The host also renders UiKit for features that are not apps, using app IDs that end in `-core` (for example `videoconf-core`, `media-call-core`, `cloud-announcements-core`). Their interactions go to core handlers in `apps/meteor/server/services/uikit-core-app/` instead of the apps-engine. Texts on those surfaces are translated with the default YasChat namespace (see [text-objects.md](text-objects.md#i18n)).

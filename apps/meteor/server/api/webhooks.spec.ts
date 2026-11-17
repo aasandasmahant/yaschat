@@ -60,7 +60,7 @@ jest.mock('meteor/accounts-base', () => ({ Accounts: { _accountData: {} as Recor
 jest.mock('meteor/ddp', () => ({ DDP: {} }), { virtual: true });
 jest.mock('meteor/ddp-common', () => ({ DDPCommon: {} }), { virtual: true });
 
-jest.mock('../../rocketchat.info', () => ({ Info: { version: '0.0.0' } }));
+jest.mock('../../yaschat.info', () => ({ Info: { version: '0.0.0' } }));
 
 jest.mock('../settings', () => ({
 	settings: {

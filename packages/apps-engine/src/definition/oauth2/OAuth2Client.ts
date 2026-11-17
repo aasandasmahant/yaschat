@@ -5,7 +5,7 @@ import type { IConfigurationExtend, IHttp, IModify, IPersistence, IRead } from '
 import { HttpStatusCode } from '../accessors';
 import type { IApiEndpointInfo, IApiRequest, IApiResponse } from '../api';
 import { ApiSecurity, ApiVisibility } from '../api';
-import { RocketChatAssociationModel, RocketChatAssociationRecord } from '../metadata';
+import { YasChatAssociationModel, YasChatAssociationRecord } from '../metadata';
 import type { IAuthData, IOAuth2Client, IOAuth2ClientOptions } from './IOAuth2';
 import { SettingType } from '../settings';
 import type { IUser } from '../users';
@@ -100,8 +100,8 @@ export class OAuth2Client implements IOAuth2Client {
 
 	public async getAccessTokenForUser(user: IUser): Promise<IAuthData | undefined> {
 		const associations = [
-			new RocketChatAssociationRecord(RocketChatAssociationModel.USER, user.id),
-			new RocketChatAssociationRecord(RocketChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
+			new YasChatAssociationRecord(YasChatAssociationModel.USER, user.id),
+			new YasChatAssociationRecord(YasChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
 		];
 
 		const [result] = (await this.app.getAccessors().reader.getPersistenceReader().readByAssociations(associations)) as unknown as Array<
@@ -317,8 +317,8 @@ export class OAuth2Client implements IOAuth2Client {
 
 		return persis.updateByAssociations(
 			[
-				new RocketChatAssociationRecord(RocketChatAssociationModel.USER, userId),
-				new RocketChatAssociationRecord(RocketChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
+				new YasChatAssociationRecord(YasChatAssociationModel.USER, userId),
+				new YasChatAssociationRecord(YasChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
 			],
 			{
 				scope,
@@ -332,8 +332,8 @@ export class OAuth2Client implements IOAuth2Client {
 
 	private async removeToken({ userId, persis }: { userId: string; persis: IPersistence }): Promise<IAuthData> {
 		const [result] = (await persis.removeByAssociations([
-			new RocketChatAssociationRecord(RocketChatAssociationModel.USER, userId),
-			new RocketChatAssociationRecord(RocketChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
+			new YasChatAssociationRecord(YasChatAssociationModel.USER, userId),
+			new YasChatAssociationRecord(YasChatAssociationModel.MISC, `${this.config.alias}-oauth-connection`),
 		])) as unknown as Array<IAuthData>;
 
 		return result;

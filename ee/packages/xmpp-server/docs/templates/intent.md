@@ -13,7 +13,7 @@ What is true once this is done, stated as something observable. Not a design.
 
 ## Affected users and systems
 
-Who notices the change. Which specs change status. Which Rocket.Chat features or
+Who notices the change. Which specs change status. Which YasChat features or
 settings are involved. Which remote servers or clients must interoperate.
 
 ## Constraints

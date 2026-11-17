@@ -7,13 +7,13 @@
 ## Decision
 
 - **Remote rooms.** Each local member of a mirrored room is joined into the remote MUC with
-  their own session: occupant JID `<username>@<domain>/rocketchat`, nick `<username>`. The
+  their own session: occupant JID `<username>@<domain>/yaschat`, nick `<username>`. The
   session map is keyed `<local bare JID>|<room JID>`. A member without a session cannot
   speak; `mucSendToRemoteRoom` throws rather than relaying under someone else's nick, and
   `sendMessage` joins first when the session is missing.
 - **Hosted rooms.** Each local member is registered in the room as a virtual occupant: they
   appear in the roster sent to remote occupants with their real JID and role, but no stanza
-  is ever sent to them. Copies of room traffic reach Rocket.Chat as events instead.
+  is ever sent to them. Copies of room traffic reach YasChat as events instead.
 
 ## Why
 

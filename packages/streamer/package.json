@@ -4,9 +4,9 @@
 	"private": true,
 	"description": "Streamer seam, stream catalogue and broker-event listeners shared by apps/meteor and ddp-streamer",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"files": [

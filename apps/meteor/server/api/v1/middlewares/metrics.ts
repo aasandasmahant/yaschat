@@ -35,8 +35,8 @@ export const metricsMiddleware =
 			return next();
 		}
 
-		const rocketchatRestApiEnd = endpointTimeSummary.startTimer();
-		const rocketchatRestApiHistEnd = endpointTimeHistogram.startTimer();
+		const yaschatRestApiEnd = endpointTimeSummary.startTimer();
+		const yaschatRestApiHistEnd = endpointTimeHistogram.startTimer();
 
 		const methodLabel = { method: c.req.method.toLowerCase() };
 		activeRequestsGauge.inc(methodLabel);
@@ -57,12 +57,12 @@ export const metricsMiddleware =
 			entrypoint: basePathRegex && entrypoint.startsWith('method.call') ? decodeURIComponent(path.replace(basePathRegex, '')) : entrypoint,
 		};
 
-		rocketchatRestApiEnd({
+		yaschatRestApiEnd({
 			...histogramLabels,
 			...(settings.get('Prometheus_API_User_Agent') && { user_agent: c.req.header('user-agent') }),
 		});
 
-		rocketchatRestApiHistEnd(histogramLabels);
+		yaschatRestApiHistEnd(histogramLabels);
 
 		const contentLength = parseInt(c.res.headers.get('content-length') || '0', 10);
 		if (contentLength > 0) {

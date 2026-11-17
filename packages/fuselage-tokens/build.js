@@ -5,12 +5,12 @@ import StyleDictionary from 'style-dictionary';
 import { minifyDictionary } from 'style-dictionary/utils';
 
 StyleDictionary.registerTransformGroup({
-	name: 'json/rocketchat',
+	name: 'json/yaschat',
 	transforms: ['attribute/cti', 'name/pascal', 'color/hex'],
 });
 
 StyleDictionary.registerFormat({
-	name: 'json/rocketchat',
+	name: 'json/yaschat',
 	async format({ dictionary }) {
 		const tokens = dictionary.tokens[Object.keys(dictionary.tokens)[0]];
 		return `${JSON.stringify(minifyDictionary(tokens, false), null, 2)}\n`;
@@ -18,13 +18,13 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerTransform({
-	name: 'name/kebab/rocketchat',
+	name: 'name/kebab/yaschat',
 	type: 'name',
 	transform: (token) => kebabCase(token.path.slice(1).join(' ')),
 });
 
 StyleDictionary.registerTransform({
-	name: 'size/borderWidth/rocketchat',
+	name: 'size/borderWidth/yaschat',
 	type: 'value',
 	filter: (token) => token.type === 'borderWidth',
 	transform: (token) => {
@@ -34,14 +34,14 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransform({
-	name: 'size/spacing/rocketchat',
+	name: 'size/spacing/yaschat',
 	type: 'value',
 	filter: (token) => token.type === 'spacing',
 	transform: (token) => `${token.value}px`,
 });
 
 StyleDictionary.registerTransform({
-	name: 'fontFamily/css/rocketchat',
+	name: 'fontFamily/css/yaschat',
 	type: 'value',
 	filter: (token) => token.attributes.type === 'fontFamily',
 	transform: (token) => {
@@ -54,18 +54,18 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransformGroup({
-	name: 'scss/rocketchat',
+	name: 'scss/yaschat',
 	transforms: [
 		'attribute/cti',
-		'name/kebab/rocketchat',
+		'name/kebab/yaschat',
 		'time/seconds',
 		'html/icon',
 		'size/pxToRem',
-		'size/borderWidth/rocketchat',
-		'size/spacing/rocketchat',
+		'size/borderWidth/yaschat',
+		'size/spacing/yaschat',
 		'color/css',
 		'asset/url',
-		'fontFamily/css/rocketchat',
+		'fontFamily/css/yaschat',
 		'cubicBezier/css',
 		'strokeStyle/css/shorthand',
 		'border/css/shorthand',
@@ -76,7 +76,7 @@ StyleDictionary.registerTransformGroup({
 });
 
 StyleDictionary.registerFormat({
-	name: 'dts/rocketchat',
+	name: 'dts/yaschat',
 	async format({ dictionary }) {
 		const moduleName = Object.keys(dictionary.tokens)[0];
 		const tokens = minifyDictionary(dictionary.tokens[moduleName], false);

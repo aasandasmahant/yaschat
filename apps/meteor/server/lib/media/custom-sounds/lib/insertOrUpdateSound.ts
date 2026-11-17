@@ -1,7 +1,7 @@
 import { api, ClientSafeError } from '@rocket.chat/core-services';
 import { CustomSounds } from '@rocket.chat/models';
 
-import { RocketChatFileCustomSoundsInstance } from '../startup/custom-sounds';
+import { YasChatFileCustomSoundsInstance } from '../startup/custom-sounds';
 
 export type ICustomSoundData = {
 	_id?: string;
@@ -53,7 +53,7 @@ export const insertOrUpdateSound = async (soundData: ICustomSoundData): Promise<
 	}
 
 	if (soundData.newFile) {
-		await RocketChatFileCustomSoundsInstance.deleteFile(`${soundData._id}.${soundData.previousExtension}`);
+		await YasChatFileCustomSoundsInstance.deleteFile(`${soundData._id}.${soundData.previousExtension}`);
 	}
 
 	if (soundData.name !== soundData.previousName || soundData.extension !== soundData.previousExtension) {

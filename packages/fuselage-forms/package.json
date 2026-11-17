@@ -3,24 +3,24 @@
 	"version": "2.0.0",
 	"description": "A set of component wrappers to provide ease of use and accessibility out-of-box.",
 	"keywords": [
-		"rocketchat",
-		"rocketchat-fuselage",
+		"yaschat",
+		"yaschat-fuselage",
 		"fuselage",
 		"forms",
 		"fuselage-forms"
 	],
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/fuselage-forms"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"main": "dist/cjs/index.js",

@@ -17,14 +17,14 @@ tests: [src/service/helpers/presence.spec.ts, tests/integration/routing.spec.ts,
 
 ## Summary
 
-Rocket.Chat users and their XMPP DM partners see each other's availability. Subscriptions
+YasChat users and their XMPP DM partners see each other's availability. Subscriptions
 are implicit: sharing a DM is the subscription
 ([ADR 0010](../adr/0010-presence-subscriptions-auto-accepted-only-from-dm-partners.md)).
 
 ## Motivation
 
 XMPP clients show contacts as online or offline and some refuse to start a chat with an
-offline contact. A Rocket.Chat user who never appears online is a worse correspondent than
+offline contact. A YasChat user who never appears online is a worse correspondent than
 a bot.
 
 ## Behaviour
@@ -65,12 +65,12 @@ rooms.
 
 ## Known defects
 
-### D2 Rocket.Chat status changes do not reach XMPP contacts
+### D2 YasChat status changes do not reach XMPP contacts
 
-After a Rocket.Chat user changes status, the XMPP server never receives a presence from
+After a YasChat user changes status, the XMPP server never receives a presence from
 them. The user holds a live session, their status really changes, and the DM with the
 contact is marked as XMPP-federated. The cause is not known; the service's debug log
-(`LOG_LEVEL=debug`) is the place to start. Test: `presence.spec.ts`, "relays a Rocket.Chat
+(`LOG_LEVEL=debug`) is the place to start. Test: `presence.spec.ts`, "relays a YasChat
 status change to subscribed contacts".
 
 ## Open questions

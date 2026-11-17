@@ -61,7 +61,7 @@ export const themes: Record<ThemeMode, ThemeVars> = {
 /** Brands the sidebar header with the logo and the name of the package the Storybook documents. */
 export const createBrandTitle = (mode: ThemeMode, { logo, name }: { logo: string; name?: string }): string => `
 	<span style="display: flex; flex-direction: column; gap: 4px;">
-		<img src="${logo.replaceAll('"', '%22')}" alt="Rocket.Chat" style="display: block; width: 128px; height: auto;" />
+		<img src="${logo.replaceAll('"', '%22')}" alt="YasChat" style="display: block; width: 128px; height: auto;" />
 		${name ? `<span style="font-size: 12px; font-weight: 700; line-height: 16px; color: ${font[mode].hint};">${name}</span>` : ''}
 	</span>
 `;

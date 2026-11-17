@@ -17,7 +17,7 @@ export interface IAppServerOrchestrator {
 	getManager(): AppManager;
 	getConverters(): IAppConvertersMap;
 	getPersistenceModel(): IAppsPersistenceModel;
-	getRocketChatLogger(): Logger;
+	getYasChatLogger(): Logger;
 	triggerEvent(event: AppEvents, ...payload: any[]): Promise<any>;
 	getBridges(): AppBridges;
 	getStorage(): AppMetadataStorage;

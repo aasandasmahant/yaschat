@@ -19,7 +19,7 @@ const mapUserLookup = (user: any) =>
 	};
 
 /**
- * Rocket.Chat -> Apps-Engine "raw" room transform (no cross-converter resolution). Mirrors the
+ * YasChat -> Apps-Engine "raw" room transform (no cross-converter resolution). Mirrors the
  * legacy `convertRoomRaw`.
  */
 export async function decodeRoomRaw(room: IRoom): Promise<IAppsRoomRaw> {
@@ -213,11 +213,11 @@ async function getDepartment({ department }: any) {
 }
 
 /**
- * Apps-Engine -> Rocket.Chat room transform. Mirrors the legacy `convertAppRoom`, including the
+ * Apps-Engine -> YasChat room transform. Mirrors the legacy `convertAppRoom`, including the
  * `isPartial` behaviour (skip `_unmappedProperties_` merge). Cross-converter independent — it reads
  * the models directly.
  */
-export async function appRoomToRocketChat(room: any, isPartial = false): Promise<Partial<IRoom>> {
+export async function appRoomToYasChat(room: any, isPartial = false): Promise<Partial<IRoom>> {
 	const u = await getCreator(room.creator?.id);
 
 	const v = await getVisitor(room);
@@ -274,7 +274,7 @@ export async function appRoomToRocketChat(room: any, isPartial = false): Promise
 }
 
 /**
- * Rocket.Chat `IRoom` <-> Apps-Engine room. Cross-converter dependent, so built via a factory closing
+ * YasChat `IRoom` <-> Apps-Engine room. Cross-converter dependent, so built via a factory closing
  * over the orchestrator. `decode` mirrors `convertRoom` (resolves creator/visitor/contact/department/
  * closedBy/servedBy/responseBy/parentRoom through their converters, plus secure fields). `encode`
  * mirrors the non-partial `convertAppRoom`; the class handles the `isPartial` variant.
@@ -457,6 +457,6 @@ export function createRoomCodec(orch: IAppServerOrchestrator) {
 
 			return mappedDecodeAsync<IAppsRoom | IAppsLivechatRoom>(originalRoom, map);
 		},
-		encode: (room): Promise<IRoom> => appRoomToRocketChat(room, false) as unknown as Promise<IRoom>,
+		encode: (room): Promise<IRoom> => appRoomToYasChat(room, false) as unknown as Promise<IRoom>,
 	});
 }

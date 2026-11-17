@@ -32,7 +32,7 @@ export const Default: StoryObj<typeof InfoPanel> = {
 		<InfoPanel>
 			<InfoPanelAvatar />
 			<InfoPanelSection>
-				<InfoPanelTitle title='rocketchat-frontend-team' icon='hashtag' />
+				<InfoPanelTitle title='yaschat-frontend-team' icon='hashtag' />
 			</InfoPanelSection>
 			<InfoPanelSection>
 				<InfoPanelField>

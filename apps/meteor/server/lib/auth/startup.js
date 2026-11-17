@@ -358,7 +358,7 @@ Accounts.insertUserDoc = async function (options, user) {
 	if (!options.skipAppsEngineEvent) {
 		// `post` triggered events don't need to wait for the promise to resolve
 		Apps.self?.triggerEvent(AppEvents.IPostUserCreated, { user, performedBy: options.performedBy }).catch((e) => {
-			Apps.self?.getRocketChatLogger().error({ msg: 'Error while executing post user created event', err: e });
+			Apps.self?.getYasChatLogger().error({ msg: 'Error while executing post user created event', err: e });
 		});
 	}
 

@@ -1,25 +1,25 @@
 {
 	"name": "@rocket.chat/fuselage-tokens",
 	"version": "0.36.0",
-	"description": "Design tokens for Fuselage, Rocket.Chat's design system",
+	"description": "Design tokens for Fuselage, YasChat's design system",
 	"keywords": [
 		"design",
 		"tokens",
 		"fuselage",
 		"rocket.chat"
 	],
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/fuselage-tokens"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"type": "module",

@@ -113,9 +113,9 @@ export class UserPresence {
 		const isLoggingIn = useIsLoggingIn();
 		const enableAutoAway = useUserPreference<boolean>('enableAutoAway');
 		const idleTimeLimit = useUserPreference<number>('idleTimeLimit') ?? 300;
-		const { RocketChatDesktop } = window;
+		const { YasChatDesktop } = window;
 		// The desktop app detects idleness itself; when it cannot, the browser's own detection takes over.
-		const [desktopDetectsIdle, setDesktopDetectsIdle] = useState(() => Boolean(RocketChatDesktop));
+		const [desktopDetectsIdle, setDesktopDetectsIdle] = useState(() => Boolean(YasChatDesktop));
 
 		const awayTime = enableAutoAway && !desktopDetectsIdle ? idleTimeLimit * 1000 : undefined;
 
@@ -126,7 +126,7 @@ export class UserPresence {
 		this.storeUser = Users.use((state) => state.store);
 
 		useEffect(() => {
-			if (!RocketChatDesktop) return;
+			if (!YasChatDesktop) return;
 
 			const registered =
 				callDesktopBridge((desktop) => {
@@ -157,7 +157,7 @@ export class UserPresence {
 					}),
 				);
 			};
-		}, [RocketChatDesktop, enableAutoAway, idleTimeLimit]);
+		}, [YasChatDesktop, enableAutoAway, idleTimeLimit]);
 
 		useEffect(() => {
 			if (desktopDetectsIdle) return;

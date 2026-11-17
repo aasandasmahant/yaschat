@@ -1,4 +1,4 @@
-import type { ICustomEmojiDescriptor, IEmojiCustom, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ICustomEmojiDescriptor, IEmojiCustom, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { WithId } from 'mongodb';
 
 import { ajv, ajvQuery } from './Ajv';
@@ -49,7 +49,7 @@ export const isEmojiCustomList = ajvQuery.compile<emojiCustomList>(emojiCustomLi
 export type EmojiCustomEndpoints = {
 	'/v1/emoji-custom.list': {
 		GET: (params: emojiCustomList) => {
-			emojis: { update: IEmojiCustom[]; remove: WithId<RocketChatRecordDeleted<IEmojiCustom>>[] };
+			emojis: { update: IEmojiCustom[]; remove: WithId<YasChatRecordDeleted<IEmojiCustom>>[] };
 		};
 	};
 	'/v1/emoji-custom.all': {

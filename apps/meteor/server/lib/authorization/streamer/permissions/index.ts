@@ -1,5 +1,5 @@
 import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IPermission, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IPermission, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ServerMethods } from '@rocket.chat/ddp-client';
 import { Permissions } from '@rocket.chat/models';
 import { Meteor } from 'meteor/meteor';
@@ -9,13 +9,13 @@ declare module '@rocket.chat/ddp-client' {
 	interface ServerMethods {
 		'permissions/get'(
 			updatedSince?: Date,
-		): Promise<IPermission[] | { update: IPermission[]; remove: WithId<RocketChatRecordDeleted<IPermission>>[] }>;
+		): Promise<IPermission[] | { update: IPermission[]; remove: WithId<YasChatRecordDeleted<IPermission>>[] }>;
 	}
 }
 
 export const permissionsGetMethod = async (
 	updatedAt?: Date,
-): Promise<IPermission[] | { update: IPermission[]; remove: WithId<RocketChatRecordDeleted<IPermission>>[] }> => {
+): Promise<IPermission[] | { update: IPermission[]; remove: WithId<YasChatRecordDeleted<IPermission>>[] }> => {
 	const records = await Permissions.find(updatedAt && { _updatedAt: { $gt: updatedAt } }).toArray();
 
 	if (updatedAt instanceof Date) {

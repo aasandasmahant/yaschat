@@ -37,7 +37,7 @@ and several defaults work against a security review:
 - A stanza whose `from` or `to` is not a well-formed JID (an empty or oversize part, a
   character RFC 7622 forbids) is refused with `jid-malformed` (type `modify`) and creates
   nothing. Localparts are compared under the UsernameCaseMapped profile of RFC 8265. A
-  Rocket.Chat username that cannot be carried even with XEP-0106 escaping is not federated.
+  YasChat username that cannot be carried even with XEP-0106 escaping is not federated.
 - The server installs from an offline package and federates between two networks with no
   internet access, using internal DNS only.
 - FMN NISP conformance evidence exists and is kept current, each item tied to the spec
@@ -55,7 +55,7 @@ and several defaults work against a security review:
   [operations.md](../operations.md); ADR 0004 may be superseded, ADR 0005 is, and
   [ADR 0011](../adr/0011-domain-normalization-is-idna-and-lowercase.md), which leaves
   PRECIS out of scope, changes for localparts.
-- Rocket.Chat packaging for offline installs, and the audit log, outside this package.
+- YasChat packaging for offline installs, and the audit log, outside this package.
 
 ## Constraints
 

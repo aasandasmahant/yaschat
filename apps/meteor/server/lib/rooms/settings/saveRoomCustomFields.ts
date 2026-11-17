@@ -8,7 +8,7 @@ import { notifyOnSubscriptionChangedByRoomId } from '../../notifyListener';
 export const saveRoomCustomFields = async function (rid: string, roomCustomFields: Record<string, any>): Promise<UpdateResult> {
 	if (!isRecord(roomCustomFields)) {
 		throw new ClientSafeError('invalid-roomCustomFields-type', 'Invalid roomCustomFields type', {
-			function: 'RocketChat.saveRoomCustomFields',
+			function: 'YasChat.saveRoomCustomFields',
 		});
 	}
 

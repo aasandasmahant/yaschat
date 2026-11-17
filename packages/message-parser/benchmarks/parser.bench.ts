@@ -67,10 +67,10 @@ const categories: BenchCategory[] = [
 		name: 'URLs & Links',
 		fixtures: [
 			{ name: 'single', input: 'Check out https://rocket.chat for more info' },
-			{ name: 'multiple', input: 'Visit https://rocket.chat or https://github.com/RocketChat/Rocket.Chat or https://open.rocket.chat' },
-			{ name: 'markdown link', input: '[Rocket.Chat](https://rocket.chat)' },
+			{ name: 'multiple', input: 'Visit https://rocket.chat or https://github.com/YasChat/YasChat or https://open.rocket.chat' },
+			{ name: 'markdown link', input: '[YasChat](https://rocket.chat)' },
 			{ name: 'autolinked domain', input: 'Visit rocket.chat for more info' },
-			{ name: 'with path', input: 'See https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/message-parser for details' },
+			{ name: 'with path', input: 'See https://github.com/YasChat/YasChat/tree/develop/packages/message-parser for details' },
 		],
 	},
 	{
@@ -155,7 +155,7 @@ const categories: BenchCategory[] = [
 			{
 				name: 'medium',
 				input:
-					'@admin I pushed the fix to `develop` branch. Check https://github.com/RocketChat/Rocket.Chat/pull/12345 for details. :thumbsup:',
+					'@admin I pushed the fix to `develop` branch. Check https://github.com/YasChat/YasChat/pull/12345 for details. :thumbsup:',
 			},
 			{
 				name: 'complex',

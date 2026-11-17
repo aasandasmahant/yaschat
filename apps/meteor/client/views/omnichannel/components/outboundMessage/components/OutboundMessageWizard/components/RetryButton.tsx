@@ -10,7 +10,7 @@ export type RetryButtonProps = {
 /* NOTE: Necessary hack due to Field styles interfering with icons */
 const btnStyle = css`
 	i {
-		font-family: 'RocketChat';
+		font-family: 'YasChat';
 		font-style: normal;
 	}
 `;

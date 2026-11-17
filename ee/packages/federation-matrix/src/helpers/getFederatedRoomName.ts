@@ -1,4 +1,4 @@
-// Derives a valid Rocket.Chat room name (slug) from a Matrix room id.
+// Derives a valid YasChat room name (slug) from a Matrix room id.
 // Matrix room ids look like `!opaqueId:server.domain`; we strip the leading `!`
 // sigil and replace every char RC rejects in a slug (including the `:` separator,
 // which may also appear in a server port) with `_`, producing a deterministic,

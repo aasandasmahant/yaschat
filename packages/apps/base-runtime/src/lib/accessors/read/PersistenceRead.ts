@@ -1,5 +1,5 @@
 import type { IPersistenceRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { RocketChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import type { YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';
@@ -11,11 +11,11 @@ export class PersistenceRead implements IPersistenceRead {
 		return bridgeCall<object>(this.senderFn, 'getPersistenceBridge', 'doReadById', id, 'APP_ID');
 	}
 
-	public readByAssociation(association: RocketChatAssociationRecord): Promise<Array<object>> {
+	public readByAssociation(association: YasChatAssociationRecord): Promise<Array<object>> {
 		return bridgeCall<Array<object>>(this.senderFn, 'getPersistenceBridge', 'doReadByAssociations', new Array(association), 'APP_ID');
 	}
 
-	public readByAssociations(associations: Array<RocketChatAssociationRecord>): Promise<Array<object>> {
+	public readByAssociations(associations: Array<YasChatAssociationRecord>): Promise<Array<object>> {
 		return bridgeCall<Array<object>>(this.senderFn, 'getPersistenceBridge', 'doReadByAssociations', associations, 'APP_ID');
 	}
 }

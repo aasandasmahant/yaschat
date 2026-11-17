@@ -14,19 +14,19 @@ export const buildSvgImages = (icons) =>
 	);
 
 export const buildCss = () =>
-	writeSource('dist/rocketchat.css')(`@font-face {
-	font-family: 'RocketChat';
+	writeSource('dist/yaschat.css')(`@font-face {
+	font-family: 'YasChat';
 	font-weight: 400;
 	font-style: normal;
 	font-display: auto;
 
-	src: url('./font/rocketchat.eot');
+	src: url('./font/yaschat.eot');
 	src:
-		url('./font/rocketchat.eot?#iefix') format('embedded-opentype'),
-		url('./font/rocketchat.woff2') format('woff2'),
-		url('./font/rocketchat.woff') format('woff'),
-		url('./font/rocketchat.ttf') format('truetype'),
-		url('./font/rocketchat.svg#RocketChat') format('svg');
+		url('./font/yaschat.eot?#iefix') format('embedded-opentype'),
+		url('./font/yaschat.woff2') format('woff2'),
+		url('./font/yaschat.woff') format('woff'),
+		url('./font/yaschat.ttf') format('truetype'),
+		url('./font/yaschat.svg#YasChat') format('svg');
 }
 `);
 
@@ -45,14 +45,14 @@ export const buildFont = (icons) =>
 	Promise.resolve(icons)
 		.then(filterOtherIconsOut)
 		.then(createSvgBuffer)
-		.then(writeBinary('./dist/font/rocketchat.svg'))
+		.then(writeBinary('./dist/font/yaschat.svg'))
 		.then(createTtfBuffer)
-		.then(writeBinary('./dist/font/rocketchat.ttf'))
+		.then(writeBinary('./dist/font/yaschat.ttf'))
 		.then((ttfBuffer) =>
 			Promise.all([
-				createWoffBuffer(ttfBuffer).then(writeBinary('./dist/font/rocketchat.woff')),
-				createWoff2Buffer(ttfBuffer).then(writeBinary('./dist/font/rocketchat.woff2')),
-				createEotBuffer(ttfBuffer).then(writeBinary('./dist/font/rocketchat.eot')),
+				createWoffBuffer(ttfBuffer).then(writeBinary('./dist/font/yaschat.woff')),
+				createWoff2Buffer(ttfBuffer).then(writeBinary('./dist/font/yaschat.woff2')),
+				createEotBuffer(ttfBuffer).then(writeBinary('./dist/font/yaschat.eot')),
 			]),
 		);
 

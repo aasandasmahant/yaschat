@@ -4,13 +4,13 @@
 
 ### Minor Changes
 
-- ([#42050](https://github.com/RocketChat/Rocket.Chat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
+- ([#42050](https://github.com/YasChat/YasChat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
 
 ### Patch Changes
 
-- ([#43271](https://github.com/RocketChat/Rocket.Chat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
+- ([#43271](https://github.com/YasChat/YasChat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
 
-- ([#43279](https://github.com/RocketChat/Rocket.Chat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
+- ([#43279](https://github.com/YasChat/YasChat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, eaf5cedcce9f8e800415b4c49bce242f661462ea, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, bff76c34b21caddbc316d69b62fac858a73d7164, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, a39b03fe5c248079365162e31994e1dece63e7c2]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -25,9 +25,9 @@
 
 ### Patch Changes
 
-- ([#43271](https://github.com/RocketChat/Rocket.Chat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
+- ([#43271](https://github.com/YasChat/YasChat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
 
-- ([#43279](https://github.com/RocketChat/Rocket.Chat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
+- ([#43279](https://github.com/YasChat/YasChat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
 
 - <details><summary>Updated dependencies [687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 4c152661022d34bfbe9bf78811eac286a31c47a5, bff76c34b21caddbc316d69b62fac858a73d7164]:</summary>
   - @rocket.chat/models@3.0.0-rc.1
@@ -39,7 +39,7 @@
 
 ### Minor Changes
 
-- ([#42050](https://github.com/RocketChat/Rocket.Chat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
+- ([#42050](https://github.com/YasChat/YasChat/pull/42050)) Adds admin control over user status (Enterprise only): from **Administration > Status and presence**, or while editing a user, an admin can turn someone's status off or hide it from chosen people, and a **Show status** setting turns status off for the whole workspace. A user whose status is turned off always appears offline and can no longer change it; a user who is only hidden from chosen people keeps control of their own status. The feature is off by default, behind the new **Manage user status** setting.
 
 ### Patch Changes
 
@@ -56,9 +56,9 @@
 
 ### Patch Changes
 
-- ([#43271](https://github.com/RocketChat/Rocket.Chat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
+- ([#43271](https://github.com/YasChat/YasChat/pull/43271)) Fixes high database load when many users disconnect at once, such as after a network outage or an instance restart
 
-- ([#43279](https://github.com/RocketChat/Rocket.Chat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
+- ([#43279](https://github.com/YasChat/YasChat/pull/43279)) Stops the presence service from writing and broadcasting the user's status on every connection heartbeat when the status did not change
 
 - <details><summary>Updated dependencies [cdb0bc05288986f8682d5eb11ac7d9fcf19684b5, 968b1ee6c3779961d49c9a0a440262ab3966029f, 9d1afa454d964374e9cd6e10433b83ae16dc90ef, f871858c7dd52cd6849032425dce3a4670e14285]:</summary>
   - @rocket.chat/models@2.6.1
@@ -142,7 +142,7 @@
 
 ### Minor Changes
 
-- ([#40274](https://github.com/RocketChat/Rocket.Chat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
+- ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 ### Patch Changes
 
@@ -157,7 +157,7 @@
 
 ### Minor Changes
 
-- ([#40274](https://github.com/RocketChat/Rocket.Chat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
+- ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 ### Patch Changes
 
@@ -260,7 +260,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/models@2.1.2
@@ -317,7 +317,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/models@2.1.2-rc.0
@@ -449,7 +449,7 @@
 
 ### Patch Changes
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0]:</summary>
   - @rocket.chat/core-typings@8.0.0
@@ -517,7 +517,7 @@
 
 ### Patch Changes
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0]:</summary>
   - @rocket.chat/core-typings@8.0.0-rc.0
@@ -530,7 +530,7 @@
 
 ### Patch Changes
 
-- ([#37883](https://github.com/RocketChat/Rocket.Chat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37883](https://github.com/YasChat/YasChat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [eef2b390a8e4664ad4b974e7ea579982245efce5]:</summary>
   - @rocket.chat/core-services@0.11.2
@@ -2044,7 +2044,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [03c8b066f9, 2d89a0c448, 24f7df4894, 03c8b066f9, b8e5887fb9]:</summary>
   - @rocket.chat/core-services@0.5.0
@@ -2123,7 +2123,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [03c8b066f9, 2d89a0c448, 24f7df4894, 03c8b066f9, b8e5887fb9]:</summary>
   - @rocket.chat/core-services@0.5.0-rc.0
@@ -2136,13 +2136,13 @@
 
 ### Patch Changes
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
   - @rocket.chat/core-services@0.4.2
@@ -2166,7 +2166,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2258,7 +2258,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2348,7 +2348,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -2363,7 +2363,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -2552,7 +2552,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, 9a6e9b4e28, fdd9852079, b4b2cd20a8]:</summary>
   - @rocket.chat/core-services@0.3.4

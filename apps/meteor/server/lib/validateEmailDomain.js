@@ -38,7 +38,7 @@ settings.watch('Accounts_AllowedDomainsList', (value) => {
 export const validateEmailDomain = async function (email) {
 	if (!validateEmail(email)) {
 		throw new ClientSafeError('error-invalid-email', `Invalid email ${email}`, {
-			function: 'RocketChat.validateEmailDomain',
+			function: 'YasChat.validateEmailDomain',
 			email,
 		});
 	}
@@ -47,7 +47,7 @@ export const validateEmailDomain = async function (email) {
 
 	if (emailDomainWhiteList.length && !emailDomainWhiteList.includes(emailDomain)) {
 		throw new ClientSafeError('error-invalid-domain', 'The email domain is not in whitelist', {
-			function: 'RocketChat.validateEmailDomain',
+			function: 'YasChat.validateEmailDomain',
 		});
 	}
 	if (
@@ -56,7 +56,7 @@ export const validateEmailDomain = async function (email) {
 			(settings.get('Accounts_UseDefaultBlockedDomainsList') && emailDomainDefaultBlackList.indexOf(emailDomain) !== -1))
 	) {
 		throw new ClientSafeError('error-email-domain-blacklisted', 'The email domain is blacklisted', {
-			function: 'RocketChat.validateEmailDomain',
+			function: 'YasChat.validateEmailDomain',
 		});
 	}
 
@@ -65,7 +65,7 @@ export const validateEmailDomain = async function (email) {
 			await dnsResolveMx(emailDomain);
 		} catch (e) {
 			throw new ClientSafeError('error-invalid-domain', 'Invalid domain', {
-				function: 'RocketChat.validateEmailDomain',
+				function: 'YasChat.validateEmailDomain',
 			});
 		}
 	}

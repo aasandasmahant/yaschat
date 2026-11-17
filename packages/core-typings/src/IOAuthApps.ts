@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IOAuthApps extends IRocketChatRecord {
+export interface IOAuthApps extends IYasChatRecord {
 	name: string;
 	active: boolean;
 	clientId: string;

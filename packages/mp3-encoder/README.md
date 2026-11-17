@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/mp3-encoder) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/mp3-encoder)
 
-This package is a web worker script that encodes raw audio samples into an MP3 stream. It is a TypeScript port of the LAME encoder, so it needs no native code or WebAssembly. Rocket.Chat uses it to encode voice messages recorded in the browser.
+This package is a web worker script that encodes raw audio samples into an MP3 stream. It is a TypeScript port of the LAME encoder, so it needs no native code or WebAssembly. YasChat uses it to encode voice messages recorded in the browser.
 
 The package has no exports. You load its built file as a worker and talk to it with `postMessage`.
 
@@ -81,7 +81,7 @@ Each `encode` message is treated as a single channel. Mix multi-channel audio do
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/mp3-encoder). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/mp3-encoder). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/mp3-encoder build
@@ -96,4 +96,4 @@ yarn workspace @rocket.chat/mp3-encoder typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

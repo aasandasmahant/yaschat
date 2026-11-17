@@ -30,7 +30,7 @@ export async function startRegisterWorkspaceSetupWizard(resend = false, email: s
 		payload = await response.json();
 	} catch (err: any) {
 		SystemLogger.error({
-			msg: 'Failed to register workspace intent with Rocket.Chat Cloud',
+			msg: 'Failed to register workspace intent with YasChat Cloud',
 			url: '/api/v2/register/workspace',
 			err,
 		});

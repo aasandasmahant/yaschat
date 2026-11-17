@@ -4,7 +4,7 @@ import limax from 'limax';
 
 import { trim } from '../../../../../lib/utils/stringUtils';
 import { hasPermissionAsync } from '../../../authorization/hasPermission';
-import { RocketChatFileEmojiCustomInstance } from '../startup/emoji-custom';
+import { YasChatFileEmojiCustomInstance } from '../startup/emoji-custom';
 
 export type EmojiData = {
 	_id?: string;
@@ -104,25 +104,25 @@ export async function insertOrUpdateEmoji(userId: string | null, emojiData: Emoj
 
 	// update emoji
 	if (emojiData.newFile) {
-		await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
-		await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.previousExtension}`));
-		await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.extension}`));
-		await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.previousExtension}`));
+		await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
+		await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.previousExtension}`));
+		await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.extension}`));
+		await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.previousExtension}`));
 
 		await EmojiCustom.setExtension(emojiData._id, emojiData.extension);
 	} else if (emojiData.name !== emojiData.previousName) {
-		const rs = await RocketChatFileEmojiCustomInstance.getFileWithReadStream(
+		const rs = await YasChatFileEmojiCustomInstance.getFileWithReadStream(
 			encodeURIComponent(`${emojiData.previousName}.${emojiData.previousExtension}`),
 		);
 
 		if (rs) {
-			await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
-			const ws = RocketChatFileEmojiCustomInstance.createWriteStream(
+			await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
+			const ws = YasChatFileEmojiCustomInstance.createWriteStream(
 				encodeURIComponent(`${emojiData.name}.${emojiData.previousExtension}`),
 				rs.contentType,
 			);
 			ws.on('end', () =>
-				RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.previousExtension}`)),
+				YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.previousName}.${emojiData.previousExtension}`)),
 			);
 			rs.readStream.pipe(ws);
 		}

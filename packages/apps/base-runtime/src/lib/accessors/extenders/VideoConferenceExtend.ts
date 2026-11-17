@@ -1,13 +1,13 @@
 import type { IVideoConferenceExtender } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceExtend';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { VideoConference, VideoConferenceMember } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
 import type { IVideoConferenceUser } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
 
 export class VideoConferenceExtender implements IVideoConferenceExtender {
-	public kind: RocketChatAssociationModel.VIDEO_CONFERENCE;
+	public kind: YasChatAssociationModel.VIDEO_CONFERENCE;
 
 	constructor(private videoConference: VideoConference) {
-		this.kind = RocketChatAssociationModel.VIDEO_CONFERENCE;
+		this.kind = YasChatAssociationModel.VIDEO_CONFERENCE;
 	}
 
 	public setProviderData(value: Record<string, unknown>): IVideoConferenceExtender {

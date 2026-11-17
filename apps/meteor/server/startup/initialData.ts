@@ -203,18 +203,18 @@ export const insertInitialData = async (): Promise<void> => {
 		}
 	}
 
-	await Users.removeById('rocketchat.internal.admin.test');
+	await Users.removeById('yaschat.internal.admin.test');
 
 	if (process.env.TEST_MODE === 'true' || process.env.TEST_MODE === 'api') {
 		console.log(colors.green('Inserting admin test user:'));
 
 		const adminUser: Omit<IUser, 'createdAt' | 'roles' | '_updatedAt'> = {
-			_id: 'rocketchat.internal.admin.test',
-			name: 'RocketChat Internal Admin Test',
-			username: 'rocketchat.internal.admin.test',
+			_id: 'yaschat.internal.admin.test',
+			name: 'YasChat Internal Admin Test',
+			username: 'yaschat.internal.admin.test',
 			emails: [
 				{
-					address: 'rocketchat.internal.admin.test@rocket.chat',
+					address: 'yaschat.internal.admin.test@rocket.chat',
 					verified: true,
 				},
 			],
@@ -231,11 +231,11 @@ export const insertInitialData = async (): Promise<void> => {
 		console.log(colors.green(`Password: ${adminUser._id}`));
 
 		if (await Users.findOneByEmailAddress(adminUser.emails![0].address)) {
-			throw new ClientSafeError(`Email ${adminUser.emails![0].address} already exists`, "Rocket.Chat can't run in test mode");
+			throw new ClientSafeError(`Email ${adminUser.emails![0].address} already exists`, "YasChat can't run in test mode");
 		}
 
 		if (!(await checkUsernameAvailability(adminUser.username!))) {
-			throw new ClientSafeError(`Username ${adminUser.username} already exists`, "Rocket.Chat can't run in test mode");
+			throw new ClientSafeError(`Username ${adminUser.username} already exists`, "YasChat can't run in test mode");
 		}
 
 		await Users.create(adminUser);
@@ -252,6 +252,6 @@ export const insertInitialData = async (): Promise<void> => {
 		await addUserToDefaultChannels(adminUser as IUser, true);
 
 		// Create sample call history for API tests
-		return addCallHistoryTestData('rocketchat.internal.admin.test', 'rocket.cat');
+		return addCallHistoryTestData('yaschat.internal.admin.test', 'rocket.cat');
 	}
 };

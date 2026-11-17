@@ -1,4 +1,4 @@
-import { Info } from '../../../../../rocketchat.info';
+import { Info } from '../../../../../yaschat.info';
 
 export function getMarketplaceHeaders(): Record<string, any> {
 	return {

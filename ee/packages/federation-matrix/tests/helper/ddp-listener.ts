@@ -188,7 +188,7 @@ export class DDPListener {
 
 /**
  * Helper function to create and manage a DDP listener for federation tests
- * @param apiUrl - The Rocket.Chat API URL (e.g., 'http://rc1:3000' or 'https://rc1:3000')
+ * @param apiUrl - The YasChat API URL (e.g., 'http://rc1:3000' or 'https://rc1:3000')
  * @param requestConfig - The request configuration containing credentials
  * @returns DDPListener instance
  */

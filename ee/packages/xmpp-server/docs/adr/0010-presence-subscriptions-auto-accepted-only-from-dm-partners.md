@@ -15,7 +15,7 @@
 
 ## Why
 
-Rocket.Chat has no roster and no UI for approving a presence request. Deriving the
+YasChat has no roster and no UI for approving a presence request. Deriving the
 subscription from an existing DM gives a rule a user can understand (people I talk to see my
 status) without a new data model or a new dialog, and it leaks presence to nobody the user
 has not already engaged with.
@@ -25,7 +25,7 @@ has not already engaged with.
 - **Accept every request.** Leaks status to any domain that asks.
 - **Store a roster and ask the user.** Needs a model, a UI and a notification path; a later
   capability can add it on top without changing the wire behaviour for DM partners.
-- **Never accept.** Remote clients then never see Rocket.Chat users as online.
+- **Never accept.** Remote clients then never see YasChat users as online.
 
 ## Consequences
 

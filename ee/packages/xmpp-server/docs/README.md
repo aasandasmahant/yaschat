@@ -208,7 +208,7 @@ Requirements are the part of a spec everything else is held to. A good one:
   an error returned, an event emitted. "The router is refactored" is not a requirement.
 - **Names the case**: who sends what, to whom, in which state. "Messages are delivered" is
   too broad. "A `groupchat` message from an occupant of a hosted room is stored in the
-  Rocket.Chat room, authored by that occupant's user" can be tested.
+  YasChat room, authored by that occupant's user" can be tested.
 - **Says MUST or SHOULD**: MUST for what the code is held to, SHOULD for what it does when
   nothing prevents it.
 - **Cites the standard** with its section number when it implements one, so a reviewer can
@@ -263,11 +263,11 @@ Where each id shows up:
 
 | Where | Form | Example |
 | --- | --- | --- |
-| Test name, same spec as the test file | `(R<n>)` at the end | `'mirrors the room in Rocket.Chat when a local user is invited (R1)'` |
+| Test name, same spec as the test file | `(R<n>)` at the end | `'mirrors the room in YasChat when a local user is invited (R1)'` |
 | Test name, another spec | `(<slug> R<n>)` | `'applies a correction from the XMPP user to the stored message (message-corrections R4)'` |
-| Skipped test | comment above it | `// Known defect: ../../docs/specs/presence.md#d2-rocketchat-status-changes-do-not-reach-xmpp-contacts` |
+| Skipped test | comment above it | `// Known defect: ../../docs/specs/presence.md#d2-yaschat-status-changes-do-not-reach-xmpp-contacts` |
 | Plan, Proof section | one table row per `R` | `R3` → the test file and test name that prove it |
-| Commit body | `<slug> R<n>` / `<slug> D<n>` | `hosted-muc D3: a topic changed in Rocket.Chat reaches only whoever joins next` |
+| Commit body | `<slug> R<n>` / `<slug> D<n>` | `hosted-muc D3: a topic changed in YasChat reaches only whoever joins next` |
 
 ## What must move together
 

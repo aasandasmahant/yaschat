@@ -29,7 +29,7 @@ const searchTerm = (selector: unknown, key: string): string | undefined => {
 	}
 };
 
-// The playground has no Rocket.Chat server; elements that fetch users or rooms read this sample data instead.
+// The playground has no YasChat server; elements that fetch users or rooms read this sample data instead.
 const respond = (pathPattern: string, params: Record<string, unknown> | undefined) => {
 	switch (pathPattern) {
 		case '/v1/users.autocomplete': {

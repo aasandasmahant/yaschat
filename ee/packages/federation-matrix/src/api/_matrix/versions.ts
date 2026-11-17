@@ -39,7 +39,7 @@ export const getFederationVersionsRoutes = (version: string) => {
 		async () => {
 			const response = {
 				server: {
-					name: 'Rocket.Chat',
+					name: 'YasChat',
 					version,
 				},
 			};

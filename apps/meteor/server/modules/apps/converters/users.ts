@@ -40,13 +40,13 @@ export class AppUsersConverter implements IAppUsersConverter {
 		return z.decode(UserCodec, user);
 	}
 
-	convertToRocketChat(user: undefined | null): undefined;
+	convertToYasChat(user: undefined | null): undefined;
 
-	convertToRocketChat(user: IAppsUser): IUser;
+	convertToYasChat(user: IAppsUser): IUser;
 
-	convertToRocketChat(user: IAppsUser | undefined | null): IUser | undefined;
+	convertToYasChat(user: IAppsUser | undefined | null): IUser | undefined;
 
-	convertToRocketChat(user: IAppsUser | undefined | null): IUser | undefined {
+	convertToYasChat(user: IAppsUser | undefined | null): IUser | undefined {
 		if (!user) {
 			return undefined;
 		}

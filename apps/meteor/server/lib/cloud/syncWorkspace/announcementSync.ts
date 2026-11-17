@@ -32,9 +32,9 @@ const fetchCloudAnnouncementsSync = async ({
 	if (!response.ok) {
 		try {
 			const { error } = await response.json();
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 		} catch (error) {
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${response.statusText}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${response.statusText}`);
 		}
 	}
 
@@ -85,7 +85,7 @@ export async function announcementSync() {
 			case err instanceof CloudWorkspaceRegistrationError:
 			case err instanceof CloudWorkspaceAccessTokenEmptyError: {
 				SystemLogger.info({
-					msg: 'Failed to sync with Rocket.Chat Cloud',
+					msg: 'Failed to sync with YasChat Cloud',
 					function: 'announcementSync',
 					err,
 				});

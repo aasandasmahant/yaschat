@@ -31,23 +31,23 @@ describe('apps converters — lenient enum edge cases', () => {
 		});
 	});
 
-	describe('AppUsersConverter.convertToRocketChat', () => {
+	describe('AppUsersConverter.convertToYasChat', () => {
 		const converter = new AppUsersConverter(orch);
 
 		it('does not throw when the app user has no type/statusConnection and strips empties', () => {
-			const result = converter.convertToRocketChat(asAppUser({ id: 'u', username: 'a' }));
+			const result = converter.convertToYasChat(asAppUser({ id: 'u', username: 'a' }));
 
 			expect(result).to.deep.equal({ _id: 'u', username: 'a' });
 		});
 
 		it('falls back to the legacy utfOffset property when utcOffset is absent', () => {
-			const result = converter.convertToRocketChat(asAppUser({ id: 'u', username: 'a', utfOffset: -3 }));
+			const result = converter.convertToYasChat(asAppUser({ id: 'u', username: 'a', utfOffset: -3 }));
 
 			expect(result).to.deep.equal({ _id: 'u', username: 'a', utcOffset: -3 });
 		});
 
 		it('prefers utcOffset over the legacy utfOffset when both are present', () => {
-			const result = converter.convertToRocketChat(asAppUser({ id: 'u', username: 'a', utcOffset: 5, utfOffset: -3 }));
+			const result = converter.convertToYasChat(asAppUser({ id: 'u', username: 'a', utcOffset: 5, utfOffset: -3 }));
 
 			expect(result).to.deep.equal({ _id: 'u', username: 'a', utcOffset: 5 });
 		});

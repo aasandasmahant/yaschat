@@ -169,11 +169,11 @@ export class LDAPEEManager extends LDAPManager {
 			return;
 		}
 
-		const mappedRocketChatTeams = Object.values(mappedTeams);
-		const validStructureMapping = mappedRocketChatTeams.every(mustBeAnArrayOfStrings);
+		const mappedYasChatTeams = Object.values(mappedTeams);
+		const validStructureMapping = mappedYasChatTeams.every(mustBeAnArrayOfStrings);
 		if (!validStructureMapping) {
 			throw new Error(
-				'Please verify your mapping for LDAP X RocketChat Teams. The structure is invalid, the structure should be an object like: {key: LdapTeam, value: [An array of rocket.chat teams]}',
+				'Please verify your mapping for LDAP X YasChat Teams. The structure is invalid, the structure should be an object like: {key: LdapTeam, value: [An array of rocket.chat teams]}',
 			);
 		}
 	}
@@ -185,9 +185,9 @@ export class LDAPEEManager extends LDAPManager {
 
 		const mappedAttributes = this.parseJson(json);
 
-		// attributes are { key: value } with key being the ldap attribute and value being the abac attribute in rocketchat
+		// attributes are { key: value } with key being the ldap attribute and value being the abac attribute in yaschat
 		// both strings
-		// There's no need for the attribute to exist in rocketchat, we just add whatever the admin wants to map
+		// There's no need for the attribute to exist in yaschat, we just add whatever the admin wants to map
 
 		if (!mappedAttributes || Object.keys(mappedAttributes).length === 0) {
 			return;
@@ -199,7 +199,7 @@ export class LDAPEEManager extends LDAPManager {
 
 		if (!validStructureMapping) {
 			throw new Error(
-				'Please verify your mapping for LDAP X RocketChat ABAC Attributes. The structure is invalid, the structure should be an object like: {key: LdapAttribute, value: RocketChatAbacAttribute}',
+				'Please verify your mapping for LDAP X YasChat ABAC Attributes. The structure is invalid, the structure should be an object like: {key: LdapAttribute, value: YasChatAbacAttribute}',
 			);
 		}
 	}
@@ -585,7 +585,7 @@ export class LDAPEEManager extends LDAPManager {
 
 		if (filteredMappedLdapGroups.length < ldapGroups.length) {
 			const unmappedLdapGroups = ldapGroups.filter((ldapGroup) => !mappedLdapGroups.includes(ldapGroup));
-			logger.error({ msg: 'The following LDAP groups are not mapped in Rocket.Chat', unmappedLdapGroups });
+			logger.error({ msg: 'The following LDAP groups are not mapped in YasChat', unmappedLdapGroups });
 		}
 
 		if (!filteredMappedLdapGroups.length) {

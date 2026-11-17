@@ -1,10 +1,10 @@
 # `@rocket.chat/layout`
 
-> React page layouts and building blocks for Rocket.Chat's full-screen pages, such as setup wizards, login and registration.
+> React page layouts and building blocks for YasChat's full-screen pages, such as setup wizards, login and registration.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/layout?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/layout) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/layout?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/layout)
 
-This package provides the page shells used by Rocket.Chat's standalone screens: a patterned background, the logo, a centered or two-column arrangement, and a form card. The pages in [`@rocket.chat/onboarding-ui`](https://www.npmjs.com/package/@rocket.chat/onboarding-ui) are built on it.
+This package provides the page shells used by YasChat's standalone screens: a patterned background, the logo, a centered or two-column arrangement, and a form card. The pages in [`@rocket.chat/onboarding-ui`](https://www.npmjs.com/package/@rocket.chat/onboarding-ui) are built on it.
 
 It is built with [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage) components and supports light and dark mode.
 
@@ -21,11 +21,11 @@ npm install @rocket.chat/layout @rocket.chat/fuselage @rocket.chat/icons react@1
 
 Peer dependencies: `@rocket.chat/fuselage`, `react` and `react-dom` (19 or later) and `react-i18next` (which itself needs `i18next`). `@rocket.chat/icons` and `react-virtuoso` are peer dependencies of Fuselage, and the icon font comes from `@rocket.chat/icons`. The package ships both CommonJS and ES modules, with TypeScript declarations.
 
-The components rely on Fuselage's styles and on the Rocket.Chat icon font. Load them once in your app:
+The components rely on Fuselage's styles and on the YasChat icon font. Load them once in your app:
 
 ```ts
 import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/rocketchat.css';
+import '@rocket.chat/icons/dist/yaschat.css';
 ```
 
 ## Usage
@@ -149,7 +149,7 @@ All three layouts accept the same options:
 </VerticalWizardLayout>
 ```
 
-Without `logo`, the Rocket.Chat logo is shown. Without `background`, a built-in pattern is drawn. Without `forceDarkMode`, the layout follows the user's `prefers-color-scheme`.
+Without `logo`, the YasChat logo is shown. Without `background`, a built-in pattern is drawn. Without `forceDarkMode`, the layout follows the user's `prefers-color-scheme`.
 
 ### Dark mode outside a layout
 
@@ -179,7 +179,7 @@ const Page = () => (
 
 | Prop             | Type        | Description                                                              |
 | ---------------- | ----------- | ------------------------------------------------------------------------ |
-| `logo`           | `ReactNode` | Replaces the Rocket.Chat logo.                                           |
+| `logo`           | `ReactNode` | Replaces the YasChat logo.                                           |
 | `logoDark`       | `ReactNode` | Logo for dark mode. Defaults to `logo`.                                  |
 | `background`     | `string`    | URL or data URI of the page background image.                            |
 | `backgroundDark` | `string`    | Background for dark mode. Defaults to `background`.                      |
@@ -211,7 +211,7 @@ The `LayoutContextValue` type describes these props.
 | Export             | Props                                                                                                                     | Description                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `BackgroundLayer`  | `children`                                                                                                                | Full-page background with the pattern or custom image from the layout options.                  |
-| `LayoutLogo`       | —                                                                                                                         | The logo from the layout options, or the Rocket.Chat logo, up to 224 px wide.                   |
+| `LayoutLogo`       | —                                                                                                                         | The logo from the layout options, or the YasChat logo, up to 224 px wide.                   |
 | `ActionLink`       | `<a>` attributes, `children`, `href` (default `'#'`), `fontScale` (default `'p2'`)                                        | A link. When `onClick` is set, the default navigation is prevented.                             |
 | `TooltipWrapper`   | `text: string`, `children: ReactElement \| ((params: AnchorParams) => ReactNode)`                                         | Shows `text` in a tooltip on hover and focus. A render function receives `{ ref, toggle, id }`. |
 | `List`             | `children`, `spacing` (Fuselage margin, default `'x6'`), `listStyleType`, `color`, `icon` (SVG markup used as the bullet) | An unstyled `<ul>` with spacing between items.                                                  |
@@ -220,7 +220,7 @@ The `LayoutContextValue` type describes these props.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/layout). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/layout). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/layout build
@@ -238,4 +238,4 @@ yarn workspace @rocket.chat/layout build-storybook
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

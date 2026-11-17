@@ -22,16 +22,16 @@ export default {
 	source: ['src/**/*.json'],
 	platforms: {
 		'fuselage/json': {
-			transformGroup: 'json/rocketchat',
+			transformGroup: 'json/yaschat',
 			buildPath: 'dist/',
 			files: categories.map((category) => ({
 				destination: `${category}.json`,
-				format: 'json/rocketchat',
+				format: 'json/yaschat',
 				filter: filterByCategory(category),
 			})),
 		},
 		'fuselage/scss': {
-			transformGroup: 'scss/rocketchat',
+			transformGroup: 'scss/yaschat',
 			buildPath: 'dist/',
 			files: categories.map((category) => ({
 				destination: `${category}.scss`,
@@ -43,11 +43,11 @@ export default {
 			})),
 		},
 		'fuselage/ts': {
-			transformGroup: 'json/rocketchat',
+			transformGroup: 'json/yaschat',
 			buildPath: 'dist/',
 			files: categories.map((category) => ({
 				destination: `${category}.d.json.ts`,
-				format: 'dts/rocketchat',
+				format: 'dts/yaschat',
 				options: {
 					mapName: kebabCase(category),
 				},

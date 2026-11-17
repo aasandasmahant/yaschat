@@ -65,7 +65,7 @@ export class AgendaCronJobs {
 	public async start(mongo: Db): Promise<void> {
 		this.scheduler = new Agenda({
 			mongo,
-			db: { collection: 'rocketchat_cron' },
+			db: { collection: 'yaschat_cron' },
 			defaultConcurrency: 1,
 			processEvery: '1 minute',
 		});

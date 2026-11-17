@@ -3,7 +3,7 @@ import { AppInstallationSource } from '@rocket.chat/apps/dist/server/storage/IAp
 import { AppStatus, AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
 import mem from 'mem';
 
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { SystemLogger } from '../../logger/system';
 
 type AppsStatistics = {

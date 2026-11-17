@@ -1,6 +1,6 @@
 import type {
 	IMediaCall,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	MediaCallActorType,
 	MediaCallSignedContact,
 	MediaCallContact,
@@ -13,7 +13,7 @@ import type { IndexDescription, Collection, Db, UpdateFilter, UpdateOptions, Upd
 import { BaseRaw } from './BaseRaw';
 
 export class MediaCallsRaw extends BaseRaw<IMediaCall> implements IMediaCallsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IMediaCall>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IMediaCall>>) {
 		super(db, 'media_calls', trash);
 	}
 

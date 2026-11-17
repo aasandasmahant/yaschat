@@ -1,9 +1,9 @@
 # LiveKit native video conference
 
 LiveKit is a **native provider of the Video Conference feature**: the camera button starts a LiveKit call the same
-way it starts a Jitsi or Google Meet call, but the call runs inside Rocket.Chat's own
+way it starts a Jitsi or Google Meet call, but the call runs inside YasChat's own
 [conference window](../video-conference-persistent-chat/README.md) instead of at the provider's page. How to deploy
-LiveKit next to Rocket.Chat is in [deployment.md](deployment.md). The feature as a whole (providers, the message
+LiveKit next to YasChat is in [deployment.md](deployment.md). The feature as a whole (providers, the message
 block, ringing) is described in [video-conference.md](../video-conference.md).
 
 ## Where the call runs

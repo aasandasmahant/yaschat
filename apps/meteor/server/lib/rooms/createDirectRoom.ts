@@ -112,7 +112,7 @@ export async function createDirectRoom(
 		});
 
 		if (prevent) {
-			throw new ClientSafeError('error-app-prevented', 'A Rocket.Chat App prevented the room creation.');
+			throw new ClientSafeError('error-app-prevented', 'A YasChat App prevented the room creation.');
 		}
 
 		const result = await Apps.self?.triggerEvent(

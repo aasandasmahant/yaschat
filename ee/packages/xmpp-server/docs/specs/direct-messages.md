@@ -18,7 +18,7 @@ tests: [src/handlers/parse.spec.ts, tests/integration/routing.spec.ts, tests/end
 
 ## Summary
 
-A Rocket.Chat user and a remote XMPP user exchange one-to-one messages. On the Rocket.Chat
+A YasChat user and a remote XMPP user exchange one-to-one messages. On the YasChat
 side the conversation is an ordinary DM room with a federated user; on the XMPP side it is
 a chat with `<username>@<domain>`.
 
@@ -53,7 +53,7 @@ pre-arranging anything.
   outgoing hook ignores anything carrying a federation stamp.
 - **R7** When a local user opens a DM by typing a bare JID, the remote user record is created
   and the room stamped before the first message is sent, whether the JID is new to
-  Rocket.Chat or already has a user record.
+  YasChat or already has a user record.
 - **R8** Delivery is at most once. A message that cannot be delivered (unreachable domain
   after backoff, full queue) is logged on the service; the sender is not told.
 - **R9** An edit by the author is sent as a correction ([message-corrections](message-corrections.md)).
@@ -71,10 +71,10 @@ from the UI goes through `federation.beforeCreateDirectMessage` (stamps the room
 ## Out of scope
 
 - Message types `headline` and `groupchat` addressed to a user.
-- Rich content: XHTML-IM (XEP-0071), mentions, markdown. The Rocket.Chat text is sent as
+- Rich content: XHTML-IM (XEP-0071), mentions, markdown. The YasChat text is sent as
   the body verbatim and the remote body is stored verbatim.
 - Threads: the `<thread/>` element is parsed and can be sent, but is not mapped to
-  Rocket.Chat threads.
+  YasChat threads.
 - Chat states (XEP-0085), pending triage in [compliance.md](../compliance.md).
 - Delivery receipts: [delivery-receipts](delivery-receipts.md), planned.
 - Attachments: [file-transfer](file-transfer.md), planned.

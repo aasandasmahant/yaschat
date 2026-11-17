@@ -46,7 +46,7 @@ import { IS_EE } from '../../e2e/config/constants';
 		const dep1 = await createDepartment();
 		await addOrRemoveAgentFromDepartment(
 			dep1._id,
-			{ agentId: 'rocketchat.internal.admin.test', username: 'rocketchat.internal.admin.test', count: 0, order: 0 },
+			{ agentId: 'yaschat.internal.admin.test', username: 'yaschat.internal.admin.test', count: 0, order: 0 },
 			true,
 		);
 		const { room, visitor } = await startANewLivechatRoomAndTakeIt({ departmentId: dep1._id });

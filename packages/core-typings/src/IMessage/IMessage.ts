@@ -7,7 +7,7 @@ import type { MessageSurfaceLayout } from '@rocket.chat/ui-kit';
 import type { ILivechatPriority } from '../ILivechatPriority';
 import type { ILivechatVisitor } from '../ILivechatVisitor';
 import type { IOmnichannelServiceLevelAgreements } from '../IOmnichannelServiceLevelAgreements';
-import type { IRocketChatRecord } from '../IRocketChatRecord';
+import type { IYasChatRecord } from '../IYasChatRecord';
 import type { IRoom } from '../IRoom';
 import type { IUser } from '../IUser';
 import type { FileProp } from './MessageAttachment/Files/FileProp';
@@ -143,7 +143,7 @@ interface IEncryptedContentFederation extends IEncryptedContent {
 
 export type EncryptedContent = IEncryptedContentV1 | IEncryptedContentV2 | IEncryptedContentFederation;
 
-export interface IMessage extends IRocketChatRecord {
+export interface IMessage extends IYasChatRecord {
 	rid: IRoom['_id'];
 	msg: string;
 	tmid?: string;

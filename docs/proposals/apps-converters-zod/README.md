@@ -10,10 +10,10 @@ notes below, including the messages/threads deviation in Phase 4.
 `apps/meteor/server/modules/apps/converters/` translates data between two models in both
 directions:
 
-- **Rocket.Chat → Apps-Engine** ("to app"): Mongo documents (`IUser`, `IRoom`, `IMessage`, …)
+- **YasChat → Apps-Engine** ("to app"): Mongo documents (`IUser`, `IRoom`, `IMessage`, …)
   become Apps-Engine objects (`IAppsUser`, `IAppsRoom`, `IAppsMessage`, …). Methods such as
   `convertToApp` / `convertRoom` / `convertMessage`.
-- **Apps-Engine → Rocket.Chat** ("from app"): the reverse. Methods such as `convertToRocketChat` /
+- **Apps-Engine → YasChat** ("from app"): the reverse. Methods such as `convertToYasChat` /
   `convertApp*`.
 
 Today the two directions are implemented by two unrelated mechanisms:
@@ -68,8 +68,8 @@ export const TimestampSchema = z.codec(z.iso.datetime(), z.date(), {
 
 `z.codec(RcSchema, AppSchema, { decode, encode })` maps directly onto our two directions:
 
-- `decode` : Rocket.Chat → Apps-Engine  (today's `convertToApp` / `convertRoom` / …)
-- `encode` : Apps-Engine → Rocket.Chat  (today's `convertToRocketChat` / `convertApp*`)
+- `decode` : YasChat → Apps-Engine  (today's `convertToApp` / `convertRoom` / …)
+- `encode` : Apps-Engine → YasChat  (today's `convertToYasChat` / `convertApp*`)
 
 `z.decode(codec, x)` / `z.encode(codec, x)` run them synchronously; `z.decodeAsync` / `z.encodeAsync`
 run them when the transforms are async.
@@ -123,9 +123,9 @@ implementation detail those methods delegate to.
 ### Direction convention (illustrative)
 
 ```ts
-const UserCodec = z.codec(UserRocketChatSchema, AppsUserSchema, {
+const UserCodec = z.codec(UserYasChatSchema, AppsUserSchema, {
 	decode: (user) => ({ id: user._id, /* … */ }),           // convertToApp
-	encode: (appUser) => removeEmpty({ _id: appUser.id, /* … */ }), // convertToRocketChat
+	encode: (appUser) => removeEmpty({ _id: appUser.id, /* … */ }), // convertToYasChat
 });
 
 // RC -> App:  z.decode(UserCodec, user)
@@ -157,7 +157,7 @@ Each phase is independently shippable, keeps the class façade, and is gated by 
 Typing the converters exposed three latent bugs in the legacy code. They are small, self-contained,
 and fixed in Phase 0 rather than carried forward as "behaviour to preserve":
 
-1. **`users` — `utfOffset` typo (from-app).** `convertToRocketChat` read the misspelled
+1. **`users` — `utfOffset` typo (from-app).** `convertToYasChat` read the misspelled
    `appUser.utfOffset`, so a round-tripped user always lost its `utcOffset`. It now reads
    `utcOffset` first and keeps `utfOffset` only as a compatibility fallback for any app still
    emitting the old key. The golden round-trip fixture uses `utcOffset`; a focused test pins the

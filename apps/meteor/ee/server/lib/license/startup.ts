@@ -133,7 +133,7 @@ export const startLicense = async () => {
 				if (License.hasOfflineLicense()) {
 					// startup level so it is visible at the default Log_Level, like 'License installed'
 					SystemLogger.startup(
-						'Offline license detected: outbound connections to Rocket.Chat Cloud services and the Rocket.Chat Push Gateway are disabled',
+						'Offline license detected: outbound connections to YasChat Cloud services and the YasChat Push Gateway are disabled',
 					);
 				}
 			});

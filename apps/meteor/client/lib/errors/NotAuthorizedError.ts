@@ -1,6 +1,6 @@
-import { RocketChatError } from './RocketChatError';
+import { YasChatError } from './YasChatError';
 
-export class NotAuthorizedError extends RocketChatError<'not-authorized'> {
+export class NotAuthorizedError extends YasChatError<'not-authorized'> {
 	constructor(message = 'Not authorized', details?: unknown) {
 		super('not-authorized', message, details);
 	}

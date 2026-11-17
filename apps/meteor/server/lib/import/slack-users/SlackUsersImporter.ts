@@ -5,7 +5,7 @@ import { Settings } from '@rocket.chat/models';
 import { parse } from 'csv-parse/lib/sync';
 
 import { Importer, ProgressStep } from '..';
-import { RocketChatFile } from '../../media/file';
+import { YasChatFile } from '../../media/file';
 import { notifyOnSettingChanged } from '../../notifyListener';
 import type { ConverterOptions } from '../classes/ImportDataConverter';
 import type { ImporterProgress } from '../classes/ImporterProgress';
@@ -42,7 +42,7 @@ export class SlackUsersImporter extends Importer {
 		await this.updateRecord({ file: fileName });
 
 		await super.updateProgress(ProgressStep.PREPARING_USERS);
-		const uriResult = RocketChatFile.dataURIParse(dataURI);
+		const uriResult = YasChatFile.dataURIParse(dataURI);
 		const buf = Buffer.from(uriResult.image, 'base64');
 		const parsed = this.csvParser(buf.toString());
 

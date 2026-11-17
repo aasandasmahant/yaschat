@@ -3,14 +3,14 @@ import * as z from 'zod';
 
 import { TimestampSchema } from './utils';
 
-export const IRocketChatRecordSchema = z.object({
+export const IYasChatRecordSchema = z.object({
 	_id: z.string(),
 	_updatedAt: TimestampSchema,
 });
 
-export type IRocketChatRecord = z.infer<typeof IRocketChatRecordSchema>;
+export type IYasChatRecord = z.infer<typeof IYasChatRecordSchema>;
 
-export type RocketChatRecordDeleted<T> = WithId<T> & {
+export type YasChatRecordDeleted<T> = WithId<T> & {
 	_updatedAt: Date;
 	_deletedAt: Date;
 	__collection__: string;

@@ -5,11 +5,11 @@ import * as z from 'zod';
 import { SettingTypeCodec } from './enums';
 
 /**
- * Rocket.Chat `ISetting` -> Apps-Engine `IAppsSetting`.
+ * YasChat `ISetting` -> Apps-Engine `IAppsSetting`.
  *
  * `decode` reproduces `AppSettingsConverter.convertToApp` (id/date renames + `SettingType` mapping).
  * The setting converter is intentionally one-directional, matching the legacy converter which had no
- * `convertToRocketChat`: an Apps-Engine setting cannot be turned back into a valid `ISetting` (required
+ * `convertToYasChat`: an Apps-Engine setting cannot be turned back into a valid `ISetting` (required
  * fields such as `env`, `blocked` and `sorter` are not part of `IAppsSetting`), so `encode` is not
  * supported and throws instead of emitting a lossy, invalid document. Endpoints are typed with
  * `z.custom` so no runtime validation is added on the decode path.
@@ -31,6 +31,6 @@ export const SettingCodec = z.codec(z.custom<ISetting>(), z.custom<IAppsSetting>
 			updatedAt: setting._updatedAt,
 		}) as unknown as IAppsSetting,
 	encode: (): ISetting => {
-		throw new Error('SettingCodec: converting an Apps-Engine setting back to a Rocket.Chat setting is not supported');
+		throw new Error('SettingCodec: converting an Apps-Engine setting back to a YasChat setting is not supported');
 	},
 });

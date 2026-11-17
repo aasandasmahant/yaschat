@@ -1,6 +1,6 @@
 import { UserStatus } from '@rocket.chat/core-typings';
 import type { IUser } from '@rocket.chat/core-typings';
-import type { IRocketChatDesktop } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
 import { mockAppRoot } from '@rocket.chat/mock-providers';
 import { clientCallbacks } from '@rocket.chat/ui-client';
 import { AuthenticationContext, UserContext } from '@rocket.chat/ui-contexts';
@@ -28,11 +28,11 @@ beforeEach(() => {
 	runCallbacks.mockClear();
 	setUserPresenceState.mockClear();
 	setUserStatusChangeHandler.mockClear();
-	window.RocketChatDesktop = { setUserPresenceState, setUserStatusChangeHandler } as unknown as IRocketChatDesktop;
+	window.YasChatDesktop = { setUserPresenceState, setUserStatusChangeHandler } as unknown as IYasChatDesktop;
 });
 
 afterAll(() => {
-	delete window.RocketChatDesktop;
+	delete window.YasChatDesktop;
 });
 
 const lastPresence = () => setUserPresenceState.mock.lastCall?.[0];
@@ -156,7 +156,7 @@ describe('useDesktopUserPresence', () => {
 
 	it('leaves a desktop app without the presence contract untouched', () => {
 		const olderDesktopSetUserPresence = jest.fn();
-		window.RocketChatDesktop = { setUserPresence: olderDesktopSetUserPresence } as unknown as IRocketChatDesktop;
+		window.YasChatDesktop = { setUserPresence: olderDesktopSetUserPresence } as unknown as IYasChatDesktop;
 
 		renderHook(() => useDesktopUserPresence(), { wrapper: mockAppRoot().withUser(user).build() });
 
@@ -168,9 +168,9 @@ describe('useDesktopUserPresence', () => {
 		['a desktop app without the presence contract', { setUserPresence: jest.fn() }],
 	])('does not load the custom statuses in %s', async (_name, bridge) => {
 		if (bridge) {
-			window.RocketChatDesktop = bridge as unknown as IRocketChatDesktop;
+			window.YasChatDesktop = bridge as unknown as IYasChatDesktop;
 		} else {
-			delete window.RocketChatDesktop;
+			delete window.YasChatDesktop;
 		}
 		const listStatuses = jest.fn(customStatuses);
 
@@ -183,7 +183,7 @@ describe('useDesktopUserPresence', () => {
 	});
 
 	it('runs in a browser without the desktop bridge', () => {
-		delete window.RocketChatDesktop;
+		delete window.YasChatDesktop;
 
 		let session: ReturnType<typeof renderWithUserRecord> | undefined;
 		expect(() => {
@@ -197,13 +197,13 @@ describe('useDesktopUserPresence', () => {
 		(member) => {
 			const desktopError = new Error('desktop bridge failure');
 			const warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
-			window.RocketChatDesktop = {
+			window.YasChatDesktop = {
 				setUserPresenceState,
 				setUserStatusChangeHandler,
 				[member]: jest.fn(() => {
 					throw desktopError;
 				}),
-			} as unknown as IRocketChatDesktop;
+			} as unknown as IYasChatDesktop;
 
 			try {
 				expect(() => renderHook(() => useDesktopUserPresence(), { wrapper: mockAppRoot().withUser(user).build() })).not.toThrow();

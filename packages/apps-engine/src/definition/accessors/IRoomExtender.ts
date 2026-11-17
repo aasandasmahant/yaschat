@@ -1,9 +1,9 @@
-import type { RocketChatAssociationModel } from '../metadata';
+import type { YasChatAssociationModel } from '../metadata';
 import type { IRoom } from '../rooms';
 import type { IUser } from '../users';
 
 export interface IRoomExtender {
-	kind: RocketChatAssociationModel.ROOM;
+	kind: YasChatAssociationModel.ROOM;
 
 	/**
 	 * Adds a custom field to the room.

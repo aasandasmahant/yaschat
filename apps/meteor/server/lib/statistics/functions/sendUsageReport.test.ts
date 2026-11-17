@@ -31,7 +31,7 @@ const { sendUsageReport } = proxyquire.noCallThru().load('./sendUsageReport', {
 	'../index': { statistics: mocks.statistics },
 	'../../cloud': { getWorkspaceAccessToken: mocks.getWorkspaceAccessToken },
 	'../../utils/getURL': { getWorkspaceURL: mocks.getWorkspaceURL },
-	'../../../../rocketchat.info': { Info: mocks.Info },
+	'../../../../yaschat.info': { Info: mocks.Info },
 });
 
 describe('sendUsageReport', () => {

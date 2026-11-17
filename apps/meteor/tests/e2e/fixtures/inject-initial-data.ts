@@ -75,7 +75,7 @@ export default async function injectInitialData() {
 		].map((setting) =>
 			connection
 				.db()
-				.collection<ISetting>('rocketchat_settings')
+				.collection<ISetting>('yaschat_settings')
 				.updateOne({ _id: setting._id }, { $set: { value: setting.value } }),
 		),
 	);

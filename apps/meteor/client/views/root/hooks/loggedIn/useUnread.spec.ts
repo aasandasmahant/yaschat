@@ -13,11 +13,11 @@ const alertOnlyRoom = (unreadAlert: 'default' | 'all' | 'nothing') => createFake
 describe('useUnread', () => {
 	describe('when the desktop app is present', () => {
 		beforeEach(() => {
-			Object.assign(window, { RocketChatDesktop: { setBadge } });
+			Object.assign(window, { YasChatDesktop: { setBadge } });
 		});
 
 		afterEach(() => {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 			setBadge.mockClear();
 		});
 
@@ -94,7 +94,7 @@ describe('useUnread', () => {
 		beforeEach(() => {
 			warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
 			Object.assign(window, {
-				RocketChatDesktop: {
+				YasChatDesktop: {
 					setBadge: () => {
 						throw new Error('desktop failure');
 					},
@@ -103,7 +103,7 @@ describe('useUnread', () => {
 		});
 
 		afterEach(() => {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 			warn.mockRestore();
 		});
 

@@ -1,7 +1,7 @@
 import type { CpuInfo } from 'node:os';
 
 import type { IMatrixFederationStatistics } from './IMatrixFederationStatistics';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { DeviceSessionAggregationResult, OSSessionAggregationResult, UserSessionAggregationResult } from './ISession';
 import type { ISettingStatisticsObject } from './ISetting';
 import type { ITeamStats } from './ITeam';
@@ -18,7 +18,7 @@ interface IVoIPPeriodStats {
 	callsDuration?: number;
 }
 
-export interface IStats extends IRocketChatRecord {
+export interface IStats extends IYasChatRecord {
 	wizard: {
 		organizationType?: string;
 		industry?: string;

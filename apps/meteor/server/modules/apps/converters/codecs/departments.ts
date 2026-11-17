@@ -5,7 +5,7 @@ import * as z from 'zod';
 import { mappedDecode } from './mappedData';
 
 /**
- * Rocket.Chat `ILivechatDepartment` <-> Apps-Engine `IAppsDepartment`.
+ * YasChat `ILivechatDepartment` <-> Apps-Engine `IAppsDepartment`.
  *
  * `decode` is a plain field-rename with an `_unmappedProperties_` bucket (mirrors the legacy
  * `convertDepartment`). `encode` mirrors `convertAppDepartment`: the inverse rename written

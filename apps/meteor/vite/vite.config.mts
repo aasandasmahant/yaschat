@@ -24,9 +24,9 @@ const appRoot = resolve(here, '..');
 const require = createRequire(import.meta.url);
 const swiperRoot = dirname(require.resolve('swiper/package.json'));
 
-// Replaces the rocketchat:version Meteor compiler plugin for `rocketchat.info`.
-const rocketchatInfo = (): Plugin => {
-	const virtualId = '\0rocketchat-info';
+// Replaces the yaschat:version Meteor compiler plugin for `yaschat.info`.
+const yaschatInfo = (): Plugin => {
+	const virtualId = '\0yaschat-info';
 
 	const git = (command: string) => {
 		try {
@@ -37,14 +37,14 @@ const rocketchatInfo = (): Plugin => {
 	};
 
 	return {
-		name: 'rocketchat-info',
+		name: 'yaschat-info',
 		enforce: 'pre',
-		resolveId: (id) => (id.endsWith('rocketchat.info') ? virtualId : undefined),
+		resolveId: (id) => (id.endsWith('yaschat.info') ? virtualId : undefined),
 		load: (id) => {
 			if (id !== virtualId) return undefined;
 
 			const info = {
-				...JSON.parse(readFileSync(join(appRoot, 'rocketchat.info'), 'utf8')),
+				...JSON.parse(readFileSync(join(appRoot, 'yaschat.info'), 'utf8')),
 				marketplaceApiVersion: require('@rocket.chat/apps-engine/package.json').version.replace(/^[^0-9]/g, ''),
 				build: { date: new Date().toISOString() },
 				commit: { hash: git('rev-parse HEAD'), branch: process.env.GITHUB_HEAD_REF || git('rev-parse --abbrev-ref HEAD') },
@@ -55,7 +55,7 @@ const rocketchatInfo = (): Plugin => {
 	};
 };
 
-// The Rocket.Chat server serves the client itself (`RC_CLIENT_TARGET=server`), or another host serves it in front of
+// The YasChat server serves the client itself (`RC_CLIENT_TARGET=server`), or another host serves it in front of
 // a proxy to the server (the default, used by the dev server and ui-preview).
 const servedByServer = process.env.RC_CLIENT_TARGET === 'server';
 
@@ -73,7 +73,7 @@ const coverage = (): Plugin => {
 	const instrumenter = createInstrumenter({ esModules: true, compact: false, produceSourceMap: true });
 
 	return {
-		name: 'rocketchat-coverage',
+		name: 'yaschat-coverage',
 		apply: 'build',
 		enforce: 'post',
 		transform(code, id) {
@@ -90,7 +90,7 @@ const coverage = (): Plugin => {
 // A production install has the peer and dev dependencies of workspace packages only in the app, so an import a
 // package compiled from source cannot resolve from its own folder is resolved from the app, as Meteor's build does.
 const appFallbackResolve = (): Plugin => ({
-	name: 'rocketchat-app-fallback-resolve',
+	name: 'yaschat-app-fallback-resolve',
 	enforce: 'pre',
 	async resolveId(source, importer, options) {
 		if (!importer || source.startsWith('.') || source.startsWith('/') || source.startsWith('\0')) return null;
@@ -104,7 +104,7 @@ const appFallbackResolve = (): Plugin => ({
 // twice, once per format, and the two copies don't share React contexts (react-aria's overlays, for one). Resolving
 // `require` like `import` loads each package once, as Meteor's build does.
 const singlePackageFormat = (): Plugin => ({
-	name: 'rocketchat-single-package-format',
+	name: 'yaschat-single-package-format',
 	apply: 'build',
 	enforce: 'pre',
 	async resolveId(source, importer, options) {
@@ -127,7 +127,7 @@ const nativeModules = (): Plugin => {
 	);
 
 	return {
-		name: 'rocketchat-native-modules',
+		name: 'yaschat-native-modules',
 		enforce: 'pre',
 		async resolveId(source, importer, options) {
 			if (!importer || !(source.startsWith('.') || source.startsWith('/'))) return null;
@@ -158,7 +158,7 @@ const dedupeTopLevelRules = (css: string) => {
 // Vite serves component stylesheets as `<style>` tags appended to `<head>` in dev, after the zero stylesheet's link;
 // the built page lists the zero stylesheet last. Moving the link to the end of `<body>` gives dev the same order.
 const zeroStylesheetLastInDev = (): Plugin => ({
-	name: 'rocketchat-zero-stylesheet-last-in-dev',
+	name: 'yaschat-zero-stylesheet-last-in-dev',
 	apply: 'serve',
 	// Runs after Tamagui's own `post` plugin, which injects the link.
 	enforce: 'post',
@@ -180,7 +180,7 @@ const zeroStylesheetInBundle = (): Plugin => {
 	let config: ResolvedConfig;
 
 	return {
-		name: 'rocketchat-zero-stylesheet-in-bundle',
+		name: 'yaschat-zero-stylesheet-in-bundle',
 		apply: 'build',
 		configResolved(resolved) {
 			config = resolved;
@@ -223,14 +223,14 @@ const zeroStylesheetInBundle = (): Plugin => {
 
 const fuselageRoot = resolve(appRoot, '../../packages/fuselage');
 
-// Routes the running Rocket.Chat server answers; everything else is served by Vite.
+// Routes the running YasChat server answers; everything else is served by Vite.
 const serverUrl = process.env.RC_SERVER_URL || 'http://localhost:3100';
 
 // In dev the page is the one the local server renders, as in production, with Vite's entry in place of the built one.
 // A remote server renders its own built client, so against one (or while the local server is still starting) the page
 // is `index.html` with the runtime config the server would otherwise inject.
 const devPage = (): Plugin => ({
-	name: 'rocketchat-dev-page',
+	name: 'yaschat-dev-page',
 	apply: 'serve',
 	transformIndexHtml: {
 		order: 'pre',
@@ -410,7 +410,7 @@ export default defineConfig({
 		react(),
 		appFallbackResolve(),
 		singlePackageFormat(),
-		rocketchatInfo(),
+		yaschatInfo(),
 		...(servedByServer ? [] : [nativeModules()]),
 		...(servedByServer && process.env.BABEL_ENV === 'coverage' ? [coverage()] : []),
 		devPage(),

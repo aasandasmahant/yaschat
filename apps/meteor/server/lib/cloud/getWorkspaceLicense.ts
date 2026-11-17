@@ -27,9 +27,9 @@ const fetchCloudWorkspaceLicensePayload = async ({ token }: { token: string }): 
 	if (!response.ok) {
 		try {
 			const { error } = await response.json();
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 		} catch (error) {
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${response.statusText}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${response.statusText}`);
 		}
 	}
 
@@ -70,7 +70,7 @@ export async function getWorkspaceLicense() {
 		return { updated: true, license: payload.license };
 	} catch (err) {
 		SystemLogger.error({
-			msg: 'Failed to update license from Rocket.Chat Cloud',
+			msg: 'Failed to update license from YasChat Cloud',
 			url: '/license',
 			err,
 		});

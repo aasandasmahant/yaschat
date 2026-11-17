@@ -107,7 +107,7 @@ const markdownText = `
   3. List Item 3
   4. List Item 4
   **Links:**
-  [Rocket.Chat](rocket.chat)
+  [YasChat](rocket.chat)
   gabriel.engel@rocket.chat
   +55991999999
   \`Inline code\`
@@ -143,7 +143,7 @@ it('should render html elements as expected using default parser', async () => {
 	expect(normalizedHtml).toContain('title=""');
 	expect(normalizedHtml).toContain('rel="nofollow noopener noreferrer"');
 	expect(normalizedHtml).toContain('target="_blank"');
-	expect(normalizedHtml).toContain('>Rocket.Chat</a>');
+	expect(normalizedHtml).toContain('>YasChat</a>');
 
 	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@rocket.chat"');
 	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@rocket.chat"');
@@ -181,7 +181,7 @@ it('should render html elements as expected using inline parser', async () => {
 	expect(normalizedHtml).toContain('title=""');
 	expect(normalizedHtml).toContain('rel="nofollow noopener noreferrer"');
 	expect(normalizedHtml).toContain('target="_blank"');
-	expect(normalizedHtml).toContain('>Rocket.Chat</a>');
+	expect(normalizedHtml).toContain('>YasChat</a>');
 
 	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@rocket.chat"');
 	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@rocket.chat"');

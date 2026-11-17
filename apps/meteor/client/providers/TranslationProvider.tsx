@@ -236,8 +236,8 @@ const TranslationProvider = ({ children }: TranslationProviderProps) => {
 };
 
 /**
- * I was forced to create this component to keep the api useTranslation from rocketchat
- * rocketchat useTranslation invalidates the provider content, triggering all the places that use it
+ * I was forced to create this component to keep the api useTranslation from yaschat
+ * yaschat useTranslation invalidates the provider content, triggering all the places that use it
  * i18next triggers a re-render inside useTranslation, since now we are using 100% of the i18next
  * the only way to invalidate after changing the language in a safe way is using the useTranslation from i8next
  * and invalidating the provider content

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Serves the web client a pull request published to ghcr.io (see .github/workflows/ui-preview.yml) and proxies
-// everything else to a running Rocket.Chat server, so a PR's UI can be tried without cloning or building it.
+// everything else to a running YasChat server, so a PR's UI can be tried without cloning or building it.
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
@@ -12,14 +12,14 @@ import { parseArgs } from 'node:util';
 
 import { preview } from 'vite';
 
-const repository = 'rocketchat/rocket.chat-web';
+const repository = 'yaschat/rocket.chat-web';
 
 const usage = `Usage: npx @rocket.chat/ui-preview <pull request number or URL> [options]
 
   --pr <number>     Latest build of a pull request (same as the positional argument)
   --sha <sha>       Exact build of a commit (with --pr, that PR's build of it)
   --develop         Latest build of develop
-  --server <url>    Rocket.Chat server to run against (default: https://open.rocket.chat)
+  --server <url>    YasChat server to run against (default: https://open.rocket.chat)
   --port <port>     Local port (default: 3000)
   -h, --help        Show this help`;
 
@@ -49,8 +49,8 @@ const tag = (() => {
 	const prArg = args.pr ?? positionals[0];
 	// Accepts `42665` or a pull request URL, so a link copied from GitHub works as is.
 	const pr =
-		prArg && (prArg.match(/^(\d+)$/) ?? prArg.match(/^https:\/\/github\.com\/RocketChat\/Rocket\.Chat\/pull\/(\d+)(?:[/?#]|$)/i))?.[1];
-	if (prArg && !pr) fail(`"${prArg}" is not a Rocket.Chat pull request number or URL.\n\n${usage}`);
+		prArg && (prArg.match(/^(\d+)$/) ?? prArg.match(/^https:\/\/github\.com\/YasChat\/Rocket\.Chat\/pull\/(\d+)(?:[/?#]|$)/i))?.[1];
+	if (prArg && !pr) fail(`"${prArg}" is not a YasChat pull request number or URL.\n\n${usage}`);
 	if (args.sha && !/^[0-9a-f]{40}$/.test(args.sha)) fail(`--sha must be a full 40-character commit hash.\n\n${usage}`);
 	if (pr && args.sha) return `pr-${pr}-${args.sha}`;
 	if (pr) return `pr-${pr}`;
@@ -83,7 +83,7 @@ const download = async () => {
 	const revision = manifest.annotations?.['org.opencontainers.image.revision'];
 
 	// Builds are immutable per digest, so a cached one never needs refreshing.
-	const dir = join(homedir(), '.cache', 'rocketchat-ui-preview', digest.replace(':', '-'));
+	const dir = join(homedir(), '.cache', 'yaschat-ui-preview', digest.replace(':', '-'));
 	if (existsSync(dir)) return { dir, revision };
 
 	console.log(`Downloading ${tag}${revision ? ` (${revision.slice(0, 7)})` : ''}...`);

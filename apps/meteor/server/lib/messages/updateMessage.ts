@@ -26,11 +26,11 @@ export const updateMessage = async function (
 
 	let messageData: IMessage = Object.assign({}, originalMessage, message);
 
-	// For the Rocket.Chat Apps :)
+	// For the YasChat Apps :)
 	if (message && Apps.self && Apps.isLoaded()) {
 		const prevent = await Apps.self?.triggerEvent(AppEvents.IPreMessageUpdatedPrevent, messageData);
 		if (prevent) {
-			throw new ClientSafeError('error-app-prevented-updating', 'A Rocket.Chat App prevented the message updating.');
+			throw new ClientSafeError('error-app-prevented-updating', 'A YasChat App prevented the message updating.');
 		}
 
 		let result = await Apps.self?.triggerEvent(AppEvents.IPreMessageUpdatedExtend, messageData);

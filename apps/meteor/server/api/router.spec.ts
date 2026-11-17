@@ -3,7 +3,7 @@ import Ajv from 'ajv';
 import request from 'supertest';
 
 import type { APIActionContext } from './router';
-import { RocketChatAPIRouter } from './router';
+import { YasChatAPIRouter } from './router';
 
 const serve = (router: Parameters<typeof mountRouter>[1]) => {
 	const app = createRootApp();
@@ -24,7 +24,7 @@ describe('Router use method', () => {
 			required: ['outerProperty'],
 		});
 
-		const api = new RocketChatAPIRouter('/api').get(
+		const api = new YasChatAPIRouter('/api').get(
 			'/test',
 			{
 				response: {

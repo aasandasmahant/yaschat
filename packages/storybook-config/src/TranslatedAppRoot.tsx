@@ -17,7 +17,7 @@ type TranslatedAppRootProps<TBuilder extends AppRootBuilder<TBuilder>> = {
 	children: ReactNode;
 };
 
-/** Mounts a mocked app root speaking a language with Rocket.Chat's real translations, then the caller's customizations. */
+/** Mounts a mocked app root speaking a language with YasChat's real translations, then the caller's customizations. */
 const TranslatedAppRoot = <TBuilder extends AppRootBuilder<TBuilder>>({
 	createRoot,
 	customize,

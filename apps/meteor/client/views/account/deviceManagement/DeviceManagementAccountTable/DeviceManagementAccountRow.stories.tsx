@@ -44,5 +44,5 @@ export const Current: Story = {
 };
 
 export const LongDeviceName: Story = {
-	args: { deviceName: 'Rocket.Chat Desktop on a very long device name that does not fit' },
+	args: { deviceName: 'YasChat Desktop on a very long device name that does not fit' },
 };

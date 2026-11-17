@@ -32,7 +32,7 @@ export const logoutFromSamlIdp = async (): Promise<boolean> => {
 	}
 
 	if (settings.peek('SAML_Custom_Default_logout_behaviour') === 'Local') {
-		console.info('SAML session not terminated, only the Rocket.Chat session is going to be killed');
+		console.info('SAML session not terminated, only the YasChat session is going to be killed');
 		return false;
 	}
 

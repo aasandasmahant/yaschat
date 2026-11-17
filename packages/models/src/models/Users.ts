@@ -9,7 +9,7 @@ import type {
 	IRole,
 	IRoom,
 	IUser,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import { ILivechatAgentStatus, UserStatus } from '@rocket.chat/core-typings';
 import type {
@@ -44,7 +44,7 @@ import { queryAvailableAgentsForSelection, queryStatusAgentOnline } from '../hel
 const usersDefaultFields = { __rooms: 0, roomRolePriorities: 0 } as const;
 
 export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IUsersModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IUser>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IUser>>) {
 		super(db, 'users', trash, {
 			collectionNameResolver(name) {
 				return name;
@@ -380,7 +380,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_livechat_department_agents',
+					from: 'yaschat_livechat_department_agents',
 					localField: '_id',
 					foreignField: 'agentId',
 					as: 'departments',
@@ -745,7 +745,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 			? [
 					{
 						$lookup: {
-							from: 'rocketchat_livechat_department_agents',
+							from: 'yaschat_livechat_department_agents',
 							let: { userId: '$_id' },
 							pipeline: [
 								{
@@ -770,7 +770,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 			...departmentFilter,
 			{
 				$lookup: {
-					from: 'rocketchat_subscription',
+					from: 'yaschat_subscription',
 					let: { id: '$_id' },
 					pipeline: [
 						{
@@ -827,7 +827,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 			? [
 					{
 						$lookup: {
-							from: 'rocketchat_livechat_department_agents',
+							from: 'yaschat_livechat_department_agents',
 							let: { userId: '$_id' },
 							pipeline: [
 								{
@@ -919,7 +919,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_subscription',
+					from: 'yaschat_subscription',
 					localField: '_id',
 					foreignField: 'u._id',
 					as: 'subs',
@@ -1168,7 +1168,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 		};
 		const lookup: Document = {
 			$lookup: {
-				from: 'rocketchat_livechat_department_agents',
+				from: 'yaschat_livechat_department_agents',
 				localField: '_id',
 				foreignField: 'agentId',
 				as: 'departments',

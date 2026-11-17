@@ -9,7 +9,7 @@ import type {
 	DeviceManagementPopulatedSession,
 	OSSessionAggregationResult,
 	IUser,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import type { ISessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { PaginatedResult, WithItemCount } from '@rocket.chat/rest-typings';
@@ -735,7 +735,7 @@ export const aggregates = {
 export class SessionsRaw extends BaseRaw<ISession> implements ISessionsModel {
 	private secondaryCollection: Collection<ISession>;
 
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ISession>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ISession>>) {
 		super(db, 'sessions', trash);
 
 		this.secondaryCollection = db.collection(getCollectionName('sessions'), { readPreference: readSecondaryPreferred(db) });

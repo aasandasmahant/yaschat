@@ -1,10 +1,10 @@
 # `@rocket.chat/fuselage`
 
-> React component library for Fuselage, Rocket.Chat's design system.
+> React component library for Fuselage, YasChat's design system.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage)
 
-Fuselage is the set of React components that the Rocket.Chat web client is built with. It covers layout primitives, form inputs, buttons, menus, modals, messages, sidebars, tables and more, all styled with the Fuselage design tokens.
+Fuselage is the set of React components that the YasChat web client is built with. It covers layout primitives, form inputs, buttons, menus, modals, messages, sidebars, tables and more, all styled with the Fuselage design tokens.
 
 - `Box`, a polymorphic primitive that turns design tokens into styling props (`padding='x16'`, `backgroundColor='surface-light'`, `fontScale='h2'`).
 - Accessible inputs, selects and menus, several of them built on [React Aria](https://react-spectrum.adobe.com/react-aria/).
@@ -37,7 +37,7 @@ Import the component stylesheet and the icon font once, at the entry point of yo
 
 ```ts
 import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/rocketchat.css';
+import '@rocket.chat/icons/dist/yaschat.css';
 ```
 
 `fuselage.css` includes the Inter font, a normalize reset and the styles of every component.
@@ -162,11 +162,11 @@ Other exports:
 - Token helpers used by `Box` (`spacing`, `size`, `color`, `backgroundColor`, `fontColor`, `fontScale`, `borderRadius`…).
 - `useCursor` — keyboard cursor over a list of options, for building custom dropdowns.
 
-Each component's source and stories live in [`src/components`](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage/src/components). To browse them interactively, run Storybook locally (see below).
+Each component's source and stories live in [`src/components`](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage/src/components). To browse them interactively, run Storybook locally (see below).
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/fuselage build
@@ -207,4 +207,4 @@ yarn workspace @rocket.chat/fuselage visual-regression-update
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
 ### Patch Changes
 
@@ -21,7 +21,7 @@
 
 ### Minor Changes
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
 ### Patch Changes
 

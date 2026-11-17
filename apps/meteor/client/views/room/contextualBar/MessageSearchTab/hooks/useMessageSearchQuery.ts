@@ -18,7 +18,7 @@ export const useMessageSearchQuery = ({
 
 	const { t } = useTranslation();
 
-	const searchMessages = useMethod('rocketchatSearch.search');
+	const searchMessages = useMethod('yaschatSearch.search');
 	return useQuery({
 		queryKey: ['rooms', room._id, 'message-search', { uid, rid: room._id, searchText, limit, globalSearch }] as const,
 

@@ -60,7 +60,7 @@ API.v1.addRoute(
 			const options = {
 				method: 'POST',
 				headers: {
-					'X-RocketChat-Livechat-Token': settings.get<string>('Livechat_secret_token'),
+					'X-YasChat-Livechat-Token': settings.get<string>('Livechat_secret_token'),
 					'Accept': 'application/json',
 				},
 				body: sampleData,

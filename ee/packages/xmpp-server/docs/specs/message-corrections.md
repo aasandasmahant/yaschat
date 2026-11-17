@@ -32,8 +32,8 @@ tests:
 ## Summary
 
 An edit of a message is carried over XMPP as a Last Message Correction: a new message that
-replaces an earlier one by id. Rocket.Chat edits reach XMPP users as corrections in DMs and
-in both kinds of room, and corrections from XMPP users update the message Rocket.Chat
+replaces an earlier one by id. YasChat edits reach XMPP users as corrections in DMs and
+in both kinds of room, and corrections from XMPP users update the message YasChat
 stored.
 
 ## Motivation
@@ -52,7 +52,7 @@ occupants unchanged.
   from the original sender.
 - **R3** A `<replace/>` on an inbound chat message, on a `groupchat` sent to a hosted room or
   on a `groupchat` from a remote room is parsed and carried on the event as `replaceId`.
-- **R4** A correction received for a message Rocket.Chat stores updates that message's text
+- **R4** A correction received for a message YasChat stores updates that message's text
   and marks it edited by its author, instead of storing a new message. Every copy of the
   correction after the first changes nothing.
 - **R5** A hosted room MUST relay a correction from one occupant to the others with its
@@ -87,7 +87,7 @@ equal to its body and changes nothing.
 ## Out of scope
 
 - Correcting a message more than once by chaining (a correction of a correction): the
-  replace id always points at the original Rocket.Chat message, which is what the XEP
+  replace id always points at the original YasChat message, which is what the XEP
   recommends.
 - Corrections of messages the other side never received (sent before the room was joined).
 - Corrections of messages stored before ADR 0014, or of messages sent without an `id`
@@ -106,9 +106,9 @@ a correction".
 
 ## Open questions
 
-- **Q1** When a correction arrives for a message Rocket.Chat does not have (sent before the
+- **Q1** When a correction arrives for a message YasChat does not have (sent before the
   room was mirrored), should it be stored as a new message, as today, or dropped?
-- **Q2** Should the edit history Rocket.Chat keeps record the correction's stanza id?
+- **Q2** Should the edit history YasChat keeps record the correction's stanza id?
 - **Q3** Do `Message_AllowEditing` and `Message_AllowEditing_BlockEditInMinutes` apply to
   inbound corrections, or does the sender's server decide?
 - **Q4** Under XEP-0258 security labels, may a correction carry a different label than the

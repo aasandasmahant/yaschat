@@ -166,7 +166,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, eae3fb3136bd0b48294c050a71b0a36d05ca02b0]:</summary>
   - @rocket.chat/models@2.1.2
@@ -214,7 +214,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, eae3fb3136bd0b48294c050a71b0a36d05ca02b0]:</summary>
   - @rocket.chat/models@2.1.2-rc.0
@@ -1320,11 +1320,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8]:</summary>
   - @rocket.chat/models@1.1.0
@@ -1362,11 +1362,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [475120dc19fb8cc400fd8af21559cd6f3cc17eb8]:</summary>
   - @rocket.chat/models@1.1.0-rc.0
@@ -1756,7 +1756,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1832,7 +1832,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2068,7 +2068,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14]:</summary>
   - @rocket.chat/models@0.0.28

@@ -11,7 +11,7 @@ import * as Rsa from './crypto/rsa';
 import { generatePassphrase } from './helper';
 import { Keychain } from './keychain';
 import { createLogger } from './logger';
-import { E2ERoom } from './rocketchat.e2e.room';
+import { E2ERoom } from './yaschat.e2e.room';
 import { createQuoteAttachment } from '../../../lib/createQuoteAttachment';
 import { getMessageUrlRegex } from '../../../lib/getMessageUrlRegex';
 import { t } from '../../../lib/i18n';

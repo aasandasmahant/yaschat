@@ -19,8 +19,8 @@ import {
 	updateMessage,
 	waitForDirectMessageWith,
 	waitForMessage,
-} from './helper/rocketchat';
-import type { LocalUser, RocketChat } from './helper/rocketchat';
+} from './helper/yaschat';
+import type { LocalUser, YasChat } from './helper/yaschat';
 import { assertFederationReachable, registerXmppUser, setupSuite } from './helper/suite';
 import type { XmppUser } from './helper/xmpp-client';
 import { escapeLocalpart } from '../../src/jid/escaping';
@@ -29,7 +29,7 @@ import { escapeLocalpart } from '../../src/jid/escaping';
 const WIDENED_USERNAMES = "[0-9a-zA-Z-_.@']+";
 
 describe('XMPP federation: direct messages', () => {
-	let rc: RocketChat;
+	let rc: YasChat;
 	let alice: XmppUser;
 	let local: LocalUser;
 	let dm: IRoom;
@@ -66,20 +66,20 @@ describe('XMPP federation: direct messages', () => {
 		await expectStoredOnce(local, dm, text);
 	});
 
-	it('ignores a message addressed to a user Rocket.Chat does not have (R2)', async () => {
+	it('ignores a message addressed to a user YasChat does not have (R2)', async () => {
 		const ghost = `xe2e-ghost-${uniqueSuffix()}`;
 		await alice.sendChat(`${ghost}@${rc.domain}`, `nobody home ${uniqueSuffix()}`);
 		await sleep(3000);
 		assert.equal(await findUser(rc, ghost), undefined);
 	});
 
-	it('delivers a message sent from Rocket.Chat, carrying its message id (R5)', async () => {
+	it('delivers a message sent from YasChat, carrying its message id (R5)', async () => {
 		const room = await createDirectMessage(rc, local, alice.bareJid);
 		assert.equal(room._id, dm._id, 'im.create should reuse the federated DM');
 
 		const text = `from rocket.chat ${uniqueSuffix()}`;
 		const sent = await sendMessage(local, room._id, text);
-		const received = await alice.waitFor(isChat({ from: local.jid, body: text }), 'the DM from Rocket.Chat');
+		const received = await alice.waitFor(isChat({ from: local.jid, body: text }), 'the DM from YasChat');
 		assert.equal(received.attrs.id, sent._id);
 	});
 
@@ -88,7 +88,7 @@ describe('XMPP federation: direct messages', () => {
 		assert.equal(room._id, dm._id);
 	});
 
-	it('opens a DM with a JID Rocket.Chat has never seen, and delivers to it (R7)', async () => {
+	it('opens a DM with a JID YasChat has never seen, and delivers to it (R7)', async () => {
 		const stranger = await registerXmppUser(rc, 'stranger');
 		const room = await createDirectMessage(rc, local, stranger.bareJid);
 		assert.ok(room.xmppFederation?.role === 'dm', `expected a dm room, got ${room.xmppFederation?.role}`);
@@ -96,17 +96,17 @@ describe('XMPP federation: direct messages', () => {
 
 		const text = `to a stranger ${uniqueSuffix()}`;
 		await sendMessage(local, room._id, text);
-		await stranger.waitFor(isChat({ from: local.jid, body: text }), 'the DM from Rocket.Chat');
+		await stranger.waitFor(isChat({ from: local.jid, body: text }), 'the DM from YasChat');
 	});
 
-	it('opens a federated DM with a known XMPP user from a Rocket.Chat user who had none (R7)', async () => {
+	it('opens a federated DM with a known XMPP user from a YasChat user who had none (R7)', async () => {
 		const other = await createLocalUser(rc, 'dm-other');
 		const room = await createDirectMessage(rc, other, alice.bareJid);
 		assert.ok(room.xmppFederation?.role === 'dm', `expected a dm room, got ${room.xmppFederation?.role}`);
 
 		const text = `from another user ${uniqueSuffix()}`;
 		await sendMessage(other, room._id, text);
-		await alice.waitFor(isChat({ from: other.jid, body: text }), 'the DM from the other Rocket.Chat user');
+		await alice.waitFor(isChat({ from: other.jid, body: text }), 'the DM from the other YasChat user');
 	});
 
 	it('delivers an edit as an XEP-0308 correction, not a second message (R9, message-corrections R1)', async () => {

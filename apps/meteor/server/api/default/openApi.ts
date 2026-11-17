@@ -65,14 +65,14 @@ const siteUrl = () => settings.get<string>('Site_Url')?.replace(/\/$/, '');
 const makeOpenAPIResponse = (paths: Record<string, Record<string, Route>>) => ({
 	openapi: '3.1.0',
 	info: {
-		title: 'Rocket.Chat API',
+		title: 'YasChat API',
 		description:
-			'REST API of this Rocket.Chat workspace. Authenticate by sending the `X-User-Id` and `X-Auth-Token` headers obtained from `/api/v1/login`.',
+			'REST API of this YasChat workspace. Authenticate by sending the `X-User-Id` and `X-Auth-Token` headers obtained from `/api/v1/login`.',
 		version: getTrimmedServerVersion(),
 	},
 	externalDocs: {
 		url: 'https://developer.rocket.chat/apidocs',
-		description: 'Rocket.Chat developer documentation',
+		description: 'YasChat developer documentation',
 	},
 	// trailing slash would make every path in the document resolve with a double one, and a Server
 	// Object without a url is invalid, so an unset `Site_Url` means no `servers` at all

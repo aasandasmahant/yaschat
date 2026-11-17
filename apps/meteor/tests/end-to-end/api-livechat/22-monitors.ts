@@ -33,7 +33,7 @@ type TestUser = { user: IUser; credentials: Credentials };
 	before(async () => {
 		await updateSetting('Livechat_enabled', true);
 		await updateSetting('Livechat_accept_chats_with_no_agents', true);
-		await setUserActiveStatus('rocketchat.internal.admin.test', true);
+		await setUserActiveStatus('yaschat.internal.admin.test', true);
 		await createAgent();
 		await makeAgentAvailable();
 	});
@@ -268,7 +268,7 @@ type TestUser = { user: IUser; credentials: Credentials };
 				.set(monitor.credentials)
 				.send({
 					roomId: room._id,
-					userId: 'rocketchat.internal.admin.test',
+					userId: 'yaschat.internal.admin.test',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200);
@@ -278,7 +278,7 @@ type TestUser = { user: IUser; credentials: Credentials };
 			const room2 = await getLivechatRoomInfo(room._id);
 
 			expect(room2).to.have.property('servedBy').that.is.an('object');
-			expect(room2.servedBy).to.have.property('_id', 'rocketchat.internal.admin.test');
+			expect(room2.servedBy).to.have.property('_id', 'yaschat.internal.admin.test');
 		});
 		it('should successfully forward a room to a department', async () => {
 			const visitor = await createVisitor(noUnitDepartment._id);

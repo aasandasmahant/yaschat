@@ -1,4 +1,4 @@
-import type { ILivechatDepartmentAgents, ILivechatInquiryRecord, ISubscription, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ILivechatDepartmentAgents, ILivechatInquiryRecord, ISubscription, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type {
 	IAnalyticsModel,
 	IAvatarsModel,
@@ -112,7 +112,7 @@ import {
 } from './modelClasses';
 import { proxify, registerModel } from './proxify';
 
-const prefix = 'rocketchat_';
+const prefix = 'yaschat_';
 export function getCollectionName(name: string): string {
 	return `${prefix}${name}`;
 }
@@ -211,13 +211,13 @@ export const AbacAttributes = proxify<IAbacAttributesModel>('IAbacAttributesMode
 export const TwoFactorChallenges = proxify<ITwoFactorChallengesModel>('ITwoFactorChallengesModel');
 export const SamlUsedAssertions = proxify<ISamlUsedAssertionsModel>('ISamlUsedAssertionsModel');
 
-export function registerServiceModels(db: Db, trash?: Collection<RocketChatRecordDeleted<any>>): void {
+export function registerServiceModels(db: Db, trash?: Collection<YasChatRecordDeleted<any>>): void {
 	registerModel('IUsersSessionsModel', () => new UsersSessionsRaw(db));
 	registerModel('IUsersModel', () => new UsersRaw(db));
 
 	registerModel('IRolesModel', () => new RolesRaw(db));
 	registerModel('IRoomsModel', () => new RoomsRaw(db));
-	registerModel('ISubscriptionsModel', () => new SubscriptionsRaw(db, trash as Collection<RocketChatRecordDeleted<ISubscription>>));
+	registerModel('ISubscriptionsModel', () => new SubscriptionsRaw(db, trash as Collection<YasChatRecordDeleted<ISubscription>>));
 	registerModel('ITeamModel', () => new TeamRaw(db));
 	registerModel('ITeamMemberModel', () => new TeamMemberRaw(db));
 
@@ -225,11 +225,11 @@ export function registerServiceModels(db: Db, trash?: Collection<RocketChatRecor
 
 	registerModel(
 		'ILivechatInquiryModel',
-		() => new LivechatInquiryRaw(db, trash as Collection<RocketChatRecordDeleted<ILivechatInquiryRecord>>),
+		() => new LivechatInquiryRaw(db, trash as Collection<YasChatRecordDeleted<ILivechatInquiryRecord>>),
 	);
 	registerModel(
 		'ILivechatDepartmentAgentsModel',
-		() => new LivechatDepartmentAgentsRaw(db, trash as Collection<RocketChatRecordDeleted<ILivechatDepartmentAgents>>),
+		() => new LivechatDepartmentAgentsRaw(db, trash as Collection<YasChatRecordDeleted<ILivechatDepartmentAgents>>),
 	);
 
 	registerModel('IPermissionsModel', () => new PermissionsRaw(db));

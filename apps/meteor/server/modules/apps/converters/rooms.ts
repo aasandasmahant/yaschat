@@ -3,7 +3,7 @@ import type { IRoom } from '@rocket.chat/core-typings';
 import { Rooms } from '@rocket.chat/models';
 import * as z from 'zod';
 
-import { appRoomToRocketChat, createRoomCodec, decodeRoomRaw } from './codecs/rooms';
+import { appRoomToYasChat, createRoomCodec, decodeRoomRaw } from './codecs/rooms';
 
 export class AppRoomsConverter implements IAppRoomsConverter {
 	private readonly codec: ReturnType<typeof createRoomCodec>;
@@ -51,7 +51,7 @@ export class AppRoomsConverter implements IAppRoomsConverter {
 		}
 
 		if (isPartial) {
-			return appRoomToRocketChat(room, true);
+			return appRoomToYasChat(room, true);
 		}
 
 		return z.encodeAsync(this.codec, room);

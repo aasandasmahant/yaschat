@@ -56,7 +56,7 @@ const fromPlugin = (data: Record<string, unknown>, { origin = PLUGIN_ORIGIN, sou
 	});
 };
 
-const message = (action: string, payload: Record<string, unknown> = {}) => ({ action: `rocketchat:videoconf/${action}`, ...payload });
+const message = (action: string, payload: Record<string, unknown> = {}) => ({ action: `yaschat:videoconf/${action}`, ...payload });
 
 const posted = () => pluginWindow.postMessage.mock.calls.map(([data]) => data);
 const postedTo = () => pluginWindow.postMessage.mock.calls.map(([, targetOrigin]) => targetOrigin);
@@ -85,9 +85,9 @@ describe('useProviderPlugin', () => {
 		fromPlugin(message('ready'));
 
 		expect(posted()).toEqual([
-			{ action: 'rocketchat:videoconf/chat-state', active: true },
-			{ action: 'rocketchat:videoconf/participants-state', active: true },
-			{ action: 'rocketchat:videoconf/chat-unread', unread: true },
+			{ action: 'yaschat:videoconf/chat-state', active: true },
+			{ action: 'yaschat:videoconf/participants-state', active: true },
+			{ action: 'yaschat:videoconf/chat-unread', unread: true },
 		]);
 	});
 
@@ -109,7 +109,7 @@ describe('useProviderPlugin', () => {
 
 		rerender({ conferenceUrl: CONFERENCE_URL, chatVisible: false, participantsVisible: true, hasUnread: false });
 
-		expect(posted()).toEqual([{ action: 'rocketchat:videoconf/participants-state', active: true }]);
+		expect(posted()).toEqual([{ action: 'yaschat:videoconf/participants-state', active: true }]);
 	});
 
 	it('opens the chat when the plugin button asks, and closes it when it asks again', () => {
@@ -131,7 +131,7 @@ describe('useProviderPlugin', () => {
 
 		rerender({ conferenceUrl: CONFERENCE_URL, chatVisible: true, participantsVisible: false, hasUnread: false });
 
-		expect(posted()).toEqual([{ action: 'rocketchat:videoconf/chat-state', active: true }]);
+		expect(posted()).toEqual([{ action: 'yaschat:videoconf/chat-state', active: true }]);
 	});
 
 	it('keeps the badge on the button in step with the unread', () => {
@@ -141,7 +141,7 @@ describe('useProviderPlugin', () => {
 
 		rerender({ conferenceUrl: CONFERENCE_URL, chatVisible: false, participantsVisible: false, hasUnread: true });
 
-		expect(posted()).toEqual([{ action: 'rocketchat:videoconf/chat-unread', unread: true }]);
+		expect(posted()).toEqual([{ action: 'yaschat:videoconf/chat-unread', unread: true }]);
 	});
 
 	describe('what it refuses to act on', () => {
@@ -383,12 +383,12 @@ describe('useProviderPlugin', () => {
 			actions.setRole('p1', 'host');
 
 			expect(posted()).toEqual([
-				{ action: 'rocketchat:videoconf/mute', participantUuid: 'p1', muted: true },
-				{ action: 'rocketchat:videoconf/mute-video', participantUuid: 'p1', muted: false },
-				{ action: 'rocketchat:videoconf/admit', participantUuid: 'p1' },
-				{ action: 'rocketchat:videoconf/disconnect', participantUuid: 'p1' },
-				{ action: 'rocketchat:videoconf/spotlight', participantUuid: 'p1', active: true },
-				{ action: 'rocketchat:videoconf/set-role', participantUuid: 'p1', role: 'host' },
+				{ action: 'yaschat:videoconf/mute', participantUuid: 'p1', muted: true },
+				{ action: 'yaschat:videoconf/mute-video', participantUuid: 'p1', muted: false },
+				{ action: 'yaschat:videoconf/admit', participantUuid: 'p1' },
+				{ action: 'yaschat:videoconf/disconnect', participantUuid: 'p1' },
+				{ action: 'yaschat:videoconf/spotlight', participantUuid: 'p1', active: true },
+				{ action: 'yaschat:videoconf/set-role', participantUuid: 'p1', role: 'host' },
 			]);
 		});
 

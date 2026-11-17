@@ -166,7 +166,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c]:</summary>
   - @rocket.chat/core-services@0.13.2
@@ -213,7 +213,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c]:</summary>
   - @rocket.chat/core-services@0.13.2-rc.0
@@ -980,7 +980,7 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
@@ -1065,7 +1065,7 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
@@ -1158,7 +1158,7 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-services@0.7.9
@@ -1213,7 +1213,7 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-services@0.7.6-rc.0

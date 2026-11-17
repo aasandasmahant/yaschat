@@ -1,6 +1,6 @@
 import type { ICalendarEvent } from './ICalendarEvent';
 import type { IMessage } from './IMessage';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IRoom } from './IRoom';
 import type { ISubscription } from './ISubscription';
 
@@ -38,7 +38,7 @@ export interface INotificationItemEmail {
 
 export type NotificationItem = INotificationItemPush | INotificationItemEmail;
 
-export interface INotification extends IRocketChatRecord {
+export interface INotification extends IYasChatRecord {
 	uid: string;
 	rid: string;
 	mid: string;

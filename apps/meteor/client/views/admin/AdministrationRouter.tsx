@@ -6,7 +6,7 @@ import { Suspense, useEffect } from 'react';
 import AdministrationLayout from './AdministrationLayout';
 import { getAdminSidebarItems } from './sidebarItems';
 import type { Item, SidebarDivider, SidebarItem } from '../../lib/createSidebarItems';
-import { isGoRocketChatLink } from '../../lib/createSidebarItems';
+import { isGoYasChatLink } from '../../lib/createSidebarItems';
 import SettingsProvider from '../../providers/SettingsProvider';
 
 const isSidebarDivider = (sidebarItem: SidebarItem): sidebarItem is SidebarDivider => {
@@ -37,7 +37,7 @@ const AdministrationRouter = ({ children }: AdministrationRouterProps) => {
 
 				const defaultRoutePath = getAdminSidebarItems().find(firstSidebarPage)?.href ?? '/admin/workspace';
 
-				if (isGoRocketChatLink(defaultRoutePath)) {
+				if (isGoYasChatLink(defaultRoutePath)) {
 					window.open(defaultRoutePath, '_blank');
 					return;
 				}

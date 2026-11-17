@@ -2,7 +2,7 @@ import type { App } from '@rocket.chat/apps-engine/definition/App';
 
 export const APPS_ENGINE_RUNTIME_DEFAULT_TIMEOUT = 1000;
 
-export const APPS_ENGINE_RUNTIME_FILE_PREFIX = '$RocketChat_App$';
+export const APPS_ENGINE_RUNTIME_FILE_PREFIX = '$YasChat_App$';
 
 export function getFilenameForApp(filename: string): string {
 	return `${APPS_ENGINE_RUNTIME_FILE_PREFIX}_${filename}`;

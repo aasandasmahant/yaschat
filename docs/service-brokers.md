@@ -1,6 +1,6 @@
 # Service brokers
 
-Rocket.Chat's server code is split into services. A service is a class extending
+YasChat's server code is split into services. A service is a class extending
 `ServiceClass` that is handed to `api.registerService(...)`, and callers reach it
 through a proxy rather than by importing it:
 
@@ -61,7 +61,7 @@ and `emitToOne()` never leave the process. See
 ## MoleculerBroker
 
 Wraps a Moleculer `ServiceBroker`. Moleculer supplies the registry, discovery,
-heartbeats, load balancing and transport; `MoleculerBroker` adapts Rocket.Chat's
+heartbeats, load balancing and transport; `MoleculerBroker` adapts YasChat's
 service classes onto Moleculer's schema format.
 
 **Dispatch.** Moleculer resolves the call against its registry. If the target is

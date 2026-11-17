@@ -12,7 +12,7 @@ const displayName = (language: string) => {
 	}
 };
 
-/** The toolbar control that picks the language stories render in, among every language Rocket.Chat ships. */
+/** The toolbar control that picks the language stories render in, among every language YasChat ships. */
 export const languageGlobalTypes: GlobalTypes = {
 	language: {
 		description: 'Language the app root renders stories in',

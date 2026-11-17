@@ -84,10 +84,10 @@ export class DDPStreamer extends ServiceClass {
 
 		if (metrics) {
 			metrics.register({
-				name: 'rocketchat_subscription',
+				name: 'yaschat_subscription',
 				type: 'histogram',
 				labelNames: ['subscription'],
-				description: 'Client subscriptions to Rocket.Chat',
+				description: 'Client subscriptions to YasChat',
 				unit: 'millisecond',
 				quantiles: true,
 			});

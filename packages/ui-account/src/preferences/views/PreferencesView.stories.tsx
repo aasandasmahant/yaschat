@@ -84,7 +84,7 @@ const meta = {
 				'Email_Notification_Mode': 'Offline email notifications',
 				'Email_Notification_Mode_All': 'Every mention/DM',
 				'Email_Notification_Mode_Disabled': 'Disabled',
-				'Email_Notifications_Change_Disabled': 'Your Rocket.Chat administrator has disabled email notifications',
+				'Email_Notifications_Change_Disabled': 'Your YasChat administrator has disabled email notifications',
 				'Enable_Auto_Away': 'Enable auto away',
 				'Enable_Auto_Away_Description':
 					'Switches your status to away after a period of inactivity. Has no effect if status is manually set to busy or away.',

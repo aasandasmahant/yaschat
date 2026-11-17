@@ -1,6 +1,6 @@
 # `@rocket.chat/lint-config`
 
-> The shared [oxlint](https://oxc.rs) config used across the Rocket.Chat codebase, for JavaScript, TypeScript and React.
+> The shared [oxlint](https://oxc.rs) config used across the YasChat codebase, for JavaScript, TypeScript and React.
 
 It replaces [`@rocket.chat/eslint-config`](https://www.npmjs.com/package/@rocket.chat/eslint-config), with the same rules except:
 
@@ -66,7 +66,7 @@ Load the plugin through `jsPlugins` and turn the rule on:
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/lint-config). The repository's root `.oxlintrc.json` extends `oxlint.json`, so a change here affects every package in the monorepo. The opt-in rules live in `rules/`. From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/lint-config). The repository's root `.oxlintrc.json` extends `oxlint.json`, so a change here affects every package in the monorepo. The opt-in rules live in `rules/`. From the repository root:
 
 ```sh
 yarn oxlint
@@ -74,4 +74,4 @@ yarn oxlint
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

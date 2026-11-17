@@ -30,7 +30,7 @@ The comparisons that matter for security are between domains, and domains are DN
 IDNA plus case folding is exactly the equivalence DNS uses, and it is what the resolver will
 look up.
 
-A localpart becomes a Rocket.Chat username, so two spellings that a peer treats as one user
+A localpart becomes a YasChat username, so two spellings that a peer treats as one user
 must not become two users here, and a malformed JID must not become a username at all.
 UsernameCaseMapped is the comparison RFC 7622 assigns to localparts, which is what the
 accreditation review checks against. It is implemented here because the npm options are
@@ -56,5 +56,5 @@ case-insensitively, so lowercasing loses nothing.
 
 - Any new comparison of domains must call `normalizeDomain` on both sides, and any new
   comparison of user localparts the UsernameCaseMapped one.
-- A Rocket.Chat username that cannot be carried as a localpart, even with XEP-0106 escaping,
+- A YasChat username that cannot be carried as a localpart, even with XEP-0106 escaping,
   is not federated.

@@ -38,7 +38,7 @@ export async function deleteMessage(message: IMessage, user: IUser): Promise<voi
 	if (deletedMsg) {
 		const prevent = await Apps.self?.triggerEvent(AppEvents.IPreMessageDeletePrevent, deletedMsg);
 		if (prevent) {
-			throw new ClientSafeError('error-app-prevented-deleting', 'A Rocket.Chat App prevented the message deleting.');
+			throw new ClientSafeError('error-app-prevented-deleting', 'A YasChat App prevented the message deleting.');
 		}
 
 		if (room) {

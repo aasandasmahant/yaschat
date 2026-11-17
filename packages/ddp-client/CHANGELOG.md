@@ -4,59 +4,59 @@
 
 ### Major Changes
 
-- ([#41948](https://github.com/RocketChat/Rocket.Chat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
+- ([#41948](https://github.com/YasChat/YasChat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
 
   Endpoints that validate their query string now reject both with `400 error-invalid-params` instead of ignoring them; the few without validation keep accepting and ignoring them. `users.create` likewise rejects a `fields` property in its body. `channels.online` and `groups.online` now require `_id`. On `users.list`, fields outside the default projection — `customFields`, `utcOffset`, `nickname`, `bio`, `statusText`, `federated` and `freeSwitchExtension` — are no longer reachable in bulk; use `users.info` instead. Callers should move to the dedicated filter parameters each endpoint exposes, such as `name`, `type`, `_id` and `text`.
 
 ### Minor Changes
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Changes the reconnection strategy to an exponential backoff with jitter, capped at 30 seconds, and makes `DDPSDK.create` and `RocketchatSdkLegacyImpl.create` keep reconnecting by default (`retryCount: Infinity`, `retryTime: 1000`) instead of giving up after one retry at 100 ms. `LivechatClientImpl` keeps its own defaults (3 retries from 10 seconds).
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Changes the reconnection strategy to an exponential backoff with jitter, capped at 30 seconds, and makes `DDPSDK.create` and `RocketchatSdkLegacyImpl.create` keep reconnecting by default (`retryCount: Infinity`, `retryTime: 1000`) instead of giving up after one retry at 100 ms. `LivechatClientImpl` keeps its own defaults (3 retries from 10 seconds).
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `encode`, `decode` and `WebSocket` options to `DDPSDK.create` and `DDPSDK.createAndConnect`, next to `retryCount` and `retryTime`, so clients can use EJSON or a custom WebSocket without reaching into the SDK internals. `LivechatClientImpl.create` and `RocketchatSdkLegacyImpl.create` share the same factory: they now also log in again after a reconnection, log the account out when the server refuses the token on that login, and send the account's credentials with REST calls.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `encode`, `decode` and `WebSocket` options to `DDPSDK.create` and `DDPSDK.createAndConnect`, next to `retryCount` and `retryTime`, so clients can use EJSON or a custom WebSocket without reaching into the SDK internals. `LivechatClientImpl.create` and `RocketchatSdkLegacyImpl.create` share the same factory: they now also log in again after a reconnection, log the account out when the server refuses the token on that login, and send the account's credentials with REST calls.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `account.setCredentials()` to adopt a login made outside the SDK and `account.clearCredentials()` to forget the logged-in user locally
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `account.setCredentials()` to adopt a login made outside the SDK and `account.clearCredentials()` to forget the logged-in user locally
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds the `inFlightMethods` option (`'reject'` by default, or `'resend'`) to choose whether method calls lost with the connection reject or are sent again after the reconnection's login, and the `logoutOnRefusedResume` option (`true` by default) to keep the account logged in when the server refuses the token after a reconnection. Only a refusal (a 401/403 answer) logs the account out; other failures of that login keep it. `connection.close()` now rejects every pending call.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds the `inFlightMethods` option (`'reject'` by default, or `'resend'`) to choose whether method calls lost with the connection reject or are sent again after the reconnection's login, and the `logoutOnRefusedResume` option (`true` by default) to keep the account logged in when the server refuses the token after a reconnection. Only a refusal (a 401/403 answer) logs the account out; other failures of that login keep it. `connection.close()` now rejects every pending call.
 
-- ([#42979](https://github.com/RocketChat/Rocket.Chat/pull/42979)) Exposes the connection's reconnection attempt count and when the next attempt is due (`retryCount`, `nextRetryAt`).
+- ([#42979](https://github.com/YasChat/YasChat/pull/42979)) Exposes the connection's reconnection attempt count and when the next attempt is due (`retryCount`, `nextRetryAt`).
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `Subscription.onStop(listener)`, called with the reason when the server stops a subscription or stream
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `Subscription.onStop(listener)`, called with the reason when the server stops a subscription or stream
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `sdk.publish(name, key, ...args)` to emit events on streams that accept them from clients, typed from `StreamerEvents`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `sdk.publish(name, key, ...args)` to emit events on streams that accept them from clients, typed from `StreamerEvents`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `connection.whenConnected()`, which resolves once the connection is established
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `connection.whenConnected()`, which resolves once the connection is established
 
 ### Patch Changes
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `client.call()` and `client.callWithOptions()` sending `[null]` as the parameters of a call made without parameters or callback
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `client.call()` and `client.callWithOptions()` sending `[null]` as the parameters of a call made without parameters or callback
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the heartbeat timers and a pending reconnect timer that kept running after `connection.close()`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the heartbeat timers and a pending reconnect timer that kept running after `connection.close()`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `connection.connect()` never settling when the socket closes before the DDP handshake, and the process crashing on an unreachable server when the `ws` package provides `WebSocket`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `connection.connect()` never settling when the socket closes before the DDP handshake, and the process crashing on an unreachable server when the `ws` package provides `WebSocket`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes method calls hanging forever when the connection drops before their result arrives. They now reject with `ConnectionLostError`, and calls queued behind a lost `login` are sent after the reconnection instead of staying blocked.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes method calls hanging forever when the connection drops before their result arrives. They now reject with `ConnectionLostError`, and calls queued behind a lost `login` are sent after the reconnection instead of staying blocked.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `RocketchatSdkLegacyImpl` never restoring subscriptions after a reconnection and `unsubscribeAll()` unsubscribing from nothing
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `RocketchatSdkLegacyImpl` never restoring subscriptions after a reconnection and `unsubscribeAll()` unsubscribing from nothing
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes subscriptions stopped by the server: a `nosub` without an error no longer counts as ready, a subscription stopped after it was ready is no longer kept and resent on every reconnection, and `Subscription.onChange` now fires on every change instead of only the first
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes subscriptions stopped by the server: a `nosub` without an error no longer counts as ready, a subscription stopped after it was ready is no longer kept and resent on every reconnection, and `Subscription.onChange` now fires on every change instead of only the first
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes subscriptions restored after a reconnection being refused because they went out before the new login, and the session staying "logged in" with a token the server refused during that login. A refused token now logs the account out (`onLogout` fires) instead of surfacing as an unhandled rejection.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes subscriptions restored after a reconnection being refused because they went out before the new login, and the session staying "logged in" with a token the server refused during that login. A refused token now logs the account out (`onLogout` fires) instead of surfacing as an unhandled rejection.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `sdk.rest` calls failing when the SDK is created with a `ws(s)://` URL, and the socket path doubling when the URL already ends with `/websocket`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `sdk.rest` calls failing when the SDK is created with a `ws(s)://` URL, and the socket path doubling when the URL already ends with `/websocket`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes stream callbacks firing once per listener for each event when the same stream key is listened to more than once: `sdk.stream` now shares one server subscription per stream key and unsubscribes when its last listener stops
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes stream callbacks firing once per listener for each event when the same stream key is listened to more than once: `sdk.stream` now shares one server subscription per stream key and unsubscribes when its last listener stops
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the login token expiry becoming an invalid date when the client decodes EJSON, and `loginWithToken` resolving with the raw server result instead of its declared `{ id, token, tokenExpires: Date }`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the login token expiry becoming an invalid date when the client decodes EJSON, and `loginWithToken` resolving with the raw server result instead of its declared `{ id, token, tokenExpires: Date }`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `client.callAsync` and `client.callAsyncWithOptions` returning `any` for the methods declared in `ServerMethods`; they now resolve with the declared return type
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `client.callAsync` and `client.callAsyncWithOptions` returning `any` for the methods declared in `ServerMethods`; they now resolve with the declared return type
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the published typings depending on `@rocket.chat/ui-kit` without declaring it, and on Node.js types for a timer field
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the published typings depending on `@rocket.chat/ui-kit` without declaring it, and on Node.js types for a timer field
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `account.user` taking the id and username of other users' documents the server publishes once logged in, instead of only the logged-in user's
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `account.user` taking the id and username of other users' documents the server publishes once logged in, instead of only the logged-in user's
 
-- ([#43036](https://github.com/RocketChat/Rocket.Chat/pull/43036)) Fixes UI Kit buttons in messages sending the clicker's credentials to an endpoint other than the app's interaction endpoint when their `appId` is not a valid app ID
+- ([#43036](https://github.com/YasChat/YasChat/pull/43036)) Fixes UI Kit buttons in messages sending the clicker's credentials to an endpoint other than the app's interaction endpoint when their `appId` is not a valid app ID
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, 9a520fcd54321e154374182698c825aa09e87cc7, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -71,59 +71,59 @@
 
 ### Major Changes
 
-- ([#41948](https://github.com/RocketChat/Rocket.Chat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
+- ([#41948](https://github.com/YasChat/YasChat/pull/41948)) Removes the deprecated `query` and `fields` REST API parameters, along with the `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` environment variable that re-enabled them. Deprecated in 6.3.0 and disabled by default since 7.0.0, they let callers run raw MongoDB queries and projections against the database.
 
   Endpoints that validate their query string now reject both with `400 error-invalid-params` instead of ignoring them; the few without validation keep accepting and ignoring them. `users.create` likewise rejects a `fields` property in its body. `channels.online` and `groups.online` now require `_id`. On `users.list`, fields outside the default projection — `customFields`, `utcOffset`, `nickname`, `bio`, `statusText`, `federated` and `freeSwitchExtension` — are no longer reachable in bulk; use `users.info` instead. Callers should move to the dedicated filter parameters each endpoint exposes, such as `name`, `type`, `_id` and `text`.
 
 ### Minor Changes
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Changes the reconnection strategy to an exponential backoff with jitter, capped at 30 seconds, and makes `DDPSDK.create` and `RocketchatSdkLegacyImpl.create` keep reconnecting by default (`retryCount: Infinity`, `retryTime: 1000`) instead of giving up after one retry at 100 ms. `LivechatClientImpl` keeps its own defaults (3 retries from 10 seconds).
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Changes the reconnection strategy to an exponential backoff with jitter, capped at 30 seconds, and makes `DDPSDK.create` and `RocketchatSdkLegacyImpl.create` keep reconnecting by default (`retryCount: Infinity`, `retryTime: 1000`) instead of giving up after one retry at 100 ms. `LivechatClientImpl` keeps its own defaults (3 retries from 10 seconds).
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `encode`, `decode` and `WebSocket` options to `DDPSDK.create` and `DDPSDK.createAndConnect`, next to `retryCount` and `retryTime`, so clients can use EJSON or a custom WebSocket without reaching into the SDK internals. `LivechatClientImpl.create` and `RocketchatSdkLegacyImpl.create` share the same factory: they now also log in again after a reconnection, log the account out when the server refuses the token on that login, and send the account's credentials with REST calls.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `encode`, `decode` and `WebSocket` options to `DDPSDK.create` and `DDPSDK.createAndConnect`, next to `retryCount` and `retryTime`, so clients can use EJSON or a custom WebSocket without reaching into the SDK internals. `LivechatClientImpl.create` and `RocketchatSdkLegacyImpl.create` share the same factory: they now also log in again after a reconnection, log the account out when the server refuses the token on that login, and send the account's credentials with REST calls.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `account.setCredentials()` to adopt a login made outside the SDK and `account.clearCredentials()` to forget the logged-in user locally
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `account.setCredentials()` to adopt a login made outside the SDK and `account.clearCredentials()` to forget the logged-in user locally
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds the `inFlightMethods` option (`'reject'` by default, or `'resend'`) to choose whether method calls lost with the connection reject or are sent again after the reconnection's login, and the `logoutOnRefusedResume` option (`true` by default) to keep the account logged in when the server refuses the token after a reconnection. Only a refusal (a 401/403 answer) logs the account out; other failures of that login keep it. `connection.close()` now rejects every pending call.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds the `inFlightMethods` option (`'reject'` by default, or `'resend'`) to choose whether method calls lost with the connection reject or are sent again after the reconnection's login, and the `logoutOnRefusedResume` option (`true` by default) to keep the account logged in when the server refuses the token after a reconnection. Only a refusal (a 401/403 answer) logs the account out; other failures of that login keep it. `connection.close()` now rejects every pending call.
 
-- ([#42979](https://github.com/RocketChat/Rocket.Chat/pull/42979)) Exposes the connection's reconnection attempt count and when the next attempt is due (`retryCount`, `nextRetryAt`).
+- ([#42979](https://github.com/YasChat/YasChat/pull/42979)) Exposes the connection's reconnection attempt count and when the next attempt is due (`retryCount`, `nextRetryAt`).
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `Subscription.onStop(listener)`, called with the reason when the server stops a subscription or stream
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `Subscription.onStop(listener)`, called with the reason when the server stops a subscription or stream
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `sdk.publish(name, key, ...args)` to emit events on streams that accept them from clients, typed from `StreamerEvents`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `sdk.publish(name, key, ...args)` to emit events on streams that accept them from clients, typed from `StreamerEvents`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Adds `connection.whenConnected()`, which resolves once the connection is established
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Adds `connection.whenConnected()`, which resolves once the connection is established
 
 ### Patch Changes
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `client.call()` and `client.callWithOptions()` sending `[null]` as the parameters of a call made without parameters or callback
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `client.call()` and `client.callWithOptions()` sending `[null]` as the parameters of a call made without parameters or callback
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the heartbeat timers and a pending reconnect timer that kept running after `connection.close()`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the heartbeat timers and a pending reconnect timer that kept running after `connection.close()`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `connection.connect()` never settling when the socket closes before the DDP handshake, and the process crashing on an unreachable server when the `ws` package provides `WebSocket`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `connection.connect()` never settling when the socket closes before the DDP handshake, and the process crashing on an unreachable server when the `ws` package provides `WebSocket`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes method calls hanging forever when the connection drops before their result arrives. They now reject with `ConnectionLostError`, and calls queued behind a lost `login` are sent after the reconnection instead of staying blocked.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes method calls hanging forever when the connection drops before their result arrives. They now reject with `ConnectionLostError`, and calls queued behind a lost `login` are sent after the reconnection instead of staying blocked.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `RocketchatSdkLegacyImpl` never restoring subscriptions after a reconnection and `unsubscribeAll()` unsubscribing from nothing
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `RocketchatSdkLegacyImpl` never restoring subscriptions after a reconnection and `unsubscribeAll()` unsubscribing from nothing
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes subscriptions stopped by the server: a `nosub` without an error no longer counts as ready, a subscription stopped after it was ready is no longer kept and resent on every reconnection, and `Subscription.onChange` now fires on every change instead of only the first
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes subscriptions stopped by the server: a `nosub` without an error no longer counts as ready, a subscription stopped after it was ready is no longer kept and resent on every reconnection, and `Subscription.onChange` now fires on every change instead of only the first
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes subscriptions restored after a reconnection being refused because they went out before the new login, and the session staying "logged in" with a token the server refused during that login. A refused token now logs the account out (`onLogout` fires) instead of surfacing as an unhandled rejection.
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes subscriptions restored after a reconnection being refused because they went out before the new login, and the session staying "logged in" with a token the server refused during that login. A refused token now logs the account out (`onLogout` fires) instead of surfacing as an unhandled rejection.
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `sdk.rest` calls failing when the SDK is created with a `ws(s)://` URL, and the socket path doubling when the URL already ends with `/websocket`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `sdk.rest` calls failing when the SDK is created with a `ws(s)://` URL, and the socket path doubling when the URL already ends with `/websocket`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes stream callbacks firing once per listener for each event when the same stream key is listened to more than once: `sdk.stream` now shares one server subscription per stream key and unsubscribes when its last listener stops
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes stream callbacks firing once per listener for each event when the same stream key is listened to more than once: `sdk.stream` now shares one server subscription per stream key and unsubscribes when its last listener stops
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the login token expiry becoming an invalid date when the client decodes EJSON, and `loginWithToken` resolving with the raw server result instead of its declared `{ id, token, tokenExpires: Date }`
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the login token expiry becoming an invalid date when the client decodes EJSON, and `loginWithToken` resolving with the raw server result instead of its declared `{ id, token, tokenExpires: Date }`
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `client.callAsync` and `client.callAsyncWithOptions` returning `any` for the methods declared in `ServerMethods`; they now resolve with the declared return type
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `client.callAsync` and `client.callAsyncWithOptions` returning `any` for the methods declared in `ServerMethods`; they now resolve with the declared return type
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the published typings depending on `@rocket.chat/ui-kit` without declaring it, and on Node.js types for a timer field
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the published typings depending on `@rocket.chat/ui-kit` without declaring it, and on Node.js types for a timer field
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes `account.user` taking the id and username of other users' documents the server publishes once logged in, instead of only the logged-in user's
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes `account.user` taking the id and username of other users' documents the server publishes once logged in, instead of only the logged-in user's
 
-- ([#43036](https://github.com/RocketChat/Rocket.Chat/pull/43036)) Fixes UI Kit buttons in messages sending the clicker's credentials to an endpoint other than the app's interaction endpoint when their `appId` is not a valid app ID
+- ([#43036](https://github.com/YasChat/YasChat/pull/43036)) Fixes UI Kit buttons in messages sending the clicker's credentials to an endpoint other than the app's interaction endpoint when their `appId` is not a valid app ID
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, 9a520fcd54321e154374182698c825aa09e87cc7, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -139,7 +139,7 @@
 
 ### Minor Changes
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -147,7 +147,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -171,7 +171,7 @@
 
 ### Minor Changes
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -179,7 +179,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -249,15 +249,15 @@
 
 ### Minor Changes
 
-- ([#40442](https://github.com/RocketChat/Rocket.Chat/pull/40442)) Add lifecycle event handlers to `Account`: `onLogin`, `onLogout`, `onEmailVerificationLink`, and `onPageLoadLogin`. `onLogin` / `onLogout` fire on `uid` transitions (the setter now emits only when the value changes, so a single login or logout produces exactly one callback). `onEmailVerificationLink` and `onPageLoadLogin` are convenience wrappers around new `Emitter` events of the same names — fire them externally with `account.emit('emailVerificationLink', token)` / `account.emit('pageLoadLogin', loginAttempt)`. The bridge from Meteor's accounts-base lives in the consumer (`apps/meteor/client`) so the package stays Meteor-independent. All four handlers return an unsubscribe function.
+- ([#40442](https://github.com/YasChat/YasChat/pull/40442)) Add lifecycle event handlers to `Account`: `onLogin`, `onLogout`, `onEmailVerificationLink`, and `onPageLoadLogin`. `onLogin` / `onLogout` fire on `uid` transitions (the setter now emits only when the value changes, so a single login or logout produces exactly one callback). `onEmailVerificationLink` and `onPageLoadLogin` are convenience wrappers around new `Emitter` events of the same names — fire them externally with `account.emit('emailVerificationLink', token)` / `account.emit('pageLoadLogin', loginAttempt)`. The bridge from Meteor's accounts-base lives in the consumer (`apps/meteor/client`) so the package stays Meteor-independent. All four handlers return an unsubscribe function.
 
 ### Patch Changes
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Make `Connection.connect()` and `Connection.reconnect()` idempotent. Previously they rejected with `Error('Connection in progress')` when called while a connection was already in flight or established. Because the internal retry timer (`ws.onclose` → `setTimeout(() => void this.reconnect(), …)`) fires with no `.catch`, that rejection surfaced as an unhandled rejection at the page level whenever an external caller (e.g. an SDK consumer's bootstrap path) won the race against the timer. While `status === 'connecting'`, both methods now return the in-flight handshake promise so a later `failed` payload still propagates to every caller instead of being masked by a synthesized success; while `status === 'connected'` they resolve with `true`. The timer also no-ops when the connection has already been re-established, and a stale `ws.onclose` from a replaced socket no longer clobbers the new socket's status or schedules a redundant retry.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Make `Connection.connect()` and `Connection.reconnect()` idempotent. Previously they rejected with `Error('Connection in progress')` when called while a connection was already in flight or established. Because the internal retry timer (`ws.onclose` → `setTimeout(() => void this.reconnect(), …)`) fires with no `.catch`, that rejection surfaced as an unhandled rejection at the page level whenever an external caller (e.g. an SDK consumer's bootstrap path) won the race against the timer. While `status === 'connecting'`, both methods now return the in-flight handshake promise so a later `failed` payload still propagates to every caller instead of being masked by a synthesized success; while `status === 'connected'` they resolve with `true`. The timer also no-ops when the connection has already been re-established, and a stale `ws.onclose` from a replaced socket no longer clobbers the new socket's status or schedules a redundant retry.
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Reset `Connection.retryCount` to zero on a successful (re)connection. The counter was only ever incremented (in `ws.onclose`), never zeroed, so the retry budget was monotonically consumed across the connection's lifetime. With the default budget of `1`, any chain of two close events — for example the SDK reconnecting after a server force-logout, then the client running a follow-up `Meteor.logout()` whose server handler closes the WS again — drained the budget; the second close handler bailed at `retryCount >= retryOptions.retryCount` and the SDK stayed permanently disconnected. Method frames already in the dispatcher queue (e.g. a fresh `login` retry from the consumer) stayed queued forever.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Reset `Connection.retryCount` to zero on a successful (re)connection. The counter was only ever incremented (in `ws.onclose`), never zeroed, so the retry budget was monotonically consumed across the connection's lifetime. With the default budget of `1`, any chain of two close events — for example the SDK reconnecting after a server force-logout, then the client running a follow-up `Meteor.logout()` whose server handler closes the WS again — drained the budget; the second close handler bailed at `retryCount >= retryOptions.retryCount` and the SDK stayed permanently disconnected. Method frames already in the dispatcher queue (e.g. a fresh `login` retry from the consumer) stayed queued forever.
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Fix `DDPDispatcher` dropping non-method frames (connect, sub, unsub, ping, pong) when a `wait` block is at the head of the queue. Previously every payload flowed through the same wait-serialization path: a `connect` frame dispatched after a `wait: true` method (e.g. `login`) would be queued in a new non-wait block but never actually sent, wedging the DDP handshake — the socket stayed open, the server never replied `connected`, and any caller awaiting the connection hung. Non-method payloads now bypass the queue and emit immediately; wait-method serialization between methods is unchanged.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Fix `DDPDispatcher` dropping non-method frames (connect, sub, unsub, ping, pong) when a `wait` block is at the head of the queue. Previously every payload flowed through the same wait-serialization path: a `connect` frame dispatched after a `wait: true` method (e.g. `login`) would be queued in a new non-wait block but never actually sent, wedging the DDP handshake — the socket stayed open, the server never replied `connected`, and any caller awaiting the connection hung. Non-method payloads now bypass the queue and emit immediately; wait-method serialization between methods is unchanged.
 
 - <details><summary>Updated dependencies [4c3984593017d59edd631bf8ae4f35f9d3c3db36, 4704bf81ca370f120af32185a7c55407a26f8514, 12897e25d0dc25b7373f5264d38f38a5a7444257, b1c2668b74bfb49ebaefe2f581b2f8be5d4d1dd6]:</summary>
   - @rocket.chat/rest-typings@8.5.0
@@ -269,15 +269,15 @@
 
 ### Minor Changes
 
-- ([#40442](https://github.com/RocketChat/Rocket.Chat/pull/40442)) Add lifecycle event handlers to `Account`: `onLogin`, `onLogout`, `onEmailVerificationLink`, and `onPageLoadLogin`. `onLogin` / `onLogout` fire on `uid` transitions (the setter now emits only when the value changes, so a single login or logout produces exactly one callback). `onEmailVerificationLink` and `onPageLoadLogin` are convenience wrappers around new `Emitter` events of the same names — fire them externally with `account.emit('emailVerificationLink', token)` / `account.emit('pageLoadLogin', loginAttempt)`. The bridge from Meteor's accounts-base lives in the consumer (`apps/meteor/client`) so the package stays Meteor-independent. All four handlers return an unsubscribe function.
+- ([#40442](https://github.com/YasChat/YasChat/pull/40442)) Add lifecycle event handlers to `Account`: `onLogin`, `onLogout`, `onEmailVerificationLink`, and `onPageLoadLogin`. `onLogin` / `onLogout` fire on `uid` transitions (the setter now emits only when the value changes, so a single login or logout produces exactly one callback). `onEmailVerificationLink` and `onPageLoadLogin` are convenience wrappers around new `Emitter` events of the same names — fire them externally with `account.emit('emailVerificationLink', token)` / `account.emit('pageLoadLogin', loginAttempt)`. The bridge from Meteor's accounts-base lives in the consumer (`apps/meteor/client`) so the package stays Meteor-independent. All four handlers return an unsubscribe function.
 
 ### Patch Changes
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Make `Connection.connect()` and `Connection.reconnect()` idempotent. Previously they rejected with `Error('Connection in progress')` when called while a connection was already in flight or established. Because the internal retry timer (`ws.onclose` → `setTimeout(() => void this.reconnect(), …)`) fires with no `.catch`, that rejection surfaced as an unhandled rejection at the page level whenever an external caller (e.g. an SDK consumer's bootstrap path) won the race against the timer. While `status === 'connecting'`, both methods now return the in-flight handshake promise so a later `failed` payload still propagates to every caller instead of being masked by a synthesized success; while `status === 'connected'` they resolve with `true`. The timer also no-ops when the connection has already been re-established, and a stale `ws.onclose` from a replaced socket no longer clobbers the new socket's status or schedules a redundant retry.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Make `Connection.connect()` and `Connection.reconnect()` idempotent. Previously they rejected with `Error('Connection in progress')` when called while a connection was already in flight or established. Because the internal retry timer (`ws.onclose` → `setTimeout(() => void this.reconnect(), …)`) fires with no `.catch`, that rejection surfaced as an unhandled rejection at the page level whenever an external caller (e.g. an SDK consumer's bootstrap path) won the race against the timer. While `status === 'connecting'`, both methods now return the in-flight handshake promise so a later `failed` payload still propagates to every caller instead of being masked by a synthesized success; while `status === 'connected'` they resolve with `true`. The timer also no-ops when the connection has already been re-established, and a stale `ws.onclose` from a replaced socket no longer clobbers the new socket's status or schedules a redundant retry.
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Reset `Connection.retryCount` to zero on a successful (re)connection. The counter was only ever incremented (in `ws.onclose`), never zeroed, so the retry budget was monotonically consumed across the connection's lifetime. With the default budget of `1`, any chain of two close events — for example the SDK reconnecting after a server force-logout, then the client running a follow-up `Meteor.logout()` whose server handler closes the WS again — drained the budget; the second close handler bailed at `retryCount >= retryOptions.retryCount` and the SDK stayed permanently disconnected. Method frames already in the dispatcher queue (e.g. a fresh `login` retry from the consumer) stayed queued forever.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Reset `Connection.retryCount` to zero on a successful (re)connection. The counter was only ever incremented (in `ws.onclose`), never zeroed, so the retry budget was monotonically consumed across the connection's lifetime. With the default budget of `1`, any chain of two close events — for example the SDK reconnecting after a server force-logout, then the client running a follow-up `Meteor.logout()` whose server handler closes the WS again — drained the budget; the second close handler bailed at `retryCount >= retryOptions.retryCount` and the SDK stayed permanently disconnected. Method frames already in the dispatcher queue (e.g. a fresh `login` retry from the consumer) stayed queued forever.
 
-- ([#40307](https://github.com/RocketChat/Rocket.Chat/pull/40307)) Fix `DDPDispatcher` dropping non-method frames (connect, sub, unsub, ping, pong) when a `wait` block is at the head of the queue. Previously every payload flowed through the same wait-serialization path: a `connect` frame dispatched after a `wait: true` method (e.g. `login`) would be queued in a new non-wait block but never actually sent, wedging the DDP handshake — the socket stayed open, the server never replied `connected`, and any caller awaiting the connection hung. Non-method payloads now bypass the queue and emit immediately; wait-method serialization between methods is unchanged.
+- ([#40307](https://github.com/YasChat/YasChat/pull/40307)) Fix `DDPDispatcher` dropping non-method frames (connect, sub, unsub, ping, pong) when a `wait` block is at the head of the queue. Previously every payload flowed through the same wait-serialization path: a `connect` frame dispatched after a `wait: true` method (e.g. `login`) would be queued in a new non-wait block but never actually sent, wedging the DDP handshake — the socket stayed open, the server never replied `connected`, and any caller awaiting the connection hung. Non-method payloads now bypass the queue and emit immediately; wait-method serialization between methods is unchanged.
 
 - <details><summary>Updated dependencies [4c3984593017d59edd631bf8ae4f35f9d3c3db36, ae9f740d6af20557eac61b4af902c868b4132b49, 4704bf81ca370f120af32185a7c55407a26f8514, 12897e25d0dc25b7373f5264d38f38a5a7444257, b1c2668b74bfb49ebaefe2f581b2f8be5d4d1dd6]:</summary>
   - @rocket.chat/rest-typings@8.5.0-rc.0
@@ -358,7 +358,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0
@@ -416,7 +416,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0-rc.0
@@ -441,7 +441,7 @@
 
 ### Patch Changes
 
-- ([#38616](https://github.com/RocketChat/Rocket.Chat/pull/38616)) Fixes device management logout not redirecting to login page.
+- ([#38616](https://github.com/YasChat/YasChat/pull/38616)) Fixes device management logout not redirecting to login page.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573]:</summary>
   - @rocket.chat/core-typings@8.2.0
@@ -476,7 +476,7 @@
 
 ### Patch Changes
 
-- ([#38616](https://github.com/RocketChat/Rocket.Chat/pull/38616)) Fixes device management logout not redirecting to login page.
+- ([#38616](https://github.com/YasChat/YasChat/pull/38616)) Fixes device management logout not redirecting to login page.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573]:</summary>
   - @rocket.chat/core-typings@8.2.0-rc.0
@@ -555,7 +555,7 @@
 
 ### Major Changes
 
-- ([#36836](https://github.com/RocketChat/Rocket.Chat/pull/36836)) Removes the deprecated livechat:getTagsList method
+- ([#36836](https://github.com/YasChat/YasChat/pull/36836)) Removes the deprecated livechat:getTagsList method
 
   Removes the deprecated livechat:getUnitsFromUser method
 
@@ -563,16 +563,16 @@
 
   Removes the deprecated livechat:getDepartmentForwardRestrictions method
 
-- ([#36871](https://github.com/RocketChat/Rocket.Chat/pull/36871)) Removes the `livechat:transfer` deprecated method
+- ([#36871](https://github.com/YasChat/YasChat/pull/36871)) Removes the `livechat:transfer` deprecated method
   Removes the `livechat/room.transfer` deprecated endpoint
   Creates the `livechat/visitor.department.transfer` for visitors department transfer use
-- ([#37114](https://github.com/RocketChat/Rocket.Chat/pull/37114)) Removes stdout logging functionality, related components and settings
+- ([#37114](https://github.com/YasChat/YasChat/pull/37114)) Removes stdout logging functionality, related components and settings
 
-- ([#36828](https://github.com/RocketChat/Rocket.Chat/pull/36828)) Removes the deprecated `setUserPassword` method
+- ([#36828](https://github.com/YasChat/YasChat/pull/36828)) Removes the deprecated `setUserPassword` method
 
 ### Minor Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
 ### Patch Changes
 
@@ -644,7 +644,7 @@
 
 ### Major Changes
 
-- ([#36836](https://github.com/RocketChat/Rocket.Chat/pull/36836)) Removes the deprecated livechat:getTagsList method
+- ([#36836](https://github.com/YasChat/YasChat/pull/36836)) Removes the deprecated livechat:getTagsList method
 
   Removes the deprecated livechat:getUnitsFromUser method
 
@@ -652,16 +652,16 @@
 
   Removes the deprecated livechat:getDepartmentForwardRestrictions method
 
-- ([#36871](https://github.com/RocketChat/Rocket.Chat/pull/36871)) Removes the `livechat:transfer` deprecated method
+- ([#36871](https://github.com/YasChat/YasChat/pull/36871)) Removes the `livechat:transfer` deprecated method
   Removes the `livechat/room.transfer` deprecated endpoint
   Creates the `livechat/visitor.department.transfer` for visitors department transfer use
-- ([#37114](https://github.com/RocketChat/Rocket.Chat/pull/37114)) Removes stdout logging functionality, related components and settings
+- ([#37114](https://github.com/YasChat/YasChat/pull/37114)) Removes stdout logging functionality, related components and settings
 
-- ([#36828](https://github.com/RocketChat/Rocket.Chat/pull/36828)) Removes the deprecated `setUserPassword` method
+- ([#36828](https://github.com/YasChat/YasChat/pull/36828)) Removes the deprecated `setUserPassword` method
 
 ### Minor Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
 ### Patch Changes
 
@@ -1067,7 +1067,7 @@
 
 ### Patch Changes
 
-- ([#36099](https://github.com/RocketChat/Rocket.Chat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
+- ([#36099](https://github.com/YasChat/YasChat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
 
 - <details><summary>Updated dependencies [0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/rest-typings@7.9.0
@@ -1102,7 +1102,7 @@
 
 ### Patch Changes
 
-- ([#36099](https://github.com/RocketChat/Rocket.Chat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
+- ([#36099](https://github.com/YasChat/YasChat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
 
 - <details><summary>Updated dependencies [0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/rest-typings@7.9.0-rc.0
@@ -1536,7 +1536,7 @@
 
 ### Patch Changes
 
-- ([#35328](https://github.com/RocketChat/Rocket.Chat/pull/35328)) Fixes livechat inquiries not routing to the manager queue when manual routing is enabled.
+- ([#35328](https://github.com/YasChat/YasChat/pull/35328)) Fixes livechat inquiries not routing to the manager queue when manual routing is enabled.
 
 - <details><summary>Updated dependencies [4ce00382e9877c4d9241747fdd4f4223d70b58a7, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, cc4111cf0b1458dd97369baf8969734f337650dc, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f]:</summary>
   - @rocket.chat/rest-typings@7.5.0
@@ -1604,7 +1604,7 @@
 
 ### Patch Changes
 
-- ([#35328](https://github.com/RocketChat/Rocket.Chat/pull/35328)) Fixes livechat inquiries not routing to the manager queue when manual routing is enabled.
+- ([#35328](https://github.com/YasChat/YasChat/pull/35328)) Fixes livechat inquiries not routing to the manager queue when manual routing is enabled.
 
 - <details><summary>Updated dependencies [4ce00382e9877c4d9241747fdd4f4223d70b58a7, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f]:</summary>
   - @rocket.chat/rest-typings@7.5.0-rc.0
@@ -1935,7 +1935,7 @@
 
 ### Patch Changes
 
-- ([#33328](https://github.com/RocketChat/Rocket.Chat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
+- ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [3395c8290b, 6b5b91fd14, d1e14a0a85, bcacbb1cee, b167db0b37, f4365b7dd4, b338807d76, bf05700542, 1bdfd201b1, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 81998f3450, 2bc9692de0, 50943a02e8, 509143d6dd, fa501ecb53]:</summary>
   - @rocket.chat/rest-typings@7.0.0
@@ -2014,7 +2014,7 @@
 
 ### Patch Changes
 
-- ([#33328](https://github.com/RocketChat/Rocket.Chat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
+- ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [3395c8290b, 6b5b91fd14, 7726d68374, bcacbb1cee, b167db0b37, f4365b7dd4, b338807d76, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 81998f3450, 50943a02e8, 509143d6dd, fa501ecb53]:</summary>
   - @rocket.chat/rest-typings@7.0.0-rc.0
@@ -2334,7 +2334,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2418,7 +2418,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2554,9 +2554,9 @@
 
 ### Patch Changes
 
-- ([#31941](https://github.com/RocketChat/Rocket.Chat/pull/31941)) fix: livechat sdk reconnect not resubscribing
+- ([#31941](https://github.com/YasChat/YasChat/pull/31941)) fix: livechat sdk reconnect not resubscribing
 
-- ([#31823](https://github.com/RocketChat/Rocket.Chat/pull/31823)) Revert unintentional changes real time presence data payload
+- ([#31823](https://github.com/YasChat/YasChat/pull/31823)) Revert unintentional changes real time presence data payload
 
 - <details><summary>Updated dependencies [d1b1ffe9e5]:</summary>
   - @rocket.chat/rest-typings@6.7.0
@@ -2608,9 +2608,9 @@
 
 ### Patch Changes
 
-- ([#31941](https://github.com/RocketChat/Rocket.Chat/pull/31941)) fix: livechat sdk reconnect not resubscribing
+- ([#31941](https://github.com/YasChat/YasChat/pull/31941)) fix: livechat sdk reconnect not resubscribing
 
-- ([#31823](https://github.com/RocketChat/Rocket.Chat/pull/31823)) Revert unintentional changes real time presence data payload
+- ([#31823](https://github.com/YasChat/YasChat/pull/31823)) Revert unintentional changes real time presence data payload
 
 - <details><summary>Updated dependencies [d1b1ffe9e5]:</summary>
   - @rocket.chat/rest-typings@6.7.0-rc.0
@@ -2632,7 +2632,7 @@
 
 ### Patch Changes
 
-- ([#31941](https://github.com/RocketChat/Rocket.Chat/pull/31941)) fix: livechat sdk reconnect not resubscribing
+- ([#31941](https://github.com/YasChat/YasChat/pull/31941)) fix: livechat sdk reconnect not resubscribing
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/rest-typings@6.6.5
@@ -2664,7 +2664,7 @@
 
 ### Patch Changes
 
-- ([#31823](https://github.com/RocketChat/Rocket.Chat/pull/31823)) Revert unintentional changes real time presence data payload
+- ([#31823](https://github.com/YasChat/YasChat/pull/31823)) Revert unintentional changes real time presence data payload
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/rest-typings@6.6.2
@@ -2686,9 +2686,9 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31304](https://github.com/RocketChat/Rocket.Chat/pull/31304)) chore: Add readme to ddp-client package
+- ([#31304](https://github.com/YasChat/YasChat/pull/31304)) chore: Add readme to ddp-client package
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, 748e57984d, 7c6198f49f, fdd9852079, 2260c04ec6]:</summary>
   - @rocket.chat/api-client@0.1.22

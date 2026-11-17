@@ -1299,7 +1299,7 @@ describe('LIVECHAT - visitors', () => {
 
 			await request
 				.get(api('omnichannel/contact.search'))
-				.query({ custom: JSON.stringify({ address: 'Rocket.Chat' }) })
+				.query({ custom: JSON.stringify({ address: 'YasChat' }) })
 				.set(credentials)
 				.send()
 				.expect('Content-Type', 'application/json')
@@ -1310,7 +1310,7 @@ describe('LIVECHAT - visitors', () => {
 					expect(res.body.contact).to.have.property('username');
 					expect(res.body.contact).to.have.property('phone');
 					expect(res.body.contact).to.have.property('visitorEmails');
-					expect(res.body.contact.livechatData).to.have.property('address', 'Rocket.Chat street');
+					expect(res.body.contact.livechatData).to.have.property('address', 'YasChat street');
 				});
 
 			await deleteCustomField(cfID);

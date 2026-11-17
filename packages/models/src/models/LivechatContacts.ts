@@ -4,7 +4,7 @@ import type {
 	ILivechatContactChannel,
 	ILivechatContactVisitorAssociation,
 	ILivechatVisitor,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import type {
 	FindPaginated,
@@ -34,7 +34,7 @@ import { BaseRaw } from './BaseRaw';
 import { readSecondaryPreferred } from '../readSecondaryPreferred';
 
 export class LivechatContactsRaw extends BaseRaw<ILivechatContact> implements ILivechatContactsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatContact>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatContact>>) {
 		super(db, 'livechat_contact', trash);
 	}
 

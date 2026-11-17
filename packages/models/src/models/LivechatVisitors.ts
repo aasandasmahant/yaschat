@@ -1,4 +1,4 @@
-import type { DeepWritable, IVisitorExternalIdentifier, ILivechatVisitor, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { DeepWritable, IVisitorExternalIdentifier, ILivechatVisitor, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { FindPaginated, ILivechatVisitorsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import { escapeRegExp } from '@rocket.chat/tools';
 import type {
@@ -22,7 +22,7 @@ import { Settings } from '../index';
 import { BaseRaw } from './BaseRaw';
 
 export class LivechatVisitorsRaw extends BaseRaw<ILivechatVisitor> implements ILivechatVisitorsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatVisitor>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatVisitor>>) {
 		super(db, 'livechat_visitor', trash);
 	}
 

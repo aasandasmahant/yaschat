@@ -1,4 +1,4 @@
-import type { ISetting, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ISetting, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ServerMethods } from '@rocket.chat/ddp-client';
 import { Settings } from '@rocket.chat/models';
 import { Meteor } from 'meteor/meteor';
@@ -12,10 +12,10 @@ declare module '@rocket.chat/ddp-client' {
 	interface ServerMethods {
 		'public-settings/get'(
 			updatedSince?: Date,
-		): Promise<ISetting[] | { update: ISetting[]; remove: WithId<RocketChatRecordDeleted<ISetting>>[] }>;
+		): Promise<ISetting[] | { update: ISetting[]; remove: WithId<YasChatRecordDeleted<ISetting>>[] }>;
 		'private-settings/get'(
 			updatedSince?: Date,
-		): Promise<ISetting[] | { update: ISetting[]; remove: WithId<RocketChatRecordDeleted<ISetting>>[] }>;
+		): Promise<ISetting[] | { update: ISetting[]; remove: WithId<YasChatRecordDeleted<ISetting>>[] }>;
 	}
 }
 

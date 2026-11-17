@@ -4,15 +4,15 @@
 
 ### Patch Changes
 
-- ([#42174](https://github.com/RocketChat/Rocket.Chat/pull/42174) by [@sudoKrishna](https://github.com/sudoKrishna)) Fixes a memory leak in the DDP streamer where every subscription that failed to start stayed registered on its connection until the connection closed
+- ([#42174](https://github.com/YasChat/YasChat/pull/42174) by [@sudoKrishna](https://github.com/sudoKrishna)) Fixes a memory leak in the DDP streamer where every subscription that failed to start stayed registered on its connection until the connection closed
 
-- ([#42032](https://github.com/RocketChat/Rocket.Chat/pull/42032) by [@vasiliy-grinko](https://github.com/vasiliy-grinko)) Fixes a memory leak in the DDP streamer where every subscription a connection stopped kept a listener until the connection closed, which on long-lived connections with frequent subscription changes led to `MaxListenersExceededWarning` and eventually an out-of-memory crash
+- ([#42032](https://github.com/YasChat/YasChat/pull/42032) by [@vasiliy-grinko](https://github.com/vasiliy-grinko)) Fixes a memory leak in the DDP streamer where every subscription a connection stopped kept a listener until the connection closed, which on long-lived connections with frequent subscription changes led to `MaxListenersExceededWarning` and eventually an out-of-memory crash
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42336](https://github.com/RocketChat/Rocket.Chat/pull/42336)) Fixes the DDP Streamer service not accepting websocket connections when it could not load the client versions at startup, which left every realtime feature unavailable while the service still looked healthy.
+- ([#42336](https://github.com/YasChat/YasChat/pull/42336)) Fixes the DDP Streamer service not accepting websocket connections when it could not load the client versions at startup, which left every realtime feature unavailable while the service still looked healthy.
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes real-time updates emitted by the main Rocket.Chat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes real-time updates emitted by the main YasChat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6254de43f3e9e23078efed927e40b320c1586a66, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, bff76c34b21caddbc316d69b62fac858a73d7164, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -32,15 +32,15 @@
 
 ### Patch Changes
 
-- ([#42174](https://github.com/RocketChat/Rocket.Chat/pull/42174) by [@sudoKrishna](https://github.com/sudoKrishna)) Fixes a memory leak in the DDP streamer where every subscription that failed to start stayed registered on its connection until the connection closed
+- ([#42174](https://github.com/YasChat/YasChat/pull/42174) by [@sudoKrishna](https://github.com/sudoKrishna)) Fixes a memory leak in the DDP streamer where every subscription that failed to start stayed registered on its connection until the connection closed
 
-- ([#42032](https://github.com/RocketChat/Rocket.Chat/pull/42032) by [@vasiliy-grinko](https://github.com/vasiliy-grinko)) Fixes a memory leak in the DDP streamer where every subscription a connection stopped kept a listener until the connection closed, which on long-lived connections with frequent subscription changes led to `MaxListenersExceededWarning` and eventually an out-of-memory crash
+- ([#42032](https://github.com/YasChat/YasChat/pull/42032) by [@vasiliy-grinko](https://github.com/vasiliy-grinko)) Fixes a memory leak in the DDP streamer where every subscription a connection stopped kept a listener until the connection closed, which on long-lived connections with frequent subscription changes led to `MaxListenersExceededWarning` and eventually an out-of-memory crash
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42336](https://github.com/RocketChat/Rocket.Chat/pull/42336)) Fixes the DDP Streamer service not accepting websocket connections when it could not load the client versions at startup, which left every realtime feature unavailable while the service still looked healthy.
+- ([#42336](https://github.com/YasChat/YasChat/pull/42336)) Fixes the DDP Streamer service not accepting websocket connections when it could not load the client versions at startup, which left every realtime feature unavailable while the service still looked healthy.
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes real-time updates emitted by the main Rocket.Chat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes real-time updates emitted by the main YasChat process never reaching clients in microservices deployments, such as canned response changes, import progress, integration history clearing and typing indicators from apps, and stops the DDP Streamer service from delivering typing and other client-sent events twice to clients on the same instance and back to their sender.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -60,7 +60,7 @@
 
 ### Patch Changes
 
-- ([#42301](https://github.com/RocketChat/Rocket.Chat/pull/42301)) Fixes login service configuration changes being lost by the DDP Streamer service when no client was subscribed at the moment of the change, which left newly connected clients with an outdated list of login services until the next change or a restart.
+- ([#42301](https://github.com/YasChat/YasChat/pull/42301)) Fixes login service configuration changes being lost by the DDP Streamer service when no client was subscribed at the moment of the change, which left newly connected clients with an outdated list of login services until the next change or a restart.
 
 - <details><summary>Updated dependencies [75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/model-typings@2.6.0
@@ -78,7 +78,7 @@
 
 ### Patch Changes
 
-- ([#42301](https://github.com/RocketChat/Rocket.Chat/pull/42301)) Fixes login service configuration changes being lost by the DDP Streamer service when no client was subscribed at the moment of the change, which left newly connected clients with an outdated list of login services until the next change or a restart.
+- ([#42301](https://github.com/YasChat/YasChat/pull/42301)) Fixes login service configuration changes being lost by the DDP Streamer service when no client was subscribed at the moment of the change, which left newly connected clients with an outdated list of login services until the next change or a restart.
 
 - <details><summary>Updated dependencies [75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/model-typings@2.6.0-rc.0
@@ -96,9 +96,9 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
   - @rocket.chat/rest-typings@8.8.0
@@ -115,9 +115,9 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
   - @rocket.chat/rest-typings@8.8.0-rc.0
@@ -135,7 +135,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -154,7 +154,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -233,7 +233,7 @@
 
 ### Patch Changes
 
-- ([#40057](https://github.com/RocketChat/Rocket.Chat/pull/40057)) Fixes an issue where some DDP method calls could incorrectly return a 404 error.
+- ([#40057](https://github.com/YasChat/YasChat/pull/40057)) Fixes an issue where some DDP method calls could incorrectly return a 404 error.
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, f4dfb8ddc2049692371aeb084110b5768151b5df]:</summary>
   - @rocket.chat/core-services@0.14.0
@@ -310,7 +310,7 @@
 
 ### Patch Changes
 
-- ([#40057](https://github.com/RocketChat/Rocket.Chat/pull/40057)) Fixes an issue where some DDP method calls could incorrectly return a 404 error.
+- ([#40057](https://github.com/YasChat/YasChat/pull/40057)) Fixes an issue where some DDP method calls could incorrectly return a 404 error.
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, f4dfb8ddc2049692371aeb084110b5768151b5df]:</summary>
   - @rocket.chat/core-services@0.14.0-rc.0
@@ -327,7 +327,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2
@@ -406,7 +406,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2-rc.0
@@ -590,7 +590,7 @@
 
 ### Patch Changes
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0
@@ -683,7 +683,7 @@
 
 ### Patch Changes
 
-- ([#37551](https://github.com/RocketChat/Rocket.Chat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37551](https://github.com/YasChat/YasChat/pull/37551)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0-rc.0
@@ -701,7 +701,7 @@
 
 ### Patch Changes
 
-- ([#37883](https://github.com/RocketChat/Rocket.Chat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
+- ([#37883](https://github.com/YasChat/YasChat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [eef2b390a8e4664ad4b974e7ea579982245efce5]:</summary>
   - @rocket.chat/core-services@0.11.2
@@ -821,7 +821,7 @@
 
 ### Patch Changes
 
-- ([#37218](https://github.com/RocketChat/Rocket.Chat/pull/37218)) Adds deprecation warning on `livechat:setupConnection`
+- ([#37218](https://github.com/YasChat/YasChat/pull/37218)) Adds deprecation warning on `livechat:setupConnection`
 
 - <details><summary>Updated dependencies [48d1442a07e860fefd6991c97e94d6a9de345afe, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
   - @rocket.chat/rest-typings@7.12.0
@@ -898,7 +898,7 @@
 
 ### Patch Changes
 
-- ([#37218](https://github.com/RocketChat/Rocket.Chat/pull/37218)) Adds deprecation warning on `livechat:setupConnection`
+- ([#37218](https://github.com/YasChat/YasChat/pull/37218)) Adds deprecation warning on `livechat:setupConnection`
 
 - <details><summary>Updated dependencies [48d1442a07e860fefd6991c97e94d6a9de345afe, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
   - @rocket.chat/rest-typings@7.12.0-rc.0
@@ -1235,7 +1235,7 @@
 
 ### Patch Changes
 
-- ([#36105](https://github.com/RocketChat/Rocket.Chat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
+- ([#36105](https://github.com/YasChat/YasChat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies [6f4429f1ac0e8a6aaed3b1fb378711388cafc325, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
   - @rocket.chat/core-services@0.9.12
@@ -1281,7 +1281,7 @@
 
 ### Patch Changes
 
-- ([#36105](https://github.com/RocketChat/Rocket.Chat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
+- ([#36105](https://github.com/YasChat/YasChat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies [6f4429f1ac0e8a6aaed3b1fb378711388cafc325, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
   - @rocket.chat/core-services@0.9.11-rc.0
@@ -1340,7 +1340,7 @@
 
 ### Patch Changes
 
-- ([#36105](https://github.com/RocketChat/Rocket.Chat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
+- ([#36105](https://github.com/YasChat/YasChat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies [5cd7b20d5fb6def0a76743576eaa19fc0bf01c4c, 1eb53d289e1280b5ac4ce4a6995e7fe28d50601a, da288f69a4c169eee942af73f490e7570fe41cc5, 2f8213e4c5b64201eb11c97e6e33d2488df9089d, 2de3aa60aa84bb262d3748065654b4ca7a000858, dc26071ba3e0242d1ea7cf819f05c76ab307b229, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c, d58457d25a9a899ebcc7fd0e1fe11d9d370c50d8]:</summary>
   - @rocket.chat/rest-typings@7.8.0
@@ -1417,7 +1417,7 @@
 
 ### Patch Changes
 
-- ([#36105](https://github.com/RocketChat/Rocket.Chat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
+- ([#36105](https://github.com/YasChat/YasChat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@7.8.0-rc.5
@@ -1539,7 +1539,7 @@
 
 ### Patch Changes
 
-- ([#36323](https://github.com/RocketChat/Rocket.Chat/pull/36323) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
+- ([#36323](https://github.com/YasChat/YasChat/pull/36323) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies [8874a5aab72c962f213d128a54393d95f7dabef8]:</summary>
   - @rocket.chat/rest-typings@7.7.2
@@ -2003,9 +2003,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#35181](https://github.com/RocketChat/Rocket.Chat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
+- ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0
@@ -2096,9 +2096,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#35181](https://github.com/RocketChat/Rocket.Chat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
+- ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0-rc.0
@@ -2159,7 +2159,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/model-typings@1.3.0
@@ -2251,7 +2251,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/model-typings@1.3.0-rc.0
@@ -2283,7 +2283,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, c43220dcd8c1df86a6143d6553964ad2173903b3, 47f24c2fb795eee33cb021d56508298b8a548eec, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/rest-typings@7.2.0
@@ -2315,7 +2315,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
   - @rocket.chat/models@1.1.0-rc.2
@@ -2362,7 +2362,7 @@
 
 ### Patch Changes
 
-- ([#33596](https://github.com/RocketChat/Rocket.Chat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
+- ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
   - @rocket.chat/model-typings@1.1.0
@@ -2424,7 +2424,7 @@
 
 ### Patch Changes
 
-- ([#33596](https://github.com/RocketChat/Rocket.Chat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
+- ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
   - @rocket.chat/model-typings@1.1.0-rc.0
@@ -2441,7 +2441,7 @@
 
 ### Patch Changes
 
-- ([#33770](https://github.com/RocketChat/Rocket.Chat/pull/33770)) Fixes page loading during reconnections
+- ([#33770](https://github.com/YasChat/YasChat/pull/33770)) Fixes page loading during reconnections
 
 - <details><summary>Updated dependencies [3395c8290b, 6b5b91fd14, d1e14a0a85, bcacbb1cee, b167db0b37, f4365b7dd4, d9fe5bbe0b, b338807d76, bf05700542, 1bdfd201b1, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 81998f3450, 2bc9692de0, 50943a02e8, 509143d6dd, fa501ecb53]:</summary>
   - @rocket.chat/rest-typings@7.0.0
@@ -2488,7 +2488,7 @@
 
 ### Patch Changes
 
-- ([#33770](https://github.com/RocketChat/Rocket.Chat/pull/33770)) Fixes page loading during reconnections
+- ([#33770](https://github.com/YasChat/YasChat/pull/33770)) Fixes page loading during reconnections
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@7.0.0-rc.4
@@ -2833,7 +2833,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 4e8aa575a6, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/model-typings@0.6.0
@@ -2940,7 +2940,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 4e8aa575a6, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/model-typings@0.6.0-rc.0
@@ -2957,13 +2957,13 @@
 
 ### Patch Changes
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
   - @rocket.chat/core-services@0.4.2
@@ -2995,7 +2995,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -3119,7 +3119,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -3241,7 +3241,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -3260,7 +3260,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -3337,9 +3337,9 @@
 
 ### Patch Changes
 
-- ([#32085](https://github.com/RocketChat/Rocket.Chat/pull/32085)) Fixed an internal server error when using the backwards compatibility flag to connect to the real time API for listening to all server message notifications.
+- ([#32085](https://github.com/YasChat/YasChat/pull/32085)) Fixed an internal server error when using the backwards compatibility flag to connect to the real time API for listening to all server message notifications.
 
-- ([#31833](https://github.com/RocketChat/Rocket.Chat/pull/31833)) Fix web UI not showing users presence updating to offline
+- ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, d1b1ffe9e5, 0570f6740a, b9e897a8f5, b876e4e0fc, e203c40471]:</summary>
   - @rocket.chat/core-typings@6.7.0
@@ -3401,7 +3401,7 @@
 
 ### Patch Changes
 
-- ([#32085](https://github.com/RocketChat/Rocket.Chat/pull/32085)) Fixed an internal server error when using the backwards compatibility flag to connect to the real time API for listening to all server message notifications.
+- ([#32085](https://github.com/YasChat/YasChat/pull/32085)) Fixed an internal server error when using the backwards compatibility flag to connect to the real time API for listening to all server message notifications.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@6.7.0-rc.1
@@ -3418,7 +3418,7 @@
 
 ### Patch Changes
 
-- ([#31833](https://github.com/RocketChat/Rocket.Chat/pull/31833)) Fix web UI not showing users presence updating to offline
+- ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, d1b1ffe9e5, 0570f6740a, b9e897a8f5, b876e4e0fc, e203c40471]:</summary>
   - @rocket.chat/core-typings@6.7.0-rc.0
@@ -3495,7 +3495,7 @@
 
 ### Patch Changes
 
-- ([#31833](https://github.com/RocketChat/Rocket.Chat/pull/31833)) Fix web UI not showing users presence updating to offline
+- ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@4.0.2
@@ -3527,9 +3527,9 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31371](https://github.com/RocketChat/Rocket.Chat/pull/31371)) Fixed an issue that caused login buttons to not be reactively removed from the login page when the related authentication service was disabled by an admin.
+- ([#31371](https://github.com/YasChat/YasChat/pull/31371)) Fixed an issue that caused login buttons to not be reactively removed from the login page when the related authentication service was disabled by an admin.
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162, dbb08ef948, fae558bd5d, 748e57984d, 7c6198f49f, 9a6e9b4e28, fdd9852079, 2260c04ec6, c8ab6583dc, e7d3cdeef0, b4b2cd20a8]:</summary>
   - @rocket.chat/instance-status@0.0.28

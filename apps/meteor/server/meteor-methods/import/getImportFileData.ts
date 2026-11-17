@@ -7,7 +7,7 @@ import { Imports } from '@rocket.chat/models';
 
 import { ProgressStep } from '../../../lib/importer/ImporterProgressStep';
 import { Importers } from '../../lib/import';
-import { RocketChatImportFileInstance } from '../../lib/import/startup/store';
+import { YasChatImportFileInstance } from '../../lib/import/startup/store';
 
 export const executeGetImportFileData = async (): Promise<IImporterSelection | { waiting: true }> => {
 	const operation = await Imports.findLastImport();
@@ -57,7 +57,7 @@ export const executeGetImportFileData = async (): Promise<IImporterSelection | {
 
 	const fileName = instance.importRecord.file;
 	if (fileName) {
-		const fullFilePath = fs.existsSync(fileName) ? fileName : path.join(RocketChatImportFileInstance.absolutePath, fileName);
+		const fullFilePath = fs.existsSync(fileName) ? fileName : path.join(YasChatImportFileInstance.absolutePath, fileName);
 		await instance.prepareUsingLocalFile(fullFilePath);
 	}
 

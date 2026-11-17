@@ -119,7 +119,7 @@ const waitForNewCallHistoryItem = async (
 const getNewestPreventedCall = async (connection: MongoClient, appId: string): Promise<IMediaCall | null> =>
 	connection
 		.db()
-		.collection<IMediaCall>('rocketchat_media_calls')
+		.collection<IMediaCall>('yaschat_media_calls')
 		.findOne({ 'preventedBy.appId': appId } as Filter<IMediaCall>, { sort: { createdAt: -1 } });
 
 /** Waits for the app to refuse a call it had not refused before, and returns the record of it. */

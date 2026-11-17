@@ -4,13 +4,13 @@
 
 ### Minor Changes
 
-- ([#42510](https://github.com/RocketChat/Rocket.Chat/pull/42510)) Opens the user card by hovering a message author's name or avatar, or a user mention, and opens the full user info by clicking them or pressing Enter or Space on the author's name or a mention. A card opened by hover doesn't take focus from what the user is doing.
+- ([#42510](https://github.com/YasChat/YasChat/pull/42510)) Opens the user card by hovering a message author's name or avatar, or a user mention, and opens the full user info by clicking them or pressing Enter or Space on the author's name or a mention. A card opened by hover doesn't take focus from what the user is doing.
 
 ### Patch Changes
 
-- ([#42686](https://github.com/RocketChat/Rocket.Chat/pull/42686)) Fixes indented list items being rendered as plain text instead of nested lists in messages
+- ([#42686](https://github.com/YasChat/YasChat/pull/42686)) Fixes indented list items being rendered as plain text instead of nested lists in messages
 
-- ([#42722](https://github.com/RocketChat/Rocket.Chat/pull/42722)) Fixes the tooltip of links typed without a protocol (e.g. `test.com`) showing stray slashes (`////test.com`) instead of the full link address
+- ([#42722](https://github.com/YasChat/YasChat/pull/42722)) Fixes the tooltip of links typed without a protocol (e.g. `test.com`) showing stray slashes (`////test.com`) instead of the full link address
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c637a035450ca2241bb04692f276921592e513f6, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 05e9b38a001919252360351f0bc3e46cc990a6ac, cd88334c72f7f2310706abc4d481a2712019e373, a39b03fe5c248079365162e31994e1dece63e7c2, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -39,13 +39,13 @@
 
 ### Minor Changes
 
-- ([#42510](https://github.com/RocketChat/Rocket.Chat/pull/42510)) Opens the user card by hovering a message author's name or avatar, or a user mention, and opens the full user info by clicking them or pressing Enter or Space on the author's name or a mention. A card opened by hover doesn't take focus from what the user is doing.
+- ([#42510](https://github.com/YasChat/YasChat/pull/42510)) Opens the user card by hovering a message author's name or avatar, or a user mention, and opens the full user info by clicking them or pressing Enter or Space on the author's name or a mention. A card opened by hover doesn't take focus from what the user is doing.
 
 ### Patch Changes
 
-- ([#42686](https://github.com/RocketChat/Rocket.Chat/pull/42686)) Fixes indented list items being rendered as plain text instead of nested lists in messages
+- ([#42686](https://github.com/YasChat/YasChat/pull/42686)) Fixes indented list items being rendered as plain text instead of nested lists in messages
 
-- ([#42722](https://github.com/RocketChat/Rocket.Chat/pull/42722)) Fixes the tooltip of links typed without a protocol (e.g. `test.com`) showing stray slashes (`////test.com`) instead of the full link address
+- ([#42722](https://github.com/YasChat/YasChat/pull/42722)) Fixes the tooltip of links typed without a protocol (e.g. `test.com`) showing stray slashes (`////test.com`) instead of the full link address
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c637a035450ca2241bb04692f276921592e513f6, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 05e9b38a001919252360351f0bc3e46cc990a6ac, cd88334c72f7f2310706abc4d481a2712019e373, a39b03fe5c248079365162e31994e1dece63e7c2, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -109,9 +109,9 @@
 
 ### Minor Changes
 
-- ([#41113](https://github.com/RocketChat/Rocket.Chat/pull/41113)) Adds support for horizontal rules (thematic breaks) in the message parser. A line of 3 or more contiguous dashes (`---`, with nothing else on the line) is parsed into a new `HORIZONTAL_RULE` block node and rendered with Fuselage's `Divider`. The node carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without horizontal-rule support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST. Only `-` is accepted: CommonMark also allows `*` and `_`, but those collide with emphasis and with censored words (bad-words masks a term as a run of `*`), so a bare `***` / `_______` line stays text/emphasis instead of becoming a divider.
+- ([#41113](https://github.com/YasChat/YasChat/pull/41113)) Adds support for horizontal rules (thematic breaks) in the message parser. A line of 3 or more contiguous dashes (`---`, with nothing else on the line) is parsed into a new `HORIZONTAL_RULE` block node and rendered with Fuselage's `Divider`. The node carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without horizontal-rule support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST. Only `-` is accepted: CommonMark also allows `*` and `_`, but those collide with emphasis and with censored words (bad-words masks a term as a run of `*`), so a bare `***` / `_______` line stays text/emphasis instead of becoming a divider.
 
-- ([#41109](https://github.com/RocketChat/Rocket.Chat/pull/41109)) Adds GFM-style table support to the message parser and renders it in gazzodown.
+- ([#41109](https://github.com/YasChat/YasChat/pull/41109)) Adds GFM-style table support to the message parser and renders it in gazzodown.
 
   Parser: tables require a leading and trailing pipe on every row, support column alignment via the delimiter row (`:---`, `:--:`, `---:`), and allow inline markup inside cells (a literal pipe must be escaped as `\|`). New `TABLE`, `TABLE_ROW`, and `TABLE_CELL` AST nodes are emitted. The `TABLE` node also carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without table support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST.
 
@@ -119,7 +119,7 @@
 
 ### Patch Changes
 
-- ([#41110](https://github.com/RocketChat/Rocket.Chat/pull/41110)) Degrades blocks without a dedicated renderer to their raw markup instead of dropping them. When a block carries a `fallback` `[start, end]` offset span, `Markup`/`PreviewMarkup` slice the original message source (passed via the new optional `source` prop) and render that text. This avoids duplicating the markup into the AST while keeping unsupported blocks visible.
+- ([#41110](https://github.com/YasChat/YasChat/pull/41110)) Degrades blocks without a dedicated renderer to their raw markup instead of dropping them. When a block carries a `fallback` `[start, end]` offset span, `Markup`/`PreviewMarkup` slice the original message source (passed via the new optional `source` prop) and render that text. This avoids duplicating the markup into the AST while keeping unsupported blocks visible.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, eec6083bb88f0caa1bd0de28b93b926a11c17507, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4117a1d3fb07905e8c9488a96f368747b48d528e, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, e5da5d016948c9bb5cfd784a65396e08e61264c4, 70c0ff0967cc50144dba4971fc7c3f3e996264a3]:</summary>
   - @rocket.chat/core-typings@8.7.0
@@ -133,9 +133,9 @@
 
 ### Minor Changes
 
-- ([#41113](https://github.com/RocketChat/Rocket.Chat/pull/41113)) Adds support for horizontal rules (thematic breaks) in the message parser. A line of 3 or more contiguous dashes (`---`, with nothing else on the line) is parsed into a new `HORIZONTAL_RULE` block node and rendered with Fuselage's `Divider`. The node carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without horizontal-rule support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST. Only `-` is accepted: CommonMark also allows `*` and `_`, but those collide with emphasis and with censored words (bad-words masks a term as a run of `*`), so a bare `***` / `_______` line stays text/emphasis instead of becoming a divider.
+- ([#41113](https://github.com/YasChat/YasChat/pull/41113)) Adds support for horizontal rules (thematic breaks) in the message parser. A line of 3 or more contiguous dashes (`---`, with nothing else on the line) is parsed into a new `HORIZONTAL_RULE` block node and rendered with Fuselage's `Divider`. The node carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without horizontal-rule support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST. Only `-` is accepted: CommonMark also allows `*` and `_`, but those collide with emphasis and with censored words (bad-words masks a term as a run of `*`), so a bare `***` / `_______` line stays text/emphasis instead of becoming a divider.
 
-- ([#41109](https://github.com/RocketChat/Rocket.Chat/pull/41109)) Adds GFM-style table support to the message parser and renders it in gazzodown.
+- ([#41109](https://github.com/YasChat/YasChat/pull/41109)) Adds GFM-style table support to the message parser and renders it in gazzodown.
 
   Parser: tables require a leading and trailing pipe on every row, support column alignment via the delimiter row (`:---`, `:--:`, `---:`), and allow inline markup inside cells (a literal pipe must be escaped as `\|`). New `TABLE`, `TABLE_ROW`, and `TABLE_CELL` AST nodes are emitted. The `TABLE` node also carries an optional `fallback` — a `[start, end]` offset span into the original source — so renderers without table support can slice the source to show the raw markup instead of dropping it, without duplicating the text into the AST.
 
@@ -143,7 +143,7 @@
 
 ### Patch Changes
 
-- ([#41110](https://github.com/RocketChat/Rocket.Chat/pull/41110)) Degrades blocks without a dedicated renderer to their raw markup instead of dropping them. When a block carries a `fallback` `[start, end]` offset span, `Markup`/`PreviewMarkup` slice the original message source (passed via the new optional `source` prop) and render that text. This avoids duplicating the markup into the AST while keeping unsupported blocks visible.
+- ([#41110](https://github.com/YasChat/YasChat/pull/41110)) Degrades blocks without a dedicated renderer to their raw markup instead of dropping them. When a block carries a `fallback` `[start, end]` offset span, `Markup`/`PreviewMarkup` slice the original message source (passed via the new optional `source` prop) and render that text. This avoids duplicating the markup into the AST while keeping unsupported blocks visible.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, eec6083bb88f0caa1bd0de28b93b926a11c17507, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4117a1d3fb07905e8c9488a96f368747b48d528e, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, e5da5d016948c9bb5cfd784a65396e08e61264c4, 70c0ff0967cc50144dba4971fc7c3f3e996264a3]:</summary>
   - @rocket.chat/core-typings@8.7.0-rc.0
@@ -179,9 +179,9 @@
 
 ### Patch Changes
 
-- ([#40420](https://github.com/RocketChat/Rocket.Chat/pull/40420)) Fixes Insert Timestamp relative time preview not updating on input changes and losing the user's locale after the first refresh tick.
+- ([#40420](https://github.com/YasChat/YasChat/pull/40420)) Fixes Insert Timestamp relative time preview not updating on input changes and losing the user's locale after the first refresh tick.
 
-- ([#40613](https://github.com/RocketChat/Rocket.Chat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
+- ([#40613](https://github.com/YasChat/YasChat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
 
 - <details><summary>Updated dependencies [fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257]:</summary>
   - @rocket.chat/ui-client@31.0.0
@@ -194,9 +194,9 @@
 
 ### Patch Changes
 
-- ([#40420](https://github.com/RocketChat/Rocket.Chat/pull/40420)) Fixes Insert Timestamp relative time preview not updating on input changes and losing the user's locale after the first refresh tick.
+- ([#40420](https://github.com/YasChat/YasChat/pull/40420)) Fixes Insert Timestamp relative time preview not updating on input changes and losing the user's locale after the first refresh tick.
 
-- ([#40613](https://github.com/RocketChat/Rocket.Chat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
+- ([#40613](https://github.com/YasChat/YasChat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
 
 - <details><summary>Updated dependencies [ae9f740d6af20557eac61b4af902c868b4132b49, fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257]:</summary>
   - @rocket.chat/core-typings@8.5.0-rc.0
@@ -277,7 +277,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/message-parser@0.31.35
@@ -335,7 +335,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/message-parser@0.31.35-rc.0
@@ -472,7 +472,7 @@
 
 ### Major Changes
 
-- ([#36976](https://github.com/RocketChat/Rocket.Chat/pull/36976)) Promotes Timestamp Parser from preview state to stable
+- ([#36976](https://github.com/YasChat/YasChat/pull/36976)) Promotes Timestamp Parser from preview state to stable
 
 ### Patch Changes
 
@@ -542,7 +542,7 @@
 
 ### Major Changes
 
-- ([#36976](https://github.com/RocketChat/Rocket.Chat/pull/36976)) Promotes Timestamp Parser from preview state to stable
+- ([#36976](https://github.com/YasChat/YasChat/pull/36976)) Promotes Timestamp Parser from preview state to stable
 
 ### Patch Changes
 
@@ -709,11 +709,11 @@
 
 ### Patch Changes
 
-- ([#36723](https://github.com/RocketChat/Rocket.Chat/pull/36723) by [@tiagoevanp](https://github.com/tiagoevanp)) Fixes search by name in custom emojis list, by adding a correct parameter to the endpoint `emoji-custom.all`
+- ([#36723](https://github.com/YasChat/YasChat/pull/36723) by [@tiagoevanp](https://github.com/tiagoevanp)) Fixes search by name in custom emojis list, by adding a correct parameter to the endpoint `emoji-custom.all`
 
   Now the endpoint `emoji-custom.all` accepts a `name` as parameter, so the filter should work on emojis page withouth the necessity of set `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` env var
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306, 399ab0233c9cd5d7f25ce955b452feecdc378744]:</summary>
   - @rocket.chat/ui-contexts@23.0.0
@@ -802,11 +802,11 @@
 
 ### Patch Changes
 
-- ([#36723](https://github.com/RocketChat/Rocket.Chat/pull/36723) by [@tiagoevanp](https://github.com/tiagoevanp)) Fixes search by name in custom emojis list, by adding a correct parameter to the endpoint `emoji-custom.all`
+- ([#36723](https://github.com/YasChat/YasChat/pull/36723) by [@tiagoevanp](https://github.com/tiagoevanp)) Fixes search by name in custom emojis list, by adding a correct parameter to the endpoint `emoji-custom.all`
 
   Now the endpoint `emoji-custom.all` accepts a `name` as parameter, so the filter should work on emojis page withouth the necessity of set `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS` env var
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306, 399ab0233c9cd5d7f25ce955b452feecdc378744]:</summary>
   - @rocket.chat/ui-contexts@23.0.0-rc.0
@@ -955,7 +955,7 @@
 
 ### Patch Changes
 
-- ([#36317](https://github.com/RocketChat/Rocket.Chat/pull/36317)) Fixes an issue that causes legitimate URLs to return '#' in links
+- ([#36317](https://github.com/YasChat/YasChat/pull/36317)) Fixes an issue that causes legitimate URLs to return '#' in links
 
 - <details><summary>Updated dependencies [2cec8acd5beddf5ad0c67c29fe632487cb82b026, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/core-typings@7.9.0
@@ -989,7 +989,7 @@
 
 ### Patch Changes
 
-- ([#36317](https://github.com/RocketChat/Rocket.Chat/pull/36317)) Fixes an issue that causes legitimate URLs to return '#' in links
+- ([#36317](https://github.com/YasChat/YasChat/pull/36317)) Fixes an issue that causes legitimate URLs to return '#' in links
 
 - <details><summary>Updated dependencies [2cec8acd5beddf5ad0c67c29fe632487cb82b026, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
   - @rocket.chat/core-typings@7.9.0-rc.0
@@ -1198,7 +1198,7 @@
 
 ### Patch Changes
 
-- ([#36016](https://github.com/RocketChat/Rocket.Chat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [aadc7956bdeb281007ef06f158088640a44171df]:</summary>
   - @rocket.chat/ui-client@19.0.0
@@ -1275,7 +1275,7 @@
 
 ### Patch Changes
 
-- ([#36016](https://github.com/RocketChat/Rocket.Chat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [aadc7956bdeb281007ef06f158088640a44171df]:</summary>
   - @rocket.chat/ui-client@19.0.0-rc.0
@@ -1430,7 +1430,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
   - @rocket.chat/ui-client@17.0.0
@@ -1499,7 +1499,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
   - @rocket.chat/ui-client@17.0.0-rc.0
@@ -1721,11 +1721,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, c43220dcd8c1df86a6143d6553964ad2173903b3, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, be2ede48ba7774a43189a729b385f441d088b68e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/core-typings@7.2.0
@@ -1771,11 +1771,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, be2ede48ba7774a43189a729b385f441d088b68e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/core-typings@7.2.0-rc.0
@@ -1843,7 +1843,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1924,7 +1924,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1939,7 +1939,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -2020,7 +2020,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -2048,7 +2048,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e, 7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
   - @rocket.chat/ui-client@10.0.0
@@ -2127,7 +2127,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e, 7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
   - @rocket.chat/ui-client@10.0.0-rc.0
@@ -2271,11 +2271,11 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
-- ([#32609](https://github.com/RocketChat/Rocket.Chat/pull/32609)) Fixes long katex lines overflowing the message component
+- ([#32609](https://github.com/YasChat/YasChat/pull/32609)) Fixes long katex lines overflowing the message component
 
 - <details><summary>Updated dependencies [1240c874a5, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
   - @rocket.chat/core-typings@6.10.0
@@ -2365,11 +2365,11 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
-- ([#32609](https://github.com/RocketChat/Rocket.Chat/pull/32609)) Fixes long katex lines overflowing the message component
+- ([#32609](https://github.com/YasChat/YasChat/pull/32609)) Fixes long katex lines overflowing the message component
 
 - <details><summary>Updated dependencies [1240c874a5, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
   - @rocket.chat/core-typings@6.10.0-rc.0
@@ -2657,9 +2657,9 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31349](https://github.com/RocketChat/Rocket.Chat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
+- ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162, 9cb97965ba, dbb08ef948, dd5fd6d2c8, fdd9852079, b4b2cd20a8]:</summary>
   - @rocket.chat/core-typings@6.6.0

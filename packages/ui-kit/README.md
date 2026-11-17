@@ -1,16 +1,16 @@
 # `@rocket.chat/ui-kit`
 
-> Types, validators and rendering contracts for UiKit, the block language Rocket.Chat Apps use to build UI.
+> Types, validators and rendering contracts for UiKit, the block language YasChat Apps use to build UI.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ui-kit) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ui-kit)
 
-UiKit describes UI as plain JSON: a list of layout blocks (sections, actions, inputs, images, ...), each holding elements (buttons, selects, date pickers, ...) and text objects. Rocket.Chat Apps send these blocks to the client, which draws them on one of five surfaces: message, modal, banner, contextual bar and attachment.
+UiKit describes UI as plain JSON: a list of layout blocks (sections, actions, inputs, images, ...), each holding elements (buttons, selects, date pickers, ...) and text objects. YasChat Apps send these blocks to the client, which draws them on one of five surfaces: message, modal, banner, contextual bar and attachment.
 
 This package is the shared contract between the parties:
 
 - **Types** for every block, element, text object and view, so you can write blocks with type checking.
 - **Runtime validators** for views and interaction payloads (`isModalView`, `isServerInteraction`, ...).
-- **Renderer base classes**, one per surface, that walk a block list and call your rendering functions. Rocket.Chat's React renderer, [`fuselage-ui-kit`](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage-ui-kit), is built on them.
+- **Renderer base classes**, one per surface, that walk a block list and call your rendering functions. YasChat's React renderer, [`fuselage-ui-kit`](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-ui-kit), is built on them.
 
 App authors usually get these types through [`@rocket.chat/apps-engine`](https://www.npmjs.com/package/@rocket.chat/apps-engine). Use this package directly when you build a renderer or handle UiKit payloads yourself.
 
@@ -186,11 +186,11 @@ if (isServerInteraction(payload) && isOpenModalServerInteraction(payload)) {
 
 ### Further reading
 
-The [UiKit feature notes](https://github.com/RocketChat/Rocket.Chat/tree/develop/docs/features/uikit) in the repository go deeper:
+The [UiKit feature notes](https://github.com/YasChat/YasChat/tree/develop/docs/features/uikit) in the repository go deeper:
 
-- [reference.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/reference.md): every block, element and text object, with its fields
-- [support-matrix.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/support-matrix.md): which surface accepts which block, and which renderer draws it
-- [rendering.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/rendering.md), [surfaces.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/surfaces.md), [text-objects.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/text-objects.md) and [interactions.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/interactions.md)
+- [reference.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/reference.md): every block, element and text object, with its fields
+- [support-matrix.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/support-matrix.md): which surface accepts which block, and which renderer draws it
+- [rendering.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/rendering.md), [surfaces.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/surfaces.md), [text-objects.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/text-objects.md) and [interactions.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/interactions.md)
 
 ## API
 
@@ -223,7 +223,7 @@ The [UiKit feature notes](https://github.com/RocketChat/Rocket.Chat/tree/develop
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/ui-kit). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/ui-kit). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/ui-kit build
@@ -234,8 +234,8 @@ yarn workspace @rocket.chat/ui-kit typecheck
 
 The build patches TypeScript with `ts-patch` and `typia` so that the `typia.createIs<T>()` calls are turned into validators at compile time.
 
-When you add or change a block, follow [adding-a-block.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/features/uikit/adding-a-block.md): a block has to be wired in this package, in the renderers and in the Apps-Engine.
+When you add or change a block, follow [adding-a-block.md](https://github.com/YasChat/YasChat/blob/develop/docs/features/uikit/adding-a-block.md): a block has to be wired in this package, in the renderers and in the Apps-Engine.
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

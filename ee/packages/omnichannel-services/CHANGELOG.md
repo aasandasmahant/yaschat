@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- ([#42337](https://github.com/RocketChat/Rocket.Chat/pull/42337)) Fixes a livechat transcript PDF that could be uploaded empty or truncated to one of the two rooms it is sent to, when the uploads started reading the rendered PDF at different times.
+- ([#42337](https://github.com/YasChat/YasChat/pull/42337)) Fixes a livechat transcript PDF that could be uploaded empty or truncated to one of the two rooms it is sent to, when the uploads started reading the rendered PDF at different times.
 
 - <details><summary>Updated dependencies [1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 60102b6e0ae410a45631ee494a3a302b9c863b48, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 467d8139d2bf33f23f5792fa364bf16c65a24bda, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 8b00fa367d7be9793c31bf578eb1b6c99bf240e9, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2f77d817051c919f29615babbb3ecd1964575b52, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, 9277d940be7fbca8b5a2cc890b368d0e803e1130, 9277d940be7fbca8b5a2cc890b368d0e803e1130, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 034260ee3eec49db0a2a86572bacf5e14490815d, bff76c34b21caddbc316d69b62fac858a73d7164, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 94a22a577e6f160b687b9ddffeade19417c66f1e, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8, ae9c28d6ebe0d3f7be1b474ebd2c15eb73c461a6]:</summary>
   - @rocket.chat/i18n@5.0.0
@@ -25,7 +25,7 @@
 
 ### Patch Changes
 
-- ([#42337](https://github.com/RocketChat/Rocket.Chat/pull/42337)) Fixes a livechat transcript PDF that could be uploaded empty or truncated to one of the two rooms it is sent to, when the uploads started reading the rendered PDF at different times.
+- ([#42337](https://github.com/YasChat/YasChat/pull/42337)) Fixes a livechat transcript PDF that could be uploaded empty or truncated to one of the two rooms it is sent to, when the uploads started reading the rendered PDF at different times.
 
 - <details><summary>Updated dependencies [1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 60102b6e0ae410a45631ee494a3a302b9c863b48, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2f77d817051c919f29615babbb3ecd1964575b52, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 034260ee3eec49db0a2a86572bacf5e14490815d, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 94a22a577e6f160b687b9ddffeade19417c66f1e, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/i18n@5.0.0-rc.0
@@ -75,7 +75,7 @@
 
 ### Patch Changes
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 6edcdd7850d713e1d31986542402b5db184f81da, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535, 1c01809baea9fc6dd06f3f4b0e38ce41a6f4f5e1]:</summary>
   - @rocket.chat/i18n@4.0.0
@@ -94,7 +94,7 @@
 
 ### Patch Changes
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 6edcdd7850d713e1d31986542402b5db184f81da, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
   - @rocket.chat/i18n@4.0.0-rc.0
@@ -293,7 +293,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 788c161bb6c9544bec37034c93e2f60de1a6c316, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2
@@ -373,7 +373,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2-rc.0
@@ -1908,7 +1908,7 @@
 
 ### Patch Changes
 
-- ([#35215](https://github.com/RocketChat/Rocket.Chat/pull/35215)) Fixes omnichannel transcript filename breaking download links
+- ([#35215](https://github.com/YasChat/YasChat/pull/35215)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0
@@ -1994,7 +1994,7 @@
 
 ### Patch Changes
 
-- ([#35215](https://github.com/RocketChat/Rocket.Chat/pull/35215)) Fixes omnichannel transcript filename breaking download links
+- ([#35215](https://github.com/YasChat/YasChat/pull/35215)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0-rc.0
@@ -2010,7 +2010,7 @@
 
 ### Patch Changes
 
-- ([#35353](https://github.com/RocketChat/Rocket.Chat/pull/35353) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes omnichannel transcript filename breaking download links
+- ([#35353](https://github.com/YasChat/YasChat/pull/35353) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [b2d71461a6a73157024e4594cc1228419a34673e]:</summary>
   - @rocket.chat/pdf-worker@0.2.13
@@ -2054,7 +2054,7 @@
 
 ### Patch Changes
 
-- ([#34903](https://github.com/RocketChat/Rocket.Chat/pull/34903)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
+- ([#34903](https://github.com/YasChat/YasChat/pull/34903)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
 
   This was due to a mistakenly bound context. Queue Worker was changed to start doing work only after it received the first request.
 
@@ -2144,7 +2144,7 @@
 
 ### Patch Changes
 
-- ([#34903](https://github.com/RocketChat/Rocket.Chat/pull/34903)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
+- ([#34903](https://github.com/YasChat/YasChat/pull/34903)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
 
   This was due to a mistakenly bound context. Queue Worker was changed to start doing work only after it received the first request.
 
@@ -2164,7 +2164,7 @@
 
 ### Patch Changes
 
-- ([#34918](https://github.com/RocketChat/Rocket.Chat/pull/34918) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
+- ([#34918](https://github.com/YasChat/YasChat/pull/34918) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
 
   This was due to a mistakenly bound context. Queue Worker was changed to start doing work only after it received the first request.
 
@@ -2702,13 +2702,13 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
 ### Patch Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier Rocket.Chat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier YasChat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/tools@0.2.2
@@ -2809,13 +2809,13 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
 ### Patch Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier Rocket.Chat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Reduced time on generation of PDF transcripts. Earlier YasChat was fetching the required translations everytime a PDF transcript was requested, this process was async and was being unnecessarily being performed on every pdf transcript request. This PR improves this and now the translations are loaded at the start and kept in memory to process further pdf transcripts requests. This reduces the time of asynchronously fetching translations again and again.
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/tools@0.2.2-rc.0
@@ -2860,11 +2860,11 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
-- ([#32329](https://github.com/RocketChat/Rocket.Chat/pull/32329)) Added a new setting `Restrict files access to users who can access room` that controls file visibility. This new setting allows users that "can access a room" to also download the files that are there. This is specially important for users with livechat manager or monitor roles, or agents that have special permissions to view closed rooms, since this allows them to download files on the conversation even after the conversation is closed.
+- ([#32329](https://github.com/YasChat/YasChat/pull/32329)) Added a new setting `Restrict files access to users who can access room` that controls file visibility. This new setting allows users that "can access a room" to also download the files that are there. This is specially important for users with livechat manager or monitor roles, or agents that have special permissions to view closed rooms, since this allows them to download files on the conversation even after the conversation is closed.
   New setting is disabled by default and it is mutually exclusive with the setting `Restrict file access to room members` since this allows _more_ types of users to download files.
 - <details><summary>Updated dependencies [1240c874a5, eaf2f11a6c, 5f95c4ec6b, 495628bce0, f75a2cb4bb, 07c4ca0621, 4f72d62aa7, dfa49bdbb2]:</summary>
   - @rocket.chat/core-typings@6.10.0
@@ -2978,11 +2978,11 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
-- ([#32329](https://github.com/RocketChat/Rocket.Chat/pull/32329)) Added a new setting `Restrict files access to users who can access room` that controls file visibility. This new setting allows users that "can access a room" to also download the files that are there. This is specially important for users with livechat manager or monitor roles, or agents that have special permissions to view closed rooms, since this allows them to download files on the conversation even after the conversation is closed.
+- ([#32329](https://github.com/YasChat/YasChat/pull/32329)) Added a new setting `Restrict files access to users who can access room` that controls file visibility. This new setting allows users that "can access a room" to also download the files that are there. This is specially important for users with livechat manager or monitor roles, or agents that have special permissions to view closed rooms, since this allows them to download files on the conversation even after the conversation is closed.
   New setting is disabled by default and it is mutually exclusive with the setting `Restrict file access to room members` since this allows _more_ types of users to download files.
 - <details><summary>Updated dependencies [1240c874a5, eaf2f11a6c, 5f95c4ec6b, 495628bce0, f75a2cb4bb, 07c4ca0621, 4f72d62aa7, dfa49bdbb2]:</summary>
   - @rocket.chat/core-typings@6.10.0-rc.0
@@ -3038,9 +3038,9 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
-- ([#32318](https://github.com/RocketChat/Rocket.Chat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
+- ([#32318](https://github.com/YasChat/YasChat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
 
 - <details><summary>Updated dependencies [ff4e396416, ad86761209, f83bd56cc5, 724ba3a729, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0
@@ -3084,9 +3084,9 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
-- ([#32318](https://github.com/RocketChat/Rocket.Chat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
+- ([#32318](https://github.com/YasChat/YasChat/pull/32318)) Fixed error handling for files bigger than NATS max allowed payload. This should prevent PDFs from erroring out when generating from rooms that contain heavy images.
 
 - <details><summary>Updated dependencies [ff4e396416, ad86761209, f83bd56cc5, 724ba3a729, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0-rc.0
@@ -3354,7 +3354,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fae558bd5d, 748e57984d, 7c6198f49f, 9a6e9b4e28, fdd9852079, 2260c04ec6, c8ab6583dc, e7d3cdeef0, b4b2cd20a8]:</summary>
   - @rocket.chat/pdf-worker@0.0.28

@@ -91,7 +91,7 @@ downtime are logged.
   queue may come in a later release. Like Prosody, ejabberd and Openfire, the service holds
   stanzas in memory while it reconnects, then answers with the error RFC 6120 requires.
 - The sender is told with an ephemeral "couldn't deliver to `<domain>`" notice, which
-  disappears on reload. Rocket.Chat has no stored delivery state for a message; adding a
+  disappears on reload. YasChat has no stored delivery state for a message; adding a
   stored failed state is core message and UI work, left for a later release.
 
 ## Open questions

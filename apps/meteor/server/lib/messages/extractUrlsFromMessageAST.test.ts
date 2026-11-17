@@ -45,12 +45,12 @@ describe('extractUrlsFromMessageAST', () => {
 						value: {
 							src: {
 								type: 'PLAIN_TEXT',
-								value: '//github.com/RocketChat/Rocket.Chat',
+								value: '//github.com/YasChat/YasChat',
 							},
 							label: [
 								{
 									type: 'PLAIN_TEXT',
-									value: 'github.com/RocketChat/Rocket.Chat',
+									value: 'github.com/YasChat/YasChat',
 								},
 							],
 						},
@@ -60,7 +60,7 @@ describe('extractUrlsFromMessageAST', () => {
 		];
 
 		const urls = extractUrlsFromMessageAST(md as any);
-		expect(urls).to.deep.equal(['https://github.com/RocketChat/Rocket.Chat']);
+		expect(urls).to.deep.equal(['https://github.com/YasChat/YasChat']);
 	});
 
 	it.skip('should handle multiple links', () => {
@@ -92,12 +92,12 @@ describe('extractUrlsFromMessageAST', () => {
 						value: {
 							src: {
 								type: 'PLAIN_TEXT',
-								value: '//github.com/RocketChat',
+								value: '//github.com/YasChat',
 							},
 							label: [
 								{
 									type: 'PLAIN_TEXT',
-									value: 'github.com/RocketChat',
+									value: 'github.com/YasChat',
 								},
 							],
 						},
@@ -107,7 +107,7 @@ describe('extractUrlsFromMessageAST', () => {
 		];
 
 		const urls = extractUrlsFromMessageAST(md as any);
-		expect(urls).to.deep.equal(['https://rocket.chat', 'https://github.com/RocketChat']);
+		expect(urls).to.deep.equal(['https://rocket.chat', 'https://github.com/YasChat']);
 	});
 
 	it('should return empty array for undefined or non-array input', () => {

@@ -3,7 +3,7 @@ import type { IModifyExtender } from '@rocket.chat/apps-engine/definition/access
 import type { IRoomExtender } from '@rocket.chat/apps-engine/definition/accessors/IRoomExtender';
 import type { IVideoConferenceExtender } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceExtend';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
 import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
@@ -48,10 +48,10 @@ export class ModifyExtender implements IModifyExtender {
 
 	public async finish(extender: IMessageExtender | IRoomExtender | IVideoConferenceExtender): Promise<void> {
 		switch (extender.kind) {
-			case RocketChatAssociationModel.MESSAGE:
+			case YasChatAssociationModel.MESSAGE:
 				await bridgeCall(this.senderFn, 'getMessageBridge', 'doUpdate', (extender as IMessageExtender).getMessage(), 'APP_ID');
 				break;
-			case RocketChatAssociationModel.ROOM:
+			case YasChatAssociationModel.ROOM:
 				await bridgeCall(
 					this.senderFn,
 					'getRoomBridge',
@@ -61,7 +61,7 @@ export class ModifyExtender implements IModifyExtender {
 					'APP_ID',
 				);
 				break;
-			case RocketChatAssociationModel.VIDEO_CONFERENCE:
+			case YasChatAssociationModel.VIDEO_CONFERENCE:
 				await bridgeCall(
 					this.senderFn,
 					'getVideoConferenceBridge',

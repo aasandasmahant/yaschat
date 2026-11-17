@@ -15,7 +15,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
  * The contract itself — who sends what, and what each message means — is in
  * [the feature doc](../../../../../../docs/features/video-conference-persistent-chat/README.md).
  */
-const PLUGIN_NS = 'rocketchat:videoconf';
+const PLUGIN_NS = 'yaschat:videoconf';
 
 type UseProviderPluginOptions = {
 	/**

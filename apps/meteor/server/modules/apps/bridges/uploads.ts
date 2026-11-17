@@ -31,7 +31,7 @@ export class AppUploadBridge extends UploadBridge {
 	protected async getBuffer(upload: IUpload, appId: string): Promise<Buffer> {
 		this.orch.debugLog(`The App ${appId} is getting the upload: "${upload.id}"`);
 
-		const rocketChatUpload = this.orch.getConverters()?.get('uploads').convertToRocketChat(upload);
+		const rocketChatUpload = this.orch.getConverters()?.get('uploads').convertToYasChat(upload);
 
 		const result = await FileUpload.getBuffer(rocketChatUpload);
 

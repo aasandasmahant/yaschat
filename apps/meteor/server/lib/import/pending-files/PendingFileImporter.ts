@@ -133,7 +133,7 @@ export class PendingFileImporter extends Importer {
 								? (await parseFileIntoMessageAttachments(file, message.rid, user)).attachments[0]
 								: this.getMessageAttachment(file, rocketChatUrl);
 
-							await Messages.setImportFileRocketChatAttachment(_importFile.id, rocketChatUrl, attachment);
+							await Messages.setImportFileYasChatAttachment(_importFile.id, rocketChatUrl, attachment);
 							await completeFile(details);
 							importedRoomIds.add(message.rid);
 						})

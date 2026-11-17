@@ -13,7 +13,7 @@ able to say which people may talk across the boundary, not only which servers.
 
 ## Proposed outcome
 
-- A Rocket.Chat user federates only when they hold the federation permission. A user
+- A YasChat user federates only when they hold the federation permission. A user
   without it cannot open a DM with a JID, add a JID to a room, or have their messages
   relayed, and to remote senders they look like an account that does not exist: messages
   and IQs addressed to them get `service-unavailable` (type `cancel`), presence is ignored.
@@ -21,7 +21,7 @@ able to say which people may talk across the boundary, not only which servers.
   refused when it connects (a `policy-violation` stream error, or a failed SASL or dialback
   exchange), and leaves nothing behind: no user record, no room, no subscription, no stored
   message.
-- Adding a JID on a refused domain to a hosted room is refused on the Rocket.Chat side, and
+- Adding a JID on a refused domain to a hosted room is refused on the YasChat side, and
   the JID receives no invitation.
 - Hosted public channels are open to every authorized remote identity. A room that needs its
   own member list is a private room with invitations.
@@ -54,7 +54,7 @@ able to say which people may talk across the boundary, not only which servers.
   [remote-muc](../specs/remote-muc.md) and [presence](../specs/presence.md) gain a gate on
   every inbound and outbound path; [addressing](../specs/addressing.md) R10 for display
   names.
-- Rocket.Chat permissions (`access-federation`, granted to `user` by default, gates Matrix
+- YasChat permissions (`access-federation`, granted to `user` by default, gates Matrix
   room creation, invites and joins on the server, but only hides the XMPP toggle in the
   client; it is shared with Matrix, so an XMPP-only gate needs its own permission or a
   decision to couple the two), the
@@ -70,7 +70,7 @@ able to say which people may talk across the boundary, not only which servers.
 - Fail closed: an error while evaluating is a refusal, never an admission.
 - The domain allow and deny lists keep working and are evaluated first
   ([s2s-connectivity R2, R5](../specs/s2s-connectivity.md)).
-- Authorizations come from a Rocket.Chat permission granted per role, so roles synced from
+- Authorizations come from a YasChat permission granted per role, so roles synced from
   LDAP or SAML apply, combined with the existing domain allow list. Allow lists of
   individual remote JIDs, per-user domain lists and per-room lists are deferred past S1.
 - A user who has federated cannot be renamed, since their address follows the username and
@@ -82,7 +82,7 @@ able to say which people may talk across the boundary, not only which servers.
 
 ## Open questions
 
-- **Q1** ~~Where do authorizations come from: a Rocket.Chat role or permission, a per-user
+- **Q1** ~~Where do authorizations come from: a YasChat role or permission, a per-user
   list of domains, an allow list of remote JIDs, an external directory (LDAP group, SAML
   attribute)?~~ A permission granted per role, plus the domain allow list: see
   Constraints.

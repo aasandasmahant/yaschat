@@ -31,7 +31,7 @@ test.describe('OC - Chat transfers [Monitor role]', () => {
 
 	// Create agents
 	test.beforeAll(async ({ api }) => {
-		agents = await Promise.all([createAgent(api, 'user1'), createAgent(api, 'user2'), createAgent(api, 'rocketchat.internal.admin.test')]);
+		agents = await Promise.all([createAgent(api, 'user1'), createAgent(api, 'user2'), createAgent(api, 'yaschat.internal.admin.test')]);
 
 		(await Promise.all(agents.map(({ data: agent }) => makeAgentAvailable(api, agent._id)))).forEach((res) => {
 			expect(res.status()).toBe(200);
@@ -49,7 +49,7 @@ test.describe('OC - Chat transfers [Monitor role]', () => {
 
 		const promises = await Promise.all([
 			addAgentToDepartment(api, { department: departmentA, agentId: 'user1' }),
-			addAgentToDepartment(api, { department: departmentA, agentId: 'rocketchat.internal.admin.test' }),
+			addAgentToDepartment(api, { department: departmentA, agentId: 'yaschat.internal.admin.test' }),
 			addAgentToDepartment(api, { department: departmentB, agentId: 'user2' }),
 		]);
 
@@ -91,7 +91,7 @@ test.describe('OC - Chat transfers [Monitor role]', () => {
 				departments: [{ departmentId: departmentA._id }],
 			}),
 			createOrUpdateUnit(api, {
-				monitors: [{ monitorId: 'rocketchat.internal.admin.test', username: 'rocketchat.internal.admin.test' }],
+				monitors: [{ monitorId: 'yaschat.internal.admin.test', username: 'yaschat.internal.admin.test' }],
 				departments: [{ departmentId: departmentB._id }],
 			}),
 		]);
@@ -263,7 +263,7 @@ test.describe('OC - Chat transfers [Monitor role]', () => {
 		});
 
 		await test.step('expect to transfer from dep a to dep b', async () => {
-			await poOmnichannel.content.forwardChatModal.selectUser('rocketchat.internal.admin.test');
+			await poOmnichannel.content.forwardChatModal.selectUser('yaschat.internal.admin.test');
 			await poOmnichannel.content.forwardChatModal.inputComment.type('any_comment');
 			await expect(poOmnichannel.content.forwardChatModal.btnForward).toBeEnabled();
 			await poOmnichannel.content.forwardChatModal.btnForward.click();
@@ -280,7 +280,7 @@ test.describe('OC - Chat transfers [Monitor role]', () => {
 			await agentC.poHomeOmnichannel.sidebar.getSidebarItemByName(roomC.fname).click();
 			await expect(
 				agentC.poHomeOmnichannel.content.findSystemMessage(
-					`New chat transfer: user3 transferred the chat to RocketChat Internal Admin Test with a comment: any_comment`,
+					`New chat transfer: user3 transferred the chat to YasChat Internal Admin Test with a comment: any_comment`,
 				),
 			).toBeVisible();
 			await expect(agentC.poHomeOmnichannel.content.findSystemMessage('left the channel')).toBeVisible();
@@ -299,7 +299,7 @@ test.describe('OC - Chat transfers [Manager role]', () => {
 
 	// Create agents
 	test.beforeAll(async ({ api }) => {
-		agents = await Promise.all([createAgent(api, 'user1'), createAgent(api, 'user2'), createAgent(api, 'rocketchat.internal.admin.test')]);
+		agents = await Promise.all([createAgent(api, 'user1'), createAgent(api, 'user2'), createAgent(api, 'yaschat.internal.admin.test')]);
 
 		(await Promise.all(agents.map(({ data: agent }) => makeAgentAvailable(api, agent._id)))).forEach((res) => {
 			expect(res.status()).toBe(200);
@@ -322,7 +322,7 @@ test.describe('OC - Chat transfers [Manager role]', () => {
 
 		const promises = await Promise.all([
 			addAgentToDepartment(api, { department: departmentA, agentId: 'user1' }),
-			addAgentToDepartment(api, { department: departmentA, agentId: 'rocketchat.internal.admin.test' }),
+			addAgentToDepartment(api, { department: departmentA, agentId: 'yaschat.internal.admin.test' }),
 			addAgentToDepartment(api, { department: departmentB, agentId: 'user2' }),
 		]);
 
@@ -486,7 +486,7 @@ test.describe('OC - Chat transfers [Manager role]', () => {
 		});
 
 		await test.step('expect to transfer from dep a to dep b', async () => {
-			await poOmnichannel.content.forwardChatModal.selectUser('rocketchat.internal.admin.test');
+			await poOmnichannel.content.forwardChatModal.selectUser('yaschat.internal.admin.test');
 			await poOmnichannel.content.forwardChatModal.inputComment.type('any_comment');
 			await expect(poOmnichannel.content.forwardChatModal.btnForward).toBeEnabled();
 			await poOmnichannel.content.forwardChatModal.btnForward.click();
@@ -503,7 +503,7 @@ test.describe('OC - Chat transfers [Manager role]', () => {
 			await agentC.poHomeOmnichannel.sidebar.getSidebarItemByName(roomC.fname).click();
 			await expect(
 				agentC.poHomeOmnichannel.content.findSystemMessage(
-					`New chat transfer: user3 transferred the chat to RocketChat Internal Admin Test with a comment: any_comment`,
+					`New chat transfer: user3 transferred the chat to YasChat Internal Admin Test with a comment: any_comment`,
 				),
 			).toBeVisible();
 			await expect(agentC.poHomeOmnichannel.content.findSystemMessage('left the channel')).toBeVisible();

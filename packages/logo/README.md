@@ -1,13 +1,13 @@
 # `@rocket.chat/logo`
 
-> The Rocket.Chat logo as React components, plus prebuilt SVG and PNG files.
+> The YasChat logo as React components, plus prebuilt SVG and PNG files.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/logo?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/logo) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/logo?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/logo)
 
-This package renders the horizontal Rocket.Chat logo (symbol and wordmark) as an inline SVG. It is used by Rocket.Chat's layout and onboarding screens.
+This package renders the horizontal YasChat logo (symbol and wordmark) as an inline SVG. It is used by YasChat's layout and onboarding screens.
 
-- `RocketChatLogo` renders the logo in a single color, red by default.
-- `TaggedRocketChatLogo` renders the logo next to an optional pill-shaped tag, such as an edition name.
+- `YasChatLogo` renders the logo in a single color, red by default.
+- `TaggedYasChatLogo` renders the logo next to an optional pill-shaped tag, such as an edition name.
 - `dist/logo.svg` and `dist/logo.png` are static copies of the default logo for places where React is not available.
 
 ## Installation
@@ -23,32 +23,32 @@ npm install @rocket.chat/logo react react-dom
 ### Plain logo
 
 ```tsx
-import { RocketChatLogo } from '@rocket.chat/logo';
+import { YasChatLogo } from '@rocket.chat/logo';
 
 const Header = () => (
 	<div style={{ width: 224 }}>
-		<RocketChatLogo />
+		<YasChatLogo />
 	</div>
 );
 ```
 
-The SVG fills its container (`width` and `height` are `100%`) and keeps its aspect ratio, so size it through the parent element. It has an accessible title, "Rocket.Chat".
+The SVG fills its container (`width` and `height` are `100%`) and keeps its aspect ratio, so size it through the parent element. It has an accessible title, "YasChat".
 
 Pass `color` to change the fill:
 
 ```tsx
-<RocketChatLogo color='#ffffff' />
-<RocketChatLogo color='currentColor' />
+<YasChatLogo color='#ffffff' />
+<YasChatLogo color='currentColor' />
 ```
 
 ### Logo with a tag
 
 ```tsx
-import { TaggedRocketChatLogo } from '@rocket.chat/logo';
+import { TaggedYasChatLogo } from '@rocket.chat/logo';
 
 const Header = () => (
 	<div style={{ width: 224 }}>
-		<TaggedRocketChatLogo tagTitle='Enterprise' />
+		<TaggedYasChatLogo tagTitle='Enterprise' />
 	</div>
 );
 ```
@@ -67,20 +67,20 @@ These are files on disk, not URLs your app serves. With a bundler that handles a
 ```tsx
 import logoUrl from '@rocket.chat/logo/dist/logo.svg';
 
-const Logo = () => <img src={logoUrl} alt='Rocket.Chat' />;
+const Logo = () => <img src={logoUrl} alt='YasChat' />;
 ```
 
 Without one, copy the file into a directory your server publishes and point `src` at its URL there.
 
 ## API
 
-### `RocketChatLogo`
+### `YasChatLogo`
 
 | Prop    | Type     | Default                     | Description                   |
 | ------- | -------- | --------------------------- | ----------------------------- |
 | `color` | `string` | `#F5455C` (Fuselage `r400`) | Fill color of the whole logo. |
 
-### `TaggedRocketChatLogo`
+### `TaggedYasChatLogo`
 
 Accepts every `<div>` attribute, plus:
 
@@ -92,7 +92,7 @@ Accepts every `<div>` attribute, plus:
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/logo). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/logo). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/logo build
@@ -105,4 +105,4 @@ yarn workspace @rocket.chat/logo lint
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

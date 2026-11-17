@@ -2,7 +2,7 @@ import type {
 	IMessage,
 	IModerationAudit,
 	IModerationReport,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	MessageReport,
 	UserReport,
 } from '@rocket.chat/core-typings';
@@ -13,7 +13,7 @@ import { BaseRaw } from './BaseRaw';
 import { readSecondaryPreferred } from '../readSecondaryPreferred';
 
 export class ModerationReportsRaw extends BaseRaw<IModerationReport> implements IModerationReportsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IModerationReport>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IModerationReport>>) {
 		super(db, 'moderation_reports', trash);
 	}
 

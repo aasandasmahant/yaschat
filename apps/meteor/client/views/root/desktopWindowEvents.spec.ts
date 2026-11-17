@@ -1,5 +1,5 @@
 /**
- * Contract test for the window events that the Rocket.Chat Desktop app reads.
+ * Contract test for the window events that the YasChat Desktop app reads.
  *
  * The desktop preload listens on `window` for these CustomEvents to drive the
  * dock/taskbar badge, the login state and its boot watchdog (a workspace that

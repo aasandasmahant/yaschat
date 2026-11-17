@@ -89,9 +89,9 @@ const INBOUND_EVENTS = [
 export type InboundHandlerObserver = (event: keyof XMPPServerEventMap) => (outcome: 'ok' | 'error') => void;
 
 export type XMPPServerServiceOptions = {
-	/** When false, inbound traffic is decoded and counted but never reaches Rocket.Chat. Default true. */
-	forwardToRocketChat?: boolean;
-	/** Lets the host measure how far Rocket.Chat-side handling lags behind what arrives on the wire. */
+	/** When false, inbound traffic is decoded and counted but never reaches YasChat. Default true. */
+	forwardToYasChat?: boolean;
+	/** Lets the host measure how far YasChat-side handling lags behind what arrives on the wire. */
 	observeHandler?: InboundHandlerObserver;
 	/** Replaces DNS resolution of remote domains, e.g. to point load-test peers at local ports. */
 	resolver?: XmppDnsResolver;
@@ -102,7 +102,7 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 
 	private readonly logger = new Logger('XMPPServer');
 
-	private readonly forwardToRocketChat: boolean;
+	private readonly forwardToYasChat: boolean;
 
 	private readonly observeHandler: InboundHandlerObserver | undefined;
 
@@ -124,9 +124,9 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 
 	private reconfiguring: Promise<void> = Promise.resolve();
 
-	constructor({ forwardToRocketChat = true, observeHandler, resolver }: XMPPServerServiceOptions = {}) {
+	constructor({ forwardToYasChat = true, observeHandler, resolver }: XMPPServerServiceOptions = {}) {
 		super();
-		this.forwardToRocketChat = forwardToRocketChat;
+		this.forwardToYasChat = forwardToYasChat;
 		this.observeHandler = observeHandler;
 		this.resolver = resolver;
 
@@ -207,10 +207,10 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 		try {
 			const server = new XMPPServer(this.toCoreConfig(config), { resolver: this.resolver });
 			this.observeInboundEvents(server);
-			if (this.forwardToRocketChat) {
+			if (this.forwardToYasChat) {
 				this.attachHandlers(server, config);
 			} else {
-				this.logger.warn('XMPP server running in decode-only mode: inbound traffic will not reach Rocket.Chat');
+				this.logger.warn('XMPP server running in decode-only mode: inbound traffic will not reach YasChat');
 			}
 			await server.start();
 			this.server = server;
@@ -352,7 +352,7 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 		this.server.mucRemoveLocalOccupant({ roomId, nick: user.username });
 	}
 
-	/** Keeps what the MUC service advertises for a hosted room in step with its Rocket.Chat settings. */
+	/** Keeps what the MUC service advertises for a hosted room in step with its YasChat settings. */
 	private async onRoomUpdated(room: Pick<IRoom, '_id'> & Partial<IRoom>): Promise<void> {
 		if (!this.server || !isRoomXMPPHostedMuc(room)) {
 			return;
@@ -425,7 +425,7 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 			roomJid: room.xmppFederation.muc,
 			nick: user.username,
 			// History catches up on messages missed while offline; decode-only mode has nowhere to store them
-			...(!this.forwardToRocketChat && { maxHistoryStanzas: 0 }),
+			...(!this.forwardToYasChat && { maxHistoryStanzas: 0 }),
 		});
 	}
 
@@ -511,7 +511,7 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 			...(tlsProvided ? { requireTls: true, tls: { cert: config.tlsCert, key: config.tlsKey } } : { requireTls: false }),
 			allowedDomains: config.domainAllowList,
 			// Decode-only mode must not read the database
-			...(this.forwardToRocketChat && {
+			...(this.forwardToYasChat && {
 				delegates: {
 					authorizeMucJoin: (params) =>
 						this.authorizeMucJoin(normalizeDomain(`${config.mucSubdomain || XMPP_SERVER_DEFAULTS.mucSubdomain}.${config.domain}`), params),
@@ -581,7 +581,7 @@ export class XMPPServerService extends ServiceClass implements IXMPPServerServic
 			);
 		});
 
-		// A kick is the echo of a Rocket.Chat removal — only a voluntary leave has to be mirrored back.
+		// A kick is the echo of a YasChat removal — only a voluntary leave has to be mirrored back.
 		server.on('muc.occupantLeft', (event) => {
 			if (event.reason === 'kicked') {
 				return;

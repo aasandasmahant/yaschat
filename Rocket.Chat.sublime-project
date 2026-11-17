@@ -12,7 +12,7 @@
 			],
 		},
 		{
-			"name": "Rocket.Chat",
+			"name": "YasChat",
 			"path": "./apps/meteor",
 		},
 		{

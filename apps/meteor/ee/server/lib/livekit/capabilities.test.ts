@@ -37,7 +37,7 @@ describe('the LiveKit provider registration', () => {
 	});
 
 	// Presence leases, the per-member lifecycle and ringing on the caller's arrival apply to embedded providers.
-	it('says the call runs inside Rocket.Chat', () => {
+	it('says the call runs inside YasChat', () => {
 		expect(registered()?.embedded).to.be.true;
 	});
 

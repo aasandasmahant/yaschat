@@ -4,13 +4,13 @@
 
 ### Minor Changes
 
-- ([#42818](https://github.com/RocketChat/Rocket.Chat/pull/42818)) Renders autocompletes, UiKit selects, room members, banned users, team channels and call member lists with the `Item` rows, and names the icons of user and room options for assistive technology
+- ([#42818](https://github.com/YasChat/YasChat/pull/42818)) Renders autocompletes, UiKit selects, room members, banned users, team channels and call member lists with the `Item` rows, and names the icons of user and room options for assistive technology
 
-- ([#42832](https://github.com/RocketChat/Rocket.Chat/pull/42832)) Renders the room files, contact info channels and history, canned responses, Outlook events and ongoing calls lists with the `Item` rows, so they share the layout and states of the other lists
+- ([#42832](https://github.com/YasChat/YasChat/pull/42832)) Renders the room files, contact info channels and history, canned responses, Outlook events and ongoing calls lists with the `Item` rows, so they share the layout and states of the other lists
 
-- ([#43215](https://github.com/RocketChat/Rocket.Chat/pull/43215)) Adds a noise cancellation choice to the microphone menus of native LiveKit calls: off, the browser's own filter (the default), or RNNoise running on the device to also remove typing and background noise. The workspace serves RNNoise itself, so clients never fetch it from a third party.
+- ([#43215](https://github.com/YasChat/YasChat/pull/43215)) Adds a noise cancellation choice to the microphone menus of native LiveKit calls: off, the browser's own filter (the default), or RNNoise running on the device to also remove typing and background noise. The workspace serves RNNoise itself, so clients never fetch it from a third party.
 
-- ([#42443](https://github.com/RocketChat/Rocket.Chat/pull/42443)) Adds optional call features to LiveKit video conference calls:
+- ([#42443](https://github.com/YasChat/YasChat/pull/42443)) Adds optional call features to LiveKit video conference calls:
   - A notice and a reminder tone when speaking while muted, a chime when someone joins a small call, and live voice activity on the microphone button, the members list and each tile
   - A video quality choice (Auto, 1080p, 720p, 360p, 180p) in the preflight and in-call camera menus
   - Spotlight and sidebar layouts, active-speaker detection, and shared screens featured on the stage
@@ -54,7 +54,7 @@
 
 ### Minor Changes
 
-- ([#43215](https://github.com/RocketChat/Rocket.Chat/pull/43215)) Adds a noise cancellation choice to the microphone menus of native LiveKit calls: off, the browser's own filter (the default), or RNNoise running on the device to also remove typing and background noise. The workspace serves RNNoise itself, so clients never fetch it from a third party.
+- ([#43215](https://github.com/YasChat/YasChat/pull/43215)) Adds a noise cancellation choice to the microphone menus of native LiveKit calls: off, the browser's own filter (the default), or RNNoise running on the device to also remove typing and background noise. The workspace serves RNNoise itself, so clients never fetch it from a third party.
 
 ### Patch Changes
 
@@ -67,11 +67,11 @@
 
 ### Minor Changes
 
-- ([#42818](https://github.com/RocketChat/Rocket.Chat/pull/42818)) Renders autocompletes, UiKit selects, room members, banned users, team channels and call member lists with the `Item` rows, and names the icons of user and room options for assistive technology
+- ([#42818](https://github.com/YasChat/YasChat/pull/42818)) Renders autocompletes, UiKit selects, room members, banned users, team channels and call member lists with the `Item` rows, and names the icons of user and room options for assistive technology
 
-- ([#42832](https://github.com/RocketChat/Rocket.Chat/pull/42832)) Renders the room files, contact info channels and history, canned responses, Outlook events and ongoing calls lists with the `Item` rows, so they share the layout and states of the other lists
+- ([#42832](https://github.com/YasChat/YasChat/pull/42832)) Renders the room files, contact info channels and history, canned responses, Outlook events and ongoing calls lists with the `Item` rows, so they share the layout and states of the other lists
 
-- ([#42443](https://github.com/RocketChat/Rocket.Chat/pull/42443)) Adds optional call features to LiveKit video conference calls:
+- ([#42443](https://github.com/YasChat/YasChat/pull/42443)) Adds optional call features to LiveKit video conference calls:
   - A notice and a reminder tone when speaking while muted, a chime when someone joins a small call, and live voice activity on the microphone button, the members list and each tile
   - A video quality choice (Auto, 1080p, 720p, 360p, 180p) in the preflight and in-call camera menus
   - Spotlight and sidebar layouts, active-speaker detection, and shared screens featured on the stage

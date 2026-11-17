@@ -3,16 +3,16 @@
 	"version": "0.31.27",
 	"description": "Stylis middleware to handle CSS Logical Properties and their fallbacks",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/stylis-logical-props-middleware"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"type": "module",

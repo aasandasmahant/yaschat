@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IPermission extends IRocketChatRecord {
+export interface IPermission extends IYasChatRecord {
 	roles: string[];
 	// TODO: migrate settings with group and section with null to undefined
 	group?: string | null;

@@ -43,12 +43,12 @@ test.describe.serial('Threads', () => {
 	test.describe('hideFlexTab Preference enabled for threads', () => {
 		test.beforeAll(async ({ api }) => {
 			await expect(
-				(await api.post('/users.setPreferences', { userId: 'rocketchat.internal.admin.test', data: { hideFlexTab: true } })).status(),
+				(await api.post('/users.setPreferences', { userId: 'yaschat.internal.admin.test', data: { hideFlexTab: true } })).status(),
 			).toBe(200);
 		});
 		test.afterAll(async ({ api }) => {
 			await expect(
-				(await api.post('/users.setPreferences', { userId: 'rocketchat.internal.admin.test', data: { hideFlexTab: false } })).status(),
+				(await api.post('/users.setPreferences', { userId: 'yaschat.internal.admin.test', data: { hideFlexTab: false } })).status(),
 			).toBe(200);
 		});
 		test('should close thread contextual bar on clicking outside of it', async ({ page }) => {

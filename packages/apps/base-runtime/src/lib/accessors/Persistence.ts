@@ -1,5 +1,5 @@
 import type { IPersistence } from '@rocket.chat/apps-engine/definition/accessors';
-import type { RocketChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import type { YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
 
 import { bridgeCall } from '../bridges/bridgeCall';
 import type * as Messenger from '../messenger';
@@ -11,11 +11,11 @@ export class Persistence implements IPersistence {
 		return bridgeCall<string>(this.senderFn, 'getPersistenceBridge', 'doCreate', data, 'APP_ID');
 	}
 
-	public createWithAssociation(data: object, association: RocketChatAssociationRecord): Promise<string> {
+	public createWithAssociation(data: object, association: YasChatAssociationRecord): Promise<string> {
 		return bridgeCall<string>(this.senderFn, 'getPersistenceBridge', 'doCreateWithAssociations', data, new Array(association), 'APP_ID');
 	}
 
-	public createWithAssociations(data: object, associations: Array<RocketChatAssociationRecord>): Promise<string> {
+	public createWithAssociations(data: object, associations: Array<YasChatAssociationRecord>): Promise<string> {
 		return bridgeCall<string>(this.senderFn, 'getPersistenceBridge', 'doCreateWithAssociations', data, associations, 'APP_ID');
 	}
 
@@ -23,7 +23,7 @@ export class Persistence implements IPersistence {
 		return bridgeCall<string>(this.senderFn, 'getPersistenceBridge', 'doUpdate', id, data, upsert, 'APP_ID');
 	}
 
-	public updateByAssociation(association: RocketChatAssociationRecord, data: object, upsert = false): Promise<string> {
+	public updateByAssociation(association: YasChatAssociationRecord, data: object, upsert = false): Promise<string> {
 		return bridgeCall<string>(
 			this.senderFn,
 			'getPersistenceBridge',
@@ -35,7 +35,7 @@ export class Persistence implements IPersistence {
 		);
 	}
 
-	public updateByAssociations(associations: Array<RocketChatAssociationRecord>, data: object, upsert = false): Promise<string> {
+	public updateByAssociations(associations: Array<YasChatAssociationRecord>, data: object, upsert = false): Promise<string> {
 		return bridgeCall<string>(this.senderFn, 'getPersistenceBridge', 'doUpdateByAssociations', associations, data, upsert, 'APP_ID');
 	}
 
@@ -43,11 +43,11 @@ export class Persistence implements IPersistence {
 		return bridgeCall<object>(this.senderFn, 'getPersistenceBridge', 'doRemove', id, 'APP_ID');
 	}
 
-	public removeByAssociation(association: RocketChatAssociationRecord): Promise<Array<object>> {
+	public removeByAssociation(association: YasChatAssociationRecord): Promise<Array<object>> {
 		return bridgeCall<Array<object>>(this.senderFn, 'getPersistenceBridge', 'doRemoveByAssociations', new Array(association), 'APP_ID');
 	}
 
-	public removeByAssociations(associations: Array<RocketChatAssociationRecord>): Promise<Array<object>> {
+	public removeByAssociations(associations: Array<YasChatAssociationRecord>): Promise<Array<object>> {
 		return bridgeCall<Array<object>>(this.senderFn, 'getPersistenceBridge', 'doRemoveByAssociations', associations, 'APP_ID');
 	}
 }

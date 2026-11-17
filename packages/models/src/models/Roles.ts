@@ -1,4 +1,4 @@
-import type { IRole, IRoom, IUser, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IRole, IRoom, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { IRolesModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { Collection, FindCursor, Db, Filter, FindOptions, Document, CountDocumentsOptions } from 'mongodb';
 
@@ -6,7 +6,7 @@ import { Subscriptions, Users } from '../index';
 import { BaseRaw } from './BaseRaw';
 
 export class RolesRaw extends BaseRaw<IRole> implements IRolesModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IRole>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IRole>>) {
 		super(db, 'roles', trash);
 	}
 

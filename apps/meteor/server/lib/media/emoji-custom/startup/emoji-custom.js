@@ -4,9 +4,9 @@ import _ from 'underscore';
 
 import { settings } from '../../../../settings';
 import { SystemLogger } from '../../../logger/system';
-import { RocketChatFile } from '../../file';
+import { YasChatFile } from '../../file';
 
-export let RocketChatFileEmojiCustomInstance;
+export let YasChatFileEmojiCustomInstance;
 
 const writeSvgFallback = (res, req) => {
 	res.setHeader('Content-Type', 'image/svg+xml');
@@ -44,10 +44,10 @@ const initializeEmojiCustomStorage = () => {
 		storeType = settings.get('EmojiUpload_Storage_Type');
 	}
 
-	const RocketChatStore = RocketChatFile[storeType];
+	const YasChatStore = YasChatFile[storeType];
 
-	if (RocketChatStore == null) {
-		throw new Error(`Invalid RocketChatStore type [${storeType}]`);
+	if (YasChatStore == null) {
+		throw new Error(`Invalid YasChatStore type [${storeType}]`);
 	}
 
 	SystemLogger.info({
@@ -62,7 +62,7 @@ const initializeEmojiCustomStorage = () => {
 		}
 	}
 
-	RocketChatFileEmojiCustomInstance = new RocketChatStore({
+	YasChatFileEmojiCustomInstance = new YasChatStore({
 		name: 'custom_emoji',
 		absolutePath: path,
 	});
@@ -86,7 +86,7 @@ WebApp.connectHandlers.use('/emoji-custom/', async (req, res /* , next*/) => {
 		return writeSvgFallback(res, req);
 	}
 
-	const file = await RocketChatFileEmojiCustomInstance.getFileWithReadStream(encodeURIComponent(params.emoji));
+	const file = await YasChatFileEmojiCustomInstance.getFileWithReadStream(encodeURIComponent(params.emoji));
 
 	if (!file) {
 		// use code from username initials renderer until file upload is complete

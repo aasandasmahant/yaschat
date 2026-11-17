@@ -13,7 +13,7 @@ export const LoginPoweredBy = () => {
 			<Trans i18nKey='registration.page.poweredBy'>
 				{'Powered by '}
 				<ActionLink href='https://rocket.chat/' target='_blank' rel='noopener noreferrer'>
-					Rocket.Chat
+					YasChat
 				</ActionLink>
 			</Trans>
 		</Box>

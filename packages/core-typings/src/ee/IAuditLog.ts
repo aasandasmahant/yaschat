@@ -1,11 +1,11 @@
 import type { ILivechatAgent } from '../ILivechatAgent';
 import type { ILivechatVisitor } from '../ILivechatVisitor';
 import type { IMessage } from '../IMessage';
-import type { IRocketChatRecord } from '../IRocketChatRecord';
+import type { IYasChatRecord } from '../IYasChatRecord';
 import type { IRoom } from '../IRoom';
 import type { IUser } from '../IUser';
 
-export interface IAuditLog extends IRocketChatRecord {
+export interface IAuditLog extends IYasChatRecord {
 	ts: Date;
 	results: number;
 	u: Pick<IUser, '_id' | 'username' | 'name' | 'avatarETag'>;

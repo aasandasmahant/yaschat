@@ -44,7 +44,7 @@ export const getCheckoutUrl = async (): Promise<{
 		return response.json();
 	} catch (err: any) {
 		SystemLogger.error({
-			msg: 'Failed to get Checkout URL with Rocket.Chat Billing Service',
+			msg: 'Failed to get Checkout URL with YasChat Billing Service',
 			url: '/api/v2/checkout',
 			err,
 		});

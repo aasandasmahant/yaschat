@@ -15,7 +15,7 @@ const LoginServices = ({ disabled, setError }: LoginServicesProps) => {
 	const services = useLoginServices();
 	const showFormLogin = useSetting('Accounts_ShowFormLogin');
 
-	const isDesktopApp = !!window.RocketChatDesktop?.openInBrowser;
+	const isDesktopApp = !!window.YasChatDesktop?.openInBrowser;
 
 	const servicesToShow = useMemo(
 		() => (isDesktopApp ? services.filter(({ service }) => servicesToBeShownOnDesktop.includes(service)) : services),
@@ -34,7 +34,7 @@ const LoginServices = ({ disabled, setError }: LoginServicesProps) => {
 		const redirectUrl = new URL(window.location.href);
 		redirectUrl.searchParams.set('loginClient', 'desktop');
 
-		window.RocketChatDesktop?.openInBrowser(redirectUrl.toString());
+		window.YasChatDesktop?.openInBrowser(redirectUrl.toString());
 	};
 
 	return (

@@ -252,7 +252,7 @@ const waitForLdapConnection = () =>
 					await request
 						.post(api('users.update'))
 						.set(credentials)
-						.send({ userId: body.user._id, data: { name: 'Renamed In Rocket.Chat' } })
+						.send({ userId: body.user._id, data: { name: 'Renamed In YasChat' } })
 						.expect(200);
 				});
 

@@ -4,17 +4,17 @@
 
 ### Minor Changes
 
-- ([#42562](https://github.com/RocketChat/Rocket.Chat/pull/42562)) Adds `accessibility_label` to UiKit buttons: screen readers announce it instead of the button text, for buttons whose visible text is ambiguous on its own.
+- ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Adds `accessibility_label` to UiKit buttons: screen readers announce it instead of the button text, for buttons whose visible text is ambiguous on its own.
 
 ### Patch Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
 
-- ([#40697](https://github.com/RocketChat/Rocket.Chat/pull/40697) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for registering multiple phone numbers with labels per user. **Breaking:** the `phone` user field is replaced by the `phones` array (`{ number, label? }[]`); existing numbers are migrated automatically on upgrade.
+- ([#40697](https://github.com/YasChat/YasChat/pull/40697) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for registering multiple phone numbers with labels per user. **Breaking:** the `phone` user field is replaced by the `phones` array (`{ number, label? }[]`); existing numbers are migrated automatically on upgrade.
 
-- ([#42560](https://github.com/RocketChat/Rocket.Chat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, c9aa43916295df79a799e53b8e09c58011991a97, c9aa43916295df79a799e53b8e09c58011991a97, 9e401e55fbd71b95dc7c4b273024219ce2564856, e2f037838f6226f4894faa28613cc86f6d6f8e2d, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 8fddbd4ebf2e4ac77a716b22a676077054506b7b]:</summary>
   - @rocket.chat/emitter@0.33.1
@@ -30,17 +30,17 @@
 
 ### Minor Changes
 
-- ([#42562](https://github.com/RocketChat/Rocket.Chat/pull/42562)) Adds `accessibility_label` to UiKit buttons: screen readers announce it instead of the button text, for buttons whose visible text is ambiguous on its own.
+- ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Adds `accessibility_label` to UiKit buttons: screen readers announce it instead of the button text, for buttons whose visible text is ambiguous on its own.
 
 ### Patch Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
-- ([#42953](https://github.com/RocketChat/Rocket.Chat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
+- ([#42953](https://github.com/YasChat/YasChat/pull/42953)) Fixes the Livechat client ignoring a visitor token set through `credentials.token`, `onQueuePositionChange` subscribing without the visitor token, and visitor endpoints throwing synchronously instead of rejecting when there is no token
 
-- ([#40697](https://github.com/RocketChat/Rocket.Chat/pull/40697) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for registering multiple phone numbers with labels per user. **Breaking:** the `phone` user field is replaced by the `phones` array (`{ number, label? }[]`); existing numbers are migrated automatically on upgrade.
+- ([#40697](https://github.com/YasChat/YasChat/pull/40697) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for registering multiple phone numbers with labels per user. **Breaking:** the `phone` user field is replaced by the `phones` array (`{ number, label? }[]`); existing numbers are migrated automatically on upgrade.
 
-- ([#42560](https://github.com/RocketChat/Rocket.Chat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, c9aa43916295df79a799e53b8e09c58011991a97, c9aa43916295df79a799e53b8e09c58011991a97, 9e401e55fbd71b95dc7c4b273024219ce2564856, e2f037838f6226f4894faa28613cc86f6d6f8e2d, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 8fddbd4ebf2e4ac77a716b22a676077054506b7b]:</summary>
   - @rocket.chat/emitter@0.33.1-rc.0
@@ -215,11 +215,11 @@
 
 ### Minor Changes
 
-- ([#39268](https://github.com/RocketChat/Rocket.Chat/pull/39268)) refactor(ui-kit): Remove UiKit deprecations
+- ([#39268](https://github.com/YasChat/YasChat/pull/39268)) refactor(ui-kit): Remove UiKit deprecations
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae]:</summary>
   - @rocket.chat/message-parser@0.31.35
@@ -269,11 +269,11 @@
 
 ### Minor Changes
 
-- ([#39268](https://github.com/RocketChat/Rocket.Chat/pull/39268)) refactor(ui-kit): Remove UiKit deprecations
+- ([#39268](https://github.com/YasChat/YasChat/pull/39268)) refactor(ui-kit): Remove UiKit deprecations
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae]:</summary>
   - @rocket.chat/message-parser@0.31.35-rc.0
@@ -389,7 +389,7 @@
 
 ### Major Changes
 
-- ([#36871](https://github.com/RocketChat/Rocket.Chat/pull/36871)) Removes the `livechat:transfer` deprecated method
+- ([#36871](https://github.com/YasChat/YasChat/pull/36871)) Removes the `livechat:transfer` deprecated method
   Removes the `livechat/room.transfer` deprecated endpoint
   Creates the `livechat/visitor.department.transfer` for visitors department transfer use
 
@@ -450,7 +450,7 @@
 
 ### Major Changes
 
-- ([#36871](https://github.com/RocketChat/Rocket.Chat/pull/36871)) Removes the `livechat:transfer` deprecated method
+- ([#36871](https://github.com/YasChat/YasChat/pull/36871)) Removes the `livechat:transfer` deprecated method
   Removes the `livechat/room.transfer` deprecated endpoint
   Creates the `livechat/visitor.department.transfer` for visitors department transfer use
 
@@ -844,7 +844,7 @@
 
 ### Minor Changes
 
-- ([#36127](https://github.com/RocketChat/Rocket.Chat/pull/36127)) #### Adds support for hiding the "Expand chat" button in the Livechat widget.
+- ([#36127](https://github.com/YasChat/YasChat/pull/36127)) #### Adds support for hiding the "Expand chat" button in the Livechat widget.
   This can be configured via the widget API by passing the `hideExpandChat` option to the `setTheme` method, or through the Livechat Appearance settings page by enabling the "Hide 'Expand chat'" option.
 
 ### Patch Changes
@@ -938,7 +938,7 @@
 
 ### Minor Changes
 
-- ([#36127](https://github.com/RocketChat/Rocket.Chat/pull/36127)) #### Adds support for hiding the "Expand chat" button in the Livechat widget.
+- ([#36127](https://github.com/YasChat/YasChat/pull/36127)) #### Adds support for hiding the "Expand chat" button in the Livechat widget.
   This can be configured via the widget API by passing the `hideExpandChat` option to the `setTheme` method, or through the Livechat Appearance settings page by enabling the "Hide 'Expand chat'" option.
 
 ### Patch Changes
@@ -1170,13 +1170,13 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
-- ([#35205](https://github.com/RocketChat/Rocket.Chat/pull/35205)) Fixes livechat routing algorithm to ensure conversations are correctly assigned to the contact manager when triggers and/or automatic agent routing are enabled.
+- ([#35205](https://github.com/YasChat/YasChat/pull/35205)) Fixes livechat routing algorithm to ensure conversations are correctly assigned to the contact manager when triggers and/or automatic agent routing are enabled.
 
-- ([#35555](https://github.com/RocketChat/Rocket.Chat/pull/35555)) Fixes an issue causing Livechat to disconnect from the websocket when registerGuest is called multiple times with the same token
+- ([#35555](https://github.com/YasChat/YasChat/pull/35555)) Fixes an issue causing Livechat to disconnect from the websocket when registerGuest is called multiple times with the same token
 
-- ([#35551](https://github.com/RocketChat/Rocket.Chat/pull/35551)) Fixes Livechat's setDepartment api method not updating the visitor's department as expected
+- ([#35551](https://github.com/YasChat/YasChat/pull/35551)) Fixes Livechat's setDepartment api method not updating the visitor's department as expected
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
   - @rocket.chat/gazzodown@17.0.0
@@ -1233,13 +1233,13 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
-- ([#35205](https://github.com/RocketChat/Rocket.Chat/pull/35205)) Fixes livechat routing algorithm to ensure conversations are correctly assigned to the contact manager when triggers and/or automatic agent routing are enabled.
+- ([#35205](https://github.com/YasChat/YasChat/pull/35205)) Fixes livechat routing algorithm to ensure conversations are correctly assigned to the contact manager when triggers and/or automatic agent routing are enabled.
 
-- ([#35555](https://github.com/RocketChat/Rocket.Chat/pull/35555)) Fixes an issue causing Livechat to disconnect from the websocket when registerGuest is called multiple times with the same token
+- ([#35555](https://github.com/YasChat/YasChat/pull/35555)) Fixes an issue causing Livechat to disconnect from the websocket when registerGuest is called multiple times with the same token
 
-- ([#35551](https://github.com/RocketChat/Rocket.Chat/pull/35551)) Fixes Livechat's setDepartment api method not updating the visitor's department as expected
+- ([#35551](https://github.com/YasChat/YasChat/pull/35551)) Fixes Livechat's setDepartment api method not updating the visitor's department as expected
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
   - @rocket.chat/gazzodown@17.0.0-rc.0
@@ -1260,7 +1260,7 @@
 
 ### Patch Changes
 
-- ([#35168](https://github.com/RocketChat/Rocket.Chat/pull/35168)) Fixes Livechat conversation not closing in a few scenarios due to cross-tab interference
+- ([#35168](https://github.com/YasChat/YasChat/pull/35168)) Fixes Livechat conversation not closing in a few scenarios due to cross-tab interference
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@16.0.0
@@ -1315,7 +1315,7 @@
 
 ### Patch Changes
 
-- ([#35168](https://github.com/RocketChat/Rocket.Chat/pull/35168)) Fixes Livechat conversation not closing in a few scenarios due to cross-tab interference
+- ([#35168](https://github.com/YasChat/YasChat/pull/35168)) Fixes Livechat conversation not closing in a few scenarios due to cross-tab interference
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@16.0.0-rc.0
@@ -1353,7 +1353,7 @@
 
 ### Minor Changes
 
-- ([#33060](https://github.com/RocketChat/Rocket.Chat/pull/33060)) Added `departmentsAllowedToForward` property to departments returned in the `livechat/config` endpoint
+- ([#33060](https://github.com/YasChat/YasChat/pull/33060)) Added `departmentsAllowedToForward` property to departments returned in the `livechat/config` endpoint
 
 ### Patch Changes
 
@@ -1411,7 +1411,7 @@
 
 ### Minor Changes
 
-- ([#33060](https://github.com/RocketChat/Rocket.Chat/pull/33060)) Added `departmentsAllowedToForward` property to departments returned in the `livechat/config` endpoint
+- ([#33060](https://github.com/YasChat/YasChat/pull/33060)) Added `departmentsAllowedToForward` property to departments returned in the `livechat/config` endpoint
 
 ### Patch Changes
 
@@ -1433,13 +1433,13 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34158](https://github.com/RocketChat/Rocket.Chat/pull/34158)) Fixes issue that caused different sessions when opening a livechat popover in cross domain
+- ([#34158](https://github.com/YasChat/YasChat/pull/34158)) Fixes issue that caused different sessions when opening a livechat popover in cross domain
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/gazzodown@14.0.0
@@ -1477,13 +1477,13 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34158](https://github.com/RocketChat/Rocket.Chat/pull/34158)) Fixes issue that caused different sessions when opening a livechat popover in cross domain
+- ([#34158](https://github.com/YasChat/YasChat/pull/34158)) Fixes issue that caused different sessions when opening a livechat popover in cross domain
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/gazzodown@14.0.0-rc.0
@@ -1494,13 +1494,13 @@
 
 ### Minor Changes
 
-- ([#33997](https://github.com/RocketChat/Rocket.Chat/pull/33997)) Prevent apps' subprocesses from crashing on unhandled rejections or uncaught exceptions
+- ([#33997](https://github.com/YasChat/YasChat/pull/33997)) Prevent apps' subprocesses from crashing on unhandled rejections or uncaught exceptions
 
 ### Patch Changes
 
-- ([#33911](https://github.com/RocketChat/Rocket.Chat/pull/33911)) Fixes the 'Finish Chat' option in Livechat appearing before the conversation is started, which caused the action to fail.
+- ([#33911](https://github.com/YasChat/YasChat/pull/33911)) Fixes the 'Finish Chat' option in Livechat appearing before the conversation is started, which caused the action to fail.
 
-- ([#33944](https://github.com/RocketChat/Rocket.Chat/pull/33944)) Fixes livechat popout mode not working correctly in cross domain situations
+- ([#33944](https://github.com/YasChat/YasChat/pull/33944)) Fixes livechat popout mode not working correctly in cross domain situations
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@13.0.0
@@ -1538,13 +1538,13 @@
 
 ### Minor Changes
 
-- ([#33997](https://github.com/RocketChat/Rocket.Chat/pull/33997)) Prevent apps' subprocesses from crashing on unhandled rejections or uncaught exceptions
+- ([#33997](https://github.com/YasChat/YasChat/pull/33997)) Prevent apps' subprocesses from crashing on unhandled rejections or uncaught exceptions
 
 ### Patch Changes
 
-- ([#33911](https://github.com/RocketChat/Rocket.Chat/pull/33911)) Fixes the 'Finish Chat' option in Livechat appearing before the conversation is started, which caused the action to fail.
+- ([#33911](https://github.com/YasChat/YasChat/pull/33911)) Fixes the 'Finish Chat' option in Livechat appearing before the conversation is started, which caused the action to fail.
 
-- ([#33944](https://github.com/RocketChat/Rocket.Chat/pull/33944)) Fixes livechat popout mode not working correctly in cross domain situations
+- ([#33944](https://github.com/YasChat/YasChat/pull/33944)) Fixes livechat popout mode not working correctly in cross domain situations
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@13.0.0-rc.0
@@ -1555,7 +1555,7 @@
 
 ### Patch Changes
 
-- ([#33229](https://github.com/RocketChat/Rocket.Chat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
+- ([#33229](https://github.com/YasChat/YasChat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
 
 - <details><summary>Updated dependencies [687f1efd5f, 9274cf4586, debd3ffa22]:</summary>
   - @rocket.chat/ui-kit@0.37.0
@@ -1621,7 +1621,7 @@
 
 ### Patch Changes
 
-- ([#33229](https://github.com/RocketChat/Rocket.Chat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
+- ([#33229](https://github.com/YasChat/YasChat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
 
 - <details><summary>Updated dependencies [687f1efd5f, 9274cf4586, debd3ffa22]:</summary>
   - @rocket.chat/ui-kit@0.37.0-rc.0
@@ -1633,12 +1633,12 @@
 
 ### Minor Changes
 
-- ([#33139](https://github.com/RocketChat/Rocket.Chat/pull/33139)) Added new setting `Allow visitors to finish conversations` that allows admins to decide if omnichannel visitors can close a conversation or not. This doesn't affect agent's capabilities of room closing, neither apps using the livechat bridge to close rooms.
+- ([#33139](https://github.com/YasChat/YasChat/pull/33139)) Added new setting `Allow visitors to finish conversations` that allows admins to decide if omnichannel visitors can close a conversation or not. This doesn't affect agent's capabilities of room closing, neither apps using the livechat bridge to close rooms.
   However, if currently your integration relies on `livechat/room.close` endpoint for closing conversations, it's advised to use the authenticated version `livechat/room.closeByUser` of it before turning off this setting.
 
 ### Patch Changes
 
-- ([#33229](https://github.com/RocketChat/Rocket.Chat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
+- ([#33229](https://github.com/YasChat/YasChat/pull/33229)) Fixes an issue where the unread message counter in the livechat widget does not update when a visitor receives their first response from an agent while the widget is minimized.
 
 - <details><summary>Updated dependencies [cd0d50016e, 79c16d315a]:</summary>
   - @rocket.chat/gazzodown@11.0.0
@@ -1704,7 +1704,7 @@
 
 ### Minor Changes
 
-- ([#33139](https://github.com/RocketChat/Rocket.Chat/pull/33139)) Added new setting `Allow visitors to finish conversations` that allows admins to decide if omnichannel visitors can close a conversation or not. This doesn't affect agent's capabilities of room closing, neither apps using the livechat bridge to close rooms.
+- ([#33139](https://github.com/YasChat/YasChat/pull/33139)) Added new setting `Allow visitors to finish conversations` that allows admins to decide if omnichannel visitors can close a conversation or not. This doesn't affect agent's capabilities of room closing, neither apps using the livechat bridge to close rooms.
   However, if currently your integration relies on `livechat/room.close` endpoint for closing conversations, it's advised to use the authenticated version `livechat/room.closeByUser` of it before turning off this setting.
 
 ### Patch Changes
@@ -1729,7 +1729,7 @@
 
 ### Patch Changes
 
-- ([#32928](https://github.com/RocketChat/Rocket.Chat/pull/32928)) Fixed issue where `after-registration-triggers` would show up in a page when the user was not yet registered
+- ([#32928](https://github.com/YasChat/YasChat/pull/32928)) Fixed issue where `after-registration-triggers` would show up in a page when the user was not yet registered
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df]:</summary>
   - @rocket.chat/gazzodown@10.0.0
@@ -1795,7 +1795,7 @@
 
 ### Patch Changes
 
-- ([#32928](https://github.com/RocketChat/Rocket.Chat/pull/32928)) Fixed issue where `after-registration-triggers` would show up in a page when the user was not yet registered
+- ([#32928](https://github.com/YasChat/YasChat/pull/32928)) Fixed issue where `after-registration-triggers` would show up in a page when the user was not yet registered
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df]:</summary>
   - @rocket.chat/gazzodown@10.0.0-rc.0
@@ -1825,13 +1825,13 @@
 
 ### Minor Changes
 
-- ([#32498](https://github.com/RocketChat/Rocket.Chat/pull/32498)) Created a `transferChat` Livechat API endpoint for transferring chats programmatically, the endpoint has all the limitations & permissions required that transferring via UI has
+- ([#32498](https://github.com/YasChat/YasChat/pull/32498)) Created a `transferChat` Livechat API endpoint for transferring chats programmatically, the endpoint has all the limitations & permissions required that transferring via UI has
 
 ### Patch Changes
 
-- ([#32692](https://github.com/RocketChat/Rocket.Chat/pull/32692)) Fixed an issue that caused the widget to set the wrong department when using the setDepartment Livechat api endpoint in conjunction with a Livechat Trigger
+- ([#32692](https://github.com/YasChat/YasChat/pull/32692)) Fixed an issue that caused the widget to set the wrong department when using the setDepartment Livechat api endpoint in conjunction with a Livechat Trigger
 
-- ([#32626](https://github.com/RocketChat/Rocket.Chat/pull/32626)) livechat `setDepartment` livechat api fixes:
+- ([#32626](https://github.com/YasChat/YasChat/pull/32626)) livechat `setDepartment` livechat api fixes:
   - Changing department didn't reflect on the registration form in real time
   - Changing the department mid conversation didn't transfer the chat
   - Depending on the state of the department, it couldn't be set as default
@@ -1899,13 +1899,13 @@
 
 ### Minor Changes
 
-- ([#32498](https://github.com/RocketChat/Rocket.Chat/pull/32498)) Created a `transferChat` Livechat API endpoint for transferring chats programmatically, the endpoint has all the limitations & permissions required that transferring via UI has
+- ([#32498](https://github.com/YasChat/YasChat/pull/32498)) Created a `transferChat` Livechat API endpoint for transferring chats programmatically, the endpoint has all the limitations & permissions required that transferring via UI has
 
 ### Patch Changes
 
-- ([#32692](https://github.com/RocketChat/Rocket.Chat/pull/32692)) Fixed an issue that caused the widget to set the wrong department when using the setDepartment Livechat api endpoint in conjunction with a Livechat Trigger
+- ([#32692](https://github.com/YasChat/YasChat/pull/32692)) Fixed an issue that caused the widget to set the wrong department when using the setDepartment Livechat api endpoint in conjunction with a Livechat Trigger
 
-- ([#32626](https://github.com/RocketChat/Rocket.Chat/pull/32626)) livechat `setDepartment` livechat api fixes:
+- ([#32626](https://github.com/YasChat/YasChat/pull/32626)) livechat `setDepartment` livechat api fixes:
   - Changing department didn't reflect on the registration form in real time
   - Changing the department mid conversation didn't transfer the chat
   - Depending on the state of the department, it couldn't be set as default
@@ -1936,7 +1936,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2013,7 +2013,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2027,7 +2027,7 @@
 
 ### Patch Changes
 
-- ([#32683](https://github.com/RocketChat/Rocket.Chat/pull/32683) by [@dionisio-bot](https://github.com/dionisio-bot)) livechat `setDepartment` livechat api fixes:
+- ([#32683](https://github.com/YasChat/YasChat/pull/32683) by [@dionisio-bot](https://github.com/dionisio-bot)) livechat `setDepartment` livechat api fixes:
   - Changing department didn't reflect on the registration form in real time
   - Changing the department mid conversation didn't transfer the chat
   - Depending on the state of the department, it couldn't be set as default
@@ -2058,7 +2058,7 @@
 
 ### Minor Changes
 
-- ([#32233](https://github.com/RocketChat/Rocket.Chat/pull/32233)) Makes the triggers fired by the condition `after-guest-registration` persist on the livechat client, it will persist through reloads and pagination, only reseting when a conversation is closed (no changes were done on the agent side of the conversation)
+- ([#32233](https://github.com/YasChat/YasChat/pull/32233)) Makes the triggers fired by the condition `after-guest-registration` persist on the livechat client, it will persist through reloads and pagination, only reseting when a conversation is closed (no changes were done on the agent side of the conversation)
 
 ### Patch Changes
 
@@ -2090,7 +2090,7 @@
 
 ### Minor Changes
 
-- ([#32233](https://github.com/RocketChat/Rocket.Chat/pull/32233)) Makes the triggers fired by the condition `after-guest-registration` persist on the livechat client, it will persist through reloads and pagination, only reseting when a conversation is closed (no changes were done on the agent side of the conversation)
+- ([#32233](https://github.com/YasChat/YasChat/pull/32233)) Makes the triggers fired by the condition `after-guest-registration` persist on the livechat client, it will persist through reloads and pagination, only reseting when a conversation is closed (no changes were done on the agent side of the conversation)
 
 ### Patch Changes
 
@@ -2104,11 +2104,11 @@
 
 ### Patch Changes
 
-- ([#31765](https://github.com/RocketChat/Rocket.Chat/pull/31765)) Fixes the livechat client ignoring the `livechat_fileuploads_enabled` setting when uploading files
+- ([#31765](https://github.com/YasChat/YasChat/pull/31765)) Fixes the livechat client ignoring the `livechat_fileuploads_enabled` setting when uploading files
 
-- ([#32069](https://github.com/RocketChat/Rocket.Chat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
+- ([#32069](https://github.com/YasChat/YasChat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
 
-- ([#32135](https://github.com/RocketChat/Rocket.Chat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
+- ([#32135](https://github.com/YasChat/YasChat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@6.0.0
@@ -2140,11 +2140,11 @@
 
 ### Patch Changes
 
-- ([#31765](https://github.com/RocketChat/Rocket.Chat/pull/31765)) Fixes the livechat client ignoring the `livechat_fileuploads_enabled` setting when uploading files
+- ([#31765](https://github.com/YasChat/YasChat/pull/31765)) Fixes the livechat client ignoring the `livechat_fileuploads_enabled` setting when uploading files
 
-- ([#32069](https://github.com/RocketChat/Rocket.Chat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
+- ([#32069](https://github.com/YasChat/YasChat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
 
-- ([#32135](https://github.com/RocketChat/Rocket.Chat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
+- ([#32135](https://github.com/YasChat/YasChat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@6.0.0-rc.0
@@ -2174,16 +2174,16 @@
 
 ### Minor Changes
 
-- ([#31820](https://github.com/RocketChat/Rocket.Chat/pull/31820)) **Added the ability for premium workspaces to hide Rocket.Chat's watermark as well as change the Livechat widget's logo**
+- ([#31820](https://github.com/YasChat/YasChat/pull/31820)) **Added the ability for premium workspaces to hide YasChat's watermark as well as change the Livechat widget's logo**
 
   The new settings (named below) can be found in the Omnichannel workspace settings within the livechat section.
 
-  - Hide "powered by Rocket.Chat"
+  - Hide "powered by YasChat"
   - Livechat widget logo (svg, png, jpg)
 
-- ([#31751](https://github.com/RocketChat/Rocket.Chat/pull/31751)) Added Livechat setting `Hide system messages` & API method `setHiddenSystemMessages`, to customize system message visibility within the widget.
+- ([#31751](https://github.com/YasChat/YasChat/pull/31751)) Added Livechat setting `Hide system messages` & API method `setHiddenSystemMessages`, to customize system message visibility within the widget.
 
-- ([#31772](https://github.com/RocketChat/Rocket.Chat/pull/31772)) Improved Livechat's theming capabilities
+- ([#31772](https://github.com/YasChat/YasChat/pull/31772)) Improved Livechat's theming capabilities
 
   | Name (`setTheme`, `initialize`) | Workspace setting                      | Default value | Description                                                                                                                                                |
   | ------------------------------- | -------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2194,25 +2194,25 @@
   | `hideGuestAvatar`               | `N/A`                                  | `false`       | Hides/shows the guest avatar                                                                                                                               |
   | `hideAgentAvatar`               | `N/A`                                  | `true`        | Hides/shows the agent avatar                                                                                                                               |
 
-- ([#30924](https://github.com/RocketChat/Rocket.Chat/pull/30924)) chore: Refactor & Improve Livechat Widget API
+- ([#30924](https://github.com/YasChat/YasChat/pull/30924)) chore: Refactor & Improve Livechat Widget API
   Refactors and adds better error handling to the widget's API calls
-- ([#31268](https://github.com/RocketChat/Rocket.Chat/pull/31268)) Added new Livechat trigger action "Send message (external service)"
+- ([#31268](https://github.com/YasChat/YasChat/pull/31268)) Added new Livechat trigger action "Send message (external service)"
 
 ### Patch Changes
 
-- ([#31663](https://github.com/RocketChat/Rocket.Chat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
+- ([#31663](https://github.com/YasChat/YasChat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
 
-- ([#31718](https://github.com/RocketChat/Rocket.Chat/pull/31718)) Allows the after-guest-registration trigger to run when starting a new chat after finishing a chat when the clear guest data when chat ended setting is set to false
+- ([#31718](https://github.com/YasChat/YasChat/pull/31718)) Allows the after-guest-registration trigger to run when starting a new chat after finishing a chat when the clear guest data when chat ended setting is set to false
 
-- ([#32069](https://github.com/RocketChat/Rocket.Chat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
+- ([#32069](https://github.com/YasChat/YasChat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
 
-- ([#32031](https://github.com/RocketChat/Rocket.Chat/pull/32031)) Fixes issue where the livechat offline form would render even when disabled
+- ([#32031](https://github.com/YasChat/YasChat/pull/32031)) Fixes issue where the livechat offline form would render even when disabled
 
-- ([#31752](https://github.com/RocketChat/Rocket.Chat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
+- ([#31752](https://github.com/YasChat/YasChat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
 
-- ([#31792](https://github.com/RocketChat/Rocket.Chat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
+- ([#31792](https://github.com/YasChat/YasChat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
 
-- ([#32135](https://github.com/RocketChat/Rocket.Chat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
+- ([#32135](https://github.com/YasChat/YasChat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
 
 - <details><summary>Updated dependencies [5ad65ff3da]:</summary>
   - @rocket.chat/message-parser@0.31.29
@@ -2226,7 +2226,7 @@
 
 ### Patch Changes
 
-- ([#32135](https://github.com/RocketChat/Rocket.Chat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
+- ([#32135](https://github.com/YasChat/YasChat/pull/32135)) Fixes issue causing a desync in different browser windows when a chat is closed and started again
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@5.0.0-rc.4
@@ -2237,7 +2237,7 @@
 
 ### Patch Changes
 
-- ([#32069](https://github.com/RocketChat/Rocket.Chat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
+- ([#32069](https://github.com/YasChat/YasChat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@5.0.0-rc.3
@@ -2266,16 +2266,16 @@
 
 ### Minor Changes
 
-- ([#31820](https://github.com/RocketChat/Rocket.Chat/pull/31820)) **Added the ability for premium workspaces to hide Rocket.Chat's watermark as well as change the Livechat widget's logo**
+- ([#31820](https://github.com/YasChat/YasChat/pull/31820)) **Added the ability for premium workspaces to hide YasChat's watermark as well as change the Livechat widget's logo**
 
   The new settings (named below) can be found in the Omnichannel workspace settings within the livechat section.
 
-  - Hide "powered by Rocket.Chat"
+  - Hide "powered by YasChat"
   - Livechat widget logo (svg, png, jpg)
 
-- ([#31751](https://github.com/RocketChat/Rocket.Chat/pull/31751)) Added Livechat setting `Hide system messages` & API method `setHiddenSystemMessages`, to customize system message visibility within the widget.
+- ([#31751](https://github.com/YasChat/YasChat/pull/31751)) Added Livechat setting `Hide system messages` & API method `setHiddenSystemMessages`, to customize system message visibility within the widget.
 
-- ([#31772](https://github.com/RocketChat/Rocket.Chat/pull/31772)) Improved Livechat's theming capabilities
+- ([#31772](https://github.com/YasChat/YasChat/pull/31772)) Improved Livechat's theming capabilities
 
   | Name (`setTheme`, `initialize`) | Workspace setting                      | Default value | Description                                                                                                                                                |
   | ------------------------------- | -------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2286,21 +2286,21 @@
   | `hideGuestAvatar`               | `N/A`                                  | `false`       | Hides/shows the guest avatar                                                                                                                               |
   | `hideAgentAvatar`               | `N/A`                                  | `true`        | Hides/shows the agent avatar                                                                                                                               |
 
-- ([#30924](https://github.com/RocketChat/Rocket.Chat/pull/30924)) chore: Refactor & Improve Livechat Widget API
+- ([#30924](https://github.com/YasChat/YasChat/pull/30924)) chore: Refactor & Improve Livechat Widget API
   Refactors and adds better error handling to the widget's API calls
-- ([#31268](https://github.com/RocketChat/Rocket.Chat/pull/31268)) Added new Livechat trigger action "Send message (external service)"
+- ([#31268](https://github.com/YasChat/YasChat/pull/31268)) Added new Livechat trigger action "Send message (external service)"
 
 ### Patch Changes
 
-- ([#31663](https://github.com/RocketChat/Rocket.Chat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
+- ([#31663](https://github.com/YasChat/YasChat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
 
-- ([#31718](https://github.com/RocketChat/Rocket.Chat/pull/31718)) Allows the after-guest-registration trigger to run when starting a new chat after finishing a chat when the clear guest data when chat ended setting is set to false
+- ([#31718](https://github.com/YasChat/YasChat/pull/31718)) Allows the after-guest-registration trigger to run when starting a new chat after finishing a chat when the clear guest data when chat ended setting is set to false
 
-- ([#32031](https://github.com/RocketChat/Rocket.Chat/pull/32031)) Fixes issue where the livechat offline form would render even when disabled
+- ([#32031](https://github.com/YasChat/YasChat/pull/32031)) Fixes issue where the livechat offline form would render even when disabled
 
-- ([#31752](https://github.com/RocketChat/Rocket.Chat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
+- ([#31752](https://github.com/YasChat/YasChat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
 
-- ([#31792](https://github.com/RocketChat/Rocket.Chat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
+- ([#31792](https://github.com/YasChat/YasChat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
 
 - <details><summary>Updated dependencies [5ad65ff3da]:</summary>
   - @rocket.chat/message-parser@0.31.29-rc.0
@@ -2323,7 +2323,7 @@
 
 ### Patch Changes
 
-- ([#31792](https://github.com/RocketChat/Rocket.Chat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
+- ([#31792](https://github.com/YasChat/YasChat/pull/31792)) Fixes issue of the `setDepartment` Livechat API method not setting the store value properly (is was only setting on the guest object)
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@4.0.5
@@ -2361,7 +2361,7 @@
 
 ### Patch Changes
 
-- ([#31752](https://github.com/RocketChat/Rocket.Chat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
+- ([#31752](https://github.com/YasChat/YasChat/pull/31752)) fixed livechat UI blinking different colors when the chat is finished
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/gazzodown@4.0.1
@@ -2372,13 +2372,13 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31349](https://github.com/RocketChat/Rocket.Chat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
+- ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
-- ([#31454](https://github.com/RocketChat/Rocket.Chat/pull/31454)) Fixed an issue with translations that caused text containing special characters to be shown escaped on UI
+- ([#31454](https://github.com/YasChat/YasChat/pull/31454)) Fixed an issue with translations that caused text containing special characters to be shown escaped on UI
 
-- ([#31302](https://github.com/RocketChat/Rocket.Chat/pull/31302)) Fixed a problem that caused Livechat Widget registration page to ignore the `showOnRegistration` flag for departments, showing all items.
+- ([#31302](https://github.com/YasChat/YasChat/pull/31302)) Fixed a problem that caused Livechat Widget registration page to ignore the `showOnRegistration` flag for departments, showing all items.
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948]:</summary>
   - @rocket.chat/ui-kit@0.33.0

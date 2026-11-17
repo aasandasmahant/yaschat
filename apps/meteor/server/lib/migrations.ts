@@ -4,7 +4,7 @@ import { Migrations } from '@rocket.chat/models';
 
 import { showErrorBox } from './logger/showBox';
 import { sleep } from '../../lib/utils/sleep';
-import { Info } from '../../rocketchat.info';
+import { Info } from '../../yaschat.info';
 
 type IMigration = {
 	name?: string;
@@ -128,7 +128,7 @@ function showError(version: number, control: IControl, e: any): void {
 			'Please make sure you are running the latest version and try again.',
 			'If the problem persists, please contact support.',
 			'',
-			`This Rocket.Chat version: ${Info.version}`,
+			`This YasChat version: ${Info.version}`,
 			`Database locked at version: ${control.version}`,
 			`Database target version: ${version}`,
 			'',
@@ -207,7 +207,7 @@ export async function migrateDatabase(targetVersion: 'latest' | number, subcomma
 				'Please make sure you are running the latest version and try again.',
 				'If the problem persists, please contact support.',
 				'',
-				`This Rocket.Chat version: ${Info.version}`,
+				`This YasChat version: ${Info.version}`,
 				`Database locked at version: ${control.version}`,
 				`Database target version: ${version}`,
 				'',

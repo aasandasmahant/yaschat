@@ -11,7 +11,7 @@ tests: []
 ## Summary
 
 A file attached to a message in an XMPP room reaches the XMPP user, and a file an XMPP user
-sends reaches the Rocket.Chat room as an upload. Files travel as out-of-band URLs
+sends reaches the YasChat room as an upload. Files travel as out-of-band URLs
 (XEP-0066), the way they travel across the XMPP ecosystem today, in DMs and rooms alike. The
 XEP-0363 upload slot service is a client-to-server protocol and is not implemented; what
 interoperates is the URL exchange its clients produce.
@@ -21,7 +21,7 @@ interoperates is the URL exchange its clients produce.
 Text-only federation is the first thing users notice. Today an attachment in an XMPP room
 is silently not relayed and an inbound file offer or file URL is stored as plain text
 ([direct-messages](direct-messages.md) lists attachments as out of scope). Federated servers
-reach each other over HTTPS, since Rocket.Chat itself is served over it, so a file URL works
+reach each other over HTTPS, since YasChat itself is served over it, so a file URL works
 in both directions. Remote files are downloaded and stored rather than shown as links,
 because users in defense deployments often cannot reach the remote host; only the path
 between the servers is open.
@@ -47,7 +47,7 @@ before they are fixed.
 - **R1** A message with file attachments saved by a local user in an XMPP DM or room is sent
   with an HTTPS URL for each attachment as the body and as
   `<x xmlns='jabber:x:oob'><url/></x>`, one message per attachment. The URL is a signed
-  link to that one file on a dedicated federation download endpoint. No Rocket.Chat login
+  link to that one file on a dedicated federation download endpoint. No YasChat login
   is needed: the token in the link is the credential, so anyone holding it can download
   the file until it expires, after a time an administrator sets (24 hours by default, with
   no option for links that never expire). It stops working earlier when the message is
@@ -89,7 +89,7 @@ Decided in the plan.
 - Jingle File Transfer (XEP-0234). The servers reach each other over HTTPS, so URLs carry
   files both ways; Jingle would add sessions between full JIDs, a resource for every local
   user and a transport to choose, for no file a URL cannot carry. A client that can only
-  send files over Jingle cannot send them to Rocket.Chat users.
+  send files over Jingle cannot send them to YasChat users.
 - Public file URLs: every upload in the workspace would be exposed, not just federated ones,
   with nothing to revoke or audit.
 - Streaming media and calls (Jingle RTP, XEP-0167).
@@ -105,12 +105,12 @@ None; not implemented.
   a public file setting, or a dedicated federation download endpoint? Who may fetch it and
   for how long?~~ A signed link on a dedicated endpoint: R1, Motivation.
 - **Q2** ~~R2: fetch and store, or render as a link and let the client fetch? Fetching
-  means Rocket.Chat makes outbound HTTPS requests to arbitrary hosts named by remote
+  means YasChat makes outbound HTTPS requests to arbitrary hosts named by remote
   users.~~ Fetch and store, within the limits R8 sets: R2, R8, Motivation.
 - **Q3** ~~XEP-0234 sessions run between full JIDs and need a transport: in-band
   bytestreams (XEP-0261) work over S2S alone but are slow; SOCKS5 bytestreams (XEP-0260)
   need a proxy (XEP-0065) reachable by both ends. Which does the end product accept, and
-  does Rocket.Chat have to run a proxy?~~ No Jingle: see Out of scope.
+  does YasChat have to run a proxy?~~ No Jingle: see Out of scope.
 - **Q4** ~~Local users have no resource on the wire outside remote rooms ([addressing
   R7](addressing.md)). Jingle needs one; does the DM path start advertising a resource, and
   what does that mean for presence?~~ No Jingle: see Out of scope.

@@ -643,7 +643,7 @@ describe('media call hangup reasons', () => {
 	const serverWrittenReasons = ['expired'];
 
 	/**
-	 * PR #41964 stopped Rocket.Chat from writing these, but stored call history still holds
+	 * PR #41964 stopped YasChat from writing these, but stored call history still holds
 	 * them, so the SDK keeps documenting them for an app that reads older calls.
 	 */
 	const legacyReasonsOnlyInStoredHistory = ['sip-refer-failed'];

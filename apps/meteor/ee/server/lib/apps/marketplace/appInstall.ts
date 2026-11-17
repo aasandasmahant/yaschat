@@ -1,6 +1,6 @@
 import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
 
-import { Info } from '../../../../../rocketchat.info';
+import { Info } from '../../../../../yaschat.info';
 import { getWorkspaceAccessToken } from '../../../../../server/lib/cloud';
 import { settings } from '../../../../../server/settings';
 import { Apps } from '../orchestrator';
@@ -10,7 +10,7 @@ type MarketplaceNotificationType = 'install' | 'update' | 'uninstall';
 /**
  * Notify the marketplace about an app install, update, or uninstall event.
  *
- * Attempts to POST a notification to the marketplace client at `v1/apps/{id}/install` containing the action, app metadata, Rocket.Chat and engine versions, and site URL. If a workspace access token is available it is included in the Authorization header. Any errors encountered while obtaining the token, reading settings, or sending the request are ignored.
+ * Attempts to POST a notification to the marketplace client at `v1/apps/{id}/install` containing the action, app metadata, YasChat and engine versions, and site URL. If a workspace access token is available it is included in the Authorization header. Any errors encountered while obtaining the token, reading settings, or sending the request are ignored.
  *
  * @param action - The marketplace event type: 'install', 'update', or 'uninstall'
  * @param appInfo - App metadata (including `id`, `name`, `nameSlug`, and `version`) to include in the notification

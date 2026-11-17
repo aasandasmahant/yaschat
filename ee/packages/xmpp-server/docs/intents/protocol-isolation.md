@@ -4,7 +4,7 @@ Author: Diego Sampaio. Status: accepted.
 
 ## Problem
 
-Rocket.Chat federates over Matrix and over XMPP, and a room must belong to exactly one of
+YasChat federates over Matrix and over XMPP, and a room must belong to exactly one of
 them: a room that mixes both is out of scope. Parts of that rule hold today, but no spec
 states it and the parts disagree in form. A room created with both toggles silently becomes
 a Matrix room. A remote JID cannot be added to a room that is not an XMPP hosted room
@@ -65,7 +65,7 @@ with a remote Matrix user.
   the choice cannot be undone. Two toggles are not kept: they suggest the protocols combine.
 - A distinct error for a room of the other protocol would tell a sender which rooms exist,
   which [ADR 0008](../adr/0008-only-dedicated-xmpp-rooms-are-exposed.md) rules out.
-- One shared check in the Rocket.Chat room layer classifies rooms and usernames by protocol
+- One shared check in the YasChat room layer classifies rooms and usernames by protocol
   and refuses a mismatch, with or without an inviter, including a room or DM that would
   carry both protocols. Each federation keeps its own hooks for creating users and room
   state. The existing Matrix error code keeps working for current callers.
@@ -78,7 +78,7 @@ with a remote Matrix user.
   only knows XMPP rooms, so to it the room does not exist (`item-not-found`), while the
   scenario asks for a rejection the sender can tell apart.~~ The errors of a room that does
   not exist: see Proposed outcome and Constraints.
-- **Q3** ~~Does one shared check in the Rocket.Chat room layer own the protocol-mismatch
+- **Q3** ~~Does one shared check in the YasChat room layer own the protocol-mismatch
   error and the member-picker filter, or does each federation keep its own?~~ One shared
   check: see Constraints.
 - **Q4** ~~Can a DM between a local user and a remote XMPP user gain a third member at all,

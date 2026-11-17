@@ -51,7 +51,7 @@ const WIDGET_MINIMIZED_WIDTH = 54;
 const WIDGET_MINIMIZED_HEIGHT = 54;
 const WIDGET_MARGIN = 16;
 
-window.RocketChat = window.RocketChat || { _: [] };
+window.YasChat = window.YasChat || { _: [] };
 const config: { url?: string } = {};
 let widget: HTMLDivElement | null;
 let iframe: HTMLIFrameElement | null;
@@ -104,7 +104,7 @@ function clearAllCallbacks() {
 }
 
 const formatMessage = (action: keyof HooksWidgetAPI, ...params: Parameters<HooksWidgetAPI[keyof HooksWidgetAPI]>) => ({
-	src: 'rocketchat',
+	src: 'yaschat',
 	fn: action,
 	args: params,
 });
@@ -177,7 +177,7 @@ const updateWidgetStyle = (isOpened: boolean) => {
 
 const createWidget = (url: string) => {
 	widget = document.createElement('div');
-	widget.className = 'rocketchat-widget';
+	widget.className = 'yaschat-widget';
 	widget.style.position = 'fixed';
 	widget.style.width = `${WIDGET_MARGIN + WIDGET_MINIMIZED_WIDTH + WIDGET_MARGIN}px`;
 	widget.style.height = `${WIDGET_MARGIN + WIDGET_MINIMIZED_HEIGHT + WIDGET_MARGIN}px`;
@@ -188,12 +188,12 @@ const createWidget = (url: string) => {
 	widget.dataset.state = 'closed';
 
 	const container = document.createElement('div');
-	container.className = 'rocketchat-container';
+	container.className = 'yaschat-container';
 	container.style.width = '100%';
 	container.style.height = '100%';
 
 	iframe = document.createElement('iframe');
-	iframe.id = 'rocketchat-iframe';
+	iframe.id = 'yaschat-iframe';
 	iframe.src = url;
 	iframe.style.width = '100%';
 	iframe.style.height = '100%';
@@ -643,7 +643,7 @@ function isValidMessage(event: MessageEvent<LivechatMessageEventData<InternalWid
 		return false;
 	}
 
-	if (!event.data.src || event.data.src !== 'rocketchat') {
+	if (!event.data.src || event.data.src !== 'yaschat') {
 		return false;
 	}
 
@@ -718,22 +718,22 @@ if (typeof window.initRocket !== 'undefined') {
 	init(window.initRocket[0]);
 }
 
-if (typeof window.RocketChat.url !== 'undefined') {
-	init(window.RocketChat.url);
+if (typeof window.YasChat.url !== 'undefined') {
+	init(window.YasChat.url);
 }
 
-const queue: (() => void)[] = window.RocketChat._;
+const queue: (() => void)[] = window.YasChat._;
 
-window.RocketChat._.push = function (c: () => void) {
-	c.call(window.RocketChat.livechat);
+window.YasChat._.push = function (c: () => void) {
+	c.call(window.YasChat.livechat);
 };
 
-window.RocketChat = window.RocketChat._.push;
+window.YasChat = window.YasChat._.push;
 
 // exports
-window.RocketChat.livechat = livechatWidgetAPI;
+window.YasChat.livechat = livechatWidgetAPI;
 
 // proccess queue
 queue.forEach((c: () => void) => {
-	c.call(window.RocketChat.livechat);
+	c.call(window.YasChat.livechat);
 });

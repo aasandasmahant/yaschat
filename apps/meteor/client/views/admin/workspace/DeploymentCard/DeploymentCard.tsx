@@ -8,7 +8,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import InstancesModal from './components/InstancesModal';
-import { Info } from '../../../../../rocketchat.info';
+import { Info } from '../../../../../yaschat.info';
 import WorkspaceCardDetail from '../components/WorkspaceCardDetail';
 import WorkspaceCardSectionTitle from '../components/WorkspaceCardSectionTitle';
 import WorkspaceCardDetails from '../layout/WorkspaceCardDetails';

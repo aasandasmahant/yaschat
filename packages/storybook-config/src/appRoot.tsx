@@ -8,7 +8,7 @@ export type { AppRootBuilder };
 export { languageGlobalTypes, languageInitialGlobals } from './language.js';
 
 /**
- * Renders stories inside a mocked app root that speaks the language picked in the toolbar, with Rocket.Chat's real
+ * Renders stories inside a mocked app root that speaks the language picked in the toolbar, with YasChat's real
  * translations; the story's own customizations apply last, so they win over the defaults.
  *
  * @param createRoot creates the builder, usually `mockAppRoot` from `@rocket.chat/mock-providers`

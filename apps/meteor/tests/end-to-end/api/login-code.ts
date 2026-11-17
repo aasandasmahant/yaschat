@@ -22,7 +22,7 @@ async function insertLoginCode(connection: MongoClient, userId: string, insertEx
 		expireAt = new Date(now.getTime() - 1);
 	}
 
-	await connection.db().collection<ILoginCode>('rocketchat_login_codes').insertOne({
+	await connection.db().collection<ILoginCode>('yaschat_login_codes').insertOne({
 		_id: code,
 		userId,
 		createdAt: now,

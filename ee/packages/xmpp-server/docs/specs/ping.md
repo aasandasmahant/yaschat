@@ -11,7 +11,7 @@ tests: [src/router/StanzaRouter.spec.ts, tests/end-to-end/connectivity.spec.ts]
 ## Summary
 
 The server answers XMPP pings, which is how peers and the end-to-end suite check that
-federation with Rocket.Chat is alive in both directions.
+federation with YasChat is alive in both directions.
 
 ## Motivation
 

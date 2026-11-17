@@ -42,11 +42,11 @@ describe('useDesktopUserRoles', () => {
 	const setUserRoles = jest.fn();
 
 	beforeEach(() => {
-		Object.assign(window, { RocketChatDesktop: { setUserRoles } });
+		Object.assign(window, { YasChatDesktop: { setUserRoles } });
 	});
 
 	afterEach(() => {
-		delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+		delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 		setUserRoles.mockClear();
 	});
 

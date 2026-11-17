@@ -1,1 +1,1 @@
-export * from './rocketchat.e2e';
+export * from './yaschat.e2e';

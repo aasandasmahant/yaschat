@@ -217,7 +217,7 @@ export const getMatrixRoomsRoutes = () => {
 									}
 
 									// Today only one room type is supported (https://spec.matrix.org/v1.15/client-server-api/#types)
-									// TODO: https://rocketchat.atlassian.net/browse/FDR-152 -> Implement logic to handle custom room types
+									// TODO: https://yaschat.atlassian.net/browse/FDR-152 -> Implement logic to handle custom room types
 									// if (filter.room_types) {
 									// }
 

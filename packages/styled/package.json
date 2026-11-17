@@ -8,18 +8,18 @@
 		"css-in-js",
 		"rocket.chat"
 	],
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/styled"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"type": "module",

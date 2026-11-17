@@ -1,12 +1,12 @@
 # `@rocket.chat/rest-typings`
 
-> TypeScript definitions and JSON Schema validators for the Rocket.Chat REST API.
+> TypeScript definitions and JSON Schema validators for the YasChat REST API.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/rest-typings) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/rest-typings)
 
-This package describes Rocket.Chat's REST endpoints as types: for each path and HTTP method, the parameters it accepts and the result it returns. The entity types it refers to (`IUser`, `IRoom`, `IMessage`, ...) come from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings).
+This package describes YasChat's REST endpoints as types: for each path and HTTP method, the parameters it accepts and the result it returns. The entity types it refers to (`IUser`, `IRoom`, `IMessage`, ...) come from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings).
 
-It is mostly consumed indirectly. [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) use it to type their REST calls, and the Rocket.Chat server uses its validators to check incoming requests.
+It is mostly consumed indirectly. [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) use it to type their REST calls, and the YasChat server uses its validators to check incoming requests.
 
 It also ships runtime code: [AJV](https://ajv.js.org/) validators for many endpoints' parameters (`isChatSendMessageProps`, `isLoginProps`, ...), the shared `ajv` and `ajvQuery` instances, and validators for standard error responses.
 
@@ -18,7 +18,7 @@ npm install @rocket.chat/rest-typings
 
 The package is published as CommonJS with TypeScript declarations.
 
-Not every endpoint is in this package. Endpoints the server defines with its newer route API declare their types inside the Rocket.Chat server code, by augmenting `Endpoints`, and are not published here.
+Not every endpoint is in this package. Endpoints the server defines with its newer route API declare their types inside the YasChat server code, by augmenting `Endpoints`, and are not published here.
 
 ## Usage
 
@@ -152,7 +152,7 @@ Both instances know the `basic_email` and `rfc_email` formats and the `isNotEmpt
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/rest-typings). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/rest-typings). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/rest-typings build
@@ -161,7 +161,7 @@ yarn workspace @rocket.chat/rest-typings lint
 yarn workspace @rocket.chat/rest-typings typecheck
 ```
 
-New server endpoints should use the validated route API, which declares their types next to the route. See [docs/api-endpoint-migration.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/api-endpoint-migration.md). For the choice between `ajv` and `ajvQuery`, see [docs/ajv-instances.md](https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/ajv-instances.md).
+New server endpoints should use the validated route API, which declares their types next to the route. See [docs/api-endpoint-migration.md](https://github.com/YasChat/YasChat/blob/develop/docs/api-endpoint-migration.md). For the choice between `ajv` and `ajvQuery`, see [docs/ajv-instances.md](https://github.com/YasChat/YasChat/blob/develop/docs/ajv-instances.md).
 
 ### Writing typings
 
@@ -214,4 +214,4 @@ Compile with the shared instances, not a new `Ajv()`: `ajvQuery` for query-strin
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

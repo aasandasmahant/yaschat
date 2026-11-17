@@ -108,7 +108,7 @@ Reads the current `OwnerDocument` value.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/styled). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/styled). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/styled build
@@ -119,4 +119,4 @@ yarn workspace @rocket.chat/styled typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

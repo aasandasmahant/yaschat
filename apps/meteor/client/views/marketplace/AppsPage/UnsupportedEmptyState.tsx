@@ -3,7 +3,7 @@ import { links } from '@rocket.chat/ui-client';
 import { usePermission } from '@rocket.chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
-import UpdateRocketChatButton from '../components/UpdateRocketChatButton';
+import UpdateYasChatButton from '../components/UpdateYasChatButton';
 
 const UnsupportedEmptyState = () => {
 	const isAdmin = usePermission('manage-apps');
@@ -22,7 +22,7 @@ const UnsupportedEmptyState = () => {
 					<Button variant='secondary' is='a' href={links.go.supportPrerequisites} external>
 						{t('Learn_more')}
 					</Button>
-					{isAdmin && <UpdateRocketChatButton />}
+					{isAdmin && <UpdateYasChatButton />}
 				</StatesActions>
 			</States>
 		</Box>

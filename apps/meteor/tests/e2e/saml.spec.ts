@@ -301,7 +301,7 @@ test.describe('SAML', () => {
 	};
 
 	const expectLoggedOutAfterLogoutRequest = async (page: Page) => {
-		await test.step('expect user to be logged out from Rocket.Chat', async () => {
+		await test.step('expect user to be logged out from YasChat', async () => {
 			// The logout response echoes back the RelayState from the request (per the SAML spec), so the browser
 			// lands on the IdP after SLO instead of returning here; navigate back to confirm the session ended.
 			await poRegistration.goto();
@@ -310,8 +310,8 @@ test.describe('SAML', () => {
 		});
 	};
 
-	test('Logout - Rocket.Chat only', async ({ page, api }) => {
-		await test.step('Configure logout to only logout from Rocket.Chat', async () => {
+	test('Logout - YasChat only', async ({ page, api }) => {
+		await test.step('Configure logout to only logout from YasChat', async () => {
 			await expect((await setSettingValueById(api, 'SAML_Custom_Default_logout_behaviour', 'Local')).status()).toBe(200);
 		});
 
@@ -350,7 +350,7 @@ test.describe('SAML', () => {
 		// This should trigger a logout request from the IdP, with a redirect to our home on success
 		await page.goto('http://localhost:8080/simplesaml/saml2/idp/SingleLogoutService.php?ReturnTo=http://localhost:3000');
 
-		await test.step('expect user to be logged out from Rocket.Chat', async () => {
+		await test.step('expect user to be logged out from YasChat', async () => {
 			await expect(page).toHaveURL('/home');
 			await expect(page.getByRole('button', { name: 'User menu' })).not.toBeVisible();
 			await expect(poRegistration.btnLoginWithSaml).toBeVisible();
@@ -792,7 +792,7 @@ test.describe('SAML', () => {
 			try {
 				return await connection
 					.db()
-					.collection<{ _id: string; userInfo?: { profile?: Record<string, any> } }>('rocketchat_credential_tokens')
+					.collection<{ _id: string; userInfo?: { profile?: Record<string, any> } }>('yaschat_credential_tokens')
 					.findOne({ _id: credentialToken });
 			} finally {
 				await connection.close();
@@ -810,7 +810,7 @@ test.describe('SAML', () => {
 			let credentialToken: string | null = null;
 
 			await test.step('expect to land on the SAML handoff route carrying the credential token', async () => {
-				// SAMLLoginRoute redirects to rocketchat://auth from here. The browser has no handler for that
+				// SAMLLoginRoute redirects to yaschat://auth from here. The browser has no handler for that
 				// scheme, so the page stays put and we can inspect exactly what would have been handed over.
 				await expect(page).toHaveURL(/\/saml\/[^?]+\?.*loginClient=desktop/);
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Checks that the tools needed to run Rocket.Chat from source are installed.
+# Checks that the tools needed to run YasChat from source are installed.
 # Usage: scripts/check-deps.sh [--install]
 set -u
 

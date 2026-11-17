@@ -31,7 +31,7 @@ const mockCanUserAccessFederation = FederationMatrix.canUserAccessFederation as 
 	typeof FederationMatrix.canUserAccessFederation
 >;
 
-const OUR_SERVER_NAME = 'rocketchat.local';
+const OUR_SERVER_NAME = 'yaschat.local';
 
 const buildInviteEvent = (stateKey: string) => ({
 	type: 'm.room.member',

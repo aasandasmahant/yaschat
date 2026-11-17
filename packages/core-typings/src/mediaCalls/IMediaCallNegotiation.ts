@@ -1,4 +1,4 @@
-import type { IRocketChatRecord } from '../IRocketChatRecord';
+import type { IYasChatRecord } from '../IYasChatRecord';
 import type { RTCSessionDescriptionInit } from './RTCSessionDescription';
 
 export type MediaCallNegotiationStream = {
@@ -6,7 +6,7 @@ export type MediaCallNegotiationStream = {
 	id: string;
 };
 
-export interface IMediaCallNegotiation extends IRocketChatRecord {
+export interface IMediaCallNegotiation extends IYasChatRecord {
 	callId: string;
 
 	offerer: 'caller' | 'callee';

@@ -26,12 +26,12 @@ spec change.
 
 ## Recording a defect found in the field
 
-Situation: testing against ejabberd showed that a topic changed in Rocket.Chat reaches only
+Situation: testing against ejabberd showed that a topic changed in YasChat reaches only
 whoever joins the hosted room next. Nobody had written it down.
 
 ```text
 /model sonnet
-A topic changed in Rocket.Chat never reaches the XMPP occupants already in the hosted
+A topic changed in YasChat never reaches the XMPP occupants already in the hosted
 room; only the next newcomer sees it. Record it as a known defect in the hosted-muc
 spec with a skipped end-to-end test, following docs/README.md.
 ```
@@ -44,7 +44,7 @@ under Known defects:
 ### D3 A new topic does not reach occupants already in the room
 
 XEP-0045 §8.1 has the room send every occupant a message carrying the new `<subject/>` when
-it changes. A topic changed in Rocket.Chat becomes the subject only for whoever joins next
+it changes. A topic changed in YasChat becomes the subject only for whoever joins next
 (R2); occupants already in the room keep the old one. Where: `MucRoom.setSubject` stores the
 subject without broadcasting it. Test: `hosted-muc.spec.ts`, "tells occupants already in
 the room about a new topic".
@@ -64,7 +64,7 @@ together. The body cites the id, as in commit 697dc62899:
 ```text
 docs(xmpp-server): record that hosted rooms miss topic changes and outlive deletion
 
-hosted-muc D3: a topic changed in Rocket.Chat reaches only whoever joins next,
+hosted-muc D3: a topic changed in YasChat reaches only whoever joins next,
 never the occupants already in the room. hosted-muc D4: ...
 ```
 
@@ -148,7 +148,7 @@ Requirements are written so a peer could check them. Two in the style the README
 - **R1** A join presence carrying `<history maxstanzas='N'/>` is answered, after the
   occupant presences and before the subject, with the last N stored messages of the room
   as `groupchat` messages carrying `<delay/>` (XEP-0045 §7.2.13, §7.2.14), oldest first.
-- **R2** Messages the joining user could not see in Rocket.Chat, because they were not a
+- **R2** Messages the joining user could not see in YasChat, because they were not a
   member when the message was sent to a private group, MUST NOT be sent.
 ```
 

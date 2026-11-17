@@ -6,7 +6,7 @@
 
 `Emitter` is a minimal publish/subscribe class. You describe your events with an event map type, and TypeScript checks event names and payloads on `on`, `once`, `off` and `emit`. Subscribing returns an unsubscribe function, so you do not need to keep a reference to the handler.
 
-It has no dependencies and does not rely on Node.js or DOM APIs. Rocket.Chat uses it across its client and server packages.
+It has no dependencies and does not rely on Node.js or DOM APIs. YasChat uses it across its client and server packages.
 
 ## Installation
 
@@ -110,7 +110,7 @@ Handlers added or removed while an event is being emitted do not change the list
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/emitter). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/emitter). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/emitter build
@@ -121,4 +121,4 @@ yarn workspace @rocket.chat/emitter typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

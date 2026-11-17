@@ -9,7 +9,7 @@ import { notifyOnSubscriptionChangedByRoomId } from '../../notifyListener';
 export const saveRoomEncrypted = async function (rid: string, encrypted: boolean, user: IUser, sendMessage = true): Promise<UpdateResult> {
 	if (!isRegisterUser(user)) {
 		throw new ClientSafeError('invalid-user', 'Invalid user', {
-			function: 'RocketChat.saveRoomEncrypted',
+			function: 'YasChat.saveRoomEncrypted',
 		});
 	}
 

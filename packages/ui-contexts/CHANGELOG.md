@@ -4,17 +4,17 @@
 
 ### Major Changes
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
 ### Minor Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
-- ([#42508](https://github.com/RocketChat/Rocket.Chat/pull/42508)) Stops announcing every user card trigger in a room as expanded while a single card is open, and stops re-rendering every message when a user card opens or closes
+- ([#42508](https://github.com/YasChat/YasChat/pull/42508)) Stops announcing every user card trigger in a room as expanded while a single card is open, and stops re-rendering every message when a user card opens or closes
 
 ### Patch Changes
 
@@ -32,17 +32,17 @@
 
 ### Major Changes
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
 ### Minor Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
-- ([#42501](https://github.com/RocketChat/Rocket.Chat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. Rocket.Chat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by Rocket.Chat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
+- ([#42501](https://github.com/YasChat/YasChat/pull/42501)) Adds a native XMPP server (Enterprise, federation module) that federates directly with other XMPP servers over server-to-server connections. YasChat users can message any XMPP address, exchange presence with remote contacts, and join rooms on remote servers; remote XMPP users can join dedicated XMPP rooms hosted by YasChat. It runs as the `xmpp-server-service` microservice and is configured under **Administration → Settings → Federation → XMPP Server (Native)**.
 
-- ([#42508](https://github.com/RocketChat/Rocket.Chat/pull/42508)) Stops announcing every user card trigger in a room as expanded while a single card is open, and stops re-rendering every message when a user card opens or closes
+- ([#42508](https://github.com/YasChat/YasChat/pull/42508)) Stops announcing every user card trigger in a room as expanded while a single card is open, and stops re-rendering every message when a user card opens or closes
 
 ### Patch Changes
 
@@ -249,9 +249,9 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
-- ([#39054](https://github.com/RocketChat/Rocket.Chat/pull/39054)) Fixes a mismatch in the room icons on the sidebar items, ABAC Managed rooms were not displaying the correct icon
+- ([#39054](https://github.com/YasChat/YasChat/pull/39054)) Fixes a mismatch in the room icons on the sidebar items, ABAC Managed rooms were not displaying the correct icon
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 788c161bb6c9544bec37034c93e2f60de1a6c316, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0
@@ -310,9 +310,9 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
-- ([#39054](https://github.com/RocketChat/Rocket.Chat/pull/39054)) Fixes a mismatch in the room icons on the sidebar items, ABAC Managed rooms were not displaying the correct icon
+- ([#39054](https://github.com/YasChat/YasChat/pull/39054)) Fixes a mismatch in the room icons on the sidebar items, ABAC Managed rooms were not displaying the correct icon
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0-rc.0
@@ -452,7 +452,7 @@
 
 ### Major Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
 ### Patch Changes
 
@@ -523,7 +523,7 @@
 
 ### Major Changes
 
-- ([#37672](https://github.com/RocketChat/Rocket.Chat/pull/37672)) Removes deprecated VoIP from Omnichannel
+- ([#37672](https://github.com/YasChat/YasChat/pull/37672)) Removes deprecated VoIP from Omnichannel
 
 ### Patch Changes
 
@@ -561,11 +561,11 @@
 
 ### Minor Changes
 
-- ([#37327](https://github.com/RocketChat/Rocket.Chat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
+- ([#37327](https://github.com/YasChat/YasChat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
 
 ### Patch Changes
 
-- ([#37350](https://github.com/RocketChat/Rocket.Chat/pull/37350)) Fixes the sidebar collapse breakpoint in enhanced navigation
+- ([#37350](https://github.com/YasChat/YasChat/pull/37350)) Fixes the sidebar collapse breakpoint in enhanced navigation
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
   - @rocket.chat/password-policies@0.1.0
@@ -602,11 +602,11 @@
 
 ### Minor Changes
 
-- ([#37327](https://github.com/RocketChat/Rocket.Chat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
+- ([#37327](https://github.com/YasChat/YasChat/pull/37327)) Adds complexity requirements to end-to-end encryption passphrase
 
 ### Patch Changes
 
-- ([#37350](https://github.com/RocketChat/Rocket.Chat/pull/37350)) Fixes the sidebar collapse breakpoint in enhanced navigation
+- ([#37350](https://github.com/YasChat/YasChat/pull/37350)) Fixes the sidebar collapse breakpoint in enhanced navigation
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
   - @rocket.chat/password-policies@0.1.0-rc.0
@@ -643,7 +643,7 @@
 
 ### Patch Changes
 
-- ([#37042](https://github.com/RocketChat/Rocket.Chat/pull/37042)) Adjusts custom sound loop on omnichannel continuous notification to play `New room` loop instead of `New message` loop
+- ([#37042](https://github.com/YasChat/YasChat/pull/37042)) Adjusts custom sound loop on omnichannel continuous notification to play `New room` loop instead of `New message` loop
 
 - <details><summary>Updated dependencies [48d1442a07e860fefd6991c97e94d6a9de345afe, 74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
   - @rocket.chat/rest-typings@7.12.0
@@ -701,7 +701,7 @@
 
 ### Patch Changes
 
-- ([#37042](https://github.com/RocketChat/Rocket.Chat/pull/37042)) Adjusts custom sound loop on omnichannel continuous notification to play `New room` loop instead of `New message` loop
+- ([#37042](https://github.com/YasChat/YasChat/pull/37042)) Adjusts custom sound loop on omnichannel continuous notification to play `New room` loop instead of `New message` loop
 
 - <details><summary>Updated dependencies [48d1442a07e860fefd6991c97e94d6a9de345afe, 74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
   - @rocket.chat/rest-typings@7.12.0-rc.0
@@ -715,11 +715,11 @@
 
 ### Minor Changes
 
-- ([#36397](https://github.com/RocketChat/Rocket.Chat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
+- ([#36397](https://github.com/YasChat/YasChat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
 
 ### Patch Changes
 
-- ([#36919](https://github.com/RocketChat/Rocket.Chat/pull/36919)) Show iframe authentication page, when login through iframe authentication API token fails
+- ([#36919](https://github.com/YasChat/YasChat/pull/36919)) Show iframe authentication page, when login through iframe authentication API token fails
 
 - <details><summary>Updated dependencies [d76a5578ed0e14fae2a041c0e09d565b28630d76, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 276c270f34293729182e9ebab61e1ff2c35398fc, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/rest-typings@7.11.0
@@ -809,11 +809,11 @@
 
 ### Minor Changes
 
-- ([#36397](https://github.com/RocketChat/Rocket.Chat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
+- ([#36397](https://github.com/YasChat/YasChat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
 
 ### Patch Changes
 
-- ([#36919](https://github.com/RocketChat/Rocket.Chat/pull/36919)) Show iframe authentication page, when login through iframe authentication API token fails
+- ([#36919](https://github.com/YasChat/YasChat/pull/36919)) Show iframe authentication page, when login through iframe authentication API token fails
 
 - <details><summary>Updated dependencies [d76a5578ed0e14fae2a041c0e09d565b28630d76, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 276c270f34293729182e9ebab61e1ff2c35398fc, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/rest-typings@7.11.0-rc.0
@@ -848,7 +848,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -928,7 +928,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1321,11 +1321,11 @@
 
 ### Minor Changes
 
-- ([#35218](https://github.com/RocketChat/Rocket.Chat/pull/35218)) Adds a new admin page to audit settings changes in a server
+- ([#35218](https://github.com/YasChat/YasChat/pull/35218)) Adds a new admin page to audit settings changes in a server
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
-- ([#35807](https://github.com/RocketChat/Rocket.Chat/pull/35807)) Moves the room search functionality from the sidebar to the navbar and reorganize their relative actions
+- ([#35807](https://github.com/YasChat/YasChat/pull/35807)) Moves the room search functionality from the sidebar to the navbar and reorganize their relative actions
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1430,11 +1430,11 @@
 
 ### Minor Changes
 
-- ([#35218](https://github.com/RocketChat/Rocket.Chat/pull/35218)) Adds a new admin page to audit settings changes in a server
+- ([#35218](https://github.com/YasChat/YasChat/pull/35218)) Adds a new admin page to audit settings changes in a server
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
-- ([#35807](https://github.com/RocketChat/Rocket.Chat/pull/35807)) Moves the room search functionality from the sidebar to the navbar and reorganize their relative actions
+- ([#35807](https://github.com/YasChat/YasChat/pull/35807)) Moves the room search functionality from the sidebar to the navbar and reorganize their relative actions
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1462,7 +1462,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [4ce00382e9877c4d9241747fdd4f4223d70b58a7, 280fcce8488475298ccd3ae4dd7ded29a32d8a4b, a0c5f3901df223f9403bef2b2a4ad5d24e843339, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, cc4111cf0b1458dd97369baf8969734f337650dc, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f]:</summary>
   - @rocket.chat/rest-typings@7.5.0
@@ -1531,7 +1531,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [4ce00382e9877c4d9241747fdd4f4223d70b58a7, 280fcce8488475298ccd3ae4dd7ded29a32d8a4b, a0c5f3901df223f9403bef2b2a4ad5d24e843339, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f]:</summary>
   - @rocket.chat/rest-typings@7.5.0-rc.0
@@ -1667,7 +1667,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c8e8518011b8b7d318a2bb2f26b897b196421d76, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11, 3c237b25b27782db2e54c4c294140b1c8cd9b31a, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/i18n@1.3.0
@@ -1736,7 +1736,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c8e8518011b8b7d318a2bb2f26b897b196421d76, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, 3c237b25b27782db2e54c4c294140b1c8cd9b31a, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/i18n@1.3.0-rc.0
@@ -1761,13 +1761,13 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f23e71166a2dfee0e3394e49cac95c48e5eb62e5, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f90b1c99bdf4d89350a70c9ef4c2d12ed3784fd8, a129e3e1c9ba5930906ef609d7573e5708d336f0, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 2d41274ae21ec51e7382da92e2f4e0c36186f814, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/rest-typings@7.2.0
@@ -1792,7 +1792,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@7.2.0-rc.2
@@ -1816,11 +1816,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f23e71166a2dfee0e3394e49cac95c48e5eb62e5, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f90b1c99bdf4d89350a70c9ef4c2d12ed3784fd8, a129e3e1c9ba5930906ef609d7573e5708d336f0, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 2d41274ae21ec51e7382da92e2f4e0c36186f814, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/rest-typings@7.2.0-rc.0
@@ -2195,12 +2195,12 @@
 
 ### Minor Changes
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [b4bbcbfc9a, 25da5280a5, 1b7b1161cf, 03c8b066f9, 2d89a0c448, 24f7df4894, 3ffe4a2944, 3b4b19cfc5, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/i18n@0.6.0
@@ -2280,12 +2280,12 @@
 
 ### Minor Changes
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [b4bbcbfc9a, 25da5280a5, 1b7b1161cf, 03c8b066f9, 2d89a0c448, 24f7df4894, 3ffe4a2944, 3b4b19cfc5, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/i18n@0.6.0-rc.0
@@ -2321,7 +2321,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2414,7 +2414,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2507,7 +2507,7 @@
 
 ### Minor Changes
 
-- ([#32073](https://github.com/RocketChat/Rocket.Chat/pull/32073)) Fixed an issue affecting the update modal/contextual bar by apps when it comes to error handling and regular surface update
+- ([#32073](https://github.com/YasChat/YasChat/pull/32073)) Fixed an issue affecting the update modal/contextual bar by apps when it comes to error handling and regular surface update
 
 ### Patch Changes
 
@@ -2545,7 +2545,7 @@
 
 ### Minor Changes
 
-- ([#32073](https://github.com/RocketChat/Rocket.Chat/pull/32073)) Fixed an issue affecting the update modal/contextual bar by apps when it comes to error handling and regular surface update
+- ([#32073](https://github.com/YasChat/YasChat/pull/32073)) Fixed an issue affecting the update modal/contextual bar by apps when it comes to error handling and regular surface update
 
 ### Patch Changes
 
@@ -2715,11 +2715,11 @@
 
 ### Minor Changes
 
-- ([#31184](https://github.com/RocketChat/Rocket.Chat/pull/31184)) Add the possibility to hide some elements through postMessage events.
+- ([#31184](https://github.com/YasChat/YasChat/pull/31184)) Add the possibility to hide some elements through postMessage events.
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, 97cd497e5e, 748e57984d, 7c6198f49f, fdd9852079, 2260c04ec6, b4b2cd20a8]:</summary>
   - @rocket.chat/password-policies@0.0.2

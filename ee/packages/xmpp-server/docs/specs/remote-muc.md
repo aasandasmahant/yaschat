@@ -31,13 +31,13 @@ tests:
 
 ## Summary
 
-A room hosted on another XMPP server is mirrored into Rocket.Chat as a channel after a
+A room hosted on another XMPP server is mirrored into YasChat as a channel after a
 remote user invites a local user. Each local member of the mirrored channel is joined into
 the remote room as their own occupant, and messages flow both ways.
 
 ## Motivation
 
-The other half of group chat: Rocket.Chat users taking part in rooms the rest of the XMPP
+The other half of group chat: YasChat users taking part in rooms the rest of the XMPP
 network already uses. Entry is by invitation only ([ADR 0008](../adr/0008-only-dedicated-xmpp-rooms-are-exposed.md)).
 
 ## Behaviour
@@ -72,7 +72,7 @@ network already uses. Entry is by invitation only ([ADR 0008](../adr/0008-only-d
   never locks it, so an invitation creates it, and its members write to it, while
   enforcement is on.
 - **R2** The invitee is then joined into the remote room with their own session: occupant
-  JID `<username>@<domain>/rocketchat`, nick `<username>`
+  JID `<username>@<domain>/yaschat`, nick `<username>`
   ([ADR 0009](../adr/0009-one-remote-muc-session-per-local-member.md)).
 - **R3** Every local member added to the mirrored channel later is joined the same way; a
   member who leaves or is removed leaves the remote room.
@@ -104,7 +104,7 @@ network already uses. Entry is by invitation only ([ADR 0008](../adr/0008-only-d
   Edits are sent as corrections ([message-corrections](message-corrections.md)).
 - **R9** The room's reflection of our own message is not stored again: the session skips its
   own nick, and the service skips a message whose replace id or sender-given id is a stored
-  Rocket.Chat message id ([message-deduplication R3](message-deduplication.md)).
+  YasChat message id ([message-deduplication R3](message-deduplication.md)).
 - **R10** The discussion history the room replays on join is stored like any other message
   and deduplicated by R7, which is how messages sent while the service was down are caught
   up. In decode-only mode no history is requested.
@@ -133,13 +133,13 @@ others, and puts the normalized bare JID in `muc.remoteMessage` as `fromJid`, le
 JIDs on its own domains (R6). The service creates the shadow room on invite, joins and
 leaves on membership hooks, rejoins on start, and persists `muc.remoteMessage`, upserting
 the author from `fromJid` or the per-room key and subscribing them to the channel first,
-since Rocket.Chat only stores a message in a private group from a member. Copies delivered
+since YasChat only stores a message in a private group from a member. Copies delivered
 by several sessions race to subscribe the same author; the loser finds the subscription
 the winner created (R12).
 
 ## Out of scope
 
-- Joining or searching a remote room from the Rocket.Chat UI; bookmarks (XEP-0048, XEP-0402).
+- Joining or searching a remote room from the YasChat UI; bookmarks (XEP-0048, XEP-0402).
 - Mirroring who is in the remote room (occupants, XEP-0045 §4.1) or the room's member list
   (affiliations, §5.2) into the mirrored channel's membership. Occupancy changes with every
   client disconnect, and the member list is an admin request (§9.5) that semi-anonymous
@@ -153,7 +153,7 @@ the winner created (R12).
   not trusted; history from an occupant who has left gets the per-room record.
 - Reconnecting a session the room dropped: `muc.remoteSessionLost` is declared but never
   emitted.
-- Direct invitations sent by Rocket.Chat; the hosted-room side sends mediated invites only.
+- Direct invitations sent by YasChat; the hosted-room side sends mediated invites only.
 - A channel-name validation setting stricter than R1's character set: the channel cannot
   be created and the invitation is dropped.
 - Full RFC 7622 PRECIS for room localparts: R1 lowercases, nothing more.

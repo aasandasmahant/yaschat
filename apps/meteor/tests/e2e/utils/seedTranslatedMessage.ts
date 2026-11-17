@@ -18,7 +18,7 @@ export const seedTranslatedMessage = async ({ rid, msg, author, translations }: 
 	try {
 		await connection
 			.db()
-			.collection('rocketchat_message')
+			.collection('yaschat_message')
 			.updateOne({ rid, msg }, { $set: { u: { _id: author.data._id, username: author.data.username }, translations } });
 	} finally {
 		await connection.close();

@@ -5,7 +5,7 @@ import type { IModifyUpdater } from '@rocket.chat/apps-engine/definition/accesso
 import type { IRoomBuilder } from '@rocket.chat/apps-engine/definition/accessors/IRoomBuilder';
 import type { IUserUpdater } from '@rocket.chat/apps-engine/definition/accessors/IUserUpdater';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType.js';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
@@ -65,9 +65,9 @@ export class ModifyUpdater implements IModifyUpdater {
 
 	public finish(builder: IMessageBuilder | IRoomBuilder): Promise<void> {
 		switch (builder.kind) {
-			case RocketChatAssociationModel.MESSAGE:
+			case YasChatAssociationModel.MESSAGE:
 				return this._finishMessage(builder as MessageBuilder);
-			case RocketChatAssociationModel.ROOM:
+			case YasChatAssociationModel.ROOM:
 				return this._finishRoom(builder as RoomBuilder);
 			default:
 				throw new Error('Invalid builder passed to the ModifyUpdater.finish function.');

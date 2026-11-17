@@ -15,15 +15,15 @@ const mountOpenCall = (conferenceWindowEnabled = false) => {
 	return (url: string, providerName?: string) => act(() => void result.current(url, providerName));
 };
 
-describe('with window.RocketChatDesktop set', () => {
+describe('with window.YasChatDesktop set', () => {
 	beforeEach(() => {
-		window.RocketChatDesktop = {
+		window.YasChatDesktop = {
 			openInternalVideoChatWindow: jest.fn(),
 		} as any;
 	});
 
 	afterAll(() => {
-		delete window.RocketChatDesktop;
+		delete window.YasChatDesktop;
 	});
 
 	it('should pass to videoConfOpenCall the url', async () => {
@@ -31,7 +31,7 @@ describe('with window.RocketChatDesktop set', () => {
 
 		mountOpenCall()(url);
 
-		expect(window.RocketChatDesktop?.openInternalVideoChatWindow).toHaveBeenCalledWith(url, { providerName: undefined });
+		expect(window.YasChatDesktop?.openInternalVideoChatWindow).toHaveBeenCalledWith(url, { providerName: undefined });
 	});
 
 	it('should pass to videoConfOpenCall the url and the providerName', async () => {
@@ -40,7 +40,7 @@ describe('with window.RocketChatDesktop set', () => {
 
 		mountOpenCall()(url, providerName);
 
-		expect(window.RocketChatDesktop?.openInternalVideoChatWindow).toHaveBeenCalledWith(url, {
+		expect(window.YasChatDesktop?.openInternalVideoChatWindow).toHaveBeenCalledWith(url, {
 			providerName,
 		});
 	});
@@ -252,7 +252,7 @@ describe('with the call window, for an in-product conference URL', () => {
 
 		mountOpenCall(true)(url);
 
-		expect(window.open).toHaveBeenCalledWith(url, 'rocketchat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenCalledWith(url, 'yaschat-conference', expect.stringContaining('popup=yes'));
 	});
 
 	it('should focus the existing window without reloading or resizing it when the same conference is reopened', async () => {
@@ -266,7 +266,7 @@ describe('with the call window, for an in-product conference URL', () => {
 		openCall(url);
 
 		// Empty URL means "don't navigate", and no features means the user's window stays where they put it.
-		expect(window.open).toHaveBeenCalledWith('', 'rocketchat-conference');
+		expect(window.open).toHaveBeenCalledWith('', 'yaschat-conference');
 	});
 
 	// A conference the user is about to *start* is identified by the room in its query string, so two of those
@@ -282,7 +282,7 @@ describe('with the call window, for an in-product conference URL', () => {
 
 		openCall(second);
 
-		expect(window.open).toHaveBeenCalledWith(second, 'rocketchat-conference', expect.any(String));
+		expect(window.open).toHaveBeenCalledWith(second, 'yaschat-conference', expect.any(String));
 	});
 
 	it('should navigate the shared window when a different conference is requested', async () => {
@@ -296,7 +296,7 @@ describe('with the call window, for an in-product conference URL', () => {
 		const second = conferenceUrl();
 		openCall(second);
 
-		expect(window.open).toHaveBeenCalledWith(second, 'rocketchat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenCalledWith(second, 'yaschat-conference', expect.stringContaining('popup=yes'));
 	});
 
 	it('should re-open the conference once its window has been closed', async () => {
@@ -309,7 +309,7 @@ describe('with the call window, for an in-product conference URL', () => {
 
 		openCall(url);
 
-		expect(window.open).toHaveBeenCalledWith(url, 'rocketchat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenCalledWith(url, 'yaschat-conference', expect.stringContaining('popup=yes'));
 	});
 
 	it('should fall back to a tab in the shared window when the popout is blocked', async () => {
@@ -321,8 +321,8 @@ describe('with the call window, for an in-product conference URL', () => {
 
 		mountOpenCall(true)(url);
 
-		expect(window.open).toHaveBeenNthCalledWith(1, url, 'rocketchat-conference', expect.stringContaining('popup=yes'));
-		expect(window.open).toHaveBeenNthCalledWith(2, url, 'rocketchat-conference');
+		expect(window.open).toHaveBeenNthCalledWith(1, url, 'yaschat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenNthCalledWith(2, url, 'yaschat-conference');
 	});
 });
 
@@ -375,8 +375,8 @@ describe('with the call window, from a page that never held a handle on it', () 
 
 		mountOnFreshPage()(url);
 
-		expect(window.open).toHaveBeenNthCalledWith(1, '', 'rocketchat-conference', expect.stringContaining('popup=yes'));
-		expect(window.open).toHaveBeenLastCalledWith('', 'rocketchat-conference');
+		expect(window.open).toHaveBeenNthCalledWith(1, '', 'yaschat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenLastCalledWith('', 'yaschat-conference');
 		expect((window.open as jest.Mock).mock.calls.some(([target]) => target === url)).toBe(false);
 	});
 
@@ -385,7 +385,7 @@ describe('with the call window, from a page that never held a handle on it', () 
 
 		mountOnFreshPage()(url);
 
-		expect(window.open).toHaveBeenLastCalledWith(url, 'rocketchat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenLastCalledWith(url, 'yaschat-conference', expect.stringContaining('popup=yes'));
 	});
 
 	it('should send the blank window the lookup opened to the conference when there was none', async () => {
@@ -393,6 +393,6 @@ describe('with the call window, from a page that never held a handle on it', () 
 
 		mountOnFreshPage()(url);
 
-		expect(window.open).toHaveBeenLastCalledWith(url, 'rocketchat-conference', expect.stringContaining('popup=yes'));
+		expect(window.open).toHaveBeenLastCalledWith(url, 'yaschat-conference', expect.stringContaining('popup=yes'));
 	});
 });

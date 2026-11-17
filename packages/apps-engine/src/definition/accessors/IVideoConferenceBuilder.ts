@@ -1,8 +1,8 @@
-import type { RocketChatAssociationModel } from '../metadata';
+import type { YasChatAssociationModel } from '../metadata';
 import type { AppVideoConference } from '../videoConferences';
 
 export interface IVideoConferenceBuilder {
-	kind: RocketChatAssociationModel.VIDEO_CONFERENCE;
+	kind: YasChatAssociationModel.VIDEO_CONFERENCE;
 
 	setData(call: Partial<AppVideoConference>): IVideoConferenceBuilder;
 

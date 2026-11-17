@@ -50,7 +50,7 @@ const namesake = {
 
 	const expectStoredRemoteName = async (expectedName: string) =>
 		retry(
-			`waiting for Rocket.Chat to store "${expectedName}" as the remote user's name`,
+			`waiting for YasChat to store "${expectedName}" as the remote user's name`,
 			async () => {
 				const response = await rc1AdminRequestConfig.request
 					.get(api('users.info'))
@@ -121,7 +121,7 @@ const namesake = {
 
 		hs1UserApp = new SynapseClient(federationConfig.hs1.url, remoteUser.username, remoteUser.password);
 		await hs1UserApp.initialize();
-		// set before the invite below, so the membership event Rocket.Chat receives already carries it
+		// set before the invite below, so the membership event YasChat receives already carries it
 		await hs1UserApp.matrixClient.setDisplayName(REMOTE_DISPLAY_NAME);
 
 		const channelName = `fed-typing-${stamp}`;

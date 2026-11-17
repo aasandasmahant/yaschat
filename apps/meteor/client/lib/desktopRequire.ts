@@ -1,12 +1,12 @@
-// Rocket.Chat Desktop 4.18 and older reload the workspace when `window.require` cannot give them the server version.
+// YasChat Desktop 4.18 and older reload the workspace when `window.require` cannot give them the server version.
 // The client is not built by Meteor, so neither Meteor's `window.require`, when the server page still loads it, nor
 // the absence of one knows that module: this answers it and leaves every other id to the existing require.
-const desktopModuleIds = new Set(['/rocketchat.info', '/app/utils/rocketchat.info']);
+const desktopModuleIds = new Set(['/yaschat.info', '/app/utils/yaschat.info']);
 
-export type DesktopWindow = Pick<Window, 'RocketChatDesktop'> & { require?: (id: string) => unknown };
+export type DesktopWindow = Pick<Window, 'YasChatDesktop'> & { require?: (id: string) => unknown };
 
 export const installDesktopRequire = (target: DesktopWindow, info: Record<string, unknown>): void => {
-	if (!target.RocketChatDesktop) {
+	if (!target.YasChatDesktop) {
 		return;
 	}
 

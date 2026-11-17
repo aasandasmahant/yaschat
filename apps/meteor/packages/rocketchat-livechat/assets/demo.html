@@ -3,7 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	</head>
 
-	<!-- Access: http://localhost:3000/packages/rocketchat_livechat/assets/demo.html -->
+	<!-- Access: http://localhost:3000/packages/yaschat_livechat/assets/demo.html -->
 
 	<body style="background-color: #efefef">
 		<h1 style="color: #000">test</h1>
@@ -23,15 +23,15 @@
 
 		<script type="text/javascript">
 			(function (w, d, s, u) {
-				w.RocketChat = function (c) {
-					w.RocketChat._.push(c);
+				w.YasChat = function (c) {
+					w.YasChat._.push(c);
 				};
-				w.RocketChat._ = [];
-				w.RocketChat.url = u;
+				w.YasChat._ = [];
+				w.YasChat.url = u;
 				var h = d.getElementsByTagName(s)[0],
 					j = d.createElement(s);
 				j.async = true;
-				j.src = `${window.location.origin}/livechat/rocketchat-livechat.min.js?_=201903270000`;
+				j.src = `${window.location.origin}/livechat/yaschat-livechat.min.js?_=201903270000`;
 				h.parentNode.insertBefore(j, h);
 			})(window, document, 'script', `${window.location.origin}/livechat`);
 		</script>

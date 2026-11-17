@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, RocketChatRecordDeleted, LivechatDepartmentDTO } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment, YasChatRecordDeleted, LivechatDepartmentDTO } from '@rocket.chat/core-typings';
 import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import { LivechatDepartmentRaw } from '@rocket.chat/models';
 import type { Collection, Document, FindCursor, FindOptions, UpdateResult, Db, AggregationCursor } from 'mongodb';
@@ -17,7 +17,7 @@ declare module '@rocket.chat/model-typings' {
 }
 
 export class LivechatDepartmentEE extends LivechatDepartmentRaw implements ILivechatDepartmentModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatDepartment>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatDepartment>>) {
 		super(db, trash);
 	}
 
@@ -73,7 +73,7 @@ export class LivechatDepartmentEE extends LivechatDepartmentRaw implements ILive
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_livechat_department_agents',
+					from: 'yaschat_livechat_department_agents',
 					localField: '_id',
 					foreignField: 'departmentId',
 					as: 'agents',

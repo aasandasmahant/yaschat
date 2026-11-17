@@ -7,7 +7,7 @@ import {
 	validateBadRequestErrorResponse,
 } from '@rocket.chat/rest-typings';
 
-import { RocketChatAssets, refreshClients } from '../../lib/media/assets';
+import { YasChatAssets, refreshClients } from '../../lib/media/assets';
 import { notifyOnSettingChangedById } from '../../lib/notifyListener';
 import { settings } from '../../settings';
 import { updateAuditedByUser } from '../../settings/lib/auditedSettingUpdates';
@@ -46,14 +46,14 @@ API.v1.post(
 		const { refreshAllClients, assetName: customName } = fields;
 
 		const assetName = customName || filename;
-		const assetsKeys = Object.keys(RocketChatAssets.assets);
+		const assetsKeys = Object.keys(YasChatAssets.assets);
 
 		const isValidAsset = assetsKeys.includes(assetName);
 		if (!isValidAsset) {
 			throw new Error('Invalid asset');
 		}
 
-		const { key, value } = await RocketChatAssets.setAssetWithBuffer(fileBuffer, mimetype, assetName);
+		const { key, value } = await YasChatAssets.setAssetWithBuffer(fileBuffer, mimetype, assetName);
 
 		const { modifiedCount } = await updateAuditedByUser({
 			_id: this.userId,
@@ -89,12 +89,12 @@ API.v1.post(
 	},
 	async function action() {
 		const { assetName, refreshAllClients } = this.bodyParams;
-		const isValidAsset = Object.keys(RocketChatAssets.assets).includes(assetName);
+		const isValidAsset = Object.keys(YasChatAssets.assets).includes(assetName);
 		if (!isValidAsset) {
 			throw Error('Invalid asset');
 		}
 
-		const { key, value } = await RocketChatAssets.unsetAsset(assetName);
+		const { key, value } = await YasChatAssets.unsetAsset(assetName);
 
 		const { modifiedCount } = await updateAuditedByUser({
 			_id: this.userId,

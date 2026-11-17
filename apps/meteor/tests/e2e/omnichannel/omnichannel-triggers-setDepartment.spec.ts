@@ -8,7 +8,7 @@ import { addAgentToDepartment, createDepartment } from '../utils/omnichannel/dep
 import { test, expect } from '../utils/test';
 
 declare const window: Window & {
-	RocketChat: { livechat: { setDepartment: (dep: string) => void; maximizeWidget: () => void } };
+	YasChat: { livechat: { setDepartment: (dep: string) => void; maximizeWidget: () => void } };
 };
 
 test.use({ storageState: Users.admin.state });
@@ -101,7 +101,7 @@ test.describe('OC - Livechat Triggers - SetDepartment', () => {
 
 		const depId = departmentB._id;
 
-		await poLiveChat.page.evaluate((depId) => window.RocketChat.livechat.setDepartment(depId), depId);
+		await poLiveChat.page.evaluate((depId) => window.YasChat.livechat.setDepartment(depId), depId);
 
 		await poLiveChat.openLiveChat();
 
@@ -117,7 +117,7 @@ test.describe('OC - Livechat Triggers - SetDepartment', () => {
 
 		const depId = departmentB._id;
 
-		await poLiveChat.page.evaluate((depId) => window.RocketChat.livechat.setDepartment(depId), depId);
+		await poLiveChat.page.evaluate((depId) => window.YasChat.livechat.setDepartment(depId), depId);
 
 		await poLiveChat.openLiveChat();
 

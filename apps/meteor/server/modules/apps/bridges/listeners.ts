@@ -256,14 +256,14 @@ export class AppListenerBridge {
 		if (typeof content === 'string') {
 			// If content is a string, we assume it's a path and create a symlink to avoid file duplication
 			await fs.promises.symlink(content, tmpfile, 'file').catch((err) => {
-				this.orch.getRocketChatLogger().error({ msg: `AppListenerBridge: Could not create symlink at ${tmpfile}`, err });
+				this.orch.getYasChatLogger().error({ msg: `AppListenerBridge: Could not create symlink at ${tmpfile}`, err });
 
 				throw new Error('Error sending file to apps', { cause: err });
 			});
 		} else {
 			// Otherwise, we write the buffer content to a temporary file
 			await fs.promises.writeFile(tmpfile, content).catch((err) => {
-				this.orch.getRocketChatLogger().error({ msg: `AppListenerBridge: Could not write temporary file at ${tmpfile}`, err });
+				this.orch.getYasChatLogger().error({ msg: `AppListenerBridge: Could not write temporary file at ${tmpfile}`, err });
 
 				throw new Error('Error sending file to apps', { cause: err });
 			});
@@ -288,7 +288,7 @@ export class AppListenerBridge {
 			await fs.promises
 				.unlink(tmpfile)
 				.catch((err) =>
-					this.orch.getRocketChatLogger().warn({ msg: `AppListenerBridge: Could not delete temporary file at ${tmpfile}`, err }),
+					this.orch.getYasChatLogger().warn({ msg: `AppListenerBridge: Could not delete temporary file at ${tmpfile}`, err }),
 				);
 		}
 	}

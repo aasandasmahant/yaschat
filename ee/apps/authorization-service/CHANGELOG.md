@@ -72,7 +72,7 @@
 
 ### Patch Changes
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
   - @rocket.chat/rest-typings@8.8.0
@@ -89,7 +89,7 @@
 
 ### Patch Changes
 
-- ([#41763](https://github.com/RocketChat/Rocket.Chat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
 
 - <details><summary>Updated dependencies [097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
   - @rocket.chat/rest-typings@8.8.0-rc.0
@@ -107,7 +107,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -126,7 +126,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -205,7 +205,7 @@
 
 ### Minor Changes
 
-- ([#39845](https://github.com/RocketChat/Rocket.Chat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
+- ([#39845](https://github.com/YasChat/YasChat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
 
 ### Patch Changes
 
@@ -284,7 +284,7 @@
 
 ### Minor Changes
 
-- ([#39845](https://github.com/RocketChat/Rocket.Chat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
+- ([#39845](https://github.com/YasChat/YasChat/pull/39845)) Adds support for setting up Virtru as a PDP (Policy Decision Point) for ABAC.
 
 ### Patch Changes
 
@@ -303,7 +303,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2
@@ -382,7 +382,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/model-typings@2.1.2-rc.0
@@ -566,7 +566,7 @@
 
 ### Minor Changes
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ### Patch Changes
 
@@ -661,7 +661,7 @@
 
 ### Minor Changes
 
-- ([#37091](https://github.com/RocketChat/Rocket.Chat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
+- ([#37091](https://github.com/YasChat/YasChat/pull/37091)) Adds Attribute Based Access Control (ABAC) for private channels & private teams.
 
 ### Patch Changes
 
@@ -1886,9 +1886,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#35181](https://github.com/RocketChat/Rocket.Chat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
+- ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0
@@ -1973,9 +1973,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#35181](https://github.com/RocketChat/Rocket.Chat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
+- ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dee90e0791de41997e6df6149c4fe07d3a12c003, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/rest-typings@7.4.0-rc.0
@@ -2032,7 +2032,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/model-typings@1.3.0
@@ -2118,7 +2118,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
   - @rocket.chat/model-typings@1.3.0-rc.0
@@ -2148,7 +2148,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, c43220dcd8c1df86a6143d6553964ad2173903b3, 47f24c2fb795eee33cb021d56508298b8a548eec, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/rest-typings@7.2.0
@@ -2178,7 +2178,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
   - @rocket.chat/models@1.1.0-rc.2
@@ -2222,7 +2222,7 @@
 
 ### Patch Changes
 
-- ([#33596](https://github.com/RocketChat/Rocket.Chat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
+- ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
   - @rocket.chat/model-typings@1.1.0
@@ -2280,7 +2280,7 @@
 
 ### Patch Changes
 
-- ([#33596](https://github.com/RocketChat/Rocket.Chat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
+- ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
   - @rocket.chat/model-typings@1.1.0-rc.0
@@ -2785,7 +2785,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2899,7 +2899,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -3231,7 +3231,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fae558bd5d, 748e57984d, 7c6198f49f, 9a6e9b4e28, fdd9852079, 2260c04ec6, c8ab6583dc, e7d3cdeef0, b4b2cd20a8]:</summary>
   - @rocket.chat/core-services@0.3.4

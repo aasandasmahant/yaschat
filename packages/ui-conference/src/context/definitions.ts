@@ -93,7 +93,7 @@ export type ConferenceRoom = {
 export type ConferenceSession = {
 	/** Where the provider runs the call, for a provider that runs it at an address of its own. */
 	url?: string;
-	/** A provider that runs the call inside Rocket.Chat rather than at a URL of its own — so having no `url` is its answer, not a failure. */
+	/** A provider that runs the call inside YasChat rather than at a URL of its own — so having no `url` is its answer, not a failure. */
 	embedded: boolean;
 	/**
 	 * Whether *this window* has joined — which is to say, whether it holds a session to render. Deliberately not

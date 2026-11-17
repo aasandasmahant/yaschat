@@ -2,11 +2,11 @@
 	"name": "@rocket.chat/xmpp-server-service",
 	"version": "0.2.0",
 	"private": true,
-	"description": "Rocket.Chat native XMPP server service",
+	"description": "YasChat native XMPP server service",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/ee/apps/xmpp-server-service/src/service.js",
 	"files": [
 		"/dist"

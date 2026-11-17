@@ -24,7 +24,7 @@ export type InboundStats = {
 	rssBytes: number;
 };
 
-/** Metrics that tell whether Rocket.Chat-side handling keeps up with inbound XMPP traffic. */
+/** Metrics that tell whether YasChat-side handling keeps up with inbound XMPP traffic. */
 export function createInboundMetrics({ decodeOnly }: { decodeOnly: boolean }) {
 	const registry = new Registry();
 	collectDefaultMetrics({ register: registry });
@@ -50,21 +50,21 @@ export function createInboundMetrics({ decodeOnly }: { decodeOnly: boolean }) {
 
 	const inflight = new Gauge({
 		name: 'xmpp_handler_inflight',
-		help: 'Inbound XMPP events whose Rocket.Chat handling has started but not settled',
+		help: 'Inbound XMPP events whose YasChat handling has started but not settled',
 		labelNames: ['event'],
 		registers: [registry],
 	});
 
 	const completed = new Counter({
 		name: 'xmpp_handler_completed_total',
-		help: 'Inbound XMPP events whose Rocket.Chat handling settled',
+		help: 'Inbound XMPP events whose YasChat handling settled',
 		labelNames: ['event', 'outcome'],
 		registers: [registry],
 	});
 
 	const duration = new Histogram({
 		name: 'xmpp_handler_duration_seconds',
-		help: 'Time from decoding an inbound XMPP event to its Rocket.Chat handling settling',
+		help: 'Time from decoding an inbound XMPP event to its YasChat handling settling',
 		labelNames: ['event'],
 		buckets: DURATION_BUCKETS,
 		registers: [registry],

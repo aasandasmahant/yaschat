@@ -1,6 +1,6 @@
 # SlackBridge Manual Test Plan
 
-The SlackBridge is a bi-directional bridge between a Rocket.Chat workspace and one or more Slack
+The SlackBridge is a bi-directional bridge between a YasChat workspace and one or more Slack
 workspaces — each token line in the SlackBridge settings gets its own connection and adapter. It
 has no automated end-to-end coverage: exercising it requires a real Slack workspace, a real bot
 installation, and a human watching both sides at once. This document is the checklist to walk
@@ -11,7 +11,7 @@ token per setting while running them. Bridging several workspaces at once is a s
 configuration that this plan does not cover; see [Coverage gaps](#coverage-gaps).
 
 Code lives in [apps/meteor/server/bridges/slack/](../../apps/meteor/server/bridges/slack/) —
-`SlackAdapter.ts` handles Slack → Rocket.Chat, `RocketAdapter.ts` handles Rocket.Chat → Slack
+`SlackAdapter.ts` handles Slack → YasChat, `RocketAdapter.ts` handles YasChat → Slack
 (hooked in through the `afterSaveMessage`, `afterDeleteMessage`, `afterSetReaction` and
 `afterUnsetReaction` callbacks). Settings are declared in
 [apps/meteor/server/settings/slackbridge.ts](../../apps/meteor/server/settings/slackbridge.ts).
@@ -26,10 +26,10 @@ Configure the bridge in **Admin → Settings → SlackBridge**:
 | `SlackBridge_UseLegacy`                                                     | Chooses the connection mode — see below. Run the matrices in the mode you are testing.      |
 | `SlackBridge_APIToken`                                                      | Legacy mode only (RTM).                                                                     |
 | `SlackBridge_BotToken`, `SlackBridge_SigningSecret`, `SlackBridge_AppToken` | App mode only (Bolt / Socket Mode).                                                         |
-| `SlackBridge_Out_Enabled`                                                   | Required for anything to flow Rocket.Chat → Slack.                                          |
-| `SlackBridge_Out_All` / `SlackBridge_Out_Channels`                          | Which Rocket.Chat rooms are bridged out.                                                    |
+| `SlackBridge_Out_Enabled`                                                   | Required for anything to flow YasChat → Slack.                                          |
+| `SlackBridge_Out_All` / `SlackBridge_Out_Channels`                          | Which YasChat rooms are bridged out.                                                    |
 | `SlackBridge_Reactions_Enabled`                                             | Gates reaction propagation in both directions.                                              |
-| `SlackBridge_AliasFormat`                                                   | Optional, Slack → Rocket.Chat only. `%s` is the Slack username; test with `%s (via Slack)`. |
+| `SlackBridge_AliasFormat`                                                   | Optional, Slack → YasChat only. `%s` is the Slack username; test with `%s (via Slack)`. |
 | `SlackBridge_FileUpload_Enabled`                                            | Gates file transfer.                                                                        |
 
 Two connection modes exist and they use different Slack event plumbing, so a regression can
@@ -63,10 +63,10 @@ failures are only visible there.
 
 | #   | Origin      | Action performed on | Expected result                                                                                         |
 | --- | ----------- | ------------------- | ------------------------------------------------------------------------------------------------------- |
-| 1   | Slack       | Slack               | Message appears in the linked Rocket.Chat room, under the alias `SlackBridge_AliasFormat` produces.     |
-| 2   | Rocket.Chat | Rocket.Chat         | Message appears in the linked Slack channel, posted by rocketbot with the sender's username and avatar. |
+| 1   | Slack       | Slack               | Message appears in the linked YasChat room, under the alias `SlackBridge_AliasFormat` produces.     |
+| 2   | YasChat | YasChat         | Message appears in the linked Slack channel, posted by rocketbot with the sender's username and avatar. |
 
-`SlackBridge_AliasFormat` only affects case 1: `addAliasToMsg` sets `alias` on the **Rocket.Chat**
+`SlackBridge_AliasFormat` only affects case 1: `addAliasToMsg` sets `alias` on the **YasChat**
 message, so with `%s (via Slack)` a message from Slack user `alice` shows as `alice (via Slack)`.
 Case 2 carries the sender's identity through `chat.postMessage`'s `username`/`icon_url` and ignores
 the setting entirely. Set the format, run case 1 with it set and again with it empty, then **restore
@@ -82,16 +82,16 @@ because "nothing crashes and the local side stays consistent" is the requirement
 
 | #   | Origin      | Action performed on | Expected result                                                                                                                       |
 | --- | ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Slack       | Slack               | Edit propagates to Rocket.Chat.                                                                                                       |
-| 2   | Rocket.Chat | Rocket.Chat         | Edit propagates to Slack.                                                                                                             |
-| 3   | Slack       | Rocket.Chat         | **Expected failure.** Rocket.Chat shows the edit; Slack is unchanged. `chat.update` is rejected because the message is not the bot's. |
-| 4   | Rocket.Chat | Slack               | **Expected failure.** Slack does not even offer the edit affordance for a bot message.                                                |
+| 1   | Slack       | Slack               | Edit propagates to YasChat.                                                                                                       |
+| 2   | YasChat | YasChat         | Edit propagates to Slack.                                                                                                             |
+| 3   | Slack       | YasChat         | **Expected failure.** YasChat shows the edit; Slack is unchanged. `chat.update` is rejected because the message is not the bot's. |
+| 4   | YasChat | Slack               | **Expected failure.** Slack does not even offer the edit affordance for a bot message.                                                |
 
 Repeat on a channel without rocketbot: edits stay local on both sides.
 
 ## Deleting messages
 
-Case 3 needs care about _who_ deletes. A Rocket.Chat-origin message is authored on Slack by
+Case 3 needs care about _who_ deletes. A YasChat-origin message is authored on Slack by
 rocketbot, and Slack offers no delete affordance for an app's message to a regular member, so
 pick one of:
 
@@ -106,25 +106,25 @@ Both routes emit the same `message_deleted` event, so either is a valid way to r
 
 | #   | Origin      | Action performed on | Expected result                                                                                                                             |
 | --- | ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Slack       | Slack               | Deletion propagates to Rocket.Chat.                                                                                                         |
-| 2   | Rocket.Chat | Rocket.Chat         | Deletion propagates to Slack.                                                                                                               |
-| 3   | Rocket.Chat | Slack               | Deletion propagates to Rocket.Chat — deleted as a workspace admin or via `chat.delete` with rocketbot's own token, per the note above.      |
-| 4   | Slack       | Rocket.Chat         | **Expected failure.** The message is deleted in Rocket.Chat only; Slack keeps it, since `chat.delete` cannot remove another user's message. |
+| 1   | Slack       | Slack               | Deletion propagates to YasChat.                                                                                                         |
+| 2   | YasChat | YasChat         | Deletion propagates to Slack.                                                                                                               |
+| 3   | YasChat | Slack               | Deletion propagates to YasChat — deleted as a workspace admin or via `chat.delete` with rocketbot's own token, per the note above.      |
+| 4   | Slack       | YasChat         | **Expected failure.** The message is deleted in YasChat only; Slack keeps it, since `chat.delete` cannot remove another user's message. |
 
 Repeat on a channel without rocketbot: deletions stay local on both sides.
 
 ## Reactions
 
 Requires `SlackBridge_Reactions_Enabled`. Reactions sent to Slack are added by the bot account,
-so on the Slack side every Rocket.Chat reaction shows up as rocketbot's reaction regardless of
+so on the Slack side every YasChat reaction shows up as rocketbot's reaction regardless of
 who actually reacted.
 
 | #   | Origin      | Action performed on | Expected result                                       |
 | --- | ----------- | ------------------- | ----------------------------------------------------- |
-| 1   | Slack       | Slack               | Reaction appears on the Rocket.Chat message.          |
-| 2   | Rocket.Chat | Slack               | Reaction appears on the Rocket.Chat message.          |
-| 3   | Rocket.Chat | Rocket.Chat         | Reaction appears on the Slack message (as rocketbot). |
-| 4   | Slack       | Rocket.Chat         | Reaction appears on the Slack message (as rocketbot). |
+| 1   | Slack       | Slack               | Reaction appears on the YasChat message.          |
+| 2   | YasChat | Slack               | Reaction appears on the YasChat message.          |
+| 3   | YasChat | YasChat         | Reaction appears on the Slack message (as rocketbot). |
+| 4   | Slack       | YasChat         | Reaction appears on the Slack message (as rocketbot). |
 
 Also check removal of each reaction, and confirm a reaction is not echoed back to its origin
 (the bridge de-duplicates through its reactions map — a double-count means that broke).
@@ -135,7 +135,7 @@ Repeat on a channel without rocketbot: reactions stay local.
 
 | Setting state | Expected result                                                                                                |
 | ------------- | -------------------------------------------------------------------------------------------------------------- |
-| Disabled      | React to both a Slack-origin and a Rocket.Chat-origin message from both sides — nothing propagates, no errors. |
+| Disabled      | React to both a Slack-origin and a YasChat-origin message from both sides — nothing propagates, no errors. |
 | Enabled       | Re-run the same reactions — they propagate as in the matrix above, without restarting the server.              |
 
 ## Channel lifecycle
@@ -147,25 +147,25 @@ or leaving. Send a message **from each side** after every step and verify propag
 
 1. Confirm nothing propagates in either direction.
 2. Invite rocketbot to the Slack channel.
-3. Send from Slack and from Rocket.Chat — both directions now work.
+3. Send from Slack and from YasChat — both directions now work.
 
-### Channel exists on Rocket.Chat only
+### Channel exists on YasChat only
 
 1. Create the matching channel in Slack and invite rocketbot.
-2. Send from Rocket.Chat — it reaches Slack.
-3. Send from Slack — it reaches Rocket.Chat.
+2. Send from YasChat — it reaches Slack.
+3. Send from Slack — it reaches YasChat.
 
 ### Channel exists on Slack only
 
 1. Invite rocketbot to the Slack channel.
-2. Send from Slack — the Rocket.Chat channel is created and receives the message.
-3. Send from Rocket.Chat — it reaches Slack.
+2. Send from Slack — the YasChat channel is created and receives the message.
+3. Send from YasChat — it reaches Slack.
 
 ### Channel exists on both sides with rocketbot
 
-1. Delete the Rocket.Chat channel, then send from Slack — behaves like the "Slack only" case
+1. Delete the YasChat channel, then send from Slack — behaves like the "Slack only" case
    above (the channel is recreated).
-2. Remove rocketbot from the Slack channel, then send from Slack and from Rocket.Chat — nothing
+2. Remove rocketbot from the Slack channel, then send from Slack and from YasChat — nothing
    propagates in either direction, and no errors are logged.
 
 ## Coverage gaps

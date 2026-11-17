@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 import * as React from 'react';
 
 import AppErrorPage from './AppErrorPage';
-import { Info } from '../../../rocketchat.info';
+import { Info } from '../../../yaschat.info';
 import ReportableErrorBoundary from '../../components/ErrorReport/ReportableErrorBoundary';
 
 declare global {

@@ -482,7 +482,7 @@ export class SlackImporter extends Importer {
 						newMessage.attachments = [];
 					}
 					newMessage.attachments.push({
-						text: this.convertSlackMessageToRocketChat(message.attachments[0].text),
+						text: this.convertSlackMessageToYasChat(message.attachments[0].text),
 						author_name: message.attachments[0].author_subname,
 						author_icon: getUserAvatarURL(message.attachments[0].author_subname),
 					});
@@ -595,7 +595,7 @@ export class SlackImporter extends Importer {
 					await this.converter.addMessage(newMessage, this._useUpsert);
 				}
 			} else {
-				const text = this.convertSlackMessageToRocketChat(message.text);
+				const text = this.convertSlackMessageToYasChat(message.text);
 
 				if (isBotMessage) {
 					newMessage.bot = true;
@@ -677,7 +677,7 @@ export class SlackImporter extends Importer {
 		return members.map((userId) => this._replaceSlackUserId(userId));
 	}
 
-	convertSlackMessageToRocketChat(message: string): string {
+	convertSlackMessageToYasChat(message: string): string {
 		if (message) {
 			message = message.replace(/<!everyone>/g, '@all');
 			message = message.replace(/<!channel>/g, '@all');
@@ -722,9 +722,9 @@ export class SlackImporter extends Importer {
 
 		return attachments.map((attachment) => ({
 			...attachment,
-			text: this.convertSlackMessageToRocketChat(attachment.text),
-			title: this.convertSlackMessageToRocketChat(attachment.title),
-			fallback: this.convertSlackMessageToRocketChat(attachment.fallback),
+			text: this.convertSlackMessageToYasChat(attachment.text),
+			title: this.convertSlackMessageToYasChat(attachment.title),
+			fallback: this.convertSlackMessageToYasChat(attachment.fallback),
 		}));
 	}
 }

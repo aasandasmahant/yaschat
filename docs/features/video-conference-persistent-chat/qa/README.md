@@ -238,7 +238,7 @@ reconciling one way or the other:
   the call-window flow around it (the preflight, the ongoing-calls list, the members panel) was not read closely
   enough on this branch to write preconditions anyone could reproduce. Worth a pass of its own.
 - **The desktop app's own conference window.** `useVideoConfOpenCall` hands off to
-  `window.RocketChatDesktop.openInternalVideoChatWindow` when it is present, and `closeCallWindow` to
+  `window.YasChatDesktop.openInternalVideoChatWindow` when it is present, and `closeCallWindow` to
   `window.videoCallWindow.close()`. Both paths need a desktop build to exercise and behave differently from the
   browser's `window.open`, so none of the window-lifecycle cases here apply to it unchanged.
 - **`?callUrl=` with the flag off.** The `asCallUrl` guard that refuses a non-`http(s)` or relative address is

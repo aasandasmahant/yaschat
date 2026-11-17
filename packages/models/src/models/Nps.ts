@@ -1,4 +1,4 @@
-import type { INps, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { INps, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import { NPSStatus } from '@rocket.chat/core-typings';
 import type { INpsModel } from '@rocket.chat/model-typings';
 import type { Collection, Db, Document, IndexDescription, UpdateResult } from 'mongodb';
@@ -6,7 +6,7 @@ import type { Collection, Db, Document, IndexDescription, UpdateResult } from 'm
 import { BaseRaw } from './BaseRaw';
 
 export class NpsRaw extends BaseRaw<INps> implements INpsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<INps>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<INps>>) {
 		super(db, 'nps', trash);
 	}
 

@@ -459,10 +459,10 @@ Api.router
 			basePathRegex: new RegExp(/^\/hooks\//),
 			api: Api,
 			settings,
-			endpointTimeSummary: metrics.rocketchatRestApi,
-			endpointTimeHistogram: metrics.rocketchatRestApiSeconds,
-			responseSizeHistogram: metrics.rocketchatRestApiResponseSizeBytes,
-			activeRequestsGauge: metrics.rocketchatRestApiActiveRequests,
+			endpointTimeSummary: metrics.yaschatRestApi,
+			endpointTimeHistogram: metrics.yaschatRestApiSeconds,
+			responseSizeHistogram: metrics.yaschatRestApiResponseSizeBytes,
+			activeRequestsGauge: metrics.yaschatRestApiActiveRequests,
 		}),
 	)
 	.use(tracerSpanMiddleware)

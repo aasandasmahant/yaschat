@@ -67,7 +67,7 @@ const ConferenceWindowGate = ({ present, children }: ConferenceWindowGateProps) 
 		);
 	}
 
-	// An embedded provider joins with no URL — it renders inside Rocket.Chat rather than at an address of its own —
+	// An embedded provider joins with no URL — it renders inside YasChat rather than at an address of its own —
 	// so having none is its documented answer, not a failed join. Everything else the window offers works either
 	// way; only the frame below has nothing to show.
 	if (!session.url && !session.embedded) {

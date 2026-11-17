@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Brings up Rocket.Chat and Openfire federating over XMPP, then runs the end-to-end suite against them.
+# Brings up YasChat and Openfire federating over XMPP, then runs the end-to-end suite against them.
 set -euo pipefail
 
 PACKAGE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -23,10 +23,10 @@ usage() {
 	cat <<EOF
 Usage: $(basename "$0") [options] [-- <node --test arguments>]
 
-Builds Rocket.Chat, authorization-service, presence-service and xmpp-server-service from the
+Builds YasChat, authorization-service, presence-service and xmpp-server-service from the
 working tree, starts them with Openfire, runs the end-to-end suite, and tears everything down.
 
-  --image-tag TAG   use the images CI published to ghcr.io/rocketchat/rocket.chat/* under TAG
+  --image-tag TAG   use the images CI published to ghcr.io/yaschat/rocket.chat/* under TAG
                     (for example pr-12345 or develop) instead of building
   --skip-build      reuse the images a previous run built
   --no-test         start the stack and leave it running without running the suite
@@ -138,8 +138,8 @@ build_images() {
 	(cd "$REPO_ROOT" && yarn turbo run build "${filters[@]}")
 
 	log "Building the Meteor bundle"
-	(cd "$REPO_ROOT/apps/meteor" && METEOR_DISABLE_OPTIMISTIC_CACHING=1 meteor build --server-only --directory "$build_dir/rocketchat")
-	add_musl_platform_packages "$build_dir/rocketchat/bundle/programs/server/npm/node_modules"
+	(cd "$REPO_ROOT/apps/meteor" && METEOR_DISABLE_OPTIMISTIC_CACHING=1 meteor build --server-only --directory "$build_dir/yaschat")
+	add_musl_platform_packages "$build_dir/yaschat/bundle/programs/server/npm/node_modules"
 
 	# Each service image builds from the pruned workspace closure, as CI does in .github/actions/build-docker
 	turbo_version="$(node -p "require('$REPO_ROOT/package.json').devDependencies.turbo")"
@@ -174,11 +174,11 @@ wait_for() {
 finish() {
 	local status=$?
 	if ((status != 0)); then
-		"${COMPOSE[@]}" logs --tail 100 rocketchat xmpp-server-service openfire || true
+		"${COMPOSE[@]}" logs --tail 100 yaschat xmpp-server-service openfire || true
 	fi
 	if [[ "$KEEP_RUNNING" == true ]]; then
 		log "Stack left running:"
-		log "  Rocket.Chat          http://localhost:$XMPP_STACK_RC_PORT (rocketchat.internal.admin.test / rocketchat.internal.admin.test), XMPP domain rc.test"
+		log "  YasChat          http://localhost:$XMPP_STACK_RC_PORT (yaschat.internal.admin.test / yaschat.internal.admin.test), XMPP domain rc.test"
 		log "  xmpp-server-service  http://localhost:$XMPP_STACK_SERVICE_PORT/stats"
 		log "  Openfire             xmpp://localhost:$XMPP_STACK_OPENFIRE_C2S_PORT, domain openfire.test; admin console http://localhost:$XMPP_STACK_OPENFIRE_ADMIN_PORT (admin / admin)"
 		log "  CA certificate       $CERTS_DIR/ca.pem"
@@ -193,9 +193,9 @@ log "Removing any previous stack"
 down
 
 if [[ -n "$IMAGE_TAG" ]]; then
-	export XMPP_STACK_REGISTRY=ghcr.io/rocketchat/rocket.chat XMPP_STACK_TAG="$IMAGE_TAG"
+	export XMPP_STACK_REGISTRY=ghcr.io/yaschat/rocket.chat XMPP_STACK_TAG="$IMAGE_TAG"
 	log "Pulling images tagged $IMAGE_TAG"
-	"${COMPOSE[@]}" pull rocketchat "${SERVICES[@]}"
+	"${COMPOSE[@]}" pull yaschat "${SERVICES[@]}"
 elif [[ "$SKIP_BUILD" == false ]]; then
 	build_images
 fi
@@ -204,7 +204,7 @@ trap finish EXIT
 log "Starting the stack"
 "${COMPOSE[@]}" up -d --no-build
 
-wait_for rocketchat "http://localhost:$XMPP_STACK_RC_PORT/api/info"
+wait_for yaschat "http://localhost:$XMPP_STACK_RC_PORT/api/info"
 wait_for xmpp-server-service "http://localhost:$XMPP_STACK_SERVICE_PORT/health"
 wait_for openfire "http://localhost:$XMPP_STACK_OPENFIRE_ADMIN_PORT/login.jsp"
 

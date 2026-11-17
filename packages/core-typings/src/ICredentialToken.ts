@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface ICredentialToken extends IRocketChatRecord {
+export interface ICredentialToken extends IYasChatRecord {
 	userInfo: {
 		username?: string;
 		attributes?: any;

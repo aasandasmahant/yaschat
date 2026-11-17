@@ -28,15 +28,15 @@ tests:
 
 ## Summary
 
-A Rocket.Chat channel or group created as **XMPP Federated** is a Multi-User Chat room on
-`conference.<domain>`. Remote XMPP users join it as occupants; Rocket.Chat members appear to
+A YasChat channel or group created as **XMPP Federated** is a Multi-User Chat room on
+`conference.<domain>`. Remote XMPP users join it as occupants; YasChat members appear to
 them as occupants too. Messages flow both ways and membership is mirrored both ways.
 
 ## Motivation
 
 Group conversations are where federation matters most, and MUC is the only room protocol
-every XMPP client speaks. Hosting the room on the Rocket.Chat side keeps membership and
-history in Rocket.Chat and lets remote users join with nothing but a room address.
+every XMPP client speaks. Hosting the room on the YasChat side keeps membership and
+history in YasChat and lets remote users join with nothing but a room address.
 
 ## Behaviour
 
@@ -54,9 +54,9 @@ history in Rocket.Chat and lets remote users join with nothing but a room addres
   enforcement never locks it, so it can be created, joined and written to while enforcement
   is on. The creation modal turns ABAC-managed off while XMPP Federated is on.
 - **R2** The room is registered with the protocol core when it is created and again on every
-  service start, with its topic as subject and each Rocket.Chat member as a virtual occupant
+  service start, with its topic as subject and each YasChat member as a virtual occupant
   (role `moderator` for the owner, `participant` otherwise). It is registered again whenever
-  its Rocket.Chat settings change, so a switch between public channel and private group
+  its YasChat settings change, so a switch between public channel and private group
   changes R3's listing and features at once, and a new topic is the subject the next
   newcomer receives.
 - **R3** Public channels are listed by `disco#items` on the MUC domain and describe themselves
@@ -73,17 +73,17 @@ history in Rocket.Chat and lets remote users join with nothing but a room addres
 - **R6** On admission the newcomer receives the presence of every other occupant, every
   other remote occupant receives the newcomer's presence, the newcomer receives their own
   presence once, with status code 110, and then the room subject. Status 201 is never sent.
-- **R7** An admitted remote occupant becomes a member of the Rocket.Chat room: their user
+- **R7** An admitted remote occupant becomes a member of the YasChat room: their user
   record is created or refreshed, renamed to their nick ([addressing R10](addressing.md)),
   and a subscription created, unless one exists.
 - **R8** An `unavailable` presence from an occupant removes them from the room, is broadcast
-  to the remaining remote occupants, and removes their Rocket.Chat subscription without
+  to the remaining remote occupants, and removes their YasChat subscription without
   running the room-leave callbacks.
-- **R9** Removing a remote member on the Rocket.Chat side kicks them: the remaining remote
+- **R9** Removing a remote member on the YasChat side kicks them: the remaining remote
   occupants receive their `unavailable` presence with status code 307.
 - **R10** Removing or a leave by a local member broadcasts their `unavailable` presence to
   remote occupants.
-- **R16** A local member added to the room by a local user, or joining it in Rocket.Chat,
+- **R16** A local member added to the room by a local user, or joining it in YasChat,
   after the room is registered MUST be published as an occupant: every remote occupant
   receives their presence from `<room>@<MUC domain>/<username>`, with role `moderator` for
   the owner and `participant` otherwise (XEP-0045 §7.2.2).
@@ -100,12 +100,12 @@ history in Rocket.Chat and lets remote users join with nothing but a room addres
 
 - **R13** A `groupchat` message with a body from a current occupant (identified by their
   real JID) is reflected to every remote occupant, the sender included (XEP-0045 §7.4),
-  under the occupant's nick with the original id, and stored in the Rocket.Chat room with the occupant's user as author,
+  under the occupant's nick with the original id, and stored in the YasChat room with the occupant's user as author,
   renamed to their nick.
 - **R14** A message saved by a local member is sent to every remote occupant as a `groupchat`
   from `<room>/<username>` with the message `_id` as id. Edits are sent as corrections
   ([message-corrections](message-corrections.md)).
-- **R15** Local members receive remote messages through Rocket.Chat only; no stanza is ever
+- **R15** Local members receive remote messages through YasChat only; no stanza is ever
   sent to a virtual occupant.
 - **R17** Every message and presence addressed to the MUC domain stays with the rooms; none
   is taken for a direct message or a contact's presence. A message other than `groupchat` to
@@ -137,14 +137,14 @@ Parts of XEP-0045 not implemented:
   `muc.subjectChanged` is declared but never emitted.
 - Invitation declines (§7.8.2 decline) and direct invitations from a hosted room: rooms
   send mediated invites only.
-- Rooms that are Rocket.Chat teams or discussions.
-- Membership changes to the Rocket.Chat room by remote moderators.
+- Rooms that are YasChat teams or discussions.
+- Membership changes to the YasChat room by remote moderators.
 
 ## Known defects
 
 ### D1 Kicked XMPP users are not told they were removed
 
-When Rocket.Chat removes an XMPP user from a room it hosts, the other occupants get the
+When YasChat removes an XMPP user from a room it hosts, the other occupants get the
 `unavailable` presence with status 307 but the removed user does not. Their client keeps
 showing them in the room. Where: `MucRoom.kick` deletes the occupant before building the
 recipients list. Test: `hosted-muc.spec.ts`, "tells the kicked XMPP user they were removed".
@@ -162,39 +162,39 @@ integration test.
 ### D3 A new topic does not reach occupants already in the room
 
 XEP-0045 §8.1 has the room send every occupant a message carrying the new `<subject/>` when
-it changes. A topic changed in Rocket.Chat becomes the subject only for whoever joins next
+it changes. A topic changed in YasChat becomes the subject only for whoever joins next
 (R2); occupants already in the room keep the old one. Where: `MucRoom.setSubject` stores the
 subject without broadcasting it. Test: `hosted-muc.spec.ts`, "tells occupants already in
 the room about a new topic".
 
 ### D4 A deleted room keeps running until the service restarts
 
-Deleting a hosted room in Rocket.Chat leaves it registered with the protocol core. Remote
+Deleting a hosted room in YasChat leaves it registered with the protocol core. Remote
 occupants still in it keep exchanging messages through our server, a public one stays
 listed by `disco#items` ([service-discovery R4](service-discovery.md)) and `disco#info`
 still describes it instead of answering `item-not-found` ([service-discovery R6](service-discovery.md)).
-New joins are refused, since no Rocket.Chat room hosts the JID. Where: nothing calls
+New joins are refused, since no YasChat room hosts the JID. Where: nothing calls
 `mucDestroyRoom` when a room is deleted, and `MucService.destroyRoom` only drops the room
 from the registry: the fix must also send each occupant the unavailable presence carrying
 `<destroy/>` (XEP-0045 §10.9), or their clients keep a dead room. Test: `hosted-muc.spec.ts`,
-"closes the room when it is deleted in Rocket.Chat".
+"closes the room when it is deleted in YasChat".
 
-### D5 A Rocket.Chat member takes the nick of an XMPP occupant
+### D5 A YasChat member takes the nick of an XMPP occupant
 
-Rocket.Chat members occupy the room under their username (R2). When a Rocket.Chat user is
+YasChat members occupy the room under their username (R2). When a YasChat user is
 added to a room where an XMPP occupant already holds that name as nick, the member replaces
 the occupant in the roster without a word: the XMPP user stops receiving the room's messages
 and presence, their own messages are dropped as coming from a non-occupant, and their client
 takes the newcomer's messages for reflections of its own. R5's conflict check only guards
 XMPP joins. Where: `MucRoom.addLocalOccupant`. How to settle the clash is Q3. Test:
-`hosted-muc.spec.ts`, "never leaves an XMPP occupant unaware that a Rocket.Chat member took
+`hosted-muc.spec.ts`, "never leaves an XMPP occupant unaware that a YasChat member took
 their nick".
 
 ### D6 An XMPP user listed when a room is created joins any room
 
 R12 holds for members added to an existing room, not for the member list a room is created
-with: an XMPP user Rocket.Chat already knows becomes a member of a room that is not XMPP
-federated, where nothing reaches them. A JID Rocket.Chat has not seen names no user and is
+with: an XMPP user YasChat already knows becomes a member of a room that is not XMPP
+federated, where nothing reaches them. A JID YasChat has not seen names no user and is
 silently left out. Where: room creation subscribes its members through
 `createUsersSubscriptions` in `apps/meteor/server/lib/rooms/createRoom.ts`, whose hooks do
 not include the XMPP check, which runs only in `beforeAddUsersToRoom`. Test:
@@ -203,7 +203,7 @@ XMPP-federated".
 
 ### D7 Banning an XMPP occupant neither removes them nor keeps them out
 
-A ban in Rocket.Chat keeps the subscription with status `BANNED`, which R4 refuses on the
+A ban in YasChat keeps the subscription with status `BANNED`, which R4 refuses on the
 next join. An XMPP user who is an occupant when banned stays in the room: their messages
 are still stored and relayed, and they keep receiving the room's messages. When they later
 leave, the leave removes their membership as R8 asks, which deletes the banned subscription
@@ -217,12 +217,12 @@ a banned XMPP occupant and keeps them out after they leave".
 
 ## Open questions
 
-- **Q1** Should a kick carry the reason given in Rocket.Chat? `MucRoom.kick` accepts one and
+- **Q1** Should a kick carry the reason given in YasChat? `MucRoom.kick` accepts one and
   ignores it.
-- **Q2** Should the room send history on join from Rocket.Chat's message history, or is that
+- **Q2** Should the room send history on join from YasChat's message history, or is that
   a job for MAM (pending triage)?
-- **Q3** How is a nick clash between an XMPP occupant and a Rocket.Chat member settled
-  (D5)? Either an XMPP join is refused with `conflict` under any Rocket.Chat username, which
+- **Q3** How is a nick clash between an XMPP occupant and a YasChat member settled
+  (D5)? Either an XMPP join is refused with `conflict` under any YasChat username, which
   costs a user lookup per join, or the occupant is removed with status 307 when the member
   arrives.
 

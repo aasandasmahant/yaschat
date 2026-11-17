@@ -3,7 +3,7 @@ import type { VideoConference } from '@rocket.chat/core-typings';
 import * as z from 'zod';
 
 /**
- * Rocket.Chat `VideoConference` <-> Apps-Engine `AppsVideoConference`.
+ * YasChat `VideoConference` <-> Apps-Engine `AppsVideoConference`.
  *
  * Both directions are a shallow pass-through clone, matching the legacy converter. Endpoints are
  * typed with `z.custom` so no runtime validation is added yet.

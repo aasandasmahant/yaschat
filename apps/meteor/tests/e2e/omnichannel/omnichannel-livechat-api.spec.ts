@@ -21,7 +21,7 @@ declare const window: Window & {
 	onChatStarted: boolean;
 	onChatEnded: boolean;
 
-	RocketChat: {
+	YasChat: {
 		livechat: {
 			clearBusinessUnit: () => void;
 			clearDepartment: () => void;
@@ -101,29 +101,29 @@ test.describe('OC - Livechat API', () => {
 
 		test('OC - Livechat API - Open and Close widget', async () => {
 			await test.step('Expect widget to be visible after maximizeWidget()', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 			});
 
 			await test.step('Expect widget not be visible after minimizeWidget()', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.minimizeWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.minimizeWidget());
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 			});
 		});
 
 		test('OC - Livechat API - Show and Hide widget', async () => {
 			await test.step('Expect livechat button not be visible after minimizeWidget()', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.hideWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.hideWidget());
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByRole('button', { name: 'Rocket.Chat' })).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByRole('button', { name: 'YasChat' })).not.toBeVisible();
 			});
 
 			await test.step('Expect livechat button to be visible after show()', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.showWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.showWidget());
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByRole('button', { name: 'Rocket.Chat' })).toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByRole('button', { name: 'YasChat' })).toBeVisible();
 			});
 		});
 
@@ -132,25 +132,25 @@ test.describe('OC - Livechat API', () => {
 			// Maybe that is used in an integration? Since as it is now, when the user starts a chat, the agent will be overriden
 			// TODO: Find the use case of the setAgent method
 			await test.step('Expect setAgent to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setAgent({ username: 'user1', _id: 'user1' }));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setAgent({ username: 'user1', _id: 'user1' }));
 			});
 		});
 
 		test('OC - Livechat API - setLanguage', async () => {
 			await test.step('Expect language to be pt-BR', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
 
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setLanguage('pt-BR'));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setLanguage('pt-BR'));
 
 				await expect(
-					page.frameLocator('#rocketchat-iframe').getByText('Por favor, conte-nos algumas informações para iniciarmos o chat'),
+					page.frameLocator('#yaschat-iframe').getByText('Por favor, conte-nos algumas informações para iniciarmos o chat'),
 				).toBeVisible();
 			});
 
 			await test.step('Expect language to be en', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setLanguage('en'));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setLanguage('en'));
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Please, tell us some information to start the chat')).toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Please, tell us some information to start the chat')).toBeVisible();
 			});
 		});
 
@@ -159,32 +159,32 @@ test.describe('OC - Livechat API', () => {
 
 			await test.step('Expect setTheme set color', async () => {
 				await poLiveChat.page.evaluate(() => {
-					window.RocketChat.livechat.maximizeWidget();
-					window.RocketChat.livechat.setTheme({ color: 'rgb(50, 50, 50)' });
+					window.YasChat.livechat.maximizeWidget();
+					window.YasChat.livechat.setTheme({ color: 'rgb(50, 50, 50)' });
 				});
 
-				await expect(page.frameLocator('#rocketchat-iframe').locator('header')).toHaveCSS('background-color', 'rgb(50, 50, 50)');
+				await expect(page.frameLocator('#yaschat-iframe').locator('header')).toHaveCSS('background-color', 'rgb(50, 50, 50)');
 			});
 
 			await test.step('Expect setTheme set fontColor', async () => {
 				await poLiveChat.page.evaluate(() => {
-					window.RocketChat.livechat.maximizeWidget();
-					window.RocketChat.livechat.setTheme({ fontColor: 'rgb(50, 50, 50)' });
+					window.YasChat.livechat.maximizeWidget();
+					window.YasChat.livechat.setTheme({ fontColor: 'rgb(50, 50, 50)' });
 				});
 
-				await expect(page.frameLocator('#rocketchat-iframe').locator('header')).toHaveCSS('color', 'rgb(50, 50, 50)');
+				await expect(page.frameLocator('#yaschat-iframe').locator('header')).toHaveCSS('color', 'rgb(50, 50, 50)');
 			});
 
 			await test.step('expect setTheme set hideExpandChat', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
 
 				await expect(poLiveChat.btnExpandChat).toBeVisible();
 
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ hideExpandChat: true }));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ hideExpandChat: true }));
 
 				await expect(poLiveChat.btnExpandChat).not.toBeVisible();
 
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ hideExpandChat: false }));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ hideExpandChat: false }));
 
 				await expect(poLiveChat.btnExpandChat).toBeVisible();
 			});
@@ -192,41 +192,41 @@ test.describe('OC - Livechat API', () => {
 			// TODO: fix iconColor setTheme property
 			// await test.step('Expect setTheme set iconColor', async () => {
 			// 	await poLiveChat.page.evaluate(() => {
-			// 		window.RocketChat.livechat.maximizeWidget();
-			// 		window.RocketChat.livechat.setTheme({ iconColor: 'rgb(50, 50, 50)' });
+			// 		window.YasChat.livechat.maximizeWidget();
+			// 		window.YasChat.livechat.setTheme({ iconColor: 'rgb(50, 50, 50)' });
 			// 	});
 
-			// 	await expect(page.frameLocator('#rocketchat-iframe').locator('header')).toHaveCSS('color', 'rgb(50, 50, 50)');
+			// 	await expect(page.frameLocator('#yaschat-iframe').locator('header')).toHaveCSS('color', 'rgb(50, 50, 50)');
 			// });
 
 			await test.step('Expect setTheme set title', async () => {
 				await poLiveChat.page.evaluate(() => {
-					window.RocketChat.livechat.maximizeWidget();
-					window.RocketChat.livechat.setTheme({ title: 'CustomTitle' });
+					window.YasChat.livechat.maximizeWidget();
+					window.YasChat.livechat.setTheme({ title: 'CustomTitle' });
 				});
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('CustomTitle')).toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('CustomTitle')).toBeVisible();
 			});
 
 			// await test.step('Expect setTheme set offlineTitle', async () => {
 			// 	await poLiveChat.page.evaluate(() => {
-			// 		window.RocketChat.livechat.maximizeWidget();
-			// 		window.RocketChat.livechat.setTheme({ offlineTitle: 'CustomOfflineTitle' });
+			// 		window.YasChat.livechat.maximizeWidget();
+			// 		window.YasChat.livechat.setTheme({ offlineTitle: 'CustomOfflineTitle' });
 			// 	});
 
-			// 	await expect(page.frameLocator('#rocketchat-iframe').getByText('CustomTitle')).toBeVisible();
+			// 	await expect(page.frameLocator('#yaschat-iframe').getByText('CustomTitle')).toBeVisible();
 			// });
 		});
 
 		test.skip('OC - Livechat API - setParentUrl', async () => {
 			// TODO: check how to test this, not sure there is a clear indication of parent url changes
 			await test.step('Expect setParentUrl to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setParentUrl('http://localhost:3000'));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setParentUrl('http://localhost:3000'));
 			});
 		});
 	});
@@ -308,28 +308,28 @@ test.describe('OC - Livechat API', () => {
 		test.skip('OC - Livechat API - clearBusinessUnit', async () => {
 			// TODO: check how to test this, and if this is working as intended
 			await test.step('Expect clearBusinessUnit to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.clearBusinessUnit());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.clearBusinessUnit());
 			});
 		});
 
 		test.skip('OC - Livechat API - setBusinessUnit', async () => {
 			// TODO
 			await test.step('Expect setBusinessUnit to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setBusinessUnit());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setBusinessUnit());
 			});
 		});
 
 		test.skip('OC - Livechat API - setCustomField', async () => {
 			// TODO
 			await test.step('Expect setCustomField to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setCustomField({ key: 'test', value: 'test' }));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.setCustomField({ key: 'test', value: 'test' }));
 			});
 		});
 
 		test.skip('OC - Livechat API - clearDepartment', async () => {
 			// TODO
 			await test.step('Expect clearDepartment to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.clearDepartment());
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.clearDepartment());
 			});
 		});
 
@@ -352,15 +352,15 @@ test.describe('OC - Livechat API', () => {
 				});
 
 				// Start chat
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -373,7 +373,7 @@ test.describe('OC - Livechat API', () => {
 				const depId = departmentB._id;
 
 				await test.step('Expect chat not be transferred', async () => {
-					await poLiveChat.page.evaluate((depId) => window.RocketChat.livechat.setDepartment(depId), depId);
+					await poLiveChat.page.evaluate((depId) => window.YasChat.livechat.setDepartment(depId), depId);
 
 					await poAuxContext2.poHomeOmnichannel.navbar.searchInput.click();
 					await poAuxContext2.poHomeOmnichannel.navbar.typeSearch(registerGuestVisitor.name);
@@ -392,10 +392,10 @@ test.describe('OC - Livechat API', () => {
 
 				const depId = departmentB._id;
 
-				await poLiveChat.page.evaluate((depId) => window.RocketChat.livechat.setDepartment(depId), depId);
+				await poLiveChat.page.evaluate((depId) => window.YasChat.livechat.setDepartment(depId), depId);
 
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.sendMessage(registerGuestVisitor, false);
 
@@ -437,15 +437,15 @@ test.describe('OC - Livechat API', () => {
 				});
 
 				// Start chat
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -458,7 +458,7 @@ test.describe('OC - Livechat API', () => {
 				const depId = departmentB._id;
 
 				await test.step('Expect chat to be transferred', async () => {
-					await poLiveChat.page.evaluate((depId) => window.RocketChat.livechat.transferChat(depId), depId);
+					await poLiveChat.page.evaluate((depId) => window.YasChat.livechat.transferChat(depId), depId);
 
 					await poAuxContext2.poHomeOmnichannel.navbar.openChat(registerGuestVisitor.name);
 					await poAuxContext2.poHomeOmnichannel.navbar.typeSearch(registerGuestVisitor.name);
@@ -471,15 +471,15 @@ test.describe('OC - Livechat API', () => {
 			const registerGuestVisitor = createFakeVisitorRegistration();
 
 			await test.step('Expect registerGuest to create a valid guest', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -500,16 +500,16 @@ test.describe('OC - Livechat API', () => {
 
 				await new OmnichannelLiveChatEmbedded(pageContext).goto();
 
-				await pageContext.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await pageContext.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await pageContext.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('this_a_test_message_from_visitor')).toBeVisible();
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('this_a_test_message_from_visitor')).toBeVisible();
 			});
 		});
 
@@ -519,15 +519,15 @@ test.describe('OC - Livechat API', () => {
 			const registerGuestVisitor2 = createFakeVisitorRegistration();
 
 			await test.step('Expect registerGuest to create guest 1', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(poLiveChat.page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(poLiveChat.page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor1) => window.RocketChat.livechat.registerGuest(registerGuestVisitor1),
+					(registerGuestVisitor1) => window.YasChat.livechat.registerGuest(registerGuestVisitor1),
 					registerGuestVisitor1,
 				);
 
-				await expect(poLiveChat.page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(poLiveChat.page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor_1');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -541,7 +541,7 @@ test.describe('OC - Livechat API', () => {
 
 			await test.step('Expect registerGuest to create guest 2', async () => {
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor2) => window.RocketChat.livechat.registerGuest(registerGuestVisitor2),
+					(registerGuestVisitor2) => window.YasChat.livechat.registerGuest(registerGuestVisitor2),
 					registerGuestVisitor2,
 				);
 
@@ -549,11 +549,11 @@ test.describe('OC - Livechat API', () => {
 				await page.waitForResponse((response) => response.url().includes(`token=${registerGuestVisitor2.token}`));
 
 				await poLiveChat.page
-					.frameLocator('#rocketchat-iframe')
+					.frameLocator('#yaschat-iframe')
 					.getByText('this_a_test_message_from_visitor_1')
 					.waitFor({ state: 'hidden' });
 
-				await expect(poLiveChat.page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(poLiveChat.page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor_2');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -567,15 +567,15 @@ test.describe('OC - Livechat API', () => {
 			const registerGuestVisitor = createFakeVisitorRegistration();
 
 			await test.step('Expect registerGuest work with the same token, multiple times', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+					(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 					registerGuestVisitor,
 				);
 
-				await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 				await poLiveChat.onlineAgentMessage.fill('this_a_test_message_from_visitor');
 				await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -585,8 +585,8 @@ test.describe('OC - Livechat API', () => {
 				const visitorResponse = page.waitForResponse('**/api/v1/livechat/visitor');
 
 				await poLiveChat.page.evaluate((registerGuestVisitor) => {
-					window.RocketChat.livechat.registerGuest(registerGuestVisitor);
-					window.RocketChat.livechat.registerGuest(registerGuestVisitor);
+					window.YasChat.livechat.registerGuest(registerGuestVisitor);
+					window.YasChat.livechat.registerGuest(registerGuestVisitor);
 				}, registerGuestVisitor);
 
 				await visitorResponse;
@@ -603,22 +603,22 @@ test.describe('OC - Livechat API', () => {
 		test.skip('OC - Livechat API - setGuestEmail', async () => {
 			const registerGuestVisitor = createFakeVisitorRegistration();
 			// Start chat
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-			await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+			await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 			await poLiveChat.page.evaluate(
-				(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+				(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 				registerGuestVisitor,
 			);
 
-			await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+			await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 			await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 			await poLiveChat.btnSendMessageToOnlineAgent.click();
 
 			await test.step('Expect setGuestEmail to change a guest email', async () => {
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.setGuestEmail(`changed${registerGuestVisitor.email}`),
+					(registerGuestVisitor) => window.YasChat.livechat.setGuestEmail(`changed${registerGuestVisitor.email}`),
 					registerGuestVisitor,
 				);
 			});
@@ -637,15 +637,15 @@ test.describe('OC - Livechat API', () => {
 		test('OC - Livechat API - setGuestName', async () => {
 			const registerGuestVisitor = createFakeVisitorRegistration();
 			// Start chat
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-			await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
+			await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 			await poLiveChat.page.evaluate(
-				(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+				(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 				registerGuestVisitor,
 			);
 
-			await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+			await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 			await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 			await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -654,7 +654,7 @@ test.describe('OC - Livechat API', () => {
 
 			await test.step('Expect setGuestEmail to change a guest email', async () => {
 				await poLiveChat.page.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.setGuestName(`changed${registerGuestVisitor.name}`),
+					(registerGuestVisitor) => window.YasChat.livechat.setGuestName(`changed${registerGuestVisitor.name}`),
 					registerGuestVisitor,
 				);
 			});
@@ -668,14 +668,14 @@ test.describe('OC - Livechat API', () => {
 			const registerGuestVisitor = createFakeVisitorRegistration();
 
 			// Register guest and send a message
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.maximizeWidget());
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.maximizeWidget());
 
 			await poLiveChat.page.evaluate(
-				(registerGuestVisitor) => window.RocketChat.livechat.registerGuest(registerGuestVisitor),
+				(registerGuestVisitor) => window.YasChat.livechat.registerGuest(registerGuestVisitor),
 				registerGuestVisitor,
 			);
 
-			await expect(page.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
+			await expect(page.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
 
 			await poLiveChat.onlineAgentMessage.type('this_a_test_message_from_visitor');
 			await poLiveChat.btnSendMessageToOnlineAgent.click();
@@ -685,16 +685,16 @@ test.describe('OC - Livechat API', () => {
 
 				await new OmnichannelLiveChatEmbedded(pageContext).goto();
 
-				await pageContext.evaluate(() => window.RocketChat.livechat.maximizeWidget());
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('Start chat')).toBeVisible();
+				await pageContext.evaluate(() => window.YasChat.livechat.maximizeWidget());
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('Start chat')).toBeVisible();
 
 				await pageContext.evaluate(
-					(registerGuestVisitor) => window.RocketChat.livechat.setGuestToken(registerGuestVisitor.token),
+					(registerGuestVisitor) => window.YasChat.livechat.setGuestToken(registerGuestVisitor.token),
 					registerGuestVisitor,
 				);
 
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('Start chat')).not.toBeVisible();
-				await expect(pageContext.frameLocator('#rocketchat-iframe').getByText('this_a_test_message_from_visitor')).toBeVisible();
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('Start chat')).not.toBeVisible();
+				await expect(pageContext.frameLocator('#yaschat-iframe').getByText('this_a_test_message_from_visitor')).toBeVisible();
 			});
 		});
 	});
@@ -746,11 +746,11 @@ test.describe('OC - Livechat API', () => {
 				await poLiveChat.page.evaluate(
 					() =>
 						new Promise((resolve: (value?: unknown) => void) => {
-							window.RocketChat.livechat.onChatMaximized(() => {
+							window.YasChat.livechat.onChatMaximized(() => {
 								resolve();
 							});
 
-							window.RocketChat.livechat.maximizeWidget();
+							window.YasChat.livechat.maximizeWidget();
 						}),
 				);
 			});
@@ -759,11 +759,11 @@ test.describe('OC - Livechat API', () => {
 				await poLiveChat.page.evaluate(
 					() =>
 						new Promise((resolve: (value?: unknown) => void) => {
-							window.RocketChat.livechat.onChatMinimized(() => {
+							window.YasChat.livechat.onChatMinimized(() => {
 								resolve();
 							});
 
-							window.RocketChat.livechat.minimizeWidget();
+							window.YasChat.livechat.minimizeWidget();
 						}),
 				);
 			});
@@ -776,7 +776,7 @@ test.describe('OC - Livechat API', () => {
 				const watchForTrigger = page.waitForFunction(() => window.onChatStarted === true);
 
 				await poLiveChat.page.evaluate(() =>
-					window.RocketChat.livechat.onChatStarted(() => {
+					window.YasChat.livechat.onChatStarted(() => {
 						window.onChatStarted = true;
 					}),
 				);
@@ -793,7 +793,7 @@ test.describe('OC - Livechat API', () => {
 				const watchForTrigger = page.waitForFunction(() => window.onChatEnded === true);
 
 				await poLiveChat.page.evaluate(() =>
-					window.RocketChat.livechat.onChatEnded(() => {
+					window.YasChat.livechat.onChatEnded(() => {
 						window.onChatEnded = true;
 					}),
 				);
@@ -811,7 +811,7 @@ test.describe('OC - Livechat API', () => {
 				const watchForTrigger = page.waitForFunction(() => window.onPrechatFormSubmit === true);
 
 				await poLiveChat.page.evaluate(() =>
-					window.RocketChat.livechat.onPrechatFormSubmit(() => {
+					window.YasChat.livechat.onPrechatFormSubmit(() => {
 						window.onPrechatFormSubmit = true;
 					}),
 				);
@@ -828,7 +828,7 @@ test.describe('OC - Livechat API', () => {
 				const watchForTrigger = page.waitForFunction(() => window.onAssignAgent === true);
 
 				await poLiveChat.page.evaluate(() =>
-					window.RocketChat.livechat.onAssignAgent(() => {
+					window.YasChat.livechat.onAssignAgent(() => {
 						window.onAssignAgent = true;
 					}),
 				);
@@ -851,7 +851,7 @@ test.describe('OC - Livechat API', () => {
 			const watchForTrigger = page.waitForFunction(() => window.onAgentStatusChange === true);
 
 			await poLiveChat.page.evaluate(() =>
-				window.RocketChat.livechat.onAgentStatusChange(() => {
+				window.YasChat.livechat.onAgentStatusChange(() => {
 					window.onAgentStatusChange = true;
 				}),
 			);
@@ -873,7 +873,7 @@ test.describe('OC - Livechat API', () => {
 			await poLiveChat.page.reload();
 
 			await poLiveChat.page.evaluate(() =>
-				window.RocketChat.livechat.onOfflineFormSubmit(() => {
+				window.YasChat.livechat.onOfflineFormSubmit(() => {
 					window.onOfflineFormSubmit = true;
 				}),
 			);
@@ -889,11 +889,11 @@ test.describe('OC - Livechat API', () => {
 				await poLiveChat.page.evaluate(
 					() =>
 						new Promise((resolve: (value?: unknown) => void) => {
-							window.RocketChat.livechat.onWidgetHidden(() => {
+							window.YasChat.livechat.onWidgetHidden(() => {
 								resolve();
 							});
 
-							window.RocketChat.livechat.hideWidget();
+							window.YasChat.livechat.hideWidget();
 						}),
 				);
 			});
@@ -902,11 +902,11 @@ test.describe('OC - Livechat API', () => {
 				await poLiveChat.page.evaluate(
 					() =>
 						new Promise((resolve: (value?: unknown) => void) => {
-							window.RocketChat.livechat.onWidgetShown(() => {
+							window.YasChat.livechat.onWidgetShown(() => {
 								resolve();
 							});
 
-							window.RocketChat.livechat.showWidget();
+							window.YasChat.livechat.showWidget();
 						}),
 				);
 			});
@@ -915,14 +915,14 @@ test.describe('OC - Livechat API', () => {
 		test.skip('OC - Livechat API - onServiceOffline', async () => {
 			// TODO: Not sure how to test this, need to check if playwright has a way to mock a server disconnect
 			await test.step('Expect onServiceOffline to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.onServiceOffline(() => console.log('onServiceOffline')));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.onServiceOffline(() => console.log('onServiceOffline')));
 			});
 		});
 
 		test.skip('OC - Livechat API - onQueuePositionChange', async () => {
 			// TODO
 			await test.step('Expect onQueuePositionChange to do something', async () => {
-				await poLiveChat.page.evaluate(() => window.RocketChat.livechat.onQueuePositionChange(() => console.log('onQueuePositionChange')));
+				await poLiveChat.page.evaluate(() => window.YasChat.livechat.onQueuePositionChange(() => console.log('onQueuePositionChange')));
 			});
 		});
 	});

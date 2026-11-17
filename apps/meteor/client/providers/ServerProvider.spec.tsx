@@ -6,7 +6,7 @@ import ServerProvider from './ServerProvider';
 import { getDdpSdk } from '../lib/sdk/ddpSdk';
 import { type ConnectionStatus, getConnectionStatus } from '../meteor/connection';
 
-jest.mock('../../rocketchat.info', () => ({ Info: {} }));
+jest.mock('../../yaschat.info', () => ({ Info: {} }));
 
 jest.mock('../meteor/connection', () => ({
 	getConnectionStatus: jest.fn(() => ({ status: 'connected', connected: true, retryCount: 0 })),

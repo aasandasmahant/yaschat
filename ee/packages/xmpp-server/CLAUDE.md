@@ -8,8 +8,8 @@ before changing behaviour.
 ```sh
 yarn testunit                       # jest: src/**/*.spec.ts and tests/integration
 yarn typecheck && yarn lint         # from this folder; never run the Meteor typecheck for this package
-yarn test:e2e                       # needs a running Rocket.Chat, xmpp-server-service and ejabberd; see docs/operations.md
-yarn test:e2e:stack                 # builds and starts Rocket.Chat + Openfire in Docker, then runs test:e2e against them
+yarn test:e2e                       # needs a running YasChat, xmpp-server-service and ejabberd; see docs/operations.md
+yarn test:e2e:stack                 # builds and starts YasChat + Openfire in Docker, then runs test:e2e against them
 node --import tsx --test --test-name-pattern='<name>' tests/end-to-end/<file>.spec.ts
 yarn workspace @rocket.chat/xmpp-server-service ms   # the only process that hosts the service
 ```
@@ -17,7 +17,7 @@ yarn workspace @rocket.chat/xmpp-server-service ms   # the only process that hos
 ## Conventions
 
 - `src/` minus `src/service/` is the protocol core. It imports nothing from `@rocket.chat/*`
-  except `emitter`. `src/service/` is the only place that knows Rocket.Chat.
+  except `emitter`. `src/service/` is the only place that knows YasChat.
 - Every capability has a spec in `docs/specs/`. A behaviour change edits the spec in the same
   PR. A new bug becomes a `D<n>` entry plus an `it.skip` test whose comment links the anchor,
   end-to-end or integration when ejabberd cannot produce the trigger. A fix un-skips the test
@@ -38,7 +38,7 @@ yarn workspace @rocket.chat/xmpp-server-service ms   # the only process that hos
 
 Two layers in one package: the protocol core (streams, dialback, routing, MUC state machines,
 events) and the integration service (`XMPPServerService`, a `ServiceClass` that maps events to
-Rocket.Chat models). Meteor only holds the outgoing hooks and the settings. Map:
+YasChat models). Meteor only holds the outgoing hooks and the settings. Map:
 [docs/architecture.md](docs/architecture.md). Supported standards:
 [docs/compliance.md](docs/compliance.md).
 
@@ -54,7 +54,7 @@ Rocket.Chat models). Meteor only holds the outgoing hooks and the settings. Map:
   a session cannot speak.
 - A remote-room author is the record of the real JID the room disclosed (`fromJid` on
   `muc.remoteMessage`); `<nick>#<room JID>` is only the fallback when it disclosed none.
-  Rocket.Chat has no per-room nick, so the user's `name` is the latest nick. See ADR 0015.
+  YasChat has no per-room nick, so the user's `name` is the latest nick. See ADR 0015.
 - A known defect is not fixed until its `it.skip` is a plain `it` and passes, against ejabberd
   for an end-to-end test.
 - `yarn typecheck` in `apps/meteor` fails for unrelated reasons; typecheck this package only.

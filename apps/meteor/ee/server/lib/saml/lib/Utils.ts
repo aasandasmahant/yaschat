@@ -475,7 +475,7 @@ export class SAMLUtils {
 		const profileUsername = this.getProfileValue(profile, userDataMap.username, true);
 		const name = this.getProfileValue(profile, userDataMap.name, true);
 
-		// Even if we're not using the email to identify the user, it is still mandatory because it's a mandatory information on Rocket.Chat
+		// Even if we're not using the email to identify the user, it is still mandatory because it's a mandatory information on YasChat
 		if (!email) {
 			throw new Error('SAML Profile did not contain an email address');
 		}

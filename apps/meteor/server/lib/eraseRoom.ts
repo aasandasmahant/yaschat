@@ -42,7 +42,7 @@ export async function eraseRoom(roomOrId: string | IRoom, user: AtLeast<IUser, '
 	if (Apps.self?.isLoaded()) {
 		const prevent = await Apps.self?.triggerEvent(AppEvents.IPreRoomDeletePrevent, room);
 		if (prevent) {
-			throw new ClientSafeError('error-app-prevented-deleting', 'A Rocket.Chat App prevented the room erasing.');
+			throw new ClientSafeError('error-app-prevented-deleting', 'A YasChat App prevented the room erasing.');
 		}
 	}
 

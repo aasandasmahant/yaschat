@@ -1,11 +1,11 @@
-import type { IUpload, RocketChatRecordDeleted, IRoom } from '@rocket.chat/core-typings';
+import type { IUpload, YasChatRecordDeleted, IRoom } from '@rocket.chat/core-typings';
 import type { FindPaginated, IUploadsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, WithId, Filter, FindOptions, UpdateResult, Document } from 'mongodb';
 
 import { BaseUploadModelRaw } from './BaseUploadModel';
 
 export class UploadsRaw extends BaseUploadModelRaw implements IUploadsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IUpload>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IUpload>>) {
 		super(db, 'uploads', trash);
 	}
 

@@ -106,7 +106,7 @@ export class Server {
 
 			this.checkCall(session, 'subscription', packet.name);
 
-			const end = this.metrics?.timer('rocketchat_subscription', { subscription: packet.name });
+			const end = this.metrics?.timer('yaschat_subscription', { subscription: packet.name });
 
 			publication = new Publication(session, packet);
 			const [eventName, options] = packet.params;

@@ -1,19 +1,19 @@
 # `@rocket.chat/livechat`
 
-> The Rocket.Chat Livechat widget: a chat window that website visitors use to talk to Omnichannel agents.
+> The YasChat Livechat widget: a chat window that website visitors use to talk to Omnichannel agents.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/livechat?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/livechat) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/livechat?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/livechat)
 
-Livechat is a small [Preact](https://preactjs.com) application for business-to-customer conversations between Omnichannel agents and the visitors of a website. Every Rocket.Chat server builds and serves it under `/livechat`.
+Livechat is a small [Preact](https://preactjs.com) application for business-to-customer conversations between Omnichannel agents and the visitors of a website. Every YasChat server builds and serves it under `/livechat`.
 
 The build has two parts:
 
-- `rocketchat-livechat.min.js`, a loader script that a website embeds. It adds an iframe to the page and exposes the `RocketChat` global used to control the widget.
-- The widget application itself (`index.html` plus its bundles), which runs inside that iframe and talks to the Rocket.Chat server.
+- `yaschat-livechat.min.js`, a loader script that a website embeds. It adds an iframe to the page and exposes the `YasChat` global used to control the widget.
+- The widget application itself (`index.html` plus its bundles), which runs inside that iframe and talks to the YasChat server.
 
 ## Installation
 
-You do not need to install this package to add Livechat to a website. Use the script that your Rocket.Chat server already serves (see [Usage](#usage)).
+You do not need to install this package to add Livechat to a website. Use the script that your YasChat server already serves (see [Usage](#usage)).
 
 The npm package exists so the widget is versioned with the rest of the monorepo. Its `files` field lists only `build/`, while the build writes to `dist/`, so the published tarball currently contains no build output.
 
@@ -21,21 +21,21 @@ The npm package exists so the widget is versioned with the rest of the monorepo.
 
 ### Embedding the widget
 
-Paste this snippet before the closing `</body>` tag of your site, replacing `https://your.server` with your Rocket.Chat site URL. The same snippet is shown in Rocket.Chat under **Omnichannel > Installation**.
+Paste this snippet before the closing `</body>` tag of your site, replacing `https://your.server` with your YasChat site URL. The same snippet is shown in YasChat under **Omnichannel > Installation**.
 
 ```html
-<!-- Start of Rocket.Chat Livechat Script -->
+<!-- Start of YasChat Livechat Script -->
 <script type="text/javascript">
 	(function (w, d, s, u) {
-		w.RocketChat = function (c) {
-			w.RocketChat._.push(c);
+		w.YasChat = function (c) {
+			w.YasChat._.push(c);
 		};
-		w.RocketChat._ = [];
-		w.RocketChat.url = u;
+		w.YasChat._ = [];
+		w.YasChat.url = u;
 		var h = d.getElementsByTagName(s)[0],
 			j = d.createElement(s);
 		j.async = true;
-		j.src = 'https://your.server/livechat/rocketchat-livechat.min.js?_=201903270000';
+		j.src = 'https://your.server/livechat/yaschat-livechat.min.js?_=201903270000';
 		h.parentNode.insertBefore(j, h);
 	})(window, document, 'script', 'https://your.server/livechat');
 </script>
@@ -43,15 +43,15 @@ Paste this snippet before the closing `</body>` tag of your site, replacing `htt
 
 ### Controlling the widget
 
-Calls to `RocketChat(fn)` are queued until the loader script is ready. Each callback runs with the widget API as `this`:
+Calls to `YasChat(fn)` are queued until the loader script is ready. Each callback runs with the widget API as `this`:
 
 ```js
-RocketChat(function () {
+YasChat(function () {
 	this.setTheme({
 		color: '#04436A', // title bar background
 		fontColor: '#FFFFFF', // title bar text
 		iconColor: '#1D74F5', // widget icon
-		title: 'Welcome to Rocket.Chat', // title when agents are online
+		title: 'Welcome to YasChat', // title when agents are online
 		offlineTitle: 'Service is offline', // title when no agent is online
 		position: 'right', // 'left' or 'right'
 	});
@@ -67,7 +67,7 @@ RocketChat(function () {
 You can also pass several settings at once with `initialize`:
 
 ```js
-RocketChat(function () {
+YasChat(function () {
 	this.initialize({
 		theme: { title: 'Need help?' },
 		department: 'sales',
@@ -92,7 +92,7 @@ These come from the widget's original 2018 design, so details may differ from th
 
 ## API
 
-The object bound to `this` inside a `RocketChat(fn)` callback (also available as `RocketChat.livechat`).
+The object bound to `this` inside a `YasChat(fn)` callback (also available as `YasChat.livechat`).
 
 ### Methods
 
@@ -139,7 +139,7 @@ Each method takes a function that runs when the event happens.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/livechat). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/livechat). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/livechat build       # production build into dist/
@@ -151,18 +151,18 @@ yarn workspace @rocket.chat/livechat storybook   # Storybook at http://localhost
 
 Other scripts: `dev` (same as `build`), `clean`, `eslint`, `stylelint` and `build-storybook`.
 
-When Rocket.Chat itself is built, it copies `dist/` into the server, which serves it under `/livechat`.
+When YasChat itself is built, it copies `dist/` into the server, which serves it under `/livechat`.
 
 ### Running the widget locally
 
-1. Run a Rocket.Chat server at `http://localhost:3000`.
-2. Build once, so `dist/rocketchat-livechat.min.js` exists: `yarn workspace @rocket.chat/livechat build`.
+1. Run a YasChat server at `http://localhost:3000`.
+2. Build once, so `dist/yaschat-livechat.min.js` exists: `yarn workspace @rocket.chat/livechat build`.
 3. Start the dev server: `yarn workspace @rocket.chat/livechat start`.
 4. Open `packages/livechat/widget-demo.html` in a browser. It loads the loader script from `dist/` and the widget from `http://localhost:8080`. Serving the file over HTTP (for example with [http-server](https://github.com/http-party/http-server)) makes it load faster.
 
 ### Using a different server
 
-The widget picks its Rocket.Chat server from, in order:
+The widget picks its YasChat server from, in order:
 
 1. `window.SERVER_URL`;
 2. the `serverUrl` query parameter of the widget URL;

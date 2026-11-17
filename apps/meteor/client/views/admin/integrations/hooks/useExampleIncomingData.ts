@@ -18,9 +18,9 @@ export function useExampleData({
 			text: 'Example message',
 			attachments: [
 				{
-					title: 'Rocket.Chat',
+					title: 'YasChat',
 					title_link: 'https://rocket.chat',
-					text: 'Rocket.Chat, the best open source chat',
+					text: 'YasChat, the best open source chat',
 					image_url: imageUrl,
 					color: '#764FA5',
 				},

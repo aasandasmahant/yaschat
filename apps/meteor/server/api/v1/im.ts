@@ -1,5 +1,5 @@
 /**
- * Docs: https://github.com/RocketChat/developer-docs/blob/master/reference/api/rest-api/endpoints/team-collaboration-endpoints/im-endpoints
+ * Docs: https://github.com/YasChat/developer-docs/blob/master/reference/api/rest-api/endpoints/team-collaboration-endpoints/im-endpoints
  */
 import { ClientSafeError } from '@rocket.chat/core-services';
 import type { IMessage, IRoom, ISubscription, IUploadWithUser, IUser, UserStatus } from '@rocket.chat/core-typings';

@@ -1,4 +1,4 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { ILoginToken } from './IUser';
 
 export const pushTokenTypes = ['gcm', 'apn'] as const;
@@ -19,7 +19,7 @@ export type RegisterPushTokenInput = {
 	voipToken?: string;
 };
 
-export interface IPushToken extends IRocketChatRecord {
+export interface IPushToken extends IYasChatRecord {
 	tokenType: PushTokenType;
 	tokenValue: string;
 	appName: string;

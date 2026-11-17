@@ -1,4 +1,4 @@
-# The protocol core has no Rocket.Chat dependency
+# The protocol core has no YasChat dependency
 
 - **Status:** accepted
 - **Date:** 2026-08
@@ -30,7 +30,7 @@ mixes protocol handling with product calls, which makes it impossible to test th
 against a scripted peer without a database, and impossible to reason about compliance in
 isolation. The S2S handshake, dialback, MUC state machines and XML hardening are the parts
 that have to match specifications written by someone else; they are the parts most worth
-testing without Rocket.Chat in the loop.
+testing without YasChat in the loop.
 
 ### Alternatives rejected
 
@@ -43,7 +43,7 @@ testing without Rocket.Chat in the loop.
 ## Consequences
 
 - `tests/integration/` runs two complete `XMPPServer` instances over loopback with no
-  Rocket.Chat involved. The load generator reuses the core as a fake remote server.
+  YasChat involved. The load generator reuses the core as a fake remote server.
 - The core keeps only ephemeral state ([ADR 0012](0012-core-state-is-ephemeral-and-rebuilt-from-the-database.md)).
   Everything durable is the service's problem.
 - Adding a capability usually touches both layers: a parser or state machine in the core, a

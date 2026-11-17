@@ -1,4 +1,4 @@
-import type { AvailableAgentsAggregation, ILivechatDepartmentAgents, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { AvailableAgentsAggregation, ILivechatDepartmentAgents, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type {
 	FindPaginated,
 	ILivechatDepartmentAgentsModel,
@@ -22,7 +22,7 @@ import { Users } from '../index';
 import { BaseRaw } from './BaseRaw';
 
 export class LivechatDepartmentAgentsRaw extends BaseRaw<ILivechatDepartmentAgents> implements ILivechatDepartmentAgentsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatDepartmentAgents>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatDepartmentAgents>>) {
 		super(db, 'livechat_department_agents', trash);
 	}
 
@@ -293,7 +293,7 @@ export class LivechatDepartmentAgentsRaw extends BaseRaw<ILivechatDepartmentAgen
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_livechat_department',
+					from: 'yaschat_livechat_department',
 					localField: 'departmentId',
 					foreignField: '_id',
 					as: 'department',

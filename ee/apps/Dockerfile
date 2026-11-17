@@ -63,21 +63,21 @@ RUN apk update && \
     # CVE -> https://scout.docker.com/vulnerabilities/id/CVE-2025-9230?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.22
     apk upgrade --no-cache openssl && \
     rm -rf /var/cache/apk/* && \
-    groupmod -n rocketchat nogroup && \
-    useradd -u 65533 -r -g rocketchat rocketchat && \
+    groupmod -n yaschat nogroup && \
+    useradd -u 65533 -r -g yaschat yaschat && \
     apk del deps
 
-COPY --chown=rocketchat:rocketchat --from=builder /app /app
+COPY --chown=yaschat:yaschat --from=builder /app /app
 
 WORKDIR /app/ee/apps/${SERVICE}
 
-USER rocketchat
+USER yaschat
 
 EXPOSE 3000 9458
 
 CMD ["node", "src/service.js"]
 
-FROM rocketchat/dhi-node:24.22.1-alpine3.23-fips AS release-fips
+FROM yaschat/dhi-node:24.22.1-alpine3.23-fips AS release-fips
 ARG SERVICE
 ENV NODE_ENV=production \
     PORT=3000

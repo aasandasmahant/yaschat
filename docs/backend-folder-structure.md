@@ -74,7 +74,7 @@ Practical consequence: when you look for code, ask "what kind of thing is it?" b
 | `media/` | Files and media: `file-upload/` (FileUpload + storage configs), `file/`, `emoji-custom/`, `emoji-native/`, `custom-sounds/`, `assets/`. |
 | `import/` | Importer framework (`classes/`, converters) + one folder per importer (`csv/`, `slack/`, `slack-users/`, `omnichannel-contacts/`, `pending-avatars/`, `pending-files/`). |
 | `integrations/` | Incoming/outgoing webhook integrations engine (the REST surface is `server/api/webhooks.ts`). |
-| `cloud/` | Rocket.Chat Cloud connectivity, `version-check/`, license sync. |
+| `cloud/` | YasChat Cloud connectivity, `version-check/`, license sync. |
 | `http/` | The HTTP server that owns the port: the root Hono app routes register on, the base middlewares, WebSocket upgrades, and the fallback to Meteor. See [features/http-server.md](features/http-server.md). |
 | `realtime/` | The DDP server behind the WebSocket and the process's sessions. See [features/ddp-sessions.md](features/ddp-sessions.md). |
 | `search/`, `autotranslate/`, `statistics/`, `metrics/`, `moderation/`, `dataExport/`, `oauth/`, `roles/`, `bot-helpers/`, `cors/`, `error-handler/`, `ui-master/` | Smaller single-purpose domains, named after what they do. |

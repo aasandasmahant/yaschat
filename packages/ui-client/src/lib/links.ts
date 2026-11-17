@@ -54,7 +54,7 @@ export const links = {
 	/** @deprecated use `go.rocket.chat` links */
 	terms: 'https://rocket.chat/terms',
 	/** @deprecated use `go.rocket.chat` links */
-	updatingRocketChat: 'https://docs.rocket.chat/v1/docs/en/updating-rocketchat',
+	updatingYasChat: 'https://docs.rocket.chat/v1/docs/en/updating-yaschat',
 	/** @deprecated use `go.rocket.chat` links */
 	webhooks: 'https://docs.rocket.chat/use-rocket.chat/omnichannel/webhooks',
 } as const;

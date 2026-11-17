@@ -50,7 +50,7 @@ describe('OmnichannelQueueInactivityMonitorClass', () => {
 	afterEach(() => {
 		modelsMock.Users.findOneById.reset();
 	});
-	describe('getRocketChatUser', () => {
+	describe('getYasChatUser', () => {
 		it('should return rocket.cat user', async () => {
 			const qclass = new OmnichannelQueueInactivityMonitorClass();
 			await qclass.getRocketCatUser();

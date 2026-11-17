@@ -1,4 +1,4 @@
-import type { IRole, ITeamMember, IUser, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IRole, ITeamMember, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { FindPaginated, ITeamMemberModel } from '@rocket.chat/model-typings';
 import type {
 	Collection,
@@ -16,7 +16,7 @@ import type {
 import { BaseRaw } from './BaseRaw';
 
 export class TeamMemberRaw extends BaseRaw<ITeamMember> implements ITeamMemberModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ITeamMember>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ITeamMember>>) {
 		super(db, 'team_member', trash);
 	}
 

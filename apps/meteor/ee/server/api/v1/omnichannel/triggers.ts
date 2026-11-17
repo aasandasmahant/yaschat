@@ -34,7 +34,7 @@ API.v1.addRoute(
 			const headers = {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-				'X-RocketChat-Livechat-Token': token,
+				'X-YasChat-Livechat-Token': token,
 			};
 
 			const response = await callTriggerExternalService({
@@ -107,7 +107,7 @@ API.v1.addRoute(
 			const headers = {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-				'X-RocketChat-Livechat-Token': token,
+				'X-YasChat-Livechat-Token': token,
 			};
 
 			const response = await callTriggerExternalService({

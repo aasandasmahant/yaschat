@@ -1,11 +1,11 @@
-import type { ICustomUserStatus, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ICustomUserStatus, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ICustomUserStatusModel, InsertionModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, InsertOneResult, UpdateResult, WithId, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';
 
 export class CustomUserStatusRaw extends BaseRaw<ICustomUserStatus> implements ICustomUserStatusModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ICustomUserStatus>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ICustomUserStatus>>) {
 		super(db, 'custom_user_status', trash);
 	}
 

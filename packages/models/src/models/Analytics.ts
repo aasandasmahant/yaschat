@@ -250,7 +250,7 @@ export class AnalyticsRaw extends BaseRaw<IAnalytics> implements IAnalyticsModel
 		};
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_room',
+				from: 'yaschat_room',
 				localField: '_id',
 				foreignField: '_id',
 				as: 'room',

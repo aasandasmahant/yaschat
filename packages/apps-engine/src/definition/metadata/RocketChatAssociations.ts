@@ -1,4 +1,4 @@
-export enum RocketChatAssociationModel {
+export enum YasChatAssociationModel {
 	ROOM = 'room',
 	DISCUSSION = 'discussion',
 	MESSAGE = 'message',
@@ -9,9 +9,9 @@ export enum RocketChatAssociationModel {
 	VIDEO_CONFERENCE = 'video-conference',
 }
 
-export class RocketChatAssociationRecord {
+export class YasChatAssociationRecord {
 	constructor(
-		private model: RocketChatAssociationModel,
+		private model: YasChatAssociationModel,
 		private id: string,
 	) {}
 

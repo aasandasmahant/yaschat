@@ -22,7 +22,7 @@ const settingValues: Record<string, unknown> = {
 	IRC_Host: 'irc.example.com',
 	IRC_Port: 6667,
 	IRC_Name: 'irc.rocket.chat',
-	IRC_Description: 'Rocket.Chat IRC bridge',
+	IRC_Description: 'YasChat IRC bridge',
 	IRC_Local_Password: 'local-password',
 	IRC_Peer_Password: 'peer-password',
 };
@@ -45,7 +45,7 @@ describe('startIrcBridge', () => {
 				host: 'irc.example.com',
 				port: 6667,
 				name: 'irc.rocket.chat',
-				description: 'Rocket.Chat IRC bridge',
+				description: 'YasChat IRC bridge',
 			},
 			passwords: {
 				local: 'local-password',

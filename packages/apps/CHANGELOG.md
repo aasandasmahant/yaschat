@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
 
   Users can only assign values they hold, or, with Virtru, values Virtru entitles them to. Members who do not qualify are not added and are listed in `skippedMembers`. While enforcement is on, new private channels and teams must be ABAC-managed and carry the workspace's required attributes.
 
@@ -25,7 +25,7 @@
 
 ### Minor Changes
 
-- ([#42850](https://github.com/RocketChat/Rocket.Chat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
+- ([#42850](https://github.com/YasChat/YasChat/pull/42850)) Allows private rooms and teams to be created with ABAC attributes. **Create channel** and **Create team** get an **ABAC managed** option that walks the user through choosing attributes and previewing which members will be added, and `groups.create` and `teams.create` accept an `abacAttributes` map. This requires the new **Create ABAC-managed rooms** permission, granted to users by default, and every such room is recorded in the ABAC audit log.
 
   Users can only assign values they hold, or, with Virtru, values Virtru entitles them to. Members who do not qualify are not added and are listed in `skippedMembers`. While enforcement is on, new private channels and teams must be ABAC-managed and carry the workspace's required attributes.
 
@@ -46,9 +46,9 @@
 
 ### Minor Changes
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
 
-- ([#42229](https://github.com/RocketChat/Rocket.Chat/pull/42229)) Adds a read-only call history accessor for apps. An app that declares the new `media-call.history` permission can read a user's call history through `read.getCallHistoryReader()`, which exposes `getById`, `getByCallId` and a paginated `search`.
+- ([#42229](https://github.com/YasChat/YasChat/pull/42229)) Adds a read-only call history accessor for apps. An app that declares the new `media-call.history` permission can read a user's call history through `read.getCallHistoryReader()`, which exposes `getById`, `getByCallId` and a paginated `search`.
 
 ### Patch Changes
 
@@ -63,9 +63,9 @@
 
 ### Minor Changes
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
 
-- ([#42229](https://github.com/RocketChat/Rocket.Chat/pull/42229)) Adds a read-only call history accessor for apps. An app that declares the new `media-call.history` permission can read a user's call history through `read.getCallHistoryReader()`, which exposes `getById`, `getByCallId` and a paginated `search`.
+- ([#42229](https://github.com/YasChat/YasChat/pull/42229)) Adds a read-only call history accessor for apps. An app that declares the new `media-call.history` permission can read a user's call history through `read.getCallHistoryReader()`, which exposes `getById`, `getByCallId` and a paginated `search`.
 
 ### Patch Changes
 
@@ -80,11 +80,11 @@
 
 ### Minor Changes
 
-- ([#41474](https://github.com/RocketChat/Rocket.Chat/pull/41474)) Changes the default apps-engine runtime backend from `deno` to `node`. The previous behavior can be restored by setting the environment variable `APPS_ENGINE_RUNTIME_BACKEND='deno'`
+- ([#41474](https://github.com/YasChat/YasChat/pull/41474)) Changes the default apps-engine runtime backend from `deno` to `node`. The previous behavior can be restored by setting the environment variable `APPS_ENGINE_RUNTIME_BACKEND='deno'`
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 8984df841e1ecc46198e073982adabc1f069c352, a9f3e6cd3f31eac17bec626287fcf815d802e9b9]:</summary>
   - @rocket.chat/apps-engine@1.66.0
@@ -97,11 +97,11 @@
 
 ### Minor Changes
 
-- ([#41474](https://github.com/RocketChat/Rocket.Chat/pull/41474)) Changes the default apps-engine runtime backend from `deno` to `node`. The previous behavior can be restored by setting the environment variable `APPS_ENGINE_RUNTIME_BACKEND='deno'`
+- ([#41474](https://github.com/YasChat/YasChat/pull/41474)) Changes the default apps-engine runtime backend from `deno` to `node`. The previous behavior can be restored by setting the environment variable `APPS_ENGINE_RUNTIME_BACKEND='deno'`
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 8984df841e1ecc46198e073982adabc1f069c352, a9f3e6cd3f31eac17bec626287fcf815d802e9b9]:</summary>
   - @rocket.chat/apps-engine@1.66.0-rc.0
@@ -114,13 +114,13 @@
 
 ### Minor Changes
 
-- ([#41019](https://github.com/RocketChat/Rocket.Chat/pull/41019)) Adds an alternative runtime runner for apps. It can be enabled via environment variable `APPS_ENGINE_RUNTIME_BACKEND='node'`
+- ([#41019](https://github.com/YasChat/YasChat/pull/41019)) Adds an alternative runtime runner for apps. It can be enabled via environment variable `APPS_ENGINE_RUNTIME_BACKEND='node'`
 
 ### Patch Changes
 
-- ([#40947](https://github.com/RocketChat/Rocket.Chat/pull/40947) by [@dsaicharan072-cmyk](https://github.com/dsaicharan072-cmyk)) Fixes an issue that would cause apps to fail with 'Module not found' errors in some cases
+- ([#40947](https://github.com/YasChat/YasChat/pull/40947) by [@dsaicharan072-cmyk](https://github.com/dsaicharan072-cmyk)) Fixes an issue that would cause apps to fail with 'Module not found' errors in some cases
 
-- ([#41338](https://github.com/RocketChat/Rocket.Chat/pull/41338) by [@AlgoArtist06](https://github.com/AlgoArtist06)) Fixes app startup failing with EACCES errors in docker deployments running with specified UIDs
+- ([#41338](https://github.com/YasChat/YasChat/pull/41338) by [@AlgoArtist06](https://github.com/AlgoArtist06)) Fixes app startup failing with EACCES errors in docker deployments running with specified UIDs
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4186deb7febee0aa653bb48b27022afa36529b21, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, 6041285601ce6f9586f85cff72fb167642893245]:</summary>
   - @rocket.chat/model-typings@2.4.0
@@ -133,13 +133,13 @@
 
 ### Minor Changes
 
-- ([#41019](https://github.com/RocketChat/Rocket.Chat/pull/41019)) Adds an alternative runtime runner for apps. It can be enabled via environment variable `APPS_ENGINE_RUNTIME_BACKEND='node'`
+- ([#41019](https://github.com/YasChat/YasChat/pull/41019)) Adds an alternative runtime runner for apps. It can be enabled via environment variable `APPS_ENGINE_RUNTIME_BACKEND='node'`
 
 ### Patch Changes
 
-- ([#40947](https://github.com/RocketChat/Rocket.Chat/pull/40947) by [@dsaicharan072-cmyk](https://github.com/dsaicharan072-cmyk)) Fixes an issue that would cause apps to fail with 'Module not found' errors in some cases
+- ([#40947](https://github.com/YasChat/YasChat/pull/40947) by [@dsaicharan072-cmyk](https://github.com/dsaicharan072-cmyk)) Fixes an issue that would cause apps to fail with 'Module not found' errors in some cases
 
-- ([#41338](https://github.com/RocketChat/Rocket.Chat/pull/41338) by [@AlgoArtist06](https://github.com/AlgoArtist06)) Fixes app startup failing with EACCES errors in docker deployments running with specified UIDs
+- ([#41338](https://github.com/YasChat/YasChat/pull/41338) by [@AlgoArtist06](https://github.com/AlgoArtist06)) Fixes app startup failing with EACCES errors in docker deployments running with specified UIDs
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4186deb7febee0aa653bb48b27022afa36529b21, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, 6041285601ce6f9586f85cff72fb167642893245]:</summary>
   - @rocket.chat/model-typings@2.4.0-rc.0
@@ -152,9 +152,9 @@
 
 ### Patch Changes
 
-- ([#40763](https://github.com/RocketChat/Rocket.Chat/pull/40763)) Replaces {} with Object.create(null) to ensure defense-in-depth against prototype pollution
+- ([#40763](https://github.com/YasChat/YasChat/pull/40763)) Replaces {} with Object.create(null) to ensure defense-in-depth against prototype pollution
 
-- ([#41009](https://github.com/RocketChat/Rocket.Chat/pull/41009)) Fixes an issue where an app's bot user presence was incorrectly shown as Offline after updating it.
+- ([#41009](https://github.com/YasChat/YasChat/pull/41009)) Fixes an issue where an app's bot user presence was incorrectly shown as Offline after updating it.
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, 7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2]:</summary>
   - @rocket.chat/model-typings@2.3.1
@@ -167,9 +167,9 @@
 
 ### Patch Changes
 
-- ([#40763](https://github.com/RocketChat/Rocket.Chat/pull/40763)) Replaces {} with Object.create(null) to ensure defense-in-depth against prototype pollution
+- ([#40763](https://github.com/YasChat/YasChat/pull/40763)) Replaces {} with Object.create(null) to ensure defense-in-depth against prototype pollution
 
-- ([#41009](https://github.com/RocketChat/Rocket.Chat/pull/41009)) Fixes an issue where an app's bot user presence was incorrectly shown as Offline after updating it.
+- ([#41009](https://github.com/YasChat/YasChat/pull/41009)) Fixes an issue where an app's bot user presence was incorrectly shown as Offline after updating it.
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, 7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2]:</summary>
   - @rocket.chat/model-typings@2.3.1-rc.0
@@ -182,9 +182,9 @@
 
 ### Minor Changes
 
-- ([#40463](https://github.com/RocketChat/Rocket.Chat/pull/40463)) Allows apps with the right permission to read room's ABAC attributes.
+- ([#40463](https://github.com/YasChat/YasChat/pull/40463)) Allows apps with the right permission to read room's ABAC attributes.
 
-- ([#40343](https://github.com/RocketChat/Rocket.Chat/pull/40343)) Receives the migration of internal files from @rocket.chat/apps-engine
+- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Receives the migration of internal files from @rocket.chat/apps-engine
 
 ### Patch Changes
 
@@ -199,9 +199,9 @@
 
 ### Minor Changes
 
-- ([#40463](https://github.com/RocketChat/Rocket.Chat/pull/40463)) Allows apps with the right permission to read room's ABAC attributes.
+- ([#40463](https://github.com/YasChat/YasChat/pull/40463)) Allows apps with the right permission to read room's ABAC attributes.
 
-- ([#40343](https://github.com/RocketChat/Rocket.Chat/pull/40343)) Receives the migration of internal files from @rocket.chat/apps-engine
+- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Receives the migration of internal files from @rocket.chat/apps-engine
 
 ### Patch Changes
 
@@ -279,7 +279,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/model-typings@2.1.2
@@ -332,7 +332,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/model-typings@2.1.2-rc.0
@@ -459,7 +459,7 @@
 
 ### Minor Changes
 
-- ([#37719](https://github.com/RocketChat/Rocket.Chat/pull/37719)) Adds a new method to the Apps-Engine that allows apps to retrieve multiple rooms from database
+- ([#37719](https://github.com/YasChat/YasChat/pull/37719)) Adds a new method to the Apps-Engine that allows apps to retrieve multiple rooms from database
 
 ### Patch Changes
 
@@ -524,7 +524,7 @@
 
 ### Minor Changes
 
-- ([#37719](https://github.com/RocketChat/Rocket.Chat/pull/37719)) Adds a new method to the Apps-Engine that allows apps to retrieve multiple rooms from database
+- ([#37719](https://github.com/YasChat/YasChat/pull/37719)) Adds a new method to the Apps-Engine that allows apps to retrieve multiple rooms from database
 
 ### Patch Changes
 
@@ -1231,7 +1231,7 @@
 
 ### Minor Changes
 
-- ([#35280](https://github.com/RocketChat/Rocket.Chat/pull/35280)) Allows apps to react to department status changes.
+- ([#35280](https://github.com/YasChat/YasChat/pull/35280)) Allows apps to react to department status changes.
 
 ### Patch Changes
 
@@ -1326,7 +1326,7 @@
 
 ### Minor Changes
 
-- ([#35280](https://github.com/RocketChat/Rocket.Chat/pull/35280)) Allows apps to react to department status changes.
+- ([#35280](https://github.com/YasChat/YasChat/pull/35280)) Allows apps to react to department status changes.
 
 ### Patch Changes
 
@@ -1351,7 +1351,7 @@
 
 ### Minor Changes
 
-- ([#35486](https://github.com/RocketChat/Rocket.Chat/pull/35486)) Adds the executeLivechatRoomCreatePrevent hook to the Rocket.Chat Apps-Engine to prevent the creation of live chat rooms.
+- ([#35486](https://github.com/YasChat/YasChat/pull/35486)) Adds the executeLivechatRoomCreatePrevent hook to the YasChat Apps-Engine to prevent the creation of live chat rooms.
 
 ### Patch Changes
 
@@ -1417,7 +1417,7 @@
 
 ### Minor Changes
 
-- ([#35486](https://github.com/RocketChat/Rocket.Chat/pull/35486)) Adds the executeLivechatRoomCreatePrevent hook to the Rocket.Chat Apps-Engine to prevent the creation of live chat rooms.
+- ([#35486](https://github.com/YasChat/YasChat/pull/35486)) Adds the executeLivechatRoomCreatePrevent hook to the YasChat Apps-Engine to prevent the creation of live chat rooms.
 
 ### Patch Changes
 
@@ -1442,11 +1442,11 @@
 
 ### Minor Changes
 
-- ([#35177](https://github.com/RocketChat/Rocket.Chat/pull/35177)) Adds a new IPostSystemMessageSent event, that is triggered whenever a new System Message is sent
+- ([#35177](https://github.com/YasChat/YasChat/pull/35177)) Adds a new IPostSystemMessageSent event, that is triggered whenever a new System Message is sent
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
 - <details><summary>Updated dependencies [d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, f80ac66b006080313f4aa5a04706ff9c8790622b, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/model-typings@1.4.0
@@ -1508,11 +1508,11 @@
 
 ### Minor Changes
 
-- ([#35177](https://github.com/RocketChat/Rocket.Chat/pull/35177)) Adds a new IPostSystemMessageSent event, that is triggered whenever a new System Message is sent
+- ([#35177](https://github.com/YasChat/YasChat/pull/35177)) Adds a new IPostSystemMessageSent event, that is triggered whenever a new System Message is sent
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
 - <details><summary>Updated dependencies [d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, f80ac66b006080313f4aa5a04706ff9c8790622b, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/model-typings@1.4.0-rc.0
@@ -1813,7 +1813,7 @@
 
 ### Minor Changes
 
-- ([#33569](https://github.com/RocketChat/Rocket.Chat/pull/33569)) Adds a `source` field to livechat visitors, which stores the channel (eg API, widget, SMS, email-inbox, app) that's been used by the visitor to send messages.
+- ([#33569](https://github.com/YasChat/YasChat/pull/33569)) Adds a `source` field to livechat visitors, which stores the channel (eg API, widget, SMS, email-inbox, app) that's been used by the visitor to send messages.
   Uses the new `source` field to assure each visitor is linked to a single source, so that each connection through a distinct channel creates a new visitor.
 
 ### Patch Changes
@@ -2019,7 +2019,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/model-typings@0.6.0
@@ -2091,7 +2091,7 @@
 
 ### Patch Changes
 
-- ([#32719](https://github.com/RocketChat/Rocket.Chat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
+- ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 264d7d5496, b8e5887fb9]:</summary>
   - @rocket.chat/model-typings@0.6.0-rc.0
@@ -2103,13 +2103,13 @@
 
 ### Patch Changes
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from handling errors during execution in some cases
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Improved Apps-Engine installation to prevent start up errors on manual installation setups
 
-- ([#32935](https://github.com/RocketChat/Rocket.Chat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
+- ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
   - @rocket.chat/core-typings@6.10.2
@@ -2131,7 +2131,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2217,7 +2217,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2299,7 +2299,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
@@ -2313,7 +2313,7 @@
 
 ### Patch Changes
 
-- ([#32374](https://github.com/RocketChat/Rocket.Chat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
+- ([#32374](https://github.com/YasChat/YasChat/pull/32374)) Fixed an issue with some apps that didn't implement executeViewCloseHandler. This causes opened modals to be open forever on UI (unless Esc was clicked). This is because when the UI attempts to close it, it calls the aforementioned handler, and since it didn't exist, apps engine errored out.
 
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 

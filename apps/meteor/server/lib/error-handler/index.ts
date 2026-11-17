@@ -1,1 +1,1 @@
-import './RocketChat.ErrorHandler';
+import './YasChat.ErrorHandler';

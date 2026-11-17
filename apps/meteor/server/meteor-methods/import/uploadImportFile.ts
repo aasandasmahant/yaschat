@@ -3,8 +3,8 @@ import type { IUser } from '@rocket.chat/core-typings';
 
 import { ProgressStep } from '../../../lib/importer/ImporterProgressStep';
 import { Importers } from '../../lib/import';
-import { RocketChatImportFileInstance } from '../../lib/import/startup/store';
-import { RocketChatFile } from '../../lib/media/file';
+import { YasChatImportFileInstance } from '../../lib/import/startup/store';
+import { YasChatFile } from '../../lib/media/file';
 
 export const executeUploadImportFile = async (
 	userId: IUser['_id'],
@@ -35,8 +35,8 @@ export const executeUploadImportFile = async (
 
 	// Save the file on the File Store
 	const file = Buffer.from(binaryContent, 'base64');
-	const readStream = RocketChatFile.bufferToStream(file);
-	const writeStream = RocketChatImportFileInstance.createWriteStream(newFileName);
+	const readStream = YasChatFile.bufferToStream(file);
+	const writeStream = YasChatImportFileInstance.createWriteStream(newFileName);
 
 	await new Promise<void>((resolve, reject) => {
 		try {

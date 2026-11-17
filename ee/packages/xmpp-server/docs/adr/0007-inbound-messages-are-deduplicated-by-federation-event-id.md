@@ -13,7 +13,7 @@
   already stored is dropped.
 - The outgoing hook never relays a message that carries `federation.eventId`.
 - In a remote room, a reflected message whose `<replace/>` id, or the id its sender gave it
-  (`<origin-id/>`, otherwise the stanza `id`), is the `_id` of a stored Rocket.Chat message
+  (`<origin-id/>`, otherwise the stanza `id`), is the `_id` of a stored YasChat message
   is dropped before any of the above: it is our own relay coming back.
 
 ## Why
@@ -41,5 +41,5 @@ the author; the room's id is unique in the room and stays findable by anyone who
   (MAM-enabled ejabberd and Prosody) still keeps on the reflection.
 - Copies without any id cannot be deduplicated at all
   ([D3](../specs/message-deduplication.md#d3-copies-without-any-id-are-never-deduplicated)).
-- Rocket.Chat does not stamp its own outbound stanzas with XEP-0359 ids; a capability that
+- YasChat does not stamp its own outbound stanzas with XEP-0359 ids; a capability that
   needs them (retraction, receipts) has to add that.

@@ -1,7 +1,7 @@
-import type { IRocketChatRecord } from '@rocket.chat/core-typings';
+import type { IYasChatRecord } from '@rocket.chat/core-typings';
 import type { FindOptions } from 'mongodb';
 
-export function projectionAllowsAttribute(attributeName: string, options?: FindOptions<IRocketChatRecord>): boolean {
+export function projectionAllowsAttribute(attributeName: string, options?: FindOptions<IYasChatRecord>): boolean {
 	if (!options?.projection) {
 		return true;
 	}

@@ -38,15 +38,15 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 6);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound.2');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound.2');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.external.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound.2');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound.2');
 
-					const internalItem1 = res.body.items.find((item: any) => item._id === 'rocketchat.internal.history.test.outbound');
-					expect(internalItem1).to.have.property('callId', 'rocketchat.internal.call.test');
+					const internalItem1 = res.body.items.find((item: any) => item._id === 'yaschat.internal.history.test.outbound');
+					expect(internalItem1).to.have.property('callId', 'yaschat.internal.call.test');
 					expect(internalItem1).to.have.property('state', 'ended');
 					expect(internalItem1).to.have.property('type', 'media-call');
 					expect(internalItem1).to.have.property('duration', 10);
@@ -56,8 +56,8 @@ describe('[Call History]', () => {
 					expect(internalItem1).to.have.property('contactName', 'Pineapple');
 					expect(internalItem1).to.have.property('contactUsername', 'fruit-001');
 
-					const internalItem2 = res.body.items.find((item: any) => item._id === 'rocketchat.internal.history.test.inbound');
-					expect(internalItem2).to.have.property('callId', 'rocketchat.internal.call.test.2');
+					const internalItem2 = res.body.items.find((item: any) => item._id === 'yaschat.internal.history.test.inbound');
+					expect(internalItem2).to.have.property('callId', 'yaschat.internal.call.test.2');
 					expect(internalItem2).to.have.property('state', 'not-answered');
 					expect(internalItem2).to.have.property('type', 'media-call');
 					expect(internalItem2).to.have.property('duration', 10);
@@ -67,20 +67,20 @@ describe('[Call History]', () => {
 					expect(internalItem2).to.have.property('contactName', 'Apple');
 					expect(internalItem2).to.have.property('contactUsername', 'fruit-002');
 
-					const internalItem3 = res.body.items.find((item: any) => item._id === 'rocketchat.internal.history.test.outbound.2');
-					expect(internalItem3).to.have.property('callId', 'rocketchat.extra.call.test.1');
+					const internalItem3 = res.body.items.find((item: any) => item._id === 'yaschat.internal.history.test.outbound.2');
+					expect(internalItem3).to.have.property('callId', 'yaschat.extra.call.test.1');
 					expect(internalItem3).to.have.property('state', 'transferred');
 					expect(internalItem3).to.have.property('direction', 'outbound');
 					expect(internalItem3).to.have.property('contactName', 'Grapefruit 002');
 
-					const internalItem4 = res.body.items.find((item: any) => item._id === 'rocketchat.internal.history.test.inbound.2');
-					expect(internalItem4).to.have.property('callId', 'rocketchat.extra.call.test.2');
+					const internalItem4 = res.body.items.find((item: any) => item._id === 'yaschat.internal.history.test.inbound.2');
+					expect(internalItem4).to.have.property('callId', 'yaschat.extra.call.test.2');
 					expect(internalItem4).to.have.property('state', 'transferred');
 					expect(internalItem4).to.have.property('direction', 'inbound');
 					expect(internalItem4).to.have.property('contactName', 'Pasta 1');
 
-					const externalItem1 = res.body.items.find((item: any) => item._id === 'rocketchat.external.history.test.outbound');
-					expect(externalItem1).to.have.property('callId', 'rocketchat.external.call.test.outbound');
+					const externalItem1 = res.body.items.find((item: any) => item._id === 'yaschat.external.history.test.outbound');
+					expect(externalItem1).to.have.property('callId', 'yaschat.external.call.test.outbound');
 					expect(externalItem1).to.have.property('state', 'failed');
 					expect(externalItem1).to.have.property('type', 'media-call');
 					expect(externalItem1).to.have.property('duration', 10);
@@ -88,8 +88,8 @@ describe('[Call History]', () => {
 					expect(externalItem1).to.have.property('direction', 'outbound');
 					expect(externalItem1).to.have.property('contactExtension', '1001');
 
-					const externalItem2 = res.body.items.find((item: any) => item._id === 'rocketchat.external.history.test.inbound');
-					expect(externalItem2).to.have.property('callId', 'rocketchat.external.call.test.inbound');
+					const externalItem2 = res.body.items.find((item: any) => item._id === 'yaschat.external.history.test.inbound');
+					expect(externalItem2).to.have.property('callId', 'yaschat.external.call.test.inbound');
 					expect(externalItem2).to.have.property('state', 'ended');
 					expect(externalItem2).to.have.property('type', 'media-call');
 					expect(externalItem2).to.have.property('duration', 10);
@@ -133,8 +133,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 2);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 
@@ -156,9 +156,9 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 3);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 
@@ -180,9 +180,9 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 3);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound.2');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound.2');
 				});
 		});
 
@@ -205,7 +205,7 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 1);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 
@@ -227,7 +227,7 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 1);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
 				});
 		});
 
@@ -249,8 +249,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 2);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
 				});
 		});
 
@@ -272,7 +272,7 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 1);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
 				});
 		});
 
@@ -294,8 +294,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 2);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
 				});
 		});
 
@@ -317,9 +317,9 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 3);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound.2');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound.2');
 				});
 		});
 
@@ -341,7 +341,7 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 1);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.external.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.outbound');
 				});
 		});
 
@@ -363,8 +363,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 2);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.external.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.external.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 
@@ -386,9 +386,9 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 3);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound.2');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound.2');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 
@@ -410,11 +410,11 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('count', 5);
 
 					const historyIds = res.body.items.map((item: any) => item._id);
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.inbound');
-					expect(historyIds).to.include('rocketchat.internal.history.test.outbound.2');
-					expect(historyIds).to.include('rocketchat.external.history.test.outbound');
-					expect(historyIds).to.include('rocketchat.external.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.inbound');
+					expect(historyIds).to.include('yaschat.internal.history.test.outbound.2');
+					expect(historyIds).to.include('yaschat.external.history.test.outbound');
+					expect(historyIds).to.include('yaschat.external.history.test.inbound');
 				});
 		});
 	});
@@ -425,7 +425,7 @@ describe('[Call History]', () => {
 				.get(api('call-history.info'))
 				.set(credentials)
 				.query({
-					historyId: 'rocketchat.internal.history.test.outbound',
+					historyId: 'yaschat.internal.history.test.outbound',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -435,8 +435,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('call').that.is.an('object');
 
 					const { item, call } = res.body;
-					expect(item).to.have.property('_id', 'rocketchat.internal.history.test.outbound');
-					expect(item).to.have.property('callId', 'rocketchat.internal.call.test');
+					expect(item).to.have.property('_id', 'yaschat.internal.history.test.outbound');
+					expect(item).to.have.property('callId', 'yaschat.internal.call.test');
 					expect(item).to.have.property('state', 'ended');
 					expect(item).to.have.property('type', 'media-call');
 					expect(item).to.have.property('duration', 10);
@@ -448,7 +448,7 @@ describe('[Call History]', () => {
 					expect(item).to.have.property('ts');
 					expect(item).to.have.property('endedAt');
 
-					expect(call).to.have.property('_id', 'rocketchat.internal.call.test');
+					expect(call).to.have.property('_id', 'yaschat.internal.call.test');
 					expect(call).to.have.property('service', 'webrtc');
 					expect(call).to.have.property('kind', 'direct');
 					expect(call).to.have.property('state', 'hangup');
@@ -472,7 +472,7 @@ describe('[Call History]', () => {
 				.get(api('call-history.info'))
 				.set(credentials)
 				.query({
-					callId: 'rocketchat.internal.call.test.2',
+					callId: 'yaschat.internal.call.test.2',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -482,8 +482,8 @@ describe('[Call History]', () => {
 					expect(res.body).to.have.property('call').that.is.an('object');
 
 					const { item, call } = res.body;
-					expect(item).to.have.property('_id', 'rocketchat.internal.history.test.inbound');
-					expect(item).to.have.property('callId', 'rocketchat.internal.call.test.2');
+					expect(item).to.have.property('_id', 'yaschat.internal.history.test.inbound');
+					expect(item).to.have.property('callId', 'yaschat.internal.call.test.2');
 					expect(item).to.have.property('state', 'not-answered');
 					expect(item).to.have.property('type', 'media-call');
 					expect(item).to.have.property('duration', 10);
@@ -495,7 +495,7 @@ describe('[Call History]', () => {
 					expect(item).to.have.property('ts');
 					expect(item).to.have.property('endedAt');
 
-					expect(call).to.have.property('_id', 'rocketchat.internal.call.test.2');
+					expect(call).to.have.property('_id', 'yaschat.internal.call.test.2');
 					expect(call).to.have.property('service', 'webrtc');
 					expect(call).to.have.property('kind', 'direct');
 					expect(call).to.have.property('state', 'hangup');
@@ -541,7 +541,7 @@ describe('[Call History]', () => {
 				.get(api('call-history.info'))
 				.set(userCredentials)
 				.query({
-					historyId: 'rocketchat.internal.history.test.outbound',
+					historyId: 'yaschat.internal.history.test.outbound',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(404);
@@ -552,7 +552,7 @@ describe('[Call History]', () => {
 				.get(api('call-history.info'))
 				.set(userCredentials)
 				.query({
-					callId: 'rocketchat.internal.call.test.2',
+					callId: 'yaschat.internal.call.test.2',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(404);

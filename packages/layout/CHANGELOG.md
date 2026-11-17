@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- ([#42974](https://github.com/RocketChat/Rocket.Chat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
+- ([#42974](https://github.com/YasChat/YasChat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
 
   **fuselage**
 
@@ -107,9 +107,9 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42408](https://github.com/RocketChat/Rocket.Chat/pull/42408)) Moved `@rocket.chat/layout` into the Rocket.Chat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
+- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@rocket.chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
 
-- ([#43047](https://github.com/RocketChat/Rocket.Chat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
+- ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373]:</summary>
   - @rocket.chat/fuselage@1.0.0
@@ -133,7 +133,7 @@
 
 ### Patch Changes
 
-- ([#42974](https://github.com/RocketChat/Rocket.Chat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
+- ([#42974](https://github.com/YasChat/YasChat/pull/42974)) Fuselage components no longer take Box styling props from their callers: containers own layout through `gap`, and components declare the variations they support.
 
   **fuselage**
 
@@ -236,9 +236,9 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42408](https://github.com/RocketChat/Rocket.Chat/pull/42408)) Moved `@rocket.chat/layout` into the Rocket.Chat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
+- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@rocket.chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
 
-- ([#43047](https://github.com/RocketChat/Rocket.Chat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
+- ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373]:</summary>
   - @rocket.chat/fuselage@1.0.0-rc.0
@@ -253,92 +253,92 @@
 
 ### Patch Changes
 
-- [#2183](https://github.com/RocketChat/fuselage/pull/2183) [`5d45a29`](https://github.com/RocketChat/fuselage/commit/5d45a299df0ba17fbf9bd660476fc1f001ea8583) Thanks [@tassoevan](https://github.com/tassoevan)! - fix(layout): Adapt `HorizontalWizardLayoutTitle` to viewports below the `md` breakpoint
+- [#2183](https://github.com/YasChat/fuselage/pull/2183) [`5d45a29`](https://github.com/YasChat/fuselage/commit/5d45a299df0ba17fbf9bd660476fc1f001ea8583) Thanks [@tassoevan](https://github.com/tassoevan)! - fix(layout): Adapt `HorizontalWizardLayoutTitle` to viewports below the `md` breakpoint
 
 ## 0.36.2
 
 ### Patch Changes
 
-- [#2148](https://github.com/RocketChat/fuselage/pull/2148) [`0d8e038`](https://github.com/RocketChat/fuselage/commit/0d8e038801972ec29ad2fb1d26da088af05b7b23) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage-tokens)!: Rework the token build and its output formats
+- [#2148](https://github.com/YasChat/fuselage/pull/2148) [`0d8e038`](https://github.com/YasChat/fuselage/commit/0d8e038801972ec29ad2fb1d26da088af05b7b23) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage-tokens)!: Rework the token build and its output formats
 
 ## 0.36.1
 
 ### Patch Changes
 
-- [#2096](https://github.com/RocketChat/fuselage/pull/2096) [`18b421e`](https://github.com/RocketChat/fuselage/commit/18b421ec571d72118fccf3f7705df45b17b16191) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Drop styling props' aliases (`bg`, `w`, `h`, `m`, `mb`, `mbs`, `mbe`, `mi`, `mis`, `mie`, `p`, `pb`, `pbs`, `pbe`, `pi`, `pis`, `pie`) in favor of their full-name counterparts
+- [#2096](https://github.com/YasChat/fuselage/pull/2096) [`18b421e`](https://github.com/YasChat/fuselage/commit/18b421ec571d72118fccf3f7705df45b17b16191) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Drop styling props' aliases (`bg`, `w`, `h`, `m`, `mb`, `mbs`, `mbe`, `mi`, `mis`, `mie`, `p`, `pb`, `pbs`, `pbe`, `pi`, `pis`, `pie`) in favor of their full-name counterparts
 
 ## 0.36.0
 
 ### Minor Changes
 
-- [#2060](https://github.com/RocketChat/fuselage/pull/2060) [`ee381bb`](https://github.com/RocketChat/fuselage/commit/ee381bb32982d0f4ed9ef26385b5016e0a2e4023) Thanks [@tassoevan](https://github.com/tassoevan)! - feat: Remove deprecations and keep documentation comments
+- [#2060](https://github.com/YasChat/fuselage/pull/2060) [`ee381bb`](https://github.com/YasChat/fuselage/commit/ee381bb32982d0f4ed9ef26385b5016e0a2e4023) Thanks [@tassoevan](https://github.com/tassoevan)! - feat: Remove deprecations and keep documentation comments
 
 ## 0.35.0
 
 ### Minor Changes
 
-- [#1999](https://github.com/RocketChat/fuselage/pull/1999) [`6e37f9d`](https://github.com/RocketChat/fuselage/commit/6e37f9d2fee4c9ebeb8ea2c1601bbd4c89905859) Thanks [@tassoevan](https://github.com/tassoevan)! - feat!: Upgrade to React 19
+- [#1999](https://github.com/YasChat/fuselage/pull/1999) [`6e37f9d`](https://github.com/YasChat/fuselage/commit/6e37f9d2fee4c9ebeb8ea2c1601bbd4c89905859) Thanks [@tassoevan](https://github.com/tassoevan)! - feat!: Upgrade to React 19
 
 ## 0.34.3
 
 ### Patch Changes
 
-- [#2010](https://github.com/RocketChat/fuselage/pull/2010) [`6a21baf`](https://github.com/RocketChat/fuselage/commit/6a21baf14375149f5c3d8cb0eb14eacc958c6d32) Thanks [@tassoevan](https://github.com/tassoevan)! - fix(layout): Color in `HorizontalWizardLayoutCaption` issues warning in runtime
+- [#2010](https://github.com/YasChat/fuselage/pull/2010) [`6a21baf`](https://github.com/YasChat/fuselage/commit/6a21baf14375149f5c3d8cb0eb14eacc958c6d32) Thanks [@tassoevan](https://github.com/tassoevan)! - fix(layout): Color in `HorizontalWizardLayoutCaption` issues warning in runtime
 
 ## 0.34.2
 
 ### Patch Changes
 
-- [#1849](https://github.com/RocketChat/fuselage/pull/1849) [`99b319c`](https://github.com/RocketChat/fuselage/commit/99b319c6c2ef1015d1d1edb027068c23dc1e29d9) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(storybook-dark-mode): Fork `storybook-dark-mode`
+- [#1849](https://github.com/YasChat/fuselage/pull/1849) [`99b319c`](https://github.com/YasChat/fuselage/commit/99b319c6c2ef1015d1d1edb027068c23dc1e29d9) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(storybook-dark-mode): Fork `storybook-dark-mode`
 
 ## 0.34.1
 
 ### Patch Changes
 
-- [#1799](https://github.com/RocketChat/fuselage/pull/1799) [`3930b70`](https://github.com/RocketChat/fuselage/commit/3930b7008144a5c6966f0a228a7e07e223bcfc5a) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Use non-polyfilled CSS custom properties
+- [#1799](https://github.com/YasChat/fuselage/pull/1799) [`3930b70`](https://github.com/YasChat/fuselage/commit/3930b7008144a5c6966f0a228a7e07e223bcfc5a) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Use non-polyfilled CSS custom properties
 
 ## 0.34.0
 
 ### Minor Changes
 
-- [#1769](https://github.com/RocketChat/fuselage/pull/1769) [`e0b2dd1`](https://github.com/RocketChat/fuselage/commit/e0b2dd135e5a99c6638341c84a5ca60dfc4f413e) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Remove deprecated `InputBox.*` component namespace
+- [#1769](https://github.com/YasChat/fuselage/pull/1769) [`e0b2dd1`](https://github.com/YasChat/fuselage/commit/e0b2dd135e5a99c6638341c84a5ca60dfc4f413e) Thanks [@tassoevan](https://github.com/tassoevan)! - feat(fuselage): Remove deprecated `InputBox.*` component namespace
 
 ### Patch Changes
 
-- [#1762](https://github.com/RocketChat/fuselage/pull/1762) [`cce8e7f`](https://github.com/RocketChat/fuselage/commit/cce8e7f7ae5bb261e95936c586ac831366579b7d) Thanks [@tassoevan](https://github.com/tassoevan)! - Deletes the `@rocket.chat/fuselage-polyfills` package
+- [#1762](https://github.com/YasChat/fuselage/pull/1762) [`cce8e7f`](https://github.com/YasChat/fuselage/commit/cce8e7f7ae5bb261e95936c586ac831366579b7d) Thanks [@tassoevan](https://github.com/tassoevan)! - Deletes the `@rocket.chat/fuselage-polyfills` package
 
 ## 0.33.1
 
 ### Patch Changes
 
-- [#1703](https://github.com/RocketChat/fuselage/pull/1703) [`33f6797`](https://github.com/RocketChat/fuselage/commit/33f67971392057420b3b3b49e35f567ac2af7319) Thanks [@aleksandernsilva](https://github.com/aleksandernsilva)! - fix(fuselage): FieldLabel required prop ignored when 'is' prop is set
+- [#1703](https://github.com/YasChat/fuselage/pull/1703) [`33f6797`](https://github.com/YasChat/fuselage/commit/33f67971392057420b3b3b49e35f567ac2af7319) Thanks [@aleksandernsilva](https://github.com/aleksandernsilva)! - fix(fuselage): FieldLabel required prop ignored when 'is' prop is set
 
 ## 0.33.0
 
 ### Minor Changes
 
-- [#1650](https://github.com/RocketChat/fuselage/pull/1650) [`69cae10`](https://github.com/RocketChat/fuselage/commit/69cae10093138e81a004a8229d14d214f60c509e) Thanks [@dougfabris](https://github.com/dougfabris)! - feat(layout): Remove unnecessary Link component
+- [#1650](https://github.com/YasChat/fuselage/pull/1650) [`69cae10`](https://github.com/YasChat/fuselage/commit/69cae10093138e81a004a8229d14d214f60c509e) Thanks [@dougfabris](https://github.com/dougfabris)! - feat(layout): Remove unnecessary Link component
 
 ## 0.32.1
 
 ### Patch Changes
 
-- [#1624](https://github.com/RocketChat/fuselage/pull/1624) [`c659931`](https://github.com/RocketChat/fuselage/commit/c65993112e87a9ed264886b35ffaef59b5ba2ceb) Thanks [@juliajforesti](https://github.com/juliajforesti)! - fix(layout): add missing tokens to layout `Form`
+- [#1624](https://github.com/YasChat/fuselage/pull/1624) [`c659931`](https://github.com/YasChat/fuselage/commit/c65993112e87a9ed264886b35ffaef59b5ba2ceb) Thanks [@juliajforesti](https://github.com/juliajforesti)! - fix(layout): add missing tokens to layout `Form`
 
 ## 0.32.0
 
 ### Minor Changes
 
-- [#1514](https://github.com/RocketChat/fuselage/pull/1514) [`c4d8300`](https://github.com/RocketChat/fuselage/commit/c4d8300a651a25b92450b8830c5028b4fcf8f4a1) Thanks [@tassoevan](https://github.com/tassoevan)! - feat: Raise minimum supported React version to 18
+- [#1514](https://github.com/YasChat/fuselage/pull/1514) [`c4d8300`](https://github.com/YasChat/fuselage/commit/c4d8300a651a25b92450b8830c5028b4fcf8f4a1) Thanks [@tassoevan](https://github.com/tassoevan)! - feat: Raise minimum supported React version to 18
 
 ## 0.31.27
 
 ### Patch Changes
 
-- [#1362](https://github.com/RocketChat/fuselage/pull/1362) [`2a4d8db74`](https://github.com/RocketChat/fuselage/commit/2a4d8db743fd2233bfe9f897ffe308955f56c24b) Thanks [@dougfabris](https://github.com/dougfabris)! - fix(layout): FormContainer wrong props
+- [#1362](https://github.com/YasChat/fuselage/pull/1362) [`2a4d8db74`](https://github.com/YasChat/fuselage/commit/2a4d8db743fd2233bfe9f897ffe308955f56c24b) Thanks [@dougfabris](https://github.com/dougfabris)! - fix(layout): FormContainer wrong props
 
 ## 0.31.26
 
 ### Patch Changes
 
-- [#1208](https://github.com/RocketChat/fuselage/pull/1208) [`24a06471d`](https://github.com/RocketChat/fuselage/commit/24a06471d4fd3c48b4e9611b6d663218934d1416) Thanks [@tiagoevanp](https://github.com/tiagoevanp)! - Adjust some font scales and text colors, fix some wrong translations, remove description from admin email on register server step, disable register workspace button when air-gapped.
+- [#1208](https://github.com/YasChat/fuselage/pull/1208) [`24a06471d`](https://github.com/YasChat/fuselage/commit/24a06471d4fd3c48b4e9611b6d663218934d1416) Thanks [@tiagoevanp](https://github.com/tiagoevanp)! - Adjust some font scales and text colors, fix some wrong translations, remove description from admin email on register server step, disable register workspace button when air-gapped.

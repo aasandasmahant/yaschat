@@ -1,6 +1,6 @@
 # Code Coverage
 
-This document explains how code coverage instrumentation works in Rocket.Chat's build and CI pipeline.
+This document explains how code coverage instrumentation works in YasChat's build and CI pipeline.
 
 ## Overview
 
@@ -11,7 +11,7 @@ Coverage is collected during E2E test runs (API, UI, Livechat) to measure how mu
 The coverage pipeline has three components:
 
 1. **Build-time instrumentation** - injects coverage counters into the code during Meteor build
-2. **Runtime collection** - the `rocketchat:coverage` Meteor package collects `__coverage__` data on process exit
+2. **Runtime collection** - the `yaschat:coverage` Meteor package collects `__coverage__` data on process exit
 3. **CI reporting** - test workflows merge coverage data and upload reports
 
 ```
@@ -22,7 +22,7 @@ Build (SWC + plugin)  -->  Run tests  -->  Process exit triggers report  -->  Me
 
 ### Modern build stack (SWC)
 
-Rocket.Chat uses Meteor's modern build stack with [SWC](https://swc.rs/) as the transpiler. For coverage builds, the [`swc-plugin-coverage-instrument`](https://github.com/kwonoj/swc-plugin-coverage-instrument) plugin is injected into `.swcrc` at build time.
+YasChat uses Meteor's modern build stack with [SWC](https://swc.rs/) as the transpiler. For coverage builds, the [`swc-plugin-coverage-instrument`](https://github.com/kwonoj/swc-plugin-coverage-instrument) plugin is injected into `.swcrc` at build time.
 
 This is configured in `.github/actions/meteor-build/action.yml`:
 
@@ -33,7 +33,7 @@ env:
 
 When `BABEL_ENV=coverage`, the build script:
 
-1. Adds `rocketchat:coverage` to `.meteor/packages`
+1. Adds `yaschat:coverage` to `.meteor/packages`
 2. Injects `swc-plugin-coverage-instrument` into `.swcrc` via a node script:
 
 ```js
@@ -48,7 +48,7 @@ This approach ensures the same build pipeline (SWC) is used for both regular and
 
 ### Web client (Vite)
 
-The web client is built by Vite (`yarn build:client`, see [features/web-client-hosting.md](features/web-client-hosting.md)), not by Meteor's SWC, so the step above only instruments the server. With `BABEL_ENV=coverage`, the `rocketchat-coverage` plugin in `apps/meteor/vite/vite.config.mts` instruments the app's own client files (not `node_modules`) with `istanbul-lib-instrument`, naming each by its absolute path. The UI e2e tests read the counters from `window.__coverage__`. Production builds are not instrumented.
+The web client is built by Vite (`yarn build:client`, see [features/web-client-hosting.md](features/web-client-hosting.md)), not by Meteor's SWC, so the step above only instruments the server. With `BABEL_ENV=coverage`, the `yaschat-coverage` plugin in `apps/meteor/vite/vite.config.mts` instruments the app's own client files (not `node_modules`) with `istanbul-lib-instrument`, naming each by its absolute path. The UI e2e tests read the counters from `window.__coverage__`. Production builds are not instrumented.
 
 ### Legacy build stack (Babel)
 
@@ -68,9 +68,9 @@ Before the modern build stack, coverage was handled via `babel-plugin-istanbul` 
 
 This section is still present in `.babelrc` as a fallback for files that fall back to Babel compilation (e.g., SWC-incompatible code).
 
-## Runtime collection: `rocketchat:coverage`
+## Runtime collection: `yaschat:coverage`
 
-The `rocketchat:coverage` Meteor package (`apps/meteor/packages/rocketchat-coverage/`) is only added to the build during coverage runs. It:
+The `yaschat:coverage` Meteor package (`apps/meteor/packages/yaschat-coverage/`) is only added to the build during coverage runs. It:
 
 1. Registers a `process.on('exit')` handler
 2. Reads `globalThis['__coverage__']` (populated by the instrumentation)
@@ -91,7 +91,7 @@ Coverage is collected in the `ci-test-e2e.yml` workflow:
 1. **Build**: `meteor-build` action runs with `type: coverage`, producing a Docker image with instrumented code
 2. **Test**: E2E tests run against the instrumented server. On each test shard:
    - `COVERAGE_DIR`, `COVERAGE_FILE_NAME`, and `COVERAGE_REPORTER` are set
-   - When the Rocket.Chat process exits after tests, the coverage plugin writes a JSON report
+   - When the YasChat process exits after tests, the coverage plugin writes a JSON report
 3. **Merge**: `nyc merge` combines per-shard JSON reports into a single coverage file
 4. **Upload**: Coverage data is uploaded to Codecov
 
@@ -115,7 +115,7 @@ node -e "
 "
 
 # Add the coverage package
-echo -e "rocketchat:coverage\n" >> .meteor/packages
+echo -e "yaschat:coverage\n" >> .meteor/packages
 
 # Set env vars and run
 COVERAGE_DIR=/tmp/coverage COVERAGE_FILE_NAME=local.json COVERAGE_REPORTER=lcov yarn dev
@@ -131,6 +131,6 @@ This covers the server only: `yarn dev` serves the client from Vite's dev server
 |---|---|
 | `swc-plugin-coverage-instrument` | SWC plugin for Istanbul-compatible instrumentation |
 | `istanbul-lib-instrument` | Instruments the Vite-built web client in coverage builds |
-| `istanbul-lib-coverage` | Coverage map creation (used by `rocketchat:coverage`) |
+| `istanbul-lib-coverage` | Coverage map creation (used by `yaschat:coverage`) |
 | `istanbul-lib-report` | Report context creation |
 | `istanbul-reports` | Report formatters (json, lcov, etc.) |

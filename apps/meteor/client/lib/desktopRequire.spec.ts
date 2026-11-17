@@ -14,8 +14,8 @@ describe('installDesktopRequire', () => {
 		expect(target.require).toBeUndefined();
 	});
 
-	it.each(['/rocketchat.info', '/app/utils/rocketchat.info'])('returns the server info for %s in the desktop app', (id) => {
-		const target = createWindow({ RocketChatDesktop: {} as Window['RocketChatDesktop'] });
+	it.each(['/yaschat.info', '/app/utils/yaschat.info'])('returns the server info for %s in the desktop app', (id) => {
+		const target = createWindow({ YasChatDesktop: {} as Window['YasChatDesktop'] });
 
 		installDesktopRequire(target, info);
 
@@ -23,7 +23,7 @@ describe('installDesktopRequire', () => {
 	});
 
 	it('throws a module-not-found error for any other module', () => {
-		const target = createWindow({ RocketChatDesktop: {} as Window['RocketChatDesktop'] });
+		const target = createWindow({ YasChatDesktop: {} as Window['YasChatDesktop'] });
 
 		installDesktopRequire(target, info);
 
@@ -33,20 +33,20 @@ describe('installDesktopRequire', () => {
 
 	it('answers the server info over an existing require that does not know it', () => {
 		const existing = jest.fn(() => {
-			throw Object.assign(new Error("Cannot find module '/rocketchat.info'"), { code: 'MODULE_NOT_FOUND' });
+			throw Object.assign(new Error("Cannot find module '/yaschat.info'"), { code: 'MODULE_NOT_FOUND' });
 		});
-		const target = createWindow({ RocketChatDesktop: {} as Window['RocketChatDesktop'], require: existing });
+		const target = createWindow({ YasChatDesktop: {} as Window['YasChatDesktop'], require: existing });
 
 		installDesktopRequire(target, info);
 
-		expect(target.require?.('/rocketchat.info')).toEqual({ Info: info });
+		expect(target.require?.('/yaschat.info')).toEqual({ Info: info });
 		expect(existing).not.toHaveBeenCalled();
 	});
 
 	it('leaves every other module to the existing require', () => {
 		const meteorModule = { Meteor: {} };
 		const existing = jest.fn(() => meteorModule);
-		const target = createWindow({ RocketChatDesktop: {} as Window['RocketChatDesktop'], require: existing });
+		const target = createWindow({ YasChatDesktop: {} as Window['YasChatDesktop'], require: existing });
 
 		installDesktopRequire(target, info);
 

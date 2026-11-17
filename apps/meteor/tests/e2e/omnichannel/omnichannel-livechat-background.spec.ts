@@ -6,7 +6,7 @@ import { createAgent, makeAgentAvailable } from '../utils/omnichannel/agents';
 import { test, expect } from '../utils/test';
 
 declare const window: Window & {
-	RocketChat: {
+	YasChat: {
 		livechat: {
 			setTheme: (theme: { background?: string }) => void;
 		};
@@ -70,13 +70,13 @@ test.describe('OC - Livechat - Message list background', async () => {
 		});
 
 		await test.step('expect to give priority to background provided via api', async () => {
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ background: 'rgb(186, 218, 85)' }));
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ background: 'rgb(186, 218, 85)' }));
 
 			await expect(await poLiveChat.messageListBackground).toBe('rgb(186, 218, 85)');
 		});
 
 		await test.step('expect to fallback to setting if api background is not available', async () => {
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ background: undefined }));
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ background: undefined }));
 			await expect(await poLiveChat.messageListBackground).toBe('rgb(186, 1, 85)');
 		});
 

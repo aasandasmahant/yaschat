@@ -4,15 +4,15 @@ import { UserStatusConnection, UserType } from '@rocket.chat/apps-engine/definit
 import * as z from 'zod';
 
 /**
- * Bidirectional enum mappings between Rocket.Chat's stored string values and the
- * Apps-Engine enums, expressed as Zod codecs (`decode`: Rocket.Chat -> Apps-Engine,
- * `encode`: Apps-Engine -> Rocket.Chat).
+ * Bidirectional enum mappings between YasChat's stored string values and the
+ * Apps-Engine enums, expressed as Zod codecs (`decode`: YasChat -> Apps-Engine,
+ * `encode`: Apps-Engine -> YasChat).
  *
  * These are behaviour-preserving replacements for the private `_convert*ToApp`/`_convert*ToEnum`
  * helpers currently living inside the converter classes. The `decode` transforms reproduce the
  * exact fallback semantics of those helpers (including passing unknown values through, upper-cased
  * where the legacy code did so). The `encode` transforms mirror the reverse converters, which today
- * assign the Apps-Engine value straight back onto the Rocket.Chat document without translation.
+ * assign the Apps-Engine value straight back onto the YasChat document without translation.
  *
  * Note: the contextual `console.warn` calls that depend on data unavailable to a pure enum mapping
  * (e.g. the affected user's id/username in the status-connection warning) are intentionally left in
@@ -20,7 +20,7 @@ import * as z from 'zod';
  */
 
 /**
- * Rocket.Chat `IUser['type']` <-> Apps-Engine `UserType`.
+ * YasChat `IUser['type']` <-> Apps-Engine `UserType`.
  * Mirrors `AppUsersConverter._convertUserTypeToEnum`.
  */
 export const UserTypeCodec = z.codec(z.any(), z.any(), {
@@ -45,7 +45,7 @@ export const UserTypeCodec = z.codec(z.any(), z.any(), {
 });
 
 /**
- * Rocket.Chat `IUser['statusConnection']` <-> Apps-Engine `UserStatusConnection`.
+ * YasChat `IUser['statusConnection']` <-> Apps-Engine `UserStatusConnection`.
  * Mirrors the value mapping of `AppUsersConverter._convertStatusConnectionToEnum`. The legacy
  * `console.warn` (which includes the affected user's id/username) stays in the converter, since
  * that context is not available to a standalone codec.
@@ -72,7 +72,7 @@ export const UserStatusConnectionCodec = z.codec(z.any(), z.any(), {
 });
 
 /**
- * Rocket.Chat `IRoom['t']` <-> Apps-Engine `RoomType`.
+ * YasChat `IRoom['t']` <-> Apps-Engine `RoomType`.
  * Mirrors `AppRoomsConverter._convertTypeToApp`. Unknown type characters pass through unchanged.
  */
 export const RoomTypeCodec = z.codec(z.any(), z.any(), {
@@ -95,7 +95,7 @@ export const RoomTypeCodec = z.codec(z.any(), z.any(), {
 });
 
 /**
- * Rocket.Chat `ISetting['type']` <-> Apps-Engine `SettingType`.
+ * YasChat `ISetting['type']` <-> Apps-Engine `SettingType`.
  * Mirrors `AppSettingsConverter._convertTypeToApp`. Unknown types pass through unchanged.
  */
 export const SettingTypeCodec = z.codec(z.any(), z.any(), {

@@ -11,7 +11,7 @@ const AppsMock = {
 		getManager: sinon.stub(),
 		getStorage: sinon.stub(),
 		getAppSourceStorage: sinon.stub(),
-		getRocketChatLogger: sinon.stub(),
+		getYasChatLogger: sinon.stub(),
 		triggerEvent: sinon.stub(),
 	},
 };
@@ -65,7 +65,7 @@ describe('AppsEngineService', () => {
 		AppsMock.self.getManager.reset();
 		AppsMock.self.getStorage.reset();
 		AppsMock.self.getAppSourceStorage.reset();
-		AppsMock.self.getRocketChatLogger.reset();
+		AppsMock.self.getYasChatLogger.reset();
 		AppsMock.self.triggerEvent.reset();
 		isRunningMsMock.reset();
 	});

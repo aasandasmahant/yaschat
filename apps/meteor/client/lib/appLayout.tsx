@@ -31,7 +31,7 @@ class AppLayoutSubscription extends Emitter<{ update: void }> {
 	 * workspace with something rendered inside it. Those omit the app-level chrome, so an admin announcement or
 	 * an E2E password prompt doesn't appear over a call.
 	 *
-	 * Deliberately not called `embedded`: that already means Rocket.Chat rendered inside someone else's page
+	 * Deliberately not called `embedded`: that already means YasChat rendered inside someone else's page
 	 * (`layout=embedded`), which is still the workspace and still wants its banners. Embedded chats reach this
 	 * through the ordinary room route and never pass this option.
 	 */

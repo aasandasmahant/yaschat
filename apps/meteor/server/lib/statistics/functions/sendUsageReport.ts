@@ -5,7 +5,7 @@ import { Statistics } from '@rocket.chat/models';
 import { serverFetch as fetch } from '@rocket.chat/server-fetch';
 import { tracerSpan } from '@rocket.chat/tracing';
 
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { shouldReportStatistics } from '../../../cron/usageReport';
 import { getWorkspaceAccessToken } from '../../cloud';
 import { getWorkspaceURL } from '../../utils/getURL';

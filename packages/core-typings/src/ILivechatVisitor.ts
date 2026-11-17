@@ -1,4 +1,4 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { UserStatus } from './UserStatus';
 
 export interface IVisitorPhone {
@@ -20,7 +20,7 @@ export interface IVisitorExternalIdentifier {
 	metadata?: Record<string, unknown>;
 }
 
-export interface ILivechatVisitor extends IRocketChatRecord {
+export interface ILivechatVisitor extends IYasChatRecord {
 	username: string;
 	ts: Date;
 	token: string;

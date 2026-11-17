@@ -8,12 +8,12 @@ const Installation = () => {
 	const { t } = useTranslation();
 	const siteUrl = useSetting('Site_Url', useAbsoluteUrl()('')).replace(/\/$/, '');
 
-	const installString = `<!-- Start of Rocket.Chat Livechat Script -->
+	const installString = `<!-- Start of YasChat Livechat Script -->
 	<script type="text/javascript">
 	(function(w, d, s, u) {
-		w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+		w.YasChat = function(c) { w.YasChat._.push(c) }; w.YasChat._ = []; w.YasChat.url = u;
 		var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-		j.async = true; j.src = '${siteUrl}/livechat/rocketchat-livechat.min.js?_=201903270000';
+		j.async = true; j.src = '${siteUrl}/livechat/yaschat-livechat.min.js?_=201903270000';
 		h.parentNode.insertBefore(j, h);
 	})(window, document, 'script', '${siteUrl}/livechat');
 	</script>`;
@@ -27,7 +27,7 @@ const Installation = () => {
 				<Box maxWidth='x600' alignSelf='center'>
 					<p>
 						<Trans
-							i18nKey='To_install_RocketChat_Livechat_in_your_website_copy_paste_this_code_above_the_last_body_tag_on_your_site'
+							i18nKey='To_install_YasChat_Livechat_in_your_website_copy_paste_this_code_above_the_last_body_tag_on_your_site'
 							values={{ bodyTag: '</body>' }}
 							components={{ bold: <Box is='span' fontWeight='bold' /> }}
 						/>

@@ -1,5 +1,5 @@
 services:
-  rocketchat:
+  yaschat:
     platform: linux/amd64
     image: ghcr.io/${LOWERCASE_REPOSITORY}/rocket.chat:${DOCKER_TAG}
     environment:
@@ -18,9 +18,9 @@ services:
       - mongo
     labels:
       traefik.enable: true
-      traefik.http.services.rocketchat.loadbalancer.server.port: 3000
-      traefik.http.routers.rocketchat.service: rocketchat
-      traefik.http.routers.rocketchat.rule: PathPrefix(`/`)
+      traefik.http.services.yaschat.loadbalancer.server.port: 3000
+      traefik.http.routers.yaschat.service: yaschat
+      traefik.http.routers.yaschat.rule: PathPrefix(`/`)
 
   authorization-service:
     platform: linux/amd64

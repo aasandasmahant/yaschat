@@ -1,10 +1,10 @@
 # `@rocket.chat/fuselage-hooks`
 
-> React hooks for Fuselage, Rocket.Chat's design system.
+> React hooks for Fuselage, YasChat's design system.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-hooks) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-hooks)
 
-A collection of general-purpose React hooks used by [`@rocket.chat/fuselage`](https://www.npmjs.com/package/@rocket.chat/fuselage) and the Rocket.Chat web client. They cover debouncing, stable callbacks and refs, media queries and breakpoints, element size and visibility, web storage, clipboard access and anchored positioning.
+A collection of general-purpose React hooks used by [`@rocket.chat/fuselage`](https://www.npmjs.com/package/@rocket.chat/fuselage) and the YasChat web client. They cover debouncing, stable callbacks and refs, media queries and breakpoints, element size and visibility, web storage, clipboard access and anchored positioning.
 
 The hooks do not depend on Fuselage components, so you can use them in any React app.
 
@@ -173,7 +173,7 @@ The package also exports the types used by these hooks, such as `UseClipboardPar
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage-hooks). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-hooks). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/fuselage-hooks build
@@ -185,4 +185,4 @@ yarn workspace @rocket.chat/fuselage-hooks lint:fix
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

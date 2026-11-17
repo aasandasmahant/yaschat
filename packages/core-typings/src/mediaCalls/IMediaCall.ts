@@ -1,4 +1,4 @@
-import type { IRocketChatRecord } from '../IRocketChatRecord';
+import type { IYasChatRecord } from '../IYasChatRecord';
 import type { IUser } from '../IUser';
 import type { RequiredField } from '../utils';
 
@@ -51,7 +51,7 @@ export type CallPreventionRecord = {
 	i18n?: { key: string; ns: string; args?: Record<string, string | number> };
 };
 
-export interface IMediaCall extends IRocketChatRecord {
+export interface IMediaCall extends IYasChatRecord {
 	service: 'webrtc';
 	kind: 'direct';
 

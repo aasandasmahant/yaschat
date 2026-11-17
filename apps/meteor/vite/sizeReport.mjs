@@ -40,7 +40,7 @@ await build({
 	logLevel: 'warn',
 	plugins: [
 		{
-			name: 'rocketchat-size-report',
+			name: 'yaschat-size-report',
 			generateBundle(_options, bundle) {
 				// Counted from the output itself: `dist/bundle` also receives whatever `public/bundle` holds.
 				for (const chunk of Object.values(bundle)) {

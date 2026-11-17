@@ -1,9 +1,9 @@
 # Native XMPP Server
 
-Rocket.Chat can act as a native XMPP server: it federates directly with other XMPP servers
+YasChat can act as a native XMPP server: it federates directly with other XMPP servers
 over the standard server-to-server protocol, without bridges. Remote XMPP users can message
-Rocket.Chat users, exchange presence with them and join dedicated XMPP rooms hosted by
-Rocket.Chat; Rocket.Chat users can message any XMPP address and take part in rooms on remote
+YasChat users, exchange presence with them and join dedicated XMPP rooms hosted by
+YasChat; YasChat users can message any XMPP address and take part in rooms on remote
 servers. It is independent from, and coexists with, the XMPP support offered through the
 Matrix federation bridge.
 

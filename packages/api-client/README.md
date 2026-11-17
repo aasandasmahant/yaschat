@@ -1,12 +1,12 @@
 # `@rocket.chat/api-client`
 
-> A typed `fetch`-based client for the Rocket.Chat REST API.
+> A typed `fetch`-based client for the YasChat REST API.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/api-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/api-client) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/api-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/api-client)
 
-`RestClient` sends requests to a Rocket.Chat server's `/api` routes. Endpoint paths, parameters and results are typed by [`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings), so the compiler checks each call against the endpoint it targets. Results are typed as `Serialized<...>` from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings): what actually arrives over JSON, with dates as strings.
+`RestClient` sends requests to a YasChat server's `/api` routes. Endpoint paths, parameters and results are typed by [`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings), so the compiler checks each call against the endpoint it targets. Results are typed as `Serialized<...>` from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings): what actually arrives over JSON, with dates as strings.
 
-The Rocket.Chat web client uses this package, and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) builds its `rest` property on top of it.
+The YasChat web client uses this package, and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) builds its `rest` property on top of it.
 
 - Typed `get`, `post`, `put` and `delete` methods.
 - Authentication through `X-User-Id` / `X-Auth-Token` headers.
@@ -171,7 +171,7 @@ const xhr = client.upload(
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/api-client). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/api-client). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/api-client build
@@ -182,4 +182,4 @@ yarn workspace @rocket.chat/api-client testunit
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

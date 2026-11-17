@@ -31,7 +31,7 @@ const insertUser = (_id: string, abacAttributes?: IAbacAttributeDefinition[]) =>
 beforeAll(async () => {
 	sharedMongo = await acquireSharedInMemoryMongo('abac_local_pdp_test');
 	usersCol = sharedMongo.db.collection('users');
-	roomsCol = sharedMongo.db.collection('rocketchat_room');
+	roomsCol = sharedMongo.db.collection('yaschat_room');
 });
 
 afterAll(async () => {

@@ -1,5 +1,5 @@
 import type { IMessage } from './IMessage/IMessage';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IRoom } from './IRoom';
 import type { IUser } from './IUser';
 
@@ -17,7 +17,7 @@ export type CallHistoryItemState =
 	/** An app refused the call before anyone's device rang */
 	| 'prevented';
 
-interface ICallHistoryItem extends IRocketChatRecord {
+interface ICallHistoryItem extends IYasChatRecord {
 	uid: IUser['_id'];
 	ts: Date;
 

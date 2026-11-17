@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import type { ServerResponse, IncomingMessage } from 'node:http';
 
 import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRocketChatAssets, IRocketChatAsset, ISetting } from '@rocket.chat/core-typings';
+import type { IYasChatAssets, IYasChatAsset, ISetting } from '@rocket.chat/core-typings';
 import { Settings } from '@rocket.chat/models';
 import type { NextHandleFunction } from 'connect';
 import { WebApp, WebAppInternals } from 'meteor/webapp';
@@ -13,15 +13,15 @@ import { settings, settingsRegistry } from '../../../settings';
 import { hasPermissionAsync } from '../../authorization/hasPermission';
 import { notifyOnSettingChangedById } from '../../notifyListener';
 import { getURL } from '../../utils/getURL';
-import { RocketChatFile } from '../file';
+import { YasChatFile } from '../file';
 
-const RocketChatAssetsInstance = new RocketChatFile.GridFS({
+const YasChatAssetsInstance = new YasChatFile.GridFS({
 	name: 'assets',
 });
 
-type IRocketChatAssetsConfig = Record<keyof IRocketChatAssets, IRocketChatAsset & { settingOptions?: Partial<ISetting> }>;
+type IYasChatAssetsConfig = Record<keyof IYasChatAssets, IYasChatAsset & { settingOptions?: Partial<ISetting> }>;
 
-const assets: IRocketChatAssetsConfig = {
+const assets: IYasChatAssetsConfig = {
 	logo: {
 		label: 'logo (svg, png, jpg)',
 		defaultUrl: 'images/logo/logo.svg',
@@ -211,11 +211,11 @@ const assets: IRocketChatAssetsConfig = {
 };
 
 function getAssetByKey(key: string) {
-	return assets[key as keyof IRocketChatAssets];
+	return assets[key as keyof IYasChatAssets];
 }
 
-class RocketChatAssetsClass {
-	get assets(): IRocketChatAssets {
+class YasChatAssetsClass {
+	get assets(): IYasChatAssets {
 		return assets;
 	}
 
@@ -225,19 +225,19 @@ class RocketChatAssetsClass {
 		asset: string,
 	): Promise<{
 		key: string;
-		value: IRocketChatAsset;
+		value: IYasChatAsset;
 	}> {
 		const assetInstance = getAssetByKey(asset);
 		if (!assetInstance) {
 			throw new ClientSafeError('error-invalid-asset', 'Invalid asset', {
-				function: 'RocketChat.Assets.setAsset',
+				function: 'YasChat.Assets.setAsset',
 			});
 		}
 
 		const extension = getExtension(contentType);
 		if (assetInstance.constraints.extensions.includes(extension) === false) {
 			throw new ClientSafeError('error-invalid-file-type', `Invalid file type: ${contentType}`, {
-				function: 'RocketChat.Assets.setAsset',
+				function: 'YasChat.Assets.setAsset',
 			});
 		}
 
@@ -253,10 +253,10 @@ class RocketChatAssetsClass {
 			}
 		}
 
-		const rs = RocketChatFile.bufferToStream(file);
-		await RocketChatAssetsInstance.deleteFile(asset);
+		const rs = YasChatFile.bufferToStream(file);
+		await YasChatAssetsInstance.deleteFile(asset);
 
-		const ws = RocketChatAssetsInstance.createWriteStream(asset, contentType);
+		const ws = YasChatAssetsInstance.createWriteStream(asset, contentType);
 
 		return new Promise((resolve) => {
 			ws.on('end', () => {
@@ -265,9 +265,9 @@ class RocketChatAssetsClass {
 					const value = {
 						url: `assets/${asset}.${extension}`,
 						defaultUrl: assetInstance.defaultUrl,
-					} as IRocketChatAsset;
+					} as IYasChatAsset;
 
-					await RocketChatAssets.processAsset(key, value);
+					await YasChatAssets.processAsset(key, value);
 					resolve({
 						key,
 						value,
@@ -282,17 +282,17 @@ class RocketChatAssetsClass {
 	public async unsetAsset(asset: string) {
 		if (!getAssetByKey(asset)) {
 			throw new ClientSafeError('error-invalid-asset', 'Invalid asset', {
-				function: 'RocketChat.Assets.unsetAsset',
+				function: 'YasChat.Assets.unsetAsset',
 			});
 		}
 
-		await RocketChatAssetsInstance.deleteFile(asset);
+		await YasChatAssetsInstance.deleteFile(asset);
 		const key = `Assets_${asset}`;
 		const value = {
 			defaultUrl: getAssetByKey(asset).defaultUrl,
 		};
 
-		await RocketChatAssets.processAsset(key, value);
+		await YasChatAssets.processAsset(key, value);
 
 		return {
 			key,
@@ -323,7 +323,7 @@ class RocketChatAssetsClass {
 			return;
 		}
 
-		const file = await RocketChatAssetsInstance.getFile(assetKey);
+		const file = await YasChatAssetsInstance.getFile(assetKey);
 		if (!file) {
 			assetValue.cache = undefined;
 			return;
@@ -351,16 +351,16 @@ class RocketChatAssetsClass {
 	}
 
 	public getURL(assetName: string, options = { cdn: false, full: true }): string {
-		const asset = settings.get<IRocketChatAsset>(assetName);
+		const asset = settings.get<IYasChatAsset>(assetName);
 		const url = asset.url || asset.defaultUrl;
 
 		return getURL(url as string, options);
 	}
 }
 
-export const RocketChatAssets = new RocketChatAssetsClass();
+export const YasChatAssets = new YasChatAssetsClass();
 
-export async function addAssetToSetting(asset: string, value: IRocketChatAsset, options?: Partial<ISetting>): Promise<void> {
+export async function addAssetToSetting(asset: string, value: IYasChatAsset, options?: Partial<ISetting>): Promise<void> {
 	const key = `Assets_${asset}`;
 
 	await settingsRegistry.add(
@@ -379,7 +379,7 @@ export async function addAssetToSetting(asset: string, value: IRocketChatAsset, 
 		},
 	);
 
-	const currentValue = settings.get<IRocketChatAsset>(key);
+	const currentValue = settings.get<IYasChatAsset>(key);
 
 	if (currentValue && typeof currentValue === 'object' && currentValue.defaultUrl !== getAssetByKey(asset).defaultUrl) {
 		currentValue.defaultUrl = getAssetByKey(asset).defaultUrl;
@@ -405,7 +405,7 @@ export const refreshClients = async (userId: string) => {
 		throw new Error('Managing assets not allowed');
 	}
 
-	return RocketChatAssets.refreshClients();
+	return YasChatAssets.refreshClients();
 };
 
 const listener = (req: IncomingMessage, res: ServerResponse, next: NextHandleFunction) => {

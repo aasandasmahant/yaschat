@@ -712,7 +712,7 @@ describe('miscellaneous', () => {
 					type: 'online',
 					icon: true,
 					channel: 'general',
-					name: 'Rocket.Chat',
+					name: 'YasChat',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(400);
@@ -730,7 +730,7 @@ describe('miscellaneous', () => {
 					type: 'online',
 					icon: true,
 					channel: 'general',
-					name: 'Rocket.Chat',
+					name: 'YasChat',
 				})
 				.expect('Content-Type', 'image/svg+xml;charset=utf-8')
 				.expect(200);

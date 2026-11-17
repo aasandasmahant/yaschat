@@ -78,7 +78,7 @@ touches all three.
 |---|---|---|
 | **SDK / definitions** (published `@rocket.chat/apps-engine`) | `packages/apps-engine/src/definition/` | `AppInterface`, `AppMethod`, handler interfaces, accessor interfaces, context/permission/association types. `package.json` ships only `definition/**` (`packages/apps-engine/package.json:37-39`). |
 | **Engine runtime** (published `@rocket.chat/apps`) | `packages/apps/src/` + `packages/apps/base-runtime/src/` | `src/server/managers/` (`AppListenerManager`, `AppVideoConfProviderManager`), abstract `src/server/bridges/`, `src/server/{AppManager,ProxiedApp}.ts`, `src/converters/`. The **concrete accessors are not here** — they live in `base-runtime/src/lib/accessors/` (`read/`, `modify/`, builders, extenders) and are assembled in `accessors/mod.ts`; there is no `AppAccessorManager` — see [ADR 0001](./0001-app-accessor-logic-in-base-runtime.md). |
-| **Host (real Rocket.Chat)** | `apps/meteor/app/apps/server/` + `apps/meteor/ee/server/apps/` | Concrete bridge subclasses, converters, orchestrator (`ee/server/apps/orchestrator.ts`). |
+| **Host (real YasChat)** | `apps/meteor/app/apps/server/` + `apps/meteor/ee/server/apps/` | Concrete bridge subclasses, converters, orchestrator (`ee/server/apps/orchestrator.ts`). |
 
 The host imports the engine from `@rocket.chat/apps/dist/...`, so **the `packages/apps` build must
 be regenerated** for host changes to see new engine code
@@ -127,7 +127,7 @@ decision 6.
 
 `MediaCallService` (`apps/meteor/server/services/media-call/service.ts`) is the thin Meteor adapter
 over the EE `callServer` engine. Its constructor (`service.ts:40-63`) wires the emitter into the rest
-of Rocket.Chat — `signalRequest`, `callUpdated`, `callActivated` (sets Presence BUSY), `callEnded`
+of YasChat — `signalRequest`, `callUpdated`, `callActivated` (sets Presence BUSY), `callEnded`
 (clears Presence), `historyUpdate` (`saveCallToHistory`), `pushNotificationRequest` — and is exactly
 where the apps-engine dispatch subscribes, mirroring how it already forwards these events onto the
 microservice bus. The service also owns the permission and feature callbacks injected into the engine
@@ -325,7 +325,7 @@ open problem below.
 ## The open problem — one call, two events
 
 With SIP integration enabled *for internal calls*, a single user-to-user call is created twice: once
-for the leg Rocket.Chat sends to the PBX, and once for the INVITE the PBX routes straight back in.
+for the leg YasChat sends to the PBX, and once for the INVITE the PBX routes straight back in.
 An app can tell that *a* SIP leg is involved; it cannot tell that the two legs are one conversation,
 and has no reason to expect two. The two payloads are side by side under
 [What an app receives today](#what-an-app-receives).
@@ -349,7 +349,7 @@ execution means `createCall` ran twice. With `VoIP_TeamCollab_SIP_Integration_En
    (`sip/providers/OutgoingSipCall.ts:46-77`) → `mediaCallDirector.createCall` → **event run #1**.
 4. `OutgoingSipCall.createDialog:136` INVITEs `sip:<user2 ext>@<SIP_Server_Host>`
    (`sip/Session.ts:102`).
-5. The PBX dialplan resolves that extension back to Rocket.Chat, so drachtio hands the same
+5. The PBX dialplan resolves that extension back to YasChat, so drachtio hands the same
    workspace an inbound INVITE: `srf.invite` (`sip/Session.ts:140`) → `processInvite:166` →
    `IncomingSipCall.processInvite` (`sip/providers/IncomingSipCall.ts:48`), where
    `getCalleeFromInvite:435` maps the called number to `user2` and `getCallerContactFromInvite:499`
@@ -370,7 +370,7 @@ only material an app has is the contacts and the features:
 
 | context field | outbound leg | inbound leg | same? |
 | --- | --- | --- | --- |
-| `caller.username` | `user1` | `user1` (from `X-RocketChat-Caller-Username`, or resolved from the extension) | yes |
+| `caller.username` | `user1` | `user1` (from `X-YasChat-Caller-Username`, or resolved from the extension) | yes |
 | `callee.username` | `user2` (sip contact built from the user record) | `user2` | yes |
 | `createdBy.username` | `user1` (the requester) | `user1` (`createdBy = requestedBy \|\| caller`, `CallDirector.ts:215`) | yes |
 | `features` | client list filtered to `SIP_CALL_FEATURES` (`OutgoingSipCall.ts:70`) | `SIP_CALL_FEATURES` verbatim (`IncomingSipCall.ts:109`) | yes, unless the client asked for fewer |
@@ -446,7 +446,7 @@ produce the same outbound-then-loop-back pair (`UserActorAgent.onCallTransferred
 **Why it is rejected.** The rule's only reliable half is the caller/extension match, and it has a
 false-positive window: an external caller who presents a workspace extension as caller-ID during the
 dial window gets their genuinely external call reported as a loop-back of an unrelated outbound one.
-Adding `X-RocketChat-Origin-Call-Id` to the outbound INVITE (`OutgoingSipCall.createDialog` already
+Adding `X-YasChat-Origin-Call-Id` to the outbound INVITE (`OutgoingSipCall.createDialog` already
 sets `Referred-By` for transfers, `:142-146`) does not fix this. The header survives only if the
 dialplan copies custom headers across the bridge (FreeSWITCH needs `sip_copy_custom_headers`), and it
 is spoofable, so it may only *select* among already correlated candidates — otherwise an external
@@ -533,7 +533,7 @@ Remaining post-event insertion points:
   real user actions and reuse every existing guard instead of mutating the record. Expose via bridge
   `doHangup` / `doTransfer`, gated by `mediaCall.write`.
 - **`IModifyCreator.startMediaCall()`:** let an app *place* a call, committing via the existing
-  `ModifyCreator.finish()` switch on `RocketChatAssociationModel` (`ModifyCreator.ts:122`). Requires
+  `ModifyCreator.finish()` switch on `YasChatAssociationModel` (`ModifyCreator.ts:122`). Requires
   a `MEDIA_CALL` association member and routes to `callServer.requestCall`.
 - **`IModifyExtender.extendMediaCall(id)`:** additive metadata only, analogous to
   `extendVideoConference`.
@@ -596,10 +596,10 @@ routing layer and should be a separate initiative.
 ### Persistence and associations
 
 Apps already get private storage via `IPersistence` / `IPersistenceRead`. To let them key records to
-a call, add `MEDIA_CALL` to `RocketChatAssociationModel`
-(`packages/apps-engine/src/definition/metadata/RocketChatAssociations.ts:1-10`). An app handling the
+a call, add `MEDIA_CALL` to `YasChatAssociationModel`
+(`packages/apps-engine/src/definition/metadata/YasChatAssociations.ts:1-10`). An app handling the
 ended event could then persist per-call analytics with
-`createWithAssociation(data, new RocketChatAssociationRecord(RocketChatAssociationModel.MEDIA_CALL, callId))`.
+`createWithAssociation(data, new YasChatAssociationRecord(YasChatAssociationModel.MEDIA_CALL, callId))`.
 Low cost, high value for CDR, analytics and compliance apps; no engine routing changes.
 
 ### Adjacent surfaces — already generic, usable today
@@ -729,7 +729,7 @@ outcomes are written as system messages via `saveCallToHistory` / `sendHistoryMe
   `packages/apps/src/server/managers/AppVideoConfProviderManager.ts`;
   `packages/apps-engine/src/definition/accessors/IVideoConfProvidersExtend.ts`, implemented inline in
   `packages/apps/base-runtime/src/lib/accessors/mod.ts`
-- Associations and permissions: `packages/apps-engine/src/definition/metadata/{RocketChatAssociations,AppPermissions}.ts`
+- Associations and permissions: `packages/apps-engine/src/definition/metadata/{YasChatAssociations,AppPermissions}.ts`
 - Host bridges, converters, orchestrator: `apps/meteor/app/apps/server/bridges/{bridges.js,listeners.ts,videoConferences.ts,messages.ts,rooms.ts}`;
   `apps/meteor/app/apps/server/converters/*`; `apps/meteor/ee/server/apps/orchestrator.ts`
 - Trigger idiom reference: `apps/meteor/server/lib/messages/sendMessage.ts:241,247-257,287-291`

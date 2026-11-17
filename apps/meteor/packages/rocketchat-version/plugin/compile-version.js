@@ -84,7 +84,7 @@ class VersionCompiler {
 
 			output.marketplaceApiVersion = require('@rocket.chat/apps-engine/package.json').version.replace(/^[^0-9]/g, '');
 			const minimumClientVersions =
-				JSON.parse(fs.readFileSync(path.resolve(process.cwd(), './package.json'), { encoding: 'utf8' }))?.rocketchat
+				JSON.parse(fs.readFileSync(path.resolve(process.cwd(), './package.json'), { encoding: 'utf8' }))?.yaschat
 					?.minimumClientVersions || {};
 			try {
 				const result = await execAsync("git log --pretty=format:'%H%n%ad%n%an%n%s' -n 1");
@@ -134,11 +134,11 @@ class VersionCompiler {
 		for await (const file of files) {
 			console.log('Processing file', file.getDisplayPath());
 			switch (true) {
-				case file.getDisplayPath().endsWith('rocketchat.info'): {
+				case file.getDisplayPath().endsWith('yaschat.info'): {
 					await processFile(file);
 					break;
 				}
-				case file.getDisplayPath().endsWith('rocketchat-supported-versions.info'): {
+				case file.getDisplayPath().endsWith('yaschat-supported-versions.info'): {
 					if (process.env.NODE_ENV === 'development') {
 						file.addJavaScript({
 							data: `exports.supportedVersions = {}`,

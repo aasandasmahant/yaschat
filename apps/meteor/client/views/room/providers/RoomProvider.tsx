@@ -28,7 +28,7 @@ export type RoomProviderProps = {
 	rid: IRoom['_id'];
 	/**
 	 * Whether this room is rendered inside something else — a panel beside a call, rather than the workspace's
-	 * main content. It is the same answer the embedded *layout* gives (Rocket.Chat inside another application),
+	 * main content. It is the same answer the embedded *layout* gives (YasChat inside another application),
 	 * and the room reads only this one: no header of its own, a composer sized for a narrow column, links that
 	 * stay where they are.
 	 *

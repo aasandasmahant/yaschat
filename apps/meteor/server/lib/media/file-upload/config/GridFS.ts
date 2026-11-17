@@ -144,15 +144,15 @@ const copyFromGridFS = async function (storeName: string | undefined, fileId: st
 };
 
 FileUpload.configureUploadsStore('GridFS', 'GridFS:Uploads', {
-	collectionName: 'rocketchat_uploads',
+	collectionName: 'yaschat_uploads',
 });
 
 FileUpload.configureUploadsStore('GridFS', 'GridFS:UserDataFiles', {
-	collectionName: 'rocketchat_userDataFiles',
+	collectionName: 'yaschat_userDataFiles',
 });
 
 FileUpload.configureUploadsStore('GridFS', 'GridFS:Avatars', {
-	collectionName: 'rocketchat_avatars',
+	collectionName: 'yaschat_avatars',
 });
 
 new FileUploadClass({

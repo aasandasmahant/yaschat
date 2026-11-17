@@ -1,5 +1,5 @@
 Package.describe({
-	name: 'rocketchat:server-runtime',
+	name: 'yaschat:server-runtime',
 	version: '0.0.1',
 	summary: "Meteor's server runtime, kept out of the browser bundle",
 	git: '',
@@ -9,7 +9,7 @@ Package.describe({
 // hot-code-push halves of these packages must not ship to the browser.
 const serverPackages = [
 	// Sets the Mongo connection options, so it has to load before any package creates a collection.
-	'rocketchat:mongo-config',
+	'yaschat:mongo-config',
 	'meteor-base@1.5.2',
 	'accounts-base@3.3.1',
 	'accounts-password@3.3.1',

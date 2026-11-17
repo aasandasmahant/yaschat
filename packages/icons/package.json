@@ -1,7 +1,7 @@
 {
 	"name": "@rocket.chat/icons",
 	"version": "0.52.0",
-	"description": "Rocket.Chat's Icons",
+	"description": "YasChat's Icons",
 	"type": "module",
 	"exports": {
 		".": {
@@ -10,18 +10,18 @@
 		},
 		"./dist/*": "./dist/*"
 	},
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/icons"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"main": "dist/index.js",

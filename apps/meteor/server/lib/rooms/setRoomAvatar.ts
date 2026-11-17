@@ -3,13 +3,13 @@ import type { IUser } from '@rocket.chat/core-typings';
 import { isRegisterUser } from '@rocket.chat/core-typings';
 import { Avatars, Rooms } from '@rocket.chat/models';
 
-import { RocketChatFile } from '../media/file';
+import { YasChatFile } from '../media/file';
 import { FileUpload } from '../media/file-upload';
 
 export const setRoomAvatar = async function (rid: string, dataURI: string, user: IUser): Promise<void> {
 	if (!isRegisterUser(user)) {
 		throw new ClientSafeError('invalid-user', 'Invalid user', {
-			function: 'RocketChat.setRoomAvatar',
+			function: 'YasChat.setRoomAvatar',
 		});
 	}
 
@@ -25,7 +25,7 @@ export const setRoomAvatar = async function (rid: string, dataURI: string, user:
 		return;
 	}
 
-	const fileData = RocketChatFile.dataURIParse(dataURI);
+	const fileData = YasChatFile.dataURIParse(dataURI);
 
 	const buffer = Buffer.from(fileData.image, 'base64');
 

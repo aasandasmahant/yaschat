@@ -15,7 +15,7 @@ A JSON list. Each entry has `urls` (a `stun:`, `stuns:`, `turn:` or `turns:` URI
 
 ```json
 [
-	{ "urls": "turn:legacy.example.com:3478", "auth": { "type": "static", "username": "rocketchat", "credential": "…" } },
+	{ "urls": "turn:legacy.example.com:3478", "auth": { "type": "static", "username": "yaschat", "credential": "…" } },
 	{
 		"urls": ["turn:turn.example.com:3478", "turns:turn.example.com:443?transport=tcp"],
 		"auth": { "type": "shared-secret", "secret": "…", "ttl": 3600 }
@@ -38,7 +38,7 @@ These follow the TURN REST API ([draft-uberti-behave-turn-rest](https://datatrac
 - username: `<expiry unix timestamp>:<user id>`
 - password: `base64(HMAC-SHA1(secret, username))`
 
-The protocol mandates HMAC-SHA1; coturn refuses credentials signed with any other hash. The TURN server checks them on its own: it recomputes the HMAC and refuses a username whose timestamp has passed. It never calls back to Rocket.Chat, and since the secret is a workspace setting, every Rocket.Chat instance issues credentials the TURN server accepts.
+The protocol mandates HMAC-SHA1; coturn refuses credentials signed with any other hash. The TURN server checks them on its own: it recomputes the HMAC and refuses a username whose timestamp has passed. It never calls back to YasChat, and since the secret is a workspace setting, every YasChat instance issues credentials the TURN server accepts.
 
 ## Configuring a shared secret TURN server
 
@@ -87,7 +87,7 @@ TURN over TLS on 443 (`turns:` URIs) can get through restrictive networks that a
 - An allocation that already exists keeps relaying after its credentials expire. New allocations, which happen on ICE restarts after a network change, need valid credentials: a call whose network changes after the lifetime has passed will not recover. Keep the lifetime longer than your longest expected call.
 - A deactivated user's credentials stay valid until they expire. Shorter lifetimes shrink that window.
 
-The default is 86400 (24 hours) and the minimum 60. One to a few hours is a reasonable hardened value. Rocket.Chat and the TURN server compare an absolute timestamp, so keep both clocks in sync (NTP), especially with short lifetimes.
+The default is 86400 (24 hours) and the minimum 60. One to a few hours is a reasonable hardened value. YasChat and the TURN server compare an absolute timestamp, so keep both clocks in sync (NTP), especially with short lifetimes.
 
 ## Verifying
 

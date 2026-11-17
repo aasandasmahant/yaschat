@@ -11,7 +11,7 @@ import { onceTransactionCommitedSuccessfully } from '../../database/utils';
 import { settings } from '../../settings';
 import { hasPermissionAsync } from '../authorization/hasPermission';
 import { SystemLogger } from '../logger/system';
-import { RocketChatFile } from '../media/file';
+import { YasChatFile } from '../media/file';
 import { FileUpload } from '../media/file-upload';
 
 export const setAvatarFromServiceWithValidation = async (
@@ -130,7 +130,7 @@ export async function setUserAvatar(
 					throw new ClientSafeError(
 						'error-avatar-url-handling',
 						`Error while handling avatar setting from a URL (${dataURI}) for ${user.username}`,
-						{ function: 'RocketChat.setUserAvatar', url: dataURI, username: user.username },
+						{ function: 'YasChat.setUserAvatar', url: dataURI, username: user.username },
 					);
 				}
 
@@ -177,7 +177,7 @@ export async function setUserAvatar(
 			};
 		}
 
-		const fileData = RocketChatFile.dataURIParse(dataURI);
+		const fileData = YasChatFile.dataURIParse(dataURI);
 
 		return {
 			buffer: Buffer.from(fileData.image, 'base64'),

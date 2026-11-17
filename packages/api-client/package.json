@@ -3,7 +3,7 @@
 	"version": "0.2.57",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/api-client"
 	},
 	"license": "MIT",

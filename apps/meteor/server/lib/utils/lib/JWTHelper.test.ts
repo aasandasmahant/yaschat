@@ -60,7 +60,7 @@ describe('JWTHelper', () => {
 			expect(tokenPayload.iat).to.equal(now);
 			expect(tokenPayload.nbf).to.equal(now);
 			expect(tokenPayload.exp).to.equal(expiryTime);
-			expect(tokenPayload.aud).to.equal('RocketChat');
+			expect(tokenPayload.aud).to.equal('YasChat');
 			expect(tokenPayload.context).to.deep.equal(payload);
 
 			expect(signArgs[3]).to.deep.equal({ rstr: secret });
@@ -135,7 +135,7 @@ describe('JWTHelper', () => {
 				payloadObj: {
 					exp: Math.floor(Date.now() / 1000) - 3600, // Expired 1 hour ago
 					nbf: Math.floor(Date.now() / 1000) - 7200,
-					aud: 'RocketChat',
+					aud: 'YasChat',
 					context: { userId: 'user-123' },
 				},
 			});
@@ -151,7 +151,7 @@ describe('JWTHelper', () => {
 				payloadObj: {
 					exp: Math.floor(Date.now() / 1000) + 7200,
 					nbf: Math.floor(Date.now() / 1000) + 3600, // Not valid until 1 hour from now
-					aud: 'RocketChat',
+					aud: 'YasChat',
 					context: { userId: 'user-123' },
 				},
 			});
@@ -161,7 +161,7 @@ describe('JWTHelper', () => {
 			expect(result).to.be.null;
 		});
 
-		it('should return null if audience is not RocketChat', () => {
+		it('should return null if audience is not YasChat', () => {
 			jsrsasignStub.KJUR.jws.JWS.verify.returns(true);
 			jsrsasignStub.KJUR.jws.JWS.parse.returns({
 				payloadObj: {
@@ -184,7 +184,7 @@ describe('JWTHelper', () => {
 				payloadObj: {
 					exp: Math.floor(Date.now() / 1000) + 3600, // Expires in 1 hour
 					nbf: Math.floor(Date.now() / 1000) - 60, // Valid since 1 minute ago
-					aud: 'RocketChat',
+					aud: 'YasChat',
 					context: contextPayload,
 				},
 			});
@@ -201,7 +201,7 @@ describe('JWTHelper', () => {
 			jsrsasignStub.KJUR.jws.JWS.verify.returns(true);
 			jsrsasignStub.KJUR.jws.JWS.parse.returns({
 				payloadObj: {
-					aud: 'RocketChat',
+					aud: 'YasChat',
 					context: contextPayload,
 				},
 			});
@@ -279,7 +279,7 @@ describe('JWTHelper', () => {
 					iat: 1609459200,
 					nbf: 1609459200,
 					exp: 1609462800,
-					aud: 'RocketChat',
+					aud: 'YasChat',
 				},
 			});
 

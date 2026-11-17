@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IEmojiCustom extends IRocketChatRecord {
+export interface IEmojiCustom extends IYasChatRecord {
 	name: string;
 	aliases: string[];
 	extension: string;

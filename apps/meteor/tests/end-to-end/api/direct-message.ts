@@ -428,7 +428,7 @@ describe('[Direct Messages]', () => {
 
 			const { lastMessage } = im;
 
-			expect(lastMessage).to.have.nested.property('u.name', 'RocketChat Internal Admin Test');
+			expect(lastMessage).to.have.nested.property('u.name', 'YasChat Internal Admin Test');
 		});
 
 		it('/im.list.everyone', async () => {
@@ -451,7 +451,7 @@ describe('[Direct Messages]', () => {
 
 			const { lastMessage } = im;
 
-			expect(lastMessage).to.have.nested.property('u.name', 'RocketChat Internal Admin Test');
+			expect(lastMessage).to.have.nested.property('u.name', 'YasChat Internal Admin Test');
 		});
 	});
 

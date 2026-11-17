@@ -6,11 +6,11 @@ import { mappedDecodeAsync } from './mappedData';
 import { getURL } from '../../../../lib/utils/getURL';
 
 /**
- * Rocket.Chat `IUpload` <-> Apps-Engine `IAppsUpload`.
+ * YasChat `IUpload` <-> Apps-Engine `IAppsUpload`.
  *
  * Cross-converter dependent, so it is built via a factory closing over the orchestrator. `decode`
  * (async) mirrors the legacy `convertToApp`: a field rename plus room/user/visitor resolved through
- * their converters, with an `_unmappedProperties_` bucket. `encode` mirrors `convertToRocketChat`.
+ * their converters, with an `_unmappedProperties_` bucket. `encode` mirrors `convertToYasChat`.
  */
 export function createUploadsCodec(orch: IAppServerOrchestrator) {
 	return z.codec(z.custom<IUpload>(), z.custom<IAppsUpload>(), {

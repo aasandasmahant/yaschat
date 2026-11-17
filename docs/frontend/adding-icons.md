@@ -4,7 +4,7 @@ Icons live in `packages/icons` and are published as `@rocket.chat/icons`. Every 
 
 ## Design
 
-Rocket.Chat's design team draws every icon, and every icon must be published on Figma before it lands here. The drawing follows these conventions:
+YasChat's design team draws every icon, and every icon must be published on Figma before it lands here. The drawing follows these conventions:
 
 - The view box is 32×32 units.
 - Any horizontal asymmetry points left-to-right. The right-to-left variant is generated, never drawn (see [Directional icons](#directional-icons)).

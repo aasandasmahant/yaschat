@@ -3,7 +3,7 @@ import type {
 	IImportRecord,
 	IImportUserRecord,
 	IImportContactRecord,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 } from '@rocket.chat/core-typings';
 import type { IImportDataModel } from '@rocket.chat/model-typings';
 import type { Collection, Db, IndexDescription } from 'mongodb';
@@ -11,7 +11,7 @@ import type { Collection, Db, IndexDescription } from 'mongodb';
 import { BaseRaw } from './BaseRaw';
 
 export class ImportDataRaw extends BaseRaw<IImportRecord> implements IImportDataModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IImportRecord>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IImportRecord>>) {
 		super(db, 'import_data', trash);
 	}
 

@@ -1,16 +1,16 @@
 import type { IUserBuilder } from '@rocket.chat/apps-engine/definition/accessors/IUserBuilder';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
 import type { IUserEmail } from '@rocket.chat/apps-engine/definition/users/IUserEmail';
 import type { IUserSettings } from '@rocket.chat/apps-engine/definition/users/IUserSettings';
 
 export class UserBuilder implements IUserBuilder {
-	public kind: RocketChatAssociationModel.USER;
+	public kind: YasChatAssociationModel.USER;
 
 	private user: Partial<IUser>;
 
 	constructor(user?: Partial<IUser>) {
-		this.kind = RocketChatAssociationModel.USER;
+		this.kind = YasChatAssociationModel.USER;
 		this.user = user || ({} as Partial<IUser>);
 	}
 

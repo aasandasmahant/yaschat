@@ -1,4 +1,4 @@
-import type { RocketChatRecordDeleted, IRole, IUserInRole } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted, IRole, IUserInRole } from '@rocket.chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 import { paginationQueryProperties } from './pagination';
@@ -120,7 +120,7 @@ export type RolesEndpoints = {
 		GET: (params: RoleSyncProps) => {
 			roles: {
 				update: IRole[];
-				remove: RocketChatRecordDeleted<IRole>[];
+				remove: YasChatRecordDeleted<IRole>[];
 			};
 		};
 	};

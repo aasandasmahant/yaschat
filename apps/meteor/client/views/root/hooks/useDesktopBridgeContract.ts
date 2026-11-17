@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { callDesktopBridge } from '../../../lib/utils/callDesktopBridge';
 
 /** Tells the desktop app that this web client pushes the bridge contract's values, starting with the server build it runs. */

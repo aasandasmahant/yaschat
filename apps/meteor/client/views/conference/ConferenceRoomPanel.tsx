@@ -60,7 +60,7 @@ const ConferenceRoomPanel = ({ rid, tmid, thread, onCloseThread, onEscape }: Con
 				{isLoading && <ConferenceRoomSkeleton />}
 				{/* `embedded` is said to the room rather than to the layout: this is a room rendered inside a panel,
 				    which is what the narrow composer and the missing header follow from. Not to be confused with the
-				    embedded *layout*, which is Rocket.Chat inside another application — the room asks one question
+				    embedded *layout*, which is YasChat inside another application — the room asks one question
 				    and the provider answers it from either source. */}
 				{isSuccess && (
 					<RoomProvider rid={data.rid} embedded>

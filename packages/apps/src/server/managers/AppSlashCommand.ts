@@ -11,19 +11,19 @@ import type { AppLogStorage } from '../storage';
 
 export class AppSlashCommand {
 	/**
-	 * States whether this command has been registered into the Rocket.Chat system or not.
+	 * States whether this command has been registered into the YasChat system or not.
 	 */
 	public isRegistered: boolean;
 
 	/**
 	 * Declares whether this command has been enabled or not,
-	 * does not have to be inside of the Rocket.Chat system if `isRegistered` is false.
+	 * does not have to be inside of the YasChat system if `isRegistered` is false.
 	 */
 	public isEnabled: boolean;
 
 	/**
 	 * Proclaims whether this command has been disabled or not,
-	 * does not have to be inside the Rocket.Chat system if `isRegistered` is false.
+	 * does not have to be inside the YasChat system if `isRegistered` is false.
 	 */
 	public isDisabled: boolean;
 

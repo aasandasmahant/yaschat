@@ -2,11 +2,11 @@
 	"name": "@rocket.chat/account-service",
 	"version": "0.5.3",
 	"private": true,
-	"description": "Rocket.Chat Account service",
+	"description": "YasChat Account service",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/ee/apps/account-service/src/service.js",
 	"files": [
 		"/dist"

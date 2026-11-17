@@ -151,7 +151,7 @@ export interface IMessagesModel extends IBaseModel<IMessage> {
 	unsetReactions(messageId: string): Promise<UpdateResult>;
 	addTranslations(messageId: string, translations: Record<string, string>, providerName: string): Promise<UpdateResult>;
 	addAttachmentTranslations(messageId: string, attachmentIndex: string, translations: Record<string, string>): Promise<UpdateResult>;
-	setImportFileRocketChatAttachment(
+	setImportFileYasChatAttachment(
 		importFileId: string,
 		rocketChatUrl: string,
 		attachment: MessageAttachment,

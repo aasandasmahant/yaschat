@@ -106,7 +106,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0
@@ -159,7 +159,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/rest-typings@8.3.0-rc.0
@@ -182,7 +182,7 @@
 
 ### Patch Changes
 
-- ([#38319](https://github.com/RocketChat/Rocket.Chat/pull/38319)) Fixes incoming webhook integrations not receiving parsed JSON from x-www-form-urlencoded payload field.
+- ([#38319](https://github.com/YasChat/YasChat/pull/38319)) Fixes incoming webhook integrations not receiving parsed JSON from x-www-form-urlencoded payload field.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573]:</summary>
   - @rocket.chat/core-typings@8.2.0
@@ -214,7 +214,7 @@
 
 ### Patch Changes
 
-- ([#38319](https://github.com/RocketChat/Rocket.Chat/pull/38319)) Fixes incoming webhook integrations not receiving parsed JSON from x-www-form-urlencoded payload field.
+- ([#38319](https://github.com/YasChat/YasChat/pull/38319)) Fixes incoming webhook integrations not receiving parsed JSON from x-www-form-urlencoded payload field.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 88da141f3c2af6f91980c7ca8b8777161f99a068, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573]:</summary>
   - @rocket.chat/core-typings@8.2.0-rc.0
@@ -236,7 +236,7 @@
 
 ### Patch Changes
 
-- ([#38071](https://github.com/RocketChat/Rocket.Chat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
+- ([#38071](https://github.com/YasChat/YasChat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
 
 - <details><summary>Updated dependencies [fd319d58a621d66c20029fd962ddb24a1a24ecc3, 5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, 6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/rest-typings@8.1.0
@@ -268,7 +268,7 @@
 
 ### Patch Changes
 
-- ([#38071](https://github.com/RocketChat/Rocket.Chat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
+- ([#38071](https://github.com/YasChat/YasChat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
 
 - <details><summary>Updated dependencies [5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, 6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/rest-typings@8.1.0-rc.0
@@ -608,7 +608,7 @@
 
 ### Patch Changes
 
-- ([#36535](https://github.com/RocketChat/Rocket.Chat/pull/36535) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) This change fixes the HTTP route validation to return the correct error message 'invalid-params' instead of 'error-invalid-params', ensuring consistency with our API error codes. The body validation should now return 'invalid-params' instead of 'error-invalid-params'.'
+- ([#36535](https://github.com/YasChat/YasChat/pull/36535) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) This change fixes the HTTP route validation to return the correct error message 'invalid-params' instead of 'error-invalid-params', ensuring consistency with our API error codes. The body validation should now return 'invalid-params' instead of 'error-invalid-params'.'
 
 - <details><summary>Updated dependencies [f040b27ff67c31188026a0aed9ba1e9c4f717f08, a54f8837338246842585d037a0d0327a79245811, c5f0be15b31d1de03256f74bd277ad4ab753ada2, c86fbce9b44942662dc25a599fc12b009fd40a74, 2fea1a79b831999f148505b9442cd584e1b06d09, 2f162a0dca79274d4458a5853afe64c506a7554f, 1ca92c346e45486e9b6afc66566ae38fac65b48f, 5d7dec3a68f7281b4b4531fa708d7fc7589a863c, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, dc6acda84bf7452d96f375be3cd97748ed016bfc, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
   - @rocket.chat/rest-typings@7.10.0
@@ -677,7 +677,7 @@
 
 ### Patch Changes
 
-- ([#36535](https://github.com/RocketChat/Rocket.Chat/pull/36535) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) This change fixes the HTTP route validation to return the correct error message 'invalid-params' instead of 'error-invalid-params', ensuring consistency with our API error codes. The body validation should now return 'invalid-params' instead of 'error-invalid-params'.'
+- ([#36535](https://github.com/YasChat/YasChat/pull/36535) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) This change fixes the HTTP route validation to return the correct error message 'invalid-params' instead of 'error-invalid-params', ensuring consistency with our API error codes. The body validation should now return 'invalid-params' instead of 'error-invalid-params'.'
 
 - <details><summary>Updated dependencies [f040b27ff67c31188026a0aed9ba1e9c4f717f08, a54f8837338246842585d037a0d0327a79245811, c5f0be15b31d1de03256f74bd277ad4ab753ada2, c86fbce9b44942662dc25a599fc12b009fd40a74, 2fea1a79b831999f148505b9442cd584e1b06d09, 2f162a0dca79274d4458a5853afe64c506a7554f, 1ca92c346e45486e9b6afc66566ae38fac65b48f, 5d7dec3a68f7281b4b4531fa708d7fc7589a863c, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, dc6acda84bf7452d96f375be3cd97748ed016bfc, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
   - @rocket.chat/rest-typings@7.10.0-rc.0

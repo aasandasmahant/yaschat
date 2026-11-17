@@ -4,21 +4,21 @@
 	"private": true,
 	"description": "The Ultimate Open Source WebChat Platform",
 	"keywords": [
-		"rocketchat",
+		"yaschat",
 		"rocket",
 		"chat"
 	],
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues",
+		"url": "https://github.com/YasChat/YasChat/issues",
 		"email": "support@rocket.chat"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/RocketChat/Rocket.Chat.git"
+		"url": "https://github.com/YasChat/YasChat.git"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"type": "commonjs",
@@ -491,7 +491,7 @@
 		},
 		"modern": true
 	},
-	"rocketchat": {
+	"yaschat": {
 		"minimumClientVersions": {
 			"desktop": "3.9.6",
 			"mobile": "4.39.0"

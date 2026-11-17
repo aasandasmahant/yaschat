@@ -1,6 +1,6 @@
-# Rocket.Chat HTTP Router
+# YasChat HTTP Router
 
-This package provides a flexible HTTP routing solution for Rocket.Chat services, built on top of Hono.
+This package provides a flexible HTTP routing solution for YasChat services, built on top of Hono.
 
 ## Features
 

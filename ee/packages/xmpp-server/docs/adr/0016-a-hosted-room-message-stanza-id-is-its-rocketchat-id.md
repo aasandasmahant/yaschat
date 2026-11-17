@@ -1,4 +1,4 @@
-# A hosted-room message's stanza id is its Rocket.Chat `_id`
+# A hosted-room message's stanza id is its YasChat `_id`
 
 - **Status:** accepted
 - **Date:** 2026-10
@@ -7,7 +7,7 @@
 ## Decision
 
 - Once a hosted room stamps XEP-0359 ids, the `<stanza-id by="<room JID>"/>` of a message
-  is the `_id` of that message in Rocket.Chat. The same value is the message's XEP-0313
+  is the `_id` of that message in YasChat. The same value is the message's XEP-0313
   archive id.
 - Every copy of a message carries the same stanza id: the live reflection to each occupant,
   and the copy replayed in discussion history on join.
@@ -24,7 +24,7 @@
 XEP-0313 pages by the stanza id the client last saw, so the archive id must be the id the
 message carried live, and every message the archive serves needs one. The archive is the
 messages collection (the intent rules out storing anything new), so the id has to be one
-every stored message already has. `_id` is that id. Messages written in Rocket.Chat already
+every stored message already has. `_id` is that id. Messages written in YasChat already
 leave with their `_id` as the stanza's `id` attribute. Messages from remote occupants get a
 derived `_id` when they are stored ([ADR
 0014](0014-inbound-message-id-is-derived-from-room-author-and-sender-id.md)).
@@ -39,7 +39,7 @@ messages of every hosted room, or an archive whose older half cannot be paged by
   installation builds, XMPP or not, and a backfill of every message already stored in a
   hosted room.
 - **`federation.eventId`.** Only messages that came from XMPP have one; messages written in
-  Rocket.Chat have none. The outgoing hook also reads it as "came from XMPP" and stops
+  YasChat have none. The outgoing hook also reads it as "came from XMPP" and stops
   relaying edits for any message that carries it.
 - **Time-ordered ids, so paging needs no lookup.** Changes the `_id` format for one
   consumer. Resolving the id with a primary-key read and paging by `ts` is enough.
@@ -56,7 +56,7 @@ messages of every hosted room, or an archive whose older half cannot be paged by
   free. The spec that starts stamping must make the reflected copy and the stored message
   share one id in every case.
 - When stamping ships, [message-deduplication](../specs/message-deduplication.md) R7 no
-  longer holds for hosted rooms and is amended in the same PR. Messages Rocket.Chat sends
+  longer holds for hosted rooms and is amended in the same PR. Messages YasChat sends
   into remote rooms are unaffected: there the remote room assigns the stanza id.
 - Retraction, reactions and replies (XEP-0424, XEP-0444, XEP-0461) in a hosted room
   reference a message by this id, so they resolve it with the same primary-key read.

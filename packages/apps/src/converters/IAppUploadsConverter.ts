@@ -7,7 +7,7 @@ export interface IAppUploadsConverter {
 	convertToApp(upload: undefined | null): Promise<undefined>;
 	convertToApp(upload: IUpload): Promise<IAppsUpload>;
 	convertToApp(upload: IUpload | undefined | null): Promise<IAppsUpload | undefined>;
-	convertToRocketChat(upload: undefined | null): undefined;
-	convertToRocketChat(upload: IAppsUpload): IUpload;
-	convertToRocketChat(upload: IAppsUpload | undefined | null): IUpload | undefined;
+	convertToYasChat(upload: undefined | null): undefined;
+	convertToYasChat(upload: IAppsUpload): IUpload;
+	convertToYasChat(upload: IAppsUpload | undefined | null): IUpload | undefined;
 }

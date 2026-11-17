@@ -8,7 +8,7 @@ export interface IAppUsersConverter {
 	convertToApp(user: undefined | null): undefined;
 	convertToApp(user: IUser): IAppsUser;
 	convertToApp(user: IUser | undefined | null): IAppsUser | undefined;
-	convertToRocketChat(user: undefined | null): undefined;
-	convertToRocketChat(user: IAppsUser): IUser;
-	convertToRocketChat(user: IAppsUser | undefined | null): IUser | undefined;
+	convertToYasChat(user: undefined | null): undefined;
+	convertToYasChat(user: IAppsUser): IUser;
+	convertToYasChat(user: IAppsUser | undefined | null): IUser | undefined;
 }

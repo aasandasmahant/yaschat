@@ -37,7 +37,7 @@ export async function sendUserEmail(subject: string, html: string, userData: Sav
 		const errorMessage = typeof error === 'object' && error && 'message' in error ? error.message : '';
 
 		throw new ClientSafeError('error-email-send-failed', `Error trying to send email: ${errorMessage}`, {
-			function: 'RocketChat.saveUser',
+			function: 'YasChat.saveUser',
 			message: errorMessage,
 		});
 	}

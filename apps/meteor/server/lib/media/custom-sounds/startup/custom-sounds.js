@@ -3,9 +3,9 @@ import { WebApp } from 'meteor/webapp';
 
 import { settings } from '../../../../settings';
 import { SystemLogger } from '../../../logger/system';
-import { RocketChatFile } from '../../file';
+import { YasChatFile } from '../../file';
 
-export let RocketChatFileCustomSoundsInstance;
+export let YasChatFileCustomSoundsInstance;
 
 const initializeCustomSoundsStorage = () => {
 	let storeType = 'GridFS';
@@ -14,10 +14,10 @@ const initializeCustomSoundsStorage = () => {
 		storeType = settings.get('CustomSounds_Storage_Type');
 	}
 
-	const RocketChatStore = RocketChatFile[storeType];
+	const YasChatStore = YasChatFile[storeType];
 
-	if (RocketChatStore == null) {
-		throw new Error(`Invalid RocketChatStore type [${storeType}]`);
+	if (YasChatStore == null) {
+		throw new Error(`Invalid YasChatStore type [${storeType}]`);
 	}
 
 	SystemLogger.info({
@@ -32,7 +32,7 @@ const initializeCustomSoundsStorage = () => {
 		}
 	}
 
-	RocketChatFileCustomSoundsInstance = new RocketChatStore({
+	YasChatFileCustomSoundsInstance = new YasChatStore({
 		name: 'custom_sounds',
 		absolutePath: path,
 	});
@@ -57,7 +57,7 @@ WebApp.connectHandlers.use('/custom-sounds/', async (req, res /* , next*/) => {
 		return;
 	}
 
-	const file = await RocketChatFileCustomSoundsInstance.getFileWithReadStream(fileId);
+	const file = await YasChatFileCustomSoundsInstance.getFileWithReadStream(fileId);
 
 	if (!file) {
 		res.writeHead(404);

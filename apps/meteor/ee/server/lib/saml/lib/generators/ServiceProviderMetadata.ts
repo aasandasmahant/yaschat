@@ -6,7 +6,7 @@ import { defaultIdentifierFormat, defaultMetadataCertificateTemplate, defaultMet
 
 /*
 	The metadata will be available at the following url:
-	[rocketchat-url]/_saml/metadata/[provider-name]
+	[yaschat-url]/_saml/metadata/[provider-name]
 */
 
 export class ServiceProviderMetadata {

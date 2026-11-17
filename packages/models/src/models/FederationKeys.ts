@@ -1,4 +1,4 @@
-import type { FederationKey, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { FederationKey, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { IFederationKeysModel } from '@rocket.chat/model-typings';
 import type { Db, Collection } from 'mongodb';
 import NodeRSA from 'node-rsa';
@@ -6,7 +6,7 @@ import NodeRSA from 'node-rsa';
 import { BaseRaw } from './BaseRaw';
 
 export class FederationKeysRaw extends BaseRaw<FederationKey> implements IFederationKeysModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<FederationKey>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<FederationKey>>) {
 		super(db, 'federation_keys', trash);
 	}
 

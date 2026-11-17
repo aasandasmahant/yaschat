@@ -6,7 +6,7 @@ import DocsContainer from './DocsContainer.js';
 import { resolveThemeMode, subscribeToSystemColorScheme, type ThemeMode } from './theme.js';
 
 import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/rocketchat.css';
+import '@rocket.chat/icons/dist/yaschat.css';
 
 export const parameters: Parameters = {
 	backgrounds: {

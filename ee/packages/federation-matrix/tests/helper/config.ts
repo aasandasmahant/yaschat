@@ -2,7 +2,7 @@
  * Configuration interface for federation test environment.
  *
  * Defines the structure for all federation-related configuration including
- * Rocket.Chat instances, Matrix homeservers, and user credentials needed
+ * YasChat instances, Matrix homeservers, and user credentials needed
  * for end-to-end federation testing.
  */
 
@@ -22,7 +22,7 @@ type FederationServerConfig = {
 
 /**
  * Only Synapse carries fixture users: specs cannot register Matrix accounts, so everything beyond
- * the admin is provisioned at container boot. Rocket.Chat specs create and delete their own.
+ * the admin is provisioned at container boot. YasChat specs create and delete their own.
  */
 type SynapseServerConfig = FederationServerConfig & {
 	additionalUser1: FederationUserConfig;

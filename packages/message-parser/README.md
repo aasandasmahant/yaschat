@@ -1,10 +1,10 @@
 # `@rocket.chat/message-parser`
 
-> Parses Rocket.Chat message text into an abstract syntax tree.
+> Parses YasChat message text into an abstract syntax tree.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/message-parser) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/message-parser)
 
-Rocket.Chat messages use a Markdown dialect with chat additions: user and channel mentions, emoji, timestamps, spoilers, colors and KaTeX. This package turns that text into a typed AST, so a client can render a message without parsing Markdown itself. Rocket.Chat stores the AST alongside each message and its clients render from it.
+YasChat messages use a Markdown dialect with chat additions: user and channel mentions, emoji, timestamps, spoilers, colors and KaTeX. This package turns that text into a typed AST, so a client can render a message without parsing Markdown itself. YasChat stores the AST alongside each message and its clients render from it.
 
 The parser is generated from a [Peggy](https://peggyjs.org/) grammar and has one runtime dependency, [`tldts`](https://github.com/remusao/tldts), used to recognize domain names in bare links.
 
@@ -182,7 +182,7 @@ The node stores the time as a Unix timestamp string. `{format}` defaults to `t`:
 | `F`    | Full date and time (long) | Thursday, December 31, 2020 12:00:00 AM |
 | `R`    | Relative time             | 1 year ago                              |
 
-Formatting is up to the renderer; the examples show how Rocket.Chat displays them.
+Formatting is up to the renderer; the examples show how YasChat displays them.
 
 ### Known limitations
 
@@ -218,7 +218,7 @@ The emoticon-to-emoji table used when `emoticons` is on, e.g. `':)'` → `'🙂'
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/message-parser). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/message-parser). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/message-parser build
@@ -229,7 +229,7 @@ yarn workspace @rocket.chat/message-parser bench
 yarn workspace @rocket.chat/message-parser bench:size
 ```
 
-The grammar is [`src/grammar.pegjs`](https://github.com/RocketChat/Rocket.Chat/blob/develop/packages/message-parser/src/grammar.pegjs). `build` bundles it with webpack and [`@rocket.chat/peggy-loader`](https://www.npmjs.com/package/@rocket.chat/peggy-loader) into `dist/messageParser.js`. `bench` runs parser benchmarks; `bench:size` prints the raw and gzipped size of the built bundle.
+The grammar is [`src/grammar.pegjs`](https://github.com/YasChat/YasChat/blob/develop/packages/message-parser/src/grammar.pegjs). `build` bundles it with webpack and [`@rocket.chat/peggy-loader`](https://www.npmjs.com/package/@rocket.chat/peggy-loader) into `dist/messageParser.js`. `bench` runs parser benchmarks; `bench:size` prints the raw and gzipped size of the built bundle.
 
 ### Changing the grammar
 
@@ -237,4 +237,4 @@ When you find a grammar bug, start by adding a test case under `tests/` that rep
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

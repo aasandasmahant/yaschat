@@ -181,7 +181,7 @@ const DEFAULT_ATTACHMENT = {
 	},
 	title: {
 		value: 'Attachment Title',
-		link: 'https://github.com/RocketChat',
+		link: 'https://github.com/YasChat',
 		displayDownloadLink: false,
 	},
 	imageUrl: 'https://rocket.chat/images/default/logo.svg',

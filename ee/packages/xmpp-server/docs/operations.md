@@ -4,7 +4,7 @@ What an administrator configures, on both sides of the federation, and how the m
 is run. Behaviour is specified in [specs/](specs/); the code layout in
 [architecture.md](architecture.md).
 
-Rocket.Chat acts as a native XMPP server: it federates directly with any other XMPP server
+YasChat acts as a native XMPP server: it federates directly with any other XMPP server
 over the standard server-to-server (S2S) protocol, without bridges. This is independent from,
 and can coexist with, the XMPP support offered through the Matrix federation appservice bridge
 (`Federation_XMPP_*` settings). It requires an enterprise license with the `federation` module
@@ -59,7 +59,7 @@ dialback attempt.
 Hosted rooms store their MUC address (`<room>@conference.<old domain>`) when they are
 created, and nothing rewrites it. After a domain or MUC subdomain change, existing hosted
 rooms can no longer be joined from XMPP, and remote contacts keep the old JIDs of local
-users. Choose the domain before creating XMPP rooms. Renaming a hosted room in Rocket.Chat
+users. Choose the domain before creating XMPP rooms. Renaming a hosted room in YasChat
 does not change its MUC address either.
 
 ## DNS
@@ -100,7 +100,7 @@ cleartext, which excludes peers configured to require encryption
 ## Network
 
 The listener binds `0.0.0.0:<XMPP_Server_Port>` inside the `xmpp-server-service`
-microservice, not in the main Rocket.Chat process. It is not HTTP: it cannot sit behind the
+microservice, not in the main YasChat process. It is not HTTP: it cannot sit behind the
 usual reverse proxy. Expose the port directly or through a TCP-level proxy.
 
 | Direction | What |
@@ -140,11 +140,11 @@ XMPP domain** ([ADR 0012](adr/0012-core-state-is-ephemeral-and-rebuilt-from-the-
 
 | Variable | Effect |
 | --- | --- |
-| `MONGO_URL` | Required. The Rocket.Chat database |
+| `MONGO_URL` | Required. The YasChat database |
 | `TRANSPORTER` | The broker transport, the same value Meteor runs with (`TCP` or a NATS URL) |
 | `PORT` | Health, stats and metrics port. Default 3039; the Docker image sets 3000 |
 | `LOG_LEVEL` | `warn`, `info` or `debug`; any other value is ignored. Without it loggers stay at `warn`, because the `Log_Level` admin setting only takes effect inside Meteor's own process. At `debug` each inbound event is logged by name, together with connection, dialback and dropped-stanza diagnostics |
-| `XMPP_DECODE_ONLY` | `true` parses, routes and answers at the protocol level but forwards nothing to Rocket.Chat; hosted-MUC joins skip the database check and remote-MUC joins request no history. For load-testing decoding alone |
+| `XMPP_DECODE_ONLY` | `true` parses, routes and answers at the protocol level but forwards nothing to YasChat; hosted-MUC joins skip the database check and remote-MUC joins request no history. For load-testing decoding alone |
 | `XMPP_DNS_OVERRIDES` | `domain=host:port,…` answers S2S lookups for the listed domains without DNS; every other domain resolves normally. Lets load-test peers on local ports pass dialback. A malformed entry stops the service at startup |
 | `MS_METRICS`, `MS_METRICS_PORT` | The broker's own Prometheus metrics, off unless `MS_METRICS=true`, on port 9458 by default. Same as every other microservice |
 
@@ -153,7 +153,7 @@ XMPP domain** ([ADR 0012](adr/0012-core-state-is-ephemeral-and-rebuilt-from-the-
 `GET /stats` on `PORT` returns a JSON snapshot:
 
 - `decoded`: running totals of every inbound event the protocol core has decoded, by event name.
-- `inflight`, `completed`, `failed`: the Rocket.Chat-side handling of those events. A handler
+- `inflight`, `completed`, `failed`: the YasChat-side handling of those events. A handler
   counts as in flight from the moment its event is decoded until its database writes and
   broker calls settle.
 - `decodeOnly`: whether the service runs with `XMPP_DECODE_ONLY=true`.
@@ -185,16 +185,16 @@ up:
 - S2S must be enabled and port 5269 open in both directions (the default on Prosody, ejabberd
   and Openfire).
 - If the remote server **requires verified TLS certificates for S2S** (Prosody
-  `s2s_secure_auth = true`), the Rocket.Chat certificate must be publicly trusted or
+  `s2s_secure_auth = true`), the YasChat certificate must be publicly trusted or
   explicitly allowed on their side (Prosody `s2s_insecure_domains`).
-- If the remote server **requires encryption**, Rocket.Chat must have a certificate
+- If the remote server **requires encryption**, YasChat must have a certificate
   configured (see [TLS certificate](#tls-certificate)).
 - If the remote server runs a domain allowlist, `chat.example.com` and
   `conference.chat.example.com` must be on it.
 
 ## How users start communicating
 
-### From the Rocket.Chat side
+### From the YasChat side
 
 - **Direct message a remote XMPP user**: open the new Direct Message dialog and type the full
   JID (`alice@remote.tld`). A DM room is created; messages are delivered to the remote server
@@ -202,7 +202,7 @@ up:
 - **Create an XMPP room**: in the channel-creation dialog, under **Advanced settings**, turn
   on **XMPP Federated**. The toggle is enabled when the XMPP server is on, the license has the
   `federation` module and you hold `access-federation`. It cannot be combined with Matrix
-  federation, encryption, broadcast or read-only. This creates a normal Rocket.Chat channel
+  federation, encryption, broadcast or read-only. This creates a normal YasChat channel
   or group that is also a MUC room at `<name>@conference.chat.example.com`, with the name
   escaped as XEP-0106 requires. Public channels can be joined by anyone on the XMPP network,
   subject to the allow list; private groups only by invited users. Changing a room between
@@ -220,19 +220,19 @@ up:
 
 ### From the XMPP side
 
-- **Direct message a Rocket.Chat user**: message `username@chat.example.com` from any client.
+- **Direct message a YasChat user**: message `username@chat.example.com` from any client.
   No prior contact or subscription is required.
-- **Presence**: send a subscription request to a Rocket.Chat user you already share a DM
+- **Presence**: send a subscription request to a YasChat user you already share a DM
   with; it is accepted automatically, and a request back is sent. Requests from anyone else
   are declined. With **Exchange Presence** off, requests get no answer at all. See
   [Presence](#presence) for what is exchanged after that.
-- **Join a Rocket.Chat-hosted room**: join `<room>@conference.chat.example.com` as a regular
+- **Join a YasChat-hosted room**: join `<room>@conference.chat.example.com` as a regular
   MUC. Public channels admit anyone; private groups require an invitation (a join without one
   is refused with `registration-required`). `disco#items` on `chat.example.com` lists the
   conference service, and `disco#items` on `conference.chat.example.com` lists its public
   rooms.
-- **Invite a Rocket.Chat user to a room on your server**: send a MUC invite, mediated
-  (XEP-0045 §7.8) or direct (XEP-0249), to `username@chat.example.com`. Rocket.Chat joins the
+- **Invite a YasChat user to a room on your server**: send a MUC invite, mediated
+  (XEP-0045 §7.8) or direct (XEP-0249), to `username@chat.example.com`. YasChat joins the
   room on their behalf immediately and mirrors it as a private group. Anyone on an allowed
   domain can do this. A second invite to the same room adds the new invitee to the existing
   group.
@@ -244,15 +244,15 @@ defect or as out of scope; the spec has the details.
 
 ### Presence
 
-Presence works one way only. A contact's XMPP presence sets their Rocket.Chat status, but
-Rocket.Chat status changes do not reach XMPP contacts
-([presence D2](specs/presence.md#d2-rocketchat-status-changes-do-not-reach-xmpp-contacts)).
+Presence works one way only. A contact's XMPP presence sets their YasChat status, but
+YasChat status changes do not reach XMPP contacts
+([presence D2](specs/presence.md#d2-yaschat-status-changes-do-not-reach-xmpp-contacts)).
 
 ### Hosted rooms
 
-- A topic changed in Rocket.Chat reaches only XMPP occupants who join afterwards
+- A topic changed in YasChat reaches only XMPP occupants who join afterwards
   ([hosted-muc D3](specs/hosted-muc.md#d3-a-new-topic-does-not-reach-occupants-already-in-the-room)).
-- A room deleted in Rocket.Chat keeps running for its XMPP occupants until the service
+- A room deleted in YasChat keeps running for its XMPP occupants until the service
   restarts ([hosted-muc D4](specs/hosted-muc.md#d4-a-deleted-room-keeps-running-until-the-service-restarts)).
 - An XMPP user removed from a room is not told, and their client still shows them in it
   ([hosted-muc D1](specs/hosted-muc.md#d1-kicked-xmpp-users-are-not-told-they-were-removed)).
@@ -272,8 +272,8 @@ What the servers need:
 - **ejabberd**: `mod_register` allows registration and `registration_timeout: infinity` is
   set (otherwise one registration per IP every ten minutes); `mod_muc` and `mod_mam` are on,
   so rooms archive and stamp XEP-0359 stanza ids, which some of the duplicate cases depend
-  on; `s2s_use_starttls: optional` when Rocket.Chat has no TLS certificate.
-- **Rocket.Chat**: the repo's test admin exists (as under `TEST_MODE`,
+  on; `s2s_use_starttls: optional` when YasChat has no TLS certificate.
+- **YasChat**: the repo's test admin exists (as under `TEST_MODE`,
   `apps/meteor/tests/data/user.ts`); the XMPP server is enabled; the allow list is empty or
   includes both the XMPP server's domain and its MUC domain. The suite checks the domain
   before every suite and the MUC domain before the remote-room one.
@@ -305,7 +305,7 @@ node --import tsx --test --test-force-exit --test-name-pattern='stores a message
 
 ### The Openfire stack
 
-`docker-compose.test.yml` runs Rocket.Chat in microservices mode (with the authorization,
+`docker-compose.test.yml` runs YasChat in microservices mode (with the authorization,
 presence and XMPP server services) and Openfire 5.1 in its default configuration, already
 federating with each other. `yarn test:e2e:stack` builds the images from the working tree,
 starts the stack, runs the suite against it and tears it down:
@@ -324,10 +324,10 @@ yarn workspace @rocket.chat/xmpp-server test:e2e:stack
 | `--down` | Tear down a stack left running |
 | `-- <args>` | Pass `node --test` arguments instead of the whole suite, e.g. `-- --test-name-pattern='…' tests/end-to-end/remote-muc.spec.ts` |
 
-| | Rocket.Chat | Openfire |
+| | YasChat | Openfire |
 | --- | --- | --- |
 | XMPP domain | `rc.test` | `openfire.test` |
-| Reached at | `http://localhost:3000`, the test admin (`rocketchat.internal.admin.test`, same password) | `xmpp://localhost:5222`; admin console `http://localhost:9090` (`admin` / `admin`) |
+| Reached at | `http://localhost:3000`, the test admin (`yaschat.internal.admin.test`, same password) | `xmpp://localhost:5222`; admin console `http://localhost:9090` (`admin` / `admin`) |
 | Host port variable | `XMPP_STACK_RC_PORT` | `XMPP_STACK_OPENFIRE_C2S_PORT`, `XMPP_STACK_OPENFIRE_ADMIN_PORT` |
 
 The service's `/stats` is on `XMPP_STACK_SERVICE_PORT` (3039). The license is validated

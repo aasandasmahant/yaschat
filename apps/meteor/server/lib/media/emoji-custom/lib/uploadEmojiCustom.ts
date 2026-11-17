@@ -6,8 +6,8 @@ import sharp from 'sharp';
 
 import type { EmojiData } from './insertOrUpdateEmoji';
 import { hasPermissionAsync } from '../../../authorization/hasPermission';
-import { RocketChatFile } from '../../file';
-import { RocketChatFileEmojiCustomInstance } from '../startup/emoji-custom';
+import { YasChatFile } from '../../file';
+import { YasChatFileEmojiCustomInstance } from '../startup/emoji-custom';
 
 const getFile = async (file: Buffer, extension: string) => {
 	if (extension !== 'svg+xml') {
@@ -61,11 +61,11 @@ export async function uploadEmojiCustomWithBuffer(
 		fileBuffer = resizedEmojiBuffer;
 	}
 
-	const rs = RocketChatFile.bufferToStream(fileBuffer);
-	await RocketChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
+	const rs = YasChatFile.bufferToStream(fileBuffer);
+	await YasChatFileEmojiCustomInstance.deleteFile(encodeURIComponent(`${emojiData.name}.${emojiData.extension}`));
 
 	return new Promise((resolve) => {
-		const ws = RocketChatFileEmojiCustomInstance.createWriteStream(
+		const ws = YasChatFileEmojiCustomInstance.createWriteStream(
 			encodeURIComponent(`${emojiData.name}.${emojiData.extension}`),
 			contentType,
 		);

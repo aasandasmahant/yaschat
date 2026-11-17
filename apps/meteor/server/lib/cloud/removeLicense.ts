@@ -33,9 +33,9 @@ export async function removeLicense() {
 		if (!response.ok) {
 			try {
 				const { error } = await response.json();
-				throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+				throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 			} catch (error) {
-				throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${response.statusText}`);
+				throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${response.statusText}`);
 			}
 		}
 

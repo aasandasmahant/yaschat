@@ -1,7 +1,7 @@
 import { imperativeModal } from '@rocket.chat/ui-client';
 
 import * as banners from '../banners';
-import { e2e } from './rocketchat.e2e';
+import { e2e } from './yaschat.e2e';
 import { dispatchToastMessage } from '../toast';
 
 jest.mock('@rocket.chat/ui-client', () => ({

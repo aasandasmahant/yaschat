@@ -115,7 +115,7 @@ export const staticBox = ({ report = false }: { report?: boolean } = {}): Plugin
 	let conditional = 0;
 
 	return {
-		name: 'rocketchat-static-box',
+		name: 'yaschat-static-box',
 		apply: 'build',
 		enforce: 'pre',
 
@@ -344,7 +344,7 @@ export const staticBox = ({ report = false }: { report?: boolean } = {}): Plugin
 
 			const percent = boxes ? ((compiled / boxes) * 100).toFixed(1) : '0.0';
 
-			console.log('\n[RocketChat StaticBox] Compilation diagnostics');
+			console.log('\n[YasChat StaticBox] Compilation diagnostics');
 			console.log(`${compiled}/${boxes} Box components compiled (${percent}%), ${conditional} of them with conditional styling props.`);
 
 			if (diagnostics.length === 0) return;

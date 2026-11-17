@@ -33,7 +33,7 @@ export class OmnichannelTranscript extends ServiceClass implements IOmnichannelT
 
 	currentJobNumber = 0;
 
-	siteName = 'Rocket.Chat';
+	siteName = 'YasChat';
 
 	dateFormat = 'LL';
 

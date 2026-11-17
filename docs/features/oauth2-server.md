@@ -37,7 +37,7 @@ The document is served where RFC 8414 puts it: the well-known segment goes betwe
 
 ## Dynamic Client Registration
 
-`POST /oauth/register` lets an application register itself (RFC 7591) without an administrator. It exists for MCP clients, so it is controlled by the **`OAuth2_Allow_Dynamic_Client_Registration`** setting on the MCP settings page (Administration → Settings → AI Center → MCP), **off by default**, and it needs what MCP needs: the Rocket.Chat AI add-on (`chat.rocket.rc-ai`) and `MCP_Enabled`. Without the add-on the setting falls back to off.
+`POST /oauth/register` lets an application register itself (RFC 7591) without an administrator. It exists for MCP clients, so it is controlled by the **`OAuth2_Allow_Dynamic_Client_Registration`** setting on the MCP settings page (Administration → Settings → AI Center → MCP), **off by default**, and it needs what MCP needs: the YasChat AI add-on (`chat.rocket.rc-ai`) and `MCP_Enabled`. Without the add-on the setting falls back to off.
 
 - **Off** (the setting, MCP, or the AI add-on): the endpoint answers `403` with `access_denied` and a description of what registration needs, and that an administrator can instead create an OAuth app and hand its client ID and secret to the client.
 - **On:** the request is validated and an active OAuth app is created. The response carries the new `client_id` and `client_secret` (which does not expire) and the registered metadata.

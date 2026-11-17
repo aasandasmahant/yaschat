@@ -63,7 +63,7 @@ export class AppMessageBridge extends MessageBridge {
 		}
 
 		const convertedMsg = await this.orch.getConverters()?.get('messages').convertAppMessage(message);
-		const convertedUser = (await Users.findOneById(user.id)) || this.orch.getConverters()?.get('users').convertToRocketChat(user);
+		const convertedUser = (await Users.findOneById(user.id)) || this.orch.getConverters()?.get('users').convertToYasChat(user);
 
 		await deleteMessage(convertedMsg as IMessage, convertedUser);
 	}

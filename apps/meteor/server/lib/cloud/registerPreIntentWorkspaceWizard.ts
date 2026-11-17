@@ -43,7 +43,7 @@ export async function registerPreIntentWorkspaceWizard(): Promise<boolean> {
 		return true;
 	} catch (err: any) {
 		SystemLogger.error({
-			msg: 'Failed to register workspace pre-intent with Rocket.Chat Cloud',
+			msg: 'Failed to register workspace pre-intent with YasChat Cloud',
 			url: '/api/v2/register/workspace/pre-intent',
 			err,
 		});

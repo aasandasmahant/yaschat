@@ -93,7 +93,7 @@ export const createVisitorWithCustomData = async ({
 			visitor: {
 				name: visitorName || `Visitor ${Date.now()}`,
 				token,
-				customFields: customFields || [{ key: 'address', value: 'Rocket.Chat street', overwrite: true }],
+				customFields: customFields || [{ key: 'address', value: 'YasChat street', overwrite: true }],
 				...(department ? { department } : {}),
 				...(!ignoreEmail ? { email } : {}),
 				...(!ignorePhone ? { phone } : {}),
@@ -126,7 +126,7 @@ export const createVisitor = (
 						email,
 						token,
 						phone,
-						customFields: [{ key: 'address', value: 'Rocket.Chat street', overwrite: true }],
+						customFields: [{ key: 'address', value: 'YasChat street', overwrite: true }],
 						...(department ? { department } : {}),
 					},
 				})

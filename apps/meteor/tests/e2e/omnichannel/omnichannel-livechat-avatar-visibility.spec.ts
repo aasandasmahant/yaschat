@@ -9,7 +9,7 @@ import { createAgent, makeAgentAvailable } from '../utils/omnichannel/agents';
 import { test, expect } from '../utils/test';
 
 declare const window: Window & {
-	RocketChat: {
+	YasChat: {
 		livechat: {
 			setTheme: (theme: { hideAgentAvatar?: boolean; hideGuestAvatar?: boolean }) => void;
 		};
@@ -79,12 +79,12 @@ test.describe('OC - Livechat - Avatar visibility', async () => {
 		});
 
 		await test.step('expect to make visitor avatar visible', async () => {
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ hideGuestAvatar: false }));
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ hideGuestAvatar: false }));
 			await expect(poLiveChat.imgAvatar(visitor.name)).toBeVisible();
 		});
 
 		await test.step('expect to hide agent avatar', async () => {
-			await poLiveChat.page.evaluate(() => window.RocketChat.livechat.setTheme({ hideAgentAvatar: false }));
+			await poLiveChat.page.evaluate(() => window.YasChat.livechat.setTheme({ hideAgentAvatar: false }));
 			await expect(poLiveChat.imgAvatar('user1')).toBeVisible();
 		});
 

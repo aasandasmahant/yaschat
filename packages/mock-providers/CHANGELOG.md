@@ -4,13 +4,13 @@
 
 ### Minor Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
 ### Patch Changes
 
-- ([#42599](https://github.com/RocketChat/Rocket.Chat/pull/42599)) Bumps `@faker-js/faker` from 8.0.2 to 10.5.0 to fix CVE-2026-73231. Updates tests to the faker 10 API and makes the Jest presets transform the ESM-only package.
+- ([#42599](https://github.com/YasChat/YasChat/pull/42599)) Bumps `@faker-js/faker` from 8.0.2 to 10.5.0 to fix CVE-2026-73231. Updates tests to the faker 10 API and makes the Jest presets transform the ESM-only package.
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
@@ -25,13 +25,13 @@
 
 ### Minor Changes
 
-- ([#42976](https://github.com/RocketChat/Rocket.Chat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
+- ([#42976](https://github.com/YasChat/YasChat/pull/42976)) Stops re-rendering every component that talks to the server whenever the connection status changes, including on each reconnection attempt
 
 ### Patch Changes
 
-- ([#42599](https://github.com/RocketChat/Rocket.Chat/pull/42599)) Bumps `@faker-js/faker` from 8.0.2 to 10.5.0 to fix CVE-2026-73231. Updates tests to the faker 10 API and makes the Jest presets transform the ESM-only package.
+- ([#42599](https://github.com/YasChat/YasChat/pull/42599)) Bumps `@faker-js/faker` from 8.0.2 to 10.5.0 to fix CVE-2026-73231. Updates tests to the faker 10 API and makes the Jest presets transform the ESM-only package.
 
-- ([#42369](https://github.com/RocketChat/Rocket.Chat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
+- ([#42369](https://github.com/YasChat/YasChat/pull/42369)) Removes the legacy Meteor OAuth login flow and the `Accounts_OAuth_Use_Modern_Flow` setting. OAuth logins (Apple, GitHub, GitLab, Google, Nextcloud and custom OAuth) now always use the server-side Passport flow, with PKCE/state validation.
 
   Also removes `Accounts_OAuth_Proxy_host` and `Accounts_OAuth_Proxy_services` settings and support for OAuth login through proxies.
 
@@ -46,7 +46,7 @@
 
 ### Minor Changes
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -54,7 +54,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -76,7 +76,7 @@
 
 ### Minor Changes
 
-- ([#41657](https://github.com/RocketChat/Rocket.Chat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
+- ([#41657](https://github.com/YasChat/YasChat/pull/41657)) Gives a video conference a chat that outlives it, and a window of its own to hold both — behind a new Premium setting, **`VideoConf_Conference_Window_Enabled`**, which is **off by default**.
 
   Nothing below happens until an administrator turns that setting on. With it off, calls behave exactly as they did before: the provider's own page opens in a tab, an incoming call is a popup over the screen, a direct call rings from the room and waits there, and no new request is made of the server. The setting is also independent of `VideoConf_Enable_Persistent_Chat`, which keeps meaning only what it always meant — a discussion or thread per call — so a workspace already running persistent chat sees no change either until the new setting is turned on.
 
@@ -84,7 +84,7 @@
 
   Joining a conference opens a dedicated call window at `/conference/:id` — the provider's call beside the conference's chat, with the people on the call in a panel of their own — instead of handing the user off to the provider's page. A preflight screen opens first: it is where the camera and microphone are chosen, where whoever started a group call can name it, and where confirming is what actually creates the call, so a call nobody confirmed leaves no message, no ring and no history behind. Closing the window reports leaving, and a call nobody is left in ends by itself.
 
-  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is Rocket.Chat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
+  Where a call's chat lives becomes a choice. `VideoConf_Persistent_Chat_Mode`, editable only with both the call window and persistent chat on, either puts the chat in a thread off the call's message — listed under the call's name — or leaves it in the room, with the discussion per call that persistent chat has always created. The thread is YasChat's own chat panel rather than anything the provider supplies, so it applies whoever runs the media, an iframed provider included. Turning the window off puts the answer back to the discussion whatever the mode was left at, so a workspace already running persistent chat is left exactly where it was.
 
   Adding someone to a conference makes them a member of the **conference** rather than putting them in a room. Membership authorizes joining the call alongside room access, so a person from outside the conference's room can join without being handed the room's history — and whether they can read the chat becomes a separate question, surfaced once it matters with a choice of how to resolve it: bring them into the room, or move the chat to a discussion. `video-conference.info` reports the members who can't read it and `POST /v1/video-conference.share-chat` applies the remedy; `video-conference.add-participants` takes the call and the usernames to add, and returns the ids it added.
 
@@ -187,7 +187,7 @@
 
 ### Patch Changes
 
-- ([#40058](https://github.com/RocketChat/Rocket.Chat/pull/40058)) Fixed UI becoming unresponsive after clicking "See on Engagement Dashboard" from the workspace info card, which required a manual page refresh to recover.
+- ([#40058](https://github.com/YasChat/YasChat/pull/40058)) Fixed UI becoming unresponsive after clicking "See on Engagement Dashboard" from the workspace info card, which required a manual page refresh to recover.
 
 - <details><summary>Updated dependencies [32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
   - @rocket.chat/i18n@3.0.0
@@ -235,7 +235,7 @@
 
 ### Patch Changes
 
-- ([#40058](https://github.com/RocketChat/Rocket.Chat/pull/40058)) Fixed UI becoming unresponsive after clicking "See on Engagement Dashboard" from the workspace info card, which required a manual page refresh to recover.
+- ([#40058](https://github.com/YasChat/YasChat/pull/40058)) Fixed UI becoming unresponsive after clicking "See on Engagement Dashboard" from the workspace info card, which required a manual page refresh to recover.
 
 - <details><summary>Updated dependencies [32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
   - @rocket.chat/i18n@3.0.0-rc.0
@@ -247,7 +247,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 788c161bb6c9544bec37034c93e2f60de1a6c316]:</summary>
   - @rocket.chat/i18n@2.2.0
@@ -295,7 +295,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5]:</summary>
   - @rocket.chat/i18n@2.2.0-rc.0
@@ -409,7 +409,7 @@
 
 ### Patch Changes
 
-- ([#37654](https://github.com/RocketChat/Rocket.Chat/pull/37654)) Fixes an issue that could cause slashcommands to disappear for the user in certain high-availability scenarios
+- ([#37654](https://github.com/YasChat/YasChat/pull/37654)) Fixes an issue that could cause slashcommands to disappear for the user in certain high-availability scenarios
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, f056c451c2926e849f52b95fed957945398ef5f6]:</summary>
   - @rocket.chat/i18n@2.0.0
@@ -466,7 +466,7 @@
 
 ### Patch Changes
 
-- ([#37654](https://github.com/RocketChat/Rocket.Chat/pull/37654)) Fixes an issue that could cause slashcommands to disappear for the user in certain high-availability scenarios
+- ([#37654](https://github.com/YasChat/YasChat/pull/37654)) Fixes an issue that could cause slashcommands to disappear for the user in certain high-availability scenarios
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, f056c451c2926e849f52b95fed957945398ef5f6]:</summary>
   - @rocket.chat/i18n@2.0.0-rc.0
@@ -496,7 +496,7 @@
 
 ### Patch Changes
 
-- ([#37477](https://github.com/RocketChat/Rocket.Chat/pull/37477)) Fixes an issue where leave room action is available for users without subscription
+- ([#37477](https://github.com/YasChat/YasChat/pull/37477)) Fixes an issue where leave room action is available for users without subscription
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 99255057f27b9d854a89da815681a03d0776f846, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
   - @rocket.chat/ui-contexts@25.0.0
@@ -526,7 +526,7 @@
 
 ### Patch Changes
 
-- ([#37477](https://github.com/RocketChat/Rocket.Chat/pull/37477)) Fixes an issue where leave room action is available for users without subscription
+- ([#37477](https://github.com/YasChat/YasChat/pull/37477)) Fixes an issue where leave room action is available for users without subscription
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 99255057f27b9d854a89da815681a03d0776f846, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
   - @rocket.chat/ui-contexts@25.0.0-rc.0
@@ -612,7 +612,7 @@
 
 ### Minor Changes
 
-- ([#36397](https://github.com/RocketChat/Rocket.Chat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
+- ([#36397](https://github.com/YasChat/YasChat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
 
 ### Patch Changes
 
@@ -688,7 +688,7 @@
 
 ### Minor Changes
 
-- ([#36397](https://github.com/RocketChat/Rocket.Chat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
+- ([#36397](https://github.com/YasChat/YasChat/pull/36397)) Introduces a new flow for requesting device permissions for Voice Calling, prompting the user before the request. Also solves a few issues with the device selection menu.
 
 ### Patch Changes
 
@@ -719,7 +719,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -785,7 +785,7 @@
 
 ### Minor Changes
 
-- ([#36049](https://github.com/RocketChat/Rocket.Chat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
+- ([#36049](https://github.com/YasChat/YasChat/pull/36049)) Introduces the side navigation with a new filtering system. The update adds new filters for All, Mentions, Favorites, and Discussions, as well as dedicated filters for Omnichannel conversations and grouping by Teams, Channels, and DMs.
   > This change is being tested under `Enhanced navigation experience` feature preview, in order to check it you need to enabled it
 
 ### Patch Changes
@@ -1112,9 +1112,9 @@
 
 ### Minor Changes
 
-- ([#35218](https://github.com/RocketChat/Rocket.Chat/pull/35218)) Adds a new admin page to audit settings changes in a server
+- ([#35218](https://github.com/YasChat/YasChat/pull/35218)) Adds a new admin page to audit settings changes in a server
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
@@ -1200,9 +1200,9 @@
 
 ### Minor Changes
 
-- ([#35218](https://github.com/RocketChat/Rocket.Chat/pull/35218)) Adds a new admin page to audit settings changes in a server
+- ([#35218](https://github.com/YasChat/YasChat/pull/35218)) Adds a new admin page to audit settings changes in a server
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
@@ -1252,7 +1252,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c8e8518011b8b7d318a2bb2f26b897b196421d76, c75d771c410579d3d7eaabb379871456ded1b111, c0fa1c884cccab47f4e68dd81457c424cf176f11, 3c237b25b27782db2e54c4c294140b1c8cd9b31a]:</summary>
   - @rocket.chat/i18n@1.3.0
@@ -1263,7 +1263,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c8e8518011b8b7d318a2bb2f26b897b196421d76, c75d771c410579d3d7eaabb379871456ded1b111, 3c237b25b27782db2e54c4c294140b1c8cd9b31a]:</summary>
   - @rocket.chat/i18n@1.3.0-rc.0
@@ -1274,7 +1274,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, f23e71166a2dfee0e3394e49cac95c48e5eb62e5, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f90b1c99bdf4d89350a70c9ef4c2d12ed3784fd8, a129e3e1c9ba5930906ef609d7573e5708d336f0, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 2d41274ae21ec51e7382da92e2f4e0c36186f814]:</summary>
   - @rocket.chat/i18n@1.2.0
@@ -1285,7 +1285,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 ## 0.1.6-rc.0
 
@@ -1318,7 +1318,7 @@
 
 ### Patch Changes
 
-- ([#33346](https://github.com/RocketChat/Rocket.Chat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
+- ([#33346](https://github.com/YasChat/YasChat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
 
 - <details><summary>Updated dependencies [c5b0c98803, 2806cb5d3e, 34ed9ad646, bcacbb1cee, 9bcb802fdc, f33c07ebb8, 9cf079721b, debd3ffa22, e3629e065b, 03d148524b, 4aa731d6e9, 53cc1111f8, e3dac4aab6, 5acb59bb39, 31eb47f573]:</summary>
   - @rocket.chat/i18n@1.0.0
@@ -1329,7 +1329,7 @@
 
 ### Patch Changes
 
-- ([#33346](https://github.com/RocketChat/Rocket.Chat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
+- ([#33346](https://github.com/YasChat/YasChat/pull/33346)) Implements integration with FreeSwitch to enable VoIP calls for team collaboration workspaces
 
 - <details><summary>Updated dependencies [c5b0c98803, 2806cb5d3e, 34ed9ad646, bcacbb1cee, 9bcb802fdc, f33c07ebb8, 9cf079721b, debd3ffa22, e3629e065b, 03d148524b, 4aa731d6e9, 53cc1111f8, e3dac4aab6, 5acb59bb39, 31eb47f573]:</summary>
   - @rocket.chat/i18n@1.0.0-rc.0
@@ -1385,7 +1385,7 @@
 
 ### Patch Changes
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [b4bbcbfc9a, 25da5280a5, 1b7b1161cf, 03c8b066f9, 2d89a0c448, 3ffe4a2944, 3b4b19cfc5]:</summary>
   - @rocket.chat/i18n@0.6.0
@@ -1396,7 +1396,7 @@
 
 ### Patch Changes
 
-- ([#32482](https://github.com/RocketChat/Rocket.Chat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
+- ([#32482](https://github.com/YasChat/YasChat/pull/32482)) Fixed an issue with blocked login when dismissed 2FA modal by clicking outside of it or pressing the escape key
 
 - <details><summary>Updated dependencies [b4bbcbfc9a, 25da5280a5, 1b7b1161cf, 03c8b066f9, 2d89a0c448, 3ffe4a2944, 3b4b19cfc5]:</summary>
   - @rocket.chat/i18n@0.6.0-rc.0
@@ -1407,7 +1407,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1420,7 +1420,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1487,7 +1487,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, 2260c04ec6]:</summary>
   - @rocket.chat/i18n@0.1.0

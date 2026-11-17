@@ -1,6 +1,6 @@
 import { css } from '@rocket.chat/css-in-js';
 import { FlexContainer, Box, InputBox, Button } from '@rocket.chat/fuselage';
-import { RocketChatLogo } from '@rocket.chat/logo';
+import { YasChatLogo } from '@rocket.chat/logo';
 import { useNavigate } from 'react-router-dom';
 
 import routes from '../Routes/Routes';
@@ -35,7 +35,7 @@ const SignInSignUp = ({ route }: SignInSignUpProps) => {
 				<FlexContainer justifyContent='start' alignItems='center' direction='column'>
 					<Box width='max-content' height='100%'>
 						<Box width='180px' height='40px' marginBlockStart='100px'>
-							<RocketChatLogo />
+							<YasChatLogo />
 						</Box>
 						<Box marginBlockStart='20px' fontScale='hero'>
 							{labels[route].header}

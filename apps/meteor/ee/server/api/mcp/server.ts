@@ -103,7 +103,7 @@ export const handleRpcMessage = async (
 					protocolVersion: negotiateProtocolVersion(params.protocolVersion),
 					capabilities: { tools: { listChanged: false } },
 					serverInfo: {
-						name: 'rocketchat',
+						name: 'yaschat',
 						version: getTrimmedServerVersion(),
 					},
 				}),

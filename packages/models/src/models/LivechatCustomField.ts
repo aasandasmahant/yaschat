@@ -1,11 +1,11 @@
-import type { ILivechatCustomField, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ILivechatCustomField, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { ILivechatCustomFieldModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { Db, Collection, IndexDescription, FindCursor, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';
 
 export class LivechatCustomFieldRaw extends BaseRaw<ILivechatCustomField> implements ILivechatCustomFieldModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatCustomField>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatCustomField>>) {
 		super(db, 'livechat_custom_field', trash);
 	}
 

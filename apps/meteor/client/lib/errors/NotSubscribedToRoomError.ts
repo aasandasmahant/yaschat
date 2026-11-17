@@ -1,10 +1,10 @@
 import type { IRoom } from '@rocket.chat/core-typings';
 
-import { RocketChatError } from './RocketChatError';
+import { YasChatError } from './YasChatError';
 
 type NotSubscribedToRoomErrorDetails = { rid: IRoom['_id'] };
 
-export class NotSubscribedToRoomError extends RocketChatError<'not-subscribed-room', NotSubscribedToRoomErrorDetails> {
+export class NotSubscribedToRoomError extends YasChatError<'not-subscribed-room', NotSubscribedToRoomErrorDetails> {
 	declare public readonly reason: string;
 
 	declare public readonly details: NotSubscribedToRoomErrorDetails;

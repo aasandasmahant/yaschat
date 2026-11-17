@@ -21,7 +21,7 @@ A UiKit block or element only works once every layer knows about it. Missing one
 - [ ] Add the renderer method named after the `type`: on `FuselageSurfaceRenderer` if every surface should draw it, otherwise on the specific `*SurfaceRenderer`. Check the `BlockContext` it will be called with.
 ## 4. Livechat (`packages/livechat`), message blocks only
 
-- [ ] If Livechat should show it, add a component under `src/components/uiKit/message/` and a method on `MessageParser`. Otherwise, apps can wrap Rocket.Chat-only content in a `conditional` block with `when: { engine: ['rocket.chat'] }`.
+- [ ] If Livechat should show it, add a component under `src/components/uiKit/message/` and a method on `MessageParser`. Otherwise, apps can wrap YasChat-only content in a `conditional` block with `when: { engine: ['rocket.chat'] }`.
 
 ## 5. Apps-engine (`packages/apps-engine`)
 

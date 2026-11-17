@@ -1,6 +1,6 @@
 # @rocket.chat/xmpp-server
 
-Native XMPP server-to-server (S2S) federation for Rocket.Chat. Lets a Rocket.Chat instance act
+Native XMPP server-to-server (S2S) federation for YasChat. Lets a YasChat instance act
 as an XMPP server: exchange 1:1 messages and presence with remote XMPP users, host MUC rooms,
 and join MUC rooms on remote servers, over standard RFC 6120/6121 S2S, without a bridge.
 
@@ -18,17 +18,17 @@ This package is developed spec-first. Everything about it lives in [docs/](docs/
 ## Two layers
 
 - **Protocol core** (`src/`, excluding `src/service/`): transport and protocol only, with no
-  Rocket.Chat dependencies. Built on `ltx`/`@xmpp/jid` plus Node `net`/`tls`/`dns`. Exposes
+  YasChat dependencies. Built on `ltx`/`@xmpp/jid` plus Node `net`/`tls`/`dns`. Exposes
   the `XMPPServer` class: lifecycle, imperative send methods, and a typed event map.
 - **Integration service** (`src/service/`): `XMPPServerService`, a `@rocket.chat/core-services`
-  `ServiceClass` that bridges the protocol core to Rocket.Chat models and events. It runs only
+  `ServiceClass` that bridges the protocol core to YasChat models and events. It runs only
   in the `ee/apps/xmpp-server-service` microservice, never inside Meteor.
 
 ## Testing
 
 ```sh
 yarn testunit   # unit + in-process integration tests (two servers over loopback)
-yarn test:e2e   # against a running Rocket.Chat, xmpp-server-service and XMPP server
+yarn test:e2e   # against a running YasChat, xmpp-server-service and XMPP server
 ```
 
 Unit tests are colocated (`src/**/*.spec.ts`). Integration tests under `tests/integration/`

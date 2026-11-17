@@ -1,11 +1,11 @@
-import type { IUserSession, IUserSessionConnection, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IUserSession, IUserSessionConnection, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { IUsersSessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type { FindCursor, Collection, Db, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';
 
 export class UsersSessionsRaw extends BaseRaw<IUserSession> implements IUsersSessionsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IUserSession>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IUserSession>>) {
 		super(db, 'usersSessions', trash, {
 			preventSetUpdatedAt: true,
 			collectionNameResolver(name) {

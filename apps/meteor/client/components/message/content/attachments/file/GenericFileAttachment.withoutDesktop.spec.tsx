@@ -35,7 +35,7 @@ beforeEach(() => {
 });
 
 /**
- * `window.RocketChatDesktop` is deliberately never installed in this file. The component captures it at
+ * `window.YasChatDesktop` is deliberately never installed in this file. The component captures it at
  * module scope, so the web build's behaviour can only be exercised from a spec that never defines it.
  */
 describe('GenericFileAttachment without the desktop API', () => {

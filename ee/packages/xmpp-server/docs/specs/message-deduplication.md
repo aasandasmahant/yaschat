@@ -23,7 +23,7 @@ tests:
 ## Summary
 
 Every message that arrives from the wire is stored exactly once, whatever the number of
-copies the network delivers, and nothing Rocket.Chat sent is stored again when it comes
+copies the network delivers, and nothing YasChat sent is stored again when it comes
 back. The rule is one event id per message, derived from the ids XMPP already carries
 ([ADR 0007](../adr/0007-inbound-messages-are-deduplicated-by-federation-event-id.md)).
 
@@ -52,14 +52,14 @@ way. Without a dedup rule a three-member mirrored room stores every message thre
   domain for a remote room.
 - **R3** In a remote room, a `groupchat` from the session's own nick is ignored, and a message
   whose replace id, or the id its sender gave it (the XEP-0359 `<origin-id/>`, otherwise the
-  stanza `id`), is the `_id` of a stored Rocket.Chat message is ignored: it is our own relay
+  stanza `id`), is the `_id` of a stored YasChat message is ignored: it is our own relay
   reflected to another member's session, whatever stanza id the room assigned it.
 - **R4** The outgoing hook never relays a message that carries `federation.eventId`, so a
   stored inbound message is not echoed back.
-- **R5** In a hosted room, local members receive no stanza at all; copies reach Rocket.Chat
+- **R5** In a hosted room, local members receive no stanza at all; copies reach YasChat
   only as the single `muc.messageReceived` event.
 - **R6** Copies of one message that arrive at the same time are still stored once.
-- **R7** Rocket.Chat does not stamp its outbound stanzas with `<origin-id/>` or
+- **R7** YasChat does not stamp its outbound stanzas with `<origin-id/>` or
   `<stanza-id/>`.
 
 ## Design
@@ -108,7 +108,7 @@ advertised XEP-0359".
 
 ## Open questions
 
-- **Q1** Should Rocket.Chat stamp its outbound room messages with `<origin-id/>` (R7), so
+- **Q1** Should YasChat stamp its outbound room messages with `<origin-id/>` (R7), so
   that R3 also holds in a room that rewrites the `id` attribute? Inbound corrections did not
   need it: they find the message they replace by its derived `_id` ([ADR
   0014](../adr/0014-inbound-message-id-is-derived-from-room-author-and-sender-id.md)).

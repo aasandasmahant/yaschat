@@ -10,7 +10,7 @@ import EnabledAppsCount from './EnabledAppsCount';
 import { useAppsCountQuery } from '../hooks/useAppsCountQuery';
 import { usePrivateAppsEnabled } from '../hooks/usePrivateAppsEnabled';
 import PrivateAppInstallModal from './PrivateAppInstallModal/PrivateAppInstallModal';
-import UpdateRocketChatButton from './UpdateRocketChatButton';
+import UpdateYasChatButton from './UpdateYasChatButton';
 
 export type MarketplaceHeaderProps = { title: string; unsupportedVersion: boolean };
 
@@ -73,7 +73,7 @@ const MarketplaceHeader = ({ title, unsupportedVersion }: MarketplaceHeaderProps
 						{t('Upgrade')}
 					</UpgradeButton>
 				)}
-				{unsupportedVersion && isAdmin && context !== 'private' && <UpdateRocketChatButton />}
+				{unsupportedVersion && isAdmin && context !== 'private' && <UpdateYasChatButton />}
 			</ButtonGroup>
 		</PageHeader>
 	);

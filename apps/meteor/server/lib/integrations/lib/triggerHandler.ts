@@ -55,7 +55,7 @@ type IntegrationData = {
 	owner?: Partial<IUser>;
 };
 
-class RocketChatIntegrationHandler {
+class YasChatIntegrationHandler {
 	private successResults: number[];
 
 	private triggers: Trigger;
@@ -836,5 +836,5 @@ class RocketChatIntegrationHandler {
 		});
 	}
 }
-const triggerHandler = new RocketChatIntegrationHandler();
+const triggerHandler = new YasChatIntegrationHandler();
 export { triggerHandler };

@@ -3,7 +3,7 @@ import { Rooms, Users } from '@rocket.chat/models';
 
 import { settings } from '../../../../../settings';
 
-class RocketChatStatisticsAdapter {
+class YasChatStatisticsAdapter {
 	async getBiggestRoomAvailable(): Promise<{
 		_id: string;
 		name: string;
@@ -55,7 +55,7 @@ class RocketChatStatisticsAdapter {
 }
 
 export const getMatrixFederationStatistics = async (): Promise<IMatrixFederationStatistics> => {
-	const statisticsService = new RocketChatStatisticsAdapter();
+	const statisticsService = new YasChatStatisticsAdapter();
 
 	return {
 		enabled: settings.get('Federation_Service_Enabled'),

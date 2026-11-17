@@ -11,7 +11,7 @@ import { removeUserFromRolesAsync } from '../roles/removeUserFromRoles';
  * Bans a user from a room when triggered by federation or other external events.
  * Executes only the necessary database operations, with no callbacks, to prevent
  * propagation loops during external event processing.
- * `byUser` must be the Rocket.Chat user who initiated the ban (local record).
+ * `byUser` must be the YasChat user who initiated the ban (local record).
  */
 export const performUserBan = async function (room: IRoom, user: IUser, byUser: IUser): Promise<void> {
 	const subscription = await Subscriptions.findOneByRoomIdAndUserId(room._id, user._id);

@@ -18,7 +18,7 @@ export type SidebarDivider = { divider: boolean; i18nLabel: string };
 export type SidebarItem = Item | SidebarDivider;
 export const isSidebarItem = (item: SidebarItem): item is Item => !('divider' in item);
 
-export const isGoRocketChatLink = (link: string): link is `${typeof GO_ROCKET_CHAT_PREFIX}${string}` =>
+export const isGoYasChatLink = (link: string): link is `${typeof GO_ROCKET_CHAT_PREFIX}${string}` =>
 	link.startsWith(GO_ROCKET_CHAT_PREFIX);
 
 export const createSidebarItems = (

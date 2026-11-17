@@ -1,6 +1,6 @@
 # Building components
 
-A component is a reusable piece of UI. It lives either in **Fuselage**, reusable by every Rocket.Chat application, or in the **application**, specific to it.
+A component is a reusable piece of UI. It lives either in **Fuselage**, reusable by every YasChat application, or in the **application**, specific to it.
 
 | Combination       | Fuselage | Application |
 | ----------------- | -------- | ----------- |

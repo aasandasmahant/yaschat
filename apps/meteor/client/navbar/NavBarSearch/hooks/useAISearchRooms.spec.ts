@@ -17,7 +17,7 @@ describe('useAISearchRooms', () => {
 	});
 
 	it('should deduplicate a user if they already exist in local subscriptions as a self-DM', async () => {
-		const myUserName = 'rocketchat.internal.admin.test';
+		const myUserName = 'yaschat.internal.admin.test';
 		const myUserId = 'user_id_456';
 
 		const wrapper = mockAppRoot()

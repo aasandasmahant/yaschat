@@ -195,7 +195,7 @@ const VersionCard = ({ serverInfo }: VersionCardProps) => {
 				</CardHeader>
 
 				<Text color='secondary-info'>
-					<Icon name='rocketchat' size={16} /> {licenseName.data}
+					<Icon name='yaschat' size={16} /> {licenseName.data}
 				</Text>
 			</CardCol>
 

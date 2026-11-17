@@ -92,7 +92,7 @@ export class RoomConverter extends RecordConverter<IImportChannelRecord> {
 	}
 
 	async insertRoom(roomData: IImportChannel, startedByUserId: string): Promise<void> {
-		// Find the rocketchatId of the user who created this channel
+		// Find the yaschatId of the user who created this channel
 		const creatorId = await this.getRoomCreatorId(roomData, startedByUserId);
 		const members = await this._cache.convertImportedIdsToUsernames(roomData.users, roomData.t !== 'd' ? creatorId : undefined);
 

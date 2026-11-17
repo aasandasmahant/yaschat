@@ -317,7 +317,7 @@ export class UserConverter extends RecordConverter<IImportUserRecord, UserConver
 			this._cache.addUser(userData.importIds[0], existingUser._id, existingUser.username || userData.username);
 		}
 
-		// Deleted users are 'inactive' users in Rocket.Chat
+		// Deleted users are 'inactive' users in YasChat
 		if (userData.deleted && existingUser?.active) {
 			await setUserActiveStatus(_id, false, true);
 		} else if (userData.deleted === false && existingUser?.active === false) {

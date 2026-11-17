@@ -6,7 +6,7 @@ import type { Response } from '@rocket.chat/server-fetch';
 import { serverFetch as fetch } from '@rocket.chat/server-fetch';
 
 import { supportedVersionsChooseLatest } from './supportedVersionsChooseLatest';
-import { supportedVersions as supportedVersionsFromBuild } from '../../../../rocketchat-supported-versions.info';
+import { supportedVersions as supportedVersionsFromBuild } from '../../../../yaschat-supported-versions.info';
 import { settings } from '../../../settings';
 import { updateAuditedBySystem } from '../../../settings/lib/auditedSettingUpdates';
 import { SystemLogger } from '../../logger/system';
@@ -131,7 +131,7 @@ const getSupportedVersionsFromCloud = async () => {
 
 	if (!response.success) {
 		SystemLogger.error({
-			msg: 'Failed to communicate with Rocket.Chat Cloud',
+			msg: 'Failed to communicate with YasChat Cloud',
 			url: releaseEndpoint,
 			err: response.error,
 		});

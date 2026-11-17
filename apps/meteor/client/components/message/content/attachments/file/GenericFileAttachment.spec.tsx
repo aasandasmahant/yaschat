@@ -28,11 +28,11 @@ jest.mock('@rocket.chat/ui-contexts', () => ({
 	useToastMessageDispatch: () => mockDispatchToastMessage,
 }));
 
-// `GenericFileAttachment` reads `window.RocketChatDesktop` at module scope, so the stub has to be in
+// `GenericFileAttachment` reads `window.YasChatDesktop` at module scope, so the stub has to be in
 // place before the module is first loaded. `import` is hoisted and would run too early, hence the
 // explicit `require` below. Tests vary behaviour through the stub's implementations rather than by
 // re-importing the module: an isolated re-import pulls in a second copy of React and breaks hooks.
-window.RocketChatDesktop = {
+window.YasChatDesktop = {
 	openDocumentViewer: mockOpenDocumentViewer,
 	supportedDocumentViewerFormats: mockSupportedDocumentViewerFormats,
 } as any;

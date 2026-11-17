@@ -1,5 +1,5 @@
 import { Media, ClientSafeError } from '@rocket.chat/core-services';
-import type { IEmojiCustom, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IEmojiCustom, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import { EmojiCustom } from '@rocket.chat/models';
 import type { PaginatedRequest } from '@rocket.chat/rest-typings';
 import {
@@ -68,7 +68,7 @@ function validateDateParam(paramName: string, paramValue: string | undefined): D
 }
 
 const emojiCustomListResponseSchema = ajv.compile<{
-	emojis: { update: IEmojiCustom[]; remove: WithId<RocketChatRecordDeleted<IEmojiCustom>>[] };
+	emojis: { update: IEmojiCustom[]; remove: WithId<YasChatRecordDeleted<IEmojiCustom>>[] };
 }>({
 	type: 'object',
 	properties: {

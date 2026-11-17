@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IInvite extends IRocketChatRecord {
+export interface IInvite extends IYasChatRecord {
 	days: number;
 	maxUses: number;
 	rid: string;

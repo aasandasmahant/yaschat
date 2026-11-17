@@ -211,7 +211,7 @@ export const sendMessage = async function (user: any, message: any, room: any, o
 		message.unread = true;
 	}
 
-	// For the Rocket.Chat Apps :)
+	// For the YasChat Apps :)
 	if (Apps.self?.isLoaded()) {
 		const prevent = await Apps.self?.triggerEvent(AppEvents.IPreMessageSentPrevent, message);
 

@@ -727,8 +727,8 @@ import { SynapseClient } from '../helper/synapse-client';
 					expect(acceptedRoomId).not.toBe('');
 				}, 10000);
 
-				it('should set the topic on the Rocket.Chat side', async () => {
-					// RC view: Verify the topic is set in Rocket.Chat
+				it('should set the topic on the YasChat side', async () => {
+					// RC view: Verify the topic is set in YasChat
 					const roomInfo = await getRoomInfo(federatedChannel._id, rc1AdminRequestConfig);
 					expect(roomInfo.room).toHaveProperty('topic', channelTopic);
 				});
@@ -773,8 +773,8 @@ import { SynapseClient } from '../helper/synapse-client';
 					expect(acceptedRoomId).not.toBe('');
 				}, 10000);
 
-				it('should not set a topic on the Rocket.Chat side', async () => {
-					// RC view: Verify no topic is set in Rocket.Chat
+				it('should not set a topic on the YasChat side', async () => {
+					// RC view: Verify no topic is set in YasChat
 					const roomInfo = await getRoomInfo(federatedChannel._id, rc1AdminRequestConfig);
 					expect(roomInfo.room?.topic).toBeUndefined();
 				});

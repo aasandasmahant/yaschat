@@ -27,8 +27,8 @@ import {
 	teardown,
 	updateMessage,
 	waitForMessage,
-} from './helper/rocketchat';
-import type { LocalUser, RocketChat, RoomRef } from './helper/rocketchat';
+} from './helper/yaschat';
+import type { LocalUser, YasChat, RoomRef } from './helper/yaschat';
 import { NS } from './helper/stanza';
 import { assertFederationReachable, registerXmppUser, setupSuite } from './helper/suite';
 import { StanzaError } from './helper/xmpp-client';
@@ -51,8 +51,8 @@ const waitForMember = (owner: LocalUser, room: IRoom, username: string, present 
 		federationPolling,
 	);
 
-describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
-	let rc: RocketChat;
+describe('XMPP federation: rooms hosted by YasChat', () => {
+	let rc: YasChat;
 	let owner: LocalUser;
 	let alice: XmppUser;
 
@@ -129,7 +129,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 			);
 		});
 
-		it('admits anyone, showing Rocket.Chat members as occupants (R4, R6, R7)', async () => {
+		it('admits anyone, showing YasChat members as occupants (R4, R6, R7)', async () => {
 			const after = alice.cursor();
 			await alice.joinRoom(muc);
 			assert.ok(alice.received(isOccupantPresence(muc, owner.username), after).length, 'the owner is not in the roster');
@@ -280,7 +280,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 			assert.equal(replacedId(correction), id);
 		});
 
-		it('shows Rocket.Chat members joining and leaving as occupants (R10, R16)', async () => {
+		it('shows YasChat members joining and leaving as occupants (R10, R16)', async () => {
 			const member = await createLocalUser(rc, 'member');
 			await inviteToRoom(owner, room, member.username);
 			await alice.waitFor(isOccupantPresence(muc, member.username), 'the new member presence');
@@ -289,7 +289,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 			await alice.waitFor(isOccupantPresence(muc, member.username, { type: 'unavailable' }), 'the member leaving');
 		});
 
-		it('kicks an XMPP user removed in Rocket.Chat and tells the other occupants (R9)', async () => {
+		it('kicks an XMPP user removed in YasChat and tells the other occupants (R9)', async () => {
 			const bobUser = await findUser(rc, bob.bareJid);
 			assert.ok(bobUser);
 			await kickFromRoom(owner, room, bobUser._id);
@@ -323,7 +323,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 		});
 	});
 
-	describe('with several Rocket.Chat members', () => {
+	describe('with several YasChat members', () => {
 		let members: LocalUser[];
 		let room: IRoom;
 		let muc: string;
@@ -346,13 +346,13 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 			await expectStoredOnce(owner, room, text);
 		});
 
-		it('delivers a Rocket.Chat message to the XMPP user once (R14)', async () => {
+		it('delivers a YasChat message to the XMPP user once (R14)', async () => {
 			const text = `once from rocket.chat ${uniqueSuffix()}`;
 			await sendMessage(members[0], room._id, text);
 			await alice.expectOnce(isGroupchat({ roomJid: muc, nick: members[0].username, body: text }), 'the message');
 		});
 
-		it('keeps both directions single after another Rocket.Chat member joins (R14, R15, R16, message-deduplication R5)', async () => {
+		it('keeps both directions single after another YasChat member joins (R14, R15, R16, message-deduplication R5)', async () => {
 			const late = await createLocalUser(rc, 'late');
 			await inviteToRoom(owner, room, late.username);
 			await alice.waitFor(isOccupantPresence(muc, late.username), 'the late member presence');
@@ -436,7 +436,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 		});
 	});
 
-	describe('after a change made in Rocket.Chat', () => {
+	describe('after a change made in YasChat', () => {
 		// Known defect: ../../docs/specs/hosted-muc.md#d3-a-new-topic-does-not-reach-occupants-already-in-the-room
 		it.skip('tells occupants already in the room about a new topic (D3)', async () => {
 			const room = await createHostedRoom(rc, owner, { type: 'c', name: `xe2e-topic-${uniqueSuffix()}` });
@@ -449,8 +449,8 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 			await alice.waitFor(isRoomSubject({ roomJid: muc, subject: topic }), 'the new subject');
 		});
 
-		// Known defect: ../../docs/specs/hosted-muc.md#d5-a-rocketchat-member-takes-the-nick-of-an-xmpp-occupant
-		it.skip('never leaves an XMPP occupant unaware that a Rocket.Chat member took their nick (D5)', async () => {
+		// Known defect: ../../docs/specs/hosted-muc.md#d5-a-yaschat-member-takes-the-nick-of-an-xmpp-occupant
+		it.skip('never leaves an XMPP occupant unaware that a YasChat member took their nick (D5)', async () => {
 			const member = await createLocalUser(rc, 'nick');
 			const room = await createHostedRoom(rc, owner, { type: 'c', name: `xe2e-nick-${uniqueSuffix()}` });
 			const muc = mucJidOf(room);
@@ -476,7 +476,7 @@ describe('XMPP federation: rooms hosted by Rocket.Chat', () => {
 		});
 
 		// Known defect: ../../docs/specs/hosted-muc.md#d4-a-deleted-room-keeps-running-until-the-service-restarts
-		it.skip('closes the room when it is deleted in Rocket.Chat (D4)', async () => {
+		it.skip('closes the room when it is deleted in YasChat (D4)', async () => {
 			const room = await createHostedRoom(rc, owner, { type: 'c', name: `xe2e-deleted-${uniqueSuffix()}` });
 			const muc = mucJidOf(room);
 			await alice.joinRoom(muc);

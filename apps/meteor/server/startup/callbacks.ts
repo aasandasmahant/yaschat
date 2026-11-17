@@ -10,8 +10,8 @@ callbacks.setMetricsTrackers({
 	trackCallback: ({ hook, id }) => {
 		const start = performance.now();
 
-		const stopTimer = metrics.rocketchatCallbacks.startTimer({ hook, callback: id });
-		const stopHistogram = metrics.rocketchatCallbacksSeconds.startTimer({ hook, callback: id });
+		const stopTimer = metrics.yaschatCallbacks.startTimer({ hook, callback: id });
+		const stopHistogram = metrics.yaschatCallbacksSeconds.startTimer({ hook, callback: id });
 
 		return (): void => {
 			const end = performance.now();
@@ -22,11 +22,11 @@ callbacks.setMetricsTrackers({
 		};
 	},
 	trackHook: ({ hook, length }) => {
-		const stopTimer = metrics.rocketchatHooks.startTimer({
+		const stopTimer = metrics.yaschatHooks.startTimer({
 			hook,
 			callbacks_length: length,
 		});
-		const stopHistogram = metrics.rocketchatHooksSeconds.startTimer({
+		const stopHistogram = metrics.yaschatHooksSeconds.startTimer({
 			hook,
 			callbacks_length: length,
 		});

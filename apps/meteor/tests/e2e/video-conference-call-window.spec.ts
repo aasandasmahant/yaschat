@@ -532,7 +532,7 @@ test.describe('video conference call window', () => {
 	 * subscription's id. It keeps everything now.
 	 *
 	 * Not reproducible locally: with LiveKit the call renders in our own window, while CI's tester app answers
-	 * with a *relative* URL, so the window carries an iframe running a second Rocket.Chat client on the same
+	 * with a *relative* URL, so the window carries an iframe running a second YasChat client on the same
 	 * origin — visible in the run's console output.
 	 */
 	test('should follow the call from the caller window as others join, decline and leave', async ({ page, browser }) => {
@@ -703,7 +703,7 @@ test.describe('video conference call window', () => {
 		await listedAsJoined;
 
 		await test.step('the window is the shared one, and it keeps its opener', async () => {
-			expect(await callWindow.page.evaluate(() => window.name)).toBe('rocketchat-conference');
+			expect(await callWindow.page.evaluate(() => window.name)).toBe('yaschat-conference');
 			// `noopener` would sever the link that lets the main app report a leave the window could not.
 			expect(await callWindow.page.evaluate(() => window.opener === null)).toBe(false);
 		});

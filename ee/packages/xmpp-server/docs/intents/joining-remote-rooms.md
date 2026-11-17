@@ -1,17 +1,17 @@
-# Intent: Joining remote rooms from Rocket.Chat
+# Intent: Joining remote rooms from YasChat
 
 Author: Diego Sampaio. Status: accepted.
 
 ## Problem
 
-A Rocket.Chat user can only enter a room hosted on another XMPP server after someone in
+A YasChat user can only enter a room hosted on another XMPP server after someone in
 that room invites them ([remote-muc R1](../specs/remote-muc.md); joining from the UI is out
 of scope there). A user who knows the address of an existing room has no way in, and has no
 way to find one.
 
 ## Proposed outcome
 
-- A Rocket.Chat user can join an existing remote room by typing its address, without an
+- A YasChat user can join an existing remote room by typing its address, without an
   invitation, subject to the room's own admission rules and to
   [federation-authorization](federation-authorization.md).
 - A members-only room can be joined when the user is on its member list. A
@@ -27,9 +27,9 @@ way to find one.
 
 ## Affected users and systems
 
-- Rocket.Chat users who take part in rooms on other servers.
+- YasChat users who take part in rooms on other servers.
 - [remote-muc](../specs/remote-muc.md) R1, R5 and its out-of-scope list.
-- The Rocket.Chat UI, which needs a new screen to join a room by its address.
+- The YasChat UI, which needs a new screen to join a room by its address.
 
 ## Constraints
 

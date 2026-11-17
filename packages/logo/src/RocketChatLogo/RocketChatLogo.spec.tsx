@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 
-import RocketChatLogo from './RocketChatLogo';
+import YasChatLogo from './YasChatLogo';
 
-it('renders the Rocket.Chat logo', () => {
-	render(<RocketChatLogo />);
-	expect(screen.getByLabelText('Rocket.Chat')).toBeInstanceOf(SVGSVGElement);
+it('renders the YasChat logo', () => {
+	render(<YasChatLogo />);
+	expect(screen.getByLabelText('YasChat')).toBeInstanceOf(SVGSVGElement);
 });

@@ -5,7 +5,7 @@ import { Logger } from '@rocket.chat/logger';
 
 import { APIClass } from './ApiClass';
 import type { RateLimiterOptions } from './definition';
-import { type APIActionHandler, RocketChatAPIRouter } from './router';
+import { type APIActionHandler, YasChatAPIRouter } from './router';
 import { httpApp } from '../lib/http/httpServer';
 import { metrics } from '../lib/metrics';
 import { settings } from '../settings';
@@ -68,7 +68,7 @@ export const API: {
 	};
 } = {
 	ApiClass: APIClass,
-	api: new RocketChatAPIRouter('/api'),
+	api: new YasChatAPIRouter('/api'),
 	v1: createApi({
 		version: 'v1',
 		useDefaultAuth: true,
@@ -117,10 +117,10 @@ export const startRestAPI = () => {
 					basePathRegex: new RegExp(/^\/api\/v1\//),
 					api: API.v1,
 					settings,
-					endpointTimeSummary: metrics.rocketchatRestApi,
-					endpointTimeHistogram: metrics.rocketchatRestApiSeconds,
-					responseSizeHistogram: metrics.rocketchatRestApiResponseSizeBytes,
-					activeRequestsGauge: metrics.rocketchatRestApiActiveRequests,
+					endpointTimeSummary: metrics.yaschatRestApi,
+					endpointTimeHistogram: metrics.yaschatRestApiSeconds,
+					responseSizeHistogram: metrics.yaschatRestApiResponseSizeBytes,
+					activeRequestsGauge: metrics.yaschatRestApiActiveRequests,
 				}),
 			)
 			.use(
@@ -128,10 +128,10 @@ export const startRestAPI = () => {
 					basePathRegex: new RegExp(/^\/api\/experimental\//),
 					api: API.experimental,
 					settings,
-					endpointTimeSummary: metrics.rocketchatRestApi,
-					endpointTimeHistogram: metrics.rocketchatRestApiSeconds,
-					responseSizeHistogram: metrics.rocketchatRestApiResponseSizeBytes,
-					activeRequestsGauge: metrics.rocketchatRestApiActiveRequests,
+					endpointTimeSummary: metrics.yaschatRestApi,
+					endpointTimeHistogram: metrics.yaschatRestApiSeconds,
+					responseSizeHistogram: metrics.yaschatRestApiResponseSizeBytes,
+					activeRequestsGauge: metrics.yaschatRestApiActiveRequests,
 				}),
 			)
 			.use(
@@ -143,10 +143,10 @@ export const startRestAPI = () => {
 					// `API.default` has no `version`; label it explicitly so the series is not blank.
 					api: { version: 'default' },
 					settings,
-					endpointTimeSummary: metrics.rocketchatRestApi,
-					endpointTimeHistogram: metrics.rocketchatRestApiSeconds,
-					responseSizeHistogram: metrics.rocketchatRestApiResponseSizeBytes,
-					activeRequestsGauge: metrics.rocketchatRestApiActiveRequests,
+					endpointTimeSummary: metrics.yaschatRestApi,
+					endpointTimeHistogram: metrics.yaschatRestApiSeconds,
+					responseSizeHistogram: metrics.yaschatRestApiResponseSizeBytes,
+					activeRequestsGauge: metrics.yaschatRestApiActiveRequests,
 				}),
 			)
 			.use(tracerSpanMiddleware)

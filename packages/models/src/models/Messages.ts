@@ -4,7 +4,7 @@ import type {
 	IRoom,
 	IUser,
 	MessageTypesValues,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	MessageAttachment,
 	IMessageWithPendingFileImport,
 	DeepWritable,
@@ -34,7 +34,7 @@ import { BaseRaw } from './BaseRaw';
 import { readSecondaryPreferred } from '../readSecondaryPreferred';
 
 export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IMessage>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IMessage>>) {
 		super(db, 'message', trash);
 	}
 
@@ -196,7 +196,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 		};
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_room',
+				from: 'yaschat_room',
 				localField: 'rid',
 				foreignField: '_id',
 				as: 'room',
@@ -276,7 +276,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 			},
 			{
 				$lookup: {
-					from: 'rocketchat_room',
+					from: 'yaschat_room',
 					localField: '_id',
 					foreignField: '_id',
 					as: 'room',
@@ -619,7 +619,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 		return this.updateOne({ _id: messageId }, { $set: updateObj });
 	}
 
-	setImportFileRocketChatAttachment(
+	setImportFileYasChatAttachment(
 		importFileId: string,
 		rocketChatUrl: string,
 		attachment: MessageAttachment,
@@ -805,7 +805,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 				{ $group: { _id: '$rid' } },
 				{
 					$lookup: {
-						from: 'rocketchat_room',
+						from: 'yaschat_room',
 						localField: '_id',
 						foreignField: '_id',
 						pipeline: [{ $match: { prid: { $exists: true } } }, { $project: { _id: 1 } }],

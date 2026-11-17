@@ -15,7 +15,7 @@ const loadAfterLicense = async () => {
 	await unloadSamlServiceProvidersWithoutLicense();
 };
 
-export const startRocketChat = async () => {
+export const startYasChat = async () => {
 	await loadBeforeLicense();
 
 	await startLicense();

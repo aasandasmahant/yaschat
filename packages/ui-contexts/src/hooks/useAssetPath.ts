@@ -1,9 +1,9 @@
-import type { IRocketChatAssets, ISettingAsset } from '@rocket.chat/core-typings';
+import type { IYasChatAssets, ISettingAsset } from '@rocket.chat/core-typings';
 
 import { useAbsoluteUrl } from './useAbsoluteUrl';
 import { useSetting } from './useSetting';
 
-export const useAssetPath = (assetId: keyof IRocketChatAssets): string | undefined => {
+export const useAssetPath = (assetId: keyof IYasChatAssets): string | undefined => {
 	const asset = useSetting<ISettingAsset>(`Assets_${assetId}`);
 	const absoluteUrl = useAbsoluteUrl();
 

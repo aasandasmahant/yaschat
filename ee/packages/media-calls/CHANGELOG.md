@@ -4,11 +4,11 @@
 
 ### Major Changes
 
-- ([#42568](https://github.com/RocketChat/Rocket.Chat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
+- ([#42568](https://github.com/YasChat/YasChat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
 
 ### Minor Changes
 
-- ([#42744](https://github.com/RocketChat/Rocket.Chat/pull/42744)) Adds a private **TURN servers** setting for voice calls. TURN servers and their credentials configured there are only handed to users on a call, instead of being readable by anyone through the public ICE servers setting. Each server can use fixed credentials or a shared secret, in which case the workspace issues each user time-limited credentials for every call and the secret never leaves the server (TURN REST API, as supported by coturn's `use-auth-secret`).
+- ([#42744](https://github.com/YasChat/YasChat/pull/42744)) Adds a private **TURN servers** setting for voice calls. TURN servers and their credentials configured there are only handed to users on a call, instead of being readable by anyone through the public ICE servers setting. Each server can use fixed credentials or a shared secret, in which case the workspace issues each user time-limited credentials for every call and the secret never leaves the server (TURN REST API, as supported by coturn's `use-auth-secret`).
 
 ### Patch Changes
 
@@ -25,11 +25,11 @@
 
 ### Major Changes
 
-- ([#42568](https://github.com/RocketChat/Rocket.Chat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
+- ([#42568](https://github.com/YasChat/YasChat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
 
 ### Minor Changes
 
-- ([#42744](https://github.com/RocketChat/Rocket.Chat/pull/42744)) Adds a private **TURN servers** setting for voice calls. TURN servers and their credentials configured there are only handed to users on a call, instead of being readable by anyone through the public ICE servers setting. Each server can use fixed credentials or a shared secret, in which case the workspace issues each user time-limited credentials for every call and the secret never leaves the server (TURN REST API, as supported by coturn's `use-auth-secret`).
+- ([#42744](https://github.com/YasChat/YasChat/pull/42744)) Adds a private **TURN servers** setting for voice calls. TURN servers and their credentials configured there are only handed to users on a call, instead of being readable by anyone through the public ICE servers setting. Each server can use fixed credentials or a shared secret, in which case the workspace issues each user time-limited credentials for every call and the secret never leaves the server (TURN REST API, as supported by coturn's `use-auth-secret`).
 
 ### Patch Changes
 
@@ -46,18 +46,18 @@
 
 ### Minor Changes
 
-- ([#41964](https://github.com/RocketChat/Rocket.Chat/pull/41964)) Improves the logic of when the Busy Tone should be played after a call ends
+- ([#41964](https://github.com/YasChat/YasChat/pull/41964)) Improves the logic of when the Busy Tone should be played after a call ends
 
-- ([#40484](https://github.com/RocketChat/Rocket.Chat/pull/40484) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds name and avatar resolution for external voice calls
+- ([#40484](https://github.com/YasChat/YasChat/pull/40484) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds name and avatar resolution for external voice calls
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
 
-- ([#40500](https://github.com/RocketChat/Rocket.Chat/pull/40500)) Started storing SIP Call Id on the media calls model
+- ([#40500](https://github.com/YasChat/YasChat/pull/40500)) Started storing SIP Call Id on the media calls model
   Added an endpoint to retrieve media calls data
 
 ### Patch Changes
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Fixes the `createdBy` of a voice call being stored with no contact information on it: every call that was not created by a transfer ended up with a `createdBy` carrying only the requester's id, while the caller and callee carried their username and display name. This also affected the `transferredBy` reported to clients.
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Fixes the `createdBy` of a voice call being stored with no contact information on it: every call that was not created by a transfer ended up with a `createdBy` carrying only the requester's id, while the caller and callee carried their username and display name. This also affected the `transferredBy` reported to clients.
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/media-signaling@1.3.0
@@ -70,18 +70,18 @@
 
 ### Minor Changes
 
-- ([#41964](https://github.com/RocketChat/Rocket.Chat/pull/41964)) Improves the logic of when the Busy Tone should be played after a call ends
+- ([#41964](https://github.com/YasChat/YasChat/pull/41964)) Improves the logic of when the Busy Tone should be played after a call ends
 
-- ([#40484](https://github.com/RocketChat/Rocket.Chat/pull/40484) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds name and avatar resolution for external voice calls
+- ([#40484](https://github.com/YasChat/YasChat/pull/40484) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds name and avatar resolution for external voice calls
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Adds media call lifecycle events to the Apps-Engine: an app implementing the new `IMediaCallHandler` interface can now observe calls starting, being answered and ending, and can block a call or change the features it was requested with before it is created
 
-- ([#40500](https://github.com/RocketChat/Rocket.Chat/pull/40500)) Started storing SIP Call Id on the media calls model
+- ([#40500](https://github.com/YasChat/YasChat/pull/40500)) Started storing SIP Call Id on the media calls model
   Added an endpoint to retrieve media calls data
 
 ### Patch Changes
 
-- ([#41681](https://github.com/RocketChat/Rocket.Chat/pull/41681)) Fixes the `createdBy` of a voice call being stored with no contact information on it: every call that was not created by a transfer ended up with a `createdBy` carrying only the requester's id, while the caller and callee carried their username and display name. This also affected the `transferredBy` reported to clients.
+- ([#41681](https://github.com/YasChat/YasChat/pull/41681)) Fixes the `createdBy` of a voice call being stored with no contact information on it: every call that was not created by a transfer ended up with a `createdBy` carrying only the requester's id, while the caller and callee carried their username and display name. This also affected the `transferredBy` reported to clients.
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
   - @rocket.chat/media-signaling@1.3.0-rc.0
@@ -94,7 +94,7 @@
 
 ### Minor Changes
 
-- ([#40560](https://github.com/RocketChat/Rocket.Chat/pull/40560) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for call diversion handling in voice calls
+- ([#40560](https://github.com/YasChat/YasChat/pull/40560) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for call diversion handling in voice calls
 
 ### Patch Changes
 
@@ -109,7 +109,7 @@
 
 ### Minor Changes
 
-- ([#40560](https://github.com/RocketChat/Rocket.Chat/pull/40560) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for call diversion handling in voice calls
+- ([#40560](https://github.com/YasChat/YasChat/pull/40560) by [@aleksandernsilva](https://github.com/aleksandernsilva)) Adds support for call diversion handling in voice calls
 
 ### Patch Changes
 
@@ -167,7 +167,7 @@
 
 ### Minor Changes
 
-- ([#40197](https://github.com/RocketChat/Rocket.Chat/pull/40197)) Fixes a server error when Drachtio connection is lost while a SIP call is active
+- ([#40197](https://github.com/YasChat/YasChat/pull/40197)) Fixes a server error when Drachtio connection is lost while a SIP call is active
 
 ### Patch Changes
 
@@ -181,7 +181,7 @@
 
 ### Minor Changes
 
-- ([#40197](https://github.com/RocketChat/Rocket.Chat/pull/40197)) Fixes a server error when Drachtio connection is lost while a SIP call is active
+- ([#40197](https://github.com/YasChat/YasChat/pull/40197)) Fixes a server error when Drachtio connection is lost while a SIP call is active
 
 ### Patch Changes
 
@@ -195,9 +195,9 @@
 
 ### Minor Changes
 
-- ([#40141](https://github.com/RocketChat/Rocket.Chat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
+- ([#40141](https://github.com/YasChat/YasChat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
 
-- ([#40093](https://github.com/RocketChat/Rocket.Chat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
+- ([#40093](https://github.com/YasChat/YasChat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
 
 ### Patch Changes
 
@@ -253,9 +253,9 @@
 
 ### Minor Changes
 
-- ([#40141](https://github.com/RocketChat/Rocket.Chat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
+- ([#40141](https://github.com/YasChat/YasChat/pull/40141)) Adds a new REST endpoint to accept or reject media calls without an active media session
 
-- ([#40093](https://github.com/RocketChat/Rocket.Chat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
+- ([#40093](https://github.com/YasChat/YasChat/pull/40093)) Adds new API endpoints to load the user's current voice call state from the server
 
 ### Patch Changes
 
@@ -270,11 +270,11 @@
 
 ### Minor Changes
 
-- ([#37922](https://github.com/RocketChat/Rocket.Chat/pull/37922)) Introduces native screen sharing for internal voice calls. This feature is currently in beta and can be disabled through admin settings.
+- ([#37922](https://github.com/YasChat/YasChat/pull/37922)) Introduces native screen sharing for internal voice calls. This feature is currently in beta and can be disabled through admin settings.
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/models@2.1.2
@@ -328,11 +328,11 @@
 
 ### Minor Changes
 
-- ([#37922](https://github.com/RocketChat/Rocket.Chat/pull/37922)) Introduces native screen sharing for internal voice calls. This feature is currently in beta and can be disabled through admin settings.
+- ([#37922](https://github.com/YasChat/YasChat/pull/37922)) Introduces native screen sharing for internal voice calls. This feature is currently in beta and can be disabled through admin settings.
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/models@2.1.2-rc.0
@@ -454,11 +454,11 @@
 
 ### Minor Changes
 
-- ([#36941](https://github.com/RocketChat/Rocket.Chat/pull/36941)) Makes Voice Calls enabled by default when available
+- ([#36941](https://github.com/YasChat/YasChat/pull/36941)) Makes Voice Calls enabled by default when available
 
 ### Patch Changes
 
-- ([#37793](https://github.com/RocketChat/Rocket.Chat/pull/37793)) Fixes improper handling of errors when SIP integration is configured incorrectly
+- ([#37793](https://github.com/YasChat/YasChat/pull/37793)) Fixes improper handling of errors when SIP integration is configured incorrectly
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, be80b724a636877294b5e5baa501d070941131dd, ec0f8b435dd12c218adffa8892737c7ced4debb8, ae1e2faaeb6f7a086f8affde4c8a81e55e2a0e04]:</summary>
   - @rocket.chat/core-typings@8.0.0
@@ -523,11 +523,11 @@
 
 ### Minor Changes
 
-- ([#36941](https://github.com/RocketChat/Rocket.Chat/pull/36941)) Makes Voice Calls enabled by default when available
+- ([#36941](https://github.com/YasChat/YasChat/pull/36941)) Makes Voice Calls enabled by default when available
 
 ### Patch Changes
 
-- ([#37793](https://github.com/RocketChat/Rocket.Chat/pull/37793)) Fixes improper handling of errors when SIP integration is configured incorrectly
+- ([#37793](https://github.com/YasChat/YasChat/pull/37793)) Fixes improper handling of errors when SIP integration is configured incorrectly
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, be80b724a636877294b5e5baa501d070941131dd, ec0f8b435dd12c218adffa8892737c7ced4debb8]:</summary>
   - @rocket.chat/core-typings@8.0.0-rc.0
@@ -561,9 +561,9 @@
 
 ### Minor Changes
 
-- ([#37378](https://github.com/RocketChat/Rocket.Chat/pull/37378)) Introduces in-chat messages for when a voice call ends
+- ([#37378](https://github.com/YasChat/YasChat/pull/37378)) Introduces in-chat messages for when a voice call ends
 
-- ([#37386](https://github.com/RocketChat/Rocket.Chat/pull/37386)) Fixes an error where Voice Calls could fail to negotiate webrtc params if both clients requested a renegotiation at the same time
+- ([#37386](https://github.com/YasChat/YasChat/pull/37386)) Fixes an error where Voice Calls could fail to negotiate webrtc params if both clients requested a renegotiation at the same time
 
 ### Patch Changes
 
@@ -597,9 +597,9 @@
 
 ### Minor Changes
 
-- ([#37378](https://github.com/RocketChat/Rocket.Chat/pull/37378)) Introduces in-chat messages for when a voice call ends
+- ([#37378](https://github.com/YasChat/YasChat/pull/37378)) Introduces in-chat messages for when a voice call ends
 
-- ([#37386](https://github.com/RocketChat/Rocket.Chat/pull/37386)) Fixes an error where Voice Calls could fail to negotiate webrtc params if both clients requested a renegotiation at the same time
+- ([#37386](https://github.com/YasChat/YasChat/pull/37386)) Fixes an error where Voice Calls could fail to negotiate webrtc params if both clients requested a renegotiation at the same time
 
 ### Patch Changes
 

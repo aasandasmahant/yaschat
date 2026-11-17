@@ -32,9 +32,9 @@ const fetchRegistrationDataPayload = async ({
 	if (!response.ok) {
 		try {
 			const { error } = await response.json();
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 		} catch (error) {
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${response.statusText}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${response.statusText}`);
 		}
 	}
 
@@ -74,7 +74,7 @@ export async function connectWorkspace(token: string) {
 		return true;
 	} catch (err) {
 		SystemLogger.error({
-			msg: 'Failed to Connect with Rocket.Chat Cloud',
+			msg: 'Failed to Connect with YasChat Cloud',
 			url: '/api/oauth/clients',
 			err,
 		});

@@ -4,31 +4,31 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.0.4-rc.0
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.0.3
 
 ### Patch Changes
 
-- ([#35115](https://github.com/RocketChat/Rocket.Chat/pull/35115) by [@tapiarafael](https://github.com/tapiarafael)) Fixes a problem with CAS when URL connection ended with `/`
+- ([#35115](https://github.com/YasChat/YasChat/pull/35115) by [@tapiarafael](https://github.com/tapiarafael)) Fixes a problem with CAS when URL connection ended with `/`
 
 ## 0.0.3-rc.0
 
 ### Patch Changes
 
-- ([#35115](https://github.com/RocketChat/Rocket.Chat/pull/35115)) Fixes a problem with CAS when URL connection ended with `/`
+- ([#35115](https://github.com/YasChat/YasChat/pull/35115)) Fixes a problem with CAS when URL connection ended with `/`
 
 ## 0.0.2
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 ## 0.0.2-rc.0
 

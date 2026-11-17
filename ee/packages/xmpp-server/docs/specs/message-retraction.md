@@ -11,7 +11,7 @@ tests: []
 ## Summary
 
 Deleting a message in an XMPP room tells the other side to remove it too, and a retraction
-sent by an XMPP user removes the message in Rocket.Chat. XEP-0424 Message Retraction is the
+sent by an XMPP user removes the message in YasChat. XEP-0424 Message Retraction is the
 mechanism. Today deletions stay local on both sides.
 
 ## Motivation
@@ -31,7 +31,7 @@ end product commits to this; it also closes the asymmetry with
   explaining the retraction for clients that do not support it. In a DM the id is the
   origin id; in a room it is the room-assigned stanza id when the room stamps one.
 - **R3** A `<retract/>` from the original sender of a stored message deletes that message in
-  Rocket.Chat the way a local delete does (same callbacks, same client notification), or
+  YasChat the way a local delete does (same callbacks, same client notification), or
   replaces it with a tombstone, per the open question.
 - **R4** A `<retract/>` referencing a message the sender did not author, or an unknown id, is
   ignored.
@@ -58,9 +58,9 @@ None; not implemented.
 ## Open questions
 
 - **Q1** Tombstone or hard delete on receipt (R3)? XEP-0424 recommends that the receiver
-  keep a tombstone when it archives, and Rocket.Chat already has a "message deleted"
+  keep a tombstone when it archives, and YasChat already has a "message deleted"
   rendering.
-- **Q2** Do Rocket.Chat's delete permissions and time limits (`Message_AllowDeleting`,
+- **Q2** Do YasChat's delete permissions and time limits (`Message_AllowDeleting`,
   `Message_AllowDeleting_BlockDeleteInMinutes`) apply to inbound retractions, or does the
   sender's server decide?
 - **Q3** R7: should a moderator's deletion in a hosted room be relayed as XEP-0425, or left
@@ -70,7 +70,7 @@ None; not implemented.
   found by the sender's id through their derived `_id`, and by the room's id through
   `federation.eventId`. Messages stored before it can only be found by `federation.eventId`.
   Accept, or backfill?
-- **Q5** A retraction in a remote room of a Rocket.Chat user's own message references the
+- **Q5** A retraction in a remote room of a YasChat user's own message references the
   stanza id the room assigned it, which is never recorded (ADR 0014, Consequences). Where
   should it be recorded, given that `federation.eventId` would stop the outgoing hook
   relaying edits?

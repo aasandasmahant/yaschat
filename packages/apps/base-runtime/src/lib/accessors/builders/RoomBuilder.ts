@@ -1,11 +1,11 @@
 import type { IRoomBuilder } from '@rocket.chat/apps-engine/definition/accessors/IRoomBuilder';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import type { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
 
 export class RoomBuilder implements IRoomBuilder {
-	public kind: RocketChatAssociationModel.ROOM | RocketChatAssociationModel.DISCUSSION;
+	public kind: YasChatAssociationModel.ROOM | YasChatAssociationModel.DISCUSSION;
 
 	protected room: IRoom;
 
@@ -16,7 +16,7 @@ export class RoomBuilder implements IRoomBuilder {
 	private customFieldsChanged = false;
 
 	constructor(data?: Partial<IRoom>) {
-		this.kind = RocketChatAssociationModel.ROOM;
+		this.kind = YasChatAssociationModel.ROOM;
 		this.room = (data || { customFields: {} }) as IRoom;
 		this.members = [];
 	}

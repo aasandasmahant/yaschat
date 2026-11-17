@@ -5,7 +5,7 @@ import { asCallUrl } from '../../../../../lib/utils/asCallUrl';
 import VideoConfBlockModal from '../VideoConfBlockModal';
 
 // Named, so a reload that loses the reference below still finds the window instead of stacking a second one.
-const CONFERENCE_WINDOW_NAME = 'rocketchat-conference';
+const CONFERENCE_WINDOW_NAME = 'yaschat-conference';
 
 let conferenceWindow: Window | null = null;
 
@@ -130,7 +130,7 @@ export const useVideoConfOpenCall = () => {
 
 	const handleOpenCall = useCallback(
 		(callUrl: string, providerName?: string): Window | null | undefined => {
-			const desktopApp = window.RocketChatDesktop;
+			const desktopApp = window.YasChatDesktop;
 
 			if (desktopApp?.openInternalVideoChatWindow) {
 				desktopApp.openInternalVideoChatWindow(callUrl, { providerName });

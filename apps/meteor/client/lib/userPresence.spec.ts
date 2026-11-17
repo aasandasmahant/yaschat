@@ -176,7 +176,7 @@ describe('UserPresence', () => {
 		let setUserOnline: ((online: boolean) => void) | undefined;
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: (options: { setUserOnline: (online: boolean) => void }) => {
 					setUserOnline = options.setUserOnline;
 				},
@@ -198,7 +198,7 @@ describe('UserPresence', () => {
 
 			expect(goAway).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 		}
 	});
 
@@ -206,7 +206,7 @@ describe('UserPresence', () => {
 		const warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: () => {
 					throw new Error('desktop failure');
 				},
@@ -218,7 +218,7 @@ describe('UserPresence', () => {
 			// A detection that never registered has nothing to unregister.
 			expect(warn).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 			warn.mockRestore();
 		}
 	});
@@ -228,7 +228,7 @@ describe('UserPresence', () => {
 		let fail = false;
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: () => {
 					if (fail) throw new Error('desktop failure');
 				},
@@ -250,7 +250,7 @@ describe('UserPresence', () => {
 
 			expect(goAway).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 			warn.mockRestore();
 		}
 	});
@@ -259,7 +259,7 @@ describe('UserPresence', () => {
 		const warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: () => {
 					throw new Error('desktop failure');
 				},
@@ -273,7 +273,7 @@ describe('UserPresence', () => {
 
 			expect(goAway).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 			warn.mockRestore();
 		}
 	});
@@ -297,7 +297,7 @@ describe('UserPresence', () => {
 		let resolveGoAway: ((value: boolean) => void) | undefined;
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: (options: { setUserOnline: (online: boolean) => void }) => {
 					setUserOnline = options.setUserOnline;
 				},
@@ -323,7 +323,7 @@ describe('UserPresence', () => {
 
 			expect(goOnline).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 		}
 	});
 
@@ -331,7 +331,7 @@ describe('UserPresence', () => {
 		let setUserOnline: ((online: boolean) => void) | undefined;
 
 		Object.assign(window, {
-			RocketChatDesktop: {
+			YasChatDesktop: {
 				setUserPresenceDetection: (options: { setUserOnline: (online: boolean) => void }) => {
 					setUserOnline = options.setUserOnline;
 				},
@@ -349,7 +349,7 @@ describe('UserPresence', () => {
 			expect(goAway).not.toHaveBeenCalled();
 			expect(goOnline).toHaveBeenCalledTimes(1);
 		} finally {
-			delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+			delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 		}
 	});
 

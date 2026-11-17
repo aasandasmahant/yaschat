@@ -187,7 +187,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 			try {
 				await connection
 					.db()
-					.collection<ILivechatVisitor>('rocketchat_livechat_visitor')
+					.collection<ILivechatVisitor>('yaschat_livechat_visitor')
 					.updateOne({ _id: visitorId }, { $push: { externalIds: externalId } });
 			} finally {
 				await connection.close();

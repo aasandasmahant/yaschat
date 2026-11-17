@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://rocket.chat/schemas/classification-banners/v1.json",
-  "title": "Rocket.Chat Classification Banners configuration",
+  "title": "YasChat Classification Banners configuration",
   "type": "object",
   "required": ["version", "enabled", "banner", "attributes"],
   "additionalProperties": false,

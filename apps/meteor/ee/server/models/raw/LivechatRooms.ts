@@ -2,7 +2,7 @@ import type {
 	ILivechatPriority,
 	IOmnichannelRoom,
 	IOmnichannelServiceLevelAgreements,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	ReportResult,
 	ILivechatContact,
 } from '@rocket.chat/core-typings';
@@ -75,7 +75,7 @@ declare module '@rocket.chat/model-typings' {
 }
 
 export class LivechatRoomsRawEE extends LivechatRoomsRaw implements ILivechatRoomsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IOmnichannelRoom>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IOmnichannelRoom>>) {
 		super(db, trash);
 	}
 
@@ -479,7 +479,7 @@ export class LivechatRoomsRawEE extends LivechatRoomsRaw implements ILivechatRoo
 				},
 				{
 					$lookup: {
-						from: 'rocketchat_livechat_department',
+						from: 'yaschat_livechat_department',
 						localField: '_id',
 						foreignField: '_id',
 						as: 'department',

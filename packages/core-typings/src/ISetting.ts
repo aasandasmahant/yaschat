@@ -1,5 +1,5 @@
-import type { IRocketChatAssetConstraint } from './IRocketChatAssets';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatAssetConstraint } from './IYasChatAssets';
+import type { IYasChatRecord } from './IYasChatRecord';
 
 export enum SettingEditor {
 	COLOR = 'color',
@@ -42,7 +42,7 @@ export type SettingValidationRule =
 
 type SettingValidation = SettingValidationRule[] | string;
 
-export interface ISettingBase extends IRocketChatRecord {
+export interface ISettingBase extends IYasChatRecord {
 	type:
 		| 'boolean'
 		| 'timezone'
@@ -149,7 +149,7 @@ interface ISettingAction extends ISettingBase {
 export interface ISettingAsset extends ISettingBase {
 	type: 'asset';
 	value: { url?: string; defaultUrl?: string };
-	fileConstraints: IRocketChatAssetConstraint;
+	fileConstraints: IYasChatAssetConstraint;
 	asset: string;
 }
 

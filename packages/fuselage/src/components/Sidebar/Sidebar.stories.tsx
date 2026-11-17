@@ -190,7 +190,7 @@ export const Default: Story = {
 					{/* <GenericCallItem is='div' /> */}
 				</SidebarMedia>
 				<SidebarFooter>
-					<SidebarFooterContent>Powered by Rocket.Chat</SidebarFooterContent>
+					<SidebarFooterContent>Powered by YasChat</SidebarFooterContent>
 					<SidebarFooterContent>
 						<Box is='span' color='titles-labels'>
 							Free edition

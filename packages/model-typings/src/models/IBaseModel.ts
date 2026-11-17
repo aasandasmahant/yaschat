@@ -1,4 +1,4 @@
-import type { RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type {
 	BulkWriteOptions,
 	ChangeStream,
@@ -52,7 +52,7 @@ export type FindPaginated<C> = {
 export interface IBaseModel<
 	T extends { _id: string },
 	C extends DefaultFields<T> = undefined,
-	TDeleted extends RocketChatRecordDeleted<T> = RocketChatRecordDeleted<T>,
+	TDeleted extends YasChatRecordDeleted<T> = YasChatRecordDeleted<T>,
 > {
 	col: Collection<T>;
 
@@ -138,7 +138,7 @@ export interface IBaseModel<
 	trashFindOneById<P extends TDeleted>(
 		_id: TDeleted['_id'],
 		options?: FindOptions<P extends TDeleted ? TDeleted : P>,
-	): Promise<WithId<RocketChatRecordDeleted<P> | TDeleted> | null>;
+	): Promise<WithId<YasChatRecordDeleted<P> | TDeleted> | null>;
 
 	trashFindDeletedAfter(deletedAt: Date): FindCursor<WithId<TDeleted>>;
 

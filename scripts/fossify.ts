@@ -16,9 +16,9 @@ const fossify = async () => {
 	await fs.rmdir('./apps/meteor/ee', removeOptions);
 
 	console.log('Replacing main files...');
-	await fs.unlink('./apps/meteor/startRocketChat.ts');
+	await fs.unlink('./apps/meteor/startYasChat.ts');
 
-	await fs.rename('./apps/meteor/startRocketChatFOSS.ts', './apps/meteor/startRocketChat.ts');
+	await fs.rename('./apps/meteor/startYasChatFOSS.ts', './apps/meteor/startYasChat.ts');
 
 	console.log('Done.');
 };

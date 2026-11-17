@@ -15,7 +15,7 @@ import type { AppLogStorage } from '../storage';
 
 export class AppVideoConfProvider {
 	/**
-	 * States whether this provider has been registered into the Rocket.Chat system or not.
+	 * States whether this provider has been registered into the YasChat system or not.
 	 */
 	public isRegistered: boolean;
 

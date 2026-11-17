@@ -13,7 +13,7 @@ export const useOutlookAuthentication = () => {
 		queryKey: ['outlook', 'auth'],
 
 		queryFn: async () => {
-			const desktopApp = window.RocketChatDesktop;
+			const desktopApp = window.YasChatDesktop;
 			if (!desktopApp?.hasOutlookCredentials) {
 				throw new NotOnDesktopError();
 			}
@@ -42,7 +42,7 @@ export const useOutlookAuthenticationMutationLogout = () => {
 	const mutation = useOutlookAuthenticationMutation();
 	return useMutation({
 		mutationFn: async () => {
-			const desktopApp = window.RocketChatDesktop;
+			const desktopApp = window.YasChatDesktop;
 			if (!desktopApp?.clearOutlookCredentials) {
 				throw new NotOnDesktopError();
 			}

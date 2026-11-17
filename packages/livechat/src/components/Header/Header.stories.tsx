@@ -59,7 +59,7 @@ export const WithTitleAndSubtitle: Story = {
 	render: (args) => (
 		<Header {...args}>
 			<HeaderContent>
-				<HeaderTitle>Rocket.Chat</HeaderTitle>
+				<HeaderTitle>YasChat</HeaderTitle>
 				<HeaderSubTitle>Livechat</HeaderSubTitle>
 			</HeaderContent>
 		</Header>

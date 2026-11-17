@@ -8,8 +8,8 @@ import { searchProviderService, validationService } from '../../lib/search/servi
 
 declare module '@rocket.chat/ddp-client' {
 	interface ServerMethods {
-		'rocketchatSearch.getProvider'(): IMessageSearchProvider | undefined;
-		'rocketchatSearch.search'(text: string, context: { uid?: IUser['_id']; rid: IRoom['_id'] }, payload: unknown): Promise<ISearchResult>;
+		'yaschatSearch.getProvider'(): IMessageSearchProvider | undefined;
+		'yaschatSearch.search'(text: string, context: { uid?: IUser['_id']; rid: IRoom['_id'] }, payload: unknown): Promise<ISearchResult>;
 	}
 }
 
@@ -17,7 +17,7 @@ Meteor.methods<ServerMethods>({
 	/**
 	 * Get the current provider with key, description, resultTemplate, suggestionItemTemplate and settings (as Map)
 	 */
-	'rocketchatSearch.getProvider'() {
+	'yaschatSearch.getProvider'() {
 		const provider = searchProviderService.activeProvider;
 		if (!provider) {
 			return undefined;
@@ -40,7 +40,7 @@ Meteor.methods<ServerMethods>({
 	 * @param context the context (uid, rid)
 	 * @param payload custom payload (e.g. for paging)
 	 */
-	async 'rocketchatSearch.search'(text, context, payload) {
+	async 'yaschatSearch.search'(text, context, payload) {
 		payload = payload !== null ? payload : undefined; // TODO is this cleanup necessary?
 
 		if (!searchProviderService.activeProvider) {

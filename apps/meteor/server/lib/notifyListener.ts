@@ -1,6 +1,6 @@
 import { api } from '@rocket.chat/core-services';
 import type {
-	IRocketChatRecord,
+	IYasChatRecord,
 	IRoom,
 	ILoginServiceConfiguration,
 	ISetting,
@@ -53,7 +53,7 @@ export const notifyOnLivechatPriorityChanged = async (
 	void api.broadcast('watch.priorities', { clientAction, id: _id, diff: { ...rest } });
 };
 
-export const notifyOnRoomChanged = async <T extends IRocketChatRecord>(
+export const notifyOnRoomChanged = async <T extends IYasChatRecord>(
 	data: T | T[],
 	clientAction: ClientAction = 'updated',
 ): Promise<void> => {
@@ -63,7 +63,7 @@ export const notifyOnRoomChanged = async <T extends IRocketChatRecord>(
 	}
 };
 
-export const notifyOnRoomChangedById = async <T extends IRocketChatRecord>(
+export const notifyOnRoomChangedById = async <T extends IYasChatRecord>(
 	ids: T['_id'] | T['_id'][],
 	clientAction: ClientAction = 'updated',
 ): Promise<void> => {

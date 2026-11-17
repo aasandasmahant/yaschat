@@ -1,11 +1,11 @@
-import type { IEmailInbox, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IEmailInbox, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { IEmailInboxModel } from '@rocket.chat/model-typings';
 import type { Collection, Db, FindCursor, IndexDescription, InsertOneResult, UpdateFilter, WithId } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';
 
 export class EmailInboxRaw extends BaseRaw<IEmailInbox> implements IEmailInboxModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IEmailInbox>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IEmailInbox>>) {
 		super(db, 'email_inbox', trash);
 	}
 

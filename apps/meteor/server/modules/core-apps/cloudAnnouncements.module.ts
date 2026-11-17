@@ -141,7 +141,7 @@ export class CloudAnnouncementsModule implements IUiKitCoreApp {
 			};
 		}
 
-		throw new CloudWorkspaceConnectionError(`Invalid user data received from Rocket.Chat Cloud`);
+		throw new CloudWorkspaceConnectionError(`Invalid user data received from YasChat Cloud`);
 	}
 
 	/**
@@ -276,7 +276,7 @@ export class CloudAnnouncementsModule implements IUiKitCoreApp {
 
 		if (!response.ok) {
 			const { error } = await response.json();
-			throw new CloudWorkspaceConnectionError(`Failed to connect to Rocket.Chat Cloud: ${error}`);
+			throw new CloudWorkspaceConnectionError(`Failed to connect to YasChat Cloud: ${error}`);
 		}
 
 		const payload: Cloud.WorkspaceInteractionResponsePayload = await response.json();

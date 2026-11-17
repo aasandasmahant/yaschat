@@ -70,7 +70,7 @@ read, and a predictable `_id` lets such a member probe whether a given message e
   requires.
 - Losing or rotating the secret makes every earlier message uncorrectable; nothing is
   deleted. A deliberate change of scheme bumps the version tag.
-- Our own messages in a remote room are stored by Rocket.Chat, not derived, and the stanza id
+- Our own messages in a remote room are stored by YasChat, not derived, and the stanza id
   the room assigns them is never recorded. A capability that has to find them by the room's
   id (retraction, reactions, replies) must record it, and not in `federation.eventId`, which
   the outgoing hook reads as "came from XMPP" and stops relaying edits for.

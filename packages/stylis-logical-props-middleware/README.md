@@ -89,7 +89,7 @@ The result of `createLogicalPropertiesMiddleware()`.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/stylis-logical-props-middleware). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/stylis-logical-props-middleware). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/stylis-logical-props-middleware build
@@ -100,4 +100,4 @@ yarn workspace @rocket.chat/stylis-logical-props-middleware typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -1,6 +1,6 @@
 # UiKit
 
-UiKit is the JSON block language Rocket.Chat Apps use to draw UI inside the client: message blocks, modals, banners and the contextual bar.
+UiKit is the JSON block language YasChat Apps use to draw UI inside the client: message blocks, modals, banners and the contextual bar.
 
 ## Where it lives
 

@@ -70,7 +70,7 @@ describe('banners', () => {
 					.db()
 					.collection<IUser>('users')
 					.updateOne(
-						{ _id: 'rocketchat.internal.admin.test' },
+						{ _id: 'yaschat.internal.admin.test' },
 						{
 							$set: {
 								[`banners.${bannerId}`]: {
@@ -92,7 +92,7 @@ describe('banners', () => {
 					.db()
 					.collection<IUser>('users')
 					.updateOne(
-						{ _id: 'rocketchat.internal.admin.test' },
+						{ _id: 'yaschat.internal.admin.test' },
 						{
 							$unset: { [`banners.${bannerId}`]: 1 },
 						},

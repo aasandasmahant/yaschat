@@ -14,7 +14,7 @@ You can find more information about this [here](https://docs.rocket.chat/docs/ve
 If you discover a security vulnerability, please report it privately through one of the channels below:
 
 - Our **Bug Bounty VDP program** on **HackerOne**, which you can access [here](https://hackerone.com/rocket_chat).
-- A **private security advisory** on GitHub, which you can open [here](https://github.com/RocketChat/Rocket.Chat/security/advisories/new).
+- A **private security advisory** on GitHub, which you can open [here](https://github.com/YasChat/YasChat/security/advisories/new).
  
 
 Please do not report vulnerabilities through public GitHub issues, pull requests, discussions, or any other public channel. Submit each report through only one of the listed channels to avoid duplicate submissions.
@@ -31,7 +31,7 @@ Reports should include:
 
 ### Confidentiality
 
-No information regarding a reported vulnerability may be publicly disclosed, in whole or in part, until a fix has been released and Rocket.Chat has formally disclosed the vulnerability.
+No information regarding a reported vulnerability may be publicly disclosed, in whole or in part, until a fix has been released and YasChat has formally disclosed the vulnerability.
 
 ---
 
@@ -41,7 +41,7 @@ We are committed to:
 
 - Responsibly validating and fixing vulnerabilities.
 - Notifying users when a security update is released.
-- Formally acknowledging researchers who help improve Rocket.Chat's security.
+- Formally acknowledging researchers who help improve YasChat's security.
 
 ---
 

@@ -6,7 +6,7 @@ import { License } from '@rocket.chat/license';
 // import { Users } from '@rocket.chat/models';
 import semver from 'semver';
 
-import { Info } from '../../rocketchat.info';
+import { Info } from '../../yaschat.info';
 import { showErrorBox, showSuccessBox, showWarningBox } from '../lib/logger/showBox';
 import { getMongoInfo } from '../lib/utils/functions/getMongoInfo';
 // import { i18n } from '../lib/i18n';
@@ -43,7 +43,7 @@ export const reportServerRunning = async (): Promise<void> => {
 
 	setTimeout(async () => {
 		let msg: string | string[] = [
-			`Rocket.Chat Version: ${Info.version}`,
+			`YasChat Version: ${Info.version}`,
 			`     NodeJS Version: ${process.versions.node} - ${process.arch}`,
 			`    MongoDB Version: ${mongoVersion}`,
 			`     MongoDB Engine: ${mongoStorageEngine}`,

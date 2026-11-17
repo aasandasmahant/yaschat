@@ -1,6 +1,6 @@
 # Message parse length limit
 
-`MESSAGE_MAX_PARSE_LENGTH` caps how long a message can be before Rocket.Chat stops parsing it into a markdown tree (`md`). Messages over the limit are stored without `md` and rendered as plain text, line breaks included (`toPlainTextRoot`).
+`MESSAGE_MAX_PARSE_LENGTH` caps how long a message can be before YasChat stops parsing it into a markdown tree (`md`). Messages over the limit are stored without `md` and rendered as plain text, line breaks included (`toPlainTextRoot`).
 
 The server reads it in `BeforeSaveMarkdownParser`. The client gets the same value through the `rc-message-parser-max-length` meta tag, so messages that arrive without `md` are not parsed in the browser either.
 

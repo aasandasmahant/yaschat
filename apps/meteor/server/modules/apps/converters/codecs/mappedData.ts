@@ -3,14 +3,14 @@ import * as z from 'zod';
 type Loose = Record<string, any>;
 
 /**
- * A declarative field map from Apps-Engine (target) property names to Rocket.Chat (source) property
+ * A declarative field map from Apps-Engine (target) property names to YasChat (source) property
  * names. Values are constrained to the keys of `Source`, so mapping a renamed or misspelled source
  * field is a compile error.
  */
 export type FieldMap<Source> = Record<string, Extract<keyof Source, string>>;
 
 /**
- * The Rocket.Chat -> Apps-Engine result of decoding `Source` through `Map`: each target property
+ * The YasChat -> Apps-Engine result of decoding `Source` through `Map`: each target property
  * holds its source value (optional, since it is only set when the source value is defined), and
  * everything the map did not name is collected under `_unmappedProperties_`.
  */
@@ -21,7 +21,7 @@ export type Decoded<Source, Map extends FieldMap<Source>> = {
 };
 
 /**
- * Rocket.Chat -> Apps-Engine transform for a plain string field map, reproducing the "rename these
+ * YasChat -> Apps-Engine transform for a plain string field map, reproducing the "rename these
  * fields, bucket the rest" behaviour of the original mapping helper: the input is deep-cloned (so the
  * app can never mutate the stored document), each mapped source field is copied to its target name
  * when defined, and every remaining property is collected into `_unmappedProperties_`.
@@ -50,7 +50,7 @@ export function mappedDecode<Source extends Loose = Loose, const Map extends Fie
 }
 
 /**
- * The Apps-Engine -> Rocket.Chat inverse of {@link mappedDecode}: target fields are copied back to
+ * The Apps-Engine -> YasChat inverse of {@link mappedDecode}: target fields are copied back to
  * their source names when defined and `_unmappedProperties_` is merged onto the result. Because both
  * the renamed keys and the bucket originate from `Source`, the result is a `Partial<Source>`.
  *
@@ -90,7 +90,7 @@ export type AsyncFieldMap = Record<
 >;
 
 /**
- * Rocket.Chat -> Apps-Engine transform for a map mixing string renames, (possibly async) derived-value
+ * YasChat -> Apps-Engine transform for a map mixing string renames, (possibly async) derived-value
  * functions and nested `{ from, map, list }` descriptors, reproducing the original mapping helper
  * exactly:
  *

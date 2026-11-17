@@ -5,7 +5,7 @@ import { ajv } from '@rocket.chat/rest-typings';
 import { serverFetch as fetch } from '@rocket.chat/server-fetch';
 
 import { getWorkspaceAccessToken } from '../..';
-import { Info } from '../../../../../rocketchat.info';
+import { Info } from '../../../../../yaschat.info';
 
 type UpdatesResponse = {
 	versions: {

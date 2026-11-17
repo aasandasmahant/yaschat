@@ -36,7 +36,7 @@ void (async () => {
 	const metrics = createInboundMetrics({ decodeOnly: DECODE_ONLY });
 
 	const xmppServer = new XMPPServerService({
-		forwardToRocketChat: !DECODE_ONLY,
+		forwardToYasChat: !DECODE_ONLY,
 		observeHandler: metrics.observeHandler,
 		resolver: parseDnsOverrides(process.env.XMPP_DNS_OVERRIDES, resolveXmppServer),
 	});

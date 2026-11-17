@@ -1,6 +1,6 @@
 # Web client hosting
 
-The web client is built by Vite, not by Meteor. By default the Rocket.Chat server serves it: the server renders the
+The web client is built by Vite, not by Meteor. By default the YasChat server serves it: the server renders the
 page and the page loads the client. This page explains how that works and how to serve the client from another host.
 
 ## How the server serves the client
@@ -65,13 +65,13 @@ CDN. Nothing else changes.
 ### From your own host
 
 `yarn build:vite` (without `RC_CLIENT_TARGET=server`) builds a standalone client into `apps/meteor/vite/dist`:
-`index.html`, `bundle/` and a copy of `public/`. To serve it yourself, in front of a Rocket.Chat server:
+`index.html`, `bundle/` and a copy of `public/`. To serve it yourself, in front of a YasChat server:
 
 1. Serve `vite/dist` as static files. Answer page navigations (`GET` requests that accept `text/html`) with
    `index.html`, since the client routes on the browser side, except under the server's own pages: `/api`, `/oauth`,
    `/_oauth`, `/_saml`, `/_cas`, `/file-upload`, `/file-decrypt`, `/data-export` and `/livechat`. Of those, only
    `/oauth/authorize` and `/oauth/error` are client pages.
-2. Proxy every other path to the Rocket.Chat server, and the `/websocket` and `/sockjs` WebSockets. Rewrite the cookie
+2. Proxy every other path to the YasChat server, and the `/websocket` and `/sockjs` WebSockets. Rewrite the cookie
    domain to your host, so `rc_token` reaches avatars and downloads.
 3. Define `window.__meteor_runtime_config__` before the entry runs, with at least `ROOT_URL` (your host) and
    `ROOT_URL_PATH_PREFIX`. Use an external script if your host sends a Content-Security-Policy.

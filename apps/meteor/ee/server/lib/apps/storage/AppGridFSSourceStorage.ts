@@ -15,7 +15,7 @@ export class AppGridFSSourceStorage extends AppSourceStorage {
 		super();
 
 		this.bucket = new GridFSBucket(db, {
-			bucketName: 'rocketchat_apps_packages',
+			bucketName: 'yaschat_apps_packages',
 			chunkSizeBytes: 1024 * 255,
 		});
 	}
@@ -62,7 +62,7 @@ export class AppGridFSSourceStorage extends AppSourceStorage {
 		} catch (error: any) {
 			if (error.message.includes('File not found for id')) {
 				console.warn(
-					`This instance could not remove the ${item.info.name} app package. If you are running Rocket.Chat in a cluster with multiple instances, possibly other instance removed the package. If this is not the case, it is possible that the file in the database got renamed or removed manually.`,
+					`This instance could not remove the ${item.info.name} app package. If you are running YasChat in a cluster with multiple instances, possibly other instance removed the package. If this is not the case, it is possible that the file in the database got renamed or removed manually.`,
 				);
 				return;
 			}

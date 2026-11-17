@@ -1,7 +1,7 @@
 import type { IMessage } from './IMessage/IMessage';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface IReport extends IRocketChatRecord {
+export interface IReport extends IYasChatRecord {
 	message: IMessage;
 	description: string;
 	ts: Date;

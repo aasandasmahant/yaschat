@@ -226,7 +226,7 @@ describe('LIVECHAT - inquiries', () => {
 			const roomInfo = await getLivechatRoomInfo(servedByRoom._id);
 
 			expect(roomInfo).to.have.property('servedBy').that.is.an('object');
-			expect(roomInfo.servedBy).to.have.property('_id', 'rocketchat.internal.admin.test');
+			expect(roomInfo.servedBy).to.have.property('_id', 'yaschat.internal.admin.test');
 		});
 	});
 
@@ -570,7 +570,7 @@ describe('LIVECHAT - inquiries', () => {
 				createAgent(),
 				updateSetting('Omnichannel_enable_department_removal', true),
 			]);
-			testDepartment = await createDepartment([{ agentId: 'rocketchat.internal.admin.test' }]);
+			testDepartment = await createDepartment([{ agentId: 'yaschat.internal.admin.test' }]);
 		});
 
 		after(async () => {

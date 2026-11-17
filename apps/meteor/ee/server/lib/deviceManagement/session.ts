@@ -85,12 +85,12 @@ export const listenSessionLogin = () => {
 				mailData.deviceInfo = `${device.type} ${device.vendor || ''} ${device.model || ''} ${cpu.architecture || ''}`;
 				break;
 			case 'mobile-app':
-				mailData.browserInfo = `Rocket.Chat App ${app?.bundle || app?.version}`;
+				mailData.browserInfo = `YasChat App ${app?.bundle || app?.version}`;
 				mailData.osInfo = `${os.name}`;
 				mailData.deviceInfo = 'Mobile App';
 				break;
 			case 'desktop-app':
-				mailData.browserInfo = `Rocket.Chat ${app?.name || browser.name} ${app?.bundle || app?.version || browser.version}`;
+				mailData.browserInfo = `YasChat ${app?.name || browser.name} ${app?.bundle || app?.version || browser.version}`;
 				mailData.osInfo = `${os.name}`;
 				mailData.deviceInfo = `Desktop App ${cpu.architecture || ''}`;
 				break;

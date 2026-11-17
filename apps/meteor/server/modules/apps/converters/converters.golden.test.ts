@@ -131,7 +131,7 @@ describe('apps converters — golden snapshots (pre-codec behaviour)', () => {
 			});
 		});
 
-		it('convertToRocketChat maps an app user back to the RC shape', () => {
+		it('convertToYasChat maps an app user back to the RC shape', () => {
 			const appUser = {
 				id: 'user-1',
 				username: 'john.doe',
@@ -153,7 +153,7 @@ describe('apps converters — golden snapshots (pre-codec behaviour)', () => {
 				sipExtension: '1001',
 			};
 
-			expect(json(converter.convertToRocketChat(appUser as any))).to.deep.equal({
+			expect(json(converter.convertToYasChat(appUser as any))).to.deep.equal({
 				_id: 'user-1',
 				username: 'john.doe',
 				emails: [{ address: 'john@example.com', verified: true }],
@@ -536,7 +536,7 @@ describe('apps converters — golden snapshots (pre-codec behaviour)', () => {
 			});
 		});
 
-		it('convertToRocketChat maps an app upload back and merges unmapped fields', () => {
+		it('convertToYasChat maps an app upload back and merges unmapped fields', () => {
 			const appUpload = {
 				id: 'up-1',
 				name: 'file.png',
@@ -560,7 +560,7 @@ describe('apps converters — golden snapshots (pre-codec behaviour)', () => {
 				_unmappedProperties_: { extraUpload: true },
 			};
 
-			expect(json(converter.convertToRocketChat(appUpload as any))).to.deep.equal({
+			expect(json(converter.convertToYasChat(appUpload as any))).to.deep.equal({
 				_id: 'up-1',
 				name: 'file.png',
 				size: 1234,
@@ -583,14 +583,14 @@ describe('apps converters — golden snapshots (pre-codec behaviour)', () => {
 			});
 		});
 
-		it('convertToRocketChat does not throw when the app upload has no room (e.g. deleted room)', () => {
+		it('convertToYasChat does not throw when the app upload has no room (e.g. deleted room)', () => {
 			const appUpload = {
 				id: 'up-1',
 				name: 'file.png',
 				user: { id: 'user-1' },
 			};
 
-			const result = json(converter.convertToRocketChat(appUpload as any)) as Record<string, unknown>;
+			const result = json(converter.convertToYasChat(appUpload as any)) as Record<string, unknown>;
 
 			expect(result).to.deep.equal({ _id: 'up-1', name: 'file.png', userId: 'user-1' });
 			expect(result).to.not.have.property('rid');

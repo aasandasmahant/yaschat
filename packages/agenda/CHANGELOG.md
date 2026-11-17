@@ -4,23 +4,23 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.1.1-rc.0
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 0.1.0
 
 ### Minor Changes
 
-- ([#31427](https://github.com/RocketChat/Rocket.Chat/pull/31427)) Remove `@ts-ignore` directives and unused code from Agenda code
+- ([#31427](https://github.com/YasChat/YasChat/pull/31427)) Remove `@ts-ignore` directives and unused code from Agenda code
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 ## 0.1.0-rc.0
 

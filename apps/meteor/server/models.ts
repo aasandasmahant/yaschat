@@ -1,4 +1,4 @@
-import type { RocketChatRecordDeleted, ISubscription, ILivechatInquiryRecord, ILivechatDepartmentAgents } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted, ISubscription, ILivechatInquiryRecord, ILivechatDepartmentAgents } from '@rocket.chat/core-typings';
 import {
 	AnalyticsRaw,
 	AppsLogsModel,
@@ -111,12 +111,12 @@ registerModel('ILivechatContactsModel', new LivechatContactsRaw(db));
 registerModel('ILivechatCustomFieldModel', new LivechatCustomFieldRaw(db));
 registerModel(
 	'ILivechatDepartmentAgentsModel',
-	new LivechatDepartmentAgentsRaw(db, trashCollection as Collection<RocketChatRecordDeleted<ILivechatDepartmentAgents>>),
+	new LivechatDepartmentAgentsRaw(db, trashCollection as Collection<YasChatRecordDeleted<ILivechatDepartmentAgents>>),
 );
 registerModel('ILivechatDepartmentModel', new LivechatDepartmentRaw(db, trashCollection));
 registerModel(
 	'ILivechatInquiryModel',
-	new LivechatInquiryRaw(db, trashCollection as Collection<RocketChatRecordDeleted<ILivechatInquiryRecord>>),
+	new LivechatInquiryRaw(db, trashCollection as Collection<YasChatRecordDeleted<ILivechatInquiryRecord>>),
 );
 registerModel('ILivechatRoomsModel', new LivechatRoomsRaw(db, trashCollection));
 registerModel('ILivechatPriorityModel', new LivechatPriorityRaw(db));
@@ -149,7 +149,7 @@ registerModel('ISessionsModel', new SessionsRaw(db));
 registerModel('ISettingsModel', new SettingsRaw(db, trashCollection));
 registerModel('ISmarshHistoryModel', new SmarshHistoryRaw(db));
 registerModel('IStatisticsModel', new StatisticsRaw(db));
-registerModel('ISubscriptionsModel', new SubscriptionsRaw(db, trashCollection as Collection<RocketChatRecordDeleted<ISubscription>>));
+registerModel('ISubscriptionsModel', new SubscriptionsRaw(db, trashCollection as Collection<YasChatRecordDeleted<ISubscription>>));
 registerModel('ITeamMemberModel', new TeamMemberRaw(db));
 registerModel('ITeamModel', new TeamRaw(db));
 registerModel('IUploadsModel', new UploadsRaw(db));

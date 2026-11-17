@@ -715,11 +715,11 @@ export default class SlackAdapter {
 		}
 
 		for await (const slackChannel of channels) {
-			const rocketchat_room =
+			const yaschat_room =
 				(await Rooms.findOneByName(slackChannel.name, { projection: { _id: 1 } })) ||
 				(await Rooms.findOneByImportId(slackChannel.id, { projection: { _id: 1 } }));
-			if (rocketchat_room && slackChannel.is_member) {
-				this.addSlackChannel(rocketchat_room._id, slackChannel.id);
+			if (yaschat_room && slackChannel.is_member) {
+				this.addSlackChannel(yaschat_room._id, slackChannel.id);
 			}
 		}
 	}
@@ -731,11 +731,11 @@ export default class SlackAdapter {
 		}
 
 		for await (const slackGroup of groups) {
-			const rocketchat_room =
+			const yaschat_room =
 				(await Rooms.findOneByName(slackGroup.name, { projection: { _id: 1 } })) ||
 				(await Rooms.findOneByImportId(slackGroup.id, { projection: { _id: 1 } }));
-			if (rocketchat_room && slackGroup.is_member) {
-				this.addSlackChannel(rocketchat_room._id, slackGroup.id);
+			if (yaschat_room && slackGroup.is_member) {
+				this.addSlackChannel(yaschat_room._id, slackGroup.id);
 			}
 		}
 	}
@@ -1256,8 +1256,8 @@ export default class SlackAdapter {
 	Uploads the file to the storage.
 	@param [Object] details an object with details about the upload. name, size, type, and rid
 	@param [String] fileUrl url of the file to download/import
-	@param [Object] user the Rocket.Chat user
-	@param [Object] room the Rocket.Chat room
+	@param [Object] user the YasChat user
+	@param [Object] room the YasChat room
 	@param [Date] timeStamp the timestamp the file was uploaded
 	**/
 	// details, slackMessage.file.url_private_download, rocketUser, rocketChannel, new Date(parseInt(slackMessage.ts.split('.')[0]) * 1000), isImporting);
@@ -1334,7 +1334,7 @@ export default class SlackAdapter {
 	}
 
 	async copyChannelInfo(rid, channelMap) {
-		slackLogger.debug({ msg: 'Copying users from Slack channel to Rocket.Chat', channelId: channelMap.id, rid });
+		slackLogger.debug({ msg: 'Copying users from Slack channel to YasChat', channelId: channelMap.id, rid });
 		const channel = await this.slackAPI.getRoomInfo(channelMap.id);
 		if (channel) {
 			const members = await this.slackAPI.getMembers(channelMap.id);
@@ -1411,12 +1411,12 @@ export default class SlackAdapter {
 
 	async importMessages(rid, callback) {
 		slackLogger.info({ msg: 'importMessages', rid });
-		const rocketchat_room = await Rooms.findOneById(rid);
-		if (rocketchat_room) {
+		const yaschat_room = await Rooms.findOneById(rid);
+		if (yaschat_room) {
 			if (this.getSlackChannel(rid)) {
 				await this.copyChannelInfo(rid, this.getSlackChannel(rid));
 
-				slackLogger.debug({ msg: 'Importing messages from Slack to Rocket.Chat', slackChannel: this.getSlackChannel(rid), rid });
+				slackLogger.debug({ msg: 'Importing messages from Slack to YasChat', slackChannel: this.getSlackChannel(rid), rid });
 
 				let results = await this.importFromHistory({
 					channel: this.getSlackChannel(rid).id,
@@ -1429,20 +1429,20 @@ export default class SlackAdapter {
 					});
 				}
 
-				slackLogger.debug({ msg: 'Pinning Slack channel messages to Rocket.Chat', slackChannel: this.getSlackChannel(rid), rid });
+				slackLogger.debug({ msg: 'Pinning Slack channel messages to YasChat', slackChannel: this.getSlackChannel(rid), rid });
 				await this.copyPins(rid, this.getSlackChannel(rid));
 
 				return callback();
 			}
-			const slack_room = await this.postFindChannel(rocketchat_room.name);
+			const slack_room = await this.postFindChannel(yaschat_room.name);
 			if (slack_room) {
 				this.addSlackChannel(rid, slack_room.id);
 				return this.importMessages(rid, callback);
 			}
-			slackLogger.error({ msg: 'Could not find Slack room with specified name', roomName: rocketchat_room.name });
+			slackLogger.error({ msg: 'Could not find Slack room with specified name', roomName: yaschat_room.name });
 			return callback(new ClientSafeError('error-slack-room-not-found', 'Could not find Slack room with specified name'));
 		}
-		slackLogger.error({ msg: 'Could not find Rocket.Chat room with specified id', rid });
+		slackLogger.error({ msg: 'Could not find YasChat room with specified id', rid });
 		return callback(new ClientSafeError('error-invalid-room', 'Invalid room'));
 	}
 }

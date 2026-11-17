@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface ILivechatCustomField extends IRocketChatRecord {
+export interface ILivechatCustomField extends IYasChatRecord {
 	label: string;
 	scope: 'visitor' | 'room';
 	visibility: string;

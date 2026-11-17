@@ -22,7 +22,7 @@ import * as Rsa from './crypto/rsa';
 import { encryptAESCTR, generateAESCTRKey, sha256HashFromArrayBuffer, createSha256HashFromText } from './helper';
 import { createLogger } from './logger';
 import { PrefixedBase64 } from './prefixed';
-import { e2e } from './rocketchat.e2e';
+import { e2e } from './yaschat.e2e';
 import { RoomSettingsEnum } from '../../../definition/IRoomTypeConfig';
 import { t } from '../../../lib/i18n';
 import { Messages, Rooms, Subscriptions } from '../../stores';

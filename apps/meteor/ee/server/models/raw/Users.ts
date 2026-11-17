@@ -1,4 +1,4 @@
-import type { RocketChatRecordDeleted, IUser, AvailableAgentsAggregation } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted, IUser, AvailableAgentsAggregation } from '@rocket.chat/core-typings';
 import { queryStatusAgentOnline, UsersRaw } from '@rocket.chat/models';
 import type { Db, Collection, Filter } from 'mongodb';
 
@@ -16,7 +16,7 @@ declare module '@rocket.chat/model-typings' {
 }
 
 export class UsersEE extends UsersRaw {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IUser>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IUser>>) {
 		super(db, trash);
 	}
 
@@ -31,7 +31,7 @@ export class UsersEE extends UsersRaw {
 			? [
 					{
 						$lookup: {
-							from: 'rocketchat_livechat_department_agents',
+							from: 'yaschat_livechat_department_agents',
 							let: { userId: '$_id' },
 							pipeline: [
 								{
@@ -60,7 +60,7 @@ export class UsersEE extends UsersRaw {
 					...departmentFilter,
 					{
 						$lookup: {
-							from: 'rocketchat_subscription',
+							from: 'yaschat_subscription',
 							localField: '_id',
 							foreignField: 'u._id',
 							pipeline: [{ $match: { $and: [{ t: 'l' }, { open: true }, { onHold: { $ne: true } }] } }],

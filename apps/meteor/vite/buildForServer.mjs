@@ -1,4 +1,4 @@
-// Builds the web client for the Rocket.Chat server to serve: the bundle goes to `public/bundle`, which the server
+// Builds the web client for the YasChat server to serve: the bundle goes to `public/bundle`, which the server
 // ships as static files, and the manifest to `private/`, which the server reads to put the entry into its page.
 import { cpSync, rmSync } from 'node:fs';
 import { dirname, join } from 'node:path';

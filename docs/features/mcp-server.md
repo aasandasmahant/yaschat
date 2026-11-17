@@ -4,7 +4,7 @@
 
 ## Overview
 
-The MCP server exposes the Rocket.Chat REST API to [Model Context Protocol](https://modelcontextprotocol.io) clients (Claude Desktop/Code, IDE agents, custom agents). It speaks **JSON-RPC 2.0 over Streamable HTTP** and turns existing REST endpoints into MCP **tools**, so an AI client can drive a workspace (post messages, search, manage rooms, look up users, …) using the user's own credentials and permissions.
+The MCP server exposes the YasChat REST API to [Model Context Protocol](https://modelcontextprotocol.io) clients (Claude Desktop/Code, IDE agents, custom agents). It speaks **JSON-RPC 2.0 over Streamable HTTP** and turns existing REST endpoints into MCP **tools**, so an AI client can drive a workspace (post messages, search, manage rooms, look up users, …) using the user's own credentials and permissions.
 
 It is **enterprise (protected) code** under `apps/meteor/ee/`. The design goal is _native + minimum changes_: it mounts on the existing Hono API router and reuses its authentication, permissions, license checks, remote-address resolution, logging, metrics, tracing, CORS, and generated typed-route metadata. Tool execution goes through the REST API, including each target endpoint's validation, authorization, and rate limiting. The endpoint adds MCP-specific Origin validation for DNS-rebinding protection. There is **no new runtime dependency** — the JSON-RPC layer is implemented directly.
 
@@ -17,7 +17,7 @@ It is **enterprise (protected) code** under `apps/meteor/ee/`. The design goal i
 | GET, HEAD | `/.well-known/oauth-protected-resource/api/v1/mcp`  | Protected resource metadata (RFC 9728): names the workspace as the authorization server of the endpoint. Under a path prefix, the prefix goes after `oauth-protected-resource`. |
 | GET, HEAD | `/.well-known/oauth-protected-resource`             | The same document, for clients that look it up at the bare path.                                          |
 
-The endpoint is attached directly to the existing `/api/v1` Hono router because its JSON-RPC envelopes are defined by the MCP specification rather than Rocket.Chat's REST response contract. It still uses the standard authentication, `access-mcp` permission, and AI license middleware. When `MCP_Enabled` is off the endpoint and the metadata return `404` before MCP checks credentials or sends a challenge, so a disabled endpoint does not advertise OAuth.
+The endpoint is attached directly to the existing `/api/v1` Hono router because its JSON-RPC envelopes are defined by the MCP specification rather than YasChat's REST response contract. It still uses the standard authentication, `access-mcp` permission, and AI license middleware. When `MCP_Enabled` is off the endpoint and the metadata return `404` before MCP checks credentials or sends a challenge, so a disabled endpoint does not advertise OAuth.
 
 ## Request lifecycle
 
@@ -67,7 +67,7 @@ Tool dispatch is restricted to server-generated, allow-listed REST paths on `127
 
 ## Licensing
 
-The feature is gated behind the **Rocket.Chat AI add-on** (`chat.rocket.rc-ai`):
+The feature is gated behind the **YasChat AI add-on** (`chat.rocket.rc-ai`):
 
 - The route is registered with `license: [AI_LICENSE_MODULE]`, so requests are rejected unless the workspace license includes the module.
 - The `MCP_*` settings and `OAuth2_Allow_Dynamic_Client_Registration` use the same module and an `invalidValue` of `false`, so without the add-on they fall back to **off** and the feature cannot be enabled.
@@ -115,7 +115,7 @@ The REST response is wrapped as MCP `content` (`type: "text"`); a non-2xx REST r
 
 ## Rate limiting
 
-The MCP endpoint uses Rocket.Chat's **built-in per-route rate limiter** with a limit of 60 requests per minute (enabled by `API_Enable_Rate_Limiter`, honoring `api-bypass-rate-limit`). Every tool call is also subject to its target REST endpoint's rate limit. The resolved client address is propagated to that endpoint rather than being counted as loopback traffic. MCP protocol requests are additionally bounded to 20 batch entries, four concurrent dispatches, 20-second calls, and a shared 5 MiB response budget. As with every Rocket.Chat API route, deployments behind a proxy must configure `HTTP_FORWARDED_COUNT` and trusted forwarding headers correctly.
+The MCP endpoint uses YasChat's **built-in per-route rate limiter** with a limit of 60 requests per minute (enabled by `API_Enable_Rate_Limiter`, honoring `api-bypass-rate-limit`). Every tool call is also subject to its target REST endpoint's rate limit. The resolved client address is propagated to that endpoint rather than being counted as loopback traffic. MCP protocol requests are additionally bounded to 20 batch entries, four concurrent dispatches, 20-second calls, and a shared 5 MiB response budget. As with every YasChat API route, deployments behind a proxy must configure `HTTP_FORWARDED_COUNT` and trusted forwarding headers correctly.
 
 ## Settings
 
@@ -134,7 +134,7 @@ With OAuth, a client starts from the endpoint URL, `https://<host>/api/v1/mcp`, 
 With a Personal Access Token:
 
 ```bash
-claude mcp add --transport http rocketchat http://<host>/api/v1/mcp \
+claude mcp add --transport http yaschat http://<host>/api/v1/mcp \
   --header "X-User-Id: <userId>" \
   --header "X-Auth-Token: <personalAccessToken>"
 ```
@@ -154,7 +154,7 @@ curl -s "${H[@]}" http://localhost:3000/api/v1/mcp \
 
 - **Alpha**, off by default.
 - Implements the handshake-based Streamable HTTP lifecycle through protocol version `2025-11-25`; newer lifecycle methods are not yet supported.
-- Requires the **Rocket.Chat AI add-on** — both the route and the settings are gated by it.
+- Requires the **YasChat AI add-on** — both the route and the settings are gated by it.
 - One HTTP response per POST. The `2025-03-26` compatibility revision accepts a bounded batch of up to 20 messages; later revisions accept one message per POST. There is no server-initiated SSE stream (`GET` → `405`).
 - OAuth tokens carry no scopes, so there is no read-only OAuth access and no scope challenge.
 - The official `@modelcontextprotocol/sdk` is intentionally not used; the files are structured so it can be dropped into the transport/server layer later for SSE and richer session handling.

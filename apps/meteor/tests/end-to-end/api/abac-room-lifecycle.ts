@@ -33,7 +33,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 	};
 
 	const findRoom = (roomId: IRoom['_id']) =>
-		connection.db().collection<Pick<IRoom, '_id' | 'abacAttributes'>>('rocketchat_room').findOne({ _id: roomId });
+		connection.db().collection<Pick<IRoom, '_id' | 'abacAttributes'>>('yaschat_room').findOne({ _id: roomId });
 
 	const createAbacGroup = async (name: string): Promise<IRoom['_id']> => {
 		const room = await createRoom({ type: 'p', name });
@@ -100,7 +100,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 
 			const event = await connection
 				.db()
-				.collection('rocketchat_server_events')
+				.collection('yaschat_server_events')
 				.findOne({ t: 'abac.object.attributes.removed', data: { $elemMatch: { 'key': 'room', 'value._id': roomId } } });
 			expect(event).to.not.be.null;
 		});

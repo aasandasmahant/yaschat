@@ -1,7 +1,7 @@
 import { isOAuthUser, type IMeApiUser, type IUser, type IUserEmail, type IUserCalendar } from '@rocket.chat/core-typings';
 import semver from 'semver';
 
-import { Info } from '../../../rocketchat.info';
+import { Info } from '../../../yaschat.info';
 import { resolveUsersByIds } from '../../lib/statusVisibility/resolveUsers';
 import { isUserHidingAllowed } from '../../lib/statusVisibility/settings';
 import { getURL } from '../../lib/utils/getURL';

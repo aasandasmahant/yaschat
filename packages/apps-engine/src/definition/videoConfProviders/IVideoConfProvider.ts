@@ -12,13 +12,13 @@ export interface IVideoConfProvider {
 	name: string;
 
 	capabilities?: {
-		// Indicates if Rocket.Chat can determine if the user's microphone will start muted or not
+		// Indicates if YasChat can determine if the user's microphone will start muted or not
 		mic?: boolean;
-		// Indicates if Rocket.Chat can determine if the user's camera will start turned on or not
+		// Indicates if YasChat can determine if the user's camera will start turned on or not
 		cam?: boolean;
-		// Indicates if Rocket.Chat can send a custom title for the video conferences
+		// Indicates if YasChat can send a custom title for the video conferences
 		title?: boolean;
-		// Indicates if the provider supports Rocket.Chat's Persistent Chat feature on its conferences.
+		// Indicates if the provider supports YasChat's Persistent Chat feature on its conferences.
 		persistentChat?: boolean;
 	};
 

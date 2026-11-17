@@ -13,13 +13,13 @@ const throwing = () => {
 
 const wrapper = () =>
 	mockAppRoot()
-		.withSetting('Site_Name', 'Rocket.Chat')
+		.withSetting('Site_Name', 'YasChat')
 		.withSetting('Assets_favicon', { defaultUrl: 'favicon.svg' })
 		.withJohnDoe({ roles: ['user'] })
 		.build();
 
 const hooks = [
-	['useDesktopTitle', 'setTitle', useDesktopTitle, 'Rocket.Chat'],
+	['useDesktopTitle', 'setTitle', useDesktopTitle, 'YasChat'],
 	['useDesktopFavicon', 'setUrlResolver', useDesktopFavicon, expect.any(Function)],
 	['useDesktopFavicon', 'setFavicon', useDesktopFavicon, expect.stringMatching(/favicon\.svg$/)],
 	['useDesktopUserRoles', 'setUserRoles', useDesktopUserRoles, ['user']],
@@ -33,13 +33,13 @@ describe('desktop bridge hooks', () => {
 	});
 
 	afterEach(() => {
-		delete (window as { RocketChatDesktop?: unknown }).RocketChatDesktop;
+		delete (window as { YasChatDesktop?: unknown }).YasChatDesktop;
 		warn.mockRestore();
 	});
 
 	it.each(hooks)('%s should call %s on the desktop bridge', (_name, member, useHook, argument) => {
 		const call = jest.fn();
-		Object.assign(window, { RocketChatDesktop: { setTitle: jest.fn(), setUrlResolver: jest.fn(), setFavicon: jest.fn(), [member]: call } });
+		Object.assign(window, { YasChatDesktop: { setTitle: jest.fn(), setUrlResolver: jest.fn(), setFavicon: jest.fn(), [member]: call } });
 
 		renderHook(() => useHook(), { wrapper: wrapper() });
 
@@ -49,7 +49,7 @@ describe('desktop bridge hooks', () => {
 
 	it.each(hooks)('%s should not crash the React tree when %s throws', (_name, member, useHook) => {
 		Object.assign(window, {
-			RocketChatDesktop: { setTitle: jest.fn(), setUrlResolver: jest.fn(), setFavicon: jest.fn(), [member]: jest.fn(throwing) },
+			YasChatDesktop: { setTitle: jest.fn(), setUrlResolver: jest.fn(), setFavicon: jest.fn(), [member]: jest.fn(throwing) },
 		});
 
 		expect(() => renderHook(() => useHook(), { wrapper: wrapper() })).not.toThrow();

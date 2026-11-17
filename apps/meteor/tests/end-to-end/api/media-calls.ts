@@ -28,7 +28,7 @@ describe('[Media Calls]', () => {
 				.get(api('media-calls.info'))
 				.set(credentials)
 				.query({
-					callId: 'rocketchat.internal.call.test',
+					callId: 'yaschat.internal.call.test',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -37,7 +37,7 @@ describe('[Media Calls]', () => {
 					expect(res.body).to.have.property('call').that.is.an('object');
 
 					const { call } = res.body;
-					expect(call).to.have.property('_id', 'rocketchat.internal.call.test');
+					expect(call).to.have.property('_id', 'yaschat.internal.call.test');
 					expect(call).to.have.property('service', 'webrtc');
 					expect(call).to.have.property('kind', 'direct');
 					expect(call).to.have.property('state', 'hangup');
@@ -61,7 +61,7 @@ describe('[Media Calls]', () => {
 				.get(api('media-calls.info'))
 				.set(credentials)
 				.query({
-					callId: 'rocketchat.external.call.test.outbound',
+					callId: 'yaschat.external.call.test.outbound',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -70,7 +70,7 @@ describe('[Media Calls]', () => {
 					expect(res.body).to.have.property('call').that.is.an('object');
 
 					const { call } = res.body;
-					expect(call).to.have.property('_id', 'rocketchat.external.call.test.outbound');
+					expect(call).to.have.property('_id', 'yaschat.external.call.test.outbound');
 					expect(call).to.have.property('service', 'webrtc');
 					expect(call).to.have.property('kind', 'direct');
 					expect(call).to.have.property('state', 'hangup');
@@ -106,7 +106,7 @@ describe('[Media Calls]', () => {
 				.get(api('media-calls.info'))
 				.set(userCredentials)
 				.query({
-					callId: 'rocketchat.internal.call.test',
+					callId: 'yaschat.internal.call.test',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(404);

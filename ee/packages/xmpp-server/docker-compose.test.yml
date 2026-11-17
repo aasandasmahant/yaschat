@@ -1,4 +1,4 @@
-# Rocket.Chat federating over XMPP with Openfire. Driven by tests/scripts/run-e2e-stack.sh;
+# YasChat federating over XMPP with Openfire. Driven by tests/scripts/run-e2e-stack.sh;
 # see docs/operations.md#the-openfire-stack.
 
 x-service-build: &service-build
@@ -6,7 +6,7 @@ x-service-build: &service-build
   target: release-standard
 
 x-service-env: &service-env
-  MONGO_URL: mongodb://mongo:27017/rocketchat?replicaSet=rs0
+  MONGO_URL: mongodb://mongo:27017/yaschat?replicaSet=rs0
   TRANSPORTER: nats://nats:4222
 
 services:
@@ -30,9 +30,9 @@ services:
   nats:
     image: nats:2.6-alpine
 
-  rocketchat:
+  yaschat:
     build:
-      context: ${XMPP_STACK_BUILD_DIR:-/tmp/rc-xmpp-stack-build}/rocketchat
+      context: ${XMPP_STACK_BUILD_DIR:-/tmp/rc-xmpp-stack-build}/yaschat
       dockerfile: ${XMPP_STACK_REPO_ROOT:-}/apps/meteor/.docker/Dockerfile.alpine
       target: release-standard
     image: ${XMPP_STACK_REGISTRY:-rc-xmpp-stack}/rocket.chat:${XMPP_STACK_TAG:-local}
@@ -41,12 +41,12 @@ services:
       - sh
       - -c
       - |
-        export OVERWRITE_SETTING_XMPP_Server_TLS_Certificate="$$(cat /certs/rocketchat.pem)"
-        export OVERWRITE_SETTING_XMPP_Server_TLS_Key="$$(cat /certs/rocketchat-key.pem)"
+        export OVERWRITE_SETTING_XMPP_Server_TLS_Certificate="$$(cat /certs/yaschat.pem)"
+        export OVERWRITE_SETTING_XMPP_Server_TLS_Key="$$(cat /certs/yaschat-key.pem)"
         exec node main.js
     environment:
       <<: *service-env
-      # the license is checked against this host, so it need not be where Rocket.Chat is reached
+      # the license is checked against this host, so it need not be where YasChat is reached
       ROOT_URL: ${XMPP_STACK_ROOT_URL:-http://rc.host}
       PORT: 3000
       ROCKETCHAT_LICENSE: ${ENTERPRISE_LICENSE:?set ENTERPRISE_LICENSE, a license with the federation module}

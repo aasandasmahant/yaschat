@@ -33,8 +33,8 @@ export const useDesktopNotifications = (sessionInfo: SessionState) => {
 		}
 
 		if (
-			typeof window.RocketChatDesktop?.dispatchCustomNotification !== 'function' ||
-			typeof window.RocketChatDesktop?.closeCustomNotification !== 'function'
+			typeof window.YasChatDesktop?.dispatchCustomNotification !== 'function' ||
+			typeof window.YasChatDesktop?.closeCustomNotification !== 'function'
 		) {
 			return;
 		}
@@ -43,7 +43,7 @@ export const useDesktopNotifications = (sessionInfo: SessionState) => {
 
 		if (sessionInfo.state !== 'ringing') {
 			if (previousCallId.current) {
-				window.RocketChatDesktop.closeCustomNotification(previousCallId.current);
+				window.YasChatDesktop.closeCustomNotification(previousCallId.current);
 				previousCallId.current = undefined;
 			}
 			return;
@@ -60,7 +60,7 @@ export const useDesktopNotifications = (sessionInfo: SessionState) => {
 				return;
 			}
 
-			window.RocketChatDesktop?.dispatchCustomNotification({
+			window.YasChatDesktop?.dispatchCustomNotification({
 				type: 'voice',
 				id: sessionInfo.callId,
 				payload: {

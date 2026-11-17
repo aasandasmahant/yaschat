@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/peggy-loader?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/peggy-loader) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/peggy-loader?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/peggy-loader)
 
-The loader lets you import a [Peggy](https://peggyjs.org/) grammar file as if it were a JavaScript module. At build time it runs `peggy.generate()` on the grammar and hands webpack the generated parser source. Rocket.Chat uses it to build [`@rocket.chat/message-parser`](https://www.npmjs.com/package/@rocket.chat/message-parser).
+The loader lets you import a [Peggy](https://peggyjs.org/) grammar file as if it were a JavaScript module. At build time it runs `peggy.generate()` on the grammar and hands webpack the generated parser source. YasChat uses it to build [`@rocket.chat/message-parser`](https://www.npmjs.com/package/@rocket.chat/message-parser).
 
 ## Installation
 
@@ -73,7 +73,7 @@ Useful options include `allowedStartRules`, `cache`, `trace`, `plugins`, `depend
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/peggy-loader). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/peggy-loader). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/peggy-loader build
@@ -85,4 +85,4 @@ There are no tests in this package; it is exercised by the `@rocket.chat/message
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

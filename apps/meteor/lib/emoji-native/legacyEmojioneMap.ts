@@ -2,7 +2,7 @@
 // These shortcodes existed in emojione but are absent from the joypixels preset that
 // `generateEmojiData` reads, so they are backfilled here to keep old stored messages and
 // reactions resolving. `digit_*`, `pound_symbol` and `asterisk_symbol` were themselves
-// hand-patched into emojione by Rocket.Chat, and `tone1`-`tone5` name skin-tone components,
+// hand-patched into emojione by YasChat, and `tone1`-`tone5` name skin-tone components,
 // which are not emoji in their own right.
 
 const legacyEmojioneMapData: Record<string, string> = {

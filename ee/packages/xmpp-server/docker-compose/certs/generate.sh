@@ -11,7 +11,7 @@ if [ -f "$out/ca.pem" ]; then
 fi
 
 openssl req -x509 -newkey rsa:2048 -nodes -days 30 \
-	-subj "/CN=Rocket.Chat XMPP stack CA" \
+	-subj "/CN=YasChat XMPP stack CA" \
 	-addext "basicConstraints=critical,CA:TRUE" \
 	-addext "keyUsage=critical,keyCertSign,cRLSign" \
 	-keyout "$out/ca-key.pem" -out "$out/ca.pem"
@@ -30,11 +30,11 @@ EOF
 	rm "$out/$name.csr" "$out/$name.ext"
 }
 
-issue rocketchat rc.test
+issue yaschat rc.test
 issue openfire openfire.test
 
 # Only the issuing above needs the CA key; the containers that mount this folder never see it
 rm "$out/ca-key.pem"
 
-# Rocket.Chat and Openfire read these as unprivileged users
+# YasChat and Openfire read these as unprivileged users
 chmod 644 "$out"/*.pem

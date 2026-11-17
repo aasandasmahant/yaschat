@@ -16,7 +16,7 @@ export default defineConfig({
 			input: join(here, 'src/widget.ts'),
 			output: {
 				format: 'iife',
-				entryFileNames: 'rocketchat-livechat.min.js',
+				entryFileNames: 'yaschat-livechat.min.js',
 			},
 		},
 	},

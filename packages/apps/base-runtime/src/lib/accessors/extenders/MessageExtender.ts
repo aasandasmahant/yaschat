@@ -1,13 +1,13 @@
 import type { IMessageExtender } from '@rocket.chat/apps-engine/definition/accessors/IMessageExtender';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
 import type { IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages/IMessageAttachment';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 
 export class MessageExtender implements IMessageExtender {
-	public readonly kind: RocketChatAssociationModel.MESSAGE;
+	public readonly kind: YasChatAssociationModel.MESSAGE;
 
 	constructor(private msg: IMessage) {
-		this.kind = RocketChatAssociationModel.MESSAGE;
+		this.kind = YasChatAssociationModel.MESSAGE;
 
 		if (!Array.isArray(msg.attachments)) {
 			this.msg.attachments = [];

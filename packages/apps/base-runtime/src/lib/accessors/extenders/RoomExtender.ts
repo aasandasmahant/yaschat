@@ -1,15 +1,15 @@
 import type { IRoomExtender } from '@rocket.chat/apps-engine/definition/accessors/IRoomExtender';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
 
 export class RoomExtender implements IRoomExtender {
-	public kind: RocketChatAssociationModel.ROOM;
+	public kind: YasChatAssociationModel.ROOM;
 
 	private members: Array<IUser>;
 
 	constructor(private room: IRoom) {
-		this.kind = RocketChatAssociationModel.ROOM;
+		this.kind = YasChatAssociationModel.ROOM;
 		this.members = [];
 	}
 

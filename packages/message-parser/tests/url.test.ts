@@ -111,19 +111,19 @@ test.each([
 	],
 	['This is a normal phrase.This in another phrase.', [paragraph([plain('This is a normal phrase.This in another phrase.')])]],
 	[
-		'https://github.com/RocketChat/Rocket.Chat/releases/tag/6.0.0-rc.3',
-		[paragraph([link('https://github.com/RocketChat/Rocket.Chat/releases/tag/6.0.0-rc.3')])],
+		'https://github.com/YasChat/YasChat/releases/tag/6.0.0-rc.3',
+		[paragraph([link('https://github.com/YasChat/YasChat/releases/tag/6.0.0-rc.3')])],
 	],
 	[
 		'https://www.rocket.chat/(W(601))/Main?ScreenId=GI000027',
 		[paragraph([link('https://www.rocket.chat/(W(601))/Main?ScreenId=GI000027')])],
 	],
 	[
-		'https://rocketchat.atlassian.net/browse/OC-718?filter=10078&jql=%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20created%20%3E%3D%20-48h%20ORDER%20BY%20cf%5B10070%5D%20ASC%2C%20status%20ASC%2C%20created%20DESC',
+		'https://yaschat.atlassian.net/browse/OC-718?filter=10078&jql=%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20created%20%3E%3D%20-48h%20ORDER%20BY%20cf%5B10070%5D%20ASC%2C%20status%20ASC%2C%20created%20DESC',
 		[
 			paragraph([
 				link(
-					'https://rocketchat.atlassian.net/browse/OC-718?filter=10078&jql=%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20created%20%3E%3D%20-48h%20ORDER%20BY%20cf%5B10070%5D%20ASC%2C%20status%20ASC%2C%20created%20DESC',
+					'https://yaschat.atlassian.net/browse/OC-718?filter=10078&jql=%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20created%20%3E%3D%20-48h%20ORDER%20BY%20cf%5B10070%5D%20ASC%2C%20status%20ASC%2C%20created%20DESC',
 				),
 			]),
 		],
@@ -136,7 +136,7 @@ test.each([
 	expect(parse(input)).toEqual(output);
 });
 
-describe('autoLink with custom hosts settings comming from Rocket.Chat', () => {
+describe('autoLink with custom hosts settings comming from YasChat', () => {
 	test.each([
 		['http://gitlab.local', [paragraph([link('http://gitlab.local', [plain('http://gitlab.local')])])]],
 		['gitlab.local', [paragraph([link('//gitlab.local', [plain('gitlab.local')])])]],
@@ -146,7 +146,7 @@ describe('autoLink with custom hosts settings comming from Rocket.Chat', () => {
 	});
 });
 
-describe('autoLink WITHOUT custom hosts settings comming from Rocket.Chat', () => {
+describe('autoLink WITHOUT custom hosts settings comming from YasChat', () => {
 	test.each([['https://internaltool.testt', [paragraph([plain('https://internaltool.testt')])]]])('parses %p', (input, output) => {
 		expect(parse(input, { customDomains: ['local'] })).toEqual(output);
 	});

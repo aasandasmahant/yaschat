@@ -11,7 +11,7 @@ import {
 } from '@rocket.chat/fuselage';
 import { useCopyErrorReport, useThemeMode } from '@rocket.chat/ui-client';
 
-import { Info } from '../../../rocketchat.info';
+import { Info } from '../../../yaschat.info';
 import { router } from '../../providers/RouterProvider';
 
 export type AppErrorPageProps = {

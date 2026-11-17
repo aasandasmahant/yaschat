@@ -22,7 +22,7 @@ export const setRoomAbacAttributesDirectly = async (
 	roomId: string,
 	abacAttributes: IAbacAttributeDefinition[],
 ): Promise<void> => {
-	const result = await connection.db().collection('rocketchat_room').updateOne(
+	const result = await connection.db().collection('yaschat_room').updateOne(
 		// @ts-expect-error - collection types for _id
 		{ _id: roomId },
 		{ $set: { abacAttributes } },

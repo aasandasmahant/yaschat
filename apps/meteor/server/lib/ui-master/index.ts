@@ -58,7 +58,7 @@ settings.watch<string>('theme-color-sidebar-background', (value) => {
 	);
 });
 
-settings.watch<string>('Site_Name', (value = 'Rocket.Chat') => {
+settings.watch<string>('Site_Name', (value = 'YasChat') => {
 	const escapedValue = escapeHTML(value);
 	injectIntoHead(
 		'Site_Name',
@@ -120,7 +120,7 @@ const escapedMessageMaxParseLength = escapeHTML(String(getMessageMaxParseLength(
 injectIntoHead('MESSAGE_MAX_PARSE_LENGTH', `<meta name="rc-message-parser-max-length" content="${escapedMessageMaxParseLength}" />`);
 
 const renderDynamicCssList = withDebouncing({ wait: 500 })(async () => {
-	// const variables = RocketChat.models.Settings.findOne({_id:'theme-custom-variables'}, {fields: { value: 1}});
+	// const variables = YasChat.models.Settings.findOne({_id:'theme-custom-variables'}, {fields: { value: 1}});
 	const colors = await Settings.find({ _id: /theme-color-rc/i }, { projection: { value: 1, editor: 1 } }).toArray();
 	const css = colors
 		.filter((color): color is ISettingColor => !!color?.value)

@@ -15,15 +15,15 @@ back to back reach the socket in whichever order their awaits finish.
 
 ## Proposed outcome
 
-Messages from one sender in one conversation, DM or room, appear in Rocket.Chat in the order
+Messages from one sender in one conversation, DM or room, appear in YasChat in the order
 they arrived on the stream, under load and with concurrent conversations. History a remote
 room replays appears at the time it was originally sent. Outbound messages reach the peer in
-the order the Rocket.Chat user sent them. Ordering holds without a duplicate
+the order the YasChat user sent them. Ordering holds without a duplicate
 ([message-deduplication](../specs/message-deduplication.md)).
 
 ## Affected users and systems
 
-- Every Rocket.Chat user sending or receiving federated messages.
+- Every YasChat user sending or receiving federated messages.
 - [direct-messages](../specs/direct-messages.md), [hosted-muc](../specs/hosted-muc.md),
   [remote-muc](../specs/remote-muc.md), [configuration-and-lifecycle](../specs/configuration-and-lifecycle.md) R9.
 

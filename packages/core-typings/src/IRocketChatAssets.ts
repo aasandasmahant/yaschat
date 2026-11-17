@@ -1,11 +1,11 @@
-export interface IRocketChatAssetConstraint {
+export interface IYasChatAssetConstraint {
 	type: string;
 	extensions: string[];
 	width?: number;
 	height?: number;
 }
 
-export interface IRocketChatAssetCache {
+export interface IYasChatAssetCache {
 	path: string;
 	cacheable: boolean;
 	where: string;
@@ -20,36 +20,36 @@ export interface IRocketChatAssetCache {
 	sourceMapUrl?: string;
 }
 
-export interface IRocketChatAsset {
+export interface IYasChatAsset {
 	label: string;
-	constraints: IRocketChatAssetConstraint;
+	constraints: IYasChatAssetConstraint;
 	defaultUrl?: string;
 	url?: string;
 	wizard?: {
 		step: number;
 		order: number;
 	};
-	cache?: IRocketChatAssetCache;
+	cache?: IYasChatAssetCache;
 }
 
-export interface IRocketChatAssets {
-	logo: IRocketChatAsset;
-	logo_dark: IRocketChatAsset;
-	background: IRocketChatAsset;
-	background_dark: IRocketChatAsset;
-	favicon_ico: IRocketChatAsset;
-	favicon: IRocketChatAsset;
-	favicon_16: IRocketChatAsset;
-	favicon_32: IRocketChatAsset;
-	favicon_192: IRocketChatAsset;
-	favicon_512: IRocketChatAsset;
-	touchicon_180: IRocketChatAsset;
-	touchicon_180_pre: IRocketChatAsset;
-	tile_70: IRocketChatAsset;
-	tile_144: IRocketChatAsset;
-	tile_150: IRocketChatAsset;
-	tile_310_square: IRocketChatAsset;
-	tile_310_wide: IRocketChatAsset;
-	safari_pinned: IRocketChatAsset;
-	livechat_widget_logo: IRocketChatAsset;
+export interface IYasChatAssets {
+	logo: IYasChatAsset;
+	logo_dark: IYasChatAsset;
+	background: IYasChatAsset;
+	background_dark: IYasChatAsset;
+	favicon_ico: IYasChatAsset;
+	favicon: IYasChatAsset;
+	favicon_16: IYasChatAsset;
+	favicon_32: IYasChatAsset;
+	favicon_192: IYasChatAsset;
+	favicon_512: IYasChatAsset;
+	touchicon_180: IYasChatAsset;
+	touchicon_180_pre: IYasChatAsset;
+	tile_70: IYasChatAsset;
+	tile_144: IYasChatAsset;
+	tile_150: IYasChatAsset;
+	tile_310_square: IYasChatAsset;
+	tile_310_wide: IYasChatAsset;
+	safari_pinned: IYasChatAsset;
+	livechat_widget_logo: IYasChatAsset;
 }

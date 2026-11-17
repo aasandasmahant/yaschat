@@ -38,7 +38,7 @@ const featuresOf = (...features: PluginFeature[]): ReadonlySet<PluginFeature> =>
  * Identifying somebody by the name they are showing under is the weakest thing the panel does, and it is
  * deliberately the last resort rather than the intended one: two people share a name and a guest types
  * whatever they like. It stays because it is the only identity that exists at all for someone who never came
- * through Rocket.Chat — a SIP dial-in, a guest who opened the provider's own address — and for anyone else in
+ * through YasChat — a SIP dial-in, a guest who opened the provider's own address — and for anyone else in
  * the moment before a stronger one is known.
  */
 describe('matchesConferenceMember', () => {
@@ -115,7 +115,7 @@ describe('resolveParticipant', () => {
 		expect(resolveParticipant(buildParticipant({ uuid: 'p1', displayName: 'Grace Hopper' }), [grace, twin])).toBe(twin);
 	});
 
-	// Everyone who arrived at the provider without passing through Rocket.Chat, which no identity of ours will
+	// Everyone who arrived at the provider without passing through YasChat, which no identity of ours will
 	// ever cover.
 	it('resolves nobody for a participant wearing a name no member of the conference has', () => {
 		expect(resolveParticipant(buildParticipant({ uuid: 'p2', displayName: 'Someone Else' }), [ada, grace])).toBeUndefined();

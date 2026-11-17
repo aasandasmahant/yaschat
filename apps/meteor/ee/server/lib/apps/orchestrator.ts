@@ -57,7 +57,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 	private readonly marketplaceClient: MarketplaceAPIClient;
 
-	private _rocketchatLogger: Logger;
+	private _yaschatLogger: Logger;
 
 	private _model: typeof AppsModel;
 
@@ -92,7 +92,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 			return;
 		}
 
-		this._rocketchatLogger = new Logger('Rocket.Chat Apps', { redact: redactionFieldPaths });
+		this._yaschatLogger = new Logger('YasChat Apps', { redact: redactionFieldPaths });
 
 		this._model = AppsModel;
 		this._logModel = AppLogs;
@@ -219,15 +219,15 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 		return DISABLED_PRIVATE_APP_INSTALLATION;
 	}
 
-	getRocketChatLogger(): Logger {
-		return this._rocketchatLogger;
+	getYasChatLogger(): Logger {
+		return this._yaschatLogger;
 	}
 
 	debugLog(...args: any[]): void {
 		if (this.isDebugging()) {
 			// The logger only declares a single message parameter, but callers have always relied on
 			// the extra arguments being forwarded to the underlying pino instance.
-			this.getRocketChatLogger().debug(...(args as [object | string]));
+			this.getYasChatLogger().debug(...(args as [object | string]));
 		}
 	}
 
@@ -250,7 +250,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 				await this.getManager().loadOne(app.getID(), true);
 			} catch (error) {
-				this._rocketchatLogger.warn({
+				this._yaschatLogger.warn({
 					msg: 'App could not be enabled',
 					appName: app.getInfo().name,
 					err: error,
@@ -262,7 +262,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 		const appCount = (await this.getManager().get({ enabled: true })).length;
 
-		this._rocketchatLogger.info({
+		this._yaschatLogger.info({
 			msg: 'Loaded the Apps Framework and apps',
 			appCount,
 		});
@@ -282,7 +282,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 		try {
 			const statistics = await this.getStatisticsModel().findInstallationDates();
 			if (!statistics || statistics.length === 0) {
-				this._rocketchatLogger.info('No statistics found');
+				this._yaschatLogger.info('No statistics found');
 				return upgradeToV7Date;
 			}
 
@@ -307,7 +307,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 				if (hadPreTargetVersion && majorVersion >= targetVersion) {
 					upgradeToV7Date = new Date(stat.installedAt ?? NaN);
-					this._rocketchatLogger.info({
+					this._yaschatLogger.info({
 						msg: 'Found upgrade to target version date',
 						targetVersion,
 						upgradeToDate: upgradeToV7Date.toISOString(),
@@ -316,7 +316,7 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 				}
 			}
 		} catch (err) {
-			this._rocketchatLogger.error({
+			this._yaschatLogger.error({
 				msg: 'Error checking statistics for version history',
 				err,
 			});
@@ -380,14 +380,14 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 		try {
 			await Promise.all(disablePromises);
-			this._rocketchatLogger.info({
+			this._yaschatLogger.info({
 				msg: 'Apps processing complete',
 				installationSource,
 				keptCount: grandfathered.length + toKeep.length,
 				disabledCount: toDisable.length,
 			});
 		} catch (error) {
-			this._rocketchatLogger.error({
+			this._yaschatLogger.error({
 				msg: 'Error disabling apps',
 				err: error,
 			});
@@ -403,9 +403,9 @@ export class AppServerOrchestrator implements IAppServerOrchestrator {
 
 		return this._manager
 			.unload(false)
-			.then(() => this._rocketchatLogger.info('Unloaded the Apps Framework.'))
+			.then(() => this._yaschatLogger.info('Unloaded the Apps Framework.'))
 			.catch((err) =>
-				this._rocketchatLogger.error({
+				this._yaschatLogger.error({
 					msg: 'Failed to unload the Apps Framework!',
 					err,
 				}),

@@ -118,7 +118,7 @@ describe('DDPStreamer lifecycle handling', () => {
 		const { metrics } = await createService();
 
 		expect(metrics.register.mock.calls.map(([metric]) => metric.name)).toEqual([
-			'rocketchat_subscription',
+			'yaschat_subscription',
 			'users_connected',
 			'users_logged',
 		]);

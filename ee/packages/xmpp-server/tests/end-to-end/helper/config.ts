@@ -15,7 +15,7 @@ const required = (name: string, hint: string): string => {
 const xmppDomain = required('XMPP_E2E_XMPP_DOMAIN', 'the domain served by the XMPP server under test, e.g. xmpp.host');
 
 /**
- * Where the suite finds the XMPP side. Rocket.Chat is reached like every other e2e suite in the repo
+ * Where the suite finds the XMPP side. YasChat is reached like every other e2e suite in the repo
  * (TEST_API_URL and the test admin); its own XMPP domain is read from its settings at runtime.
  */
 export const config = {

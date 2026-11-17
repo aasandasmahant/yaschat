@@ -1,7 +1,7 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IUser } from './IUser';
 
-export interface ICalendarEvent extends IRocketChatRecord {
+export interface ICalendarEvent extends IYasChatRecord {
 	startTime: Date;
 	endTime?: Date;
 

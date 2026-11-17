@@ -42,7 +42,7 @@ export async function syncCloudData() {
 		}
 
 		SystemLogger.info({
-			msg: 'Synced with Rocket.Chat Cloud',
+			msg: 'Synced with YasChat Cloud',
 			function: 'syncCloudData',
 		});
 
@@ -60,7 +60,7 @@ export async function syncCloudData() {
 			case err instanceof CloudWorkspaceRegistrationError:
 			case err instanceof CloudWorkspaceAccessTokenEmptyError:
 				SystemLogger.info({
-					msg: 'Failed to sync with Rocket.Chat Cloud',
+					msg: 'Failed to sync with YasChat Cloud',
 					function: 'syncCloudData',
 					err,
 				});
@@ -68,7 +68,7 @@ export async function syncCloudData() {
 
 			default:
 				SystemLogger.error({
-					msg: 'Failed to sync with Rocket.Chat Cloud',
+					msg: 'Failed to sync with YasChat Cloud',
 					function: 'syncCloudData',
 					err,
 				});

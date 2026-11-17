@@ -2,7 +2,7 @@ import { useMethod } from '@rocket.chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 export const useMessageSearchProviderQuery = () => {
-	const getSearchProvider = useMethod('rocketchatSearch.getProvider');
+	const getSearchProvider = useMethod('yaschatSearch.getProvider');
 	return useQuery({
 		queryKey: ['search', 'provider'] as const,
 

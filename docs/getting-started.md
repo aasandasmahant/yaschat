@@ -1,6 +1,6 @@
-# Getting Started — Rocket.Chat local development
+# Getting Started — YasChat local development
 
-**Who this is for:** developers new to the monorepo who want to run Rocket.Chat
+**Who this is for:** developers new to the monorepo who want to run YasChat
 from source for the first time.
 
 **After reading this you will have:** the app running at
@@ -40,8 +40,8 @@ production or to inspect data with an external client (see section 5).
 ## 2. Clone, install and build
 
 ```bash
-git clone https://github.com/RocketChat/Rocket.Chat.git
-cd Rocket.Chat
+git clone https://github.com/YasChat/YasChat.git
+cd YasChat
 ./scripts/check-deps.sh --install   # Node, Yarn and Meteor at the pinned versions
 yarn                                # installs all workspaces (slow the first time)
 yarn build                          # builds the workspace packages that have a build step
@@ -84,7 +84,7 @@ http://localhost:3000
 On the first run the Setup Wizard asks you to create the **admin** user and the
 organization. That's it — you are running.
 
-`yarn dev` runs the Rocket.Chat server and the web client together:
+`yarn dev` runs the YasChat server and the web client together:
 
 1. It builds the packages the app depends on (`turbo run build
    --filter=@rocket.chat/meteor^...`). If the build fails, nothing starts.
@@ -104,7 +104,7 @@ stops Vite, Meteor and the bundled Mongo together.
 
 ### Against a remote server — client work without a local server
 
-Set `RC_SERVER_URL` to a Rocket.Chat server that already runs. Only Vite
+Set `RC_SERVER_URL` to a YasChat server that already runs. Only Vite
 starts: no Meteor compilation and no Mongo. The script builds only the packages
 that the client reads from `dist`, so this is the fastest way to start on
 client work.
@@ -161,7 +161,7 @@ server loads it and how to serve the client from another host.
 
 ## 4. Environment variables
 
-Rocket.Chat is configured through environment variables. All are **optional**
+YasChat is configured through environment variables. All are **optional**
 for the first run — with none set, the app boots on the bundled Mongo. A var
 exported in your shell is picked up on the next start. The most used ones:
 
@@ -179,7 +179,7 @@ exported in your shell is picked up on the next start. The most used ones:
 The bundled Mongo already covers local dev. Set up an external one only to
 mirror production or to point external tooling at the data.
 
-Rocket.Chat needs a replica set — not for the oplog (Meteor oplog tailing is
+YasChat needs a replica set — not for the oplog (Meteor oplog tailing is
 disabled; real-time is handled by the streamer), but because transactions and
 change streams require it. A single-node replica set is enough:
 
@@ -195,7 +195,7 @@ Then point the app at it by **exporting in your shell** before `yarn dev`
 (Meteor does not load a `.env` file):
 
 ```bash
-export MONGO_URL='mongodb://localhost:27017/rocketchat?replicaSet=rs0'
+export MONGO_URL='mongodb://localhost:27017/yaschat?replicaSet=rs0'
 ```
 
 ---

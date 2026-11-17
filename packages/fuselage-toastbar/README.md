@@ -99,7 +99,7 @@ Returns `dismiss(id)`, which removes the toast with that `id`. Timed toasts call
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage-toastbar). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-toastbar). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/fuselage-toastbar build
@@ -118,4 +118,4 @@ yarn workspace @rocket.chat/fuselage-toastbar build-storybook
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -25,9 +25,9 @@ export interface IRequestConfig {
  *
  * Sets up a new request instance and authenticates with the specified
  * domain, user, and password. This is essential for federation testing
- * where multiple Rocket.Chat instances need to be accessed.
+ * where multiple YasChat instances need to be accessed.
  *
- * @param domain - The base URL of the Rocket.Chat instance
+ * @param domain - The base URL of the YasChat instance
  * @param user - The username for authentication
  * @param password - The password for authentication
  * @returns Promise resolving to request configuration with credentials

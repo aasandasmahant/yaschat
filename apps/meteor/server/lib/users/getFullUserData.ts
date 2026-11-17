@@ -117,7 +117,7 @@ export async function getFullUserDataByUniqueSearchTerm(
 
 	const fields = getFields(canViewAllInfo);
 
-	// When PDP type is not local, Rocket.Chat doesn't manage ABAC attributes, so there's no point in fetching them
+	// When PDP type is not local, YasChat doesn't manage ABAC attributes, so there's no point in fetching them
 	if (settings.get('ABAC_PDP_Type') !== 'local') {
 		delete fields.abacAttributes;
 	}

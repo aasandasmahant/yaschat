@@ -1,6 +1,6 @@
 # Troubleshooting — local development
 
-**Who this is for:** a developer running Rocket.Chat locally who hit a
+**Who this is for:** a developer running YasChat locally who hit a
 build/run problem. **After reading:** you resolve the most common friction
 points without needing to ask a senior.
 
@@ -43,7 +43,7 @@ Volta aligns Node automatically if installed.
 
 ## Mongo: real-time doesn't work / replica-set errors
 
-Rocket.Chat needs Mongo running as a **replica set** — for change streams, not
+YasChat needs Mongo running as a **replica set** — for change streams, not
 the Meteor oplog (oplog tailing is disabled; real-time goes through the
 streamer). The bundled dev Mongo already runs as a single-node replica set; if
 you use an external Mongo, initiate a replica set and export `MONGO_URL` — see

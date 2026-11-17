@@ -1,4 +1,4 @@
-import type { IRocketChatRecord } from '@rocket.chat/core-typings';
+import type { IYasChatRecord } from '@rocket.chat/core-typings';
 import type { StreamNames } from '@rocket.chat/ddp-client';
 import { isTruthy } from '@rocket.chat/tools';
 import localforage from 'localforage';
@@ -41,7 +41,7 @@ export interface IWithManageableCache {
 	clearCacheOnLogout(): void;
 }
 
-export abstract class CachedStore<T extends IRocketChatRecord, U = T> implements IWithManageableCache {
+export abstract class CachedStore<T extends IYasChatRecord, U = T> implements IWithManageableCache {
 	private static readonly MAX_CACHE_TIME = 60 * 60 * 24 * 30;
 
 	readonly store: UseBoundStore<StoreApi<IDocumentMapStore<T>>>;
@@ -370,7 +370,7 @@ export abstract class CachedStore<T extends IRocketChatRecord, U = T> implements
 	}
 }
 
-export class PublicCachedStore<T extends IRocketChatRecord, U = T> extends CachedStore<T, U> {
+export class PublicCachedStore<T extends IYasChatRecord, U = T> extends CachedStore<T, U> {
 	protected override getToken() {
 		return undefined;
 	}
@@ -380,7 +380,7 @@ export class PublicCachedStore<T extends IRocketChatRecord, U = T> extends Cache
 	}
 }
 
-export class PrivateCachedStore<T extends IRocketChatRecord, U = T> extends CachedStore<T, U> {
+export class PrivateCachedStore<T extends IYasChatRecord, U = T> extends CachedStore<T, U> {
 	protected override getToken() {
 		return getStoredItem(STORAGE_KEYS.LOGIN_TOKEN);
 	}

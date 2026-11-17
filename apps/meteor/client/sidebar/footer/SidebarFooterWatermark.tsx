@@ -27,7 +27,7 @@ export const SidebarFooterWatermark = () => {
 		<FooterContent>
 			<Box is='a' href={links.rocketChat} target='_blank' rel='noopener noreferrer'>
 				<Box color='hint' paddingBlockEnd={4}>
-					{t('Powered_by_RocketChat')}
+					{t('Powered_by_YasChat')}
 				</Box>
 				<Box color='pure-white' paddingBlockEnd={12}>
 					{licenseName.data}

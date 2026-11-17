@@ -8,7 +8,7 @@
 		"error_file": "/var/log/rocket.chat/err.log",
 		"port": "8080",
 		"env": {
-			"MONGO_URL": "mongodb://localhost:27017/rocketchat",
+			"MONGO_URL": "mongodb://localhost:27017/yaschat",
 			"MONGO_OPLOG_URL": "mongodb://localhost:27017/local",
 			"ROOT_URL": "https://open.rocket.chat",
 			"DDP_DEFAULT_CONNECTION_URL": "https://open.rocket.chat",
@@ -23,7 +23,7 @@
 		"error_file": "/var/log/rocket.chat/err.log",
 		"port": "8081",
 		"env": {
-			"MONGO_URL": "mongodb://localhost:27017/rocketchat",
+			"MONGO_URL": "mongodb://localhost:27017/yaschat",
 			"MONGO_OPLOG_URL": "mongodb://localhost:27017/local",
 			"ROOT_URL": "https://open.rocket.chat",
 			"DDP_DEFAULT_CONNECTION_URL": "https://open.rocket.chat",
@@ -38,7 +38,7 @@
 		"error_file": "/var/log/rocket.chat/err.log",
 		"port": "8082",
 		"env": {
-			"MONGO_URL": "mongodb://localhost:27017/rocketchat",
+			"MONGO_URL": "mongodb://localhost:27017/yaschat",
 			"MONGO_OPLOG_URL": "mongodb://localhost:27017/local",
 			"ROOT_URL": "https://open.rocket.chat",
 			"DDP_DEFAULT_CONNECTION_URL": "https://open.rocket.chat",
@@ -53,7 +53,7 @@
 		"error_file": "/var/log/rocket.chat/err.log",
 		"port": "8083",
 		"env": {
-			"MONGO_URL": "mongodb://localhost:27017/rocketchat",
+			"MONGO_URL": "mongodb://localhost:27017/yaschat",
 			"MONGO_OPLOG_URL": "mongodb://localhost:27017/local",
 			"ROOT_URL": "https://open.rocket.chat",
 			"DDP_DEFAULT_CONNECTION_URL": "https://open.rocket.chat",

@@ -400,7 +400,7 @@ describe('VideoConfService: ringing a direct call when its caller arrives', () =
 		expect(ringedUserIds(broadcastStub)).to.deep.equal([]);
 	});
 
-	// The window renders every provider's call inside Rocket.Chat, so the caller sits on a preflight whatever the
+	// The window renders every provider's call inside YasChat, so the caller sits on a preflight whatever the
 	// provider is, and the callee is a member waiting to be asked. Reading only the provider's capability left a
 	// direct call ringing nobody at all once the window was enabled.
 	it('rings the callee when the caller arrives, for any provider, once the call window is enabled', async () => {

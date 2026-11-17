@@ -3,7 +3,7 @@ import { Users } from '@rocket.chat/models';
 
 import { settings } from '../../../../settings';
 import { callbacks } from '../../../callbacks';
-import { RocketChatAssets } from '../../../media/assets';
+import { YasChatAssets } from '../../../media/assets';
 import { metrics } from '../../../metrics';
 import { getWorkspaceURL } from '../../../utils/getURL';
 import { replaceMentionedUsernamesWithFullNames, parseMessageTextPerUser } from '../../message';
@@ -82,7 +82,7 @@ class PushNotification {
 			notId: this.getNotificationId(rid),
 			gcm: {
 				style: 'inbox',
-				image: RocketChatAssets.getURL('Assets_favicon_192'),
+				image: YasChatAssets.getURL('Assets_favicon_192'),
 			},
 			...(category !== '' ? { apn: { category } } : {}),
 		};

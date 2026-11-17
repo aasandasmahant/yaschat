@@ -7,7 +7,7 @@ import TeamsInfo from './TeamsInfo';
 
 const room = {
 	_id: 'awdawd',
-	fname: 'rocketchat-frontend-team',
+	fname: 'yaschat-frontend-team',
 	description:
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis nisi vel arcu bibendum vehicula. Integer vitae suscipit libero',
 	announcement:

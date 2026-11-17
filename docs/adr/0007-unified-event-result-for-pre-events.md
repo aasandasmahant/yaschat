@@ -153,7 +153,7 @@ This is the crux of the non-breaking analysis. Return values are consumed at thr
 2. **`AppListenerBridge`** (`apps/meteor/app/apps/server/bridges/listeners.ts`) — only **two** sites
    duck-type the result, and coarsely: `messageEvent` (`:377`) and `roomEvent` (`:421`) both treat
    "boolean or undefined → pass through, anything else → it is the entity, convert it".
-3. **The Rocket.Chat server call sites** — `sendMessage.ts:241`/`:252`, `createRoom.ts:265`,
+3. **The YasChat server call sites** — `sendMessage.ts:241`/`:252`, `createRoom.ts:265`,
    `deleteMessage.ts:40`, `updateMessage.ts:32`, `FileUpload.ts:203`, `email/api.ts:176`.
 
 Two facts fall out of this and drive the whole design:

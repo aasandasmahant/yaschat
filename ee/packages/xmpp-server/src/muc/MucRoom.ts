@@ -18,7 +18,7 @@ export type MucOccupant = {
 	nick: string;
 	realJid: string;
 	role: MucRole;
-	/** Local (Rocket.Chat) occupants receive copies as events, not stanzas. */
+	/** Local (YasChat) occupants receive copies as events, not stanzas. */
 	isLocal: boolean;
 };
 
@@ -144,7 +144,7 @@ export class MucRoom {
 		this.occupants.set(parsed.nick, occupant);
 		this.broadcastPresence(occupant);
 
-		// Never 201: the room is always created on the Rocket.Chat side before anyone can join,
+		// Never 201: the room is always created on the YasChat side before anyone can join,
 		// and 201 would send clients into the room-configuration flow.
 		this.deps.send(
 			buildOccupantPresence({
@@ -193,7 +193,7 @@ export class MucRoom {
 		});
 	}
 
-	/** Broadcasts a message authored on the Rocket.Chat side into the room. */
+	/** Broadcasts a message authored on the YasChat side into the room. */
 	broadcastFromLocal(message: BroadcastMessage): void {
 		this.broadcastMessage(message);
 	}

@@ -1,5 +1,5 @@
 import type { IVideoConferenceBuilder } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceBuilder';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IGroupVideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
 
 export type AppVideoConference = Pick<IGroupVideoConference, 'rid' | 'providerName' | 'providerData' | 'title' | 'discussionRid'> & {
@@ -7,7 +7,7 @@ export type AppVideoConference = Pick<IGroupVideoConference, 'rid' | 'providerNa
 };
 
 export class VideoConferenceBuilder implements IVideoConferenceBuilder {
-	public kind: RocketChatAssociationModel.VIDEO_CONFERENCE = RocketChatAssociationModel.VIDEO_CONFERENCE;
+	public kind: YasChatAssociationModel.VIDEO_CONFERENCE = YasChatAssociationModel.VIDEO_CONFERENCE;
 
 	protected call: AppVideoConference;
 

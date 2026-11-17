@@ -1,4 +1,4 @@
-# Rocket.Chat
+# YasChat
 
 Monorepo: the main Meteor app lives in `apps/meteor/`, shared libraries in `packages/`, other services in `apps/` and `ee/`.
 

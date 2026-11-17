@@ -43,7 +43,7 @@ export const Default: StoryFn<typeof HoverCard> = () => <Card header={{ avatar, 
 
 export const WithBand: StoryFn<typeof HoverCard> = () => (
 	<Card
-		band={{ label: 'Workspace roles', children: 'Admin, Rocket.Chat Team, Livechat Agent' }}
+		band={{ label: 'Workspace roles', children: 'Admin, YasChat Team, Livechat Agent' }}
 		header={{ avatar, title: 'Title', subtitle: 'Subtitle', end: favorite }}
 	/>
 );
@@ -52,7 +52,7 @@ export const WithLongBand: StoryFn<typeof HoverCard> = () => (
 	<Card
 		band={{
 			label: 'Workspace roles',
-			children: 'Admin, Rocket.Chat Team, Livechat Agent, Moderator, Owner, Leader, Bot, Guest, Anonymous, App, User',
+			children: 'Admin, YasChat Team, Livechat Agent, Moderator, Owner, Leader, Bot, Guest, Anonymous, App, User',
 		}}
 		header={{ avatar, title: 'Title', subtitle: 'Subtitle', end: favorite }}
 	/>

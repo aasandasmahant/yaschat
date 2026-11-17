@@ -52,7 +52,7 @@ describe('AppMessagesConverter.convertAppMessage', () => {
 		expect(result).to.deep.equal({ _id: 'msg-1', msg: 'hi' });
 	});
 
-	it('produces exactly the Rocket.Chat fields the app message carries, adding no undefined keys', async () => {
+	it('produces exactly the YasChat fields the app message carries, adding no undefined keys', async () => {
 		const result = await converter.convertAppMessage({
 			id: 'msg-1',
 			room: { id: 'room-1' },
@@ -148,7 +148,7 @@ describe('AppMessagesConverter.convertAppMessage', () => {
 		expect(result).to.not.have.property('attachments');
 	});
 
-	it('maps the attachment author, title and timestamp back to the Rocket.Chat shape', async () => {
+	it('maps the attachment author, title and timestamp back to the YasChat shape', async () => {
 		const result: any = await converter.convertAppMessage({
 			id: 'msg-1',
 			room: { id: 'room-1' },

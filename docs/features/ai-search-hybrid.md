@@ -108,7 +108,7 @@ the request body:
 The top-level `type` is the only thing that selects the retriever. Both branches send the same
 `classification.search_type` (`CLASSIFICATION_SEARCH_TYPE`), which controls how the requested
 classifications resolve rather than which retriever runs: the strict values reject a request carrying a
-classification the pipeline does not know, and Rocket.Chat sends the user's roles alongside `user`.
+classification the pipeline does not know, and YasChat sends the user's roles alongside `user`.
 
 Which of them runs is decided by a single setting, `AI_Intelligent_Search_Semantic_Weight` (0-100):
 

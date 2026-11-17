@@ -1,7 +1,7 @@
 // Expects the following details:
 // {
 // 	body: '<table>',
-// 	subject: 'Rocket.Chat, 17 Users, 24 Messages, 1 File, 799504 Minutes, in #random',
+// 	subject: 'YasChat, 17 Users, 24 Messages, 1 File, 799504 Minutes, in #random',
 //  files: ['i3nc9l3mn']
 // }
 import { Uploads } from '@rocket.chat/models';
@@ -15,7 +15,7 @@ export const sendEmail = async (data: { files: string[]; subject: string; body: 
 
 	for await (const fileId of data.files) {
 		const file = await Uploads.findOneById(fileId);
-		if (file?.store === 'rocketchat_uploads' || file?.store === 'fileSystem') {
+		if (file?.store === 'yaschat_uploads' || file?.store === 'fileSystem') {
 			const rs = await UploadFS.getStore(file.store).getReadStream(fileId, file);
 			attachments.push({
 				filename: file.name,

@@ -1,4 +1,4 @@
-import type { IIntegration, IUser, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IIntegration, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type {
 	IBaseModel,
 	IIntegrationsModel,
@@ -11,7 +11,7 @@ import type { AggregateOptions, Collection, Db, FindCursor, IndexDescription, Do
 import { BaseRaw } from './BaseRaw';
 
 export class IntegrationsRaw extends BaseRaw<IIntegration> implements IIntegrationsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IIntegration>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IIntegration>>) {
 		super(db, 'integrations', trash);
 	}
 

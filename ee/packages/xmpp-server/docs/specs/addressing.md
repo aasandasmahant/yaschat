@@ -36,7 +36,7 @@ tests:
 
 ## Summary
 
-How Rocket.Chat users and rooms are named on the XMPP network, how remote addresses are
+How YasChat users and rooms are named on the XMPP network, how remote addresses are
 identified locally, and how domains are compared.
 
 ## Motivation
@@ -48,7 +48,7 @@ localparts, and compare domains the way DNS does.
 ## Behaviour
 
 - **R1** A local user's JID is `<localpart>@<XMPP domain>`, where the localpart is the
-  Rocket.Chat username escaped per XEP-0106 when it contains characters a localpart cannot
+  YasChat username escaped per XEP-0106 when it contains characters a localpart cannot
   carry (space, `"`, `&`, `'`, `/`, `:`, `<`, `>`, `@`, and `\` followed by an escape
   sequence). Inbound localparts are unescaped before the username lookup.
 - **R2** An escaped localpart MUST NOT exceed 1023 bytes (RFC 6122).
@@ -62,15 +62,15 @@ localparts, and compare domains the way DNS does.
   `InvalidJidError` and the stanza or stream carrying it is rejected. Normalizing a
   normalized domain changes nothing. An accepted inbound stanza's `from` and `to` carry
   their domains in normalized form, so a remote account has one record and a message one
-  event id however the peer spells its domain. A JID a Rocket.Chat user types, opening a DM
+  event id however the peer spells its domain. A JID a YasChat user types, opening a DM
   or adding a member to an XMPP room, is taken with its domain normalized the same way,
   internationalized domains included, so it names the record a stanza from that account
   does.
 - **R5** Allow and deny lists are evaluated on normalized domains. A domain on the deny list
   is refused regardless of the allow list; an empty allow list allows every domain.
 - **R6** The MUC service domain is `<subdomain>.<domain>`, normalized the same way.
-- **R7** When Rocket.Chat joins a remote room on a user's behalf, the occupant's full JID
-  uses the fixed resource `rocketchat`.
+- **R7** When YasChat joins a remote room on a user's behalf, the occupant's full JID
+  uses the fixed resource `yaschat`.
 - **R8** A hosted room's JID is `<escaped room name>@<MUC domain>`, fixed at creation.
 - **R9** A remote account has one user record, however many DMs, hosted rooms and remote
   rooms it appears in: every path that knows the sender's real JID upserts the record of
@@ -115,7 +115,7 @@ the unique index instead of that user (R11).
 
 ### D1 A local username shaped like a bare JID is taken for an XMPP account
 
-Rocket.Chat decides a username names an XMPP account by its shape alone. A local username
+YasChat decides a username names an XMPP account by its shape alone. A local username
 can look like `alice@corp.example` when a SAML or LDAP sync copies an email address into it,
 or an admin widens `UTF8_User_Names_Validation`. Adding such a user to a room that is not
 XMPP federated is refused with `error-xmpp-users-in-non-xmpp-rooms`, XMPP on or off. Opening

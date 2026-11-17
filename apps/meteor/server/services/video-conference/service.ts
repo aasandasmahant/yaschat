@@ -57,7 +57,7 @@ import { hasAtLeastOnePermissionAsync } from '../../lib/authorization/hasPermiss
 import { callbacks } from '../../lib/callbacks';
 import { i18n } from '../../lib/i18n';
 import { isRoomCompatibleWithVideoConfRinging } from '../../lib/isRoomCompatibleWithVideoConfRinging';
-import { RocketChatAssets } from '../../lib/media/assets';
+import { YasChatAssets } from '../../lib/media/assets';
 import { sendMessage } from '../../lib/messages/sendMessage';
 import { follow } from '../../lib/messaging/threads/functions';
 import { metrics } from '../../lib/metrics/lib/metrics';
@@ -528,7 +528,7 @@ export class VideoConfService extends ServiceClassInternal implements IVideoConf
 		void api.broadcast('room.video-conference', { rid, callId });
 	}
 
-	/** Whether the provider runs the call inside Rocket.Chat rather than at a page of its own. */
+	/** Whether the provider runs the call inside YasChat rather than at a page of its own. */
 	private isEmbeddedProvider(providerName: string): boolean {
 		return videoConfProviders.getProviderCapabilities(providerName)?.embedded === true;
 	}
@@ -664,7 +664,7 @@ export class VideoConfService extends ServiceClassInternal implements IVideoConf
 	/**
 	 * Whether this call happens inside a window of ours, rather than being handed off to a page we don't run.
 	 *
-	 * True for a provider that renders inside Rocket.Chat, and true for *any* provider once the conference window
+	 * True for a provider that renders inside YasChat, and true for *any* provider once the conference window
 	 * is enabled — an iframed provider renders inside our page, so our code is alive there either way.
 	 */
 	private runsInOurCallWindow(providerName: string): boolean {
@@ -797,7 +797,7 @@ export class VideoConfService extends ServiceClassInternal implements IVideoConf
 			notId: PushNotification.getNotificationId(`${call.rid}|${call._id}`),
 			gcm: {
 				style: 'inbox',
-				image: RocketChatAssets.getURL('Assets_favicon_192'),
+				image: YasChatAssets.getURL('Assets_favicon_192'),
 			},
 			apn: {
 				category: 'VIDEOCONF',
@@ -1117,7 +1117,7 @@ export class VideoConfService extends ServiceClassInternal implements IVideoConf
 		}
 
 		const room = await Rooms.findOneById(call.rid);
-		return room?.fname || room?.name || 'Rocket.Chat';
+		return room?.fname || room?.name || 'YasChat';
 	}
 
 	private async getCallTitle(call: VideoConference): Promise<string> {
@@ -1140,7 +1140,7 @@ export class VideoConfService extends ServiceClassInternal implements IVideoConf
 			}
 		}
 
-		return 'Rocket.Chat';
+		return 'YasChat';
 	}
 
 	private async getUrl(

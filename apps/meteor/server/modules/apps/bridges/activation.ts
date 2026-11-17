@@ -13,13 +13,13 @@ export class AppActivationBridge extends ActivationBridge {
 		// await this.orch.getNotifier().appAdded(app.getID());
 
 		// Calls made via AppActivationBridge should NOT go through
-		// View https://github.com/RocketChat/Rocket.Chat/pull/29180 for details
+		// View https://github.com/YasChat/YasChat/pull/29180 for details
 		return undefined;
 	}
 
 	protected async appUpdated(_app: ProxiedApp): Promise<void> {
 		// Calls made via AppActivationBridge should NOT go through
-		// View https://github.com/RocketChat/Rocket.Chat/pull/29180 for details
+		// View https://github.com/YasChat/YasChat/pull/29180 for details
 		// await this.orch.getNotifier().appUpdated(app.getID());
 		return undefined;
 	}

@@ -23,7 +23,7 @@ export async function sendRequest(
 		const result = await fetch(webhookUrl, {
 			method: 'POST',
 			headers: {
-				...(secretToken && { 'X-RocketChat-Livechat-Token': secretToken }),
+				...(secretToken && { 'X-YasChat-Livechat-Token': secretToken }),
 			},
 			body: postData,
 			timeout,

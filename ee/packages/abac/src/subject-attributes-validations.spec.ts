@@ -150,7 +150,7 @@ describe('Subject Attributes validation', () => {
 		sharedMongo = await acquireSharedInMemoryMongo(SHARED_ABAC_TEST_DB);
 		db = sharedMongo.db;
 
-		roomsCol = db.collection('rocketchat_room');
+		roomsCol = db.collection('yaschat_room');
 		usersCol = db.collection('users');
 
 		await usersCol.deleteMany({ _id: { $in: staticUserIds } });

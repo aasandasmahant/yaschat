@@ -105,8 +105,8 @@ class JIRAReporter implements Reporter {
 
 	private async postComment(issue: string, test: TestCase, payload: { run: number; headSha: string }): Promise<void> {
 		const { location } = test;
-		const testUrl = `https://github.com/RocketChat/Rocket.Chat/blob/${payload.headSha}${location.file.replace(
-			'/home/runner/work/Rocket.Chat/Rocket.Chat',
+		const testUrl = `https://github.com/YasChat/YasChat/blob/${payload.headSha}${location.file.replace(
+			'/home/runner/work/YasChat/YasChat',
 			'',
 		)}#L${location.line}`;
 

@@ -1,6 +1,6 @@
 import type {
 	IOmnichannelRoom,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	IOmnichannelRoomClosingInfo,
 	DeepWritable,
 	IMessage,
@@ -35,7 +35,7 @@ import { BaseRaw } from './BaseRaw';
 import { readSecondaryPreferred } from '../readSecondaryPreferred';
 
 export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILivechatRoomsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IOmnichannelRoom>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IOmnichannelRoom>>) {
 		super(db, 'room', trash);
 	}
 
@@ -120,7 +120,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 
 		const departmentsLookup = {
 			$lookup: {
-				from: 'rocketchat_livechat_department',
+				from: 'yaschat_livechat_department',
 				let: {
 					deptId: '$departmentId',
 				},
@@ -611,7 +611,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 		};
 		const departmentsLookup = {
 			$lookup: {
-				from: 'rocketchat_livechat_department',
+				from: 'yaschat_livechat_department',
 				localField: 'departmentId',
 				foreignField: '_id',
 				as: 'departments',
@@ -648,7 +648,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 		};
 		const messagesLookup = {
 			$lookup: {
-				from: 'rocketchat_message',
+				from: 'yaschat_message',
 				localField: 'rooms._id',
 				foreignField: 'rid',
 				as: 'messages',
@@ -868,7 +868,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 		};
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_livechat_department',
+				from: 'yaschat_livechat_department',
 				localField: 'departmentId',
 				foreignField: '_id',
 				as: 'departments',
@@ -914,7 +914,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 		};
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_livechat_department',
+				from: 'yaschat_livechat_department',
 				localField: 'departmentId',
 				foreignField: '_id',
 				as: 'departments',
@@ -1185,7 +1185,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 		};
 		const lookup = {
 			$lookup: {
-				from: 'rocketchat_message',
+				from: 'yaschat_message',
 				localField: '_id',
 				foreignField: 'rid',
 				as: 'messages',
@@ -2148,7 +2148,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 				{ $addFields: { roomId: '$_id' } },
 				{
 					$lookup: {
-						from: 'rocketchat_message',
+						from: 'yaschat_message',
 						// mongo doesn't like _id as variable name here :(
 						let: { roomId: '$roomId' },
 						pipeline: [
@@ -2225,7 +2225,7 @@ export class LivechatRoomsRaw extends BaseRaw<IOmnichannelRoom> implements ILive
 				{ $addFields: { roomId: '$_id' } },
 				{
 					$lookup: {
-						from: 'rocketchat_message',
+						from: 'yaschat_message',
 						// mongo doesn't like _id as variable name here :(
 						let: { roomId: '$roomId' },
 						pipeline: [

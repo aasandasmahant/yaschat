@@ -6,7 +6,7 @@
 
 `memoize` wraps a function of one argument and caches its results by that argument. Entries can expire after a period of inactivity, and a memoized function's cache can be cleared on demand with `clear`.
 
-Rocket.Chat's styling packages use it to cache CSS support checks and evaluated CSS.
+YasChat's styling packages use it to cache CSS support checks and evaluated CSS.
 
 ## Installation
 
@@ -80,7 +80,7 @@ type Options = { maxAge: number };
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/memo). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/memo). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/memo build
@@ -91,4 +91,4 @@ yarn workspace @rocket.chat/memo typecheck
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

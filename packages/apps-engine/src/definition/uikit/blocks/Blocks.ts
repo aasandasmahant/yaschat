@@ -96,7 +96,7 @@ export interface IConditionalBlockFilters {
  * Currently supported conditions:
  *      `engine: Array<"rocket.chat" | "omnichannel">` specifies what engine should
  *      render the block:
- *          "rocket.chat" for regular Rocket.Chat engine
+ *          "rocket.chat" for regular YasChat engine
  *          "omnichannel" for the Livechat/Omnichannel widget engine
  *      leave it blank to show the block in both engines
  */

@@ -1,4 +1,4 @@
-export abstract class RocketChatError<TErrorId extends string, TDetails = unknown> extends Error {
+export abstract class YasChatError<TErrorId extends string, TDetails = unknown> extends Error {
 	public readonly error: TErrorId;
 
 	public readonly reason?: string;

@@ -65,7 +65,7 @@ export const commonServiceStubs = {
 	'../../lib/callbacks': { callbacks: { runAsync: () => undefined, run: () => undefined } },
 	'../../lib/i18n': { i18n: { t: (s: string) => s } },
 	'../../lib/isRoomCompatibleWithVideoConfRinging': { isRoomCompatibleWithVideoConfRinging: () => true },
-	'../../lib/media/assets': { RocketChatAssets: { getURL: () => '' } },
+	'../../lib/media/assets': { YasChatAssets: { getURL: () => '' } },
 	'../../lib/messages/sendMessage': { sendMessage: async () => ({ _id: 'msg1' }) },
 	// Loaded for real this would drag in `server/settings` (top-level await), which tsx-in-CJS cannot transform.
 	'../../lib/messaging/threads/functions': { follow: async () => undefined },

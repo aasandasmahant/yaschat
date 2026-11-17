@@ -17,7 +17,7 @@ import { registerAppLogsExportHandler } from './endpoints/appLogsExportHandler';
 import { registerAppLogsHandler } from './endpoints/appLogsHandler';
 import { registerAppsCountHandler } from './endpoints/appsCountHandler';
 import { CloudOfflineLicenseError } from '../../../../lib/errors/CloudOfflineLicenseError';
-import { Info } from '../../../../rocketchat.info';
+import { Info } from '../../../../yaschat.info';
 import { API } from '../../../../server/api';
 import type { APIClass } from '../../../../server/api/ApiClass';
 import { getUploadFormData } from '../../../../server/api/lib/getUploadFormData';
@@ -82,10 +82,10 @@ export class AppsRestApi {
 					basePathRegex: new RegExp(/^\/api\/apps\//),
 					api: this.api,
 					settings,
-					endpointTimeSummary: metrics.rocketchatRestApi,
-					endpointTimeHistogram: metrics.rocketchatRestApiSeconds,
-					responseSizeHistogram: metrics.rocketchatRestApiResponseSizeBytes,
-					activeRequestsGauge: metrics.rocketchatRestApiActiveRequests,
+					endpointTimeSummary: metrics.yaschatRestApi,
+					endpointTimeHistogram: metrics.yaschatRestApiSeconds,
+					responseSizeHistogram: metrics.yaschatRestApiResponseSizeBytes,
+					activeRequestsGauge: metrics.yaschatRestApiActiveRequests,
 				}),
 			)
 			.use(tracerSpanMiddleware)
@@ -104,18 +104,18 @@ export class AppsRestApi {
 			// Offline (air-gapped) licenses suppress marketplace requests at the source;
 			// report the real reason instead of a generic connectivity failure.
 			if (err instanceof CloudOfflineLicenseError) {
-				orchestrator.getRocketChatLogger().info({ msg: err.message });
+				orchestrator.getYasChatLogger().info({ msg: err.message });
 				return API.v1.failure({ error: err.message });
 			}
 
 			// when there is no `response` field in the error, it means the request
 			// couldn't even make it to the server
 			if (!err.hasOwnProperty('response')) {
-				orchestrator.getRocketChatLogger().warn({ msg: message, err });
+				orchestrator.getYasChatLogger().warn({ msg: message, err });
 				return API.v1.internalError('Could not reach the Marketplace');
 			}
 
-			orchestrator.getRocketChatLogger().error({ msg: message, err });
+			orchestrator.getYasChatLogger().error({ msg: message, err });
 
 			if (err.response.statusCode >= 500 && err.response.statusCode <= 599) {
 				return API.v1.internalError();
@@ -170,7 +170,7 @@ export class AppsRestApi {
 						}
 
 						if (err instanceof z.ZodError) {
-							orchestrator.getRocketChatLogger().error({ msg: 'Error validating the response from Marketplace:', err });
+							orchestrator.getYasChatLogger().error({ msg: 'Error validating the response from Marketplace:', err });
 							return API.v1.failure({ error: i18n.t('Marketplace_Failed_To_Fetch_Apps') });
 						}
 
@@ -189,7 +189,7 @@ export class AppsRestApi {
 						const categories = await fetchMarketplaceCategories();
 						return API.v1.success(categories);
 					} catch (err) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error fetching categories from Marketplace:', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error fetching categories from Marketplace:', err });
 						if (err instanceof MarketplaceConnectionError || err instanceof CloudOfflineLicenseError) {
 							return handleError('Unable to access Marketplace. Does the server has access to the internet?', err);
 						}
@@ -199,7 +199,7 @@ export class AppsRestApi {
 						}
 
 						if (err instanceof z.ZodError) {
-							orchestrator.getRocketChatLogger().error({ msg: 'Error validating the response from Marketplace:', err });
+							orchestrator.getYasChatLogger().error({ msg: 'Error validating the response from Marketplace:', err });
 							return API.v1.failure({ error: i18n.t('Marketplace_Failed_To_Fetch_Categories') });
 						}
 
@@ -257,7 +257,7 @@ export class AppsRestApi {
 							}
 
 							orchestrator
-								.getRocketChatLogger()
+								.getYasChatLogger()
 								.debug('Request to /apps/installed with includeClusterStatus=true, but no cluster nodes found');
 						}
 					}
@@ -294,7 +294,7 @@ export class AppsRestApi {
 
 							buff = await response.buffer();
 						} catch (err: any) {
-							orchestrator.getRocketChatLogger().error({ msg: 'Error fetching App from URL:', err });
+							orchestrator.getYasChatLogger().error({ msg: 'Error fetching App from URL:', err });
 							return API.v1.internalError();
 						}
 					} else if ('appId' in this.bodyParams && this.bodyParams.appId && this.bodyParams.marketplace && this.bodyParams.version) {
@@ -337,7 +337,7 @@ export class AppsRestApi {
 							// Note: marketplace responds with an array of the marketplace info on the app, but it is expected
 							// to always have one element since we are fetching a specific app version.
 							if (!Array.isArray(marketplaceInfo) || marketplaceInfo?.length !== 1) {
-								orchestrator.getRocketChatLogger().error({ msg: 'Error getting app information from marketplace', marketplaceInfo });
+								orchestrator.getYasChatLogger().error({ msg: 'Error getting app information from marketplace', marketplaceInfo });
 								throw new Error('Invalid response from the Marketplace');
 							}
 
@@ -346,7 +346,7 @@ export class AppsRestApi {
 							let message;
 
 							if (err instanceof Error) {
-								orchestrator.getRocketChatLogger().error({ msg: 'Error installing app from marketplace:', err });
+								orchestrator.getYasChatLogger().error({ msg: 'Error installing app from marketplace:', err });
 								message = err.message;
 							} else {
 								message = err;
@@ -417,7 +417,7 @@ export class AppsRestApi {
 						const success = await manager.changeStatus(info.id, AppStatus.MANUALLY_ENABLED);
 						info.status = await success.getStatus();
 					} catch (error) {
-						orchestrator.getRocketChatLogger().warn({
+						orchestrator.getYasChatLogger().warn({
 							msg: 'App was installed but could not be enabled',
 							appId: info.id,
 							err: error,
@@ -480,7 +480,7 @@ export class AppsRestApi {
 							};
 						});
 					} catch (err) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error fetching admins for app request', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error fetching admins for app request', err });
 					}
 
 					const queryParams = new URLSearchParams();
@@ -542,7 +542,7 @@ export class AppsRestApi {
 
 						return API.v1.success({ result });
 					} catch (e: any) {
-						orchestrator.getRocketChatLogger().error({
+						orchestrator.getYasChatLogger().error({
 							msg: "Error triggering external components' events",
 							err: e,
 						});
@@ -573,7 +573,7 @@ export class AppsRestApi {
 								ignoreSsrfValidation: true,
 							});
 						if (request.status !== 200) {
-							orchestrator.getRocketChatLogger().error({
+							orchestrator.getYasChatLogger().error({
 								msg: "Error getting the Bundle's Apps from the Marketplace",
 								response: await request.json(),
 							});
@@ -581,7 +581,7 @@ export class AppsRestApi {
 						}
 						result = await request.json();
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: "Error getting the Bundle's Apps from the Marketplace:", err });
+						orchestrator.getYasChatLogger().error({ msg: "Error getting the Bundle's Apps from the Marketplace:", err });
 						return API.v1.internalError();
 					}
 
@@ -610,7 +610,7 @@ export class AppsRestApi {
 						});
 						if (request.status !== 200) {
 							orchestrator
-								.getRocketChatLogger()
+								.getYasChatLogger()
 								.error({ msg: 'Error getting the Featured Apps from the Marketplace:', response: await request.json() });
 							return API.v1.failure();
 						}
@@ -652,7 +652,7 @@ export class AppsRestApi {
 						}
 						return API.v1.success(result);
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error getting the app requests from marketplace', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error getting the app requests from marketplace', err });
 
 						return API.v1.failure(err.message);
 					}
@@ -686,7 +686,7 @@ export class AppsRestApi {
 						}
 						return API.v1.success(result);
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error getting app request stats from marketplace', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error getting app request stats from marketplace', err });
 
 						return API.v1.failure(err.message);
 					}
@@ -724,7 +724,7 @@ export class AppsRestApi {
 
 						return API.v1.success(result);
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error marking app requests as seen in marketplace', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error marking app requests as seen in marketplace', err });
 
 						return API.v1.failure(err.message);
 					}
@@ -762,7 +762,7 @@ export class AppsRestApi {
 
 						return API.v1.success();
 					} catch (err) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error notifying admins about app request', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error notifying admins about app request', err });
 						return API.v1.failure();
 					}
 				},
@@ -792,7 +792,7 @@ export class AppsRestApi {
 								});
 							if (request.status !== 200) {
 								orchestrator
-									.getRocketChatLogger()
+									.getYasChatLogger()
 									.error({ msg: 'Error getting the App from the Marketplace:', response: await request.json() });
 								return API.v1.failure();
 							}
@@ -822,7 +822,7 @@ export class AppsRestApi {
 								});
 							if (request.status !== 200) {
 								orchestrator
-									.getRocketChatLogger()
+									.getYasChatLogger()
 									.error({ msg: 'Error getting the App update from the Marketplace:', response: await request.json() });
 								return API.v1.failure();
 							}
@@ -875,7 +875,7 @@ export class AppsRestApi {
 
 							if (response.status !== 200) {
 								orchestrator
-									.getRocketChatLogger()
+									.getYasChatLogger()
 									.error({ msg: 'Error getting the App from the Marketplace:', response: await response.json() });
 								return API.v1.failure();
 							}
@@ -888,7 +888,7 @@ export class AppsRestApi {
 
 							buff = Buffer.from(await response.arrayBuffer());
 						} catch (err: any) {
-							orchestrator.getRocketChatLogger().error({ msg: 'Error getting the App from the Marketplace:', err });
+							orchestrator.getYasChatLogger().error({ msg: 'Error getting the App from the Marketplace:', err });
 							return API.v1.internalError();
 						}
 
@@ -1021,7 +1021,7 @@ export class AppsRestApi {
 					}
 
 					if (!result || statusCode !== 200) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error getting the App versions from the Marketplace:', result });
+						orchestrator.getYasChatLogger().error({ msg: 'Error getting the App versions from the Marketplace:', result });
 						return API.v1.failure();
 					}
 
@@ -1064,12 +1064,12 @@ export class AppsRestApi {
 							throw new Error(result.error);
 						}
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error syncing the App from the Marketplace:', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error syncing the App from the Marketplace:', err });
 						return API.v1.internalError();
 					}
 
 					if (statusCode !== 200) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error getting the App from the Marketplace during sync:', result });
+						orchestrator.getYasChatLogger().error({ msg: 'Error getting the App from the Marketplace during sync:', result });
 						return API.v1.failure();
 					}
 
@@ -1133,7 +1133,7 @@ export class AppsRestApi {
 							screenshots: data,
 						});
 					} catch (err: any) {
-						orchestrator.getRocketChatLogger().error({ msg: 'Error getting the App screenshots from the Marketplace:', err });
+						orchestrator.getYasChatLogger().error({ msg: 'Error getting the App screenshots from the Marketplace:', err });
 						return API.v1.failure(err.message);
 					}
 				},
@@ -1283,7 +1283,7 @@ export class AppsRestApi {
 							response.clusterStatus = clusterStatus[app.getID()];
 						}
 					} catch (e) {
-						orchestrator.getRocketChatLogger().warn({ msg: 'Could not fetch cluster status for app', appId: app.getID(), err: e });
+						orchestrator.getYasChatLogger().warn({ msg: 'Could not fetch cluster status for app', appId: app.getID(), err: e });
 					}
 
 					return API.v1.success(response);

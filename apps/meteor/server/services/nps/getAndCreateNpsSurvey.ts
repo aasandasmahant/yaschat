@@ -53,7 +53,7 @@ export const getAndCreateNpsSurvey = async function getNpsSurvey(npsId: string) 
 			createdAt: new Date(surveyData.createdAt),
 			expireAt: new Date(surveyData.expireAt),
 			startAt: new Date(surveyData.startAt),
-			_updatedAt: new Date(), // Needed by the IRocketChatRecord interface
+			_updatedAt: new Date(), // Needed by the IYasChatRecord interface
 			roles: surveyData.roles,
 			createdBy: {
 				_id: 'rocket.cat',

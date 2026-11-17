@@ -2,7 +2,7 @@
 
 ## Overview
 
-Persistent chat gives a video conference a Rocket.Chat room that lives alongside the call, so the conversation survives after the call ends. Instead of handing the user off to the provider's own page, joining a conference opens an in-product page at `/conference/:id` — the provider's call in an iframe, a control bar along the bottom, and the conference's chat in a collapsible panel docked to the inline end.
+Persistent chat gives a video conference a YasChat room that lives alongside the call, so the conversation survives after the call ends. Instead of handing the user off to the provider's own page, joining a conference opens an in-product page at `/conference/:id` — the provider's call in an iframe, a control bar along the bottom, and the conference's chat in a collapsible panel docked to the inline end.
 
 ### The setting
 
@@ -130,7 +130,7 @@ A call opens as a **popout** — a dedicated window sized to 1280×800 (capped t
 
 `noopener` is deliberately **never** in the features string: it makes `window.open` return `null`, which is indistinguishable from a blocked popup, and the opener link is what lets the main app notice the call window closing (see [The window that opened the call watches it](#the-window-that-opened-the-call-watches-it)).
 
-Same-origin (in-product) conferences share a named window, `rocketchat-conference`, so repeated joins reuse it instead of stacking duplicates:
+Same-origin (in-product) conferences share a named window, `yaschat-conference`, so repeated joins reuse it instead of stacking duplicates:
 
 | State of the shared window | Behaviour |
 |---|---|
@@ -261,7 +261,7 @@ turns into the window's root `PaletteStyleTag`. Pinning at the **root** rather t
 subtree would reach the buttons but not the menus they open.
 
 What the panels beside the call hold is room UI: a chat, a members list, a thread. Those are read in the theme
-the rest of Rocket.Chat is read in, so `CallPanel` — and `ConferenceThreadModal`, which is the chat panel's own
+the rest of YasChat is read in, so `CallPanel` — and `ConferenceThreadModal`, which is the chat panel's own
 content one portal further out — wears `CONFERENCE_THEMED_CLASS`, and `ConferenceViewport` emits the reader's
 own palette scoped to that class.
 
@@ -788,7 +788,7 @@ A provider must declare the **`persistentChat` capability** for `maybeCreateDisc
 
 Providers that don't declare it still work in the split view — the chat panel falls back to the conference's `rid`, showing the room the call was started in — but get no dedicated per-call discussion. The bundled **Jitsi app (v2.1.1) declares only `{ mic, cam, title }`**, so it falls into this case; adding `persistentChat` is an app-side change.
 
-The provider's URL is embedded in an iframe, so it must permit framing (no restrictive `X-Frame-Options` / `frame-ancestors`). Rocket.Chat's own CSP allows `frame-src *`. Note the public `meet.jit.si` server disconnects embedded calls after 5 minutes and asks you to use a self-hosted instance or JaaS.
+The provider's URL is embedded in an iframe, so it must permit framing (no restrictive `X-Frame-Options` / `frame-ancestors`). YasChat's own CSP allows `frame-src *`. Note the public `meet.jit.si` server disconnects embedded calls after 5 minutes and asks you to use a self-hosted instance or JaaS.
 
 ### Talking to the provider's page
 
@@ -799,10 +799,10 @@ that does: the provider's chat button becomes a remote control for the chat pane
 hears about a call the user left from inside the frame, and the people panel becomes the call's own participant
 list.
 
-The namespace is Rocket.Chat's, not any provider's — `{ action: 'rocketchat:videoconf/<name>', ...payload }` —
+The namespace is YasChat's, not any provider's — `{ action: 'yaschat:videoconf/<name>', ...payload }` —
 so any provider plugin that speaks it gets the same behaviour. Pexip's
-[External Chat plugin](https://github.com/RocketChat/Pexip.External.Chat) is the first implementation: its
-branding hides Pexip's own chat button and add-participant menu, on the understanding that Rocket.Chat supplies
+[External Chat plugin](https://github.com/YasChat/Pexip.External.Chat) is the first implementation: its
+branding hides Pexip's own chat button and add-participant menu, on the understanding that YasChat supplies
 both. A Jitsi plugin sending the same actions needs nothing new on this side.
 
 | Direction | Action | Payload | What it means here |
@@ -844,7 +844,7 @@ bridge stays silent.
 
 Two conditions are the deployment's rather than the code's. The provider must allow framing by the workspace
 origin, and this window has to be the top window if the plugin posts to `window.top`, as Pexip's does — a
-Rocket.Chat that is itself embedded in another page would never see those messages.
+YasChat that is itself embedded in another page would never see those messages.
 
 Pexip's plugin also exposes `dial-out`, which would let this window dial a phone or SIP destination into the
 call. It is deliberately not part of the protocol above: nothing here can send it, because the participants
@@ -949,7 +949,7 @@ and [Access Control](#access-control).
 
 ### Future work (not in scope)
 
-- **Non-user participants.** Members are registered Rocket.Chat users only, for now. Representing SIP
+- **Non-user participants.** Members are registered YasChat users only, for now. Representing SIP
   extensions, phone numbers, external email addresses, or participants derived from a calendar event is
   wanted later. `IVideoConferenceUser extends Pick<Required<IUser>, '_id' | 'username' | 'name'>` — required
   `username` *and* `name` — so that constraint has to relax when it happens. Adding a nullable `source`
@@ -1054,7 +1054,7 @@ app is never enabled outside EE.
 
 ### Nothing else "ends" a Jitsi conference
 
-`endCall` runs when something tells Rocket.Chat the call is over. For a third-party provider, nothing does:
+`endCall` runs when something tells YasChat the call is over. For a third-party provider, nothing does:
 the Jitsi app never reports an end, so before closing the window became a signal, conferences sat at `STARTED`
 until `videoConferencesCron` expired them a day later — and the expire path wrote no history at all. Both gaps
 are closed: leaving ends the call when nobody is left, and expiry writes history as a backstop.
@@ -1109,9 +1109,9 @@ If a provider ever asks for it: an embedded provider posts to the parent window 
 panel, rather than showing two competing sets of controls.
 
 ```js
-parent.postMessage({ type: 'rocketchat:conference', command: 'set-call-bar-visible', visible: false }, '*');
-parent.postMessage({ type: 'rocketchat:conference', command: 'set-chat-visible', visible: true }, '*');
-parent.postMessage({ type: 'rocketchat:conference', command: 'toggle-chat' }, '*');
+parent.postMessage({ type: 'yaschat:conference', command: 'set-call-bar-visible', visible: false }, '*');
+parent.postMessage({ type: 'yaschat:conference', command: 'set-chat-visible', visible: true }, '*');
+parent.postMessage({ type: 'yaschat:conference', command: 'toggle-chat' }, '*');
 ```
 
 The trust model is the part worth preserving: the iframe is cross-origin, so `event.origin` cannot be allow-listed

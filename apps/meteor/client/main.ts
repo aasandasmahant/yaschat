@@ -1,4 +1,4 @@
-import { Info } from '../rocketchat.info';
+import { Info } from '../yaschat.info';
 import { installDesktopRequire } from './lib/desktopRequire';
 import './meteor/startup';
 import './lib/sdk/ddpSdk';

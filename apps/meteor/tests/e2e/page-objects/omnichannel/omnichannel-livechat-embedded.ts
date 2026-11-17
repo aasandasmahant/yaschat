@@ -2,44 +2,44 @@ import type { Locator } from '@playwright/test';
 
 import { RoutedPage } from '../routed-page';
 
-/** The widget as embedded on a host page, driven through `window.RocketChat.livechat`. */
+/** The widget as embedded on a host page, driven through `window.YasChat.livechat`. */
 export class OmnichannelLiveChatEmbedded extends RoutedPage {
-	protected readonly route = '/packages/rocketchat_livechat/assets/demo.html';
+	protected readonly route = '/packages/yaschat_livechat/assets/demo.html';
 
 	async waitForReady(): Promise<void> {
 		await this.btnOpenLiveChat().waitFor({ state: 'visible' });
 	}
 
 	btnOpenLiveChat(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`[data-qa-id="chat-button"]`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`[data-qa-id="chat-button"]`);
 	}
 
 	btnFinishOfflineMessage(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`button[aria-label="OK"]`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`button[aria-label="OK"]`);
 	}
 
 	get btnOptions(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`button >> text="Options"`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`button >> text="Options"`);
 	}
 
 	get btnCloseChat(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`button >> text="Finish this chat"`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`button >> text="Finish this chat"`);
 	}
 
 	get btnCloseChatConfirm(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`button >> text="Yes"`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`button >> text="Yes"`);
 	}
 
 	get headerTitle(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[data-qa="header-title"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[data-qa="header-title"]');
 	}
 
 	get btnNewChat(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`role=button[name="New Chat"]`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`role=button[name="New Chat"]`);
 	}
 
 	get messageList(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[data-qa="message-list"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[data-qa="message-list"]');
 	}
 
 	get messageListBackground(): Promise<string> {
@@ -48,8 +48,8 @@ export class OmnichannelLiveChatEmbedded extends RoutedPage {
 
 	messageBubble(message: string): Locator {
 		return this.page
-			.frameLocator('#rocketchat-iframe')
-			.locator('[data-qa="message-bubble"]', { has: this.page.frameLocator('#rocketchat-iframe').locator(`div >> text="${message}"`) });
+			.frameLocator('#yaschat-iframe')
+			.locator('[data-qa="message-bubble"]', { has: this.page.frameLocator('#yaschat-iframe').locator(`div >> text="${message}"`) });
 	}
 
 	messageBubbleBackground(message: string): Promise<string> {
@@ -59,11 +59,11 @@ export class OmnichannelLiveChatEmbedded extends RoutedPage {
 	}
 
 	txtChatMessage(message: string): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`li >> text="${message}"`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`li >> text="${message}"`);
 	}
 
 	imgAvatar(username: string): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`img[alt="${username}"]`).last();
+		return this.page.frameLocator('#yaschat-iframe').locator(`img[alt="${username}"]`).last();
 	}
 
 	async openLiveChat(): Promise<void> {
@@ -71,31 +71,31 @@ export class OmnichannelLiveChatEmbedded extends RoutedPage {
 	}
 
 	get inputName(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[name="name"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[name="name"]');
 	}
 
 	get inputEmail(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[name="email"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[name="email"]');
 	}
 
 	get textAreaMessage(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[name="message"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[name="message"]');
 	}
 
 	btnSendMessage(btnText: string): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator(`role=button[name="${btnText}"]`);
+		return this.page.frameLocator('#yaschat-iframe').locator(`role=button[name="${btnText}"]`);
 	}
 
 	get onlineAgentMessage(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('[contenteditable="true"]');
+		return this.page.frameLocator('#yaschat-iframe').locator('[contenteditable="true"]');
 	}
 
 	get btnSendMessageToOnlineAgent(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').locator('footer div div div:nth-child(3) button');
+		return this.page.frameLocator('#yaschat-iframe').locator('footer div div div:nth-child(3) button');
 	}
 
 	get btnExpandChat(): Locator {
-		return this.page.frameLocator('#rocketchat-iframe').getByRole('button', { name: 'Expand chat', exact: true });
+		return this.page.frameLocator('#yaschat-iframe').getByRole('button', { name: 'Expand chat', exact: true });
 	}
 
 	public async sendMessage(liveChatUser: { name: string; email: string }, isOffline = true): Promise<void> {
@@ -108,6 +108,6 @@ export class OmnichannelLiveChatEmbedded extends RoutedPage {
 			return this.btnFinishOfflineMessage().click();
 		}
 		await this.btnSendMessage(buttonLabel).click();
-		await this.page.frameLocator('#rocketchat-iframe').locator('[data-qa="livechat-composer"]').waitFor();
+		await this.page.frameLocator('#yaschat-iframe').locator('[data-qa="livechat-composer"]').waitFor();
 	}
 }

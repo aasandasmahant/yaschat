@@ -3,7 +3,7 @@ export {};
 declare global {
 	interface Window {
 		SERVER_URL: string;
-		RocketChat: {
+		YasChat: {
 			// TODO: Discover what the hell does "_" do
 			_: any;
 			url?: string;

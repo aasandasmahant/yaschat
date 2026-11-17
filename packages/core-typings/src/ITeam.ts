@@ -1,6 +1,6 @@
 import type { Document, FindOptions } from 'mongodb';
 
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IRole } from './IRole';
 import type { IUser } from './IUser';
 
@@ -11,7 +11,7 @@ export enum TeamType {
 
 export type SortType = -1 | 1;
 
-export interface ITeam extends IRocketChatRecord {
+export interface ITeam extends IYasChatRecord {
 	name: string;
 	type: TeamType;
 	roomId: string;
@@ -19,7 +19,7 @@ export interface ITeam extends IRocketChatRecord {
 	createdAt: Date;
 }
 
-export interface ITeamMember extends IRocketChatRecord {
+export interface ITeamMember extends IYasChatRecord {
 	teamId: string;
 	userId: string;
 	roles?: Array<IRole['_id']>;

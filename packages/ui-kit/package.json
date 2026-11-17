@@ -1,7 +1,7 @@
 {
 	"name": "@rocket.chat/ui-kit",
 	"version": "2.0.0",
-	"description": "Interactive UI elements for Rocket.Chat Apps",
+	"description": "Interactive UI elements for YasChat Apps",
 	"type": "module",
 	"exports": {
 		".": {
@@ -11,16 +11,16 @@
 	},
 	"homepage": "https://rocket.chat",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/ui-kit"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"main": "dist/index.js",

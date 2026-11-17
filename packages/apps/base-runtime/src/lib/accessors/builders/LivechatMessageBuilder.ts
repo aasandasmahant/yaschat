@@ -4,7 +4,7 @@ import type { ILivechatMessage as EngineLivechatMessage } from '@rocket.chat/app
 import type { IVisitor } from '@rocket.chat/apps-engine/definition/livechat/IVisitor';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
 import type { IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages/IMessageAttachment';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
@@ -14,12 +14,12 @@ import { MessageBuilder } from './MessageBuilder';
 export interface ILivechatMessage extends EngineLivechatMessage, IMessage {}
 
 export class LivechatMessageBuilder implements ILivechatMessageBuilder {
-	public kind: RocketChatAssociationModel.LIVECHAT_MESSAGE;
+	public kind: YasChatAssociationModel.LIVECHAT_MESSAGE;
 
 	private msg: ILivechatMessage;
 
 	constructor(message?: ILivechatMessage) {
-		this.kind = RocketChatAssociationModel.LIVECHAT_MESSAGE;
+		this.kind = YasChatAssociationModel.LIVECHAT_MESSAGE;
 		this.msg = message || ({} as ILivechatMessage);
 	}
 

@@ -19,7 +19,7 @@ all of the above.
 ## Why
 
 The durable facts (who is a member of which room, which user is which JID, what was said)
-already live in Rocket.Chat's collections, and the service can derive the core's state from
+already live in YasChat's collections, and the service can derive the core's state from
 them. Persisting the core's own view would create a second source of truth that drifts from
 the first on every crash. The cost is a burst of work on start, which is bounded by the number
 of federated rooms.
@@ -34,7 +34,7 @@ of federated rooms.
 ## Consequences
 
 - Remote occupants of hosted rooms are not restored; they rejoin on their own when their
-  server reconnects. Until then they are members in Rocket.Chat but not occupants in the core.
+  server reconnects. Until then they are members in YasChat but not occupants in the core.
 - A restart produces one join per member of every mirrored room and requests history, which
   is how messages sent during the downtime are caught up.
 - Dialback verifications in flight across a restart fail and are retried by the peer.

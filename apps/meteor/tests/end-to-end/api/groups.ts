@@ -702,7 +702,7 @@ describe('[Groups]', () => {
 				.set(credentials)
 				.query({
 					roomId: testGroup._id,
-					starredIds: 'rocketchat.internal.admin.test',
+					starredIds: 'yaschat.internal.admin.test',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -730,7 +730,7 @@ describe('[Groups]', () => {
 					expect(res.body.messages).to.have.lengthOf(1);
 					expect(res.body.messages[0]).to.have.nested.property('pinned').that.is.an('boolean').and.to.be.true;
 					expect(res.body.messages[0]).to.have.nested.property('pinnedBy').that.is.an('object');
-					expect(res.body.messages[0].pinnedBy).to.have.property('_id', 'rocketchat.internal.admin.test');
+					expect(res.body.messages[0].pinnedBy).to.have.property('_id', 'yaschat.internal.admin.test');
 					expect(res.body).to.have.property('count', 1);
 					expect(res.body).to.have.property('total', 1);
 				});
@@ -2912,7 +2912,7 @@ describe('[Groups]', () => {
 			const { group } = res.body;
 
 			expect(group._id).to.be.equal(realNameGroup._id);
-			expect(group).to.have.nested.property('lastMessage.u.name', 'RocketChat Internal Admin Test');
+			expect(group).to.have.nested.property('lastMessage.u.name', 'YasChat Internal Admin Test');
 		});
 	});
 });

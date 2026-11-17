@@ -20,17 +20,17 @@ separated layers. The package runs only in the `ee/apps/xmpp-server-service` mic
 │ ee/apps/xmpp-server-service  (process entrypoint)           │
 │ ee/packages/xmpp-server                                     │
 │  src/service/   Integration layer (ServiceClass)            │
-│    - knows Rocket.Chat: models, core-services, core-typings │
+│    - knows YasChat: models, core-services, core-typings │
 │    - subscribes to core events, calls core API              │
 │  ────────────────────────────────────────────────────────   │
 │  src/ (rest)    Protocol core                               │
-│    - knows only XMPP: no Rocket.Chat imports at all         │
+│    - knows only XMPP: no YasChat imports at all         │
 │    - deps: ltx, @xmpp/jid, @rocket.chat/emitter, pino       │
 │    - talks to the world over net/tls sockets                │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-The protocol core is Rocket.Chat-agnostic ([ADR 0001](adr/0001-protocol-core-has-no-rocketchat-dependency.md)):
+The protocol core is YasChat-agnostic ([ADR 0001](adr/0001-protocol-core-has-no-yaschat-dependency.md)):
 network operations return promises, room state changes and queries are synchronous, and
 event payloads are plain data apart from the `raw: Element` fields, which serialize via
 `toString()`.
@@ -82,8 +82,8 @@ cannot be expressed over a fire-and-forget emitter.
 | `src/handlers/parse.ts` | Pure parsers: chat message (body, thread, XEP-0308 replace id), availability presence, subscription type |
 | `src/iq/disco.ts`, `src/iq/ping.ts` | XEP-0030 on the server domain, the MUC domain and individual room JIDs (clients disco a room before joining and refuse it unless it is `conference/text`); XEP-0199 |
 | `src/muc/MucService.ts` | Registry of hosted rooms plus which are public; routes room-addressed stanzas; detects invites addressed to local users |
-| `src/muc/MucRoom.ts` | Hosted-room state machine: occupants keyed by nick, nick conflicts, join authorization, presence fan-out with status 110 and 307 (never 201, the room always pre-exists in Rocket.Chat), the subject that closes a join, groupchat reflection, mediated invitations. Rocket.Chat members are **virtual occupants**: in the roster, delivered via events rather than sockets |
-| `src/muc/RemoteMucSession.ts` | A local user joined into a remote MUC as a client over S2S, fixed resource `rocketchat`. Tracks join state and the remote roster, with the real JIDs the room discloses; prefers the XEP-0359 stanza id for dedup; skips its own reflections. One session per local member ([ADR 0009](adr/0009-one-remote-muc-session-per-local-member.md)); a member without one cannot speak, so `mucSendToRemoteRoom` throws instead of dropping |
+| `src/muc/MucRoom.ts` | Hosted-room state machine: occupants keyed by nick, nick conflicts, join authorization, presence fan-out with status 110 and 307 (never 201, the room always pre-exists in YasChat), the subject that closes a join, groupchat reflection, mediated invitations. YasChat members are **virtual occupants**: in the roster, delivered via events rather than sockets |
+| `src/muc/RemoteMucSession.ts` | A local user joined into a remote MUC as a client over S2S, fixed resource `yaschat`. Tracks join state and the remote roster, with the real JIDs the room discloses; prefers the XEP-0359 stanza id for dedup; skips its own reflections. One session per local member ([ADR 0009](adr/0009-one-remote-muc-session-per-local-member.md)); a member without one cannot speak, so `mucSendToRemoteRoom` throws instead of dropping |
 | `src/muc/stanzas.ts` | Pure builders and parsers for `muc#user` presence, groupchat (with replace), subject, join presence, mediated invites (XEP-0045 §7.8.2) and invite parsing (mediated and XEP-0249 direct) |
 | `src/types/ltx.d.ts` | Types for the CommonJS parts of `ltx` and `@xmpp/jid` the package uses |
 
@@ -111,7 +111,7 @@ as `XMPPServer` and exposes `sendMessage`, `registerHostedRoom`,
   re-registered with its local members as virtual occupants, each `remote-muc` room is
   rejoined once per local member. A failure there degrades group chat but never takes the
   listener down.
-- Join authorization is the one request/response path into Rocket.Chat: `authorizeMucJoin`
+- Join authorization is the one request/response path into YasChat: `authorizeMucJoin`
   allows any federated domain into a public channel and requires an existing subscription for
   a private group.
 - Inbound handlers are private methods of `XMPPServerService`, attached in `attachHandlers`
@@ -193,7 +193,7 @@ member added/joins     → afterAddedToRoom → joinRemoteMUC (own session, nick
 member leaves/removed  → leaveRemoteMUC
 message sent           → sendMessage joins first if the session is missing
 inbound groupchat      → own nick skipped in the session; the service skips a message whose
-                         replace id or stanza id is a stored Rocket.Chat message id (our own
+                         replace id or stanza id is a stored YasChat message id (our own
                          relay coming back); then deduped on federation.eventId
 ```
 
@@ -255,7 +255,7 @@ Deliberately minimal:
   dialback dance in both directions, queue flush, spoof rejection, routing events,
   cross-server MUC, and the service's handler observer.
 - **End-to-end** (`tests/end-to-end/`): real XMPP users on a real XMPP server talking to a
-  running Rocket.Chat. Not part of CI. Each spec file maps to a capability spec; cases that
+  running YasChat. Not part of CI. Each spec file maps to a capability spec; cases that
   fail today are `it.skip` and link to the `D` entry that describes them.
 
 ### End-to-end tests
@@ -263,7 +263,7 @@ Deliberately minimal:
 ```
                 ┌─ @xmpp/client (C2S) ──▶ XMPP server (ejabberd) ──S2S──┐
 node --test ────┤                                                        ▼
-                └─ REST ──────────────▶ Rocket.Chat ──broker──▶ xmpp-server-service
+                └─ REST ──────────────▶ YasChat ──broker──▶ xmpp-server-service
 ```
 
 - **Runner**: `node:test`, loading TypeScript through `tsx`, the loader the Meteor API suite
@@ -273,13 +273,13 @@ node --test ────┤                                                     
 - **XMPP side**: `helper/xmpp-client.ts`. Each suite registers fresh accounts in-band
   (XEP-0077) and removes them when it finishes. Every inbound stanza is recorded, so a wait
   never misses one that arrived before it started.
-- **Rocket.Chat side**: `helper/rocketchat.ts`, thin wrappers over the shared helpers, logged
+- **YasChat side**: `helper/yaschat.ts`, thin wrappers over the shared helpers, logged
   in as the repo's test admin. Test users keep an unverified email, because email 2FA would
   otherwise block their login. Presence tests also give the user a live DDP session, since a
   user with no session never shows a status.
-- **Preflight** (`helper/suite.ts`): every suite checks the Rocket.Chat XMPP settings and the
-  service's `/stats` (a decode-only service never forwards to Rocket.Chat), then sends an S2S
-  ping from an XMPP user to Rocket.Chat's domain, which proves federation in both directions.
+- **Preflight** (`helper/suite.ts`): every suite checks the YasChat XMPP settings and the
+  service's `/stats` (a decode-only service never forwards to YasChat), then sends an S2S
+  ping from an XMPP user to YasChat's domain, which proves federation in both directions.
 
 What the servers need, and the environment variables, are in
 [operations.md](operations.md#running-the-end-to-end-suite).

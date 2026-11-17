@@ -4,17 +4,17 @@
 
 ### Patch Changes
 
-- ([#42363](https://github.com/RocketChat/Rocket.Chat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
+- ([#42363](https://github.com/YasChat/YasChat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
 
 - Fixes federated requests being rejected when the remote server sends unquoted parameters in its `X-Matrix` authorization header
 
-- ([#43147](https://github.com/RocketChat/Rocket.Chat/pull/43147)) Fixes the Matrix federation answering every `/.well-known` path with an error, which hid other discovery documents the workspace serves there
+- ([#43147](https://github.com/YasChat/YasChat/pull/43147)) Fixes the Matrix federation answering every `/.well-known` path with an error, which hid other discovery documents the workspace serves there
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, bff76c34b21caddbc316d69b62fac858a73d7164, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -45,15 +45,15 @@
 
 ### Patch Changes
 
-- ([#42363](https://github.com/RocketChat/Rocket.Chat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
+- ([#42363](https://github.com/YasChat/YasChat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
 
-- ([#42415](https://github.com/RocketChat/Rocket.Chat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
+- ([#42415](https://github.com/YasChat/YasChat/pull/42415)) Fixes local users' typing indicators never being sent to federated rooms in microservices deployments.
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Changes the room version of newly created federated rooms from 10 to 11; existing rooms keep their version
 
-- ([#42927](https://github.com/RocketChat/Rocket.Chat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
+- ([#42927](https://github.com/YasChat/YasChat/pull/42927)) Fixes message edits and deletions received from federated rooms being applied without first checking them against the Matrix rules for edits and redactions
 
-- ([#43147](https://github.com/RocketChat/Rocket.Chat/pull/43147)) Fixes the Matrix federation answering every `/.well-known` path with an error, which hid other discovery documents the workspace serves there
+- ([#43147](https://github.com/YasChat/YasChat/pull/43147)) Fixes the Matrix federation answering every `/.well-known` path with an error, which hid other discovery documents the workspace serves there
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, a39b03fe5c248079365162e31994e1dece63e7c2, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -71,13 +71,13 @@
 
 ### Minor Changes
 
-- ([#41718](https://github.com/RocketChat/Rocket.Chat/pull/41718)) Adds support for federation room version 11 (version 10 remains the default)
+- ([#41718](https://github.com/YasChat/YasChat/pull/41718)) Adds support for federation room version 11 (version 10 remains the default)
 
 ### Patch Changes
 
-- ([#41872](https://github.com/RocketChat/Rocket.Chat/pull/41872)) Fixes federated user presence never being sent to remote workspaces
+- ([#41872](https://github.com/YasChat/YasChat/pull/41872)) Fixes federated user presence never being sent to remote workspaces
 
-- ([#41785](https://github.com/RocketChat/Rocket.Chat/pull/41785)) Fixes federation endpoints rejecting requests that are valid per the Matrix specification:
+- ([#41785](https://github.com/YasChat/YasChat/pull/41785)) Fixes federation endpoints rejecting requests that are valid per the Matrix specification:
 
   - `publicRooms` (GET and POST) required params/fields the spec marks optional
   - `query/profile` rejected spec-valid profile fields such as `m.tz`
@@ -103,13 +103,13 @@
 
 ### Minor Changes
 
-- ([#41718](https://github.com/RocketChat/Rocket.Chat/pull/41718)) Use federation room version 11 by default _(changed in a later 8.9.0 release candidate: version 11 is supported, but 10 remains the default)_
+- ([#41718](https://github.com/YasChat/YasChat/pull/41718)) Use federation room version 11 by default _(changed in a later 8.9.0 release candidate: version 11 is supported, but 10 remains the default)_
 
 ### Patch Changes
 
-- ([#41872](https://github.com/RocketChat/Rocket.Chat/pull/41872)) Fixes federated user presence never being sent to remote workspaces
+- ([#41872](https://github.com/YasChat/YasChat/pull/41872)) Fixes federated user presence never being sent to remote workspaces
 
-- ([#41785](https://github.com/RocketChat/Rocket.Chat/pull/41785)) Fixes federation endpoints rejecting requests that are valid per the Matrix specification:
+- ([#41785](https://github.com/YasChat/YasChat/pull/41785)) Fixes federation endpoints rejecting requests that are valid per the Matrix specification:
 
   - `publicRooms` (GET and POST) required params/fields the spec marks optional
   - `query/profile` rejected spec-valid profile fields such as `m.tz`
@@ -135,7 +135,7 @@
 
 ### Patch Changes
 
-- ([#41717](https://github.com/RocketChat/Rocket.Chat/pull/41717)) Fixes federation endpoints rejecting valid requests, which broke:
+- ([#41717](https://github.com/YasChat/YasChat/pull/41717)) Fixes federation endpoints rejecting valid requests, which broke:
 
   - room history backfill
   - image thumbnails
@@ -155,7 +155,7 @@
 
 ### Patch Changes
 
-- ([#41717](https://github.com/RocketChat/Rocket.Chat/pull/41717)) Fixes federation endpoints rejecting valid requests, which broke:
+- ([#41717](https://github.com/YasChat/YasChat/pull/41717)) Fixes federation endpoints rejecting valid requests, which broke:
 
   - room history backfill
   - image thumbnails
@@ -178,7 +178,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -196,7 +196,7 @@
 
 ### Minor Changes
 
-- ([#39324](https://github.com/RocketChat/Rocket.Chat/pull/39324)) Adds support for running Rocket.Chat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
+- ([#39324](https://github.com/YasChat/YasChat/pull/39324)) Adds support for running YasChat in FIPS mode. The monolith and all microservices (ddp-streamer, account-service, authorization-service, presence-service, queue-worker, omnichannel-transcript) can now enforce FIPS-compliant cryptography via Node.js/OpenSSL FIPS, with dedicated FIPS Docker images. Running in FIPS mode requires a license including the new `fips` module, and FIPS status is now reported in server logs and statistics.
 
 ### Patch Changes
 
@@ -214,11 +214,11 @@
 
 ### Patch Changes
 
-- ([#41046](https://github.com/RocketChat/Rocket.Chat/pull/41046)) Fixes an issue where editing or deleting a message in a federated room caused subsequent messages to stop syncing between servers
+- ([#41046](https://github.com/YasChat/YasChat/pull/41046)) Fixes an issue where editing or deleting a message in a federated room caused subsequent messages to stop syncing between servers
 
   Note: this prevents the issue from happening, but does not restore rooms that are already affected. Recovering those requires a separate, one-time repair.
 
-- ([#40839](https://github.com/RocketChat/Rocket.Chat/pull/40839)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
+- ([#40839](https://github.com/YasChat/YasChat/pull/40839)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, 7380c44c751eff9ee624d80bf26370411ffed78b, f4f361234f00bd44efe348df4355e9d3cf80efe0, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53]:</summary>
   - @rocket.chat/models@2.3.1
@@ -233,7 +233,7 @@
 
 ### Patch Changes
 
-- ([#41046](https://github.com/RocketChat/Rocket.Chat/pull/41046)) Fixes an issue where editing or deleting a message in a federated room caused subsequent messages to stop syncing between servers
+- ([#41046](https://github.com/YasChat/YasChat/pull/41046)) Fixes an issue where editing or deleting a message in a federated room caused subsequent messages to stop syncing between servers
 
   Note: this prevents the issue from happening, but does not restore rooms that are already affected. Recovering those requires a separate, one-time repair.
 
@@ -247,7 +247,7 @@
 
 ### Patch Changes
 
-- ([#40839](https://github.com/RocketChat/Rocket.Chat/pull/40839)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
+- ([#40839](https://github.com/YasChat/YasChat/pull/40839)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
 
 - <details><summary>Updated dependencies [73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, 7380c44c751eff9ee624d80bf26370411ffed78b, f4f361234f00bd44efe348df4355e9d3cf80efe0, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53]:</summary>
   - @rocket.chat/models@2.3.1-rc.0
@@ -262,7 +262,7 @@
 
 ### Patch Changes
 
-- ([#40938](https://github.com/RocketChat/Rocket.Chat/pull/40938) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
+- ([#40938](https://github.com/YasChat/YasChat/pull/40938) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
 
 - <details><summary>Updated dependencies [01a184640f635866bf4c1c612696acc4eed62311]:</summary>
   - @rocket.chat/core-typings@8.5.1
@@ -300,7 +300,7 @@
 
 ### Patch Changes
 
-- ([#40114](https://github.com/RocketChat/Rocket.Chat/pull/40114)) Fixes a bug preventing users to join a room after being banned and unbanned.
+- ([#40114](https://github.com/YasChat/YasChat/pull/40114)) Fixes a bug preventing users to join a room after being banned and unbanned.
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, f4dfb8ddc2049692371aeb084110b5768151b5df]:</summary>
   - @rocket.chat/core-services@0.14.0
@@ -377,7 +377,7 @@
 
 ### Patch Changes
 
-- ([#40114](https://github.com/RocketChat/Rocket.Chat/pull/40114)) Fixes a bug preventing users to join a room after being banned and unbanned.
+- ([#40114](https://github.com/YasChat/YasChat/pull/40114)) Fixes a bug preventing users to join a room after being banned and unbanned.
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, f4dfb8ddc2049692371aeb084110b5768151b5df]:</summary>
   - @rocket.chat/core-services@0.14.0-rc.0
@@ -394,13 +394,13 @@
 
 ### Minor Changes
 
-- ([#39750](https://github.com/RocketChat/Rocket.Chat/pull/39750)) Adds support to name changes on federated rooms
+- ([#39750](https://github.com/YasChat/YasChat/pull/39750)) Adds support to name changes on federated rooms
 
 ### Patch Changes
 
-- ([#39752](https://github.com/RocketChat/Rocket.Chat/pull/39752)) Fixes an issue on Federation where all domains ending with the pattern where being allowed to communicate, the feature is meant to work with a list, url by url
+- ([#39752](https://github.com/YasChat/YasChat/pull/39752)) Fixes an issue on Federation where all domains ending with the pattern where being allowed to communicate, the feature is meant to work with a list, url by url
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/models@2.1.2
@@ -477,13 +477,13 @@
 
 ### Minor Changes
 
-- ([#39750](https://github.com/RocketChat/Rocket.Chat/pull/39750)) Adds support to name changes on federated rooms
+- ([#39750](https://github.com/YasChat/YasChat/pull/39750)) Adds support to name changes on federated rooms
 
 ### Patch Changes
 
-- ([#39752](https://github.com/RocketChat/Rocket.Chat/pull/39752)) Fixes an issue on Federation where all domains ending with the pattern where being allowed to communicate, the feature is meant to work with a list, url by url
+- ([#39752](https://github.com/YasChat/YasChat/pull/39752)) Fixes an issue on Federation where all domains ending with the pattern where being allowed to communicate, the feature is meant to work with a list, url by url
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, a4e3c1635d55ec4ce04cbde741426770e43581fb, 539659af22bc19880eda047dfc0b152472ccb65c, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
   - @rocket.chat/models@2.1.2-rc.0
@@ -515,7 +515,7 @@
 
 ### Patch Changes
 
-- ([#38596](https://github.com/RocketChat/Rocket.Chat/pull/38596)) Adjusts the minimum supported MongoDB version from 8.2 (Rapid Release with short support lifecycle) to 8, ensuring stable and long-term compatibility
+- ([#38596](https://github.com/YasChat/YasChat/pull/38596)) Adjusts the minimum supported MongoDB version from 8.2 (Rapid Release with short support lifecycle) to 8, ensuring stable and long-term compatibility
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
   - @rocket.chat/core-typings@8.2.0
@@ -562,7 +562,7 @@
 
 ### Patch Changes
 
-- ([#38596](https://github.com/RocketChat/Rocket.Chat/pull/38596)) Adjusts the minimum supported MongoDB version from 8.2 (Rapid Release with short support lifecycle) to 8, ensuring stable and long-term compatibility
+- ([#38596](https://github.com/YasChat/YasChat/pull/38596)) Adjusts the minimum supported MongoDB version from 8.2 (Rapid Release with short support lifecycle) to 8, ensuring stable and long-term compatibility
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
   - @rocket.chat/core-typings@8.2.0-rc.0
@@ -669,9 +669,9 @@
 
 ### Patch Changes
 
-- ([#37791](https://github.com/RocketChat/Rocket.Chat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
+- ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37677](https://github.com/RocketChat/Rocket.Chat/pull/37677)) Fixes an issue where membership updates were not reflected when the user was the first member on their own server.
+- ([#37677](https://github.com/YasChat/YasChat/pull/37677)) Fixes an issue where membership updates were not reflected when the user was the first member on their own server.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0
@@ -763,9 +763,9 @@
 
 ### Patch Changes
 
-- ([#37791](https://github.com/RocketChat/Rocket.Chat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
+- ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37677](https://github.com/RocketChat/Rocket.Chat/pull/37677)) Fixes an issue where membership updates were not reflected when the user was the first member on their own server.
+- ([#37677](https://github.com/YasChat/YasChat/pull/37677)) Fixes an issue where membership updates were not reflected when the user was the first member on their own server.
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, ddc935727e9a7275813006d9dcaa7fe866610844, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b]:</summary>
   - @rocket.chat/rest-typings@8.0.0-rc.0

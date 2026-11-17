@@ -1,11 +1,11 @@
-import type { IAvatar, RocketChatRecordDeleted, IUser } from '@rocket.chat/core-typings';
+import type { IAvatar, YasChatRecordDeleted, IUser } from '@rocket.chat/core-typings';
 import type { IAvatarsModel } from '@rocket.chat/model-typings';
 import type { Collection, Db, IndexDescription, FindOptions } from 'mongodb';
 
 import { BaseUploadModelRaw } from './BaseUploadModel';
 
 export class AvatarsRaw extends BaseUploadModelRaw implements IAvatarsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<IAvatar>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<IAvatar>>) {
 		super(db, 'avatars', trash);
 	}
 

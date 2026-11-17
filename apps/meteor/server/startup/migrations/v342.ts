@@ -8,6 +8,6 @@ addMigration({
 	name: 'Remove Atlassian Crowd integration: delete CROWD_* settings and the CROWD_Sync cron job',
 	async up() {
 		await Settings.deleteMany({ $or: [{ _id: { $regex: /^CROWD_/ } }, { _id: 'AtlassianCrowd' }] });
-		await db.collection('rocketchat_cron').deleteMany({ name: 'CROWD_Sync' });
+		await db.collection('yaschat_cron').deleteMany({ name: 'CROWD_Sync' });
 	},
 });

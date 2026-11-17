@@ -1,8 +1,8 @@
 import type { IMessage, IMessageAttachment } from '../messages';
-import type { RocketChatAssociationModel } from '../metadata';
+import type { YasChatAssociationModel } from '../metadata';
 
 export interface IMessageExtender {
-	kind: RocketChatAssociationModel.MESSAGE;
+	kind: YasChatAssociationModel.MESSAGE;
 
 	/**
 	 * Adds a custom field to the message.

@@ -1,5 +1,5 @@
 import type { IAbacAttributeDefinition } from './IAbacAttribute';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IRole } from './IRole';
 import type { PresenceSource, UserStatus } from './UserStatus';
 import type { Serialized } from './utils';
@@ -197,7 +197,7 @@ export interface ISidebarCategory {
 	keepUnreadsOnTop?: boolean;
 }
 
-export interface IUser extends IRocketChatRecord {
+export interface IUser extends IYasChatRecord {
 	createdAt: Date;
 	roles: IRole['_id'][];
 	type: string;

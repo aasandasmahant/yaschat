@@ -43,7 +43,7 @@ import type {
 import { getUserInfo } from './lib/getUserInfo';
 import { parseJsonQuery } from './lib/parseJsonQuery';
 import type { APIActionContext } from './router';
-import { RocketChatAPIRouter } from './router';
+import { YasChatAPIRouter } from './router';
 import { isObject } from '../../lib/utils/isObject';
 import { checkCodeForUser } from '../lib/2fa/code';
 import { getNestedProp } from '../lib/getNestedProp';
@@ -243,7 +243,7 @@ export class APIClass<TBasePath extends string = '', TOperations extends Record<
 			'statusVisibilityDeniedByAdmin': 0,
 			'settings.preferences.statusVisibilityDenied': 0,
 		};
-		this.router = new RocketChatAPIRouter(`/${this.apiPath}`.replace(/\/$/, '').replaceAll('//', '/'));
+		this.router = new YasChatAPIRouter(`/${this.apiPath}`.replace(/\/$/, '').replaceAll('//', '/'));
 
 		if (useDefaultAuth) {
 			this._initAuth();

@@ -32,7 +32,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 		});
 
 		this.onEvent('apps.added', async (appId: string): Promise<void> => {
-			Apps.self?.getRocketChatLogger().debug({
+			Apps.self?.getYasChatLogger().debug({
 				msg: '"apps.added" event received for app',
 				appId,
 			});
@@ -40,7 +40,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 			const app = Apps.self?.getManager()?.getOneById(appId);
 
 			if (app) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.added" event received for app, but it already exists in this instance',
 					appId,
 				});
@@ -51,13 +51,13 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 		});
 
 		this.onEvent('apps.removed', async (appId: string): Promise<void> => {
-			Apps.self?.getRocketChatLogger().debug({
+			Apps.self?.getYasChatLogger().debug({
 				msg: '"apps.removed" event received for app',
 				appId,
 			});
 			const app = Apps.self?.getManager()?.getOneById(appId);
 			if (!app) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.removed" event received for app, but it could not be found in this instance',
 					appId,
 				});
@@ -68,13 +68,13 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 		});
 
 		this.onEvent('apps.updated', async (appId: string, originInstanceId?: string): Promise<void> => {
-			Apps.self?.getRocketChatLogger().debug({
+			Apps.self?.getYasChatLogger().debug({
 				msg: '"apps.updated" event received for app',
 				appId,
 			});
 
 			if (originInstanceId && originInstanceId === InstanceStatus.id()) {
-				Apps.self?.getRocketChatLogger().debug({
+				Apps.self?.getYasChatLogger().debug({
 					msg: '"apps.updated" event ignored: originated from this instance',
 					appId,
 				});
@@ -83,7 +83,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 
 			const storageItem = await Apps.self?.getStorage()?.retrieveOne(appId);
 			if (!storageItem) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.updated" event received for app, but it could not be found in the storage',
 					appId,
 				});
@@ -104,14 +104,14 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 		});
 
 		this.onEvent('apps.statusUpdate', async (appId: string, status: AppStatus): Promise<void> => {
-			Apps.self?.getRocketChatLogger().debug({
+			Apps.self?.getYasChatLogger().debug({
 				msg: '"apps.statusUpdate" event received for app with status',
 				appId,
 				status,
 			});
 			const app = Apps.self?.getManager()?.getOneById(appId);
 			if (!app) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.statusUpdate" event received for app, but it could not be found in this instance',
 					appId,
 					status,
@@ -120,7 +120,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 			}
 
 			if ((await app.getStatus()) === status) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.statusUpdate" event received for app, but the status is the same',
 					appId,
 					status,
@@ -136,7 +136,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 		});
 
 		this.onEvent('apps.settingUpdated', async (appId: string, setting): Promise<void> => {
-			Apps.self?.getRocketChatLogger().debug({
+			Apps.self?.getYasChatLogger().debug({
 				msg: '"apps.settingUpdated" event received for app',
 				appId,
 				setting,
@@ -150,7 +150,7 @@ export class AppsEngineService extends ServiceClassInternal implements IAppsEngi
 			// so we need to convert it to JSON stringified to compare it
 
 			if (JSON.stringify(oldSetting) === JSON.stringify(setting.value)) {
-				Apps.self?.getRocketChatLogger().info({
+				Apps.self?.getYasChatLogger().info({
 					msg: '"apps.settingUpdated" event received for app, but the setting value is the same',
 					appId,
 					settingId: setting.id,

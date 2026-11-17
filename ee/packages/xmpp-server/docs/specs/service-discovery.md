@@ -22,11 +22,11 @@ XEP-0030 nothing else interoperates.
 
 ## Behaviour
 
-- **R1** `disco#info` on the server domain answers identity `server/im` named `Rocket.Chat`
+- **R1** `disco#info` on the server domain answers identity `server/im` named `YasChat`
   and the features `disco#info`, `disco#items`, `urn:xmpp:ping` and `jabber:server:dialback`.
 - **R2** `disco#items` on the server domain lists the MUC service domain as an item.
 - **R3** `disco#info` on the MUC domain answers identity `conference/text` named
-  `Rocket.Chat Conferences` and the features `disco#info` and
+  `YasChat Conferences` and the features `disco#info` and
   `http://jabber.org/protocol/muc`.
 - **R4** `disco#items` on the MUC domain lists the hosted rooms that are public channels, by
   JID. Private groups are never listed, even to their members.

@@ -4185,7 +4185,7 @@ describe('[Channels]', () => {
 			const { channel } = res.body;
 
 			expect(channel._id).to.be.equal(testChannel._id);
-			expect(channel).to.have.nested.property('lastMessage.u.name', 'RocketChat Internal Admin Test');
+			expect(channel).to.have.nested.property('lastMessage.u.name', 'YasChat Internal Admin Test');
 		});
 
 		it('/channels.list.joined', async () => {
@@ -4198,7 +4198,7 @@ describe('[Channels]', () => {
 
 			const retChannel = (res.body.channels as IRoom[]).find(({ _id }) => _id === testChannel._id);
 
-			expect(retChannel).to.have.nested.property('lastMessage.u.name', 'RocketChat Internal Admin Test');
+			expect(retChannel).to.have.nested.property('lastMessage.u.name', 'YasChat Internal Admin Test');
 		});
 
 		it('/channels.list.join should return empty list when member of no group', async () => {
@@ -4367,7 +4367,7 @@ describe('[Channels]', () => {
 				.set(credentials)
 				.query({
 					roomId: testChannel._id,
-					starredIds: 'rocketchat.internal.admin.test',
+					starredIds: 'yaschat.internal.admin.test',
 				})
 				.expect('Content-Type', 'application/json')
 				.expect(200)
@@ -4396,7 +4396,7 @@ describe('[Channels]', () => {
 					expect(res.body.messages).to.have.lengthOf(1);
 					expect(res.body.messages[0]).to.have.nested.property('pinned').that.is.an('boolean').and.to.be.true;
 					expect(res.body.messages[0]).to.have.nested.property('pinnedBy').that.is.an('object');
-					expect(res.body.messages[0].pinnedBy).to.have.property('_id', 'rocketchat.internal.admin.test');
+					expect(res.body.messages[0].pinnedBy).to.have.property('_id', 'yaschat.internal.admin.test');
 					expect(res.body).to.have.property('count', 1);
 					expect(res.body).to.have.property('total', 1);
 				});

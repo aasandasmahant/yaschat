@@ -1,6 +1,6 @@
-## Rocket.Chat main library
+## YasChat main library
 
-This package contains the main libraries of Rocket.Chat.
+This package contains the main libraries of YasChat.
 
 ### APIs
 

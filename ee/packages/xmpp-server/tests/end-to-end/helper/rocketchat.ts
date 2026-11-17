@@ -41,20 +41,20 @@ function expectSuccess<T>(path: string, res: { status: number; body: { success?:
 	return res.body as T;
 }
 
-export type RocketChat = {
+export type YasChat = {
 	admin: IRequestConfig;
-	/** Rocket.Chat's own XMPP domain (`XMPP_Server_Domain`). */
+	/** YasChat's own XMPP domain (`XMPP_Server_Domain`). */
 	domain: string;
 	mucDomain: string;
 	cleanup: Cleanup;
 	roomsToDelete: Set<string>;
 };
 
-export const getSetting = async <T>(rc: Pick<RocketChat, 'admin'>, id: string): Promise<T> =>
+export const getSetting = async <T>(rc: Pick<YasChat, 'admin'>, id: string): Promise<T> =>
 	(await get<{ value: T }>(rc.admin, `settings/${id}`)).value;
 
 /** Changing a setting asks for two-factor confirmation, which the password method answers with its SHA-256. */
-export const setSetting = (rc: Pick<RocketChat, 'admin'>, id: string, value: unknown): Promise<unknown> =>
+export const setSetting = (rc: Pick<YasChat, 'admin'>, id: string, value: unknown): Promise<unknown> =>
 	post(
 		rc.admin,
 		`settings/${id}`,
@@ -63,7 +63,7 @@ export const setSetting = (rc: Pick<RocketChat, 'admin'>, id: string, value: unk
 	);
 
 /** Changes a setting for the rest of the suite and queues the original value for restoring. */
-export async function overrideSetting(rc: RocketChat, id: string, value: unknown): Promise<void> {
+export async function overrideSetting(rc: YasChat, id: string, value: unknown): Promise<void> {
 	const original = await getSetting(rc, id);
 	if (original === value) {
 		return;
@@ -72,8 +72,8 @@ export async function overrideSetting(rc: RocketChat, id: string, value: unknown
 	await setSetting(rc, id, value);
 }
 
-/** Logs in as the repo's test admin and fails fast when Rocket.Chat does not federate with the XMPP server under test. */
-export async function connectRocketChat(cleanup: Cleanup): Promise<RocketChat> {
+/** Logs in as the repo's test admin and fails fast when YasChat does not federate with the XMPP server under test. */
+export async function connectYasChat(cleanup: Cleanup): Promise<YasChat> {
 	const admin = await getRequestConfig(apiUrl, adminUsername, adminPassword);
 
 	const [enabled, domain, mucSubdomain, allowList] = await Promise.all([
@@ -82,8 +82,8 @@ export async function connectRocketChat(cleanup: Cleanup): Promise<RocketChat> {
 		getSetting<string>({ admin }, 'XMPP_Server_MUC_Subdomain'),
 		getSetting<string>({ admin }, 'XMPP_Server_Domain_Allow_List'),
 	]);
-	assert.ok(enabled, 'XMPP_Server_Enabled is off in Rocket.Chat');
-	assert.ok(domain, 'XMPP_Server_Domain is empty in Rocket.Chat');
+	assert.ok(enabled, 'XMPP_Server_Enabled is off in YasChat');
+	assert.ok(domain, 'XMPP_Server_Domain is empty in YasChat');
 
 	assertAllowed(allowList, config.xmpp.domain);
 
@@ -98,13 +98,13 @@ function assertAllowed(allowList: string, domain: string): void {
 	assert.ok(isDomainAllowed(domain, allowed), `XMPP_Server_Domain_Allow_List (${allowList}) does not include ${domain}`);
 }
 
-/** Fails fast when Rocket.Chat's allow list would refuse `domain`, instead of letting a later step time out. */
-export async function assertDomainAllowed(rc: Pick<RocketChat, 'admin'>, domain: string): Promise<void> {
+/** Fails fast when YasChat's allow list would refuse `domain`, instead of letting a later step time out. */
+export async function assertDomainAllowed(rc: Pick<YasChat, 'admin'>, domain: string): Promise<void> {
 	assertAllowed(await getSetting<string>(rc, 'XMPP_Server_Domain_Allow_List'), domain);
 }
 
 /** Deletes the suite's rooms, then runs every other cleanup task. */
-export async function teardown(rc: RocketChat | undefined): Promise<void> {
+export async function teardown(rc: YasChat | undefined): Promise<void> {
 	if (!rc) {
 		return;
 	}
@@ -116,9 +116,9 @@ export async function teardown(rc: RocketChat | undefined): Promise<void> {
 
 export type LocalUser = { _id: string; username: string; jid: string; config: IRequestConfig };
 
-/** A fresh Rocket.Chat user, logged in and deleted on cleanup; its email stays unverified so email 2FA cannot block the login. */
+/** A fresh YasChat user, logged in and deleted on cleanup; its email stays unverified so email 2FA cannot block the login. */
 export async function createLocalUser(
-	rc: RocketChat,
+	rc: YasChat,
 	label: string,
 	username = `xe2e-${label}-${uniqueSuffix()}`,
 	email?: string,
@@ -129,16 +129,16 @@ export async function createLocalUser(
 }
 
 /** Keeps a DDP session open for the user: without one their connection status stays offline, masking any status they pick. */
-export async function connectSession(rc: RocketChat, user: LocalUser): Promise<void> {
+export async function connectSession(rc: YasChat, user: LocalUser): Promise<void> {
 	const session = new DDPListener(config.ddpUrl, user.config);
 	rc.cleanup.add(() => session.disconnect());
 	await session.connect();
 }
 
-export const findUser = (rc: RocketChat, username: string) => findUserByUsername(username, rc.admin);
+export const findUser = (rc: YasChat, username: string) => findUserByUsername(username, rc.admin);
 
-/** Deletes, on cleanup, the local record Rocket.Chat materializes for a remote JID. */
-export function forgetRemoteUserOnCleanup(rc: RocketChat, username: string): void {
+/** Deletes, on cleanup, the local record YasChat materializes for a remote JID. */
+export function forgetRemoteUserOnCleanup(rc: YasChat, username: string): void {
 	rc.cleanup.add(async () => {
 		const user = await findUser(rc, username);
 		if (user) {
@@ -151,13 +151,13 @@ export const anonymousOccupantUsername = (nick: string, roomJid: string): string
 
 export type RoomRef = Pick<IRoom, '_id' | 't'>;
 
-export function deleteRoomOnCleanup(rc: RocketChat, roomId: string): void {
+export function deleteRoomOnCleanup(rc: YasChat, roomId: string): void {
 	rc.roomsToDelete.add(roomId);
 }
 
-/** Creates a room hosted by Rocket.Chat as an XMPP MUC; the creator's session owns it. */
+/** Creates a room hosted by YasChat as an XMPP MUC; the creator's session owns it. */
 export async function createHostedRoom(
-	rc: RocketChat,
+	rc: YasChat,
 	owner: LocalUser,
 	{ type, name, members = [] }: { type: 'c' | 'p'; name: string; members?: string[] },
 ): Promise<IRoom> {
@@ -169,7 +169,7 @@ export async function createHostedRoom(
 }
 
 /** A private group that is not XMPP federated, deleted with the suite. */
-export async function createPlainGroup(rc: RocketChat, user: LocalUser): Promise<RoomRef> {
+export async function createPlainGroup(rc: YasChat, user: LocalUser): Promise<RoomRef> {
 	const res = await createRoom({ type: 'p', name: `xe2e-plain-${uniqueSuffix()}`, config: user.config });
 	const { _id } = (res.body as { group: IRoom }).group;
 	deleteRoomOnCleanup(rc, _id);
@@ -225,7 +225,7 @@ export async function expectStoredOnce(user: LocalUser, room: RoomRef, text: str
 	return copies[0];
 }
 
-/** Sends as a Rocket.Chat user does, so every message hook runs. */
+/** Sends as a YasChat user does, so every message hook runs. */
 export async function sendMessage(user: LocalUser, roomId: string, msg: string): Promise<IMessage> {
 	const res = await sendMessageViaRest({ rid: roomId, msg, config: user.config });
 	return res.body.message;
@@ -260,7 +260,7 @@ export async function setRoomTopic(user: LocalUser, room: RoomRef, topic: string
 	await post(user.config, `${endpointPrefix[room.t]}.setTopic`, { roomId: room._id, topic });
 }
 
-export async function deleteRoom(rc: RocketChat, room: RoomRef): Promise<void> {
+export async function deleteRoom(rc: YasChat, room: RoomRef): Promise<void> {
 	await post(rc.admin, 'rooms.delete', { roomId: room._id });
 }
 
@@ -270,13 +270,13 @@ export async function listMemberUsernames(user: LocalUser, room: RoomRef): Promi
 }
 
 /** Opens (or reuses) the DM between a local user and a remote JID. */
-export async function createDirectMessage(rc: RocketChat, user: LocalUser, jid: string): Promise<IRoom> {
+export async function createDirectMessage(rc: YasChat, user: LocalUser, jid: string): Promise<IRoom> {
 	const { room } = await post<{ room: { _id: string } }>(user.config, 'im.create', { username: jid });
 	deleteRoomOnCleanup(rc, room._id);
 	return getRoom(user, room._id);
 }
 
-/** The DM a remote JID opened with a local user, once Rocket.Chat created it. */
+/** The DM a remote JID opened with a local user, once YasChat created it. */
 export async function findDirectMessageWith(user: LocalUser, jid: string): Promise<IRoom | undefined> {
 	const { ims } = await get<{ ims: IRoom[] }>(user.config, 'im.list', { count: 200 });
 	const dm = ims.find((room) => room.usernames?.includes(jid));
@@ -284,7 +284,7 @@ export async function findDirectMessageWith(user: LocalUser, jid: string): Promi
 }
 
 /** Resolves with the DM once the first inbound message from a remote JID has created it. */
-export async function waitForDirectMessageWith(rc: RocketChat, user: LocalUser, jid: string): Promise<IRoom> {
+export async function waitForDirectMessageWith(rc: YasChat, user: LocalUser, jid: string): Promise<IRoom> {
 	let dm: IRoom | undefined;
 	await retry(
 		`the DM between ${user.username} and ${jid}`,

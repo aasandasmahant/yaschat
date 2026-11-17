@@ -1,8 +1,8 @@
-# Deploying LiveKit next to Rocket.Chat
+# Deploying LiveKit next to YasChat
 
-How to run a self-hosted LiveKit server beside a Rocket.Chat deployed with the official
-[rocketchat-compose](https://github.com/RocketChat/rocketchat-compose) stack, reusing its Traefik for TLS and routing.
-LiveKit Cloud works too: skip to [Rocket.Chat settings](#4-rocketchat-settings) and use its URL and keys.
+How to run a self-hosted LiveKit server beside a YasChat deployed with the official
+[yaschat-compose](https://github.com/YasChat/yaschat-compose) stack, reusing its Traefik for TLS and routing.
+LiveKit Cloud works too: skip to [YasChat settings](#4-yaschat-settings) and use its URL and keys.
 
 > **License add-on required.** LiveKit calls are licensed by their own module, `video-conference-native`, on top of
 > the `videoconference-enterprise` module the rest of video conferencing needs. Without `videoconference-enterprise`
@@ -10,7 +10,7 @@ LiveKit Cloud works too: skip to [Rocket.Chat settings](#4-rocketchat-settings) 
 
 ## Prerequisites
 
-- Rocket.Chat running from rocketchat-compose with `compose.traefik.yml` (Let's Encrypt enabled).
+- YasChat running from yaschat-compose with `compose.traefik.yml` (Let's Encrypt enabled).
 - A DNS name for LiveKit pointing at the same host, e.g. `livekit.example.com` next to `chat.example.com`.
 - Inbound `7881/tcp` and `7882/udp` open on the host (media), plus `5349/tcp` if you enable [TURN](#turn-restrictive-networks). Signalling goes through Traefik on 443.
 
@@ -23,7 +23,7 @@ echo "APIKey$(openssl rand -hex 8)"   # key
 openssl rand -base64 32               # secret
 ```
 
-Create `files/livekit/livekit.yaml` in the rocketchat-compose checkout:
+Create `files/livekit/livekit.yaml` in the yaschat-compose checkout:
 
 ```yaml
 port: 7880
@@ -65,7 +65,7 @@ services:
 
 `compose.traefik.yml` generates Traefik's file-provider configuration in its `traefik-init` service. Add a router and a
 service for LiveKit to the generated `https/dynamic.yml` (and `http/dynamic.yml` if you run without TLS), next to the
-`rocketchat` ones:
+`yaschat` ones:
 
 ```yaml
 http:
@@ -85,7 +85,7 @@ http:
 ```
 
 and pass `LIVEKIT_DOMAIN` to the `traefik` service's `environment`. Traefik forwards WebSocket upgrades as is and
-obtains the certificate with the same `le` resolver Rocket.Chat uses.
+obtains the certificate with the same `le` resolver YasChat uses.
 
 Do not put SSO or proxy authentication in front of the LiveKit host: a LiveKit client cannot answer a proxy challenge.
 
@@ -97,7 +97,7 @@ docker compose -f compose.database.yml -f compose.monitoring.yml -f compose.trae
 
 `curl -s https://livekit.example.com` answering anything but an error means signalling is reachable.
 
-## 4. Rocket.Chat settings
+## 4. YasChat settings
 
 Under **Administration → Settings → Conference Call**:
 
@@ -109,7 +109,7 @@ Under **Administration → Settings → Conference Call**:
 | `VideoConf_LiveKit_Api_Key` / `VideoConf_LiveKit_Api_Secret` | the pair from step 1 |
 | `VideoConf_Default_Provider` | `livekit`, once it appears in the list |
 
-The provider appears as soon as all of them are filled. `OVERWRITE_SETTING_<key>` in the `rocketchat` service's
+The provider appears as soon as all of them are filled. `OVERWRITE_SETTING_<key>` in the `yaschat` service's
 environment sets them from the compose file instead, at the cost of making them read-only in the admin UI.
 
 ## 5. Verify

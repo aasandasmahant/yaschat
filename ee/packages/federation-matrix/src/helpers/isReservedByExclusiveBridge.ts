@@ -4,7 +4,7 @@ import { federationSDK } from '@rocket.chat/federation-sdk';
 type NamespaceType = 'users' | 'aliases' | 'rooms';
 
 /**
- * The kind of Rocket.Chat handle being validated. A `user` is a person's username; a `room`
+ * The kind of YasChat handle being validated. A `user` is a person's username; a `room`
  * is a room or team name. Each maps to different Matrix appservice namespaces.
  */
 export type ExclusiveBridgeHandleType = 'user' | 'room';
@@ -12,7 +12,7 @@ export type ExclusiveBridgeHandleType = 'user' | 'room';
 /**
  * Matrix appservice registrations declare separate exclusive namespaces. A username maps to a
  * user MXID (`@localpart:server`) in the `users` namespace; a room/team name maps to a room
- * alias (`#localpart:server`) — in Rocket.Chat the room alias and the room itself are one
+ * alias (`#localpart:server`) — in YasChat the room alias and the room itself are one
  * concept, so both the `aliases` and `rooms` namespaces are checked.
  */
 const NAMESPACES: Record<ExclusiveBridgeHandleType, { sigil: string; namespaces: NamespaceType[] }> = {
@@ -21,7 +21,7 @@ const NAMESPACES: Record<ExclusiveBridgeHandleType, { sigil: string; namespaces:
 };
 
 /**
- * Returns `true` when the given local Rocket.Chat handle falls within a bridge's *exclusive*
+ * Returns `true` when the given local YasChat handle falls within a bridge's *exclusive*
  * namespace, meaning only that bridge may own it and a regular user must not be allowed to
  * register/rename into it.
  *
@@ -36,7 +36,7 @@ export function isReservedByExclusiveBridge(type: ExclusiveBridgeHandleType, nam
 
 	const { sigil, namespaces } = NAMESPACES[type];
 
-	// Matrix localparts are conventionally lowercase while Rocket.Chat handles may be mixed-case,
+	// Matrix localparts are conventionally lowercase while YasChat handles may be mixed-case,
 	// so also test the lowercased localpart — erring towards reserving is the safe failure mode
 	// for an exclusive namespace.
 	const candidates = new Set([`${sigil}${name}:${serverName}`, `${sigil}${name.toLowerCase()}:${serverName}`]);

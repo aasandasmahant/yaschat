@@ -2,19 +2,19 @@
 	"name": "@rocket.chat/fuselage-ui-kit",
 	"version": "36.0.0",
 	"private": true,
-	"description": "UiKit elements for Rocket.Chat Apps built under Fuselage design system",
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
+	"description": "UiKit elements for YasChat Apps built under Fuselage design system",
+	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/fuselage-ui-kit"
 	},
 	"license": "MIT",
 	"author": {
-		"name": "Rocket.Chat",
+		"name": "YasChat",
 		"url": "https://rocket.chat/"
 	},
 	"main": "dist/index.js",

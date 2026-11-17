@@ -23,7 +23,7 @@ Stop building `web.browser` and make the server own what hangs off it today:
 - **Static files.** Serve `public/` with the headers `cors.ts` adds today (`Access-Control-Allow-Origin`, the cache
   version cookie and `Clear-Site-Data`), and move the `/assets/*` default fallback
   (`server/lib/media/assets/assets.ts`) off `WebAppInternals.staticFilesByArch`.
-- **Livechat.** Serve the widget files and `/packages/rocketchat_livechat/assets/demo.html`, whose script hash is
+- **Livechat.** Serve the widget files and `/packages/yaschat_livechat/assets/demo.html`, whose script hash is
   allowed in the Content-Security-Policy.
 - **New-version notice.** Publish `meteor_autoupdate_clientVersions` with a version computed from the Vite manifest,
   in the monolith and through `server/services/meteor/service.ts` and `ee/apps/ddp-streamer` for microservices.

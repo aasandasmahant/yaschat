@@ -143,7 +143,7 @@ const RegisterServerForm = ({
 						</Box>
 						<Box id={`${formId}-informed-disclaimer`} marginBlockStart={24} fontScale='c1'>
 							<Trans i18nKey='form.registeredServerForm.registrationKeepInformed'>
-								By submitting this form you consent to receive more information about Rocket.Chat products, events and updates, according to
+								By submitting this form you consent to receive more information about YasChat products, events and updates, according to
 								our
 								<a href={policyHref} target='_blank' rel='noopener noreferrer'>
 									Privacy Policy

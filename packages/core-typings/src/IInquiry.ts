@@ -2,7 +2,7 @@ import type { ILivechatPriority } from './ILivechatPriority';
 import type { ILivechatVisitor } from './ILivechatVisitor';
 import type { IMessage } from './IMessage';
 import type { IOmnichannelServiceLevelAgreements } from './IOmnichannelServiceLevelAgreements';
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IOmnichannelRoom, OmnichannelSourceType } from './IRoom';
 import type { SelectedAgent } from './omnichannel/routing';
 
@@ -26,7 +26,7 @@ export interface IVisitor {
 	lastMessageTs?: Date;
 }
 
-export interface ILivechatInquiryRecord extends IRocketChatRecord {
+export interface ILivechatInquiryRecord extends IYasChatRecord {
 	rid: string;
 	name: string;
 	ts: Date;

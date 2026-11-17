@@ -60,7 +60,7 @@ describe('The AppMessagesConverter instance', () => {
 	const createdAt = new Date('2019-03-30T01:22:08.389Z');
 	const updatedAt = new Date('2019-03-30T01:22:08.412Z');
 
-	describe('when converting a message from Rocket.Chat to the Engine schema', () => {
+	describe('when converting a message from YasChat to the Engine schema', () => {
 		it('should return `undefined` when `msgObj` is falsy', async () => {
 			const appMessage = await messagesConverter.convertMessage(undefined);
 
@@ -87,11 +87,11 @@ describe('The AppMessagesConverter instance', () => {
 		});
 
 		it('should not mutate the original message object', () => {
-			const rocketchatMessageMock = messagesMock.findOneById('SimpleMessageMock');
+			const yaschatMessageMock = messagesMock.findOneById('SimpleMessageMock');
 
-			messagesConverter.convertMessage(rocketchatMessageMock);
+			messagesConverter.convertMessage(yaschatMessageMock);
 
-			expect(rocketchatMessageMock).to.deep.equal({
+			expect(yaschatMessageMock).to.deep.equal({
 				_id: 'SimpleMessageMock',
 				t: 'uj',
 				rid: 'GENERAL',
@@ -106,7 +106,7 @@ describe('The AppMessagesConverter instance', () => {
 			});
 		});
 
-		it("should return basic sender info when it's not a Rocket.Chat user (e.g. Livechat Guest)", async () => {
+		it("should return basic sender info when it's not a YasChat user (e.g. Livechat Guest)", async () => {
 			const appMessage = await messagesConverter.convertMessage(messagesMock.findOneById('LivechatGuestMessageMock'));
 
 			expect(appMessage).to.have.property('sender').which.includes({
@@ -117,22 +117,22 @@ describe('The AppMessagesConverter instance', () => {
 		});
 	});
 
-	describe('when converting a message from the Engine schema back to Rocket.Chat', () => {
+	describe('when converting a message from the Engine schema back to YasChat', () => {
 		it('should return `undefined` when `message` is falsy', async () => {
-			const rocketchatMessage = await messagesConverter.convertAppMessage(undefined);
+			const yaschatMessage = await messagesConverter.convertAppMessage(undefined);
 
-			expect(rocketchatMessage).to.be.undefined;
+			expect(yaschatMessage).to.be.undefined;
 		});
 
 		it('should return a proper schema', async () => {
-			const rocketchatMessage = await messagesConverter.convertAppMessage(appMessageMock);
+			const yaschatMessage = await messagesConverter.convertAppMessage(appMessageMock);
 
-			expect(rocketchatMessage).to.have.property('_id', 'appMessageMock');
-			expect(rocketchatMessage).to.have.property('rid', 'GENERAL');
-			expect(rocketchatMessage).to.have.property('groupable', false);
-			expect(rocketchatMessage).to.have.property('ts').which.equalTime(createdAt);
-			expect(rocketchatMessage).to.have.property('_updatedAt').which.equalTime(updatedAt);
-			expect(rocketchatMessage).to.have.property('u').which.includes({
+			expect(yaschatMessage).to.have.property('_id', 'appMessageMock');
+			expect(yaschatMessage).to.have.property('rid', 'GENERAL');
+			expect(yaschatMessage).to.have.property('groupable', false);
+			expect(yaschatMessage).to.have.property('ts').which.equalTime(createdAt);
+			expect(yaschatMessage).to.have.property('_updatedAt').which.equalTime(updatedAt);
+			expect(yaschatMessage).to.have.property('u').which.includes({
 				_id: 'rocket.cat',
 				username: 'rocket.cat',
 				name: 'Rocket.Cat',
@@ -140,24 +140,24 @@ describe('The AppMessagesConverter instance', () => {
 		});
 
 		it('should return a proper schema when receiving a partial object', async () => {
-			const rocketchatMessage = await messagesConverter.convertAppMessage(appPartialMessageMock, true);
+			const yaschatMessage = await messagesConverter.convertAppMessage(appPartialMessageMock, true);
 
-			expect(rocketchatMessage).to.have.property('_id', 'appPartialMessageMock');
-			expect(rocketchatMessage).to.have.property('groupable', false);
-			expect(rocketchatMessage).to.have.property('emoji', ':smirk:');
-			expect(rocketchatMessage).to.have.property('alias', 'rocket.feline');
+			expect(yaschatMessage).to.have.property('_id', 'appPartialMessageMock');
+			expect(yaschatMessage).to.have.property('groupable', false);
+			expect(yaschatMessage).to.have.property('emoji', ':smirk:');
+			expect(yaschatMessage).to.have.property('alias', 'rocket.feline');
 
-			expect(rocketchatMessage).to.not.have.property('ts');
-			expect(rocketchatMessage).to.not.have.property('u');
-			expect(rocketchatMessage).to.not.have.property('rid');
-			expect(rocketchatMessage).to.not.have.property('_updatedAt');
+			expect(yaschatMessage).to.not.have.property('ts');
+			expect(yaschatMessage).to.not.have.property('u');
+			expect(yaschatMessage).to.not.have.property('rid');
+			expect(yaschatMessage).to.not.have.property('_updatedAt');
 		});
 
 		it('should merge `_unmappedProperties_` into the returned message', async () => {
-			const rocketchatMessage = await messagesConverter.convertAppMessage(appMessageMock);
+			const yaschatMessage = await messagesConverter.convertAppMessage(appMessageMock);
 
-			expect(rocketchatMessage).not.to.have.property('_unmappedProperties_');
-			expect(rocketchatMessage).to.have.property('t', 'uj');
+			expect(yaschatMessage).not.to.have.property('_unmappedProperties_');
+			expect(yaschatMessage).to.have.property('t', 'uj');
 		});
 
 		it('should not merge `_unmappedProperties_` into the returned message when receiving a partial object', async () => {
@@ -166,10 +166,10 @@ describe('The AppMessagesConverter instance', () => {
 				t: 'uj',
 			};
 
-			const rocketchatMessage = await messagesConverter.convertAppMessage(invalidPartialMessage, true);
+			const yaschatMessage = await messagesConverter.convertAppMessage(invalidPartialMessage, true);
 
-			expect(rocketchatMessage).to.not.have.property('_unmappedProperties_');
-			expect(rocketchatMessage).to.not.have.property('t');
+			expect(yaschatMessage).to.not.have.property('_unmappedProperties_');
+			expect(yaschatMessage).to.not.have.property('t');
 		});
 
 		it('should throw if message has an invalid room', async () => {

@@ -4,25 +4,25 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 ## 2.2.5-rc.0
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 ## 2.2.4
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 2.2.4-rc.0
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 ## 2.2.3
 
@@ -64,7 +64,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [642745f289, b223cbde14]:</summary>
 
@@ -155,12 +155,12 @@
 
 ### Patch Changes
 
-- [#29596](https://github.com/RocketChat/Rocket.Chat/pull/29596) [`a19359b3f5`](https://github.com/RocketChat/Rocket.Chat/commit/a19359b3f5b09270fe1644df0706c6b1ebb979ef) Thanks [@rocketchat-github-ci](https://github.com/rocketchat-github-ci)! - Use CI user PAT token
+- [#29596](https://github.com/YasChat/YasChat/pull/29596) [`a19359b3f5`](https://github.com/YasChat/YasChat/commit/a19359b3f5b09270fe1644df0706c6b1ebb979ef) Thanks [@yaschat-github-ci](https://github.com/yaschat-github-ci)! - Use CI user PAT token
 
-- [#29596](https://github.com/RocketChat/Rocket.Chat/pull/29596) [`a19359b3f5`](https://github.com/RocketChat/Rocket.Chat/commit/a19359b3f5b09270fe1644df0706c6b1ebb979ef) Thanks [@rocketchat-github-ci](https://github.com/rocketchat-github-ci)! - Update versions in configured files
+- [#29596](https://github.com/YasChat/YasChat/pull/29596) [`a19359b3f5`](https://github.com/YasChat/YasChat/commit/a19359b3f5b09270fe1644df0706c6b1ebb979ef) Thanks [@yaschat-github-ci](https://github.com/yaschat-github-ci)! - Update versions in configured files
 
 ## 1.0.0
 
 ### Major Changes
 
-- [#29545](https://github.com/RocketChat/Rocket.Chat/pull/29545) [`a728082848`](https://github.com/RocketChat/Rocket.Chat/commit/a72808284870af04a6457af6f2f79b0a0c38b7cb) Thanks [@github-actions](https://github.com/apps/github-actions)! - New action to publish package releases
+- [#29545](https://github.com/YasChat/YasChat/pull/29545) [`a728082848`](https://github.com/YasChat/YasChat/commit/a72808284870af04a6457af6f2f79b0a0c38b7cb) Thanks [@github-actions](https://github.com/apps/github-actions)! - New action to publish package releases

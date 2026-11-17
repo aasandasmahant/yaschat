@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- ([#42363](https://github.com/RocketChat/Rocket.Chat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
+- ([#42363](https://github.com/YasChat/YasChat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, a39b03fe5c248079365162e31994e1dece63e7c2]:</summary>
   - @rocket.chat/core-typings@9.0.0
@@ -16,7 +16,7 @@
 
 ### Patch Changes
 
-- ([#42363](https://github.com/RocketChat/Rocket.Chat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
+- ([#42363](https://github.com/YasChat/YasChat/pull/42363)) Updates the native emoji set to Emoji 17.0 (emojibase 17), adding the newly released emojis to the emoji picker, shortcodes, PDF chat transcripts and federated reactions
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, a39b03fe5c248079365162e31994e1dece63e7c2]:</summary>
   - @rocket.chat/core-typings@9.0.0-rc.0
@@ -28,7 +28,7 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
   - @rocket.chat/core-typings@8.8.0
@@ -39,7 +39,7 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
   - @rocket.chat/core-typings@8.8.0-rc.0
@@ -104,7 +104,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/core-typings@8.3.0
@@ -151,7 +151,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/core-typings@8.3.0-rc.0
@@ -216,7 +216,7 @@
 
 ### Patch Changes
 
-- ([#38064](https://github.com/RocketChat/Rocket.Chat/pull/38064)) Fixes broken chat transcript when there are more than one file per message
+- ([#38064](https://github.com/YasChat/YasChat/pull/38064)) Fixes broken chat transcript when there are more than one file per message
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/core-typings@8.1.0
@@ -244,7 +244,7 @@
 
 ### Patch Changes
 
-- ([#38064](https://github.com/RocketChat/Rocket.Chat/pull/38064)) Fixes broken chat transcript when there are more than one file per message
+- ([#38064](https://github.com/YasChat/YasChat/pull/38064)) Fixes broken chat transcript when there are more than one file per message
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
   - @rocket.chat/core-typings@8.1.0-rc.0
@@ -921,11 +921,11 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
-- ([#35705](https://github.com/RocketChat/Rocket.Chat/pull/35705)) Fixes an issue with PDF generation process that caused the server to hang when a single message consisted of too many (+30) markdown elements and was followed and preceded by more messages.
+- ([#35705](https://github.com/YasChat/YasChat/pull/35705)) Fixes an issue with PDF generation process that caused the server to hang when a single message consisted of too many (+30) markdown elements and was followed and preceded by more messages.
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
   - @rocket.chat/core-typings@7.6.0
@@ -1008,11 +1008,11 @@
 
 ### Minor Changes
 
-- ([#35721](https://github.com/RocketChat/Rocket.Chat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
+- ([#35721](https://github.com/YasChat/YasChat/pull/35721)) Enhances the `/api/apps/installed` and `/api/apps/:id/status` endpoints so they get apps' status across the cluster in High-Availability and Microservices deployments
 
 ### Patch Changes
 
-- ([#35705](https://github.com/RocketChat/Rocket.Chat/pull/35705)) Fixes an issue with PDF generation process that caused the server to hang when a single message consisted of too many (+30) markdown elements and was followed and preceded by more messages.
+- ([#35705](https://github.com/YasChat/YasChat/pull/35705)) Fixes an issue with PDF generation process that caused the server to hang when a single message consisted of too many (+30) markdown elements and was followed and preceded by more messages.
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
   - @rocket.chat/core-typings@7.6.0-rc.0
@@ -1104,7 +1104,7 @@
 
 ### Patch Changes
 
-- ([#35215](https://github.com/RocketChat/Rocket.Chat/pull/35215)) Fixes omnichannel transcript filename breaking download links
+- ([#35215](https://github.com/YasChat/YasChat/pull/35215)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/core-typings@7.4.0
@@ -1160,7 +1160,7 @@
 
 ### Patch Changes
 
-- ([#35215](https://github.com/RocketChat/Rocket.Chat/pull/35215)) Fixes omnichannel transcript filename breaking download links
+- ([#35215](https://github.com/YasChat/YasChat/pull/35215)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
   - @rocket.chat/core-typings@7.4.0-rc.0
@@ -1171,7 +1171,7 @@
 
 ### Patch Changes
 
-- ([#35353](https://github.com/RocketChat/Rocket.Chat/pull/35353) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes omnichannel transcript filename breaking download links
+- ([#35353](https://github.com/YasChat/YasChat/pull/35353) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/core-typings@7.3.3
@@ -1610,7 +1610,7 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
@@ -1679,7 +1679,7 @@
 
 ### Minor Changes
 
-- ([#32752](https://github.com/RocketChat/Rocket.Chat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
+- ([#32752](https://github.com/YasChat/YasChat/pull/32752)) Added system messages support for Omnichannel PDF transcripts and email transcripts. Currently these transcripts don't render system messages and is shown as an empty message in PDF/email. This PR adds this support for all valid livechat system messages.
 
   Also added a new setting under transcripts, to toggle the inclusion of system messages in email and PDF transcripts.
 
@@ -1704,7 +1704,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1780,7 +1780,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -1818,7 +1818,7 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
 - <details><summary>Updated dependencies [ff4e396416, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0
@@ -1847,7 +1847,7 @@
 
 ### Patch Changes
 
-- ([#32311](https://github.com/RocketChat/Rocket.Chat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
+- ([#32311](https://github.com/YasChat/YasChat/pull/32311)) Fixed multiple issues with PDF generation logic when a quoted message was too big to fit in one single page. This was causing an internal infinite loop within the library (as it tried to make it fit, failing and then trying to fit on next page where the same happened thus causing a loop).
   The library was not able to break down some nested views and thus was trying to fit the whole quote on one single page. Logic was updated to allow wrapping of the contents when messages are quoted (so they can span multiple lines) and removed a bunch of unnecesary views from the code.
 - <details><summary>Updated dependencies [ff4e396416, 70ab2a7b7b]:</summary>
   - @rocket.chat/core-typings@6.9.0-rc.0
@@ -2018,9 +2018,9 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
-- ([#31349](https://github.com/RocketChat/Rocket.Chat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
+- ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fdd9852079, b4b2cd20a8]:</summary>
   - @rocket.chat/core-typings@6.6.0

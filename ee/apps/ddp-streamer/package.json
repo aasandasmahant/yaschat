@@ -2,11 +2,11 @@
 	"name": "@rocket.chat/ddp-streamer",
 	"version": "0.4.3",
 	"private": true,
-	"description": "Rocket.Chat DDP-Streamer service",
+	"description": "YasChat DDP-Streamer service",
 	"keywords": [
-		"rocketchat"
+		"yaschat"
 	],
-	"author": "Rocket.Chat",
+	"author": "YasChat",
 	"main": "./dist/ee/apps/ddp-streamer/src/service.js",
 	"files": [
 		"/dist"

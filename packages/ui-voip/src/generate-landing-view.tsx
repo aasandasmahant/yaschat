@@ -48,14 +48,14 @@ const { States, StatesIcon, StatesSubtitle, StatesTitle, PaletteStyleTag } =
 
 const fuselageCssPath = require.resolve('@rocket.chat/fuselage/dist/fuselage.css');
 
-// 4. Embed the RocketChat icon font as a base64 data URI.
-//    fuselage.css sets font-family:RocketChat on .rcx-icon but does not include the
+// 4. Embed the YasChat icon font as a base64 data URI.
+//    fuselage.css sets font-family:YasChat on .rcx-icon but does not include the
 //    @font-face declaration — that lives in @rocket.chat/icons. Inlining the woff2
 //    makes the HTML fully self-contained with no external font file dependencies.
-const iconFontPath = require.resolve('@rocket.chat/icons/dist/font/rocketchat.woff2');
+const iconFontPath = require.resolve('@rocket.chat/icons/dist/font/yaschat.woff2');
 const iconFontBase64 = readFileSync(iconFontPath).toString('base64');
 const iconFontCss = `@font-face {
-  font-family: 'RocketChat';
+  font-family: 'YasChat';
   font-weight: 400;
   font-style: normal;
   font-display: auto;

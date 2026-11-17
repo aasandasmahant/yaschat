@@ -8,10 +8,10 @@ import { UserStatusConnectionCodec, UserTypeCodec } from './enums';
 const VALID_STATUS_CONNECTIONS = new Set(['offline', 'online', 'away', 'busy']);
 
 /**
- * Rocket.Chat `IUser` <-> Apps-Engine `IAppsUser`.
+ * YasChat `IUser` <-> Apps-Engine `IAppsUser`.
  *
  * Both directions are bespoke (no `_unmappedProperties_` bucket): `decode` mirrors `convertToApp`
- * and `encode` mirrors `convertToRocketChat`. Enum fields go through the shared enum codecs. The
+ * and `encode` mirrors `convertToYasChat`. Enum fields go through the shared enum codecs. The
  * contextual "invalid status" warning stays here (rather than in `UserStatusConnectionCodec`)
  * because it needs the user's id/username. On the `encode` side `utcOffset` falls back to the legacy
  * misspelled `utfOffset` property, so app users that only carry the historical typo still convert.

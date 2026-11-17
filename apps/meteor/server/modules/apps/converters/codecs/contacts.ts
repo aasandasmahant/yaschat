@@ -5,10 +5,10 @@ import * as z from 'zod';
 import { mappedDecodeAsync } from './mappedData';
 
 /**
- * Rocket.Chat `ILivechatContact` <-> Apps-Engine `IAppsLivechatContact`.
+ * YasChat `ILivechatContact` <-> Apps-Engine `IAppsLivechatContact`.
  *
- * `decode` (Rocket.Chat -> Apps-Engine) is a straight clone, mirroring the legacy `convertContact`.
- * `encode` (Apps-Engine -> Rocket.Chat) maps every attribute individually via a nested field map so
+ * `decode` (YasChat -> Apps-Engine) is a straight clone, mirroring the legacy `convertContact`.
+ * `encode` (Apps-Engine -> YasChat) maps every attribute individually via a nested field map so
  * no extra data coming from the app leaks through — mirroring the legacy `convertAppContact`.
  */
 export const ContactCodec = z.codec(z.custom<ILivechatContact>(), z.custom<IAppsLivechatContact>(), {

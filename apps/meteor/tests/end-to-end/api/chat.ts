@@ -1368,9 +1368,9 @@ describe('[Chat]', () => {
 			const oembedProcessingMs = 500;
 
 			const youtubeOembedResponse = {
-				title: 'Rocket.Chat Demo',
-				author_name: 'Rocket.Chat',
-				author_url: 'https://www.youtube.com/@RocketChatApp',
+				title: 'YasChat Demo',
+				author_name: 'YasChat',
+				author_url: 'https://www.youtube.com/@YasChatApp',
 				type: 'video',
 				height: 150,
 				width: 200,
@@ -1380,7 +1380,7 @@ describe('[Chat]', () => {
 				thumbnail_height: 360,
 				thumbnail_width: 480,
 				thumbnail_url: 'https://i.ytimg.com/vi/T2v29gK8fP4/hqdefault.jpg',
-				html: '<iframe width="200" height="150" src="https://www.youtube.com/embed/T2v29gK8fP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Rocket.Chat Demo"></iframe>',
+				html: '<iframe width="200" height="150" src="https://www.youtube.com/embed/T2v29gK8fP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YasChat Demo"></iframe>',
 			};
 
 			const spotifyOembedResponse = {
@@ -2521,7 +2521,7 @@ describe('[Chat]', () => {
 				beforeEach(() =>
 					withDatabase((db) =>
 						db
-							.collection<IMessage>('rocketchat_message')
+							.collection<IMessage>('yaschat_message')
 							.updateOne({ _id: msgId }, { $set: { ts: new Date(Date.now() - 10 * 60 * 1000) } }),
 					),
 				);

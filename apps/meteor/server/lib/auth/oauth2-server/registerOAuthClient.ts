@@ -137,7 +137,7 @@ export const registerOAuthClient = async (body: unknown): Promise<ClientRegistra
 			body: {
 				error: 'access_denied',
 				error_description:
-					'Dynamic Client Registration is not enabled on this workspace. It needs the Rocket.Chat AI add-on with MCP enabled; an administrator can turn it on in the MCP settings, or create an OAuth app and give its client ID and secret to the client.',
+					'Dynamic Client Registration is not enabled on this workspace. It needs the YasChat AI add-on with MCP enabled; an administrator can turn it on in the MCP settings, or create an OAuth app and give its client ID and secret to the client.',
 			},
 		};
 	}

@@ -1,6 +1,6 @@
 {
 	"name": "@rocket.chat/media-signaling",
-	"description": "Rocket.Chat signaling client for media calls",
+	"description": "YasChat signaling client for media calls",
 	"type": "module",
 	"exports": {
 		".": {
@@ -10,14 +10,14 @@
 	},
 	"version": "1.4.0",
 	"license": "MIT",
-	"homepage": "https://github.com/RocketChat/Rocket.Chat/#readme",
+	"homepage": "https://github.com/YasChat/YasChat/#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/media-signaling"
 	},
 	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
+		"url": "https://github.com/YasChat/YasChat/issues"
 	},
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",

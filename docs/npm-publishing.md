@@ -58,7 +58,7 @@ both references (the `setup-node` input and the `Release` step's `env`).
 npm allows one trusted publisher per package, so packages move over one at a time:
 
 1. Register the package (see below). Watch for packages previously released from another repo —
-   `@rocket.chat/emitter`'s last provenance came from `RocketChat/fuselage`'s `cd.yml`, and that
+   `@rocket.chat/emitter`'s last provenance came from `YasChat/fuselage`'s `cd.yml`, and that
    registration has to be re-pointed here before this workflow can publish it.
 2. Let a release run. The job log is not evidence — a token fallback looks identical to success.
 3. Confirm with `npm view @rocket.chat/<name> --json dist.attestations`; non-null means the package
@@ -86,7 +86,7 @@ bypass-2FA option are rejected):
 ```sh
 npm trust github @rocket.chat/<name> \
   --file release.yml \
-  --repo RocketChat/Rocket.Chat \
+  --repo YasChat/YasChat \
   --allow-publish
 
 npm trust list @rocket.chat/<name>
@@ -97,8 +97,8 @@ Or on `npmjs.com/package/@rocket.chat/<name>/access`:
 | Field             | Value                                  |
 | ----------------- | -------------------------------------- |
 | Provider          | GitHub Actions                         |
-| Organization      | `RocketChat`                           |
-| Repository        | `Rocket.Chat`                          |
+| Organization      | `YasChat`                           |
+| Repository        | `YasChat`                          |
 | Workflow filename | `release.yml` (filename only, no path) |
 | Environment       | _(blank)_                              |
 | Allowed actions   | `npm publish`                          |
@@ -115,12 +115,12 @@ in**. Every published package therefore needs:
 ```json
 "repository": {
   "type": "git",
-  "url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+  "url": "git+https://github.com/YasChat/YasChat.git",
   "directory": "packages/<name>"
 }
 ```
 
-The org/repo casing (`RocketChat/Rocket.Chat`) has to match too.
+The org/repo casing (`YasChat/YasChat`) has to match too.
 
 Verify after a release:
 

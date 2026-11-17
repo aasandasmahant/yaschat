@@ -209,7 +209,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0
@@ -261,7 +261,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd]:</summary>
   - @rocket.chat/ui-contexts@29.0.0-rc.0
@@ -591,7 +591,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0
@@ -672,7 +672,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0-rc.0
@@ -1228,7 +1228,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-avatar@13.0.0
@@ -1290,7 +1290,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff]:</summary>
   - @rocket.chat/ui-avatar@13.0.0-rc.0
@@ -1312,9 +1312,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#33141](https://github.com/RocketChat/Rocket.Chat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
+- ([#33141](https://github.com/YasChat/YasChat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@16.0.0
@@ -1375,9 +1375,9 @@
 
 ### Patch Changes
 
-- ([#35120](https://github.com/RocketChat/Rocket.Chat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
+- ([#35120](https://github.com/YasChat/YasChat/pull/35120)) Fixes behavior of app updates that would save undesired field changes to documents
 
-- ([#33141](https://github.com/RocketChat/Rocket.Chat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
+- ([#33141](https://github.com/YasChat/YasChat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
 
 - <details><summary>Updated dependencies []:</summary>
   - @rocket.chat/ui-contexts@16.0.0-rc.0
@@ -1499,11 +1499,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, c43220dcd8c1df86a6143d6553964ad2173903b3, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/ui-contexts@14.0.0
@@ -1545,11 +1545,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e]:</summary>
   - @rocket.chat/ui-contexts@14.0.0-rc.0
@@ -1611,7 +1611,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1685,7 +1685,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -1699,7 +1699,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -1773,7 +1773,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -1797,7 +1797,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e]:</summary>
   - @rocket.chat/ui-avatar@6.0.0
@@ -1869,7 +1869,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e]:</summary>
   - @rocket.chat/ui-avatar@6.0.0-rc.0
@@ -1901,8 +1901,8 @@
 
 ### Minor Changes
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
@@ -1976,8 +1976,8 @@
 
 ### Minor Changes
 
-- ([#32793](https://github.com/RocketChat/Rocket.Chat/pull/32793)) New Feature: Video Conference Persistent Chat.
-  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through Rocket.Chat.
+- ([#32793](https://github.com/YasChat/YasChat/pull/32793)) New Feature: Video Conference Persistent Chat.
+  This feature provides a discussion id for conference provider apps to store the chat messages exchanged during the conferences, so that those users may then access those messages again at any time through YasChat.
 
 ### Patch Changes
 
@@ -2011,7 +2011,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2095,7 +2095,7 @@
 
 ### Minor Changes
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2348,7 +2348,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162]:</summary>
   - @rocket.chat/ui-contexts@4.0.0

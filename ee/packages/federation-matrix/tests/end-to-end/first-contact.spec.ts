@@ -90,7 +90,7 @@ const localUser = {
 			await hs1FirstContactApp.inviteUserToRoom(synapseRoomId, localUser.matrixUserId);
 		}, 60000);
 
-		it('should create the room on the Rocket.Chat side', async () => {
+		it('should create the room on the YasChat side', async () => {
 			await retry(
 				'waiting for the federated room to reach RC',
 				async () => {

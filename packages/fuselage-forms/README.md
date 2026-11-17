@@ -148,7 +148,7 @@ Each input takes the same props as the Fuselage component with the same name.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/fuselage-forms). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-forms). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/fuselage-forms build
@@ -167,4 +167,4 @@ yarn workspace @rocket.chat/fuselage-forms build-storybook
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

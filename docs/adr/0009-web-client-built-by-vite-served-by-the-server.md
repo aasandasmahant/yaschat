@@ -1,4 +1,4 @@
-# The web client is built by Vite and served by the Rocket.Chat server
+# The web client is built by Vite and served by the YasChat server
 
 - **Status:** accepted
 - **Date:** 2026-10
@@ -8,7 +8,7 @@
 ## Decision
 
 Vite (Rolldown) builds the web client, and Meteor no longer compiles it. `yarn build:client` writes the client to
-`public/bundle` and its manifest to `private/vite-manifest.json`. The Rocket.Chat server keeps rendering the page and
+`public/bundle` and its manifest to `private/vite-manifest.json`. The YasChat server keeps rendering the page and
 adds the client's entry, stylesheets and preloads from the manifest
 ([features/web-client-hosting.md](../features/web-client-hosting.md)). `yarn dev` runs Vite in front of the local
 server.

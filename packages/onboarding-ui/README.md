@@ -1,10 +1,10 @@
 # `@rocket.chat/onboarding-ui`
 
-> Ready-made React pages and forms for Rocket.Chat's onboarding, login, registration and password recovery screens.
+> Ready-made React pages and forms for YasChat's onboarding, login, registration and password recovery screens.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/onboarding-ui) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/onboarding-ui)
 
-This package holds the full-page screens a user sees before entering a Rocket.Chat workspace: the setup wizard, workspace registration, cloud workspace creation, trial requests, login, account creation and password reset. Each page is a presentational component. It renders the UI and validates input, and hands every action back to you through callbacks such as `onSubmit`, `onLogin` or `onBackButtonClick`.
+This package holds the full-page screens a user sees before entering a YasChat workspace: the setup wizard, workspace registration, cloud workspace creation, trial requests, login, account creation and password reset. Each page is a presentational component. It renders the UI and validates input, and hands every action back to you through callbacks such as `onSubmit`, `onLogin` or `onBackButtonClick`.
 
 Pages are built with [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage) and [`@rocket.chat/layout`](https://www.npmjs.com/package/@rocket.chat/layout). Forms use [React Hook Form](https://react-hook-form.com/), and all text goes through [react-i18next](https://react.i18next.com/).
 
@@ -20,7 +20,7 @@ Load Fuselage's styles and the icon font once in your app:
 
 ```ts
 import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/rocketchat.css';
+import '@rocket.chat/icons/dist/yaschat.css';
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ import '@rocket.chat/icons/dist/rocketchat.css';
 
 The pages expect three things around them:
 
-- An i18next instance provided through `react-i18next`. The package does not ship translations; your resources must contain its keys (for example `form.adminInfoForm.title` or `component.form.action.next`). The English source strings live in [`.i18n/en.i18n.json`](https://github.com/RocketChat/Rocket.Chat/blob/develop/packages/onboarding-ui/.i18n/en.i18n.json) in the repository; they are not included in the npm package.
+- An i18next instance provided through `react-i18next`. The package does not ship translations; your resources must contain its keys (for example `form.adminInfoForm.title` or `component.form.action.next`). The English source strings live in [`.i18n/en.i18n.json`](https://github.com/YasChat/YasChat/blob/develop/packages/onboarding-ui/.i18n/en.i18n.json) in the repository; they are not included in the npm package.
 - A `DarkModeProvider` from `@rocket.chat/layout`. Without it, most pages render in dark mode regardless of the user's preference.
 - Fuselage's `PaletteStyleTag`, which injects the color palette for the chosen theme.
 
@@ -190,7 +190,7 @@ Each `onSubmit` receives a typed payload. These types are exported:
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/onboarding-ui). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/onboarding-ui). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/onboarding-ui build
@@ -199,7 +199,7 @@ yarn workspace @rocket.chat/onboarding-ui typecheck
 yarn workspace @rocket.chat/onboarding-ui lint
 ```
 
-Pages are developed in Storybook. Its Language toolbar control renders them in any language Rocket.Chat ships, with the `onboarding.*` strings from `@rocket.chat/i18n`; English comes from `.i18n/en.i18n.json`, and strings missing in another language fall back to it:
+Pages are developed in Storybook. Its Language toolbar control renders them in any language YasChat ships, with the `onboarding.*` strings from `@rocket.chat/i18n`; English comes from `.i18n/en.i18n.json`, and strings missing in another language fall back to it:
 
 ```sh
 yarn workspace @rocket.chat/onboarding-ui storybook
@@ -208,4 +208,4 @@ yarn workspace @rocket.chat/onboarding-ui build-storybook
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

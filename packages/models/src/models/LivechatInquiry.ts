@@ -1,7 +1,7 @@
 import type {
 	ILivechatInquiryRecord,
 	IMessage,
-	RocketChatRecordDeleted,
+	YasChatRecordDeleted,
 	ILivechatPriority,
 	SelectedAgent,
 } from '@rocket.chat/core-typings';
@@ -29,7 +29,7 @@ import { readSecondaryPreferred } from '../readSecondaryPreferred';
 const { INQUIRY_LOCK_TIMEOUT = '10000' } = process.env;
 
 export class LivechatInquiryRaw extends BaseRaw<ILivechatInquiryRecord> implements ILivechatInquiryModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ILivechatInquiryRecord>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ILivechatInquiryRecord>>) {
 		super(db, 'livechat_inquiry', trash);
 	}
 

@@ -1,11 +1,11 @@
-import type { MessageReads, IUser, IMessage, RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { MessageReads, IUser, IMessage, YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type { IMessageReadsModel } from '@rocket.chat/model-typings';
 import type { Collection, Db, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';
 
 export class MessageReadsRaw extends BaseRaw<MessageReads> implements IMessageReadsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<MessageReads>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<MessageReads>>) {
 		super(db, 'message_reads', trash);
 	}
 

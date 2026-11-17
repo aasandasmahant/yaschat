@@ -10,7 +10,7 @@ const user = {
 	roles: (
 		<>
 			<UserCardRole>Admin</UserCardRole>
-			<UserCardRole>Rocket.Chat</UserCardRole>
+			<UserCardRole>YasChat</UserCardRole>
 			<UserCardRole>Team</UserCardRole>
 		</>
 	),

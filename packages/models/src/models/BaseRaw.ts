@@ -1,4 +1,4 @@
-import type { RocketChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
 import type {
 	IBaseModel,
 	DefaultFields,
@@ -60,7 +60,7 @@ type ModelOptions = {
 export abstract class BaseRaw<
 	T extends { _id: string },
 	C extends DefaultFields<T> = undefined,
-	TDeleted extends RocketChatRecordDeleted<T> = RocketChatRecordDeleted<T>,
+	TDeleted extends YasChatRecordDeleted<T> = YasChatRecordDeleted<T>,
 > implements IBaseModel<T, C, TDeleted> {
 	protected defaultFields: C | undefined;
 

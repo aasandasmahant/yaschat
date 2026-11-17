@@ -11255,7 +11255,7 @@ __metadata:
   dependencies:
     vite: "npm:~8.2.2"
   bin:
-    rocketchat-ui-preview: ./bin/ui-preview.mjs
+    yaschat-ui-preview: ./bin/ui-preview.mjs
   languageName: unknown
   linkType: soft
 

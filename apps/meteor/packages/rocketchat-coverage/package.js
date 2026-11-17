@@ -1,5 +1,5 @@
 Package.describe({
-	name: 'rocketchat:coverage',
+	name: 'yaschat:coverage',
 	summary: '',
 	version: '1.0.0',
 });

@@ -1,6 +1,6 @@
 # @rocket.chat/pdf-worker
 
-This package is a PDF worker for Rocket.Chat. It allows for the rendering of PDFs within the Rocket.Chat application. `@react-pdf/renderer` is used as the PDF renderer, as it provides a React-based solution for rendering PDFs, making it easy to integrate into the existing React codebase of Rocket.Chat.
+This package is a PDF worker for YasChat. It allows for the rendering of PDFs within the YasChat application. `@react-pdf/renderer` is used as the PDF renderer, as it provides a React-based solution for rendering PDFs, making it easy to integrate into the existing React codebase of YasChat.
 
 ## Installation
 

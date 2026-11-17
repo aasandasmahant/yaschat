@@ -2,7 +2,7 @@ import { NotOnDesktopError } from './NotOnDesktopError';
 
 export const syncOutlookEvents = async () => {
 	const date = new Date();
-	const desktopApp = window.RocketChatDesktop;
+	const desktopApp = window.YasChatDesktop;
 
 	if (!desktopApp?.getOutlookEvents) {
 		throw new NotOnDesktopError();

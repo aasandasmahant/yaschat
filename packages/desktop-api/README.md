@@ -1,12 +1,12 @@
 # `@rocket.chat/desktop-api`
 
-> TypeScript types for the bridge the Rocket.Chat Desktop app exposes to the web client it loads.
+> TypeScript types for the bridge the YasChat Desktop app exposes to the web client it loads.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/desktop-api) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/desktop-api)
 
-The [Rocket.Chat Desktop app](https://github.com/RocketChat/Rocket.Chat.Electron) loads a workspace's web client and injects a `window.RocketChatDesktop` object into it. The web client calls that object to update the app's badge, title and favicon, show native notifications, report the user's presence, open the video call window, and more.
+The [YasChat Desktop app](https://github.com/YasChat/YasChat.Electron) loads a workspace's web client and injects a `window.YasChatDesktop` object into it. The web client calls that object to update the app's badge, title and favicon, show native notifications, report the user's presence, open the video call window, and more.
 
-This package is the contract between the two sides. It contains types only: `IRocketChatDesktop`, which describes `window.RocketChatDesktop`, `IVideoCallWindow`, which describes the video call window's bridge, and the option types they use.
+This package is the contract between the two sides. It contains types only: `IYasChatDesktop`, which describes `window.YasChatDesktop`, `IVideoCallWindow`, which describes the video call window's bridge, and the option types they use.
 
 ## Installation
 
@@ -20,14 +20,14 @@ The package has no runtime code and no dependencies. It is published as an ES mo
 
 ### Declaring the global
 
-The package does not declare `window.RocketChatDesktop` itself. Add the declaration to your project:
+The package does not declare `window.YasChatDesktop` itself. Add the declaration to your project:
 
 ```ts
-import type { IRocketChatDesktop } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
 
 declare global {
 	interface Window {
-		RocketChatDesktop?: IRocketChatDesktop;
+		YasChatDesktop?: IYasChatDesktop;
 	}
 }
 ```
@@ -37,19 +37,19 @@ Keep the property optional: it only exists when the page runs inside the desktop
 ### Calling the desktop app
 
 ```ts
-if (window.RocketChatDesktop) {
-	window.RocketChatDesktop.setTitle('Rocket.Chat');
-	window.RocketChatDesktop.setBadge(3);
-	window.RocketChatDesktop.setUserLoggedIn(true);
+if (window.YasChatDesktop) {
+	window.YasChatDesktop.setTitle('YasChat');
+	window.YasChatDesktop.setBadge(3);
+	window.YasChatDesktop.setUserLoggedIn(true);
 }
 ```
 
 ### The video call window
 
-In the desktop app's video call window (desktop 4.18 and later), `RocketChatDesktop.videoCall` holds an `IVideoCallWindow`. There, the main window's setters are no-ops.
+In the desktop app's video call window (desktop 4.18 and later), `YasChatDesktop.videoCall` holds an `IVideoCallWindow`. There, the main window's setters are no-ops.
 
 ```ts
-const callWindow = window.RocketChatDesktop?.videoCall;
+const callWindow = window.YasChatDesktop?.videoCall;
 
 callWindow?.openInMainWindow('/home');
 callWindow?.close();
@@ -57,7 +57,7 @@ callWindow?.close();
 
 ### User presence
 
-Rocket.Chat 8.10.0 and later use two members for the presence of the user:
+YasChat 8.10.0 and later use two members for the presence of the user:
 
 - `setUserPresenceState` receives the presence of the user.
 - `setUserStatusChangeHandler` receives the function that changes the status of the user.
@@ -69,7 +69,7 @@ The web client calls `setUserPresenceState` when it starts and again after each 
 Desktop 4.18 already has a `setUserPresence` member with a different payload. Do not use that name for these members. If you do, a new server sends the wrong payload to a released desktop app.
 
 ```ts
-window.RocketChatDesktop?.setUserPresenceState?.({
+window.YasChatDesktop?.setUserPresenceState?.({
 	loggedIn: true,
 	connection: 'connected',
 	status: 'busy',
@@ -101,7 +101,7 @@ The returned promise rejects when the server refuses the change.
 
 ## API
 
-### `IRocketChatDesktop`
+### `IYasChatDesktop`
 
 | Member                                                                                                                 | Description                                                                                                                                                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -148,7 +148,7 @@ The returned promise rejects when the server refuses the change.
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/desktop-api). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/desktop-api). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/desktop-api build
@@ -160,4 +160,4 @@ Changes to these types change the contract with the desktop app.
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

@@ -1,4 +1,4 @@
-import type { ISetting, ISettingColor, ISettingSelectOption, RocketChatRecordDeleted, SettingValue } from '@rocket.chat/core-typings';
+import type { ISetting, ISettingColor, ISettingSelectOption, YasChatRecordDeleted, SettingValue } from '@rocket.chat/core-typings';
 import type { ISettingsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
 import type {
 	Collection,
@@ -20,7 +20,7 @@ type PublicSettingFields<T extends ISetting> = T extends ISettingColor
 	: Pick<T, '_id' | 'value' | 'enterprise' | 'invalidValue' | 'modules' | 'requiredOnWizard'>;
 
 export class SettingsRaw extends BaseRaw<ISetting> implements ISettingsModel {
-	constructor(db: Db, trash?: Collection<RocketChatRecordDeleted<ISetting>>) {
+	constructor(db: Db, trash?: Collection<YasChatRecordDeleted<ISetting>>) {
 		super(db, 'settings', trash);
 	}
 

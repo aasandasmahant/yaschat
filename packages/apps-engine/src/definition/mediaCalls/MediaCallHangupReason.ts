@@ -1,5 +1,5 @@
 /**
- * The reasons Rocket.Chat records when a call ends.
+ * The reasons YasChat records when a call ends.
  */
 export const mediaCallHangupReasonList = [
 	/** A user explicitly hung up. */
@@ -48,7 +48,7 @@ export const mediaCallHangupReasonList = [
 
 /**
  * The SIP failures carry the response code they came from, e.g. `'sip-error-486'`.
- * Rocket.Chat writes no new SIP code, but stored call history from earlier versions
+ * YasChat writes no new SIP code, but stored call history from earlier versions
  * still contains them.
  */
 export type KnownMediaCallHangupReason = (typeof mediaCallHangupReasonList)[number] | `sip-error-${string}`;

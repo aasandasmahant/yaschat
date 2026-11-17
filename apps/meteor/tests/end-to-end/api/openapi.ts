@@ -38,7 +38,7 @@ describe('[OpenAPI]', () => {
 
 	it('should describe every documented route', () => {
 		expect(document).to.have.property('openapi', '3.1.0');
-		expect(document.info).to.have.property('title', 'Rocket.Chat API');
+		expect(document.info).to.have.property('title', 'YasChat API');
 		expect(document.tags).to.be.an('array').that.is.not.empty;
 		expect(Object.keys(document.paths)).to.not.be.empty;
 		expect(document.components.schemas).to.include.keys(['ApiFailureV1', 'ApiSuccessV1']);

@@ -1,12 +1,12 @@
 # `@rocket.chat/media-signaling`
 
-> The client side of Rocket.Chat media calls: it exchanges call signals with the server and drives the WebRTC connection.
+> The client side of YasChat media calls: it exchanges call signals with the server and drives the WebRTC connection.
 
 [![npm](https://img.shields.io/npm/v/@rocket.chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/media-signaling) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/media-signaling)
 
-A `MediaSignalingSession` represents one client (a browser tab, a desktop app, a mobile device) of one user. It registers with the server, places and receives calls, and keeps each call's state in sync with the server. Calls between Rocket.Chat users and calls to SIP extensions both go through it.
+A `MediaSignalingSession` represents one client (a browser tab, a desktop app, a mobile device) of one user. It registers with the server, places and receives calls, and keeps each call's state in sync with the server. Calls between YasChat users and calls to SIP extensions both go through it.
 
-The package does not open any network connection itself. You give it a function that sends signals to the server, and you feed it the signals the server sends back. This keeps it independent of the transport, so the same code runs in the Rocket.Chat web client and in other apps.
+The package does not open any network connection itself. You give it a function that sends signals to the server, and you feed it the signals the server sends back. This keeps it independent of the transport, so the same code runs in the YasChat web client and in other apps.
 
 It also exports the signal types and their JSON schemas, which the server uses to validate what clients send.
 
@@ -29,7 +29,7 @@ import type { ClientMediaSignal, ServerMediaSignal } from '@rocket.chat/media-si
 const session = new MediaSignalingSession({
 	userId: 'my-user-id',
 	transport: (signal: ClientMediaSignal) => {
-		// Send the signal to the Rocket.Chat server.
+		// Send the signal to the YasChat server.
 		sendToServer(JSON.stringify(signal));
 	},
 	processorFactories: {
@@ -52,14 +52,14 @@ onServerSignal((signal: ServerMediaSignal) => {
 });
 ```
 
-The session registers with the server as soon as it is created. In the Rocket.Chat web client, signals go out on the `notify-user` stream as `<userId>/media-calls` and come in on `<userId>/media-signal`.
+The session registers with the server as soon as it is created. In the YasChat web client, signals go out on the `notify-user` stream as `<userId>/media-calls` and come in on `<userId>/media-signal`.
 
 Call `session.endSession()` when the user logs out or the client stops handling calls.
 
 ### Placing a call
 
 ```ts
-// Call another Rocket.Chat user...
+// Call another YasChat user...
 await session.startCall('user', 'callee-user-id');
 
 // ...or a SIP extension.
@@ -155,7 +155,7 @@ The call objects the session hands out. Main members:
 
 ## Development
 
-This package lives in the [Rocket.Chat monorepo](https://github.com/RocketChat/Rocket.Chat/tree/develop/packages/media-signaling). From the repository root:
+This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/media-signaling). From the repository root:
 
 ```sh
 yarn workspace @rocket.chat/media-signaling build
@@ -169,4 +169,4 @@ Other scripts: `test` (same as `testunit`), `lint:fix` and `build-preview`.
 
 ## License
 
-MIT — see [LICENSE](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE).
+MIT — see [LICENSE](https://github.com/YasChat/YasChat/blob/develop/LICENSE).

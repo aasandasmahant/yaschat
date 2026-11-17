@@ -37,7 +37,7 @@ class Bridge {
 		// General
 		this.config = config;
 
-		// Workaround for Rocket.Chat callbacks being called multiple times
+		// Workaround for YasChat callbacks being called multiple times
 		this.loggedInUsers = [];
 
 		// Server

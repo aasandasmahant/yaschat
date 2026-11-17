@@ -63,7 +63,7 @@ export const useNotification = () => {
 			canReply: true,
 			silent: true,
 			requireInteraction,
-			...(window.RocketChatDesktop && notification.actions?.length ? { actions: notification.actions } : {}),
+			...(window.YasChatDesktop && notification.actions?.length ? { actions: notification.actions } : {}),
 		} as NotificationOptions & {
 			canReply?: boolean;
 		});

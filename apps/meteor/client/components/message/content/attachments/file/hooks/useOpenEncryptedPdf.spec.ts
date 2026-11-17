@@ -49,7 +49,7 @@ describe('useOpenEncryptedPdf', () => {
 	beforeEach(() => {
 		jest.clearAllMocks();
 
-		window.RocketChatDesktop = {
+		window.YasChatDesktop = {
 			getE2ePdfPreviewSizeLimit: jest.fn(() => 15),
 		} as any;
 
@@ -75,7 +75,7 @@ describe('useOpenEncryptedPdf', () => {
 		global.URL.createObjectURL = originalCreateObjectURL;
 		global.URL.revokeObjectURL = originalRevokeObjectURL;
 		global.AbortController = originalAbortController;
-		delete (window as any).RocketChatDesktop;
+		delete (window as any).YasChatDesktop;
 	});
 
 	describe('file size is not within the limit', () => {
@@ -156,7 +156,7 @@ describe('useOpenEncryptedPdf', () => {
 
 	describe('when the desktop size limit call throws', () => {
 		beforeEach(() => {
-			window.RocketChatDesktop = {
+			window.YasChatDesktop = {
 				getE2ePdfPreviewSizeLimit: jest.fn(() => {
 					throw new Error('desktop failure');
 				}),
@@ -180,9 +180,9 @@ describe('useOpenEncryptedPdf', () => {
 		});
 	});
 
-	describe('when RocketChatDesktop is undefined', () => {
+	describe('when YasChatDesktop is undefined', () => {
 		beforeEach(() => {
-			delete (window as any).RocketChatDesktop;
+			delete (window as any).YasChatDesktop;
 		});
 
 		it('should fall back to 10MB limit and download if file exceeds it', async () => {

@@ -1,9 +1,9 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 import type { IUser } from './IUser';
 
 export type IntegrationScriptEngine = 'isolated-vm';
 
-export interface IIncomingIntegration extends IRocketChatRecord {
+export interface IIncomingIntegration extends IYasChatRecord {
 	type: 'webhook-incoming';
 	_createdBy: Pick<IUser, 'username' | '_id'> | null;
 	_createdAt: Date;
@@ -39,7 +39,7 @@ export interface IIncomingIntegration extends IRocketChatRecord {
 export type OutgoingIntegrationEvent =
 	'sendMessage' | 'fileUploaded' | 'roomArchived' | 'roomCreated' | 'roomJoined' | 'roomLeft' | 'userCreated';
 
-export interface IOutgoingIntegration extends IRocketChatRecord {
+export interface IOutgoingIntegration extends IYasChatRecord {
 	type: 'webhook-outgoing';
 	_createdBy: Pick<IUser, 'username' | '_id'> | null;
 	_createdAt: Date;

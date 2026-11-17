@@ -60,7 +60,7 @@ is never revived this way: a heartbeat still in flight behind them must not put 
 were not here to be told" are the same picture — every lease is expired either way. In a multi-instance
 workspace this costs nothing, since the instances that stayed up were never absent.
 
-Leases only apply where the call renders inside Rocket.Chat. A call handed off to the provider's own page never
+Leases only apply where the call renders inside YasChat. A call handed off to the provider's own page never
 heartbeats, so sweeping it would end a live call; those are cleaned up by the long-running expiry instead.
 
 ### The grace period
@@ -157,7 +157,7 @@ in the reader's theme, floating over a dark call. High contrast outranks the pin
 answers a legibility need rather than a taste.
 
 What the panels beside the call carry is not call surface, though: it is room UI — a chat, a members list, a
-thread. Those are read the way the reader reads the rest of Rocket.Chat, so a second rule hands the preference
+thread. Those are read the way the reader reads the rest of YasChat, so a second rule hands the preference
 back to whichever subtrees ask for it by class, winning over the pin by specificity.
 
 ### Its own modal region
@@ -183,7 +183,7 @@ over the call rather than as the window's new contents.
 Because the two cases are told apart by height as well as width, the breakpoint alone is never the question
 asked.
 
-## Providers that run inside Rocket.Chat
+## Providers that run inside YasChat
 
 A provider that declares `embedded` has no page of its own: its call is mounted inside the conference window. LiveKit
 is the one built in; see [native video conference](native-video-conference/README.md).

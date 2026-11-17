@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from '../IRocketChatRecord';
+import type { IYasChatRecord } from '../IYasChatRecord';
 
-export interface IControl extends IRocketChatRecord {
+export interface IControl extends IYasChatRecord {
 	version: number;
 	locked: boolean;
 	hash?: string;

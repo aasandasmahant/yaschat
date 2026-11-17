@@ -1092,7 +1092,7 @@ import type {
 	MediaCallCreateEventResult,
 } from '@rocket.chat/apps-engine/definition/mediaCalls';
 import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { AppMethod, RocketChatAssociationModel, RocketChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppMethod, YasChatAssociationModel, YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
 
 /**
  * How the app should answer the next `executePreMediaCallCreated`. Tests set this
@@ -1110,7 +1110,7 @@ const MODES: Mode[] = ['pass', 'prevent', 'prevent-i18n', 'drop-screen-share'];
  */
 const PREVENTION_I18N_KEY = 'call_prevented_for_callee';
 
-const association = new RocketChatAssociationRecord(RocketChatAssociationModel.MISC, 'media-call-events-test-mode');
+const association = new YasChatAssociationRecord(YasChatAssociationModel.MISC, 'media-call-events-test-mode');
 
 /**
  * What the `history` endpoint should read. Each of the three reads runs only when the

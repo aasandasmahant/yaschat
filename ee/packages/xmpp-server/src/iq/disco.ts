@@ -54,11 +54,11 @@ export function buildDiscoReply(
 	if (infoQuery) {
 		const query = xml('query', { xmlns: NS_DISCO_INFO });
 		if (isMucDomain) {
-			query.cnode(xml('identity', { category: 'conference', type: 'text', name: 'Rocket.Chat Conferences' }));
+			query.cnode(xml('identity', { category: 'conference', type: 'text', name: 'YasChat Conferences' }));
 			query.cnode(xml('feature', { var: NS_DISCO_INFO }));
 			query.cnode(xml('feature', { var: NS_MUC }));
 		} else {
-			query.cnode(xml('identity', { category: 'server', type: 'im', name: 'Rocket.Chat' }));
+			query.cnode(xml('identity', { category: 'server', type: 'im', name: 'YasChat' }));
 			query.cnode(xml('feature', { var: NS_DISCO_INFO }));
 			query.cnode(xml('feature', { var: NS_DISCO_ITEMS }));
 			query.cnode(xml('feature', { var: NS_PING }));

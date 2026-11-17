@@ -1,4 +1,4 @@
-// Runs the Rocket.Chat server and the Vite client together. The browser only
+// Runs the YasChat server and the Vite client together. The browser only
 // talks to Vite (PORT, default 3000), which serves the page Meteor renders with
 // its own client in it and proxies server routes to Meteor (METEOR_PORT, default 3100).
 // With RC_SERVER_URL set, only Vite starts and it proxies to that server instead.

@@ -33,13 +33,13 @@ export class AppUploadsConverter implements IAppUploadsConverter {
 		return z.decodeAsync(this.codec, upload);
 	}
 
-	convertToRocketChat(upload: undefined | null): undefined;
+	convertToYasChat(upload: undefined | null): undefined;
 
-	convertToRocketChat(upload: IAppsUpload): IUpload;
+	convertToYasChat(upload: IAppsUpload): IUpload;
 
-	convertToRocketChat(upload: IAppsUpload | undefined | null): IUpload | undefined;
+	convertToYasChat(upload: IAppsUpload | undefined | null): IUpload | undefined;
 
-	convertToRocketChat(upload: IAppsUpload | undefined | null): IUpload | undefined {
+	convertToYasChat(upload: IAppsUpload | undefined | null): IUpload | undefined {
 		if (!upload) {
 			return undefined;
 		}

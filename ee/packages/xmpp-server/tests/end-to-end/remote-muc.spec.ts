@@ -24,14 +24,14 @@ import {
 	teardown,
 	updateMessage,
 	waitForMessage,
-} from './helper/rocketchat';
-import type { LocalUser, RocketChat } from './helper/rocketchat';
+} from './helper/yaschat';
+import type { LocalUser, YasChat } from './helper/yaschat';
 import { assertFederationReachable, registerXmppUser, setupSuite } from './helper/suite';
 import type { XmppUser } from './helper/xmpp-client';
 import { retry } from '../../../../../apps/meteor/tests/data/retry';
 
 describe('XMPP federation: rooms hosted by the XMPP server', () => {
-	let rc: RocketChat;
+	let rc: YasChat;
 	let alice: XmppUser;
 
 	before(async () => {
@@ -44,7 +44,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 
 	after(() => teardown(rc));
 
-	/** A members-only room owned by alice; Rocket.Chat mirrors it as a channel named after its JID. */
+	/** A members-only room owned by alice; YasChat mirrors it as a channel named after its JID. */
 	async function openRoom({
 		archive,
 		disclosesJids = false,
@@ -67,7 +67,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 		await alice.invite(roomJid, user.jid);
 	}
 
-	async function addFromRocketChat(roomJid: string, inviter: LocalUser, shadow: IRoom, user: LocalUser): Promise<void> {
+	async function addFromYasChat(roomJid: string, inviter: LocalUser, shadow: IRoom, user: LocalUser): Promise<void> {
 		// A members-only room only admits listed members, whoever brought them in
 		await alice.grantMembership(roomJid, user.jid);
 		await inviteToRoom(inviter, shadow, user.username);
@@ -76,7 +76,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 	async function waitForShadowRoom(shadowName: string, roomJid: string, invitee: LocalUser): Promise<IRoom> {
 		let shadow: IRoom | undefined;
 		await retry(
-			`Rocket.Chat to mirror ${roomJid}`,
+			`YasChat to mirror ${roomJid}`,
 			async () => {
 				shadow = await findRoomByName(invitee.config, shadowName);
 				assert.ok(shadow, `no shadow room for ${roomJid} yet`);
@@ -108,7 +108,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			({ roomJid, shadowName } = await openRoom({ archive: true }));
 		});
 
-		it('mirrors the room in Rocket.Chat when a local user is invited (R1)', async () => {
+		it('mirrors the room in YasChat when a local user is invited (R1)', async () => {
 			await inviteFromXmpp(roomJid, a);
 			shadow = await waitForShadowRoom(shadowName, roomJid, a);
 			assert.ok((await listMemberUsernames(a, shadow)).includes(a.username));
@@ -127,7 +127,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 
 			const outbound = `hello from rocket.chat ${uniqueSuffix()}`;
 			await sendMessage(a, shadow._id, outbound);
-			await alice.waitFor(isGroupchat({ roomJid, nick: a.username, body: outbound }), 'the Rocket.Chat message');
+			await alice.waitFor(isGroupchat({ roomJid, nick: a.username, body: outbound }), 'the YasChat message');
 		});
 
 		it('makes the author of a stored message a member of the mirrored room (R12)', async () => {
@@ -146,8 +146,8 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			assert.equal(stored._id, original._id);
 		});
 
-		it('joins a member added in Rocket.Chat with their own session (R3)', async () => {
-			await addFromRocketChat(roomJid, a, shadow, b);
+		it('joins a member added in YasChat with their own session (R3)', async () => {
+			await addFromYasChat(roomJid, a, shadow, b);
 			await waitForOccupant(roomJid, b);
 		});
 
@@ -163,7 +163,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			);
 		});
 
-		it('leaves the room when a member leaves in Rocket.Chat (R3)', async () => {
+		it('leaves the room when a member leaves in YasChat (R3)', async () => {
 			await leaveRoom(b, shadow);
 			await alice.waitFor(isOccupantPresence(roomJid, b.username, { type: 'unavailable' }), `${b.username} to leave`);
 		});
@@ -228,7 +228,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 		});
 	});
 
-	describe('with several Rocket.Chat members', () => {
+	describe('with several YasChat members', () => {
 		let members: LocalUser[];
 		let roomJid: string;
 		let shadow: IRoom;
@@ -250,7 +250,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			// Each new session gets the room history replayed, carrying the same stanza-id
 			for (const member of members.slice(1)) {
 				const after = alice.cursor();
-				await addFromRocketChat(roomJid, members[0], shadow, member);
+				await addFromYasChat(roomJid, members[0], shadow, member);
 				await waitForOccupant(roomJid, member, after);
 			}
 			await sleep(DUPLICATE_SETTLE_MS);
@@ -266,7 +266,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 		it("does not store a member's own message again when the room reflects it to the other sessions (R9)", async () => {
 			const text = `reflected ${uniqueSuffix()}`;
 			await sendMessage(members[0], shadow._id, text);
-			await alice.waitFor(isGroupchat({ roomJid, nick: members[0].username, body: text }), 'the Rocket.Chat message');
+			await alice.waitFor(isGroupchat({ roomJid, nick: members[0].username, body: text }), 'the YasChat message');
 
 			const stored = await expectStoredOnce(members[0], shadow, text);
 			assert.equal(stored.u.username, members[0].username);
@@ -287,7 +287,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 		});
 	});
 
-	describe('with several Rocket.Chat members in a room without archive ids', () => {
+	describe('with several YasChat members in a room without archive ids', () => {
 		let members: LocalUser[];
 		let roomJid: string;
 		let shadow: IRoom;
@@ -300,7 +300,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			shadow = await waitForShadowRoom(opened.shadowName, roomJid, members[0]);
 			await waitForOccupant(roomJid, members[0]);
 			const after = alice.cursor();
-			await addFromRocketChat(roomJid, members[0], shadow, members[1]);
+			await addFromYasChat(roomJid, members[0], shadow, members[1]);
 			await waitForOccupant(roomJid, members[1], after);
 		});
 

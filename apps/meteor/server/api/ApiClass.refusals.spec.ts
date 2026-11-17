@@ -13,7 +13,7 @@ jest.mock('meteor/ddp-common', () => ({ DDPCommon: {} }), { virtual: true });
 jest.mock('meteor/facts-base', () => ({ Facts: { incrementServerFact: () => undefined } }), { virtual: true });
 jest.mock('meteor/email', () => ({ Email: {} }), { virtual: true });
 
-jest.mock('../../rocketchat.info', () => ({ Info: { version: '0.0.0' } }));
+jest.mock('../../yaschat.info', () => ({ Info: { version: '0.0.0' } }));
 
 jest.mock('../settings', () => ({
 	settings: {

@@ -8,7 +8,7 @@ import { serverFetch as fetch } from '@rocket.chat/server-fetch';
 
 import { ProgressStep } from '../../../lib/importer/ImporterProgressStep';
 import { Importers } from '../../lib/import';
-import { RocketChatImportFileInstance } from '../../lib/import/startup/store';
+import { YasChatImportFileInstance } from '../../lib/import/startup/store';
 import { SystemLogger } from '../../lib/logger/system';
 import { settings } from '../../settings';
 
@@ -59,7 +59,7 @@ export const executeDownloadPublicImportFile = async (userId: IUser['_id'], file
 	await instance.startFileUpload(newFileName);
 	await instance.updateProgress(ProgressStep.DOWNLOADING_FILE);
 
-	const writeStream = RocketChatImportFileInstance.createWriteStream(newFileName);
+	const writeStream = YasChatImportFileInstance.createWriteStream(newFileName);
 	let errorProgressUpdate: Promise<unknown> | undefined;
 	const markImportAsFailed = (): Promise<unknown> => {
 		errorProgressUpdate ??= instance.updateProgress(ProgressStep.ERROR).catch((error) => {

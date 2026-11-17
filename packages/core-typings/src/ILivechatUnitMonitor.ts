@@ -1,6 +1,6 @@
-import type { IRocketChatRecord } from './IRocketChatRecord';
+import type { IYasChatRecord } from './IYasChatRecord';
 
-export interface ILivechatUnitMonitor extends IRocketChatRecord {
+export interface ILivechatUnitMonitor extends IYasChatRecord {
 	monitorId: string;
 	unitId: string;
 	username: string;

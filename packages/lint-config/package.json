@@ -1,10 +1,10 @@
 {
 	"name": "@rocket.chat/lint-config",
 	"version": "0.1.0",
-	"description": "Rocket.Chat's JS/TS oxlint config",
+	"description": "YasChat's JS/TS oxlint config",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git",
+		"url": "git+https://github.com/YasChat/YasChat.git",
 		"directory": "packages/lint-config"
 	},
 	"license": "MIT",

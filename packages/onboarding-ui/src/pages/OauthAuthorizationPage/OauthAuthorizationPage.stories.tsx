@@ -10,7 +10,7 @@ export default {
 		layout: 'fullscreen',
 	},
 	args: {
-		clientName: 'Rocket.Chat',
+		clientName: 'YasChat',
 		error: {
 			message: '',
 			onGoBack: () => console.log('Back'),

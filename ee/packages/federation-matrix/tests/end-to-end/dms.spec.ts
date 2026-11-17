@@ -284,7 +284,7 @@ const waitForRoomEvent = async (
 					expect(sub).toHaveProperty('fname', federationConfig.hs1.adminUser);
 				});
 
-				it('should be able to leave the DM from Rocket.Chat', async () => {
+				it('should be able to leave the DM from YasChat', async () => {
 					const leaveEventPromise = waitForRoomEvent(hs1Room, RoomStateEvent.Members, ({ event }) => {
 						expect(event).toHaveProperty('content.membership', 'leave');
 						expect(event).toHaveProperty('state_key', userDmId);
@@ -305,7 +305,7 @@ const waitForRoomEvent = async (
 			});
 		});
 
-		describe('Rocket.Chat as the resident server', () => {
+		describe('YasChat as the resident server', () => {
 			let hs1User: SynapseClient;
 			let rcUser: TestUser<IUser>;
 			let rcUserConfig: IRequestConfig;
@@ -870,7 +870,7 @@ const waitForRoomEvent = async (
 			});
 		});
 
-		describe('Rocket.Chat as the resident server', () => {
+		describe('YasChat as the resident server', () => {
 			let hs1User1: SynapseClient;
 
 			beforeAll(async () => {
@@ -942,7 +942,7 @@ const waitForRoomEvent = async (
 					await deleteUser(rcUser2.user, {}, rc1AdminRequestConfig);
 				});
 
-				it('should create a group DM with a Synapse and Rocket.Chat user', async () => {
+				it('should create a group DM with a Synapse and YasChat user', async () => {
 					// Create group DM from RC user to two Synapse users
 					const response = await rcUser1.config.request
 						.post(api('dm.create'))
@@ -991,7 +991,7 @@ const waitForRoomEvent = async (
 					expect(sub).toHaveProperty('fname', `${federationConfig.hs1.adminUser}, ${rcUser2.fullName}`);
 				});
 
-				it("should display only the inviter's username for the invited user on Rocket.Chat", async () => {
+				it("should display only the inviter's username for the invited user on YasChat", async () => {
 					const sub = await getSubscriptionByRoomId(rcRoom._id, rcUser2.config.credentials, rcUser2.config.request);
 
 					expect(sub).toHaveProperty('status', 'INVITED');
@@ -1111,7 +1111,7 @@ const waitForRoomEvent = async (
 					]);
 				});
 
-				it('should create a group DM with a Synapse and Rocket.Chat user', async () => {
+				it('should create a group DM with a Synapse and YasChat user', async () => {
 					// Create group DM from RC user to two Synapse users
 					const response = await rcUserConfig1.request
 						.post(api('dm.create'))
@@ -1148,7 +1148,7 @@ const waitForRoomEvent = async (
 					);
 				});
 
-				it('should accept the invitation by the Rocket.Chat user', async () => {
+				it('should accept the invitation by the YasChat user', async () => {
 					await expect(acceptRoomInvite(rcRoom._id, rcUserConfig2)).resolves.toMatchObject({ success: true });
 				});
 
@@ -1803,7 +1803,7 @@ const waitForRoomEvent = async (
 					expect(roomInfo.room).toHaveProperty('usersCount', 3);
 				});
 
-				it('should invite a fourth Rocket.Chat user by the invited Synapse user', async () => {
+				it('should invite a fourth YasChat user by the invited Synapse user', async () => {
 					await hs1User1.inviteUserToRoom(hs1Room1.roomId, rcUser2.matrixId);
 
 					await retry(

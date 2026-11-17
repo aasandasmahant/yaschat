@@ -1,7 +1,7 @@
 import type { IMessageBuilder } from '@rocket.chat/apps-engine/definition/accessors/IMessageBuilder';
 import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
 import type { IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages/IMessageAttachment';
-import { RocketChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/RocketChatAssociations';
+import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
 import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
 import type { IBlock } from '@rocket.chat/apps-engine/definition/uikit/blocks/Blocks';
 import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
@@ -10,7 +10,7 @@ import type { LayoutBlock } from '@rocket.chat/ui-kit';
 import { BlockBuilder } from './BlockBuilder';
 
 export class MessageBuilder implements IMessageBuilder {
-	public kind: RocketChatAssociationModel.MESSAGE;
+	public kind: YasChatAssociationModel.MESSAGE;
 
 	private msg: IMessage;
 
@@ -21,7 +21,7 @@ export class MessageBuilder implements IMessageBuilder {
 	private customFieldsChanged = false;
 
 	constructor(message?: IMessage) {
-		this.kind = RocketChatAssociationModel.MESSAGE;
+		this.kind = YasChatAssociationModel.MESSAGE;
 		this.msg = message || ({} as IMessage);
 	}
 

@@ -2,7 +2,7 @@ import type { IUser } from '@rocket.chat/core-typings';
 import { Settings, Users } from '@rocket.chat/models';
 import semver from 'semver';
 
-import { Info } from '../../../../../rocketchat.info';
+import { Info } from '../../../../../yaschat.info';
 import { settings } from '../../../../settings';
 import { updateAuditedBySystem } from '../../../../settings/lib/auditedSettingUpdates';
 import { i18n } from '../../../i18n';
@@ -85,7 +85,7 @@ export const buildVersionUpdateMessage = async (
 		await sendMessagesToAdmins({
 			msgs: async ({ adminUser }) => [
 				{
-					msg: `*${i18n.t('Update_your_RocketChat', { ...(adminUser.language && { lng: adminUser.language }) })}*\n${i18n.t(
+					msg: `*${i18n.t('Update_your_YasChat', { ...(adminUser.language && { lng: adminUser.language }) })}*\n${i18n.t(
 						'New_version_available_(s)',
 						{
 							postProcess: 'sprintf',
@@ -98,7 +98,7 @@ export const buildVersionUpdateMessage = async (
 				{
 					id: `versionUpdate-${version.version}`.replace(/\./g, '_'),
 					priority: 10,
-					title: 'Update_your_RocketChat',
+					title: 'Update_your_YasChat',
 					text: 'New_version_available_(s)',
 					textArguments: [version.version],
 					link: version.infoUrl,

@@ -27,7 +27,7 @@ export function enforceFipsLicense(): void {
 			"including the 'fips' module.",
 			'',
 			'Provide your license through the ROCKETCHAT_LICENSE environment variable,',
-			'or contact Rocket.Chat to obtain one: https://www.rocket.chat/sales-contact',
+			'or contact YasChat to obtain one: https://www.rocket.chat/sales-contact',
 		].join('\n'),
 	);
 

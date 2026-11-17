@@ -70,7 +70,7 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
   - @rocket.chat/core-typings@8.8.0
@@ -84,7 +84,7 @@
 
 ### Patch Changes
 
-- ([#41653](https://github.com/RocketChat/Rocket.Chat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
+- ([#41653](https://github.com/YasChat/YasChat/pull/41653)) Bumps patch-level dependency updates: `react`, `react-dom` and `react-is` to 19.2.8, `ws` to 8.21.3, `nodemailer` to 9.0.5, `mailparser` to 3.9.15, `google-libphonenumber` to 3.2.46, `twitter-api-v2` to 1.29.1, `ip-range-check` to 0.2.1, `esbuild` to 0.28.2, `@octokit/core` to 7.0.7 and `@octokit/plugin-throttling` to 11.0.5, plus build and test tooling (`@swc/core`, `ts-jest`, `rollup`, `html-webpack-plugin`, `@vitejs/plugin-react`, `@testing-library/user-event`, and the `@types/*` packages). No behavior changes are expected.
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
   - @rocket.chat/core-typings@8.8.0-rc.0
@@ -242,7 +242,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/fuselage-ui-kit@29.0.0
@@ -304,7 +304,7 @@
 
 ### Patch Changes
 
-- ([#38989](https://github.com/RocketChat/Rocket.Chat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
+- ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
   - @rocket.chat/fuselage-ui-kit@29.0.0-rc.0
@@ -557,7 +557,7 @@
 
 ### Minor Changes
 
-- ([#37398](https://github.com/RocketChat/Rocket.Chat/pull/37398)) Adds new elements for building apps (ui-kit): `icon` (block element), `icon_button` (block element) and `info_card` (layout block).
+- ([#37398](https://github.com/YasChat/YasChat/pull/37398)) Adds new elements for building apps (ui-kit): `icon` (block element), `icon_button` (block element) and `info_card` (layout block).
 
 ### Patch Changes
 
@@ -596,7 +596,7 @@
 
 ### Minor Changes
 
-- ([#37398](https://github.com/RocketChat/Rocket.Chat/pull/37398)) Adds new elements for building apps (ui-kit): `icon` (block element), `icon_button` (block element) and `info_card` (layout block).
+- ([#37398](https://github.com/YasChat/YasChat/pull/37398)) Adds new elements for building apps (ui-kit): `icon` (block element), `icon_button` (block element) and `info_card` (layout block).
 
 ### Patch Changes
 
@@ -705,7 +705,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0
@@ -803,7 +803,7 @@
 
 ### Patch Changes
 
-- ([#36207](https://github.com/RocketChat/Rocket.Chat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from Rocket.Chat
+- ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
   - @rocket.chat/ui-contexts@23.0.0-rc.0
@@ -1475,7 +1475,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1]:</summary>
   - @rocket.chat/fuselage-ui-kit@17.0.0
@@ -1549,7 +1549,7 @@
 
 ### Patch Changes
 
-- ([#35286](https://github.com/RocketChat/Rocket.Chat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
+- ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1]:</summary>
   - @rocket.chat/fuselage-ui-kit@17.0.0-rc.0
@@ -1693,7 +1693,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944]:</summary>
   - @rocket.chat/fuselage-ui-kit@15.0.0
@@ -1767,7 +1767,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944]:</summary>
   - @rocket.chat/fuselage-ui-kit@15.0.0-rc.0
@@ -1793,13 +1793,13 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, c43220dcd8c1df86a6143d6553964ad2173903b3, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/fuselage-ui-kit@14.0.0
@@ -1825,7 +1825,7 @@
 
 ### Patch Changes
 
-- ([#34858](https://github.com/RocketChat/Rocket.Chat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
+- ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
   - @rocket.chat/fuselage-ui-kit@14.0.0-rc.2
@@ -1851,11 +1851,11 @@
 
 ### Patch Changes
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes an error where the engine would not retry a subprocess restart if the last attempt failed
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes error propagation when trying to get the status of apps in some cases
 
-- ([#34205](https://github.com/RocketChat/Rocket.Chat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
+- ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
   - @rocket.chat/fuselage-ui-kit@14.0.0-rc.0
@@ -1929,7 +1929,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -2017,7 +2017,7 @@
 
 ### Minor Changes
 
-- ([#33592](https://github.com/RocketChat/Rocket.Chat/pull/33592)) Adds ability to collapse/expand sidebar groups
+- ([#33592](https://github.com/YasChat/YasChat/pull/33592)) Adds ability to collapse/expand sidebar groups
 
 ### Patch Changes
 
@@ -2033,7 +2033,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -2121,7 +2121,7 @@
 
 ### Minor Changes
 
-- ([#32821](https://github.com/RocketChat/Rocket.Chat/pull/32821)) Replaced new `SidebarV2` components under feature preview
+- ([#32821](https://github.com/YasChat/YasChat/pull/32821)) Replaced new `SidebarV2` components under feature preview
 
 ### Patch Changes
 
@@ -2148,11 +2148,11 @@
 
 ### Minor Changes
 
-- ([#32969](https://github.com/RocketChat/Rocket.Chat/pull/32969)) Upgrades fuselage-toastbar version in order to add pause on hover functionality
+- ([#32969](https://github.com/YasChat/YasChat/pull/32969)) Upgrades fuselage-toastbar version in order to add pause on hover functionality
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e]:</summary>
   - @rocket.chat/fuselage-ui-kit@10.0.0
@@ -2230,11 +2230,11 @@
 
 ### Minor Changes
 
-- ([#32969](https://github.com/RocketChat/Rocket.Chat/pull/32969)) Upgrades fuselage-toastbar version in order to add pause on hover functionality
+- ([#32969](https://github.com/YasChat/YasChat/pull/32969)) Upgrades fuselage-toastbar version in order to add pause on hover functionality
 
 ### Patch Changes
 
-- ([#32968](https://github.com/RocketChat/Rocket.Chat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e]:</summary>
   - @rocket.chat/fuselage-ui-kit@10.0.0-rc.0
@@ -2379,9 +2379,9 @@
 
 ### Minor Changes
 
-- ([#32604](https://github.com/RocketChat/Rocket.Chat/pull/32604)) Upgrades fuselage-toastbar version in order to add RTL support to the component
+- ([#32604](https://github.com/YasChat/YasChat/pull/32604)) Upgrades fuselage-toastbar version in order to add RTL support to the component
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2473,9 +2473,9 @@
 
 ### Minor Changes
 
-- ([#32604](https://github.com/RocketChat/Rocket.Chat/pull/32604)) Upgrades fuselage-toastbar version in order to add RTL support to the component
+- ([#32604](https://github.com/YasChat/YasChat/pull/32604)) Upgrades fuselage-toastbar version in order to add RTL support to the component
 
-- ([#31821](https://github.com/RocketChat/Rocket.Chat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
+- ([#31821](https://github.com/YasChat/YasChat/pull/31821)) New runtime for apps in the Apps-Engine based on the Deno platform
 
 ### Patch Changes
 
@@ -2755,7 +2755,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/RocketChat/Rocket.Chat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162]:</summary>
   - @rocket.chat/fuselage-ui-kit@4.0.0

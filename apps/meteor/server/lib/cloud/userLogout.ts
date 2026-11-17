@@ -52,7 +52,7 @@ export async function userLogout(userId: string): Promise<string | boolean> {
 			});
 		} catch (err) {
 			SystemLogger.error({
-				msg: 'Failed to get Revoke refresh token to logout of Rocket.Chat Cloud',
+				msg: 'Failed to get Revoke refresh token to logout of YasChat Cloud',
 				url: '/api/oauth/revoke',
 				err,
 			});

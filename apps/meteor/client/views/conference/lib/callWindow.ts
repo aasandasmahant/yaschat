@@ -9,10 +9,10 @@ const CLOSE_GRACE = 500;
 export const NEW_CONFERENCE_ID = 'new';
 
 /**
- * The desktop app's bridge for its video call window, where it has one: under `RocketChatDesktop` since desktop
+ * The desktop app's bridge for its video call window, where it has one: under `YasChatDesktop` since desktop
  * 4.18, and a global of its own before that.
  */
-const desktopCallWindow = (): IVideoCallWindow | undefined => window.RocketChatDesktop?.videoCall ?? window.videoCallWindow;
+const desktopCallWindow = (): IVideoCallWindow | undefined => window.YasChatDesktop?.videoCall ?? window.videoCallWindow;
 
 /**
  * Closes the call window.

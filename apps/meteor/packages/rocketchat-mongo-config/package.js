@@ -1,5 +1,5 @@
 Package.describe({
-	name: 'rocketchat:mongo-config',
+	name: 'yaschat:mongo-config',
 	version: '0.0.1',
 	summary: '',
 	git: '',

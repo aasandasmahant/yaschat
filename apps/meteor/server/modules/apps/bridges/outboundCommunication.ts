@@ -18,7 +18,7 @@ export class OutboundCommunicationBridge extends OutboundMessageBridge {
 			this.orch.debugLog(`App ${appId} is registering a phone outbound provider.`);
 			getOutboundService().outboundMessageProvider.registerPhoneProvider(provider);
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ appId, err, msg: 'Failed to register phone provider' });
+			this.orch.getYasChatLogger().error({ appId, err, msg: 'Failed to register phone provider' });
 			throw new Error('error-registering-provider');
 		}
 	}
@@ -28,7 +28,7 @@ export class OutboundCommunicationBridge extends OutboundMessageBridge {
 			this.orch.debugLog(`App ${appId} is registering an email outbound provider.`);
 			getOutboundService().outboundMessageProvider.registerEmailProvider(provider);
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ appId, err, msg: 'Failed to register email provider' });
+			this.orch.getYasChatLogger().error({ appId, err, msg: 'Failed to register email provider' });
 			throw new Error('error-registering-provider');
 		}
 	}
@@ -38,7 +38,7 @@ export class OutboundCommunicationBridge extends OutboundMessageBridge {
 			this.orch.debugLog(`App ${appId} is unregistering an outbound provider.`);
 			getOutboundService().outboundMessageProvider.unregisterProvider(appId, provider.type);
 		} catch (err) {
-			this.orch.getRocketChatLogger().error({ appId, err, msg: 'Failed to unregister provider' });
+			this.orch.getYasChatLogger().error({ appId, err, msg: 'Failed to unregister provider' });
 			throw new Error('error-unregistering-provider');
 		}
 	}
