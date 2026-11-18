@@ -23,7 +23,8 @@ const nextTick = () => new Promise((resolve) => setImmediate(resolve));
 
 const headHtml = (call = rawModHtml.lastCall) => {
 	expect(call.args[0]).to.equal('headInjections');
-	return call.args[1]('<html><head></head><body></body></html>');
+	return call.args[1]('<html><head>  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body></body></html>');
 };
 
 describe('ui-master inject', () => {
@@ -47,7 +48,8 @@ describe('ui-master inject', () => {
 			await nextTick();
 
 			expect(rawModHtml.callCount).to.equal(1);
-			expect(headHtml()).to.equal('<html><head><meta name="a2">\n<meta name="b">\n</head><body></body></html>');
+			expect(headHtml()).to.equal('<html><head><meta name="a2">\n<meta name="b">\n  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body></body></html>');
 		});
 
 		it('should not render again when a key is set to the value it already has', async () => {
@@ -70,7 +72,8 @@ describe('ui-master inject', () => {
 			await nextTick();
 
 			expect(rawModHtml.callCount).to.equal(2);
-			expect(headHtml()).to.equal('<html><head><meta name="a2">\n<meta name="b">\n</head><body></body></html>');
+			expect(headHtml()).to.equal('<html><head><meta name="a2">\n<meta name="b">\n  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body></body></html>');
 		});
 
 		it('should leave out keys set to an empty string', async () => {
@@ -78,7 +81,8 @@ describe('ui-master inject', () => {
 			inject.injectIntoHead('empty', '');
 			await nextTick();
 
-			expect(headHtml()).to.equal('<html><head><meta name="a">\n</head><body></body></html>');
+			expect(headHtml()).to.equal('<html><head><meta name="a">\n  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body></body></html>');
 		});
 	});
 
@@ -104,17 +108,22 @@ describe('ui-master inject', () => {
 
 	describe('applyHeadInjections', () => {
 		it('should return the html unchanged when there are no injections', () => {
-			expect(inject.applyHeadInjections([])('<head></head>')).to.equal('<head></head>');
+			expect(inject.applyHeadInjections([])('<head>  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head>')).to.equal('<head>  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head>');
 		});
 
-		it('should insert strings and the tags of non-empty assets before </head>', () => {
+		it('should insert strings and the tags of non-empty assets before   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head>', () => {
 			const apply = inject.applyHeadInjections([
 				'<title>$1 & $$</title>',
 				{ type: 'JS', tag: '<script src="/a.js"></script>', content: 'alert(1)' },
 				{ type: 'CSS', tag: '<link href="/b.css">', content: '  ' },
 			]);
 
-			expect(apply('<head></head>')).to.equal('<head><title>$1 & $$</title>\n<script src="/a.js"></script>\n\n</head>');
+			expect(apply('<head>  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head>')).to.equal('<head><title>$1 & $$</title>\n<script src="/a.js"></script>\n\n  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2300b4d8' d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/%3E%3Ccircle cx='44' cy='30' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head>');
 		});
 	});
 });
