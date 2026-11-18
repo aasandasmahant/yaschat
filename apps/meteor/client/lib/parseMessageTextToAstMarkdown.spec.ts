@@ -1,5 +1,5 @@
-import type { IMessage, ITranslatedMessage } from '@rocket.chat/core-typings';
-import type { Options, Root } from '@rocket.chat/message-parser';
+import type { IMessage, ITranslatedMessage } from '@yas chat/core-typings';
+import type { Options, Root } from '@yas chat/message-parser';
 
 import { getMarkdownParserLimit } from './getMarkdownParserLimit';
 import { parseMessageAttachments, parseMessageTextToAstMarkdown } from './parseMessageTextToAstMarkdown';

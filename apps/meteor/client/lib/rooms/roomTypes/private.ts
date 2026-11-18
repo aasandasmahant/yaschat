@@ -1,5 +1,5 @@
-import type { AtLeast, IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
+import type { AtLeast, IRoom } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
 
 import type { IRoomTypeClientDirectives } from '../../../../definition/IRoomTypeConfig';
 import { RoomSettingsEnum, RoomMemberActions, UiTextContext } from '../../../../definition/IRoomTypeConfig';

@@ -1,4 +1,4 @@
-import styled from '@rocket.chat/styled';
+import styled from '@yas chat/styled';
 
 import { below } from '../../helpers/tokenBreakpoints';
 import { sans } from '../../helpers/tokenFontFamilies';

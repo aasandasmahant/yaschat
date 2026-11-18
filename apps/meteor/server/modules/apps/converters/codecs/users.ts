@@ -1,6 +1,6 @@
-import type { IAppsUser } from '@rocket.chat/apps';
-import type { IUser } from '@rocket.chat/core-typings';
-import { removeEmpty } from '@rocket.chat/tools';
+import type { IAppsUser } from '@yas chat/apps';
+import type { IUser } from '@yas chat/core-typings';
+import { removeEmpty } from '@yas chat/tools';
 import * as z from 'zod';
 
 import { UserStatusConnectionCodec, UserTypeCodec } from './enums';

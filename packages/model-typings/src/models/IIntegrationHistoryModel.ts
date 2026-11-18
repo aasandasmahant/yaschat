@@ -1,4 +1,4 @@
-import type { IIntegrationHistory } from '@rocket.chat/core-typings';
+import type { IIntegrationHistory } from '@yas chat/core-typings';
 import type { FindOneAndUpdateOptions, InsertOneResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

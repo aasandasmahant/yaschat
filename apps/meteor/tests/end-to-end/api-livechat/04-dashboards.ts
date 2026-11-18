@@ -1,9 +1,9 @@
 import { after, before, describe, it } from 'node:test';
 
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ILivechatDepartment, ILivechatVisitor, IOmnichannelRoom, IUser } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import type { ILivechatDepartment, ILivechatVisitor, IOmnichannelRoom, IUser } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { expect } from 'chai';
 import moment from 'moment';
 import type { Response } from 'supertest';

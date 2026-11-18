@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { isNotUndefined } from '@rocket.chat/core-typings';
-import { LivechatContacts, Users } from '@rocket.chat/models';
-import type { PaginatedResult, ILivechatContactWithManagerData } from '@rocket.chat/rest-typings';
+import type { IUser } from '@yas chat/core-typings';
+import { isNotUndefined } from '@yas chat/core-typings';
+import { LivechatContacts, Users } from '@yas chat/models';
+import type { PaginatedResult, ILivechatContactWithManagerData } from '@yas chat/rest-typings';
 import type { FindCursor, Sort } from 'mongodb';
 
 export type GetContactsParams = {

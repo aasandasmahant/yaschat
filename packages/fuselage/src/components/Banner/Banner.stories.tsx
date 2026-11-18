@@ -94,7 +94,7 @@ export const _Banner: Story = {
 		icon: <Icon name='info' size={24} />,
 		title: 'Sed ut perspiciatis unde',
 		onClose: action('close'),
-		link: 'https://rocket.chat/',
+		link: 'https://yas chat/',
 		children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
 	},
 };

@@ -1,5 +1,5 @@
-import type { Keys as IconName } from '@rocket.chat/icons';
-import nameToCharacterMapping from '@rocket.chat/icons';
+import type { Keys as IconName } from '@yas chat/icons';
+import nameToCharacterMapping from '@yas chat/icons';
 
 import type { statusColors, textIconColors } from '../../Theme';
 import type { ElementProps } from '../../types/ElementProps';

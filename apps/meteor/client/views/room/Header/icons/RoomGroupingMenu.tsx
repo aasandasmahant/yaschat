@@ -1,5 +1,5 @@
-import { isOmnichannelRoom, type IRoom, type ISubscription } from '@rocket.chat/core-typings';
-import { useIsEnterprise } from '@rocket.chat/ui-client';
+import { isOmnichannelRoom, type IRoom, type ISubscription } from '@yas chat/core-typings';
+import { useIsEnterprise } from '@yas chat/ui-client';
 import { memo } from 'react';
 
 import Favorite from './Favorite';

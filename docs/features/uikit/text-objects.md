@@ -13,7 +13,7 @@ Do not rely on either behaviour: send `mrkdwn` when formatting is wanted.
 
 This is YasChat message markdown:
 
-- **Fuselage** parses the text with `@rocket.chat/message-parser` and renders the tokens with `@rocket.chat/gazzodown`, the same pipeline as chat messages, with emoticons disabled. See [`MarkdownTextElement.tsx`](../../../packages/fuselage-ui-kit/src/elements/MarkdownTextElement.tsx).
+- **Fuselage** parses the text with `@yas chat/message-parser` and renders the tokens with `@yas chat/gazzodown`, the same pipeline as chat messages, with emoticons disabled. See [`MarkdownTextElement.tsx`](../../../packages/fuselage-ui-kit/src/elements/MarkdownTextElement.tsx).
 - **Livechat** renders it with its own `MarkdownBlock`, converts emoji shortnames to unicode and enables emoticons. See [`Mrkdwn/index.tsx`](../../../packages/livechat/src/components/uiKit/message/Mrkdwn/index.tsx).
 
 So `*bold*`, `_italic_`, mentions and links behave as in a YasChat message. `verbatim` is declared but ignored by both renderers.

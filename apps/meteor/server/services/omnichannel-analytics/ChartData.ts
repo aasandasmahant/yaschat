@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import type { ILivechatRoomsModel } from '@rocket.chat/model-typings';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import type { ILivechatRoomsModel } from '@yas chat/model-typings';
 import type { Filter } from 'mongodb';
 
 /* oxlint-disable new-cap */

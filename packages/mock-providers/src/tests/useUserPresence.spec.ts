@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { useUserPresence } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { useUserPresence } from '@yas chat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { mockAppRoot } from '..';

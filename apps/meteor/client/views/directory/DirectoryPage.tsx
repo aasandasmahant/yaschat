@@ -1,5 +1,5 @@
-import { Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
-import { useRouter, useRouteParameter, useSetting } from '@rocket.chat/ui-contexts';
+import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { useRouter, useRouteParameter, useSetting } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { Select } from '@rocket.chat/fuselage';
+import { Select } from '@yas chat/fuselage';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

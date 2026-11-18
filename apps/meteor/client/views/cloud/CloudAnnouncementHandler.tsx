@@ -1,5 +1,5 @@
-import type { IBanner } from '@rocket.chat/core-typings';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { IBanner } from '@yas chat/core-typings';
+import type * as UiKit from '@yas chat/ui-kit';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
 import type { Locator, Page } from '@playwright/test';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { FlexTab } from './flextab';
 import { MenuMore } from '../menu';

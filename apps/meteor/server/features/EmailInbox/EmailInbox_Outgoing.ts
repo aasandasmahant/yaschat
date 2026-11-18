@@ -1,7 +1,7 @@
-import { isIMessageInbox } from '@rocket.chat/core-typings';
-import type { IEmailInbox, IUser, IOmnichannelRoom, SlashCommandCallbackParams, IUpload } from '@rocket.chat/core-typings';
-import { Messages, Uploads, LivechatRooms, Rooms, Users } from '@rocket.chat/models';
-import { isTruthy } from '@rocket.chat/tools';
+import { isIMessageInbox } from '@yas chat/core-typings';
+import type { IEmailInbox, IUser, IOmnichannelRoom, SlashCommandCallbackParams, IUpload } from '@yas chat/core-typings';
+import { Messages, Uploads, LivechatRooms, Rooms, Users } from '@yas chat/models';
+import { isTruthy } from '@yas chat/tools';
 import type Mail from 'nodemailer/lib/mailer';
 
 import { inboxes } from './EmailInbox';

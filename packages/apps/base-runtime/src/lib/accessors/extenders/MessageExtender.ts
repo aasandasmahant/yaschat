@@ -1,7 +1,7 @@
-import type { IMessageExtender } from '@rocket.chat/apps-engine/definition/accessors/IMessageExtender';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import type { IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages/IMessageAttachment';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IMessageExtender } from '@yas chat/apps-engine/definition/accessors/IMessageExtender';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import type { IMessageAttachment } from '@yas chat/apps-engine/definition/messages/IMessageAttachment';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
 
 export class MessageExtender implements IMessageExtender {
 	public readonly kind: YasChatAssociationModel.MESSAGE;

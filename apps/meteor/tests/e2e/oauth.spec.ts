@@ -1,4 +1,4 @@
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
 
 import { BASE_URL, IS_EE } from './config/constants';
 import { Registration } from './page-objects';

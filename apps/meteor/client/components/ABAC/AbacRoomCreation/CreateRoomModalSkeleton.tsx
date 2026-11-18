@@ -1,4 +1,4 @@
-import { Box, InputBoxSkeleton, Modal, ModalClose, ModalContent, ModalHeader, ModalTitle } from '@rocket.chat/fuselage';
+import { Box, InputBoxSkeleton, Modal, ModalClose, ModalContent, ModalHeader, ModalTitle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 type CreateRoomModalSkeletonProps = {

@@ -1,4 +1,4 @@
-import type { App } from '@rocket.chat/apps-engine/definition/App';
+import type { App } from '@yas chat/apps-engine/definition/App';
 
 import type { RequestContext } from './requestContext';
 import { isApp, isRecord } from '../handlers/lib/assertions';

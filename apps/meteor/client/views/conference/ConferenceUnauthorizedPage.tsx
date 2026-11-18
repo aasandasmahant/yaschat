@@ -1,5 +1,5 @@
-import { ConferenceStatePage } from '@rocket.chat/ui-conference';
-import { UserContext, useUser, useRoute } from '@rocket.chat/ui-contexts';
+import { ConferenceStatePage } from '@yas chat/ui-conference';
+import { UserContext, useUser, useRoute } from '@yas chat/ui-contexts';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 

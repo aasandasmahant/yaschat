@@ -1,5 +1,5 @@
-import { AccordionItem } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldHint, TextAreaInput } from '@rocket.chat/fuselage-forms';
+import { AccordionItem } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldHint, TextAreaInput } from '@yas chat/fuselage-forms';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

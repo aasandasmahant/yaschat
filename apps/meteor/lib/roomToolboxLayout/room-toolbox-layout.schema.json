@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://rocket.chat/schemas/room-toolbox-layout/v1.json",
+	"$id": "https://yas chat/schemas/room-toolbox-layout/v1.json",
 	"title": "YasChat Room Toolbox Layout configuration",
 	"description": "A list of entries, each declaring the toolbox layout for the room types it claims. Room types left out keep the default layout.",
 	"type": "array",

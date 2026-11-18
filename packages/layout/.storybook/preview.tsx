@@ -1,4 +1,4 @@
-import { parameters, decorators, useThemeMode } from '@rocket.chat/storybook-config/preview';
+import { parameters, decorators, useThemeMode } from '@yas chat/storybook-config/preview';
 import type { Preview } from '@storybook/react-webpack5';
 import { Suspense } from 'react';
 

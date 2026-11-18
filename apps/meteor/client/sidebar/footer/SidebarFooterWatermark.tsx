@@ -1,5 +1,5 @@
-import { Box, SidebarFooterContent as FooterContent } from '@rocket.chat/fuselage';
-import { links, useLicense, useLicenseName } from '@rocket.chat/ui-client';
+import { Box, SidebarFooterContent as FooterContent } from '@yas chat/fuselage';
+import { links, useLicense, useLicenseName } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export const SidebarFooterWatermark = () => {
@@ -25,7 +25,7 @@ export const SidebarFooterWatermark = () => {
 
 	return (
 		<FooterContent>
-			<Box is='a' href={links.rocketChat} target='_blank' rel='noopener noreferrer'>
+			<Box is='a' href={links.YasChat} target='_blank' rel='noopener noreferrer'>
 				<Box color='hint' paddingBlockEnd={4}>
 					{t('Powered_by_YasChat')}
 				</Box>

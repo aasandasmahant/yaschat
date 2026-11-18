@@ -1,7 +1,7 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IUser, IOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IUser, IOmnichannelRoom } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { api, request, credentials, getCredentials } from '../../data/api-data';

@@ -1,4 +1,4 @@
-import { BlockBuilder as AppsEngineBlockBuilder } from '@rocket.chat/apps-engine/definition/uikit/blocks/BlockBuilder';
+import { BlockBuilder as AppsEngineBlockBuilder } from '@yas chat/apps-engine/definition/uikit/blocks/BlockBuilder';
 
 import { AppObjectRegistry } from '../../../AppObjectRegistry';
 
@@ -7,7 +7,7 @@ import { AppObjectRegistry } from '../../../AppObjectRegistry';
  * It overrides the constructor to source the appId from the registry
  * instead of requiring it as a constructor argument.
  *
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export class BlockBuilder extends AppsEngineBlockBuilder {
 	constructor() {

@@ -2,7 +2,7 @@ import { EventEmitter } from 'node:events';
 import net from 'node:net';
 import util from 'node:util';
 
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 
 import localCommandHandlers from './localCommandHandlers';
 import parseMessage from './parseMessage';

@@ -1,4 +1,4 @@
-import type { IIntegration, IIntegrationHistory } from '@rocket.chat/core-typings';
+import type { IIntegration, IIntegrationHistory } from '@yas chat/core-typings';
 
 import type { IntegrationsClearHistoryProps } from './IntegrationsClearHistoryProps';
 import type { IntegrationsCreateProps } from './IntegrationsCreateProps';

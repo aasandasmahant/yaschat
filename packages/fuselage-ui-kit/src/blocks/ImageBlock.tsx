@@ -1,5 +1,5 @@
-import { Box, Skeleton } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { Box, Skeleton } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 import { memo, useEffect, useState } from 'react';
 
 import { Image } from './ImageBlock.styles';

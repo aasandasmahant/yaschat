@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import type { VideoConferenceCapabilities } from '@rocket.chat/core-typings';
+import type { VideoConferenceCapabilities } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { LIVEKIT_CAPABILITIES } from './capabilities';

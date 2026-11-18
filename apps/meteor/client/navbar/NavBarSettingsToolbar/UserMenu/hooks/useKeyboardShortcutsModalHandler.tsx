@@ -1,4 +1,4 @@
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { useSetModal } from '@yas chat/ui-contexts';
 
 import KeyboardShortcutsModal from '../KeyboardShortcutsModal';
 

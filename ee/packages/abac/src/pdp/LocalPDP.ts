@@ -1,7 +1,7 @@
-import { LDAPEnterprise } from '@rocket.chat/core-services';
-import type { AbacActor, AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import type { AbacMembershipVerdict, AbacPreviewCursor, IAbacAttributeDefinition, IRoom, AtLeast, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
+import { LDAPEnterprise } from '@yas chat/core-services';
+import type { AbacActor, AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import type { AbacMembershipVerdict, AbacPreviewCursor, IAbacAttributeDefinition, IRoom, AtLeast, IUser } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
 
 import { AbacInvalidAttributeValuesError, OnlyCompliantCanBeAddedToRoomError } from '../errors';
 import {

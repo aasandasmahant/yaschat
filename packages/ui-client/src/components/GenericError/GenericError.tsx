@@ -1,5 +1,5 @@
-import { Box, States, StatesIcon, StatesTitle, StatesActions, StatesAction } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Box, States, StatesIcon, StatesTitle, StatesActions, StatesAction } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import { useTranslation } from 'react-i18next';
 
 import CopyErrorReportAction from '../ErrorReport/CopyErrorReportAction';

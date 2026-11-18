@@ -1,7 +1,7 @@
-import { IconButton } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { IconButton } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

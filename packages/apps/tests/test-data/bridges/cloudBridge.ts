@@ -1,4 +1,4 @@
-import type { IWorkspaceToken } from '@rocket.chat/apps-engine/definition/cloud/IWorkspaceToken';
+import type { IWorkspaceToken } from '@yas chat/apps-engine/definition/cloud/IWorkspaceToken';
 
 import { CloudWorkspaceBridge } from '../../../src/server/bridges/CloudWorkspaceBridge';
 

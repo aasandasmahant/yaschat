@@ -87,7 +87,7 @@ organization. That's it — you are running.
 `yarn dev` runs the YasChat server and the web client together:
 
 1. It builds the packages the app depends on (`turbo run build
-   --filter=@rocket.chat/meteor^...`). If the build fails, nothing starts.
+   --filter=@yas chat/meteor^...`). If the build fails, nothing starts.
 2. It starts the Meteor server on `METEOR_PORT` (default `3100`). `ROOT_URL`
    defaults to the client address, so the links that the server builds
    (emails, OAuth callbacks) point to it.
@@ -170,7 +170,7 @@ exported in your shell is picked up on the next start. The most used ones:
 | `PORT` | HTTP port (default `3000`) |
 | `ROOT_URL` | public URL; must match how you open it in the browser |
 | `MONGO_URL` | point at an external Mongo instead of the bundled one (see section 5) |
-| `ROCKETCHAT_LICENSE` | enables Enterprise (EE) features |
+| `YasChat_LICENSE` | enables Enterprise (EE) features |
 
 ---
 

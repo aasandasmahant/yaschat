@@ -1,5 +1,5 @@
-import { Box, Button } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { Box, Button } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 import { memo, useCallback, useMemo, useState } from 'react';
 
 import Action from './ActionsBlock.Action';

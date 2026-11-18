@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { usePermission, useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { usePermission, useRoomToolbox } from '@yas chat/ui-contexts';
 import { useCallback, useState } from 'react';
 
 import TeamsInfo from './TeamsInfo';

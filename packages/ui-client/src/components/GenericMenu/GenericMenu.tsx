@@ -1,4 +1,4 @@
-import { IconButton, MenuItem, MenuSection, Menu } from '@rocket.chat/fuselage';
+import { IconButton, MenuItem, MenuSection, Menu } from '@yas chat/fuselage';
 import { cloneElement, type ComponentProps, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

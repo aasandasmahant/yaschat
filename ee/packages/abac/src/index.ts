@@ -1,4 +1,4 @@
-import { api, Authorization, License, Message, Room, ServiceClass, Settings } from '@rocket.chat/core-services';
+import { api, Authorization, License, Message, Room, ServiceClass, Settings } from '@yas chat/core-services';
 import type {
 	AbacActor,
 	AbacCreationAttributesResult,
@@ -7,8 +7,8 @@ import type {
 	AbacRoomMembershipPreviewPage,
 	AbacUsersAllowedInRoomResult,
 	IAbacService,
-} from '@rocket.chat/core-services';
-import { AbacAccessOperation, AbacObjectType, isAbacPdpType, isAbacAttributeStoreType } from '@rocket.chat/core-typings';
+} from '@yas chat/core-services';
+import { AbacAccessOperation, AbacObjectType, isAbacPdpType, isAbacAttributeStoreType } from '@yas chat/core-typings';
 import type {
 	IAbacAttribute,
 	IAbacAttributeDefinition,
@@ -23,9 +23,9 @@ import type {
 	AbacPdpType,
 	AbacUserIdentifiers,
 	MinimalApp,
-} from '@rocket.chat/core-typings';
-import { Rooms, AbacAttributes, Users, Subscriptions } from '@rocket.chat/models';
-import { escapeRegExp, isTruthy } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { Rooms, AbacAttributes, Users, Subscriptions } from '@yas chat/models';
+import { escapeRegExp, isTruthy } from '@yas chat/tools';
 import type { Document, UpdateFilter } from 'mongodb';
 import pLimit from 'p-limit';
 

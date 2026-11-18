@@ -1,7 +1,7 @@
-import type { ICustomSound } from '@rocket.chat/core-typings';
-import { IconButton, Text } from '@rocket.chat/fuselage';
-import { GenericTableCell, GenericTableRow } from '@rocket.chat/ui-client';
-import { useCustomSound } from '@rocket.chat/ui-contexts';
+import type { ICustomSound } from '@yas chat/core-typings';
+import { IconButton, Text } from '@yas chat/fuselage';
+import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
+import { useCustomSound } from '@yas chat/ui-contexts';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

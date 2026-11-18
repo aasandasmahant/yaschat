@@ -10,8 +10,8 @@ const serverFetchStub = sinon.stub();
 class CloudOfflineLicenseError extends Error {}
 
 const { MarketplaceAPIClient } = proxyquire.noCallThru().load('./MarketplaceAPIClient.ts', {
-	'@rocket.chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
-	'@rocket.chat/server-fetch': { serverFetch: serverFetchStub, Response: class {} },
+	'@yas chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
+	'@yas chat/server-fetch': { serverFetch: serverFetchStub, Response: class {} },
 	'./isTesting': { isTesting: () => false },
 	'../../../../../lib/errors/CloudOfflineLicenseError': { CloudOfflineLicenseError },
 });
@@ -53,6 +53,6 @@ describe('MarketplaceAPIClient', () => {
 		await client.fetch('v1/apps');
 
 		expect(serverFetchStub.calledOnce).to.be.true;
-		expect(serverFetchStub.firstCall.args[0]).to.equal('https://marketplace.rocket.chat/v1/apps');
+		expect(serverFetchStub.firstCall.args[0]).to.equal('https://marketplace.yas chat/v1/apps');
 	});
 });

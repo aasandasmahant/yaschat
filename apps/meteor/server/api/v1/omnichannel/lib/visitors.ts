@@ -1,5 +1,5 @@
-import type { ILivechatVisitor, IMessage, IOmnichannelRoom, IRoom, IUser, IVisitor } from '@rocket.chat/core-typings';
-import { LivechatVisitors, Messages, LivechatRooms, LivechatCustomField } from '@rocket.chat/models';
+import type { ILivechatVisitor, IMessage, IOmnichannelRoom, IRoom, IUser, IVisitor } from '@yas chat/core-typings';
+import { LivechatVisitors, Messages, LivechatRooms, LivechatCustomField } from '@yas chat/models';
 import type { FindOptions } from 'mongodb';
 
 import { canAccessRoomAsync } from '../../../../lib/authorization/canAccessRoom';

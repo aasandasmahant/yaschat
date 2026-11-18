@@ -2,8 +2,8 @@
 // TODO: Remove the following lint/ts instructions when the file gets properly converted
 /* oxlint-disable-next-line @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import { Rooms, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { Rooms, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { SlackBridge } from './slackbridge';
 import { i18n } from '../../lib/i18n';

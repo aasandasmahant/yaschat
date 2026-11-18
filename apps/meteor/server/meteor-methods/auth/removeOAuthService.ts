@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Settings } from '@rocket.chat/models';
-import { capitalize } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Settings } from '@yas chat/models';
+import { capitalize } from '@yas chat/tools';
 
 import { notifyOnSettingChangedById } from '../../lib/notifyListener';
 

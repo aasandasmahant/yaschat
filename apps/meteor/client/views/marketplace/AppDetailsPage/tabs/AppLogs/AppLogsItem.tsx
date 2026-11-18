@@ -1,6 +1,6 @@
-import type { ILogItem } from '@rocket.chat/core-typings';
-import { Box, Divider } from '@rocket.chat/fuselage';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { ILogItem } from '@yas chat/core-typings';
+import { Box, Divider } from '@yas chat/fuselage';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

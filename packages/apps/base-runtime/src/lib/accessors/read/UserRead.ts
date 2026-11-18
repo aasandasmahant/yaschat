@@ -1,5 +1,5 @@
-import type { IUserRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IUserRead } from '@yas chat/apps-engine/definition/accessors';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

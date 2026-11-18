@@ -1,7 +1,7 @@
-import type { IImportRecord } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { ImportData } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import type { IImportRecord } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { ImportData } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import { type FindCursor, ObjectId } from 'mongodb';
 
 import { ConverterCache } from './ConverterCache';

@@ -1,6 +1,6 @@
-import { Message } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Subscriptions } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Subscriptions } from '@yas chat/models';
 
 import { filterDefaultChannelsForUser } from './filterDefaultChannelsForUser';
 import { getDefaultChannels } from './getDefaultChannels';

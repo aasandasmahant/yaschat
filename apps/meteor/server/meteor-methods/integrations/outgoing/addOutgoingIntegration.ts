@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { INewOutgoingIntegration, IOutgoingIntegration } from '@rocket.chat/core-typings';
-import { Integrations } from '@rocket.chat/models';
-import { removeEmpty } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { INewOutgoingIntegration, IOutgoingIntegration } from '@yas chat/core-typings';
+import { Integrations } from '@yas chat/models';
+import { removeEmpty } from '@yas chat/tools';
 
 import { hasPermissionAsync } from '../../../lib/authorization/hasPermission';
 import { validateOutgoingIntegration } from '../../../lib/integrations/lib/validateOutgoingIntegration';

@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -44,7 +44,7 @@ const { UserConverter } = proxyquire.noCallThru().load('./UserConverter', {
 	'./generateTempPassword': {
 		generateTempPassword,
 	},
-	'@rocket.chat/account-utils': {
+	'@yas chat/account-utils': {
 		hashPassword: hashPasswordMock,
 	},
 	'meteor/meteor': sinon.stub(),

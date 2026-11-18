@@ -30,7 +30,7 @@ actually experienced in production (host copies were unreachable from the subpro
 ## End state
 
 `BaseRuntimeSubprocessController` handles exactly one app-originated RPC category — `bridges:*` — with
-a single dispatcher and a single permission model. The `@rocket.chat/apps` host contains no accessor
+a single dispatcher and a single permission model. The `@yas chat/apps` host contains no accessor
 implementation and no accessor manager (`src/server/accessors/` and `AppAccessorManager` are deleted);
 the only accessor-shaped host code is the bridge layer (`AppBridges`/`do*`) plus `AppResourceBridge`.
 Every accessor an app uses is built and resolved inside `packages/apps/base-runtime`.
@@ -230,14 +230,14 @@ payload `appId` and use the connection-known id (follow-up 5).
 ### Module-resolution constraints (the original reason for the proxies)
 
 The Deno subprocess consumes base-runtime **as TypeScript source** through the import map
-(`@rocket.chat/apps/base-runtime/` → `../base-runtime/src/`); compiled `dist` CJS is avoided because
+(`@yas chat/apps/base-runtime/` → `../base-runtime/src/`); compiled `dist` CJS is avoided because
 its `require()` calls bypass the import map. So moved code may import only
-`@rocket.chat/apps-engine/definition/*` (mapped to source), `node:` builtins, and npm deps already in
+`@yas chat/apps-engine/definition/*` (mapped to source), `node:` builtins, and npm deps already in
 `deno.jsonc`'s import map or Deno cache — which every moved accessor satisfies.
 
 `UIHelper` was **duplicated** into base-runtime rather than shared. It is a small pure helper (only
 `node:crypto` plus two type-only imports) needed by `ModifyCreator`/`ModifyUpdater`/`UIController`, and
-the runtime used to import it from `@rocket.chat/apps/dist/server/misc/UIHelper` — exactly the fragile
+the runtime used to import it from `@yas chat/apps/dist/server/misc/UIHelper` — exactly the fragile
 dist-CJS path the runtime avoids. Having the host import it *back* from base-runtime was rejected:
 base-runtime already imports `apps/dist`, so that would create an unlinearizable **build cycle**
 (flipping the order only moves it). Phase 0 copied it into `base-runtime/src/lib/` and left the host
@@ -398,7 +398,7 @@ positional* params. Refactored the existing runtime accessors (`Http`, `Notifier
 `ModifyUpdater`, `ModifyExtender`, `roomFactory`) onto it and normalized caller-identity params;
 accessors still holding `accessor:*` sub-proxies kept `senderFn` for those until Phase 2. Duplicated
 `UIHelper` into `base-runtime/src/lib/`. Stood up the parity harness. No changeset:
-`@rocket.chat/apps` is `private` and has never carried one — this ADR and the exception list are the
+`@yas chat/apps` is `private` and has never carried one — this ADR and the exception list are the
 recorded contract.
 
 **Phase 1 — readers, `Persistence`, server-side environment.** Ported the reader family plus

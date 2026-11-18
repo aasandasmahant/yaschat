@@ -1,7 +1,7 @@
-import { Banner } from '@rocket.chat/core-services';
-import type { IBanner, BannerPlatform } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Banner } from '@yas chat/core-services';
+import type { IBanner, BannerPlatform } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { getWorkspaceAccessToken } from '../../lib/cloud';
 import { SystemLogger } from '../../lib/logger/system';

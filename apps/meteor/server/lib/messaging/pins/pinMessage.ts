@@ -1,9 +1,9 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import { isQuoteAttachment, isRegisterUser } from '@rocket.chat/core-typings';
-import type { IMessage, MessageAttachment, MessageQuoteAttachment } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { isTruthy } from '@rocket.chat/tools';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import { isQuoteAttachment, isRegisterUser } from '@yas chat/core-typings';
+import type { IMessage, MessageAttachment, MessageQuoteAttachment } from '@yas chat/core-typings';
+import { Messages, Rooms, Subscriptions, Users } from '@yas chat/models';
+import { isTruthy } from '@yas chat/tools';
 
 import { settings } from '../../../settings';
 import { canAccessRoomAsync, roomAccessAttributes } from '../../authorization';

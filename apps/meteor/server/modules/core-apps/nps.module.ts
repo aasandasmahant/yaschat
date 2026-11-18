@@ -1,6 +1,6 @@
-import type { IUiKitCoreApp, UiKitCoreAppBlockActionPayload, UiKitCoreAppViewSubmitPayload } from '@rocket.chat/core-services';
-import { Banner, NPS } from '@rocket.chat/core-services';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { IUiKitCoreApp, UiKitCoreAppBlockActionPayload, UiKitCoreAppViewSubmitPayload } from '@yas chat/core-services';
+import { Banner, NPS } from '@yas chat/core-services';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { createModal } from './nps/createModal';
 

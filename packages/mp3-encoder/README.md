@@ -1,8 +1,8 @@
-# `@rocket.chat/mp3-encoder`
+# `@yas chat/mp3-encoder`
 
 > A LAME-based MP3 encoder that runs as a web worker.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/mp3-encoder) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/mp3-encoder)
+[![npm](https://img.shields.io/npm/v/@yas chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@yas chat/mp3-encoder) [![downloads](https://img.shields.io/npm/dw/@yas chat/mp3-encoder?style=flat-square)](https://www.npmjs.com/package/@yas chat/mp3-encoder)
 
 This package is a web worker script that encodes raw audio samples into an MP3 stream. It is a TypeScript port of the LAME encoder, so it needs no native code or WebAssembly. YasChat uses it to encode voice messages recorded in the browser.
 
@@ -11,7 +11,7 @@ The package has no exports. You load its built file as a worker and talk to it w
 ## Installation
 
 ```sh
-npm install @rocket.chat/mp3-encoder
+npm install @yas chat/mp3-encoder
 ```
 
 There are no dependencies. The worker script is published as `dist/index.js`, a classic script suitable for `new Worker(url)`.
@@ -20,7 +20,7 @@ There are no dependencies. The worker script is published as `dist/index.js`, a 
 
 ### Serving the worker
 
-Copy or link `node_modules/@rocket.chat/mp3-encoder/dist/index.js` to a path your app serves as a static file, then start a worker from it:
+Copy or link `node_modules/@yas chat/mp3-encoder/dist/index.js` to a path your app serves as a static file, then start a worker from it:
 
 ```ts
 const worker = new Worker('/workers/mp3-encoder/index.js');
@@ -84,12 +84,12 @@ Each `encode` message is treated as a single channel. Mix multi-channel audio do
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/mp3-encoder). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/mp3-encoder build
-yarn workspace @rocket.chat/mp3-encoder start
-yarn workspace @rocket.chat/mp3-encoder testunit
-yarn workspace @rocket.chat/mp3-encoder lint
-yarn workspace @rocket.chat/mp3-encoder lint:fix
-yarn workspace @rocket.chat/mp3-encoder typecheck
+yarn workspace @yas chat/mp3-encoder build
+yarn workspace @yas chat/mp3-encoder start
+yarn workspace @yas chat/mp3-encoder testunit
+yarn workspace @yas chat/mp3-encoder lint
+yarn workspace @yas chat/mp3-encoder lint:fix
+yarn workspace @yas chat/mp3-encoder typecheck
 ```
 
 `build` bundles the worker with Rollup; `start` rebuilds on change. The tests encode the WAV files in `testdata/` and compare the result with a known hash, so a change to the encoder that alters its output fails them.

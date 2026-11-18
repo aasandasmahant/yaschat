@@ -1,5 +1,5 @@
-import { Box, Label } from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormTitle } from '@rocket.chat/layout';
+import { Box, Label } from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormTitle } from '@yas chat/layout';
 import { Trans, useTranslation } from 'react-i18next';
 
 import EmailCodeFallback from '../../common/EmailCodeFallback';

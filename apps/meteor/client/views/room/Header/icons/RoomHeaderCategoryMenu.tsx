@@ -1,7 +1,7 @@
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { Icon, IconButton } from '@rocket.chat/fuselage';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
+import { Icon, IconButton } from '@yas chat/fuselage';
+import { GenericMenu } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useCategoryMenuItems } from '../../../../sidebar/categories/hooks/useCategoryMenuItems';

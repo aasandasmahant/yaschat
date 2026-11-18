@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { isRegisterUser } from '@rocket.chat/core-typings';
-import { Users, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { isRegisterUser } from '@yas chat/core-typings';
+import { Users, Rooms } from '@yas chat/models';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

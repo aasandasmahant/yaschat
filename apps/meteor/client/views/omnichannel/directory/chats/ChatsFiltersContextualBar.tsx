@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Field, FieldLabel, FieldRow, InputBox, Select, TextInput } from '@rocket.chat/fuselage';
+import { Button, ButtonGroup, Field, FieldLabel, FieldRow, InputBox, Select, TextInput } from '@yas chat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -8,8 +8,8 @@ import {
 	ContextualbarFooter,
 	ContextualbarDialog,
 	useHasLicenseModule,
-} from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import { format } from 'date-fns/format';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

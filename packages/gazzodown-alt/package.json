@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/gazzodown-alt",
+	"name": "@yas chat/gazzodown-alt",
 	"version": "1.0.0",
 	"private": true,
 	"type": "module",
@@ -23,9 +23,9 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/message-parser": "workspace:^",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/message-parser": "workspace:^",
+		"@yas chat/tsconfig": "workspace:*",
 		"@types/react": "~19.2.18",
 		"@types/react-dom": "~19.2.7",
 		"fast-check": "~4.6.0",
@@ -35,7 +35,7 @@
 		"typescript": "~7.0.2"
 	},
 	"peerDependencies": {
-		"@rocket.chat/message-parser": "workspace:^",
+		"@yas chat/message-parser": "workspace:^",
 		"react": "*",
 		"react-dom": "*"
 	},

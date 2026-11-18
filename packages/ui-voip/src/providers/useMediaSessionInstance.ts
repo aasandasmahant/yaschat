@@ -1,9 +1,9 @@
-import { Emitter } from '@rocket.chat/emitter';
-import { MediaSignalingSession, MediaCallWebRTCProcessor } from '@rocket.chat/media-signaling';
-import type { MediaSignalTransport, ClientMediaSignal, ServerMediaSignal, WebRTCProcessorConfig } from '@rocket.chat/media-signaling';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useSetting, useStream, useToastMessageDispatch, useWriteStream } from '@rocket.chat/ui-contexts';
-import { stopTracks } from '@rocket.chat/ui-media';
+import { Emitter } from '@yas chat/emitter';
+import { MediaSignalingSession, MediaCallWebRTCProcessor } from '@yas chat/media-signaling';
+import type { MediaSignalTransport, ClientMediaSignal, ServerMediaSignal, WebRTCProcessorConfig } from '@yas chat/media-signaling';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useSetting, useStream, useToastMessageDispatch, useWriteStream } from '@yas chat/ui-contexts';
+import { stopTracks } from '@yas chat/ui-media';
 import { useEffect, useSyncExternalStore, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

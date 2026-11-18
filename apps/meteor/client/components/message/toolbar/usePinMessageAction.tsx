@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { useSetting, useSetModal, usePermission } from '@rocket.chat/ui-contexts';
+import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { useSetting, useSetModal, usePermission } from '@yas chat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import PinMessageModal from '../../../views/room/modals/PinMessageModal';

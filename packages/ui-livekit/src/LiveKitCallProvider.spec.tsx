@@ -1,5 +1,5 @@
 import { useLiveKitRoom } from '@livekit/components-react';
-import type { CallActions } from '@rocket.chat/ui-conference';
+import type { CallActions } from '@yas chat/ui-conference';
 import { act, render } from '@testing-library/react';
 import { ConnectionState } from 'livekit-client';
 import type { ReactNode } from 'react';
@@ -31,17 +31,17 @@ jest.mock('@livekit/components-react', () => ({
 	RoomAudioRenderer: () => null,
 }));
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	useToastMessageDispatch: () => dispatchToastMessage,
 	useUser: () => null,
 	useUserAvatarPath: () => () => '',
 }));
 
-jest.mock('@rocket.chat/ui-client', () => ({
+jest.mock('@yas chat/ui-client', () => ({
 	useUserDisplayName: () => '',
 }));
 
-jest.mock('@rocket.chat/ui-conference', () => ({
+jest.mock('@yas chat/ui-conference', () => ({
 	CallStateProvider: ({ children }: { children: ReactNode }) => children,
 	CallActionsProvider: ({ value, children }: { value: CallActions; children: ReactNode }) => {
 		actions = value;
@@ -55,7 +55,7 @@ jest.mock('@rocket.chat/ui-conference', () => ({
 	useUpdateCallPreferences: () => jest.fn(),
 }));
 
-jest.mock('@rocket.chat/ui-media', () => ({
+jest.mock('@yas chat/ui-media', () => ({
 	DeviceSelectionProvider: ({ children }: { children: ReactNode }) => children,
 }));
 

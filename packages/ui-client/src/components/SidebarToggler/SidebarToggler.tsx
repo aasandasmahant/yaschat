@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useLayout, useSession } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useLayout, useSession } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 
 import SidebarTogglerButton from './SidebarTogglerButton';

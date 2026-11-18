@@ -50,10 +50,10 @@ test.each([
 		`
 | Name | Link |
 | ---- | ---- |
-| **bold** | [rc](https://rocket.chat) |
+| **bold** | [rc](https://yas chat) |
 `.trim(),
 		[tableCell([plain('Name')]), tableCell([plain('Link')])],
-		[tableRow([tableCell([bold([plain('bold')])]), tableCell([link('https://rocket.chat', [plain('rc')])])])],
+		[tableRow([tableCell([bold([plain('bold')])]), tableCell([link('https://yas chat', [plain('rc')])])])],
 	],
 	// escaped pipe inside a cell stays literal
 	[

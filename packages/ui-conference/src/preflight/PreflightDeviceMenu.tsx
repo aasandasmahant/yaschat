@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import type { DeviceMenuChoices } from '@rocket.chat/ui-media';
-import { DeviceMenu, deviceMenuSelection, useDeviceSelection } from '@rocket.chat/ui-media';
+import { Box } from '@yas chat/fuselage';
+import type { DeviceMenuChoices } from '@yas chat/ui-media';
+import { DeviceMenu, deviceMenuSelection, useDeviceSelection } from '@yas chat/ui-media';
 
 import PreflightDeviceMenuButton from './PreflightDeviceMenuButton';
 

@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@rocket.chat/fuselage';
+import { Button, type ButtonProps } from '@yas chat/fuselage';
 import type { ButtonHTMLAttributes } from 'react';
 
 export type VideoConfMessageButtonProps = Pick<ButtonProps, 'variant'> & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'is'>;

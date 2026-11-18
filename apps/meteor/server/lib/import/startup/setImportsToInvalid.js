@@ -1,4 +1,4 @@
-import { Imports } from '@rocket.chat/models';
+import { Imports } from '@yas chat/models';
 
 import { ProgressStep } from '../../../../lib/importer/ImporterProgressStep';
 

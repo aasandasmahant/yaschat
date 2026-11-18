@@ -1,6 +1,6 @@
 import type http from 'node:http';
 
-import type { IUpload } from '@rocket.chat/core-typings';
+import type { IUpload } from '@yas chat/core-typings';
 
 type ByteRange = { start?: number; stop?: number };
 

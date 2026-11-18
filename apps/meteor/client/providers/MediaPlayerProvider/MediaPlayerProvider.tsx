@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useMergedRefsV2 } from '@rocket.chat/ui-client';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useMergedRefsV2 } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { useCallback, useMemo, useRef, useState } from 'react';
 

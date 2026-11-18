@@ -1,7 +1,7 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { AnnouncementBanner, GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { AnnouncementBanner, GenericModal } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

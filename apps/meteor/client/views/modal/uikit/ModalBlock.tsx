@@ -11,9 +11,9 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@rocket.chat/fuselage';
-import { UiKitComponent, UiKitModal, modalParser } from '@rocket.chat/fuselage-ui-kit';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/fuselage';
+import { UiKitComponent, UiKitModal, modalParser } from '@yas chat/fuselage-ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { FormEvent, FormEventHandler } from 'react';
 import { useId, useCallback, useEffect, useMemo, useRef } from 'react';
 

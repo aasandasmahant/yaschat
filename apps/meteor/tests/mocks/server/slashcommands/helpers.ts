@@ -1,5 +1,5 @@
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
-import type { SlashCommandCallbackParams, SlashCommandOptions } from '@rocket.chat/core-typings';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
+import type { SlashCommandCallbackParams, SlashCommandOptions } from '@yas chat/core-typings';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
 
@@ -10,14 +10,14 @@ type Registration = {
 };
 
 type Dependencies = Record<string, unknown> & {
-	'@rocket.chat/core-services'?: Record<string, unknown> & {
+	'@yas chat/core-services'?: Record<string, unknown> & {
 		api?: Record<string, unknown> & { broadcast?: sinon.SinonStub };
 	};
 };
 
 export function loadSlashCommand(path: string, dependencies: Dependencies = {}) {
 	const registeredCommands = new Map<string, Registration>();
-	const coreServices = dependencies['@rocket.chat/core-services'];
+	const coreServices = dependencies['@yas chat/core-services'];
 	const broadcast = coreServices?.api?.broadcast ?? sinon.stub().resolves();
 	const translate = sinon.stub().callsFake((key: string) => `translated:${key}`);
 	const translationExists = sinon.stub().returns(false);
@@ -29,11 +29,11 @@ export function loadSlashCommand(path: string, dependencies: Dependencies = {}) 
 		.noCallThru()
 		.noPreserveCache()
 		.load(`../../../../server/slashcommands/${path}`, {
-			'@rocket.chat/logger': { Logger: sinon.stub().returns(logger) },
+			'@yas chat/logger': { Logger: sinon.stub().returns(logger) },
 			'../../lib/i18n': { i18n: { t: translate, exists: translationExists } },
 			'../../settings': { settings },
 			...dependencies,
-			'@rocket.chat/core-services': { ClientSafeError, isClientSafeError, ...coreServices, api: { ...coreServices?.api, broadcast } },
+			'@yas chat/core-services': { ClientSafeError, isClientSafeError, ...coreServices, api: { ...coreServices?.api, broadcast } },
 			'../../lib/utils/slashCommand': {
 				slashCommands: { add: (registration: Registration) => registeredCommands.set(registration.command, registration) },
 			},

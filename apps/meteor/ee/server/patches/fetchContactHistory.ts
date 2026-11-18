@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { LivechatRooms } from '@rocket.chat/models';
+import { License } from '@yas chat/license';
+import { LivechatRooms } from '@yas chat/models';
 
 import { fetchContactHistory } from '../../../server/lib/omnichannel/contacts/getContactHistory';
 

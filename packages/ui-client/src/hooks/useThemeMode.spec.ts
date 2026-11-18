@@ -1,11 +1,11 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useThemeMode } from './useThemeMode';
 
 const mockUseDarkMode = jest.fn();
 
-jest.mock('@rocket.chat/fuselage-hooks', () => ({
+jest.mock('@yas chat/fuselage-hooks', () => ({
 	useDarkMode: (...args: unknown[]) => mockUseDarkMode(...args),
 }));
 

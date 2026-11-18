@@ -14,8 +14,8 @@ import {
 	ModalTitle,
 	NumberInput,
 	RadioButton,
-} from '@rocket.chat/fuselage';
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

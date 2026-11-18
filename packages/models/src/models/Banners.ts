@@ -1,6 +1,6 @@
-import type { IBanner, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { BannerPlatform } from '@rocket.chat/core-typings';
-import type { IBannersModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IBanner, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { BannerPlatform } from '@yas chat/core-typings';
+import type { IBannersModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, InsertOneResult, UpdateResult, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

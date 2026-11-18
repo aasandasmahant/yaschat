@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Button } from '@rocket.chat/fuselage';
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import { css } from '@yas chat/css-in-js';
+import { Box, Button } from '@yas chat/fuselage';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 import { useContext, useMemo } from 'react';
 
 import { context, templatesToggleAction, updatePayloadAction } from '../../../Context';

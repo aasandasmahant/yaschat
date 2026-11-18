@@ -1,4 +1,4 @@
-import { BackgroundLayer } from '@rocket.chat/layout';
+import { BackgroundLayer } from '@yas chat/layout';
 import type { ReactNode } from 'react';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 

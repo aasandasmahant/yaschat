@@ -1,17 +1,17 @@
-import { api, MediaCall, Settings, VideoConf } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { api, MediaCall, Settings, VideoConf } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 
 import { NotificationsModule } from './notifications.module';
 import { Streamer } from './streamer.module';
 
-jest.mock('@rocket.chat/core-services', () => ({
-	...jest.requireActual('@rocket.chat/core-services'),
+jest.mock('@yas chat/core-services', () => ({
+	...jest.requireActual('@yas chat/core-services'),
 	VideoConf: { validateAction: jest.fn() },
 	MediaCall: { processSerializedSignal: jest.fn() },
 	Settings: { get: jest.fn() },
 }));
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

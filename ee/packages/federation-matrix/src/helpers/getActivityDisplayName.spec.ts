@@ -1,5 +1,5 @@
-import { LocalBroker, ServiceClass, api } from '@rocket.chat/core-services';
-import type { SettingValue } from '@rocket.chat/core-typings';
+import { LocalBroker, ServiceClass, api } from '@yas chat/core-services';
+import type { SettingValue } from '@yas chat/core-typings';
 
 import { getActivityDisplayName } from './getActivityDisplayName';
 

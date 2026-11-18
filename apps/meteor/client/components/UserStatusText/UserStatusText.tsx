@@ -1,6 +1,6 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { Box, Icon } from '@rocket.chat/fuselage';
-import { isTruthy } from '@rocket.chat/tools';
+import { UserStatus } from '@yas chat/core-typings';
+import { Box, Icon } from '@yas chat/fuselage';
+import { isTruthy } from '@yas chat/tools';
 import { useTranslation } from 'react-i18next';
 
 import { useExpirationText } from '../../hooks/useExpirationText';

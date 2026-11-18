@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import type { CloseRoomParams } from '../../../../server/lib/omnichannel/localTypes';

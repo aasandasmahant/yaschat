@@ -1,5 +1,5 @@
-import { States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
-import { CopyErrorReportAction } from '@rocket.chat/ui-client';
+import { States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
+import { CopyErrorReportAction } from '@yas chat/ui-client';
 import { QueryErrorResetBoundary } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';

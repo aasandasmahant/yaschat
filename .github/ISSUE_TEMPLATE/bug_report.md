@@ -6,11 +6,11 @@ about: Create a report to help us improve
 
 <!-- 
 
-Please see our guide for opening issues: https://developer.rocket.chat/rocket.chat/contribute-to-rocket.chat/ways-to-contribute/report-bugs
+Please see our guide for opening issues: https://developer.yas chat/yas chat/contribute-to-yas chat/ways-to-contribute/report-bugs
 
-If you have questions or are looking for help/support please see: https://rocket.chat/docs/getting-support
+If you have questions or are looking for help/support please see: https://yas chat/docs/getting-support
 
-If you are experiencing a bug please search our issues to be sure it is not already present: https://github.com/RocketChat/Rocket.Chat/issues
+If you are experiencing a bug please search our issues to be sure it is not already present: https://github.com/YasChat/Yas chat/issues
 
 -->
 
@@ -34,7 +34,7 @@ If you are experiencing a bug please search our issues to be sure it is not alre
 
 ### Server Setup Information:
 
-- Version of Rocket.Chat Server: 
+- Version of Yas chat Server: 
 - License Type:
 - Number of Users: 
 - Operating System: 
@@ -56,4 +56,4 @@ If you are experiencing a bug please search our issues to be sure it is not alre
 ### Relevant logs:
 
 <!-- Logs from both SERVER and BROWSER -->
-<!-- For more information about collecting logs please see: https://rocket.chat/docs/contributing/reporting-issues#gathering-logs -->
+<!-- For more information about collecting logs please see: https://yas chat/docs/contributing/reporting-issues#gathering-logs -->

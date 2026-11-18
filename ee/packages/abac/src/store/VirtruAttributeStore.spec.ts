@@ -1,4 +1,4 @@
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 
 import { VirtruAttributeStore } from './VirtruAttributeStore';
 

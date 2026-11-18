@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import { HorizontalWizardLayoutCaption } from '@rocket.chat/layout';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { HorizontalWizardLayoutCaption } from '@yas chat/layout';
+import { useSetting } from '@yas chat/ui-contexts';
 import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

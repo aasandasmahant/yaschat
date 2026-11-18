@@ -1,6 +1,6 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { ICustomEmojiDescriptor } from '@rocket.chat/core-typings';
-import { EmojiCustom } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { ICustomEmojiDescriptor } from '@yas chat/core-typings';
+import { EmojiCustom } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { YasChatFileEmojiCustomInstance } from '../../lib/media/emoji-custom/startup/emoji-custom';

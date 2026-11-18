@@ -1,11 +1,11 @@
-import type { ILivechatUpdater } from '@rocket.chat/apps-engine/definition/accessors';
+import type { ILivechatUpdater } from '@yas chat/apps-engine/definition/accessors';
 import type {
 	ILivechatRoom,
 	ILivechatTransferData,
 	IVisitor,
 	IVisitorExternalIdentifier,
-} from '@rocket.chat/apps-engine/definition/livechat';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+} from '@yas chat/apps-engine/definition/livechat';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

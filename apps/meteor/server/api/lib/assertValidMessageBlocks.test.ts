@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { isChatSendMessageProps } from '@rocket.chat/rest-typings';
+import { isChatSendMessageProps } from '@yas chat/rest-typings';
 import { expect } from 'chai';
 
 import { assertValidMessageBlocks } from './assertValidMessageBlocks';

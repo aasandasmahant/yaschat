@@ -1,4 +1,4 @@
-import type { IServerInfo, Serialized } from '@rocket.chat/core-typings';
+import type { IServerInfo, Serialized } from '@yas chat/core-typings';
 import type {
 	ServerMethodName,
 	ServerMethodParameters,
@@ -7,8 +7,8 @@ import type {
 	StreamNames,
 	StreamerCallbackArgs,
 	StreamerEvents,
-} from '@rocket.chat/ddp-client';
-import type { Method, OperationParams, OperationResult, PathFor, PathPattern, UrlParams } from '@rocket.chat/rest-typings';
+} from '@yas chat/ddp-client';
+import type { Method, OperationParams, OperationResult, PathFor, PathPattern, UrlParams } from '@yas chat/rest-typings';
 import { createContext } from 'react';
 
 export type UploadResult = {

@@ -1,6 +1,6 @@
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import type { IRoom, IMessage, ISubscription } from '@rocket.chat/core-typings';
-import { usePermission, useSetting, useUser } from '@rocket.chat/ui-contexts';
+import { isRoomFederated } from '@yas chat/core-typings';
+import type { IRoom, IMessage, ISubscription } from '@yas chat/core-typings';
+import { usePermission, useSetting, useUser } from '@yas chat/ui-contexts';
 import { differenceInMinutes } from 'date-fns/differenceInMinutes';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';

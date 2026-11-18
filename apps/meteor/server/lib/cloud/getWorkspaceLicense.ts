@@ -1,6 +1,6 @@
-import { Cloud } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { Cloud } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 import * as z from 'zod';
 
 import { getWorkspaceAccessToken } from './getWorkspaceAccessToken';

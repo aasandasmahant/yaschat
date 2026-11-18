@@ -1,4 +1,4 @@
-import type { IMessage, AtLeast } from '@rocket.chat/core-typings';
+import type { IMessage, AtLeast } from '@yas chat/core-typings';
 
 import { extractUrlsFromMessageAST } from './extractUrlsFromMessageAST';
 import { getMessageUrlRegex } from '../../../lib/getMessageUrlRegex';

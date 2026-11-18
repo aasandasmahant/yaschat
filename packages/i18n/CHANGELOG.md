@@ -1,4 +1,4 @@
-# @rocket.chat/i18n
+# @yas chat/i18n
 
 ## 5.0.0
 
@@ -119,7 +119,7 @@
 - ([#43632](https://github.com/YasChat/YasChat/pull/43632)) Adds an "Experimental Feature" alert under the Enabled setting of Native XMPP Federation, warning admins that the capability is in an early Alpha stage
 
 - <details><summary>Updated dependencies [8b00fa367d7be9793c31bf578eb1b6c99bf240e9, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, 01204df7088b1362f14438d99c44bc4f6d6e840e]:</summary>
-  - @rocket.chat/tools@0.5.0
+  - @yas chat/tools@0.5.0
 
   </details>
 
@@ -248,7 +248,7 @@
 - ([#43198](https://github.com/YasChat/YasChat/pull/43198)) Fixes the email field in the admin "Invite members" panel not filling the panel's width
 
 - <details><summary>Updated dependencies [a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, 01204df7088b1362f14438d99c44bc4f6d6e840e]:</summary>
-  - @rocket.chat/tools@0.5.0-rc.0
+  - @yas chat/tools@0.5.0-rc.0
 
   </details>
 
@@ -357,7 +357,7 @@
 - ([#41673](https://github.com/YasChat/YasChat/pull/41673)) Fixes the messages count displayed on a discussion taking into account system messages which are hidden inside of it, making the count higher than the number of messages actually visible after opening the discussion. The count now excludes every system message type hidden either globally or on the discussion itself. A hint was also added to the `Hide system messages` option of the room edit panel clarifying that the hidden messages are not included in the count.
 
 - <details><summary>Updated dependencies [742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/tools@0.4.0
+  - @yas chat/tools@0.4.0
 
   </details>
 
@@ -390,7 +390,7 @@
 - ([#41673](https://github.com/YasChat/YasChat/pull/41673)) Fixes the messages count displayed on a discussion taking into account system messages which are hidden inside of it, making the count higher than the number of messages actually visible after opening the discussion. The count now excludes every system message type hidden either globally or on the discussion itself. A hint was also added to the `Hide system messages` option of the room edit panel clarifying that the hidden messages are not included in the count.
 
 - <details><summary>Updated dependencies [742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/tools@0.4.0-rc.0
+  - @yas chat/tools@0.4.0-rc.0
 
   </details>
 
@@ -497,7 +497,7 @@
 
 - ([#40456](https://github.com/YasChat/YasChat/pull/40456)) Fixes signed URL generation for S3 and Google Cloud Storage when the expiry setting is below 5 seconds, which previously caused expired or invalid preview URLs. Adds a dedicated URL expiry setting for Google Cloud Storage since it was incorrectly reusing the AWS S3 setting.
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 3.1.0-rc.0
 
@@ -532,13 +532,13 @@
 
 - ([#40456](https://github.com/YasChat/YasChat/pull/40456)) Fixes signed URL generation for S3 and Google Cloud Storage when the expiry setting is below 5 seconds, which previously caused expired or invalid preview URLs. Adds a dedicated URL expiry setting for Google Cloud Storage since it was incorrectly reusing the AWS S3 setting.
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 3.0.1
 
 ### Patch Changes
 
-- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 3.0.0
 
@@ -555,7 +555,7 @@
 - ([#39985](https://github.com/YasChat/YasChat/pull/39985)) Adds error feedback when clicking on a mentioned room you don't have access to
 
 - <details><summary>Updated dependencies [95a82f72dd45fc51d54bb1beed295315facf9109]:</summary>
-  - @rocket.chat/tools@0.3.0
+  - @yas chat/tools@0.3.0
 
   </details>
 
@@ -574,7 +574,7 @@
 - ([#39985](https://github.com/YasChat/YasChat/pull/39985)) Adds error feedback when clicking on a mentioned room you don't have access to
 
 - <details><summary>Updated dependencies [95a82f72dd45fc51d54bb1beed295315facf9109]:</summary>
-  - @rocket.chat/tools@0.3.0-rc.0
+  - @yas chat/tools@0.3.0-rc.0
 
   </details>
 
@@ -599,7 +599,7 @@
 - ([#39461](https://github.com/YasChat/YasChat/pull/39461)) Deprecates `Anonymous write`. Feature will be removed in version 9.0.0.
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c]:</summary>
-  - @rocket.chat/tools@0.2.5
+  - @yas chat/tools@0.2.5
 
   </details>
 
@@ -622,7 +622,7 @@
 - ([#39461](https://github.com/YasChat/YasChat/pull/39461)) Deprecates `Anonymous write`. Feature will be removed in version 9.0.0.
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c]:</summary>
-  - @rocket.chat/tools@0.2.5-rc.0
+  - @yas chat/tools@0.2.5-rc.0
 
   </details>
 
@@ -683,7 +683,7 @@
 - ([#37635](https://github.com/YasChat/YasChat/pull/37635)) Adds invitation badge to sidebar
 
 - <details><summary>Updated dependencies [9e03ed5c5ea829c62c2da2de9413a27a4696f8a3]:</summary>
-  - @rocket.chat/tools@0.2.4
+  - @yas chat/tools@0.2.4
 
   </details>
 
@@ -716,7 +716,7 @@
 - ([#37635](https://github.com/YasChat/YasChat/pull/37635)) Adds invitation badge to sidebar
 
 - <details><summary>Updated dependencies [9e03ed5c5ea829c62c2da2de9413a27a4696f8a3]:</summary>
-  - @rocket.chat/tools@0.2.4-rc.0
+  - @yas chat/tools@0.2.4-rc.0
 
   </details>
 
@@ -849,7 +849,7 @@
 - ([#36259](https://github.com/YasChat/YasChat/pull/36259)) Introduces PDF file as an export type for room messages
 
 - <details><summary>Updated dependencies [fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
-  - @rocket.chat/tools@0.2.3
+  - @yas chat/tools@0.2.3
 
   </details>
 
@@ -872,7 +872,7 @@
 - ([#36259](https://github.com/YasChat/YasChat/pull/36259)) Introduces PDF file as an export type for room messages
 
 - <details><summary>Updated dependencies [fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
-  - @rocket.chat/tools@0.2.3-rc.0
+  - @yas chat/tools@0.2.3-rc.0
 
   </details>
 
@@ -1558,7 +1558,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.1.0-rc.0
 
@@ -1568,7 +1568,7 @@
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.0.3
 

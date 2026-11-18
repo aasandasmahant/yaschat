@@ -1,5 +1,5 @@
-import type { IEmailMessageHistory, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IEmailMessageHistoryModel, InsertionModel } from '@rocket.chat/model-typings';
+import type { IEmailMessageHistory, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IEmailMessageHistoryModel, InsertionModel } from '@yas chat/model-typings';
 import type { Collection, Db, InsertOneResult, WithId, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

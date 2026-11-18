@@ -1,7 +1,7 @@
-import type { ILivechatAgent, ILivechatDepartment, ILivechatTrigger, ILivechatVisitor, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { EmojiCustom, LivechatTrigger, LivechatVisitors, LivechatRooms, LivechatDepartment } from '@rocket.chat/models';
-import { makeFunction } from '@rocket.chat/patch-injection';
+import type { ILivechatAgent, ILivechatDepartment, ILivechatTrigger, ILivechatVisitor, IOmnichannelRoom } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { EmojiCustom, LivechatTrigger, LivechatVisitors, LivechatRooms, LivechatDepartment } from '@yas chat/models';
+import { makeFunction } from '@yas chat/patch-injection';
 
 import { callbacks } from '../../../../lib/callbacks';
 import { normalizeAgent } from '../../../../lib/omnichannel/Helper';

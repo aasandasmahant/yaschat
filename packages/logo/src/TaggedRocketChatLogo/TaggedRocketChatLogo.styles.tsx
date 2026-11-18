@@ -1,4 +1,4 @@
-import styled from '@rocket.chat/styled';
+import styled from '@yas chat/styled';
 
 const tagStyleProps = ({ color: _color, backgroundColor: _backgroundColor, ...props }: { color: string; backgroundColor: string }) => props;
 

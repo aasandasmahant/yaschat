@@ -1,8 +1,8 @@
-# `@rocket.chat/lint-config`
+# `@yas chat/lint-config`
 
 > The shared [oxlint](https://oxc.rs) config used across the YasChat codebase, for JavaScript, TypeScript and React.
 
-It replaces [`@rocket.chat/eslint-config`](https://www.npmjs.com/package/@rocket.chat/eslint-config), with the same rules except:
+It replaces [`@yas chat/eslint-config`](https://www.npmjs.com/package/@yas chat/eslint-config), with the same rules except:
 
 - `@typescript-eslint/naming-convention`, `import-x/no-relative-packages` and `import-x/no-unresolved` are not enforced.
 - `import-x/no-useless-path-segments` only catches what it can see in the import path (`./a/../a/b`, `./`), not paths that point back into the current directory (`../current/b`). That needs an import resolver, and oxlint ignores `settings` in a config you `extends`. To get the full check, install `eslint-import-resolver-typescript` and add the resolver to your own `settings`:
@@ -22,7 +22,7 @@ Where oxlint has no native version of a rule, the config loads the original ESLi
 ## Installation
 
 ```sh
-npm install --save-dev @rocket.chat/lint-config oxlint oxlint-tsgolint
+npm install --save-dev @yas chat/lint-config oxlint oxlint-tsgolint
 ```
 
 `oxlint-tsgolint` runs the type-aware rules.
@@ -33,7 +33,7 @@ Create `.oxlintrc.json` at the root of your project:
 
 ```json
 {
-	"extends": ["./node_modules/@rocket.chat/lint-config/oxlint.json"],
+	"extends": ["./node_modules/@yas chat/lint-config/oxlint.json"],
 	"options": { "typeAware": true }
 }
 ```
@@ -48,7 +48,7 @@ Add your own `rules`, `overrides` and `ignorePatterns` after `extends`. Each lin
 
 ### Opt-in rules
 
-`@rocket.chat/lint-config/rules` exports a JS plugin with rules `oxlint.json` doesn't turn on:
+`@yas chat/lint-config/rules` exports a JS plugin with rules `oxlint.json` doesn't turn on:
 
 | Rule            | What it reports                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,9 +58,9 @@ Load the plugin through `jsPlugins` and turn the rule on:
 
 ```json
 {
-	"extends": ["./node_modules/@rocket.chat/lint-config/oxlint.json"],
-	"jsPlugins": [{ "name": "rocket.chat", "specifier": "@rocket.chat/lint-config/rules" }],
-	"rules": { "rocket.chat/spacing-scale": ["error", { "ignoreComponents": ["ResponsiveBar"] }] }
+	"extends": ["./node_modules/@yas chat/lint-config/oxlint.json"],
+	"jsPlugins": [{ "name": "yas chat", "specifier": "@yas chat/lint-config/rules" }],
+	"rules": { "yas chat/spacing-scale": ["error", { "ignoreComponents": ["ResponsiveBar"] }] }
 }
 ```
 

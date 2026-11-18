@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { useSetting } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 

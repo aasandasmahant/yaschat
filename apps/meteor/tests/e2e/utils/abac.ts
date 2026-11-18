@@ -1,5 +1,5 @@
 import type { APIRequestContext } from '@playwright/test';
-import type { IAbacAttributeDefinition, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IAbacAttributeDefinition, IRoom, IUser } from '@yas chat/core-typings';
 import type { Collection } from 'mongodb';
 import { MongoClient } from 'mongodb';
 

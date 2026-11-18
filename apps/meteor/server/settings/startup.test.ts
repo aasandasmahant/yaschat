@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 
-import type { ISetting } from '@rocket.chat/core-typings';
-import type { Settings } from '@rocket.chat/models';
+import type { ISetting } from '@yas chat/core-typings';
+import type { Settings } from '@yas chat/models';
 import { expect, spy } from 'chai';
 
 import { CachedSettings } from './CachedSettings';

@@ -1,5 +1,5 @@
-import type { IAppsSetting } from '@rocket.chat/apps';
-import type { ISetting } from '@rocket.chat/core-typings';
+import type { IAppsSetting } from '@yas chat/apps';
+import type { ISetting } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { SettingTypeCodec } from './enums';

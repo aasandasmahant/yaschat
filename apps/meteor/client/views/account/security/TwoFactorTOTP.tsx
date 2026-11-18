@@ -1,6 +1,6 @@
-import { Button, Field, FieldLabel, FieldRow, Stack, Text, TextInput, ToggleSwitch } from '@rocket.chat/fuselage';
-import { useStableCallback, useSafely } from '@rocket.chat/fuselage-hooks';
-import { useSetModal, useToastMessageDispatch, useUser, useEndpoint } from '@rocket.chat/ui-contexts';
+import { Button, Field, FieldLabel, FieldRow, Stack, Text, TextInput, ToggleSwitch } from '@yas chat/fuselage';
+import { useStableCallback, useSafely } from '@yas chat/fuselage-hooks';
+import { useSetModal, useToastMessageDispatch, useUser, useEndpoint } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useState, useCallback, useEffect, useId } from 'react';
 import { useForm } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import { useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 
 import ConfirmOwnerChangeWarningModal from '../../../../components/ConfirmOwnerChangeModal';

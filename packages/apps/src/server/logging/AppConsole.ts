@@ -1,6 +1,6 @@
-import type { ILogEntry, ILogger } from '@rocket.chat/apps-engine/definition/accessors';
-import { LogMessageSeverity } from '@rocket.chat/apps-engine/definition/accessors';
-import type { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+import type { ILogEntry, ILogger } from '@yas chat/apps-engine/definition/accessors';
+import { LogMessageSeverity } from '@yas chat/apps-engine/definition/accessors';
+import type { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 import * as stackTrace from 'stack-trace';
 
 import type { ILoggerStorageEntry } from './ILoggerStorageEntry';

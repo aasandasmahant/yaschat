@@ -1,6 +1,6 @@
-import type { AbacAttributeDefinitionChangeType, AbacActionPerformed } from '@rocket.chat/core-typings';
-import { Box, InputBox, Pagination } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import type { AbacAttributeDefinitionChangeType, AbacActionPerformed } from '@yas chat/core-typings';
+import { Box, InputBox, Pagination } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -12,8 +12,8 @@ import {
 	usePagination,
 	GenericNoResults,
 	useFormatDateAndTime,
-} from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { NegotiationManager } from './NegotiationManager.js';
 import type { MediaSignalTransportWrapper } from './TransportWrapper.js';

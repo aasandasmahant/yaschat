@@ -1,7 +1,7 @@
-import { Message, FederationMatrix } from '@rocket.chat/core-services';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Users, Messages } from '@rocket.chat/models'; // Rooms
+import { Message, FederationMatrix } from '@yas chat/core-services';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Users, Messages } from '@yas chat/models'; // Rooms
 
 import { unicodeToShortname } from '../utils/emojiConverter';
 

@@ -1,5 +1,5 @@
-import type { IOEmbedCache, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IOEmbedCacheModel } from '@rocket.chat/model-typings';
+import type { IOEmbedCache, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IOEmbedCacheModel } from '@yas chat/model-typings';
 import type { Collection, Db, DeleteResult, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

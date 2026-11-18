@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -20,7 +20,7 @@ describe('/msg', () => {
 		send = sinon.stub().resolves();
 		mockModel('Users', { findOneByUsernameIgnoringCase: findTarget, findOneById: findActor });
 		slashCommand = loadSlashCommand('msg/server', {
-			'@rocket.chat/random': { Random: { id: () => 'generated-id' } },
+			'@yas chat/random': { Random: { id: () => 'generated-id' } },
 			'../../meteor-methods/messages/createDirectMessage': { createDirectMessage: createDirect },
 			'../../meteor-methods/messages/sendMessage': { executeSendMessage: send },
 		});

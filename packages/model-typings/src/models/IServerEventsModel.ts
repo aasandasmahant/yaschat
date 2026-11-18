@@ -1,4 +1,4 @@
-import type { ExtractDataToParams, IAuditServerActor, IServerEvent, IServerEvents } from '@rocket.chat/core-typings';
+import type { ExtractDataToParams, IAuditServerActor, IServerEvent, IServerEvents } from '@yas chat/core-typings';
 
 import type { IBaseModel } from './IBaseModel';
 

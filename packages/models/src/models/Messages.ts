@@ -8,10 +8,10 @@ import type {
 	MessageAttachment,
 	IMessageWithPendingFileImport,
 	DeepWritable,
-} from '@rocket.chat/core-typings';
-import type { FindPaginated, IMessagesModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import type { PaginatedRequest } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import type { FindPaginated, IMessagesModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import type { PaginatedRequest } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	AggregationCursor,
 	Collection,
@@ -621,7 +621,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 
 	setImportFileYasChatAttachment(
 		importFileId: string,
-		rocketChatUrl: string,
+		YasChatUrl: string,
 		attachment: MessageAttachment,
 	): Promise<UpdateResult | Document> {
 		const query = {
@@ -631,7 +631,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 		return this.updateMany(query, {
 			$set: {
 				'_hidden': false,
-				'_importFile.rocketChatUrl': rocketChatUrl,
+				'_importFile.YasChatUrl': YasChatUrl,
 				'_importFile.downloaded': true,
 			},
 			$addToSet: {
@@ -1792,7 +1792,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 			'_importFile.downloadUrl': {
 				$exists: true,
 			},
-			'_importFile.rocketChatUrl': {
+			'_importFile.YasChatUrl': {
 				$exists: false,
 			},
 			'_importFile.downloaded': {
@@ -1811,7 +1811,7 @@ export class MessagesRaw extends BaseRaw<IMessage> implements IMessagesModel {
 			'_importFile.downloadUrl': {
 				$exists: true,
 			},
-			'_importFile.rocketChatUrl': {
+			'_importFile.YasChatUrl': {
 				$exists: false,
 			},
 			'_importFile.downloaded': {

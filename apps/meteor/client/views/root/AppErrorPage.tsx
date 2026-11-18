@@ -8,8 +8,8 @@ import {
 	StatesIcon,
 	StatesSubtitle,
 	StatesTitle,
-} from '@rocket.chat/fuselage';
-import { useCopyErrorReport, useThemeMode } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import { useCopyErrorReport, useThemeMode } from '@yas chat/ui-client';
 
 import { Info } from '../../../yaschat.info';
 import { router } from '../../providers/RouterProvider';

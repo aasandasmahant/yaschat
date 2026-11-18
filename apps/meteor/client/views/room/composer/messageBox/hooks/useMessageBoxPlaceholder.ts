@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { isDirectMessageRoom } from '@yas chat/core-typings';
 
 import { useRoomName } from '../../../hooks/useRoomName';
 

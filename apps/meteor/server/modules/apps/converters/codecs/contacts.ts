@@ -1,5 +1,5 @@
-import type { IAppsLivechatContact } from '@rocket.chat/apps';
-import type { ILivechatContact } from '@rocket.chat/core-typings';
+import type { IAppsLivechatContact } from '@yas chat/apps';
+import type { ILivechatContact } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { mappedDecodeAsync } from './mappedData';

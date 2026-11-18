@@ -1,4 +1,4 @@
-import { OngoingCallsDropdown } from '@rocket.chat/ui-conference';
+import { OngoingCallsDropdown } from '@yas chat/ui-conference';
 
 import OngoingCallsProvider from '../views/conference/providers/OngoingCallsProvider';
 

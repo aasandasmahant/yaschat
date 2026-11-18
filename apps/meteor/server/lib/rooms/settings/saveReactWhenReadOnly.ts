@@ -1,5 +1,5 @@
-import { Message } from '@rocket.chat/core-services';
-import { Rooms } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import { Rooms } from '@yas chat/models';
 
 export const saveReactWhenReadOnly = async function (
 	rid: string,

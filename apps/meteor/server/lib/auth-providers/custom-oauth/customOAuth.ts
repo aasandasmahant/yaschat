@@ -1,9 +1,9 @@
-import { LDAP, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, OAuthConfiguration } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
-import { capitalize, isAbsoluteURL } from '@rocket.chat/tools';
+import { LDAP, ClientSafeError } from '@yas chat/core-services';
+import type { IUser, OAuthConfiguration } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
+import { capitalize, isAbsoluteURL } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 import type { DoneCallback } from 'passport';
 import type { VerifyFunction, StrategyOptions } from 'passport-oauth2';

@@ -1,5 +1,5 @@
-import type { ILoginServiceConfiguration, OAuthConfiguration } from '@rocket.chat/core-typings';
-import { LoginServiceConfiguration } from '@rocket.chat/models';
+import type { ILoginServiceConfiguration, OAuthConfiguration } from '@yas chat/core-typings';
+import { LoginServiceConfiguration } from '@yas chat/models';
 
 import { addPassportCustomOAuth } from './addPassportCustomOAuth';
 import { logger } from './logger';

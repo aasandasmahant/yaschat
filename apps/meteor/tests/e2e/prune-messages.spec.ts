@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { IRoom } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 
 import { Users } from './fixtures/userStates';
 import { HomeChannel } from './page-objects/home-channel';

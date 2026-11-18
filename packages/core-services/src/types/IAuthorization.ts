@@ -1,4 +1,4 @@
-import type { IRoom, IUser, IRole, VideoConference } from '@rocket.chat/core-typings';
+import type { IRoom, IUser, IRole, VideoConference } from '@yas chat/core-typings';
 
 /** Minimal user shape a permission check needs. `getRoles` only reads `_id` and `roles`. */
 export type UserWithRoles = Pick<IUser, '_id' | 'roles'>;

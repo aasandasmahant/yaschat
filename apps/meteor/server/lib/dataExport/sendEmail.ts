@@ -1,4 +1,4 @@
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 
 import { getUserEmailAddress } from '../../../lib/getUserEmailAddress';
 import { settings } from '../../settings';

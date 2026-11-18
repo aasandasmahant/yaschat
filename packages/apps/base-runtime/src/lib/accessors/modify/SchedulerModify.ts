@@ -1,5 +1,5 @@
-import type { ISchedulerModify } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IOnetimeSchedule, IRecurringSchedule } from '@rocket.chat/apps-engine/definition/scheduler';
+import type { ISchedulerModify } from '@yas chat/apps-engine/definition/accessors';
+import type { IOnetimeSchedule, IRecurringSchedule } from '@yas chat/apps-engine/definition/scheduler';
 
 import { AppObjectRegistry } from '../../../AppObjectRegistry';
 import { bridgeCall } from '../../bridges/bridgeCall';

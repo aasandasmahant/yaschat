@@ -1,5 +1,5 @@
-import type { IPermission, ISetting } from '@rocket.chat/core-typings';
-import { Permissions, Settings } from '@rocket.chat/models';
+import type { IPermission, ISetting } from '@yas chat/core-typings';
+import { Permissions, Settings } from '@yas chat/models';
 
 import { permissions } from './constant/permissions';
 import { getSettingPermissionId, CONSTANTS } from '../../../lib/authorization';

@@ -1,5 +1,5 @@
-import type { InputBoxProps } from '@rocket.chat/fuselage';
-import { Box, InputBox } from '@rocket.chat/fuselage';
+import type { InputBoxProps } from '@yas chat/fuselage';
+import { Box, InputBox } from '@yas chat/fuselage';
 
 type WorkspaceUrlInputProps = Omit<InputBoxProps, 'type'> & {
 	domain: string;

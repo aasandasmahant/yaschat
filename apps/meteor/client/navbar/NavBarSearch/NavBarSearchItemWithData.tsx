@@ -1,5 +1,5 @@
-import { SidebarItemIcon } from '@rocket.chat/fuselage';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { SidebarItemIcon } from '@yas chat/fuselage';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import type { ComponentProps, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

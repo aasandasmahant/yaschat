@@ -1,4 +1,4 @@
-import { useMergedRefs, useStableCallback, useResizeObserver } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs, useStableCallback, useResizeObserver } from '@yas chat/fuselage-hooks';
 import type { ElementType, MouseEventHandler, ReactNode, RefAttributes } from 'react';
 import { useState, useRef, useEffect } from 'react';
 

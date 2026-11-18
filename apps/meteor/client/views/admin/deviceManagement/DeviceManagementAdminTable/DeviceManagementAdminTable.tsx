@@ -1,8 +1,8 @@
-import type { DeviceManagementPopulatedSession, DeviceManagementSession, Serialized } from '@rocket.chat/core-typings';
-import type { TableColumnWidth } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useMediaQuery } from '@rocket.chat/fuselage-hooks';
-import { GenericTableHeaderCell, usePagination, useSort } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { DeviceManagementPopulatedSession, DeviceManagementSession, Serialized } from '@yas chat/core-typings';
+import type { TableColumnWidth } from '@yas chat/fuselage';
+import { useDebouncedValue, useMediaQuery } from '@yas chat/fuselage-hooks';
+import { GenericTableHeaderCell, usePagination, useSort } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

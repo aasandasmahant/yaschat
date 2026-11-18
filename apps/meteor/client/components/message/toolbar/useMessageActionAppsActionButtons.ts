@@ -1,6 +1,6 @@
-import { type IUIActionButton, MessageActionContext as AppsEngineMessageActionContext } from '@rocket.chat/apps-engine/definition/ui';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { type IUIActionButton, MessageActionContext as AppsEngineMessageActionContext } from '@yas chat/apps-engine/definition/ui';
+import type { IMessage } from '@yas chat/core-typings';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

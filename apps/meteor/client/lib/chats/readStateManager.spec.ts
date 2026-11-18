@@ -1,4 +1,4 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
+import type { ISubscription } from '@yas chat/core-typings';
 
 import { ReadStateManager } from './readStateManager';
 import { RoomHistoryManager } from '../RoomHistoryManager';

@@ -1,5 +1,5 @@
-import { LivechatPriority } from '@rocket.chat/models';
-import { isGETLivechatPrioritiesParams, isPUTLivechatPriority } from '@rocket.chat/rest-typings';
+import { LivechatPriority } from '@yas chat/models';
+import { isGETLivechatPrioritiesParams, isPUTLivechatPriority } from '@yas chat/rest-typings';
 
 import { findPriority, updatePriority } from './lib/priorities';
 import { API } from '../../../../../server/api';

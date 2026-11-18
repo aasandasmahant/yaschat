@@ -1,7 +1,7 @@
-import type { App } from '@rocket.chat/apps-engine/definition/App';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions/AppsEngineException';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
+import type { App } from '@yas chat/apps-engine/definition/App';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions/AppsEngineException';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { MessageBuilder } from '../../lib/accessors/builders/MessageBuilder';

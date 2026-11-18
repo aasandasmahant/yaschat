@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import type { AppStatus } from '@rocket.chat/apps';
-import { AppSubscriptionStatus } from '@rocket.chat/core-typings';
-import type { AppSubscriptionInfo, App } from '@rocket.chat/core-typings';
+import type { AppStatus } from '@yas chat/apps';
+import { AppSubscriptionStatus } from '@yas chat/core-typings';
+import type { AppSubscriptionInfo, App } from '@yas chat/core-typings';
 
 import { createFakeApp } from '../data';
 

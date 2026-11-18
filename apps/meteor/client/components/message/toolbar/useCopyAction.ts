@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription } from '@rocket.chat/core-typings';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IMessage, ISubscription } from '@yas chat/core-typings';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';

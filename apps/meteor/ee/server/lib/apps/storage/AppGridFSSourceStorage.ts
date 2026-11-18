@@ -1,6 +1,6 @@
-import { AppSourceStorage } from '@rocket.chat/apps/dist/server/storage/AppSourceStorage';
-import type { IAppStorageItem } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import { streamToBuffer } from '@rocket.chat/tools';
+import { AppSourceStorage } from '@yas chat/apps/dist/server/storage/AppSourceStorage';
+import type { IAppStorageItem } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import { streamToBuffer } from '@yas chat/tools';
 import { ObjectId } from 'mongodb';
 import type { GridFSBucketWriteStream } from 'mongodb';
 

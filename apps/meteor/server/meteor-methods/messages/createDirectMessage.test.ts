@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -31,7 +31,7 @@ const { createDirectMessage } = p.noCallThru().load('./createDirectMessage', {
 			methods: sandbox.stub(),
 		},
 	},
-	'@rocket.chat/federation-matrix': { validateFederatedUsername: validateFederatedUsernameMock },
+	'@yas chat/federation-matrix': { validateFederatedUsername: validateFederatedUsernameMock },
 	'../../lib/RateLimiter': { RateLimiterClass: { limitMethod: sandbox.stub() } },
 	'../../lib/authorization/hasPermission': { hasPermissionAsync: hasPermissionMock },
 	'../../lib/callbacks': { callbacks: { run: sandbox.stub() } },

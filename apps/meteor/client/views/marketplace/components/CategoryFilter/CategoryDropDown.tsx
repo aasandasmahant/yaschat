@@ -1,5 +1,5 @@
-import type { Button } from '@rocket.chat/fuselage';
-import { useToggle } from '@rocket.chat/fuselage-hooks';
+import type { Button } from '@yas chat/fuselage';
+import { useToggle } from '@yas chat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { useRef, useCallback } from 'react';
 

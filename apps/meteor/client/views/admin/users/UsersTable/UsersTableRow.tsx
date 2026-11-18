@@ -1,9 +1,9 @@
-import { UserStatus as Status } from '@rocket.chat/core-typings';
-import type { IUser, Serialized } from '@rocket.chat/core-typings';
-import { Box, Button, Text } from '@rocket.chat/fuselage';
-import type { DefaultUserInfo } from '@rocket.chat/rest-typings';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { GenericMenu, GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
+import { UserStatus as Status } from '@yas chat/core-typings';
+import type { IUser, Serialized } from '@yas chat/core-typings';
+import { Box, Button, Text } from '@yas chat/fuselage';
+import type { DefaultUserInfo } from '@yas chat/rest-typings';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { GenericMenu, GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

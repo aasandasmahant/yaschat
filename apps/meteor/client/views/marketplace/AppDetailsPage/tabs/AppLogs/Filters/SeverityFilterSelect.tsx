@@ -1,5 +1,5 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Select } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Select } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

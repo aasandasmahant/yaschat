@@ -1,4 +1,4 @@
-import type { LicenseManager } from '@rocket.chat/license';
+import type { LicenseManager } from '@yas chat/license';
 import type { Context } from 'hono';
 
 import { licenseRequired } from './licenseRequired';

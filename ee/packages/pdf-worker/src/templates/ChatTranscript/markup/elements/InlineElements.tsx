@@ -1,5 +1,5 @@
 import { Text } from '@react-pdf/renderer';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import BoldSpan from './BoldSpan';
 import CodeSpan from './CodeSpan';

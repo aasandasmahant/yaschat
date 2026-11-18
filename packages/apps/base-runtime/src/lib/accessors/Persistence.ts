@@ -1,5 +1,5 @@
-import type { IPersistence } from '@rocket.chat/apps-engine/definition/accessors';
-import type { YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import type { IPersistence } from '@yas chat/apps-engine/definition/accessors';
+import type { YasChatAssociationRecord } from '@yas chat/apps-engine/definition/metadata';
 
 import { bridgeCall } from '../bridges/bridgeCall';
 import type * as Messenger from '../messenger';

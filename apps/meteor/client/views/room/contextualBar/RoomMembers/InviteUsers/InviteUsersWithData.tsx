@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { useEndpoint, useToastMessageDispatch, useRoomToolbox } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
+import { useEndpoint, useToastMessageDispatch, useRoomToolbox } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

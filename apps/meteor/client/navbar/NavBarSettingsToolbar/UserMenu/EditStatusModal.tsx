@@ -1,10 +1,10 @@
-import { UserStatus as UserStatusType } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { InputBox, Box } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, Select } from '@rocket.chat/fuselage-forms';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useSetting, useEndpoint, useUser } from '@rocket.chat/ui-contexts';
+import { UserStatus as UserStatusType } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { InputBox, Box } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, Select } from '@yas chat/fuselage-forms';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useSetting, useEndpoint, useUser } from '@yas chat/ui-contexts';
 import type { ChangeEvent, ComponentProps } from 'react';
 import { useEffect, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';

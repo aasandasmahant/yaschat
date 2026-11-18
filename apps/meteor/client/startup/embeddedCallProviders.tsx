@@ -4,7 +4,7 @@ import { _relativeToSiteRootUrl } from '../lib/absoluteUrl';
 import type { EmbeddedCallProviderProps } from '../lib/videoConference/embeddedCallProviders';
 import { embeddedCallProviders } from '../lib/videoConference/embeddedCallProviders';
 
-const LiveKitCallProvider = lazy(() => import('@rocket.chat/ui-livekit'));
+const LiveKitCallProvider = lazy(() => import('@yas chat/ui-livekit'));
 
 // Same origin and under the root path, since the page fetches an AudioWorklet module the way it fetches a script.
 const rnnoiseBaseUrl = _relativeToSiteRootUrl('/video-conference/rnnoise');

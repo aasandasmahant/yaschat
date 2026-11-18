@@ -1,5 +1,5 @@
-import type { Serialized, ILivechatContact } from '@rocket.chat/core-typings';
-import { Select } from '@rocket.chat/fuselage';
+import type { Serialized, ILivechatContact } from '@yas chat/core-typings';
+import { Select } from '@yas chat/fuselage';
 import type { ComponentProps, Key } from 'react';
 import { useMemo } from 'react';
 

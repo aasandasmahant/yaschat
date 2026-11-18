@@ -4,8 +4,8 @@ import type {
 	IOutboundProviderMetadata,
 	IOutboundProviderTemplate,
 	ILivechatContact,
-} from '@rocket.chat/core-typings';
-import { Box, Margins } from '@rocket.chat/fuselage';
+} from '@yas chat/core-typings';
+import { Box, Margins } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

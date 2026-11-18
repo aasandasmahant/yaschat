@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Subscriptions, Users } from '@yas chat/models';
 import type { ClientSession } from 'mongodb';
 
 import { trim } from '../../../lib/utils/stringUtils';

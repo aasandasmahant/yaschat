@@ -1,4 +1,4 @@
-import type { ISidebarCategory, ThemePreference } from '@rocket.chat/core-typings';
+import type { ISidebarCategory, ThemePreference } from '@yas chat/core-typings';
 
 import { ajv } from '../Ajv';
 

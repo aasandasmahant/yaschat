@@ -1,5 +1,5 @@
-import type { IRoom, VideoConference } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IRoom, VideoConference } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { Authorization } from './Authorization';
 import { canAccessRoom } from './canAccessRoom';

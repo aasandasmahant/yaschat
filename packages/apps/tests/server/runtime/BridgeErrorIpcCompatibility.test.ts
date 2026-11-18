@@ -4,8 +4,8 @@ import * as path from 'node:path';
 import { describe, it, before, after } from 'node:test';
 import * as v8 from 'node:v8';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 import AdmZip from 'adm-zip';
 
 import * as jsonrpc from '../../../src/lib/jsonrpc';
@@ -37,7 +37,7 @@ const errors: Record<string, () => unknown> = {
 
 const appSource = `"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const { App } = require("@rocket.chat/apps-engine/definition/App");
+const { App } = require("@yas chat/apps-engine/definition/App");
 class BridgeErrorApp extends App {
 	async initialize(configurationExtend) {
 		const received = {};

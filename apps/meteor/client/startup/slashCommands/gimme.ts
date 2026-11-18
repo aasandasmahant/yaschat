@@ -1,4 +1,4 @@
-import type { SlashCommandCallbackParams } from '@rocket.chat/core-typings';
+import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
 
 import { sdk } from '../../lib/SDKClient';
 import { slashCommands } from '../../lib/slashCommand';

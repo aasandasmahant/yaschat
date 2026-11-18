@@ -1,4 +1,4 @@
-import { Box, Popover } from '@rocket.chat/fuselage';
+import { Box, Popover } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 import { Suspense } from 'react';
 

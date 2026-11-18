@@ -1,7 +1,7 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { UploadBridge } from '@rocket.chat/apps/dist/server/bridges/UploadBridge';
-import type { IUpload } from '@rocket.chat/apps-engine/definition/uploads';
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { UploadBridge } from '@yas chat/apps/dist/server/bridges/UploadBridge';
+import type { IUpload } from '@yas chat/apps-engine/definition/uploads';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
 
 import { determineFileType } from '../../../../ee/lib/misc/determineFileType';
 import { FileUpload } from '../../../lib/media/file-upload';
@@ -31,9 +31,9 @@ export class AppUploadBridge extends UploadBridge {
 	protected async getBuffer(upload: IUpload, appId: string): Promise<Buffer> {
 		this.orch.debugLog(`The App ${appId} is getting the upload: "${upload.id}"`);
 
-		const rocketChatUpload = this.orch.getConverters()?.get('uploads').convertToYasChat(upload);
+		const YasChatUpload = this.orch.getConverters()?.get('uploads').convertToYasChat(upload);
 
-		const result = await FileUpload.getBuffer(rocketChatUpload);
+		const result = await FileUpload.getBuffer(YasChatUpload);
 
 		if (!(result instanceof Buffer)) {
 			throw new Error('Unknown error');

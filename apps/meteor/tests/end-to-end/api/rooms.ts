@@ -2,7 +2,7 @@ import fs from 'fs';
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 import path from 'path';
 
-import type { Credentials } from '@rocket.chat/api-client';
+import type { Credentials } from '@yas chat/api-client';
 import type {
 	IMessage,
 	IRole,
@@ -13,9 +13,9 @@ import type {
 	ImageAttachmentProps,
 	MessageAttachment,
 	SettingValue,
-} from '@rocket.chat/core-typings';
-import { isFileAttachment, isQuoteAttachment, TeamType } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+} from '@yas chat/core-typings';
+import { isFileAttachment, isQuoteAttachment, TeamType } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { assert, expect } from 'chai';
 
 import { sleep } from '../../../lib/utils/sleep';

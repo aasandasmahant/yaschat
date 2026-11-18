@@ -1,5 +1,5 @@
-import type { ICustomUserStatus, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ICustomUserStatusModel, InsertionModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { ICustomUserStatus, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ICustomUserStatusModel, InsertionModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, InsertOneResult, UpdateResult, WithId, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

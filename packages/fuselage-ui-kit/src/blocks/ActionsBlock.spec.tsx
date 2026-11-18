@@ -1,4 +1,4 @@
-import { MockedServerContext } from '@rocket.chat/mock-providers';
+import { MockedServerContext } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import { UiKitContext } from '../contexts/UiKitContext';

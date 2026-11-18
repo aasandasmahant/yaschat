@@ -1,6 +1,6 @@
-import type { App } from '@rocket.chat/core-typings';
-import { Accordion } from '@rocket.chat/fuselage';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { Accordion } from '@yas chat/fuselage';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { isClientSafeError } from '@rocket.chat/core-services';
-import { LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import { LivechatInquiry, LivechatDepartment, Users, LivechatRooms } from '@rocket.chat/models';
+import { isClientSafeError } from '@yas chat/core-services';
+import { LivechatInquiryStatus } from '@yas chat/core-typings';
+import { LivechatInquiry, LivechatDepartment, Users, LivechatRooms } from '@yas chat/models';
 import {
 	isGETLivechatInquiriesListParams,
 	isPOSTLivechatInquiriesTakeParams,
@@ -11,7 +11,7 @@ import {
 	validateForbiddenErrorResponse,
 	isPOSTLivechatInquiriesReturnAsInquiry,
 	POSTLivechatInquiriesReturnAsInquirySuccessResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findInquiries, findOneInquiryByRoomId } from './lib/inquiries';
@@ -154,7 +154,7 @@ const livechatInquiriesEndpoints = API.v1.post(
 
 type LivechatInquiriesEndpoints = ExtractRoutesFromAPI<typeof livechatInquiriesEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatInquiriesEndpoints {}
 }

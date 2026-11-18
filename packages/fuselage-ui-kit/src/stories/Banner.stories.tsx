@@ -1,6 +1,6 @@
 /* oxlint-disable new-cap */
-import { Banner, Icon } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Banner, Icon } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

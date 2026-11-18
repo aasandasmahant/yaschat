@@ -1,4 +1,4 @@
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 
 import { settings } from '../../../settings';
 import { closeOpenChats } from '../closeRoom';

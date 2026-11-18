@@ -1,7 +1,7 @@
 import type { IncomingMessage } from 'node:http';
 import type { Duplex } from 'node:stream';
 
-import { RESPONSE_ALREADY_SENT, createMiddlewareSlot, createNodeServer, createRootApp } from '@rocket.chat/http-router';
+import { RESPONSE_ALREADY_SENT, createMiddlewareSlot, createNodeServer, createRootApp } from '@yas chat/http-router';
 import { WebApp } from 'meteor/webapp';
 
 const IDLE_SOCKET_TIMEOUT_MS = 5_000;

@@ -1,4 +1,4 @@
-import { tracerSpan } from '@rocket.chat/tracing';
+import { tracerSpan } from '@yas chat/tracing';
 import type { MiddlewareHandler } from 'hono';
 
 export const tracerSpanMiddleware: MiddlewareHandler = async (c, next) => {

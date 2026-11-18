@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isDiscussion, isPrivateRoom, isPublicRoom, isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { isDiscussion, isPrivateRoom, isPublicRoom, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
 
 export type AbacLockableRoom = Pick<IRoom, 't' | 'abacAttributes' | 'federated' | 'xmppFederation' | 'prid'>;
 

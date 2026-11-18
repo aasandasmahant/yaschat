@@ -1,6 +1,6 @@
-import type { AppScreenshot } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Icon, Text } from '@rocket.chat/fuselage';
+import type { AppScreenshot } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { Box, Icon, Text } from '@yas chat/fuselage';
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 

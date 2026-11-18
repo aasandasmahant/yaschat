@@ -129,7 +129,7 @@ export const Link: Story = {
 				<StatesActions>
 					<StatesAction>Reload</StatesAction>
 				</StatesActions>
-				<StatesLink target='_blank' href='https://go.rocket.chat'>
+				<StatesLink target='_blank' href='https://go.yas chat'>
 					Link to another page
 				</StatesLink>
 			</States>

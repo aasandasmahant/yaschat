@@ -1,5 +1,5 @@
-import { LivechatTrigger } from '@rocket.chat/models';
-import { isGETLivechatTriggersParams, isPOSTLivechatTriggersParams } from '@rocket.chat/rest-typings';
+import { LivechatTrigger } from '@yas chat/models';
+import { isGETLivechatTriggersParams, isPOSTLivechatTriggersParams } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findTriggers, findTriggerById, deleteTrigger } from './lib/triggers';

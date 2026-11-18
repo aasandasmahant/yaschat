@@ -1,4 +1,4 @@
-import { Field, FieldDescription, FieldError, FieldHint, FieldLabel, FieldRow, InputBoxSkeleton } from '@rocket.chat/fuselage';
+import { Field, FieldDescription, FieldError, FieldHint, FieldLabel, FieldRow, InputBoxSkeleton } from '@yas chat/fuselage';
 import type { Meta, StoryFn } from '@storybook/react-webpack5';
 
 import HorizontalWizardLayout from './HorizontalWizardLayout';

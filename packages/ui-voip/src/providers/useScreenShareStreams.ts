@@ -1,4 +1,4 @@
-import type { IMediaStreamWrapper, MediaSignalingSession } from '@rocket.chat/media-signaling';
+import type { IMediaStreamWrapper, MediaSignalingSession } from '@yas chat/media-signaling';
 
 import type { MediaCallStreams } from '../context/MediaCallViewContext';
 import { useInstanceSnapshot } from '../context/useInstanceSnapshot';

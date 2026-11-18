@@ -1,5 +1,5 @@
-import { Box, ItemGroupHeader, ItemGroupTitle } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { Box, ItemGroupHeader, ItemGroupTitle } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export type MembersListGroupHeaderProps = {

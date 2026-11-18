@@ -1,7 +1,7 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { IRolesModel, IRoomsModel, IUsersModel } from '@rocket.chat/model-typings';
-import { registerModel } from '@rocket.chat/models';
+import type { IRolesModel, IRoomsModel, IUsersModel } from '@yas chat/model-typings';
+import { registerModel } from '@yas chat/models';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

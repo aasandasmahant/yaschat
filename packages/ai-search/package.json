@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/ai-search",
+	"name": "@yas chat/ai-search",
 	"version": "0.4.0",
 	"private": true,
 	"type": "module",
@@ -25,8 +25,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

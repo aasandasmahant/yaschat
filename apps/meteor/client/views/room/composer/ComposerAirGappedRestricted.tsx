@@ -1,5 +1,5 @@
-import { Box, Icon, Stack } from '@rocket.chat/fuselage';
-import { MessageFooterCallout } from '@rocket.chat/ui-composer';
+import { Box, Icon, Stack } from '@yas chat/fuselage';
+import { MessageFooterCallout } from '@yas chat/ui-composer';
 import { Trans } from 'react-i18next';
 
 const ComposerAirGappedRestricted = () => {

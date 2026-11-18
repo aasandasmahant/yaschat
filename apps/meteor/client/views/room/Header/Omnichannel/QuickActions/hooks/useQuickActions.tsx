@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import {
 	useSetModal,
 	useToastMessageDispatch,
@@ -10,7 +10,7 @@ import {
 	useEndpoint,
 	useTranslation,
 	useRouter,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useCallback, useState, useEffect } from 'react';
 
 import { usePutChatOnHoldMutation } from './usePutChatOnHoldMutation';

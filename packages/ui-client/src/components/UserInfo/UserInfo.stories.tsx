@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { Meta, StoryFn } from '@storybook/react';
 
 import UserInfo from './UserInfo';
@@ -26,7 +26,7 @@ const defaultArgs = {
 	username: 'guilherme.gazzo',
 	nickname: 'gazzo',
 	bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, eros convallis vulputate cursus, nisi neque eleifend libero, eget lacinia justo purus nec est. In at sodales ipsum. Sed lacinia quis purus eget pulvinar. Aenean eu pretium nunc, at aliquam magna. Praesent dignissim, tortor sed volutpat mattis, mauris diam pulvinar leo, porta commodo risus est non purus.',
-	email: 'yaschat@rocket.chat',
+	email: 'yaschat@yas chat',
 	status: <Status.Offline />,
 	customStatus: '🛴 currently working on User Card',
 	roles: [<UserCardRole key='admin'>admin</UserCardRole>, <UserCardRole key='user'>user</UserCardRole>],

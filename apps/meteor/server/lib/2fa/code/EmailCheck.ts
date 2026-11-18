@@ -1,7 +1,7 @@
-import { BCRYPT_ROUNDS } from '@rocket.chat/account-utils';
-import { isOAuthUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { BCRYPT_ROUNDS } from '@yas chat/account-utils';
+import { isOAuthUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import bcrypt from 'bcrypt';
 
 import type { ICodeCheck, IProcessInvalidCodeResult, TwoFactorUser } from './ICodeCheck';

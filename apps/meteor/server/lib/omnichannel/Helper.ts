@@ -1,6 +1,6 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { LivechatTransferEventType } from '@rocket.chat/apps-engine/definition/livechat';
-import { api, Message, Omnichannel, ClientSafeError } from '@rocket.chat/core-services';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { LivechatTransferEventType } from '@yas chat/apps-engine/definition/livechat';
+import { api, Message, Omnichannel, ClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatVisitor,
 	IOmnichannelRoom,
@@ -17,11 +17,11 @@ import type {
 	IOmnichannelInquiryExtraData,
 	IOmnichannelRoomExtraData,
 	ILivechatContact,
-} from '@rocket.chat/core-typings';
-import { LivechatInquiryStatus, OmnichannelSourceType, DEFAULT_SLA_CONFIG, UserStatus } from '@rocket.chat/core-typings';
-import { LivechatPriorityWeight } from '@rocket.chat/core-typings/src/ILivechatPriority';
-import { Logger } from '@rocket.chat/logger';
-import type { InsertionModel } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import { LivechatInquiryStatus, OmnichannelSourceType, DEFAULT_SLA_CONFIG, UserStatus } from '@yas chat/core-typings';
+import { LivechatPriorityWeight } from '@yas chat/core-typings/src/ILivechatPriority';
+import { Logger } from '@yas chat/logger';
+import type { InsertionModel } from '@yas chat/model-typings';
 import {
 	LivechatDepartmentAgents,
 	LivechatInquiry,
@@ -30,8 +30,8 @@ import {
 	Subscriptions,
 	Users,
 	LivechatContacts,
-} from '@rocket.chat/models';
-import { removeEmpty, validateEmail as validatorFunc } from '@rocket.chat/tools';
+} from '@yas chat/models';
+import { removeEmpty, validateEmail as validatorFunc } from '@yas chat/tools';
 import type { ClientSession } from 'mongodb';
 import { ObjectId } from 'mongodb';
 

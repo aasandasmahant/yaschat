@@ -1,6 +1,6 @@
-import type { AppliedFilter } from '@rocket.chat/ai-search';
-import { formatAppliedFilter } from '@rocket.chat/ai-search';
-import { Box, Chip, Icon, Text } from '@rocket.chat/fuselage';
+import type { AppliedFilter } from '@yas chat/ai-search';
+import { formatAppliedFilter } from '@yas chat/ai-search';
+import { Box, Chip, Icon, Text } from '@yas chat/fuselage';
 import type { ReactElement } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

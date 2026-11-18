@@ -1,4 +1,4 @@
-import { isPOSTLivechatOfflineMessageParams } from '@rocket.chat/rest-typings';
+import { isPOSTLivechatOfflineMessageParams } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { i18n } from '../../../lib/i18n';

@@ -1,4 +1,4 @@
-import type { ISetting, SettingValueMultiSelect, SettingValueRoomPick } from '@rocket.chat/core-typings';
+import type { ISetting, SettingValueMultiSelect, SettingValueRoomPick } from '@yas chat/core-typings';
 
 import { convertValue } from './convertValue';
 

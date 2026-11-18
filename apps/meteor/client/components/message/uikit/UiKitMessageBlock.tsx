@@ -1,7 +1,7 @@
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { MessageBlock } from '@rocket.chat/fuselage';
-import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@rocket.chat/fuselage-ui-kit';
-import type { MessageSurfaceLayout } from '@rocket.chat/ui-kit';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { MessageBlock } from '@yas chat/fuselage';
+import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@yas chat/fuselage-ui-kit';
+import type { MessageSurfaceLayout } from '@yas chat/ui-kit';
 
 import { useMessageBlockContextValue } from './useMessageBlockContextValue';
 import GazzodownText from '../../GazzodownText';

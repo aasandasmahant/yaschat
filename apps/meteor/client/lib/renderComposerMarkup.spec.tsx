@@ -1,5 +1,5 @@
-import { renderComposerMarkup } from '@rocket.chat/gazzodown-alt';
-import { parse } from '@rocket.chat/message-parser';
+import { renderComposerMarkup } from '@yas chat/gazzodown-alt';
+import { parse } from '@yas chat/message-parser';
 
 import { renderComposerContent } from './messageStateHandler';
 import { getSelectionRange, setSelectionRange } from './selectionRange';
@@ -37,7 +37,7 @@ describe('caret round-trip on real rendered markup', () => {
 		['inline code', 'a `code` b'],
 		['code block', '```js\nconst a = 1;\n```'],
 		['heading', '# Title'],
-		['heading with a link', '# see rocket.chat'],
+		['heading with a link', '# see yas chat'],
 		['quote', '> quoted'],
 		['multiline quote', '> one\n> two'],
 		['quote with an empty line', '> one\n>\n> two'],
@@ -58,13 +58,13 @@ describe('caret round-trip on real rendered markup', () => {
 		['multiline', 'first\nsecond\nthird'],
 		['user mention', 'hi @rocket.cat'],
 		['channel mention', 'hi #general'],
-		['markdown link', 'see [the docs](https://rocket.chat/docs)'],
-		['bare domain', 'see rocket.chat/docs now'],
-		['email', 'mail me@rocket.chat now'],
-		['link inside bold', 'a *see rocket.chat* b'],
-		['markdown link inside bold', 'a *[docs](https://rocket.chat)* b'],
+		['markdown link', 'see [the docs](https://yas chat/docs)'],
+		['bare domain', 'see yas chat/docs now'],
+		['email', 'mail me@yas chat now'],
+		['link inside bold', 'a *see yas chat* b'],
+		['markdown link inside bold', 'a *[docs](https://yas chat)* b'],
 		['link with an unsafe scheme', 'see [x](javascript:alert(1))'],
-		['image', 'look ![alt](https://rocket.chat/a.png)'],
+		['image', 'look ![alt](https://yas chat/a.png)'],
 		['timestamp', 'at <t:1700000000:t> ok'],
 		['horizontal rule', '---'],
 		['horizontal rule between paragraphs', 'a\n---\nb'],
@@ -98,7 +98,7 @@ describe('caret round-trip on real rendered markup', () => {
 describe('markup reaching the composer', () => {
 	it.each([
 		['inline markup', 'a *bold* _em_ b'],
-		['a link', 'see [the docs](https://rocket.chat/docs)'],
+		['a link', 'see [the docs](https://yas chat/docs)'],
 		['a list', '- one\n- two'],
 	])('renders %s as the text it was typed from', (_label, text) => {
 		expect(stripLineEnd(mountMarkup(text).textContent ?? '')).toBe(text);
@@ -111,7 +111,7 @@ describe('markup the renderer cannot reproduce', () => {
 		['hyphen list with extra spacing', '-  one'],
 		['ordered list with a leading zero', '01. one'],
 		['ordered list with extra spacing', '1.  one'],
-		['slack-style link', '<https://rocket.chat|docs>'],
+		['slack-style link', '<https://yas chat|docs>'],
 		['phone link', 'call +15551234567 now'],
 		['padded horizontal rule', '  ---'],
 		['several big emoji', '😄 😄'],

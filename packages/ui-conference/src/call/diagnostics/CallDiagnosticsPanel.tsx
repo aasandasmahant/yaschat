@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Divider, Palette } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Divider, Palette } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import CallDiagnosticsParticipantCard from './CallDiagnosticsParticipantCard';

@@ -1,5 +1,5 @@
-import type { OffCallbackHandler } from '@rocket.chat/emitter';
-import { Emitter } from '@rocket.chat/emitter';
+import type { OffCallbackHandler } from '@yas chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import { MongoInternals } from 'meteor/mongo';
 import type { ClientSession, MongoError } from 'mongodb';
 

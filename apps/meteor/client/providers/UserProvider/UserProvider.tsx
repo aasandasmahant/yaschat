@@ -1,9 +1,9 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { createPredicateFromFilter } from '@rocket.chat/mongo-adapter';
-import type { FindOptions, SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { UserContext, useRouteParameter, useSearchParameter } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import type { FindOptions, SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { UserContext, useRouteParameter, useSearchParameter } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { Filter, ObjectId } from 'mongodb';
 import type { ContextType, ReactNode } from 'react';

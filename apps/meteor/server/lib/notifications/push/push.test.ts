@@ -1,9 +1,9 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { IPushNotificationConfig } from '@rocket.chat/core-typings/src/IPushNotificationConfig';
-import type { IPushToken } from '@rocket.chat/core-typings/src/IPushToken';
-import { mockModel } from '@rocket.chat/models/testing';
-import { isRecord, pick, truncateString } from '@rocket.chat/tools';
+import type { IPushNotificationConfig } from '@yas chat/core-typings/src/IPushNotificationConfig';
+import type { IPushToken } from '@yas chat/core-typings/src/IPushToken';
+import { mockModel } from '@yas chat/models/testing';
+import { isRecord, pick, truncateString } from '@yas chat/tools';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -15,12 +15,12 @@ const sendFCMStub = sinon.stub();
 const pushTokenModelStub = { findAllTokensByUserId: sinon.stub() };
 
 const { Push } = proxyquire.noCallThru().load('./push', {
-	'@rocket.chat/license': { License: { hasOfflineLicense: () => false } },
+	'@yas chat/license': { License: { hasOfflineLicense: () => false } },
 	'./logger': { logger: loggerStub },
 	'../../../settings': { settings: settingsStub },
 	'./apn': { initAPN: sinon.stub(), sendAPN: sendAPNStub, shutdownAPN: sinon.stub() },
 	'./fcm': { sendFCM: sendFCMStub },
-	'@rocket.chat/tools': { isRecord, pick, truncateString },
+	'@yas chat/tools': { isRecord, pick, truncateString },
 	'../../utils/getURL': { getWorkspaceURL: sinon.stub().returns('http://localhost') },
 });
 
@@ -197,7 +197,7 @@ describe('Push Notifications [PushClass]', () => {
 
 		beforeEach(() => {
 			settingsStub.get.returns('');
-			Push.options = { gateways: ['https://gateway.rocket.chat'] };
+			Push.options = { gateways: ['https://gateway.yas chat'] };
 			sendGatewayPushStub = sinon.stub(Push, 'sendGatewayPush').resolves();
 		});
 
@@ -257,7 +257,7 @@ describe('Push Notifications [PushClass]', () => {
 
 		beforeEach(() => {
 			settingsStub.get.returns(true);
-			Push.options = { gateways: ['https://gateway.rocket.chat'] };
+			Push.options = { gateways: ['https://gateway.yas chat'] };
 			sendNotificationGatewayStub = sinon
 				.stub(Push, 'sendNotificationGateway')
 				.callsFake(() => new Promise<void>((resolve) => pendingGatewayRequests.push(resolve)));

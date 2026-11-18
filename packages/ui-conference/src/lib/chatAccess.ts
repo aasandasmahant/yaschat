@@ -1,4 +1,4 @@
-import type { IRoom, IUser, VideoConferenceChatAccess } from '@rocket.chat/core-typings';
+import type { IRoom, IUser, VideoConferenceChatAccess } from '@yas chat/core-typings';
 
 /** Being in a call and being able to read its chat are separate questions. */
 export const hasConferenceChatAccess = (

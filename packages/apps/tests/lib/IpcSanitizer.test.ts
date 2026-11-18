@@ -2,7 +2,7 @@ import * as assert from 'node:assert';
 import { describe, it } from 'node:test';
 import * as v8 from 'node:v8';
 
-import { App } from '@rocket.chat/apps-engine/definition/App';
+import { App } from '@yas chat/apps-engine/definition/App';
 
 import { sanitizeForIpc } from '../../src/lib/IpcSanitizer';
 

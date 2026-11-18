@@ -1,5 +1,5 @@
-import type { ClassificationBannerPayload, IRoom } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { ClassificationBannerPayload, IRoom } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ClassificationBanner from './ClassificationBanner';

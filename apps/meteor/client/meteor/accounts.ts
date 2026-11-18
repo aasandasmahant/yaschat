@@ -238,7 +238,7 @@ setInterval(() => {
 	resumeStoredSession(token).catch(() => undefined);
 }, 3000);
 
-window.__rocketChatLoginWithToken = loginWithToken;
+window.__YasChatLoginWithToken = loginWithToken;
 
 // Resumes the stored session once every module has loaded, as accounts-base did at package load.
 queueMicrotask(() => {

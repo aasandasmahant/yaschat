@@ -1,4 +1,4 @@
-import { isTracingEnabled } from '@rocket.chat/tracing';
+import { isTracingEnabled } from '@yas chat/tracing';
 import { MongoClient } from 'mongodb';
 import type { Db, Collection, MongoClientOptions, Document } from 'mongodb';
 

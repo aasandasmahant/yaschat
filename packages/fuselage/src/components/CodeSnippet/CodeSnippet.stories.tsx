@@ -45,20 +45,20 @@ type Story = StoryObj<typeof CodeSnippet>;
 
 export const Default: Story = {
 	args: {
-		children: 'curl -L https://go.rocket.chat/i/docker-compose.yml -O',
+		children: 'curl -L https://go.yas chat/i/docker-compose.yml -O',
 	},
 };
 
 export const CopyButton: Story = {
 	args: {
-		children: 'curl -L https://go.rocket.chat/i/docker-compose.yml -O',
+		children: 'curl -L https://go.yas chat/i/docker-compose.yml -O',
 		onClick: action('click'),
 	},
 };
 
 export const CustomButtonName: Story = {
 	args: {
-		children: 'curl -L https://go.rocket.chat/i/docker-compose.yml -O',
+		children: 'curl -L https://go.yas chat/i/docker-compose.yml -O',
 		onClick: action('click'),
 		buttonText: 'Custom name',
 	},
@@ -73,7 +73,7 @@ export const LoadingCode: Story = {
 
 export const DisabledButton: Story = {
 	args: {
-		children: 'curl -L https://go.rocket.chat/i/docker-compose.yml -O',
+		children: 'curl -L https://go.yas chat/i/docker-compose.yml -O',
 		onClick: action('click'),
 		buttonText: 'Disabled Button',
 		buttonDisabled: true,

@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Badge } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Badge } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type SidebarTogglerBadgeProps = {

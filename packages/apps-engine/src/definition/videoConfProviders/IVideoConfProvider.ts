@@ -28,7 +28,7 @@ export interface IVideoConfProvider {
 	// Optional function to run when a new video conference is created on this provider
 	onNewVideoConference?(call: VideoConference, read: IRead, modify: IModify, http: IHttp, persis: IPersistence): Promise<void>;
 
-	// Optional function to run when a video conference from this provider is changed by rocket.chat
+	// Optional function to run when a video conference from this provider is changed by yas chat
 	onVideoConferenceChanged?(call: VideoConference, read: IRead, modify: IModify, http: IHttp, persis: IPersistence): Promise<void>;
 
 	// Optional function to run when a new user joins a video conference from this provider

@@ -1,8 +1,8 @@
-import { type ISubscription, type ILivechatInquiryRecord, type IRoom, isTeamRoom, isDirectMessageRoom } from '@rocket.chat/core-typings';
-import { useStableCallback, useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import { isTruthy } from '@rocket.chat/tools';
-import type { SubscriptionWithRoom, TranslationKey } from '@rocket.chat/ui-contexts';
+import { type ISubscription, type ILivechatInquiryRecord, type IRoom, isTeamRoom, isDirectMessageRoom } from '@yas chat/core-typings';
+import { useStableCallback, useLocalStorage } from '@yas chat/fuselage-hooks';
+import type { Keys as IconName } from '@yas chat/icons';
+import { isTruthy } from '@yas chat/tools';
+import type { SubscriptionWithRoom, TranslationKey } from '@yas chat/ui-contexts';
 import { createContext, useCallback, useContext, useEffect, useMemo } from 'react';
 
 import { useCollapsedGroups } from '../hooks/useCollapsedGroups';

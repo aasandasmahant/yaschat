@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
 
 import { subscriptionHasRole } from '../authorization';
 

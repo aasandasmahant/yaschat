@@ -1,7 +1,7 @@
-import type { IMessage, MessageQuoteAttachment } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { IconButton, Box, Margins } from '@rocket.chat/fuselage';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
+import type { IMessage, MessageQuoteAttachment } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { IconButton, Box, Margins } from '@yas chat/fuselage';
+import { useUserDisplayName } from '@yas chat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

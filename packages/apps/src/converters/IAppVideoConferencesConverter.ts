@@ -1,4 +1,4 @@
-import type { VideoConference } from '@rocket.chat/core-typings';
+import type { VideoConference } from '@yas chat/core-typings';
 
 import type { AppsVideoConference } from '../AppsEngine';
 

@@ -1,8 +1,8 @@
-import type { AbacActor, AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import type { IAbacAttributeDefinition, IRoom, IUser, AtLeast } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
-import { serverFetch } from '@rocket.chat/server-fetch';
-import { isTruthy } from '@rocket.chat/tools';
+import type { AbacActor, AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import type { IAbacAttributeDefinition, IRoom, IUser, AtLeast } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
+import { serverFetch } from '@yas chat/server-fetch';
+import { isTruthy } from '@yas chat/tools';
 import pLimit from 'p-limit';
 
 import type {

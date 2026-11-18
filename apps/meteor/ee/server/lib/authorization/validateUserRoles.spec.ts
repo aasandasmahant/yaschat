@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { License, MockedLicenseBuilder } from '@rocket.chat/license';
+import { ClientSafeError } from '@yas chat/core-services';
+import { License, MockedLicenseBuilder } from '@yas chat/license';
 
 import { validateUserRoles } from './validateUserRoles';
 

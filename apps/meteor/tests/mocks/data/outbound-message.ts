@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import type { IOutboundProvider, IOutboundProviderMetadata, IOutboundProviderTemplate } from '@rocket.chat/core-typings';
-import { capitalize } from '@rocket.chat/tools';
+import type { IOutboundProvider, IOutboundProviderMetadata, IOutboundProviderTemplate } from '@yas chat/core-typings';
+import { capitalize } from '@yas chat/tools';
 
 export const createFakeProvider = (overrides: Partial<IOutboundProvider> = {}): IOutboundProvider => ({
 	providerId: faker.string.uuid(),

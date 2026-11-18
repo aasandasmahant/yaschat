@@ -1,6 +1,6 @@
-import { api } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, IUser, IReadReceipt, IReadReceiptWithUser } from '@rocket.chat/core-typings';
-import { LivechatVisitors, ReadReceipts, ReadReceiptsArchive, Messages, Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { IMessage, IRoom, IUser, IReadReceipt, IReadReceiptWithUser } from '@yas chat/core-typings';
+import { LivechatVisitors, ReadReceipts, ReadReceiptsArchive, Messages, Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { SystemLogger } from '../../../../server/lib/logger/system';
 import { notifyOnRoomChangedById, notifyOnMessageChange } from '../../../../server/lib/notifyListener';

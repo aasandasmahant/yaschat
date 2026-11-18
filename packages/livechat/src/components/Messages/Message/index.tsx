@@ -1,4 +1,4 @@
-import type { IOmnichannelSystemMessage } from '@rocket.chat/core-typings';
+import type { IOmnichannelSystemMessage } from '@yas chat/core-typings';
 import type { TFunction } from 'i18next';
 import type { CSSProperties } from 'preact/compat';
 import { memo } from 'preact/compat';

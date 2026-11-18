@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import type { IUser } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import { useTranslation } from 'react-i18next';
 
 type CallParticipantsProps = {

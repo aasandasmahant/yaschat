@@ -1,5 +1,5 @@
-import { Palette } from '@rocket.chat/fuselage';
-import styled from '@rocket.chat/styled';
+import { Palette } from '@yas chat/fuselage';
+import styled from '@yas chat/styled';
 
 type WidgetBaseProps = { inline?: boolean; borderless?: boolean };
 

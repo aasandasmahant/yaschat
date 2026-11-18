@@ -1,4 +1,4 @@
-import type { IExperimentalRead } from '@rocket.chat/apps-engine/definition/accessors';
+import type { IExperimentalRead } from '@yas chat/apps-engine/definition/accessors';
 
 import type * as Messenger from '../../messenger';
 

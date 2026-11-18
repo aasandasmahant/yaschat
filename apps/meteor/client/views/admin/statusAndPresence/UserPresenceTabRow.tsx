@@ -1,8 +1,8 @@
-import { UserStatus as Status } from '@rocket.chat/core-typings';
-import { Box, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { GenericMenu, GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
+import { UserStatus as Status } from '@yas chat/core-typings';
+import { Box, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { GenericMenu, GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
 import type { KeyboardEvent, SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

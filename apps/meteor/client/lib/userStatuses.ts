@@ -1,5 +1,5 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { ICustomUserStatus } from '@rocket.chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { ICustomUserStatus } from '@yas chat/core-typings';
 
 export type UserStatusDescriptor = {
 	id: string;

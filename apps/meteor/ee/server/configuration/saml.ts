@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { Roles, Users } from '@rocket.chat/models';
+import { License } from '@yas chat/license';
+import { Roles, Users } from '@yas chat/models';
 
 import { ensureArray } from '../../../lib/utils/arrayUtils';
 import { settings } from '../../../server/settings';

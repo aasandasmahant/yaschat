@@ -1,6 +1,6 @@
-import type { ISidebarCategory } from '@rocket.chat/core-typings';
-import { useIsEnterprise } from '@rocket.chat/ui-client';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import type { ISidebarCategory } from '@yas chat/core-typings';
+import { useIsEnterprise } from '@yas chat/ui-client';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 export type MovableRoom = { rid: string; name?: string; isFavorite?: boolean; categoryId?: string };

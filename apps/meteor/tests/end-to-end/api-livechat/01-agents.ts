@@ -1,9 +1,9 @@
 import { after, afterEach, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { ILivechatVisitor, IOmnichannelRoom, ILivechatAgent, ILivechatDepartment, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import { UserStatus } from '@yas chat/core-typings';
+import type { ILivechatVisitor, IOmnichannelRoom, ILivechatAgent, ILivechatDepartment, IRoom, IUser } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

@@ -1,6 +1,6 @@
-import type { INotification, INotificationItemPush, INotificationItemEmail, NotificationItem, IUser } from '@rocket.chat/core-typings';
-import { NotificationQueue, Users } from '@rocket.chat/models';
-import { tracerSpan } from '@rocket.chat/tracing';
+import type { INotification, INotificationItemPush, INotificationItemEmail, NotificationItem, IUser } from '@yas chat/core-typings';
+import { NotificationQueue, Users } from '@yas chat/models';
+import { tracerSpan } from '@yas chat/tracing';
 
 import { SystemLogger } from '../../logger/system';
 import { sendEmailFromData } from '../message/email';

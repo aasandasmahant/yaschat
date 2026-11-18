@@ -1,9 +1,9 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { isSettingCode } from '@rocket.chat/core-typings';
-import { createPredicateFromFilter } from '@rocket.chat/mongo-adapter';
-import { isTruthy } from '@rocket.chat/tools';
-import type { SettingsContextQuery, SettingsContextValue } from '@rocket.chat/ui-contexts';
-import { SettingsContext, useAtLeastOnePermission, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { isSettingCode } from '@yas chat/core-typings';
+import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import { isTruthy } from '@yas chat/tools';
+import type { SettingsContextQuery, SettingsContextValue } from '@yas chat/ui-contexts';
+import { SettingsContext, useAtLeastOnePermission, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useCallback, useEffect, useMemo } from 'react';

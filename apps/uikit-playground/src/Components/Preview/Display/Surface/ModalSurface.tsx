@@ -1,4 +1,4 @@
-import { css } from '@rocket.chat/css-in-js';
+import { css } from '@yas chat/css-in-js';
 import {
 	Modal,
 	ModalHeader,
@@ -10,7 +10,7 @@ import {
 	ButtonGroup,
 	Button,
 	useStyle,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type ModalSurfaceProps = { children: ReactNode };

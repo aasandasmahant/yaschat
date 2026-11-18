@@ -1,7 +1,7 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom, isE2EEMessage, isMultipleDirectMessageRoom, isVideoConfMessage } from '@rocket.chat/core-typings';
-import { escapeHTML } from '@rocket.chat/tools';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { isDirectMessageRoom, isE2EEMessage, isMultipleDirectMessageRoom, isVideoConfMessage } from '@yas chat/core-typings';
+import { escapeHTML } from '@yas chat/tools';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import type { TFunction } from 'i18next';
 
 import { normalizeMessagePreview } from './normalizeMessagePreview';

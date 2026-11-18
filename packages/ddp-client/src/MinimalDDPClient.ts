@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import type { DDPClient } from './types/DDPClient';
 import type { IncomingPayload } from './types/IncomingPayload';

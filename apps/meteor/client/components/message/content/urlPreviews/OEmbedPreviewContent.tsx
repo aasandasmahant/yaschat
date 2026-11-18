@@ -4,7 +4,7 @@ import {
 	MessageGenericPreviewDescription,
 	MessageGenericPreviewFooter,
 	Box,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { ReactElement, ReactNode } from 'react';
 
 import type { OEmbedPreviewMetadata } from './OEmbedPreviewMetadata';

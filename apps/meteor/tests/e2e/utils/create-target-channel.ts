@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { request as baseRequest } from '@playwright/test';
-import type { IRoom, IMessage } from '@rocket.chat/core-typings';
-import type { ChannelsCreateProps, GroupsCreateProps } from '@rocket.chat/rest-typings';
+import type { IRoom, IMessage } from '@yas chat/core-typings';
+import type { ChannelsCreateProps, GroupsCreateProps } from '@yas chat/rest-typings';
 
 import type { BaseTest } from './test';
 import { BASE_API_URL } from '../config/constants';

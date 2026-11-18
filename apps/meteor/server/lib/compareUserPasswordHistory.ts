@@ -1,5 +1,5 @@
-import { verifyPassword } from '@rocket.chat/account-utils';
-import type { IUser, IPassword } from '@rocket.chat/core-typings';
+import { verifyPassword } from '@yas chat/account-utils';
+import type { IUser, IPassword } from '@yas chat/core-typings';
 
 import { settings } from '../settings';
 

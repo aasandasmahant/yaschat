@@ -1,5 +1,5 @@
-import type { IPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { App } from '@rocket.chat/core-typings';
+import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { App } from '@yas chat/core-typings';
 
 import { request, credentials } from '../api-data';
 import { apps, APP_URL, installedApps } from './apps-data';

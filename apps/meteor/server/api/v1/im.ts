@@ -1,10 +1,10 @@
 /**
  * Docs: https://github.com/YasChat/developer-docs/blob/master/reference/api/rest-api/endpoints/team-collaboration-endpoints/im-endpoints
  */
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, ISubscription, IUploadWithUser, IUser, UserStatus } from '@rocket.chat/core-typings';
-import { Subscriptions, Uploads, Messages, Rooms, Users } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IRoom, ISubscription, IUploadWithUser, IUser, UserStatus } from '@yas chat/core-typings';
+import { Subscriptions, Uploads, Messages, Rooms, Users } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -19,7 +19,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import type { FindOptions } from 'mongodb';
 
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';
@@ -1042,7 +1042,7 @@ const dmEndpoints = API.v1
 
 export type DmEndpoints = ExtractRoutesFromAPI<typeof dmEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends DmEndpoints {}
 }

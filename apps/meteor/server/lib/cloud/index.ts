@@ -1,4 +1,4 @@
-import { cronJobs } from '@rocket.chat/cron';
+import { cronJobs } from '@yas chat/cron';
 
 import { connectWorkspace } from './connectWorkspace';
 import { CloudWorkspaceAccessTokenEmptyError, getWorkspaceAccessToken } from './getWorkspaceAccessToken';

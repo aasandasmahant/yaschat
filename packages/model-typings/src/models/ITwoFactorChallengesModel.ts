@@ -1,4 +1,4 @@
-import type { ITwoFactorChallenge } from '@rocket.chat/core-typings';
+import type { ITwoFactorChallenge } from '@yas chat/core-typings';
 import type { DeleteResult, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

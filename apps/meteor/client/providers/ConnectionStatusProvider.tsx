@@ -1,5 +1,5 @@
-import type { ConnectionStatusContextValue } from '@rocket.chat/ui-contexts';
-import { ConnectionStatusContext } from '@rocket.chat/ui-contexts';
+import type { ConnectionStatusContextValue } from '@yas chat/ui-contexts';
+import { ConnectionStatusContext } from '@yas chat/ui-contexts';
 import { useMemo, useSyncExternalStore, type ReactNode } from 'react';
 
 import { ensureConnectedAndAuthenticated, getDdpSdk } from '../lib/sdk/ddpSdk';

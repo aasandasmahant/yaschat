@@ -1,8 +1,8 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
 
 import { isReservedByExclusiveBridge } from './isReservedByExclusiveBridge';
 
-jest.mock('@rocket.chat/federation-sdk', () => ({
+jest.mock('@yas chat/federation-sdk', () => ({
 	federationSDK: {
 		getConfig: jest.fn(),
 		isExclusiveNamespace: jest.fn(),

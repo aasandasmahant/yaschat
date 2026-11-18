@@ -1,5 +1,5 @@
-import type { RoomType } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { RoomType } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { QueryClient } from '@tanstack/react-query';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';

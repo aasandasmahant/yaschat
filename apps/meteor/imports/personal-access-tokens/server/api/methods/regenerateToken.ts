@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
-import { isPersonalAccessToken } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
+import { isPersonalAccessToken } from '@yas chat/core-typings';
 
 import { hasPermissionAsync } from '../../../../../server/lib/authorization/hasPermission';
 import { removePersonalAccessTokenOfUser } from './removeToken';

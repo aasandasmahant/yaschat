@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { beforeEach, describe, it, mock } from 'node:test';
 
-import type { IRead, IModify, IHttp, IPersistence } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IApiRequest, IApiEndpointInfo, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import type { IApiEndpoint } from '@rocket.chat/apps-engine/definition/api/IApiEndpoint';
+import type { IRead, IModify, IHttp, IPersistence } from '@yas chat/apps-engine/definition/accessors';
+import type { IApiRequest, IApiEndpointInfo, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import type { IApiEndpoint } from '@yas chat/apps-engine/definition/api/IApiEndpoint';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { JsonRpcError } from '../../lib/jsonrpc';

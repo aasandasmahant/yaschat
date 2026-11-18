@@ -1,4 +1,4 @@
-import { Presence } from '@rocket.chat/core-services';
+import { Presence } from '@yas chat/core-services';
 
 import type { Session } from './Session';
 import type { ConnectionLifecycle } from './lifecycle';

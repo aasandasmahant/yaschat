@@ -1,7 +1,7 @@
-import type { ILivechatContact, Serialized } from '@rocket.chat/core-typings';
-import { Badge, Box, Field, FieldError, FieldGroup, FieldHint, FieldLabel, FieldRow, Select } from '@rocket.chat/fuselage';
-import { GenericModal, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useAtLeastOnePermission } from '@rocket.chat/ui-contexts';
+import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
+import { Badge, Box, Field, FieldError, FieldGroup, FieldHint, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
+import { GenericModal, useHasLicenseModule } from '@yas chat/ui-client';
+import { useAtLeastOnePermission } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

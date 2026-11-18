@@ -1,4 +1,4 @@
-import type { ITeam, TeamType } from '@rocket.chat/core-typings';
+import type { ITeam, TeamType } from '@yas chat/core-typings';
 import type { FindCursor, UpdateResult, DeleteResult, Filter, Document, FindOptions } from 'mongodb';
 
 import type { FindPaginated, IBaseModel } from './IBaseModel';

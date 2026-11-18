@@ -1,5 +1,5 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { CustomSounds } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { CustomSounds } from '@yas chat/models';
 
 import { YasChatFileCustomSoundsInstance } from '../startup/custom-sounds';
 

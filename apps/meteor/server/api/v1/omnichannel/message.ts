@@ -1,7 +1,7 @@
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatRooms, Messages } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
-import { Random } from '@rocket.chat/random';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatRooms, Messages } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
+import { Random } from '@yas chat/random';
 import {
 	isPOSTLivechatMessageParams,
 	isGETLivechatMessageIdParams,
@@ -9,7 +9,7 @@ import {
 	isDELETELivechatMessageIdParams,
 	isGETLivechatMessagesHistoryRidParams,
 	isGETLivechatMessagesParams,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findGuest, findRoom, normalizeHttpHeaderData } from './lib/livechat';

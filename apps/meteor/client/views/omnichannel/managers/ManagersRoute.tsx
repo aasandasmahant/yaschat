@@ -1,5 +1,5 @@
-import { Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ManagersTable from './ManagersTable';

@@ -84,7 +84,7 @@ test.describe('E2EE Legacy Format', () => {
 
 		await page.evaluate(
 			async ({ rid, kid, encryptedKey }) => {
-				const room = await window.__rocketChatE2E?.getInstanceByRoomId(rid);
+				const room = await window.__YasChatE2E?.getInstanceByRoomId(rid);
 				await room?.importGroupKey(kid + encryptedKey);
 			},
 			{ rid, kid, encryptedKey },

@@ -1,7 +1,7 @@
 /* oxlint-disable react-hooks/exhaustive-deps */
 import type { Extension } from '@codemirror/state';
-import { Box } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { Box } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import { useEffect, useContext } from 'react';
 
 import { updatePayloadAction, context } from '../../Context';

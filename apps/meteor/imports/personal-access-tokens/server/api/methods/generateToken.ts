@@ -1,7 +1,7 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Random } from '@rocket.chat/random';
-import { Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Random } from '@yas chat/random';
+import { Users } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../../../../server/lib/authorization/hasPermission';
 

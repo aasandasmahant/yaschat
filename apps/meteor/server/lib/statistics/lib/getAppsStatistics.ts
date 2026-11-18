@@ -1,6 +1,6 @@
-import { Apps } from '@rocket.chat/apps';
-import { AppInstallationSource } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import { AppStatus, AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
+import { Apps } from '@yas chat/apps';
+import { AppInstallationSource } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import { AppStatus, AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
 import mem from 'mem';
 
 import { Info } from '../../../../yaschat.info';

@@ -46,8 +46,8 @@ const createPendingFileImporter = (httpMock: ReturnType<typeof createMockHttpMod
 	const { PendingFileImporter } = proxyquire.noCallThru().load('./PendingFileImporter', {
 		'node:http': httpMock,
 		'node:https': httpMock,
-		'@rocket.chat/core-services': { api: { broadcast: sinon.stub() } },
-		'@rocket.chat/random': { Random: { id: () => 'random-id' } },
+		'@yas chat/core-services': { api: { broadcast: sinon.stub() } },
+		'@yas chat/random': { Random: { id: () => 'random-id' } },
 		'../../media/file-upload': { FileUpload: { getStore: sinon.stub(), getPath: sinon.stub() } },
 		'../../../meteor-methods/messages/sendFileMessage': { parseFileIntoMessageAttachments: sinon.stub() },
 		'..': {

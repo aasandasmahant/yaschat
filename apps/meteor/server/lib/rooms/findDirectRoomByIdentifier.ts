@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
 
 // direct rooms carry no `name`; the member set is what identifies them
 export const findDirectRoomByIdentifier = async (identifier: string, uid: IUser['_id']): Promise<IRoom | null> => {

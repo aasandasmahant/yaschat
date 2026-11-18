@@ -1,8 +1,8 @@
-import type { IOutboundProviderMetadata, Serialized, ILivechatContact } from '@rocket.chat/core-typings';
-import { Box, Button, FieldGroup, Scrollable } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOutboundProviderMetadata, Serialized, ILivechatContact } from '@yas chat/core-typings';
+import { Box, Button, FieldGroup, Scrollable } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useEffect, useId, useMemo } from 'react';

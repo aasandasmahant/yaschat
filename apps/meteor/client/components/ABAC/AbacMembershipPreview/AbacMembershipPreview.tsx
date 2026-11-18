@@ -1,5 +1,5 @@
-import type { IAbacMembershipPreview } from '@rocket.chat/core-typings';
-import { Box, Callout, Skeleton } from '@rocket.chat/fuselage';
+import type { IAbacMembershipPreview } from '@yas chat/core-typings';
+import { Box, Callout, Skeleton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import AbacPreviewMemberGroup from './AbacPreviewMemberGroup';

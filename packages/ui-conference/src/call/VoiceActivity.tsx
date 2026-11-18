@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Palette } from '@rocket.chat/fuselage';
-import { useAudioLevel } from '@rocket.chat/ui-media';
+import { css } from '@yas chat/css-in-js';
+import { Box, Palette } from '@yas chat/fuselage';
+import { useAudioLevel } from '@yas chat/ui-media';
 
 /**
  * Three bars that rise and fall with how loudly someone is talking: whether a mic that is on is picking anything up,

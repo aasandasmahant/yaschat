@@ -4,7 +4,7 @@
     "metadata": {
         "name": "rocket-chat",
         "annotations": {
-            "description": "Rocket.Chat with a MongoDB database running with a Persistent storage. Use this template if you want to run Rocket.Chat in production.",
+            "description": "Yas chat with a MongoDB database running with a Persistent storage. Use this template if you want to run Yas chat in production.",
             "tags": "quickstart,nodejs,mongodb,instant-app",
             "iconClass": "icon-nodejs"
         }
@@ -168,17 +168,17 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "rocketchat"
+                "name": "YasChat"
             },
             "spec": {
-                "dockerImageRepository": "${ROCKETCHAT_IMAGE}",
+                "dockerImageRepository": "${YasChat_IMAGE}",
                 "tags": [
                     {
                         "name": "latest",
                         "annotations": {
-                            "description": "Provides a Rocket.Chat application",
+                            "description": "Provides a Yas chat application",
                             "iconClass": "icon-nodejs",
-                            "tags": "rocketchat"
+                            "tags": "YasChat"
                         },
                         "from": {
                             "kind": "ImageStreamTag",
@@ -194,10 +194,10 @@
             "kind": "DeploymentConfig",
             "apiVersion": "v1",
             "metadata": {
-                "name": "rocketchat",
+                "name": "YasChat",
                 "creationTimestamp": null,
                 "labels": {
-                    "app": "rocketchat"
+                    "app": "YasChat"
                 },
                 "annotations": {
                     "openshift.io/generated-by": "OpenShiftNewApp"
@@ -224,11 +224,11 @@
                         "imageChangeParams": {
                             "automatic": true,
                             "containerNames": [
-                                "rocketchat"
+                                "YasChat"
                             ],
                             "from": {
                                 "kind": "ImageStreamTag",
-                                "name": "rocketchat:latest"
+                                "name": "YasChat:latest"
                             }
                         }
                     }
@@ -236,32 +236,32 @@
                 "replicas": 1,
                 "test": false,
                 "selector": {
-                    "app": "rocketchat",
-                    "deploymentconfig": "rocketchat"
+                    "app": "YasChat",
+                    "deploymentconfig": "YasChat"
                 },
                 "template": {
                     "metadata": {
                         "creationTimestamp": null,
                         "labels": {
-                            "app": "rocketchat",
-                            "deploymentconfig": "rocketchat"
+                            "app": "YasChat",
+                            "deploymentconfig": "YasChat"
                         },
                         "annotations": {
-                            "openshift.io/container.rocketchat.image.entrypoint": "[\"node\",\"main.js\"]",
+                            "openshift.io/container.YasChat.image.entrypoint": "[\"node\",\"main.js\"]",
                             "openshift.io/generated-by": "OpenShiftNewApp"
                         }
                     },
                     "spec": {
                         "volumes": [
                             {
-                                "name": "rocketchat-volume-1",
+                                "name": "YasChat-volume-1",
                                 "emptyDir": {}
                             }
                         ],
                         "containers": [
                             {
-                                "name": "rocketchat",
-                                "image": "${ROCKETCHAT_IMAGE}:latest",
+                                "name": "YasChat",
+                                "image": "${YasChat_IMAGE}:latest",
                                 "ports": [
                                     {
                                         "containerPort": 3000,
@@ -277,7 +277,7 @@
                                 "resources": {},
                                 "volumeMounts": [
                                     {
-                                        "name": "rocketchat-volume-1",
+                                        "name": "YasChat-volume-1",
                                         "mountPath": "/app/uploads"
                                     }
                                 ],
@@ -322,10 +322,10 @@
             "kind": "Route",
             "apiVersion": "v1",
             "metadata": {
-                "name": "rocketchat",
+                "name": "YasChat",
                 "creationTimestamp": null,
                 "labels": {
-                    "app": "rocketchat"
+                    "app": "YasChat"
                 },
                 "annotations": {
                     "openshift.io/host.generated": "true"
@@ -334,7 +334,7 @@
             "spec": {
                 "to": {
                     "kind": "Service",
-                    "name": "rocketchat"
+                    "name": "YasChat"
                 },
                 "port": {
                     "targetPort": "3000-tcp"
@@ -377,10 +377,10 @@
             "kind": "Service",
             "apiVersion": "v1",
             "metadata": {
-                "name": "rocketchat",
+                "name": "YasChat",
                 "creationTimestamp": null,
                 "labels": {
-                    "app": "rocketchat"
+                    "app": "YasChat"
                 },
                 "annotations": {
                     "openshift.io/generated-by": "OpenShiftNewApp"
@@ -396,8 +396,8 @@
                     }
                 ],
                 "selector": {
-                    "app": "rocketchat",
-                    "deploymentconfig": "rocketchat"
+                    "app": "YasChat",
+                    "deploymentconfig": "YasChat"
                 },
                 "type": "ClusterIP",
                 "sessionAffinity": "None"
@@ -441,7 +441,7 @@
             "name": "MONGODB_DATABASE",
             "displayName": "MongoDB Database Name",
             "description": "Name of the MongoDB database accessed.",
-            "value": "rocketchatdb",
+            "value": "YasChatdb",
             "required": true
         },
         {
@@ -453,11 +453,11 @@
             "required": true
         },
         {
-            "name": "ROCKETCHAT_IMAGE",
-            "displayName": "RocketChat Image",
-            "description": "The RocketChat image to use for this deployment",
+            "name": "YasChat_IMAGE",
+            "displayName": "YasChat Image",
+            "description": "The YasChat image to use for this deployment",
             "required": true,
-            "value": "rocketchat/rocket.chat"
+            "value": "YasChat/yas chat"
         },
         {
             "name": "VOLUME_CAPACITY",

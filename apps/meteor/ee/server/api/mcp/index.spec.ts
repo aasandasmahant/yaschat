@@ -1,7 +1,7 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { AI_LICENSE_MODULE } from '@rocket.chat/ai-search';
-import type { IUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { AI_LICENSE_MODULE } from '@yas chat/ai-search';
+import type { IUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { checkMcpCredentials, handleMcpGet, handleMcpPost } from './index';
 import { handleRpcMessage } from './server';
@@ -11,7 +11,7 @@ import { permissionsMiddleware } from '../../../../server/api/v1/middlewares/per
 import { settings } from '../../../../server/settings/cached';
 import { license } from '../v1/middlewares/license';
 
-jest.mock('@rocket.chat/account-utils', () => ({ hashLoginToken: jest.fn((token: string) => `hashed-${token}`) }));
+jest.mock('@yas chat/account-utils', () => ({ hashLoginToken: jest.fn((token: string) => `hashed-${token}`) }));
 
 const usersModel = { findPersonalAccessTokenByHashedTokenAndUserId: jest.fn() };
 

@@ -1,4 +1,4 @@
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 import { performance } from 'universal-perf-hooks';
 
 import { callbacks } from '../lib/callbacks';

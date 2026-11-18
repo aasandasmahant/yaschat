@@ -1,4 +1,4 @@
-import { createRequiredContext } from '@rocket.chat/ui-media';
+import { createRequiredContext } from '@yas chat/ui-media';
 
 import type { VideoQuality } from '../hooks/useCallDevicesInitialState';
 

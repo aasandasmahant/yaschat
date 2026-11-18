@@ -1,5 +1,5 @@
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { LicenseImp } from '@rocket.chat/license';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { LicenseImp } from '@yas chat/license';
 
 import { Apps } from './orchestrator';
 import { i18n } from '../../../../server/lib/i18n';

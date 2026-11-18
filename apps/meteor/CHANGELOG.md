@@ -1,4 +1,4 @@
-# @rocket.chat/meteor
+# @yas chat/meteor
 
 ## 9.0.0
 
@@ -224,7 +224,7 @@
 
   Methods still called by the web client (presence, cached stores, message search, SAML logout, registration secret URL) and the ones dispatched by admin setting action buttons stay registered.
 
-- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@rocket.chat/core-typings`.
+- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@yas chat/core-typings`.
 
 - ([#42979](https://github.com/YasChat/YasChat/pull/42979)) Removes the `Use_RC_SDK` setting (General → Use YasChat SDK) and the `rc-sdk-transport-enabled` meta tag it controlled. The web client always talks to the server through the DDP SDK now, so the setting no longer had any effect. On upgrade the setting is deleted from the database.
 
@@ -416,25 +416,25 @@
 
 - ([#43277](https://github.com/YasChat/YasChat/pull/43277)) Fixes high database load on busy workspaces with the Engagement Dashboard enabled, where every sent or deleted message read all of the day's dashboard records
 
-- ([#42906](https://github.com/YasChat/YasChat/pull/42906)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#42906](https://github.com/YasChat/YasChat/pull/42906)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#42975](https://github.com/YasChat/YasChat/pull/42975)) Fixes `chat.sendMessage` accepting message fields that only the server may set, and malformed message blocks that made a room unreadable
 
@@ -629,7 +629,7 @@
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Removes the extra 2px around the fields of the create direct message and create room modals and of the outbound message forms
 
-- ([#42500](https://github.com/YasChat/YasChat/pull/42500)) Moves the `UserCard` and `UserInfo` components, along with the date formatting helpers and hooks they rely on, from the web app into `@rocket.chat/ui-client`
+- ([#42500](https://github.com/YasChat/YasChat/pull/42500)) Moves the `UserCard` and `UserInfo` components, along with the date formatting helpers and hooks they rely on, from the web app into `@yas chat/ui-client`
 
 - ([#43532](https://github.com/YasChat/YasChat/pull/43532)) Marks native video (LiveKit) as beta instead of alpha in the Conference Call settings
 
@@ -675,7 +675,7 @@
 
 - ([#42642](https://github.com/YasChat/YasChat/pull/42642)) Fixes the ongoing calls button missing from the top navigation bar when the Sidebar Rail feature preview is enabled
 
-- ([#42863](https://github.com/YasChat/YasChat/pull/42863)) Reconciles REST endpoint types so the published `@rocket.chat/rest-typings` contract matches the implementation. Each migrated route is declared twice — hand-written in `rest-typings` (the contract SDK and external consumers see) and derived from the handler via `ExtractRoutesFromAPI` in `apps/meteor` — and the two had drifted: the hand-written side was missing routes and carried stale/inaccurate shapes. The hand-written declarations are now completed and made identical to the implementation-derived types, and the implementation's `ajv.compile<T>` generics were strengthened at the source where they were weak (never loosened to `object`/`any`/`unknown`). Inaccurate public shapes were corrected to the truthful type (e.g. `chat.postMessage` `channel: string`, `chat.getDeletedMessages` returns only `_id`s, `roles.list` has no `_updatedAt`, `roles.sync` `remove` carries `_deletedAt`, `teams.create` `type: 0 | 1`, `chat.getURLPreview` `urlPreview: MessageUrl`, `im.history` typed messages). Covers chat, dm/im, e2e, emoji-custom, invites, push, roles, rooms, teams, and the omnichannel visitor department-transfer route. No runtime behavior change.
+- ([#42863](https://github.com/YasChat/YasChat/pull/42863)) Reconciles REST endpoint types so the published `@yas chat/rest-typings` contract matches the implementation. Each migrated route is declared twice — hand-written in `rest-typings` (the contract SDK and external consumers see) and derived from the handler via `ExtractRoutesFromAPI` in `apps/meteor` — and the two had drifted: the hand-written side was missing routes and carried stale/inaccurate shapes. The hand-written declarations are now completed and made identical to the implementation-derived types, and the implementation's `ajv.compile<T>` generics were strengthened at the source where they were weak (never loosened to `object`/`any`/`unknown`). Inaccurate public shapes were corrected to the truthful type (e.g. `chat.postMessage` `channel: string`, `chat.getDeletedMessages` returns only `_id`s, `roles.list` has no `_updatedAt`, `roles.sync` `remove` carries `_deletedAt`, `teams.create` `type: 0 | 1`, `chat.getURLPreview` `urlPreview: MessageUrl`, `im.history` typed messages). Covers chat, dm/im, e2e, emoji-custom, invites, push, roles, rooms, teams, and the omnichannel visitor department-transfer route. No runtime behavior change.
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (10px becomes 8px, 28px becomes 24px, 2px becomes 4px, and so on), which shifts parts of many screens by 1 to 4px
 
@@ -741,9 +741,9 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Fixes UiKit users, channels and conversations selects (single and multi) rendering nothing inside `actions` blocks; they were only drawn inside `input` blocks.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - ([#42181](https://github.com/YasChat/YasChat/pull/42181)) Describes the REST API's pagination in one place instead of restating it at every endpoint. `count` and `offset` now come from a shared schema across every offset-paginated endpoint, which also states in the generated API docs what the server does with `count`: for a positive `count`, a page holds at most `min(count, API_Upper_Count_Limit)` items, so a response can be smaller than requested and callers should page by what came back; a `count` of zero returns every item when `API_Allow_Infinite_Count` is enabled. Where an endpoint validates its query, `count` and `offset` are now checked as non-negative integers, so a negative or fractional value — previously accepted, then silently coerced — is rejected.
 
@@ -758,70 +758,70 @@
 - ([#43632](https://github.com/YasChat/YasChat/pull/43632)) Adds an "Experimental Feature" alert under the Enabled setting of Native XMPP Federation, warning admins that the capability is in an early Alpha stage
 
 - <details><summary>Updated dependencies [7880b26b084405f7da03175e7ba01807b67f597c, 0de24e2254ce4c67c1cf4d6887a27b21c4aeb62f, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 0b9d5f8d2caad828653bd1abc237e24a9c730752, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, f6ef5334bf00b8fcd11587f877ffdc096ff1e21a, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, dd082311778ac467d36a72589bc675f1ab2b2cbe, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6254de43f3e9e23078efed927e40b320c1586a66, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, add59fb5c6d998729eb7a6cef521157fb3a8950d, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 60102b6e0ae410a45631ee494a3a302b9c863b48, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 94394ff8f1775d6ca9cf3aba770ea219721ba576, c0f8c0d2455b1a3352bd8c1fd442c125d939df77, 05e9b38a001919252360351f0bc3e46cc990a6ac, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 467d8139d2bf33f23f5792fa364bf16c65a24bda, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c637a035450ca2241bb04692f276921592e513f6, 8b00fa367d7be9793c31bf578eb1b6c99bf240e9, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, c9aa43916295df79a799e53b8e09c58011991a97, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 509e3e05765cbeb37539ae669778740e6e9a46be, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, 2f77d817051c919f29615babbb3ecd1964575b52, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 85730f517e2352c1f76ccee888c2ba0a02505cd0, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, 9277d940be7fbca8b5a2cc890b368d0e803e1130, 9277d940be7fbca8b5a2cc890b368d0e803e1130, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 933187fc0f51b3537a04df0cc1045015acad222f, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, 40ea1c7b7192282d077a9d5496f6b7e4211f74b3, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, e2f037838f6226f4894faa28613cc86f6d6f8e2d, 84cb0f0c021712deb00b09eb9671f397d6476752, 150b84030665fbf0e0c2ab59801825a96b27305a, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, a838cc5af0652f59d0ab30aa1a488abded0622b1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 034260ee3eec49db0a2a86572bacf5e14490815d, bff76c34b21caddbc316d69b62fac858a73d7164, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, 05e9b38a001919252360351f0bc3e46cc990a6ac, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, cd88334c72f7f2310706abc4d481a2712019e373, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, aff24fc27c79644a077192f9b0daf4e93c837014, 05e9b38a001919252360351f0bc3e46cc990a6ac, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 7ae0f74b707a943b543f034369388387fe0dc10c, 23698f9d08d34d3c145f116b5303b542e8342f9e, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, 1a997506d74bff2afa933dd2b9403ff9d2e6d5bb, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 94a22a577e6f160b687b9ddffeade19417c66f1e, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8, ae9c28d6ebe0d3f7be1b474ebd2c15eb73c461a6]:</summary>
-  - @rocket.chat/abac@0.4.0
-  - @rocket.chat/i18n@5.0.0
-  - @rocket.chat/core-typings@9.0.0
-  - @rocket.chat/rest-typings@9.0.0
-  - @rocket.chat/core-services@1.0.0
-  - @rocket.chat/model-typings@3.0.0
-  - @rocket.chat/models@3.0.0
-  - @rocket.chat/apps-engine@1.68.0
-  - @rocket.chat/message-types@0.2.0
-  - @rocket.chat/apps@0.11.0
-  - @rocket.chat/ai-search@0.4.0
-  - @rocket.chat/fuselage-ui-kit@36.0.0
-  - @rocket.chat/fuselage@1.0.0
-  - @rocket.chat/ui-contexts@36.0.0
-  - @rocket.chat/ui-voip@26.0.0
-  - @rocket.chat/ddp-client@2.0.0
-  - @rocket.chat/emitter@0.33.1
-  - @rocket.chat/ui-avatar@32.0.0
-  - @rocket.chat/ui-client@36.0.0
-  - @rocket.chat/pdf-worker@0.3.37
-  - @rocket.chat/federation-matrix@0.3.1
-  - @rocket.chat/streamer@0.1.2
-  - @rocket.chat/presence@0.4.0
-  - @rocket.chat/fuselage-forms@2.0.0
-  - @rocket.chat/fuselage-hooks@0.44.0
-  - @rocket.chat/layout@1.0.0
-  - @rocket.chat/onboarding-ui@1.0.0
-  - @rocket.chat/ui-composer@7.0.0
-  - @rocket.chat/web-ui-registration@36.0.0
-  - @rocket.chat/fuselage-toastbar@1.0.0
-  - @rocket.chat/fuselage-tokens@0.36.0
-  - @rocket.chat/icons@0.52.0
-  - @rocket.chat/ui-conference@3.0.0
-  - @rocket.chat/ui-livekit@1.0.0
-  - @rocket.chat/jwt@0.3.0
-  - @rocket.chat/tools@0.5.0
-  - @rocket.chat/logo@0.33.3
-  - @rocket.chat/message-parser@0.33.0
-  - @rocket.chat/gazzodown-alt@1.0.0
-  - @rocket.chat/memo@0.31.26
-  - @rocket.chat/mp3-encoder@0.31.27
-  - @rocket.chat/ui-media@1.0.0
-  - @rocket.chat/xmpp-server@0.2.0
-  - @rocket.chat/gazzodown@36.0.0
-  - @rocket.chat/ui-kit@2.0.0
-  - @rocket.chat/server-fetch@0.2.6
-  - @rocket.chat/media-signaling@1.4.0
-  - @rocket.chat/media-calls@1.0.0
-  - @rocket.chat/styled@0.34.2
-  - @rocket.chat/omnichannel-services@0.3.59
-  - @rocket.chat/ui-account@1.0.0
-  - @rocket.chat/ui-video-conf@36.0.0
-  - @rocket.chat/omni-core@0.1.6
-  - @rocket.chat/license@1.2.2
-  - @rocket.chat/network-broker@0.2.41
-  - @rocket.chat/omni-core-ee@0.0.27
-  - @rocket.chat/authorization@0.0.3
-  - @rocket.chat/cron@0.1.62
-  - @rocket.chat/css-in-js@0.33.3
-  - @rocket.chat/css-supports@0.31.27
-  - @rocket.chat/http-router@7.9.25
-  - @rocket.chat/instance-status@0.1.62
-  - @rocket.chat/logger@1.0.2
-  - @rocket.chat/stylis-logical-props-middleware@0.31.27
+  - @yas chat/abac@0.4.0
+  - @yas chat/i18n@5.0.0
+  - @yas chat/core-typings@9.0.0
+  - @yas chat/rest-typings@9.0.0
+  - @yas chat/core-services@1.0.0
+  - @yas chat/model-typings@3.0.0
+  - @yas chat/models@3.0.0
+  - @yas chat/apps-engine@1.68.0
+  - @yas chat/message-types@0.2.0
+  - @yas chat/apps@0.11.0
+  - @yas chat/ai-search@0.4.0
+  - @yas chat/fuselage-ui-kit@36.0.0
+  - @yas chat/fuselage@1.0.0
+  - @yas chat/ui-contexts@36.0.0
+  - @yas chat/ui-voip@26.0.0
+  - @yas chat/ddp-client@2.0.0
+  - @yas chat/emitter@0.33.1
+  - @yas chat/ui-avatar@32.0.0
+  - @yas chat/ui-client@36.0.0
+  - @yas chat/pdf-worker@0.3.37
+  - @yas chat/federation-matrix@0.3.1
+  - @yas chat/streamer@0.1.2
+  - @yas chat/presence@0.4.0
+  - @yas chat/fuselage-forms@2.0.0
+  - @yas chat/fuselage-hooks@0.44.0
+  - @yas chat/layout@1.0.0
+  - @yas chat/onboarding-ui@1.0.0
+  - @yas chat/ui-composer@7.0.0
+  - @yas chat/web-ui-registration@36.0.0
+  - @yas chat/fuselage-toastbar@1.0.0
+  - @yas chat/fuselage-tokens@0.36.0
+  - @yas chat/icons@0.52.0
+  - @yas chat/ui-conference@3.0.0
+  - @yas chat/ui-livekit@1.0.0
+  - @yas chat/jwt@0.3.0
+  - @yas chat/tools@0.5.0
+  - @yas chat/logo@0.33.3
+  - @yas chat/message-parser@0.33.0
+  - @yas chat/gazzodown-alt@1.0.0
+  - @yas chat/memo@0.31.26
+  - @yas chat/mp3-encoder@0.31.27
+  - @yas chat/ui-media@1.0.0
+  - @yas chat/xmpp-server@0.2.0
+  - @yas chat/gazzodown@36.0.0
+  - @yas chat/ui-kit@2.0.0
+  - @yas chat/server-fetch@0.2.6
+  - @yas chat/media-signaling@1.4.0
+  - @yas chat/media-calls@1.0.0
+  - @yas chat/styled@0.34.2
+  - @yas chat/omnichannel-services@0.3.59
+  - @yas chat/ui-account@1.0.0
+  - @yas chat/ui-video-conf@36.0.0
+  - @yas chat/omni-core@0.1.6
+  - @yas chat/license@1.2.2
+  - @yas chat/network-broker@0.2.41
+  - @yas chat/omni-core-ee@0.0.27
+  - @yas chat/authorization@0.0.3
+  - @yas chat/cron@0.1.62
+  - @yas chat/css-in-js@0.33.3
+  - @yas chat/css-supports@0.31.27
+  - @yas chat/http-router@7.9.25
+  - @yas chat/instance-status@0.1.62
+  - @yas chat/logger@1.0.2
+  - @yas chat/stylis-logical-props-middleware@0.31.27
 
   </details>
 
@@ -829,13 +829,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43580](https://github.com/YasChat/YasChat/pull/43580)) Fixes servers that started while another server was running the database migrations, which kept the old values of the settings those migrations changed until they were restarted.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@9.0.0-rc.8
-  - @rocket.chat/rest-typings@9.0.0-rc.8
+  - @yas chat/core-typings@9.0.0-rc.8
+  - @yas chat/rest-typings@9.0.0-rc.8
 
   </details>
 
@@ -843,7 +843,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43513](https://github.com/YasChat/YasChat/pull/43513)) Fixes bot notifications sent back to back (for example, the result of `/invite-all-to` or `/invite`) occasionally replacing each other, so only the last one was shown
 
@@ -854,10 +854,10 @@
 - ([#43547](https://github.com/YasChat/YasChat/pull/43547)) Fixes the memory usage of the web client and the desktop app, which increased for as long as the app stayed open. Each new message that moved a room in the sidebar added an event listener to the room avatar.
 
 - <details><summary>Updated dependencies [6254de43f3e9e23078efed927e40b320c1586a66, 9277d940be7fbca8b5a2cc890b368d0e803e1130, 9277d940be7fbca8b5a2cc890b368d0e803e1130]:</summary>
-  - @rocket.chat/streamer@0.1.2-rc.1
-  - @rocket.chat/i18n@5.0.0-rc.2
-  - @rocket.chat/core-typings@9.0.0-rc.7
-  - @rocket.chat/rest-typings@9.0.0-rc.7
+  - @yas chat/streamer@0.1.2-rc.1
+  - @yas chat/i18n@5.0.0-rc.2
+  - @yas chat/core-typings@9.0.0-rc.7
+  - @yas chat/rest-typings@9.0.0-rc.7
 
   </details>
 
@@ -865,15 +865,15 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - Fixes federated requests being rejected when the remote server sends unquoted parameters in its `X-Matrix` authorization header
 
 - <details><summary>Updated dependencies [203d5ff96b613a12f85d9e59c57b4d177a4858c0]:</summary>
-  - @rocket.chat/federation-matrix@0.3.1-rc.1
-  - @rocket.chat/core-services@1.0.0-rc.1
-  - @rocket.chat/core-typings@9.0.0-rc.6
-  - @rocket.chat/rest-typings@9.0.0-rc.6
+  - @yas chat/federation-matrix@0.3.1-rc.1
+  - @yas chat/core-services@1.0.0-rc.1
+  - @yas chat/core-typings@9.0.0-rc.6
+  - @yas chat/rest-typings@9.0.0-rc.6
 
   </details>
 
@@ -881,17 +881,17 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43507](https://github.com/YasChat/YasChat/pull/43507)) Fixes features of a removed license, such as the ABAC message composer lock, staying active for connected users until they reload the page
 
 - ([#43500](https://github.com/YasChat/YasChat/pull/43500)) Fixes requests to the federation, Apps-Engine endpoint, UiKit interaction, OAuth login, `.well-known` metadata, health probe, `/_timesync` and `/theme.css` routes not appearing in the HTTP request log, and redacts OAuth authorization codes from logged URLs
 
 - <details><summary>Updated dependencies [8b00fa367d7be9793c31bf578eb1b6c99bf240e9]:</summary>
-  - @rocket.chat/tools@0.5.0-rc.1
-  - @rocket.chat/omni-core@0.1.6-rc.0
-  - @rocket.chat/core-typings@9.0.0-rc.5
-  - @rocket.chat/rest-typings@9.0.0-rc.5
+  - @yas chat/tools@0.5.0-rc.1
+  - @yas chat/omni-core@0.1.6-rc.0
+  - @yas chat/core-typings@9.0.0-rc.5
+  - @yas chat/rest-typings@9.0.0-rc.5
 
   </details>
 
@@ -901,7 +901,7 @@
 
 - ([#43277](https://github.com/YasChat/YasChat/pull/43277)) Fixes high database load on busy workspaces with the Engagement Dashboard enabled, where every sent or deleted message read all of the day's dashboard records
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43477](https://github.com/YasChat/YasChat/pull/43477)) Fixes the server staying up without ever accepting connections when a step of its startup fails; it now logs the error and exits
 
@@ -920,11 +920,11 @@
 - ([#43278](https://github.com/YasChat/YasChat/pull/43278)) Fixes instances started at the same time after an upgrade hanging at startup on a duplicate key error; they now start without a restart
 
 - <details><summary>Updated dependencies [687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 4c152661022d34bfbe9bf78811eac286a31c47a5, 40ea1c7b7192282d077a9d5496f6b7e4211f74b3, bff76c34b21caddbc316d69b62fac858a73d7164]:</summary>
-  - @rocket.chat/models@3.0.0-rc.1
-  - @rocket.chat/model-typings@3.0.0-rc.1
-  - @rocket.chat/presence@0.4.0-rc.1
-  - @rocket.chat/core-typings@9.0.0-rc.4
-  - @rocket.chat/rest-typings@9.0.0-rc.4
+  - @yas chat/models@3.0.0-rc.1
+  - @yas chat/model-typings@3.0.0-rc.1
+  - @yas chat/presence@0.4.0-rc.1
+  - @yas chat/core-typings@9.0.0-rc.4
+  - @yas chat/rest-typings@9.0.0-rc.4
 
   </details>
 
@@ -950,7 +950,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43234](https://github.com/YasChat/YasChat/pull/43234)) Fixes native and custom emojis rendering at different sizes, and inline emojis making message lines and reaction pills taller
 
@@ -959,24 +959,24 @@
 - ([#43355](https://github.com/YasChat/YasChat/pull/43355)) Removes the empty space above the divider at the bottom of the sidebar
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
-  - @rocket.chat/ui-avatar@32.0.0-rc.1
-  - @rocket.chat/fuselage@1.0.0-rc.1
-  - @rocket.chat/ui-client@36.0.0-rc.1
-  - @rocket.chat/fuselage-forms@2.0.0-rc.1
-  - @rocket.chat/fuselage-toastbar@1.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@36.0.0-rc.1
-  - @rocket.chat/gazzodown@36.0.0-rc.1
-  - @rocket.chat/layout@1.0.0-rc.1
-  - @rocket.chat/onboarding-ui@1.0.0-rc.1
-  - @rocket.chat/ui-account@1.0.0-rc.1
-  - @rocket.chat/ui-composer@7.0.0-rc.1
-  - @rocket.chat/ui-conference@3.0.0-rc.2
-  - @rocket.chat/ui-media@1.0.0-rc.1
-  - @rocket.chat/ui-video-conf@36.0.0-rc.1
-  - @rocket.chat/ui-voip@26.0.0-rc.1
-  - @rocket.chat/web-ui-registration@36.0.0-rc.1
-  - @rocket.chat/core-typings@9.0.0-rc.3
-  - @rocket.chat/rest-typings@9.0.0-rc.3
+  - @yas chat/ui-avatar@32.0.0-rc.1
+  - @yas chat/fuselage@1.0.0-rc.1
+  - @yas chat/ui-client@36.0.0-rc.1
+  - @yas chat/fuselage-forms@2.0.0-rc.1
+  - @yas chat/fuselage-toastbar@1.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@36.0.0-rc.1
+  - @yas chat/gazzodown@36.0.0-rc.1
+  - @yas chat/layout@1.0.0-rc.1
+  - @yas chat/onboarding-ui@1.0.0-rc.1
+  - @yas chat/ui-account@1.0.0-rc.1
+  - @yas chat/ui-composer@7.0.0-rc.1
+  - @yas chat/ui-conference@3.0.0-rc.2
+  - @yas chat/ui-media@1.0.0-rc.1
+  - @yas chat/ui-video-conf@36.0.0-rc.1
+  - @yas chat/ui-voip@26.0.0-rc.1
+  - @yas chat/web-ui-registration@36.0.0-rc.1
+  - @yas chat/core-typings@9.0.0-rc.3
+  - @yas chat/rest-typings@9.0.0-rc.3
 
   </details>
 
@@ -984,11 +984,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@9.0.0-rc.2
-  - @rocket.chat/rest-typings@9.0.0-rc.2
+  - @yas chat/core-typings@9.0.0-rc.2
+  - @yas chat/rest-typings@9.0.0-rc.2
 
   </details>
 
@@ -1000,16 +1000,16 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - Fixes the unread messages bubble missing on the first visit to a room, and the room staying unread after scrolling to the latest message
 
 - <details><summary>Updated dependencies [467d8139d2bf33f23f5792fa364bf16c65a24bda]:</summary>
-  - @rocket.chat/i18n@5.0.0-rc.1
-  - @rocket.chat/ui-conference@3.0.0-rc.1
-  - @rocket.chat/ui-livekit@1.0.0-rc.1
-  - @rocket.chat/core-typings@9.0.0-rc.1
-  - @rocket.chat/rest-typings@9.0.0-rc.1
+  - @yas chat/i18n@5.0.0-rc.1
+  - @yas chat/ui-conference@3.0.0-rc.1
+  - @yas chat/ui-livekit@1.0.0-rc.1
+  - @yas chat/core-typings@9.0.0-rc.1
+  - @yas chat/rest-typings@9.0.0-rc.1
 
   </details>
 
@@ -1237,7 +1237,7 @@
 
   Methods still called by the web client (presence, cached stores, message search, SAML logout, registration secret URL) and the ones dispatched by admin setting action buttons stay registered.
 
-- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@rocket.chat/core-typings`.
+- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@yas chat/core-typings`.
 
 - ([#42979](https://github.com/YasChat/YasChat/pull/42979)) Removes the `Use_RC_SDK` setting (General → Use YasChat SDK) and the `rc-sdk-transport-enabled` meta tag it controlled. The web client always talks to the server through the DDP SDK now, so the setting no longer had any effect. On upgrade the setting is deleted from the database.
 
@@ -1409,7 +1409,7 @@
 
 - ([#42556](https://github.com/YasChat/YasChat/pull/42556)) Fixes ABAC audit log entries showing an empty room name when a user is removed by the Virtru sync or by attribute re-evaluation
 
-- ([#42906](https://github.com/YasChat/YasChat/pull/42906)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#42906](https://github.com/YasChat/YasChat/pull/42906)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#42975](https://github.com/YasChat/YasChat/pull/42975)) Fixes `chat.sendMessage` accepting message fields that only the server may set, and malformed message blocks that made a room unreadable
 
@@ -1588,7 +1588,7 @@
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Removes the extra 2px around the fields of the create direct message and create room modals and of the outbound message forms
 
-- ([#42500](https://github.com/YasChat/YasChat/pull/42500)) Moves the `UserCard` and `UserInfo` components, along with the date formatting helpers and hooks they rely on, from the web app into `@rocket.chat/ui-client`
+- ([#42500](https://github.com/YasChat/YasChat/pull/42500)) Moves the `UserCard` and `UserInfo` components, along with the date formatting helpers and hooks they rely on, from the web app into `@yas chat/ui-client`
 
 - ([#42686](https://github.com/YasChat/YasChat/pull/42686)) Fixes indented list items being rendered as plain text instead of nested lists in messages
 
@@ -1618,7 +1618,7 @@
 
 - ([#42642](https://github.com/YasChat/YasChat/pull/42642)) Fixes the ongoing calls button missing from the top navigation bar when the Sidebar Rail feature preview is enabled
 
-- ([#42863](https://github.com/YasChat/YasChat/pull/42863)) Reconciles REST endpoint types so the published `@rocket.chat/rest-typings` contract matches the implementation. Each migrated route is declared twice — hand-written in `rest-typings` (the contract SDK and external consumers see) and derived from the handler via `ExtractRoutesFromAPI` in `apps/meteor` — and the two had drifted: the hand-written side was missing routes and carried stale/inaccurate shapes. The hand-written declarations are now completed and made identical to the implementation-derived types, and the implementation's `ajv.compile<T>` generics were strengthened at the source where they were weak (never loosened to `object`/`any`/`unknown`). Inaccurate public shapes were corrected to the truthful type (e.g. `chat.postMessage` `channel: string`, `chat.getDeletedMessages` returns only `_id`s, `roles.list` has no `_updatedAt`, `roles.sync` `remove` carries `_deletedAt`, `teams.create` `type: 0 | 1`, `chat.getURLPreview` `urlPreview: MessageUrl`, `im.history` typed messages). Covers chat, dm/im, e2e, emoji-custom, invites, push, roles, rooms, teams, and the omnichannel visitor department-transfer route. No runtime behavior change.
+- ([#42863](https://github.com/YasChat/YasChat/pull/42863)) Reconciles REST endpoint types so the published `@yas chat/rest-typings` contract matches the implementation. Each migrated route is declared twice — hand-written in `rest-typings` (the contract SDK and external consumers see) and derived from the handler via `ExtractRoutesFromAPI` in `apps/meteor` — and the two had drifted: the hand-written side was missing routes and carried stale/inaccurate shapes. The hand-written declarations are now completed and made identical to the implementation-derived types, and the implementation's `ajv.compile<T>` generics were strengthened at the source where they were weak (never loosened to `object`/`any`/`unknown`). Inaccurate public shapes were corrected to the truthful type (e.g. `chat.postMessage` `channel: string`, `chat.getDeletedMessages` returns only `_id`s, `roles.list` has no `_updatedAt`, `roles.sync` `remove` carries `_deletedAt`, `teams.create` `type: 0 | 1`, `chat.getURLPreview` `urlPreview: MessageUrl`, `im.history` typed messages). Covers chat, dm/im, e2e, emoji-custom, invites, push, roles, rooms, teams, and the omnichannel visitor department-transfer route. No runtime behavior change.
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (10px becomes 8px, 28px becomes 24px, 2px becomes 4px, and so on), which shifts parts of many screens by 1 to 4px
 
@@ -1676,9 +1676,9 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Fixes UiKit users, channels and conversations selects (single and multi) rendering nothing inside `actions` blocks; they were only drawn inside `input` blocks.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - ([#42181](https://github.com/YasChat/YasChat/pull/42181)) Describes the REST API's pagination in one place instead of restating it at every endpoint. `count` and `offset` now come from a shared schema across every offset-paginated endpoint, which also states in the generated API docs what the server does with `count`: for a positive `count`, a page holds at most `min(count, API_Upper_Count_Limit)` items, so a response can be smaller than requested and callers should page by what came back; a `count` of zero returns every item when `API_Allow_Infinite_Count` is enabled. Where an endpoint validates its query, `count` and `offset` are now checked as non-negative integers, so a negative or fractional value — previously accepted, then silently coerced — is rejected.
 
@@ -1691,78 +1691,78 @@
 - ([#43198](https://github.com/YasChat/YasChat/pull/43198)) Fixes the email field in the admin "Invite members" panel not filling the panel's width
 
 - <details><summary>Updated dependencies [7880b26b084405f7da03175e7ba01807b67f597c, 0de24e2254ce4c67c1cf4d6887a27b21c4aeb62f, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 0b9d5f8d2caad828653bd1abc237e24a9c730752, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, f6ef5334bf00b8fcd11587f877ffdc096ff1e21a, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, 8662d98d1c6070b063f51d45cf4b8454085033d9, dd082311778ac467d36a72589bc675f1ab2b2cbe, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, add59fb5c6d998729eb7a6cef521157fb3a8950d, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, a2e5dae08b252358c170e67f2f68cb373a2f93f7, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, 325ca24f7a377f4af406969f1a2626d15d3ec619, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 60102b6e0ae410a45631ee494a3a302b9c863b48, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 94394ff8f1775d6ca9cf3aba770ea219721ba576, c0f8c0d2455b1a3352bd8c1fd442c125d939df77, 05e9b38a001919252360351f0bc3e46cc990a6ac, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c637a035450ca2241bb04692f276921592e513f6, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, c9aa43916295df79a799e53b8e09c58011991a97, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 509e3e05765cbeb37539ae669778740e6e9a46be, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, 2f77d817051c919f29615babbb3ecd1964575b52, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 85730f517e2352c1f76ccee888c2ba0a02505cd0, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 933187fc0f51b3537a04df0cc1045015acad222f, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, e2f037838f6226f4894faa28613cc86f6d6f8e2d, 84cb0f0c021712deb00b09eb9671f397d6476752, 150b84030665fbf0e0c2ab59801825a96b27305a, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, cc5554d63e7341925dd7fd5844d77bd51834b572, 2559423eb2c897c5f1fe8c968c02380009a97df9, a838cc5af0652f59d0ab30aa1a488abded0622b1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 9a520fcd54321e154374182698c825aa09e87cc7, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 034260ee3eec49db0a2a86572bacf5e14490815d, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 61bdf0d5afb6714ea3cef087758f1d0eb3bfef45, c3e4da2025942803ddcf19f5298fe707e37bf9c4, 05e9b38a001919252360351f0bc3e46cc990a6ac, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, cd88334c72f7f2310706abc4d481a2712019e373, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, aff24fc27c79644a077192f9b0daf4e93c837014, 05e9b38a001919252360351f0bc3e46cc990a6ac, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 7ae0f74b707a943b543f034369388387fe0dc10c, 23698f9d08d34d3c145f116b5303b542e8342f9e, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, 1a997506d74bff2afa933dd2b9403ff9d2e6d5bb, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 6c23db12912236374f41ae8f43ca7409b7b8b56c, 94a22a577e6f160b687b9ddffeade19417c66f1e, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a, 5feb08c8d83883c4142fda5d98cd1e1435d5d3b8]:</summary>
-  - @rocket.chat/abac@0.4.0-rc.0
-  - @rocket.chat/i18n@5.0.0-rc.0
-  - @rocket.chat/core-typings@9.0.0-rc.0
-  - @rocket.chat/rest-typings@9.0.0-rc.0
-  - @rocket.chat/core-services@1.0.0-rc.0
-  - @rocket.chat/model-typings@3.0.0-rc.0
-  - @rocket.chat/models@3.0.0-rc.0
-  - @rocket.chat/apps-engine@1.68.0-rc.0
-  - @rocket.chat/message-types@0.2.0-rc.0
-  - @rocket.chat/apps@0.11.0-rc.0
-  - @rocket.chat/ai-search@0.4.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@36.0.0-rc.0
-  - @rocket.chat/fuselage@1.0.0-rc.0
-  - @rocket.chat/ui-contexts@36.0.0-rc.0
-  - @rocket.chat/ui-voip@26.0.0-rc.0
-  - @rocket.chat/ddp-client@2.0.0-rc.0
-  - @rocket.chat/emitter@0.33.1-rc.0
-  - @rocket.chat/pdf-worker@0.3.37-rc.0
-  - @rocket.chat/federation-matrix@0.3.1-rc.0
-  - @rocket.chat/presence@0.4.0-rc.0
-  - @rocket.chat/fuselage-forms@2.0.0-rc.0
-  - @rocket.chat/fuselage-hooks@0.44.0-rc.0
-  - @rocket.chat/layout@1.0.0-rc.0
-  - @rocket.chat/onboarding-ui@1.0.0-rc.0
-  - @rocket.chat/ui-client@36.0.0-rc.0
-  - @rocket.chat/ui-composer@7.0.0-rc.0
-  - @rocket.chat/web-ui-registration@36.0.0-rc.0
-  - @rocket.chat/fuselage-toastbar@1.0.0-rc.0
-  - @rocket.chat/fuselage-tokens@0.36.0-rc.0
-  - @rocket.chat/icons@0.52.0-rc.0
-  - @rocket.chat/ui-conference@3.0.0-rc.0
-  - @rocket.chat/jwt@0.3.0-rc.0
-  - @rocket.chat/logo@0.33.3-rc.0
-  - @rocket.chat/message-parser@0.33.0-rc.0
-  - @rocket.chat/gazzodown-alt@1.0.0-rc.0
-  - @rocket.chat/memo@0.31.26-rc.0
-  - @rocket.chat/mp3-encoder@0.31.27-rc.0
-  - @rocket.chat/ui-livekit@1.0.0-rc.0
-  - @rocket.chat/ui-media@1.0.0-rc.0
-  - @rocket.chat/tools@0.5.0-rc.0
-  - @rocket.chat/xmpp-server@0.2.0-rc.0
-  - @rocket.chat/gazzodown@36.0.0-rc.0
-  - @rocket.chat/ui-kit@2.0.0-rc.0
-  - @rocket.chat/server-fetch@0.2.6-rc.0
-  - @rocket.chat/media-signaling@1.4.0-rc.0
-  - @rocket.chat/media-calls@1.0.0-rc.0
-  - @rocket.chat/styled@0.34.2-rc.0
-  - @rocket.chat/omnichannel-services@0.3.59-rc.0
-  - @rocket.chat/network-broker@0.2.41-rc.0
-  - @rocket.chat/omni-core-ee@0.0.27-rc.0
-  - @rocket.chat/authorization@0.0.3-rc.0
-  - @rocket.chat/streamer@0.1.2-rc.0
-  - @rocket.chat/cron@0.1.62-rc.0
-  - @rocket.chat/instance-status@0.1.62-rc.0
-  - @rocket.chat/omni-core@0.1.6-rc.0
-  - @rocket.chat/ui-account@1.0.0-rc.0
-  - @rocket.chat/ui-avatar@32.0.0-rc.0
-  - @rocket.chat/ui-video-conf@36.0.0-rc.0
-  - @rocket.chat/license@1.2.2-rc.0
-  - @rocket.chat/api-client@0.2.57
-  - @rocket.chat/base64@1.0.14
-  - @rocket.chat/css-in-js@0.33.3-rc.0
-  - @rocket.chat/css-supports@0.31.27-rc.0
-  - @rocket.chat/http-router@7.9.25-rc.0
-  - @rocket.chat/mongo-adapter@0.0.3
-  - @rocket.chat/password-policies@0.1.1
-  - @rocket.chat/patch-injection@0.0.2
-  - @rocket.chat/random@1.2.4
-  - @rocket.chat/sha256@1.0.13
-  - @rocket.chat/stylis-logical-props-middleware@0.31.27-rc.0
-  - @rocket.chat/logger@1.0.2-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.3
+  - @yas chat/abac@0.4.0-rc.0
+  - @yas chat/i18n@5.0.0-rc.0
+  - @yas chat/core-typings@9.0.0-rc.0
+  - @yas chat/rest-typings@9.0.0-rc.0
+  - @yas chat/core-services@1.0.0-rc.0
+  - @yas chat/model-typings@3.0.0-rc.0
+  - @yas chat/models@3.0.0-rc.0
+  - @yas chat/apps-engine@1.68.0-rc.0
+  - @yas chat/message-types@0.2.0-rc.0
+  - @yas chat/apps@0.11.0-rc.0
+  - @yas chat/ai-search@0.4.0-rc.0
+  - @yas chat/fuselage-ui-kit@36.0.0-rc.0
+  - @yas chat/fuselage@1.0.0-rc.0
+  - @yas chat/ui-contexts@36.0.0-rc.0
+  - @yas chat/ui-voip@26.0.0-rc.0
+  - @yas chat/ddp-client@2.0.0-rc.0
+  - @yas chat/emitter@0.33.1-rc.0
+  - @yas chat/pdf-worker@0.3.37-rc.0
+  - @yas chat/federation-matrix@0.3.1-rc.0
+  - @yas chat/presence@0.4.0-rc.0
+  - @yas chat/fuselage-forms@2.0.0-rc.0
+  - @yas chat/fuselage-hooks@0.44.0-rc.0
+  - @yas chat/layout@1.0.0-rc.0
+  - @yas chat/onboarding-ui@1.0.0-rc.0
+  - @yas chat/ui-client@36.0.0-rc.0
+  - @yas chat/ui-composer@7.0.0-rc.0
+  - @yas chat/web-ui-registration@36.0.0-rc.0
+  - @yas chat/fuselage-toastbar@1.0.0-rc.0
+  - @yas chat/fuselage-tokens@0.36.0-rc.0
+  - @yas chat/icons@0.52.0-rc.0
+  - @yas chat/ui-conference@3.0.0-rc.0
+  - @yas chat/jwt@0.3.0-rc.0
+  - @yas chat/logo@0.33.3-rc.0
+  - @yas chat/message-parser@0.33.0-rc.0
+  - @yas chat/gazzodown-alt@1.0.0-rc.0
+  - @yas chat/memo@0.31.26-rc.0
+  - @yas chat/mp3-encoder@0.31.27-rc.0
+  - @yas chat/ui-livekit@1.0.0-rc.0
+  - @yas chat/ui-media@1.0.0-rc.0
+  - @yas chat/tools@0.5.0-rc.0
+  - @yas chat/xmpp-server@0.2.0-rc.0
+  - @yas chat/gazzodown@36.0.0-rc.0
+  - @yas chat/ui-kit@2.0.0-rc.0
+  - @yas chat/server-fetch@0.2.6-rc.0
+  - @yas chat/media-signaling@1.4.0-rc.0
+  - @yas chat/media-calls@1.0.0-rc.0
+  - @yas chat/styled@0.34.2-rc.0
+  - @yas chat/omnichannel-services@0.3.59-rc.0
+  - @yas chat/network-broker@0.2.41-rc.0
+  - @yas chat/omni-core-ee@0.0.27-rc.0
+  - @yas chat/authorization@0.0.3-rc.0
+  - @yas chat/streamer@0.1.2-rc.0
+  - @yas chat/cron@0.1.62-rc.0
+  - @yas chat/instance-status@0.1.62-rc.0
+  - @yas chat/omni-core@0.1.6-rc.0
+  - @yas chat/ui-account@1.0.0-rc.0
+  - @yas chat/ui-avatar@32.0.0-rc.0
+  - @yas chat/ui-video-conf@36.0.0-rc.0
+  - @yas chat/license@1.2.2-rc.0
+  - @yas chat/api-client@0.2.57
+  - @yas chat/base64@1.0.14
+  - @yas chat/css-in-js@0.33.3-rc.0
+  - @yas chat/css-supports@0.31.27-rc.0
+  - @yas chat/http-router@7.9.25-rc.0
+  - @yas chat/mongo-adapter@0.0.3
+  - @yas chat/password-policies@0.1.1
+  - @yas chat/patch-injection@0.0.2
+  - @yas chat/random@1.2.4
+  - @yas chat/sha256@1.0.13
+  - @yas chat/stylis-logical-props-middleware@0.31.27-rc.0
+  - @yas chat/logger@1.0.2-rc.0
+  - @yas chat/server-cloud-communication@0.0.3
 
   </details>
 
@@ -1772,11 +1772,11 @@
 
 - ([#43277](https://github.com/YasChat/YasChat/pull/43277)) Fixes high database load on busy workspaces with the Engagement Dashboard enabled, where every sent or deleted message read all of the day's dashboard records
 
-- ([#43439](https://github.com/YasChat/YasChat/pull/43439) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#43439](https://github.com/YasChat/YasChat/pull/43439) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#43477](https://github.com/YasChat/YasChat/pull/43477)) Fixes the server staying up without ever accepting connections when a step of its startup fails; it now logs the error and exits
 
@@ -1801,11 +1801,11 @@
 - ([#43403](https://github.com/YasChat/YasChat/pull/43403) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a permission check in team member management
 
 - <details><summary>Updated dependencies [cdb0bc05288986f8682d5eb11ac7d9fcf19684b5, 968b1ee6c3779961d49c9a0a440262ab3966029f, 9d1afa454d964374e9cd6e10433b83ae16dc90ef, ec037bac9859dfb30bd2c5822b31c326269c6348, f871858c7dd52cd6849032425dce3a4670e14285]:</summary>
-  - @rocket.chat/models@2.6.1
-  - @rocket.chat/model-typings@2.6.1
-  - @rocket.chat/presence@0.3.4
-  - @rocket.chat/core-typings@8.9.1
-  - @rocket.chat/rest-typings@8.9.1
+  - @yas chat/models@2.6.1
+  - @yas chat/model-typings@2.6.1
+  - @yas chat/presence@0.3.4
+  - @yas chat/core-typings@8.9.1
+  - @yas chat/rest-typings@8.9.1
 
   </details>
 
@@ -1879,17 +1879,17 @@
 
 - ([#41971](https://github.com/YasChat/YasChat/pull/41971)) Fixes auto-translate continuing to translate messages with the previously selected service provider after switching providers, until the server was restarted or the feature was disabled and re-enabled.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#42015](https://github.com/YasChat/YasChat/pull/42015)) Fixes the custom emoji picker returning zero emoji on workspaces running with `ALLOW_UNSAFE_QUERY_AND_FIELDS_API_PARAMS=true`, caused by the client sending an empty `query` string to `emoji-custom.list`
 
@@ -1930,7 +1930,7 @@
 
   Also links every federation endpoint to its definition in the Matrix specification.
 
-- ([#42222](https://github.com/YasChat/YasChat/pull/42222)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#42222](https://github.com/YasChat/YasChat/pull/42222)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#42070](https://github.com/YasChat/YasChat/pull/42070)) Fixes long custom statuses being cut off without an ellipsis in the user status menu.
 
@@ -1983,48 +1983,48 @@
 - ([#42280](https://github.com/YasChat/YasChat/pull/42280)) Fixes the custom scrollbars staying permanently visible on virtualized lists (sidebar room list, message list, thread list, discussions list and other paginated virtual lists) instead of hiding when the pointer is away
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, eeca122b913518d2231f9d9568a10873705845ee, 639dcb1a2d2116eeb956c7dfc7890b48cbdf9782, 131bbceaff27f5c3f0156fdb21a4b2a79129c851, 4be043d9356fd50d2e3e1b585008368f90e95505, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 5b3195460164fb62b19f0eab771937b6e6209954, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, b00940368ed52e9b2959d69381ab260dcb5165bf, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 36e70bb8af4f0350d1244b65a717fbf58f4afc28, 53b519cc692587a63beaeb780e28d368ed70e94c, fa724f8a39af14734242f55ac975dfc565e80d8c, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 356203b9ef1fe1dec13096d0f012e7a72770be0a, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, b7511dff4bbe063810028eaca66796dea7339b6f, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 5e8a7cb1432e5078ca87360a4c0ae83a0f21dd7b, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 509e3d764ea95a910bf7aba899123eec88a8ac8f, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9, 694568a9b6b0020d45cfcbb08a0c3f74f65a8d30, e61b41d340e2722037de67551982fd70773d0617]:</summary>
-  - @rocket.chat/media-signaling@1.3.0
-  - @rocket.chat/media-calls@0.7.0
-  - @rocket.chat/ui-voip@25.0.0
-  - @rocket.chat/ui-composer@6.0.0
-  - @rocket.chat/ui-client@35.0.0
-  - @rocket.chat/i18n@4.1.0
-  - @rocket.chat/css-in-js@0.33.2
-  - @rocket.chat/css-supports@0.31.26
-  - @rocket.chat/model-typings@2.6.0
-  - @rocket.chat/models@2.6.0
-  - @rocket.chat/federation-matrix@0.3.0
-  - @rocket.chat/core-services@0.17.0
-  - @rocket.chat/core-typings@8.9.0
-  - @rocket.chat/rest-typings@8.9.0
-  - @rocket.chat/ai-search@0.3.0
-  - @rocket.chat/apps@0.10.0
-  - @rocket.chat/apps-engine@1.67.0
-  - @rocket.chat/web-ui-registration@35.0.0
-  - @rocket.chat/random@1.2.4
-  - @rocket.chat/license@1.2.1
-  - @rocket.chat/stylis-logical-props-middleware@0.31.26
-  - @rocket.chat/ddp-client@1.2.0
-  - @rocket.chat/fuselage-ui-kit@35.0.0
-  - @rocket.chat/ui-kit@1.2.0
-  - @rocket.chat/gazzodown@35.0.0
-  - @rocket.chat/ui-conference@2.0.0
-  - @rocket.chat/ui-video-conf@35.0.0
-  - @rocket.chat/abac@0.3.3
-  - @rocket.chat/network-broker@0.2.40
-  - @rocket.chat/omni-core-ee@0.0.26
-  - @rocket.chat/omnichannel-services@0.3.58
-  - @rocket.chat/presence@0.3.3
-  - @rocket.chat/api-client@0.2.57
-  - @rocket.chat/authorization@0.0.2
-  - @rocket.chat/cron@0.1.61
-  - @rocket.chat/http-router@7.9.24
-  - @rocket.chat/instance-status@0.1.61
-  - @rocket.chat/omni-core@0.1.5
-  - @rocket.chat/server-fetch@0.2.5
-  - @rocket.chat/streamer@0.1.1
-  - @rocket.chat/ui-avatar@31.0.0
-  - @rocket.chat/ui-contexts@35.0.0
+  - @yas chat/media-signaling@1.3.0
+  - @yas chat/media-calls@0.7.0
+  - @yas chat/ui-voip@25.0.0
+  - @yas chat/ui-composer@6.0.0
+  - @yas chat/ui-client@35.0.0
+  - @yas chat/i18n@4.1.0
+  - @yas chat/css-in-js@0.33.2
+  - @yas chat/css-supports@0.31.26
+  - @yas chat/model-typings@2.6.0
+  - @yas chat/models@2.6.0
+  - @yas chat/federation-matrix@0.3.0
+  - @yas chat/core-services@0.17.0
+  - @yas chat/core-typings@8.9.0
+  - @yas chat/rest-typings@8.9.0
+  - @yas chat/ai-search@0.3.0
+  - @yas chat/apps@0.10.0
+  - @yas chat/apps-engine@1.67.0
+  - @yas chat/web-ui-registration@35.0.0
+  - @yas chat/random@1.2.4
+  - @yas chat/license@1.2.1
+  - @yas chat/stylis-logical-props-middleware@0.31.26
+  - @yas chat/ddp-client@1.2.0
+  - @yas chat/fuselage-ui-kit@35.0.0
+  - @yas chat/ui-kit@1.2.0
+  - @yas chat/gazzodown@35.0.0
+  - @yas chat/ui-conference@2.0.0
+  - @yas chat/ui-video-conf@35.0.0
+  - @yas chat/abac@0.3.3
+  - @yas chat/network-broker@0.2.40
+  - @yas chat/omni-core-ee@0.0.26
+  - @yas chat/omnichannel-services@0.3.58
+  - @yas chat/presence@0.3.3
+  - @yas chat/api-client@0.2.57
+  - @yas chat/authorization@0.0.2
+  - @yas chat/cron@0.1.61
+  - @yas chat/http-router@7.9.24
+  - @yas chat/instance-status@0.1.61
+  - @yas chat/omni-core@0.1.5
+  - @yas chat/server-fetch@0.2.5
+  - @yas chat/streamer@0.1.1
+  - @yas chat/ui-avatar@31.0.0
+  - @yas chat/ui-contexts@35.0.0
 
   </details>
 
@@ -2032,11 +2032,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.5
-  - @rocket.chat/rest-typings@8.9.0-rc.5
+  - @yas chat/core-typings@8.9.0-rc.5
+  - @yas chat/rest-typings@8.9.0-rc.5
 
   </details>
 
@@ -2048,13 +2048,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#42429](https://github.com/YasChat/YasChat/pull/42429)) Fixes audio and video attachments served through the Amazon S3 or Google Cloud Storage proxy not showing their duration or progress until playback ended, and not being seekable, by honoring byte-range requests in the proxy.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.4
-  - @rocket.chat/rest-typings@8.9.0-rc.4
+  - @yas chat/core-typings@8.9.0-rc.4
+  - @yas chat/rest-typings@8.9.0-rc.4
 
   </details>
 
@@ -2062,11 +2062,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.3
-  - @rocket.chat/rest-typings@8.9.0-rc.3
+  - @yas chat/core-typings@8.9.0-rc.3
+  - @yas chat/rest-typings@8.9.0-rc.3
 
   </details>
 
@@ -2074,13 +2074,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#42360](https://github.com/YasChat/YasChat/pull/42360)) Restores the room list sidebar rows and group headers to their previous look, undoing the restyle introduced by the Fuselage upgrade
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.2
-  - @rocket.chat/rest-typings@8.9.0-rc.2
+  - @yas chat/core-typings@8.9.0-rc.2
+  - @yas chat/rest-typings@8.9.0-rc.2
 
   </details>
 
@@ -2088,11 +2088,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.1
-  - @rocket.chat/rest-typings@8.9.0-rc.1
+  - @yas chat/core-typings@8.9.0-rc.1
+  - @yas chat/rest-typings@8.9.0-rc.1
 
   </details>
 
@@ -2201,7 +2201,7 @@
 
   Also links every federation endpoint to its definition in the Matrix specification.
 
-- ([#42222](https://github.com/YasChat/YasChat/pull/42222)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#42222](https://github.com/YasChat/YasChat/pull/42222)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#42070](https://github.com/YasChat/YasChat/pull/42070)) Fixes long custom statuses being cut off without an ellipsis in the user status menu.
 
@@ -2252,50 +2252,50 @@
 - ([#42280](https://github.com/YasChat/YasChat/pull/42280)) Fixes the custom scrollbars staying permanently visible on virtualized lists (sidebar room list, message list, thread list, discussions list and other paginated virtual lists) instead of hiding when the pointer is away
 
 - <details><summary>Updated dependencies [3e51ba30e3d48a418adb3bfa1bd41fa69cf636e9, eeca122b913518d2231f9d9568a10873705845ee, 639dcb1a2d2116eeb956c7dfc7890b48cbdf9782, 131bbceaff27f5c3f0156fdb21a4b2a79129c851, 4be043d9356fd50d2e3e1b585008368f90e95505, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 5b3195460164fb62b19f0eab771937b6e6209954, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, b00940368ed52e9b2959d69381ab260dcb5165bf, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 36e70bb8af4f0350d1244b65a717fbf58f4afc28, 53b519cc692587a63beaeb780e28d368ed70e94c, fa724f8a39af14734242f55ac975dfc565e80d8c, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 356203b9ef1fe1dec13096d0f012e7a72770be0a, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 2f18297792c973da326be7253f497d239ea6f2b0, 4be043d9356fd50d2e3e1b585008368f90e95505, 781a3bccc16378284afabae87abf11897c6e1013, b263243745917337314259cf987c0e989cf0cdc9, 4be043d9356fd50d2e3e1b585008368f90e95505, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, b7511dff4bbe063810028eaca66796dea7339b6f, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 5e8a7cb1432e5078ca87360a4c0ae83a0f21dd7b, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 509e3d764ea95a910bf7aba899123eec88a8ac8f, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9, 694568a9b6b0020d45cfcbb08a0c3f74f65a8d30, e61b41d340e2722037de67551982fd70773d0617]:</summary>
-  - @rocket.chat/media-signaling@1.3.0-rc.0
-  - @rocket.chat/media-calls@0.7.0-rc.0
-  - @rocket.chat/ui-voip@25.0.0-rc.0
-  - @rocket.chat/ui-composer@6.0.0-rc.0
-  - @rocket.chat/ui-client@35.0.0-rc.0
-  - @rocket.chat/i18n@4.1.0-rc.0
-  - @rocket.chat/css-in-js@0.33.2-rc.0
-  - @rocket.chat/css-supports@0.31.26-rc.0
-  - @rocket.chat/model-typings@2.6.0-rc.0
-  - @rocket.chat/models@2.6.0-rc.0
-  - @rocket.chat/federation-matrix@0.3.0-rc.0
-  - @rocket.chat/core-services@0.17.0-rc.0
-  - @rocket.chat/core-typings@8.9.0-rc.0
-  - @rocket.chat/rest-typings@8.9.0-rc.0
-  - @rocket.chat/ai-search@0.3.0-rc.0
-  - @rocket.chat/apps@0.10.0-rc.0
-  - @rocket.chat/apps-engine@1.67.0-rc.0
-  - @rocket.chat/web-ui-registration@35.0.0-rc.0
-  - @rocket.chat/random@1.2.4-rc.0
-  - @rocket.chat/license@1.2.1-rc.0
-  - @rocket.chat/stylis-logical-props-middleware@0.31.26-rc.0
-  - @rocket.chat/ddp-client@1.2.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@35.0.0-rc.0
-  - @rocket.chat/ui-kit@1.2.0-rc.0
-  - @rocket.chat/streamer@0.1.1-rc.0
-  - @rocket.chat/gazzodown@35.0.0-rc.0
-  - @rocket.chat/ui-conference@2.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.58-rc.0
-  - @rocket.chat/ui-contexts@35.0.0-rc.0
-  - @rocket.chat/ui-avatar@31.0.0-rc.0
-  - @rocket.chat/ui-video-conf@35.0.0-rc.0
-  - @rocket.chat/abac@0.3.3-rc.0
-  - @rocket.chat/omni-core-ee@0.0.26-rc.0
-  - @rocket.chat/presence@0.3.3-rc.0
-  - @rocket.chat/authorization@0.0.2-rc.0
-  - @rocket.chat/cron@0.1.61-rc.0
-  - @rocket.chat/instance-status@0.1.61-rc.0
-  - @rocket.chat/omni-core@0.1.5-rc.0
-  - @rocket.chat/server-fetch@0.2.5-rc.0
-  - @rocket.chat/network-broker@0.2.40-rc.0
-  - @rocket.chat/api-client@0.2.57-rc.0
-  - @rocket.chat/http-router@7.9.24-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/pdf-worker@0.3.36
+  - @yas chat/media-signaling@1.3.0-rc.0
+  - @yas chat/media-calls@0.7.0-rc.0
+  - @yas chat/ui-voip@25.0.0-rc.0
+  - @yas chat/ui-composer@6.0.0-rc.0
+  - @yas chat/ui-client@35.0.0-rc.0
+  - @yas chat/i18n@4.1.0-rc.0
+  - @yas chat/css-in-js@0.33.2-rc.0
+  - @yas chat/css-supports@0.31.26-rc.0
+  - @yas chat/model-typings@2.6.0-rc.0
+  - @yas chat/models@2.6.0-rc.0
+  - @yas chat/federation-matrix@0.3.0-rc.0
+  - @yas chat/core-services@0.17.0-rc.0
+  - @yas chat/core-typings@8.9.0-rc.0
+  - @yas chat/rest-typings@8.9.0-rc.0
+  - @yas chat/ai-search@0.3.0-rc.0
+  - @yas chat/apps@0.10.0-rc.0
+  - @yas chat/apps-engine@1.67.0-rc.0
+  - @yas chat/web-ui-registration@35.0.0-rc.0
+  - @yas chat/random@1.2.4-rc.0
+  - @yas chat/license@1.2.1-rc.0
+  - @yas chat/stylis-logical-props-middleware@0.31.26-rc.0
+  - @yas chat/ddp-client@1.2.0-rc.0
+  - @yas chat/fuselage-ui-kit@35.0.0-rc.0
+  - @yas chat/ui-kit@1.2.0-rc.0
+  - @yas chat/streamer@0.1.1-rc.0
+  - @yas chat/gazzodown@35.0.0-rc.0
+  - @yas chat/ui-conference@2.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.58-rc.0
+  - @yas chat/ui-contexts@35.0.0-rc.0
+  - @yas chat/ui-avatar@31.0.0-rc.0
+  - @yas chat/ui-video-conf@35.0.0-rc.0
+  - @yas chat/abac@0.3.3-rc.0
+  - @yas chat/omni-core-ee@0.0.26-rc.0
+  - @yas chat/presence@0.3.3-rc.0
+  - @yas chat/authorization@0.0.2-rc.0
+  - @yas chat/cron@0.1.61-rc.0
+  - @yas chat/instance-status@0.1.61-rc.0
+  - @yas chat/omni-core@0.1.5-rc.0
+  - @yas chat/server-fetch@0.2.5-rc.0
+  - @yas chat/network-broker@0.2.40-rc.0
+  - @yas chat/api-client@0.2.57-rc.0
+  - @yas chat/http-router@7.9.24-rc.0
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/pdf-worker@0.3.36
 
   </details>
 
@@ -2303,15 +2303,15 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#42042](https://github.com/YasChat/YasChat/pull/42042) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes Omnichannel rooms failing to register agent responses (and showing send errors on messages and file uploads that were actually delivered) when the room carried corrupted visitor activity data created by older app integrations
 
 - <details><summary>Updated dependencies [61e940939adce0e512bdba3bbb33d27aec2a1fea]:</summary>
-  - @rocket.chat/models@2.5.1
-  - @rocket.chat/model-typings@2.5.1
-  - @rocket.chat/core-typings@8.8.1
-  - @rocket.chat/rest-typings@8.8.1
+  - @yas chat/models@2.5.1
+  - @yas chat/model-typings@2.5.1
+  - @yas chat/core-typings@8.8.1
+  - @yas chat/rest-typings@8.8.1
 
   </details>
 
@@ -2376,11 +2376,11 @@
 
 - ([#41777](https://github.com/YasChat/YasChat/pull/41777)) Fixed app action buttons never matching a role scoped to `Subscriptions` — `owner`, `moderator`, `leader`, or a custom one. The room was not being passed as the scope of the role check, so a button filtered by one of those roles stayed hidden even for a user who held it in the room.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41784](https://github.com/YasChat/YasChat/pull/41784)) Fixed business hours closing for one minute a day when configured as `00:00`-`23:59`. Work hours are set at minute granularity, but the finish time was treated as exclusive, so consecutive daily windows never met and the service dropped to closed for the whole `23:59` minute — agents could not become available and the Livechat widget rendered the offline form. A work hour now stays open until the end of its finish minute.
 
@@ -2420,7 +2420,7 @@
 
 - ([#41744](https://github.com/YasChat/YasChat/pull/41744)) Fixes `canAccessRoom` throwing when the user's `_id` is undefined
 
-- ([#41814](https://github.com/YasChat/YasChat/pull/41814)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41814](https://github.com/YasChat/YasChat/pull/41814)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41749](https://github.com/YasChat/YasChat/pull/41749)) Replace http with serverFetch in downloadPublicImportFile to add SSRF protection
 
@@ -2451,7 +2451,7 @@
 
 - ([#41702](https://github.com/YasChat/YasChat/pull/41702)) Fixes discussion parent message count and last-message timestamp out of sync with the discussion
 
-- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@yas chat/string-helpers` in favor of `@yas chat/tools`
 
 - ([#41574](https://github.com/YasChat/YasChat/pull/41574)) Fixes reaction list modal showing blank entries (mobile) or usernames (web) instead of real names when `UI_Use_Real_Name` is enabled. The broadcast pipeline now enriches reactions with display names via batch query.
 
@@ -2460,39 +2460,39 @@
 - ([#41631](https://github.com/YasChat/YasChat/pull/41631)) Fixes text rendering without line breaks when its length is higher than the value of the `MESSAGE_MAX_PARSE_LENGTH` environment variable
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, b27e38c55da90bdae5d96f458c47a133548a7d0d, e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 9b66ee2e8735de8bda60cdcd6ed6d30a9375bb3f, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 6edcdd7850d713e1d31986542402b5db184f81da, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535, 1c01809baea9fc6dd06f3f4b0e38ce41a6f4f5e1]:</summary>
-  - @rocket.chat/apps-engine@1.66.0
-  - @rocket.chat/apps@0.9.0
-  - @rocket.chat/i18n@4.0.0
-  - @rocket.chat/pdf-worker@0.3.36
-  - @rocket.chat/rest-typings@8.8.0
-  - @rocket.chat/model-typings@2.5.0
-  - @rocket.chat/core-typings@8.8.0
-  - @rocket.chat/ui-client@34.0.0
-  - @rocket.chat/models@2.5.0
-  - @rocket.chat/media-calls@0.6.0
-  - @rocket.chat/media-signaling@1.2.0
-  - @rocket.chat/ui-voip@24.0.0
-  - @rocket.chat/core-services@0.16.0
-  - @rocket.chat/federation-matrix@0.2.1
-  - @rocket.chat/message-types@0.1.2
-  - @rocket.chat/tools@0.4.0
-  - @rocket.chat/omnichannel-services@0.3.57
-  - @rocket.chat/abac@0.3.2
-  - @rocket.chat/ui-composer@5.0.0
-  - @rocket.chat/omni-core@0.1.4
-  - @rocket.chat/web-ui-registration@34.0.0
-  - @rocket.chat/network-broker@0.2.39
-  - @rocket.chat/omni-core-ee@0.0.25
-  - @rocket.chat/presence@0.3.2
-  - @rocket.chat/cron@0.1.60
-  - @rocket.chat/ddp-client@1.1.2
-  - @rocket.chat/fuselage-ui-kit@34.0.0
-  - @rocket.chat/gazzodown@34.0.0
-  - @rocket.chat/instance-status@0.1.60
-  - @rocket.chat/server-fetch@0.2.4
-  - @rocket.chat/ui-avatar@30.0.0
-  - @rocket.chat/ui-contexts@34.0.0
-  - @rocket.chat/ui-video-conf@34.0.0
+  - @yas chat/apps-engine@1.66.0
+  - @yas chat/apps@0.9.0
+  - @yas chat/i18n@4.0.0
+  - @yas chat/pdf-worker@0.3.36
+  - @yas chat/rest-typings@8.8.0
+  - @yas chat/model-typings@2.5.0
+  - @yas chat/core-typings@8.8.0
+  - @yas chat/ui-client@34.0.0
+  - @yas chat/models@2.5.0
+  - @yas chat/media-calls@0.6.0
+  - @yas chat/media-signaling@1.2.0
+  - @yas chat/ui-voip@24.0.0
+  - @yas chat/core-services@0.16.0
+  - @yas chat/federation-matrix@0.2.1
+  - @yas chat/message-types@0.1.2
+  - @yas chat/tools@0.4.0
+  - @yas chat/omnichannel-services@0.3.57
+  - @yas chat/abac@0.3.2
+  - @yas chat/ui-composer@5.0.0
+  - @yas chat/omni-core@0.1.4
+  - @yas chat/web-ui-registration@34.0.0
+  - @yas chat/network-broker@0.2.39
+  - @yas chat/omni-core-ee@0.0.25
+  - @yas chat/presence@0.3.2
+  - @yas chat/cron@0.1.60
+  - @yas chat/ddp-client@1.1.2
+  - @yas chat/fuselage-ui-kit@34.0.0
+  - @yas chat/gazzodown@34.0.0
+  - @yas chat/instance-status@0.1.60
+  - @yas chat/server-fetch@0.2.4
+  - @yas chat/ui-avatar@30.0.0
+  - @yas chat/ui-contexts@34.0.0
+  - @yas chat/ui-video-conf@34.0.0
 
   </details>
 
@@ -2500,11 +2500,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.8.0-rc.2
-  - @rocket.chat/rest-typings@8.8.0-rc.2
+  - @yas chat/core-typings@8.8.0-rc.2
+  - @yas chat/rest-typings@8.8.0-rc.2
 
   </details>
 
@@ -2516,17 +2516,17 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41454](https://github.com/YasChat/YasChat/pull/41454)) Fixes the message list silently loading the entire room history — and downloading its attachments — in the background when a full-width contextual bar (such as the thread view on small screens) hides it
 
 - ([#41499](https://github.com/YasChat/YasChat/pull/41499)) Fixes a reload loop when opening a link to an older message (`?msg=`): the room would flash the linked message and then keep loading until it hit the server rate limit (429) instead of settling. The room now opens positioned on the linked message, and when the linked message cannot be loaded the room settles on the most recent messages instead of retrying.
 
 - <details><summary>Updated dependencies [1c01809baea9fc6dd06f3f4b0e38ce41a6f4f5e1]:</summary>
-  - @rocket.chat/i18n@4.0.0-rc.1
-  - @rocket.chat/ui-voip@24.0.0-rc.1
-  - @rocket.chat/core-typings@8.8.0-rc.1
-  - @rocket.chat/rest-typings@8.8.0-rc.1
+  - @yas chat/i18n@4.0.0-rc.1
+  - @yas chat/ui-voip@24.0.0-rc.1
+  - @yas chat/core-typings@8.8.0-rc.1
+  - @yas chat/rest-typings@8.8.0-rc.1
 
   </details>
 
@@ -2625,7 +2625,7 @@
 
 - ([#41744](https://github.com/YasChat/YasChat/pull/41744)) Fixes `canAccessRoom` throwing when the user's `_id` is undefined
 
-- ([#41814](https://github.com/YasChat/YasChat/pull/41814)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41814](https://github.com/YasChat/YasChat/pull/41814)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41749](https://github.com/YasChat/YasChat/pull/41749)) Replace http with serverFetch in downloadPublicImportFile to add SSRF protection
 
@@ -2654,7 +2654,7 @@
 
 - ([#41702](https://github.com/YasChat/YasChat/pull/41702)) Fixes discussion parent message count and last-message timestamp out of sync with the discussion
 
-- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@rocket.chat/string-helpers` in favor of `@rocket.chat/tools`
+- ([#41763](https://github.com/YasChat/YasChat/pull/41763)) Drops `@yas chat/string-helpers` in favor of `@yas chat/tools`
 
 - ([#41574](https://github.com/YasChat/YasChat/pull/41574)) Fixes reaction list modal showing blank entries (mobile) or usernames (web) instead of real names when `UI_Use_Real_Name` is enabled. The broadcast pipeline now enriches reactions with display names via batch query.
 
@@ -2663,55 +2663,55 @@
 - ([#41631](https://github.com/YasChat/YasChat/pull/41631)) Fixes text rendering without line breaks when its length is higher than the value of the `MESSAGE_MAX_PARSE_LENGTH` environment variable
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, b27e38c55da90bdae5d96f458c47a133548a7d0d, e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 9b66ee2e8735de8bda60cdcd6ed6d30a9375bb3f, 6dc66fbe33b7dae6e386e51dadb56b0a70994e80, 20528861308cee6561444fd970c9a080013a7ecf, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, 6edcdd7850d713e1d31986542402b5db184f81da, 7f9592dc92567993f41d0e3510ecc9c00637a4cc, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/apps-engine@1.66.0-rc.0
-  - @rocket.chat/apps@0.9.0-rc.0
-  - @rocket.chat/i18n@4.0.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.36-rc.0
-  - @rocket.chat/rest-typings@8.8.0-rc.0
-  - @rocket.chat/model-typings@2.5.0-rc.0
-  - @rocket.chat/core-typings@8.8.0-rc.0
-  - @rocket.chat/ui-client@34.0.0-rc.0
-  - @rocket.chat/models@2.5.0-rc.0
-  - @rocket.chat/media-calls@0.6.0-rc.0
-  - @rocket.chat/media-signaling@1.2.0-rc.0
-  - @rocket.chat/ui-voip@24.0.0-rc.0
-  - @rocket.chat/core-services@0.16.0-rc.0
-  - @rocket.chat/federation-matrix@0.2.1-rc.0
-  - @rocket.chat/message-types@0.1.2-rc.0
-  - @rocket.chat/tools@0.4.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.57-rc.0
-  - @rocket.chat/abac@0.3.2-rc.0
-  - @rocket.chat/ui-contexts@34.0.0-rc.0
-  - @rocket.chat/web-ui-registration@34.0.0-rc.0
-  - @rocket.chat/license@1.2.0
-  - @rocket.chat/omni-core-ee@0.0.25-rc.0
-  - @rocket.chat/ai-search@0.2.0
-  - @rocket.chat/api-client@0.2.56
-  - @rocket.chat/base64@1.0.14
-  - @rocket.chat/ddp-client@1.1.2-rc.0
-  - @rocket.chat/emitter@0.33.0
-  - @rocket.chat/fuselage-ui-kit@34.0.0-rc.0
-  - @rocket.chat/gazzodown@34.0.0-rc.0
-  - @rocket.chat/http-router@7.9.23
-  - @rocket.chat/jwt@0.2.1
-  - @rocket.chat/memo@0.31.25
-  - @rocket.chat/message-parser@0.32.0
-  - @rocket.chat/mongo-adapter@0.0.3
-  - @rocket.chat/mp3-encoder@0.31.26
-  - @rocket.chat/omni-core@0.1.4-rc.0
-  - @rocket.chat/password-policies@0.1.1
-  - @rocket.chat/patch-injection@0.0.2
-  - @rocket.chat/random@1.2.3
-  - @rocket.chat/sha256@1.0.13
-  - @rocket.chat/ui-composer@5.0.0-rc.0
-  - @rocket.chat/ui-kit@1.1.0
-  - @rocket.chat/ui-video-conf@34.0.0-rc.0
-  - @rocket.chat/presence@0.3.2-rc.0
-  - @rocket.chat/cron@0.1.60-rc.0
-  - @rocket.chat/instance-status@0.1.60-rc.0
-  - @rocket.chat/server-fetch@0.2.4-rc.0
-  - @rocket.chat/network-broker@0.2.39-rc.0
-  - @rocket.chat/ui-avatar@30.0.0-rc.0
+  - @yas chat/apps-engine@1.66.0-rc.0
+  - @yas chat/apps@0.9.0-rc.0
+  - @yas chat/i18n@4.0.0-rc.0
+  - @yas chat/pdf-worker@0.3.36-rc.0
+  - @yas chat/rest-typings@8.8.0-rc.0
+  - @yas chat/model-typings@2.5.0-rc.0
+  - @yas chat/core-typings@8.8.0-rc.0
+  - @yas chat/ui-client@34.0.0-rc.0
+  - @yas chat/models@2.5.0-rc.0
+  - @yas chat/media-calls@0.6.0-rc.0
+  - @yas chat/media-signaling@1.2.0-rc.0
+  - @yas chat/ui-voip@24.0.0-rc.0
+  - @yas chat/core-services@0.16.0-rc.0
+  - @yas chat/federation-matrix@0.2.1-rc.0
+  - @yas chat/message-types@0.1.2-rc.0
+  - @yas chat/tools@0.4.0-rc.0
+  - @yas chat/omnichannel-services@0.3.57-rc.0
+  - @yas chat/abac@0.3.2-rc.0
+  - @yas chat/ui-contexts@34.0.0-rc.0
+  - @yas chat/web-ui-registration@34.0.0-rc.0
+  - @yas chat/license@1.2.0
+  - @yas chat/omni-core-ee@0.0.25-rc.0
+  - @yas chat/ai-search@0.2.0
+  - @yas chat/api-client@0.2.56
+  - @yas chat/base64@1.0.14
+  - @yas chat/ddp-client@1.1.2-rc.0
+  - @yas chat/emitter@0.33.0
+  - @yas chat/fuselage-ui-kit@34.0.0-rc.0
+  - @yas chat/gazzodown@34.0.0-rc.0
+  - @yas chat/http-router@7.9.23
+  - @yas chat/jwt@0.2.1
+  - @yas chat/memo@0.31.25
+  - @yas chat/message-parser@0.32.0
+  - @yas chat/mongo-adapter@0.0.3
+  - @yas chat/mp3-encoder@0.31.26
+  - @yas chat/omni-core@0.1.4-rc.0
+  - @yas chat/password-policies@0.1.1
+  - @yas chat/patch-injection@0.0.2
+  - @yas chat/random@1.2.3
+  - @yas chat/sha256@1.0.13
+  - @yas chat/ui-composer@5.0.0-rc.0
+  - @yas chat/ui-kit@1.1.0
+  - @yas chat/ui-video-conf@34.0.0-rc.0
+  - @yas chat/presence@0.3.2-rc.0
+  - @yas chat/cron@0.1.60-rc.0
+  - @yas chat/instance-status@0.1.60-rc.0
+  - @yas chat/server-fetch@0.2.4-rc.0
+  - @yas chat/network-broker@0.2.39-rc.0
+  - @yas chat/ui-avatar@30.0.0-rc.0
 
   </details>
 
@@ -2719,11 +2719,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41818](https://github.com/YasChat/YasChat/pull/41818) by [@dionisio-bot](https://github.com/dionisio-bot)) Adds per-client rate limiting to the unauthenticated sendForgotPasswordEmail method, matching the REST users.forgotPassword endpoint
 
-- ([#41820](https://github.com/YasChat/YasChat/pull/41820) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41820](https://github.com/YasChat/YasChat/pull/41820) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41846](https://github.com/YasChat/YasChat/pull/41846)) Fixes an issue where a `MultiSelect` option checkbox remained checked after the option was deselected
 
@@ -2732,8 +2732,8 @@
 - ([#41817](https://github.com/YasChat/YasChat/pull/41817) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes special characters not being escaped in the visitor name shown in the Omnichannel queue side panel's message preview
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.1
-  - @rocket.chat/rest-typings@8.7.1
+  - @yas chat/core-typings@8.7.1
+  - @yas chat/rest-typings@8.7.1
 
   </details>
 
@@ -2795,19 +2795,19 @@
 
 - ([#41152](https://github.com/YasChat/YasChat/pull/41152)) Fixes own account showing twice in navbar room search when searching by username
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41285](https://github.com/YasChat/YasChat/pull/41285)) Fixes the Slack importer storing shared files as raw URLs in the message body. Imported file messages now stay hidden until "Download Pending Files" button fetches them, then display as native attachments with image previews. Failed downloads (e.g. invalidated export links) are no longer silently saved as the file's content — they are counted as errors and can be retried.
 
@@ -2817,7 +2817,7 @@
 
 - ([#41173](https://github.com/YasChat/YasChat/pull/41173)) Fixes the password policy allowing a maximum length lower than the minimum length to be saved — a combination that made it impossible to set any valid password. The server now rejects such configurations when password policy settings are saved and shows an error explaining the constraint.
 
-- ([#41233](https://github.com/YasChat/YasChat/pull/41233)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41233](https://github.com/YasChat/YasChat/pull/41233)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41195](https://github.com/YasChat/YasChat/pull/41195)) fix: Buttons from emoji picker misbehaving on clicks
 
@@ -2829,13 +2829,13 @@
 
   Also fixes agents keeping a business hour's availability after their department was removed from it: saving a business hour with a smaller department list unlinked the departments but never cleared the business hour from the removed departments' agents.
 
-- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
+- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `YasChat_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
 
 - ([#40351](https://github.com/YasChat/YasChat/pull/40351)) Fixes error message being shown when logging out current device via Device Management despite successful logout.
 
 - ([#41169](https://github.com/YasChat/YasChat/pull/41169)) Fixes a race condition that left messages permanently undecryptable ("incorrect encryption key") in rooms created with encryption enabled. When several members opened such a room at the same time, each client could independently generate and distribute a different group key. Establishing the room key is now atomic (first-write-wins) on the server, and a client that loses the race discards its locally generated key and adopts the established one instead of encrypting with a divergent key.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41168](https://github.com/YasChat/YasChat/pull/41168)) Fixes LDAP channel sync aborting the entire add/removal pass when a mapped channel could not be resolved, which prevented users from being removed from channels when "Auto Remove Users from Channels" was enabled.
 
@@ -2884,38 +2884,38 @@
 - ([#41200](https://github.com/YasChat/YasChat/pull/41200)) Fixes an issue where the whole app remounts when VoIP availability changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, eec6083bb88f0caa1bd0de28b93b926a11c17507, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, 297df1a45500e8bcd9989a4ce613dce9cef71740, 6ebabce27a153d36ea8426f3257ffff880e820bc, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 784c287489367c4ff9d6460f73c10a4a0a06658d, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 115dfe8f7e0ac788a2ef92c6ca298cf37b61b136, 719e3db9734708e812ceb33483ffaa2e064b4d59, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 74d6cacb77cc2b029dfd1a12890cfcae7fd540cb, 4186deb7febee0aa653bb48b27022afa36529b21, 4117a1d3fb07905e8c9488a96f368747b48d528e, 376c9d862f63cb7dd4995842a23340e581056eee, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 1cc7bbdef9330899a8207d3d55130f48321d68f1, 6041285601ce6f9586f85cff72fb167642893245, e5da5d016948c9bb5cfd784a65396e08e61264c4, 2ec4d291b38e3c00d3eb9125f35730c1a0f540e2, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 1637a8bfe94e761a3c3edef201f016fe1cfe5a7d]:</summary>
-  - @rocket.chat/model-typings@2.4.0
-  - @rocket.chat/core-typings@8.7.0
-  - @rocket.chat/models@2.4.0
-  - @rocket.chat/gazzodown@33.0.0
-  - @rocket.chat/web-ui-registration@33.0.0
-  - @rocket.chat/rest-typings@8.7.0
-  - @rocket.chat/passport-x@0.1.0
-  - @rocket.chat/i18n@3.3.0
-  - @rocket.chat/message-parser@0.32.0
-  - @rocket.chat/core-services@0.15.0
-  - @rocket.chat/ai-search@0.2.0
-  - @rocket.chat/ui-client@33.0.0
-  - @rocket.chat/federation-matrix@0.2.0
-  - @rocket.chat/apps@0.8.0
-  - @rocket.chat/license@1.2.0
-  - @rocket.chat/apps-engine@1.65.1
-  - @rocket.chat/ui-voip@23.0.0
-  - @rocket.chat/ui-composer@4.0.0
-  - @rocket.chat/abac@0.3.1
-  - @rocket.chat/media-calls@0.5.2
-  - @rocket.chat/network-broker@0.2.38
-  - @rocket.chat/omni-core-ee@0.0.24
-  - @rocket.chat/omnichannel-services@0.3.56
-  - @rocket.chat/presence@0.3.1
-  - @rocket.chat/cron@0.1.59
-  - @rocket.chat/fuselage-ui-kit@33.0.0
-  - @rocket.chat/instance-status@0.1.59
-  - @rocket.chat/omni-core@0.1.3
-  - @rocket.chat/server-fetch@0.2.3
-  - @rocket.chat/ui-avatar@29.0.0
-  - @rocket.chat/ui-contexts@33.0.0
-  - @rocket.chat/ui-video-conf@33.0.0
+  - @yas chat/model-typings@2.4.0
+  - @yas chat/core-typings@8.7.0
+  - @yas chat/models@2.4.0
+  - @yas chat/gazzodown@33.0.0
+  - @yas chat/web-ui-registration@33.0.0
+  - @yas chat/rest-typings@8.7.0
+  - @yas chat/passport-x@0.1.0
+  - @yas chat/i18n@3.3.0
+  - @yas chat/message-parser@0.32.0
+  - @yas chat/core-services@0.15.0
+  - @yas chat/ai-search@0.2.0
+  - @yas chat/ui-client@33.0.0
+  - @yas chat/federation-matrix@0.2.0
+  - @yas chat/apps@0.8.0
+  - @yas chat/license@1.2.0
+  - @yas chat/apps-engine@1.65.1
+  - @yas chat/ui-voip@23.0.0
+  - @yas chat/ui-composer@4.0.0
+  - @yas chat/abac@0.3.1
+  - @yas chat/media-calls@0.5.2
+  - @yas chat/network-broker@0.2.38
+  - @yas chat/omni-core-ee@0.0.24
+  - @yas chat/omnichannel-services@0.3.56
+  - @yas chat/presence@0.3.1
+  - @yas chat/cron@0.1.59
+  - @yas chat/fuselage-ui-kit@33.0.0
+  - @yas chat/instance-status@0.1.59
+  - @yas chat/omni-core@0.1.3
+  - @yas chat/server-fetch@0.2.3
+  - @yas chat/ui-avatar@29.0.0
+  - @yas chat/ui-contexts@33.0.0
+  - @yas chat/ui-video-conf@33.0.0
 
   </details>
 
@@ -2923,11 +2923,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.6
-  - @rocket.chat/rest-typings@8.7.0-rc.6
+  - @yas chat/core-typings@8.7.0-rc.6
+  - @yas chat/rest-typings@8.7.0-rc.6
 
   </details>
 
@@ -2935,11 +2935,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.5
-  - @rocket.chat/rest-typings@8.7.0-rc.5
+  - @yas chat/core-typings@8.7.0-rc.5
+  - @yas chat/rest-typings@8.7.0-rc.5
 
   </details>
 
@@ -2947,13 +2947,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41588](https://github.com/YasChat/YasChat/pull/41588)) Fixes audio attachments not being seekable using the progress slider
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.4
-  - @rocket.chat/rest-typings@8.7.0-rc.4
+  - @yas chat/core-typings@8.7.0-rc.4
+  - @yas chat/rest-typings@8.7.0-rc.4
 
   </details>
 
@@ -2961,11 +2961,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.3
-  - @rocket.chat/rest-typings@8.7.0-rc.3
+  - @yas chat/core-typings@8.7.0-rc.3
+  - @yas chat/rest-typings@8.7.0-rc.3
 
   </details>
 
@@ -2973,11 +2973,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.2
-  - @rocket.chat/rest-typings@8.7.0-rc.2
+  - @yas chat/core-typings@8.7.0-rc.2
+  - @yas chat/rest-typings@8.7.0-rc.2
 
   </details>
 
@@ -2985,11 +2985,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.1
-  - @rocket.chat/rest-typings@8.7.0-rc.1
+  - @yas chat/core-typings@8.7.0-rc.1
+  - @yas chat/rest-typings@8.7.0-rc.1
 
   </details>
 
@@ -3059,7 +3059,7 @@
 
 - ([#41173](https://github.com/YasChat/YasChat/pull/41173)) Fixes the password policy allowing a maximum length lower than the minimum length to be saved — a combination that made it impossible to set any valid password. The server now rejects such configurations when password policy settings are saved and shows an error explaining the constraint.
 
-- ([#41233](https://github.com/YasChat/YasChat/pull/41233)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41233](https://github.com/YasChat/YasChat/pull/41233)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41195](https://github.com/YasChat/YasChat/pull/41195)) fix: Buttons from emoji picker misbehaving on clicks
 
@@ -3071,13 +3071,13 @@
 
   Also fixes agents keeping a business hour's availability after their department was removed from it: saving a business hour with a smaller department list unlinked the departments but never cleared the business hour from the removed departments' agents.
 
-- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `ROCKETCHAT_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
+- ([#41472](https://github.com/YasChat/YasChat/pull/41472)) Fixes the license provided via the `YasChat_LICENSE` environment variable not being applied when it is newer than the one persisted in the workspace.
 
 - ([#40351](https://github.com/YasChat/YasChat/pull/40351)) Fixes error message being shown when logging out current device via Device Management despite successful logout.
 
 - ([#41169](https://github.com/YasChat/YasChat/pull/41169)) Fixes a race condition that left messages permanently undecryptable ("incorrect encryption key") in rooms created with encryption enabled. When several members opened such a room at the same time, each client could independently generate and distribute a different group key. Establishing the room key is now atomic (first-write-wins) on the server, and a client that loses the race discards its locally generated key and adopts the established one instead of encrypting with a divergent key.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41168](https://github.com/YasChat/YasChat/pull/41168)) Fixes LDAP channel sync aborting the entire add/removal pass when a mapped channel could not be resolved, which prevented users from being removed from channels when "Auto Remove Users from Channels" was enabled.
 
@@ -3124,40 +3124,40 @@
 - ([#41200](https://github.com/YasChat/YasChat/pull/41200)) Fixes an issue where the whole app remounts when VoIP availability changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, eec6083bb88f0caa1bd0de28b93b926a11c17507, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, 297df1a45500e8bcd9989a4ce613dce9cef71740, 6ebabce27a153d36ea8426f3257ffff880e820bc, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 784c287489367c4ff9d6460f73c10a4a0a06658d, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 115dfe8f7e0ac788a2ef92c6ca298cf37b61b136, 719e3db9734708e812ceb33483ffaa2e064b4d59, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 74d6cacb77cc2b029dfd1a12890cfcae7fd540cb, 4186deb7febee0aa653bb48b27022afa36529b21, 4117a1d3fb07905e8c9488a96f368747b48d528e, 376c9d862f63cb7dd4995842a23340e581056eee, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 73c3aec49bacdfb42e67b6cbf90dfffbb65e0658, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 1cc7bbdef9330899a8207d3d55130f48321d68f1, 6041285601ce6f9586f85cff72fb167642893245, e5da5d016948c9bb5cfd784a65396e08e61264c4, 2ec4d291b38e3c00d3eb9125f35730c1a0f540e2, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 1637a8bfe94e761a3c3edef201f016fe1cfe5a7d]:</summary>
-  - @rocket.chat/model-typings@2.4.0-rc.0
-  - @rocket.chat/core-typings@8.7.0-rc.0
-  - @rocket.chat/models@2.4.0-rc.0
-  - @rocket.chat/gazzodown@33.0.0-rc.0
-  - @rocket.chat/web-ui-registration@33.0.0-rc.0
-  - @rocket.chat/rest-typings@8.7.0-rc.0
-  - @rocket.chat/passport-x@0.1.0-rc.0
-  - @rocket.chat/i18n@3.3.0-rc.0
-  - @rocket.chat/message-parser@0.32.0-rc.0
-  - @rocket.chat/core-services@0.15.0-rc.0
-  - @rocket.chat/ai-search@0.2.0-rc.0
-  - @rocket.chat/ui-client@33.0.0-rc.0
-  - @rocket.chat/federation-matrix@0.2.0-rc.0
-  - @rocket.chat/apps@0.8.0-rc.0
-  - @rocket.chat/license@1.2.0-rc.0
-  - @rocket.chat/apps-engine@1.64.1-rc.0
-  - @rocket.chat/ui-voip@23.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.56-rc.0
-  - @rocket.chat/abac@0.3.1-rc.0
-  - @rocket.chat/media-calls@0.5.2-rc.0
-  - @rocket.chat/omni-core-ee@0.0.24-rc.0
-  - @rocket.chat/presence@0.3.1-rc.0
-  - @rocket.chat/cron@0.1.59-rc.0
-  - @rocket.chat/instance-status@0.1.59-rc.0
-  - @rocket.chat/omni-core@0.1.3-rc.0
-  - @rocket.chat/server-fetch@0.2.3-rc.0
-  - @rocket.chat/fuselage-ui-kit@33.0.0-rc.0
-  - @rocket.chat/ui-contexts@33.0.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.35
-  - @rocket.chat/network-broker@0.2.38-rc.0
-  - @rocket.chat/ui-composer@4.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/ui-avatar@29.0.0-rc.0
-  - @rocket.chat/ui-video-conf@33.0.0-rc.0
+  - @yas chat/model-typings@2.4.0-rc.0
+  - @yas chat/core-typings@8.7.0-rc.0
+  - @yas chat/models@2.4.0-rc.0
+  - @yas chat/gazzodown@33.0.0-rc.0
+  - @yas chat/web-ui-registration@33.0.0-rc.0
+  - @yas chat/rest-typings@8.7.0-rc.0
+  - @yas chat/passport-x@0.1.0-rc.0
+  - @yas chat/i18n@3.3.0-rc.0
+  - @yas chat/message-parser@0.32.0-rc.0
+  - @yas chat/core-services@0.15.0-rc.0
+  - @yas chat/ai-search@0.2.0-rc.0
+  - @yas chat/ui-client@33.0.0-rc.0
+  - @yas chat/federation-matrix@0.2.0-rc.0
+  - @yas chat/apps@0.8.0-rc.0
+  - @yas chat/license@1.2.0-rc.0
+  - @yas chat/apps-engine@1.64.1-rc.0
+  - @yas chat/ui-voip@23.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.56-rc.0
+  - @yas chat/abac@0.3.1-rc.0
+  - @yas chat/media-calls@0.5.2-rc.0
+  - @yas chat/omni-core-ee@0.0.24-rc.0
+  - @yas chat/presence@0.3.1-rc.0
+  - @yas chat/cron@0.1.59-rc.0
+  - @yas chat/instance-status@0.1.59-rc.0
+  - @yas chat/omni-core@0.1.3-rc.0
+  - @yas chat/server-fetch@0.2.3-rc.0
+  - @yas chat/fuselage-ui-kit@33.0.0-rc.0
+  - @yas chat/ui-contexts@33.0.0-rc.0
+  - @yas chat/pdf-worker@0.3.35
+  - @yas chat/network-broker@0.2.38-rc.0
+  - @yas chat/ui-composer@4.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/ui-avatar@29.0.0-rc.0
+  - @yas chat/ui-video-conf@33.0.0-rc.0
 
   </details>
 
@@ -3165,13 +3165,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#41234](https://github.com/YasChat/YasChat/pull/41234) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41234](https://github.com/YasChat/YasChat/pull/41234) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
-- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41308](https://github.com/YasChat/YasChat/pull/41308) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes wrong FederationLookup type assigned to IUser in apps. The correct data is there, but the type does not represent it.
 
@@ -3180,11 +3180,11 @@
 - ([#41276](https://github.com/YasChat/YasChat/pull/41276) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures room permission checks are applied consistently regardless of how the room is identified when converting a channel to a team or creating a team from an existing room
 
 - <details><summary>Updated dependencies [89ab75ca9121feb289a0f5744a526361364b8867, c86d933c267e375b0b32585450cf513b6483c245]:</summary>
-  - @rocket.chat/core-typings@8.6.1
-  - @rocket.chat/model-typings@2.3.2
-  - @rocket.chat/models@2.3.2
-  - @rocket.chat/apps-engine@1.64.1
-  - @rocket.chat/rest-typings@8.6.1
+  - @yas chat/core-typings@8.6.1
+  - @yas chat/model-typings@2.3.2
+  - @yas chat/models@2.3.2
+  - @yas chat/apps-engine@1.64.1
+  - @yas chat/rest-typings@8.6.1
 
   </details>
 
@@ -3235,13 +3235,13 @@
 
 - ([#40988](https://github.com/YasChat/YasChat/pull/40988)) Added Tagalog (`tl`) as a selectable interface language. It appears in the user's **Account → Preferences → Localization → Language** dropdown; interface strings fall back to English until translations are contributed (same approach as other not-yet-translated locales).
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40902](https://github.com/YasChat/YasChat/pull/40902)) Fixes a memory leakage on the CodeMirror component (used by `code`-typed settings)
 
@@ -3267,7 +3267,7 @@
   - `saveSettings` → `POST /v1/settings`
   - `e2e.requestSubscriptionKeys` → `POST /v1/e2e.requestSubscriptionKeys`
 
-- ([#41017](https://github.com/YasChat/YasChat/pull/41017)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41017](https://github.com/YasChat/YasChat/pull/41017)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40767](https://github.com/YasChat/YasChat/pull/40767)) Fixes an issue that allowed users to create a DM and send messages to a deactivated account
 
@@ -3293,7 +3293,7 @@
 
 - ([#40849](https://github.com/YasChat/YasChat/pull/40849)) Fixes the behavior when the login token expires to redirect the user to the login page
 
-- ([#40842](https://github.com/YasChat/YasChat/pull/40842)) Fixes an issue where temporary AD/LDAP lockouts would deactivate users on rocket.chat.
+- ([#40842](https://github.com/YasChat/YasChat/pull/40842)) Fixes an issue where temporary AD/LDAP lockouts would deactivate users on yas chat.
 
 - ([#41046](https://github.com/YasChat/YasChat/pull/41046)) Fixes an issue where editing or deleting a message in a federated room caused subsequent messages to stop syncing between servers
 
@@ -3303,7 +3303,7 @@
 
 - ([#40684](https://github.com/YasChat/YasChat/pull/40684)) Fixes an issue on ABAC audit page that sent local timestamps instead of UTC ones as filters to fetch audit logs
 
-- ([#40889](https://github.com/YasChat/YasChat/pull/40889)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40889](https://github.com/YasChat/YasChat/pull/40889)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40706](https://github.com/YasChat/YasChat/pull/40706)) Fixes missing permission check on the `POST /api/v1/fingerprint` endpoint
 
@@ -3324,36 +3324,36 @@
 - ([#40864](https://github.com/YasChat/YasChat/pull/40864)) Fixes an issue on `canAccessRoom` where `abacAttributes` were not fetched in some endpoint calls
 
 - <details><summary>Updated dependencies [6ae500ab8983b334d0df3e07925b610d0ff9d38c, 4319d3eda1df3cd45b8e2b7b2b193ae9798a9ade, 24dc6ec3cc19c2ef182a07e1f7c5368f67584d5c, 73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, ebc9c17b6ba63ee754320eadfba20c024c53c18f, 7380c44c751eff9ee624d80bf26370411ffed78b, a7279cebc73edfa4b991eb593730c08e8f5e9001, 3c47215f4724bf41a56950542feba7c2d5d9eb7f, 25722dbb970665c66d0acfee415650f96e52cd50, f4f361234f00bd44efe348df4355e9d3cf80efe0, 308e1c5c3a8f6432dc03472914f563d1c0d15bdf, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53, 5d5edd8520ddb424bd336e3ec802c1f4a4e7d1ce, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2, ff751747f8a0637888364bde42ae18ac92a38768, 9861932cd7653c457a5b09e379fcb60a33947cf5]:</summary>
-  - @rocket.chat/i18n@3.2.0
-  - @rocket.chat/apps@0.7.1
-  - @rocket.chat/model-typings@2.3.1
-  - @rocket.chat/models@2.3.1
-  - @rocket.chat/core-services@0.14.2
-  - @rocket.chat/media-signaling@1.1.0
-  - @rocket.chat/core-typings@8.6.0
-  - @rocket.chat/presence@0.3.0
-  - @rocket.chat/abac@0.3.0
-  - @rocket.chat/rest-typings@8.6.0
-  - @rocket.chat/federation-matrix@0.1.6
-  - @rocket.chat/apps-engine@1.64.0
-  - @rocket.chat/ui-voip@22.0.0
-  - @rocket.chat/media-calls@0.5.1
-  - @rocket.chat/network-broker@0.2.37
-  - @rocket.chat/omni-core-ee@0.0.23
-  - @rocket.chat/omnichannel-services@0.3.55
-  - @rocket.chat/cron@0.1.58
-  - @rocket.chat/ddp-client@1.1.1
-  - @rocket.chat/fuselage-ui-kit@32.0.0
-  - @rocket.chat/gazzodown@32.0.0
-  - @rocket.chat/instance-status@0.1.58
-  - @rocket.chat/omni-core@0.1.2
-  - @rocket.chat/server-fetch@0.2.2
-  - @rocket.chat/ui-avatar@28.0.0
-  - @rocket.chat/ui-client@32.0.0
-  - @rocket.chat/ui-composer@3.0.0
-  - @rocket.chat/ui-contexts@32.0.0
-  - @rocket.chat/ui-video-conf@32.0.0
-  - @rocket.chat/web-ui-registration@32.0.0
+  - @yas chat/i18n@3.2.0
+  - @yas chat/apps@0.7.1
+  - @yas chat/model-typings@2.3.1
+  - @yas chat/models@2.3.1
+  - @yas chat/core-services@0.14.2
+  - @yas chat/media-signaling@1.1.0
+  - @yas chat/core-typings@8.6.0
+  - @yas chat/presence@0.3.0
+  - @yas chat/abac@0.3.0
+  - @yas chat/rest-typings@8.6.0
+  - @yas chat/federation-matrix@0.1.6
+  - @yas chat/apps-engine@1.64.0
+  - @yas chat/ui-voip@22.0.0
+  - @yas chat/media-calls@0.5.1
+  - @yas chat/network-broker@0.2.37
+  - @yas chat/omni-core-ee@0.0.23
+  - @yas chat/omnichannel-services@0.3.55
+  - @yas chat/cron@0.1.58
+  - @yas chat/ddp-client@1.1.1
+  - @yas chat/fuselage-ui-kit@32.0.0
+  - @yas chat/gazzodown@32.0.0
+  - @yas chat/instance-status@0.1.58
+  - @yas chat/omni-core@0.1.2
+  - @yas chat/server-fetch@0.2.2
+  - @yas chat/ui-avatar@28.0.0
+  - @yas chat/ui-client@32.0.0
+  - @yas chat/ui-composer@3.0.0
+  - @yas chat/ui-contexts@32.0.0
+  - @yas chat/ui-video-conf@32.0.0
+  - @yas chat/web-ui-registration@32.0.0
 
   </details>
 
@@ -3361,11 +3361,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.6.0-rc.3
-  - @rocket.chat/rest-typings@8.6.0-rc.3
+  - @yas chat/core-typings@8.6.0-rc.3
+  - @yas chat/rest-typings@8.6.0-rc.3
 
   </details>
 
@@ -3373,10 +3373,10 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.6.0-rc.2
-  - @rocket.chat/rest-typings@8.6.0-rc.2
+  - @yas chat/core-typings@8.6.0-rc.2
+  - @yas chat/rest-typings@8.6.0-rc.2
 
   </details>
 
@@ -3384,7 +3384,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#41057](https://github.com/YasChat/YasChat/pull/41057)) Fixes incoming integrations inability of reaching internal hosts by adding "ignoreSsrfValidation: true" to it
 
@@ -3395,11 +3395,11 @@
 - ([#41065](https://github.com/YasChat/YasChat/pull/41065)) Fixes REST API endpoints that require two-factor authentication (such as `users.update`) rejecting requests authenticated with a Personal Access Token created with "Ignore Two Factor Authentication", returning `totp-required` even though the token was meant to bypass the check. The two-factor authorization check now resolves the login token from the REST connection, so `bypassTwoFactor` tokens are honored again.
 
 - <details><summary>Updated dependencies [308e1c5c3a8f6432dc03472914f563d1c0d15bdf, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, 5d5edd8520ddb424bd336e3ec802c1f4a4e7d1ce, 9861932cd7653c457a5b09e379fcb60a33947cf5]:</summary>
-  - @rocket.chat/federation-matrix@0.1.5-rc.1
-  - @rocket.chat/core-typings@8.6.0-rc.1
-  - @rocket.chat/media-signaling@1.1.0-rc.1
-  - @rocket.chat/ui-voip@22.0.0-rc.1
-  - @rocket.chat/rest-typings@8.6.0-rc.1
+  - @yas chat/federation-matrix@0.1.5-rc.1
+  - @yas chat/core-typings@8.6.0-rc.1
+  - @yas chat/media-signaling@1.1.0-rc.1
+  - @yas chat/ui-voip@22.0.0-rc.1
+  - @yas chat/rest-typings@8.6.0-rc.1
 
   </details>
 
@@ -3474,7 +3474,7 @@
   - `saveSettings` → `POST /v1/settings`
   - `e2e.requestSubscriptionKeys` → `POST /v1/e2e.requestSubscriptionKeys`
 
-- ([#41017](https://github.com/YasChat/YasChat/pull/41017)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41017](https://github.com/YasChat/YasChat/pull/41017)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40767](https://github.com/YasChat/YasChat/pull/40767)) Fixes an issue that allowed users to create a DM and send messages to a deactivated account
 
@@ -3498,13 +3498,13 @@
 
 - ([#40849](https://github.com/YasChat/YasChat/pull/40849)) Fixes the behavior when the login token expires to redirect the user to the login page
 
-- ([#40842](https://github.com/YasChat/YasChat/pull/40842)) Fixes an issue where temporary AD/LDAP lockouts would deactivate users on rocket.chat.
+- ([#40842](https://github.com/YasChat/YasChat/pull/40842)) Fixes an issue where temporary AD/LDAP lockouts would deactivate users on yas chat.
 
 - ([#40956](https://github.com/YasChat/YasChat/pull/40956)) fixes issue that caused threads to sometimes not scroll when sending messages
 
 - ([#40684](https://github.com/YasChat/YasChat/pull/40684)) Fixes an issue on ABAC audit page that sent local timestamps instead of UTC ones as filters to fetch audit logs
 
-- ([#40889](https://github.com/YasChat/YasChat/pull/40889)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40889](https://github.com/YasChat/YasChat/pull/40889)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40706](https://github.com/YasChat/YasChat/pull/40706)) Fixes missing permission check on the `POST /api/v1/fingerprint` endpoint
 
@@ -3523,36 +3523,36 @@
 - ([#40864](https://github.com/YasChat/YasChat/pull/40864)) Fixes an issue on `canAccessRoom` where `abacAttributes` were not fetched in some endpoint calls
 
 - <details><summary>Updated dependencies [6ae500ab8983b334d0df3e07925b610d0ff9d38c, 4319d3eda1df3cd45b8e2b7b2b193ae9798a9ade, 24dc6ec3cc19c2ef182a07e1f7c5368f67584d5c, 73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, ebc9c17b6ba63ee754320eadfba20c024c53c18f, 7380c44c751eff9ee624d80bf26370411ffed78b, a7279cebc73edfa4b991eb593730c08e8f5e9001, 3c47215f4724bf41a56950542feba7c2d5d9eb7f, 25722dbb970665c66d0acfee415650f96e52cd50, f4f361234f00bd44efe348df4355e9d3cf80efe0, 9a36221f1fbf5ca417325204637c9f32fe760443, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, f57901d91feaccedd00dee65b78775b20235825b, 9a36221f1fbf5ca417325204637c9f32fe760443, 9a36221f1fbf5ca417325204637c9f32fe760443, fa685d0ddfdf1167705a58b5d846a993144e3734, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2, ff751747f8a0637888364bde42ae18ac92a38768]:</summary>
-  - @rocket.chat/i18n@3.2.0-rc.0
-  - @rocket.chat/apps@0.7.1-rc.0
-  - @rocket.chat/model-typings@2.3.1-rc.0
-  - @rocket.chat/models@2.3.1-rc.0
-  - @rocket.chat/core-services@0.14.2-rc.0
-  - @rocket.chat/media-signaling@1.1.0-rc.0
-  - @rocket.chat/core-typings@8.6.0-rc.0
-  - @rocket.chat/presence@0.3.0-rc.0
-  - @rocket.chat/abac@0.3.0-rc.0
-  - @rocket.chat/rest-typings@8.6.0-rc.0
-  - @rocket.chat/federation-matrix@0.1.5-rc.0
-  - @rocket.chat/apps-engine@1.64.0-rc.0
-  - @rocket.chat/ui-voip@22.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.55-rc.0
-  - @rocket.chat/ui-contexts@32.0.0-rc.0
-  - @rocket.chat/web-ui-registration@32.0.0-rc.0
-  - @rocket.chat/media-calls@0.5.1-rc.0
-  - @rocket.chat/omni-core-ee@0.0.23-rc.0
-  - @rocket.chat/cron@0.1.58-rc.0
-  - @rocket.chat/instance-status@0.1.58-rc.0
-  - @rocket.chat/omni-core@0.1.2-rc.0
-  - @rocket.chat/server-fetch@0.2.2-rc.0
-  - @rocket.chat/ui-client@32.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.37-rc.0
-  - @rocket.chat/ddp-client@1.1.1-rc.0
-  - @rocket.chat/fuselage-ui-kit@32.0.0-rc.0
-  - @rocket.chat/ui-composer@3.0.0-rc.0
-  - @rocket.chat/gazzodown@32.0.0-rc.0
-  - @rocket.chat/ui-avatar@28.0.0-rc.0
-  - @rocket.chat/ui-video-conf@32.0.0-rc.0
+  - @yas chat/i18n@3.2.0-rc.0
+  - @yas chat/apps@0.7.1-rc.0
+  - @yas chat/model-typings@2.3.1-rc.0
+  - @yas chat/models@2.3.1-rc.0
+  - @yas chat/core-services@0.14.2-rc.0
+  - @yas chat/media-signaling@1.1.0-rc.0
+  - @yas chat/core-typings@8.6.0-rc.0
+  - @yas chat/presence@0.3.0-rc.0
+  - @yas chat/abac@0.3.0-rc.0
+  - @yas chat/rest-typings@8.6.0-rc.0
+  - @yas chat/federation-matrix@0.1.5-rc.0
+  - @yas chat/apps-engine@1.64.0-rc.0
+  - @yas chat/ui-voip@22.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.55-rc.0
+  - @yas chat/ui-contexts@32.0.0-rc.0
+  - @yas chat/web-ui-registration@32.0.0-rc.0
+  - @yas chat/media-calls@0.5.1-rc.0
+  - @yas chat/omni-core-ee@0.0.23-rc.0
+  - @yas chat/cron@0.1.58-rc.0
+  - @yas chat/instance-status@0.1.58-rc.0
+  - @yas chat/omni-core@0.1.2-rc.0
+  - @yas chat/server-fetch@0.2.2-rc.0
+  - @yas chat/ui-client@32.0.0-rc.0
+  - @yas chat/network-broker@0.2.37-rc.0
+  - @yas chat/ddp-client@1.1.1-rc.0
+  - @yas chat/fuselage-ui-kit@32.0.0-rc.0
+  - @yas chat/ui-composer@3.0.0-rc.0
+  - @yas chat/gazzodown@32.0.0-rc.0
+  - @yas chat/ui-avatar@28.0.0-rc.0
+  - @yas chat/ui-video-conf@32.0.0-rc.0
 
   </details>
 
@@ -3560,21 +3560,21 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40917](https://github.com/YasChat/YasChat/pull/40917) by [@dionisio-bot](https://github.com/dionisio-bot)) Escapes HTML tags in exported data
 
-- ([#40891](https://github.com/YasChat/YasChat/pull/40891) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40891](https://github.com/YasChat/YasChat/pull/40891) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40904](https://github.com/YasChat/YasChat/pull/40904) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes missing permission check on the `POST /api/v1/fingerprint` endpoint
 
 - ([#40938](https://github.com/YasChat/YasChat/pull/40938) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where `description` was incorrectly being used as alternative text for image attachments
 
 - <details><summary>Updated dependencies [01a184640f635866bf4c1c612696acc4eed62311]:</summary>
-  - @rocket.chat/federation-matrix@0.1.5
-  - @rocket.chat/core-typings@8.5.1
-  - @rocket.chat/rest-typings@8.5.1
+  - @yas chat/federation-matrix@0.1.5
+  - @yas chat/core-typings@8.5.1
+  - @yas chat/rest-typings@8.5.1
 
   </details>
 
@@ -3582,7 +3582,7 @@
 
 ### Minor Changes
 
-- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Swap usage of internal @rocket.chat/apps-engine internal APIs to @rocket.chat/apps package
+- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Swap usage of internal @yas chat/apps-engine internal APIs to @yas chat/apps package
 
 - ([#40408](https://github.com/YasChat/YasChat/pull/40408)) Adds 4 new permissions (assigned to admins by default) to control the visibility of each tab inside the ABAC Administration panel
 
@@ -3604,7 +3604,7 @@
 
 - ([#39858](https://github.com/YasChat/YasChat/pull/39858)) Adds support to room information on ViewSubmit and ViewClose events for ContextualBar surface
 
-- ([#40430](https://github.com/YasChat/YasChat/pull/40430)) Adds a new admin setting `Use_RC_SDK` (General → Use YasChat SDK) that opts the workspace into the experimental SDK-over-DDP transport. When enabled, the client routes Meteor DDP traffic through `@rocket.chat/ddp-client` over a single WebSocket instead of the legacy Meteor stream. The flag is dormant by default; the server surfaces the value via a `<meta name="rc-sdk-transport-enabled">` tag, and the client also honors a per-tab `?sdk_transport=on|off` URL parameter and a `rc-config-sdk_transport` localStorage key (URL > localStorage > meta tag).
+- ([#40430](https://github.com/YasChat/YasChat/pull/40430)) Adds a new admin setting `Use_RC_SDK` (General → Use YasChat SDK) that opts the workspace into the experimental SDK-over-DDP transport. When enabled, the client routes Meteor DDP traffic through `@yas chat/ddp-client` over a single WebSocket instead of the legacy Meteor stream. The flag is dormant by default; the server surfaces the value via a `<meta name="rc-sdk-transport-enabled">` tag, and the client also honors a per-tab `?sdk_transport=on|off` URL parameter and a `rc-config-sdk_transport` localStorage key (URL > localStorage > meta tag).
 
 ### Patch Changes
 
@@ -3612,19 +3612,19 @@
 
 - ([#40524](https://github.com/YasChat/YasChat/pull/40524)) Ensures OAuth tokens are cleaned up after user deactivation
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40537](https://github.com/YasChat/YasChat/pull/40537)) Fixes an issue that allowed a room converted from private to public (while abac is disabled) to retain its abac attributes (if any)
 
@@ -3654,7 +3654,7 @@
 
 - ([#40501](https://github.com/YasChat/YasChat/pull/40501)) Ensures the visitor token is not present in the visitors.info response
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40613](https://github.com/YasChat/YasChat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
 
@@ -3671,36 +3671,36 @@
 - ([#40393](https://github.com/YasChat/YasChat/pull/40393)) Fixes a `date-fns` crash on routes that mount before the public settings stream finishes loading. `useFormatDate` was passing `String(undefined)` (the literal `"undefined"`) to `formatDate` while `Message_DateFormat` was momentarily unloaded — `date-fns` rejects that token because it contains an unescaped `n`. The hook now uses `'LL'` as the default token via `useSetting`'s second argument, so the formatter always receives a valid format string.
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, f7d47dd3517ec14ca2ec5c3c95fcdf9e1e2fb8b0, cdb264fec803e234a6ad2000018b31d4b2074e99, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, bede0e2528bb053cb913e93ccf30d78a1c84bc76, bede0e2528bb053cb913e93ccf30d78a1c84bc76, bede0e2528bb053cb913e93ccf30d78a1c84bc76, 4c3984593017d59edd631bf8ae4f35f9d3c3db36, 7f2bdf1809804de7a95c54c3892da30f058ee13d, b6b04aadfcc8558f888b334e37c46a77e5816237, ad7d42400ea36f1eb0aaf7cc3361c77fdabf9ebc, 4704bf81ca370f120af32185a7c55407a26f8514, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, ebc9babf55dd26613027c28dcacf77909116b342, f392d5cc8d956c199f557dcd6beb52094232499d, 2198d9ea565b06f92e3dec29891890086f62f9df, fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257, e45585b70a3a7b75434c88e4b2ea9af0a0764a76, 0b7a76367d650793c271160e01798ebbb5fe0d26, 51833064591b91140d17e403389e1abbc5d9ef7a, 2d32e52073dd1a68bd12a093b3a673ae297cb4ee, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, b1c2668b74bfb49ebaefe2f581b2f8be5d4d1dd6, 90f15e32ae843ed146ccf711ee3201408d1e8731, 22c8d3283f0ea3004fe94c51f8bb32dfb40a0f4f]:</summary>
-  - @rocket.chat/ui-kit@1.1.0
-  - @rocket.chat/model-typings@2.3.0
-  - @rocket.chat/models@2.3.0
-  - @rocket.chat/i18n@3.1.0
-  - @rocket.chat/apps-engine@1.63.0
-  - @rocket.chat/ddp-client@1.1.0
-  - @rocket.chat/rest-typings@8.5.0
-  - @rocket.chat/ui-voip@21.0.0
-  - @rocket.chat/gazzodown@31.0.0
-  - @rocket.chat/apps@0.7.0
-  - @rocket.chat/ui-client@31.0.0
-  - @rocket.chat/core-typings@8.5.0
-  - @rocket.chat/abac@0.2.1
-  - @rocket.chat/media-calls@0.5.0
-  - @rocket.chat/ui-composer@2.0.0
-  - @rocket.chat/federation-matrix@0.1.4
-  - @rocket.chat/network-broker@0.2.36
-  - @rocket.chat/omni-core-ee@0.0.22
-  - @rocket.chat/omnichannel-services@0.3.54
-  - @rocket.chat/presence@0.2.57
-  - @rocket.chat/core-services@0.14.1
-  - @rocket.chat/cron@0.1.57
-  - @rocket.chat/fuselage-ui-kit@31.0.0
-  - @rocket.chat/instance-status@0.1.57
-  - @rocket.chat/omni-core@0.1.1
-  - @rocket.chat/server-fetch@0.2.1
-  - @rocket.chat/ui-avatar@27.0.0
-  - @rocket.chat/ui-contexts@31.0.0
-  - @rocket.chat/ui-video-conf@31.0.0
-  - @rocket.chat/web-ui-registration@31.0.0
+  - @yas chat/ui-kit@1.1.0
+  - @yas chat/model-typings@2.3.0
+  - @yas chat/models@2.3.0
+  - @yas chat/i18n@3.1.0
+  - @yas chat/apps-engine@1.63.0
+  - @yas chat/ddp-client@1.1.0
+  - @yas chat/rest-typings@8.5.0
+  - @yas chat/ui-voip@21.0.0
+  - @yas chat/gazzodown@31.0.0
+  - @yas chat/apps@0.7.0
+  - @yas chat/ui-client@31.0.0
+  - @yas chat/core-typings@8.5.0
+  - @yas chat/abac@0.2.1
+  - @yas chat/media-calls@0.5.0
+  - @yas chat/ui-composer@2.0.0
+  - @yas chat/federation-matrix@0.1.4
+  - @yas chat/network-broker@0.2.36
+  - @yas chat/omni-core-ee@0.0.22
+  - @yas chat/omnichannel-services@0.3.54
+  - @yas chat/presence@0.2.57
+  - @yas chat/core-services@0.14.1
+  - @yas chat/cron@0.1.57
+  - @yas chat/fuselage-ui-kit@31.0.0
+  - @yas chat/instance-status@0.1.57
+  - @yas chat/omni-core@0.1.1
+  - @yas chat/server-fetch@0.2.1
+  - @yas chat/ui-avatar@27.0.0
+  - @yas chat/ui-contexts@31.0.0
+  - @yas chat/ui-video-conf@31.0.0
+  - @yas chat/web-ui-registration@31.0.0
 
   </details>
 
@@ -3708,11 +3708,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.6
-  - @rocket.chat/rest-typings@8.5.0-rc.6
+  - @yas chat/core-typings@8.5.0-rc.6
+  - @yas chat/rest-typings@8.5.0-rc.6
 
   </details>
 
@@ -3720,11 +3720,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.5
-  - @rocket.chat/rest-typings@8.5.0-rc.5
+  - @yas chat/core-typings@8.5.0-rc.5
+  - @yas chat/rest-typings@8.5.0-rc.5
 
   </details>
 
@@ -3732,10 +3732,10 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.4
-  - @rocket.chat/rest-typings@8.5.0-rc.4
+  - @yas chat/core-typings@8.5.0-rc.4
+  - @yas chat/rest-typings@8.5.0-rc.4
 
   </details>
 
@@ -3743,12 +3743,12 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - ([#40635](https://github.com/YasChat/YasChat/pull/40635) by [@copilot-swe-agent](https://github.com/copilot-swe-agent)) Fixes the Chat Limits locking mechanism to allow bot agents to skip the lock as they aren't limited
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.3
-  - @rocket.chat/rest-typings@8.5.0-rc.3
+  - @yas chat/core-typings@8.5.0-rc.3
+  - @yas chat/rest-typings@8.5.0-rc.3
 
   </details>
 
@@ -3756,11 +3756,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.2
-  - @rocket.chat/rest-typings@8.5.0-rc.2
+  - @yas chat/core-typings@8.5.0-rc.2
+  - @yas chat/rest-typings@8.5.0-rc.2
 
   </details>
 
@@ -3768,11 +3768,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.1
-  - @rocket.chat/rest-typings@8.5.0-rc.1
+  - @yas chat/core-typings@8.5.0-rc.1
+  - @yas chat/rest-typings@8.5.0-rc.1
 
   </details>
 
@@ -3780,7 +3780,7 @@
 
 ### Minor Changes
 
-- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Swap usage of internal @rocket.chat/apps-engine internal APIs to @rocket.chat/apps package
+- ([#40343](https://github.com/YasChat/YasChat/pull/40343)) Swap usage of internal @yas chat/apps-engine internal APIs to @yas chat/apps package
 
 - ([#40408](https://github.com/YasChat/YasChat/pull/40408)) Adds 4 new permissions (assigned to admins by default) to control the visibility of each tab inside the ABAC Administration panel
 
@@ -3816,7 +3816,7 @@
 
 - ([#39858](https://github.com/YasChat/YasChat/pull/39858)) Adds support to room information on ViewSubmit and ViewClose events for ContextualBar surface
 
-- ([#40430](https://github.com/YasChat/YasChat/pull/40430)) Adds a new admin setting `Use_RC_SDK` (General → Use YasChat SDK) that opts the workspace into the experimental SDK-over-DDP transport. When enabled, the client routes Meteor DDP traffic through `@rocket.chat/ddp-client` over a single WebSocket instead of the legacy Meteor stream. The flag is dormant by default; the server surfaces the value via a `<meta name="rc-sdk-transport-enabled">` tag, and the client also honors a per-tab `?sdk_transport=on|off` URL parameter and a `rc-config-sdk_transport` localStorage key (URL > localStorage > meta tag).
+- ([#40430](https://github.com/YasChat/YasChat/pull/40430)) Adds a new admin setting `Use_RC_SDK` (General → Use YasChat SDK) that opts the workspace into the experimental SDK-over-DDP transport. When enabled, the client routes Meteor DDP traffic through `@yas chat/ddp-client` over a single WebSocket instead of the legacy Meteor stream. The flag is dormant by default; the server surfaces the value via a `<meta name="rc-sdk-transport-enabled">` tag, and the client also honors a per-tab `?sdk_transport=on|off` URL parameter and a `rc-config-sdk_transport` localStorage key (URL > localStorage > meta tag).
 
 ### Patch Changes
 
@@ -3852,7 +3852,7 @@
 
 - ([#40501](https://github.com/YasChat/YasChat/pull/40501)) Ensures the visitor token is not present in the visitors.info response
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40613](https://github.com/YasChat/YasChat/pull/40613)) Sanitizes image URLs in rendered messages to block `javascript:`, `data:`, and `vbscript:` schemes — matching the protection already applied to markdown links. Defense-in-depth against XSS via crafted markdown like `![label](javascript:...)`.
 
@@ -3867,36 +3867,36 @@
 - ([#40393](https://github.com/YasChat/YasChat/pull/40393)) Fixes a `date-fns` crash on routes that mount before the public settings stream finishes loading. `useFormatDate` was passing `String(undefined)` (the literal `"undefined"`) to `formatDate` while `Message_DateFormat` was momentarily unloaded — `date-fns` rejects that token because it contains an unescaped `n`. The hook now uses `'LL'` as the default token via `useSetting`'s second argument, so the formatter always receives a valid format string.
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, f7d47dd3517ec14ca2ec5c3c95fcdf9e1e2fb8b0, cdb264fec803e234a6ad2000018b31d4b2074e99, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, bede0e2528bb053cb913e93ccf30d78a1c84bc76, bede0e2528bb053cb913e93ccf30d78a1c84bc76, bede0e2528bb053cb913e93ccf30d78a1c84bc76, 4c3984593017d59edd631bf8ae4f35f9d3c3db36, 7f2bdf1809804de7a95c54c3892da30f058ee13d, ae9f740d6af20557eac61b4af902c868b4132b49, b6b04aadfcc8558f888b334e37c46a77e5816237, ad7d42400ea36f1eb0aaf7cc3361c77fdabf9ebc, 4704bf81ca370f120af32185a7c55407a26f8514, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, ebc9babf55dd26613027c28dcacf77909116b342, f392d5cc8d956c199f557dcd6beb52094232499d, 2198d9ea565b06f92e3dec29891890086f62f9df, fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257, e45585b70a3a7b75434c88e4b2ea9af0a0764a76, 0b7a76367d650793c271160e01798ebbb5fe0d26, 51833064591b91140d17e403389e1abbc5d9ef7a, 2d32e52073dd1a68bd12a093b3a673ae297cb4ee, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, b1c2668b74bfb49ebaefe2f581b2f8be5d4d1dd6, 90f15e32ae843ed146ccf711ee3201408d1e8731, 22c8d3283f0ea3004fe94c51f8bb32dfb40a0f4f]:</summary>
-  - @rocket.chat/ui-kit@1.1.0-rc.0
-  - @rocket.chat/model-typings@2.3.0-rc.0
-  - @rocket.chat/models@2.3.0-rc.0
-  - @rocket.chat/i18n@3.1.0-rc.0
-  - @rocket.chat/apps-engine@1.63.0-rc.0
-  - @rocket.chat/ddp-client@1.1.0-rc.0
-  - @rocket.chat/rest-typings@8.5.0-rc.0
-  - @rocket.chat/ui-voip@21.0.0-rc.0
-  - @rocket.chat/web-ui-registration@31.0.0-rc.0
-  - @rocket.chat/core-typings@8.5.0-rc.0
-  - @rocket.chat/gazzodown@31.0.0-rc.0
-  - @rocket.chat/apps@0.7.0-rc.0
-  - @rocket.chat/ui-client@31.0.0-rc.0
-  - @rocket.chat/abac@0.2.1-rc.0
-  - @rocket.chat/media-calls@0.5.0-rc.0
-  - @rocket.chat/core-services@0.14.1-rc.0
-  - @rocket.chat/fuselage-ui-kit@31.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.54-rc.0
-  - @rocket.chat/federation-matrix@0.1.4-rc.0
-  - @rocket.chat/omni-core-ee@0.0.22-rc.0
-  - @rocket.chat/presence@0.2.57-rc.0
-  - @rocket.chat/cron@0.1.57-rc.0
-  - @rocket.chat/instance-status@0.1.57-rc.0
-  - @rocket.chat/omni-core@0.1.1-rc.0
-  - @rocket.chat/server-fetch@0.2.1-rc.0
-  - @rocket.chat/ui-contexts@31.0.0-rc.0
-  - @rocket.chat/ui-composer@2.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.36-rc.0
-  - @rocket.chat/ui-avatar@27.0.0-rc.0
-  - @rocket.chat/ui-video-conf@31.0.0-rc.0
+  - @yas chat/ui-kit@1.1.0-rc.0
+  - @yas chat/model-typings@2.3.0-rc.0
+  - @yas chat/models@2.3.0-rc.0
+  - @yas chat/i18n@3.1.0-rc.0
+  - @yas chat/apps-engine@1.63.0-rc.0
+  - @yas chat/ddp-client@1.1.0-rc.0
+  - @yas chat/rest-typings@8.5.0-rc.0
+  - @yas chat/ui-voip@21.0.0-rc.0
+  - @yas chat/web-ui-registration@31.0.0-rc.0
+  - @yas chat/core-typings@8.5.0-rc.0
+  - @yas chat/gazzodown@31.0.0-rc.0
+  - @yas chat/apps@0.7.0-rc.0
+  - @yas chat/ui-client@31.0.0-rc.0
+  - @yas chat/abac@0.2.1-rc.0
+  - @yas chat/media-calls@0.5.0-rc.0
+  - @yas chat/core-services@0.14.1-rc.0
+  - @yas chat/fuselage-ui-kit@31.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.54-rc.0
+  - @yas chat/federation-matrix@0.1.4-rc.0
+  - @yas chat/omni-core-ee@0.0.22-rc.0
+  - @yas chat/presence@0.2.57-rc.0
+  - @yas chat/cron@0.1.57-rc.0
+  - @yas chat/instance-status@0.1.57-rc.0
+  - @yas chat/omni-core@0.1.1-rc.0
+  - @yas chat/server-fetch@0.2.1-rc.0
+  - @yas chat/ui-contexts@31.0.0-rc.0
+  - @yas chat/ui-composer@2.0.0-rc.0
+  - @yas chat/network-broker@0.2.36-rc.0
+  - @yas chat/ui-avatar@27.0.0-rc.0
+  - @yas chat/ui-video-conf@31.0.0-rc.0
 
   </details>
 
@@ -3904,14 +3904,14 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40771](https://github.com/YasChat/YasChat/pull/40771) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the Chat Limits locking mechanism to allow bot agents to skip the lock as they aren't limited
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.3
-  - @rocket.chat/rest-typings@8.4.3
+  - @yas chat/core-typings@8.4.3
+  - @yas chat/rest-typings@8.4.3
 
   </details>
 
@@ -3921,9 +3921,9 @@
 
 - ([#40627](https://github.com/YasChat/YasChat/pull/40627) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures OAuth tokens are cleaned up after user deactivation
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40527](https://github.com/YasChat/YasChat/pull/40527) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the `users.presence` endpoint returning an empty array when called with multiple comma-separated IDs, caused by `ajvQuery` coercing the string into a single-element array after the OpenAPI migration
 
@@ -3936,10 +3936,10 @@
 - ([#40547](https://github.com/YasChat/YasChat/pull/40547) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures the autotranslate.translateMessage endpoint checks for room access
 
 - <details><summary>Updated dependencies [b0c593db9bc0bbbb603e673ddcdc48aad4f4e721, f422eb613d8cae43dc1e44d71b6ecb5a0a9c5d92, 3a3f0e1103bd0b8aaf93c16300ed664aed7a67a1]:</summary>
-  - @rocket.chat/model-typings@2.2.2
-  - @rocket.chat/models@2.2.2
-  - @rocket.chat/rest-typings@8.4.2
-  - @rocket.chat/core-typings@8.4.2
+  - @yas chat/model-typings@2.2.2
+  - @yas chat/models@2.2.2
+  - @yas chat/rest-typings@8.4.2
+  - @yas chat/core-typings@8.4.2
 
   </details>
 
@@ -3947,25 +3947,25 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Disables SAML login when it is set to validate signatures without the proper configuration for it
 
 - ([#40459](https://github.com/YasChat/YasChat/pull/40459) by [@dionisio-bot](https://github.com/dionisio-bot)) Allows users to search for attribute values when assigning them to rooms
 
-- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [5b291c38600757482aaf261a02487abdf5f14007]:</summary>
-  - @rocket.chat/model-typings@2.2.1
-  - @rocket.chat/core-typings@8.4.1
-  - @rocket.chat/models@2.2.1
-  - @rocket.chat/i18n@3.0.1
-  - @rocket.chat/rest-typings@8.4.1
+  - @yas chat/model-typings@2.2.1
+  - @yas chat/core-typings@8.4.1
+  - @yas chat/models@2.2.1
+  - @yas chat/i18n@3.0.1
+  - @yas chat/rest-typings@8.4.1
 
   </details>
 
@@ -4007,11 +4007,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40058](https://github.com/YasChat/YasChat/pull/40058)) Fixed UI becoming unresponsive after clicking "See on Engagement Dashboard" from the workspace info card, which required a manual page refresh to recover.
 
@@ -4021,7 +4021,7 @@
 
 - ([#39246](https://github.com/YasChat/YasChat/pull/39246)) Fixes an issue where messages appeared as unread even when all active users had read them. Read receipts now correctly ignore deactivated users.
 
-- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40051](https://github.com/YasChat/YasChat/pull/40051)) Fixes user status indicator to show disabled state when presence broadcast is turned off
 
@@ -4054,43 +4054,43 @@
 - ([#40175](https://github.com/YasChat/YasChat/pull/40175)) Fixes an issue where the Omnichannel routing system ignored the `Livechat_accept_chats_with_no_agents` setting. Now, offline agents are correctly considered for assignment when the setting allows it.
 
 - <details><summary>Updated dependencies [53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 543b6c8cbde0d084a3a923acf4845b68db80206a, 43642220a5cc8124ecc6f3956150c42c5b390c90, 2632182e429d337325fe3b1e28ea52ab12d99591, 21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 95a82f72dd45fc51d54bb1beed295315facf9109, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 5cff1f41d388b036c77a8f774f233b1921e9066e, 9713af36f5c0d673f2d2093015f322341706bab0, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, 32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, e792aba7f56f1b2ece62951087591819995a1446, f3649b22edfe6497ec2d7f3d7b8ec655466ad4a6, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 95a82f72dd45fc51d54bb1beed295315facf9109, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, f4dfb8ddc2049692371aeb084110b5768151b5df, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
-  - @rocket.chat/message-parser@0.31.36
-  - @rocket.chat/ui-composer@1.0.0
-  - @rocket.chat/ui-client@30.0.0
-  - @rocket.chat/ui-voip@20.0.0
-  - @rocket.chat/media-signaling@1.0.0
-  - @rocket.chat/media-calls@0.4.0
-  - @rocket.chat/core-services@0.14.0
-  - @rocket.chat/model-typings@2.2.0
-  - @rocket.chat/models@2.2.0
-  - @rocket.chat/core-typings@8.4.0
-  - @rocket.chat/apps-engine@1.62.0
-  - @rocket.chat/omni-core@0.1.0
-  - @rocket.chat/server-fetch@0.2.0
-  - @rocket.chat/rest-typings@8.4.0
-  - @rocket.chat/i18n@3.0.0
-  - @rocket.chat/federation-matrix@0.1.3
-  - @rocket.chat/abac@0.2.0
-  - @rocket.chat/tools@0.3.0
-  - @rocket.chat/pdf-worker@0.3.35
-  - @rocket.chat/gazzodown@30.0.0
-  - @rocket.chat/web-ui-registration@30.0.0
-  - @rocket.chat/fuselage-ui-kit@30.0.0
-  - @rocket.chat/network-broker@0.2.35
-  - @rocket.chat/omni-core-ee@0.0.21
-  - @rocket.chat/omnichannel-services@0.3.53
-  - @rocket.chat/presence@0.2.56
-  - @rocket.chat/apps@0.6.9
-  - @rocket.chat/cron@0.1.56
-  - @rocket.chat/instance-status@0.1.56
-  - @rocket.chat/license@1.1.16
-  - @rocket.chat/api-client@0.2.56
-  - @rocket.chat/http-router@7.9.23
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/ui-avatar@26.0.0
-  - @rocket.chat/ui-contexts@30.0.0
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/ui-video-conf@30.0.0
+  - @yas chat/message-parser@0.31.36
+  - @yas chat/ui-composer@1.0.0
+  - @yas chat/ui-client@30.0.0
+  - @yas chat/ui-voip@20.0.0
+  - @yas chat/media-signaling@1.0.0
+  - @yas chat/media-calls@0.4.0
+  - @yas chat/core-services@0.14.0
+  - @yas chat/model-typings@2.2.0
+  - @yas chat/models@2.2.0
+  - @yas chat/core-typings@8.4.0
+  - @yas chat/apps-engine@1.62.0
+  - @yas chat/omni-core@0.1.0
+  - @yas chat/server-fetch@0.2.0
+  - @yas chat/rest-typings@8.4.0
+  - @yas chat/i18n@3.0.0
+  - @yas chat/federation-matrix@0.1.3
+  - @yas chat/abac@0.2.0
+  - @yas chat/tools@0.3.0
+  - @yas chat/pdf-worker@0.3.35
+  - @yas chat/gazzodown@30.0.0
+  - @yas chat/web-ui-registration@30.0.0
+  - @yas chat/fuselage-ui-kit@30.0.0
+  - @yas chat/network-broker@0.2.35
+  - @yas chat/omni-core-ee@0.0.21
+  - @yas chat/omnichannel-services@0.3.53
+  - @yas chat/presence@0.2.56
+  - @yas chat/apps@0.6.9
+  - @yas chat/cron@0.1.56
+  - @yas chat/instance-status@0.1.56
+  - @yas chat/license@1.1.16
+  - @yas chat/api-client@0.2.56
+  - @yas chat/http-router@7.9.23
+  - @yas chat/message-types@0.1.1
+  - @yas chat/ui-avatar@26.0.0
+  - @yas chat/ui-contexts@30.0.0
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/ui-video-conf@30.0.0
 
   </details>
 
@@ -4098,41 +4098,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.2
-  - @rocket.chat/rest-typings@8.4.0-rc.2
-  - @rocket.chat/abac@0.2.0-rc.2
-  - @rocket.chat/federation-matrix@0.1.3-rc.2
-  - @rocket.chat/license@1.1.16-rc.2
-  - @rocket.chat/media-calls@0.4.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.53-rc.2
-  - @rocket.chat/pdf-worker@0.3.35-rc.2
-  - @rocket.chat/presence@0.2.56-rc.2
-  - @rocket.chat/api-client@0.2.56-rc.2
-  - @rocket.chat/apps@0.6.9-rc.2
-  - @rocket.chat/core-services@0.14.0-rc.2
-  - @rocket.chat/cron@0.1.56-rc.2
-  - @rocket.chat/fuselage-ui-kit@30.0.0-rc.2
-  - @rocket.chat/gazzodown@30.0.0-rc.2
-  - @rocket.chat/http-router@7.9.23-rc.2
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/model-typings@2.2.0-rc.2
-  - @rocket.chat/models@2.2.0-rc.2
-  - @rocket.chat/ui-avatar@26.0.0-rc.2
-  - @rocket.chat/ui-client@30.0.0-rc.2
-  - @rocket.chat/ui-contexts@30.0.0-rc.2
-  - @rocket.chat/ui-voip@20.0.0-rc.2
-  - @rocket.chat/web-ui-registration@30.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/network-broker@0.2.35-rc.2
-  - @rocket.chat/omni-core-ee@0.0.21-rc.2
-  - @rocket.chat/instance-status@0.1.56-rc.2
-  - @rocket.chat/omni-core@0.1.0-rc.2
-  - @rocket.chat/server-fetch@0.2.0-rc.2
-  - @rocket.chat/ui-video-conf@30.0.0-rc.2
-  - @rocket.chat/ui-composer@1.0.0-rc.2
+  - @yas chat/core-typings@8.4.0-rc.2
+  - @yas chat/rest-typings@8.4.0-rc.2
+  - @yas chat/abac@0.2.0-rc.2
+  - @yas chat/federation-matrix@0.1.3-rc.2
+  - @yas chat/license@1.1.16-rc.2
+  - @yas chat/media-calls@0.4.0-rc.2
+  - @yas chat/omnichannel-services@0.3.53-rc.2
+  - @yas chat/pdf-worker@0.3.35-rc.2
+  - @yas chat/presence@0.2.56-rc.2
+  - @yas chat/api-client@0.2.56-rc.2
+  - @yas chat/apps@0.6.9-rc.2
+  - @yas chat/core-services@0.14.0-rc.2
+  - @yas chat/cron@0.1.56-rc.2
+  - @yas chat/fuselage-ui-kit@30.0.0-rc.2
+  - @yas chat/gazzodown@30.0.0-rc.2
+  - @yas chat/http-router@7.9.23-rc.2
+  - @yas chat/message-types@0.1.1
+  - @yas chat/model-typings@2.2.0-rc.2
+  - @yas chat/models@2.2.0-rc.2
+  - @yas chat/ui-avatar@26.0.0-rc.2
+  - @yas chat/ui-client@30.0.0-rc.2
+  - @yas chat/ui-contexts@30.0.0-rc.2
+  - @yas chat/ui-voip@20.0.0-rc.2
+  - @yas chat/web-ui-registration@30.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/network-broker@0.2.35-rc.2
+  - @yas chat/omni-core-ee@0.0.21-rc.2
+  - @yas chat/instance-status@0.1.56-rc.2
+  - @yas chat/omni-core@0.1.0-rc.2
+  - @yas chat/server-fetch@0.2.0-rc.2
+  - @yas chat/ui-video-conf@30.0.0-rc.2
+  - @yas chat/ui-composer@1.0.0-rc.2
 
   </details>
 
@@ -4140,42 +4140,42 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [2632182e429d337325fe3b1e28ea52ab12d99591]:</summary>
-  - @rocket.chat/media-signaling@1.0.0-rc.1
-  - @rocket.chat/media-calls@0.4.0-rc.1
-  - @rocket.chat/core-services@0.14.0-rc.1
-  - @rocket.chat/ui-voip@20.0.0-rc.1
-  - @rocket.chat/abac@0.2.0-rc.1
-  - @rocket.chat/federation-matrix@0.1.3-rc.1
-  - @rocket.chat/network-broker@0.2.35-rc.1
-  - @rocket.chat/omni-core-ee@0.0.21-rc.1
-  - @rocket.chat/omnichannel-services@0.3.53-rc.1
-  - @rocket.chat/presence@0.2.56-rc.1
-  - @rocket.chat/ui-contexts@30.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@30.0.0-rc.1
-  - @rocket.chat/gazzodown@30.0.0-rc.1
-  - @rocket.chat/ui-avatar@26.0.0-rc.1
-  - @rocket.chat/ui-client@30.0.0-rc.1
-  - @rocket.chat/ui-video-conf@30.0.0-rc.1
-  - @rocket.chat/web-ui-registration@30.0.0-rc.1
-  - @rocket.chat/ui-composer@1.0.0-rc.1
-  - @rocket.chat/core-typings@8.4.0-rc.1
-  - @rocket.chat/rest-typings@8.4.0-rc.1
-  - @rocket.chat/license@1.1.16-rc.1
-  - @rocket.chat/pdf-worker@0.3.35-rc.1
-  - @rocket.chat/api-client@0.2.56-rc.1
-  - @rocket.chat/apps@0.6.9-rc.1
-  - @rocket.chat/cron@0.1.56-rc.1
-  - @rocket.chat/http-router@7.9.23-rc.1
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/model-typings@2.2.0-rc.1
-  - @rocket.chat/models@2.2.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/instance-status@0.1.56-rc.1
-  - @rocket.chat/omni-core@0.1.0-rc.1
-  - @rocket.chat/server-fetch@0.2.0-rc.1
+  - @yas chat/media-signaling@1.0.0-rc.1
+  - @yas chat/media-calls@0.4.0-rc.1
+  - @yas chat/core-services@0.14.0-rc.1
+  - @yas chat/ui-voip@20.0.0-rc.1
+  - @yas chat/abac@0.2.0-rc.1
+  - @yas chat/federation-matrix@0.1.3-rc.1
+  - @yas chat/network-broker@0.2.35-rc.1
+  - @yas chat/omni-core-ee@0.0.21-rc.1
+  - @yas chat/omnichannel-services@0.3.53-rc.1
+  - @yas chat/presence@0.2.56-rc.1
+  - @yas chat/ui-contexts@30.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@30.0.0-rc.1
+  - @yas chat/gazzodown@30.0.0-rc.1
+  - @yas chat/ui-avatar@26.0.0-rc.1
+  - @yas chat/ui-client@30.0.0-rc.1
+  - @yas chat/ui-video-conf@30.0.0-rc.1
+  - @yas chat/web-ui-registration@30.0.0-rc.1
+  - @yas chat/ui-composer@1.0.0-rc.1
+  - @yas chat/core-typings@8.4.0-rc.1
+  - @yas chat/rest-typings@8.4.0-rc.1
+  - @yas chat/license@1.1.16-rc.1
+  - @yas chat/pdf-worker@0.3.35-rc.1
+  - @yas chat/api-client@0.2.56-rc.1
+  - @yas chat/apps@0.6.9-rc.1
+  - @yas chat/cron@0.1.56-rc.1
+  - @yas chat/http-router@7.9.23-rc.1
+  - @yas chat/message-types@0.1.1
+  - @yas chat/model-typings@2.2.0-rc.1
+  - @yas chat/models@2.2.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/instance-status@0.1.56-rc.1
+  - @yas chat/omni-core@0.1.0-rc.1
+  - @yas chat/server-fetch@0.2.0-rc.1
 
   </details>
 
@@ -4183,45 +4183,45 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#40130](https://github.com/YasChat/YasChat/pull/40130) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40130](https://github.com/YasChat/YasChat/pull/40130) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [356a6026dda4821a3e28752def7c8619ac860975]:</summary>
-  - @rocket.chat/apps-engine@1.61.1
-  - @rocket.chat/presence@0.2.55
-  - @rocket.chat/apps@0.6.8
-  - @rocket.chat/core-services@0.13.4
-  - @rocket.chat/core-typings@8.3.2
-  - @rocket.chat/fuselage-ui-kit@29.0.2
-  - @rocket.chat/rest-typings@8.3.2
-  - @rocket.chat/ui-voip@19.0.2
-  - @rocket.chat/abac@0.1.8
-  - @rocket.chat/federation-matrix@0.1.2
-  - @rocket.chat/license@1.1.15
-  - @rocket.chat/media-calls@0.3.2
-  - @rocket.chat/omnichannel-services@0.3.52
-  - @rocket.chat/pdf-worker@0.3.34
-  - @rocket.chat/api-client@0.2.55
-  - @rocket.chat/cron@0.1.55
-  - @rocket.chat/gazzodown@29.0.2
-  - @rocket.chat/http-router@7.9.22
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/model-typings@2.1.4
-  - @rocket.chat/ui-avatar@25.0.2
-  - @rocket.chat/ui-client@29.0.2
-  - @rocket.chat/ui-contexts@29.0.2
-  - @rocket.chat/web-ui-registration@29.0.2
-  - @rocket.chat/models@2.1.4
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/network-broker@0.2.34
-  - @rocket.chat/omni-core-ee@0.0.20
-  - @rocket.chat/ui-video-conf@29.0.2
-  - @rocket.chat/instance-status@0.1.55
-  - @rocket.chat/omni-core@0.0.20
-  - @rocket.chat/server-fetch@0.1.4
+  - @yas chat/apps-engine@1.61.1
+  - @yas chat/presence@0.2.55
+  - @yas chat/apps@0.6.8
+  - @yas chat/core-services@0.13.4
+  - @yas chat/core-typings@8.3.2
+  - @yas chat/fuselage-ui-kit@29.0.2
+  - @yas chat/rest-typings@8.3.2
+  - @yas chat/ui-voip@19.0.2
+  - @yas chat/abac@0.1.8
+  - @yas chat/federation-matrix@0.1.2
+  - @yas chat/license@1.1.15
+  - @yas chat/media-calls@0.3.2
+  - @yas chat/omnichannel-services@0.3.52
+  - @yas chat/pdf-worker@0.3.34
+  - @yas chat/api-client@0.2.55
+  - @yas chat/cron@0.1.55
+  - @yas chat/gazzodown@29.0.2
+  - @yas chat/http-router@7.9.22
+  - @yas chat/message-types@0.1.1
+  - @yas chat/model-typings@2.1.4
+  - @yas chat/ui-avatar@25.0.2
+  - @yas chat/ui-client@29.0.2
+  - @yas chat/ui-contexts@29.0.2
+  - @yas chat/web-ui-registration@29.0.2
+  - @yas chat/models@2.1.4
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/network-broker@0.2.34
+  - @yas chat/omni-core-ee@0.0.20
+  - @yas chat/ui-video-conf@29.0.2
+  - @yas chat/instance-status@0.1.55
+  - @yas chat/omni-core@0.0.20
+  - @yas chat/server-fetch@0.1.4
 
   </details>
 
@@ -4229,44 +4229,44 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#40080](https://github.com/YasChat/YasChat/pull/40080) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a bug that could remove all of a user's subscriptions when the user was re-added to a room while still banned.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.1
-  - @rocket.chat/rest-typings@8.3.1
-  - @rocket.chat/abac@0.1.7
-  - @rocket.chat/federation-matrix@0.1.1
-  - @rocket.chat/license@1.1.14
-  - @rocket.chat/media-calls@0.3.1
-  - @rocket.chat/omnichannel-services@0.3.51
-  - @rocket.chat/pdf-worker@0.3.33
-  - @rocket.chat/presence@0.2.54
-  - @rocket.chat/api-client@0.2.54
-  - @rocket.chat/apps@0.6.7
-  - @rocket.chat/core-services@0.13.3
-  - @rocket.chat/cron@0.1.54
-  - @rocket.chat/fuselage-ui-kit@29.0.1
-  - @rocket.chat/gazzodown@29.0.1
-  - @rocket.chat/http-router@7.9.21
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/model-typings@2.1.3
-  - @rocket.chat/ui-avatar@25.0.1
-  - @rocket.chat/ui-client@29.0.1
-  - @rocket.chat/ui-contexts@29.0.1
-  - @rocket.chat/ui-voip@19.0.1
-  - @rocket.chat/web-ui-registration@29.0.1
-  - @rocket.chat/models@2.1.3
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/network-broker@0.2.33
-  - @rocket.chat/omni-core-ee@0.0.19
-  - @rocket.chat/ui-video-conf@29.0.1
-  - @rocket.chat/instance-status@0.1.54
-  - @rocket.chat/omni-core@0.0.19
-  - @rocket.chat/server-fetch@0.1.3
+  - @yas chat/core-typings@8.3.1
+  - @yas chat/rest-typings@8.3.1
+  - @yas chat/abac@0.1.7
+  - @yas chat/federation-matrix@0.1.1
+  - @yas chat/license@1.1.14
+  - @yas chat/media-calls@0.3.1
+  - @yas chat/omnichannel-services@0.3.51
+  - @yas chat/pdf-worker@0.3.33
+  - @yas chat/presence@0.2.54
+  - @yas chat/api-client@0.2.54
+  - @yas chat/apps@0.6.7
+  - @yas chat/core-services@0.13.3
+  - @yas chat/cron@0.1.54
+  - @yas chat/fuselage-ui-kit@29.0.1
+  - @yas chat/gazzodown@29.0.1
+  - @yas chat/http-router@7.9.21
+  - @yas chat/message-types@0.1.1
+  - @yas chat/model-typings@2.1.3
+  - @yas chat/ui-avatar@25.0.1
+  - @yas chat/ui-client@29.0.1
+  - @yas chat/ui-contexts@29.0.1
+  - @yas chat/ui-voip@19.0.1
+  - @yas chat/web-ui-registration@29.0.1
+  - @yas chat/models@2.1.3
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/network-broker@0.2.33
+  - @yas chat/omni-core-ee@0.0.19
+  - @yas chat/ui-video-conf@29.0.1
+  - @yas chat/instance-status@0.1.54
+  - @yas chat/omni-core@0.0.19
+  - @yas chat/server-fetch@0.1.3
 
   </details>
 
@@ -4316,7 +4316,7 @@
 
 - ([#39246](https://github.com/YasChat/YasChat/pull/39246)) Fixes an issue where messages appeared as unread even when all active users had read them. Read receipts now correctly ignore deactivated users.
 
-- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#40051](https://github.com/YasChat/YasChat/pull/40051)) Fixes user status indicator to show disabled state when presence broadcast is turned off
 
@@ -4349,43 +4349,43 @@
 - ([#40175](https://github.com/YasChat/YasChat/pull/40175)) Fixes an issue where the Omnichannel routing system ignored the `Livechat_accept_chats_with_no_agents` setting. Now, offline agents are correctly considered for assignment when the setting allows it.
 
 - <details><summary>Updated dependencies [53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 543b6c8cbde0d084a3a923acf4845b68db80206a, 43642220a5cc8124ecc6f3956150c42c5b390c90, 21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 95a82f72dd45fc51d54bb1beed295315facf9109, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 5cff1f41d388b036c77a8f774f233b1921e9066e, 9713af36f5c0d673f2d2093015f322341706bab0, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, 32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, e792aba7f56f1b2ece62951087591819995a1446, f3649b22edfe6497ec2d7f3d7b8ec655466ad4a6, c544b805d1c03f8eae9d061cd48838206207a7c9, 4e99ff6c1a99ac569cf444f9de9b5fe5ac3262b2, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 95a82f72dd45fc51d54bb1beed295315facf9109, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, f4dfb8ddc2049692371aeb084110b5768151b5df, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
-  - @rocket.chat/message-parser@0.31.36-rc.0
-  - @rocket.chat/ui-composer@1.0.0-rc.0
-  - @rocket.chat/ui-client@30.0.0-rc.0
-  - @rocket.chat/ui-voip@20.0.0-rc.0
-  - @rocket.chat/media-calls@0.4.0-rc.0
-  - @rocket.chat/core-services@0.14.0-rc.0
-  - @rocket.chat/model-typings@2.2.0-rc.0
-  - @rocket.chat/models@2.2.0-rc.0
-  - @rocket.chat/media-signaling@0.3.0-rc.0
-  - @rocket.chat/core-typings@8.4.0-rc.0
-  - @rocket.chat/apps-engine@1.62.0-rc.0
-  - @rocket.chat/omni-core@0.1.0-rc.0
-  - @rocket.chat/server-fetch@0.2.0-rc.0
-  - @rocket.chat/rest-typings@8.4.0-rc.0
-  - @rocket.chat/i18n@3.0.0-rc.0
-  - @rocket.chat/federation-matrix@0.1.1-rc.0
-  - @rocket.chat/abac@0.2.0-rc.0
-  - @rocket.chat/tools@0.3.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.33-rc.0
-  - @rocket.chat/gazzodown@30.0.0-rc.0
-  - @rocket.chat/web-ui-registration@30.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@30.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.33-rc.0
-  - @rocket.chat/omni-core-ee@0.0.19-rc.0
-  - @rocket.chat/omnichannel-services@0.3.51-rc.0
-  - @rocket.chat/presence@0.2.54-rc.0
-  - @rocket.chat/apps@0.6.7-rc.0
-  - @rocket.chat/cron@0.1.54-rc.0
-  - @rocket.chat/instance-status@0.1.54-rc.0
-  - @rocket.chat/license@1.1.14-rc.0
-  - @rocket.chat/api-client@0.2.54-rc.0
-  - @rocket.chat/http-router@7.9.21-rc.0
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/ui-avatar@26.0.0-rc.0
-  - @rocket.chat/ui-contexts@30.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/ui-video-conf@30.0.0-rc.0
+  - @yas chat/message-parser@0.31.36-rc.0
+  - @yas chat/ui-composer@1.0.0-rc.0
+  - @yas chat/ui-client@30.0.0-rc.0
+  - @yas chat/ui-voip@20.0.0-rc.0
+  - @yas chat/media-calls@0.4.0-rc.0
+  - @yas chat/core-services@0.14.0-rc.0
+  - @yas chat/model-typings@2.2.0-rc.0
+  - @yas chat/models@2.2.0-rc.0
+  - @yas chat/media-signaling@0.3.0-rc.0
+  - @yas chat/core-typings@8.4.0-rc.0
+  - @yas chat/apps-engine@1.62.0-rc.0
+  - @yas chat/omni-core@0.1.0-rc.0
+  - @yas chat/server-fetch@0.2.0-rc.0
+  - @yas chat/rest-typings@8.4.0-rc.0
+  - @yas chat/i18n@3.0.0-rc.0
+  - @yas chat/federation-matrix@0.1.1-rc.0
+  - @yas chat/abac@0.2.0-rc.0
+  - @yas chat/tools@0.3.0-rc.0
+  - @yas chat/pdf-worker@0.3.33-rc.0
+  - @yas chat/gazzodown@30.0.0-rc.0
+  - @yas chat/web-ui-registration@30.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@30.0.0-rc.0
+  - @yas chat/network-broker@0.2.33-rc.0
+  - @yas chat/omni-core-ee@0.0.19-rc.0
+  - @yas chat/omnichannel-services@0.3.51-rc.0
+  - @yas chat/presence@0.2.54-rc.0
+  - @yas chat/apps@0.6.7-rc.0
+  - @yas chat/cron@0.1.54-rc.0
+  - @yas chat/instance-status@0.1.54-rc.0
+  - @yas chat/license@1.1.14-rc.0
+  - @yas chat/api-client@0.2.54-rc.0
+  - @yas chat/http-router@7.9.21-rc.0
+  - @yas chat/message-types@0.1.1
+  - @yas chat/ui-avatar@26.0.0-rc.0
+  - @yas chat/ui-contexts@30.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/ui-video-conf@30.0.0-rc.0
 
   </details>
 
@@ -4437,21 +4437,21 @@
 
 ### Patch Changes
 
-- ([#39492](https://github.com/YasChat/YasChat/pull/39492)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#39492](https://github.com/YasChat/YasChat/pull/39492)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#39010](https://github.com/YasChat/YasChat/pull/39010)) Fixes an authorization issue that allowed users to confirm uploads from other users
 
 - ([#39092](https://github.com/YasChat/YasChat/pull/39092)) Fixes main channel scroll position changing when jumping to a thread message from search
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#38531](https://github.com/YasChat/YasChat/pull/38531)) Fixes a cross-resource access issue that allowed users to retrieve emojis from the Custom Sounds endpoint and sounds from the Custom Emojis endpoint when using the FileSystem storage mode.
 
@@ -4528,59 +4528,59 @@
 - ([#38974](https://github.com/YasChat/YasChat/pull/38974) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) Add OpenAPI support for the YasChat dm.close/im.close API endpoints by migrating to a modern chained route definition syntax and utilizing shared AJV schemas for validation to enhance API documentation and ensure type safety through response validation.
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, e65b1764aad1ece3d770599e2ba0e216f41457cf, 6b80941a610085bac643d6958f6efa7c018f4bdf, d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, cd2fc208d351032c0b729755af4886665dca08b6, 87f9262af4a543d52642a54e1ef546d509a79e23, a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 788c161bb6c9544bec37034c93e2f60de1a6c316, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
-  - @rocket.chat/model-typings@2.1.2
-  - @rocket.chat/models@2.1.2
-  - @rocket.chat/federation-matrix@0.1.0
-  - @rocket.chat/message-parser@0.31.35
-  - @rocket.chat/fuselage-ui-kit@29.0.0
-  - @rocket.chat/ui-kit@1.0.0
-  - @rocket.chat/apps-engine@1.61.0
-  - @rocket.chat/rest-typings@8.3.0
-  - @rocket.chat/i18n@2.2.0
-  - @rocket.chat/ui-voip@19.0.0
-  - @rocket.chat/server-cloud-communication@0.0.3
-  - @rocket.chat/omnichannel-services@0.3.50
-  - @rocket.chat/web-ui-registration@29.0.0
-  - @rocket.chat/network-broker@0.2.32
-  - @rocket.chat/password-policies@0.1.1
-  - @rocket.chat/omni-core-ee@0.0.18
-  - @rocket.chat/instance-status@0.1.53
-  - @rocket.chat/media-signaling@0.2.0
-  - @rocket.chat/patch-injection@0.0.2
-  - @rocket.chat/media-calls@0.3.0
-  - @rocket.chat/pdf-worker@0.3.32
-  - @rocket.chat/account-utils@0.0.3
-  - @rocket.chat/core-services@0.13.2
-  - @rocket.chat/message-types@0.1.1
-  - @rocket.chat/mongo-adapter@0.0.3
-  - @rocket.chat/ui-video-conf@29.0.0
-  - @rocket.chat/cas-validate@0.0.4
-  - @rocket.chat/core-typings@8.3.0
-  - @rocket.chat/server-fetch@0.1.2
-  - @rocket.chat/presence@0.2.53
-  - @rocket.chat/http-router@7.9.20
-  - @rocket.chat/poplib@0.0.3
-  - @rocket.chat/ui-composer@0.6.0
-  - @rocket.chat/ui-contexts@29.0.0
-  - @rocket.chat/license@1.1.13
-  - @rocket.chat/api-client@0.2.53
-  - @rocket.chat/log-format@0.0.3
-  - @rocket.chat/gazzodown@29.0.0
-  - @rocket.chat/omni-core@0.0.18
-  - @rocket.chat/ui-avatar@25.0.0
-  - @rocket.chat/ui-client@29.0.0
-  - @rocket.chat/abac@0.1.6
-  - @rocket.chat/favicon@0.0.5
-  - @rocket.chat/tracing@0.0.2
-  - @rocket.chat/agenda@0.1.1
-  - @rocket.chat/base64@1.0.14
-  - @rocket.chat/logger@1.0.1
-  - @rocket.chat/random@1.2.3
-  - @rocket.chat/sha256@1.0.13
-  - @rocket.chat/tools@0.2.5
-  - @rocket.chat/apps@0.6.6
-  - @rocket.chat/cron@0.1.53
-  - @rocket.chat/jwt@0.2.1
+  - @yas chat/model-typings@2.1.2
+  - @yas chat/models@2.1.2
+  - @yas chat/federation-matrix@0.1.0
+  - @yas chat/message-parser@0.31.35
+  - @yas chat/fuselage-ui-kit@29.0.0
+  - @yas chat/ui-kit@1.0.0
+  - @yas chat/apps-engine@1.61.0
+  - @yas chat/rest-typings@8.3.0
+  - @yas chat/i18n@2.2.0
+  - @yas chat/ui-voip@19.0.0
+  - @yas chat/server-cloud-communication@0.0.3
+  - @yas chat/omnichannel-services@0.3.50
+  - @yas chat/web-ui-registration@29.0.0
+  - @yas chat/network-broker@0.2.32
+  - @yas chat/password-policies@0.1.1
+  - @yas chat/omni-core-ee@0.0.18
+  - @yas chat/instance-status@0.1.53
+  - @yas chat/media-signaling@0.2.0
+  - @yas chat/patch-injection@0.0.2
+  - @yas chat/media-calls@0.3.0
+  - @yas chat/pdf-worker@0.3.32
+  - @yas chat/account-utils@0.0.3
+  - @yas chat/core-services@0.13.2
+  - @yas chat/message-types@0.1.1
+  - @yas chat/mongo-adapter@0.0.3
+  - @yas chat/ui-video-conf@29.0.0
+  - @yas chat/cas-validate@0.0.4
+  - @yas chat/core-typings@8.3.0
+  - @yas chat/server-fetch@0.1.2
+  - @yas chat/presence@0.2.53
+  - @yas chat/http-router@7.9.20
+  - @yas chat/poplib@0.0.3
+  - @yas chat/ui-composer@0.6.0
+  - @yas chat/ui-contexts@29.0.0
+  - @yas chat/license@1.1.13
+  - @yas chat/api-client@0.2.53
+  - @yas chat/log-format@0.0.3
+  - @yas chat/gazzodown@29.0.0
+  - @yas chat/omni-core@0.0.18
+  - @yas chat/ui-avatar@25.0.0
+  - @yas chat/ui-client@29.0.0
+  - @yas chat/abac@0.1.6
+  - @yas chat/favicon@0.0.5
+  - @yas chat/tracing@0.0.2
+  - @yas chat/agenda@0.1.1
+  - @yas chat/base64@1.0.14
+  - @yas chat/logger@1.0.1
+  - @yas chat/random@1.2.3
+  - @yas chat/sha256@1.0.13
+  - @yas chat/tools@0.2.5
+  - @yas chat/apps@0.6.6
+  - @yas chat/cron@0.1.53
+  - @yas chat/jwt@0.2.1
 
   </details>
 
@@ -4588,40 +4588,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.4
-  - @rocket.chat/rest-typings@8.3.0-rc.4
-  - @rocket.chat/abac@0.1.6-rc.4
-  - @rocket.chat/federation-matrix@0.1.0-rc.4
-  - @rocket.chat/license@1.1.13-rc.4
-  - @rocket.chat/media-calls@0.3.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.50-rc.4
-  - @rocket.chat/pdf-worker@0.3.32-rc.4
-  - @rocket.chat/presence@0.2.53-rc.4
-  - @rocket.chat/api-client@0.2.53-rc.4
-  - @rocket.chat/apps@0.6.6-rc.4
-  - @rocket.chat/core-services@0.13.2-rc.4
-  - @rocket.chat/cron@0.1.53-rc.4
-  - @rocket.chat/fuselage-ui-kit@29.0.0-rc.4
-  - @rocket.chat/gazzodown@29.0.0-rc.4
-  - @rocket.chat/http-router@7.9.20-rc.4
-  - @rocket.chat/message-types@0.1.1-rc.0
-  - @rocket.chat/model-typings@2.1.2-rc.4
-  - @rocket.chat/ui-avatar@25.0.0-rc.4
-  - @rocket.chat/ui-client@29.0.0-rc.4
-  - @rocket.chat/ui-contexts@29.0.0-rc.4
-  - @rocket.chat/ui-voip@19.0.0-rc.4
-  - @rocket.chat/web-ui-registration@29.0.0-rc.4
-  - @rocket.chat/models@2.1.2-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.3-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.4
-  - @rocket.chat/omni-core-ee@0.0.18-rc.4
-  - @rocket.chat/ui-video-conf@29.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.53-rc.4
-  - @rocket.chat/omni-core@0.0.18-rc.4
-  - @rocket.chat/server-fetch@0.1.2-rc.4
+  - @yas chat/core-typings@8.3.0-rc.4
+  - @yas chat/rest-typings@8.3.0-rc.4
+  - @yas chat/abac@0.1.6-rc.4
+  - @yas chat/federation-matrix@0.1.0-rc.4
+  - @yas chat/license@1.1.13-rc.4
+  - @yas chat/media-calls@0.3.0-rc.4
+  - @yas chat/omnichannel-services@0.3.50-rc.4
+  - @yas chat/pdf-worker@0.3.32-rc.4
+  - @yas chat/presence@0.2.53-rc.4
+  - @yas chat/api-client@0.2.53-rc.4
+  - @yas chat/apps@0.6.6-rc.4
+  - @yas chat/core-services@0.13.2-rc.4
+  - @yas chat/cron@0.1.53-rc.4
+  - @yas chat/fuselage-ui-kit@29.0.0-rc.4
+  - @yas chat/gazzodown@29.0.0-rc.4
+  - @yas chat/http-router@7.9.20-rc.4
+  - @yas chat/message-types@0.1.1-rc.0
+  - @yas chat/model-typings@2.1.2-rc.4
+  - @yas chat/ui-avatar@25.0.0-rc.4
+  - @yas chat/ui-client@29.0.0-rc.4
+  - @yas chat/ui-contexts@29.0.0-rc.4
+  - @yas chat/ui-voip@19.0.0-rc.4
+  - @yas chat/web-ui-registration@29.0.0-rc.4
+  - @yas chat/models@2.1.2-rc.4
+  - @yas chat/server-cloud-communication@0.0.3-rc.0
+  - @yas chat/network-broker@0.2.32-rc.4
+  - @yas chat/omni-core-ee@0.0.18-rc.4
+  - @yas chat/ui-video-conf@29.0.0-rc.4
+  - @yas chat/instance-status@0.1.53-rc.4
+  - @yas chat/omni-core@0.0.18-rc.4
+  - @yas chat/server-fetch@0.1.2-rc.4
 
   </details>
 
@@ -4629,40 +4629,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.3
-  - @rocket.chat/rest-typings@8.3.0-rc.3
-  - @rocket.chat/abac@0.1.6-rc.3
-  - @rocket.chat/federation-matrix@0.1.0-rc.3
-  - @rocket.chat/license@1.1.13-rc.3
-  - @rocket.chat/media-calls@0.3.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.50-rc.3
-  - @rocket.chat/pdf-worker@0.3.32-rc.3
-  - @rocket.chat/presence@0.2.53-rc.3
-  - @rocket.chat/api-client@0.2.53-rc.3
-  - @rocket.chat/apps@0.6.6-rc.3
-  - @rocket.chat/core-services@0.13.2-rc.3
-  - @rocket.chat/cron@0.1.53-rc.3
-  - @rocket.chat/fuselage-ui-kit@29.0.0-rc.3
-  - @rocket.chat/gazzodown@29.0.0-rc.3
-  - @rocket.chat/http-router@7.9.20-rc.3
-  - @rocket.chat/message-types@0.1.1-rc.0
-  - @rocket.chat/model-typings@2.1.2-rc.3
-  - @rocket.chat/ui-avatar@25.0.0-rc.3
-  - @rocket.chat/ui-client@29.0.0-rc.3
-  - @rocket.chat/ui-contexts@29.0.0-rc.3
-  - @rocket.chat/ui-voip@19.0.0-rc.3
-  - @rocket.chat/web-ui-registration@29.0.0-rc.3
-  - @rocket.chat/models@2.1.2-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.3-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.3
-  - @rocket.chat/omni-core-ee@0.0.18-rc.3
-  - @rocket.chat/ui-video-conf@29.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.53-rc.3
-  - @rocket.chat/omni-core@0.0.18-rc.3
-  - @rocket.chat/server-fetch@0.1.2-rc.3
+  - @yas chat/core-typings@8.3.0-rc.3
+  - @yas chat/rest-typings@8.3.0-rc.3
+  - @yas chat/abac@0.1.6-rc.3
+  - @yas chat/federation-matrix@0.1.0-rc.3
+  - @yas chat/license@1.1.13-rc.3
+  - @yas chat/media-calls@0.3.0-rc.3
+  - @yas chat/omnichannel-services@0.3.50-rc.3
+  - @yas chat/pdf-worker@0.3.32-rc.3
+  - @yas chat/presence@0.2.53-rc.3
+  - @yas chat/api-client@0.2.53-rc.3
+  - @yas chat/apps@0.6.6-rc.3
+  - @yas chat/core-services@0.13.2-rc.3
+  - @yas chat/cron@0.1.53-rc.3
+  - @yas chat/fuselage-ui-kit@29.0.0-rc.3
+  - @yas chat/gazzodown@29.0.0-rc.3
+  - @yas chat/http-router@7.9.20-rc.3
+  - @yas chat/message-types@0.1.1-rc.0
+  - @yas chat/model-typings@2.1.2-rc.3
+  - @yas chat/ui-avatar@25.0.0-rc.3
+  - @yas chat/ui-client@29.0.0-rc.3
+  - @yas chat/ui-contexts@29.0.0-rc.3
+  - @yas chat/ui-voip@19.0.0-rc.3
+  - @yas chat/web-ui-registration@29.0.0-rc.3
+  - @yas chat/models@2.1.2-rc.3
+  - @yas chat/server-cloud-communication@0.0.3-rc.0
+  - @yas chat/network-broker@0.2.32-rc.3
+  - @yas chat/omni-core-ee@0.0.18-rc.3
+  - @yas chat/ui-video-conf@29.0.0-rc.3
+  - @yas chat/instance-status@0.1.53-rc.3
+  - @yas chat/omni-core@0.0.18-rc.3
+  - @yas chat/server-fetch@0.1.2-rc.3
 
   </details>
 
@@ -4670,40 +4670,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.2
-  - @rocket.chat/rest-typings@8.3.0-rc.2
-  - @rocket.chat/abac@0.1.6-rc.2
-  - @rocket.chat/federation-matrix@0.1.0-rc.2
-  - @rocket.chat/license@1.1.13-rc.2
-  - @rocket.chat/media-calls@0.3.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.50-rc.2
-  - @rocket.chat/pdf-worker@0.3.32-rc.2
-  - @rocket.chat/presence@0.2.53-rc.2
-  - @rocket.chat/api-client@0.2.53-rc.2
-  - @rocket.chat/apps@0.6.6-rc.2
-  - @rocket.chat/core-services@0.13.2-rc.2
-  - @rocket.chat/cron@0.1.53-rc.2
-  - @rocket.chat/fuselage-ui-kit@29.0.0-rc.2
-  - @rocket.chat/gazzodown@29.0.0-rc.2
-  - @rocket.chat/http-router@7.9.20-rc.2
-  - @rocket.chat/message-types@0.1.1-rc.0
-  - @rocket.chat/model-typings@2.1.2-rc.2
-  - @rocket.chat/ui-avatar@25.0.0-rc.2
-  - @rocket.chat/ui-client@29.0.0-rc.2
-  - @rocket.chat/ui-contexts@29.0.0-rc.2
-  - @rocket.chat/ui-voip@19.0.0-rc.2
-  - @rocket.chat/web-ui-registration@29.0.0-rc.2
-  - @rocket.chat/models@2.1.2-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.3-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.2
-  - @rocket.chat/omni-core-ee@0.0.18-rc.2
-  - @rocket.chat/ui-video-conf@29.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.53-rc.2
-  - @rocket.chat/omni-core@0.0.18-rc.2
-  - @rocket.chat/server-fetch@0.1.2-rc.2
+  - @yas chat/core-typings@8.3.0-rc.2
+  - @yas chat/rest-typings@8.3.0-rc.2
+  - @yas chat/abac@0.1.6-rc.2
+  - @yas chat/federation-matrix@0.1.0-rc.2
+  - @yas chat/license@1.1.13-rc.2
+  - @yas chat/media-calls@0.3.0-rc.2
+  - @yas chat/omnichannel-services@0.3.50-rc.2
+  - @yas chat/pdf-worker@0.3.32-rc.2
+  - @yas chat/presence@0.2.53-rc.2
+  - @yas chat/api-client@0.2.53-rc.2
+  - @yas chat/apps@0.6.6-rc.2
+  - @yas chat/core-services@0.13.2-rc.2
+  - @yas chat/cron@0.1.53-rc.2
+  - @yas chat/fuselage-ui-kit@29.0.0-rc.2
+  - @yas chat/gazzodown@29.0.0-rc.2
+  - @yas chat/http-router@7.9.20-rc.2
+  - @yas chat/message-types@0.1.1-rc.0
+  - @yas chat/model-typings@2.1.2-rc.2
+  - @yas chat/ui-avatar@25.0.0-rc.2
+  - @yas chat/ui-client@29.0.0-rc.2
+  - @yas chat/ui-contexts@29.0.0-rc.2
+  - @yas chat/ui-voip@19.0.0-rc.2
+  - @yas chat/web-ui-registration@29.0.0-rc.2
+  - @yas chat/models@2.1.2-rc.2
+  - @yas chat/server-cloud-communication@0.0.3-rc.0
+  - @yas chat/network-broker@0.2.32-rc.2
+  - @yas chat/omni-core-ee@0.0.18-rc.2
+  - @yas chat/ui-video-conf@29.0.0-rc.2
+  - @yas chat/instance-status@0.1.53-rc.2
+  - @yas chat/omni-core@0.0.18-rc.2
+  - @yas chat/server-fetch@0.1.2-rc.2
 
   </details>
 
@@ -4711,40 +4711,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.1
-  - @rocket.chat/rest-typings@8.3.0-rc.1
-  - @rocket.chat/abac@0.1.6-rc.1
-  - @rocket.chat/federation-matrix@0.1.0-rc.1
-  - @rocket.chat/license@1.1.13-rc.1
-  - @rocket.chat/media-calls@0.3.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.50-rc.1
-  - @rocket.chat/pdf-worker@0.3.32-rc.1
-  - @rocket.chat/presence@0.2.53-rc.1
-  - @rocket.chat/api-client@0.2.53-rc.1
-  - @rocket.chat/apps@0.6.6-rc.1
-  - @rocket.chat/core-services@0.13.2-rc.1
-  - @rocket.chat/cron@0.1.53-rc.1
-  - @rocket.chat/fuselage-ui-kit@29.0.0-rc.1
-  - @rocket.chat/gazzodown@29.0.0-rc.1
-  - @rocket.chat/http-router@7.9.20-rc.1
-  - @rocket.chat/message-types@0.1.1-rc.0
-  - @rocket.chat/model-typings@2.1.2-rc.1
-  - @rocket.chat/ui-avatar@25.0.0-rc.1
-  - @rocket.chat/ui-client@29.0.0-rc.1
-  - @rocket.chat/ui-contexts@29.0.0-rc.1
-  - @rocket.chat/ui-voip@19.0.0-rc.1
-  - @rocket.chat/web-ui-registration@29.0.0-rc.1
-  - @rocket.chat/models@2.1.2-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.3-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.1
-  - @rocket.chat/omni-core-ee@0.0.18-rc.1
-  - @rocket.chat/ui-video-conf@29.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.53-rc.1
-  - @rocket.chat/omni-core@0.0.18-rc.1
-  - @rocket.chat/server-fetch@0.1.2-rc.1
+  - @yas chat/core-typings@8.3.0-rc.1
+  - @yas chat/rest-typings@8.3.0-rc.1
+  - @yas chat/abac@0.1.6-rc.1
+  - @yas chat/federation-matrix@0.1.0-rc.1
+  - @yas chat/license@1.1.13-rc.1
+  - @yas chat/media-calls@0.3.0-rc.1
+  - @yas chat/omnichannel-services@0.3.50-rc.1
+  - @yas chat/pdf-worker@0.3.32-rc.1
+  - @yas chat/presence@0.2.53-rc.1
+  - @yas chat/api-client@0.2.53-rc.1
+  - @yas chat/apps@0.6.6-rc.1
+  - @yas chat/core-services@0.13.2-rc.1
+  - @yas chat/cron@0.1.53-rc.1
+  - @yas chat/fuselage-ui-kit@29.0.0-rc.1
+  - @yas chat/gazzodown@29.0.0-rc.1
+  - @yas chat/http-router@7.9.20-rc.1
+  - @yas chat/message-types@0.1.1-rc.0
+  - @yas chat/model-typings@2.1.2-rc.1
+  - @yas chat/ui-avatar@25.0.0-rc.1
+  - @yas chat/ui-client@29.0.0-rc.1
+  - @yas chat/ui-contexts@29.0.0-rc.1
+  - @yas chat/ui-voip@19.0.0-rc.1
+  - @yas chat/web-ui-registration@29.0.0-rc.1
+  - @yas chat/models@2.1.2-rc.1
+  - @yas chat/server-cloud-communication@0.0.3-rc.0
+  - @yas chat/network-broker@0.2.32-rc.1
+  - @yas chat/omni-core-ee@0.0.18-rc.1
+  - @yas chat/ui-video-conf@29.0.0-rc.1
+  - @yas chat/instance-status@0.1.53-rc.1
+  - @yas chat/omni-core@0.0.18-rc.1
+  - @yas chat/server-fetch@0.1.2-rc.1
 
   </details>
 
@@ -4792,7 +4792,7 @@
 
 ### Patch Changes
 
-- ([#39492](https://github.com/YasChat/YasChat/pull/39492)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#39492](https://github.com/YasChat/YasChat/pull/39492)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#39010](https://github.com/YasChat/YasChat/pull/39010)) Fixes an authorization issue that allowed users to confirm uploads from other users
 
@@ -4875,59 +4875,59 @@
 - ([#38974](https://github.com/YasChat/YasChat/pull/38974) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) Add OpenAPI support for the YasChat dm.close/im.close API endpoints by migrating to a modern chained route definition syntax and utilizing shared AJV schemas for validation to enhance API documentation and ensure type safety through response validation.
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, e65b1764aad1ece3d770599e2ba0e216f41457cf, 6b80941a610085bac643d6958f6efa7c018f4bdf, d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, cd2fc208d351032c0b729755af4886665dca08b6, 87f9262af4a543d52642a54e1ef546d509a79e23, a4e3c1635d55ec4ce04cbde741426770e43581fb, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae, 1741a20dd86c353755becfc706cd9ad63df09cfa, 5518503736b72674753e711ba4089d177ab988a5, a4341ec67d1f0413f30bbabfd292d1b0a41728b2, 40253146de8d8f83737e71b0ade7c67e0c295a28, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, 803b8075514de54c9ff34ba0c9aa3ee5fc3bbe61, 1361a1f4f1e3c0cc3f2a191cef8eccc12a714cde, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 2a2701098536b32143003be8d267891978c708c9, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 37acece030bc9f39bdaa86ab0130eb818332033e, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d8baf395181b70fef9ce448eb509f65b66049615, ddc0ed34b03072362d166f1160104a9332b362e8, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 4c2e444216efd514ab406fe8e9cd127ef971d566, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 78b3fe3ef20e3a545b84551ba3f85cb40e862ba7, 98a6c58a38c053c60db2b4d53a9df0e94fecf0ba, 29b453e1def8092a8d78c28736e2bfb24229717b, 39f2e87e1caa6842e69155f033205cfdc4767b9e, c117492ad90d291a361eedc929506f557495caf7, 7c7324184589a15bf3e67b4f0c1cc222f8d48db3]:</summary>
-  - @rocket.chat/model-typings@2.1.2-rc.0
-  - @rocket.chat/models@2.1.2-rc.0
-  - @rocket.chat/federation-matrix@0.1.0-rc.0
-  - @rocket.chat/message-parser@0.31.35-rc.0
-  - @rocket.chat/fuselage-ui-kit@29.0.0-rc.0
-  - @rocket.chat/ui-kit@1.0.0-rc.0
-  - @rocket.chat/apps-engine@1.61.0-rc.0
-  - @rocket.chat/rest-typings@8.3.0-rc.0
-  - @rocket.chat/i18n@2.2.0-rc.0
-  - @rocket.chat/ui-voip@19.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.3-rc.0
-  - @rocket.chat/omnichannel-services@0.3.50-rc.0
-  - @rocket.chat/web-ui-registration@29.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.0
-  - @rocket.chat/password-policies@0.1.1-rc.0
-  - @rocket.chat/omni-core-ee@0.0.18-rc.0
-  - @rocket.chat/instance-status@0.1.53-rc.0
-  - @rocket.chat/media-signaling@0.2.0-rc.0
-  - @rocket.chat/patch-injection@0.0.2-rc.0
-  - @rocket.chat/media-calls@0.3.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.32-rc.0
-  - @rocket.chat/account-utils@0.0.3-rc.0
-  - @rocket.chat/core-services@0.13.2-rc.0
-  - @rocket.chat/message-types@0.1.1-rc.0
-  - @rocket.chat/mongo-adapter@0.0.3-rc.0
-  - @rocket.chat/ui-video-conf@29.0.0-rc.0
-  - @rocket.chat/cas-validate@0.0.4-rc.0
-  - @rocket.chat/core-typings@8.3.0-rc.0
-  - @rocket.chat/server-fetch@0.1.2-rc.0
-  - @rocket.chat/presence@0.2.53-rc.0
-  - @rocket.chat/http-router@7.9.20-rc.0
-  - @rocket.chat/poplib@0.0.3-rc.0
-  - @rocket.chat/ui-composer@0.6.0-rc.0
-  - @rocket.chat/ui-contexts@29.0.0-rc.0
-  - @rocket.chat/license@1.1.13-rc.0
-  - @rocket.chat/api-client@0.2.53-rc.0
-  - @rocket.chat/log-format@0.0.3-rc.0
-  - @rocket.chat/gazzodown@29.0.0-rc.0
-  - @rocket.chat/omni-core@0.0.18-rc.0
-  - @rocket.chat/ui-avatar@25.0.0-rc.0
-  - @rocket.chat/ui-client@29.0.0-rc.0
-  - @rocket.chat/abac@0.1.6-rc.0
-  - @rocket.chat/favicon@0.0.5-rc.0
-  - @rocket.chat/tracing@0.0.2-rc.0
-  - @rocket.chat/agenda@0.1.1-rc.0
-  - @rocket.chat/base64@1.0.14-rc.0
-  - @rocket.chat/logger@1.0.1-rc.0
-  - @rocket.chat/random@1.2.3-rc.0
-  - @rocket.chat/sha256@1.0.13-rc.0
-  - @rocket.chat/tools@0.2.5-rc.0
-  - @rocket.chat/apps@0.6.6-rc.0
-  - @rocket.chat/cron@0.1.53-rc.0
-  - @rocket.chat/jwt@0.2.1-rc.0
+  - @yas chat/model-typings@2.1.2-rc.0
+  - @yas chat/models@2.1.2-rc.0
+  - @yas chat/federation-matrix@0.1.0-rc.0
+  - @yas chat/message-parser@0.31.35-rc.0
+  - @yas chat/fuselage-ui-kit@29.0.0-rc.0
+  - @yas chat/ui-kit@1.0.0-rc.0
+  - @yas chat/apps-engine@1.61.0-rc.0
+  - @yas chat/rest-typings@8.3.0-rc.0
+  - @yas chat/i18n@2.2.0-rc.0
+  - @yas chat/ui-voip@19.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.3-rc.0
+  - @yas chat/omnichannel-services@0.3.50-rc.0
+  - @yas chat/web-ui-registration@29.0.0-rc.0
+  - @yas chat/network-broker@0.2.32-rc.0
+  - @yas chat/password-policies@0.1.1-rc.0
+  - @yas chat/omni-core-ee@0.0.18-rc.0
+  - @yas chat/instance-status@0.1.53-rc.0
+  - @yas chat/media-signaling@0.2.0-rc.0
+  - @yas chat/patch-injection@0.0.2-rc.0
+  - @yas chat/media-calls@0.3.0-rc.0
+  - @yas chat/pdf-worker@0.3.32-rc.0
+  - @yas chat/account-utils@0.0.3-rc.0
+  - @yas chat/core-services@0.13.2-rc.0
+  - @yas chat/message-types@0.1.1-rc.0
+  - @yas chat/mongo-adapter@0.0.3-rc.0
+  - @yas chat/ui-video-conf@29.0.0-rc.0
+  - @yas chat/cas-validate@0.0.4-rc.0
+  - @yas chat/core-typings@8.3.0-rc.0
+  - @yas chat/server-fetch@0.1.2-rc.0
+  - @yas chat/presence@0.2.53-rc.0
+  - @yas chat/http-router@7.9.20-rc.0
+  - @yas chat/poplib@0.0.3-rc.0
+  - @yas chat/ui-composer@0.6.0-rc.0
+  - @yas chat/ui-contexts@29.0.0-rc.0
+  - @yas chat/license@1.1.13-rc.0
+  - @yas chat/api-client@0.2.53-rc.0
+  - @yas chat/log-format@0.0.3-rc.0
+  - @yas chat/gazzodown@29.0.0-rc.0
+  - @yas chat/omni-core@0.0.18-rc.0
+  - @yas chat/ui-avatar@25.0.0-rc.0
+  - @yas chat/ui-client@29.0.0-rc.0
+  - @yas chat/abac@0.1.6-rc.0
+  - @yas chat/favicon@0.0.5-rc.0
+  - @yas chat/tracing@0.0.2-rc.0
+  - @yas chat/agenda@0.1.1-rc.0
+  - @yas chat/base64@1.0.14-rc.0
+  - @yas chat/logger@1.0.1-rc.0
+  - @yas chat/random@1.2.3-rc.0
+  - @yas chat/sha256@1.0.13-rc.0
+  - @yas chat/tools@0.2.5-rc.0
+  - @yas chat/apps@0.6.6-rc.0
+  - @yas chat/cron@0.1.53-rc.0
+  - @yas chat/jwt@0.2.1-rc.0
 
   </details>
 
@@ -4935,47 +4935,47 @@
 
 ### Patch Changes
 
-- ([#39508](https://github.com/YasChat/YasChat/pull/39508) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#39508](https://github.com/YasChat/YasChat/pull/39508) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#39517](https://github.com/YasChat/YasChat/pull/39517) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes `ssrf` validation for oauth endpoints, which allows internal endpoints to be used during the auth flow.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.1
-  - @rocket.chat/rest-typings@8.2.1
-  - @rocket.chat/abac@0.1.5
-  - @rocket.chat/federation-matrix@0.0.14
-  - @rocket.chat/license@1.1.12
-  - @rocket.chat/media-calls@0.2.5
-  - @rocket.chat/omnichannel-services@0.3.49
-  - @rocket.chat/pdf-worker@0.3.31
-  - @rocket.chat/presence@0.2.52
-  - @rocket.chat/api-client@0.2.52
-  - @rocket.chat/apps@0.6.5
-  - @rocket.chat/core-services@0.13.1
-  - @rocket.chat/cron@0.1.52
-  - @rocket.chat/fuselage-ui-kit@28.0.1
-  - @rocket.chat/gazzodown@28.0.1
-  - @rocket.chat/http-router@7.9.19
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.1.1
-  - @rocket.chat/ui-avatar@24.0.1
-  - @rocket.chat/ui-client@28.0.1
-  - @rocket.chat/ui-contexts@28.0.1
-  - @rocket.chat/ui-voip@18.0.1
-  - @rocket.chat/web-ui-registration@28.0.1
-  - @rocket.chat/models@2.1.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.31
-  - @rocket.chat/omni-core-ee@0.0.17
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@28.0.1
-  - @rocket.chat/instance-status@0.1.52
-  - @rocket.chat/omni-core@0.0.17
-  - @rocket.chat/server-fetch@0.1.1
+  - @yas chat/core-typings@8.2.1
+  - @yas chat/rest-typings@8.2.1
+  - @yas chat/abac@0.1.5
+  - @yas chat/federation-matrix@0.0.14
+  - @yas chat/license@1.1.12
+  - @yas chat/media-calls@0.2.5
+  - @yas chat/omnichannel-services@0.3.49
+  - @yas chat/pdf-worker@0.3.31
+  - @yas chat/presence@0.2.52
+  - @yas chat/api-client@0.2.52
+  - @yas chat/apps@0.6.5
+  - @yas chat/core-services@0.13.1
+  - @yas chat/cron@0.1.52
+  - @yas chat/fuselage-ui-kit@28.0.1
+  - @yas chat/gazzodown@28.0.1
+  - @yas chat/http-router@7.9.19
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.1.1
+  - @yas chat/ui-avatar@24.0.1
+  - @yas chat/ui-client@28.0.1
+  - @yas chat/ui-contexts@28.0.1
+  - @yas chat/ui-voip@18.0.1
+  - @yas chat/web-ui-registration@28.0.1
+  - @yas chat/models@2.1.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.31
+  - @yas chat/omni-core-ee@0.0.17
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@28.0.1
+  - @yas chat/instance-status@0.1.52
+  - @yas chat/omni-core@0.0.17
+  - @yas chat/server-fetch@0.1.1
 
   </details>
 
@@ -4995,11 +4995,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#38374](https://github.com/YasChat/YasChat/pull/38374)) Fixes an issue where apps logs were being lost in nested requests
 
@@ -5052,41 +5052,41 @@
 - ([#38568](https://github.com/YasChat/YasChat/pull/38568)) Adds automatic cleanup of statistics collection with 1-year retention via TTL index.
 
 - <details><summary>Updated dependencies [bbc14893f10baa6d548274485d1a2470efccfd55, 11821455ea6a8c1cac2a43c433254864b8b2c5f8, d3758a7d57ab602745369ef9d2ccdbf9271cf305, 398fca05554d860a1202c7afd78912f1254257f5, 098f0a7467332f10a7bea5d435ae2ca3b5431fc9, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, a75e1f168050bd49880e0d3e1b02e36a4f53b6f8, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, d6ef0db96a60e3ad27b980af6df2e80fad1467be, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 379c2b22f54911ebf17c0872c9ca8e2baaac3609, 562d5ce6ad8afc67bef61e91939f8c21c4501610, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
-  - @rocket.chat/apps-engine@1.60.0
-  - @rocket.chat/model-typings@2.1.0
-  - @rocket.chat/core-typings@8.2.0
-  - @rocket.chat/models@2.1.0
-  - @rocket.chat/message-parser@0.31.34
-  - @rocket.chat/core-services@0.13.0
-  - @rocket.chat/i18n@2.1.0
-  - @rocket.chat/rest-typings@8.2.0
-  - @rocket.chat/http-router@7.9.18
-  - @rocket.chat/ui-voip@18.0.0
-  - @rocket.chat/server-fetch@0.1.0
-  - @rocket.chat/federation-matrix@0.0.13
-  - @rocket.chat/presence@0.2.51
-  - @rocket.chat/apps@0.6.4
-  - @rocket.chat/fuselage-ui-kit@28.0.0
-  - @rocket.chat/omnichannel-services@0.3.48
-  - @rocket.chat/abac@0.1.4
-  - @rocket.chat/license@1.1.11
-  - @rocket.chat/media-calls@0.2.4
-  - @rocket.chat/pdf-worker@0.3.30
-  - @rocket.chat/api-client@0.2.51
-  - @rocket.chat/cron@0.1.51
-  - @rocket.chat/gazzodown@28.0.0
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/ui-avatar@24.0.0
-  - @rocket.chat/ui-client@28.0.0
-  - @rocket.chat/ui-contexts@28.0.0
-  - @rocket.chat/web-ui-registration@28.0.0
-  - @rocket.chat/omni-core-ee@0.0.16
-  - @rocket.chat/instance-status@0.1.51
-  - @rocket.chat/omni-core@0.0.16
-  - @rocket.chat/network-broker@0.2.30
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@28.0.0
+  - @yas chat/apps-engine@1.60.0
+  - @yas chat/model-typings@2.1.0
+  - @yas chat/core-typings@8.2.0
+  - @yas chat/models@2.1.0
+  - @yas chat/message-parser@0.31.34
+  - @yas chat/core-services@0.13.0
+  - @yas chat/i18n@2.1.0
+  - @yas chat/rest-typings@8.2.0
+  - @yas chat/http-router@7.9.18
+  - @yas chat/ui-voip@18.0.0
+  - @yas chat/server-fetch@0.1.0
+  - @yas chat/federation-matrix@0.0.13
+  - @yas chat/presence@0.2.51
+  - @yas chat/apps@0.6.4
+  - @yas chat/fuselage-ui-kit@28.0.0
+  - @yas chat/omnichannel-services@0.3.48
+  - @yas chat/abac@0.1.4
+  - @yas chat/license@1.1.11
+  - @yas chat/media-calls@0.2.4
+  - @yas chat/pdf-worker@0.3.30
+  - @yas chat/api-client@0.2.51
+  - @yas chat/cron@0.1.51
+  - @yas chat/gazzodown@28.0.0
+  - @yas chat/message-types@0.1.0
+  - @yas chat/ui-avatar@24.0.0
+  - @yas chat/ui-client@28.0.0
+  - @yas chat/ui-contexts@28.0.0
+  - @yas chat/web-ui-registration@28.0.0
+  - @yas chat/omni-core-ee@0.0.16
+  - @yas chat/instance-status@0.1.51
+  - @yas chat/omni-core@0.0.16
+  - @yas chat/network-broker@0.2.30
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@28.0.0
 
   </details>
 
@@ -5094,41 +5094,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.2
-  - @rocket.chat/rest-typings@8.2.0-rc.2
-  - @rocket.chat/abac@0.1.4-rc.2
-  - @rocket.chat/federation-matrix@0.0.13-rc.2
-  - @rocket.chat/license@1.1.11-rc.2
-  - @rocket.chat/media-calls@0.2.4-rc.2
-  - @rocket.chat/omnichannel-services@0.3.48-rc.2
-  - @rocket.chat/pdf-worker@0.3.30-rc.2
-  - @rocket.chat/presence@0.2.51-rc.2
-  - @rocket.chat/api-client@0.2.51-rc.2
-  - @rocket.chat/apps@0.6.4-rc.2
-  - @rocket.chat/core-services@0.13.0-rc.2
-  - @rocket.chat/cron@0.1.51-rc.2
-  - @rocket.chat/fuselage-ui-kit@28.0.0-rc.2
-  - @rocket.chat/gazzodown@28.0.0-rc.2
-  - @rocket.chat/http-router@7.9.18-rc.2
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.1.0-rc.2
-  - @rocket.chat/ui-avatar@24.0.0-rc.2
-  - @rocket.chat/ui-client@28.0.0-rc.2
-  - @rocket.chat/ui-contexts@28.0.0-rc.2
-  - @rocket.chat/ui-voip@18.0.0-rc.2
-  - @rocket.chat/web-ui-registration@28.0.0-rc.2
-  - @rocket.chat/models@2.1.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.30-rc.2
-  - @rocket.chat/omni-core-ee@0.0.16-rc.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@28.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.51-rc.2
-  - @rocket.chat/omni-core@0.0.16-rc.2
-  - @rocket.chat/server-fetch@0.1.0-rc.2
+  - @yas chat/core-typings@8.2.0-rc.2
+  - @yas chat/rest-typings@8.2.0-rc.2
+  - @yas chat/abac@0.1.4-rc.2
+  - @yas chat/federation-matrix@0.0.13-rc.2
+  - @yas chat/license@1.1.11-rc.2
+  - @yas chat/media-calls@0.2.4-rc.2
+  - @yas chat/omnichannel-services@0.3.48-rc.2
+  - @yas chat/pdf-worker@0.3.30-rc.2
+  - @yas chat/presence@0.2.51-rc.2
+  - @yas chat/api-client@0.2.51-rc.2
+  - @yas chat/apps@0.6.4-rc.2
+  - @yas chat/core-services@0.13.0-rc.2
+  - @yas chat/cron@0.1.51-rc.2
+  - @yas chat/fuselage-ui-kit@28.0.0-rc.2
+  - @yas chat/gazzodown@28.0.0-rc.2
+  - @yas chat/http-router@7.9.18-rc.2
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.1.0-rc.2
+  - @yas chat/ui-avatar@24.0.0-rc.2
+  - @yas chat/ui-client@28.0.0-rc.2
+  - @yas chat/ui-contexts@28.0.0-rc.2
+  - @yas chat/ui-voip@18.0.0-rc.2
+  - @yas chat/web-ui-registration@28.0.0-rc.2
+  - @yas chat/models@2.1.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.30-rc.2
+  - @yas chat/omni-core-ee@0.0.16-rc.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@28.0.0-rc.2
+  - @yas chat/instance-status@0.1.51-rc.2
+  - @yas chat/omni-core@0.0.16-rc.2
+  - @yas chat/server-fetch@0.1.0-rc.2
 
   </details>
 
@@ -5136,41 +5136,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.1
-  - @rocket.chat/rest-typings@8.2.0-rc.1
-  - @rocket.chat/abac@0.1.4-rc.1
-  - @rocket.chat/federation-matrix@0.0.13-rc.1
-  - @rocket.chat/license@1.1.11-rc.1
-  - @rocket.chat/media-calls@0.2.4-rc.1
-  - @rocket.chat/omnichannel-services@0.3.48-rc.1
-  - @rocket.chat/pdf-worker@0.3.30-rc.1
-  - @rocket.chat/presence@0.2.51-rc.1
-  - @rocket.chat/api-client@0.2.51-rc.1
-  - @rocket.chat/apps@0.6.4-rc.1
-  - @rocket.chat/core-services@0.13.0-rc.1
-  - @rocket.chat/cron@0.1.51-rc.1
-  - @rocket.chat/fuselage-ui-kit@28.0.0-rc.1
-  - @rocket.chat/gazzodown@28.0.0-rc.1
-  - @rocket.chat/http-router@7.9.18-rc.1
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.1.0-rc.1
-  - @rocket.chat/ui-avatar@24.0.0-rc.1
-  - @rocket.chat/ui-client@28.0.0-rc.1
-  - @rocket.chat/ui-contexts@28.0.0-rc.1
-  - @rocket.chat/ui-voip@18.0.0-rc.1
-  - @rocket.chat/web-ui-registration@28.0.0-rc.1
-  - @rocket.chat/models@2.1.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.30-rc.1
-  - @rocket.chat/omni-core-ee@0.0.16-rc.1
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@28.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.51-rc.1
-  - @rocket.chat/omni-core@0.0.16-rc.1
-  - @rocket.chat/server-fetch@0.1.0-rc.1
+  - @yas chat/core-typings@8.2.0-rc.1
+  - @yas chat/rest-typings@8.2.0-rc.1
+  - @yas chat/abac@0.1.4-rc.1
+  - @yas chat/federation-matrix@0.0.13-rc.1
+  - @yas chat/license@1.1.11-rc.1
+  - @yas chat/media-calls@0.2.4-rc.1
+  - @yas chat/omnichannel-services@0.3.48-rc.1
+  - @yas chat/pdf-worker@0.3.30-rc.1
+  - @yas chat/presence@0.2.51-rc.1
+  - @yas chat/api-client@0.2.51-rc.1
+  - @yas chat/apps@0.6.4-rc.1
+  - @yas chat/core-services@0.13.0-rc.1
+  - @yas chat/cron@0.1.51-rc.1
+  - @yas chat/fuselage-ui-kit@28.0.0-rc.1
+  - @yas chat/gazzodown@28.0.0-rc.1
+  - @yas chat/http-router@7.9.18-rc.1
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.1.0-rc.1
+  - @yas chat/ui-avatar@24.0.0-rc.1
+  - @yas chat/ui-client@28.0.0-rc.1
+  - @yas chat/ui-contexts@28.0.0-rc.1
+  - @yas chat/ui-voip@18.0.0-rc.1
+  - @yas chat/web-ui-registration@28.0.0-rc.1
+  - @yas chat/models@2.1.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.30-rc.1
+  - @yas chat/omni-core-ee@0.0.16-rc.1
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@28.0.0-rc.1
+  - @yas chat/instance-status@0.1.51-rc.1
+  - @yas chat/omni-core@0.0.16-rc.1
+  - @yas chat/server-fetch@0.1.0-rc.1
 
   </details>
 
@@ -5241,41 +5241,41 @@
 - ([#38568](https://github.com/YasChat/YasChat/pull/38568)) Adds automatic cleanup of statistics collection with 1-year retention via TTL index.
 
 - <details><summary>Updated dependencies [bbc14893f10baa6d548274485d1a2470efccfd55, 11821455ea6a8c1cac2a43c433254864b8b2c5f8, d3758a7d57ab602745369ef9d2ccdbf9271cf305, 398fca05554d860a1202c7afd78912f1254257f5, 098f0a7467332f10a7bea5d435ae2ca3b5431fc9, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 88da141f3c2af6f91980c7ca8b8777161f99a068, 1c474580b768358b49c93002b1277e7065df02fe, 75d089ca40248af963d7cd2a8034c3c6de6b971e, a75e1f168050bd49880e0d3e1b02e36a4f53b6f8, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, d6ef0db96a60e3ad27b980af6df2e80fad1467be, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 379c2b22f54911ebf17c0872c9ca8e2baaac3609, 562d5ce6ad8afc67bef61e91939f8c21c4501610, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
-  - @rocket.chat/apps-engine@1.60.0-rc.0
-  - @rocket.chat/model-typings@2.1.0-rc.0
-  - @rocket.chat/core-typings@8.2.0-rc.0
-  - @rocket.chat/models@2.1.0-rc.0
-  - @rocket.chat/message-parser@0.31.34-rc.0
-  - @rocket.chat/core-services@0.13.0-rc.0
-  - @rocket.chat/i18n@2.1.0-rc.0
-  - @rocket.chat/rest-typings@8.2.0-rc.0
-  - @rocket.chat/http-router@7.9.18-rc.0
-  - @rocket.chat/ui-voip@18.0.0-rc.0
-  - @rocket.chat/server-fetch@0.1.0-rc.0
-  - @rocket.chat/federation-matrix@0.0.13-rc.0
-  - @rocket.chat/presence@0.2.51-rc.0
-  - @rocket.chat/apps@0.6.4-rc.0
-  - @rocket.chat/fuselage-ui-kit@28.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.48-rc.0
-  - @rocket.chat/abac@0.1.4-rc.0
-  - @rocket.chat/license@1.1.11-rc.0
-  - @rocket.chat/media-calls@0.2.4-rc.0
-  - @rocket.chat/pdf-worker@0.3.30-rc.0
-  - @rocket.chat/api-client@0.2.51-rc.0
-  - @rocket.chat/cron@0.1.51-rc.0
-  - @rocket.chat/gazzodown@28.0.0-rc.0
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/ui-avatar@24.0.0-rc.0
-  - @rocket.chat/ui-client@28.0.0-rc.0
-  - @rocket.chat/ui-contexts@28.0.0-rc.0
-  - @rocket.chat/web-ui-registration@28.0.0-rc.0
-  - @rocket.chat/omni-core-ee@0.0.16-rc.0
-  - @rocket.chat/instance-status@0.1.51-rc.0
-  - @rocket.chat/omni-core@0.0.16-rc.0
-  - @rocket.chat/network-broker@0.2.30-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@28.0.0-rc.0
+  - @yas chat/apps-engine@1.60.0-rc.0
+  - @yas chat/model-typings@2.1.0-rc.0
+  - @yas chat/core-typings@8.2.0-rc.0
+  - @yas chat/models@2.1.0-rc.0
+  - @yas chat/message-parser@0.31.34-rc.0
+  - @yas chat/core-services@0.13.0-rc.0
+  - @yas chat/i18n@2.1.0-rc.0
+  - @yas chat/rest-typings@8.2.0-rc.0
+  - @yas chat/http-router@7.9.18-rc.0
+  - @yas chat/ui-voip@18.0.0-rc.0
+  - @yas chat/server-fetch@0.1.0-rc.0
+  - @yas chat/federation-matrix@0.0.13-rc.0
+  - @yas chat/presence@0.2.51-rc.0
+  - @yas chat/apps@0.6.4-rc.0
+  - @yas chat/fuselage-ui-kit@28.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.48-rc.0
+  - @yas chat/abac@0.1.4-rc.0
+  - @yas chat/license@1.1.11-rc.0
+  - @yas chat/media-calls@0.2.4-rc.0
+  - @yas chat/pdf-worker@0.3.30-rc.0
+  - @yas chat/api-client@0.2.51-rc.0
+  - @yas chat/cron@0.1.51-rc.0
+  - @yas chat/gazzodown@28.0.0-rc.0
+  - @yas chat/message-types@0.1.0
+  - @yas chat/ui-avatar@24.0.0-rc.0
+  - @yas chat/ui-client@28.0.0-rc.0
+  - @yas chat/ui-contexts@28.0.0-rc.0
+  - @yas chat/web-ui-registration@28.0.0-rc.0
+  - @yas chat/omni-core-ee@0.0.16-rc.0
+  - @yas chat/instance-status@0.1.51-rc.0
+  - @yas chat/omni-core@0.0.16-rc.0
+  - @yas chat/network-broker@0.2.30-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@28.0.0-rc.0
 
   </details>
 
@@ -5283,44 +5283,44 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#38786](https://github.com/YasChat/YasChat/pull/38786) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#38786](https://github.com/YasChat/YasChat/pull/38786) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.1
-  - @rocket.chat/rest-typings@8.1.1
-  - @rocket.chat/abac@0.1.3
-  - @rocket.chat/federation-matrix@0.0.12
-  - @rocket.chat/license@1.1.10
-  - @rocket.chat/media-calls@0.2.3
-  - @rocket.chat/omnichannel-services@0.3.47
-  - @rocket.chat/pdf-worker@0.3.29
-  - @rocket.chat/presence@0.2.50
-  - @rocket.chat/api-client@0.2.50
-  - @rocket.chat/apps@0.6.3
-  - @rocket.chat/core-services@0.12.3
-  - @rocket.chat/cron@0.1.50
-  - @rocket.chat/fuselage-ui-kit@27.0.1
-  - @rocket.chat/gazzodown@27.0.1
-  - @rocket.chat/http-router@7.9.17
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.0.3
-  - @rocket.chat/ui-avatar@23.0.1
-  - @rocket.chat/ui-client@27.0.1
-  - @rocket.chat/ui-contexts@27.0.1
-  - @rocket.chat/ui-voip@17.0.1
-  - @rocket.chat/web-ui-registration@27.0.1
-  - @rocket.chat/models@2.0.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.29
-  - @rocket.chat/omni-core-ee@0.0.15
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@27.0.1
-  - @rocket.chat/instance-status@0.1.50
-  - @rocket.chat/omni-core@0.0.15
+  - @yas chat/core-typings@8.1.1
+  - @yas chat/rest-typings@8.1.1
+  - @yas chat/abac@0.1.3
+  - @yas chat/federation-matrix@0.0.12
+  - @yas chat/license@1.1.10
+  - @yas chat/media-calls@0.2.3
+  - @yas chat/omnichannel-services@0.3.47
+  - @yas chat/pdf-worker@0.3.29
+  - @yas chat/presence@0.2.50
+  - @yas chat/api-client@0.2.50
+  - @yas chat/apps@0.6.3
+  - @yas chat/core-services@0.12.3
+  - @yas chat/cron@0.1.50
+  - @yas chat/fuselage-ui-kit@27.0.1
+  - @yas chat/gazzodown@27.0.1
+  - @yas chat/http-router@7.9.17
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.0.3
+  - @yas chat/ui-avatar@23.0.1
+  - @yas chat/ui-client@27.0.1
+  - @yas chat/ui-contexts@27.0.1
+  - @yas chat/ui-voip@17.0.1
+  - @yas chat/web-ui-registration@27.0.1
+  - @yas chat/models@2.0.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.29
+  - @yas chat/omni-core-ee@0.0.15
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@27.0.1
+  - @yas chat/instance-status@0.1.50
+  - @yas chat/omni-core@0.0.15
 
   </details>
 
@@ -5338,11 +5338,11 @@
 
 - ([#38210](https://github.com/YasChat/YasChat/pull/38210)) Fixes integration saving error because of missing babel dependencies inside the docker container
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#38183](https://github.com/YasChat/YasChat/pull/38183)) Fixes `/sendEmailAttachment` to support sending multiple file attachments in a single email
 
@@ -5387,40 +5387,40 @@
 - ([#38071](https://github.com/YasChat/YasChat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, 00b36c5a59fb45573f72c5409735238a817ff5ca, e639382ee1faee44cfce44bdf6113d1b56da8692, 7b51ba84340480fa28e85c8f35d9d2f947d3250e, fd319d58a621d66c20029fd962ddb24a1a24ecc3, 719b85aa769fed231d0455bdd60f28867ceecfbe, 5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, 1e0b37f68e1622a34879c1ccf7c77c07b373e00c, 9a205633c25065fda9024184c406ac9675c3f23f, bed615ef323d4018f779cda013255ac9147e4cde, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, c547985fbb8e434f2cba0035840c1be21a2a2ddd, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e, ccd76942bf74322f21deb855af5348856463b82a]:</summary>
-  - @rocket.chat/model-typings@2.0.2
-  - @rocket.chat/models@2.0.2
-  - @rocket.chat/ui-client@27.0.0
-  - @rocket.chat/ui-voip@17.0.0
-  - @rocket.chat/pdf-worker@0.3.28
-  - @rocket.chat/core-services@0.12.2
-  - @rocket.chat/i18n@2.0.1
-  - @rocket.chat/rest-typings@8.1.0
-  - @rocket.chat/message-parser@0.31.33
-  - @rocket.chat/core-typings@8.1.0
-  - @rocket.chat/license@1.1.9
-  - @rocket.chat/apps-engine@1.59.1
-  - @rocket.chat/http-router@7.9.16
-  - @rocket.chat/omnichannel-services@0.3.46
-  - @rocket.chat/apps@0.6.2
-  - @rocket.chat/abac@0.1.2
-  - @rocket.chat/federation-matrix@0.0.11
-  - @rocket.chat/media-calls@0.2.2
-  - @rocket.chat/omni-core-ee@0.0.14
-  - @rocket.chat/presence@0.2.49
-  - @rocket.chat/cron@0.1.49
-  - @rocket.chat/instance-status@0.1.49
-  - @rocket.chat/omni-core@0.0.14
-  - @rocket.chat/gazzodown@27.0.0
-  - @rocket.chat/web-ui-registration@27.0.0
-  - @rocket.chat/network-broker@0.2.28
-  - @rocket.chat/ui-contexts@27.0.0
-  - @rocket.chat/api-client@0.2.49
-  - @rocket.chat/fuselage-ui-kit@27.0.0
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/ui-avatar@23.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@27.0.0
+  - @yas chat/model-typings@2.0.2
+  - @yas chat/models@2.0.2
+  - @yas chat/ui-client@27.0.0
+  - @yas chat/ui-voip@17.0.0
+  - @yas chat/pdf-worker@0.3.28
+  - @yas chat/core-services@0.12.2
+  - @yas chat/i18n@2.0.1
+  - @yas chat/rest-typings@8.1.0
+  - @yas chat/message-parser@0.31.33
+  - @yas chat/core-typings@8.1.0
+  - @yas chat/license@1.1.9
+  - @yas chat/apps-engine@1.59.1
+  - @yas chat/http-router@7.9.16
+  - @yas chat/omnichannel-services@0.3.46
+  - @yas chat/apps@0.6.2
+  - @yas chat/abac@0.1.2
+  - @yas chat/federation-matrix@0.0.11
+  - @yas chat/media-calls@0.2.2
+  - @yas chat/omni-core-ee@0.0.14
+  - @yas chat/presence@0.2.49
+  - @yas chat/cron@0.1.49
+  - @yas chat/instance-status@0.1.49
+  - @yas chat/omni-core@0.0.14
+  - @yas chat/gazzodown@27.0.0
+  - @yas chat/web-ui-registration@27.0.0
+  - @yas chat/network-broker@0.2.28
+  - @yas chat/ui-contexts@27.0.0
+  - @yas chat/api-client@0.2.49
+  - @yas chat/fuselage-ui-kit@27.0.0
+  - @yas chat/message-types@0.1.0
+  - @yas chat/ui-avatar@23.0.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@27.0.0
 
   </details>
 
@@ -5428,41 +5428,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [bed615ef323d4018f779cda013255ac9147e4cde]:</summary>
-  - @rocket.chat/message-parser@0.31.33-rc.0
-  - @rocket.chat/pdf-worker@0.3.28-rc.2
-  - @rocket.chat/core-services@0.12.2-rc.2
-  - @rocket.chat/core-typings@8.1.0-rc.2
-  - @rocket.chat/gazzodown@27.0.0-rc.2
-  - @rocket.chat/rest-typings@8.1.0-rc.2
-  - @rocket.chat/abac@0.1.2-rc.2
-  - @rocket.chat/federation-matrix@0.0.11-rc.2
-  - @rocket.chat/network-broker@0.2.28-rc.2
-  - @rocket.chat/omni-core-ee@0.0.14-rc.2
-  - @rocket.chat/omnichannel-services@0.3.46-rc.2
-  - @rocket.chat/presence@0.2.49-rc.2
-  - @rocket.chat/license@1.1.9-rc.2
-  - @rocket.chat/media-calls@0.2.2-rc.2
-  - @rocket.chat/api-client@0.2.49-rc.2
-  - @rocket.chat/apps@0.6.2-rc.2
-  - @rocket.chat/cron@0.1.49-rc.2
-  - @rocket.chat/fuselage-ui-kit@27.0.0-rc.2
-  - @rocket.chat/http-router@7.9.16-rc.2
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.0.2-rc.2
-  - @rocket.chat/ui-avatar@23.0.0-rc.2
-  - @rocket.chat/ui-client@27.0.0-rc.2
-  - @rocket.chat/ui-contexts@27.0.0-rc.2
-  - @rocket.chat/ui-voip@17.0.0-rc.2
-  - @rocket.chat/web-ui-registration@27.0.0-rc.2
-  - @rocket.chat/models@2.0.2-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@27.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.49-rc.2
-  - @rocket.chat/omni-core@0.0.14-rc.2
+  - @yas chat/message-parser@0.31.33-rc.0
+  - @yas chat/pdf-worker@0.3.28-rc.2
+  - @yas chat/core-services@0.12.2-rc.2
+  - @yas chat/core-typings@8.1.0-rc.2
+  - @yas chat/gazzodown@27.0.0-rc.2
+  - @yas chat/rest-typings@8.1.0-rc.2
+  - @yas chat/abac@0.1.2-rc.2
+  - @yas chat/federation-matrix@0.0.11-rc.2
+  - @yas chat/network-broker@0.2.28-rc.2
+  - @yas chat/omni-core-ee@0.0.14-rc.2
+  - @yas chat/omnichannel-services@0.3.46-rc.2
+  - @yas chat/presence@0.2.49-rc.2
+  - @yas chat/license@1.1.9-rc.2
+  - @yas chat/media-calls@0.2.2-rc.2
+  - @yas chat/api-client@0.2.49-rc.2
+  - @yas chat/apps@0.6.2-rc.2
+  - @yas chat/cron@0.1.49-rc.2
+  - @yas chat/fuselage-ui-kit@27.0.0-rc.2
+  - @yas chat/http-router@7.9.16-rc.2
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.0.2-rc.2
+  - @yas chat/ui-avatar@23.0.0-rc.2
+  - @yas chat/ui-client@27.0.0-rc.2
+  - @yas chat/ui-contexts@27.0.0-rc.2
+  - @yas chat/ui-voip@17.0.0-rc.2
+  - @yas chat/web-ui-registration@27.0.0-rc.2
+  - @yas chat/models@2.0.2-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@27.0.0-rc.2
+  - @yas chat/instance-status@0.1.49-rc.2
+  - @yas chat/omni-core@0.0.14-rc.2
 
   </details>
 
@@ -5470,42 +5470,42 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#38267](https://github.com/YasChat/YasChat/pull/38267)) Fixes an issue where web clients could remain with a stale slashcommand list during a rolling workspace update
 
 - <details><summary>Updated dependencies [fd319d58a621d66c20029fd962ddb24a1a24ecc3]:</summary>
-  - @rocket.chat/rest-typings@8.1.0-rc.1
-  - @rocket.chat/federation-matrix@0.0.10-rc.1
-  - @rocket.chat/omnichannel-services@0.3.45-rc.1
-  - @rocket.chat/presence@0.2.48-rc.1
-  - @rocket.chat/api-client@0.2.48-rc.1
-  - @rocket.chat/core-services@0.12.1-rc.1
-  - @rocket.chat/http-router@7.9.15-rc.1
-  - @rocket.chat/models@2.0.1-rc.1
-  - @rocket.chat/ui-contexts@27.0.0-rc.1
-  - @rocket.chat/web-ui-registration@27.0.0-rc.1
-  - @rocket.chat/abac@0.1.1-rc.1
-  - @rocket.chat/network-broker@0.2.27-rc.1
-  - @rocket.chat/omni-core-ee@0.0.13-rc.1
-  - @rocket.chat/media-calls@0.2.1-rc.1
-  - @rocket.chat/cron@0.1.48-rc.1
-  - @rocket.chat/instance-status@0.1.48-rc.1
-  - @rocket.chat/omni-core@0.0.13-rc.1
-  - @rocket.chat/ui-client@27.0.0-rc.1
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/fuselage-ui-kit@27.0.0-rc.1
-  - @rocket.chat/gazzodown@27.0.0-rc.1
-  - @rocket.chat/ui-avatar@23.0.0-rc.1
-  - @rocket.chat/ui-video-conf@27.0.0-rc.1
-  - @rocket.chat/ui-voip@17.0.0-rc.1
-  - @rocket.chat/core-typings@8.1.0-rc.1
-  - @rocket.chat/license@1.1.8-rc.1
-  - @rocket.chat/pdf-worker@0.3.27-rc.1
-  - @rocket.chat/apps@0.6.1-rc.1
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.0.1-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@8.1.0-rc.1
+  - @yas chat/federation-matrix@0.0.10-rc.1
+  - @yas chat/omnichannel-services@0.3.45-rc.1
+  - @yas chat/presence@0.2.48-rc.1
+  - @yas chat/api-client@0.2.48-rc.1
+  - @yas chat/core-services@0.12.1-rc.1
+  - @yas chat/http-router@7.9.15-rc.1
+  - @yas chat/models@2.0.1-rc.1
+  - @yas chat/ui-contexts@27.0.0-rc.1
+  - @yas chat/web-ui-registration@27.0.0-rc.1
+  - @yas chat/abac@0.1.1-rc.1
+  - @yas chat/network-broker@0.2.27-rc.1
+  - @yas chat/omni-core-ee@0.0.13-rc.1
+  - @yas chat/media-calls@0.2.1-rc.1
+  - @yas chat/cron@0.1.48-rc.1
+  - @yas chat/instance-status@0.1.48-rc.1
+  - @yas chat/omni-core@0.0.13-rc.1
+  - @yas chat/ui-client@27.0.0-rc.1
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/fuselage-ui-kit@27.0.0-rc.1
+  - @yas chat/gazzodown@27.0.0-rc.1
+  - @yas chat/ui-avatar@23.0.0-rc.1
+  - @yas chat/ui-video-conf@27.0.0-rc.1
+  - @yas chat/ui-voip@17.0.0-rc.1
+  - @yas chat/core-typings@8.1.0-rc.1
+  - @yas chat/license@1.1.8-rc.1
+  - @yas chat/pdf-worker@0.3.27-rc.1
+  - @yas chat/apps@0.6.1-rc.1
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.0.1-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -5564,80 +5564,80 @@
 - ([#38071](https://github.com/YasChat/YasChat/pull/38071)) Improves file upload flow to prevent buffering of contents in memory
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, 00b36c5a59fb45573f72c5409735238a817ff5ca, e639382ee1faee44cfce44bdf6113d1b56da8692, 7b51ba84340480fa28e85c8f35d9d2f947d3250e, 719b85aa769fed231d0455bdd60f28867ceecfbe, 5c3c52b1fc8b0bd52d4744614ad4d2b8e2e03937, 1e0b37f68e1622a34879c1ccf7c77c07b373e00c, 9a205633c25065fda9024184c406ac9675c3f23f, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, c547985fbb8e434f2cba0035840c1be21a2a2ddd, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e, ccd76942bf74322f21deb855af5348856463b82a]:</summary>
-  - @rocket.chat/model-typings@2.0.1-rc.0
-  - @rocket.chat/models@2.0.1-rc.0
-  - @rocket.chat/ui-client@27.0.0-rc.0
-  - @rocket.chat/ui-voip@17.0.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.27-rc.0
-  - @rocket.chat/core-services@0.12.1-rc.0
-  - @rocket.chat/i18n@2.0.1-rc.0
-  - @rocket.chat/rest-typings@8.1.0-rc.0
-  - @rocket.chat/core-typings@8.1.0-rc.0
-  - @rocket.chat/license@1.1.8-rc.0
-  - @rocket.chat/apps-engine@1.59.1-rc.0
-  - @rocket.chat/http-router@7.9.15-rc.0
-  - @rocket.chat/omnichannel-services@0.3.45-rc.0
-  - @rocket.chat/apps@0.6.1-rc.0
-  - @rocket.chat/abac@0.1.1-rc.0
-  - @rocket.chat/federation-matrix@0.0.10-rc.0
-  - @rocket.chat/media-calls@0.2.1-rc.0
-  - @rocket.chat/omni-core-ee@0.0.13-rc.0
-  - @rocket.chat/presence@0.2.48-rc.0
-  - @rocket.chat/cron@0.1.48-rc.0
-  - @rocket.chat/instance-status@0.1.48-rc.0
-  - @rocket.chat/omni-core@0.0.13-rc.0
-  - @rocket.chat/gazzodown@27.0.0-rc.0
-  - @rocket.chat/web-ui-registration@27.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.27-rc.0
-  - @rocket.chat/ui-contexts@27.0.0-rc.0
-  - @rocket.chat/api-client@0.2.48-rc.0
-  - @rocket.chat/fuselage-ui-kit@27.0.0-rc.0
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/ui-avatar@23.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@27.0.0-rc.0
+  - @yas chat/model-typings@2.0.1-rc.0
+  - @yas chat/models@2.0.1-rc.0
+  - @yas chat/ui-client@27.0.0-rc.0
+  - @yas chat/ui-voip@17.0.0-rc.0
+  - @yas chat/pdf-worker@0.3.27-rc.0
+  - @yas chat/core-services@0.12.1-rc.0
+  - @yas chat/i18n@2.0.1-rc.0
+  - @yas chat/rest-typings@8.1.0-rc.0
+  - @yas chat/core-typings@8.1.0-rc.0
+  - @yas chat/license@1.1.8-rc.0
+  - @yas chat/apps-engine@1.59.1-rc.0
+  - @yas chat/http-router@7.9.15-rc.0
+  - @yas chat/omnichannel-services@0.3.45-rc.0
+  - @yas chat/apps@0.6.1-rc.0
+  - @yas chat/abac@0.1.1-rc.0
+  - @yas chat/federation-matrix@0.0.10-rc.0
+  - @yas chat/media-calls@0.2.1-rc.0
+  - @yas chat/omni-core-ee@0.0.13-rc.0
+  - @yas chat/presence@0.2.48-rc.0
+  - @yas chat/cron@0.1.48-rc.0
+  - @yas chat/instance-status@0.1.48-rc.0
+  - @yas chat/omni-core@0.0.13-rc.0
+  - @yas chat/gazzodown@27.0.0-rc.0
+  - @yas chat/web-ui-registration@27.0.0-rc.0
+  - @yas chat/network-broker@0.2.27-rc.0
+  - @yas chat/ui-contexts@27.0.0-rc.0
+  - @yas chat/api-client@0.2.48-rc.0
+  - @yas chat/fuselage-ui-kit@27.0.0-rc.0
+  - @yas chat/message-types@0.1.0
+  - @yas chat/ui-avatar@23.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@27.0.0-rc.0
     </details>
 
 ## 8.0.1
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - Fixes an error regarding `DEBUG_DISABLE_USER_AUDIT` flag being deprecated which was preventing the server from starting up.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.1
-  - @rocket.chat/rest-typings@8.0.1
-  - @rocket.chat/abac@0.1.1
-  - @rocket.chat/federation-matrix@0.0.10
-  - @rocket.chat/license@1.1.8
-  - @rocket.chat/media-calls@0.2.1
-  - @rocket.chat/omnichannel-services@0.3.45
-  - @rocket.chat/pdf-worker@0.3.27
-  - @rocket.chat/presence@0.2.48
-  - @rocket.chat/api-client@0.2.48
-  - @rocket.chat/apps@0.6.1
-  - @rocket.chat/core-services@0.12.1
-  - @rocket.chat/cron@0.1.48
-  - @rocket.chat/fuselage-ui-kit@26.0.1
-  - @rocket.chat/gazzodown@26.0.1
-  - @rocket.chat/http-router@7.9.15
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/model-typings@2.0.1
-  - @rocket.chat/ui-avatar@22.0.1
-  - @rocket.chat/ui-client@26.0.1
-  - @rocket.chat/ui-contexts@26.0.1
-  - @rocket.chat/ui-voip@16.0.1
-  - @rocket.chat/web-ui-registration@26.0.1
-  - @rocket.chat/models@2.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.27
-  - @rocket.chat/omni-core-ee@0.0.13
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.1
-  - @rocket.chat/instance-status@0.1.48
-  - @rocket.chat/omni-core@0.0.13
+  - @yas chat/core-typings@8.0.1
+  - @yas chat/rest-typings@8.0.1
+  - @yas chat/abac@0.1.1
+  - @yas chat/federation-matrix@0.0.10
+  - @yas chat/license@1.1.8
+  - @yas chat/media-calls@0.2.1
+  - @yas chat/omnichannel-services@0.3.45
+  - @yas chat/pdf-worker@0.3.27
+  - @yas chat/presence@0.2.48
+  - @yas chat/api-client@0.2.48
+  - @yas chat/apps@0.6.1
+  - @yas chat/core-services@0.12.1
+  - @yas chat/cron@0.1.48
+  - @yas chat/fuselage-ui-kit@26.0.1
+  - @yas chat/gazzodown@26.0.1
+  - @yas chat/http-router@7.9.15
+  - @yas chat/message-types@0.1.0
+  - @yas chat/model-typings@2.0.1
+  - @yas chat/ui-avatar@22.0.1
+  - @yas chat/ui-client@26.0.1
+  - @yas chat/ui-contexts@26.0.1
+  - @yas chat/ui-voip@16.0.1
+  - @yas chat/web-ui-registration@26.0.1
+  - @yas chat/models@2.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.27
+  - @yas chat/omni-core-ee@0.0.13
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.1
+  - @yas chat/instance-status@0.1.48
+  - @yas chat/omni-core@0.0.13
 
   </details>
 
@@ -5798,17 +5798,17 @@
 
 - ([#37690](https://github.com/YasChat/YasChat/pull/37690) by [@lucas-a-pelegrino](https://github.com/lucas-a-pelegrino)) Adds a deprecation warning for `livechat:saveBusinessHour` and new endpoint replacing it; `livechat/business-hours.save`
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37612](https://github.com/YasChat/YasChat/pull/37612)) Adds invitation request support to rooms
 
@@ -5820,7 +5820,7 @@
 
 - ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37874](https://github.com/YasChat/YasChat/pull/37874)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#37874](https://github.com/YasChat/YasChat/pull/37874)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36822](https://github.com/YasChat/YasChat/pull/36822)) Removes deprecated meteor method `unmuteUserInRoom`
 
@@ -5887,44 +5887,44 @@
 - ([#37775](https://github.com/YasChat/YasChat/pull/37775) by [@lucas-a-pelegrino](https://github.com/lucas-a-pelegrino)) Adds deprecation warning for `livechat:removeBusinessHour` and new endpoint to replace it; `livechat/business-hours.remove`
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, 04d24848bd8733caefc45d42c53f004177865a53, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 0ccb9692b434bc88b4bc5009d39e024c03f01b86, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, 0c0258604632342f42fc36cabac2d6cfe0e477c4, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, 70872896b912004dc016297b6e875d873d81dc3a, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, 94b87d9ef40647d77fe83f3f84dca46a94515b39, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, d3538e7045c41f91b8c561d44e5485ff93b93745, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, 9e03ed5c5ea829c62c2da2de9413a27a4696f8a3, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, 4793aca8796d8a3b4c645a2ed685028067119d8d, 0b660a5933b137ae142d78318d8c4022f1f4f1ca, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, f056c451c2926e849f52b95fed957945398ef5f6, cb3c5e3455606a045f95f168dae6ed32a387697c, ae1e2faaeb6f7a086f8affde4c8a81e55e2a0e04, 5b3f93c47a03b628d613a77005e92021cd6cee4b, 8bf0bab1eb84f903976b7833691d17236eac8dcd, 55dc368f3f679e93bffb9f04efe3944832cf3336]:</summary>
-  - @rocket.chat/rest-typings@8.0.0
-  - @rocket.chat/web-ui-registration@26.0.0
-  - @rocket.chat/apps-engine@1.59.0
-  - @rocket.chat/apps@0.6.0
-  - @rocket.chat/core-typings@8.0.0
-  - @rocket.chat/i18n@2.0.0
-  - @rocket.chat/media-calls@0.2.0
-  - @rocket.chat/model-typings@2.0.0
-  - @rocket.chat/ui-contexts@26.0.0
-  - @rocket.chat/ui-voip@16.0.0
-  - @rocket.chat/models@2.0.0
-  - @rocket.chat/core-services@0.12.0
-  - @rocket.chat/message-types@0.1.0
-  - @rocket.chat/federation-matrix@0.0.9
-  - @rocket.chat/gazzodown@26.0.0
-  - @rocket.chat/ui-client@26.0.0
-  - @rocket.chat/fuselage-ui-kit@26.0.0
-  - @rocket.chat/media-signaling@0.1.1
-  - @rocket.chat/ui-kit@0.39.0
-  - @rocket.chat/abac@0.1.0
-  - @rocket.chat/jwt@0.2.0
-  - @rocket.chat/tools@0.2.4
-  - @rocket.chat/presence@0.2.47
-  - @rocket.chat/logger@1.0.0
-  - @rocket.chat/omnichannel-services@0.3.44
-  - @rocket.chat/api-client@0.2.47
-  - @rocket.chat/http-router@7.9.14
-  - @rocket.chat/license@1.1.7
-  - @rocket.chat/pdf-worker@0.3.26
-  - @rocket.chat/cron@0.1.47
-  - @rocket.chat/ui-avatar@22.0.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0
-  - @rocket.chat/omni-core-ee@0.0.12
-  - @rocket.chat/instance-status@0.1.47
-  - @rocket.chat/omni-core@0.0.12
-  - @rocket.chat/network-broker@0.2.26
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@8.0.0
+  - @yas chat/web-ui-registration@26.0.0
+  - @yas chat/apps-engine@1.59.0
+  - @yas chat/apps@0.6.0
+  - @yas chat/core-typings@8.0.0
+  - @yas chat/i18n@2.0.0
+  - @yas chat/media-calls@0.2.0
+  - @yas chat/model-typings@2.0.0
+  - @yas chat/ui-contexts@26.0.0
+  - @yas chat/ui-voip@16.0.0
+  - @yas chat/models@2.0.0
+  - @yas chat/core-services@0.12.0
+  - @yas chat/message-types@0.1.0
+  - @yas chat/federation-matrix@0.0.9
+  - @yas chat/gazzodown@26.0.0
+  - @yas chat/ui-client@26.0.0
+  - @yas chat/fuselage-ui-kit@26.0.0
+  - @yas chat/media-signaling@0.1.1
+  - @yas chat/ui-kit@0.39.0
+  - @yas chat/abac@0.1.0
+  - @yas chat/jwt@0.2.0
+  - @yas chat/tools@0.2.4
+  - @yas chat/presence@0.2.47
+  - @yas chat/logger@1.0.0
+  - @yas chat/omnichannel-services@0.3.44
+  - @yas chat/api-client@0.2.47
+  - @yas chat/http-router@7.9.14
+  - @yas chat/license@1.1.7
+  - @yas chat/pdf-worker@0.3.26
+  - @yas chat/cron@0.1.47
+  - @yas chat/ui-avatar@22.0.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0
+  - @yas chat/omni-core-ee@0.0.12
+  - @yas chat/instance-status@0.1.47
+  - @yas chat/omni-core@0.0.12
+  - @yas chat/network-broker@0.2.26
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -5932,40 +5932,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.5
-  - @rocket.chat/rest-typings@8.0.0-rc.5
-  - @rocket.chat/abac@0.1.0-rc.5
-  - @rocket.chat/federation-matrix@0.0.9-rc.5
-  - @rocket.chat/license@1.1.7-rc.5
-  - @rocket.chat/media-calls@0.2.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.44-rc.5
-  - @rocket.chat/pdf-worker@0.3.26-rc.5
-  - @rocket.chat/presence@0.2.47-rc.5
-  - @rocket.chat/api-client@0.2.47-rc.5
-  - @rocket.chat/apps@0.6.0-rc.5
-  - @rocket.chat/core-services@0.12.0-rc.5
-  - @rocket.chat/cron@0.1.47-rc.5
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.5
-  - @rocket.chat/gazzodown@26.0.0-rc.5
-  - @rocket.chat/http-router@7.9.14-rc.5
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.5
-  - @rocket.chat/ui-avatar@22.0.0-rc.5
-  - @rocket.chat/ui-client@26.0.0-rc.5
-  - @rocket.chat/ui-contexts@26.0.0-rc.5
-  - @rocket.chat/ui-voip@16.0.0-rc.5
-  - @rocket.chat/web-ui-registration@26.0.0-rc.5
-  - @rocket.chat/models@2.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.26-rc.5
-  - @rocket.chat/omni-core-ee@0.0.12-rc.5
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.47-rc.5
-  - @rocket.chat/omni-core@0.0.12-rc.5
+  - @yas chat/core-typings@8.0.0-rc.5
+  - @yas chat/rest-typings@8.0.0-rc.5
+  - @yas chat/abac@0.1.0-rc.5
+  - @yas chat/federation-matrix@0.0.9-rc.5
+  - @yas chat/license@1.1.7-rc.5
+  - @yas chat/media-calls@0.2.0-rc.5
+  - @yas chat/omnichannel-services@0.3.44-rc.5
+  - @yas chat/pdf-worker@0.3.26-rc.5
+  - @yas chat/presence@0.2.47-rc.5
+  - @yas chat/api-client@0.2.47-rc.5
+  - @yas chat/apps@0.6.0-rc.5
+  - @yas chat/core-services@0.12.0-rc.5
+  - @yas chat/cron@0.1.47-rc.5
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.5
+  - @yas chat/gazzodown@26.0.0-rc.5
+  - @yas chat/http-router@7.9.14-rc.5
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.5
+  - @yas chat/ui-avatar@22.0.0-rc.5
+  - @yas chat/ui-client@26.0.0-rc.5
+  - @yas chat/ui-contexts@26.0.0-rc.5
+  - @yas chat/ui-voip@16.0.0-rc.5
+  - @yas chat/web-ui-registration@26.0.0-rc.5
+  - @yas chat/models@2.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.26-rc.5
+  - @yas chat/omni-core-ee@0.0.12-rc.5
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0-rc.5
+  - @yas chat/instance-status@0.1.47-rc.5
+  - @yas chat/omni-core@0.0.12-rc.5
 
   </details>
 
@@ -5973,40 +5973,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.4
-  - @rocket.chat/rest-typings@8.0.0-rc.4
-  - @rocket.chat/abac@0.1.0-rc.4
-  - @rocket.chat/federation-matrix@0.0.9-rc.4
-  - @rocket.chat/license@1.1.7-rc.4
-  - @rocket.chat/media-calls@0.2.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.44-rc.4
-  - @rocket.chat/pdf-worker@0.3.26-rc.4
-  - @rocket.chat/presence@0.2.47-rc.4
-  - @rocket.chat/api-client@0.2.47-rc.4
-  - @rocket.chat/apps@0.6.0-rc.4
-  - @rocket.chat/core-services@0.12.0-rc.4
-  - @rocket.chat/cron@0.1.47-rc.4
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.4
-  - @rocket.chat/gazzodown@26.0.0-rc.4
-  - @rocket.chat/http-router@7.9.14-rc.4
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.4
-  - @rocket.chat/ui-avatar@22.0.0-rc.4
-  - @rocket.chat/ui-client@26.0.0-rc.4
-  - @rocket.chat/ui-contexts@26.0.0-rc.4
-  - @rocket.chat/ui-voip@16.0.0-rc.4
-  - @rocket.chat/web-ui-registration@26.0.0-rc.4
-  - @rocket.chat/models@2.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.26-rc.4
-  - @rocket.chat/omni-core-ee@0.0.12-rc.4
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.47-rc.4
-  - @rocket.chat/omni-core@0.0.12-rc.4
+  - @yas chat/core-typings@8.0.0-rc.4
+  - @yas chat/rest-typings@8.0.0-rc.4
+  - @yas chat/abac@0.1.0-rc.4
+  - @yas chat/federation-matrix@0.0.9-rc.4
+  - @yas chat/license@1.1.7-rc.4
+  - @yas chat/media-calls@0.2.0-rc.4
+  - @yas chat/omnichannel-services@0.3.44-rc.4
+  - @yas chat/pdf-worker@0.3.26-rc.4
+  - @yas chat/presence@0.2.47-rc.4
+  - @yas chat/api-client@0.2.47-rc.4
+  - @yas chat/apps@0.6.0-rc.4
+  - @yas chat/core-services@0.12.0-rc.4
+  - @yas chat/cron@0.1.47-rc.4
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.4
+  - @yas chat/gazzodown@26.0.0-rc.4
+  - @yas chat/http-router@7.9.14-rc.4
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.4
+  - @yas chat/ui-avatar@22.0.0-rc.4
+  - @yas chat/ui-client@26.0.0-rc.4
+  - @yas chat/ui-contexts@26.0.0-rc.4
+  - @yas chat/ui-voip@16.0.0-rc.4
+  - @yas chat/web-ui-registration@26.0.0-rc.4
+  - @yas chat/models@2.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.26-rc.4
+  - @yas chat/omni-core-ee@0.0.12-rc.4
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0-rc.4
+  - @yas chat/instance-status@0.1.47-rc.4
+  - @yas chat/omni-core@0.0.12-rc.4
 
   </details>
 
@@ -6014,41 +6014,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [ae1e2faaeb6f7a086f8affde4c8a81e55e2a0e04]:</summary>
-  - @rocket.chat/media-signaling@0.1.1-rc.1
-  - @rocket.chat/media-calls@0.2.0-rc.3
-  - @rocket.chat/core-services@0.12.0-rc.3
-  - @rocket.chat/ui-voip@16.0.0-rc.3
-  - @rocket.chat/abac@0.1.0-rc.3
-  - @rocket.chat/federation-matrix@0.0.9-rc.3
-  - @rocket.chat/network-broker@0.2.26-rc.3
-  - @rocket.chat/omni-core-ee@0.0.12-rc.3
-  - @rocket.chat/omnichannel-services@0.3.44-rc.3
-  - @rocket.chat/presence@0.2.47-rc.3
-  - @rocket.chat/ui-contexts@26.0.0-rc.3
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.3
-  - @rocket.chat/gazzodown@26.0.0-rc.3
-  - @rocket.chat/ui-avatar@22.0.0-rc.3
-  - @rocket.chat/ui-client@26.0.0-rc.3
-  - @rocket.chat/ui-video-conf@26.0.0-rc.3
-  - @rocket.chat/web-ui-registration@26.0.0-rc.3
-  - @rocket.chat/core-typings@8.0.0-rc.3
-  - @rocket.chat/rest-typings@8.0.0-rc.3
-  - @rocket.chat/license@1.1.7-rc.3
-  - @rocket.chat/pdf-worker@0.3.26-rc.3
-  - @rocket.chat/api-client@0.2.47-rc.3
-  - @rocket.chat/apps@0.6.0-rc.3
-  - @rocket.chat/cron@0.1.47-rc.3
-  - @rocket.chat/http-router@7.9.14-rc.3
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.3
-  - @rocket.chat/models@2.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/instance-status@0.1.47-rc.3
-  - @rocket.chat/omni-core@0.0.12-rc.3
+  - @yas chat/media-signaling@0.1.1-rc.1
+  - @yas chat/media-calls@0.2.0-rc.3
+  - @yas chat/core-services@0.12.0-rc.3
+  - @yas chat/ui-voip@16.0.0-rc.3
+  - @yas chat/abac@0.1.0-rc.3
+  - @yas chat/federation-matrix@0.0.9-rc.3
+  - @yas chat/network-broker@0.2.26-rc.3
+  - @yas chat/omni-core-ee@0.0.12-rc.3
+  - @yas chat/omnichannel-services@0.3.44-rc.3
+  - @yas chat/presence@0.2.47-rc.3
+  - @yas chat/ui-contexts@26.0.0-rc.3
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.3
+  - @yas chat/gazzodown@26.0.0-rc.3
+  - @yas chat/ui-avatar@22.0.0-rc.3
+  - @yas chat/ui-client@26.0.0-rc.3
+  - @yas chat/ui-video-conf@26.0.0-rc.3
+  - @yas chat/web-ui-registration@26.0.0-rc.3
+  - @yas chat/core-typings@8.0.0-rc.3
+  - @yas chat/rest-typings@8.0.0-rc.3
+  - @yas chat/license@1.1.7-rc.3
+  - @yas chat/pdf-worker@0.3.26-rc.3
+  - @yas chat/api-client@0.2.47-rc.3
+  - @yas chat/apps@0.6.0-rc.3
+  - @yas chat/cron@0.1.47-rc.3
+  - @yas chat/http-router@7.9.14-rc.3
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.3
+  - @yas chat/models@2.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/instance-status@0.1.47-rc.3
+  - @yas chat/omni-core@0.0.12-rc.3
 
   </details>
 
@@ -6056,42 +6056,42 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#38007](https://github.com/YasChat/YasChat/pull/38007)) Changes the HTTP code of `/api/v1/method.call` and `/api/v1/method.callAnon` in case of internal errors
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.2
-  - @rocket.chat/rest-typings@8.0.0-rc.2
-  - @rocket.chat/abac@0.1.0-rc.2
-  - @rocket.chat/federation-matrix@0.0.9-rc.2
-  - @rocket.chat/license@1.1.7-rc.2
-  - @rocket.chat/media-calls@0.2.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.44-rc.2
-  - @rocket.chat/pdf-worker@0.3.26-rc.2
-  - @rocket.chat/presence@0.2.47-rc.2
-  - @rocket.chat/api-client@0.2.47-rc.2
-  - @rocket.chat/apps@0.6.0-rc.2
-  - @rocket.chat/core-services@0.12.0-rc.2
-  - @rocket.chat/cron@0.1.47-rc.2
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.2
-  - @rocket.chat/gazzodown@26.0.0-rc.2
-  - @rocket.chat/http-router@7.9.14-rc.2
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.2
-  - @rocket.chat/ui-avatar@22.0.0-rc.2
-  - @rocket.chat/ui-client@26.0.0-rc.2
-  - @rocket.chat/ui-contexts@26.0.0-rc.2
-  - @rocket.chat/ui-voip@16.0.0-rc.2
-  - @rocket.chat/web-ui-registration@26.0.0-rc.2
-  - @rocket.chat/models@2.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.26-rc.2
-  - @rocket.chat/omni-core-ee@0.0.12-rc.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.47-rc.2
-  - @rocket.chat/omni-core@0.0.12-rc.2
+  - @yas chat/core-typings@8.0.0-rc.2
+  - @yas chat/rest-typings@8.0.0-rc.2
+  - @yas chat/abac@0.1.0-rc.2
+  - @yas chat/federation-matrix@0.0.9-rc.2
+  - @yas chat/license@1.1.7-rc.2
+  - @yas chat/media-calls@0.2.0-rc.2
+  - @yas chat/omnichannel-services@0.3.44-rc.2
+  - @yas chat/pdf-worker@0.3.26-rc.2
+  - @yas chat/presence@0.2.47-rc.2
+  - @yas chat/api-client@0.2.47-rc.2
+  - @yas chat/apps@0.6.0-rc.2
+  - @yas chat/core-services@0.12.0-rc.2
+  - @yas chat/cron@0.1.47-rc.2
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.2
+  - @yas chat/gazzodown@26.0.0-rc.2
+  - @yas chat/http-router@7.9.14-rc.2
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.2
+  - @yas chat/ui-avatar@22.0.0-rc.2
+  - @yas chat/ui-client@26.0.0-rc.2
+  - @yas chat/ui-contexts@26.0.0-rc.2
+  - @yas chat/ui-voip@16.0.0-rc.2
+  - @yas chat/web-ui-registration@26.0.0-rc.2
+  - @yas chat/models@2.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.26-rc.2
+  - @yas chat/omni-core-ee@0.0.12-rc.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0-rc.2
+  - @yas chat/instance-status@0.1.47-rc.2
+  - @yas chat/omni-core@0.0.12-rc.2
 
   </details>
 
@@ -6099,40 +6099,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.1
-  - @rocket.chat/rest-typings@8.0.0-rc.1
-  - @rocket.chat/abac@0.1.0-rc.1
-  - @rocket.chat/federation-matrix@0.0.9-rc.1
-  - @rocket.chat/license@1.1.7-rc.1
-  - @rocket.chat/media-calls@0.2.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.44-rc.1
-  - @rocket.chat/pdf-worker@0.3.26-rc.1
-  - @rocket.chat/presence@0.2.47-rc.1
-  - @rocket.chat/api-client@0.2.47-rc.1
-  - @rocket.chat/apps@0.6.0-rc.1
-  - @rocket.chat/core-services@0.12.0-rc.1
-  - @rocket.chat/cron@0.1.47-rc.1
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.1
-  - @rocket.chat/gazzodown@26.0.0-rc.1
-  - @rocket.chat/http-router@7.9.14-rc.1
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.1
-  - @rocket.chat/ui-avatar@22.0.0-rc.1
-  - @rocket.chat/ui-client@26.0.0-rc.1
-  - @rocket.chat/ui-contexts@26.0.0-rc.1
-  - @rocket.chat/ui-voip@16.0.0-rc.1
-  - @rocket.chat/web-ui-registration@26.0.0-rc.1
-  - @rocket.chat/models@2.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.26-rc.1
-  - @rocket.chat/omni-core-ee@0.0.12-rc.1
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.47-rc.1
-  - @rocket.chat/omni-core@0.0.12-rc.1
+  - @yas chat/core-typings@8.0.0-rc.1
+  - @yas chat/rest-typings@8.0.0-rc.1
+  - @yas chat/abac@0.1.0-rc.1
+  - @yas chat/federation-matrix@0.0.9-rc.1
+  - @yas chat/license@1.1.7-rc.1
+  - @yas chat/media-calls@0.2.0-rc.1
+  - @yas chat/omnichannel-services@0.3.44-rc.1
+  - @yas chat/pdf-worker@0.3.26-rc.1
+  - @yas chat/presence@0.2.47-rc.1
+  - @yas chat/api-client@0.2.47-rc.1
+  - @yas chat/apps@0.6.0-rc.1
+  - @yas chat/core-services@0.12.0-rc.1
+  - @yas chat/cron@0.1.47-rc.1
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.1
+  - @yas chat/gazzodown@26.0.0-rc.1
+  - @yas chat/http-router@7.9.14-rc.1
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.1
+  - @yas chat/ui-avatar@22.0.0-rc.1
+  - @yas chat/ui-client@26.0.0-rc.1
+  - @yas chat/ui-contexts@26.0.0-rc.1
+  - @yas chat/ui-voip@16.0.0-rc.1
+  - @yas chat/web-ui-registration@26.0.0-rc.1
+  - @yas chat/models@2.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.26-rc.1
+  - @yas chat/omni-core-ee@0.0.12-rc.1
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0-rc.1
+  - @yas chat/instance-status@0.1.47-rc.1
+  - @yas chat/omni-core@0.0.12-rc.1
 
   </details>
 
@@ -6303,7 +6303,7 @@
 
 - ([#37791](https://github.com/YasChat/YasChat/pull/37791)) Fixes an issue where cases of invites that were canceled or disinvited were not being handled.
 
-- ([#37874](https://github.com/YasChat/YasChat/pull/37874)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#37874](https://github.com/YasChat/YasChat/pull/37874)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36822](https://github.com/YasChat/YasChat/pull/36822)) Removes deprecated meteor method `unmuteUserInRoom`
 
@@ -6368,44 +6368,44 @@
 - ([#37775](https://github.com/YasChat/YasChat/pull/37775)) Adds deprecation warning for `livechat:removeBusinessHour` and new endpoint to replace it; `livechat/business-hours.remove`
 
 - <details><summary>Updated dependencies [347b8f973440f3e2239f79c00c2d9b430859eef2, 04d24848bd8733caefc45d42c53f004177865a53, b802430fbfdc7fa69a976468dc6dee6f3c4de26f, 872da49986436d2efa65fc42e416b45d706fd59c, 0ccb9692b434bc88b4bc5009d39e024c03f01b86, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, 0c0258604632342f42fc36cabac2d6cfe0e477c4, f3f0b273ab49e9d1048ba43d52eb36005274905e, ac11ea05ffadeca978c794ff38d5199d9acb2c29, a1d65f493fdb039d34ef4f65d243a97931763f4b, 70872896b912004dc016297b6e875d873d81dc3a, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, 94b87d9ef40647d77fe83f3f84dca46a94515b39, ddc935727e9a7275813006d9dcaa7fe866610844, 733c94b996204151f580de2dd7f3402124b70977, d3538e7045c41f91b8c561d44e5485ff93b93745, a5a7343a835b04812c70699be1b13e54f0e10d48, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, 476a070b0099b95e4c463ee85960c4dcfbd87120, 239f4b1171bcf448cfba345cc90c4b5cd7c21afc, 9e03ed5c5ea829c62c2da2de9413a27a4696f8a3, dc67590d14d510b069dee074c55314c56f74bb11, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, 4793aca8796d8a3b4c645a2ed685028067119d8d, 0b660a5933b137ae142d78318d8c4022f1f4f1ca, dccdcc5b4a0da4814f72a020bc4eccb8ea2497d8, 5ac1863be4c6e82666989f4b569928c0805691ff, ec0f8b435dd12c218adffa8892737c7ced4debb8, f056c451c2926e849f52b95fed957945398ef5f6, cb3c5e3455606a045f95f168dae6ed32a387697c, 5b3f93c47a03b628d613a77005e92021cd6cee4b, 8bf0bab1eb84f903976b7833691d17236eac8dcd, 55dc368f3f679e93bffb9f04efe3944832cf3336]:</summary>
-  - @rocket.chat/rest-typings@8.0.0-rc.0
-  - @rocket.chat/web-ui-registration@26.0.0-rc.0
-  - @rocket.chat/apps-engine@1.59.0-rc.0
-  - @rocket.chat/apps@0.6.0-rc.0
-  - @rocket.chat/core-typings@8.0.0-rc.0
-  - @rocket.chat/i18n@2.0.0-rc.0
-  - @rocket.chat/media-calls@0.2.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.0
-  - @rocket.chat/ui-contexts@26.0.0-rc.0
-  - @rocket.chat/ui-voip@16.0.0-rc.0
-  - @rocket.chat/models@2.0.0-rc.0
-  - @rocket.chat/core-services@0.12.0-rc.0
-  - @rocket.chat/message-types@0.1.0-rc.0
-  - @rocket.chat/federation-matrix@0.0.9-rc.0
-  - @rocket.chat/gazzodown@26.0.0-rc.0
-  - @rocket.chat/ui-client@26.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@26.0.0-rc.0
-  - @rocket.chat/media-signaling@0.1.1-rc.0
-  - @rocket.chat/ui-kit@0.39.0-rc.0
-  - @rocket.chat/abac@0.1.0-rc.0
-  - @rocket.chat/jwt@0.2.0-rc.0
-  - @rocket.chat/tools@0.2.4-rc.0
-  - @rocket.chat/presence@0.2.47-rc.0
-  - @rocket.chat/logger@1.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.44-rc.0
-  - @rocket.chat/api-client@0.2.47-rc.0
-  - @rocket.chat/http-router@7.9.14-rc.0
-  - @rocket.chat/license@1.1.7-rc.0
-  - @rocket.chat/pdf-worker@0.3.26-rc.0
-  - @rocket.chat/cron@0.1.47-rc.0
-  - @rocket.chat/ui-avatar@22.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.0
-  - @rocket.chat/omni-core-ee@0.0.12-rc.0
-  - @rocket.chat/instance-status@0.1.47-rc.0
-  - @rocket.chat/omni-core@0.0.12-rc.0
-  - @rocket.chat/network-broker@0.2.26-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@8.0.0-rc.0
+  - @yas chat/web-ui-registration@26.0.0-rc.0
+  - @yas chat/apps-engine@1.59.0-rc.0
+  - @yas chat/apps@0.6.0-rc.0
+  - @yas chat/core-typings@8.0.0-rc.0
+  - @yas chat/i18n@2.0.0-rc.0
+  - @yas chat/media-calls@0.2.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.0
+  - @yas chat/ui-contexts@26.0.0-rc.0
+  - @yas chat/ui-voip@16.0.0-rc.0
+  - @yas chat/models@2.0.0-rc.0
+  - @yas chat/core-services@0.12.0-rc.0
+  - @yas chat/message-types@0.1.0-rc.0
+  - @yas chat/federation-matrix@0.0.9-rc.0
+  - @yas chat/gazzodown@26.0.0-rc.0
+  - @yas chat/ui-client@26.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@26.0.0-rc.0
+  - @yas chat/media-signaling@0.1.1-rc.0
+  - @yas chat/ui-kit@0.39.0-rc.0
+  - @yas chat/abac@0.1.0-rc.0
+  - @yas chat/jwt@0.2.0-rc.0
+  - @yas chat/tools@0.2.4-rc.0
+  - @yas chat/presence@0.2.47-rc.0
+  - @yas chat/logger@1.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.44-rc.0
+  - @yas chat/api-client@0.2.47-rc.0
+  - @yas chat/http-router@7.9.14-rc.0
+  - @yas chat/license@1.1.7-rc.0
+  - @yas chat/pdf-worker@0.3.26-rc.0
+  - @yas chat/cron@0.1.47-rc.0
+  - @yas chat/ui-avatar@22.0.0-rc.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@26.0.0-rc.0
+  - @yas chat/omni-core-ee@0.0.12-rc.0
+  - @yas chat/instance-status@0.1.47-rc.0
+  - @yas chat/omni-core@0.0.12-rc.0
+  - @yas chat/network-broker@0.2.26-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -6413,46 +6413,46 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#37876](https://github.com/YasChat/YasChat/pull/37876) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#37876](https://github.com/YasChat/YasChat/pull/37876) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#37883](https://github.com/YasChat/YasChat/pull/37883) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures presence stays accurate by refreshing connections on heartbeats and removing stale sessions.
 
 - <details><summary>Updated dependencies [eef2b390a8e4664ad4b974e7ea579982245efce5]:</summary>
-  - @rocket.chat/core-services@0.11.2
-  - @rocket.chat/presence@0.2.46
-  - @rocket.chat/federation-matrix@0.0.8
-  - @rocket.chat/network-broker@0.2.25
-  - @rocket.chat/omni-core-ee@0.0.11
-  - @rocket.chat/omnichannel-services@0.3.43
-  - @rocket.chat/core-typings@7.13.2
-  - @rocket.chat/rest-typings@7.13.2
-  - @rocket.chat/license@1.1.6
-  - @rocket.chat/media-calls@0.1.2
-  - @rocket.chat/pdf-worker@0.3.25
-  - @rocket.chat/api-client@0.2.46
-  - @rocket.chat/apps@0.5.25
-  - @rocket.chat/cron@0.1.46
-  - @rocket.chat/freeswitch@1.2.33
-  - @rocket.chat/fuselage-ui-kit@25.0.2
-  - @rocket.chat/gazzodown@25.0.2
-  - @rocket.chat/http-router@7.9.13
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.9.2
-  - @rocket.chat/ui-avatar@21.0.2
-  - @rocket.chat/ui-client@25.0.2
-  - @rocket.chat/ui-contexts@25.0.2
-  - @rocket.chat/web-ui-registration@25.0.2
-  - @rocket.chat/models@1.8.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@25.0.2
-  - @rocket.chat/ui-voip@15.0.2
-  - @rocket.chat/instance-status@0.1.46
-  - @rocket.chat/omni-core@0.0.11
+  - @yas chat/core-services@0.11.2
+  - @yas chat/presence@0.2.46
+  - @yas chat/federation-matrix@0.0.8
+  - @yas chat/network-broker@0.2.25
+  - @yas chat/omni-core-ee@0.0.11
+  - @yas chat/omnichannel-services@0.3.43
+  - @yas chat/core-typings@7.13.2
+  - @yas chat/rest-typings@7.13.2
+  - @yas chat/license@1.1.6
+  - @yas chat/media-calls@0.1.2
+  - @yas chat/pdf-worker@0.3.25
+  - @yas chat/api-client@0.2.46
+  - @yas chat/apps@0.5.25
+  - @yas chat/cron@0.1.46
+  - @yas chat/freeswitch@1.2.33
+  - @yas chat/fuselage-ui-kit@25.0.2
+  - @yas chat/gazzodown@25.0.2
+  - @yas chat/http-router@7.9.13
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.9.2
+  - @yas chat/ui-avatar@21.0.2
+  - @yas chat/ui-client@25.0.2
+  - @yas chat/ui-contexts@25.0.2
+  - @yas chat/web-ui-registration@25.0.2
+  - @yas chat/models@1.8.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@25.0.2
+  - @yas chat/ui-voip@15.0.2
+  - @yas chat/instance-status@0.1.46
+  - @yas chat/omni-core@0.0.11
 
   </details>
 
@@ -6460,44 +6460,44 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37732](https://github.com/YasChat/YasChat/pull/37732) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue with the build that prevented Deno runtime to run on air-gapped environments
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.1
-  - @rocket.chat/rest-typings@7.13.1
-  - @rocket.chat/federation-matrix@0.0.7
-  - @rocket.chat/license@1.1.5
-  - @rocket.chat/media-calls@0.1.1
-  - @rocket.chat/omnichannel-services@0.3.42
-  - @rocket.chat/pdf-worker@0.3.24
-  - @rocket.chat/presence@0.2.45
-  - @rocket.chat/api-client@0.2.45
-  - @rocket.chat/apps@0.5.24
-  - @rocket.chat/core-services@0.11.1
-  - @rocket.chat/cron@0.1.45
-  - @rocket.chat/freeswitch@1.2.32
-  - @rocket.chat/fuselage-ui-kit@25.0.1
-  - @rocket.chat/gazzodown@25.0.1
-  - @rocket.chat/http-router@7.9.12
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.9.1
-  - @rocket.chat/ui-avatar@21.0.1
-  - @rocket.chat/ui-client@25.0.1
-  - @rocket.chat/ui-contexts@25.0.1
-  - @rocket.chat/web-ui-registration@25.0.1
-  - @rocket.chat/models@1.8.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.24
-  - @rocket.chat/omni-core-ee@0.0.10
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@25.0.1
-  - @rocket.chat/ui-voip@15.0.1
-  - @rocket.chat/instance-status@0.1.45
-  - @rocket.chat/omni-core@0.0.10
+  - @yas chat/core-typings@7.13.1
+  - @yas chat/rest-typings@7.13.1
+  - @yas chat/federation-matrix@0.0.7
+  - @yas chat/license@1.1.5
+  - @yas chat/media-calls@0.1.1
+  - @yas chat/omnichannel-services@0.3.42
+  - @yas chat/pdf-worker@0.3.24
+  - @yas chat/presence@0.2.45
+  - @yas chat/api-client@0.2.45
+  - @yas chat/apps@0.5.24
+  - @yas chat/core-services@0.11.1
+  - @yas chat/cron@0.1.45
+  - @yas chat/freeswitch@1.2.32
+  - @yas chat/fuselage-ui-kit@25.0.1
+  - @yas chat/gazzodown@25.0.1
+  - @yas chat/http-router@7.9.12
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.9.1
+  - @yas chat/ui-avatar@21.0.1
+  - @yas chat/ui-client@25.0.1
+  - @yas chat/ui-contexts@25.0.1
+  - @yas chat/web-ui-registration@25.0.1
+  - @yas chat/models@1.8.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.24
+  - @yas chat/omni-core-ee@0.0.10
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@25.0.1
+  - @yas chat/ui-voip@15.0.1
+  - @yas chat/instance-status@0.1.45
+  - @yas chat/omni-core@0.0.10
 
   </details>
 
@@ -6543,11 +6543,11 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37255](https://github.com/YasChat/YasChat/pull/37255)) Adds deprecation warning for `livechat:saveUnit`
 
@@ -6596,43 +6596,43 @@
 - ([#37550](https://github.com/YasChat/YasChat/pull/37550)) Fixes an issue that caused the server to load upload files' contents in-memory twice
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 8596daf01ac84864caa63dd937971e557933d401, 5f075eabe1ed1292e3eda2bcca58b5323936dd13, 78880826d580ed81682a5bf62c80f5d0a8e65aeb, 83642cbe499ba399329449fb8cd652a0405c0795, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 20490afe32cf5fd5efac9f59057780ee8c9e927b, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 44ca3b111f13ac1816a82ab0e4720e9886769c34, 99255057f27b9d854a89da815681a03d0776f846, 713ce9295496a43dc2ce757cf014b4af2d6e4e92, ec22d9c102d48908bac33865b00abde4f4738ced, 64a4e8bbb70f28532d8967de6936e3bbe6603f8b, 65fbcbed9f64004b953dd9d4182b3fccb8147339, cd0f72faa58908349b7968a9288d289185d0c770, a05b8f72ca70dfed2959282c35518f78fbeb65cf, 7a7aad5cb1191c0eca61a22dadd620bd4f6c12a2, fcb2d1f806c7f2f5c728ed2542cd1a73231a77fd, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9, 09551f930f957560203847904c81aaffbf72b3ab]:</summary>
-  - @rocket.chat/password-policies@0.1.0
-  - @rocket.chat/ui-client@25.0.0
-  - @rocket.chat/ui-contexts@25.0.0
-  - @rocket.chat/core-services@0.11.0
-  - @rocket.chat/apps-engine@1.58.0
-  - @rocket.chat/favicon@0.0.4
-  - @rocket.chat/models@1.8.0
-  - @rocket.chat/i18n@1.13.0
-  - @rocket.chat/core-typings@7.13.0
-  - @rocket.chat/model-typings@1.9.0
-  - @rocket.chat/media-calls@0.1.0
-  - @rocket.chat/ui-voip@15.0.0
-  - @rocket.chat/fuselage-ui-kit@25.0.0
-  - @rocket.chat/ui-kit@0.38.0
-  - @rocket.chat/media-signaling@0.1.0
-  - @rocket.chat/rest-typings@7.13.0
-  - @rocket.chat/gazzodown@25.0.0
-  - @rocket.chat/web-ui-registration@25.0.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-avatar@21.0.0
-  - @rocket.chat/ui-video-conf@25.0.0
-  - @rocket.chat/federation-matrix@0.0.6
-  - @rocket.chat/network-broker@0.2.23
-  - @rocket.chat/omni-core-ee@0.0.9
-  - @rocket.chat/omnichannel-services@0.3.41
-  - @rocket.chat/presence@0.2.44
-  - @rocket.chat/apps@0.5.23
-  - @rocket.chat/cron@0.1.44
-  - @rocket.chat/instance-status@0.1.44
-  - @rocket.chat/omni-core@0.0.9
-  - @rocket.chat/license@1.1.4
-  - @rocket.chat/pdf-worker@0.3.23
-  - @rocket.chat/api-client@0.2.44
-  - @rocket.chat/freeswitch@1.2.31
-  - @rocket.chat/http-router@7.9.11
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/password-policies@0.1.0
+  - @yas chat/ui-client@25.0.0
+  - @yas chat/ui-contexts@25.0.0
+  - @yas chat/core-services@0.11.0
+  - @yas chat/apps-engine@1.58.0
+  - @yas chat/favicon@0.0.4
+  - @yas chat/models@1.8.0
+  - @yas chat/i18n@1.13.0
+  - @yas chat/core-typings@7.13.0
+  - @yas chat/model-typings@1.9.0
+  - @yas chat/media-calls@0.1.0
+  - @yas chat/ui-voip@15.0.0
+  - @yas chat/fuselage-ui-kit@25.0.0
+  - @yas chat/ui-kit@0.38.0
+  - @yas chat/media-signaling@0.1.0
+  - @yas chat/rest-typings@7.13.0
+  - @yas chat/gazzodown@25.0.0
+  - @yas chat/web-ui-registration@25.0.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-avatar@21.0.0
+  - @yas chat/ui-video-conf@25.0.0
+  - @yas chat/federation-matrix@0.0.6
+  - @yas chat/network-broker@0.2.23
+  - @yas chat/omni-core-ee@0.0.9
+  - @yas chat/omnichannel-services@0.3.41
+  - @yas chat/presence@0.2.44
+  - @yas chat/apps@0.5.23
+  - @yas chat/cron@0.1.44
+  - @yas chat/instance-status@0.1.44
+  - @yas chat/omni-core@0.0.9
+  - @yas chat/license@1.1.4
+  - @yas chat/pdf-worker@0.3.23
+  - @yas chat/api-client@0.2.44
+  - @yas chat/freeswitch@1.2.31
+  - @yas chat/http-router@7.9.11
+  - @yas chat/message-types@0.0.1
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -6640,40 +6640,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.2
-  - @rocket.chat/rest-typings@7.13.0-rc.2
-  - @rocket.chat/federation-matrix@0.0.6-rc.2
-  - @rocket.chat/license@1.1.4-rc.2
-  - @rocket.chat/media-calls@0.1.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.41-rc.2
-  - @rocket.chat/pdf-worker@0.3.23-rc.2
-  - @rocket.chat/presence@0.2.44-rc.2
-  - @rocket.chat/api-client@0.2.44-rc.2
-  - @rocket.chat/apps@0.5.23-rc.2
-  - @rocket.chat/core-services@0.11.0-rc.2
-  - @rocket.chat/cron@0.1.44-rc.2
-  - @rocket.chat/freeswitch@1.2.31-rc.2
-  - @rocket.chat/fuselage-ui-kit@25.0.0-rc.2
-  - @rocket.chat/gazzodown@25.0.0-rc.2
-  - @rocket.chat/http-router@7.9.11-rc.2
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.9.0-rc.2
-  - @rocket.chat/ui-avatar@21.0.0-rc.2
-  - @rocket.chat/ui-client@25.0.0-rc.2
-  - @rocket.chat/ui-contexts@25.0.0-rc.2
-  - @rocket.chat/web-ui-registration@25.0.0-rc.2
-  - @rocket.chat/models@1.8.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.23-rc.2
-  - @rocket.chat/omni-core-ee@0.0.9-rc.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@25.0.0-rc.2
-  - @rocket.chat/ui-voip@15.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.44-rc.2
-  - @rocket.chat/omni-core@0.0.9-rc.2
+  - @yas chat/core-typings@7.13.0-rc.2
+  - @yas chat/rest-typings@7.13.0-rc.2
+  - @yas chat/federation-matrix@0.0.6-rc.2
+  - @yas chat/license@1.1.4-rc.2
+  - @yas chat/media-calls@0.1.0-rc.2
+  - @yas chat/omnichannel-services@0.3.41-rc.2
+  - @yas chat/pdf-worker@0.3.23-rc.2
+  - @yas chat/presence@0.2.44-rc.2
+  - @yas chat/api-client@0.2.44-rc.2
+  - @yas chat/apps@0.5.23-rc.2
+  - @yas chat/core-services@0.11.0-rc.2
+  - @yas chat/cron@0.1.44-rc.2
+  - @yas chat/freeswitch@1.2.31-rc.2
+  - @yas chat/fuselage-ui-kit@25.0.0-rc.2
+  - @yas chat/gazzodown@25.0.0-rc.2
+  - @yas chat/http-router@7.9.11-rc.2
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.9.0-rc.2
+  - @yas chat/ui-avatar@21.0.0-rc.2
+  - @yas chat/ui-client@25.0.0-rc.2
+  - @yas chat/ui-contexts@25.0.0-rc.2
+  - @yas chat/web-ui-registration@25.0.0-rc.2
+  - @yas chat/models@1.8.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.23-rc.2
+  - @yas chat/omni-core-ee@0.0.9-rc.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@25.0.0-rc.2
+  - @yas chat/ui-voip@15.0.0-rc.2
+  - @yas chat/instance-status@0.1.44-rc.2
+  - @yas chat/omni-core@0.0.9-rc.2
 
   </details>
 
@@ -6681,40 +6681,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.1
-  - @rocket.chat/rest-typings@7.13.0-rc.1
-  - @rocket.chat/federation-matrix@0.0.4-rc.1
-  - @rocket.chat/license@1.1.2-rc.1
-  - @rocket.chat/media-calls@0.1.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.39-rc.1
-  - @rocket.chat/pdf-worker@0.3.21-rc.1
-  - @rocket.chat/presence@0.2.42-rc.1
-  - @rocket.chat/api-client@0.2.42-rc.1
-  - @rocket.chat/apps@0.5.21-rc.1
-  - @rocket.chat/core-services@0.11.0-rc.1
-  - @rocket.chat/cron@0.1.42-rc.1
-  - @rocket.chat/freeswitch@1.2.29-rc.1
-  - @rocket.chat/fuselage-ui-kit@25.0.0-rc.1
-  - @rocket.chat/gazzodown@25.0.0-rc.1
-  - @rocket.chat/http-router@7.9.9-rc.1
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.9.0-rc.1
-  - @rocket.chat/ui-avatar@21.0.0-rc.1
-  - @rocket.chat/ui-client@25.0.0-rc.1
-  - @rocket.chat/ui-contexts@25.0.0-rc.1
-  - @rocket.chat/web-ui-registration@25.0.0-rc.1
-  - @rocket.chat/models@1.8.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.21-rc.1
-  - @rocket.chat/omni-core-ee@0.0.7-rc.1
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@25.0.0-rc.1
-  - @rocket.chat/ui-voip@15.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.42-rc.1
-  - @rocket.chat/omni-core@0.0.7-rc.1
+  - @yas chat/core-typings@7.13.0-rc.1
+  - @yas chat/rest-typings@7.13.0-rc.1
+  - @yas chat/federation-matrix@0.0.4-rc.1
+  - @yas chat/license@1.1.2-rc.1
+  - @yas chat/media-calls@0.1.0-rc.1
+  - @yas chat/omnichannel-services@0.3.39-rc.1
+  - @yas chat/pdf-worker@0.3.21-rc.1
+  - @yas chat/presence@0.2.42-rc.1
+  - @yas chat/api-client@0.2.42-rc.1
+  - @yas chat/apps@0.5.21-rc.1
+  - @yas chat/core-services@0.11.0-rc.1
+  - @yas chat/cron@0.1.42-rc.1
+  - @yas chat/freeswitch@1.2.29-rc.1
+  - @yas chat/fuselage-ui-kit@25.0.0-rc.1
+  - @yas chat/gazzodown@25.0.0-rc.1
+  - @yas chat/http-router@7.9.9-rc.1
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.9.0-rc.1
+  - @yas chat/ui-avatar@21.0.0-rc.1
+  - @yas chat/ui-client@25.0.0-rc.1
+  - @yas chat/ui-contexts@25.0.0-rc.1
+  - @yas chat/web-ui-registration@25.0.0-rc.1
+  - @yas chat/models@1.8.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.21-rc.1
+  - @yas chat/omni-core-ee@0.0.7-rc.1
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@25.0.0-rc.1
+  - @yas chat/ui-voip@15.0.0-rc.1
+  - @yas chat/instance-status@0.1.42-rc.1
+  - @yas chat/omni-core@0.0.7-rc.1
 
   </details>
 
@@ -6807,43 +6807,43 @@
 - ([#37550](https://github.com/YasChat/YasChat/pull/37550)) Fixes an issue that caused the server to load upload files' contents in-memory twice
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 8596daf01ac84864caa63dd937971e557933d401, 5f075eabe1ed1292e3eda2bcca58b5323936dd13, 78880826d580ed81682a5bf62c80f5d0a8e65aeb, 83642cbe499ba399329449fb8cd652a0405c0795, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 20490afe32cf5fd5efac9f59057780ee8c9e927b, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 44ca3b111f13ac1816a82ab0e4720e9886769c34, 99255057f27b9d854a89da815681a03d0776f846, 713ce9295496a43dc2ce757cf014b4af2d6e4e92, ec22d9c102d48908bac33865b00abde4f4738ced, 64a4e8bbb70f28532d8967de6936e3bbe6603f8b, 65fbcbed9f64004b953dd9d4182b3fccb8147339, cd0f72faa58908349b7968a9288d289185d0c770, a05b8f72ca70dfed2959282c35518f78fbeb65cf, 7a7aad5cb1191c0eca61a22dadd620bd4f6c12a2, fcb2d1f806c7f2f5c728ed2542cd1a73231a77fd, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9, 09551f930f957560203847904c81aaffbf72b3ab]:</summary>
-  - @rocket.chat/password-policies@0.1.0-rc.0
-  - @rocket.chat/ui-client@25.0.0-rc.0
-  - @rocket.chat/ui-contexts@25.0.0-rc.0
-  - @rocket.chat/core-services@0.11.0-rc.0
-  - @rocket.chat/apps-engine@1.58.0-rc.0
-  - @rocket.chat/favicon@0.0.3-rc.0
-  - @rocket.chat/models@1.8.0-rc.0
-  - @rocket.chat/i18n@1.13.0-rc.0
-  - @rocket.chat/core-typings@7.13.0-rc.0
-  - @rocket.chat/model-typings@1.9.0-rc.0
-  - @rocket.chat/media-calls@0.1.0-rc.0
-  - @rocket.chat/ui-voip@15.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@25.0.0-rc.0
-  - @rocket.chat/ui-kit@0.38.0-rc.0
-  - @rocket.chat/media-signaling@0.1.0-rc.0
-  - @rocket.chat/rest-typings@7.13.0-rc.0
-  - @rocket.chat/gazzodown@25.0.0-rc.0
-  - @rocket.chat/web-ui-registration@25.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-avatar@21.0.0-rc.0
-  - @rocket.chat/ui-video-conf@25.0.0-rc.0
-  - @rocket.chat/federation-matrix@0.0.4-rc.0
-  - @rocket.chat/network-broker@0.2.21-rc.0
-  - @rocket.chat/omni-core-ee@0.0.7-rc.0
-  - @rocket.chat/omnichannel-services@0.3.39-rc.0
-  - @rocket.chat/presence@0.2.42-rc.0
-  - @rocket.chat/apps@0.5.21-rc.0
-  - @rocket.chat/cron@0.1.42-rc.0
-  - @rocket.chat/instance-status@0.1.42-rc.0
-  - @rocket.chat/omni-core@0.0.7-rc.0
-  - @rocket.chat/license@1.1.2-rc.0
-  - @rocket.chat/pdf-worker@0.3.21-rc.0
-  - @rocket.chat/api-client@0.2.42-rc.0
-  - @rocket.chat/freeswitch@1.2.29-rc.0
-  - @rocket.chat/http-router@7.9.9-rc.0
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/password-policies@0.1.0-rc.0
+  - @yas chat/ui-client@25.0.0-rc.0
+  - @yas chat/ui-contexts@25.0.0-rc.0
+  - @yas chat/core-services@0.11.0-rc.0
+  - @yas chat/apps-engine@1.58.0-rc.0
+  - @yas chat/favicon@0.0.3-rc.0
+  - @yas chat/models@1.8.0-rc.0
+  - @yas chat/i18n@1.13.0-rc.0
+  - @yas chat/core-typings@7.13.0-rc.0
+  - @yas chat/model-typings@1.9.0-rc.0
+  - @yas chat/media-calls@0.1.0-rc.0
+  - @yas chat/ui-voip@15.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@25.0.0-rc.0
+  - @yas chat/ui-kit@0.38.0-rc.0
+  - @yas chat/media-signaling@0.1.0-rc.0
+  - @yas chat/rest-typings@7.13.0-rc.0
+  - @yas chat/gazzodown@25.0.0-rc.0
+  - @yas chat/web-ui-registration@25.0.0-rc.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-avatar@21.0.0-rc.0
+  - @yas chat/ui-video-conf@25.0.0-rc.0
+  - @yas chat/federation-matrix@0.0.4-rc.0
+  - @yas chat/network-broker@0.2.21-rc.0
+  - @yas chat/omni-core-ee@0.0.7-rc.0
+  - @yas chat/omnichannel-services@0.3.39-rc.0
+  - @yas chat/presence@0.2.42-rc.0
+  - @yas chat/apps@0.5.21-rc.0
+  - @yas chat/cron@0.1.42-rc.0
+  - @yas chat/instance-status@0.1.42-rc.0
+  - @yas chat/omni-core@0.0.7-rc.0
+  - @yas chat/license@1.1.2-rc.0
+  - @yas chat/pdf-worker@0.3.21-rc.0
+  - @yas chat/api-client@0.2.42-rc.0
+  - @yas chat/freeswitch@1.2.29-rc.0
+  - @yas chat/http-router@7.9.9-rc.0
+  - @yas chat/message-types@0.0.1
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -6851,47 +6851,47 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37540](https://github.com/YasChat/YasChat/pull/37540) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where `user-agent` is not properly extracted from the DDP connection headers
 
 - ([#37520](https://github.com/YasChat/YasChat/pull/37520) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes client slowdown for users with large amount of channels
 
 - <details><summary>Updated dependencies [fadc449607a3506a25294018a607e3c654c33d28]:</summary>
-  - @rocket.chat/favicon@0.0.3
-  - @rocket.chat/core-typings@7.12.2
-  - @rocket.chat/rest-typings@7.12.2
-  - @rocket.chat/federation-matrix@0.0.5
-  - @rocket.chat/license@1.1.3
-  - @rocket.chat/media-calls@0.0.5
-  - @rocket.chat/omnichannel-services@0.3.40
-  - @rocket.chat/pdf-worker@0.3.22
-  - @rocket.chat/presence@0.2.43
-  - @rocket.chat/api-client@0.2.43
-  - @rocket.chat/apps@0.5.22
-  - @rocket.chat/core-services@0.10.6
-  - @rocket.chat/cron@0.1.43
-  - @rocket.chat/freeswitch@1.2.30
-  - @rocket.chat/fuselage-ui-kit@24.0.2
-  - @rocket.chat/gazzodown@24.0.2
-  - @rocket.chat/http-router@7.9.10
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.3
-  - @rocket.chat/ui-avatar@20.0.2
-  - @rocket.chat/ui-client@24.0.2
-  - @rocket.chat/ui-contexts@24.0.2
-  - @rocket.chat/web-ui-registration@24.0.2
-  - @rocket.chat/models@1.7.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.22
-  - @rocket.chat/omni-core-ee@0.0.8
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.2
-  - @rocket.chat/ui-voip@14.0.2
-  - @rocket.chat/instance-status@0.1.43
-  - @rocket.chat/omni-core@0.0.8
+  - @yas chat/favicon@0.0.3
+  - @yas chat/core-typings@7.12.2
+  - @yas chat/rest-typings@7.12.2
+  - @yas chat/federation-matrix@0.0.5
+  - @yas chat/license@1.1.3
+  - @yas chat/media-calls@0.0.5
+  - @yas chat/omnichannel-services@0.3.40
+  - @yas chat/pdf-worker@0.3.22
+  - @yas chat/presence@0.2.43
+  - @yas chat/api-client@0.2.43
+  - @yas chat/apps@0.5.22
+  - @yas chat/core-services@0.10.6
+  - @yas chat/cron@0.1.43
+  - @yas chat/freeswitch@1.2.30
+  - @yas chat/fuselage-ui-kit@24.0.2
+  - @yas chat/gazzodown@24.0.2
+  - @yas chat/http-router@7.9.10
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.3
+  - @yas chat/ui-avatar@20.0.2
+  - @yas chat/ui-client@24.0.2
+  - @yas chat/ui-contexts@24.0.2
+  - @yas chat/web-ui-registration@24.0.2
+  - @yas chat/models@1.7.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.22
+  - @yas chat/omni-core-ee@0.0.8
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.2
+  - @yas chat/ui-voip@14.0.2
+  - @yas chat/instance-status@0.1.43
+  - @yas chat/omni-core@0.0.8
 
   </details>
 
@@ -6899,47 +6899,47 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37436](https://github.com/YasChat/YasChat/pull/37436) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the capture of lead's email or phone number when the visitor didn't have data already
 
 - ([#37440](https://github.com/YasChat/YasChat/pull/37440) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a problem in apps-engine debug logs where only 2 depth levels were displayed for objects, which is often not enough for debugging purposes
 
 - <details><summary>Updated dependencies [8cbd9bfd0566cbd7d86d8b40ea7d58d6ef382742, e6cc073a99e1aaa7936ef9b29e7bfa31dab86aa3]:</summary>
-  - @rocket.chat/models@1.7.2
-  - @rocket.chat/apps-engine@1.57.1
-  - @rocket.chat/federation-matrix@0.0.4
-  - @rocket.chat/media-calls@0.0.4
-  - @rocket.chat/omni-core-ee@0.0.7
-  - @rocket.chat/omnichannel-services@0.3.39
-  - @rocket.chat/presence@0.2.42
-  - @rocket.chat/core-services@0.10.5
-  - @rocket.chat/cron@0.1.42
-  - @rocket.chat/instance-status@0.1.42
-  - @rocket.chat/omni-core@0.0.7
-  - @rocket.chat/apps@0.5.21
-  - @rocket.chat/core-typings@7.12.1
-  - @rocket.chat/fuselage-ui-kit@24.0.1
-  - @rocket.chat/rest-typings@7.12.1
-  - @rocket.chat/network-broker@0.2.21
-  - @rocket.chat/license@1.1.2
-  - @rocket.chat/pdf-worker@0.3.21
-  - @rocket.chat/api-client@0.2.42
-  - @rocket.chat/freeswitch@1.2.29
-  - @rocket.chat/gazzodown@24.0.1
-  - @rocket.chat/http-router@7.9.9
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.2
-  - @rocket.chat/ui-avatar@20.0.1
-  - @rocket.chat/ui-client@24.0.1
-  - @rocket.chat/ui-contexts@24.0.1
-  - @rocket.chat/web-ui-registration@24.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.1
-  - @rocket.chat/ui-voip@14.0.1
+  - @yas chat/models@1.7.2
+  - @yas chat/apps-engine@1.57.1
+  - @yas chat/federation-matrix@0.0.4
+  - @yas chat/media-calls@0.0.4
+  - @yas chat/omni-core-ee@0.0.7
+  - @yas chat/omnichannel-services@0.3.39
+  - @yas chat/presence@0.2.42
+  - @yas chat/core-services@0.10.5
+  - @yas chat/cron@0.1.42
+  - @yas chat/instance-status@0.1.42
+  - @yas chat/omni-core@0.0.7
+  - @yas chat/apps@0.5.21
+  - @yas chat/core-typings@7.12.1
+  - @yas chat/fuselage-ui-kit@24.0.1
+  - @yas chat/rest-typings@7.12.1
+  - @yas chat/network-broker@0.2.21
+  - @yas chat/license@1.1.2
+  - @yas chat/pdf-worker@0.3.21
+  - @yas chat/api-client@0.2.42
+  - @yas chat/freeswitch@1.2.29
+  - @yas chat/gazzodown@24.0.1
+  - @yas chat/http-router@7.9.9
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.2
+  - @yas chat/ui-avatar@20.0.1
+  - @yas chat/ui-client@24.0.1
+  - @yas chat/ui-contexts@24.0.1
+  - @yas chat/web-ui-registration@24.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.1
+  - @yas chat/ui-voip@14.0.1
 
   </details>
 
@@ -6959,15 +6959,15 @@
 
 - ([#37154](https://github.com/YasChat/YasChat/pull/37154)) Fixes a GUI crash happening in the admin user page when attempting to display an invalid custom field
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36973](https://github.com/YasChat/YasChat/pull/36973)) Adds deprecation warning on `livechat:returnAsInquiry` with new endpoint replacing it; `livechat/inquiries.returnAsInquiry`
 
@@ -7006,39 +7006,39 @@
 - ([#36958](https://github.com/YasChat/YasChat/pull/36958)) Adds deprecation warning on `livechat:removeRoom` with new endpoint replacing it; `livechat/rooms.delete`
 
 - <details><summary>Updated dependencies [085d6536d23fe5cc293fec2f1454eb7442e8c7f4, 48d1442a07e860fefd6991c97e94d6a9de345afe, c253db3ece80da36fba7b79b3cbe64d705175d6d, f627e675076a49ebd2f7c80cee1c2a3e51cc22fc, a25e88c06cafdbe3baf7a40e3bffe3aed5a81cf6, 74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, b85e96a2b7968dda91cb192331d6b1e046071037, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
-  - @rocket.chat/ui-client@24.0.0
-  - @rocket.chat/rest-typings@7.12.0
-  - @rocket.chat/apps-engine@1.57.0
-  - @rocket.chat/ui-contexts@24.0.0
-  - @rocket.chat/i18n@1.12.0
-  - @rocket.chat/ui-voip@14.0.0
-  - @rocket.chat/core-typings@7.12.0
-  - @rocket.chat/gazzodown@24.0.0
-  - @rocket.chat/web-ui-registration@24.0.0
-  - @rocket.chat/federation-matrix@0.0.3
-  - @rocket.chat/omnichannel-services@0.3.38
-  - @rocket.chat/presence@0.2.41
-  - @rocket.chat/api-client@0.2.41
-  - @rocket.chat/core-services@0.10.4
-  - @rocket.chat/http-router@7.9.8
-  - @rocket.chat/models@1.7.1
-  - @rocket.chat/apps@0.5.20
-  - @rocket.chat/fuselage-ui-kit@24.0.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-avatar@20.0.0
-  - @rocket.chat/ui-video-conf@24.0.0
-  - @rocket.chat/license@1.1.1
-  - @rocket.chat/media-calls@0.0.3
-  - @rocket.chat/pdf-worker@0.3.20
-  - @rocket.chat/cron@0.1.41
-  - @rocket.chat/freeswitch@1.2.28
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1
-  - @rocket.chat/network-broker@0.2.20
-  - @rocket.chat/omni-core-ee@0.0.6
-  - @rocket.chat/instance-status@0.1.41
-  - @rocket.chat/omni-core@0.0.6
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-client@24.0.0
+  - @yas chat/rest-typings@7.12.0
+  - @yas chat/apps-engine@1.57.0
+  - @yas chat/ui-contexts@24.0.0
+  - @yas chat/i18n@1.12.0
+  - @yas chat/ui-voip@14.0.0
+  - @yas chat/core-typings@7.12.0
+  - @yas chat/gazzodown@24.0.0
+  - @yas chat/web-ui-registration@24.0.0
+  - @yas chat/federation-matrix@0.0.3
+  - @yas chat/omnichannel-services@0.3.38
+  - @yas chat/presence@0.2.41
+  - @yas chat/api-client@0.2.41
+  - @yas chat/core-services@0.10.4
+  - @yas chat/http-router@7.9.8
+  - @yas chat/models@1.7.1
+  - @yas chat/apps@0.5.20
+  - @yas chat/fuselage-ui-kit@24.0.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-avatar@20.0.0
+  - @yas chat/ui-video-conf@24.0.0
+  - @yas chat/license@1.1.1
+  - @yas chat/media-calls@0.0.3
+  - @yas chat/pdf-worker@0.3.20
+  - @yas chat/cron@0.1.41
+  - @yas chat/freeswitch@1.2.28
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1
+  - @yas chat/network-broker@0.2.20
+  - @yas chat/omni-core-ee@0.0.6
+  - @yas chat/instance-status@0.1.41
+  - @yas chat/omni-core@0.0.6
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -7046,40 +7046,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.4
-  - @rocket.chat/rest-typings@7.12.0-rc.4
-  - @rocket.chat/federation-matrix@0.0.3-rc.4
-  - @rocket.chat/license@1.1.1-rc.4
-  - @rocket.chat/media-calls@0.0.3-rc.4
-  - @rocket.chat/omnichannel-services@0.3.38-rc.4
-  - @rocket.chat/pdf-worker@0.3.20-rc.4
-  - @rocket.chat/presence@0.2.41-rc.4
-  - @rocket.chat/api-client@0.2.41-rc.4
-  - @rocket.chat/apps@0.5.20-rc.4
-  - @rocket.chat/core-services@0.10.4-rc.4
-  - @rocket.chat/cron@0.1.41-rc.4
-  - @rocket.chat/freeswitch@1.2.28-rc.4
-  - @rocket.chat/fuselage-ui-kit@24.0.0-rc.4
-  - @rocket.chat/gazzodown@24.0.0-rc.4
-  - @rocket.chat/http-router@7.9.8-rc.4
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1-rc.4
-  - @rocket.chat/ui-avatar@20.0.0-rc.4
-  - @rocket.chat/ui-client@24.0.0-rc.4
-  - @rocket.chat/ui-contexts@24.0.0-rc.4
-  - @rocket.chat/web-ui-registration@24.0.0-rc.4
-  - @rocket.chat/models@1.7.1-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.20-rc.4
-  - @rocket.chat/omni-core-ee@0.0.6-rc.4
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.0-rc.4
-  - @rocket.chat/ui-voip@14.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.41-rc.4
-  - @rocket.chat/omni-core@0.0.6-rc.4
+  - @yas chat/core-typings@7.12.0-rc.4
+  - @yas chat/rest-typings@7.12.0-rc.4
+  - @yas chat/federation-matrix@0.0.3-rc.4
+  - @yas chat/license@1.1.1-rc.4
+  - @yas chat/media-calls@0.0.3-rc.4
+  - @yas chat/omnichannel-services@0.3.38-rc.4
+  - @yas chat/pdf-worker@0.3.20-rc.4
+  - @yas chat/presence@0.2.41-rc.4
+  - @yas chat/api-client@0.2.41-rc.4
+  - @yas chat/apps@0.5.20-rc.4
+  - @yas chat/core-services@0.10.4-rc.4
+  - @yas chat/cron@0.1.41-rc.4
+  - @yas chat/freeswitch@1.2.28-rc.4
+  - @yas chat/fuselage-ui-kit@24.0.0-rc.4
+  - @yas chat/gazzodown@24.0.0-rc.4
+  - @yas chat/http-router@7.9.8-rc.4
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1-rc.4
+  - @yas chat/ui-avatar@20.0.0-rc.4
+  - @yas chat/ui-client@24.0.0-rc.4
+  - @yas chat/ui-contexts@24.0.0-rc.4
+  - @yas chat/web-ui-registration@24.0.0-rc.4
+  - @yas chat/models@1.7.1-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.20-rc.4
+  - @yas chat/omni-core-ee@0.0.6-rc.4
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.0-rc.4
+  - @yas chat/ui-voip@14.0.0-rc.4
+  - @yas chat/instance-status@0.1.41-rc.4
+  - @yas chat/omni-core@0.0.6-rc.4
 
   </details>
 
@@ -7091,40 +7091,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.3
-  - @rocket.chat/rest-typings@7.12.0-rc.3
-  - @rocket.chat/federation-matrix@0.0.3-rc.3
-  - @rocket.chat/license@1.1.1-rc.3
-  - @rocket.chat/media-calls@0.0.3-rc.3
-  - @rocket.chat/omnichannel-services@0.3.38-rc.3
-  - @rocket.chat/pdf-worker@0.3.20-rc.3
-  - @rocket.chat/presence@0.2.41-rc.3
-  - @rocket.chat/api-client@0.2.41-rc.3
-  - @rocket.chat/apps@0.5.20-rc.3
-  - @rocket.chat/core-services@0.10.4-rc.3
-  - @rocket.chat/cron@0.1.41-rc.3
-  - @rocket.chat/freeswitch@1.2.28-rc.3
-  - @rocket.chat/fuselage-ui-kit@24.0.0-rc.3
-  - @rocket.chat/gazzodown@24.0.0-rc.3
-  - @rocket.chat/http-router@7.9.8-rc.3
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1-rc.3
-  - @rocket.chat/ui-avatar@20.0.0-rc.3
-  - @rocket.chat/ui-client@24.0.0-rc.3
-  - @rocket.chat/ui-contexts@24.0.0-rc.3
-  - @rocket.chat/web-ui-registration@24.0.0-rc.3
-  - @rocket.chat/models@1.7.1-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.20-rc.3
-  - @rocket.chat/omni-core-ee@0.0.6-rc.3
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.0-rc.3
-  - @rocket.chat/ui-voip@14.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.41-rc.3
-  - @rocket.chat/omni-core@0.0.6-rc.3
+  - @yas chat/core-typings@7.12.0-rc.3
+  - @yas chat/rest-typings@7.12.0-rc.3
+  - @yas chat/federation-matrix@0.0.3-rc.3
+  - @yas chat/license@1.1.1-rc.3
+  - @yas chat/media-calls@0.0.3-rc.3
+  - @yas chat/omnichannel-services@0.3.38-rc.3
+  - @yas chat/pdf-worker@0.3.20-rc.3
+  - @yas chat/presence@0.2.41-rc.3
+  - @yas chat/api-client@0.2.41-rc.3
+  - @yas chat/apps@0.5.20-rc.3
+  - @yas chat/core-services@0.10.4-rc.3
+  - @yas chat/cron@0.1.41-rc.3
+  - @yas chat/freeswitch@1.2.28-rc.3
+  - @yas chat/fuselage-ui-kit@24.0.0-rc.3
+  - @yas chat/gazzodown@24.0.0-rc.3
+  - @yas chat/http-router@7.9.8-rc.3
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1-rc.3
+  - @yas chat/ui-avatar@20.0.0-rc.3
+  - @yas chat/ui-client@24.0.0-rc.3
+  - @yas chat/ui-contexts@24.0.0-rc.3
+  - @yas chat/web-ui-registration@24.0.0-rc.3
+  - @yas chat/models@1.7.1-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.20-rc.3
+  - @yas chat/omni-core-ee@0.0.6-rc.3
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.0-rc.3
+  - @yas chat/ui-voip@14.0.0-rc.3
+  - @yas chat/instance-status@0.1.41-rc.3
+  - @yas chat/omni-core@0.0.6-rc.3
 
   </details>
 
@@ -7132,40 +7132,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.2
-  - @rocket.chat/rest-typings@7.12.0-rc.2
-  - @rocket.chat/federation-matrix@0.0.3-rc.2
-  - @rocket.chat/license@1.1.1-rc.2
-  - @rocket.chat/media-calls@0.0.3-rc.2
-  - @rocket.chat/omnichannel-services@0.3.38-rc.2
-  - @rocket.chat/pdf-worker@0.3.20-rc.2
-  - @rocket.chat/presence@0.2.41-rc.2
-  - @rocket.chat/api-client@0.2.41-rc.2
-  - @rocket.chat/apps@0.5.20-rc.2
-  - @rocket.chat/core-services@0.10.4-rc.2
-  - @rocket.chat/cron@0.1.41-rc.2
-  - @rocket.chat/freeswitch@1.2.28-rc.2
-  - @rocket.chat/fuselage-ui-kit@24.0.0-rc.2
-  - @rocket.chat/gazzodown@24.0.0-rc.2
-  - @rocket.chat/http-router@7.9.8-rc.2
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1-rc.2
-  - @rocket.chat/ui-avatar@20.0.0-rc.2
-  - @rocket.chat/ui-client@24.0.0-rc.2
-  - @rocket.chat/ui-contexts@24.0.0-rc.2
-  - @rocket.chat/web-ui-registration@24.0.0-rc.2
-  - @rocket.chat/models@1.7.1-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.20-rc.2
-  - @rocket.chat/omni-core-ee@0.0.6-rc.2
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.0-rc.2
-  - @rocket.chat/ui-voip@14.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.41-rc.2
-  - @rocket.chat/omni-core@0.0.6-rc.2
+  - @yas chat/core-typings@7.12.0-rc.2
+  - @yas chat/rest-typings@7.12.0-rc.2
+  - @yas chat/federation-matrix@0.0.3-rc.2
+  - @yas chat/license@1.1.1-rc.2
+  - @yas chat/media-calls@0.0.3-rc.2
+  - @yas chat/omnichannel-services@0.3.38-rc.2
+  - @yas chat/pdf-worker@0.3.20-rc.2
+  - @yas chat/presence@0.2.41-rc.2
+  - @yas chat/api-client@0.2.41-rc.2
+  - @yas chat/apps@0.5.20-rc.2
+  - @yas chat/core-services@0.10.4-rc.2
+  - @yas chat/cron@0.1.41-rc.2
+  - @yas chat/freeswitch@1.2.28-rc.2
+  - @yas chat/fuselage-ui-kit@24.0.0-rc.2
+  - @yas chat/gazzodown@24.0.0-rc.2
+  - @yas chat/http-router@7.9.8-rc.2
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1-rc.2
+  - @yas chat/ui-avatar@20.0.0-rc.2
+  - @yas chat/ui-client@24.0.0-rc.2
+  - @yas chat/ui-contexts@24.0.0-rc.2
+  - @yas chat/web-ui-registration@24.0.0-rc.2
+  - @yas chat/models@1.7.1-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.20-rc.2
+  - @yas chat/omni-core-ee@0.0.6-rc.2
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.0-rc.2
+  - @yas chat/ui-voip@14.0.0-rc.2
+  - @yas chat/instance-status@0.1.41-rc.2
+  - @yas chat/omni-core@0.0.6-rc.2
 
   </details>
 
@@ -7173,40 +7173,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.1
-  - @rocket.chat/rest-typings@7.12.0-rc.1
-  - @rocket.chat/federation-matrix@0.0.3-rc.1
-  - @rocket.chat/license@1.1.1-rc.1
-  - @rocket.chat/media-calls@0.0.3-rc.1
-  - @rocket.chat/omnichannel-services@0.3.38-rc.1
-  - @rocket.chat/pdf-worker@0.3.20-rc.1
-  - @rocket.chat/presence@0.2.41-rc.1
-  - @rocket.chat/api-client@0.2.41-rc.1
-  - @rocket.chat/apps@0.5.20-rc.1
-  - @rocket.chat/core-services@0.10.4-rc.1
-  - @rocket.chat/cron@0.1.41-rc.1
-  - @rocket.chat/freeswitch@1.2.28-rc.1
-  - @rocket.chat/fuselage-ui-kit@24.0.0-rc.1
-  - @rocket.chat/gazzodown@24.0.0-rc.1
-  - @rocket.chat/http-router@7.9.8-rc.1
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1-rc.1
-  - @rocket.chat/ui-avatar@20.0.0-rc.1
-  - @rocket.chat/ui-client@24.0.0-rc.1
-  - @rocket.chat/ui-contexts@24.0.0-rc.1
-  - @rocket.chat/web-ui-registration@24.0.0-rc.1
-  - @rocket.chat/models@1.7.1-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.20-rc.1
-  - @rocket.chat/omni-core-ee@0.0.6-rc.1
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@24.0.0-rc.1
-  - @rocket.chat/ui-voip@14.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.41-rc.1
-  - @rocket.chat/omni-core@0.0.6-rc.1
+  - @yas chat/core-typings@7.12.0-rc.1
+  - @yas chat/rest-typings@7.12.0-rc.1
+  - @yas chat/federation-matrix@0.0.3-rc.1
+  - @yas chat/license@1.1.1-rc.1
+  - @yas chat/media-calls@0.0.3-rc.1
+  - @yas chat/omnichannel-services@0.3.38-rc.1
+  - @yas chat/pdf-worker@0.3.20-rc.1
+  - @yas chat/presence@0.2.41-rc.1
+  - @yas chat/api-client@0.2.41-rc.1
+  - @yas chat/apps@0.5.20-rc.1
+  - @yas chat/core-services@0.10.4-rc.1
+  - @yas chat/cron@0.1.41-rc.1
+  - @yas chat/freeswitch@1.2.28-rc.1
+  - @yas chat/fuselage-ui-kit@24.0.0-rc.1
+  - @yas chat/gazzodown@24.0.0-rc.1
+  - @yas chat/http-router@7.9.8-rc.1
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1-rc.1
+  - @yas chat/ui-avatar@20.0.0-rc.1
+  - @yas chat/ui-client@24.0.0-rc.1
+  - @yas chat/ui-contexts@24.0.0-rc.1
+  - @yas chat/web-ui-registration@24.0.0-rc.1
+  - @yas chat/models@1.7.1-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.20-rc.1
+  - @yas chat/omni-core-ee@0.0.6-rc.1
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@24.0.0-rc.1
+  - @yas chat/ui-voip@14.0.0-rc.1
+  - @yas chat/instance-status@0.1.41-rc.1
+  - @yas chat/omni-core@0.0.6-rc.1
 
   </details>
 
@@ -7261,39 +7261,39 @@
 - ([#36958](https://github.com/YasChat/YasChat/pull/36958)) Adds deprecation warning on `livechat:removeRoom` with new endpoint replacing it; `livechat/rooms.delete`
 
 - <details><summary>Updated dependencies [085d6536d23fe5cc293fec2f1454eb7442e8c7f4, 48d1442a07e860fefd6991c97e94d6a9de345afe, c253db3ece80da36fba7b79b3cbe64d705175d6d, f627e675076a49ebd2f7c80cee1c2a3e51cc22fc, a25e88c06cafdbe3baf7a40e3bffe3aed5a81cf6, 74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f, b85e96a2b7968dda91cb192331d6b1e046071037, 4ab2b7fdb9314538d45abdf4474ea9d2409799be, fd4f9b2523dae23518561cdcfa8d931f87d8964d]:</summary>
-  - @rocket.chat/ui-client@24.0.0-rc.0
-  - @rocket.chat/rest-typings@7.12.0-rc.0
-  - @rocket.chat/apps-engine@1.57.0-rc.0
-  - @rocket.chat/ui-contexts@24.0.0-rc.0
-  - @rocket.chat/i18n@1.12.0-rc.0
-  - @rocket.chat/ui-voip@14.0.0-rc.0
-  - @rocket.chat/core-typings@7.12.0-rc.0
-  - @rocket.chat/gazzodown@24.0.0-rc.0
-  - @rocket.chat/web-ui-registration@24.0.0-rc.0
-  - @rocket.chat/federation-matrix@0.0.3-rc.0
-  - @rocket.chat/omnichannel-services@0.3.38-rc.0
-  - @rocket.chat/presence@0.2.41-rc.0
-  - @rocket.chat/api-client@0.2.41-rc.0
-  - @rocket.chat/core-services@0.10.4-rc.0
-  - @rocket.chat/http-router@7.9.8-rc.0
-  - @rocket.chat/models@1.7.1-rc.0
-  - @rocket.chat/apps@0.5.20-rc.0
-  - @rocket.chat/fuselage-ui-kit@24.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-avatar@20.0.0-rc.0
-  - @rocket.chat/ui-video-conf@24.0.0-rc.0
-  - @rocket.chat/license@1.1.1-rc.0
-  - @rocket.chat/media-calls@0.0.3-rc.0
-  - @rocket.chat/pdf-worker@0.3.20-rc.0
-  - @rocket.chat/cron@0.1.41-rc.0
-  - @rocket.chat/freeswitch@1.2.28-rc.0
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.1-rc.0
-  - @rocket.chat/network-broker@0.2.20-rc.0
-  - @rocket.chat/omni-core-ee@0.0.6-rc.0
-  - @rocket.chat/instance-status@0.1.41-rc.0
-  - @rocket.chat/omni-core@0.0.6-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-client@24.0.0-rc.0
+  - @yas chat/rest-typings@7.12.0-rc.0
+  - @yas chat/apps-engine@1.57.0-rc.0
+  - @yas chat/ui-contexts@24.0.0-rc.0
+  - @yas chat/i18n@1.12.0-rc.0
+  - @yas chat/ui-voip@14.0.0-rc.0
+  - @yas chat/core-typings@7.12.0-rc.0
+  - @yas chat/gazzodown@24.0.0-rc.0
+  - @yas chat/web-ui-registration@24.0.0-rc.0
+  - @yas chat/federation-matrix@0.0.3-rc.0
+  - @yas chat/omnichannel-services@0.3.38-rc.0
+  - @yas chat/presence@0.2.41-rc.0
+  - @yas chat/api-client@0.2.41-rc.0
+  - @yas chat/core-services@0.10.4-rc.0
+  - @yas chat/http-router@7.9.8-rc.0
+  - @yas chat/models@1.7.1-rc.0
+  - @yas chat/apps@0.5.20-rc.0
+  - @yas chat/fuselage-ui-kit@24.0.0-rc.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-avatar@20.0.0-rc.0
+  - @yas chat/ui-video-conf@24.0.0-rc.0
+  - @yas chat/license@1.1.1-rc.0
+  - @yas chat/media-calls@0.0.3-rc.0
+  - @yas chat/pdf-worker@0.3.20-rc.0
+  - @yas chat/cron@0.1.41-rc.0
+  - @yas chat/freeswitch@1.2.28-rc.0
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.1-rc.0
+  - @yas chat/network-broker@0.2.20-rc.0
+  - @yas chat/omni-core-ee@0.0.6-rc.0
+  - @yas chat/instance-status@0.1.41-rc.0
+  - @yas chat/omni-core@0.0.6-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -7331,21 +7331,21 @@
 
 - ([#37031](https://github.com/YasChat/YasChat/pull/37031)) Removes deprecated search federated rooms
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36933](https://github.com/YasChat/YasChat/pull/36933)) Adds deprecation warning on `livechat:removeCustomField` with new endpoint replacing it; `livechat/custom-fields.delete`
 
@@ -7365,7 +7365,7 @@
 
 - ([#36683](https://github.com/YasChat/YasChat/pull/36683)) Fixes an issue where deleted messages remain visible until a manual page refresh when "Message removed" is hidden in hidden system messages settings.
 
-- ([#36982](https://github.com/YasChat/YasChat/pull/36982)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36982](https://github.com/YasChat/YasChat/pull/36982)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36897](https://github.com/YasChat/YasChat/pull/36897)) Adds deprecation warning on `livechat:getRoutingConfig`, as well as it adds new endpoint to replace it; `livechat/config/routing`
 
@@ -7426,40 +7426,40 @@
 - ([#36994](https://github.com/YasChat/YasChat/pull/36994)) Fixes button `Add members` not being disabled on a federated room memers tab, when no user is selected
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, f139c0d42790f0df076f32b4184f6b846bcdbc26, d76a5578ed0e14fae2a041c0e09d565b28630d76, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 3dfb557f723a395bc1e00f2647675968c46656bc, 276c270f34293729182e9ebab61e1ff2c35398fc, 3484c1fa14beafa62460f00de5a89cbfa4fa0db5, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, 72d9474b2f9149d8690d3483237bd2273d6799ac, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1, c6ef437d9071dbd8c08152984dc39542b1ae7306, 399ab0233c9cd5d7f25ce955b452feecdc378744]:</summary>
-  - @rocket.chat/models@1.7.0
-  - @rocket.chat/apps-engine@1.56.0
-  - @rocket.chat/gazzodown@23.0.0
-  - @rocket.chat/rest-typings@7.11.0
-  - @rocket.chat/i18n@1.11.0
-  - @rocket.chat/model-typings@1.8.0
-  - @rocket.chat/core-services@0.10.3
-  - @rocket.chat/ui-contexts@23.0.0
-  - @rocket.chat/web-ui-registration@23.0.0
-  - @rocket.chat/fuselage-ui-kit@23.0.0
-  - @rocket.chat/ui-theming@0.4.4
-  - @rocket.chat/ui-video-conf@23.0.0
-  - @rocket.chat/ui-composer@0.5.3
-  - @rocket.chat/ui-avatar@19.0.0
-  - @rocket.chat/ui-client@23.0.0
-  - @rocket.chat/ui-voip@13.0.0
-  - @rocket.chat/core-typings@7.11.0
-  - @rocket.chat/license@1.1.0
-  - @rocket.chat/federation-matrix@0.0.2
-  - @rocket.chat/media-calls@0.0.2
-  - @rocket.chat/omni-core-ee@0.0.5
-  - @rocket.chat/omnichannel-services@0.3.37
-  - @rocket.chat/presence@0.2.40
-  - @rocket.chat/cron@0.1.40
-  - @rocket.chat/instance-status@0.1.40
-  - @rocket.chat/omni-core@0.0.5
-  - @rocket.chat/apps@0.5.19
-  - @rocket.chat/api-client@0.2.40
-  - @rocket.chat/http-router@7.9.7
-  - @rocket.chat/network-broker@0.2.19
-  - @rocket.chat/pdf-worker@0.3.19
-  - @rocket.chat/freeswitch@1.2.27
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/models@1.7.0
+  - @yas chat/apps-engine@1.56.0
+  - @yas chat/gazzodown@23.0.0
+  - @yas chat/rest-typings@7.11.0
+  - @yas chat/i18n@1.11.0
+  - @yas chat/model-typings@1.8.0
+  - @yas chat/core-services@0.10.3
+  - @yas chat/ui-contexts@23.0.0
+  - @yas chat/web-ui-registration@23.0.0
+  - @yas chat/fuselage-ui-kit@23.0.0
+  - @yas chat/ui-theming@0.4.4
+  - @yas chat/ui-video-conf@23.0.0
+  - @yas chat/ui-composer@0.5.3
+  - @yas chat/ui-avatar@19.0.0
+  - @yas chat/ui-client@23.0.0
+  - @yas chat/ui-voip@13.0.0
+  - @yas chat/core-typings@7.11.0
+  - @yas chat/license@1.1.0
+  - @yas chat/federation-matrix@0.0.2
+  - @yas chat/media-calls@0.0.2
+  - @yas chat/omni-core-ee@0.0.5
+  - @yas chat/omnichannel-services@0.3.37
+  - @yas chat/presence@0.2.40
+  - @yas chat/cron@0.1.40
+  - @yas chat/instance-status@0.1.40
+  - @yas chat/omni-core@0.0.5
+  - @yas chat/apps@0.5.19
+  - @yas chat/api-client@0.2.40
+  - @yas chat/http-router@7.9.7
+  - @yas chat/network-broker@0.2.19
+  - @yas chat/pdf-worker@0.3.19
+  - @yas chat/freeswitch@1.2.27
+  - @yas chat/message-types@0.0.1
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -7467,40 +7467,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.7
-  - @rocket.chat/rest-typings@7.11.0-rc.7
-  - @rocket.chat/federation-matrix@0.0.2-rc.7
-  - @rocket.chat/license@1.1.0-rc.7
-  - @rocket.chat/media-calls@0.0.2-rc.7
-  - @rocket.chat/omnichannel-services@0.3.37-rc.7
-  - @rocket.chat/pdf-worker@0.3.19-rc.7
-  - @rocket.chat/presence@0.2.40-rc.7
-  - @rocket.chat/api-client@0.2.40-rc.7
-  - @rocket.chat/apps@0.5.19-rc.7
-  - @rocket.chat/core-services@0.10.3-rc.7
-  - @rocket.chat/cron@0.1.40-rc.7
-  - @rocket.chat/freeswitch@1.2.27-rc.7
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.7
-  - @rocket.chat/gazzodown@23.0.0-rc.7
-  - @rocket.chat/http-router@7.9.7-rc.7
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.7
-  - @rocket.chat/ui-avatar@19.0.0-rc.7
-  - @rocket.chat/ui-client@23.0.0-rc.7
-  - @rocket.chat/ui-contexts@23.0.0-rc.7
-  - @rocket.chat/web-ui-registration@23.0.0-rc.7
-  - @rocket.chat/models@1.7.0-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.19-rc.7
-  - @rocket.chat/omni-core-ee@0.0.5-rc.7
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.7
-  - @rocket.chat/ui-voip@13.0.0-rc.7
-  - @rocket.chat/instance-status@0.1.40-rc.7
-  - @rocket.chat/omni-core@0.0.5-rc.7
+  - @yas chat/core-typings@7.11.0-rc.7
+  - @yas chat/rest-typings@7.11.0-rc.7
+  - @yas chat/federation-matrix@0.0.2-rc.7
+  - @yas chat/license@1.1.0-rc.7
+  - @yas chat/media-calls@0.0.2-rc.7
+  - @yas chat/omnichannel-services@0.3.37-rc.7
+  - @yas chat/pdf-worker@0.3.19-rc.7
+  - @yas chat/presence@0.2.40-rc.7
+  - @yas chat/api-client@0.2.40-rc.7
+  - @yas chat/apps@0.5.19-rc.7
+  - @yas chat/core-services@0.10.3-rc.7
+  - @yas chat/cron@0.1.40-rc.7
+  - @yas chat/freeswitch@1.2.27-rc.7
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.7
+  - @yas chat/gazzodown@23.0.0-rc.7
+  - @yas chat/http-router@7.9.7-rc.7
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.7
+  - @yas chat/ui-avatar@19.0.0-rc.7
+  - @yas chat/ui-client@23.0.0-rc.7
+  - @yas chat/ui-contexts@23.0.0-rc.7
+  - @yas chat/web-ui-registration@23.0.0-rc.7
+  - @yas chat/models@1.7.0-rc.7
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.19-rc.7
+  - @yas chat/omni-core-ee@0.0.5-rc.7
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.7
+  - @yas chat/ui-voip@13.0.0-rc.7
+  - @yas chat/instance-status@0.1.40-rc.7
+  - @yas chat/omni-core@0.0.5-rc.7
 
   </details>
 
@@ -7508,40 +7508,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.6
-  - @rocket.chat/rest-typings@7.11.0-rc.6
-  - @rocket.chat/federation-matrix@0.0.2-rc.6
-  - @rocket.chat/license@1.1.0-rc.6
-  - @rocket.chat/media-calls@0.0.2-rc.6
-  - @rocket.chat/omnichannel-services@0.3.36-rc.6
-  - @rocket.chat/pdf-worker@0.3.18-rc.6
-  - @rocket.chat/presence@0.2.39-rc.6
-  - @rocket.chat/api-client@0.2.39-rc.6
-  - @rocket.chat/apps@0.5.18-rc.6
-  - @rocket.chat/core-services@0.10.2-rc.6
-  - @rocket.chat/cron@0.1.39-rc.6
-  - @rocket.chat/freeswitch@1.2.26-rc.6
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.6
-  - @rocket.chat/gazzodown@23.0.0-rc.6
-  - @rocket.chat/http-router@7.9.6-rc.6
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.6
-  - @rocket.chat/ui-avatar@19.0.0-rc.6
-  - @rocket.chat/ui-client@23.0.0-rc.6
-  - @rocket.chat/ui-contexts@23.0.0-rc.6
-  - @rocket.chat/web-ui-registration@23.0.0-rc.6
-  - @rocket.chat/models@1.7.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.18-rc.6
-  - @rocket.chat/omni-core-ee@0.0.4-rc.6
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.6
-  - @rocket.chat/ui-voip@13.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.39-rc.6
-  - @rocket.chat/omni-core@0.0.4-rc.6
+  - @yas chat/core-typings@7.11.0-rc.6
+  - @yas chat/rest-typings@7.11.0-rc.6
+  - @yas chat/federation-matrix@0.0.2-rc.6
+  - @yas chat/license@1.1.0-rc.6
+  - @yas chat/media-calls@0.0.2-rc.6
+  - @yas chat/omnichannel-services@0.3.36-rc.6
+  - @yas chat/pdf-worker@0.3.18-rc.6
+  - @yas chat/presence@0.2.39-rc.6
+  - @yas chat/api-client@0.2.39-rc.6
+  - @yas chat/apps@0.5.18-rc.6
+  - @yas chat/core-services@0.10.2-rc.6
+  - @yas chat/cron@0.1.39-rc.6
+  - @yas chat/freeswitch@1.2.26-rc.6
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.6
+  - @yas chat/gazzodown@23.0.0-rc.6
+  - @yas chat/http-router@7.9.6-rc.6
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.6
+  - @yas chat/ui-avatar@19.0.0-rc.6
+  - @yas chat/ui-client@23.0.0-rc.6
+  - @yas chat/ui-contexts@23.0.0-rc.6
+  - @yas chat/web-ui-registration@23.0.0-rc.6
+  - @yas chat/models@1.7.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.18-rc.6
+  - @yas chat/omni-core-ee@0.0.4-rc.6
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.6
+  - @yas chat/ui-voip@13.0.0-rc.6
+  - @yas chat/instance-status@0.1.39-rc.6
+  - @yas chat/omni-core@0.0.4-rc.6
 
   </details>
 
@@ -7549,40 +7549,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.5
-  - @rocket.chat/rest-typings@7.11.0-rc.5
-  - @rocket.chat/federation-matrix@0.0.2-rc.5
-  - @rocket.chat/license@1.1.0-rc.5
-  - @rocket.chat/media-calls@0.0.2-rc.5
-  - @rocket.chat/omnichannel-services@0.3.36-rc.5
-  - @rocket.chat/pdf-worker@0.3.18-rc.5
-  - @rocket.chat/presence@0.2.39-rc.5
-  - @rocket.chat/api-client@0.2.39-rc.5
-  - @rocket.chat/apps@0.5.18-rc.5
-  - @rocket.chat/core-services@0.10.2-rc.5
-  - @rocket.chat/cron@0.1.39-rc.5
-  - @rocket.chat/freeswitch@1.2.26-rc.5
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.5
-  - @rocket.chat/gazzodown@23.0.0-rc.5
-  - @rocket.chat/http-router@7.9.6-rc.5
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.5
-  - @rocket.chat/ui-avatar@19.0.0-rc.5
-  - @rocket.chat/ui-client@23.0.0-rc.5
-  - @rocket.chat/ui-contexts@23.0.0-rc.5
-  - @rocket.chat/web-ui-registration@23.0.0-rc.5
-  - @rocket.chat/models@1.7.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.18-rc.5
-  - @rocket.chat/omni-core-ee@0.0.4-rc.5
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.5
-  - @rocket.chat/ui-voip@13.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.39-rc.5
-  - @rocket.chat/omni-core@0.0.4-rc.5
+  - @yas chat/core-typings@7.11.0-rc.5
+  - @yas chat/rest-typings@7.11.0-rc.5
+  - @yas chat/federation-matrix@0.0.2-rc.5
+  - @yas chat/license@1.1.0-rc.5
+  - @yas chat/media-calls@0.0.2-rc.5
+  - @yas chat/omnichannel-services@0.3.36-rc.5
+  - @yas chat/pdf-worker@0.3.18-rc.5
+  - @yas chat/presence@0.2.39-rc.5
+  - @yas chat/api-client@0.2.39-rc.5
+  - @yas chat/apps@0.5.18-rc.5
+  - @yas chat/core-services@0.10.2-rc.5
+  - @yas chat/cron@0.1.39-rc.5
+  - @yas chat/freeswitch@1.2.26-rc.5
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.5
+  - @yas chat/gazzodown@23.0.0-rc.5
+  - @yas chat/http-router@7.9.6-rc.5
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.5
+  - @yas chat/ui-avatar@19.0.0-rc.5
+  - @yas chat/ui-client@23.0.0-rc.5
+  - @yas chat/ui-contexts@23.0.0-rc.5
+  - @yas chat/web-ui-registration@23.0.0-rc.5
+  - @yas chat/models@1.7.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.18-rc.5
+  - @yas chat/omni-core-ee@0.0.4-rc.5
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.5
+  - @yas chat/ui-voip@13.0.0-rc.5
+  - @yas chat/instance-status@0.1.39-rc.5
+  - @yas chat/omni-core@0.0.4-rc.5
 
   </details>
 
@@ -7590,40 +7590,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.4
-  - @rocket.chat/rest-typings@7.11.0-rc.4
-  - @rocket.chat/federation-matrix@0.0.2-rc.4
-  - @rocket.chat/license@1.1.0-rc.4
-  - @rocket.chat/media-calls@0.0.2-rc.4
-  - @rocket.chat/omnichannel-services@0.3.36-rc.4
-  - @rocket.chat/pdf-worker@0.3.18-rc.4
-  - @rocket.chat/presence@0.2.39-rc.4
-  - @rocket.chat/api-client@0.2.39-rc.4
-  - @rocket.chat/apps@0.5.18-rc.4
-  - @rocket.chat/core-services@0.10.2-rc.4
-  - @rocket.chat/cron@0.1.39-rc.4
-  - @rocket.chat/freeswitch@1.2.26-rc.4
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.4
-  - @rocket.chat/gazzodown@23.0.0-rc.4
-  - @rocket.chat/http-router@7.9.6-rc.4
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.4
-  - @rocket.chat/ui-avatar@19.0.0-rc.4
-  - @rocket.chat/ui-client@23.0.0-rc.4
-  - @rocket.chat/ui-contexts@23.0.0-rc.4
-  - @rocket.chat/web-ui-registration@23.0.0-rc.4
-  - @rocket.chat/models@1.7.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.18-rc.4
-  - @rocket.chat/omni-core-ee@0.0.4-rc.4
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.4
-  - @rocket.chat/ui-voip@13.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.39-rc.4
-  - @rocket.chat/omni-core@0.0.4-rc.4
+  - @yas chat/core-typings@7.11.0-rc.4
+  - @yas chat/rest-typings@7.11.0-rc.4
+  - @yas chat/federation-matrix@0.0.2-rc.4
+  - @yas chat/license@1.1.0-rc.4
+  - @yas chat/media-calls@0.0.2-rc.4
+  - @yas chat/omnichannel-services@0.3.36-rc.4
+  - @yas chat/pdf-worker@0.3.18-rc.4
+  - @yas chat/presence@0.2.39-rc.4
+  - @yas chat/api-client@0.2.39-rc.4
+  - @yas chat/apps@0.5.18-rc.4
+  - @yas chat/core-services@0.10.2-rc.4
+  - @yas chat/cron@0.1.39-rc.4
+  - @yas chat/freeswitch@1.2.26-rc.4
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.4
+  - @yas chat/gazzodown@23.0.0-rc.4
+  - @yas chat/http-router@7.9.6-rc.4
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.4
+  - @yas chat/ui-avatar@19.0.0-rc.4
+  - @yas chat/ui-client@23.0.0-rc.4
+  - @yas chat/ui-contexts@23.0.0-rc.4
+  - @yas chat/web-ui-registration@23.0.0-rc.4
+  - @yas chat/models@1.7.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.18-rc.4
+  - @yas chat/omni-core-ee@0.0.4-rc.4
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.4
+  - @yas chat/ui-voip@13.0.0-rc.4
+  - @yas chat/instance-status@0.1.39-rc.4
+  - @yas chat/omni-core@0.0.4-rc.4
 
   </details>
 
@@ -7631,40 +7631,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.3
-  - @rocket.chat/rest-typings@7.11.0-rc.3
-  - @rocket.chat/federation-matrix@0.0.2-rc.3
-  - @rocket.chat/license@1.1.0-rc.3
-  - @rocket.chat/media-calls@0.0.2-rc.3
-  - @rocket.chat/omnichannel-services@0.3.36-rc.3
-  - @rocket.chat/pdf-worker@0.3.18-rc.3
-  - @rocket.chat/presence@0.2.39-rc.3
-  - @rocket.chat/api-client@0.2.39-rc.3
-  - @rocket.chat/apps@0.5.18-rc.3
-  - @rocket.chat/core-services@0.10.2-rc.3
-  - @rocket.chat/cron@0.1.39-rc.3
-  - @rocket.chat/freeswitch@1.2.26-rc.3
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.3
-  - @rocket.chat/gazzodown@23.0.0-rc.3
-  - @rocket.chat/http-router@7.9.6-rc.3
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.3
-  - @rocket.chat/ui-avatar@19.0.0-rc.3
-  - @rocket.chat/ui-client@23.0.0-rc.3
-  - @rocket.chat/ui-contexts@23.0.0-rc.3
-  - @rocket.chat/web-ui-registration@23.0.0-rc.3
-  - @rocket.chat/models@1.7.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.18-rc.3
-  - @rocket.chat/omni-core-ee@0.0.4-rc.3
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.3
-  - @rocket.chat/ui-voip@13.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.39-rc.3
-  - @rocket.chat/omni-core@0.0.4-rc.3
+  - @yas chat/core-typings@7.11.0-rc.3
+  - @yas chat/rest-typings@7.11.0-rc.3
+  - @yas chat/federation-matrix@0.0.2-rc.3
+  - @yas chat/license@1.1.0-rc.3
+  - @yas chat/media-calls@0.0.2-rc.3
+  - @yas chat/omnichannel-services@0.3.36-rc.3
+  - @yas chat/pdf-worker@0.3.18-rc.3
+  - @yas chat/presence@0.2.39-rc.3
+  - @yas chat/api-client@0.2.39-rc.3
+  - @yas chat/apps@0.5.18-rc.3
+  - @yas chat/core-services@0.10.2-rc.3
+  - @yas chat/cron@0.1.39-rc.3
+  - @yas chat/freeswitch@1.2.26-rc.3
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.3
+  - @yas chat/gazzodown@23.0.0-rc.3
+  - @yas chat/http-router@7.9.6-rc.3
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.3
+  - @yas chat/ui-avatar@19.0.0-rc.3
+  - @yas chat/ui-client@23.0.0-rc.3
+  - @yas chat/ui-contexts@23.0.0-rc.3
+  - @yas chat/web-ui-registration@23.0.0-rc.3
+  - @yas chat/models@1.7.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.18-rc.3
+  - @yas chat/omni-core-ee@0.0.4-rc.3
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.3
+  - @yas chat/ui-voip@13.0.0-rc.3
+  - @yas chat/instance-status@0.1.39-rc.3
+  - @yas chat/omni-core@0.0.4-rc.3
 
   </details>
 
@@ -7672,42 +7672,42 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37053](https://github.com/YasChat/YasChat/pull/37053)) Fixes stale phone numbers being available for outbound message
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.2
-  - @rocket.chat/rest-typings@7.11.0-rc.2
-  - @rocket.chat/federation-matrix@0.0.2-rc.2
-  - @rocket.chat/license@1.1.0-rc.2
-  - @rocket.chat/media-calls@0.0.2-rc.2
-  - @rocket.chat/omnichannel-services@0.3.35-rc.2
-  - @rocket.chat/pdf-worker@0.3.17-rc.2
-  - @rocket.chat/presence@0.2.38-rc.2
-  - @rocket.chat/api-client@0.2.38-rc.2
-  - @rocket.chat/apps@0.5.17-rc.2
-  - @rocket.chat/core-services@0.10.1-rc.2
-  - @rocket.chat/cron@0.1.38-rc.2
-  - @rocket.chat/freeswitch@1.2.25-rc.2
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.2
-  - @rocket.chat/gazzodown@23.0.0-rc.2
-  - @rocket.chat/http-router@7.9.5-rc.2
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.2
-  - @rocket.chat/ui-avatar@19.0.0-rc.2
-  - @rocket.chat/ui-client@23.0.0-rc.2
-  - @rocket.chat/ui-contexts@23.0.0-rc.2
-  - @rocket.chat/web-ui-registration@23.0.0-rc.2
-  - @rocket.chat/models@1.7.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.17-rc.2
-  - @rocket.chat/omni-core-ee@0.0.3-rc.2
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.2
-  - @rocket.chat/ui-voip@13.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.38-rc.2
-  - @rocket.chat/omni-core@0.0.3-rc.2
+  - @yas chat/core-typings@7.11.0-rc.2
+  - @yas chat/rest-typings@7.11.0-rc.2
+  - @yas chat/federation-matrix@0.0.2-rc.2
+  - @yas chat/license@1.1.0-rc.2
+  - @yas chat/media-calls@0.0.2-rc.2
+  - @yas chat/omnichannel-services@0.3.35-rc.2
+  - @yas chat/pdf-worker@0.3.17-rc.2
+  - @yas chat/presence@0.2.38-rc.2
+  - @yas chat/api-client@0.2.38-rc.2
+  - @yas chat/apps@0.5.17-rc.2
+  - @yas chat/core-services@0.10.1-rc.2
+  - @yas chat/cron@0.1.38-rc.2
+  - @yas chat/freeswitch@1.2.25-rc.2
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.2
+  - @yas chat/gazzodown@23.0.0-rc.2
+  - @yas chat/http-router@7.9.5-rc.2
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.2
+  - @yas chat/ui-avatar@19.0.0-rc.2
+  - @yas chat/ui-client@23.0.0-rc.2
+  - @yas chat/ui-contexts@23.0.0-rc.2
+  - @yas chat/web-ui-registration@23.0.0-rc.2
+  - @yas chat/models@1.7.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.17-rc.2
+  - @yas chat/omni-core-ee@0.0.3-rc.2
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.2
+  - @yas chat/ui-voip@13.0.0-rc.2
+  - @yas chat/instance-status@0.1.38-rc.2
+  - @yas chat/omni-core@0.0.3-rc.2
 
   </details>
 
@@ -7715,41 +7715,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.1
-  - @rocket.chat/rest-typings@7.11.0-rc.1
-  - @rocket.chat/federation-service@0.1.1-rc.1
-  - @rocket.chat/federation-matrix@0.0.2-rc.1
-  - @rocket.chat/license@1.1.0-rc.1
-  - @rocket.chat/media-calls@0.0.2-rc.1
-  - @rocket.chat/omnichannel-services@0.3.35-rc.1
-  - @rocket.chat/pdf-worker@0.3.17-rc.1
-  - @rocket.chat/presence@0.2.38-rc.1
-  - @rocket.chat/api-client@0.2.38-rc.1
-  - @rocket.chat/apps@0.5.17-rc.1
-  - @rocket.chat/core-services@0.10.1-rc.1
-  - @rocket.chat/cron@0.1.38-rc.1
-  - @rocket.chat/freeswitch@1.2.25-rc.1
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.1
-  - @rocket.chat/gazzodown@23.0.0-rc.1
-  - @rocket.chat/http-router@7.9.5-rc.1
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/model-typings@1.8.0-rc.1
-  - @rocket.chat/ui-avatar@19.0.0-rc.1
-  - @rocket.chat/ui-client@23.0.0-rc.1
-  - @rocket.chat/ui-contexts@23.0.0-rc.1
-  - @rocket.chat/web-ui-registration@23.0.0-rc.1
-  - @rocket.chat/models@1.7.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.17-rc.1
-  - @rocket.chat/omni-core-ee@0.0.3-rc.1
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.1
-  - @rocket.chat/ui-voip@13.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.38-rc.1
-  - @rocket.chat/omni-core@0.0.3-rc.1
+  - @yas chat/core-typings@7.11.0-rc.1
+  - @yas chat/rest-typings@7.11.0-rc.1
+  - @yas chat/federation-service@0.1.1-rc.1
+  - @yas chat/federation-matrix@0.0.2-rc.1
+  - @yas chat/license@1.1.0-rc.1
+  - @yas chat/media-calls@0.0.2-rc.1
+  - @yas chat/omnichannel-services@0.3.35-rc.1
+  - @yas chat/pdf-worker@0.3.17-rc.1
+  - @yas chat/presence@0.2.38-rc.1
+  - @yas chat/api-client@0.2.38-rc.1
+  - @yas chat/apps@0.5.17-rc.1
+  - @yas chat/core-services@0.10.1-rc.1
+  - @yas chat/cron@0.1.38-rc.1
+  - @yas chat/freeswitch@1.2.25-rc.1
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.1
+  - @yas chat/gazzodown@23.0.0-rc.1
+  - @yas chat/http-router@7.9.5-rc.1
+  - @yas chat/message-types@0.0.1
+  - @yas chat/model-typings@1.8.0-rc.1
+  - @yas chat/ui-avatar@19.0.0-rc.1
+  - @yas chat/ui-client@23.0.0-rc.1
+  - @yas chat/ui-contexts@23.0.0-rc.1
+  - @yas chat/web-ui-registration@23.0.0-rc.1
+  - @yas chat/models@1.7.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.17-rc.1
+  - @yas chat/omni-core-ee@0.0.3-rc.1
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.1
+  - @yas chat/ui-voip@13.0.0-rc.1
+  - @yas chat/instance-status@0.1.38-rc.1
+  - @yas chat/omni-core@0.0.3-rc.1
 
   </details>
 
@@ -7803,7 +7803,7 @@
 
 - ([#36683](https://github.com/YasChat/YasChat/pull/36683)) Fixes an issue where deleted messages remain visible until a manual page refresh when "Message removed" is hidden in hidden system messages settings.
 
-- ([#36982](https://github.com/YasChat/YasChat/pull/36982)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36982](https://github.com/YasChat/YasChat/pull/36982)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36897](https://github.com/YasChat/YasChat/pull/36897)) Adds deprecation warning on `livechat:getRoutingConfig`, as well as it adds new endpoint to replace it; `livechat/config/routing`
 
@@ -7864,79 +7864,79 @@
 - ([#36994](https://github.com/YasChat/YasChat/pull/36994)) Fixes button `Add members` not being disabled on a federated room memers tab, when no user is selected
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, f139c0d42790f0df076f32b4184f6b846bcdbc26, d76a5578ed0e14fae2a041c0e09d565b28630d76, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 8d2ad40c46334aaf35816e52a3b28dc2ac23ce2d, ba793542644d2b725924c4cef253e7d84bc2ff71, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, c5ee569cc3120bb616001fd78687dbf623a6a504, 00611aceec7f158064863f2e829c5a6698687512, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, c15a47ee1d55118342d0f0ece7af77f6f41132b7, 3dfb557f723a395bc1e00f2647675968c46656bc, 276c270f34293729182e9ebab61e1ff2c35398fc, 3484c1fa14beafa62460f00de5a89cbfa4fa0db5, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, 72d9474b2f9149d8690d3483237bd2273d6799ac, 80fbb2eb421253e6066207949eaf2b41871e4428, 90a1759df57814306cbc859409fe041b33db7a39, b74ab6f18ff1343f4835975f663211b005ccc5a1, c6ef437d9071dbd8c08152984dc39542b1ae7306, 399ab0233c9cd5d7f25ce955b452feecdc378744]:</summary>
-  - @rocket.chat/models@1.7.0-rc.0
-  - @rocket.chat/apps-engine@1.56.0-rc.0
-  - @rocket.chat/gazzodown@23.0.0-rc.0
-  - @rocket.chat/rest-typings@7.11.0-rc.0
-  - @rocket.chat/i18n@1.11.0-rc.0
-  - @rocket.chat/model-typings@1.8.0-rc.0
-  - @rocket.chat/core-services@0.10.1-rc.0
-  - @rocket.chat/ui-contexts@23.0.0-rc.0
-  - @rocket.chat/web-ui-registration@23.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@23.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.4-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.0
-  - @rocket.chat/ui-composer@0.5.3-rc.0
-  - @rocket.chat/ui-avatar@19.0.0-rc.0
-  - @rocket.chat/ui-client@23.0.0-rc.0
-  - @rocket.chat/ui-voip@13.0.0-rc.0
-  - @rocket.chat/core-typings@7.11.0-rc.0
-  - @rocket.chat/license@1.1.0-rc.0
-  - @rocket.chat/federation-service@0.1.1-rc.0
-  - @rocket.chat/federation-matrix@0.0.2-rc.0
-  - @rocket.chat/media-calls@0.0.2-rc.0
-  - @rocket.chat/omni-core-ee@0.0.3-rc.0
-  - @rocket.chat/omnichannel-services@0.3.35-rc.0
-  - @rocket.chat/presence@0.2.38-rc.0
-  - @rocket.chat/cron@0.1.38-rc.0
-  - @rocket.chat/instance-status@0.1.38-rc.0
-  - @rocket.chat/omni-core@0.0.3-rc.0
-  - @rocket.chat/apps@0.5.17-rc.0
-  - @rocket.chat/api-client@0.2.38-rc.0
-  - @rocket.chat/http-router@7.9.5-rc.0
-  - @rocket.chat/network-broker@0.2.17-rc.0
-  - @rocket.chat/pdf-worker@0.3.17-rc.0
-  - @rocket.chat/freeswitch@1.2.25-rc.0
-  - @rocket.chat/message-types@0.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/models@1.7.0-rc.0
+  - @yas chat/apps-engine@1.56.0-rc.0
+  - @yas chat/gazzodown@23.0.0-rc.0
+  - @yas chat/rest-typings@7.11.0-rc.0
+  - @yas chat/i18n@1.11.0-rc.0
+  - @yas chat/model-typings@1.8.0-rc.0
+  - @yas chat/core-services@0.10.1-rc.0
+  - @yas chat/ui-contexts@23.0.0-rc.0
+  - @yas chat/web-ui-registration@23.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@23.0.0-rc.0
+  - @yas chat/ui-theming@0.4.4-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.0
+  - @yas chat/ui-composer@0.5.3-rc.0
+  - @yas chat/ui-avatar@19.0.0-rc.0
+  - @yas chat/ui-client@23.0.0-rc.0
+  - @yas chat/ui-voip@13.0.0-rc.0
+  - @yas chat/core-typings@7.11.0-rc.0
+  - @yas chat/license@1.1.0-rc.0
+  - @yas chat/federation-service@0.1.1-rc.0
+  - @yas chat/federation-matrix@0.0.2-rc.0
+  - @yas chat/media-calls@0.0.2-rc.0
+  - @yas chat/omni-core-ee@0.0.3-rc.0
+  - @yas chat/omnichannel-services@0.3.35-rc.0
+  - @yas chat/presence@0.2.38-rc.0
+  - @yas chat/cron@0.1.38-rc.0
+  - @yas chat/instance-status@0.1.38-rc.0
+  - @yas chat/omni-core@0.0.3-rc.0
+  - @yas chat/apps@0.5.17-rc.0
+  - @yas chat/api-client@0.2.38-rc.0
+  - @yas chat/http-router@7.9.5-rc.0
+  - @yas chat/network-broker@0.2.17-rc.0
+  - @yas chat/pdf-worker@0.3.17-rc.0
+  - @yas chat/freeswitch@1.2.25-rc.0
+  - @yas chat/message-types@0.0.1
+  - @yas chat/server-cloud-communication@0.0.2
 
 ## 7.10.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#37236](https://github.com/YasChat/YasChat/pull/37236) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes real-time monitoring displaying incorrect data
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.2
-  - @rocket.chat/rest-typings@7.10.2
-  - @rocket.chat/license@1.0.30
-  - @rocket.chat/omnichannel-services@0.3.36
-  - @rocket.chat/pdf-worker@0.3.18
-  - @rocket.chat/presence@0.2.39
-  - @rocket.chat/api-client@0.2.39
-  - @rocket.chat/apps@0.5.18
-  - @rocket.chat/core-services@0.10.2
-  - @rocket.chat/cron@0.1.39
-  - @rocket.chat/freeswitch@1.2.26
-  - @rocket.chat/fuselage-ui-kit@22.0.2
-  - @rocket.chat/gazzodown@22.0.2
-  - @rocket.chat/http-router@7.9.6
-  - @rocket.chat/model-typings@1.7.2
-  - @rocket.chat/ui-avatar@18.0.2
-  - @rocket.chat/ui-client@22.0.2
-  - @rocket.chat/ui-contexts@22.0.2
-  - @rocket.chat/web-ui-registration@22.0.2
-  - @rocket.chat/models@1.6.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.18
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.2
-  - @rocket.chat/ui-voip@12.0.2
-  - @rocket.chat/omni-core-ee@0.0.4
-  - @rocket.chat/instance-status@0.1.39
-  - @rocket.chat/omni-core@0.0.4
+  - @yas chat/core-typings@7.10.2
+  - @yas chat/rest-typings@7.10.2
+  - @yas chat/license@1.0.30
+  - @yas chat/omnichannel-services@0.3.36
+  - @yas chat/pdf-worker@0.3.18
+  - @yas chat/presence@0.2.39
+  - @yas chat/api-client@0.2.39
+  - @yas chat/apps@0.5.18
+  - @yas chat/core-services@0.10.2
+  - @yas chat/cron@0.1.39
+  - @yas chat/freeswitch@1.2.26
+  - @yas chat/fuselage-ui-kit@22.0.2
+  - @yas chat/gazzodown@22.0.2
+  - @yas chat/http-router@7.9.6
+  - @yas chat/model-typings@1.7.2
+  - @yas chat/ui-avatar@18.0.2
+  - @yas chat/ui-client@22.0.2
+  - @yas chat/ui-contexts@22.0.2
+  - @yas chat/web-ui-registration@22.0.2
+  - @yas chat/models@1.6.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.18
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.2
+  - @yas chat/ui-voip@12.0.2
+  - @yas chat/omni-core-ee@0.0.4
+  - @yas chat/instance-status@0.1.39
+  - @yas chat/omni-core@0.0.4
 
   </details>
 
@@ -7944,48 +7944,48 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36962](https://github.com/YasChat/YasChat/pull/36962) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes login using iframe authentication.
 
-- ([#37000](https://github.com/YasChat/YasChat/pull/37000) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#37000](https://github.com/YasChat/YasChat/pull/37000) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#37028](https://github.com/YasChat/YasChat/pull/37028) by [@dionisio-bot](https://github.com/dionisio-bot)) Changes a strict behavior on reporting slash commands provided by apps
 
 - ([#37041](https://github.com/YasChat/YasChat/pull/37041)) Ensures the formatted volume value is kept between 0 and 1
 
 - <details><summary>Updated dependencies [42cea259937ceea4ba8ec62627e4ca40e7e02320]:</summary>
-  - @rocket.chat/apps-engine@1.55.1
-  - @rocket.chat/presence@0.2.38
-  - @rocket.chat/apps@0.5.17
-  - @rocket.chat/core-services@0.10.1
-  - @rocket.chat/core-typings@7.10.1
-  - @rocket.chat/fuselage-ui-kit@22.0.1
-  - @rocket.chat/rest-typings@7.10.1
-  - @rocket.chat/license@1.0.29
-  - @rocket.chat/omnichannel-services@0.3.35
-  - @rocket.chat/pdf-worker@0.3.17
-  - @rocket.chat/api-client@0.2.38
-  - @rocket.chat/cron@0.1.38
-  - @rocket.chat/freeswitch@1.2.25
-  - @rocket.chat/gazzodown@22.0.1
-  - @rocket.chat/http-router@7.9.5
-  - @rocket.chat/model-typings@1.7.1
-  - @rocket.chat/ui-avatar@18.0.1
-  - @rocket.chat/ui-client@22.0.1
-  - @rocket.chat/ui-contexts@22.0.1
-  - @rocket.chat/web-ui-registration@22.0.1
-  - @rocket.chat/models@1.6.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.17
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.1
-  - @rocket.chat/ui-voip@12.0.1
-  - @rocket.chat/omni-core-ee@0.0.3
-  - @rocket.chat/instance-status@0.1.38
-  - @rocket.chat/omni-core@0.0.3
+  - @yas chat/apps-engine@1.55.1
+  - @yas chat/presence@0.2.38
+  - @yas chat/apps@0.5.17
+  - @yas chat/core-services@0.10.1
+  - @yas chat/core-typings@7.10.1
+  - @yas chat/fuselage-ui-kit@22.0.1
+  - @yas chat/rest-typings@7.10.1
+  - @yas chat/license@1.0.29
+  - @yas chat/omnichannel-services@0.3.35
+  - @yas chat/pdf-worker@0.3.17
+  - @yas chat/api-client@0.2.38
+  - @yas chat/cron@0.1.38
+  - @yas chat/freeswitch@1.2.25
+  - @yas chat/gazzodown@22.0.1
+  - @yas chat/http-router@7.9.5
+  - @yas chat/model-typings@1.7.1
+  - @yas chat/ui-avatar@18.0.1
+  - @yas chat/ui-client@22.0.1
+  - @yas chat/ui-contexts@22.0.1
+  - @yas chat/web-ui-registration@22.0.1
+  - @yas chat/models@1.6.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.17
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.1
+  - @yas chat/ui-voip@12.0.1
+  - @yas chat/omni-core-ee@0.0.3
+  - @yas chat/instance-status@0.1.38
+  - @yas chat/omni-core@0.0.3
 
   </details>
 
@@ -8008,19 +8008,19 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36622](https://github.com/YasChat/YasChat/pull/36622)) Fixes an issue where audio and video messages would stop playing if left idle past their link expiration. Now the player automatically refreshes expired links so users can continue listening or watching without reloading the chat.
 
@@ -8093,36 +8093,36 @@
 - ([#36578](https://github.com/YasChat/YasChat/pull/36578)) Fixes a bug where the `/api/v1/users.update` API call was replacing the entire `customFields` object instead of merging only the specified properties. The fix ensures that when updating custom fields, existing values are preserved while only specified fields are updated or added.
 
 - <details><summary>Updated dependencies [f040b27ff67c31188026a0aed9ba1e9c4f717f08, a54f8837338246842585d037a0d0327a79245811, c5f0be15b31d1de03256f74bd277ad4ab753ada2, b25f05acd07762387fa45d67a1241b982c192f5d, c86fbce9b44942662dc25a599fc12b009fd40a74, 22498de4e9de4467642f637d00cc8344ba876987, 2fea1a79b831999f148505b9442cd584e1b06d09, 2f162a0dca79274d4458a5853afe64c506a7554f, 128b228fcb0b2fda2967c88b07340be4b34a5470, fd32867fd4949bc2951a22075498ccb551cc6bbc, 759b178946951f10dfcf0c9daf0f45aceb422998, 1ca92c346e45486e9b6afc66566ae38fac65b48f, 580a3c945252666b3b477e1b626ea1001de6f456, c0c8919723c8d1242973625d15db74c994318460, 8942187a9b062be3aaac8fee4b576dcad467641e, 5d7dec3a68f7281b4b4531fa708d7fc7589a863c, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, a1c99dfe7bdee81e85164155e61b94b55dcbb752, dc6acda84bf7452d96f375be3cd97748ed016bfc, 42979690f3880d3c700582b7892020e37bc82be3, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/rest-typings@7.10.0
-  - @rocket.chat/model-typings@1.7.0
-  - @rocket.chat/models@1.6.0
-  - @rocket.chat/apps-engine@1.55.0
-  - @rocket.chat/ui-client@22.0.0
-  - @rocket.chat/http-router@7.9.4
-  - @rocket.chat/i18n@1.10.0
-  - @rocket.chat/core-typings@7.10.0
-  - @rocket.chat/core-services@0.10.0
-  - @rocket.chat/ui-contexts@22.0.0
-  - @rocket.chat/omnichannel-services@0.3.34
-  - @rocket.chat/presence@0.2.37
-  - @rocket.chat/api-client@0.2.37
-  - @rocket.chat/web-ui-registration@22.0.0
-  - @rocket.chat/apps@0.5.16
-  - @rocket.chat/omni-core-ee@0.0.2
-  - @rocket.chat/cron@0.1.37
-  - @rocket.chat/instance-status@0.1.37
-  - @rocket.chat/omni-core@0.0.2
-  - @rocket.chat/fuselage-ui-kit@22.0.0
-  - @rocket.chat/gazzodown@22.0.0
-  - @rocket.chat/ui-voip@12.0.0
-  - @rocket.chat/license@1.0.28
-  - @rocket.chat/pdf-worker@0.3.16
-  - @rocket.chat/freeswitch@1.2.24
-  - @rocket.chat/ui-avatar@18.0.0
-  - @rocket.chat/network-broker@0.2.16
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.10.0
+  - @yas chat/model-typings@1.7.0
+  - @yas chat/models@1.6.0
+  - @yas chat/apps-engine@1.55.0
+  - @yas chat/ui-client@22.0.0
+  - @yas chat/http-router@7.9.4
+  - @yas chat/i18n@1.10.0
+  - @yas chat/core-typings@7.10.0
+  - @yas chat/core-services@0.10.0
+  - @yas chat/ui-contexts@22.0.0
+  - @yas chat/omnichannel-services@0.3.34
+  - @yas chat/presence@0.2.37
+  - @yas chat/api-client@0.2.37
+  - @yas chat/web-ui-registration@22.0.0
+  - @yas chat/apps@0.5.16
+  - @yas chat/omni-core-ee@0.0.2
+  - @yas chat/cron@0.1.37
+  - @yas chat/instance-status@0.1.37
+  - @yas chat/omni-core@0.0.2
+  - @yas chat/fuselage-ui-kit@22.0.0
+  - @yas chat/gazzodown@22.0.0
+  - @yas chat/ui-voip@12.0.0
+  - @yas chat/license@1.0.28
+  - @yas chat/pdf-worker@0.3.16
+  - @yas chat/freeswitch@1.2.24
+  - @yas chat/ui-avatar@18.0.0
+  - @yas chat/network-broker@0.2.16
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -8130,39 +8130,39 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36815](https://github.com/YasChat/YasChat/pull/36815)) Fixes queued conversations not being sorted in real time based on the room's SLA policy
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.6
-  - @rocket.chat/rest-typings@7.10.0-rc.6
-  - @rocket.chat/license@1.0.28-rc.6
-  - @rocket.chat/omnichannel-services@0.3.34-rc.6
-  - @rocket.chat/pdf-worker@0.3.16-rc.6
-  - @rocket.chat/presence@0.2.37-rc.6
-  - @rocket.chat/api-client@0.2.37-rc.6
-  - @rocket.chat/apps@0.5.16-rc.6
-  - @rocket.chat/core-services@0.10.0-rc.6
-  - @rocket.chat/cron@0.1.37-rc.6
-  - @rocket.chat/freeswitch@1.2.24-rc.6
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.6
-  - @rocket.chat/gazzodown@22.0.0-rc.6
-  - @rocket.chat/http-router@7.9.4-rc.6
-  - @rocket.chat/model-typings@1.7.0-rc.6
-  - @rocket.chat/ui-avatar@18.0.0-rc.6
-  - @rocket.chat/ui-client@22.0.0-rc.6
-  - @rocket.chat/ui-contexts@22.0.0-rc.6
-  - @rocket.chat/web-ui-registration@22.0.0-rc.6
-  - @rocket.chat/models@1.6.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.16-rc.6
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.6
-  - @rocket.chat/ui-voip@12.0.0-rc.6
-  - @rocket.chat/omni-core-ee@0.0.2-rc.6
-  - @rocket.chat/instance-status@0.1.37-rc.6
-  - @rocket.chat/omni-core@0.0.2-rc.6
+  - @yas chat/core-typings@7.10.0-rc.6
+  - @yas chat/rest-typings@7.10.0-rc.6
+  - @yas chat/license@1.0.28-rc.6
+  - @yas chat/omnichannel-services@0.3.34-rc.6
+  - @yas chat/pdf-worker@0.3.16-rc.6
+  - @yas chat/presence@0.2.37-rc.6
+  - @yas chat/api-client@0.2.37-rc.6
+  - @yas chat/apps@0.5.16-rc.6
+  - @yas chat/core-services@0.10.0-rc.6
+  - @yas chat/cron@0.1.37-rc.6
+  - @yas chat/freeswitch@1.2.24-rc.6
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.6
+  - @yas chat/gazzodown@22.0.0-rc.6
+  - @yas chat/http-router@7.9.4-rc.6
+  - @yas chat/model-typings@1.7.0-rc.6
+  - @yas chat/ui-avatar@18.0.0-rc.6
+  - @yas chat/ui-client@22.0.0-rc.6
+  - @yas chat/ui-contexts@22.0.0-rc.6
+  - @yas chat/web-ui-registration@22.0.0-rc.6
+  - @yas chat/models@1.6.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.16-rc.6
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.6
+  - @yas chat/ui-voip@12.0.0-rc.6
+  - @yas chat/omni-core-ee@0.0.2-rc.6
+  - @yas chat/instance-status@0.1.37-rc.6
+  - @yas chat/omni-core@0.0.2-rc.6
 
   </details>
 
@@ -8170,74 +8170,74 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.5
-  - @rocket.chat/rest-typings@7.10.0-rc.5
-  - @rocket.chat/license@1.0.25-rc.5
-  - @rocket.chat/omnichannel-services@0.3.31-rc.5
-  - @rocket.chat/pdf-worker@0.3.13-rc.5
-  - @rocket.chat/presence@0.2.34-rc.5
-  - @rocket.chat/api-client@0.2.34-rc.5
-  - @rocket.chat/apps@0.5.13-rc.5
-  - @rocket.chat/core-services@0.10.0-rc.5
-  - @rocket.chat/cron@0.1.34-rc.5
-  - @rocket.chat/freeswitch@1.2.21-rc.5
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.5
-  - @rocket.chat/gazzodown@22.0.0-rc.5
-  - @rocket.chat/http-router@7.9.1-rc.5
-  - @rocket.chat/model-typings@1.7.0-rc.5
-  - @rocket.chat/ui-avatar@18.0.0-rc.5
-  - @rocket.chat/ui-client@22.0.0-rc.5
-  - @rocket.chat/ui-contexts@22.0.0-rc.5
-  - @rocket.chat/web-ui-registration@22.0.0-rc.5
-  - @rocket.chat/models@1.6.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13-rc.5
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.5
-  - @rocket.chat/ui-voip@12.0.0-rc.5
-  - @rocket.chat/omni-core-ee@0.0.2-rc.5
-  - @rocket.chat/instance-status@0.1.34-rc.5
-  - @rocket.chat/omni-core@0.0.2-rc.5
+  - @yas chat/core-typings@7.10.0-rc.5
+  - @yas chat/rest-typings@7.10.0-rc.5
+  - @yas chat/license@1.0.25-rc.5
+  - @yas chat/omnichannel-services@0.3.31-rc.5
+  - @yas chat/pdf-worker@0.3.13-rc.5
+  - @yas chat/presence@0.2.34-rc.5
+  - @yas chat/api-client@0.2.34-rc.5
+  - @yas chat/apps@0.5.13-rc.5
+  - @yas chat/core-services@0.10.0-rc.5
+  - @yas chat/cron@0.1.34-rc.5
+  - @yas chat/freeswitch@1.2.21-rc.5
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.5
+  - @yas chat/gazzodown@22.0.0-rc.5
+  - @yas chat/http-router@7.9.1-rc.5
+  - @yas chat/model-typings@1.7.0-rc.5
+  - @yas chat/ui-avatar@18.0.0-rc.5
+  - @yas chat/ui-client@22.0.0-rc.5
+  - @yas chat/ui-contexts@22.0.0-rc.5
+  - @yas chat/web-ui-registration@22.0.0-rc.5
+  - @yas chat/models@1.6.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13-rc.5
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.5
+  - @yas chat/ui-voip@12.0.0-rc.5
+  - @yas chat/omni-core-ee@0.0.2-rc.5
+  - @yas chat/instance-status@0.1.34-rc.5
+  - @yas chat/omni-core@0.0.2-rc.5
   </details>
 
 ## 7.10.0-rc.4
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.4
-  - @rocket.chat/rest-typings@7.10.0-rc.4
-  - @rocket.chat/license@1.0.25-rc.4
-  - @rocket.chat/omnichannel-services@0.3.31-rc.4
-  - @rocket.chat/pdf-worker@0.3.13-rc.4
-  - @rocket.chat/presence@0.2.34-rc.4
-  - @rocket.chat/api-client@0.2.34-rc.4
-  - @rocket.chat/apps@0.5.13-rc.4
-  - @rocket.chat/core-services@0.10.0-rc.4
-  - @rocket.chat/cron@0.1.34-rc.4
-  - @rocket.chat/freeswitch@1.2.21-rc.4
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.4
-  - @rocket.chat/gazzodown@22.0.0-rc.4
-  - @rocket.chat/http-router@7.9.1-rc.4
-  - @rocket.chat/model-typings@1.7.0-rc.4
-  - @rocket.chat/ui-avatar@18.0.0-rc.4
-  - @rocket.chat/ui-client@22.0.0-rc.4
-  - @rocket.chat/ui-contexts@22.0.0-rc.4
-  - @rocket.chat/web-ui-registration@22.0.0-rc.4
-  - @rocket.chat/models@1.6.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13-rc.4
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.4
-  - @rocket.chat/ui-voip@12.0.0-rc.4
-  - @rocket.chat/omni-core-ee@0.0.2-rc.4
-  - @rocket.chat/instance-status@0.1.34-rc.4
-  - @rocket.chat/omni-core@0.0.2-rc.4
+  - @yas chat/core-typings@7.10.0-rc.4
+  - @yas chat/rest-typings@7.10.0-rc.4
+  - @yas chat/license@1.0.25-rc.4
+  - @yas chat/omnichannel-services@0.3.31-rc.4
+  - @yas chat/pdf-worker@0.3.13-rc.4
+  - @yas chat/presence@0.2.34-rc.4
+  - @yas chat/api-client@0.2.34-rc.4
+  - @yas chat/apps@0.5.13-rc.4
+  - @yas chat/core-services@0.10.0-rc.4
+  - @yas chat/cron@0.1.34-rc.4
+  - @yas chat/freeswitch@1.2.21-rc.4
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.4
+  - @yas chat/gazzodown@22.0.0-rc.4
+  - @yas chat/http-router@7.9.1-rc.4
+  - @yas chat/model-typings@1.7.0-rc.4
+  - @yas chat/ui-avatar@18.0.0-rc.4
+  - @yas chat/ui-client@22.0.0-rc.4
+  - @yas chat/ui-contexts@22.0.0-rc.4
+  - @yas chat/web-ui-registration@22.0.0-rc.4
+  - @yas chat/models@1.6.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13-rc.4
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.4
+  - @yas chat/ui-voip@12.0.0-rc.4
+  - @yas chat/omni-core-ee@0.0.2-rc.4
+  - @yas chat/instance-status@0.1.34-rc.4
+  - @yas chat/omni-core@0.0.2-rc.4
 
   </details>
 
@@ -8245,39 +8245,39 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - ([#36802](https://github.com/YasChat/YasChat/pull/36802)) Fixes an error on apps loading that would cause an unhandled promise rejection crash during startup in some cases
 
 - <details><summary>Updated dependencies [128b228fcb0b2fda2967c88b07340be4b34a5470]:</summary>
-  - @rocket.chat/apps-engine@1.55.0-rc.1
-  - @rocket.chat/presence@0.2.34-rc.3
-  - @rocket.chat/apps@0.5.13-rc.3
-  - @rocket.chat/core-services@0.10.0-rc.3
-  - @rocket.chat/core-typings@7.10.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.3
-  - @rocket.chat/rest-typings@7.10.0-rc.3
-  - @rocket.chat/license@1.0.25-rc.3
-  - @rocket.chat/omnichannel-services@0.3.31-rc.3
-  - @rocket.chat/pdf-worker@0.3.13-rc.3
-  - @rocket.chat/api-client@0.2.34-rc.3
-  - @rocket.chat/cron@0.1.34-rc.3
-  - @rocket.chat/freeswitch@1.2.21-rc.3
-  - @rocket.chat/gazzodown@22.0.0-rc.3
-  - @rocket.chat/http-router@7.9.1-rc.3
-  - @rocket.chat/model-typings@1.7.0-rc.3
-  - @rocket.chat/ui-avatar@18.0.0-rc.3
-  - @rocket.chat/ui-client@22.0.0-rc.3
-  - @rocket.chat/ui-contexts@22.0.0-rc.3
-  - @rocket.chat/web-ui-registration@22.0.0-rc.3
-  - @rocket.chat/models@1.6.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13-rc.3
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.3
-  - @rocket.chat/ui-voip@12.0.0-rc.3
-  - @rocket.chat/omni-core-ee@0.0.2-rc.3
-  - @rocket.chat/instance-status@0.1.34-rc.3
-  - @rocket.chat/omni-core@0.0.2-rc.3
+  - @yas chat/apps-engine@1.55.0-rc.1
+  - @yas chat/presence@0.2.34-rc.3
+  - @yas chat/apps@0.5.13-rc.3
+  - @yas chat/core-services@0.10.0-rc.3
+  - @yas chat/core-typings@7.10.0-rc.3
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.3
+  - @yas chat/rest-typings@7.10.0-rc.3
+  - @yas chat/license@1.0.25-rc.3
+  - @yas chat/omnichannel-services@0.3.31-rc.3
+  - @yas chat/pdf-worker@0.3.13-rc.3
+  - @yas chat/api-client@0.2.34-rc.3
+  - @yas chat/cron@0.1.34-rc.3
+  - @yas chat/freeswitch@1.2.21-rc.3
+  - @yas chat/gazzodown@22.0.0-rc.3
+  - @yas chat/http-router@7.9.1-rc.3
+  - @yas chat/model-typings@1.7.0-rc.3
+  - @yas chat/ui-avatar@18.0.0-rc.3
+  - @yas chat/ui-client@22.0.0-rc.3
+  - @yas chat/ui-contexts@22.0.0-rc.3
+  - @yas chat/web-ui-registration@22.0.0-rc.3
+  - @yas chat/models@1.6.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13-rc.3
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.3
+  - @yas chat/ui-voip@12.0.0-rc.3
+  - @yas chat/omni-core-ee@0.0.2-rc.3
+  - @yas chat/instance-status@0.1.34-rc.3
+  - @yas chat/omni-core@0.0.2-rc.3
 
   </details>
 
@@ -8285,37 +8285,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.2
-  - @rocket.chat/rest-typings@7.10.0-rc.2
-  - @rocket.chat/license@1.0.25-rc.2
-  - @rocket.chat/omnichannel-services@0.3.31-rc.2
-  - @rocket.chat/pdf-worker@0.3.13-rc.2
-  - @rocket.chat/presence@0.2.34-rc.2
-  - @rocket.chat/api-client@0.2.34-rc.2
-  - @rocket.chat/apps@0.5.13-rc.2
-  - @rocket.chat/core-services@0.10.0-rc.2
-  - @rocket.chat/cron@0.1.34-rc.2
-  - @rocket.chat/freeswitch@1.2.21-rc.2
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.2
-  - @rocket.chat/gazzodown@22.0.0-rc.2
-  - @rocket.chat/http-router@7.9.1-rc.2
-  - @rocket.chat/model-typings@1.7.0-rc.2
-  - @rocket.chat/ui-avatar@18.0.0-rc.2
-  - @rocket.chat/ui-client@22.0.0-rc.2
-  - @rocket.chat/ui-contexts@22.0.0-rc.2
-  - @rocket.chat/web-ui-registration@22.0.0-rc.2
-  - @rocket.chat/models@1.6.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13-rc.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.2
-  - @rocket.chat/ui-voip@12.0.0-rc.2
-  - @rocket.chat/omni-core-ee@0.0.2-rc.2
-  - @rocket.chat/instance-status@0.1.34-rc.2
-  - @rocket.chat/omni-core@0.0.2-rc.2
+  - @yas chat/core-typings@7.10.0-rc.2
+  - @yas chat/rest-typings@7.10.0-rc.2
+  - @yas chat/license@1.0.25-rc.2
+  - @yas chat/omnichannel-services@0.3.31-rc.2
+  - @yas chat/pdf-worker@0.3.13-rc.2
+  - @yas chat/presence@0.2.34-rc.2
+  - @yas chat/api-client@0.2.34-rc.2
+  - @yas chat/apps@0.5.13-rc.2
+  - @yas chat/core-services@0.10.0-rc.2
+  - @yas chat/cron@0.1.34-rc.2
+  - @yas chat/freeswitch@1.2.21-rc.2
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.2
+  - @yas chat/gazzodown@22.0.0-rc.2
+  - @yas chat/http-router@7.9.1-rc.2
+  - @yas chat/model-typings@1.7.0-rc.2
+  - @yas chat/ui-avatar@18.0.0-rc.2
+  - @yas chat/ui-client@22.0.0-rc.2
+  - @yas chat/ui-contexts@22.0.0-rc.2
+  - @yas chat/web-ui-registration@22.0.0-rc.2
+  - @yas chat/models@1.6.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13-rc.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.2
+  - @yas chat/ui-voip@12.0.0-rc.2
+  - @yas chat/omni-core-ee@0.0.2-rc.2
+  - @yas chat/instance-status@0.1.34-rc.2
+  - @yas chat/omni-core@0.0.2-rc.2
 
   </details>
 
@@ -8323,37 +8323,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.1
-  - @rocket.chat/rest-typings@7.10.0-rc.1
-  - @rocket.chat/license@1.0.25-rc.1
-  - @rocket.chat/omnichannel-services@0.3.31-rc.1
-  - @rocket.chat/pdf-worker@0.3.13-rc.1
-  - @rocket.chat/presence@0.2.34-rc.1
-  - @rocket.chat/api-client@0.2.34-rc.1
-  - @rocket.chat/apps@0.5.13-rc.1
-  - @rocket.chat/core-services@0.10.0-rc.1
-  - @rocket.chat/cron@0.1.34-rc.1
-  - @rocket.chat/freeswitch@1.2.21-rc.1
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.1
-  - @rocket.chat/gazzodown@22.0.0-rc.1
-  - @rocket.chat/http-router@7.9.1-rc.1
-  - @rocket.chat/model-typings@1.7.0-rc.1
-  - @rocket.chat/ui-avatar@18.0.0-rc.1
-  - @rocket.chat/ui-client@22.0.0-rc.1
-  - @rocket.chat/ui-contexts@22.0.0-rc.1
-  - @rocket.chat/web-ui-registration@22.0.0-rc.1
-  - @rocket.chat/models@1.6.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13-rc.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.1
-  - @rocket.chat/ui-voip@12.0.0-rc.1
-  - @rocket.chat/omni-core-ee@0.0.2-rc.1
-  - @rocket.chat/instance-status@0.1.34-rc.1
-  - @rocket.chat/omni-core@0.0.2-rc.1
+  - @yas chat/core-typings@7.10.0-rc.1
+  - @yas chat/rest-typings@7.10.0-rc.1
+  - @yas chat/license@1.0.25-rc.1
+  - @yas chat/omnichannel-services@0.3.31-rc.1
+  - @yas chat/pdf-worker@0.3.13-rc.1
+  - @yas chat/presence@0.2.34-rc.1
+  - @yas chat/api-client@0.2.34-rc.1
+  - @yas chat/apps@0.5.13-rc.1
+  - @yas chat/core-services@0.10.0-rc.1
+  - @yas chat/cron@0.1.34-rc.1
+  - @yas chat/freeswitch@1.2.21-rc.1
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.1
+  - @yas chat/gazzodown@22.0.0-rc.1
+  - @yas chat/http-router@7.9.1-rc.1
+  - @yas chat/model-typings@1.7.0-rc.1
+  - @yas chat/ui-avatar@18.0.0-rc.1
+  - @yas chat/ui-client@22.0.0-rc.1
+  - @yas chat/ui-contexts@22.0.0-rc.1
+  - @yas chat/web-ui-registration@22.0.0-rc.1
+  - @yas chat/models@1.6.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13-rc.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.1
+  - @yas chat/ui-voip@12.0.0-rc.1
+  - @yas chat/omni-core-ee@0.0.2-rc.1
+  - @yas chat/instance-status@0.1.34-rc.1
+  - @yas chat/omni-core@0.0.2-rc.1
 
   </details>
 
@@ -8443,36 +8443,36 @@
 - ([#36578](https://github.com/YasChat/YasChat/pull/36578)) Fixes a bug where the `/api/v1/users.update` API call was replacing the entire `customFields` object instead of merging only the specified properties. The fix ensures that when updating custom fields, existing values are preserved while only specified fields are updated or added.
 
 - <details><summary>Updated dependencies [f040b27ff67c31188026a0aed9ba1e9c4f717f08, a54f8837338246842585d037a0d0327a79245811, c5f0be15b31d1de03256f74bd277ad4ab753ada2, b25f05acd07762387fa45d67a1241b982c192f5d, c86fbce9b44942662dc25a599fc12b009fd40a74, 22498de4e9de4467642f637d00cc8344ba876987, 2fea1a79b831999f148505b9442cd584e1b06d09, 2f162a0dca79274d4458a5853afe64c506a7554f, fd32867fd4949bc2951a22075498ccb551cc6bbc, 759b178946951f10dfcf0c9daf0f45aceb422998, 1ca92c346e45486e9b6afc66566ae38fac65b48f, 580a3c945252666b3b477e1b626ea1001de6f456, c0c8919723c8d1242973625d15db74c994318460, 8942187a9b062be3aaac8fee4b576dcad467641e, 5d7dec3a68f7281b4b4531fa708d7fc7589a863c, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, a1c99dfe7bdee81e85164155e61b94b55dcbb752, dc6acda84bf7452d96f375be3cd97748ed016bfc, 42979690f3880d3c700582b7892020e37bc82be3, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/rest-typings@7.10.0-rc.0
-  - @rocket.chat/model-typings@1.7.0-rc.0
-  - @rocket.chat/models@1.6.0-rc.0
-  - @rocket.chat/apps-engine@1.55.0-rc.0
-  - @rocket.chat/ui-client@22.0.0-rc.0
-  - @rocket.chat/http-router@7.9.1-rc.0
-  - @rocket.chat/i18n@1.10.0-rc.0
-  - @rocket.chat/core-typings@7.10.0-rc.0
-  - @rocket.chat/core-services@0.10.0-rc.0
-  - @rocket.chat/ui-contexts@22.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.31-rc.0
-  - @rocket.chat/presence@0.2.34-rc.0
-  - @rocket.chat/api-client@0.2.34-rc.0
-  - @rocket.chat/web-ui-registration@22.0.0-rc.0
-  - @rocket.chat/apps@0.5.13-rc.0
-  - @rocket.chat/omni-core-ee@0.0.2-rc.0
-  - @rocket.chat/cron@0.1.34-rc.0
-  - @rocket.chat/instance-status@0.1.34-rc.0
-  - @rocket.chat/omni-core@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@22.0.0-rc.0
-  - @rocket.chat/gazzodown@22.0.0-rc.0
-  - @rocket.chat/ui-voip@12.0.0-rc.0
-  - @rocket.chat/license@1.0.25-rc.0
-  - @rocket.chat/pdf-worker@0.3.13-rc.0
-  - @rocket.chat/freeswitch@1.2.21-rc.0
-  - @rocket.chat/ui-avatar@18.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.13-rc.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.10.0-rc.0
+  - @yas chat/model-typings@1.7.0-rc.0
+  - @yas chat/models@1.6.0-rc.0
+  - @yas chat/apps-engine@1.55.0-rc.0
+  - @yas chat/ui-client@22.0.0-rc.0
+  - @yas chat/http-router@7.9.1-rc.0
+  - @yas chat/i18n@1.10.0-rc.0
+  - @yas chat/core-typings@7.10.0-rc.0
+  - @yas chat/core-services@0.10.0-rc.0
+  - @yas chat/ui-contexts@22.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.31-rc.0
+  - @yas chat/presence@0.2.34-rc.0
+  - @yas chat/api-client@0.2.34-rc.0
+  - @yas chat/web-ui-registration@22.0.0-rc.0
+  - @yas chat/apps@0.5.13-rc.0
+  - @yas chat/omni-core-ee@0.0.2-rc.0
+  - @yas chat/cron@0.1.34-rc.0
+  - @yas chat/instance-status@0.1.34-rc.0
+  - @yas chat/omni-core@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@22.0.0-rc.0
+  - @yas chat/gazzodown@22.0.0-rc.0
+  - @yas chat/ui-voip@12.0.0-rc.0
+  - @yas chat/license@1.0.25-rc.0
+  - @yas chat/pdf-worker@0.3.13-rc.0
+  - @yas chat/freeswitch@1.2.21-rc.0
+  - @yas chat/ui-avatar@18.0.0-rc.0
+  - @yas chat/network-broker@0.2.13-rc.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@22.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -8480,73 +8480,73 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.9.3
-  - @rocket.chat/rest-typings@7.9.3
-  - @rocket.chat/license@1.0.27
-  - @rocket.chat/omnichannel-services@0.3.33
-  - @rocket.chat/pdf-worker@0.3.15
-  - @rocket.chat/presence@0.2.36
-  - @rocket.chat/api-client@0.2.36
-  - @rocket.chat/apps@0.5.15
-  - @rocket.chat/core-services@0.9.15
-  - @rocket.chat/cron@0.1.36
-  - @rocket.chat/freeswitch@1.2.23
-  - @rocket.chat/fuselage-ui-kit@21.0.3
-  - @rocket.chat/gazzodown@21.0.3
-  - @rocket.chat/http-router@7.9.3
-  - @rocket.chat/model-typings@1.6.15
-  - @rocket.chat/ui-avatar@17.0.3
-  - @rocket.chat/ui-client@21.0.3
-  - @rocket.chat/ui-contexts@21.0.3
-  - @rocket.chat/web-ui-registration@21.0.3
-  - @rocket.chat/models@1.5.15
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.15
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.3
-  - @rocket.chat/ui-voip@11.0.3
-  - @rocket.chat/instance-status@0.1.36
+- @yas chat/core-typings@7.9.3
+  - @yas chat/rest-typings@7.9.3
+  - @yas chat/license@1.0.27
+  - @yas chat/omnichannel-services@0.3.33
+  - @yas chat/pdf-worker@0.3.15
+  - @yas chat/presence@0.2.36
+  - @yas chat/api-client@0.2.36
+  - @yas chat/apps@0.5.15
+  - @yas chat/core-services@0.9.15
+  - @yas chat/cron@0.1.36
+  - @yas chat/freeswitch@1.2.23
+  - @yas chat/fuselage-ui-kit@21.0.3
+  - @yas chat/gazzodown@21.0.3
+  - @yas chat/http-router@7.9.3
+  - @yas chat/model-typings@1.6.15
+  - @yas chat/ui-avatar@17.0.3
+  - @yas chat/ui-client@21.0.3
+  - @yas chat/ui-contexts@21.0.3
+  - @yas chat/web-ui-registration@21.0.3
+  - @yas chat/models@1.5.15
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.15
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.3
+  - @yas chat/ui-voip@11.0.3
+  - @yas chat/instance-status@0.1.36
   </details>
 
 ## 7.9.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36680](https://github.com/YasChat/YasChat/pull/36680) by [@dionisio-bot](https://github.com/dionisio-bot)) fixes an issue where some apps that don't need permission would have grantedPermissions as null making it impossible to activate the app
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.2
-  - @rocket.chat/rest-typings@7.9.2
-  - @rocket.chat/license@1.0.26
-  - @rocket.chat/omnichannel-services@0.3.32
-  - @rocket.chat/pdf-worker@0.3.14
-  - @rocket.chat/presence@0.2.35
-  - @rocket.chat/api-client@0.2.35
-  - @rocket.chat/apps@0.5.14
-  - @rocket.chat/core-services@0.9.14
-  - @rocket.chat/cron@0.1.35
-  - @rocket.chat/freeswitch@1.2.22
-  - @rocket.chat/fuselage-ui-kit@21.0.2
-  - @rocket.chat/gazzodown@21.0.2
-  - @rocket.chat/http-router@7.9.2
-  - @rocket.chat/model-typings@1.6.14
-  - @rocket.chat/ui-avatar@17.0.2
-  - @rocket.chat/ui-client@21.0.2
-  - @rocket.chat/ui-contexts@21.0.2
-  - @rocket.chat/web-ui-registration@21.0.2
-  - @rocket.chat/models@1.5.14
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.14
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.2
-  - @rocket.chat/ui-voip@11.0.2
-  - @rocket.chat/instance-status@0.1.35
+  - @yas chat/core-typings@7.9.2
+  - @yas chat/rest-typings@7.9.2
+  - @yas chat/license@1.0.26
+  - @yas chat/omnichannel-services@0.3.32
+  - @yas chat/pdf-worker@0.3.14
+  - @yas chat/presence@0.2.35
+  - @yas chat/api-client@0.2.35
+  - @yas chat/apps@0.5.14
+  - @yas chat/core-services@0.9.14
+  - @yas chat/cron@0.1.35
+  - @yas chat/freeswitch@1.2.22
+  - @yas chat/fuselage-ui-kit@21.0.2
+  - @yas chat/gazzodown@21.0.2
+  - @yas chat/http-router@7.9.2
+  - @yas chat/model-typings@1.6.14
+  - @yas chat/ui-avatar@17.0.2
+  - @yas chat/ui-client@21.0.2
+  - @yas chat/ui-contexts@21.0.2
+  - @yas chat/web-ui-registration@21.0.2
+  - @yas chat/models@1.5.14
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.14
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.2
+  - @yas chat/ui-voip@11.0.2
+  - @yas chat/instance-status@0.1.35
 
   </details>
 
@@ -8554,40 +8554,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36581](https://github.com/YasChat/YasChat/pull/36581) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where rooms transferred to a department's queue could get stuck—marked as taken but with no agent assigned.
 
 - ([#36612](https://github.com/YasChat/YasChat/pull/36612) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a bug where the `/api/v1/users.update` API call was replacing the entire `customFields` object instead of merging only the specified properties. The fix ensures that when updating custom fields, existing values are preserved while only specified fields are updated or added.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.1
-  - @rocket.chat/rest-typings@7.9.1
-  - @rocket.chat/license@1.0.25
-  - @rocket.chat/omnichannel-services@0.3.31
-  - @rocket.chat/pdf-worker@0.3.13
-  - @rocket.chat/presence@0.2.34
-  - @rocket.chat/api-client@0.2.34
-  - @rocket.chat/apps@0.5.13
-  - @rocket.chat/core-services@0.9.13
-  - @rocket.chat/cron@0.1.34
-  - @rocket.chat/freeswitch@1.2.21
-  - @rocket.chat/fuselage-ui-kit@21.0.1
-  - @rocket.chat/gazzodown@21.0.1
-  - @rocket.chat/http-router@7.9.1
-  - @rocket.chat/model-typings@1.6.13
-  - @rocket.chat/ui-avatar@17.0.1
-  - @rocket.chat/ui-client@21.0.1
-  - @rocket.chat/ui-contexts@21.0.1
-  - @rocket.chat/web-ui-registration@21.0.1
-  - @rocket.chat/models@1.5.13
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.13
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.1
-  - @rocket.chat/ui-voip@11.0.1
-  - @rocket.chat/instance-status@0.1.34
+  - @yas chat/core-typings@7.9.1
+  - @yas chat/rest-typings@7.9.1
+  - @yas chat/license@1.0.25
+  - @yas chat/omnichannel-services@0.3.31
+  - @yas chat/pdf-worker@0.3.13
+  - @yas chat/presence@0.2.34
+  - @yas chat/api-client@0.2.34
+  - @yas chat/apps@0.5.13
+  - @yas chat/core-services@0.9.13
+  - @yas chat/cron@0.1.34
+  - @yas chat/freeswitch@1.2.21
+  - @yas chat/fuselage-ui-kit@21.0.1
+  - @yas chat/gazzodown@21.0.1
+  - @yas chat/http-router@7.9.1
+  - @yas chat/model-typings@1.6.13
+  - @yas chat/ui-avatar@17.0.1
+  - @yas chat/ui-client@21.0.1
+  - @yas chat/ui-contexts@21.0.1
+  - @yas chat/web-ui-registration@21.0.1
+  - @yas chat/models@1.5.13
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.13
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.1
+  - @yas chat/ui-voip@11.0.1
+  - @yas chat/instance-status@0.1.34
 
   </details>
 
@@ -8619,11 +8619,11 @@
 
 - ([#36532](https://github.com/YasChat/YasChat/pull/36532)) Fixes an issue with SLA policies that caused an inquiry to "dissapear" after its SLA being updated
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36099](https://github.com/YasChat/YasChat/pull/36099)) Fixes missing UI updates after pruning messages with "Files only" enabled.
 
@@ -8680,35 +8680,35 @@
 - ([#36346](https://github.com/YasChat/YasChat/pull/36346)) Fixes an issue where some error objects sent to apps' method calls would only contain the message '[object Object]'
 
 - <details><summary>Updated dependencies [689f6dfbaaa244e8f6329d6761e608f0e8c0a5a3, 6f4429f1ac0e8a6aaed3b1fb378711388cafc325, ba0cbd32657365abc2a10e50285e02b4e34bf674, 93fef88ee29f27cd533a80109f1cefbc125dd81d, adfc1acc06a693b9a1c09bcc660d3909da56b477, 3f000d7381b857eaefcc2a750a8fb64547bd0058, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 0ba4d8bc18c6f2183f2fe32e8739d7455aab75e7, 61b77e4263e5fbbfb73f32521394be29d1ad5b82, 170a413f1f12500e053580f01d43af65e515da42, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 208fe33880e1b980fa275ed5be9b5fc0da20e267, 93acfbe01460ca01642830ec5dad3a75a53e7eee, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 4ec3b92df6cb68072447b1931e89b7f4b92124f5, 68426bdfae63f7be8db55d17bd40b076290fd102, cfabf2684046e1e336b1f81d548a081c25419677, e5eda7eb5c3e45ff0798559922c732f5b537d023, 9826bc2ed9a3a4232ce6d5d436c3f489f2d4192b]:</summary>
-  - @rocket.chat/ui-voip@11.0.0
-  - @rocket.chat/core-services@0.9.12
-  - @rocket.chat/gazzodown@21.0.0
-  - @rocket.chat/freeswitch@1.2.20
-  - @rocket.chat/i18n@1.9.0
-  - @rocket.chat/model-typings@1.6.12
-  - @rocket.chat/models@1.5.12
-  - @rocket.chat/rest-typings@7.9.0
-  - @rocket.chat/apps-engine@1.54.0
-  - @rocket.chat/core-typings@7.9.0
-  - @rocket.chat/web-ui-registration@21.0.0
-  - @rocket.chat/tools@0.2.3
-  - @rocket.chat/network-broker@0.2.12
-  - @rocket.chat/omnichannel-services@0.3.30
-  - @rocket.chat/presence@0.2.33
-  - @rocket.chat/ui-contexts@21.0.0
-  - @rocket.chat/fuselage-ui-kit@21.0.0
-  - @rocket.chat/apps@0.5.12
-  - @rocket.chat/cron@0.1.33
-  - @rocket.chat/instance-status@0.1.33
-  - @rocket.chat/api-client@0.2.33
-  - @rocket.chat/http-router@7.9.0
-  - @rocket.chat/license@1.0.24
-  - @rocket.chat/pdf-worker@0.3.12
-  - @rocket.chat/ui-avatar@17.0.0
-  - @rocket.chat/ui-client@21.0.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-voip@11.0.0
+  - @yas chat/core-services@0.9.12
+  - @yas chat/gazzodown@21.0.0
+  - @yas chat/freeswitch@1.2.20
+  - @yas chat/i18n@1.9.0
+  - @yas chat/model-typings@1.6.12
+  - @yas chat/models@1.5.12
+  - @yas chat/rest-typings@7.9.0
+  - @yas chat/apps-engine@1.54.0
+  - @yas chat/core-typings@7.9.0
+  - @yas chat/web-ui-registration@21.0.0
+  - @yas chat/tools@0.2.3
+  - @yas chat/network-broker@0.2.12
+  - @yas chat/omnichannel-services@0.3.30
+  - @yas chat/presence@0.2.33
+  - @yas chat/ui-contexts@21.0.0
+  - @yas chat/fuselage-ui-kit@21.0.0
+  - @yas chat/apps@0.5.12
+  - @yas chat/cron@0.1.33
+  - @yas chat/instance-status@0.1.33
+  - @yas chat/api-client@0.2.33
+  - @yas chat/http-router@7.9.0
+  - @yas chat/license@1.0.24
+  - @yas chat/pdf-worker@0.3.12
+  - @yas chat/ui-avatar@17.0.0
+  - @yas chat/ui-client@21.0.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -8718,7 +8718,7 @@
 
 - ([#36532](https://github.com/YasChat/YasChat/pull/36532)) Fixes an issue with SLA policies that caused an inquiry to "dissapear" after its SLA being updated
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36494](https://github.com/YasChat/YasChat/pull/36494)) Fixes a behavior when transferring a room to another department that was not considering the `waiting queue` setting and attempted to route the chat to an agent instead of leaving it on the department's queue
 
@@ -8727,33 +8727,33 @@
 - ([#36504](https://github.com/YasChat/YasChat/pull/36504)) Fixes an issue that would leave an app in an unrecoverable state if the installation failed during the construction of the runtime
 
 - <details><summary>Updated dependencies [cfabf2684046e1e336b1f81d548a081c25419677]:</summary>
-  - @rocket.chat/apps-engine@1.54.0-rc.1
-  - @rocket.chat/presence@0.2.32-rc.2
-  - @rocket.chat/apps@0.5.11-rc.2
-  - @rocket.chat/core-services@0.9.11-rc.2
-  - @rocket.chat/core-typings@7.9.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@21.0.0-rc.2
-  - @rocket.chat/rest-typings@7.9.0-rc.2
-  - @rocket.chat/license@1.0.23-rc.2
-  - @rocket.chat/omnichannel-services@0.3.29-rc.2
-  - @rocket.chat/pdf-worker@0.3.11-rc.2
-  - @rocket.chat/api-client@0.2.32-rc.2
-  - @rocket.chat/cron@0.1.32-rc.2
-  - @rocket.chat/freeswitch@1.2.19-rc.2
-  - @rocket.chat/gazzodown@21.0.0-rc.2
-  - @rocket.chat/http-router@7.8.3-rc.2
-  - @rocket.chat/model-typings@1.6.11-rc.2
-  - @rocket.chat/ui-avatar@17.0.0-rc.2
-  - @rocket.chat/ui-client@21.0.0-rc.2
-  - @rocket.chat/ui-contexts@21.0.0-rc.2
-  - @rocket.chat/web-ui-registration@21.0.0-rc.2
-  - @rocket.chat/models@1.5.11-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.11-rc.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.0-rc.2
-  - @rocket.chat/ui-voip@11.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.32-rc.2
+  - @yas chat/apps-engine@1.54.0-rc.1
+  - @yas chat/presence@0.2.32-rc.2
+  - @yas chat/apps@0.5.11-rc.2
+  - @yas chat/core-services@0.9.11-rc.2
+  - @yas chat/core-typings@7.9.0-rc.2
+  - @yas chat/fuselage-ui-kit@21.0.0-rc.2
+  - @yas chat/rest-typings@7.9.0-rc.2
+  - @yas chat/license@1.0.23-rc.2
+  - @yas chat/omnichannel-services@0.3.29-rc.2
+  - @yas chat/pdf-worker@0.3.11-rc.2
+  - @yas chat/api-client@0.2.32-rc.2
+  - @yas chat/cron@0.1.32-rc.2
+  - @yas chat/freeswitch@1.2.19-rc.2
+  - @yas chat/gazzodown@21.0.0-rc.2
+  - @yas chat/http-router@7.8.3-rc.2
+  - @yas chat/model-typings@1.6.11-rc.2
+  - @yas chat/ui-avatar@17.0.0-rc.2
+  - @yas chat/ui-client@21.0.0-rc.2
+  - @yas chat/ui-contexts@21.0.0-rc.2
+  - @yas chat/web-ui-registration@21.0.0-rc.2
+  - @yas chat/models@1.5.11-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.11-rc.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.0-rc.2
+  - @yas chat/ui-voip@11.0.0-rc.2
+  - @yas chat/instance-status@0.1.32-rc.2
 
   </details>
 
@@ -8761,35 +8761,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.1
-  - @rocket.chat/rest-typings@7.9.0-rc.1
-  - @rocket.chat/license@1.0.23-rc.1
-  - @rocket.chat/omnichannel-services@0.3.29-rc.1
-  - @rocket.chat/pdf-worker@0.3.11-rc.1
-  - @rocket.chat/presence@0.2.32-rc.1
-  - @rocket.chat/api-client@0.2.32-rc.1
-  - @rocket.chat/apps@0.5.11-rc.1
-  - @rocket.chat/core-services@0.9.11-rc.1
-  - @rocket.chat/cron@0.1.32-rc.1
-  - @rocket.chat/freeswitch@1.2.19-rc.1
-  - @rocket.chat/fuselage-ui-kit@21.0.0-rc.1
-  - @rocket.chat/gazzodown@21.0.0-rc.1
-  - @rocket.chat/http-router@7.8.3-rc.1
-  - @rocket.chat/model-typings@1.6.11-rc.1
-  - @rocket.chat/ui-avatar@17.0.0-rc.1
-  - @rocket.chat/ui-client@21.0.0-rc.1
-  - @rocket.chat/ui-contexts@21.0.0-rc.1
-  - @rocket.chat/web-ui-registration@21.0.0-rc.1
-  - @rocket.chat/models@1.5.11-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.11-rc.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.0-rc.1
-  - @rocket.chat/ui-voip@11.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.32-rc.1
+  - @yas chat/core-typings@7.9.0-rc.1
+  - @yas chat/rest-typings@7.9.0-rc.1
+  - @yas chat/license@1.0.23-rc.1
+  - @yas chat/omnichannel-services@0.3.29-rc.1
+  - @yas chat/pdf-worker@0.3.11-rc.1
+  - @yas chat/presence@0.2.32-rc.1
+  - @yas chat/api-client@0.2.32-rc.1
+  - @yas chat/apps@0.5.11-rc.1
+  - @yas chat/core-services@0.9.11-rc.1
+  - @yas chat/cron@0.1.32-rc.1
+  - @yas chat/freeswitch@1.2.19-rc.1
+  - @yas chat/fuselage-ui-kit@21.0.0-rc.1
+  - @yas chat/gazzodown@21.0.0-rc.1
+  - @yas chat/http-router@7.8.3-rc.1
+  - @yas chat/model-typings@1.6.11-rc.1
+  - @yas chat/ui-avatar@17.0.0-rc.1
+  - @yas chat/ui-client@21.0.0-rc.1
+  - @yas chat/ui-contexts@21.0.0-rc.1
+  - @yas chat/web-ui-registration@21.0.0-rc.1
+  - @yas chat/models@1.5.11-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.11-rc.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.0-rc.1
+  - @yas chat/ui-voip@11.0.0-rc.1
+  - @yas chat/instance-status@0.1.32-rc.1
 
   </details>
 
@@ -8868,35 +8868,35 @@
 - ([#36346](https://github.com/YasChat/YasChat/pull/36346)) Fixes an issue where some error objects sent to apps' method calls would only contain the message '[object Object]'
 
 - <details><summary>Updated dependencies [689f6dfbaaa244e8f6329d6761e608f0e8c0a5a3, 6f4429f1ac0e8a6aaed3b1fb378711388cafc325, ba0cbd32657365abc2a10e50285e02b4e34bf674, 93fef88ee29f27cd533a80109f1cefbc125dd81d, adfc1acc06a693b9a1c09bcc660d3909da56b477, 3f000d7381b857eaefcc2a750a8fb64547bd0058, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 0de9318f344b49cb4afbce6bf8b26f943346343d, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 0ba4d8bc18c6f2183f2fe32e8739d7455aab75e7, 61b77e4263e5fbbfb73f32521394be29d1ad5b82, 170a413f1f12500e053580f01d43af65e515da42, d4226a564d699e44eb6264095da8de3850071d6b, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 208fe33880e1b980fa275ed5be9b5fc0da20e267, 93acfbe01460ca01642830ec5dad3a75a53e7eee, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 4ec3b92df6cb68072447b1931e89b7f4b92124f5, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023, 9826bc2ed9a3a4232ce6d5d436c3f489f2d4192b]:</summary>
-  - @rocket.chat/ui-voip@11.0.0-rc.0
-  - @rocket.chat/core-services@0.9.11-rc.0
-  - @rocket.chat/gazzodown@21.0.0-rc.0
-  - @rocket.chat/freeswitch@1.2.19-rc.0
-  - @rocket.chat/i18n@1.9.0-rc.0
-  - @rocket.chat/model-typings@1.6.11-rc.0
-  - @rocket.chat/models@1.5.11-rc.0
-  - @rocket.chat/rest-typings@7.9.0-rc.0
-  - @rocket.chat/apps-engine@1.54.0-rc.0
-  - @rocket.chat/core-typings@7.9.0-rc.0
-  - @rocket.chat/web-ui-registration@21.0.0-rc.0
-  - @rocket.chat/tools@0.2.3-rc.0
-  - @rocket.chat/network-broker@0.2.11-rc.0
-  - @rocket.chat/omnichannel-services@0.3.29-rc.0
-  - @rocket.chat/presence@0.2.32-rc.0
-  - @rocket.chat/ui-contexts@21.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@21.0.0-rc.0
-  - @rocket.chat/apps@0.5.11-rc.0
-  - @rocket.chat/cron@0.1.32-rc.0
-  - @rocket.chat/instance-status@0.1.32-rc.0
-  - @rocket.chat/api-client@0.2.32-rc.0
-  - @rocket.chat/http-router@7.8.3-rc.0
-  - @rocket.chat/license@1.0.23-rc.0
-  - @rocket.chat/pdf-worker@0.3.11-rc.0
-  - @rocket.chat/ui-avatar@17.0.0-rc.0
-  - @rocket.chat/ui-client@21.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-video-conf@21.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-voip@11.0.0-rc.0
+  - @yas chat/core-services@0.9.11-rc.0
+  - @yas chat/gazzodown@21.0.0-rc.0
+  - @yas chat/freeswitch@1.2.19-rc.0
+  - @yas chat/i18n@1.9.0-rc.0
+  - @yas chat/model-typings@1.6.11-rc.0
+  - @yas chat/models@1.5.11-rc.0
+  - @yas chat/rest-typings@7.9.0-rc.0
+  - @yas chat/apps-engine@1.54.0-rc.0
+  - @yas chat/core-typings@7.9.0-rc.0
+  - @yas chat/web-ui-registration@21.0.0-rc.0
+  - @yas chat/tools@0.2.3-rc.0
+  - @yas chat/network-broker@0.2.11-rc.0
+  - @yas chat/omnichannel-services@0.3.29-rc.0
+  - @yas chat/presence@0.2.32-rc.0
+  - @yas chat/ui-contexts@21.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@21.0.0-rc.0
+  - @yas chat/apps@0.5.11-rc.0
+  - @yas chat/cron@0.1.32-rc.0
+  - @yas chat/instance-status@0.1.32-rc.0
+  - @yas chat/api-client@0.2.32-rc.0
+  - @yas chat/http-router@7.8.3-rc.0
+  - @yas chat/license@1.0.23-rc.0
+  - @yas chat/pdf-worker@0.3.11-rc.0
+  - @yas chat/ui-avatar@17.0.0-rc.0
+  - @yas chat/ui-client@21.0.0-rc.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-video-conf@21.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
     </details>
 
 ## 7.8.3
@@ -8905,7 +8905,7 @@
 
 - ([#36538](https://github.com/YasChat/YasChat/pull/36538) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue with SLA policies that caused an inquiry to "dissapear" after its SLA being updated
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36534](https://github.com/YasChat/YasChat/pull/36534) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a behavior when transferring a room to another department that was not considering the `waiting queue` setting and attempted to route the chat to an agent instead of leaving it on the department's queue
 
@@ -8914,33 +8914,33 @@
 - ([#36543](https://github.com/YasChat/YasChat/pull/36543)) Fixes an issue that would leave an app in an unrecoverable state if the installation failed during the construction of the runtime
 
 - <details><summary>Updated dependencies [3c914ca4b4f9ae3246b149409c893b7610ae6570]:</summary>
-  - @rocket.chat/apps-engine@1.53.1
-  - @rocket.chat/presence@0.2.32
-  - @rocket.chat/apps@0.5.11
-  - @rocket.chat/core-services@0.9.11
-  - @rocket.chat/core-typings@7.8.3
-  - @rocket.chat/fuselage-ui-kit@20.0.3
-  - @rocket.chat/rest-typings@7.8.3
-  - @rocket.chat/license@1.0.23
-  - @rocket.chat/omnichannel-services@0.3.29
-  - @rocket.chat/pdf-worker@0.3.11
-  - @rocket.chat/api-client@0.2.32
-  - @rocket.chat/cron@0.1.32
-  - @rocket.chat/freeswitch@1.2.19
-  - @rocket.chat/gazzodown@20.0.3
-  - @rocket.chat/http-router@7.8.3
-  - @rocket.chat/model-typings@1.6.11
-  - @rocket.chat/ui-contexts@20.0.3
-  - @rocket.chat/models@1.5.11
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.11
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.3
-  - @rocket.chat/ui-client@20.0.3
-  - @rocket.chat/ui-video-conf@20.0.3
-  - @rocket.chat/ui-voip@10.0.3
-  - @rocket.chat/web-ui-registration@20.0.3
-  - @rocket.chat/instance-status@0.1.32
+  - @yas chat/apps-engine@1.53.1
+  - @yas chat/presence@0.2.32
+  - @yas chat/apps@0.5.11
+  - @yas chat/core-services@0.9.11
+  - @yas chat/core-typings@7.8.3
+  - @yas chat/fuselage-ui-kit@20.0.3
+  - @yas chat/rest-typings@7.8.3
+  - @yas chat/license@1.0.23
+  - @yas chat/omnichannel-services@0.3.29
+  - @yas chat/pdf-worker@0.3.11
+  - @yas chat/api-client@0.2.32
+  - @yas chat/cron@0.1.32
+  - @yas chat/freeswitch@1.2.19
+  - @yas chat/gazzodown@20.0.3
+  - @yas chat/http-router@7.8.3
+  - @yas chat/model-typings@1.6.11
+  - @yas chat/ui-contexts@20.0.3
+  - @yas chat/models@1.5.11
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.11
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.3
+  - @yas chat/ui-client@20.0.3
+  - @yas chat/ui-video-conf@20.0.3
+  - @yas chat/ui-voip@10.0.3
+  - @yas chat/web-ui-registration@20.0.3
+  - @yas chat/instance-status@0.1.32
 
   </details>
 
@@ -8948,37 +8948,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36474](https://github.com/YasChat/YasChat/pull/36474) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes priorities, sla changes & inquiries not being propagated when change streams were not being used
 
 - <details><summary>Updated dependencies [617caa8e7be9c650b96cc1fcc5b836eaa3e7ae39]:</summary>
-  - @rocket.chat/model-typings@1.6.10
-  - @rocket.chat/models@1.5.10
-  - @rocket.chat/omnichannel-services@0.3.28
-  - @rocket.chat/apps@0.5.10
-  - @rocket.chat/presence@0.2.31
-  - @rocket.chat/core-services@0.9.10
-  - @rocket.chat/cron@0.1.31
-  - @rocket.chat/instance-status@0.1.31
-  - @rocket.chat/network-broker@0.2.10
-  - @rocket.chat/core-typings@7.8.2
-  - @rocket.chat/rest-typings@7.8.2
-  - @rocket.chat/license@1.0.22
-  - @rocket.chat/pdf-worker@0.3.10
-  - @rocket.chat/api-client@0.2.31
-  - @rocket.chat/freeswitch@1.2.18
-  - @rocket.chat/fuselage-ui-kit@20.0.2
-  - @rocket.chat/gazzodown@20.0.2
-  - @rocket.chat/http-router@7.8.2
-  - @rocket.chat/ui-contexts@20.0.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.2
-  - @rocket.chat/ui-client@20.0.2
-  - @rocket.chat/ui-video-conf@20.0.2
-  - @rocket.chat/ui-voip@10.0.2
-  - @rocket.chat/web-ui-registration@20.0.2
+  - @yas chat/model-typings@1.6.10
+  - @yas chat/models@1.5.10
+  - @yas chat/omnichannel-services@0.3.28
+  - @yas chat/apps@0.5.10
+  - @yas chat/presence@0.2.31
+  - @yas chat/core-services@0.9.10
+  - @yas chat/cron@0.1.31
+  - @yas chat/instance-status@0.1.31
+  - @yas chat/network-broker@0.2.10
+  - @yas chat/core-typings@7.8.2
+  - @yas chat/rest-typings@7.8.2
+  - @yas chat/license@1.0.22
+  - @yas chat/pdf-worker@0.3.10
+  - @yas chat/api-client@0.2.31
+  - @yas chat/freeswitch@1.2.18
+  - @yas chat/fuselage-ui-kit@20.0.2
+  - @yas chat/gazzodown@20.0.2
+  - @yas chat/http-router@7.8.2
+  - @yas chat/ui-contexts@20.0.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.2
+  - @yas chat/ui-client@20.0.2
+  - @yas chat/ui-video-conf@20.0.2
+  - @yas chat/ui-voip@10.0.2
+  - @yas chat/web-ui-registration@20.0.2
 
   </details>
 
@@ -8990,37 +8990,37 @@
 
 - fixes an issue where depending on some race conditions the subscription stream was not being updated
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36432](https://github.com/YasChat/YasChat/pull/36432) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes redirection not being triggered after a required password change
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.1
-  - @rocket.chat/rest-typings@7.8.1
-  - @rocket.chat/license@1.0.21
-  - @rocket.chat/omnichannel-services@0.3.27
-  - @rocket.chat/pdf-worker@0.3.9
-  - @rocket.chat/presence@0.2.30
-  - @rocket.chat/api-client@0.2.30
-  - @rocket.chat/apps@0.5.9
-  - @rocket.chat/core-services@0.9.9
-  - @rocket.chat/cron@0.1.30
-  - @rocket.chat/freeswitch@1.2.17
-  - @rocket.chat/fuselage-ui-kit@20.0.1
-  - @rocket.chat/gazzodown@20.0.1
-  - @rocket.chat/http-router@7.8.1
-  - @rocket.chat/model-typings@1.6.9
-  - @rocket.chat/ui-contexts@20.0.1
-  - @rocket.chat/models@1.5.9
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.9
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.1
-  - @rocket.chat/ui-client@20.0.1
-  - @rocket.chat/ui-video-conf@20.0.1
-  - @rocket.chat/ui-voip@10.0.1
-  - @rocket.chat/web-ui-registration@20.0.1
-  - @rocket.chat/instance-status@0.1.30
+  - @yas chat/core-typings@7.8.1
+  - @yas chat/rest-typings@7.8.1
+  - @yas chat/license@1.0.21
+  - @yas chat/omnichannel-services@0.3.27
+  - @yas chat/pdf-worker@0.3.9
+  - @yas chat/presence@0.2.30
+  - @yas chat/api-client@0.2.30
+  - @yas chat/apps@0.5.9
+  - @yas chat/core-services@0.9.9
+  - @yas chat/cron@0.1.30
+  - @yas chat/freeswitch@1.2.17
+  - @yas chat/fuselage-ui-kit@20.0.1
+  - @yas chat/gazzodown@20.0.1
+  - @yas chat/http-router@7.8.1
+  - @yas chat/model-typings@1.6.9
+  - @yas chat/ui-contexts@20.0.1
+  - @yas chat/models@1.5.9
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.9
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.1
+  - @yas chat/ui-client@20.0.1
+  - @yas chat/ui-video-conf@20.0.1
+  - @yas chat/ui-voip@10.0.1
+  - @yas chat/web-ui-registration@20.0.1
+  - @yas chat/instance-status@0.1.30
 
   </details>
 
@@ -9054,25 +9054,25 @@
 
 - ([#36062](https://github.com/YasChat/YasChat/pull/36062)) Removes the `Change to Default` language button from the login page
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36038](https://github.com/YasChat/YasChat/pull/36038)) Fixes departments field being limited to 50 entries when adding or editing agents
 
@@ -9090,7 +9090,7 @@
 
 - ([#36035](https://github.com/YasChat/YasChat/pull/36035)) Fixes file filtering by name or type not working for non-private channels.
 
-- ([#36224](https://github.com/YasChat/YasChat/pull/36224)) fix: Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36224](https://github.com/YasChat/YasChat/pull/36224)) fix: Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36163](https://github.com/YasChat/YasChat/pull/36163)) Fixes an issue where incoming webhook messages did not respect the maximum allowed characters per message.
 
@@ -9125,34 +9125,34 @@
 - ([#36138](https://github.com/YasChat/YasChat/pull/36138)) fixes contextual-bar not working by apps interaction after a page refresh.
 
 - <details><summary>Updated dependencies [5cd7b20d5fb6def0a76743576eaa19fc0bf01c4c, 8de5b66aff3e58af14684db2816410cfe0d3034c, 1eb53d289e1280b5ac4ce4a6995e7fe28d50601a, 8033bdb1f611eb8954a2626aca2583a285a94b27, da288f69a4c169eee942af73f490e7570fe41cc5, 5ac20e2a84200f8002ce454df693ada2653f3827, 2f8213e4c5b64201eb11c97e6e33d2488df9089d, 2de3aa60aa84bb262d3748065654b4ca7a000858, c77056f1d5d7269d9fb4bb16d86711b037ec547f, dc26071ba3e0242d1ea7cf819f05c76ab307b229, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c, de4293a1ca5af138437bf01a78e7c0450f437dc7, d58457d25a9a899ebcc7fd0e1fe11d9d370c50d8]:</summary>
-  - @rocket.chat/rest-typings@7.8.0
-  - @rocket.chat/web-ui-registration@20.0.0
-  - @rocket.chat/i18n@1.8.0
-  - @rocket.chat/apps-engine@1.53.0
-  - @rocket.chat/model-typings@1.6.8
-  - @rocket.chat/models@1.5.8
-  - @rocket.chat/core-typings@7.8.0
-  - @rocket.chat/omnichannel-services@0.3.26
-  - @rocket.chat/presence@0.2.29
-  - @rocket.chat/api-client@0.2.29
-  - @rocket.chat/core-services@0.9.8
-  - @rocket.chat/http-router@7.8.0
-  - @rocket.chat/ui-contexts@20.0.0
-  - @rocket.chat/apps@0.5.8
-  - @rocket.chat/fuselage-ui-kit@20.0.0
-  - @rocket.chat/cron@0.1.29
-  - @rocket.chat/instance-status@0.1.29
-  - @rocket.chat/license@1.0.20
-  - @rocket.chat/pdf-worker@0.3.8
-  - @rocket.chat/freeswitch@1.2.16
-  - @rocket.chat/gazzodown@20.0.0
-  - @rocket.chat/network-broker@0.2.8
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0
-  - @rocket.chat/ui-client@20.0.0
-  - @rocket.chat/ui-video-conf@20.0.0
-  - @rocket.chat/ui-voip@10.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.8.0
+  - @yas chat/web-ui-registration@20.0.0
+  - @yas chat/i18n@1.8.0
+  - @yas chat/apps-engine@1.53.0
+  - @yas chat/model-typings@1.6.8
+  - @yas chat/models@1.5.8
+  - @yas chat/core-typings@7.8.0
+  - @yas chat/omnichannel-services@0.3.26
+  - @yas chat/presence@0.2.29
+  - @yas chat/api-client@0.2.29
+  - @yas chat/core-services@0.9.8
+  - @yas chat/http-router@7.8.0
+  - @yas chat/ui-contexts@20.0.0
+  - @yas chat/apps@0.5.8
+  - @yas chat/fuselage-ui-kit@20.0.0
+  - @yas chat/cron@0.1.29
+  - @yas chat/instance-status@0.1.29
+  - @yas chat/license@1.0.20
+  - @yas chat/pdf-worker@0.3.8
+  - @yas chat/freeswitch@1.2.16
+  - @yas chat/gazzodown@20.0.0
+  - @yas chat/network-broker@0.2.8
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0
+  - @yas chat/ui-client@20.0.0
+  - @yas chat/ui-video-conf@20.0.0
+  - @yas chat/ui-voip@10.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -9160,35 +9160,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.9
-  - @rocket.chat/rest-typings@7.8.0-rc.9
-  - @rocket.chat/license@1.0.20-rc.9
-  - @rocket.chat/omnichannel-services@0.3.26-rc.9
-  - @rocket.chat/pdf-worker@0.3.8-rc.9
-  - @rocket.chat/presence@0.2.29-rc.9
-  - @rocket.chat/api-client@0.2.29-rc.9
-  - @rocket.chat/apps@0.5.8-rc.9
-  - @rocket.chat/core-services@0.9.8-rc.9
-  - @rocket.chat/cron@0.1.29-rc.9
-  - @rocket.chat/freeswitch@1.2.16-rc.9
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.9
-  - @rocket.chat/gazzodown@20.0.0-rc.9
-  - @rocket.chat/http-router@7.8.0-rc.9
-  - @rocket.chat/model-typings@1.6.8-rc.9
-  - @rocket.chat/ui-contexts@20.0.0-rc.9
-  - @rocket.chat/models@1.5.8-rc.9
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.8-rc.9
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.9
-  - @rocket.chat/ui-client@20.0.0-rc.9
-  - @rocket.chat/ui-video-conf@20.0.0-rc.9
-  - @rocket.chat/ui-voip@10.0.0-rc.9
-  - @rocket.chat/web-ui-registration@20.0.0-rc.9
-  - @rocket.chat/instance-status@0.1.29-rc.9
+  - @yas chat/core-typings@7.8.0-rc.9
+  - @yas chat/rest-typings@7.8.0-rc.9
+  - @yas chat/license@1.0.20-rc.9
+  - @yas chat/omnichannel-services@0.3.26-rc.9
+  - @yas chat/pdf-worker@0.3.8-rc.9
+  - @yas chat/presence@0.2.29-rc.9
+  - @yas chat/api-client@0.2.29-rc.9
+  - @yas chat/apps@0.5.8-rc.9
+  - @yas chat/core-services@0.9.8-rc.9
+  - @yas chat/cron@0.1.29-rc.9
+  - @yas chat/freeswitch@1.2.16-rc.9
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.9
+  - @yas chat/gazzodown@20.0.0-rc.9
+  - @yas chat/http-router@7.8.0-rc.9
+  - @yas chat/model-typings@1.6.8-rc.9
+  - @yas chat/ui-contexts@20.0.0-rc.9
+  - @yas chat/models@1.5.8-rc.9
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.8-rc.9
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.9
+  - @yas chat/ui-client@20.0.0-rc.9
+  - @yas chat/ui-video-conf@20.0.0-rc.9
+  - @yas chat/ui-voip@10.0.0-rc.9
+  - @yas chat/web-ui-registration@20.0.0-rc.9
+  - @yas chat/instance-status@0.1.29-rc.9
 
   </details>
 
@@ -9196,38 +9196,38 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36346](https://github.com/YasChat/YasChat/pull/36346)) Fixes an issue where some error objects sent to apps' method calls would only contain the message '[object Object]'
 
 - <details><summary>Updated dependencies [de4293a1ca5af138437bf01a78e7c0450f437dc7]:</summary>
-  - @rocket.chat/apps-engine@1.53.0-rc.1
-  - @rocket.chat/presence@0.2.26-rc.8
-  - @rocket.chat/apps@0.5.5-rc.8
-  - @rocket.chat/core-services@0.9.5-rc.8
-  - @rocket.chat/core-typings@7.8.0-rc.8
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.8
-  - @rocket.chat/rest-typings@7.8.0-rc.8
-  - @rocket.chat/license@1.0.17-rc.8
-  - @rocket.chat/omnichannel-services@0.3.23-rc.8
-  - @rocket.chat/pdf-worker@0.3.5-rc.8
-  - @rocket.chat/api-client@0.2.26-rc.8
-  - @rocket.chat/cron@0.1.26-rc.8
-  - @rocket.chat/freeswitch@1.2.13-rc.8
-  - @rocket.chat/gazzodown@20.0.0-rc.8
-  - @rocket.chat/http-router@7.8.0-rc.8
-  - @rocket.chat/model-typings@1.6.5-rc.8
-  - @rocket.chat/ui-contexts@20.0.0-rc.8
-  - @rocket.chat/models@1.5.5-rc.8
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.8
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.8
-  - @rocket.chat/ui-client@20.0.0-rc.8
-  - @rocket.chat/ui-video-conf@20.0.0-rc.8
-  - @rocket.chat/ui-voip@10.0.0-rc.8
-  - @rocket.chat/web-ui-registration@20.0.0-rc.8
-  - @rocket.chat/instance-status@0.1.26-rc.8
+  - @yas chat/apps-engine@1.53.0-rc.1
+  - @yas chat/presence@0.2.26-rc.8
+  - @yas chat/apps@0.5.5-rc.8
+  - @yas chat/core-services@0.9.5-rc.8
+  - @yas chat/core-typings@7.8.0-rc.8
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.8
+  - @yas chat/rest-typings@7.8.0-rc.8
+  - @yas chat/license@1.0.17-rc.8
+  - @yas chat/omnichannel-services@0.3.23-rc.8
+  - @yas chat/pdf-worker@0.3.5-rc.8
+  - @yas chat/api-client@0.2.26-rc.8
+  - @yas chat/cron@0.1.26-rc.8
+  - @yas chat/freeswitch@1.2.13-rc.8
+  - @yas chat/gazzodown@20.0.0-rc.8
+  - @yas chat/http-router@7.8.0-rc.8
+  - @yas chat/model-typings@1.6.5-rc.8
+  - @yas chat/ui-contexts@20.0.0-rc.8
+  - @yas chat/models@1.5.5-rc.8
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.8
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.8
+  - @yas chat/ui-client@20.0.0-rc.8
+  - @yas chat/ui-video-conf@20.0.0-rc.8
+  - @yas chat/ui-voip@10.0.0-rc.8
+  - @yas chat/web-ui-registration@20.0.0-rc.8
+  - @yas chat/instance-status@0.1.26-rc.8
 
   </details>
 
@@ -9235,35 +9235,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.7
-  - @rocket.chat/rest-typings@7.8.0-rc.7
-  - @rocket.chat/license@1.0.17-rc.7
-  - @rocket.chat/omnichannel-services@0.3.23-rc.7
-  - @rocket.chat/pdf-worker@0.3.5-rc.7
-  - @rocket.chat/presence@0.2.26-rc.7
-  - @rocket.chat/api-client@0.2.26-rc.7
-  - @rocket.chat/apps@0.5.5-rc.7
-  - @rocket.chat/core-services@0.9.5-rc.7
-  - @rocket.chat/cron@0.1.26-rc.7
-  - @rocket.chat/freeswitch@1.2.13-rc.7
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.7
-  - @rocket.chat/gazzodown@20.0.0-rc.7
-  - @rocket.chat/http-router@7.8.0-rc.7
-  - @rocket.chat/model-typings@1.6.5-rc.7
-  - @rocket.chat/ui-contexts@20.0.0-rc.7
-  - @rocket.chat/models@1.5.5-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.7
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.7
-  - @rocket.chat/ui-client@20.0.0-rc.7
-  - @rocket.chat/ui-video-conf@20.0.0-rc.7
-  - @rocket.chat/ui-voip@10.0.0-rc.7
-  - @rocket.chat/web-ui-registration@20.0.0-rc.7
-  - @rocket.chat/instance-status@0.1.26-rc.7
+  - @yas chat/core-typings@7.8.0-rc.7
+  - @yas chat/rest-typings@7.8.0-rc.7
+  - @yas chat/license@1.0.17-rc.7
+  - @yas chat/omnichannel-services@0.3.23-rc.7
+  - @yas chat/pdf-worker@0.3.5-rc.7
+  - @yas chat/presence@0.2.26-rc.7
+  - @yas chat/api-client@0.2.26-rc.7
+  - @yas chat/apps@0.5.5-rc.7
+  - @yas chat/core-services@0.9.5-rc.7
+  - @yas chat/cron@0.1.26-rc.7
+  - @yas chat/freeswitch@1.2.13-rc.7
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.7
+  - @yas chat/gazzodown@20.0.0-rc.7
+  - @yas chat/http-router@7.8.0-rc.7
+  - @yas chat/model-typings@1.6.5-rc.7
+  - @yas chat/ui-contexts@20.0.0-rc.7
+  - @yas chat/models@1.5.5-rc.7
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.7
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.7
+  - @yas chat/ui-client@20.0.0-rc.7
+  - @yas chat/ui-video-conf@20.0.0-rc.7
+  - @yas chat/ui-voip@10.0.0-rc.7
+  - @yas chat/web-ui-registration@20.0.0-rc.7
+  - @yas chat/instance-status@0.1.26-rc.7
 
   </details>
 
@@ -9271,35 +9271,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.6
-  - @rocket.chat/rest-typings@7.8.0-rc.6
-  - @rocket.chat/license@1.0.17-rc.6
-  - @rocket.chat/omnichannel-services@0.3.23-rc.6
-  - @rocket.chat/pdf-worker@0.3.5-rc.6
-  - @rocket.chat/presence@0.2.26-rc.6
-  - @rocket.chat/api-client@0.2.26-rc.6
-  - @rocket.chat/apps@0.5.5-rc.6
-  - @rocket.chat/core-services@0.9.5-rc.6
-  - @rocket.chat/cron@0.1.26-rc.6
-  - @rocket.chat/freeswitch@1.2.13-rc.6
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.6
-  - @rocket.chat/gazzodown@20.0.0-rc.6
-  - @rocket.chat/http-router@7.8.0-rc.6
-  - @rocket.chat/model-typings@1.6.5-rc.6
-  - @rocket.chat/ui-contexts@20.0.0-rc.6
-  - @rocket.chat/models@1.5.5-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.6
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.6
-  - @rocket.chat/ui-client@20.0.0-rc.6
-  - @rocket.chat/ui-video-conf@20.0.0-rc.6
-  - @rocket.chat/ui-voip@10.0.0-rc.6
-  - @rocket.chat/web-ui-registration@20.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.26-rc.6
+  - @yas chat/core-typings@7.8.0-rc.6
+  - @yas chat/rest-typings@7.8.0-rc.6
+  - @yas chat/license@1.0.17-rc.6
+  - @yas chat/omnichannel-services@0.3.23-rc.6
+  - @yas chat/pdf-worker@0.3.5-rc.6
+  - @yas chat/presence@0.2.26-rc.6
+  - @yas chat/api-client@0.2.26-rc.6
+  - @yas chat/apps@0.5.5-rc.6
+  - @yas chat/core-services@0.9.5-rc.6
+  - @yas chat/cron@0.1.26-rc.6
+  - @yas chat/freeswitch@1.2.13-rc.6
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.6
+  - @yas chat/gazzodown@20.0.0-rc.6
+  - @yas chat/http-router@7.8.0-rc.6
+  - @yas chat/model-typings@1.6.5-rc.6
+  - @yas chat/ui-contexts@20.0.0-rc.6
+  - @yas chat/models@1.5.5-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.6
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.6
+  - @yas chat/ui-client@20.0.0-rc.6
+  - @yas chat/ui-video-conf@20.0.0-rc.6
+  - @yas chat/ui-voip@10.0.0-rc.6
+  - @yas chat/web-ui-registration@20.0.0-rc.6
+  - @yas chat/instance-status@0.1.26-rc.6
 
   </details>
 
@@ -9307,37 +9307,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36105](https://github.com/YasChat/YasChat/pull/36105)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.5
-  - @rocket.chat/rest-typings@7.8.0-rc.5
-  - @rocket.chat/license@1.0.17-rc.5
-  - @rocket.chat/omnichannel-services@0.3.23-rc.5
-  - @rocket.chat/pdf-worker@0.3.5-rc.5
-  - @rocket.chat/presence@0.2.26-rc.5
-  - @rocket.chat/api-client@0.2.26-rc.5
-  - @rocket.chat/apps@0.5.5-rc.5
-  - @rocket.chat/core-services@0.9.5-rc.5
-  - @rocket.chat/cron@0.1.26-rc.5
-  - @rocket.chat/freeswitch@1.2.13-rc.5
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.5
-  - @rocket.chat/gazzodown@20.0.0-rc.5
-  - @rocket.chat/http-router@7.8.0-rc.5
-  - @rocket.chat/model-typings@1.6.5-rc.5
-  - @rocket.chat/ui-contexts@20.0.0-rc.5
-  - @rocket.chat/models@1.5.5-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.5
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.5
-  - @rocket.chat/ui-client@20.0.0-rc.5
-  - @rocket.chat/ui-video-conf@20.0.0-rc.5
-  - @rocket.chat/ui-voip@10.0.0-rc.5
-  - @rocket.chat/web-ui-registration@20.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.26-rc.5
+  - @yas chat/core-typings@7.8.0-rc.5
+  - @yas chat/rest-typings@7.8.0-rc.5
+  - @yas chat/license@1.0.17-rc.5
+  - @yas chat/omnichannel-services@0.3.23-rc.5
+  - @yas chat/pdf-worker@0.3.5-rc.5
+  - @yas chat/presence@0.2.26-rc.5
+  - @yas chat/api-client@0.2.26-rc.5
+  - @yas chat/apps@0.5.5-rc.5
+  - @yas chat/core-services@0.9.5-rc.5
+  - @yas chat/cron@0.1.26-rc.5
+  - @yas chat/freeswitch@1.2.13-rc.5
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.5
+  - @yas chat/gazzodown@20.0.0-rc.5
+  - @yas chat/http-router@7.8.0-rc.5
+  - @yas chat/model-typings@1.6.5-rc.5
+  - @yas chat/ui-contexts@20.0.0-rc.5
+  - @yas chat/models@1.5.5-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.5
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.5
+  - @yas chat/ui-client@20.0.0-rc.5
+  - @yas chat/ui-video-conf@20.0.0-rc.5
+  - @yas chat/ui-voip@10.0.0-rc.5
+  - @yas chat/web-ui-registration@20.0.0-rc.5
+  - @yas chat/instance-status@0.1.26-rc.5
 
   </details>
 
@@ -9345,35 +9345,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.4
-  - @rocket.chat/rest-typings@7.8.0-rc.4
-  - @rocket.chat/license@1.0.17-rc.4
-  - @rocket.chat/omnichannel-services@0.3.23-rc.4
-  - @rocket.chat/pdf-worker@0.3.5-rc.4
-  - @rocket.chat/presence@0.2.26-rc.4
-  - @rocket.chat/api-client@0.2.26-rc.4
-  - @rocket.chat/apps@0.5.5-rc.4
-  - @rocket.chat/core-services@0.9.5-rc.4
-  - @rocket.chat/cron@0.1.26-rc.4
-  - @rocket.chat/freeswitch@1.2.13-rc.4
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.4
-  - @rocket.chat/gazzodown@20.0.0-rc.4
-  - @rocket.chat/http-router@7.8.0-rc.4
-  - @rocket.chat/model-typings@1.6.5-rc.4
-  - @rocket.chat/ui-contexts@20.0.0-rc.4
-  - @rocket.chat/models@1.5.5-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.4
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.4
-  - @rocket.chat/ui-client@20.0.0-rc.4
-  - @rocket.chat/ui-video-conf@20.0.0-rc.4
-  - @rocket.chat/ui-voip@10.0.0-rc.4
-  - @rocket.chat/web-ui-registration@20.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.26-rc.4
+  - @yas chat/core-typings@7.8.0-rc.4
+  - @yas chat/rest-typings@7.8.0-rc.4
+  - @yas chat/license@1.0.17-rc.4
+  - @yas chat/omnichannel-services@0.3.23-rc.4
+  - @yas chat/pdf-worker@0.3.5-rc.4
+  - @yas chat/presence@0.2.26-rc.4
+  - @yas chat/api-client@0.2.26-rc.4
+  - @yas chat/apps@0.5.5-rc.4
+  - @yas chat/core-services@0.9.5-rc.4
+  - @yas chat/cron@0.1.26-rc.4
+  - @yas chat/freeswitch@1.2.13-rc.4
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.4
+  - @yas chat/gazzodown@20.0.0-rc.4
+  - @yas chat/http-router@7.8.0-rc.4
+  - @yas chat/model-typings@1.6.5-rc.4
+  - @yas chat/ui-contexts@20.0.0-rc.4
+  - @yas chat/models@1.5.5-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.4
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.4
+  - @yas chat/ui-client@20.0.0-rc.4
+  - @yas chat/ui-video-conf@20.0.0-rc.4
+  - @yas chat/ui-voip@10.0.0-rc.4
+  - @yas chat/web-ui-registration@20.0.0-rc.4
+  - @yas chat/instance-status@0.1.26-rc.4
 
   </details>
 
@@ -9381,39 +9381,39 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36256](https://github.com/YasChat/YasChat/pull/36256)) Fixes an issue that caused the queue worker to stop processing if something failed when checking MAC limits or while fetching the list of queues
 
 - ([#36258](https://github.com/YasChat/YasChat/pull/36258)) Fixes an issue that prevented the action of removing an agent when editing a department to work.
 
 - <details><summary>Updated dependencies [d58457d25a9a899ebcc7fd0e1fe11d9d370c50d8]:</summary>
-  - @rocket.chat/rest-typings@7.8.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.23-rc.3
-  - @rocket.chat/presence@0.2.26-rc.3
-  - @rocket.chat/api-client@0.2.26-rc.3
-  - @rocket.chat/core-services@0.9.5-rc.3
-  - @rocket.chat/http-router@7.8.0-rc.3
-  - @rocket.chat/models@1.5.5-rc.3
-  - @rocket.chat/ui-contexts@20.0.0-rc.3
-  - @rocket.chat/network-broker@0.2.5-rc.3
-  - @rocket.chat/cron@0.1.26-rc.3
-  - @rocket.chat/instance-status@0.1.26-rc.3
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.3
-  - @rocket.chat/gazzodown@20.0.0-rc.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.3
-  - @rocket.chat/ui-client@20.0.0-rc.3
-  - @rocket.chat/ui-video-conf@20.0.0-rc.3
-  - @rocket.chat/ui-voip@10.0.0-rc.3
-  - @rocket.chat/web-ui-registration@20.0.0-rc.3
-  - @rocket.chat/core-typings@7.8.0-rc.3
-  - @rocket.chat/license@1.0.17-rc.3
-  - @rocket.chat/pdf-worker@0.3.5-rc.3
-  - @rocket.chat/apps@0.5.5-rc.3
-  - @rocket.chat/freeswitch@1.2.13-rc.3
-  - @rocket.chat/model-typings@1.6.5-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.8.0-rc.3
+  - @yas chat/omnichannel-services@0.3.23-rc.3
+  - @yas chat/presence@0.2.26-rc.3
+  - @yas chat/api-client@0.2.26-rc.3
+  - @yas chat/core-services@0.9.5-rc.3
+  - @yas chat/http-router@7.8.0-rc.3
+  - @yas chat/models@1.5.5-rc.3
+  - @yas chat/ui-contexts@20.0.0-rc.3
+  - @yas chat/network-broker@0.2.5-rc.3
+  - @yas chat/cron@0.1.26-rc.3
+  - @yas chat/instance-status@0.1.26-rc.3
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.3
+  - @yas chat/gazzodown@20.0.0-rc.3
+  - @yas chat/ui-avatar@16.0.0-rc.3
+  - @yas chat/ui-client@20.0.0-rc.3
+  - @yas chat/ui-video-conf@20.0.0-rc.3
+  - @yas chat/ui-voip@10.0.0-rc.3
+  - @yas chat/web-ui-registration@20.0.0-rc.3
+  - @yas chat/core-typings@7.8.0-rc.3
+  - @yas chat/license@1.0.17-rc.3
+  - @yas chat/pdf-worker@0.3.5-rc.3
+  - @yas chat/apps@0.5.5-rc.3
+  - @yas chat/freeswitch@1.2.13-rc.3
+  - @yas chat/model-typings@1.6.5-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -9421,35 +9421,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.2
-  - @rocket.chat/rest-typings@7.8.0-rc.2
-  - @rocket.chat/license@1.0.17-rc.2
-  - @rocket.chat/omnichannel-services@0.3.23-rc.2
-  - @rocket.chat/pdf-worker@0.3.5-rc.2
-  - @rocket.chat/presence@0.2.26-rc.2
-  - @rocket.chat/api-client@0.2.26-rc.2
-  - @rocket.chat/apps@0.5.5-rc.2
-  - @rocket.chat/core-services@0.9.5-rc.2
-  - @rocket.chat/cron@0.1.26-rc.2
-  - @rocket.chat/freeswitch@1.2.13-rc.2
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.2
-  - @rocket.chat/gazzodown@20.0.0-rc.2
-  - @rocket.chat/http-router@7.8.0-rc.2
-  - @rocket.chat/model-typings@1.6.5-rc.2
-  - @rocket.chat/ui-contexts@20.0.0-rc.2
-  - @rocket.chat/models@1.5.5-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.2
-  - @rocket.chat/ui-client@20.0.0-rc.2
-  - @rocket.chat/ui-video-conf@20.0.0-rc.2
-  - @rocket.chat/ui-voip@10.0.0-rc.2
-  - @rocket.chat/web-ui-registration@20.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.26-rc.2
+  - @yas chat/core-typings@7.8.0-rc.2
+  - @yas chat/rest-typings@7.8.0-rc.2
+  - @yas chat/license@1.0.17-rc.2
+  - @yas chat/omnichannel-services@0.3.23-rc.2
+  - @yas chat/pdf-worker@0.3.5-rc.2
+  - @yas chat/presence@0.2.26-rc.2
+  - @yas chat/api-client@0.2.26-rc.2
+  - @yas chat/apps@0.5.5-rc.2
+  - @yas chat/core-services@0.9.5-rc.2
+  - @yas chat/cron@0.1.26-rc.2
+  - @yas chat/freeswitch@1.2.13-rc.2
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.2
+  - @yas chat/gazzodown@20.0.0-rc.2
+  - @yas chat/http-router@7.8.0-rc.2
+  - @yas chat/model-typings@1.6.5-rc.2
+  - @yas chat/ui-contexts@20.0.0-rc.2
+  - @yas chat/models@1.5.5-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.2
+  - @yas chat/ui-client@20.0.0-rc.2
+  - @yas chat/ui-video-conf@20.0.0-rc.2
+  - @yas chat/ui-voip@10.0.0-rc.2
+  - @yas chat/web-ui-registration@20.0.0-rc.2
+  - @yas chat/instance-status@0.1.26-rc.2
 
   </details>
 
@@ -9458,32 +9458,32 @@
 - ([#36263](https://github.com/YasChat/YasChat/pull/36263)) Fixes an issue, where multiple reconnections would subscribe multiple times to the same stream, only a frontend issue, since the stream cache prevents sending multiple times to the backend, but does not prevent running the callback multiple times
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.1
-  - @rocket.chat/rest-typings@7.8.0-rc.1
-  - @rocket.chat/license@1.0.17-rc.1
-  - @rocket.chat/omnichannel-services@0.3.23-rc.1
-  - @rocket.chat/pdf-worker@0.3.5-rc.1
-  - @rocket.chat/presence@0.2.26-rc.1
-  - @rocket.chat/api-client@0.2.26-rc.1
-  - @rocket.chat/apps@0.5.5-rc.1
-  - @rocket.chat/core-services@0.9.5-rc.1
-  - @rocket.chat/cron@0.1.26-rc.1
-  - @rocket.chat/freeswitch@1.2.13-rc.1
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.1
-  - @rocket.chat/gazzodown@20.0.0-rc.1
-  - @rocket.chat/http-router@7.8.0-rc.1
-  - @rocket.chat/model-typings@1.6.5-rc.1
-  - @rocket.chat/ui-contexts@20.0.0-rc.1
-  - @rocket.chat/models@1.5.5-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.5-rc.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.1
-  - @rocket.chat/ui-client@20.0.0-rc.1
-  - @rocket.chat/ui-video-conf@20.0.0-rc.1
-  - @rocket.chat/ui-voip@10.0.0-rc.1
-  - @rocket.chat/web-ui-registration@20.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.26-rc.1
+  - @yas chat/core-typings@7.8.0-rc.1
+  - @yas chat/rest-typings@7.8.0-rc.1
+  - @yas chat/license@1.0.17-rc.1
+  - @yas chat/omnichannel-services@0.3.23-rc.1
+  - @yas chat/pdf-worker@0.3.5-rc.1
+  - @yas chat/presence@0.2.26-rc.1
+  - @yas chat/api-client@0.2.26-rc.1
+  - @yas chat/apps@0.5.5-rc.1
+  - @yas chat/core-services@0.9.5-rc.1
+  - @yas chat/cron@0.1.26-rc.1
+  - @yas chat/freeswitch@1.2.13-rc.1
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.1
+  - @yas chat/gazzodown@20.0.0-rc.1
+  - @yas chat/http-router@7.8.0-rc.1
+  - @yas chat/model-typings@1.6.5-rc.1
+  - @yas chat/ui-contexts@20.0.0-rc.1
+  - @yas chat/models@1.5.5-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.5-rc.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.1
+  - @yas chat/ui-client@20.0.0-rc.1
+  - @yas chat/ui-video-conf@20.0.0-rc.1
+  - @yas chat/ui-voip@10.0.0-rc.1
+  - @yas chat/web-ui-registration@20.0.0-rc.1
+  - @yas chat/instance-status@0.1.26-rc.1
 
   </details>
 
@@ -9529,7 +9529,7 @@
 
 - ([#36035](https://github.com/YasChat/YasChat/pull/36035)) Fixes file filtering by name or type not working for non-private channels.
 
-- ([#36224](https://github.com/YasChat/YasChat/pull/36224)) fix: Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36224](https://github.com/YasChat/YasChat/pull/36224)) fix: Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36163](https://github.com/YasChat/YasChat/pull/36163)) Fixes an issue where incoming webhook messages did not respect the maximum allowed characters per message.
 
@@ -9558,38 +9558,38 @@
 - ([#36138](https://github.com/YasChat/YasChat/pull/36138)) fixes contextual-bar not working by apps interaction after a page refresh.
 
 - <details><summary>Updated dependencies [5cd7b20d5fb6def0a76743576eaa19fc0bf01c4c, 8de5b66aff3e58af14684db2816410cfe0d3034c, 1eb53d289e1280b5ac4ce4a6995e7fe28d50601a, 8033bdb1f611eb8954a2626aca2583a285a94b27, da288f69a4c169eee942af73f490e7570fe41cc5, 5ac20e2a84200f8002ce454df693ada2653f3827, 2f8213e4c5b64201eb11c97e6e33d2488df9089d, 2de3aa60aa84bb262d3748065654b4ca7a000858, c77056f1d5d7269d9fb4bb16d86711b037ec547f, dc26071ba3e0242d1ea7cf819f05c76ab307b229, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/rest-typings@7.8.0-rc.0
-  - @rocket.chat/web-ui-registration@20.0.0-rc.0
-  - @rocket.chat/i18n@1.8.0-rc.0
-  - @rocket.chat/apps-engine@1.53.0-rc.0
-  - @rocket.chat/model-typings@1.6.5-rc.0
-  - @rocket.chat/models@1.5.5-rc.0
-  - @rocket.chat/core-typings@7.8.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.23-rc.0
-  - @rocket.chat/presence@0.2.26-rc.0
-  - @rocket.chat/api-client@0.2.26-rc.0
-  - @rocket.chat/core-services@0.9.5-rc.0
-  - @rocket.chat/http-router@7.8.0-rc.0
-  - @rocket.chat/ui-contexts@20.0.0-rc.0
-  - @rocket.chat/apps@0.5.5-rc.0
-  - @rocket.chat/fuselage-ui-kit@20.0.0-rc.0
-  - @rocket.chat/cron@0.1.26-rc.0
-  - @rocket.chat/instance-status@0.1.26-rc.0
-  - @rocket.chat/license@1.0.17-rc.0
-  - @rocket.chat/pdf-worker@0.3.5-rc.0
-  - @rocket.chat/freeswitch@1.2.13-rc.0
-  - @rocket.chat/gazzodown@20.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.5-rc.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.0
-  - @rocket.chat/ui-client@20.0.0-rc.0
-  - @rocket.chat/ui-video-conf@20.0.0-rc.0
-  - @rocket.chat/ui-voip@10.0.0-rc.0
+  - @yas chat/rest-typings@7.8.0-rc.0
+  - @yas chat/web-ui-registration@20.0.0-rc.0
+  - @yas chat/i18n@1.8.0-rc.0
+  - @yas chat/apps-engine@1.53.0-rc.0
+  - @yas chat/model-typings@1.6.5-rc.0
+  - @yas chat/models@1.5.5-rc.0
+  - @yas chat/core-typings@7.8.0-rc.0
+  - @yas chat/omnichannel-services@0.3.23-rc.0
+  - @yas chat/presence@0.2.26-rc.0
+  - @yas chat/api-client@0.2.26-rc.0
+  - @yas chat/core-services@0.9.5-rc.0
+  - @yas chat/http-router@7.8.0-rc.0
+  - @yas chat/ui-contexts@20.0.0-rc.0
+  - @yas chat/apps@0.5.5-rc.0
+  - @yas chat/fuselage-ui-kit@20.0.0-rc.0
+  - @yas chat/cron@0.1.26-rc.0
+  - @yas chat/instance-status@0.1.26-rc.0
+  - @yas chat/license@1.0.17-rc.0
+  - @yas chat/pdf-worker@0.3.5-rc.0
+  - @yas chat/freeswitch@1.2.13-rc.0
+  - @yas chat/gazzodown@20.0.0-rc.0
+  - @yas chat/network-broker@0.2.5-rc.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@16.0.0-rc.0
+  - @yas chat/ui-client@20.0.0-rc.0
+  - @yas chat/ui-video-conf@20.0.0-rc.0
+  - @yas chat/ui-voip@10.0.0-rc.0
 
   ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/server-cloud-communication@0.0.2
+- Bump @yas chat/meteor version.
+  - @yas chat/server-cloud-communication@0.0.2
   </details>
 
 ## 7.7.4
@@ -9597,32 +9597,32 @@
 - ([#36360](https://github.com/YasChat/YasChat/pull/36360) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where some error objects sent to apps' method calls would only contain the message '[object Object]'
 
 - <details><summary>Updated dependencies [46662d78192b438914b2aedb974faa2367225fa5]:</summary>
-  - @rocket.chat/apps-engine@1.52.1
-  - @rocket.chat/presence@0.2.28
-  - @rocket.chat/apps@0.5.7
-  - @rocket.chat/core-services@0.9.7
-  - @rocket.chat/core-typings@7.7.4
-  - @rocket.chat/fuselage-ui-kit@19.0.4
-  - @rocket.chat/rest-typings@7.7.4
-  - @rocket.chat/license@1.0.19
-  - @rocket.chat/omnichannel-services@0.3.25
-  - @rocket.chat/pdf-worker@0.3.7
-  - @rocket.chat/api-client@0.2.28
-  - @rocket.chat/cron@0.1.28
-  - @rocket.chat/freeswitch@1.2.15
-  - @rocket.chat/gazzodown@19.0.4
-  - @rocket.chat/model-typings@1.6.7
-  - @rocket.chat/ui-contexts@19.0.4
-  - @rocket.chat/models@1.5.7
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.7
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.4
-  - @rocket.chat/ui-client@19.0.4
-  - @rocket.chat/ui-video-conf@19.0.4
-  - @rocket.chat/ui-voip@9.0.4
-  - @rocket.chat/web-ui-registration@19.0.4
-  - @rocket.chat/instance-status@0.1.28
+  - @yas chat/apps-engine@1.52.1
+  - @yas chat/presence@0.2.28
+  - @yas chat/apps@0.5.7
+  - @yas chat/core-services@0.9.7
+  - @yas chat/core-typings@7.7.4
+  - @yas chat/fuselage-ui-kit@19.0.4
+  - @yas chat/rest-typings@7.7.4
+  - @yas chat/license@1.0.19
+  - @yas chat/omnichannel-services@0.3.25
+  - @yas chat/pdf-worker@0.3.7
+  - @yas chat/api-client@0.2.28
+  - @yas chat/cron@0.1.28
+  - @yas chat/freeswitch@1.2.15
+  - @yas chat/gazzodown@19.0.4
+  - @yas chat/model-typings@1.6.7
+  - @yas chat/ui-contexts@19.0.4
+  - @yas chat/models@1.5.7
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.7
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.4
+  - @yas chat/ui-client@19.0.4
+  - @yas chat/ui-video-conf@19.0.4
+  - @yas chat/ui-voip@9.0.4
+  - @yas chat/web-ui-registration@19.0.4
+  - @yas chat/instance-status@0.1.28
 
   </details>
 
@@ -9630,34 +9630,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.3
-  - @rocket.chat/rest-typings@7.7.3
-  - @rocket.chat/license@1.0.18
-  - @rocket.chat/omnichannel-services@0.3.24
-  - @rocket.chat/pdf-worker@0.3.6
-  - @rocket.chat/presence@0.2.27
-  - @rocket.chat/api-client@0.2.27
-  - @rocket.chat/apps@0.5.6
-  - @rocket.chat/core-services@0.9.6
-  - @rocket.chat/cron@0.1.27
-  - @rocket.chat/freeswitch@1.2.14
-  - @rocket.chat/fuselage-ui-kit@19.0.3
-  - @rocket.chat/gazzodown@19.0.3
-  - @rocket.chat/model-typings@1.6.6
-  - @rocket.chat/ui-contexts@19.0.3
-  - @rocket.chat/models@1.5.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.6
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.3
-  - @rocket.chat/ui-client@19.0.3
-  - @rocket.chat/ui-video-conf@19.0.3
-  - @rocket.chat/ui-voip@9.0.3
-  - @rocket.chat/web-ui-registration@19.0.3
-  - @rocket.chat/instance-status@0.1.27
+  - @yas chat/core-typings@7.7.3
+  - @yas chat/rest-typings@7.7.3
+  - @yas chat/license@1.0.18
+  - @yas chat/omnichannel-services@0.3.24
+  - @yas chat/pdf-worker@0.3.6
+  - @yas chat/presence@0.2.27
+  - @yas chat/api-client@0.2.27
+  - @yas chat/apps@0.5.6
+  - @yas chat/core-services@0.9.6
+  - @yas chat/cron@0.1.27
+  - @yas chat/freeswitch@1.2.14
+  - @yas chat/fuselage-ui-kit@19.0.3
+  - @yas chat/gazzodown@19.0.3
+  - @yas chat/model-typings@1.6.6
+  - @yas chat/ui-contexts@19.0.3
+  - @yas chat/models@1.5.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.6
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.3
+  - @yas chat/ui-client@19.0.3
+  - @yas chat/ui-video-conf@19.0.3
+  - @yas chat/ui-voip@9.0.3
+  - @yas chat/web-ui-registration@19.0.3
+  - @yas chat/instance-status@0.1.27
 
   </details>
 
@@ -9665,44 +9665,44 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36323](https://github.com/YasChat/YasChat/pull/36323) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that was causing ddp-streamer process to break if the communication with presence service was interrupted for any reason.
 
-- ([#36250](https://github.com/YasChat/YasChat/pull/36250) by [@dionisio-bot](https://github.com/dionisio-bot)) fix: Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36250](https://github.com/YasChat/YasChat/pull/36250) by [@dionisio-bot](https://github.com/dionisio-bot)) fix: Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36270](https://github.com/YasChat/YasChat/pull/36270) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that caused the queue worker to stop processing if something failed when checking MAC limits or while fetching the list of queues
 
 - ([#36298](https://github.com/YasChat/YasChat/pull/36298) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that prevented the action of removing an agent when editing a department to work.
 
 - <details><summary>Updated dependencies [8874a5aab72c962f213d128a54393d95f7dabef8]:</summary>
-  - @rocket.chat/rest-typings@7.7.2
-  - @rocket.chat/omnichannel-services@0.3.23
-  - @rocket.chat/presence@0.2.26
-  - @rocket.chat/api-client@0.2.26
-  - @rocket.chat/core-services@0.9.5
-  - @rocket.chat/models@1.5.5
-  - @rocket.chat/ui-contexts@19.0.2
-  - @rocket.chat/network-broker@0.2.5
-  - @rocket.chat/cron@0.1.26
-  - @rocket.chat/instance-status@0.1.26
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/fuselage-ui-kit@19.0.2
-  - @rocket.chat/gazzodown@19.0.2
-  - @rocket.chat/ui-avatar@15.0.2
-  - @rocket.chat/ui-client@19.0.2
-  - @rocket.chat/ui-video-conf@19.0.2
-  - @rocket.chat/ui-voip@9.0.2
-  - @rocket.chat/web-ui-registration@19.0.2
-  - @rocket.chat/core-typings@7.7.2
-  - @rocket.chat/license@1.0.17
-  - @rocket.chat/pdf-worker@0.3.5
-  - @rocket.chat/apps@0.5.5
-  - @rocket.chat/freeswitch@1.2.13
-  - @rocket.chat/model-typings@1.6.5
-    - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.7.2
+  - @yas chat/omnichannel-services@0.3.23
+  - @yas chat/presence@0.2.26
+  - @yas chat/api-client@0.2.26
+  - @yas chat/core-services@0.9.5
+  - @yas chat/models@1.5.5
+  - @yas chat/ui-contexts@19.0.2
+  - @yas chat/network-broker@0.2.5
+  - @yas chat/cron@0.1.26
+  - @yas chat/instance-status@0.1.26
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/fuselage-ui-kit@19.0.2
+  - @yas chat/gazzodown@19.0.2
+  - @yas chat/ui-avatar@15.0.2
+  - @yas chat/ui-client@19.0.2
+  - @yas chat/ui-video-conf@19.0.2
+  - @yas chat/ui-voip@9.0.2
+  - @yas chat/web-ui-registration@19.0.2
+  - @yas chat/core-typings@7.7.2
+  - @yas chat/license@1.0.17
+  - @yas chat/pdf-worker@0.3.5
+  - @yas chat/apps@0.5.5
+  - @yas chat/freeswitch@1.2.13
+  - @yas chat/model-typings@1.6.5
+    - @yas chat/server-cloud-communication@0.0.2
     </details>
 
 ## 7.7.1
@@ -9711,40 +9711,40 @@
 
 - ([#36204](https://github.com/YasChat/YasChat/pull/36204) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that prevented the action of saving an agent when editing a department to work.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36210](https://github.com/YasChat/YasChat/pull/36210) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the usage of `Livechat_enabled_when_agent_idle` setting across the codebase. Goal is to use it wherever is applicable making the feature more predictable.
 
 - ([#36200](https://github.com/YasChat/YasChat/pull/36200) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixed contacts being marked as `known` after editing a custom field, or resolving conflicts by adding a new model function that only updates the `customFields` or `conflictingFields` prop.
 
 - <details><summary>Updated dependencies [016611917a86c738c22f7da4235e3ad38cf81e2a, 710f6b2bc211ba1d06d701f99d17bf2405d19b32]:</summary>
-  - @rocket.chat/rest-typings@7.7.1
-  - @rocket.chat/model-typings@1.6.4
-  - @rocket.chat/models@1.5.4
-  - @rocket.chat/omnichannel-services@0.3.22
-  - @rocket.chat/presence@0.2.25
-  - @rocket.chat/api-client@0.2.25
-  - @rocket.chat/core-services@0.9.4
-  - @rocket.chat/ui-contexts@19.0.1
-  - @rocket.chat/apps@0.5.4
-  - @rocket.chat/cron@0.1.25
-  - @rocket.chat/instance-status@0.1.25
-  - @rocket.chat/network-broker@0.2.4
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/fuselage-ui-kit@19.0.1
-  - @rocket.chat/gazzodown@19.0.1
-  - @rocket.chat/ui-avatar@15.0.1
-  - @rocket.chat/ui-client@19.0.1
-  - @rocket.chat/ui-video-conf@19.0.1
-  - @rocket.chat/ui-voip@9.0.1
-  - @rocket.chat/web-ui-registration@19.0.1
-  - @rocket.chat/core-typings@7.7.1
-  - @rocket.chat/license@1.0.16
-  - @rocket.chat/pdf-worker@0.3.4
-  - @rocket.chat/freeswitch@1.2.12
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.7.1
+  - @yas chat/model-typings@1.6.4
+  - @yas chat/models@1.5.4
+  - @yas chat/omnichannel-services@0.3.22
+  - @yas chat/presence@0.2.25
+  - @yas chat/api-client@0.2.25
+  - @yas chat/core-services@0.9.4
+  - @yas chat/ui-contexts@19.0.1
+  - @yas chat/apps@0.5.4
+  - @yas chat/cron@0.1.25
+  - @yas chat/instance-status@0.1.25
+  - @yas chat/network-broker@0.2.4
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/fuselage-ui-kit@19.0.1
+  - @yas chat/gazzodown@19.0.1
+  - @yas chat/ui-avatar@15.0.1
+  - @yas chat/ui-client@19.0.1
+  - @yas chat/ui-video-conf@19.0.1
+  - @yas chat/ui-voip@9.0.1
+  - @yas chat/web-ui-registration@19.0.1
+  - @yas chat/core-typings@7.7.1
+  - @yas chat/license@1.0.16
+  - @yas chat/pdf-worker@0.3.4
+  - @yas chat/freeswitch@1.2.12
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -9764,19 +9764,19 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35468](https://github.com/YasChat/YasChat/pull/35468) by [@samir0607](https://github.com/samir0607)) Fixes an issue where the composer popup doesn't scroll the results properly
 
@@ -9786,7 +9786,7 @@
 
   The previous behavior can still be enabled using the environment flag `DISABLE_DB_WATCHERS=false`.
 
-  ⚠️ In future major versions, this flag will be completely removed, and the `@rocket.chat/stream-hub-service` package and the `stream-hub-service` At that time the Docker image will no longer be published.
+  ⚠️ In future major versions, this flag will be completely removed, and the `@yas chat/stream-hub-service` package and the `stream-hub-service` At that time the Docker image will no longer be published.
 
 - ([#35976](https://github.com/YasChat/YasChat/pull/35976)) Fixes a bug where changing site url breaks `meteor_runtime_config` path until we reset the server
 
@@ -9842,40 +9842,40 @@
 
 - ([#35797](https://github.com/YasChat/YasChat/pull/35797)) Fixes the room history pruning behavior when filesOnly is true to ensure only file-type attachments are removed, preserving quotes and non-file attachments.
 
-- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36019](https://github.com/YasChat/YasChat/pull/36019)) Adds new endpoint to handle contact's conflicting data
 
 - ([#35905](https://github.com/YasChat/YasChat/pull/35905)) Fixes file deletion being called twice and ignoring errors with FileSystem storage type.
 
 - <details><summary>Updated dependencies [0c3ac1f67922e25f8122f4e34c22f4d7278ad97a, aadc7956bdeb281007ef06f158088640a44171df, 5a74a78a2ba5e5733df7599b22f3ad0504f89a49, 13824d153aefc75830d73067f665122becfe6742, fdb3b5783053c2705936ee2941e46f9351901e66, 7f9748374a3b04f7880003227cde7058e5ea9a68, 1c7f00a5edcb070f48a2cb137bf7101a21c3c34a, 7f9748374a3b04f7880003227cde7058e5ea9a68, 996f5b9df477097fe496902b8a2700dee747895b, 8d907087746dd75bd640c6d51ae0bbb7f3dc43c0, 6d36fc25a47281aad298edc6fc3a6e981d279f61, 821cd886891370443117d7caa05c43fc7c3dd0c7, 6d334f21b97f0cb98d9af03be5167ff60198f6c1]:</summary>
-  - @rocket.chat/models@1.5.3
-  - @rocket.chat/i18n@1.7.0
-  - @rocket.chat/ui-client@19.0.0
-  - @rocket.chat/ui-voip@9.0.0
-  - @rocket.chat/web-ui-registration@19.0.0
-  - @rocket.chat/rest-typings@7.7.0
-  - @rocket.chat/apps-engine@1.52.0
-  - @rocket.chat/model-typings@1.6.3
-  - @rocket.chat/gazzodown@19.0.0
-  - @rocket.chat/omnichannel-services@0.3.21
-  - @rocket.chat/presence@0.2.24
-  - @rocket.chat/core-services@0.9.3
-  - @rocket.chat/cron@0.1.24
-  - @rocket.chat/instance-status@0.1.24
-  - @rocket.chat/ui-contexts@19.0.0
-  - @rocket.chat/api-client@0.2.24
-  - @rocket.chat/apps@0.5.3
-  - @rocket.chat/core-typings@7.7.0
-  - @rocket.chat/fuselage-ui-kit@19.0.0
-  - @rocket.chat/network-broker@0.2.3
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0
-  - @rocket.chat/ui-video-conf@19.0.0
-  - @rocket.chat/license@1.0.15
-  - @rocket.chat/pdf-worker@0.3.3
-  - @rocket.chat/freeswitch@1.2.11
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/models@1.5.3
+  - @yas chat/i18n@1.7.0
+  - @yas chat/ui-client@19.0.0
+  - @yas chat/ui-voip@9.0.0
+  - @yas chat/web-ui-registration@19.0.0
+  - @yas chat/rest-typings@7.7.0
+  - @yas chat/apps-engine@1.52.0
+  - @yas chat/model-typings@1.6.3
+  - @yas chat/gazzodown@19.0.0
+  - @yas chat/omnichannel-services@0.3.21
+  - @yas chat/presence@0.2.24
+  - @yas chat/core-services@0.9.3
+  - @yas chat/cron@0.1.24
+  - @yas chat/instance-status@0.1.24
+  - @yas chat/ui-contexts@19.0.0
+  - @yas chat/api-client@0.2.24
+  - @yas chat/apps@0.5.3
+  - @yas chat/core-typings@7.7.0
+  - @yas chat/fuselage-ui-kit@19.0.0
+  - @yas chat/network-broker@0.2.3
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0
+  - @yas chat/ui-video-conf@19.0.0
+  - @yas chat/license@1.0.15
+  - @yas chat/pdf-worker@0.3.3
+  - @yas chat/freeswitch@1.2.11
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -9883,34 +9883,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.6
-  - @rocket.chat/rest-typings@7.7.0-rc.6
-  - @rocket.chat/license@1.0.15-rc.6
-  - @rocket.chat/omnichannel-services@0.3.21-rc.6
-  - @rocket.chat/pdf-worker@0.3.3-rc.6
-  - @rocket.chat/presence@0.2.24-rc.6
-  - @rocket.chat/api-client@0.2.24-rc.6
-  - @rocket.chat/apps@0.5.3-rc.6
-  - @rocket.chat/core-services@0.9.3-rc.6
-  - @rocket.chat/cron@0.1.24-rc.6
-  - @rocket.chat/freeswitch@1.2.11-rc.6
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.6
-  - @rocket.chat/gazzodown@19.0.0-rc.6
-  - @rocket.chat/model-typings@1.6.3-rc.6
-  - @rocket.chat/ui-contexts@19.0.0-rc.6
-  - @rocket.chat/models@1.5.3-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.3-rc.6
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.6
-  - @rocket.chat/ui-client@19.0.0-rc.6
-  - @rocket.chat/ui-video-conf@19.0.0-rc.6
-  - @rocket.chat/ui-voip@9.0.0-rc.6
-  - @rocket.chat/web-ui-registration@19.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.24-rc.6
+  - @yas chat/core-typings@7.7.0-rc.6
+  - @yas chat/rest-typings@7.7.0-rc.6
+  - @yas chat/license@1.0.15-rc.6
+  - @yas chat/omnichannel-services@0.3.21-rc.6
+  - @yas chat/pdf-worker@0.3.3-rc.6
+  - @yas chat/presence@0.2.24-rc.6
+  - @yas chat/api-client@0.2.24-rc.6
+  - @yas chat/apps@0.5.3-rc.6
+  - @yas chat/core-services@0.9.3-rc.6
+  - @yas chat/cron@0.1.24-rc.6
+  - @yas chat/freeswitch@1.2.11-rc.6
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.6
+  - @yas chat/gazzodown@19.0.0-rc.6
+  - @yas chat/model-typings@1.6.3-rc.6
+  - @yas chat/ui-contexts@19.0.0-rc.6
+  - @yas chat/models@1.5.3-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.3-rc.6
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.6
+  - @yas chat/ui-client@19.0.0-rc.6
+  - @yas chat/ui-video-conf@19.0.0-rc.6
+  - @yas chat/ui-voip@9.0.0-rc.6
+  - @yas chat/web-ui-registration@19.0.0-rc.6
+  - @yas chat/instance-status@0.1.24-rc.6
 
   </details>
 
@@ -9918,34 +9918,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.5
-  - @rocket.chat/rest-typings@7.7.0-rc.5
-  - @rocket.chat/license@1.0.15-rc.5
-  - @rocket.chat/omnichannel-services@0.3.21-rc.5
-  - @rocket.chat/pdf-worker@0.3.3-rc.5
-  - @rocket.chat/presence@0.2.24-rc.5
-  - @rocket.chat/api-client@0.2.24-rc.5
-  - @rocket.chat/apps@0.5.3-rc.5
-  - @rocket.chat/core-services@0.9.3-rc.5
-  - @rocket.chat/cron@0.1.24-rc.5
-  - @rocket.chat/freeswitch@1.2.11-rc.5
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.5
-  - @rocket.chat/gazzodown@19.0.0-rc.5
-  - @rocket.chat/model-typings@1.6.3-rc.5
-  - @rocket.chat/ui-contexts@19.0.0-rc.5
-  - @rocket.chat/models@1.5.3-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.3-rc.5
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.5
-  - @rocket.chat/ui-client@19.0.0-rc.5
-  - @rocket.chat/ui-video-conf@19.0.0-rc.5
-  - @rocket.chat/ui-voip@9.0.0-rc.5
-  - @rocket.chat/web-ui-registration@19.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.24-rc.5
+  - @yas chat/core-typings@7.7.0-rc.5
+  - @yas chat/rest-typings@7.7.0-rc.5
+  - @yas chat/license@1.0.15-rc.5
+  - @yas chat/omnichannel-services@0.3.21-rc.5
+  - @yas chat/pdf-worker@0.3.3-rc.5
+  - @yas chat/presence@0.2.24-rc.5
+  - @yas chat/api-client@0.2.24-rc.5
+  - @yas chat/apps@0.5.3-rc.5
+  - @yas chat/core-services@0.9.3-rc.5
+  - @yas chat/cron@0.1.24-rc.5
+  - @yas chat/freeswitch@1.2.11-rc.5
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.5
+  - @yas chat/gazzodown@19.0.0-rc.5
+  - @yas chat/model-typings@1.6.3-rc.5
+  - @yas chat/ui-contexts@19.0.0-rc.5
+  - @yas chat/models@1.5.3-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.3-rc.5
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.5
+  - @yas chat/ui-client@19.0.0-rc.5
+  - @yas chat/ui-video-conf@19.0.0-rc.5
+  - @yas chat/ui-voip@9.0.0-rc.5
+  - @yas chat/web-ui-registration@19.0.0-rc.5
+  - @yas chat/instance-status@0.1.24-rc.5
 
   </details>
 
@@ -9953,36 +9953,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36097](https://github.com/YasChat/YasChat/pull/36097)) Fixes `contact.conflictingFields` being updated with nullish values.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.1-rc.4
-  - @rocket.chat/rest-typings@7.7.1-rc.4
-  - @rocket.chat/license@1.0.15-rc.4
-  - @rocket.chat/omnichannel-services@0.3.21-rc.4
-  - @rocket.chat/pdf-worker@0.3.3-rc.4
-  - @rocket.chat/presence@0.2.24-rc.4
-  - @rocket.chat/api-client@0.2.24-rc.4
-  - @rocket.chat/apps@0.5.3-rc.4
-  - @rocket.chat/core-services@0.9.3-rc.4
-  - @rocket.chat/cron@0.1.24-rc.4
-  - @rocket.chat/freeswitch@1.2.11-rc.4
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.4
-  - @rocket.chat/gazzodown@19.0.0-rc.4
-  - @rocket.chat/model-typings@1.6.3-rc.4
-  - @rocket.chat/ui-contexts@19.0.0-rc.4
-  - @rocket.chat/models@1.5.3-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.3-rc.4
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.4
-  - @rocket.chat/ui-client@19.0.0-rc.4
-  - @rocket.chat/ui-video-conf@19.0.0-rc.4
-  - @rocket.chat/ui-voip@9.0.0-rc.4
-  - @rocket.chat/web-ui-registration@19.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.24-rc.4
+  - @yas chat/core-typings@7.7.1-rc.4
+  - @yas chat/rest-typings@7.7.1-rc.4
+  - @yas chat/license@1.0.15-rc.4
+  - @yas chat/omnichannel-services@0.3.21-rc.4
+  - @yas chat/pdf-worker@0.3.3-rc.4
+  - @yas chat/presence@0.2.24-rc.4
+  - @yas chat/api-client@0.2.24-rc.4
+  - @yas chat/apps@0.5.3-rc.4
+  - @yas chat/core-services@0.9.3-rc.4
+  - @yas chat/cron@0.1.24-rc.4
+  - @yas chat/freeswitch@1.2.11-rc.4
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.4
+  - @yas chat/gazzodown@19.0.0-rc.4
+  - @yas chat/model-typings@1.6.3-rc.4
+  - @yas chat/ui-contexts@19.0.0-rc.4
+  - @yas chat/models@1.5.3-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.3-rc.4
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.4
+  - @yas chat/ui-client@19.0.0-rc.4
+  - @yas chat/ui-video-conf@19.0.0-rc.4
+  - @yas chat/ui-voip@9.0.0-rc.4
+  - @yas chat/web-ui-registration@19.0.0-rc.4
+  - @yas chat/instance-status@0.1.24-rc.4
 
   </details>
 
@@ -9990,35 +9990,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - ([#36085](https://github.com/YasChat/YasChat/pull/36085)) Fixes CORS headers not being sent for GET requests
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.3
-  - @rocket.chat/rest-typings@7.7.0-rc.3
-  - @rocket.chat/license@1.0.13-rc.3
-  - @rocket.chat/omnichannel-services@0.3.19-rc.3
-  - @rocket.chat/pdf-worker@0.3.1-rc.3
-  - @rocket.chat/presence@0.2.22-rc.3
-  - @rocket.chat/api-client@0.2.22-rc.3
-  - @rocket.chat/apps@0.5.1-rc.3
-  - @rocket.chat/core-services@0.9.1-rc.3
-  - @rocket.chat/cron@0.1.22-rc.3
-  - @rocket.chat/freeswitch@1.2.9-rc.3
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.3
-  - @rocket.chat/gazzodown@19.0.0-rc.3
-  - @rocket.chat/model-typings@1.6.1-rc.3
-  - @rocket.chat/ui-contexts@19.0.0-rc.3
-  - @rocket.chat/models@1.5.1-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.1-rc.3
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.3
-  - @rocket.chat/ui-client@19.0.0-rc.3
-  - @rocket.chat/ui-video-conf@19.0.0-rc.3
-  - @rocket.chat/ui-voip@9.0.0-rc.3
-  - @rocket.chat/web-ui-registration@19.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.22-rc.3
+  - @yas chat/core-typings@7.7.0-rc.3
+  - @yas chat/rest-typings@7.7.0-rc.3
+  - @yas chat/license@1.0.13-rc.3
+  - @yas chat/omnichannel-services@0.3.19-rc.3
+  - @yas chat/pdf-worker@0.3.1-rc.3
+  - @yas chat/presence@0.2.22-rc.3
+  - @yas chat/api-client@0.2.22-rc.3
+  - @yas chat/apps@0.5.1-rc.3
+  - @yas chat/core-services@0.9.1-rc.3
+  - @yas chat/cron@0.1.22-rc.3
+  - @yas chat/freeswitch@1.2.9-rc.3
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.3
+  - @yas chat/gazzodown@19.0.0-rc.3
+  - @yas chat/model-typings@1.6.1-rc.3
+  - @yas chat/ui-contexts@19.0.0-rc.3
+  - @yas chat/models@1.5.1-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.1-rc.3
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.3
+  - @yas chat/ui-client@19.0.0-rc.3
+  - @yas chat/ui-video-conf@19.0.0-rc.3
+  - @yas chat/ui-voip@9.0.0-rc.3
+  - @yas chat/web-ui-registration@19.0.0-rc.3
+  - @yas chat/instance-status@0.1.22-rc.3
 
   </details>
 
@@ -10026,33 +10026,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.2
-  - @rocket.chat/rest-typings@7.7.0-rc.2
-  - @rocket.chat/license@1.0.13-rc.2
-  - @rocket.chat/omnichannel-services@0.3.19-rc.2
-  - @rocket.chat/pdf-worker@0.3.1-rc.2
-  - @rocket.chat/presence@0.2.22-rc.2
-  - @rocket.chat/api-client@0.2.22-rc.2
-  - @rocket.chat/apps@0.5.1-rc.2
-  - @rocket.chat/core-services@0.9.1-rc.2
-  - @rocket.chat/cron@0.1.22-rc.2
-  - @rocket.chat/freeswitch@1.2.9-rc.2
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.2
-  - @rocket.chat/gazzodown@19.0.0-rc.2
-  - @rocket.chat/model-typings@1.6.1-rc.2
-  - @rocket.chat/ui-contexts@19.0.0-rc.2
-  - @rocket.chat/models@1.5.1-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.1-rc.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.2
-  - @rocket.chat/ui-client@19.0.0-rc.2
-  - @rocket.chat/ui-video-conf@19.0.0-rc.2
-  - @rocket.chat/ui-voip@9.0.0-rc.2
-  - @rocket.chat/web-ui-registration@19.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.22-rc.2
+  - @yas chat/core-typings@7.7.0-rc.2
+  - @yas chat/rest-typings@7.7.0-rc.2
+  - @yas chat/license@1.0.13-rc.2
+  - @yas chat/omnichannel-services@0.3.19-rc.2
+  - @yas chat/pdf-worker@0.3.1-rc.2
+  - @yas chat/presence@0.2.22-rc.2
+  - @yas chat/api-client@0.2.22-rc.2
+  - @yas chat/apps@0.5.1-rc.2
+  - @yas chat/core-services@0.9.1-rc.2
+  - @yas chat/cron@0.1.22-rc.2
+  - @yas chat/freeswitch@1.2.9-rc.2
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.2
+  - @yas chat/gazzodown@19.0.0-rc.2
+  - @yas chat/model-typings@1.6.1-rc.2
+  - @yas chat/ui-contexts@19.0.0-rc.2
+  - @yas chat/models@1.5.1-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.1-rc.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.2
+  - @yas chat/ui-client@19.0.0-rc.2
+  - @yas chat/ui-video-conf@19.0.0-rc.2
+  - @yas chat/ui-voip@9.0.0-rc.2
+  - @yas chat/web-ui-registration@19.0.0-rc.2
+  - @yas chat/instance-status@0.1.22-rc.2
 
   </details>
 
@@ -10060,38 +10060,38 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36068](https://github.com/YasChat/YasChat/pull/36068)) Fixes an issue that caused Hono to not process payloads with content type `x-www-form-urlencoded` correctly
 
 - ([#36070](https://github.com/YasChat/YasChat/pull/36070)) Fixes an issue with REST API metrics sent to Prometheus not grouping endpoints by route
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.1
-  - @rocket.chat/rest-typings@7.7.0-rc.1
-  - @rocket.chat/license@1.0.13-rc.1
-  - @rocket.chat/omnichannel-services@0.3.19-rc.1
-  - @rocket.chat/pdf-worker@0.3.1-rc.1
-  - @rocket.chat/presence@0.2.22-rc.1
-  - @rocket.chat/api-client@0.2.22-rc.1
-  - @rocket.chat/apps@0.5.1-rc.1
-  - @rocket.chat/core-services@0.9.1-rc.1
-  - @rocket.chat/cron@0.1.22-rc.1
-  - @rocket.chat/freeswitch@1.2.9-rc.1
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.1
-  - @rocket.chat/gazzodown@19.0.0-rc.1
-  - @rocket.chat/model-typings@1.6.1-rc.1
-  - @rocket.chat/ui-contexts@19.0.0-rc.1
-  - @rocket.chat/models@1.5.1-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.1-rc.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.1
-  - @rocket.chat/ui-client@19.0.0-rc.1
-  - @rocket.chat/ui-video-conf@19.0.0-rc.1
-  - @rocket.chat/ui-voip@9.0.0-rc.1
-  - @rocket.chat/web-ui-registration@19.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.22-rc.1
+  - @yas chat/core-typings@7.7.0-rc.1
+  - @yas chat/rest-typings@7.7.0-rc.1
+  - @yas chat/license@1.0.13-rc.1
+  - @yas chat/omnichannel-services@0.3.19-rc.1
+  - @yas chat/pdf-worker@0.3.1-rc.1
+  - @yas chat/presence@0.2.22-rc.1
+  - @yas chat/api-client@0.2.22-rc.1
+  - @yas chat/apps@0.5.1-rc.1
+  - @yas chat/core-services@0.9.1-rc.1
+  - @yas chat/cron@0.1.22-rc.1
+  - @yas chat/freeswitch@1.2.9-rc.1
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.1
+  - @yas chat/gazzodown@19.0.0-rc.1
+  - @yas chat/model-typings@1.6.1-rc.1
+  - @yas chat/ui-contexts@19.0.0-rc.1
+  - @yas chat/models@1.5.1-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.1-rc.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.1
+  - @yas chat/ui-client@19.0.0-rc.1
+  - @yas chat/ui-video-conf@19.0.0-rc.1
+  - @yas chat/ui-voip@9.0.0-rc.1
+  - @yas chat/web-ui-registration@19.0.0-rc.1
+  - @yas chat/instance-status@0.1.22-rc.1
 
   </details>
 
@@ -10119,7 +10119,7 @@
 
   The previous behavior can still be enabled using the environment flag `DISABLE_DB_WATCHERS=false`.
 
-  ⚠️ In future major versions, this flag will be completely removed, and the `@rocket.chat/stream-hub-service` package and the `stream-hub-service` Docker image will no longer be published.
+  ⚠️ In future major versions, this flag will be completely removed, and the `@yas chat/stream-hub-service` package and the `stream-hub-service` Docker image will no longer be published.
 
 - ([#35976](https://github.com/YasChat/YasChat/pull/35976)) Fixes a bug where changing site url breaks `meteor_runtime_config` path until we reset the server
 
@@ -10167,74 +10167,74 @@
 
 - ([#35797](https://github.com/YasChat/YasChat/pull/35797)) Fixes the room history pruning behavior when filesOnly is true to ensure only file-type attachments are removed, preserving quotes and non-file attachments.
 
-- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#36016](https://github.com/YasChat/YasChat/pull/36016)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#36019](https://github.com/YasChat/YasChat/pull/36019)) Adds new endpoint to handle contact's conflicting data
 
 - ([#35905](https://github.com/YasChat/YasChat/pull/35905)) Fixes file deletion being called twice and ignoring errors with FileSystem storage type.
 
 - <details><summary>Updated dependencies [0c3ac1f67922e25f8122f4e34c22f4d7278ad97a, aadc7956bdeb281007ef06f158088640a44171df, 5a74a78a2ba5e5733df7599b22f3ad0504f89a49, 13824d153aefc75830d73067f665122becfe6742, fdb3b5783053c2705936ee2941e46f9351901e66, 7f9748374a3b04f7880003227cde7058e5ea9a68, 1c7f00a5edcb070f48a2cb137bf7101a21c3c34a, 7f9748374a3b04f7880003227cde7058e5ea9a68, 996f5b9df477097fe496902b8a2700dee747895b, 8d907087746dd75bd640c6d51ae0bbb7f3dc43c0, 6d36fc25a47281aad298edc6fc3a6e981d279f61, 821cd886891370443117d7caa05c43fc7c3dd0c7, 6d334f21b97f0cb98d9af03be5167ff60198f6c1]:</summary>
-  - @rocket.chat/models@1.5.1-rc.0
-  - @rocket.chat/i18n@1.7.0-rc.0
-  - @rocket.chat/ui-client@19.0.0-rc.0
-  - @rocket.chat/ui-voip@9.0.0-rc.0
-  - @rocket.chat/web-ui-registration@19.0.0-rc.0
-  - @rocket.chat/rest-typings@7.7.0-rc.0
-  - @rocket.chat/apps-engine@1.52.0-rc.0
-  - @rocket.chat/model-typings@1.6.1-rc.0
-  - @rocket.chat/gazzodown@19.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.19-rc.0
-  - @rocket.chat/presence@0.2.22-rc.0
-  - @rocket.chat/core-services@0.9.1-rc.0
-  - @rocket.chat/cron@0.1.22-rc.0
-  - @rocket.chat/instance-status@0.1.22-rc.0
-  - @rocket.chat/ui-contexts@19.0.0-rc.0
-  - @rocket.chat/api-client@0.2.22-rc.0
-  - @rocket.chat/apps@0.5.1-rc.0
-  - @rocket.chat/core-typings@7.7.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@19.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.1-rc.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.0
-  - @rocket.chat/ui-video-conf@19.0.0-rc.0
-  - @rocket.chat/license@1.0.13-rc.0
-  - @rocket.chat/pdf-worker@0.3.1-rc.0
-  - @rocket.chat/freeswitch@1.2.9-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/models@1.5.1-rc.0
+  - @yas chat/i18n@1.7.0-rc.0
+  - @yas chat/ui-client@19.0.0-rc.0
+  - @yas chat/ui-voip@9.0.0-rc.0
+  - @yas chat/web-ui-registration@19.0.0-rc.0
+  - @yas chat/rest-typings@7.7.0-rc.0
+  - @yas chat/apps-engine@1.52.0-rc.0
+  - @yas chat/model-typings@1.6.1-rc.0
+  - @yas chat/gazzodown@19.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.19-rc.0
+  - @yas chat/presence@0.2.22-rc.0
+  - @yas chat/core-services@0.9.1-rc.0
+  - @yas chat/cron@0.1.22-rc.0
+  - @yas chat/instance-status@0.1.22-rc.0
+  - @yas chat/ui-contexts@19.0.0-rc.0
+  - @yas chat/api-client@0.2.22-rc.0
+  - @yas chat/apps@0.5.1-rc.0
+  - @yas chat/core-typings@7.7.0-rc.0
+  - @yas chat/fuselage-ui-kit@19.0.0-rc.0
+  - @yas chat/network-broker@0.2.1-rc.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@15.0.0-rc.0
+  - @yas chat/ui-video-conf@19.0.0-rc.0
+  - @yas chat/license@1.0.13-rc.0
+  - @yas chat/pdf-worker@0.3.1-rc.0
+  - @yas chat/freeswitch@1.2.9-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
 ## 7.6.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - ([#36101](https://github.com/YasChat/YasChat/pull/36101) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue that caused Hono to not process payloads with content type `x-www-form-urlencoded` correctly
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.2
-  - @rocket.chat/rest-typings@7.6.2
-  - @rocket.chat/license@1.0.14
-  - @rocket.chat/omnichannel-services@0.3.20
-  - @rocket.chat/pdf-worker@0.3.2
-  - @rocket.chat/presence@0.2.23
-  - @rocket.chat/api-client@0.2.23
-  - @rocket.chat/apps@0.5.2
-  - @rocket.chat/core-services@0.9.2
-  - @rocket.chat/cron@0.1.23
-  - @rocket.chat/freeswitch@1.2.10
-  - @rocket.chat/fuselage-ui-kit@18.0.2
-  - @rocket.chat/gazzodown@18.0.2
-  - @rocket.chat/model-typings@1.6.2
-  - @rocket.chat/ui-contexts@18.0.2
-  - @rocket.chat/models@1.5.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.2
-  - @rocket.chat/ui-client@18.0.2
-  - @rocket.chat/ui-video-conf@18.0.2
-  - @rocket.chat/ui-voip@8.0.2
-  - @rocket.chat/web-ui-registration@18.0.2
-  - @rocket.chat/instance-status@0.1.23
+  - @yas chat/core-typings@7.6.2
+  - @yas chat/rest-typings@7.6.2
+  - @yas chat/license@1.0.14
+  - @yas chat/omnichannel-services@0.3.20
+  - @yas chat/pdf-worker@0.3.2
+  - @yas chat/presence@0.2.23
+  - @yas chat/api-client@0.2.23
+  - @yas chat/apps@0.5.2
+  - @yas chat/core-services@0.9.2
+  - @yas chat/cron@0.1.23
+  - @yas chat/freeswitch@1.2.10
+  - @yas chat/fuselage-ui-kit@18.0.2
+  - @yas chat/gazzodown@18.0.2
+  - @yas chat/model-typings@1.6.2
+  - @yas chat/ui-contexts@18.0.2
+  - @yas chat/models@1.5.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.2
+  - @yas chat/ui-client@18.0.2
+  - @yas chat/ui-video-conf@18.0.2
+  - @yas chat/ui-voip@8.0.2
+  - @yas chat/web-ui-registration@18.0.2
+  - @yas chat/instance-status@0.1.23
 
   </details>
 
@@ -10242,7 +10242,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#36060](https://github.com/YasChat/YasChat/pull/36060) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes buffer as response from API
 
@@ -10251,32 +10251,32 @@
 - ([#36033](https://github.com/YasChat/YasChat/pull/36033) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the Apps-Engine package installation, removing the dependency on an internal package
 
 - <details><summary>Updated dependencies [587c3cafbd631b4275fd05497d3e463713583cc0]:</summary>
-  - @rocket.chat/apps-engine@1.51.1
-  - @rocket.chat/presence@0.2.22
-  - @rocket.chat/apps@0.5.1
-  - @rocket.chat/core-services@0.9.1
-  - @rocket.chat/core-typings@7.6.1
-  - @rocket.chat/fuselage-ui-kit@18.0.1
-  - @rocket.chat/rest-typings@7.6.1
-  - @rocket.chat/license@1.0.13
-  - @rocket.chat/omnichannel-services@0.3.19
-  - @rocket.chat/pdf-worker@0.3.1
-  - @rocket.chat/api-client@0.2.22
-  - @rocket.chat/cron@0.1.22
-  - @rocket.chat/freeswitch@1.2.9
-  - @rocket.chat/gazzodown@18.0.1
-  - @rocket.chat/model-typings@1.6.1
-  - @rocket.chat/ui-contexts@18.0.1
-  - @rocket.chat/models@1.5.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.1
-  - @rocket.chat/ui-client@18.0.1
-  - @rocket.chat/ui-video-conf@18.0.1
-  - @rocket.chat/ui-voip@8.0.1
-  - @rocket.chat/web-ui-registration@18.0.1
-  - @rocket.chat/instance-status@0.1.22
+  - @yas chat/apps-engine@1.51.1
+  - @yas chat/presence@0.2.22
+  - @yas chat/apps@0.5.1
+  - @yas chat/core-services@0.9.1
+  - @yas chat/core-typings@7.6.1
+  - @yas chat/fuselage-ui-kit@18.0.1
+  - @yas chat/rest-typings@7.6.1
+  - @yas chat/license@1.0.13
+  - @yas chat/omnichannel-services@0.3.19
+  - @yas chat/pdf-worker@0.3.1
+  - @yas chat/api-client@0.2.22
+  - @yas chat/cron@0.1.22
+  - @yas chat/freeswitch@1.2.9
+  - @yas chat/gazzodown@18.0.1
+  - @yas chat/model-typings@1.6.1
+  - @yas chat/ui-contexts@18.0.1
+  - @yas chat/models@1.5.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.1
+  - @yas chat/ui-client@18.0.1
+  - @yas chat/ui-video-conf@18.0.1
+  - @yas chat/ui-voip@8.0.1
+  - @yas chat/web-ui-registration@18.0.1
+  - @yas chat/instance-status@0.1.22
 
   </details>
 
@@ -10324,23 +10324,23 @@
 
 - ([#35299](https://github.com/YasChat/YasChat/pull/35299)) Fixes user email verification update not working on admin > users
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35762](https://github.com/YasChat/YasChat/pull/35762)) Fixes an issue with apps loading in microservices in some cases by ensuring all services have started before trying to load apps
 
@@ -10399,7 +10399,7 @@
 
 - ([#35709](https://github.com/YasChat/YasChat/pull/35709)) Improves UX for users with mandatory 2FA roles by clarifying required actions
 
-- ([#35852](https://github.com/YasChat/YasChat/pull/35852)) Fixes an issue where rocket.chat would not properly log OAuth errors nor remove the credential with the error from the internal list
+- ([#35852](https://github.com/YasChat/YasChat/pull/35852)) Fixes an issue where yas chat would not properly log OAuth errors nor remove the credential with the error from the internal list
 
 - ([#35616](https://github.com/YasChat/YasChat/pull/35616)) Fixes Omnichannel Contact Center's chats filter not working when "From" and "To" fields have the same date
 
@@ -10414,33 +10414,33 @@
 - ([#35580](https://github.com/YasChat/YasChat/pull/35580)) Fixes contact custom fields not being updated when updating a visitor's custom field
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d649a761edd71e1325a635b757ef1df2e5a778a4, bbd14f84214b4785f2b58cfeb8e9117bdfbf18e8, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, f545617c2ac3d67af533e64c2670d8d564a56d15, bffc49f426259925c415651c2b2a58083dac547a, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, ec7894139c56d0e29ac696c448cc932efb6cb0f0, 6bf386dcc2a560963cf719fbc2d96569ce23a2de, 1eeb139158fcd621a2b8d3a7de5bb512e659261d, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 5e3ab1a07163cd22ad4c41502ef232845d26bdc2, e868a6f6598b7eb2843ef79126d18abd1f604b4f, 2ee1a81de770a682f6e7a8590a896e76a32f4e3c, 47ae69912cd90743e7bf836fdee4be481a01bbba, 72725d391e79b44e7380ee2fe640e2e4426c77ca, 4b28126ac94cf1d3312b30ad9863ca02673f49d4, cc344bea08c08501f50e9cee620b2926a322a4ee, 4690c55d8e379d0bd5dfa444f3e0a4175e88d8de, be67bb771294c337c28da5e61ae47ab4e32244d1, 895ea3fdbba1d0e3cf1bed03cb8d0abfcca5d351]:</summary>
-  - @rocket.chat/core-typings@7.6.0
-  - @rocket.chat/i18n@1.6.0
-  - @rocket.chat/apps-engine@1.51.0
-  - @rocket.chat/apps@0.5.0
-  - @rocket.chat/models@1.5.0
-  - @rocket.chat/model-typings@1.6.0
-  - @rocket.chat/ui-client@18.0.0
-  - @rocket.chat/ui-voip@8.0.0
-  - @rocket.chat/ui-contexts@18.0.0
-  - @rocket.chat/network-broker@0.2.0
-  - @rocket.chat/pdf-worker@0.3.0
-  - @rocket.chat/core-services@0.9.0
-  - @rocket.chat/rest-typings@7.6.0
-  - @rocket.chat/license@1.0.12
-  - @rocket.chat/omnichannel-services@0.3.18
-  - @rocket.chat/presence@0.2.21
-  - @rocket.chat/api-client@0.2.21
-  - @rocket.chat/cron@0.1.21
-  - @rocket.chat/freeswitch@1.2.8
-  - @rocket.chat/fuselage-ui-kit@18.0.0
-  - @rocket.chat/gazzodown@18.0.0
-  - @rocket.chat/web-ui-registration@18.0.0
-  - @rocket.chat/instance-status@0.1.21
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0
-  - @rocket.chat/ui-video-conf@18.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/core-typings@7.6.0
+  - @yas chat/i18n@1.6.0
+  - @yas chat/apps-engine@1.51.0
+  - @yas chat/apps@0.5.0
+  - @yas chat/models@1.5.0
+  - @yas chat/model-typings@1.6.0
+  - @yas chat/ui-client@18.0.0
+  - @yas chat/ui-voip@8.0.0
+  - @yas chat/ui-contexts@18.0.0
+  - @yas chat/network-broker@0.2.0
+  - @yas chat/pdf-worker@0.3.0
+  - @yas chat/core-services@0.9.0
+  - @yas chat/rest-typings@7.6.0
+  - @yas chat/license@1.0.12
+  - @yas chat/omnichannel-services@0.3.18
+  - @yas chat/presence@0.2.21
+  - @yas chat/api-client@0.2.21
+  - @yas chat/cron@0.1.21
+  - @yas chat/freeswitch@1.2.8
+  - @yas chat/fuselage-ui-kit@18.0.0
+  - @yas chat/gazzodown@18.0.0
+  - @yas chat/web-ui-registration@18.0.0
+  - @yas chat/instance-status@0.1.21
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0
+  - @yas chat/ui-video-conf@18.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -10448,38 +10448,38 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35864](https://github.com/YasChat/YasChat/pull/35864)) Fixes an issue where OAuth login buttons were not showing up on the login page
 
-- ([#35852](https://github.com/YasChat/YasChat/pull/35852)) Fixes an issue where rocket.chat would not properly log OAuth errors nor remove the credential with the error from the internal list
+- ([#35852](https://github.com/YasChat/YasChat/pull/35852)) Fixes an issue where yas chat would not properly log OAuth errors nor remove the credential with the error from the internal list
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.8
-  - @rocket.chat/rest-typings@7.6.0-rc.8
-  - @rocket.chat/license@1.0.12-rc.8
-  - @rocket.chat/omnichannel-services@0.3.18-rc.8
-  - @rocket.chat/pdf-worker@0.3.0-rc.8
-  - @rocket.chat/presence@0.2.21-rc.8
-  - @rocket.chat/api-client@0.2.21-rc.8
-  - @rocket.chat/apps@0.5.0-rc.8
-  - @rocket.chat/core-services@0.9.0-rc.8
-  - @rocket.chat/cron@0.1.21-rc.8
-  - @rocket.chat/freeswitch@1.2.8-rc.8
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.8
-  - @rocket.chat/gazzodown@18.0.0-rc.8
-  - @rocket.chat/model-typings@1.6.0-rc.8
-  - @rocket.chat/ui-contexts@18.0.0-rc.8
-  - @rocket.chat/models@1.5.0-rc.8
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.8
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.8
-  - @rocket.chat/ui-client@18.0.0-rc.8
-  - @rocket.chat/ui-video-conf@18.0.0-rc.8
-  - @rocket.chat/ui-voip@8.0.0-rc.8
-  - @rocket.chat/web-ui-registration@18.0.0-rc.8
-  - @rocket.chat/instance-status@0.1.21-rc.8
+  - @yas chat/core-typings@7.6.0-rc.8
+  - @yas chat/rest-typings@7.6.0-rc.8
+  - @yas chat/license@1.0.12-rc.8
+  - @yas chat/omnichannel-services@0.3.18-rc.8
+  - @yas chat/pdf-worker@0.3.0-rc.8
+  - @yas chat/presence@0.2.21-rc.8
+  - @yas chat/api-client@0.2.21-rc.8
+  - @yas chat/apps@0.5.0-rc.8
+  - @yas chat/core-services@0.9.0-rc.8
+  - @yas chat/cron@0.1.21-rc.8
+  - @yas chat/freeswitch@1.2.8-rc.8
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.8
+  - @yas chat/gazzodown@18.0.0-rc.8
+  - @yas chat/model-typings@1.6.0-rc.8
+  - @yas chat/ui-contexts@18.0.0-rc.8
+  - @yas chat/models@1.5.0-rc.8
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.8
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.8
+  - @yas chat/ui-client@18.0.0-rc.8
+  - @yas chat/ui-video-conf@18.0.0-rc.8
+  - @yas chat/ui-voip@8.0.0-rc.8
+  - @yas chat/web-ui-registration@18.0.0-rc.8
+  - @yas chat/instance-status@0.1.21-rc.8
 
   </details>
 
@@ -10487,34 +10487,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.7
-  - @rocket.chat/rest-typings@7.6.0-rc.7
-  - @rocket.chat/license@1.0.12-rc.7
-  - @rocket.chat/omnichannel-services@0.3.18-rc.7
-  - @rocket.chat/pdf-worker@0.3.0-rc.7
-  - @rocket.chat/presence@0.2.21-rc.7
-  - @rocket.chat/api-client@0.2.21-rc.7
-  - @rocket.chat/apps@0.5.0-rc.7
-  - @rocket.chat/core-services@0.9.0-rc.7
-  - @rocket.chat/cron@0.1.21-rc.7
-  - @rocket.chat/freeswitch@1.2.8-rc.7
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.7
-  - @rocket.chat/gazzodown@18.0.0-rc.7
-  - @rocket.chat/model-typings@1.6.0-rc.7
-  - @rocket.chat/ui-contexts@18.0.0-rc.7
-  - @rocket.chat/models@1.5.0-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.7
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.7
-  - @rocket.chat/ui-client@18.0.0-rc.7
-  - @rocket.chat/ui-video-conf@18.0.0-rc.7
-  - @rocket.chat/ui-voip@8.0.0-rc.7
-  - @rocket.chat/web-ui-registration@18.0.0-rc.7
-  - @rocket.chat/instance-status@0.1.21-rc.7
+  - @yas chat/core-typings@7.6.0-rc.7
+  - @yas chat/rest-typings@7.6.0-rc.7
+  - @yas chat/license@1.0.12-rc.7
+  - @yas chat/omnichannel-services@0.3.18-rc.7
+  - @yas chat/pdf-worker@0.3.0-rc.7
+  - @yas chat/presence@0.2.21-rc.7
+  - @yas chat/api-client@0.2.21-rc.7
+  - @yas chat/apps@0.5.0-rc.7
+  - @yas chat/core-services@0.9.0-rc.7
+  - @yas chat/cron@0.1.21-rc.7
+  - @yas chat/freeswitch@1.2.8-rc.7
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.7
+  - @yas chat/gazzodown@18.0.0-rc.7
+  - @yas chat/model-typings@1.6.0-rc.7
+  - @yas chat/ui-contexts@18.0.0-rc.7
+  - @yas chat/models@1.5.0-rc.7
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.7
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.7
+  - @yas chat/ui-client@18.0.0-rc.7
+  - @yas chat/ui-video-conf@18.0.0-rc.7
+  - @yas chat/ui-voip@8.0.0-rc.7
+  - @yas chat/web-ui-registration@18.0.0-rc.7
+  - @yas chat/instance-status@0.1.21-rc.7
 
   </details>
 
@@ -10522,34 +10522,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.6
-  - @rocket.chat/rest-typings@7.6.0-rc.6
-  - @rocket.chat/license@1.0.12-rc.6
-  - @rocket.chat/omnichannel-services@0.3.18-rc.6
-  - @rocket.chat/pdf-worker@0.3.0-rc.6
-  - @rocket.chat/presence@0.2.21-rc.6
-  - @rocket.chat/api-client@0.2.21-rc.6
-  - @rocket.chat/apps@0.5.0-rc.6
-  - @rocket.chat/core-services@0.9.0-rc.6
-  - @rocket.chat/cron@0.1.21-rc.6
-  - @rocket.chat/freeswitch@1.2.8-rc.6
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.6
-  - @rocket.chat/gazzodown@18.0.0-rc.6
-  - @rocket.chat/model-typings@1.6.0-rc.6
-  - @rocket.chat/ui-contexts@18.0.0-rc.6
-  - @rocket.chat/models@1.5.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.6
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.6
-  - @rocket.chat/ui-client@18.0.0-rc.6
-  - @rocket.chat/ui-video-conf@18.0.0-rc.6
-  - @rocket.chat/ui-voip@8.0.0-rc.6
-  - @rocket.chat/web-ui-registration@18.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.21-rc.6
+  - @yas chat/core-typings@7.6.0-rc.6
+  - @yas chat/rest-typings@7.6.0-rc.6
+  - @yas chat/license@1.0.12-rc.6
+  - @yas chat/omnichannel-services@0.3.18-rc.6
+  - @yas chat/pdf-worker@0.3.0-rc.6
+  - @yas chat/presence@0.2.21-rc.6
+  - @yas chat/api-client@0.2.21-rc.6
+  - @yas chat/apps@0.5.0-rc.6
+  - @yas chat/core-services@0.9.0-rc.6
+  - @yas chat/cron@0.1.21-rc.6
+  - @yas chat/freeswitch@1.2.8-rc.6
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.6
+  - @yas chat/gazzodown@18.0.0-rc.6
+  - @yas chat/model-typings@1.6.0-rc.6
+  - @yas chat/ui-contexts@18.0.0-rc.6
+  - @yas chat/models@1.5.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.6
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.6
+  - @yas chat/ui-client@18.0.0-rc.6
+  - @yas chat/ui-video-conf@18.0.0-rc.6
+  - @yas chat/ui-voip@8.0.0-rc.6
+  - @yas chat/web-ui-registration@18.0.0-rc.6
+  - @yas chat/instance-status@0.1.21-rc.6
 
   </details>
 
@@ -10557,34 +10557,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.5
-  - @rocket.chat/rest-typings@7.6.0-rc.5
-  - @rocket.chat/license@1.0.12-rc.5
-  - @rocket.chat/omnichannel-services@0.3.18-rc.5
-  - @rocket.chat/pdf-worker@0.3.0-rc.5
-  - @rocket.chat/presence@0.2.21-rc.5
-  - @rocket.chat/api-client@0.2.21-rc.5
-  - @rocket.chat/apps@0.5.0-rc.5
-  - @rocket.chat/core-services@0.9.0-rc.5
-  - @rocket.chat/cron@0.1.21-rc.5
-  - @rocket.chat/freeswitch@1.2.8-rc.5
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.5
-  - @rocket.chat/gazzodown@18.0.0-rc.5
-  - @rocket.chat/model-typings@1.6.0-rc.5
-  - @rocket.chat/ui-contexts@18.0.0-rc.5
-  - @rocket.chat/models@1.5.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.5
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.5
-  - @rocket.chat/ui-client@18.0.0-rc.5
-  - @rocket.chat/ui-video-conf@18.0.0-rc.5
-  - @rocket.chat/ui-voip@8.0.0-rc.5
-  - @rocket.chat/web-ui-registration@18.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.21-rc.5
+  - @yas chat/core-typings@7.6.0-rc.5
+  - @yas chat/rest-typings@7.6.0-rc.5
+  - @yas chat/license@1.0.12-rc.5
+  - @yas chat/omnichannel-services@0.3.18-rc.5
+  - @yas chat/pdf-worker@0.3.0-rc.5
+  - @yas chat/presence@0.2.21-rc.5
+  - @yas chat/api-client@0.2.21-rc.5
+  - @yas chat/apps@0.5.0-rc.5
+  - @yas chat/core-services@0.9.0-rc.5
+  - @yas chat/cron@0.1.21-rc.5
+  - @yas chat/freeswitch@1.2.8-rc.5
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.5
+  - @yas chat/gazzodown@18.0.0-rc.5
+  - @yas chat/model-typings@1.6.0-rc.5
+  - @yas chat/ui-contexts@18.0.0-rc.5
+  - @yas chat/models@1.5.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.5
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.5
+  - @yas chat/ui-client@18.0.0-rc.5
+  - @yas chat/ui-video-conf@18.0.0-rc.5
+  - @yas chat/ui-voip@8.0.0-rc.5
+  - @yas chat/web-ui-registration@18.0.0-rc.5
+  - @yas chat/instance-status@0.1.21-rc.5
 
   </details>
 
@@ -10592,34 +10592,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.4
-  - @rocket.chat/rest-typings@7.6.0-rc.4
-  - @rocket.chat/license@1.0.12-rc.4
-  - @rocket.chat/omnichannel-services@0.3.18-rc.4
-  - @rocket.chat/pdf-worker@0.3.0-rc.4
-  - @rocket.chat/presence@0.2.21-rc.4
-  - @rocket.chat/api-client@0.2.21-rc.4
-  - @rocket.chat/apps@0.5.0-rc.4
-  - @rocket.chat/core-services@0.9.0-rc.4
-  - @rocket.chat/cron@0.1.21-rc.4
-  - @rocket.chat/freeswitch@1.2.8-rc.4
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.4
-  - @rocket.chat/gazzodown@18.0.0-rc.4
-  - @rocket.chat/model-typings@1.6.0-rc.4
-  - @rocket.chat/ui-contexts@18.0.0-rc.4
-  - @rocket.chat/models@1.5.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.4
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.4
-  - @rocket.chat/ui-client@18.0.0-rc.4
-  - @rocket.chat/ui-video-conf@18.0.0-rc.4
-  - @rocket.chat/ui-voip@8.0.0-rc.4
-  - @rocket.chat/web-ui-registration@18.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.21-rc.4
+  - @yas chat/core-typings@7.6.0-rc.4
+  - @yas chat/rest-typings@7.6.0-rc.4
+  - @yas chat/license@1.0.12-rc.4
+  - @yas chat/omnichannel-services@0.3.18-rc.4
+  - @yas chat/pdf-worker@0.3.0-rc.4
+  - @yas chat/presence@0.2.21-rc.4
+  - @yas chat/api-client@0.2.21-rc.4
+  - @yas chat/apps@0.5.0-rc.4
+  - @yas chat/core-services@0.9.0-rc.4
+  - @yas chat/cron@0.1.21-rc.4
+  - @yas chat/freeswitch@1.2.8-rc.4
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.4
+  - @yas chat/gazzodown@18.0.0-rc.4
+  - @yas chat/model-typings@1.6.0-rc.4
+  - @yas chat/ui-contexts@18.0.0-rc.4
+  - @yas chat/models@1.5.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.4
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.4
+  - @yas chat/ui-client@18.0.0-rc.4
+  - @yas chat/ui-video-conf@18.0.0-rc.4
+  - @yas chat/ui-voip@8.0.0-rc.4
+  - @yas chat/web-ui-registration@18.0.0-rc.4
+  - @yas chat/instance-status@0.1.21-rc.4
 
   </details>
 
@@ -10627,36 +10627,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35879](https://github.com/YasChat/YasChat/pull/35879)) Fixes contact's conflict resolution not working due to invalid parameters
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.3
-  - @rocket.chat/rest-typings@7.6.0-rc.3
-  - @rocket.chat/license@1.0.12-rc.3
-  - @rocket.chat/omnichannel-services@0.3.18-rc.3
-  - @rocket.chat/pdf-worker@0.3.0-rc.3
-  - @rocket.chat/presence@0.2.21-rc.3
-  - @rocket.chat/api-client@0.2.21-rc.3
-  - @rocket.chat/apps@0.5.0-rc.3
-  - @rocket.chat/core-services@0.9.0-rc.3
-  - @rocket.chat/cron@0.1.21-rc.3
-  - @rocket.chat/freeswitch@1.2.8-rc.3
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.3
-  - @rocket.chat/gazzodown@18.0.0-rc.3
-  - @rocket.chat/model-typings@1.6.0-rc.3
-  - @rocket.chat/ui-contexts@18.0.0-rc.3
-  - @rocket.chat/models@1.5.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.3
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.3
-  - @rocket.chat/ui-client@18.0.0-rc.3
-  - @rocket.chat/ui-video-conf@18.0.0-rc.3
-  - @rocket.chat/ui-voip@8.0.0-rc.3
-  - @rocket.chat/web-ui-registration@18.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.21-rc.3
+  - @yas chat/core-typings@7.6.0-rc.3
+  - @yas chat/rest-typings@7.6.0-rc.3
+  - @yas chat/license@1.0.12-rc.3
+  - @yas chat/omnichannel-services@0.3.18-rc.3
+  - @yas chat/pdf-worker@0.3.0-rc.3
+  - @yas chat/presence@0.2.21-rc.3
+  - @yas chat/api-client@0.2.21-rc.3
+  - @yas chat/apps@0.5.0-rc.3
+  - @yas chat/core-services@0.9.0-rc.3
+  - @yas chat/cron@0.1.21-rc.3
+  - @yas chat/freeswitch@1.2.8-rc.3
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.3
+  - @yas chat/gazzodown@18.0.0-rc.3
+  - @yas chat/model-typings@1.6.0-rc.3
+  - @yas chat/ui-contexts@18.0.0-rc.3
+  - @yas chat/models@1.5.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.3
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.3
+  - @yas chat/ui-client@18.0.0-rc.3
+  - @yas chat/ui-video-conf@18.0.0-rc.3
+  - @yas chat/ui-voip@8.0.0-rc.3
+  - @yas chat/web-ui-registration@18.0.0-rc.3
+  - @yas chat/instance-status@0.1.21-rc.3
 
   </details>
 
@@ -10664,34 +10664,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.2
-  - @rocket.chat/rest-typings@7.6.0-rc.2
-  - @rocket.chat/license@1.0.12-rc.2
-  - @rocket.chat/omnichannel-services@0.3.18-rc.2
-  - @rocket.chat/pdf-worker@0.3.0-rc.2
-  - @rocket.chat/presence@0.2.21-rc.2
-  - @rocket.chat/api-client@0.2.21-rc.2
-  - @rocket.chat/apps@0.5.0-rc.2
-  - @rocket.chat/core-services@0.9.0-rc.2
-  - @rocket.chat/cron@0.1.21-rc.2
-  - @rocket.chat/freeswitch@1.2.8-rc.2
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.2
-  - @rocket.chat/gazzodown@18.0.0-rc.2
-  - @rocket.chat/model-typings@1.6.0-rc.2
-  - @rocket.chat/ui-contexts@18.0.0-rc.2
-  - @rocket.chat/models@1.5.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.2
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.2
-  - @rocket.chat/ui-client@18.0.0-rc.2
-  - @rocket.chat/ui-video-conf@18.0.0-rc.2
-  - @rocket.chat/ui-voip@8.0.0-rc.2
-  - @rocket.chat/web-ui-registration@18.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.21-rc.2
+  - @yas chat/core-typings@7.6.0-rc.2
+  - @yas chat/rest-typings@7.6.0-rc.2
+  - @yas chat/license@1.0.12-rc.2
+  - @yas chat/omnichannel-services@0.3.18-rc.2
+  - @yas chat/pdf-worker@0.3.0-rc.2
+  - @yas chat/presence@0.2.21-rc.2
+  - @yas chat/api-client@0.2.21-rc.2
+  - @yas chat/apps@0.5.0-rc.2
+  - @yas chat/core-services@0.9.0-rc.2
+  - @yas chat/cron@0.1.21-rc.2
+  - @yas chat/freeswitch@1.2.8-rc.2
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.2
+  - @yas chat/gazzodown@18.0.0-rc.2
+  - @yas chat/model-typings@1.6.0-rc.2
+  - @yas chat/ui-contexts@18.0.0-rc.2
+  - @yas chat/models@1.5.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.2
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.2
+  - @yas chat/ui-client@18.0.0-rc.2
+  - @yas chat/ui-video-conf@18.0.0-rc.2
+  - @yas chat/ui-voip@8.0.0-rc.2
+  - @yas chat/web-ui-registration@18.0.0-rc.2
+  - @yas chat/instance-status@0.1.21-rc.2
 
   </details>
 
@@ -10699,34 +10699,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.1
-  - @rocket.chat/rest-typings@7.6.0-rc.1
-  - @rocket.chat/license@1.0.11-rc.1
-  - @rocket.chat/omnichannel-services@0.3.17-rc.1
-  - @rocket.chat/pdf-worker@0.3.0-rc.1
-  - @rocket.chat/presence@0.2.20-rc.1
-  - @rocket.chat/api-client@0.2.20-rc.1
-  - @rocket.chat/apps@0.5.0-rc.1
-  - @rocket.chat/core-services@0.9.0-rc.1
-  - @rocket.chat/cron@0.1.20-rc.1
-  - @rocket.chat/freeswitch@1.2.7-rc.1
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.1
-  - @rocket.chat/gazzodown@18.0.0-rc.1
-  - @rocket.chat/model-typings@1.6.0-rc.1
-  - @rocket.chat/ui-contexts@18.0.0-rc.1
-  - @rocket.chat/models@1.5.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.2.0-rc.1
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.1
-  - @rocket.chat/ui-client@18.0.0-rc.1
-  - @rocket.chat/ui-video-conf@18.0.0-rc.1
-  - @rocket.chat/ui-voip@8.0.0-rc.1
-  - @rocket.chat/web-ui-registration@18.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.20-rc.1
+  - @yas chat/core-typings@7.6.0-rc.1
+  - @yas chat/rest-typings@7.6.0-rc.1
+  - @yas chat/license@1.0.11-rc.1
+  - @yas chat/omnichannel-services@0.3.17-rc.1
+  - @yas chat/pdf-worker@0.3.0-rc.1
+  - @yas chat/presence@0.2.20-rc.1
+  - @yas chat/api-client@0.2.20-rc.1
+  - @yas chat/apps@0.5.0-rc.1
+  - @yas chat/core-services@0.9.0-rc.1
+  - @yas chat/cron@0.1.20-rc.1
+  - @yas chat/freeswitch@1.2.7-rc.1
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.1
+  - @yas chat/gazzodown@18.0.0-rc.1
+  - @yas chat/model-typings@1.6.0-rc.1
+  - @yas chat/ui-contexts@18.0.0-rc.1
+  - @yas chat/models@1.5.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.2.0-rc.1
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.1
+  - @yas chat/ui-client@18.0.0-rc.1
+  - @yas chat/ui-video-conf@18.0.0-rc.1
+  - @yas chat/ui-voip@8.0.0-rc.1
+  - @yas chat/web-ui-registration@18.0.0-rc.1
+  - @yas chat/instance-status@0.1.20-rc.1
 
   </details>
 
@@ -10840,70 +10840,70 @@
 - ([#35580](https://github.com/YasChat/YasChat/pull/35580)) Fixes contact custom fields not being updated when updating a visitor's custom field
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d649a761edd71e1325a635b757ef1df2e5a778a4, bbd14f84214b4785f2b58cfeb8e9117bdfbf18e8, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, f545617c2ac3d67af533e64c2670d8d564a56d15, bffc49f426259925c415651c2b2a58083dac547a, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, ec7894139c56d0e29ac696c448cc932efb6cb0f0, 6bf386dcc2a560963cf719fbc2d96569ce23a2de, 1eeb139158fcd621a2b8d3a7de5bb512e659261d, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 5e3ab1a07163cd22ad4c41502ef232845d26bdc2, e868a6f6598b7eb2843ef79126d18abd1f604b4f, 2ee1a81de770a682f6e7a8590a896e76a32f4e3c, 47ae69912cd90743e7bf836fdee4be481a01bbba, 72725d391e79b44e7380ee2fe640e2e4426c77ca, 4b28126ac94cf1d3312b30ad9863ca02673f49d4, cc344bea08c08501f50e9cee620b2926a322a4ee, 4690c55d8e379d0bd5dfa444f3e0a4175e88d8de, be67bb771294c337c28da5e61ae47ab4e32244d1, 895ea3fdbba1d0e3cf1bed03cb8d0abfcca5d351]:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.0
-  - @rocket.chat/i18n@1.6.0-rc.0
-  - @rocket.chat/apps-engine@1.51.0-rc.0
-  - @rocket.chat/apps@0.5.0-rc.0
-  - @rocket.chat/models@1.5.0-rc.0
-  - @rocket.chat/model-typings@1.6.0-rc.0
-  - @rocket.chat/ui-client@18.0.0-rc.0
-  - @rocket.chat/ui-voip@8.0.0-rc.0
-  - @rocket.chat/ui-contexts@18.0.0-rc.0
-  - @rocket.chat/network-broker@0.2.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.0-rc.0
-  - @rocket.chat/core-services@0.9.0-rc.0
-  - @rocket.chat/rest-typings@7.6.0-rc.0
-  - @rocket.chat/license@1.0.11-rc.0
-  - @rocket.chat/omnichannel-services@0.3.17-rc.0
-  - @rocket.chat/presence@0.2.20-rc.0
-  - @rocket.chat/api-client@0.2.20-rc.0
-  - @rocket.chat/cron@0.1.20-rc.0
-  - @rocket.chat/freeswitch@1.2.7-rc.0
-  - @rocket.chat/fuselage-ui-kit@18.0.0-rc.0
-  - @rocket.chat/gazzodown@18.0.0-rc.0
-  - @rocket.chat/web-ui-registration@18.0.0-rc.0
-  - @rocket.chat/instance-status@0.1.20-rc.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.0
-  - @rocket.chat/ui-video-conf@18.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/core-typings@7.6.0-rc.0
+  - @yas chat/i18n@1.6.0-rc.0
+  - @yas chat/apps-engine@1.51.0-rc.0
+  - @yas chat/apps@0.5.0-rc.0
+  - @yas chat/models@1.5.0-rc.0
+  - @yas chat/model-typings@1.6.0-rc.0
+  - @yas chat/ui-client@18.0.0-rc.0
+  - @yas chat/ui-voip@8.0.0-rc.0
+  - @yas chat/ui-contexts@18.0.0-rc.0
+  - @yas chat/network-broker@0.2.0-rc.0
+  - @yas chat/pdf-worker@0.3.0-rc.0
+  - @yas chat/core-services@0.9.0-rc.0
+  - @yas chat/rest-typings@7.6.0-rc.0
+  - @yas chat/license@1.0.11-rc.0
+  - @yas chat/omnichannel-services@0.3.17-rc.0
+  - @yas chat/presence@0.2.20-rc.0
+  - @yas chat/api-client@0.2.20-rc.0
+  - @yas chat/cron@0.1.20-rc.0
+  - @yas chat/freeswitch@1.2.7-rc.0
+  - @yas chat/fuselage-ui-kit@18.0.0-rc.0
+  - @yas chat/gazzodown@18.0.0-rc.0
+  - @yas chat/web-ui-registration@18.0.0-rc.0
+  - @yas chat/instance-status@0.1.20-rc.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@14.0.0-rc.0
+  - @yas chat/ui-video-conf@18.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
 ## 7.5.1
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35732](https://github.com/YasChat/YasChat/pull/35732) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue with dynamic API routes requiring a server restart to be operable.
 
 - ([#35728](https://github.com/YasChat/YasChat/pull/35728) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes Omnichannel Contact Center's chats filter not working when "From" and "To" fields have the same date
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.1
-  - @rocket.chat/rest-typings@7.5.1
-  - @rocket.chat/license@1.0.11
-  - @rocket.chat/omnichannel-services@0.3.17
-  - @rocket.chat/pdf-worker@0.2.17
-  - @rocket.chat/presence@0.2.20
-  - @rocket.chat/api-client@0.2.20
-  - @rocket.chat/apps@0.4.1
-  - @rocket.chat/core-services@0.8.1
-  - @rocket.chat/cron@0.1.20
-  - @rocket.chat/freeswitch@1.2.7
-  - @rocket.chat/fuselage-ui-kit@17.0.1
-  - @rocket.chat/gazzodown@17.0.1
-  - @rocket.chat/model-typings@1.5.1
-  - @rocket.chat/ui-contexts@17.0.1
-  - @rocket.chat/models@1.4.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.12
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/ui-avatar@13.0.1
-  - @rocket.chat/ui-client@17.0.1
-  - @rocket.chat/ui-video-conf@17.0.1
-  - @rocket.chat/ui-voip@7.0.1
-  - @rocket.chat/web-ui-registration@17.0.1
-  - @rocket.chat/instance-status@0.1.20
+  - @yas chat/core-typings@7.5.1
+  - @yas chat/rest-typings@7.5.1
+  - @yas chat/license@1.0.11
+  - @yas chat/omnichannel-services@0.3.17
+  - @yas chat/pdf-worker@0.2.17
+  - @yas chat/presence@0.2.20
+  - @yas chat/api-client@0.2.20
+  - @yas chat/apps@0.4.1
+  - @yas chat/core-services@0.8.1
+  - @yas chat/cron@0.1.20
+  - @yas chat/freeswitch@1.2.7
+  - @yas chat/fuselage-ui-kit@17.0.1
+  - @yas chat/gazzodown@17.0.1
+  - @yas chat/model-typings@1.5.1
+  - @yas chat/ui-contexts@17.0.1
+  - @yas chat/models@1.4.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.12
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/ui-avatar@13.0.1
+  - @yas chat/ui-client@17.0.1
+  - @yas chat/ui-video-conf@17.0.1
+  - @yas chat/ui-voip@7.0.1
+  - @yas chat/web-ui-registration@17.0.1
+  - @yas chat/instance-status@0.1.20
 
   </details>
 
@@ -10933,17 +10933,17 @@
 
 - ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35205](https://github.com/YasChat/YasChat/pull/35205)) Fixes livechat routing algorithm to ensure conversations are correctly assigned to the contact manager when triggers and/or automatic agent routing are enabled.
 
@@ -10971,7 +10971,7 @@
 
 - ([#35369](https://github.com/YasChat/YasChat/pull/35369)) Fixes an issue where recursively quoting messages multiple times (up to the configured chained quote limit) caused the inner attachment to appear empty.
 
-- ([#35549](https://github.com/YasChat/YasChat/pull/35549)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#35549](https://github.com/YasChat/YasChat/pull/35549)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#35311](https://github.com/YasChat/YasChat/pull/35311) by [@4shb0rne](https://github.com/4shb0rne)) Fixes an issue where menus inside sidebar keeps opened even if the sidebar is collapsed
 
@@ -11018,35 +11018,35 @@
 - ([#35418](https://github.com/YasChat/YasChat/pull/35418)) Adds support for filtering bad words from messages for languages other than English
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 4ce00382e9877c4d9241747fdd4f4223d70b58a7, 280fcce8488475298ccd3ae4dd7ded29a32d8a4b, 3b5406172c5575f09e9f5a2cb3ff99122900afde, 4e9d3155db516718fdd28be30a53d0051c9144d3, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, cc4111cf0b1458dd97369baf8969734f337650dc, 335f19f5d08b7348263b574e4133ecf93145a79c, 38f1c508c9f95cd34744066019927add53470446, c618263e8e5fa9459f48d262e5dd9e20c59c1410, c44331e0d9b0e4e04d1ec64bea74b439a1125aa0, 4129dbc934f240a9972aa92ab159ee34e518587a, 21f413d6c87cbf402325664da7bbbc9b3d7bce83, 0d96d633a653f52d07bc9ebeead16dcb90c75e2c, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f, d7ea246e0f7837cd3cc93f99316683b75a2faa43]:</summary>
-  - @rocket.chat/fuselage-ui-kit@17.0.0
-  - @rocket.chat/gazzodown@17.0.0
-  - @rocket.chat/ui-avatar@13.0.0
-  - @rocket.chat/ui-client@17.0.0
-  - @rocket.chat/ui-composer@0.5.2
-  - @rocket.chat/ui-contexts@17.0.0
-  - @rocket.chat/ui-video-conf@17.0.0
-  - @rocket.chat/ui-voip@7.0.0
-  - @rocket.chat/web-ui-registration@17.0.0
-  - @rocket.chat/ui-theming@0.4.3
-  - @rocket.chat/rest-typings@7.5.0
-  - @rocket.chat/i18n@1.5.0
-  - @rocket.chat/model-typings@1.5.0
-  - @rocket.chat/models@1.4.0
-  - @rocket.chat/apps-engine@1.50.0
-  - @rocket.chat/core-typings@7.5.0
-  - @rocket.chat/core-services@0.8.0
-  - @rocket.chat/message-parser@0.31.32
-  - @rocket.chat/apps@0.4.0
-  - @rocket.chat/omnichannel-services@0.3.16
-  - @rocket.chat/presence@0.2.19
-  - @rocket.chat/api-client@0.2.19
-  - @rocket.chat/cron@0.1.19
-  - @rocket.chat/instance-status@0.1.19
-  - @rocket.chat/license@1.0.10
-  - @rocket.chat/pdf-worker@0.2.16
-  - @rocket.chat/freeswitch@1.2.6
-  - @rocket.chat/network-broker@0.1.11
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@17.0.0
+  - @yas chat/gazzodown@17.0.0
+  - @yas chat/ui-avatar@13.0.0
+  - @yas chat/ui-client@17.0.0
+  - @yas chat/ui-composer@0.5.2
+  - @yas chat/ui-contexts@17.0.0
+  - @yas chat/ui-video-conf@17.0.0
+  - @yas chat/ui-voip@7.0.0
+  - @yas chat/web-ui-registration@17.0.0
+  - @yas chat/ui-theming@0.4.3
+  - @yas chat/rest-typings@7.5.0
+  - @yas chat/i18n@1.5.0
+  - @yas chat/model-typings@1.5.0
+  - @yas chat/models@1.4.0
+  - @yas chat/apps-engine@1.50.0
+  - @yas chat/core-typings@7.5.0
+  - @yas chat/core-services@0.8.0
+  - @yas chat/message-parser@0.31.32
+  - @yas chat/apps@0.4.0
+  - @yas chat/omnichannel-services@0.3.16
+  - @yas chat/presence@0.2.19
+  - @yas chat/api-client@0.2.19
+  - @yas chat/cron@0.1.19
+  - @yas chat/instance-status@0.1.19
+  - @yas chat/license@1.0.10
+  - @yas chat/pdf-worker@0.2.16
+  - @yas chat/freeswitch@1.2.6
+  - @yas chat/network-broker@0.1.11
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -11054,34 +11054,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.5
-  - @rocket.chat/rest-typings@7.5.0-rc.5
-  - @rocket.chat/license@1.0.10-rc.5
-  - @rocket.chat/omnichannel-services@0.3.16-rc.5
-  - @rocket.chat/pdf-worker@0.2.16-rc.5
-  - @rocket.chat/presence@0.2.19-rc.5
-  - @rocket.chat/api-client@0.2.19-rc.5
-  - @rocket.chat/apps@0.4.0-rc.5
-  - @rocket.chat/core-services@0.8.0-rc.5
-  - @rocket.chat/cron@0.1.19-rc.5
-  - @rocket.chat/freeswitch@1.2.6-rc.5
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.5
-  - @rocket.chat/gazzodown@17.0.0-rc.5
-  - @rocket.chat/model-typings@1.5.0-rc.5
-  - @rocket.chat/ui-contexts@17.0.0-rc.5
-  - @rocket.chat/models@1.4.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.11-rc.5
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.5
-  - @rocket.chat/ui-client@17.0.0-rc.5
-  - @rocket.chat/ui-video-conf@17.0.0-rc.5
-  - @rocket.chat/ui-voip@7.0.0-rc.5
-  - @rocket.chat/web-ui-registration@17.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.19-rc.5
+  - @yas chat/core-typings@7.5.0-rc.5
+  - @yas chat/rest-typings@7.5.0-rc.5
+  - @yas chat/license@1.0.10-rc.5
+  - @yas chat/omnichannel-services@0.3.16-rc.5
+  - @yas chat/pdf-worker@0.2.16-rc.5
+  - @yas chat/presence@0.2.19-rc.5
+  - @yas chat/api-client@0.2.19-rc.5
+  - @yas chat/apps@0.4.0-rc.5
+  - @yas chat/core-services@0.8.0-rc.5
+  - @yas chat/cron@0.1.19-rc.5
+  - @yas chat/freeswitch@1.2.6-rc.5
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.5
+  - @yas chat/gazzodown@17.0.0-rc.5
+  - @yas chat/model-typings@1.5.0-rc.5
+  - @yas chat/ui-contexts@17.0.0-rc.5
+  - @yas chat/models@1.4.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.11-rc.5
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.5
+  - @yas chat/ui-client@17.0.0-rc.5
+  - @yas chat/ui-video-conf@17.0.0-rc.5
+  - @yas chat/ui-voip@7.0.0-rc.5
+  - @yas chat/web-ui-registration@17.0.0-rc.5
+  - @yas chat/instance-status@0.1.19-rc.5
 
   </details>
 
@@ -11089,7 +11089,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35667](https://github.com/YasChat/YasChat/pull/35667)) Fixes an issue with error handling where errors were not properly propagated to integrated apps.
 
@@ -11098,32 +11098,32 @@
 - ([#35603](https://github.com/YasChat/YasChat/pull/35603)) Fixes an issue where apps where not able to update messages using the BlockBuilder.
 
 - <details><summary>Updated dependencies [c618263e8e5fa9459f48d262e5dd9e20c59c1410, d7ea246e0f7837cd3cc93f99316683b75a2faa43]:</summary>
-  - @rocket.chat/apps-engine@1.50.0-rc.1
-  - @rocket.chat/presence@0.2.19-rc.4
-  - @rocket.chat/apps@0.4.0-rc.4
-  - @rocket.chat/core-services@0.8.0-rc.4
-  - @rocket.chat/core-typings@7.5.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.4
-  - @rocket.chat/rest-typings@7.5.0-rc.4
-  - @rocket.chat/license@1.0.10-rc.4
-  - @rocket.chat/omnichannel-services@0.3.16-rc.4
-  - @rocket.chat/pdf-worker@0.2.16-rc.4
-  - @rocket.chat/api-client@0.2.19-rc.4
-  - @rocket.chat/cron@0.1.19-rc.4
-  - @rocket.chat/freeswitch@1.2.6-rc.4
-  - @rocket.chat/gazzodown@17.0.0-rc.4
-  - @rocket.chat/model-typings@1.5.0-rc.4
-  - @rocket.chat/ui-contexts@17.0.0-rc.4
-  - @rocket.chat/models@1.4.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.11-rc.4
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.4
-  - @rocket.chat/ui-client@17.0.0-rc.4
-  - @rocket.chat/ui-video-conf@17.0.0-rc.4
-  - @rocket.chat/ui-voip@7.0.0-rc.4
-  - @rocket.chat/web-ui-registration@17.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.19-rc.4
+  - @yas chat/apps-engine@1.50.0-rc.1
+  - @yas chat/presence@0.2.19-rc.4
+  - @yas chat/apps@0.4.0-rc.4
+  - @yas chat/core-services@0.8.0-rc.4
+  - @yas chat/core-typings@7.5.0-rc.4
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.4
+  - @yas chat/rest-typings@7.5.0-rc.4
+  - @yas chat/license@1.0.10-rc.4
+  - @yas chat/omnichannel-services@0.3.16-rc.4
+  - @yas chat/pdf-worker@0.2.16-rc.4
+  - @yas chat/api-client@0.2.19-rc.4
+  - @yas chat/cron@0.1.19-rc.4
+  - @yas chat/freeswitch@1.2.6-rc.4
+  - @yas chat/gazzodown@17.0.0-rc.4
+  - @yas chat/model-typings@1.5.0-rc.4
+  - @yas chat/ui-contexts@17.0.0-rc.4
+  - @yas chat/models@1.4.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.11-rc.4
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.4
+  - @yas chat/ui-client@17.0.0-rc.4
+  - @yas chat/ui-video-conf@17.0.0-rc.4
+  - @yas chat/ui-voip@7.0.0-rc.4
+  - @yas chat/web-ui-registration@17.0.0-rc.4
+  - @yas chat/instance-status@0.1.19-rc.4
 
   </details>
 
@@ -11131,34 +11131,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.3
-  - @rocket.chat/rest-typings@7.5.0-rc.3
-  - @rocket.chat/license@1.0.10-rc.3
-  - @rocket.chat/omnichannel-services@0.3.16-rc.3
-  - @rocket.chat/pdf-worker@0.2.16-rc.3
-  - @rocket.chat/presence@0.2.19-rc.3
-  - @rocket.chat/api-client@0.2.19-rc.3
-  - @rocket.chat/apps@0.4.0-rc.3
-  - @rocket.chat/core-services@0.8.0-rc.3
-  - @rocket.chat/cron@0.1.19-rc.3
-  - @rocket.chat/freeswitch@1.2.6-rc.3
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.3
-  - @rocket.chat/gazzodown@17.0.0-rc.3
-  - @rocket.chat/model-typings@1.5.0-rc.3
-  - @rocket.chat/ui-contexts@17.0.0-rc.3
-  - @rocket.chat/models@1.4.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.11-rc.3
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.3
-  - @rocket.chat/ui-client@17.0.0-rc.3
-  - @rocket.chat/ui-video-conf@17.0.0-rc.3
-  - @rocket.chat/ui-voip@7.0.0-rc.3
-  - @rocket.chat/web-ui-registration@17.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.19-rc.3
+  - @yas chat/core-typings@7.5.0-rc.3
+  - @yas chat/rest-typings@7.5.0-rc.3
+  - @yas chat/license@1.0.10-rc.3
+  - @yas chat/omnichannel-services@0.3.16-rc.3
+  - @yas chat/pdf-worker@0.2.16-rc.3
+  - @yas chat/presence@0.2.19-rc.3
+  - @yas chat/api-client@0.2.19-rc.3
+  - @yas chat/apps@0.4.0-rc.3
+  - @yas chat/core-services@0.8.0-rc.3
+  - @yas chat/cron@0.1.19-rc.3
+  - @yas chat/freeswitch@1.2.6-rc.3
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.3
+  - @yas chat/gazzodown@17.0.0-rc.3
+  - @yas chat/model-typings@1.5.0-rc.3
+  - @yas chat/ui-contexts@17.0.0-rc.3
+  - @yas chat/models@1.4.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.11-rc.3
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.3
+  - @yas chat/ui-client@17.0.0-rc.3
+  - @yas chat/ui-video-conf@17.0.0-rc.3
+  - @yas chat/ui-voip@7.0.0-rc.3
+  - @yas chat/web-ui-registration@17.0.0-rc.3
+  - @yas chat/instance-status@0.1.19-rc.3
 
   </details>
 
@@ -11170,34 +11170,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [cc4111cf0b1458dd97369baf8969734f337650dc]:</summary>
-  - @rocket.chat/core-services@0.8.0-rc.2
-  - @rocket.chat/rest-typings@7.5.0-rc.2
-  - @rocket.chat/models@1.4.0-rc.2
-  - @rocket.chat/network-broker@0.1.11-rc.2
-  - @rocket.chat/omnichannel-services@0.3.16-rc.2
-  - @rocket.chat/presence@0.2.19-rc.2
-  - @rocket.chat/api-client@0.2.19-rc.2
-  - @rocket.chat/ui-contexts@17.0.0-rc.2
-  - @rocket.chat/cron@0.1.19-rc.2
-  - @rocket.chat/instance-status@0.1.19-rc.2
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.2
-  - @rocket.chat/gazzodown@17.0.0-rc.2
-  - @rocket.chat/ui-avatar@13.0.0-rc.2
-  - @rocket.chat/ui-client@17.0.0-rc.2
-  - @rocket.chat/ui-video-conf@17.0.0-rc.2
-  - @rocket.chat/ui-voip@7.0.0-rc.2
-  - @rocket.chat/web-ui-registration@17.0.0-rc.2
-  - @rocket.chat/core-typings@7.5.0-rc.2
-  - @rocket.chat/license@1.0.10-rc.2
-  - @rocket.chat/pdf-worker@0.2.16-rc.2
-  - @rocket.chat/apps@0.4.0-rc.2
-  - @rocket.chat/freeswitch@1.2.6-rc.2
-  - @rocket.chat/model-typings@1.5.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/core-services@0.8.0-rc.2
+  - @yas chat/rest-typings@7.5.0-rc.2
+  - @yas chat/models@1.4.0-rc.2
+  - @yas chat/network-broker@0.1.11-rc.2
+  - @yas chat/omnichannel-services@0.3.16-rc.2
+  - @yas chat/presence@0.2.19-rc.2
+  - @yas chat/api-client@0.2.19-rc.2
+  - @yas chat/ui-contexts@17.0.0-rc.2
+  - @yas chat/cron@0.1.19-rc.2
+  - @yas chat/instance-status@0.1.19-rc.2
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.2
+  - @yas chat/gazzodown@17.0.0-rc.2
+  - @yas chat/ui-avatar@13.0.0-rc.2
+  - @yas chat/ui-client@17.0.0-rc.2
+  - @yas chat/ui-video-conf@17.0.0-rc.2
+  - @yas chat/ui-voip@7.0.0-rc.2
+  - @yas chat/web-ui-registration@17.0.0-rc.2
+  - @yas chat/core-typings@7.5.0-rc.2
+  - @yas chat/license@1.0.10-rc.2
+  - @yas chat/pdf-worker@0.2.16-rc.2
+  - @yas chat/apps@0.4.0-rc.2
+  - @yas chat/freeswitch@1.2.6-rc.2
+  - @yas chat/model-typings@1.5.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -11205,38 +11205,38 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35340](https://github.com/YasChat/YasChat/pull/35340)) Fixes an issue where account security page was flashing sometimes for users with mandatory two factor configured.
 
 - ([#35532](https://github.com/YasChat/YasChat/pull/35532)) Fixes receiving webhook payloads encoded as x-www-form-urlencoded JSON.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.1
-  - @rocket.chat/rest-typings@7.5.0-rc.1
-  - @rocket.chat/license@1.0.10-rc.1
-  - @rocket.chat/omnichannel-services@0.3.16-rc.1
-  - @rocket.chat/pdf-worker@0.2.16-rc.1
-  - @rocket.chat/presence@0.2.19-rc.1
-  - @rocket.chat/api-client@0.2.19-rc.1
-  - @rocket.chat/apps@0.4.0-rc.1
-  - @rocket.chat/core-services@0.7.11-rc.1
-  - @rocket.chat/cron@0.1.19-rc.1
-  - @rocket.chat/freeswitch@1.2.6-rc.1
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.1
-  - @rocket.chat/gazzodown@17.0.0-rc.1
-  - @rocket.chat/model-typings@1.5.0-rc.1
-  - @rocket.chat/ui-contexts@17.0.0-rc.1
-  - @rocket.chat/models@1.4.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.11-rc.1
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.1
-  - @rocket.chat/ui-client@17.0.0-rc.1
-  - @rocket.chat/ui-video-conf@17.0.0-rc.1
-  - @rocket.chat/ui-voip@7.0.0-rc.1
-  - @rocket.chat/web-ui-registration@17.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.19-rc.1
+  - @yas chat/core-typings@7.5.0-rc.1
+  - @yas chat/rest-typings@7.5.0-rc.1
+  - @yas chat/license@1.0.10-rc.1
+  - @yas chat/omnichannel-services@0.3.16-rc.1
+  - @yas chat/pdf-worker@0.2.16-rc.1
+  - @yas chat/presence@0.2.19-rc.1
+  - @yas chat/api-client@0.2.19-rc.1
+  - @yas chat/apps@0.4.0-rc.1
+  - @yas chat/core-services@0.7.11-rc.1
+  - @yas chat/cron@0.1.19-rc.1
+  - @yas chat/freeswitch@1.2.6-rc.1
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.1
+  - @yas chat/gazzodown@17.0.0-rc.1
+  - @yas chat/model-typings@1.5.0-rc.1
+  - @yas chat/ui-contexts@17.0.0-rc.1
+  - @yas chat/models@1.4.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.11-rc.1
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.1
+  - @yas chat/ui-client@17.0.0-rc.1
+  - @yas chat/ui-video-conf@17.0.0-rc.1
+  - @yas chat/ui-voip@7.0.0-rc.1
+  - @yas chat/web-ui-registration@17.0.0-rc.1
+  - @yas chat/instance-status@0.1.19-rc.1
 
   </details>
 
@@ -11288,7 +11288,7 @@
 
 - ([#35369](https://github.com/YasChat/YasChat/pull/35369)) Fixes an issue where recursively quoting messages multiple times (up to the configured chained quote limit) caused the inner attachment to appear empty.
 
-- ([#35549](https://github.com/YasChat/YasChat/pull/35549)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#35549](https://github.com/YasChat/YasChat/pull/35549)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#35311](https://github.com/YasChat/YasChat/pull/35311) by [@4shb0rne](https://github.com/4shb0rne)) Fixes an issue where menus inside sidebar keeps opened even if the sidebar is collapsed
 
@@ -11327,35 +11327,35 @@
 - ([#35418](https://github.com/YasChat/YasChat/pull/35418)) Adds support for filtering bad words from messages for languages other than English
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 4ce00382e9877c4d9241747fdd4f4223d70b58a7, 280fcce8488475298ccd3ae4dd7ded29a32d8a4b, 3b5406172c5575f09e9f5a2cb3ff99122900afde, 4e9d3155db516718fdd28be30a53d0051c9144d3, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 96432420860651a3279069111972af6ec18c3b8a, 335f19f5d08b7348263b574e4133ecf93145a79c, 38f1c508c9f95cd34744066019927add53470446, c44331e0d9b0e4e04d1ec64bea74b439a1125aa0, 4129dbc934f240a9972aa92ab159ee34e518587a, 21f413d6c87cbf402325664da7bbbc9b3d7bce83, 0d96d633a653f52d07bc9ebeead16dcb90c75e2c, bb4ff0db3dcedcc715eb4b69b3f8d5c79ce0cb5f]:</summary>
-  - @rocket.chat/fuselage-ui-kit@17.0.0-rc.0
-  - @rocket.chat/gazzodown@17.0.0-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.0
-  - @rocket.chat/ui-client@17.0.0-rc.0
-  - @rocket.chat/ui-composer@0.5.2-rc.0
-  - @rocket.chat/ui-contexts@17.0.0-rc.0
-  - @rocket.chat/ui-video-conf@17.0.0-rc.0
-  - @rocket.chat/ui-voip@7.0.0-rc.0
-  - @rocket.chat/web-ui-registration@17.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.3-rc.0
-  - @rocket.chat/rest-typings@7.5.0-rc.0
-  - @rocket.chat/i18n@1.5.0-rc.0
-  - @rocket.chat/model-typings@1.5.0-rc.0
-  - @rocket.chat/models@1.4.0-rc.0
-  - @rocket.chat/apps-engine@1.50.0-rc.0
-  - @rocket.chat/core-typings@7.5.0-rc.0
-  - @rocket.chat/message-parser@0.31.32-rc.0
-  - @rocket.chat/apps@0.4.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.15-rc.0
-  - @rocket.chat/presence@0.2.18-rc.0
-  - @rocket.chat/api-client@0.2.18-rc.0
-  - @rocket.chat/core-services@0.7.10-rc.0
-  - @rocket.chat/cron@0.1.18-rc.0
-  - @rocket.chat/instance-status@0.1.18-rc.0
-  - @rocket.chat/license@1.0.9-rc.0
-  - @rocket.chat/pdf-worker@0.2.15-rc.0
-  - @rocket.chat/freeswitch@1.2.5-rc.0
-  - @rocket.chat/network-broker@0.1.10-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@17.0.0-rc.0
+  - @yas chat/gazzodown@17.0.0-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.0
+  - @yas chat/ui-client@17.0.0-rc.0
+  - @yas chat/ui-composer@0.5.2-rc.0
+  - @yas chat/ui-contexts@17.0.0-rc.0
+  - @yas chat/ui-video-conf@17.0.0-rc.0
+  - @yas chat/ui-voip@7.0.0-rc.0
+  - @yas chat/web-ui-registration@17.0.0-rc.0
+  - @yas chat/ui-theming@0.4.3-rc.0
+  - @yas chat/rest-typings@7.5.0-rc.0
+  - @yas chat/i18n@1.5.0-rc.0
+  - @yas chat/model-typings@1.5.0-rc.0
+  - @yas chat/models@1.4.0-rc.0
+  - @yas chat/apps-engine@1.50.0-rc.0
+  - @yas chat/core-typings@7.5.0-rc.0
+  - @yas chat/message-parser@0.31.32-rc.0
+  - @yas chat/apps@0.4.0-rc.0
+  - @yas chat/omnichannel-services@0.3.15-rc.0
+  - @yas chat/presence@0.2.18-rc.0
+  - @yas chat/api-client@0.2.18-rc.0
+  - @yas chat/core-services@0.7.10-rc.0
+  - @yas chat/cron@0.1.18-rc.0
+  - @yas chat/instance-status@0.1.18-rc.0
+  - @yas chat/license@1.0.9-rc.0
+  - @yas chat/pdf-worker@0.2.15-rc.0
+  - @yas chat/freeswitch@1.2.5-rc.0
+  - @yas chat/network-broker@0.1.10-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -11365,36 +11365,36 @@
 
 - ([#35422](https://github.com/YasChat/YasChat/pull/35422) by [@dionisio-bot](https://github.com/dionisio-bot)) fixes an issue where videoconf calls could sometimes fail to ring an user after a temporary disconnection
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.1
-  - @rocket.chat/rest-typings@7.4.1
-  - @rocket.chat/license@1.0.9
-  - @rocket.chat/omnichannel-services@0.3.15
-  - @rocket.chat/pdf-worker@0.2.15
-  - @rocket.chat/presence@0.2.18
-  - @rocket.chat/api-client@0.2.18
-  - @rocket.chat/apps@0.3.1
-  - @rocket.chat/core-services@0.7.10
-  - @rocket.chat/cron@0.1.18
-  - @rocket.chat/freeswitch@1.2.5
-  - @rocket.chat/fuselage-ui-kit@16.0.1
-  - @rocket.chat/gazzodown@16.0.1
-  - @rocket.chat/model-typings@1.4.1
-  - @rocket.chat/ui-contexts@16.0.1
-  - @rocket.chat/models@1.3.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.10
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.1
-  - @rocket.chat/ui-client@16.0.1
-  - @rocket.chat/ui-video-conf@16.0.1
-  - @rocket.chat/ui-voip@6.0.1
-  - @rocket.chat/web-ui-registration@16.0.1
-  - @rocket.chat/instance-status@0.1.18
+  - @yas chat/core-typings@7.4.1
+  - @yas chat/rest-typings@7.4.1
+  - @yas chat/license@1.0.9
+  - @yas chat/omnichannel-services@0.3.15
+  - @yas chat/pdf-worker@0.2.15
+  - @yas chat/presence@0.2.18
+  - @yas chat/api-client@0.2.18
+  - @yas chat/apps@0.3.1
+  - @yas chat/core-services@0.7.10
+  - @yas chat/cron@0.1.18
+  - @yas chat/freeswitch@1.2.5
+  - @yas chat/fuselage-ui-kit@16.0.1
+  - @yas chat/gazzodown@16.0.1
+  - @yas chat/model-typings@1.4.1
+  - @yas chat/ui-contexts@16.0.1
+  - @yas chat/models@1.3.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.10
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.1
+  - @yas chat/ui-client@16.0.1
+  - @yas chat/ui-video-conf@16.0.1
+  - @yas chat/ui-voip@6.0.1
+  - @yas chat/web-ui-registration@16.0.1
+  - @yas chat/instance-status@0.1.18
 
   </details>
 
@@ -11440,17 +11440,17 @@
 
 - ([#35189](https://github.com/YasChat/YasChat/pull/35189)) fixes toast with empty error messages when a private app installation fails
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34980](https://github.com/YasChat/YasChat/pull/34980)) Implements removal of OTR (off-the-record) conversation messsages just after OTR session ends.
 
@@ -11470,7 +11470,7 @@
 
 - ([#35233](https://github.com/YasChat/YasChat/pull/35233)) Improves color contrast in image gallery icon buttons to meet WCAG compliance.
 
-- ([#35261](https://github.com/YasChat/YasChat/pull/35261)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#35261](https://github.com/YasChat/YasChat/pull/35261)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#35100](https://github.com/YasChat/YasChat/pull/35100)) Fixes incorrect start date on omnichannel reports
 
@@ -11517,34 +11517,34 @@
 - ([#35046](https://github.com/YasChat/YasChat/pull/35046)) Fixes an issue which was preventing admins in enterprise workspaces from updating some premium layout settings.
 
 - <details><summary>Updated dependencies [beec5663fd9a2fcf1f6777592fb2f38eef22eb24, eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, 599fd932627e64ff84831f5972706f92db440438, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, 1854c9bac22defa2f8cf5593062200171163aa19, f80ac66b006080313f4aa5a04706ff9c8790622b, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, dee90e0791de41997e6df6149c4fe07d3a12c003, dd889ed2984c4c8a19a8b3cdb7ab7287a1258ea5, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, 30ea250f03331513029d812ab4c7841e712d1a73, be5031a21bdcda31270d53d319f7d183e77d84d7, 36e90a2eb2f9698f7ba42f6e8429a240114426bf]:</summary>
-  - @rocket.chat/i18n@1.4.0
-  - @rocket.chat/rest-typings@7.4.0
-  - @rocket.chat/models@1.3.0
-  - @rocket.chat/model-typings@1.4.0
-  - @rocket.chat/network-broker@0.1.9
-  - @rocket.chat/fuselage-ui-kit@16.0.0
-  - @rocket.chat/ui-video-conf@16.0.0
-  - @rocket.chat/core-typings@7.4.0
-  - @rocket.chat/apps-engine@1.49.0
-  - @rocket.chat/ui-client@16.0.0
-  - @rocket.chat/apps@0.3.0
-  - @rocket.chat/ui-voip@6.0.0
-  - @rocket.chat/cas-validate@0.0.3
-  - @rocket.chat/omnichannel-services@0.3.14
-  - @rocket.chat/pdf-worker@0.2.14
-  - @rocket.chat/ui-contexts@16.0.0
-  - @rocket.chat/web-ui-registration@16.0.0
-  - @rocket.chat/presence@0.2.17
-  - @rocket.chat/api-client@0.2.17
-  - @rocket.chat/core-services@0.7.9
-  - @rocket.chat/cron@0.1.17
-  - @rocket.chat/instance-status@0.1.17
-  - @rocket.chat/license@1.0.8
-  - @rocket.chat/freeswitch@1.2.4
-  - @rocket.chat/gazzodown@16.0.0
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/i18n@1.4.0
+  - @yas chat/rest-typings@7.4.0
+  - @yas chat/models@1.3.0
+  - @yas chat/model-typings@1.4.0
+  - @yas chat/network-broker@0.1.9
+  - @yas chat/fuselage-ui-kit@16.0.0
+  - @yas chat/ui-video-conf@16.0.0
+  - @yas chat/core-typings@7.4.0
+  - @yas chat/apps-engine@1.49.0
+  - @yas chat/ui-client@16.0.0
+  - @yas chat/apps@0.3.0
+  - @yas chat/ui-voip@6.0.0
+  - @yas chat/cas-validate@0.0.3
+  - @yas chat/omnichannel-services@0.3.14
+  - @yas chat/pdf-worker@0.2.14
+  - @yas chat/ui-contexts@16.0.0
+  - @yas chat/web-ui-registration@16.0.0
+  - @yas chat/presence@0.2.17
+  - @yas chat/api-client@0.2.17
+  - @yas chat/core-services@0.7.9
+  - @yas chat/cron@0.1.17
+  - @yas chat/instance-status@0.1.17
+  - @yas chat/license@1.0.8
+  - @yas chat/freeswitch@1.2.4
+  - @yas chat/gazzodown@16.0.0
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -11552,34 +11552,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.5
-  - @rocket.chat/rest-typings@7.4.0-rc.5
-  - @rocket.chat/license@1.0.8-rc.5
-  - @rocket.chat/omnichannel-services@0.3.14-rc.5
-  - @rocket.chat/pdf-worker@0.2.14-rc.5
-  - @rocket.chat/presence@0.2.17-rc.5
-  - @rocket.chat/api-client@0.2.17-rc.5
-  - @rocket.chat/apps@0.3.0-rc.5
-  - @rocket.chat/core-services@0.7.9-rc.5
-  - @rocket.chat/cron@0.1.17-rc.5
-  - @rocket.chat/freeswitch@1.2.4-rc.5
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.5
-  - @rocket.chat/gazzodown@16.0.0-rc.5
-  - @rocket.chat/model-typings@1.4.0-rc.5
-  - @rocket.chat/ui-contexts@16.0.0-rc.5
-  - @rocket.chat/models@1.3.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.9-rc.5
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.5
-  - @rocket.chat/ui-client@16.0.0-rc.5
-  - @rocket.chat/ui-video-conf@16.0.0-rc.5
-  - @rocket.chat/ui-voip@6.0.0-rc.5
-  - @rocket.chat/web-ui-registration@16.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.17-rc.5
+  - @yas chat/core-typings@7.4.0-rc.5
+  - @yas chat/rest-typings@7.4.0-rc.5
+  - @yas chat/license@1.0.8-rc.5
+  - @yas chat/omnichannel-services@0.3.14-rc.5
+  - @yas chat/pdf-worker@0.2.14-rc.5
+  - @yas chat/presence@0.2.17-rc.5
+  - @yas chat/api-client@0.2.17-rc.5
+  - @yas chat/apps@0.3.0-rc.5
+  - @yas chat/core-services@0.7.9-rc.5
+  - @yas chat/cron@0.1.17-rc.5
+  - @yas chat/freeswitch@1.2.4-rc.5
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.5
+  - @yas chat/gazzodown@16.0.0-rc.5
+  - @yas chat/model-typings@1.4.0-rc.5
+  - @yas chat/ui-contexts@16.0.0-rc.5
+  - @yas chat/models@1.3.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.9-rc.5
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.5
+  - @yas chat/ui-client@16.0.0-rc.5
+  - @yas chat/ui-video-conf@16.0.0-rc.5
+  - @yas chat/ui-voip@6.0.0-rc.5
+  - @yas chat/web-ui-registration@16.0.0-rc.5
+  - @yas chat/instance-status@0.1.17-rc.5
 
   </details>
 
@@ -11587,34 +11587,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.4
-  - @rocket.chat/rest-typings@7.4.0-rc.4
-  - @rocket.chat/license@1.0.8-rc.4
-  - @rocket.chat/omnichannel-services@0.3.14-rc.4
-  - @rocket.chat/pdf-worker@0.2.14-rc.4
-  - @rocket.chat/presence@0.2.17-rc.4
-  - @rocket.chat/api-client@0.2.17-rc.4
-  - @rocket.chat/apps@0.3.0-rc.4
-  - @rocket.chat/core-services@0.7.9-rc.4
-  - @rocket.chat/cron@0.1.17-rc.4
-  - @rocket.chat/freeswitch@1.2.4-rc.4
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.4
-  - @rocket.chat/gazzodown@16.0.0-rc.4
-  - @rocket.chat/model-typings@1.4.0-rc.4
-  - @rocket.chat/ui-contexts@16.0.0-rc.4
-  - @rocket.chat/models@1.3.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.9-rc.4
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.4
-  - @rocket.chat/ui-client@16.0.0-rc.4
-  - @rocket.chat/ui-video-conf@16.0.0-rc.4
-  - @rocket.chat/ui-voip@6.0.0-rc.4
-  - @rocket.chat/web-ui-registration@16.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.17-rc.4
+  - @yas chat/core-typings@7.4.0-rc.4
+  - @yas chat/rest-typings@7.4.0-rc.4
+  - @yas chat/license@1.0.8-rc.4
+  - @yas chat/omnichannel-services@0.3.14-rc.4
+  - @yas chat/pdf-worker@0.2.14-rc.4
+  - @yas chat/presence@0.2.17-rc.4
+  - @yas chat/api-client@0.2.17-rc.4
+  - @yas chat/apps@0.3.0-rc.4
+  - @yas chat/core-services@0.7.9-rc.4
+  - @yas chat/cron@0.1.17-rc.4
+  - @yas chat/freeswitch@1.2.4-rc.4
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.4
+  - @yas chat/gazzodown@16.0.0-rc.4
+  - @yas chat/model-typings@1.4.0-rc.4
+  - @yas chat/ui-contexts@16.0.0-rc.4
+  - @yas chat/models@1.3.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.9-rc.4
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.4
+  - @yas chat/ui-client@16.0.0-rc.4
+  - @yas chat/ui-video-conf@16.0.0-rc.4
+  - @yas chat/ui-voip@6.0.0-rc.4
+  - @yas chat/web-ui-registration@16.0.0-rc.4
+  - @yas chat/instance-status@0.1.17-rc.4
 
   </details>
 
@@ -11622,33 +11622,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.3
-  - @rocket.chat/rest-typings@7.4.0-rc.3
-  - @rocket.chat/license@1.0.7-rc.3
-  - @rocket.chat/omnichannel-services@0.3.13-rc.3
-  - @rocket.chat/pdf-worker@0.2.13-rc.3
-  - @rocket.chat/presence@0.2.16-rc.3
-  - @rocket.chat/api-client@0.2.16-rc.3
-  - @rocket.chat/apps@0.3.0-rc.3
-  - @rocket.chat/core-services@0.7.8-rc.3
-  - @rocket.chat/cron@0.1.16-rc.3
-  - @rocket.chat/freeswitch@1.2.3-rc.3
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.3
-  - @rocket.chat/gazzodown@16.0.0-rc.3
-  - @rocket.chat/model-typings@1.4.0-rc.3
-  - @rocket.chat/ui-contexts@16.0.0-rc.3
-  - @rocket.chat/models@1.3.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.8-rc.3
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.3
-  - @rocket.chat/ui-client@16.0.0-rc.3
-  - @rocket.chat/ui-video-conf@16.0.0-rc.3
-  - @rocket.chat/ui-voip@6.0.0-rc.3
-  - @rocket.chat/web-ui-registration@16.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.16-rc.3
+  - @yas chat/core-typings@7.4.0-rc.3
+  - @yas chat/rest-typings@7.4.0-rc.3
+  - @yas chat/license@1.0.7-rc.3
+  - @yas chat/omnichannel-services@0.3.13-rc.3
+  - @yas chat/pdf-worker@0.2.13-rc.3
+  - @yas chat/presence@0.2.16-rc.3
+  - @yas chat/api-client@0.2.16-rc.3
+  - @yas chat/apps@0.3.0-rc.3
+  - @yas chat/core-services@0.7.8-rc.3
+  - @yas chat/cron@0.1.16-rc.3
+  - @yas chat/freeswitch@1.2.3-rc.3
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.3
+  - @yas chat/gazzodown@16.0.0-rc.3
+  - @yas chat/model-typings@1.4.0-rc.3
+  - @yas chat/ui-contexts@16.0.0-rc.3
+  - @yas chat/models@1.3.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.8-rc.3
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.3
+  - @yas chat/ui-client@16.0.0-rc.3
+  - @yas chat/ui-video-conf@16.0.0-rc.3
+  - @yas chat/ui-voip@6.0.0-rc.3
+  - @yas chat/web-ui-registration@16.0.0-rc.3
+  - @yas chat/instance-status@0.1.16-rc.3
 
   </details>
 
@@ -11656,36 +11656,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35269](https://github.com/YasChat/YasChat/pull/35269)) fixes a very rare issue where switching from a DM to a regular room would show an error page
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.2
-  - @rocket.chat/rest-typings@7.4.0-rc.2
-  - @rocket.chat/license@1.0.7-rc.2
-  - @rocket.chat/omnichannel-services@0.3.13-rc.2
-  - @rocket.chat/pdf-worker@0.2.13-rc.2
-  - @rocket.chat/presence@0.2.16-rc.2
-  - @rocket.chat/api-client@0.2.16-rc.2
-  - @rocket.chat/apps@0.3.0-rc.2
-  - @rocket.chat/core-services@0.7.8-rc.2
-  - @rocket.chat/cron@0.1.16-rc.2
-  - @rocket.chat/freeswitch@1.2.3-rc.2
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.2
-  - @rocket.chat/gazzodown@16.0.0-rc.2
-  - @rocket.chat/model-typings@1.4.0-rc.2
-  - @rocket.chat/ui-contexts@16.0.0-rc.2
-  - @rocket.chat/models@1.3.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.8-rc.2
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.2
-  - @rocket.chat/ui-client@16.0.0-rc.2
-  - @rocket.chat/ui-video-conf@16.0.0-rc.2
-  - @rocket.chat/ui-voip@6.0.0-rc.2
-  - @rocket.chat/web-ui-registration@16.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.16-rc.2
+  - @yas chat/core-typings@7.4.0-rc.2
+  - @yas chat/rest-typings@7.4.0-rc.2
+  - @yas chat/license@1.0.7-rc.2
+  - @yas chat/omnichannel-services@0.3.13-rc.2
+  - @yas chat/pdf-worker@0.2.13-rc.2
+  - @yas chat/presence@0.2.16-rc.2
+  - @yas chat/api-client@0.2.16-rc.2
+  - @yas chat/apps@0.3.0-rc.2
+  - @yas chat/core-services@0.7.8-rc.2
+  - @yas chat/cron@0.1.16-rc.2
+  - @yas chat/freeswitch@1.2.3-rc.2
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.2
+  - @yas chat/gazzodown@16.0.0-rc.2
+  - @yas chat/model-typings@1.4.0-rc.2
+  - @yas chat/ui-contexts@16.0.0-rc.2
+  - @yas chat/models@1.3.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.8-rc.2
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.2
+  - @yas chat/ui-client@16.0.0-rc.2
+  - @yas chat/ui-video-conf@16.0.0-rc.2
+  - @yas chat/ui-voip@6.0.0-rc.2
+  - @yas chat/web-ui-registration@16.0.0-rc.2
+  - @yas chat/instance-status@0.1.16-rc.2
 
   </details>
 
@@ -11693,34 +11693,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.1
-  - @rocket.chat/rest-typings@7.4.0-rc.1
-  - @rocket.chat/license@1.0.7-rc.1
-  - @rocket.chat/omnichannel-services@0.3.13-rc.1
-  - @rocket.chat/pdf-worker@0.2.13-rc.1
-  - @rocket.chat/presence@0.2.16-rc.1
-  - @rocket.chat/api-client@0.2.16-rc.1
-  - @rocket.chat/apps@0.3.0-rc.1
-  - @rocket.chat/core-services@0.7.8-rc.1
-  - @rocket.chat/cron@0.1.16-rc.1
-  - @rocket.chat/freeswitch@1.2.3-rc.1
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.1
-  - @rocket.chat/gazzodown@16.0.0-rc.1
-  - @rocket.chat/model-typings@1.4.0-rc.1
-  - @rocket.chat/ui-contexts@16.0.0-rc.1
-  - @rocket.chat/models@1.3.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.8-rc.1
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.1
-  - @rocket.chat/ui-client@16.0.0-rc.1
-  - @rocket.chat/ui-video-conf@16.0.0-rc.1
-  - @rocket.chat/ui-voip@6.0.0-rc.1
-  - @rocket.chat/web-ui-registration@16.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.16-rc.1
+  - @yas chat/core-typings@7.4.0-rc.1
+  - @yas chat/rest-typings@7.4.0-rc.1
+  - @yas chat/license@1.0.7-rc.1
+  - @yas chat/omnichannel-services@0.3.13-rc.1
+  - @yas chat/pdf-worker@0.2.13-rc.1
+  - @yas chat/presence@0.2.16-rc.1
+  - @yas chat/api-client@0.2.16-rc.1
+  - @yas chat/apps@0.3.0-rc.1
+  - @yas chat/core-services@0.7.8-rc.1
+  - @yas chat/cron@0.1.16-rc.1
+  - @yas chat/freeswitch@1.2.3-rc.1
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.1
+  - @yas chat/gazzodown@16.0.0-rc.1
+  - @yas chat/model-typings@1.4.0-rc.1
+  - @yas chat/ui-contexts@16.0.0-rc.1
+  - @yas chat/models@1.3.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.8-rc.1
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.1
+  - @yas chat/ui-client@16.0.0-rc.1
+  - @yas chat/ui-video-conf@16.0.0-rc.1
+  - @yas chat/ui-voip@6.0.0-rc.1
+  - @yas chat/web-ui-registration@16.0.0-rc.1
+  - @yas chat/instance-status@0.1.16-rc.1
 
   </details>
 
@@ -11784,7 +11784,7 @@
 
 - ([#35233](https://github.com/YasChat/YasChat/pull/35233)) Improves color contrast in image gallery icon buttons to meet WCAG compliance.
 
-- ([#35261](https://github.com/YasChat/YasChat/pull/35261)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#35261](https://github.com/YasChat/YasChat/pull/35261)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#35100](https://github.com/YasChat/YasChat/pull/35100)) Fixes incorrect start date on omnichannel reports
 
@@ -11829,79 +11829,79 @@
 - ([#35046](https://github.com/YasChat/YasChat/pull/35046)) Fixes an issue which was preventing admins in enterprise workspaces from updating some premium layout settings.
 
 - <details><summary>Updated dependencies [beec5663fd9a2fcf1f6777592fb2f38eef22eb24, eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, 599fd932627e64ff84831f5972706f92db440438, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, 1854c9bac22defa2f8cf5593062200171163aa19, f80ac66b006080313f4aa5a04706ff9c8790622b, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, dee90e0791de41997e6df6149c4fe07d3a12c003, dd889ed2984c4c8a19a8b3cdb7ab7287a1258ea5, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, 30ea250f03331513029d812ab4c7841e712d1a73, be5031a21bdcda31270d53d319f7d183e77d84d7, 36e90a2eb2f9698f7ba42f6e8429a240114426bf]:</summary>
-  - @rocket.chat/i18n@1.4.0-rc.0
-  - @rocket.chat/rest-typings@7.4.0-rc.0
-  - @rocket.chat/models@1.3.0-rc.0
-  - @rocket.chat/model-typings@1.4.0-rc.0
-  - @rocket.chat/network-broker@0.1.6-rc.0
-  - @rocket.chat/fuselage-ui-kit@16.0.0-rc.0
-  - @rocket.chat/ui-video-conf@16.0.0-rc.0
-  - @rocket.chat/core-typings@7.4.0-rc.0
-  - @rocket.chat/apps-engine@1.49.0-rc.0
-  - @rocket.chat/ui-client@16.0.0-rc.0
-  - @rocket.chat/apps@0.3.0-rc.0
-  - @rocket.chat/ui-voip@6.0.0-rc.0
-  - @rocket.chat/cas-validate@0.0.3-rc.0
-  - @rocket.chat/omnichannel-services@0.3.11-rc.0
-  - @rocket.chat/pdf-worker@0.2.11-rc.0
-  - @rocket.chat/ui-contexts@16.0.0-rc.0
-  - @rocket.chat/web-ui-registration@16.0.0-rc.0
-  - @rocket.chat/presence@0.2.14-rc.0
-  - @rocket.chat/api-client@0.2.14-rc.0
-  - @rocket.chat/core-services@0.7.6-rc.0
-  - @rocket.chat/cron@0.1.14-rc.0
-  - @rocket.chat/instance-status@0.1.14-rc.0
-  - @rocket.chat/license@1.0.5-rc.0
-  - @rocket.chat/freeswitch@1.2.1-rc.0
-  - @rocket.chat/gazzodown@16.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/i18n@1.4.0-rc.0
+  - @yas chat/rest-typings@7.4.0-rc.0
+  - @yas chat/models@1.3.0-rc.0
+  - @yas chat/model-typings@1.4.0-rc.0
+  - @yas chat/network-broker@0.1.6-rc.0
+  - @yas chat/fuselage-ui-kit@16.0.0-rc.0
+  - @yas chat/ui-video-conf@16.0.0-rc.0
+  - @yas chat/core-typings@7.4.0-rc.0
+  - @yas chat/apps-engine@1.49.0-rc.0
+  - @yas chat/ui-client@16.0.0-rc.0
+  - @yas chat/apps@0.3.0-rc.0
+  - @yas chat/ui-voip@6.0.0-rc.0
+  - @yas chat/cas-validate@0.0.3-rc.0
+  - @yas chat/omnichannel-services@0.3.11-rc.0
+  - @yas chat/pdf-worker@0.2.11-rc.0
+  - @yas chat/ui-contexts@16.0.0-rc.0
+  - @yas chat/web-ui-registration@16.0.0-rc.0
+  - @yas chat/presence@0.2.14-rc.0
+  - @yas chat/api-client@0.2.14-rc.0
+  - @yas chat/core-services@0.7.6-rc.0
+  - @yas chat/cron@0.1.14-rc.0
+  - @yas chat/instance-status@0.1.14-rc.0
+  - @yas chat/license@1.0.5-rc.0
+  - @yas chat/freeswitch@1.2.1-rc.0
+  - @yas chat/gazzodown@16.0.0-rc.0
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@12.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
 ## 7.3.3
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - Add a retry mechanism to get supported versions from Cloud
 
 - ([#35353](https://github.com/YasChat/YasChat/pull/35353) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes omnichannel transcript filename breaking download links
 
 - <details><summary>Updated dependencies [b2d71461a6a73157024e4594cc1228419a34673e]:</summary>
-  - @rocket.chat/omnichannel-services@0.3.13
-  - @rocket.chat/pdf-worker@0.2.13
-  - @rocket.chat/core-typings@7.3.3
-  - @rocket.chat/rest-typings@7.3.3
-  - @rocket.chat/license@1.0.7
-  - @rocket.chat/presence@0.2.16
-  - @rocket.chat/api-client@0.2.16
-  - @rocket.chat/apps@0.2.7
-  - @rocket.chat/core-services@0.7.8
-  - @rocket.chat/cron@0.1.16
-  - @rocket.chat/freeswitch@1.2.3
-  - @rocket.chat/fuselage-ui-kit@15.0.3
-  - @rocket.chat/gazzodown@15.0.3
-  - @rocket.chat/model-typings@1.3.3
-  - @rocket.chat/ui-contexts@15.0.3
-  - @rocket.chat/models@1.2.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.8
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@11.0.3
-  - @rocket.chat/ui-client@15.0.3
-  - @rocket.chat/ui-video-conf@15.0.3
-  - @rocket.chat/ui-voip@5.0.3
-  - @rocket.chat/web-ui-registration@15.0.3
-  - @rocket.chat/instance-status@0.1.16
+  - @yas chat/omnichannel-services@0.3.13
+  - @yas chat/pdf-worker@0.2.13
+  - @yas chat/core-typings@7.3.3
+  - @yas chat/rest-typings@7.3.3
+  - @yas chat/license@1.0.7
+  - @yas chat/presence@0.2.16
+  - @yas chat/api-client@0.2.16
+  - @yas chat/apps@0.2.7
+  - @yas chat/core-services@0.7.8
+  - @yas chat/cron@0.1.16
+  - @yas chat/freeswitch@1.2.3
+  - @yas chat/fuselage-ui-kit@15.0.3
+  - @yas chat/gazzodown@15.0.3
+  - @yas chat/model-typings@1.3.3
+  - @yas chat/ui-contexts@15.0.3
+  - @yas chat/models@1.2.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.8
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@11.0.3
+  - @yas chat/ui-client@15.0.3
+  - @yas chat/ui-video-conf@15.0.3
+  - @yas chat/ui-voip@5.0.3
+  - @yas chat/web-ui-registration@15.0.3
+  - @yas chat/instance-status@0.1.16
 
   </details>
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35212](https://github.com/YasChat/YasChat/pull/35212) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes incorrect start date on omnichannel reports
 
@@ -11910,31 +11910,31 @@
 - ([#35251](https://github.com/YasChat/YasChat/pull/35251) by [@dionisio-bot](https://github.com/dionisio-bot)) fixes an issue with embedded layout rooms displaying as if the user is not part of the room
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.2
-  - @rocket.chat/rest-typings@7.3.2
-  - @rocket.chat/license@1.0.6
-  - @rocket.chat/omnichannel-services@0.3.12
-  - @rocket.chat/pdf-worker@0.2.12
-  - @rocket.chat/presence@0.2.15
-  - @rocket.chat/api-client@0.2.15
-  - @rocket.chat/apps@0.2.6
-  - @rocket.chat/core-services@0.7.7
-  - @rocket.chat/cron@0.1.15
-  - @rocket.chat/freeswitch@1.2.2
-  - @rocket.chat/fuselage-ui-kit@15.0.2
-  - @rocket.chat/gazzodown@15.0.2
-  - @rocket.chat/model-typings@1.3.2
-  - @rocket.chat/ui-contexts@15.0.2
-  - @rocket.chat/models@1.2.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.7
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@11.0.2
-  - @rocket.chat/ui-client@15.0.2
-  - @rocket.chat/ui-video-conf@15.0.2
-  - @rocket.chat/ui-voip@5.0.2
-  - @rocket.chat/web-ui-registration@15.0.2
-  - @rocket.chat/instance-status@0.1.15
+  - @yas chat/core-typings@7.3.2
+  - @yas chat/rest-typings@7.3.2
+  - @yas chat/license@1.0.6
+  - @yas chat/omnichannel-services@0.3.12
+  - @yas chat/pdf-worker@0.2.12
+  - @yas chat/presence@0.2.15
+  - @yas chat/api-client@0.2.15
+  - @yas chat/apps@0.2.6
+  - @yas chat/core-services@0.7.7
+  - @yas chat/cron@0.1.15
+  - @yas chat/freeswitch@1.2.2
+  - @yas chat/fuselage-ui-kit@15.0.2
+  - @yas chat/gazzodown@15.0.2
+  - @yas chat/model-typings@1.3.2
+  - @yas chat/ui-contexts@15.0.2
+  - @yas chat/models@1.2.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.7
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@11.0.2
+  - @yas chat/ui-client@15.0.2
+  - @yas chat/ui-video-conf@15.0.2
+  - @yas chat/ui-voip@5.0.2
+  - @yas chat/web-ui-registration@15.0.2
+  - @yas chat/instance-status@0.1.15
 
   </details>
 
@@ -11942,9 +11942,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35112](https://github.com/YasChat/YasChat/pull/35112) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the queue processing of Omnichannel's waiting queue focusing on 3 main areas:
   - Changes the way we fetch the queue list to not append the public queue by default. This makes the server to not run the public queue always (as it is now) even if there was no work to be done.
@@ -11953,31 +11953,31 @@
 - ([#35096](https://github.com/YasChat/YasChat/pull/35096) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a behavior in Omnichannel that was causing bot agents to be waiting in the queue, when they should always skip it.
 
 - <details><summary>Updated dependencies [b7905dfebe48d27d0d774fb23cc579ea9dfd01f4]:</summary>
-  - @rocket.chat/model-typings@1.3.1
-  - @rocket.chat/models@1.2.1
-  - @rocket.chat/omnichannel-services@0.3.11
-  - @rocket.chat/apps@0.2.5
-  - @rocket.chat/presence@0.2.14
-  - @rocket.chat/core-services@0.7.6
-  - @rocket.chat/cron@0.1.14
-  - @rocket.chat/instance-status@0.1.14
-  - @rocket.chat/network-broker@0.1.6
-  - @rocket.chat/core-typings@7.3.1
-  - @rocket.chat/rest-typings@7.3.1
-  - @rocket.chat/license@1.0.5
-  - @rocket.chat/pdf-worker@0.2.11
-  - @rocket.chat/api-client@0.2.14
-  - @rocket.chat/freeswitch@1.2.1
-  - @rocket.chat/fuselage-ui-kit@15.0.1
-  - @rocket.chat/gazzodown@15.0.1
-  - @rocket.chat/ui-contexts@15.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/ui-avatar@11.0.1
-  - @rocket.chat/ui-client@15.0.1
-  - @rocket.chat/ui-video-conf@15.0.1
-  - @rocket.chat/ui-voip@5.0.1
-  - @rocket.chat/web-ui-registration@15.0.1
+  - @yas chat/model-typings@1.3.1
+  - @yas chat/models@1.2.1
+  - @yas chat/omnichannel-services@0.3.11
+  - @yas chat/apps@0.2.5
+  - @yas chat/presence@0.2.14
+  - @yas chat/core-services@0.7.6
+  - @yas chat/cron@0.1.14
+  - @yas chat/instance-status@0.1.14
+  - @yas chat/network-broker@0.1.6
+  - @yas chat/core-typings@7.3.1
+  - @yas chat/rest-typings@7.3.1
+  - @yas chat/license@1.0.5
+  - @yas chat/pdf-worker@0.2.11
+  - @yas chat/api-client@0.2.14
+  - @yas chat/freeswitch@1.2.1
+  - @yas chat/fuselage-ui-kit@15.0.1
+  - @yas chat/gazzodown@15.0.1
+  - @yas chat/ui-contexts@15.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/ui-avatar@11.0.1
+  - @yas chat/ui-client@15.0.1
+  - @yas chat/ui-video-conf@15.0.1
+  - @yas chat/ui-voip@5.0.1
+  - @yas chat/web-ui-registration@15.0.1
 
   </details>
 
@@ -12001,19 +12001,19 @@
 
 ### Patch Changes
 
-- ([#34904](https://github.com/YasChat/YasChat/pull/34904)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#34904](https://github.com/YasChat/YasChat/pull/34904)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34846](https://github.com/YasChat/YasChat/pull/34846)) Fixes the send attachments option not working on iOS browsers by moving it from the composer dropdown menu to the composer primary actions.
 
@@ -12061,35 +12061,35 @@
 - ([#34851](https://github.com/YasChat/YasChat/pull/34851)) Fixes thumbnails not being deleted from storage on room deletion
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, c8e8518011b8b7d318a2bb2f26b897b196421d76, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 4aa95b61edaf6ce4fe0c5bdbc3d0157bf3d6794b, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11, 3c237b25b27782db2e54c4c294140b1c8cd9b31a, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
-  - @rocket.chat/model-typings@1.3.0
-  - @rocket.chat/i18n@1.3.0
-  - @rocket.chat/fuselage-ui-kit@15.0.0
-  - @rocket.chat/ui-theming@0.4.2
-  - @rocket.chat/apps-engine@1.48.2
-  - @rocket.chat/ui-composer@0.5.1
-  - @rocket.chat/ui-contexts@15.0.0
-  - @rocket.chat/ui-client@15.0.0
-  - @rocket.chat/models@1.2.0
-  - @rocket.chat/sha256@1.0.12
-  - @rocket.chat/rest-typings@7.3.0
-  - @rocket.chat/core-typings@7.3.0
-  - @rocket.chat/freeswitch@1.2.0
-  - @rocket.chat/omnichannel-services@0.3.10
-  - @rocket.chat/apps@0.2.4
-  - @rocket.chat/web-ui-registration@15.0.0
-  - @rocket.chat/ui-voip@5.0.0
-  - @rocket.chat/presence@0.2.13
-  - @rocket.chat/core-services@0.7.5
-  - @rocket.chat/gazzodown@15.0.0
-  - @rocket.chat/ui-avatar@11.0.0
-  - @rocket.chat/ui-video-conf@15.0.0
-  - @rocket.chat/cron@0.1.13
-  - @rocket.chat/instance-status@0.1.13
-  - @rocket.chat/api-client@0.2.13
-  - @rocket.chat/license@1.0.4
-  - @rocket.chat/pdf-worker@0.2.10
-  - @rocket.chat/network-broker@0.1.5
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/model-typings@1.3.0
+  - @yas chat/i18n@1.3.0
+  - @yas chat/fuselage-ui-kit@15.0.0
+  - @yas chat/ui-theming@0.4.2
+  - @yas chat/apps-engine@1.48.2
+  - @yas chat/ui-composer@0.5.1
+  - @yas chat/ui-contexts@15.0.0
+  - @yas chat/ui-client@15.0.0
+  - @yas chat/models@1.2.0
+  - @yas chat/sha256@1.0.12
+  - @yas chat/rest-typings@7.3.0
+  - @yas chat/core-typings@7.3.0
+  - @yas chat/freeswitch@1.2.0
+  - @yas chat/omnichannel-services@0.3.10
+  - @yas chat/apps@0.2.4
+  - @yas chat/web-ui-registration@15.0.0
+  - @yas chat/ui-voip@5.0.0
+  - @yas chat/presence@0.2.13
+  - @yas chat/core-services@0.7.5
+  - @yas chat/gazzodown@15.0.0
+  - @yas chat/ui-avatar@11.0.0
+  - @yas chat/ui-video-conf@15.0.0
+  - @yas chat/cron@0.1.13
+  - @yas chat/instance-status@0.1.13
+  - @yas chat/api-client@0.2.13
+  - @yas chat/license@1.0.4
+  - @yas chat/pdf-worker@0.2.10
+  - @yas chat/network-broker@0.1.5
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -12097,34 +12097,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.5
-  - @rocket.chat/rest-typings@7.3.0-rc.5
-  - @rocket.chat/license@1.0.4-rc.5
-  - @rocket.chat/omnichannel-services@0.3.10-rc.5
-  - @rocket.chat/pdf-worker@0.2.10-rc.5
-  - @rocket.chat/presence@0.2.13-rc.5
-  - @rocket.chat/api-client@0.2.13-rc.5
-  - @rocket.chat/apps@0.2.4-rc.5
-  - @rocket.chat/core-services@0.7.5-rc.5
-  - @rocket.chat/cron@0.1.13-rc.5
-  - @rocket.chat/freeswitch@1.2.0-rc.5
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.5
-  - @rocket.chat/gazzodown@15.0.0-rc.5
-  - @rocket.chat/model-typings@1.3.0-rc.5
-  - @rocket.chat/ui-contexts@15.0.0-rc.5
-  - @rocket.chat/models@1.2.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.5-rc.5
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.5
-  - @rocket.chat/ui-client@15.0.0-rc.5
-  - @rocket.chat/ui-video-conf@15.0.0-rc.5
-  - @rocket.chat/ui-voip@5.0.0-rc.5
-  - @rocket.chat/web-ui-registration@15.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.13-rc.5
+  - @yas chat/core-typings@7.3.0-rc.5
+  - @yas chat/rest-typings@7.3.0-rc.5
+  - @yas chat/license@1.0.4-rc.5
+  - @yas chat/omnichannel-services@0.3.10-rc.5
+  - @yas chat/pdf-worker@0.2.10-rc.5
+  - @yas chat/presence@0.2.13-rc.5
+  - @yas chat/api-client@0.2.13-rc.5
+  - @yas chat/apps@0.2.4-rc.5
+  - @yas chat/core-services@0.7.5-rc.5
+  - @yas chat/cron@0.1.13-rc.5
+  - @yas chat/freeswitch@1.2.0-rc.5
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.5
+  - @yas chat/gazzodown@15.0.0-rc.5
+  - @yas chat/model-typings@1.3.0-rc.5
+  - @yas chat/ui-contexts@15.0.0-rc.5
+  - @yas chat/models@1.2.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.5-rc.5
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.5
+  - @yas chat/ui-client@15.0.0-rc.5
+  - @yas chat/ui-video-conf@15.0.0-rc.5
+  - @yas chat/ui-voip@5.0.0-rc.5
+  - @yas chat/web-ui-registration@15.0.0-rc.5
+  - @yas chat/instance-status@0.1.13-rc.5
 
   </details>
 
@@ -12132,34 +12132,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.4
-  - @rocket.chat/rest-typings@7.3.0-rc.4
-  - @rocket.chat/license@1.0.4-rc.4
-  - @rocket.chat/omnichannel-services@0.3.10-rc.4
-  - @rocket.chat/pdf-worker@0.2.10-rc.4
-  - @rocket.chat/presence@0.2.13-rc.4
-  - @rocket.chat/api-client@0.2.13-rc.4
-  - @rocket.chat/apps@0.2.4-rc.4
-  - @rocket.chat/core-services@0.7.5-rc.4
-  - @rocket.chat/cron@0.1.13-rc.4
-  - @rocket.chat/freeswitch@1.2.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.4
-  - @rocket.chat/gazzodown@15.0.0-rc.4
-  - @rocket.chat/model-typings@1.3.0-rc.4
-  - @rocket.chat/ui-contexts@15.0.0-rc.4
-  - @rocket.chat/models@1.2.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.5-rc.4
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.4
-  - @rocket.chat/ui-client@15.0.0-rc.4
-  - @rocket.chat/ui-video-conf@15.0.0-rc.4
-  - @rocket.chat/ui-voip@5.0.0-rc.4
-  - @rocket.chat/web-ui-registration@15.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.13-rc.4
+  - @yas chat/core-typings@7.3.0-rc.4
+  - @yas chat/rest-typings@7.3.0-rc.4
+  - @yas chat/license@1.0.4-rc.4
+  - @yas chat/omnichannel-services@0.3.10-rc.4
+  - @yas chat/pdf-worker@0.2.10-rc.4
+  - @yas chat/presence@0.2.13-rc.4
+  - @yas chat/api-client@0.2.13-rc.4
+  - @yas chat/apps@0.2.4-rc.4
+  - @yas chat/core-services@0.7.5-rc.4
+  - @yas chat/cron@0.1.13-rc.4
+  - @yas chat/freeswitch@1.2.0-rc.4
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.4
+  - @yas chat/gazzodown@15.0.0-rc.4
+  - @yas chat/model-typings@1.3.0-rc.4
+  - @yas chat/ui-contexts@15.0.0-rc.4
+  - @yas chat/models@1.2.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.5-rc.4
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.4
+  - @yas chat/ui-client@15.0.0-rc.4
+  - @yas chat/ui-video-conf@15.0.0-rc.4
+  - @yas chat/ui-voip@5.0.0-rc.4
+  - @yas chat/web-ui-registration@15.0.0-rc.4
+  - @yas chat/instance-status@0.1.13-rc.4
 
   </details>
 
@@ -12167,34 +12167,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.3
-  - @rocket.chat/rest-typings@7.3.0-rc.3
-  - @rocket.chat/license@1.0.4-rc.3
-  - @rocket.chat/omnichannel-services@0.3.10-rc.3
-  - @rocket.chat/pdf-worker@0.2.10-rc.3
-  - @rocket.chat/presence@0.2.13-rc.3
-  - @rocket.chat/api-client@0.2.13-rc.3
-  - @rocket.chat/apps@0.2.4-rc.3
-  - @rocket.chat/core-services@0.7.5-rc.3
-  - @rocket.chat/cron@0.1.13-rc.3
-  - @rocket.chat/freeswitch@1.2.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.3
-  - @rocket.chat/gazzodown@15.0.0-rc.3
-  - @rocket.chat/model-typings@1.3.0-rc.3
-  - @rocket.chat/ui-contexts@15.0.0-rc.3
-  - @rocket.chat/models@1.2.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.5-rc.3
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.3
-  - @rocket.chat/ui-client@15.0.0-rc.3
-  - @rocket.chat/ui-video-conf@15.0.0-rc.3
-  - @rocket.chat/ui-voip@5.0.0-rc.3
-  - @rocket.chat/web-ui-registration@15.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.13-rc.3
+  - @yas chat/core-typings@7.3.0-rc.3
+  - @yas chat/rest-typings@7.3.0-rc.3
+  - @yas chat/license@1.0.4-rc.3
+  - @yas chat/omnichannel-services@0.3.10-rc.3
+  - @yas chat/pdf-worker@0.2.10-rc.3
+  - @yas chat/presence@0.2.13-rc.3
+  - @yas chat/api-client@0.2.13-rc.3
+  - @yas chat/apps@0.2.4-rc.3
+  - @yas chat/core-services@0.7.5-rc.3
+  - @yas chat/cron@0.1.13-rc.3
+  - @yas chat/freeswitch@1.2.0-rc.3
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.3
+  - @yas chat/gazzodown@15.0.0-rc.3
+  - @yas chat/model-typings@1.3.0-rc.3
+  - @yas chat/ui-contexts@15.0.0-rc.3
+  - @yas chat/models@1.2.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.5-rc.3
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.3
+  - @yas chat/ui-client@15.0.0-rc.3
+  - @yas chat/ui-video-conf@15.0.0-rc.3
+  - @yas chat/ui-voip@5.0.0-rc.3
+  - @yas chat/web-ui-registration@15.0.0-rc.3
+  - @yas chat/instance-status@0.1.13-rc.3
 
   </details>
 
@@ -12202,36 +12202,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#35010](https://github.com/YasChat/YasChat/pull/35010)) Prevent a bug that caused all sessions being marked as logged out if some required value was missing due to a race condition.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.2
-  - @rocket.chat/rest-typings@7.3.0-rc.2
-  - @rocket.chat/license@1.0.4-rc.2
-  - @rocket.chat/omnichannel-services@0.3.10-rc.2
-  - @rocket.chat/pdf-worker@0.2.10-rc.2
-  - @rocket.chat/presence@0.2.13-rc.2
-  - @rocket.chat/api-client@0.2.13-rc.2
-  - @rocket.chat/apps@0.2.4-rc.2
-  - @rocket.chat/core-services@0.7.5-rc.2
-  - @rocket.chat/cron@0.1.13-rc.2
-  - @rocket.chat/freeswitch@1.2.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.2
-  - @rocket.chat/gazzodown@15.0.0-rc.2
-  - @rocket.chat/model-typings@1.3.0-rc.2
-  - @rocket.chat/ui-contexts@15.0.0-rc.2
-  - @rocket.chat/models@1.2.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.5-rc.2
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.2
-  - @rocket.chat/ui-client@15.0.0-rc.2
-  - @rocket.chat/ui-video-conf@15.0.0-rc.2
-  - @rocket.chat/ui-voip@5.0.0-rc.2
-  - @rocket.chat/web-ui-registration@15.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.13-rc.2
+  - @yas chat/core-typings@7.3.0-rc.2
+  - @yas chat/rest-typings@7.3.0-rc.2
+  - @yas chat/license@1.0.4-rc.2
+  - @yas chat/omnichannel-services@0.3.10-rc.2
+  - @yas chat/pdf-worker@0.2.10-rc.2
+  - @yas chat/presence@0.2.13-rc.2
+  - @yas chat/api-client@0.2.13-rc.2
+  - @yas chat/apps@0.2.4-rc.2
+  - @yas chat/core-services@0.7.5-rc.2
+  - @yas chat/cron@0.1.13-rc.2
+  - @yas chat/freeswitch@1.2.0-rc.2
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.2
+  - @yas chat/gazzodown@15.0.0-rc.2
+  - @yas chat/model-typings@1.3.0-rc.2
+  - @yas chat/ui-contexts@15.0.0-rc.2
+  - @yas chat/models@1.2.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.5-rc.2
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.2
+  - @yas chat/ui-client@15.0.0-rc.2
+  - @yas chat/ui-video-conf@15.0.0-rc.2
+  - @yas chat/ui-voip@5.0.0-rc.2
+  - @yas chat/web-ui-registration@15.0.0-rc.2
+  - @yas chat/instance-status@0.1.13-rc.2
 
   </details>
 
@@ -12239,36 +12239,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34935](https://github.com/YasChat/YasChat/pull/34935)) Fixes an issue with the retention policy max age settings not maintaning it's previous value when upgrading from version < 6.10
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.1
-  - @rocket.chat/rest-typings@7.3.0-rc.1
-  - @rocket.chat/license@1.0.4-rc.1
-  - @rocket.chat/omnichannel-services@0.3.10-rc.1
-  - @rocket.chat/pdf-worker@0.2.10-rc.1
-  - @rocket.chat/presence@0.2.13-rc.1
-  - @rocket.chat/api-client@0.2.13-rc.1
-  - @rocket.chat/apps@0.2.4-rc.1
-  - @rocket.chat/core-services@0.7.5-rc.1
-  - @rocket.chat/cron@0.1.13-rc.1
-  - @rocket.chat/freeswitch@1.2.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.1
-  - @rocket.chat/gazzodown@15.0.0-rc.1
-  - @rocket.chat/model-typings@1.3.0-rc.1
-  - @rocket.chat/ui-contexts@15.0.0-rc.1
-  - @rocket.chat/models@1.2.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.5-rc.1
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.1
-  - @rocket.chat/ui-client@15.0.0-rc.1
-  - @rocket.chat/ui-video-conf@15.0.0-rc.1
-  - @rocket.chat/ui-voip@5.0.0-rc.1
-  - @rocket.chat/web-ui-registration@15.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.13-rc.1
+  - @yas chat/core-typings@7.3.0-rc.1
+  - @yas chat/rest-typings@7.3.0-rc.1
+  - @yas chat/license@1.0.4-rc.1
+  - @yas chat/omnichannel-services@0.3.10-rc.1
+  - @yas chat/pdf-worker@0.2.10-rc.1
+  - @yas chat/presence@0.2.13-rc.1
+  - @yas chat/api-client@0.2.13-rc.1
+  - @yas chat/apps@0.2.4-rc.1
+  - @yas chat/core-services@0.7.5-rc.1
+  - @yas chat/cron@0.1.13-rc.1
+  - @yas chat/freeswitch@1.2.0-rc.1
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.1
+  - @yas chat/gazzodown@15.0.0-rc.1
+  - @yas chat/model-typings@1.3.0-rc.1
+  - @yas chat/ui-contexts@15.0.0-rc.1
+  - @yas chat/models@1.2.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.5-rc.1
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.1
+  - @yas chat/ui-client@15.0.0-rc.1
+  - @yas chat/ui-video-conf@15.0.0-rc.1
+  - @yas chat/ui-voip@5.0.0-rc.1
+  - @yas chat/web-ui-registration@15.0.0-rc.1
+  - @yas chat/instance-status@0.1.13-rc.1
 
   </details>
 
@@ -12292,7 +12292,7 @@
 
 ### Patch Changes
 
-- ([#34904](https://github.com/YasChat/YasChat/pull/34904)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#34904](https://github.com/YasChat/YasChat/pull/34904)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#34846](https://github.com/YasChat/YasChat/pull/34846)) Fixes the send attachments option not working on iOS browsers by moving it from the composer dropdown menu to the composer primary actions.
 
@@ -12332,35 +12332,35 @@
 - ([#34851](https://github.com/YasChat/YasChat/pull/34851)) Fixes thumbnails not being deleted from storage on room deletion
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, c8e8518011b8b7d318a2bb2f26b897b196421d76, 5506c406f4a22145ece065ad2b797225e94423ca, c75d771c410579d3d7eaabb379871456ded1b111, 8942b0032af976738a7c602fa389803dda30c0dc, 4aa95b61edaf6ce4fe0c5bdbc3d0157bf3d6794b, 1f54b733eaa91e602baaff74f113c7ef16ddaa89, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, 3c237b25b27782db2e54c4c294140b1c8cd9b31a, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72, c8e8518011b8b7d318a2bb2f26b897b196421d76]:</summary>
-  - @rocket.chat/model-typings@1.3.0-rc.0
-  - @rocket.chat/i18n@1.3.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@15.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.2-rc.0
-  - @rocket.chat/apps-engine@1.48.2-rc.0
-  - @rocket.chat/ui-composer@0.5.1-rc.0
-  - @rocket.chat/ui-contexts@15.0.0-rc.0
-  - @rocket.chat/ui-client@15.0.0-rc.0
-  - @rocket.chat/models@1.2.0-rc.0
-  - @rocket.chat/sha256@1.0.12-rc.0
-  - @rocket.chat/rest-typings@7.3.0-rc.0
-  - @rocket.chat/core-typings@7.3.0-rc.0
-  - @rocket.chat/freeswitch@1.2.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.10-rc.0
-  - @rocket.chat/apps@0.2.4-rc.0
-  - @rocket.chat/web-ui-registration@15.0.0-rc.0
-  - @rocket.chat/ui-voip@5.0.0-rc.0
-  - @rocket.chat/presence@0.2.13-rc.0
-  - @rocket.chat/core-services@0.7.5-rc.0
-  - @rocket.chat/gazzodown@15.0.0-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.0
-  - @rocket.chat/ui-video-conf@15.0.0-rc.0
-  - @rocket.chat/cron@0.1.13-rc.0
-  - @rocket.chat/instance-status@0.1.13-rc.0
-  - @rocket.chat/api-client@0.2.13-rc.0
-  - @rocket.chat/license@1.0.4-rc.0
-  - @rocket.chat/pdf-worker@0.2.10-rc.0
-  - @rocket.chat/network-broker@0.1.5-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/model-typings@1.3.0-rc.0
+  - @yas chat/i18n@1.3.0-rc.0
+  - @yas chat/fuselage-ui-kit@15.0.0-rc.0
+  - @yas chat/ui-theming@0.4.2-rc.0
+  - @yas chat/apps-engine@1.48.2-rc.0
+  - @yas chat/ui-composer@0.5.1-rc.0
+  - @yas chat/ui-contexts@15.0.0-rc.0
+  - @yas chat/ui-client@15.0.0-rc.0
+  - @yas chat/models@1.2.0-rc.0
+  - @yas chat/sha256@1.0.12-rc.0
+  - @yas chat/rest-typings@7.3.0-rc.0
+  - @yas chat/core-typings@7.3.0-rc.0
+  - @yas chat/freeswitch@1.2.0-rc.0
+  - @yas chat/omnichannel-services@0.3.10-rc.0
+  - @yas chat/apps@0.2.4-rc.0
+  - @yas chat/web-ui-registration@15.0.0-rc.0
+  - @yas chat/ui-voip@5.0.0-rc.0
+  - @yas chat/presence@0.2.13-rc.0
+  - @yas chat/core-services@0.7.5-rc.0
+  - @yas chat/gazzodown@15.0.0-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.0
+  - @yas chat/ui-video-conf@15.0.0-rc.0
+  - @yas chat/cron@0.1.13-rc.0
+  - @yas chat/instance-status@0.1.13-rc.0
+  - @yas chat/api-client@0.2.13-rc.0
+  - @yas chat/license@1.0.4-rc.0
+  - @yas chat/pdf-worker@0.2.10-rc.0
+  - @yas chat/network-broker@0.1.5-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -12368,9 +12368,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34918](https://github.com/YasChat/YasChat/pull/34918) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes a behavior when running microservices that caused queue worker to process just the first 60 seconds of request.
 
@@ -12381,31 +12381,31 @@
 - ([#34946](https://github.com/YasChat/YasChat/pull/34946) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes SlackBridge service failing to connect to multiple slack workspaces
 
 - <details><summary>Updated dependencies [f9e531fce6c0a9e8b9e1836eecfea189f6626bea]:</summary>
-  - @rocket.chat/omnichannel-services@0.3.9
-  - @rocket.chat/core-typings@7.2.1
-  - @rocket.chat/rest-typings@7.2.1
-  - @rocket.chat/license@1.0.3
-  - @rocket.chat/pdf-worker@0.2.9
-  - @rocket.chat/presence@0.2.12
-  - @rocket.chat/api-client@0.2.12
-  - @rocket.chat/apps@0.2.3
-  - @rocket.chat/core-services@0.7.4
-  - @rocket.chat/cron@0.1.12
-  - @rocket.chat/freeswitch@1.1.1
-  - @rocket.chat/fuselage-ui-kit@14.0.1
-  - @rocket.chat/gazzodown@14.0.1
-  - @rocket.chat/model-typings@1.2.1
-  - @rocket.chat/ui-contexts@14.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.4
-  - @rocket.chat/models@1.1.1
-  - @rocket.chat/ui-theming@0.4.1
-  - @rocket.chat/ui-avatar@10.0.1
-  - @rocket.chat/ui-client@14.0.1
-  - @rocket.chat/ui-video-conf@14.0.1
-  - @rocket.chat/ui-voip@4.0.1
-  - @rocket.chat/web-ui-registration@14.0.1
-  - @rocket.chat/instance-status@0.1.12
+  - @yas chat/omnichannel-services@0.3.9
+  - @yas chat/core-typings@7.2.1
+  - @yas chat/rest-typings@7.2.1
+  - @yas chat/license@1.0.3
+  - @yas chat/pdf-worker@0.2.9
+  - @yas chat/presence@0.2.12
+  - @yas chat/api-client@0.2.12
+  - @yas chat/apps@0.2.3
+  - @yas chat/core-services@0.7.4
+  - @yas chat/cron@0.1.12
+  - @yas chat/freeswitch@1.1.1
+  - @yas chat/fuselage-ui-kit@14.0.1
+  - @yas chat/gazzodown@14.0.1
+  - @yas chat/model-typings@1.2.1
+  - @yas chat/ui-contexts@14.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.4
+  - @yas chat/models@1.1.1
+  - @yas chat/ui-theming@0.4.1
+  - @yas chat/ui-avatar@10.0.1
+  - @yas chat/ui-client@14.0.1
+  - @yas chat/ui-video-conf@14.0.1
+  - @yas chat/ui-voip@4.0.1
+  - @yas chat/web-ui-registration@14.0.1
+  - @yas chat/instance-status@0.1.12
 
   </details>
 
@@ -12448,13 +12448,13 @@
 
 - ([#34137](https://github.com/YasChat/YasChat/pull/34137)) Fixes Unit's `numDepartments` property not being updated after a department is removed
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34038](https://github.com/YasChat/YasChat/pull/34038)) Removes a validation that allowed only the room creator to propagate E2EE room keys. This was causing issues when the rooms were created via apps or some other integration, as the creator may not be online or able to create E2EE keys
 
@@ -12523,35 +12523,35 @@
 - ([#34202](https://github.com/YasChat/YasChat/pull/34202)) Fixes an issue where the notification sound was playing randomly
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, eb794b7fd6bf3ff5a37a38bccaba247ed36db744, c43220dcd8c1df86a6143d6553964ad2173903b3, f23e71166a2dfee0e3394e49cac95c48e5eb62e5, 47f24c2fb795eee33cb021d56508298b8a548eec, f62326080d5e6ba36351cb0b6965a09f23856ac8, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, f90b1c99bdf4d89350a70c9ef4c2d12ed3784fd8, a129e3e1c9ba5930906ef609d7573e5708d336f0, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, b7e1dd38de051607c05f09c3dc70e4bfb94002b2, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 2d41274ae21ec51e7382da92e2f4e0c36186f814, be2ede48ba7774a43189a729b385f441d088b68e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8, f62326080d5e6ba36351cb0b6965a09f23856ac8]:</summary>
-  - @rocket.chat/rest-typings@7.2.0
-  - @rocket.chat/fuselage-ui-kit@14.0.0
-  - @rocket.chat/instance-status@0.1.11
-  - @rocket.chat/ui-theming@0.4.1
-  - @rocket.chat/model-typings@1.2.0
-  - @rocket.chat/ui-video-conf@14.0.0
-  - @rocket.chat/core-typings@7.2.0
-  - @rocket.chat/apps-engine@1.48.1
-  - @rocket.chat/ui-composer@0.5.0
-  - @rocket.chat/ui-contexts@14.0.0
-  - @rocket.chat/gazzodown@14.0.0
-  - @rocket.chat/ui-avatar@10.0.0
-  - @rocket.chat/ui-client@14.0.0
-  - @rocket.chat/ui-voip@4.0.0
-  - @rocket.chat/i18n@1.2.0
-  - @rocket.chat/models@1.1.0
-  - @rocket.chat/sha256@1.0.11
-  - @rocket.chat/freeswitch@1.1.0
-  - @rocket.chat/omnichannel-services@0.3.8
-  - @rocket.chat/presence@0.2.11
-  - @rocket.chat/api-client@0.2.11
-  - @rocket.chat/core-services@0.7.3
-  - @rocket.chat/apps@0.2.2
-  - @rocket.chat/license@1.0.2
-  - @rocket.chat/pdf-worker@0.2.8
-  - @rocket.chat/cron@0.1.11
-  - @rocket.chat/web-ui-registration@14.0.0
-  - @rocket.chat/network-broker@0.1.3
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.2.0
+  - @yas chat/fuselage-ui-kit@14.0.0
+  - @yas chat/instance-status@0.1.11
+  - @yas chat/ui-theming@0.4.1
+  - @yas chat/model-typings@1.2.0
+  - @yas chat/ui-video-conf@14.0.0
+  - @yas chat/core-typings@7.2.0
+  - @yas chat/apps-engine@1.48.1
+  - @yas chat/ui-composer@0.5.0
+  - @yas chat/ui-contexts@14.0.0
+  - @yas chat/gazzodown@14.0.0
+  - @yas chat/ui-avatar@10.0.0
+  - @yas chat/ui-client@14.0.0
+  - @yas chat/ui-voip@4.0.0
+  - @yas chat/i18n@1.2.0
+  - @yas chat/models@1.1.0
+  - @yas chat/sha256@1.0.11
+  - @yas chat/freeswitch@1.1.0
+  - @yas chat/omnichannel-services@0.3.8
+  - @yas chat/presence@0.2.11
+  - @yas chat/api-client@0.2.11
+  - @yas chat/core-services@0.7.3
+  - @yas chat/apps@0.2.2
+  - @yas chat/license@1.0.2
+  - @yas chat/pdf-worker@0.2.8
+  - @yas chat/cron@0.1.11
+  - @yas chat/web-ui-registration@14.0.0
+  - @yas chat/network-broker@0.1.3
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -12559,34 +12559,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.3
-  - @rocket.chat/rest-typings@7.2.0-rc.3
-  - @rocket.chat/license@1.0.2-rc.3
-  - @rocket.chat/omnichannel-services@0.3.8-rc.3
-  - @rocket.chat/pdf-worker@0.2.8-rc.3
-  - @rocket.chat/presence@0.2.11-rc.3
-  - @rocket.chat/api-client@0.2.11-rc.3
-  - @rocket.chat/apps@0.2.2-rc.3
-  - @rocket.chat/core-services@0.7.3-rc.3
-  - @rocket.chat/cron@0.1.11-rc.3
-  - @rocket.chat/freeswitch@1.1.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@14.0.0-rc.3
-  - @rocket.chat/gazzodown@14.0.0-rc.3
-  - @rocket.chat/model-typings@1.2.0-rc.3
-  - @rocket.chat/ui-contexts@14.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.3-rc.3
-  - @rocket.chat/models@1.1.0-rc.3
-  - @rocket.chat/ui-theming@0.4.1-rc.1
-  - @rocket.chat/ui-avatar@10.0.0-rc.3
-  - @rocket.chat/ui-client@14.0.0-rc.3
-  - @rocket.chat/ui-video-conf@14.0.0-rc.3
-  - @rocket.chat/ui-voip@4.0.0-rc.3
-  - @rocket.chat/web-ui-registration@14.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.11-rc.3
+  - @yas chat/core-typings@7.2.0-rc.3
+  - @yas chat/rest-typings@7.2.0-rc.3
+  - @yas chat/license@1.0.2-rc.3
+  - @yas chat/omnichannel-services@0.3.8-rc.3
+  - @yas chat/pdf-worker@0.2.8-rc.3
+  - @yas chat/presence@0.2.11-rc.3
+  - @yas chat/api-client@0.2.11-rc.3
+  - @yas chat/apps@0.2.2-rc.3
+  - @yas chat/core-services@0.7.3-rc.3
+  - @yas chat/cron@0.1.11-rc.3
+  - @yas chat/freeswitch@1.1.0-rc.3
+  - @yas chat/fuselage-ui-kit@14.0.0-rc.3
+  - @yas chat/gazzodown@14.0.0-rc.3
+  - @yas chat/model-typings@1.2.0-rc.3
+  - @yas chat/ui-contexts@14.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.3-rc.3
+  - @yas chat/models@1.1.0-rc.3
+  - @yas chat/ui-theming@0.4.1-rc.1
+  - @yas chat/ui-avatar@10.0.0-rc.3
+  - @yas chat/ui-client@14.0.0-rc.3
+  - @yas chat/ui-video-conf@14.0.0-rc.3
+  - @yas chat/ui-voip@4.0.0-rc.3
+  - @yas chat/web-ui-registration@14.0.0-rc.3
+  - @yas chat/instance-status@0.1.11-rc.3
 
   </details>
 
@@ -12594,39 +12594,39 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
-  - @rocket.chat/fuselage-ui-kit@14.0.0-rc.2
-  - @rocket.chat/ui-theming@0.4.1-rc.1
-  - @rocket.chat/apps-engine@1.48.1-rc.1
-  - @rocket.chat/ui-composer@0.5.0-rc.1
-  - @rocket.chat/ui-contexts@14.0.0-rc.2
-  - @rocket.chat/ui-client@14.0.0-rc.2
-  - @rocket.chat/models@1.1.0-rc.2
-  - @rocket.chat/sha256@1.0.11-rc.0
-  - @rocket.chat/ui-voip@4.0.0-rc.2
-  - @rocket.chat/web-ui-registration@14.0.0-rc.2
-  - @rocket.chat/presence@0.2.11-rc.2
-  - @rocket.chat/apps@0.2.2-rc.2
-  - @rocket.chat/core-services@0.7.3-rc.2
-  - @rocket.chat/core-typings@7.2.0-rc.2
-  - @rocket.chat/rest-typings@7.2.0-rc.2
-  - @rocket.chat/gazzodown@14.0.0-rc.2
-  - @rocket.chat/ui-avatar@10.0.0-rc.2
-  - @rocket.chat/ui-video-conf@14.0.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.8-rc.2
-  - @rocket.chat/cron@0.1.11-rc.2
-  - @rocket.chat/instance-status@0.1.11-rc.2
-  - @rocket.chat/network-broker@0.1.3-rc.2
-  - @rocket.chat/license@1.0.2-rc.2
-  - @rocket.chat/pdf-worker@0.2.8-rc.2
-  - @rocket.chat/api-client@0.2.11-rc.2
-  - @rocket.chat/freeswitch@1.1.0-rc.2
-  - @rocket.chat/model-typings@1.2.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@14.0.0-rc.2
+  - @yas chat/ui-theming@0.4.1-rc.1
+  - @yas chat/apps-engine@1.48.1-rc.1
+  - @yas chat/ui-composer@0.5.0-rc.1
+  - @yas chat/ui-contexts@14.0.0-rc.2
+  - @yas chat/ui-client@14.0.0-rc.2
+  - @yas chat/models@1.1.0-rc.2
+  - @yas chat/sha256@1.0.11-rc.0
+  - @yas chat/ui-voip@4.0.0-rc.2
+  - @yas chat/web-ui-registration@14.0.0-rc.2
+  - @yas chat/presence@0.2.11-rc.2
+  - @yas chat/apps@0.2.2-rc.2
+  - @yas chat/core-services@0.7.3-rc.2
+  - @yas chat/core-typings@7.2.0-rc.2
+  - @yas chat/rest-typings@7.2.0-rc.2
+  - @yas chat/gazzodown@14.0.0-rc.2
+  - @yas chat/ui-avatar@10.0.0-rc.2
+  - @yas chat/ui-video-conf@14.0.0-rc.2
+  - @yas chat/omnichannel-services@0.3.8-rc.2
+  - @yas chat/cron@0.1.11-rc.2
+  - @yas chat/instance-status@0.1.11-rc.2
+  - @yas chat/network-broker@0.1.3-rc.2
+  - @yas chat/license@1.0.2-rc.2
+  - @yas chat/pdf-worker@0.2.8-rc.2
+  - @yas chat/api-client@0.2.11-rc.2
+  - @yas chat/freeswitch@1.1.0-rc.2
+  - @yas chat/model-typings@1.2.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -12634,34 +12634,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.1
-  - @rocket.chat/rest-typings@7.2.0-rc.1
-  - @rocket.chat/license@1.0.2-rc.1
-  - @rocket.chat/omnichannel-services@0.3.8-rc.1
-  - @rocket.chat/pdf-worker@0.2.8-rc.1
-  - @rocket.chat/presence@0.2.11-rc.1
-  - @rocket.chat/api-client@0.2.11-rc.1
-  - @rocket.chat/apps@0.2.2-rc.1
-  - @rocket.chat/core-services@0.7.3-rc.1
-  - @rocket.chat/cron@0.1.11-rc.1
-  - @rocket.chat/freeswitch@1.1.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@14.0.0-rc.1
-  - @rocket.chat/gazzodown@14.0.0-rc.1
-  - @rocket.chat/model-typings@1.2.0-rc.1
-  - @rocket.chat/ui-contexts@14.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.3-rc.1
-  - @rocket.chat/models@1.1.0-rc.1
-  - @rocket.chat/ui-theming@0.4.1-rc.0
-  - @rocket.chat/ui-avatar@10.0.0-rc.1
-  - @rocket.chat/ui-client@14.0.0-rc.1
-  - @rocket.chat/ui-video-conf@14.0.0-rc.1
-  - @rocket.chat/ui-voip@4.0.0-rc.1
-  - @rocket.chat/web-ui-registration@14.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.11-rc.1
+  - @yas chat/core-typings@7.2.0-rc.1
+  - @yas chat/rest-typings@7.2.0-rc.1
+  - @yas chat/license@1.0.2-rc.1
+  - @yas chat/omnichannel-services@0.3.8-rc.1
+  - @yas chat/pdf-worker@0.2.8-rc.1
+  - @yas chat/presence@0.2.11-rc.1
+  - @yas chat/api-client@0.2.11-rc.1
+  - @yas chat/apps@0.2.2-rc.1
+  - @yas chat/core-services@0.7.3-rc.1
+  - @yas chat/cron@0.1.11-rc.1
+  - @yas chat/freeswitch@1.1.0-rc.1
+  - @yas chat/fuselage-ui-kit@14.0.0-rc.1
+  - @yas chat/gazzodown@14.0.0-rc.1
+  - @yas chat/model-typings@1.2.0-rc.1
+  - @yas chat/ui-contexts@14.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.3-rc.1
+  - @yas chat/models@1.1.0-rc.1
+  - @yas chat/ui-theming@0.4.1-rc.0
+  - @yas chat/ui-avatar@10.0.0-rc.1
+  - @yas chat/ui-client@14.0.0-rc.1
+  - @yas chat/ui-video-conf@14.0.0-rc.1
+  - @yas chat/ui-voip@4.0.0-rc.1
+  - @yas chat/web-ui-registration@14.0.0-rc.1
+  - @yas chat/instance-status@0.1.11-rc.1
 
   </details>
 
@@ -12769,34 +12769,34 @@
 - ([#34202](https://github.com/YasChat/YasChat/pull/34202)) Fixes an issue where the notification sound was playing randomly
 
 - <details><summary>Updated dependencies [b845fc0093cfaf59093d1e99ccaae77ab741354a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, eb794b7fd6bf3ff5a37a38bccaba247ed36db744, f23e71166a2dfee0e3394e49cac95c48e5eb62e5, 47f24c2fb795eee33cb021d56508298b8a548eec, f62326080d5e6ba36351cb0b6965a09f23856ac8, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, f90b1c99bdf4d89350a70c9ef4c2d12ed3784fd8, a129e3e1c9ba5930906ef609d7573e5708d336f0, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, b7e1dd38de051607c05f09c3dc70e4bfb94002b2, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 2d41274ae21ec51e7382da92e2f4e0c36186f814, be2ede48ba7774a43189a729b385f441d088b68e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8, f62326080d5e6ba36351cb0b6965a09f23856ac8]:</summary>
-  - @rocket.chat/rest-typings@7.2.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@14.0.0-rc.0
-  - @rocket.chat/instance-status@0.1.11-rc.0
-  - @rocket.chat/ui-theming@0.4.1-rc.0
-  - @rocket.chat/model-typings@1.2.0-rc.0
-  - @rocket.chat/ui-video-conf@14.0.0-rc.0
-  - @rocket.chat/core-typings@7.2.0-rc.0
-  - @rocket.chat/apps-engine@1.48.1-rc.0
-  - @rocket.chat/ui-composer@0.5.0-rc.0
-  - @rocket.chat/ui-contexts@14.0.0-rc.0
-  - @rocket.chat/gazzodown@14.0.0-rc.0
-  - @rocket.chat/ui-avatar@10.0.0-rc.0
-  - @rocket.chat/ui-client@14.0.0-rc.0
-  - @rocket.chat/ui-voip@4.0.0-rc.0
-  - @rocket.chat/i18n@1.2.0-rc.0
-  - @rocket.chat/freeswitch@1.1.0-rc.0
-  - @rocket.chat/models@1.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.8-rc.0
-  - @rocket.chat/presence@0.2.11-rc.0
-  - @rocket.chat/api-client@0.2.11-rc.0
-  - @rocket.chat/core-services@0.7.3-rc.0
-  - @rocket.chat/apps@0.2.2-rc.0
-  - @rocket.chat/license@1.0.2-rc.0
-  - @rocket.chat/pdf-worker@0.2.8-rc.0
-  - @rocket.chat/cron@0.1.11-rc.0
-  - @rocket.chat/web-ui-registration@14.0.0-rc.0
-  - @rocket.chat/network-broker@0.1.3-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@7.2.0-rc.0
+  - @yas chat/fuselage-ui-kit@14.0.0-rc.0
+  - @yas chat/instance-status@0.1.11-rc.0
+  - @yas chat/ui-theming@0.4.1-rc.0
+  - @yas chat/model-typings@1.2.0-rc.0
+  - @yas chat/ui-video-conf@14.0.0-rc.0
+  - @yas chat/core-typings@7.2.0-rc.0
+  - @yas chat/apps-engine@1.48.1-rc.0
+  - @yas chat/ui-composer@0.5.0-rc.0
+  - @yas chat/ui-contexts@14.0.0-rc.0
+  - @yas chat/gazzodown@14.0.0-rc.0
+  - @yas chat/ui-avatar@10.0.0-rc.0
+  - @yas chat/ui-client@14.0.0-rc.0
+  - @yas chat/ui-voip@4.0.0-rc.0
+  - @yas chat/i18n@1.2.0-rc.0
+  - @yas chat/freeswitch@1.1.0-rc.0
+  - @yas chat/models@1.1.0-rc.0
+  - @yas chat/omnichannel-services@0.3.8-rc.0
+  - @yas chat/presence@0.2.11-rc.0
+  - @yas chat/api-client@0.2.11-rc.0
+  - @yas chat/core-services@0.7.3-rc.0
+  - @yas chat/apps@0.2.2-rc.0
+  - @yas chat/license@1.0.2-rc.0
+  - @yas chat/pdf-worker@0.2.8-rc.0
+  - @yas chat/cron@0.1.11-rc.0
+  - @yas chat/web-ui-registration@14.0.0-rc.0
+  - @yas chat/network-broker@0.1.3-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -12830,13 +12830,13 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33776](https://github.com/YasChat/YasChat/pull/33776)) Fix user highlights not matching only whole words
 
@@ -12887,33 +12887,33 @@
 - ([#33958](https://github.com/YasChat/YasChat/pull/33958)) Fixes an issue where resizable handler renders over the expanded thread view while using contextualbarResizable feature preview
 
 - <details><summary>Updated dependencies [82767d8fd8a52ac348e8aded1d238e688d36129b, 80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 66ecc64fc1d4464ad2818ad04e23a09cdf221194, 6c83bf0657004ee9cf43d5c832f51826a6591165, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 3569b0a9c48f8b94ebaef2f8b607c52fdb8e570a, b4841cb7206d855d7a1bc7604683a5b4a48b7176, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, d1e6a73796269824fb1aa7afcc7b8aa242e34e90, 661cc01237629ce83699d6c25df25d12985e88bf, 63ccadc012499e004445ad6bc6cd2ff777aecbd1, ce7024af36fcde97b1da5b2731f6edc4a4c236b8, 616655585cb1c5c60d7cee97e25b17af3dfda794, e5fe727f6a2f0e60cdf7ba225e1f6caa6db2045c, d398866dba725918017e3609807f9d0ab9b89b72, 322bafd4bd1fe91ed34610501b269e4d8951944c, d398866dba725918017e3609807f9d0ab9b89b72]:</summary>
-  - @rocket.chat/apps-engine@1.48.0
-  - @rocket.chat/model-typings@1.1.0
-  - @rocket.chat/core-typings@7.1.0
-  - @rocket.chat/i18n@1.1.0
-  - @rocket.chat/rest-typings@7.1.0
-  - @rocket.chat/core-services@0.7.2
-  - @rocket.chat/presence@0.2.10
-  - @rocket.chat/apps@0.2.1
-  - @rocket.chat/fuselage-ui-kit@13.0.0
-  - @rocket.chat/omnichannel-services@0.3.7
-  - @rocket.chat/models@1.0.1
-  - @rocket.chat/license@1.0.1
-  - @rocket.chat/pdf-worker@0.2.7
-  - @rocket.chat/api-client@0.2.10
-  - @rocket.chat/cron@0.1.10
-  - @rocket.chat/freeswitch@1.0.1
-  - @rocket.chat/gazzodown@13.0.0
-  - @rocket.chat/ui-contexts@13.0.0
-  - @rocket.chat/web-ui-registration@13.0.0
-  - @rocket.chat/network-broker@0.1.2
-  - @rocket.chat/instance-status@0.1.10
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-avatar@9.0.0
-  - @rocket.chat/ui-client@13.0.0
-  - @rocket.chat/ui-video-conf@13.0.0
-  - @rocket.chat/ui-voip@3.0.0
+  - @yas chat/apps-engine@1.48.0
+  - @yas chat/model-typings@1.1.0
+  - @yas chat/core-typings@7.1.0
+  - @yas chat/i18n@1.1.0
+  - @yas chat/rest-typings@7.1.0
+  - @yas chat/core-services@0.7.2
+  - @yas chat/presence@0.2.10
+  - @yas chat/apps@0.2.1
+  - @yas chat/fuselage-ui-kit@13.0.0
+  - @yas chat/omnichannel-services@0.3.7
+  - @yas chat/models@1.0.1
+  - @yas chat/license@1.0.1
+  - @yas chat/pdf-worker@0.2.7
+  - @yas chat/api-client@0.2.10
+  - @yas chat/cron@0.1.10
+  - @yas chat/freeswitch@1.0.1
+  - @yas chat/gazzodown@13.0.0
+  - @yas chat/ui-contexts@13.0.0
+  - @yas chat/web-ui-registration@13.0.0
+  - @yas chat/network-broker@0.1.2
+  - @yas chat/instance-status@0.1.10
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-avatar@9.0.0
+  - @yas chat/ui-client@13.0.0
+  - @yas chat/ui-video-conf@13.0.0
+  - @yas chat/ui-voip@3.0.0
 
   </details>
 
@@ -12921,34 +12921,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.3
-  - @rocket.chat/rest-typings@7.1.0-rc.3
-  - @rocket.chat/license@1.0.1-rc.3
-  - @rocket.chat/omnichannel-services@0.3.7-rc.3
-  - @rocket.chat/pdf-worker@0.2.7-rc.3
-  - @rocket.chat/presence@0.2.10-rc.3
-  - @rocket.chat/api-client@0.2.10-rc.3
-  - @rocket.chat/apps@0.2.1-rc.3
-  - @rocket.chat/core-services@0.7.2-rc.3
-  - @rocket.chat/cron@0.1.10-rc.3
-  - @rocket.chat/freeswitch@1.0.1-rc.3
-  - @rocket.chat/fuselage-ui-kit@13.0.0-rc.3
-  - @rocket.chat/gazzodown@13.0.0-rc.3
-  - @rocket.chat/model-typings@1.1.0-rc.3
-  - @rocket.chat/ui-contexts@13.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.2-rc.3
-  - @rocket.chat/models@1.0.1-rc.3
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-avatar@9.0.0-rc.3
-  - @rocket.chat/ui-client@13.0.0-rc.3
-  - @rocket.chat/ui-video-conf@13.0.0-rc.3
-  - @rocket.chat/ui-voip@3.0.0-rc.3
-  - @rocket.chat/web-ui-registration@13.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.10-rc.3
+  - @yas chat/core-typings@7.1.0-rc.3
+  - @yas chat/rest-typings@7.1.0-rc.3
+  - @yas chat/license@1.0.1-rc.3
+  - @yas chat/omnichannel-services@0.3.7-rc.3
+  - @yas chat/pdf-worker@0.2.7-rc.3
+  - @yas chat/presence@0.2.10-rc.3
+  - @yas chat/api-client@0.2.10-rc.3
+  - @yas chat/apps@0.2.1-rc.3
+  - @yas chat/core-services@0.7.2-rc.3
+  - @yas chat/cron@0.1.10-rc.3
+  - @yas chat/freeswitch@1.0.1-rc.3
+  - @yas chat/fuselage-ui-kit@13.0.0-rc.3
+  - @yas chat/gazzodown@13.0.0-rc.3
+  - @yas chat/model-typings@1.1.0-rc.3
+  - @yas chat/ui-contexts@13.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.2-rc.3
+  - @yas chat/models@1.0.1-rc.3
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-avatar@9.0.0-rc.3
+  - @yas chat/ui-client@13.0.0-rc.3
+  - @yas chat/ui-video-conf@13.0.0-rc.3
+  - @yas chat/ui-voip@3.0.0-rc.3
+  - @yas chat/web-ui-registration@13.0.0-rc.3
+  - @yas chat/instance-status@0.1.10-rc.3
 
   </details>
 
@@ -12956,34 +12956,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.2
-  - @rocket.chat/rest-typings@7.1.0-rc.2
-  - @rocket.chat/license@1.0.1-rc.2
-  - @rocket.chat/omnichannel-services@0.3.7-rc.2
-  - @rocket.chat/pdf-worker@0.2.7-rc.2
-  - @rocket.chat/presence@0.2.10-rc.2
-  - @rocket.chat/api-client@0.2.10-rc.2
-  - @rocket.chat/apps@0.2.1-rc.2
-  - @rocket.chat/core-services@0.7.2-rc.2
-  - @rocket.chat/cron@0.1.10-rc.2
-  - @rocket.chat/freeswitch@1.0.1-rc.2
-  - @rocket.chat/fuselage-ui-kit@13.0.0-rc.2
-  - @rocket.chat/gazzodown@13.0.0-rc.2
-  - @rocket.chat/model-typings@1.1.0-rc.2
-  - @rocket.chat/ui-contexts@13.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.2-rc.2
-  - @rocket.chat/models@1.0.1-rc.2
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-avatar@9.0.0-rc.2
-  - @rocket.chat/ui-client@13.0.0-rc.2
-  - @rocket.chat/ui-video-conf@13.0.0-rc.2
-  - @rocket.chat/ui-voip@3.0.0-rc.2
-  - @rocket.chat/web-ui-registration@13.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.10-rc.2
+  - @yas chat/core-typings@7.1.0-rc.2
+  - @yas chat/rest-typings@7.1.0-rc.2
+  - @yas chat/license@1.0.1-rc.2
+  - @yas chat/omnichannel-services@0.3.7-rc.2
+  - @yas chat/pdf-worker@0.2.7-rc.2
+  - @yas chat/presence@0.2.10-rc.2
+  - @yas chat/api-client@0.2.10-rc.2
+  - @yas chat/apps@0.2.1-rc.2
+  - @yas chat/core-services@0.7.2-rc.2
+  - @yas chat/cron@0.1.10-rc.2
+  - @yas chat/freeswitch@1.0.1-rc.2
+  - @yas chat/fuselage-ui-kit@13.0.0-rc.2
+  - @yas chat/gazzodown@13.0.0-rc.2
+  - @yas chat/model-typings@1.1.0-rc.2
+  - @yas chat/ui-contexts@13.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.2-rc.2
+  - @yas chat/models@1.0.1-rc.2
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-avatar@9.0.0-rc.2
+  - @yas chat/ui-client@13.0.0-rc.2
+  - @yas chat/ui-video-conf@13.0.0-rc.2
+  - @yas chat/ui-voip@3.0.0-rc.2
+  - @yas chat/web-ui-registration@13.0.0-rc.2
+  - @yas chat/instance-status@0.1.10-rc.2
 
   </details>
 
@@ -12991,34 +12991,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.1
-  - @rocket.chat/rest-typings@7.1.0-rc.1
-  - @rocket.chat/license@1.0.1-rc.1
-  - @rocket.chat/omnichannel-services@0.3.7-rc.1
-  - @rocket.chat/pdf-worker@0.2.7-rc.1
-  - @rocket.chat/presence@0.2.10-rc.1
-  - @rocket.chat/api-client@0.2.10-rc.1
-  - @rocket.chat/apps@0.2.1-rc.1
-  - @rocket.chat/core-services@0.7.2-rc.1
-  - @rocket.chat/cron@0.1.10-rc.1
-  - @rocket.chat/freeswitch@1.0.1-rc.1
-  - @rocket.chat/fuselage-ui-kit@13.0.0-rc.1
-  - @rocket.chat/gazzodown@13.0.0-rc.1
-  - @rocket.chat/model-typings@1.1.0-rc.1
-  - @rocket.chat/ui-contexts@13.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.2-rc.1
-  - @rocket.chat/models@1.0.1-rc.1
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-avatar@9.0.0-rc.1
-  - @rocket.chat/ui-client@13.0.0-rc.1
-  - @rocket.chat/ui-video-conf@13.0.0-rc.1
-  - @rocket.chat/ui-voip@3.0.0-rc.1
-  - @rocket.chat/web-ui-registration@13.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.10-rc.1
+  - @yas chat/core-typings@7.1.0-rc.1
+  - @yas chat/rest-typings@7.1.0-rc.1
+  - @yas chat/license@1.0.1-rc.1
+  - @yas chat/omnichannel-services@0.3.7-rc.1
+  - @yas chat/pdf-worker@0.2.7-rc.1
+  - @yas chat/presence@0.2.10-rc.1
+  - @yas chat/api-client@0.2.10-rc.1
+  - @yas chat/apps@0.2.1-rc.1
+  - @yas chat/core-services@0.7.2-rc.1
+  - @yas chat/cron@0.1.10-rc.1
+  - @yas chat/freeswitch@1.0.1-rc.1
+  - @yas chat/fuselage-ui-kit@13.0.0-rc.1
+  - @yas chat/gazzodown@13.0.0-rc.1
+  - @yas chat/model-typings@1.1.0-rc.1
+  - @yas chat/ui-contexts@13.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.2-rc.1
+  - @yas chat/models@1.0.1-rc.1
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-avatar@9.0.0-rc.1
+  - @yas chat/ui-client@13.0.0-rc.1
+  - @yas chat/ui-video-conf@13.0.0-rc.1
+  - @yas chat/ui-voip@3.0.0-rc.1
+  - @yas chat/web-ui-registration@13.0.0-rc.1
+  - @yas chat/instance-status@0.1.10-rc.1
 
   </details>
 
@@ -13101,33 +13101,33 @@
 - ([#33958](https://github.com/YasChat/YasChat/pull/33958)) Fixes an issue where resizable handler renders over the expanded thread view while using contextualbarResizable feature preview
 
 - <details><summary>Updated dependencies [82767d8fd8a52ac348e8aded1d238e688d36129b, 80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 66ecc64fc1d4464ad2818ad04e23a09cdf221194, 6c83bf0657004ee9cf43d5c832f51826a6591165, e7edeac3bdd22da0a04b8e873d5a008e249fb4be, 3569b0a9c48f8b94ebaef2f8b607c52fdb8e570a, b4841cb7206d855d7a1bc7604683a5b4a48b7176, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, d1e6a73796269824fb1aa7afcc7b8aa242e34e90, 661cc01237629ce83699d6c25df25d12985e88bf, 63ccadc012499e004445ad6bc6cd2ff777aecbd1, ce7024af36fcde97b1da5b2731f6edc4a4c236b8, 616655585cb1c5c60d7cee97e25b17af3dfda794, e5fe727f6a2f0e60cdf7ba225e1f6caa6db2045c, d398866dba725918017e3609807f9d0ab9b89b72, 322bafd4bd1fe91ed34610501b269e4d8951944c, d398866dba725918017e3609807f9d0ab9b89b72]:</summary>
-  - @rocket.chat/apps-engine@1.48.0-rc.0
-  - @rocket.chat/model-typings@1.1.0-rc.0
-  - @rocket.chat/core-typings@7.1.0-rc.0
-  - @rocket.chat/i18n@1.1.0-rc.0
-  - @rocket.chat/rest-typings@7.1.0-rc.0
-  - @rocket.chat/core-services@0.7.2-rc.0
-  - @rocket.chat/presence@0.2.10-rc.0
-  - @rocket.chat/apps@0.2.1-rc.0
-  - @rocket.chat/fuselage-ui-kit@13.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.7-rc.0
-  - @rocket.chat/models@1.0.1-rc.0
-  - @rocket.chat/license@1.0.1-rc.0
-  - @rocket.chat/pdf-worker@0.2.7-rc.0
-  - @rocket.chat/api-client@0.2.10-rc.0
-  - @rocket.chat/cron@0.1.10-rc.0
-  - @rocket.chat/freeswitch@1.0.1-rc.0
-  - @rocket.chat/gazzodown@13.0.0-rc.0
-  - @rocket.chat/ui-contexts@13.0.0-rc.0
-  - @rocket.chat/web-ui-registration@13.0.0-rc.0
-  - @rocket.chat/network-broker@0.1.2-rc.0
-  - @rocket.chat/instance-status@0.1.10-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-avatar@9.0.0-rc.0
-  - @rocket.chat/ui-client@13.0.0-rc.0
-  - @rocket.chat/ui-video-conf@13.0.0-rc.0
-  - @rocket.chat/ui-voip@3.0.0-rc.0
+  - @yas chat/apps-engine@1.48.0-rc.0
+  - @yas chat/model-typings@1.1.0-rc.0
+  - @yas chat/core-typings@7.1.0-rc.0
+  - @yas chat/i18n@1.1.0-rc.0
+  - @yas chat/rest-typings@7.1.0-rc.0
+  - @yas chat/core-services@0.7.2-rc.0
+  - @yas chat/presence@0.2.10-rc.0
+  - @yas chat/apps@0.2.1-rc.0
+  - @yas chat/fuselage-ui-kit@13.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.7-rc.0
+  - @yas chat/models@1.0.1-rc.0
+  - @yas chat/license@1.0.1-rc.0
+  - @yas chat/pdf-worker@0.2.7-rc.0
+  - @yas chat/api-client@0.2.10-rc.0
+  - @yas chat/cron@0.1.10-rc.0
+  - @yas chat/freeswitch@1.0.1-rc.0
+  - @yas chat/gazzodown@13.0.0-rc.0
+  - @yas chat/ui-contexts@13.0.0-rc.0
+  - @yas chat/web-ui-registration@13.0.0-rc.0
+  - @yas chat/network-broker@0.1.2-rc.0
+  - @yas chat/instance-status@0.1.10-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-avatar@9.0.0-rc.0
+  - @yas chat/ui-client@13.0.0-rc.0
+  - @yas chat/ui-video-conf@13.0.0-rc.0
+  - @yas chat/ui-voip@3.0.0-rc.0
 
   </details>
 
@@ -13338,19 +13338,19 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32648](https://github.com/YasChat/YasChat/pull/32648) by [@AllanPazRibeiro](https://github.com/AllanPazRibeiro)) This adjustment removes the deprecated `eraseRoom` method. Moving forward, use the `room.delete` endpoint to delete rooms.
 
@@ -13368,7 +13368,7 @@
 
 - ([#33364](https://github.com/YasChat/YasChat/pull/33364)) Fixed Twilio request validation by accepting URLs with query strings
 
-- ([#33330](https://github.com/YasChat/YasChat/pull/33330)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33330](https://github.com/YasChat/YasChat/pull/33330)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33606](https://github.com/YasChat/YasChat/pull/33606)) Fixed the regex for domains in the isValidDomain function
 
@@ -13384,13 +13384,13 @@
 
 - ([#33417](https://github.com/YasChat/YasChat/pull/33417)) Fixes issue with previously disabled private apps being auto enabled on update
 
-- ([#33583](https://github.com/YasChat/YasChat/pull/33583)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33583](https://github.com/YasChat/YasChat/pull/33583)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33424](https://github.com/YasChat/YasChat/pull/33424)) Fixes a problem with custom sounds causing files to not be playable when using filesystem storage.
 
-- ([#28042](https://github.com/YasChat/YasChat/pull/28042)) Changes the default base Docker image to Alpine. Previously we were shipping Alpine as an alternative flavor under the tag yaschat/rocket.chat:{release}.alpine , we have been testing this for a while now so we're migrating to use the official one to Alpine.
+- ([#28042](https://github.com/YasChat/YasChat/pull/28042)) Changes the default base Docker image to Alpine. Previously we were shipping Alpine as an alternative flavor under the tag yaschat/yas chat:{release}.alpine , we have been testing this for a while now so we're migrating to use the official one to Alpine.
 
-  We'll still ship a Debian variant under the tag yaschat/rocket.chat:{release}.debian.
+  We'll still ship a Debian variant under the tag yaschat/yas chat:{release}.debian.
 
 - ([#33390](https://github.com/YasChat/YasChat/pull/33390)) Removed deprecated method `livechat:loadHistory` method. Moving forward use the `ivechat/messages.history/:rid` endpoint
 
@@ -13409,35 +13409,35 @@
 - ([#33378](https://github.com/YasChat/YasChat/pull/33378)) Fixes async E2EE key exchange in development environments where change streams are no longer used
 
 - <details><summary>Updated dependencies [c5b0c98803, 2806cb5d3e, 3395c8290b, d44f614d0c, 34ed9ad646, 6b5b91fd14, d1e14a0a85, 687f1efd5f, bcacbb1cee, 9274cf4586, 9bcb802fdc, f33c07ebb8, 9cf079721b, b167db0b37, f4365b7dd4, d9fe5bbe0b, b338807d76, 5f9826bed6, bf05700542, debd3ffa22, a5f25e73b5, 1bdfd201b1, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 760ae5c01a, 4aa731d6e9, 53cc1111f8, 81998f3450, e3dac4aab6, 2bc9692de0, 50943a02e8, 5acb59bb39, 509143d6dd, 31eb47f573, fa501ecb53]:</summary>
-  - @rocket.chat/i18n@1.0.0
-  - @rocket.chat/rest-typings@7.0.0
-  - @rocket.chat/web-ui-registration@12.0.0
-  - @rocket.chat/ui-kit@0.37.0
-  - @rocket.chat/freeswitch@1.0.0
-  - @rocket.chat/core-services@0.7.1
-  - @rocket.chat/model-typings@1.0.0
-  - @rocket.chat/core-typings@7.0.0
-  - @rocket.chat/ui-client@12.0.0
-  - @rocket.chat/ui-voip@2.0.0
-  - @rocket.chat/fuselage-ui-kit@12.0.0
-  - @rocket.chat/ui-theming@0.4.0
-  - @rocket.chat/ui-video-conf@12.0.0
-  - @rocket.chat/ui-composer@0.4.0
-  - @rocket.chat/gazzodown@12.0.0
-  - @rocket.chat/ui-avatar@8.0.0
-  - @rocket.chat/license@1.0.0
-  - @rocket.chat/models@1.0.0
-  - @rocket.chat/apps-engine@1.47.0
-  - @rocket.chat/ui-contexts@12.0.0
-  - @rocket.chat/omnichannel-services@0.3.6
-  - @rocket.chat/presence@0.2.9
-  - @rocket.chat/api-client@0.2.9
-  - @rocket.chat/network-broker@0.1.1
-  - @rocket.chat/apps@0.2.0
-  - @rocket.chat/pdf-worker@0.2.6
-  - @rocket.chat/cron@0.1.9
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/instance-status@0.1.9
+  - @yas chat/i18n@1.0.0
+  - @yas chat/rest-typings@7.0.0
+  - @yas chat/web-ui-registration@12.0.0
+  - @yas chat/ui-kit@0.37.0
+  - @yas chat/freeswitch@1.0.0
+  - @yas chat/core-services@0.7.1
+  - @yas chat/model-typings@1.0.0
+  - @yas chat/core-typings@7.0.0
+  - @yas chat/ui-client@12.0.0
+  - @yas chat/ui-voip@2.0.0
+  - @yas chat/fuselage-ui-kit@12.0.0
+  - @yas chat/ui-theming@0.4.0
+  - @yas chat/ui-video-conf@12.0.0
+  - @yas chat/ui-composer@0.4.0
+  - @yas chat/gazzodown@12.0.0
+  - @yas chat/ui-avatar@8.0.0
+  - @yas chat/license@1.0.0
+  - @yas chat/models@1.0.0
+  - @yas chat/apps-engine@1.47.0
+  - @yas chat/ui-contexts@12.0.0
+  - @yas chat/omnichannel-services@0.3.6
+  - @yas chat/presence@0.2.9
+  - @yas chat/api-client@0.2.9
+  - @yas chat/network-broker@0.1.1
+  - @yas chat/apps@0.2.0
+  - @yas chat/pdf-worker@0.2.6
+  - @yas chat/cron@0.1.9
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/instance-status@0.1.9
 
   </details>
 
@@ -13445,34 +13445,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.6
-  - @rocket.chat/rest-typings@7.0.0-rc.6
-  - @rocket.chat/license@1.0.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.6-rc.6
-  - @rocket.chat/pdf-worker@0.2.6-rc.6
-  - @rocket.chat/presence@0.2.9-rc.6
-  - @rocket.chat/api-client@0.2.9-rc.6
-  - @rocket.chat/apps@0.2.0-rc.6
-  - @rocket.chat/core-services@0.7.1-rc.6
-  - @rocket.chat/cron@0.1.9-rc.6
-  - @rocket.chat/freeswitch@1.0.0-rc.6
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.6
-  - @rocket.chat/gazzodown@12.0.0-rc.6
-  - @rocket.chat/model-typings@1.0.0-rc.6
-  - @rocket.chat/ui-contexts@12.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.1-rc.6
-  - @rocket.chat/models@1.0.0-rc.6
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.6
-  - @rocket.chat/ui-client@12.0.0-rc.6
-  - @rocket.chat/ui-video-conf@12.0.0-rc.6
-  - @rocket.chat/ui-voip@2.0.0-rc.6
-  - @rocket.chat/web-ui-registration@12.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.9-rc.6
+  - @yas chat/core-typings@7.0.0-rc.6
+  - @yas chat/rest-typings@7.0.0-rc.6
+  - @yas chat/license@1.0.0-rc.6
+  - @yas chat/omnichannel-services@0.3.6-rc.6
+  - @yas chat/pdf-worker@0.2.6-rc.6
+  - @yas chat/presence@0.2.9-rc.6
+  - @yas chat/api-client@0.2.9-rc.6
+  - @yas chat/apps@0.2.0-rc.6
+  - @yas chat/core-services@0.7.1-rc.6
+  - @yas chat/cron@0.1.9-rc.6
+  - @yas chat/freeswitch@1.0.0-rc.6
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.6
+  - @yas chat/gazzodown@12.0.0-rc.6
+  - @yas chat/model-typings@1.0.0-rc.6
+  - @yas chat/ui-contexts@12.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.1-rc.6
+  - @yas chat/models@1.0.0-rc.6
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.6
+  - @yas chat/ui-client@12.0.0-rc.6
+  - @yas chat/ui-video-conf@12.0.0-rc.6
+  - @yas chat/ui-voip@2.0.0-rc.6
+  - @yas chat/web-ui-registration@12.0.0-rc.6
+  - @yas chat/instance-status@0.1.9-rc.6
 
   </details>
 
@@ -13500,34 +13500,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [d1e14a0a85, bf05700542, 1bdfd201b1, 2bc9692de0]:</summary>
-  - @rocket.chat/rest-typings@7.0.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.6-rc.5
-  - @rocket.chat/presence@0.2.9-rc.5
-  - @rocket.chat/api-client@0.2.9-rc.5
-  - @rocket.chat/core-services@0.7.1-rc.5
-  - @rocket.chat/ui-contexts@12.0.0-rc.5
-  - @rocket.chat/network-broker@0.1.1-rc.5
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.5
-  - @rocket.chat/gazzodown@12.0.0-rc.5
-  - @rocket.chat/ui-avatar@8.0.0-rc.5
-  - @rocket.chat/ui-client@12.0.0-rc.5
-  - @rocket.chat/ui-video-conf@12.0.0-rc.5
-  - @rocket.chat/ui-voip@2.0.0-rc.5
-  - @rocket.chat/web-ui-registration@12.0.0-rc.5
-  - @rocket.chat/core-typings@7.0.0-rc.5
-  - @rocket.chat/license@1.0.0-rc.5
-  - @rocket.chat/pdf-worker@0.2.6-rc.5
-  - @rocket.chat/apps@0.2.0-rc.5
-  - @rocket.chat/cron@0.1.9-rc.5
-  - @rocket.chat/freeswitch@1.0.0-rc.5
-  - @rocket.chat/model-typings@1.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@1.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.9-rc.5
+  - @yas chat/rest-typings@7.0.0-rc.5
+  - @yas chat/omnichannel-services@0.3.6-rc.5
+  - @yas chat/presence@0.2.9-rc.5
+  - @yas chat/api-client@0.2.9-rc.5
+  - @yas chat/core-services@0.7.1-rc.5
+  - @yas chat/ui-contexts@12.0.0-rc.5
+  - @yas chat/network-broker@0.1.1-rc.5
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.5
+  - @yas chat/gazzodown@12.0.0-rc.5
+  - @yas chat/ui-avatar@8.0.0-rc.5
+  - @yas chat/ui-client@12.0.0-rc.5
+  - @yas chat/ui-video-conf@12.0.0-rc.5
+  - @yas chat/ui-voip@2.0.0-rc.5
+  - @yas chat/web-ui-registration@12.0.0-rc.5
+  - @yas chat/core-typings@7.0.0-rc.5
+  - @yas chat/license@1.0.0-rc.5
+  - @yas chat/pdf-worker@0.2.6-rc.5
+  - @yas chat/apps@0.2.0-rc.5
+  - @yas chat/cron@0.1.9-rc.5
+  - @yas chat/freeswitch@1.0.0-rc.5
+  - @yas chat/model-typings@1.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@1.0.0-rc.5
+  - @yas chat/instance-status@0.1.9-rc.5
 
   </details>
 
@@ -13535,36 +13535,36 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33770](https://github.com/YasChat/YasChat/pull/33770)) Fixes page loading during reconnections
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.4
-  - @rocket.chat/rest-typings@7.0.0-rc.4
-  - @rocket.chat/license@1.0.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.6-rc.4
-  - @rocket.chat/pdf-worker@0.2.6-rc.4
-  - @rocket.chat/presence@0.2.9-rc.4
-  - @rocket.chat/api-client@0.2.9-rc.4
-  - @rocket.chat/apps@0.2.0-rc.4
-  - @rocket.chat/core-services@0.7.1-rc.4
-  - @rocket.chat/cron@0.1.9-rc.4
-  - @rocket.chat/freeswitch@1.0.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.4
-  - @rocket.chat/gazzodown@12.0.0-rc.4
-  - @rocket.chat/model-typings@1.0.0-rc.4
-  - @rocket.chat/ui-contexts@12.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.1-rc.4
-  - @rocket.chat/models@1.0.0-rc.4
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.4
-  - @rocket.chat/ui-client@12.0.0-rc.4
-  - @rocket.chat/ui-video-conf@12.0.0-rc.4
-  - @rocket.chat/ui-voip@2.0.0-rc.4
-  - @rocket.chat/web-ui-registration@12.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.9-rc.4
+  - @yas chat/core-typings@7.0.0-rc.4
+  - @yas chat/rest-typings@7.0.0-rc.4
+  - @yas chat/license@1.0.0-rc.4
+  - @yas chat/omnichannel-services@0.3.6-rc.4
+  - @yas chat/pdf-worker@0.2.6-rc.4
+  - @yas chat/presence@0.2.9-rc.4
+  - @yas chat/api-client@0.2.9-rc.4
+  - @yas chat/apps@0.2.0-rc.4
+  - @yas chat/core-services@0.7.1-rc.4
+  - @yas chat/cron@0.1.9-rc.4
+  - @yas chat/freeswitch@1.0.0-rc.4
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.4
+  - @yas chat/gazzodown@12.0.0-rc.4
+  - @yas chat/model-typings@1.0.0-rc.4
+  - @yas chat/ui-contexts@12.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.1-rc.4
+  - @yas chat/models@1.0.0-rc.4
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.4
+  - @yas chat/ui-client@12.0.0-rc.4
+  - @yas chat/ui-video-conf@12.0.0-rc.4
+  - @yas chat/ui-voip@2.0.0-rc.4
+  - @yas chat/web-ui-registration@12.0.0-rc.4
+  - @yas chat/instance-status@0.1.9-rc.4
 
   </details>
 
@@ -13572,34 +13572,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.3
-  - @rocket.chat/rest-typings@7.0.0-rc.3
-  - @rocket.chat/license@1.0.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.6-rc.3
-  - @rocket.chat/pdf-worker@0.2.6-rc.3
-  - @rocket.chat/presence@0.2.9-rc.3
-  - @rocket.chat/api-client@0.2.9-rc.3
-  - @rocket.chat/apps@0.2.0-rc.3
-  - @rocket.chat/core-services@0.7.1-rc.3
-  - @rocket.chat/cron@0.1.9-rc.3
-  - @rocket.chat/freeswitch@1.0.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.3
-  - @rocket.chat/gazzodown@12.0.0-rc.3
-  - @rocket.chat/model-typings@1.0.0-rc.3
-  - @rocket.chat/ui-contexts@12.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.1-rc.3
-  - @rocket.chat/models@1.0.0-rc.3
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.3
-  - @rocket.chat/ui-client@12.0.0-rc.3
-  - @rocket.chat/ui-video-conf@12.0.0-rc.3
-  - @rocket.chat/ui-voip@2.0.0-rc.3
-  - @rocket.chat/web-ui-registration@12.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.9-rc.3
+  - @yas chat/core-typings@7.0.0-rc.3
+  - @yas chat/rest-typings@7.0.0-rc.3
+  - @yas chat/license@1.0.0-rc.3
+  - @yas chat/omnichannel-services@0.3.6-rc.3
+  - @yas chat/pdf-worker@0.2.6-rc.3
+  - @yas chat/presence@0.2.9-rc.3
+  - @yas chat/api-client@0.2.9-rc.3
+  - @yas chat/apps@0.2.0-rc.3
+  - @yas chat/core-services@0.7.1-rc.3
+  - @yas chat/cron@0.1.9-rc.3
+  - @yas chat/freeswitch@1.0.0-rc.3
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.3
+  - @yas chat/gazzodown@12.0.0-rc.3
+  - @yas chat/model-typings@1.0.0-rc.3
+  - @yas chat/ui-contexts@12.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.1-rc.3
+  - @yas chat/models@1.0.0-rc.3
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.3
+  - @yas chat/ui-client@12.0.0-rc.3
+  - @yas chat/ui-video-conf@12.0.0-rc.3
+  - @yas chat/ui-voip@2.0.0-rc.3
+  - @yas chat/web-ui-registration@12.0.0-rc.3
+  - @yas chat/instance-status@0.1.9-rc.3
 
   </details>
 
@@ -13607,34 +13607,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.2
-  - @rocket.chat/rest-typings@7.0.0-rc.2
-  - @rocket.chat/license@1.0.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.6-rc.2
-  - @rocket.chat/pdf-worker@0.2.6-rc.2
-  - @rocket.chat/presence@0.2.9-rc.2
-  - @rocket.chat/api-client@0.2.9-rc.2
-  - @rocket.chat/apps@0.2.0-rc.2
-  - @rocket.chat/core-services@0.7.1-rc.2
-  - @rocket.chat/cron@0.1.9-rc.2
-  - @rocket.chat/freeswitch@1.0.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.2
-  - @rocket.chat/gazzodown@12.0.0-rc.2
-  - @rocket.chat/model-typings@1.0.0-rc.2
-  - @rocket.chat/ui-contexts@12.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.1-rc.2
-  - @rocket.chat/models@1.0.0-rc.2
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.2
-  - @rocket.chat/ui-client@12.0.0-rc.2
-  - @rocket.chat/ui-video-conf@12.0.0-rc.2
-  - @rocket.chat/ui-voip@2.0.0-rc.2
-  - @rocket.chat/web-ui-registration@12.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.9-rc.2
+  - @yas chat/core-typings@7.0.0-rc.2
+  - @yas chat/rest-typings@7.0.0-rc.2
+  - @yas chat/license@1.0.0-rc.2
+  - @yas chat/omnichannel-services@0.3.6-rc.2
+  - @yas chat/pdf-worker@0.2.6-rc.2
+  - @yas chat/presence@0.2.9-rc.2
+  - @yas chat/api-client@0.2.9-rc.2
+  - @yas chat/apps@0.2.0-rc.2
+  - @yas chat/core-services@0.7.1-rc.2
+  - @yas chat/cron@0.1.9-rc.2
+  - @yas chat/freeswitch@1.0.0-rc.2
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.2
+  - @yas chat/gazzodown@12.0.0-rc.2
+  - @yas chat/model-typings@1.0.0-rc.2
+  - @yas chat/ui-contexts@12.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.1-rc.2
+  - @yas chat/models@1.0.0-rc.2
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.2
+  - @yas chat/ui-client@12.0.0-rc.2
+  - @yas chat/ui-video-conf@12.0.0-rc.2
+  - @yas chat/ui-voip@2.0.0-rc.2
+  - @yas chat/web-ui-registration@12.0.0-rc.2
+  - @yas chat/instance-status@0.1.9-rc.2
 
   </details>
 
@@ -13642,34 +13642,34 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.1
-  - @rocket.chat/rest-typings@7.0.0-rc.1
-  - @rocket.chat/license@1.0.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.6-rc.1
-  - @rocket.chat/pdf-worker@0.2.6-rc.1
-  - @rocket.chat/presence@0.2.9-rc.1
-  - @rocket.chat/api-client@0.2.9-rc.1
-  - @rocket.chat/apps@0.2.0-rc.1
-  - @rocket.chat/core-services@0.7.1-rc.1
-  - @rocket.chat/cron@0.1.9-rc.1
-  - @rocket.chat/freeswitch@1.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.1
-  - @rocket.chat/gazzodown@12.0.0-rc.1
-  - @rocket.chat/model-typings@1.0.0-rc.1
-  - @rocket.chat/ui-contexts@12.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/network-broker@0.1.1-rc.1
-  - @rocket.chat/models@1.0.0-rc.1
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.1
-  - @rocket.chat/ui-client@12.0.0-rc.1
-  - @rocket.chat/ui-video-conf@12.0.0-rc.1
-  - @rocket.chat/ui-voip@2.0.0-rc.1
-  - @rocket.chat/web-ui-registration@12.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.9-rc.1
+  - @yas chat/core-typings@7.0.0-rc.1
+  - @yas chat/rest-typings@7.0.0-rc.1
+  - @yas chat/license@1.0.0-rc.1
+  - @yas chat/omnichannel-services@0.3.6-rc.1
+  - @yas chat/pdf-worker@0.2.6-rc.1
+  - @yas chat/presence@0.2.9-rc.1
+  - @yas chat/api-client@0.2.9-rc.1
+  - @yas chat/apps@0.2.0-rc.1
+  - @yas chat/core-services@0.7.1-rc.1
+  - @yas chat/cron@0.1.9-rc.1
+  - @yas chat/freeswitch@1.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.1
+  - @yas chat/gazzodown@12.0.0-rc.1
+  - @yas chat/model-typings@1.0.0-rc.1
+  - @yas chat/ui-contexts@12.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/network-broker@0.1.1-rc.1
+  - @yas chat/models@1.0.0-rc.1
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.1
+  - @yas chat/ui-client@12.0.0-rc.1
+  - @yas chat/ui-video-conf@12.0.0-rc.1
+  - @yas chat/ui-voip@2.0.0-rc.1
+  - @yas chat/web-ui-registration@12.0.0-rc.1
+  - @yas chat/instance-status@0.1.9-rc.1
 
   </details>
 
@@ -13880,7 +13880,7 @@
 
 - ([#33364](https://github.com/YasChat/YasChat/pull/33364)) Fixed Twilio request validation by accepting URLs with query strings
 
-- ([#33330](https://github.com/YasChat/YasChat/pull/33330)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33330](https://github.com/YasChat/YasChat/pull/33330)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33606](https://github.com/YasChat/YasChat/pull/33606)) Fixed the regex for domains in the isValidDomain function
 
@@ -13894,13 +13894,13 @@
 
 - ([#33417](https://github.com/YasChat/YasChat/pull/33417)) Fixes issue with previously disabled private apps being auto enabled on update
 
-- ([#33583](https://github.com/YasChat/YasChat/pull/33583)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33583](https://github.com/YasChat/YasChat/pull/33583)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33424](https://github.com/YasChat/YasChat/pull/33424)) Fixes a problem with custom sounds causing files to not be playable when using filesystem storage.
 
-- ([#28042](https://github.com/YasChat/YasChat/pull/28042)) Changes the default base Docker image to Alpine. Previously we were shipping Alpine as an alternative flavor under the tag yaschat/rocket.chat:{release}.alpine , we have been testing this for a while now so we're migrating to use the official one to Alpine.
+- ([#28042](https://github.com/YasChat/YasChat/pull/28042)) Changes the default base Docker image to Alpine. Previously we were shipping Alpine as an alternative flavor under the tag yaschat/yas chat:{release}.alpine , we have been testing this for a while now so we're migrating to use the official one to Alpine.
 
-  We'll still ship a Debian variant under the tag yaschat/rocket.chat:{release}.debian.
+  We'll still ship a Debian variant under the tag yaschat/yas chat:{release}.debian.
 
 - ([#33390](https://github.com/YasChat/YasChat/pull/33390)) Removed deprecated method `livechat:loadHistory` method. Moving forward use the `ivechat/messages.history/:rid` endpoint
 
@@ -13919,35 +13919,35 @@
 - ([#33378](https://github.com/YasChat/YasChat/pull/33378)) Fixes async E2EE key exchange in development environments where change streams are no longer used
 
 - <details><summary>Updated dependencies [c5b0c98803, 2806cb5d3e, 3395c8290b, d44f614d0c, 34ed9ad646, 6b5b91fd14, 7726d68374, 687f1efd5f, bcacbb1cee, 9274cf4586, 9bcb802fdc, f33c07ebb8, 9cf079721b, b167db0b37, f4365b7dd4, d9fe5bbe0b, b338807d76, 5f9826bed6, debd3ffa22, a5f25e73b5, 3ea02d3cc1, e3629e065b, b19ae4dbc7, 03d148524b, 3f9c3f1f52, 760ae5c01a, 4aa731d6e9, 53cc1111f8, 81998f3450, e3dac4aab6, 50943a02e8, 5acb59bb39, 509143d6dd, 31eb47f573, fa501ecb53]:</summary>
-  - @rocket.chat/i18n@1.0.0-rc.0
-  - @rocket.chat/rest-typings@7.0.0-rc.0
-  - @rocket.chat/web-ui-registration@12.0.0-rc.0
-  - @rocket.chat/apps@0.2.0-rc.0
-  - @rocket.chat/core-typings@7.0.0-rc.0
-  - @rocket.chat/model-typings@1.0.0-rc.0
-  - @rocket.chat/ui-kit@0.37.0-rc.0
-  - @rocket.chat/freeswitch@1.0.0-rc.0
-  - @rocket.chat/core-services@0.7.1-rc.0
-  - @rocket.chat/ui-client@12.0.0-rc.0
-  - @rocket.chat/ui-voip@2.0.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@12.0.0-rc.0
-  - @rocket.chat/ui-theming@0.4.0-rc.0
-  - @rocket.chat/ui-video-conf@12.0.0-rc.0
-  - @rocket.chat/ui-composer@0.4.0-rc.0
-  - @rocket.chat/gazzodown@12.0.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.0
-  - @rocket.chat/license@1.0.0-rc.0
-  - @rocket.chat/models@1.0.0-rc.0
-  - @rocket.chat/apps-engine@1.47.0-rc.0
-  - @rocket.chat/ui-contexts@12.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.6-rc.0
-  - @rocket.chat/presence@0.2.9-rc.0
-  - @rocket.chat/api-client@0.2.9-rc.0
-  - @rocket.chat/pdf-worker@0.2.6-rc.0
-  - @rocket.chat/cron@0.1.9-rc.0
-  - @rocket.chat/network-broker@0.1.1-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/instance-status@0.1.9-rc.0
+  - @yas chat/i18n@1.0.0-rc.0
+  - @yas chat/rest-typings@7.0.0-rc.0
+  - @yas chat/web-ui-registration@12.0.0-rc.0
+  - @yas chat/apps@0.2.0-rc.0
+  - @yas chat/core-typings@7.0.0-rc.0
+  - @yas chat/model-typings@1.0.0-rc.0
+  - @yas chat/ui-kit@0.37.0-rc.0
+  - @yas chat/freeswitch@1.0.0-rc.0
+  - @yas chat/core-services@0.7.1-rc.0
+  - @yas chat/ui-client@12.0.0-rc.0
+  - @yas chat/ui-voip@2.0.0-rc.0
+  - @yas chat/fuselage-ui-kit@12.0.0-rc.0
+  - @yas chat/ui-theming@0.4.0-rc.0
+  - @yas chat/ui-video-conf@12.0.0-rc.0
+  - @yas chat/ui-composer@0.4.0-rc.0
+  - @yas chat/gazzodown@12.0.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.0
+  - @yas chat/license@1.0.0-rc.0
+  - @yas chat/models@1.0.0-rc.0
+  - @yas chat/apps-engine@1.47.0-rc.0
+  - @yas chat/ui-contexts@12.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.6-rc.0
+  - @yas chat/presence@0.2.9-rc.0
+  - @yas chat/api-client@0.2.9-rc.0
+  - @yas chat/pdf-worker@0.2.6-rc.0
+  - @yas chat/cron@0.1.9-rc.0
+  - @yas chat/network-broker@0.1.1-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/instance-status@0.1.9-rc.0
 
   </details>
 
@@ -13987,19 +13987,19 @@
 
 - ([#33339](https://github.com/YasChat/YasChat/pull/33339)) Fixes a problem that caused visitor creation to fail when GDPR setting was enabled and visitor was created via Apps Engine or the deprecated `livechat:registerGuest` method.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33317](https://github.com/YasChat/YasChat/pull/33317)) Fixed error during sendmessage client stub
 
@@ -14015,7 +14015,7 @@
 
 - ([#33321](https://github.com/YasChat/YasChat/pull/33321)) Changed the contextualbar behavior based on chat size instead the viewport
 
-- ([#33246](https://github.com/YasChat/YasChat/pull/33246)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33246](https://github.com/YasChat/YasChat/pull/33246)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#32999](https://github.com/YasChat/YasChat/pull/32999)) Fixes multiple selection for MultiStaticSelectElement in UiKit
 
@@ -14044,31 +14044,31 @@
 - ([#33158](https://github.com/YasChat/YasChat/pull/33158)) Fixes an issue where multi-step modals were closing unexpectedly
 
 - <details><summary>Updated dependencies [bb94c9c67a, 9a38c8e13f, 599762739a, 7c14fd1a80, 9eaefdc892, 274f4f5881, cd0d50016e, 78e6ba4820, 2f9eea03d2, 532f08819e, 79c16d315a, 927710d778, 3a161c4310, 0f21fa01a3, 12d6307998]:</summary>
-  - @rocket.chat/ui-client@11.0.0
-  - @rocket.chat/i18n@0.8.0
-  - @rocket.chat/model-typings@0.8.0
-  - @rocket.chat/rest-typings@6.13.0
-  - @rocket.chat/fuselage-ui-kit@11.0.0
-  - @rocket.chat/core-typings@6.13.0
-  - @rocket.chat/ui-theming@0.3.0
-  - @rocket.chat/ui-video-conf@11.0.0
-  - @rocket.chat/ui-composer@0.3.0
-  - @rocket.chat/gazzodown@11.0.0
-  - @rocket.chat/ui-avatar@7.0.0
-  - @rocket.chat/core-services@0.7.0
-  - @rocket.chat/message-parser@0.31.31
-  - @rocket.chat/models@0.3.0
-  - @rocket.chat/web-ui-registration@11.0.0
-  - @rocket.chat/ui-contexts@11.0.0
-  - @rocket.chat/omnichannel-services@0.3.5
-  - @rocket.chat/apps@0.1.8
-  - @rocket.chat/presence@0.2.8
-  - @rocket.chat/api-client@0.2.8
-  - @rocket.chat/license@0.2.8
-  - @rocket.chat/pdf-worker@0.2.5
-  - @rocket.chat/cron@0.1.8
-  - @rocket.chat/instance-status@0.1.8
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-client@11.0.0
+  - @yas chat/i18n@0.8.0
+  - @yas chat/model-typings@0.8.0
+  - @yas chat/rest-typings@6.13.0
+  - @yas chat/fuselage-ui-kit@11.0.0
+  - @yas chat/core-typings@6.13.0
+  - @yas chat/ui-theming@0.3.0
+  - @yas chat/ui-video-conf@11.0.0
+  - @yas chat/ui-composer@0.3.0
+  - @yas chat/gazzodown@11.0.0
+  - @yas chat/ui-avatar@7.0.0
+  - @yas chat/core-services@0.7.0
+  - @yas chat/message-parser@0.31.31
+  - @yas chat/models@0.3.0
+  - @yas chat/web-ui-registration@11.0.0
+  - @yas chat/ui-contexts@11.0.0
+  - @yas chat/omnichannel-services@0.3.5
+  - @yas chat/apps@0.1.8
+  - @yas chat/presence@0.2.8
+  - @yas chat/api-client@0.2.8
+  - @yas chat/license@0.2.8
+  - @yas chat/pdf-worker@0.2.5
+  - @yas chat/cron@0.1.8
+  - @yas chat/instance-status@0.1.8
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -14076,30 +14076,30 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.6
-  - @rocket.chat/rest-typings@6.13.0-rc.6
-  - @rocket.chat/license@0.2.8-rc.6
-  - @rocket.chat/omnichannel-services@0.3.5-rc.6
-  - @rocket.chat/pdf-worker@0.2.5-rc.6
-  - @rocket.chat/presence@0.2.8-rc.6
-  - @rocket.chat/api-client@0.2.8-rc.6
-  - @rocket.chat/apps@0.1.8-rc.6
-  - @rocket.chat/core-services@0.7.0-rc.6
-  - @rocket.chat/cron@0.1.8-rc.6
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.6
-  - @rocket.chat/gazzodown@11.0.0-rc.6
-  - @rocket.chat/model-typings@0.8.0-rc.6
-  - @rocket.chat/ui-contexts@11.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.6
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.6
-  - @rocket.chat/ui-video-conf@11.0.0-rc.6
-  - @rocket.chat/web-ui-registration@11.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.8-rc.6
+  - @yas chat/core-typings@6.13.0-rc.6
+  - @yas chat/rest-typings@6.13.0-rc.6
+  - @yas chat/license@0.2.8-rc.6
+  - @yas chat/omnichannel-services@0.3.5-rc.6
+  - @yas chat/pdf-worker@0.2.5-rc.6
+  - @yas chat/presence@0.2.8-rc.6
+  - @yas chat/api-client@0.2.8-rc.6
+  - @yas chat/apps@0.1.8-rc.6
+  - @yas chat/core-services@0.7.0-rc.6
+  - @yas chat/cron@0.1.8-rc.6
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.6
+  - @yas chat/gazzodown@11.0.0-rc.6
+  - @yas chat/model-typings@0.8.0-rc.6
+  - @yas chat/ui-contexts@11.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.6
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.6
+  - @yas chat/ui-video-conf@11.0.0-rc.6
+  - @yas chat/web-ui-registration@11.0.0-rc.6
+  - @yas chat/instance-status@0.1.8-rc.6
 
   </details>
 
@@ -14107,31 +14107,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.5
-  - @rocket.chat/rest-typings@6.13.0-rc.5
-  - @rocket.chat/license@0.2.8-rc.5
-  - @rocket.chat/omnichannel-services@0.3.5-rc.5
-  - @rocket.chat/pdf-worker@0.2.5-rc.5
-  - @rocket.chat/presence@0.2.8-rc.5
-  - @rocket.chat/api-client@0.2.8-rc.5
-  - @rocket.chat/apps@0.1.8-rc.5
-  - @rocket.chat/core-services@0.7.0-rc.5
-  - @rocket.chat/cron@0.1.8-rc.5
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.5
-  - @rocket.chat/gazzodown@11.0.0-rc.5
-  - @rocket.chat/model-typings@0.8.0-rc.5
-  - @rocket.chat/ui-contexts@11.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.5
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.5
-  - @rocket.chat/ui-client@11.0.0-rc.5
-  - @rocket.chat/ui-video-conf@11.0.0-rc.5
-  - @rocket.chat/web-ui-registration@11.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.8-rc.5
+  - @yas chat/core-typings@6.13.0-rc.5
+  - @yas chat/rest-typings@6.13.0-rc.5
+  - @yas chat/license@0.2.8-rc.5
+  - @yas chat/omnichannel-services@0.3.5-rc.5
+  - @yas chat/pdf-worker@0.2.5-rc.5
+  - @yas chat/presence@0.2.8-rc.5
+  - @yas chat/api-client@0.2.8-rc.5
+  - @yas chat/apps@0.1.8-rc.5
+  - @yas chat/core-services@0.7.0-rc.5
+  - @yas chat/cron@0.1.8-rc.5
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.5
+  - @yas chat/gazzodown@11.0.0-rc.5
+  - @yas chat/model-typings@0.8.0-rc.5
+  - @yas chat/ui-contexts@11.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.5
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.5
+  - @yas chat/ui-client@11.0.0-rc.5
+  - @yas chat/ui-video-conf@11.0.0-rc.5
+  - @yas chat/web-ui-registration@11.0.0-rc.5
+  - @yas chat/instance-status@0.1.8-rc.5
 
   </details>
 
@@ -14139,31 +14139,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.4
-  - @rocket.chat/rest-typings@6.13.0-rc.4
-  - @rocket.chat/license@0.2.8-rc.4
-  - @rocket.chat/omnichannel-services@0.3.5-rc.4
-  - @rocket.chat/pdf-worker@0.2.5-rc.4
-  - @rocket.chat/presence@0.2.8-rc.4
-  - @rocket.chat/api-client@0.2.8-rc.4
-  - @rocket.chat/apps@0.1.8-rc.4
-  - @rocket.chat/core-services@0.7.0-rc.4
-  - @rocket.chat/cron@0.1.8-rc.4
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.4
-  - @rocket.chat/gazzodown@11.0.0-rc.4
-  - @rocket.chat/model-typings@0.8.0-rc.4
-  - @rocket.chat/ui-contexts@11.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.4
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.4
-  - @rocket.chat/ui-client@11.0.0-rc.4
-  - @rocket.chat/ui-video-conf@11.0.0-rc.4
-  - @rocket.chat/web-ui-registration@11.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.8-rc.4
+  - @yas chat/core-typings@6.13.0-rc.4
+  - @yas chat/rest-typings@6.13.0-rc.4
+  - @yas chat/license@0.2.8-rc.4
+  - @yas chat/omnichannel-services@0.3.5-rc.4
+  - @yas chat/pdf-worker@0.2.5-rc.4
+  - @yas chat/presence@0.2.8-rc.4
+  - @yas chat/api-client@0.2.8-rc.4
+  - @yas chat/apps@0.1.8-rc.4
+  - @yas chat/core-services@0.7.0-rc.4
+  - @yas chat/cron@0.1.8-rc.4
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.4
+  - @yas chat/gazzodown@11.0.0-rc.4
+  - @yas chat/model-typings@0.8.0-rc.4
+  - @yas chat/ui-contexts@11.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.4
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.4
+  - @yas chat/ui-client@11.0.0-rc.4
+  - @yas chat/ui-video-conf@11.0.0-rc.4
+  - @yas chat/web-ui-registration@11.0.0-rc.4
+  - @yas chat/instance-status@0.1.8-rc.4
 
   </details>
 
@@ -14171,33 +14171,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33381](https://github.com/YasChat/YasChat/pull/33381)) Fixes a race condition that causes livechat conversations to get stuck in the agent's sidebar panel after being forwarded.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.3
-  - @rocket.chat/rest-typings@6.13.0-rc.3
-  - @rocket.chat/license@0.2.8-rc.3
-  - @rocket.chat/omnichannel-services@0.3.5-rc.3
-  - @rocket.chat/pdf-worker@0.2.5-rc.3
-  - @rocket.chat/presence@0.2.8-rc.3
-  - @rocket.chat/api-client@0.2.8-rc.3
-  - @rocket.chat/apps@0.1.8-rc.3
-  - @rocket.chat/core-services@0.7.0-rc.3
-  - @rocket.chat/cron@0.1.8-rc.3
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.3
-  - @rocket.chat/gazzodown@11.0.0-rc.3
-  - @rocket.chat/model-typings@0.8.0-rc.3
-  - @rocket.chat/ui-contexts@11.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.3
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.3
-  - @rocket.chat/ui-client@11.0.0-rc.3
-  - @rocket.chat/ui-video-conf@11.0.0-rc.3
-  - @rocket.chat/web-ui-registration@11.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.8-rc.3
+  - @yas chat/core-typings@6.13.0-rc.3
+  - @yas chat/rest-typings@6.13.0-rc.3
+  - @yas chat/license@0.2.8-rc.3
+  - @yas chat/omnichannel-services@0.3.5-rc.3
+  - @yas chat/pdf-worker@0.2.5-rc.3
+  - @yas chat/presence@0.2.8-rc.3
+  - @yas chat/api-client@0.2.8-rc.3
+  - @yas chat/apps@0.1.8-rc.3
+  - @yas chat/core-services@0.7.0-rc.3
+  - @yas chat/cron@0.1.8-rc.3
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.3
+  - @yas chat/gazzodown@11.0.0-rc.3
+  - @yas chat/model-typings@0.8.0-rc.3
+  - @yas chat/ui-contexts@11.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.3
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.3
+  - @yas chat/ui-client@11.0.0-rc.3
+  - @yas chat/ui-video-conf@11.0.0-rc.3
+  - @yas chat/web-ui-registration@11.0.0-rc.3
+  - @yas chat/instance-status@0.1.8-rc.3
 
   </details>
 
@@ -14205,31 +14205,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.2
-  - @rocket.chat/rest-typings@6.13.0-rc.2
-  - @rocket.chat/license@0.2.8-rc.2
-  - @rocket.chat/omnichannel-services@0.3.5-rc.2
-  - @rocket.chat/pdf-worker@0.2.5-rc.2
-  - @rocket.chat/presence@0.2.8-rc.2
-  - @rocket.chat/api-client@0.2.8-rc.2
-  - @rocket.chat/apps@0.1.8-rc.2
-  - @rocket.chat/core-services@0.7.0-rc.2
-  - @rocket.chat/cron@0.1.8-rc.2
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.2
-  - @rocket.chat/gazzodown@11.0.0-rc.2
-  - @rocket.chat/model-typings@0.8.0-rc.2
-  - @rocket.chat/ui-contexts@11.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.2
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.2
-  - @rocket.chat/ui-client@11.0.0-rc.2
-  - @rocket.chat/ui-video-conf@11.0.0-rc.2
-  - @rocket.chat/web-ui-registration@11.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.8-rc.2
+  - @yas chat/core-typings@6.13.0-rc.2
+  - @yas chat/rest-typings@6.13.0-rc.2
+  - @yas chat/license@0.2.8-rc.2
+  - @yas chat/omnichannel-services@0.3.5-rc.2
+  - @yas chat/pdf-worker@0.2.5-rc.2
+  - @yas chat/presence@0.2.8-rc.2
+  - @yas chat/api-client@0.2.8-rc.2
+  - @yas chat/apps@0.1.8-rc.2
+  - @yas chat/core-services@0.7.0-rc.2
+  - @yas chat/cron@0.1.8-rc.2
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.2
+  - @yas chat/gazzodown@11.0.0-rc.2
+  - @yas chat/model-typings@0.8.0-rc.2
+  - @yas chat/ui-contexts@11.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.2
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.2
+  - @yas chat/ui-client@11.0.0-rc.2
+  - @yas chat/ui-video-conf@11.0.0-rc.2
+  - @yas chat/web-ui-registration@11.0.0-rc.2
+  - @yas chat/instance-status@0.1.8-rc.2
 
   </details>
 
@@ -14243,32 +14243,32 @@
 
 - ([#33339](https://github.com/YasChat/YasChat/pull/33339)) Fixes a problem that caused visitor creation to fail when GDPR setting was enabled and visitor was created via Apps Engine or the deprecated `livechat:registerGuest` method.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies [2f9eea03d2]:</summary>
-  - @rocket.chat/i18n@0.8.0-rc.1
-  - @rocket.chat/ui-client@11.0.0-rc.1
-  - @rocket.chat/ui-contexts@11.0.0-rc.1
-  - @rocket.chat/web-ui-registration@11.0.0-rc.1
-  - @rocket.chat/gazzodown@11.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.1
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.1
-  - @rocket.chat/ui-video-conf@11.0.0-rc.1
-  - @rocket.chat/core-typings@6.13.0-rc.1
-  - @rocket.chat/rest-typings@6.13.0-rc.1
-  - @rocket.chat/license@0.2.8-rc.1
-  - @rocket.chat/omnichannel-services@0.3.5-rc.1
-  - @rocket.chat/pdf-worker@0.2.5-rc.1
-  - @rocket.chat/presence@0.2.8-rc.1
-  - @rocket.chat/api-client@0.2.8-rc.1
-  - @rocket.chat/apps@0.1.8-rc.1
-  - @rocket.chat/core-services@0.7.0-rc.1
-  - @rocket.chat/cron@0.1.8-rc.1
-  - @rocket.chat/model-typings@0.8.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.3.0-rc.1
-  - @rocket.chat/instance-status@0.1.8-rc.1
+  - @yas chat/i18n@0.8.0-rc.1
+  - @yas chat/ui-client@11.0.0-rc.1
+  - @yas chat/ui-contexts@11.0.0-rc.1
+  - @yas chat/web-ui-registration@11.0.0-rc.1
+  - @yas chat/gazzodown@11.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.1
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.1
+  - @yas chat/ui-video-conf@11.0.0-rc.1
+  - @yas chat/core-typings@6.13.0-rc.1
+  - @yas chat/rest-typings@6.13.0-rc.1
+  - @yas chat/license@0.2.8-rc.1
+  - @yas chat/omnichannel-services@0.3.5-rc.1
+  - @yas chat/pdf-worker@0.2.5-rc.1
+  - @yas chat/presence@0.2.8-rc.1
+  - @yas chat/api-client@0.2.8-rc.1
+  - @yas chat/apps@0.1.8-rc.1
+  - @yas chat/core-services@0.7.0-rc.1
+  - @yas chat/cron@0.1.8-rc.1
+  - @yas chat/model-typings@0.8.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.3.0-rc.1
+  - @yas chat/instance-status@0.1.8-rc.1
 
   </details>
 
@@ -14316,7 +14316,7 @@
 
 - ([#33321](https://github.com/YasChat/YasChat/pull/33321)) Changed the contextualbar behavior based on chat size instead the viewport
 
-- ([#33246](https://github.com/YasChat/YasChat/pull/33246)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33246](https://github.com/YasChat/YasChat/pull/33246)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#32999](https://github.com/YasChat/YasChat/pull/32999)) Fixes multiple selection for MultiStaticSelectElement in UiKit
 
@@ -14345,31 +14345,31 @@
 - ([#33158](https://github.com/YasChat/YasChat/pull/33158)) Fixes an issue where multi-step modals were closing unexpectedly
 
 - <details><summary>Updated dependencies [bb94c9c67a, 9a38c8e13f, 599762739a, 7c14fd1a80, 9eaefdc892, 274f4f5881, cd0d50016e, 78e6ba4820, 532f08819e, 79c16d315a, 927710d778, 3a161c4310, 0f21fa01a3, 12d6307998]:</summary>
-  - @rocket.chat/ui-client@11.0.0-rc.0
-  - @rocket.chat/i18n@0.8.0-rc.0
-  - @rocket.chat/model-typings@0.8.0-rc.0
-  - @rocket.chat/rest-typings@6.13.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@11.0.0-rc.0
-  - @rocket.chat/core-typings@6.13.0-rc.0
-  - @rocket.chat/ui-theming@0.3.0-rc.0
-  - @rocket.chat/ui-video-conf@11.0.0-rc.0
-  - @rocket.chat/ui-composer@0.3.0-rc.0
-  - @rocket.chat/gazzodown@11.0.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.0
-  - @rocket.chat/core-services@0.7.0-rc.0
-  - @rocket.chat/message-parser@0.31.30-rc.0
-  - @rocket.chat/models@0.3.0-rc.0
-  - @rocket.chat/web-ui-registration@11.0.0-rc.0
-  - @rocket.chat/ui-contexts@11.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.4-rc.0
-  - @rocket.chat/apps@0.1.7-rc.0
-  - @rocket.chat/presence@0.2.7-rc.0
-  - @rocket.chat/api-client@0.2.7-rc.0
-  - @rocket.chat/license@0.2.7-rc.0
-  - @rocket.chat/pdf-worker@0.2.4-rc.0
-  - @rocket.chat/cron@0.1.7-rc.0
-  - @rocket.chat/instance-status@0.1.7-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-client@11.0.0-rc.0
+  - @yas chat/i18n@0.8.0-rc.0
+  - @yas chat/model-typings@0.8.0-rc.0
+  - @yas chat/rest-typings@6.13.0-rc.0
+  - @yas chat/fuselage-ui-kit@11.0.0-rc.0
+  - @yas chat/core-typings@6.13.0-rc.0
+  - @yas chat/ui-theming@0.3.0-rc.0
+  - @yas chat/ui-video-conf@11.0.0-rc.0
+  - @yas chat/ui-composer@0.3.0-rc.0
+  - @yas chat/gazzodown@11.0.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.0
+  - @yas chat/core-services@0.7.0-rc.0
+  - @yas chat/message-parser@0.31.30-rc.0
+  - @yas chat/models@0.3.0-rc.0
+  - @yas chat/web-ui-registration@11.0.0-rc.0
+  - @yas chat/ui-contexts@11.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.4-rc.0
+  - @yas chat/apps@0.1.7-rc.0
+  - @yas chat/presence@0.2.7-rc.0
+  - @yas chat/api-client@0.2.7-rc.0
+  - @yas chat/license@0.2.7-rc.0
+  - @yas chat/pdf-worker@0.2.4-rc.0
+  - @yas chat/cron@0.1.7-rc.0
+  - @yas chat/instance-status@0.1.7-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -14377,40 +14377,40 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33242](https://github.com/YasChat/YasChat/pull/33242) by [@dionisio-bot](https://github.com/dionisio-bot)) Allow to use the token from `room.v` when requesting transcript instead of visitor token. Visitors may change their tokens at any time, rendering old conversations impossible to access for them (or for APIs depending on token) as the visitor token won't match the `room.v` token.
 
-- ([#33268](https://github.com/YasChat/YasChat/pull/33268) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33268](https://github.com/YasChat/YasChat/pull/33268) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33265](https://github.com/YasChat/YasChat/pull/33265) by [@dionisio-bot](https://github.com/dionisio-bot)) fixed retention policy max age settings not being respected after upgrade
 
 - <details><summary>Updated dependencies [3cbb9f6252]:</summary>
-  - @rocket.chat/message-parser@0.31.30
-  - @rocket.chat/core-services@0.6.1
-  - @rocket.chat/core-typings@6.12.1
-  - @rocket.chat/gazzodown@10.0.1
-  - @rocket.chat/rest-typings@6.12.1
-  - @rocket.chat/omnichannel-services@0.3.4
-  - @rocket.chat/presence@0.2.7
-  - @rocket.chat/license@0.2.7
-  - @rocket.chat/pdf-worker@0.2.4
-  - @rocket.chat/api-client@0.2.7
-  - @rocket.chat/apps@0.1.7
-  - @rocket.chat/cron@0.1.7
-  - @rocket.chat/fuselage-ui-kit@10.0.1
-  - @rocket.chat/model-typings@0.7.1
-  - @rocket.chat/ui-contexts@10.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.4
-  - @rocket.chat/ui-theming@0.2.1
-  - @rocket.chat/ui-avatar@6.0.1
-  - @rocket.chat/ui-client@10.0.1
-  - @rocket.chat/ui-video-conf@10.0.1
-  - @rocket.chat/web-ui-registration@10.0.1
-  - @rocket.chat/instance-status@0.1.7
+  - @yas chat/message-parser@0.31.30
+  - @yas chat/core-services@0.6.1
+  - @yas chat/core-typings@6.12.1
+  - @yas chat/gazzodown@10.0.1
+  - @yas chat/rest-typings@6.12.1
+  - @yas chat/omnichannel-services@0.3.4
+  - @yas chat/presence@0.2.7
+  - @yas chat/license@0.2.7
+  - @yas chat/pdf-worker@0.2.4
+  - @yas chat/api-client@0.2.7
+  - @yas chat/apps@0.1.7
+  - @yas chat/cron@0.1.7
+  - @yas chat/fuselage-ui-kit@10.0.1
+  - @yas chat/model-typings@0.7.1
+  - @yas chat/ui-contexts@10.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.4
+  - @yas chat/ui-theming@0.2.1
+  - @yas chat/ui-avatar@6.0.1
+  - @yas chat/ui-client@10.0.1
+  - @yas chat/ui-video-conf@10.0.1
+  - @yas chat/web-ui-registration@10.0.1
+  - @yas chat/instance-status@0.1.7
 
   </details>
 
@@ -14450,21 +14450,21 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33159](https://github.com/YasChat/YasChat/pull/33159)) Improves Omnichannel queue page performance
 
@@ -14486,7 +14486,7 @@
 
 - ([#31525](https://github.com/YasChat/YasChat/pull/31525)) Fix: Show correct user info actions for non-members in channels.
 
-- ([#33136](https://github.com/YasChat/YasChat/pull/33136)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33136](https://github.com/YasChat/YasChat/pull/33136)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#32931](https://github.com/YasChat/YasChat/pull/32931)) Fixed an issue that caused UI to show an error when the call to get the Business Hour type from settings returned `undefined`.
 
@@ -14521,31 +14521,31 @@
 - ([#33158](https://github.com/YasChat/YasChat/pull/33158)) Fixes an issue where multi-step modals were closing unexpectedly
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df, 7f88158036, 127866ce97, 0c919db7b4, b764c415dc, 1f061a1aa5, dd37ea1b35, 7937ff741a, a14c0678bb, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/fuselage-ui-kit@10.0.0
-  - @rocket.chat/ui-theming@0.2.1
-  - @rocket.chat/ui-video-conf@10.0.0
-  - @rocket.chat/ui-composer@0.2.1
-  - @rocket.chat/gazzodown@10.0.0
-  - @rocket.chat/ui-avatar@6.0.0
-  - @rocket.chat/ui-client@10.0.0
-  - @rocket.chat/ui-kit@0.36.1
-  - @rocket.chat/model-typings@0.7.0
-  - @rocket.chat/i18n@0.7.0
-  - @rocket.chat/rest-typings@6.12.0
-  - @rocket.chat/web-ui-registration@10.0.0
-  - @rocket.chat/core-typings@6.12.0
-  - @rocket.chat/core-services@0.6.0
-  - @rocket.chat/omnichannel-services@0.3.3
-  - @rocket.chat/apps@0.1.6
-  - @rocket.chat/models@0.2.3
-  - @rocket.chat/ui-contexts@10.0.0
-  - @rocket.chat/presence@0.2.6
-  - @rocket.chat/api-client@0.2.6
-  - @rocket.chat/license@0.2.6
-  - @rocket.chat/pdf-worker@0.2.3
-  - @rocket.chat/cron@0.1.6
-  - @rocket.chat/instance-status@0.1.6
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@10.0.0
+  - @yas chat/ui-theming@0.2.1
+  - @yas chat/ui-video-conf@10.0.0
+  - @yas chat/ui-composer@0.2.1
+  - @yas chat/gazzodown@10.0.0
+  - @yas chat/ui-avatar@6.0.0
+  - @yas chat/ui-client@10.0.0
+  - @yas chat/ui-kit@0.36.1
+  - @yas chat/model-typings@0.7.0
+  - @yas chat/i18n@0.7.0
+  - @yas chat/rest-typings@6.12.0
+  - @yas chat/web-ui-registration@10.0.0
+  - @yas chat/core-typings@6.12.0
+  - @yas chat/core-services@0.6.0
+  - @yas chat/omnichannel-services@0.3.3
+  - @yas chat/apps@0.1.6
+  - @yas chat/models@0.2.3
+  - @yas chat/ui-contexts@10.0.0
+  - @yas chat/presence@0.2.6
+  - @yas chat/api-client@0.2.6
+  - @yas chat/license@0.2.6
+  - @yas chat/pdf-worker@0.2.3
+  - @yas chat/cron@0.1.6
+  - @yas chat/instance-status@0.1.6
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -14553,31 +14553,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.6
-  - @rocket.chat/rest-typings@6.12.0-rc.6
-  - @rocket.chat/license@0.2.6-rc.6
-  - @rocket.chat/omnichannel-services@0.3.3-rc.6
-  - @rocket.chat/pdf-worker@0.2.3-rc.6
-  - @rocket.chat/presence@0.2.6-rc.6
-  - @rocket.chat/api-client@0.2.6-rc.6
-  - @rocket.chat/apps@0.1.6-rc.6
-  - @rocket.chat/core-services@0.6.0-rc.6
-  - @rocket.chat/cron@0.1.6-rc.6
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.6
-  - @rocket.chat/gazzodown@10.0.0-rc.6
-  - @rocket.chat/model-typings@0.7.0-rc.6
-  - @rocket.chat/ui-contexts@10.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.3-rc.6
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.6
-  - @rocket.chat/ui-client@10.0.0-rc.6
-  - @rocket.chat/ui-video-conf@10.0.0-rc.6
-  - @rocket.chat/web-ui-registration@10.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.6-rc.6
+  - @yas chat/core-typings@6.12.0-rc.6
+  - @yas chat/rest-typings@6.12.0-rc.6
+  - @yas chat/license@0.2.6-rc.6
+  - @yas chat/omnichannel-services@0.3.3-rc.6
+  - @yas chat/pdf-worker@0.2.3-rc.6
+  - @yas chat/presence@0.2.6-rc.6
+  - @yas chat/api-client@0.2.6-rc.6
+  - @yas chat/apps@0.1.6-rc.6
+  - @yas chat/core-services@0.6.0-rc.6
+  - @yas chat/cron@0.1.6-rc.6
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.6
+  - @yas chat/gazzodown@10.0.0-rc.6
+  - @yas chat/model-typings@0.7.0-rc.6
+  - @yas chat/ui-contexts@10.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.3-rc.6
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.6
+  - @yas chat/ui-client@10.0.0-rc.6
+  - @yas chat/ui-video-conf@10.0.0-rc.6
+  - @yas chat/web-ui-registration@10.0.0-rc.6
+  - @yas chat/instance-status@0.1.6-rc.6
 
   </details>
 
@@ -14585,33 +14585,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33158](https://github.com/YasChat/YasChat/pull/33158)) Fixes an issue where multi-step modals were closing unexpectedly
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.5
-  - @rocket.chat/rest-typings@6.12.0-rc.5
-  - @rocket.chat/license@0.2.6-rc.5
-  - @rocket.chat/omnichannel-services@0.3.3-rc.5
-  - @rocket.chat/pdf-worker@0.2.3-rc.5
-  - @rocket.chat/presence@0.2.6-rc.5
-  - @rocket.chat/api-client@0.2.6-rc.5
-  - @rocket.chat/apps@0.1.6-rc.5
-  - @rocket.chat/core-services@0.6.0-rc.5
-  - @rocket.chat/cron@0.1.6-rc.5
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.5
-  - @rocket.chat/gazzodown@10.0.0-rc.5
-  - @rocket.chat/model-typings@0.7.0-rc.5
-  - @rocket.chat/ui-contexts@10.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.3-rc.5
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.5
-  - @rocket.chat/ui-client@10.0.0-rc.5
-  - @rocket.chat/ui-video-conf@10.0.0-rc.5
-  - @rocket.chat/web-ui-registration@10.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.6-rc.5
+  - @yas chat/core-typings@6.12.0-rc.5
+  - @yas chat/rest-typings@6.12.0-rc.5
+  - @yas chat/license@0.2.6-rc.5
+  - @yas chat/omnichannel-services@0.3.3-rc.5
+  - @yas chat/pdf-worker@0.2.3-rc.5
+  - @yas chat/presence@0.2.6-rc.5
+  - @yas chat/api-client@0.2.6-rc.5
+  - @yas chat/apps@0.1.6-rc.5
+  - @yas chat/core-services@0.6.0-rc.5
+  - @yas chat/cron@0.1.6-rc.5
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.5
+  - @yas chat/gazzodown@10.0.0-rc.5
+  - @yas chat/model-typings@0.7.0-rc.5
+  - @yas chat/ui-contexts@10.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.3-rc.5
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.5
+  - @yas chat/ui-client@10.0.0-rc.5
+  - @yas chat/ui-video-conf@10.0.0-rc.5
+  - @yas chat/web-ui-registration@10.0.0-rc.5
+  - @yas chat/instance-status@0.1.6-rc.5
 
   </details>
 
@@ -14619,31 +14619,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.4
-  - @rocket.chat/rest-typings@6.12.0-rc.4
-  - @rocket.chat/license@0.2.6-rc.4
-  - @rocket.chat/omnichannel-services@0.3.3-rc.4
-  - @rocket.chat/pdf-worker@0.2.3-rc.4
-  - @rocket.chat/presence@0.2.6-rc.4
-  - @rocket.chat/api-client@0.2.6-rc.4
-  - @rocket.chat/apps@0.1.6-rc.4
-  - @rocket.chat/core-services@0.6.0-rc.4
-  - @rocket.chat/cron@0.1.6-rc.4
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.4
-  - @rocket.chat/gazzodown@10.0.0-rc.4
-  - @rocket.chat/model-typings@0.7.0-rc.4
-  - @rocket.chat/ui-contexts@10.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.3-rc.4
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.4
-  - @rocket.chat/ui-client@10.0.0-rc.4
-  - @rocket.chat/ui-video-conf@10.0.0-rc.4
-  - @rocket.chat/web-ui-registration@10.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.6-rc.4
+  - @yas chat/core-typings@6.12.0-rc.4
+  - @yas chat/rest-typings@6.12.0-rc.4
+  - @yas chat/license@0.2.6-rc.4
+  - @yas chat/omnichannel-services@0.3.3-rc.4
+  - @yas chat/pdf-worker@0.2.3-rc.4
+  - @yas chat/presence@0.2.6-rc.4
+  - @yas chat/api-client@0.2.6-rc.4
+  - @yas chat/apps@0.1.6-rc.4
+  - @yas chat/core-services@0.6.0-rc.4
+  - @yas chat/cron@0.1.6-rc.4
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.4
+  - @yas chat/gazzodown@10.0.0-rc.4
+  - @yas chat/model-typings@0.7.0-rc.4
+  - @yas chat/ui-contexts@10.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.3-rc.4
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.4
+  - @yas chat/ui-client@10.0.0-rc.4
+  - @yas chat/ui-video-conf@10.0.0-rc.4
+  - @yas chat/web-ui-registration@10.0.0-rc.4
+  - @yas chat/instance-status@0.1.6-rc.4
 
   </details>
 
@@ -14651,39 +14651,39 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 ## 6.12.0-rc.3
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33159](https://github.com/YasChat/YasChat/pull/33159)) Improves Omnichannel queue page performance
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.3
-  - @rocket.chat/rest-typings@6.12.0-rc.3
-  - @rocket.chat/license@0.2.5-rc.3
-  - @rocket.chat/omnichannel-services@0.3.2-rc.3
-  - @rocket.chat/pdf-worker@0.2.2-rc.3
-  - @rocket.chat/presence@0.2.5-rc.3
-  - @rocket.chat/api-client@0.2.5-rc.3
-  - @rocket.chat/apps@0.1.5-rc.3
-  - @rocket.chat/core-services@0.6.0-rc.3
-  - @rocket.chat/cron@0.1.5-rc.3
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.3
-  - @rocket.chat/gazzodown@10.0.0-rc.3
-  - @rocket.chat/model-typings@0.7.0-rc.3
-  - @rocket.chat/ui-contexts@10.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.2-rc.3
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.3
-  - @rocket.chat/ui-client@10.0.0-rc.3
-  - @rocket.chat/ui-video-conf@10.0.0-rc.3
-  - @rocket.chat/web-ui-registration@10.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.5-rc.3
+  - @yas chat/core-typings@6.12.0-rc.3
+  - @yas chat/rest-typings@6.12.0-rc.3
+  - @yas chat/license@0.2.5-rc.3
+  - @yas chat/omnichannel-services@0.3.2-rc.3
+  - @yas chat/pdf-worker@0.2.2-rc.3
+  - @yas chat/presence@0.2.5-rc.3
+  - @yas chat/api-client@0.2.5-rc.3
+  - @yas chat/apps@0.1.5-rc.3
+  - @yas chat/core-services@0.6.0-rc.3
+  - @yas chat/cron@0.1.5-rc.3
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.3
+  - @yas chat/gazzodown@10.0.0-rc.3
+  - @yas chat/model-typings@0.7.0-rc.3
+  - @yas chat/ui-contexts@10.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.2-rc.3
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.3
+  - @yas chat/ui-client@10.0.0-rc.3
+  - @yas chat/ui-video-conf@10.0.0-rc.3
+  - @yas chat/web-ui-registration@10.0.0-rc.3
+  - @yas chat/instance-status@0.1.5-rc.3
 
   </details>
 
@@ -14691,35 +14691,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33169](https://github.com/YasChat/YasChat/pull/33169)) Fixed issue that prevented sending encrypted filed from the mobile app
 
 - ([#33174](https://github.com/YasChat/YasChat/pull/33174)) Restored tooltips to the unit edit department field selected options
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.2
-  - @rocket.chat/rest-typings@6.12.0-rc.2
-  - @rocket.chat/license@0.2.5-rc.2
-  - @rocket.chat/omnichannel-services@0.3.2-rc.2
-  - @rocket.chat/pdf-worker@0.2.2-rc.2
-  - @rocket.chat/presence@0.2.5-rc.2
-  - @rocket.chat/api-client@0.2.5-rc.2
-  - @rocket.chat/apps@0.1.5-rc.2
-  - @rocket.chat/core-services@0.6.0-rc.2
-  - @rocket.chat/cron@0.1.5-rc.2
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.2
-  - @rocket.chat/gazzodown@10.0.0-rc.2
-  - @rocket.chat/model-typings@0.7.0-rc.2
-  - @rocket.chat/ui-contexts@10.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.2-rc.2
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.2
-  - @rocket.chat/ui-client@10.0.0-rc.2
-  - @rocket.chat/ui-video-conf@10.0.0-rc.2
-  - @rocket.chat/web-ui-registration@10.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.5-rc.2
+  - @yas chat/core-typings@6.12.0-rc.2
+  - @yas chat/rest-typings@6.12.0-rc.2
+  - @yas chat/license@0.2.5-rc.2
+  - @yas chat/omnichannel-services@0.3.2-rc.2
+  - @yas chat/pdf-worker@0.2.2-rc.2
+  - @yas chat/presence@0.2.5-rc.2
+  - @yas chat/api-client@0.2.5-rc.2
+  - @yas chat/apps@0.1.5-rc.2
+  - @yas chat/core-services@0.6.0-rc.2
+  - @yas chat/cron@0.1.5-rc.2
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.2
+  - @yas chat/gazzodown@10.0.0-rc.2
+  - @yas chat/model-typings@0.7.0-rc.2
+  - @yas chat/ui-contexts@10.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.2-rc.2
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.2
+  - @yas chat/ui-client@10.0.0-rc.2
+  - @yas chat/ui-video-conf@10.0.0-rc.2
+  - @yas chat/web-ui-registration@10.0.0-rc.2
+  - @yas chat/instance-status@0.1.5-rc.2
 
   </details>
 
@@ -14727,33 +14727,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#33136](https://github.com/YasChat/YasChat/pull/33136)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33136](https://github.com/YasChat/YasChat/pull/33136)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.1
-  - @rocket.chat/rest-typings@6.12.0-rc.1
-  - @rocket.chat/license@0.2.5-rc.1
-  - @rocket.chat/omnichannel-services@0.3.2-rc.1
-  - @rocket.chat/pdf-worker@0.2.2-rc.1
-  - @rocket.chat/presence@0.2.5-rc.1
-  - @rocket.chat/api-client@0.2.5-rc.1
-  - @rocket.chat/apps@0.1.5-rc.1
-  - @rocket.chat/core-services@0.6.0-rc.1
-  - @rocket.chat/cron@0.1.5-rc.1
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.1
-  - @rocket.chat/gazzodown@10.0.0-rc.1
-  - @rocket.chat/model-typings@0.7.0-rc.1
-  - @rocket.chat/ui-contexts@10.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.2-rc.1
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.1
-  - @rocket.chat/ui-client@10.0.0-rc.1
-  - @rocket.chat/ui-video-conf@10.0.0-rc.1
-  - @rocket.chat/web-ui-registration@10.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.5-rc.1
+  - @yas chat/core-typings@6.12.0-rc.1
+  - @yas chat/rest-typings@6.12.0-rc.1
+  - @yas chat/license@0.2.5-rc.1
+  - @yas chat/omnichannel-services@0.3.2-rc.1
+  - @yas chat/pdf-worker@0.2.2-rc.1
+  - @yas chat/presence@0.2.5-rc.1
+  - @yas chat/api-client@0.2.5-rc.1
+  - @yas chat/apps@0.1.5-rc.1
+  - @yas chat/core-services@0.6.0-rc.1
+  - @yas chat/cron@0.1.5-rc.1
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.1
+  - @yas chat/gazzodown@10.0.0-rc.1
+  - @yas chat/model-typings@0.7.0-rc.1
+  - @yas chat/ui-contexts@10.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.2-rc.1
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.1
+  - @yas chat/ui-client@10.0.0-rc.1
+  - @yas chat/ui-video-conf@10.0.0-rc.1
+  - @yas chat/web-ui-registration@10.0.0-rc.1
+  - @yas chat/instance-status@0.1.5-rc.1
 
   </details>
 
@@ -14793,7 +14793,7 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - ([#32986](https://github.com/YasChat/YasChat/pull/32986)) Fixed login with third-party apps not working without the "Manage OAuth Apps" permission
 
@@ -14840,39 +14840,39 @@
   The new meteor 2.16 release introduced a new option to configure the Accounts package and choose between the local storage or session storage. They also changed how Meteor.\_localstorage works internally. Due to these changes in Meteor, our setting to use session storage wasn't working as expected. This PR fixes this issue and configures the Accounts package according to the workspace settings.
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df, 7f88158036, 127866ce97, 0c919db7b4, b764c415dc, 1f061a1aa5, dd37ea1b35, 7937ff741a, a14c0678bb, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/fuselage-ui-kit@10.0.0-rc.0
-  - @rocket.chat/ui-theming@0.2.1-rc.0
-  - @rocket.chat/ui-video-conf@10.0.0-rc.0
-  - @rocket.chat/ui-composer@0.2.1-rc.0
-  - @rocket.chat/gazzodown@10.0.0-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.0
-  - @rocket.chat/ui-client@10.0.0-rc.0
-  - @rocket.chat/ui-kit@0.36.1-rc.0
-  - @rocket.chat/model-typings@0.7.0-rc.0
-  - @rocket.chat/i18n@0.7.0-rc.0
-  - @rocket.chat/rest-typings@6.12.0-rc.0
-  - @rocket.chat/web-ui-registration@10.0.0-rc.0
-  - @rocket.chat/core-typings@6.12.0-rc.0
-  - @rocket.chat/core-services@0.6.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.1-rc.0
-  - @rocket.chat/apps@0.1.4-rc.0
-  - @rocket.chat/models@0.2.1-rc.0
-  - @rocket.chat/ui-contexts@10.0.0-rc.0
-  - @rocket.chat/presence@0.2.4-rc.0
-  - @rocket.chat/api-client@0.2.4-rc.0
-  - @rocket.chat/license@0.2.4-rc.0
-  - @rocket.chat/pdf-worker@0.2.1-rc.0
-  - @rocket.chat/cron@0.1.4-rc.0
-  - @rocket.chat/instance-status@0.1.4-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@10.0.0-rc.0
+  - @yas chat/ui-theming@0.2.1-rc.0
+  - @yas chat/ui-video-conf@10.0.0-rc.0
+  - @yas chat/ui-composer@0.2.1-rc.0
+  - @yas chat/gazzodown@10.0.0-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.0
+  - @yas chat/ui-client@10.0.0-rc.0
+  - @yas chat/ui-kit@0.36.1-rc.0
+  - @yas chat/model-typings@0.7.0-rc.0
+  - @yas chat/i18n@0.7.0-rc.0
+  - @yas chat/rest-typings@6.12.0-rc.0
+  - @yas chat/web-ui-registration@10.0.0-rc.0
+  - @yas chat/core-typings@6.12.0-rc.0
+  - @yas chat/core-services@0.6.0-rc.0
+  - @yas chat/omnichannel-services@0.3.1-rc.0
+  - @yas chat/apps@0.1.4-rc.0
+  - @yas chat/models@0.2.1-rc.0
+  - @yas chat/ui-contexts@10.0.0-rc.0
+  - @yas chat/presence@0.2.4-rc.0
+  - @yas chat/api-client@0.2.4-rc.0
+  - @yas chat/license@0.2.4-rc.0
+  - @yas chat/pdf-worker@0.2.1-rc.0
+  - @yas chat/cron@0.1.4-rc.0
+  - @yas chat/instance-status@0.1.4-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#33084](https://github.com/YasChat/YasChat/pull/33084) by [@dionisio-bot](https://github.com/dionisio-bot)) Prevent `processRoomAbandonment` callback from erroring out when a room was inactive during a day Business Hours was not configured for.
 
-- ([#33153](https://github.com/YasChat/YasChat/pull/33153) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33153](https://github.com/YasChat/YasChat/pull/33153) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#33185](https://github.com/YasChat/YasChat/pull/33185) by [@dionisio-bot](https://github.com/dionisio-bot)) Restored tooltips to the unit edit department field selected options
 
@@ -14883,28 +14883,28 @@
 - ([#33178](https://github.com/YasChat/YasChat/pull/33178) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue where multi-step modals were closing unexpectedly
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.2
-  - @rocket.chat/rest-typings@6.11.2
-  - @rocket.chat/api-client@0.2.5
-  - @rocket.chat/license@0.2.5
-  - @rocket.chat/omnichannel-services@0.3.2
-  - @rocket.chat/pdf-worker@0.2.2
-  - @rocket.chat/presence@0.2.5
-  - @rocket.chat/apps@0.1.5
-  - @rocket.chat/core-services@0.5.2
-  - @rocket.chat/cron@0.1.5
-  - @rocket.chat/fuselage-ui-kit@9.0.2
-  - @rocket.chat/gazzodown@9.0.2
-  - @rocket.chat/model-typings@0.6.2
-  - @rocket.chat/ui-contexts@9.0.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.2
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.2
-  - @rocket.chat/ui-client@9.0.2
-  - @rocket.chat/ui-video-conf@9.0.2
-  - @rocket.chat/web-ui-registration@9.0.2
-  - @rocket.chat/instance-status@0.1.5
+  - @yas chat/core-typings@6.11.2
+  - @yas chat/rest-typings@6.11.2
+  - @yas chat/api-client@0.2.5
+  - @yas chat/license@0.2.5
+  - @yas chat/omnichannel-services@0.3.2
+  - @yas chat/pdf-worker@0.2.2
+  - @yas chat/presence@0.2.5
+  - @yas chat/apps@0.1.5
+  - @yas chat/core-services@0.5.2
+  - @yas chat/cron@0.1.5
+  - @yas chat/fuselage-ui-kit@9.0.2
+  - @yas chat/gazzodown@9.0.2
+  - @yas chat/model-typings@0.6.2
+  - @yas chat/ui-contexts@9.0.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.2
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.2
+  - @yas chat/ui-client@9.0.2
+  - @yas chat/ui-video-conf@9.0.2
+  - @yas chat/web-ui-registration@9.0.2
+  - @yas chat/instance-status@0.1.5
 
   </details>
 
@@ -14912,35 +14912,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#33062](https://github.com/YasChat/YasChat/pull/33062)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#33062](https://github.com/YasChat/YasChat/pull/33062)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.1
-  - @rocket.chat/rest-typings@6.11.1
-  - @rocket.chat/api-client@0.2.4
-  - @rocket.chat/license@0.2.4
-  - @rocket.chat/omnichannel-services@0.3.1
-  - @rocket.chat/pdf-worker@0.2.1
-  - @rocket.chat/presence@0.2.4
-  - @rocket.chat/apps@0.1.4
-  - @rocket.chat/core-services@0.5.1
-  - @rocket.chat/cron@0.1.4
-  - @rocket.chat/fuselage-ui-kit@9.0.1
-  - @rocket.chat/gazzodown@9.0.1
-  - @rocket.chat/model-typings@0.6.1
-  - @rocket.chat/ui-contexts@9.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.1
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.1
-  - @rocket.chat/ui-client@9.0.1
-  - @rocket.chat/ui-video-conf@9.0.1
-  - @rocket.chat/web-ui-registration@9.0.1
-  - @rocket.chat/instance-status@0.1.4
+  - @yas chat/core-typings@6.11.1
+  - @yas chat/rest-typings@6.11.1
+  - @yas chat/api-client@0.2.4
+  - @yas chat/license@0.2.4
+  - @yas chat/omnichannel-services@0.3.1
+  - @yas chat/pdf-worker@0.2.1
+  - @yas chat/presence@0.2.4
+  - @yas chat/apps@0.1.4
+  - @yas chat/core-services@0.5.1
+  - @yas chat/cron@0.1.4
+  - @yas chat/fuselage-ui-kit@9.0.1
+  - @yas chat/gazzodown@9.0.1
+  - @yas chat/model-typings@0.6.1
+  - @yas chat/ui-contexts@9.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.1
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.1
+  - @yas chat/ui-client@9.0.1
+  - @yas chat/ui-video-conf@9.0.1
+  - @yas chat/web-ui-registration@9.0.1
+  - @yas chat/instance-status@0.1.4
 
   </details>
 
@@ -14986,19 +14986,19 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32679](https://github.com/YasChat/YasChat/pull/32679)) Fix validations from "UiKit" modal component
 
@@ -15050,7 +15050,7 @@
 
 - ([#32804](https://github.com/YasChat/YasChat/pull/32804)) Fixes an issue not displaying all groups in settings list
 
-- ([#32815](https://github.com/YasChat/YasChat/pull/32815)) Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- ([#32815](https://github.com/YasChat/YasChat/pull/32815)) Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - ([#32632](https://github.com/YasChat/YasChat/pull/32632)) Improving UX by change the position of room info actions buttons and menu order to avoid missclick in destructive actions.
 
@@ -15059,31 +15059,31 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [88e5219bd2, b4bbcbfc9a, 8fc6ca8b4e, 25da5280a5, 1b7b1161cf, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 3ffe4a2944, 3b4b19cfc5, 4e8aa575a6, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
-  - @rocket.chat/fuselage-ui-kit@9.0.0
-  - @rocket.chat/i18n@0.6.0
-  - @rocket.chat/tools@0.2.2
-  - @rocket.chat/ui-client@9.0.0
-  - @rocket.chat/model-typings@0.6.0
-  - @rocket.chat/omnichannel-services@0.3.0
-  - @rocket.chat/pdf-worker@0.2.0
-  - @rocket.chat/core-services@0.5.0
-  - @rocket.chat/ui-video-conf@9.0.0
-  - @rocket.chat/core-typings@6.11.0
-  - @rocket.chat/ui-contexts@9.0.0
-  - @rocket.chat/models@0.2.0
-  - @rocket.chat/ui-kit@0.36.0
-  - @rocket.chat/web-ui-registration@9.0.0
-  - @rocket.chat/rest-typings@6.11.0
-  - @rocket.chat/apps@0.1.3
-  - @rocket.chat/presence@0.2.3
-  - @rocket.chat/gazzodown@9.0.0
-  - @rocket.chat/api-client@0.2.3
-  - @rocket.chat/license@0.2.3
-  - @rocket.chat/cron@0.1.3
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0
-  - @rocket.chat/instance-status@0.1.3
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@9.0.0
+  - @yas chat/i18n@0.6.0
+  - @yas chat/tools@0.2.2
+  - @yas chat/ui-client@9.0.0
+  - @yas chat/model-typings@0.6.0
+  - @yas chat/omnichannel-services@0.3.0
+  - @yas chat/pdf-worker@0.2.0
+  - @yas chat/core-services@0.5.0
+  - @yas chat/ui-video-conf@9.0.0
+  - @yas chat/core-typings@6.11.0
+  - @yas chat/ui-contexts@9.0.0
+  - @yas chat/models@0.2.0
+  - @yas chat/ui-kit@0.36.0
+  - @yas chat/web-ui-registration@9.0.0
+  - @yas chat/rest-typings@6.11.0
+  - @yas chat/apps@0.1.3
+  - @yas chat/presence@0.2.3
+  - @yas chat/gazzodown@9.0.0
+  - @yas chat/api-client@0.2.3
+  - @yas chat/license@0.2.3
+  - @yas chat/cron@0.1.3
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0
+  - @yas chat/instance-status@0.1.3
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -15091,31 +15091,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.6
-  - @rocket.chat/rest-typings@6.11.0-rc.6
-  - @rocket.chat/api-client@0.2.3-rc.6
-  - @rocket.chat/license@0.2.3-rc.6
-  - @rocket.chat/omnichannel-services@0.3.0-rc.6
-  - @rocket.chat/pdf-worker@0.2.0-rc.6
-  - @rocket.chat/presence@0.2.3-rc.6
-  - @rocket.chat/apps@0.1.3-rc.6
-  - @rocket.chat/core-services@0.5.0-rc.6
-  - @rocket.chat/cron@0.1.3-rc.6
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.6
-  - @rocket.chat/gazzodown@9.0.0-rc.6
-  - @rocket.chat/model-typings@0.6.0-rc.6
-  - @rocket.chat/ui-contexts@9.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.6
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.6
-  - @rocket.chat/ui-client@9.0.0-rc.6
-  - @rocket.chat/ui-video-conf@9.0.0-rc.6
-  - @rocket.chat/web-ui-registration@9.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.3-rc.6
+  - @yas chat/core-typings@6.11.0-rc.6
+  - @yas chat/rest-typings@6.11.0-rc.6
+  - @yas chat/api-client@0.2.3-rc.6
+  - @yas chat/license@0.2.3-rc.6
+  - @yas chat/omnichannel-services@0.3.0-rc.6
+  - @yas chat/pdf-worker@0.2.0-rc.6
+  - @yas chat/presence@0.2.3-rc.6
+  - @yas chat/apps@0.1.3-rc.6
+  - @yas chat/core-services@0.5.0-rc.6
+  - @yas chat/cron@0.1.3-rc.6
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.6
+  - @yas chat/gazzodown@9.0.0-rc.6
+  - @yas chat/model-typings@0.6.0-rc.6
+  - @yas chat/ui-contexts@9.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.6
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.6
+  - @yas chat/ui-client@9.0.0-rc.6
+  - @yas chat/ui-video-conf@9.0.0-rc.6
+  - @yas chat/web-ui-registration@9.0.0-rc.6
+  - @yas chat/instance-status@0.1.3-rc.6
 
   </details>
 
@@ -15123,31 +15123,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.5
-  - @rocket.chat/rest-typings@6.11.0-rc.5
-  - @rocket.chat/api-client@0.2.3-rc.5
-  - @rocket.chat/license@0.2.3-rc.5
-  - @rocket.chat/omnichannel-services@0.3.0-rc.5
-  - @rocket.chat/pdf-worker@0.2.0-rc.5
-  - @rocket.chat/presence@0.2.3-rc.5
-  - @rocket.chat/apps@0.1.3-rc.5
-  - @rocket.chat/core-services@0.5.0-rc.5
-  - @rocket.chat/cron@0.1.3-rc.5
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.5
-  - @rocket.chat/gazzodown@9.0.0-rc.5
-  - @rocket.chat/model-typings@0.6.0-rc.5
-  - @rocket.chat/ui-contexts@9.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.5
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.5
-  - @rocket.chat/ui-client@9.0.0-rc.5
-  - @rocket.chat/ui-video-conf@9.0.0-rc.5
-  - @rocket.chat/web-ui-registration@9.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.3-rc.5
+  - @yas chat/core-typings@6.11.0-rc.5
+  - @yas chat/rest-typings@6.11.0-rc.5
+  - @yas chat/api-client@0.2.3-rc.5
+  - @yas chat/license@0.2.3-rc.5
+  - @yas chat/omnichannel-services@0.3.0-rc.5
+  - @yas chat/pdf-worker@0.2.0-rc.5
+  - @yas chat/presence@0.2.3-rc.5
+  - @yas chat/apps@0.1.3-rc.5
+  - @yas chat/core-services@0.5.0-rc.5
+  - @yas chat/cron@0.1.3-rc.5
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.5
+  - @yas chat/gazzodown@9.0.0-rc.5
+  - @yas chat/model-typings@0.6.0-rc.5
+  - @yas chat/ui-contexts@9.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.5
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.5
+  - @yas chat/ui-client@9.0.0-rc.5
+  - @yas chat/ui-video-conf@9.0.0-rc.5
+  - @yas chat/web-ui-registration@9.0.0-rc.5
+  - @yas chat/instance-status@0.1.3-rc.5
 
   </details>
 
@@ -15155,31 +15155,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.4
-  - @rocket.chat/rest-typings@6.11.0-rc.4
-  - @rocket.chat/api-client@0.2.3-rc.4
-  - @rocket.chat/license@0.2.3-rc.4
-  - @rocket.chat/omnichannel-services@0.3.0-rc.4
-  - @rocket.chat/pdf-worker@0.2.0-rc.4
-  - @rocket.chat/presence@0.2.3-rc.4
-  - @rocket.chat/apps@0.1.3-rc.4
-  - @rocket.chat/core-services@0.5.0-rc.4
-  - @rocket.chat/cron@0.1.3-rc.4
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.4
-  - @rocket.chat/gazzodown@9.0.0-rc.4
-  - @rocket.chat/model-typings@0.6.0-rc.4
-  - @rocket.chat/ui-contexts@9.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.4
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.4
-  - @rocket.chat/ui-client@9.0.0-rc.4
-  - @rocket.chat/ui-video-conf@9.0.0-rc.4
-  - @rocket.chat/web-ui-registration@9.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.3-rc.4
+  - @yas chat/core-typings@6.11.0-rc.4
+  - @yas chat/rest-typings@6.11.0-rc.4
+  - @yas chat/api-client@0.2.3-rc.4
+  - @yas chat/license@0.2.3-rc.4
+  - @yas chat/omnichannel-services@0.3.0-rc.4
+  - @yas chat/pdf-worker@0.2.0-rc.4
+  - @yas chat/presence@0.2.3-rc.4
+  - @yas chat/apps@0.1.3-rc.4
+  - @yas chat/core-services@0.5.0-rc.4
+  - @yas chat/cron@0.1.3-rc.4
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.4
+  - @yas chat/gazzodown@9.0.0-rc.4
+  - @yas chat/model-typings@0.6.0-rc.4
+  - @yas chat/ui-contexts@9.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.4
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.4
+  - @yas chat/ui-client@9.0.0-rc.4
+  - @yas chat/ui-video-conf@9.0.0-rc.4
+  - @yas chat/web-ui-registration@9.0.0-rc.4
+  - @yas chat/instance-status@0.1.3-rc.4
 
   </details>
 
@@ -15187,31 +15187,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.3
-  - @rocket.chat/rest-typings@6.11.0-rc.3
-  - @rocket.chat/api-client@0.2.3-rc.3
-  - @rocket.chat/license@0.2.3-rc.3
-  - @rocket.chat/omnichannel-services@0.3.0-rc.3
-  - @rocket.chat/pdf-worker@0.2.0-rc.3
-  - @rocket.chat/presence@0.2.3-rc.3
-  - @rocket.chat/apps@0.1.3-rc.3
-  - @rocket.chat/core-services@0.5.0-rc.3
-  - @rocket.chat/cron@0.1.3-rc.3
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.3
-  - @rocket.chat/gazzodown@9.0.0-rc.3
-  - @rocket.chat/model-typings@0.6.0-rc.3
-  - @rocket.chat/ui-contexts@9.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.3
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.3
-  - @rocket.chat/ui-client@9.0.0-rc.3
-  - @rocket.chat/ui-video-conf@9.0.0-rc.3
-  - @rocket.chat/web-ui-registration@9.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.3-rc.3
+  - @yas chat/core-typings@6.11.0-rc.3
+  - @yas chat/rest-typings@6.11.0-rc.3
+  - @yas chat/api-client@0.2.3-rc.3
+  - @yas chat/license@0.2.3-rc.3
+  - @yas chat/omnichannel-services@0.3.0-rc.3
+  - @yas chat/pdf-worker@0.2.0-rc.3
+  - @yas chat/presence@0.2.3-rc.3
+  - @yas chat/apps@0.1.3-rc.3
+  - @yas chat/core-services@0.5.0-rc.3
+  - @yas chat/cron@0.1.3-rc.3
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.3
+  - @yas chat/gazzodown@9.0.0-rc.3
+  - @yas chat/model-typings@0.6.0-rc.3
+  - @yas chat/ui-contexts@9.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.3
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.3
+  - @yas chat/ui-client@9.0.0-rc.3
+  - @yas chat/ui-video-conf@9.0.0-rc.3
+  - @yas chat/web-ui-registration@9.0.0-rc.3
+  - @yas chat/instance-status@0.1.3-rc.3
 
   </details>
 
@@ -15219,31 +15219,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.2
-  - @rocket.chat/rest-typings@6.11.0-rc.2
-  - @rocket.chat/api-client@0.2.3-rc.2
-  - @rocket.chat/license@0.2.3-rc.2
-  - @rocket.chat/omnichannel-services@0.3.0-rc.2
-  - @rocket.chat/pdf-worker@0.2.0-rc.2
-  - @rocket.chat/presence@0.2.3-rc.2
-  - @rocket.chat/apps@0.1.3-rc.2
-  - @rocket.chat/core-services@0.5.0-rc.2
-  - @rocket.chat/cron@0.1.3-rc.2
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.2
-  - @rocket.chat/gazzodown@9.0.0-rc.2
-  - @rocket.chat/model-typings@0.6.0-rc.2
-  - @rocket.chat/ui-contexts@9.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.2
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.2
-  - @rocket.chat/ui-client@9.0.0-rc.2
-  - @rocket.chat/ui-video-conf@9.0.0-rc.2
-  - @rocket.chat/web-ui-registration@9.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.3-rc.2
+  - @yas chat/core-typings@6.11.0-rc.2
+  - @yas chat/rest-typings@6.11.0-rc.2
+  - @yas chat/api-client@0.2.3-rc.2
+  - @yas chat/license@0.2.3-rc.2
+  - @yas chat/omnichannel-services@0.3.0-rc.2
+  - @yas chat/pdf-worker@0.2.0-rc.2
+  - @yas chat/presence@0.2.3-rc.2
+  - @yas chat/apps@0.1.3-rc.2
+  - @yas chat/core-services@0.5.0-rc.2
+  - @yas chat/cron@0.1.3-rc.2
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.2
+  - @yas chat/gazzodown@9.0.0-rc.2
+  - @yas chat/model-typings@0.6.0-rc.2
+  - @yas chat/ui-contexts@9.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.2
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.2
+  - @yas chat/ui-client@9.0.0-rc.2
+  - @yas chat/ui-video-conf@9.0.0-rc.2
+  - @yas chat/web-ui-registration@9.0.0-rc.2
+  - @yas chat/instance-status@0.1.3-rc.2
 
   </details>
 
@@ -15251,31 +15251,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.1
-  - @rocket.chat/rest-typings@6.11.0-rc.1
-  - @rocket.chat/api-client@0.2.2-rc.1
-  - @rocket.chat/license@0.2.2-rc.1
-  - @rocket.chat/omnichannel-services@0.3.0-rc.1
-  - @rocket.chat/pdf-worker@0.2.0-rc.1
-  - @rocket.chat/presence@0.2.2-rc.1
-  - @rocket.chat/apps@0.1.2-rc.1
-  - @rocket.chat/core-services@0.5.0-rc.1
-  - @rocket.chat/cron@0.1.2-rc.1
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.1
-  - @rocket.chat/gazzodown@9.0.0-rc.1
-  - @rocket.chat/model-typings@0.6.0-rc.1
-  - @rocket.chat/ui-contexts@9.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.2.0-rc.1
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.1
-  - @rocket.chat/ui-client@9.0.0-rc.1
-  - @rocket.chat/ui-video-conf@9.0.0-rc.1
-  - @rocket.chat/web-ui-registration@9.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.2-rc.1
+  - @yas chat/core-typings@6.11.0-rc.1
+  - @yas chat/rest-typings@6.11.0-rc.1
+  - @yas chat/api-client@0.2.2-rc.1
+  - @yas chat/license@0.2.2-rc.1
+  - @yas chat/omnichannel-services@0.3.0-rc.1
+  - @yas chat/pdf-worker@0.2.0-rc.1
+  - @yas chat/presence@0.2.2-rc.1
+  - @yas chat/apps@0.1.2-rc.1
+  - @yas chat/core-services@0.5.0-rc.1
+  - @yas chat/cron@0.1.2-rc.1
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.1
+  - @yas chat/gazzodown@9.0.0-rc.1
+  - @yas chat/model-typings@0.6.0-rc.1
+  - @yas chat/ui-contexts@9.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.2.0-rc.1
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.1
+  - @yas chat/ui-client@9.0.0-rc.1
+  - @yas chat/ui-video-conf@9.0.0-rc.1
+  - @yas chat/web-ui-registration@9.0.0-rc.1
+  - @yas chat/instance-status@0.1.2-rc.1
 
   </details>
 
@@ -15375,7 +15375,7 @@
 
 - ([#32804](https://github.com/YasChat/YasChat/pull/32804)) Fixes an issue not displaying all groups in settings list
 
-- ([#32815](https://github.com/YasChat/YasChat/pull/32815)) Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- ([#32815](https://github.com/YasChat/YasChat/pull/32815)) Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - ([#32632](https://github.com/YasChat/YasChat/pull/32632)) Improving UX by change the position of room info actions buttons and menu order to avoid missclick in destructive actions.
 
@@ -15384,37 +15384,37 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [88e5219bd2, b4bbcbfc9a, 8fc6ca8b4e, 15664127be, 25da5280a5, 1b7b1161cf, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 3ffe4a2944, 3b4b19cfc5, 4e8aa575a6, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
-  - @rocket.chat/fuselage-ui-kit@9.0.0-rc.0
-  - @rocket.chat/i18n@0.6.0-rc.0
-  - @rocket.chat/tools@0.2.2-rc.0
-  - @rocket.chat/web-ui-registration@9.0.0-rc.0
-  - @rocket.chat/ui-client@9.0.0-rc.0
-  - @rocket.chat/model-typings@0.6.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.0-rc.0
-  - @rocket.chat/pdf-worker@0.2.0-rc.0
-  - @rocket.chat/core-services@0.5.0-rc.0
-  - @rocket.chat/ui-video-conf@9.0.0-rc.0
-  - @rocket.chat/core-typings@6.11.0-rc.0
-  - @rocket.chat/ui-contexts@9.0.0-rc.0
-  - @rocket.chat/models@0.2.0-rc.0
-  - @rocket.chat/ui-kit@0.36.0-rc.0
-  - @rocket.chat/rest-typings@6.11.0-rc.0
-  - @rocket.chat/apps@0.1.2-rc.0
-  - @rocket.chat/presence@0.2.2-rc.0
-  - @rocket.chat/gazzodown@9.0.0-rc.0
-  - @rocket.chat/api-client@0.2.2-rc.0
-  - @rocket.chat/license@0.2.2-rc.0
-  - @rocket.chat/cron@0.1.2-rc.0
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.0
-  - @rocket.chat/instance-status@0.1.2-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@9.0.0-rc.0
+  - @yas chat/i18n@0.6.0-rc.0
+  - @yas chat/tools@0.2.2-rc.0
+  - @yas chat/web-ui-registration@9.0.0-rc.0
+  - @yas chat/ui-client@9.0.0-rc.0
+  - @yas chat/model-typings@0.6.0-rc.0
+  - @yas chat/omnichannel-services@0.3.0-rc.0
+  - @yas chat/pdf-worker@0.2.0-rc.0
+  - @yas chat/core-services@0.5.0-rc.0
+  - @yas chat/ui-video-conf@9.0.0-rc.0
+  - @yas chat/core-typings@6.11.0-rc.0
+  - @yas chat/ui-contexts@9.0.0-rc.0
+  - @yas chat/models@0.2.0-rc.0
+  - @yas chat/ui-kit@0.36.0-rc.0
+  - @yas chat/rest-typings@6.11.0-rc.0
+  - @yas chat/apps@0.1.2-rc.0
+  - @yas chat/presence@0.2.2-rc.0
+  - @yas chat/gazzodown@9.0.0-rc.0
+  - @yas chat/api-client@0.2.2-rc.0
+  - @yas chat/license@0.2.2-rc.0
+  - @yas chat/cron@0.1.2-rc.0
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@5.0.0-rc.0
+  - @yas chat/instance-status@0.1.2-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
 ## 6.10.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that prevented apps from being updated or uninstalled in some cases
 
@@ -15429,28 +15429,28 @@
 - ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
-  - @rocket.chat/fuselage-ui-kit@8.0.2
-  - @rocket.chat/core-services@0.4.2
-  - @rocket.chat/core-typings@6.10.2
-  - @rocket.chat/rest-typings@6.10.2
-  - @rocket.chat/presence@0.2.2
-  - @rocket.chat/apps@0.1.2
-  - @rocket.chat/omnichannel-services@0.2.2
-  - @rocket.chat/api-client@0.2.2
-  - @rocket.chat/license@0.2.2
-  - @rocket.chat/pdf-worker@0.1.2
-  - @rocket.chat/cron@0.1.2
-  - @rocket.chat/gazzodown@8.0.2
-  - @rocket.chat/model-typings@0.5.2
-  - @rocket.chat/ui-contexts@8.0.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.2
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@4.0.2
-  - @rocket.chat/ui-client@8.0.2
-  - @rocket.chat/ui-video-conf@8.0.2
-  - @rocket.chat/web-ui-registration@8.0.2
-  - @rocket.chat/instance-status@0.1.2
+  - @yas chat/fuselage-ui-kit@8.0.2
+  - @yas chat/core-services@0.4.2
+  - @yas chat/core-typings@6.10.2
+  - @yas chat/rest-typings@6.10.2
+  - @yas chat/presence@0.2.2
+  - @yas chat/apps@0.1.2
+  - @yas chat/omnichannel-services@0.2.2
+  - @yas chat/api-client@0.2.2
+  - @yas chat/license@0.2.2
+  - @yas chat/pdf-worker@0.1.2
+  - @yas chat/cron@0.1.2
+  - @yas chat/gazzodown@8.0.2
+  - @yas chat/model-typings@0.5.2
+  - @yas chat/ui-contexts@8.0.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.2
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@4.0.2
+  - @yas chat/ui-client@8.0.2
+  - @yas chat/ui-video-conf@8.0.2
+  - @yas chat/web-ui-registration@8.0.2
+  - @yas chat/instance-status@0.1.2
 
   </details>
 
@@ -15458,41 +15458,41 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32819](https://github.com/YasChat/YasChat/pull/32819) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixed issue with livechat agents not being able to leave omnichannel rooms if joining after a room has been closed by the visitor (due to race conditions)
 
-- ([#32894](https://github.com/YasChat/YasChat/pull/32894)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#32894](https://github.com/YasChat/YasChat/pull/32894)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#32829](https://github.com/YasChat/YasChat/pull/32829) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes an issue not displaying all groups in settings list
 
-- ([#32836](https://github.com/YasChat/YasChat/pull/32836) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- ([#32836](https://github.com/YasChat/YasChat/pull/32836) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.1
-  - @rocket.chat/rest-typings@6.10.1
-  - @rocket.chat/api-client@0.2.1
-  - @rocket.chat/license@0.2.1
-  - @rocket.chat/omnichannel-services@0.2.1
-  - @rocket.chat/pdf-worker@0.1.1
-  - @rocket.chat/presence@0.2.1
-  - @rocket.chat/apps@0.1.1
-  - @rocket.chat/core-services@0.4.1
-  - @rocket.chat/cron@0.1.1
-  - @rocket.chat/fuselage-ui-kit@8.0.1
-  - @rocket.chat/gazzodown@8.0.1
-  - @rocket.chat/model-typings@0.5.1
-  - @rocket.chat/ui-contexts@8.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.1
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/ui-avatar@4.0.1
-  - @rocket.chat/ui-client@8.0.1
-  - @rocket.chat/ui-video-conf@8.0.1
-  - @rocket.chat/web-ui-registration@8.0.1
-  - @rocket.chat/instance-status@0.1.1
+  - @yas chat/core-typings@6.10.1
+  - @yas chat/rest-typings@6.10.1
+  - @yas chat/api-client@0.2.1
+  - @yas chat/license@0.2.1
+  - @yas chat/omnichannel-services@0.2.1
+  - @yas chat/pdf-worker@0.1.1
+  - @yas chat/presence@0.2.1
+  - @yas chat/apps@0.1.1
+  - @yas chat/core-services@0.4.1
+  - @yas chat/cron@0.1.1
+  - @yas chat/fuselage-ui-kit@8.0.1
+  - @yas chat/gazzodown@8.0.1
+  - @yas chat/model-typings@0.5.1
+  - @yas chat/ui-contexts@8.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.1
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/ui-avatar@4.0.1
+  - @yas chat/ui-client@8.0.1
+  - @yas chat/ui-video-conf@8.0.1
+  - @yas chat/web-ui-registration@8.0.1
+  - @yas chat/instance-status@0.1.1
 
   </details>
 
@@ -15541,21 +15541,21 @@
 
 - ([#32152](https://github.com/YasChat/YasChat/pull/32152) by [@AllanPazRibeiro](https://github.com/AllanPazRibeiro)) Resolved an issue with the room type filter not being reset after navigating between admin sections.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32478](https://github.com/YasChat/YasChat/pull/32478)) Fixed "File Upload > Accepted Media Types" setting to allow all type of files uploads
 
@@ -15635,34 +15635,34 @@
 
 - ([#31363](https://github.com/YasChat/YasChat/pull/31363)) Remove password change reason when the `request password change` option is set to false
 
-- ([#32690](https://github.com/YasChat/YasChat/pull/32690)) Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- ([#32690](https://github.com/YasChat/YasChat/pull/32690)) Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - <details><summary>Updated dependencies [d3c493b6da, 02dd87574b, 16b67aa0ff, a565999ae0, 1056f220df, 1240c874a5, 768cad6de5, 2ef71e8ea6, 59df102d0c, eaf2f11a6c, 5f95c4ec6b, 363a011487, 495628bce0, f75a2cb4bb, 45dc3d5f72, ee43f2c57c, 07c4ca0621, 30399688fc, 4fd9c4cbaa, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/i18n@0.5.0
-  - @rocket.chat/fuselage-ui-kit@8.0.0
-  - @rocket.chat/ui-kit@0.35.0
-  - @rocket.chat/core-typings@6.10.0
-  - @rocket.chat/gazzodown@8.0.0
-  - @rocket.chat/model-typings@0.5.0
-  - @rocket.chat/rest-typings@6.10.0
-  - @rocket.chat/omnichannel-services@0.2.0
-  - @rocket.chat/web-ui-registration@8.0.0
-  - @rocket.chat/instance-status@0.1.0
-  - @rocket.chat/api-client@0.2.0
-  - @rocket.chat/pdf-worker@0.1.0
-  - @rocket.chat/ui-theming@0.2.0
-  - @rocket.chat/core-services@0.4.0
-  - @rocket.chat/ui-video-conf@8.0.0
-  - @rocket.chat/presence@0.2.0
-  - @rocket.chat/ui-composer@0.2.0
-  - @rocket.chat/ui-contexts@8.0.0
-  - @rocket.chat/license@0.2.0
-  - @rocket.chat/ui-avatar@4.0.0
-  - @rocket.chat/ui-client@8.0.0
-  - @rocket.chat/models@0.1.0
-  - @rocket.chat/apps@0.1.0
-  - @rocket.chat/cron@0.1.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/i18n@0.5.0
+  - @yas chat/fuselage-ui-kit@8.0.0
+  - @yas chat/ui-kit@0.35.0
+  - @yas chat/core-typings@6.10.0
+  - @yas chat/gazzodown@8.0.0
+  - @yas chat/model-typings@0.5.0
+  - @yas chat/rest-typings@6.10.0
+  - @yas chat/omnichannel-services@0.2.0
+  - @yas chat/web-ui-registration@8.0.0
+  - @yas chat/instance-status@0.1.0
+  - @yas chat/api-client@0.2.0
+  - @yas chat/pdf-worker@0.1.0
+  - @yas chat/ui-theming@0.2.0
+  - @yas chat/core-services@0.4.0
+  - @yas chat/ui-video-conf@8.0.0
+  - @yas chat/presence@0.2.0
+  - @yas chat/ui-composer@0.2.0
+  - @yas chat/ui-contexts@8.0.0
+  - @yas chat/license@0.2.0
+  - @yas chat/ui-avatar@4.0.0
+  - @yas chat/ui-client@8.0.0
+  - @yas chat/models@0.1.0
+  - @yas chat/apps@0.1.0
+  - @yas chat/cron@0.1.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -15670,31 +15670,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.7
-  - @rocket.chat/rest-typings@6.10.0-rc.7
-  - @rocket.chat/api-client@0.2.0-rc.7
-  - @rocket.chat/license@0.2.0-rc.7
-  - @rocket.chat/omnichannel-services@0.2.0-rc.7
-  - @rocket.chat/pdf-worker@0.1.0-rc.7
-  - @rocket.chat/presence@0.2.0-rc.7
-  - @rocket.chat/apps@0.1.0-rc.7
-  - @rocket.chat/core-services@0.4.0-rc.7
-  - @rocket.chat/cron@0.1.0-rc.7
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.7
-  - @rocket.chat/gazzodown@8.0.0-rc.7
-  - @rocket.chat/model-typings@0.5.0-rc.7
-  - @rocket.chat/ui-contexts@8.0.0-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.7
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.7
-  - @rocket.chat/ui-client@8.0.0-rc.7
-  - @rocket.chat/ui-video-conf@8.0.0-rc.7
-  - @rocket.chat/web-ui-registration@8.0.0-rc.7
-  - @rocket.chat/instance-status@0.1.0-rc.7
+  - @yas chat/core-typings@6.10.0-rc.7
+  - @yas chat/rest-typings@6.10.0-rc.7
+  - @yas chat/api-client@0.2.0-rc.7
+  - @yas chat/license@0.2.0-rc.7
+  - @yas chat/omnichannel-services@0.2.0-rc.7
+  - @yas chat/pdf-worker@0.1.0-rc.7
+  - @yas chat/presence@0.2.0-rc.7
+  - @yas chat/apps@0.1.0-rc.7
+  - @yas chat/core-services@0.4.0-rc.7
+  - @yas chat/cron@0.1.0-rc.7
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.7
+  - @yas chat/gazzodown@8.0.0-rc.7
+  - @yas chat/model-typings@0.5.0-rc.7
+  - @yas chat/ui-contexts@8.0.0-rc.7
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.7
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.7
+  - @yas chat/ui-client@8.0.0-rc.7
+  - @yas chat/ui-video-conf@8.0.0-rc.7
+  - @yas chat/web-ui-registration@8.0.0-rc.7
+  - @yas chat/instance-status@0.1.0-rc.7
 
   </details>
 
@@ -15702,33 +15702,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32696](https://github.com/YasChat/YasChat/pull/32696)) Added the allowDiskUse option to the users page queries so that if the mongodb memory threshold is exceeded it will use disk space instead of throwing an error.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.6
-  - @rocket.chat/rest-typings@6.10.0-rc.6
-  - @rocket.chat/api-client@0.2.0-rc.6
-  - @rocket.chat/license@0.2.0-rc.6
-  - @rocket.chat/omnichannel-services@0.2.0-rc.6
-  - @rocket.chat/pdf-worker@0.1.0-rc.6
-  - @rocket.chat/presence@0.2.0-rc.6
-  - @rocket.chat/apps@0.1.0-rc.6
-  - @rocket.chat/core-services@0.4.0-rc.6
-  - @rocket.chat/cron@0.1.0-rc.6
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.6
-  - @rocket.chat/gazzodown@8.0.0-rc.6
-  - @rocket.chat/model-typings@0.5.0-rc.6
-  - @rocket.chat/ui-contexts@8.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.6
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.6
-  - @rocket.chat/ui-client@8.0.0-rc.6
-  - @rocket.chat/ui-video-conf@8.0.0-rc.6
-  - @rocket.chat/web-ui-registration@8.0.0-rc.6
-  - @rocket.chat/instance-status@0.1.0-rc.6
+  - @yas chat/core-typings@6.10.0-rc.6
+  - @yas chat/rest-typings@6.10.0-rc.6
+  - @yas chat/api-client@0.2.0-rc.6
+  - @yas chat/license@0.2.0-rc.6
+  - @yas chat/omnichannel-services@0.2.0-rc.6
+  - @yas chat/pdf-worker@0.1.0-rc.6
+  - @yas chat/presence@0.2.0-rc.6
+  - @yas chat/apps@0.1.0-rc.6
+  - @yas chat/core-services@0.4.0-rc.6
+  - @yas chat/cron@0.1.0-rc.6
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.6
+  - @yas chat/gazzodown@8.0.0-rc.6
+  - @yas chat/model-typings@0.5.0-rc.6
+  - @yas chat/ui-contexts@8.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.6
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.6
+  - @yas chat/ui-client@8.0.0-rc.6
+  - @yas chat/ui-video-conf@8.0.0-rc.6
+  - @yas chat/web-ui-registration@8.0.0-rc.6
+  - @yas chat/instance-status@0.1.0-rc.6
 
   </details>
 
@@ -15736,31 +15736,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.5
-  - @rocket.chat/rest-typings@6.10.0-rc.5
-  - @rocket.chat/api-client@0.2.0-rc.5
-  - @rocket.chat/license@0.2.0-rc.5
-  - @rocket.chat/omnichannel-services@0.2.0-rc.5
-  - @rocket.chat/pdf-worker@0.1.0-rc.5
-  - @rocket.chat/presence@0.2.0-rc.5
-  - @rocket.chat/apps@0.1.0-rc.5
-  - @rocket.chat/core-services@0.4.0-rc.5
-  - @rocket.chat/cron@0.1.0-rc.5
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.5
-  - @rocket.chat/gazzodown@8.0.0-rc.5
-  - @rocket.chat/model-typings@0.5.0-rc.5
-  - @rocket.chat/ui-contexts@8.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.5
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.5
-  - @rocket.chat/ui-client@8.0.0-rc.5
-  - @rocket.chat/ui-video-conf@8.0.0-rc.5
-  - @rocket.chat/web-ui-registration@8.0.0-rc.5
-  - @rocket.chat/instance-status@0.1.0-rc.5
+  - @yas chat/core-typings@6.10.0-rc.5
+  - @yas chat/rest-typings@6.10.0-rc.5
+  - @yas chat/api-client@0.2.0-rc.5
+  - @yas chat/license@0.2.0-rc.5
+  - @yas chat/omnichannel-services@0.2.0-rc.5
+  - @yas chat/pdf-worker@0.1.0-rc.5
+  - @yas chat/presence@0.2.0-rc.5
+  - @yas chat/apps@0.1.0-rc.5
+  - @yas chat/core-services@0.4.0-rc.5
+  - @yas chat/cron@0.1.0-rc.5
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.5
+  - @yas chat/gazzodown@8.0.0-rc.5
+  - @yas chat/model-typings@0.5.0-rc.5
+  - @yas chat/ui-contexts@8.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.5
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.5
+  - @yas chat/ui-client@8.0.0-rc.5
+  - @yas chat/ui-video-conf@8.0.0-rc.5
+  - @yas chat/web-ui-registration@8.0.0-rc.5
+  - @yas chat/instance-status@0.1.0-rc.5
 
   </details>
 
@@ -15768,33 +15768,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- ([#32690](https://github.com/YasChat/YasChat/pull/32690)) Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- ([#32690](https://github.com/YasChat/YasChat/pull/32690)) Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.4
-  - @rocket.chat/rest-typings@6.10.0-rc.4
-  - @rocket.chat/api-client@0.2.0-rc.4
-  - @rocket.chat/license@0.2.0-rc.4
-  - @rocket.chat/omnichannel-services@0.2.0-rc.4
-  - @rocket.chat/pdf-worker@0.1.0-rc.4
-  - @rocket.chat/presence@0.2.0-rc.4
-  - @rocket.chat/apps@0.1.0-rc.4
-  - @rocket.chat/core-services@0.4.0-rc.4
-  - @rocket.chat/cron@0.1.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.4
-  - @rocket.chat/gazzodown@8.0.0-rc.4
-  - @rocket.chat/model-typings@0.5.0-rc.4
-  - @rocket.chat/ui-contexts@8.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.4
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.4
-  - @rocket.chat/ui-client@8.0.0-rc.4
-  - @rocket.chat/ui-video-conf@8.0.0-rc.4
-  - @rocket.chat/web-ui-registration@8.0.0-rc.4
-  - @rocket.chat/instance-status@0.1.0-rc.4
+  - @yas chat/core-typings@6.10.0-rc.4
+  - @yas chat/rest-typings@6.10.0-rc.4
+  - @yas chat/api-client@0.2.0-rc.4
+  - @yas chat/license@0.2.0-rc.4
+  - @yas chat/omnichannel-services@0.2.0-rc.4
+  - @yas chat/pdf-worker@0.1.0-rc.4
+  - @yas chat/presence@0.2.0-rc.4
+  - @yas chat/apps@0.1.0-rc.4
+  - @yas chat/core-services@0.4.0-rc.4
+  - @yas chat/cron@0.1.0-rc.4
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.4
+  - @yas chat/gazzodown@8.0.0-rc.4
+  - @yas chat/model-typings@0.5.0-rc.4
+  - @yas chat/ui-contexts@8.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.4
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.4
+  - @yas chat/ui-client@8.0.0-rc.4
+  - @yas chat/ui-video-conf@8.0.0-rc.4
+  - @yas chat/web-ui-registration@8.0.0-rc.4
+  - @yas chat/instance-status@0.1.0-rc.4
 
   </details>
 
@@ -15802,31 +15802,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.3
-  - @rocket.chat/rest-typings@6.10.0-rc.3
-  - @rocket.chat/api-client@0.2.0-rc.3
-  - @rocket.chat/license@0.2.0-rc.3
-  - @rocket.chat/omnichannel-services@0.2.0-rc.3
-  - @rocket.chat/pdf-worker@0.1.0-rc.3
-  - @rocket.chat/presence@0.2.0-rc.3
-  - @rocket.chat/apps@0.1.0-rc.3
-  - @rocket.chat/core-services@0.4.0-rc.3
-  - @rocket.chat/cron@0.1.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.3
-  - @rocket.chat/gazzodown@8.0.0-rc.3
-  - @rocket.chat/model-typings@0.5.0-rc.3
-  - @rocket.chat/ui-contexts@8.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.3
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.3
-  - @rocket.chat/ui-client@8.0.0-rc.3
-  - @rocket.chat/ui-video-conf@8.0.0-rc.3
-  - @rocket.chat/web-ui-registration@8.0.0-rc.3
-  - @rocket.chat/instance-status@0.1.0-rc.3
+  - @yas chat/core-typings@6.10.0-rc.3
+  - @yas chat/rest-typings@6.10.0-rc.3
+  - @yas chat/api-client@0.2.0-rc.3
+  - @yas chat/license@0.2.0-rc.3
+  - @yas chat/omnichannel-services@0.2.0-rc.3
+  - @yas chat/pdf-worker@0.1.0-rc.3
+  - @yas chat/presence@0.2.0-rc.3
+  - @yas chat/apps@0.1.0-rc.3
+  - @yas chat/core-services@0.4.0-rc.3
+  - @yas chat/cron@0.1.0-rc.3
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.3
+  - @yas chat/gazzodown@8.0.0-rc.3
+  - @yas chat/model-typings@0.5.0-rc.3
+  - @yas chat/ui-contexts@8.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.3
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.3
+  - @yas chat/ui-client@8.0.0-rc.3
+  - @yas chat/ui-video-conf@8.0.0-rc.3
+  - @yas chat/web-ui-registration@8.0.0-rc.3
+  - @yas chat/instance-status@0.1.0-rc.3
 
   </details>
 
@@ -15834,37 +15834,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 ## 6.10.0-rc.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.2
-  - @rocket.chat/rest-typings@6.10.0-rc.2
-  - @rocket.chat/api-client@0.2.0-rc.2
-  - @rocket.chat/license@0.2.0-rc.2
-  - @rocket.chat/omnichannel-services@0.2.0-rc.2
-  - @rocket.chat/pdf-worker@0.1.0-rc.2
-  - @rocket.chat/presence@0.2.0-rc.2
-  - @rocket.chat/apps@0.1.0-rc.2
-  - @rocket.chat/core-services@0.4.0-rc.2
-  - @rocket.chat/cron@0.1.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.2
-  - @rocket.chat/gazzodown@8.0.0-rc.2
-  - @rocket.chat/model-typings@0.5.0-rc.2
-  - @rocket.chat/ui-contexts@8.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.2
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.2
-  - @rocket.chat/ui-client@8.0.0-rc.2
-  - @rocket.chat/ui-video-conf@8.0.0-rc.2
-  - @rocket.chat/web-ui-registration@8.0.0-rc.2
-  - @rocket.chat/instance-status@0.1.0-rc.2
+  - @yas chat/core-typings@6.10.0-rc.2
+  - @yas chat/rest-typings@6.10.0-rc.2
+  - @yas chat/api-client@0.2.0-rc.2
+  - @yas chat/license@0.2.0-rc.2
+  - @yas chat/omnichannel-services@0.2.0-rc.2
+  - @yas chat/pdf-worker@0.1.0-rc.2
+  - @yas chat/presence@0.2.0-rc.2
+  - @yas chat/apps@0.1.0-rc.2
+  - @yas chat/core-services@0.4.0-rc.2
+  - @yas chat/cron@0.1.0-rc.2
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.2
+  - @yas chat/gazzodown@8.0.0-rc.2
+  - @yas chat/model-typings@0.5.0-rc.2
+  - @yas chat/ui-contexts@8.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.2
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.2
+  - @yas chat/ui-client@8.0.0-rc.2
+  - @yas chat/ui-video-conf@8.0.0-rc.2
+  - @yas chat/web-ui-registration@8.0.0-rc.2
+  - @yas chat/instance-status@0.1.0-rc.2
 
   </details>
 
@@ -15872,31 +15872,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.1
-  - @rocket.chat/rest-typings@6.10.0-rc.1
-  - @rocket.chat/api-client@0.2.0-rc.1
-  - @rocket.chat/license@0.2.0-rc.1
-  - @rocket.chat/omnichannel-services@0.2.0-rc.1
-  - @rocket.chat/pdf-worker@0.1.0-rc.1
-  - @rocket.chat/presence@0.2.0-rc.1
-  - @rocket.chat/apps@0.1.0-rc.1
-  - @rocket.chat/core-services@0.4.0-rc.1
-  - @rocket.chat/cron@0.1.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.1
-  - @rocket.chat/gazzodown@8.0.0-rc.1
-  - @rocket.chat/model-typings@0.5.0-rc.1
-  - @rocket.chat/ui-contexts@8.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.1.0-rc.1
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.1
-  - @rocket.chat/ui-client@8.0.0-rc.1
-  - @rocket.chat/ui-video-conf@8.0.0-rc.1
-  - @rocket.chat/web-ui-registration@8.0.0-rc.1
-  - @rocket.chat/instance-status@0.1.0-rc.1
+  - @yas chat/core-typings@6.10.0-rc.1
+  - @yas chat/rest-typings@6.10.0-rc.1
+  - @yas chat/api-client@0.2.0-rc.1
+  - @yas chat/license@0.2.0-rc.1
+  - @yas chat/omnichannel-services@0.2.0-rc.1
+  - @yas chat/pdf-worker@0.1.0-rc.1
+  - @yas chat/presence@0.2.0-rc.1
+  - @yas chat/apps@0.1.0-rc.1
+  - @yas chat/core-services@0.4.0-rc.1
+  - @yas chat/cron@0.1.0-rc.1
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.1
+  - @yas chat/gazzodown@8.0.0-rc.1
+  - @yas chat/model-typings@0.5.0-rc.1
+  - @yas chat/ui-contexts@8.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.1.0-rc.1
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.1
+  - @yas chat/ui-client@8.0.0-rc.1
+  - @yas chat/ui-video-conf@8.0.0-rc.1
+  - @yas chat/web-ui-registration@8.0.0-rc.1
+  - @yas chat/instance-status@0.1.0-rc.1
 
   </details>
 
@@ -16022,61 +16022,61 @@
 - ([#31363](https://github.com/YasChat/YasChat/pull/31363)) Remove password change reason when the `request password change` option is set to false
 
 - <details><summary>Updated dependencies [d3c493b6da, 02dd87574b, 16b67aa0ff, a565999ae0, 1056f220df, 1240c874a5, 768cad6de5, 2ef71e8ea6, 59df102d0c, eaf2f11a6c, 5f95c4ec6b, 363a011487, 495628bce0, f75a2cb4bb, 45dc3d5f72, ee43f2c57c, 07c4ca0621, 30399688fc, 4fd9c4cbaa, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/i18n@0.5.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@8.0.0-rc.0
-  - @rocket.chat/ui-kit@0.35.0-rc.0
-  - @rocket.chat/core-typings@6.10.0-rc.0
-  - @rocket.chat/gazzodown@8.0.0-rc.0
-  - @rocket.chat/model-typings@0.5.0-rc.0
-  - @rocket.chat/rest-typings@6.10.0-rc.0
-  - @rocket.chat/omnichannel-services@0.2.0-rc.0
-  - @rocket.chat/web-ui-registration@8.0.0-rc.0
-  - @rocket.chat/instance-status@0.1.0-rc.0
-  - @rocket.chat/api-client@0.2.0-rc.0
-  - @rocket.chat/pdf-worker@0.1.0-rc.0
-  - @rocket.chat/ui-theming@0.2.0-rc.0
-  - @rocket.chat/core-services@0.4.0-rc.0
-  - @rocket.chat/ui-video-conf@8.0.0-rc.0
-  - @rocket.chat/presence@0.2.0-rc.0
-  - @rocket.chat/ui-composer@0.2.0-rc.0
-  - @rocket.chat/ui-contexts@8.0.0-rc.0
-  - @rocket.chat/license@0.2.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.0
-  - @rocket.chat/ui-client@8.0.0-rc.0
-  - @rocket.chat/models@0.1.0-rc.0
-  - @rocket.chat/apps@0.1.0-rc.0
-  - @rocket.chat/cron@0.1.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/i18n@0.5.0-rc.0
+  - @yas chat/fuselage-ui-kit@8.0.0-rc.0
+  - @yas chat/ui-kit@0.35.0-rc.0
+  - @yas chat/core-typings@6.10.0-rc.0
+  - @yas chat/gazzodown@8.0.0-rc.0
+  - @yas chat/model-typings@0.5.0-rc.0
+  - @yas chat/rest-typings@6.10.0-rc.0
+  - @yas chat/omnichannel-services@0.2.0-rc.0
+  - @yas chat/web-ui-registration@8.0.0-rc.0
+  - @yas chat/instance-status@0.1.0-rc.0
+  - @yas chat/api-client@0.2.0-rc.0
+  - @yas chat/pdf-worker@0.1.0-rc.0
+  - @yas chat/ui-theming@0.2.0-rc.0
+  - @yas chat/core-services@0.4.0-rc.0
+  - @yas chat/ui-video-conf@8.0.0-rc.0
+  - @yas chat/presence@0.2.0-rc.0
+  - @yas chat/ui-composer@0.2.0-rc.0
+  - @yas chat/ui-contexts@8.0.0-rc.0
+  - @yas chat/license@0.2.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.0
+  - @yas chat/ui-client@8.0.0-rc.0
+  - @yas chat/models@0.1.0-rc.0
+  - @yas chat/apps@0.1.0-rc.0
+  - @yas chat/cron@0.1.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32683](https://github.com/YasChat/YasChat/pull/32683) by [@dionisio-bot](https://github.com/dionisio-bot)) livechat `setDepartment` livechat api fixes:
   - Changing department didn't reflect on the registration form in real time
   - Changing the department mid conversation didn't transfer the chat
   - Depending on the state of the department, it couldn't be set as default
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.3
-  - @rocket.chat/rest-typings@6.9.3
-  - @rocket.chat/api-client@0.1.36
-  - @rocket.chat/license@0.1.18
-  - @rocket.chat/omnichannel-services@0.1.18
-  - @rocket.chat/pdf-worker@0.0.42
-  - @rocket.chat/presence@0.1.18
-  - @rocket.chat/apps@0.0.9
-  - @rocket.chat/core-services@0.3.18
-  - @rocket.chat/cron@0.0.38
-  - @rocket.chat/fuselage-ui-kit@7.0.3
-  - @rocket.chat/gazzodown@7.0.3
-  - @rocket.chat/model-typings@0.4.4
-  - @rocket.chat/ui-contexts@7.0.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.42
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.3
-  - @rocket.chat/ui-client@7.0.3
-  - @rocket.chat/ui-video-conf@7.0.3
-  - @rocket.chat/web-ui-registration@7.0.3
-  - @rocket.chat/instance-status@0.0.42
+  - @yas chat/core-typings@6.9.3
+  - @yas chat/rest-typings@6.9.3
+  - @yas chat/api-client@0.1.36
+  - @yas chat/license@0.1.18
+  - @yas chat/omnichannel-services@0.1.18
+  - @yas chat/pdf-worker@0.0.42
+  - @yas chat/presence@0.1.18
+  - @yas chat/apps@0.0.9
+  - @yas chat/core-services@0.3.18
+  - @yas chat/cron@0.0.38
+  - @yas chat/fuselage-ui-kit@7.0.3
+  - @yas chat/gazzodown@7.0.3
+  - @yas chat/model-typings@0.4.4
+  - @yas chat/ui-contexts@7.0.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.42
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.3
+  - @yas chat/ui-client@7.0.3
+  - @yas chat/ui-video-conf@7.0.3
+  - @yas chat/web-ui-registration@7.0.3
+  - @yas chat/instance-status@0.0.42
 
   </details>
 
@@ -16084,37 +16084,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32621](https://github.com/YasChat/YasChat/pull/32621) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the supported versions problem, where in most cases the data chosen was the oldest
 
 - ([#32622](https://github.com/YasChat/YasChat/pull/32622) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes the issue not allowing users without edit-room-retention-policy permission try to edit the room with the retention policy enabled
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.2
-  - @rocket.chat/rest-typings@6.9.2
-  - @rocket.chat/api-client@0.1.35
-  - @rocket.chat/license@0.1.17
-  - @rocket.chat/omnichannel-services@0.1.17
-  - @rocket.chat/pdf-worker@0.0.41
-  - @rocket.chat/presence@0.1.17
-  - @rocket.chat/apps@0.0.8
-  - @rocket.chat/core-services@0.3.17
-  - @rocket.chat/cron@0.0.37
-  - @rocket.chat/fuselage-ui-kit@7.0.2
-  - @rocket.chat/gazzodown@7.0.2
-  - @rocket.chat/model-typings@0.4.3
-  - @rocket.chat/ui-contexts@7.0.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.41
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.2
-  - @rocket.chat/ui-client@7.0.2
-  - @rocket.chat/ui-video-conf@7.0.2
-  - @rocket.chat/web-ui-registration@7.0.2
-  - @rocket.chat/instance-status@0.0.41
+  - @yas chat/core-typings@6.9.2
+  - @yas chat/rest-typings@6.9.2
+  - @yas chat/api-client@0.1.35
+  - @yas chat/license@0.1.17
+  - @yas chat/omnichannel-services@0.1.17
+  - @yas chat/pdf-worker@0.0.41
+  - @yas chat/presence@0.1.17
+  - @yas chat/apps@0.0.8
+  - @yas chat/core-services@0.3.17
+  - @yas chat/cron@0.0.37
+  - @yas chat/fuselage-ui-kit@7.0.2
+  - @yas chat/gazzodown@7.0.2
+  - @yas chat/model-typings@0.4.3
+  - @yas chat/ui-contexts@7.0.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.41
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.2
+  - @yas chat/ui-client@7.0.2
+  - @yas chat/ui-video-conf@7.0.2
+  - @yas chat/web-ui-registration@7.0.2
+  - @yas chat/instance-status@0.0.41
 
   </details>
 
@@ -16122,37 +16122,37 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32591](https://github.com/YasChat/YasChat/pull/32591) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes issues with loading license modules when loading the page while logged out
 
 - ([#32588](https://github.com/YasChat/YasChat/pull/32588) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes issues causing nonstop sound notification when taking a chat from the `Current Chats` view
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.1
-  - @rocket.chat/rest-typings@6.9.1
-  - @rocket.chat/api-client@0.1.34
-  - @rocket.chat/license@0.1.16
-  - @rocket.chat/omnichannel-services@0.1.16
-  - @rocket.chat/pdf-worker@0.0.40
-  - @rocket.chat/presence@0.1.16
-  - @rocket.chat/apps@0.0.7
-  - @rocket.chat/core-services@0.3.16
-  - @rocket.chat/cron@0.0.36
-  - @rocket.chat/fuselage-ui-kit@7.0.1
-  - @rocket.chat/gazzodown@7.0.1
-  - @rocket.chat/model-typings@0.4.2
-  - @rocket.chat/ui-contexts@7.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.40
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.1
-  - @rocket.chat/ui-client@7.0.1
-  - @rocket.chat/ui-video-conf@7.0.1
-  - @rocket.chat/web-ui-registration@7.0.1
-  - @rocket.chat/instance-status@0.0.40
+  - @yas chat/core-typings@6.9.1
+  - @yas chat/rest-typings@6.9.1
+  - @yas chat/api-client@0.1.34
+  - @yas chat/license@0.1.16
+  - @yas chat/omnichannel-services@0.1.16
+  - @yas chat/pdf-worker@0.0.40
+  - @yas chat/presence@0.1.16
+  - @yas chat/apps@0.0.7
+  - @yas chat/core-services@0.3.16
+  - @yas chat/cron@0.0.36
+  - @yas chat/fuselage-ui-kit@7.0.1
+  - @yas chat/gazzodown@7.0.1
+  - @yas chat/model-typings@0.4.2
+  - @yas chat/ui-contexts@7.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.40
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.1
+  - @yas chat/ui-client@7.0.1
+  - @yas chat/ui-video-conf@7.0.1
+  - @yas chat/web-ui-registration@7.0.1
+  - @yas chat/instance-status@0.0.40
 
   </details>
 
@@ -16180,11 +16180,11 @@
 
 - ([#31695](https://github.com/YasChat/YasChat/pull/31695)) Fix an issue where read receipts menu item wasn't considering the enabled setting to be displayed
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32454](https://github.com/YasChat/YasChat/pull/32454)) Fixes an issue not allowing override retention policy in channels
 
@@ -16226,7 +16226,7 @@
   - The message toolbar visibility on hover (Firefox ESR)
   - `Bubble` missing font-family
 
-  [more details](https://github.com/YasChat/fuselage/releases/tag/%40rocket.chat%2Ffuselage%400.53.7)
+  [more details](https://github.com/YasChat/fuselage/releases/tag/%40yas chat%2Ffuselage%400.53.7)
 
 - ([#32398](https://github.com/YasChat/YasChat/pull/32398)) Fixed issue with external users being able to reset their passwords even when the "Allow Password Change for OAuth Users" setting is disabled
 
@@ -16235,30 +16235,30 @@
 - ([#32342](https://github.com/YasChat/YasChat/pull/32342)) bump fuselage adding `AttachmentAuthorName` missing color token
 
 - <details><summary>Updated dependencies [ff4e396416, bc50dd54a2, ad86761209, f83bd56cc5, 6205ef14f0, 724ba3a729, ee5cdfc367, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0
-  - @rocket.chat/i18n@0.4.0
-  - @rocket.chat/core-services@0.3.15
-  - @rocket.chat/omnichannel-services@0.1.15
-  - @rocket.chat/pdf-worker@0.0.39
-  - @rocket.chat/rest-typings@6.9.0
-  - @rocket.chat/fuselage-ui-kit@7.0.0
-  - @rocket.chat/ui-kit@0.34.0
-  - @rocket.chat/api-client@0.1.33
-  - @rocket.chat/license@0.1.15
-  - @rocket.chat/presence@0.1.15
-  - @rocket.chat/apps@0.0.6
-  - @rocket.chat/cron@0.0.35
-  - @rocket.chat/gazzodown@7.0.0
-  - @rocket.chat/model-typings@0.4.1
-  - @rocket.chat/ui-contexts@7.0.0
-  - @rocket.chat/web-ui-registration@7.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.39
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.0
-  - @rocket.chat/ui-client@7.0.0
-  - @rocket.chat/ui-video-conf@7.0.0
-  - @rocket.chat/instance-status@0.0.39
+  - @yas chat/core-typings@6.9.0
+  - @yas chat/i18n@0.4.0
+  - @yas chat/core-services@0.3.15
+  - @yas chat/omnichannel-services@0.1.15
+  - @yas chat/pdf-worker@0.0.39
+  - @yas chat/rest-typings@6.9.0
+  - @yas chat/fuselage-ui-kit@7.0.0
+  - @yas chat/ui-kit@0.34.0
+  - @yas chat/api-client@0.1.33
+  - @yas chat/license@0.1.15
+  - @yas chat/presence@0.1.15
+  - @yas chat/apps@0.0.6
+  - @yas chat/cron@0.0.35
+  - @yas chat/gazzodown@7.0.0
+  - @yas chat/model-typings@0.4.1
+  - @yas chat/ui-contexts@7.0.0
+  - @yas chat/web-ui-registration@7.0.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.39
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.0
+  - @yas chat/ui-client@7.0.0
+  - @yas chat/ui-video-conf@7.0.0
+  - @yas chat/instance-status@0.0.39
 
   </details>
 
@@ -16266,33 +16266,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32500](https://github.com/YasChat/YasChat/pull/32500)) Fix user not being set as online when setting "Use REST instead of websocket for Meteor calls" is disabled
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.2
-  - @rocket.chat/rest-typings@6.9.0-rc.2
-  - @rocket.chat/api-client@0.1.33-rc.2
-  - @rocket.chat/license@0.1.15-rc.2
-  - @rocket.chat/omnichannel-services@0.1.15-rc.2
-  - @rocket.chat/pdf-worker@0.0.39-rc.2
-  - @rocket.chat/presence@0.1.15-rc.2
-  - @rocket.chat/apps@0.0.6-rc.2
-  - @rocket.chat/core-services@0.3.15-rc.2
-  - @rocket.chat/cron@0.0.35-rc.2
-  - @rocket.chat/fuselage-ui-kit@7.0.0-rc.2
-  - @rocket.chat/gazzodown@7.0.0-rc.2
-  - @rocket.chat/model-typings@0.4.1-rc.2
-  - @rocket.chat/ui-contexts@7.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.39-rc.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.0-rc.2
-  - @rocket.chat/ui-client@7.0.0-rc.2
-  - @rocket.chat/ui-video-conf@7.0.0-rc.2
-  - @rocket.chat/web-ui-registration@7.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.39-rc.2
+  - @yas chat/core-typings@6.9.0-rc.2
+  - @yas chat/rest-typings@6.9.0-rc.2
+  - @yas chat/api-client@0.1.33-rc.2
+  - @yas chat/license@0.1.15-rc.2
+  - @yas chat/omnichannel-services@0.1.15-rc.2
+  - @yas chat/pdf-worker@0.0.39-rc.2
+  - @yas chat/presence@0.1.15-rc.2
+  - @yas chat/apps@0.0.6-rc.2
+  - @yas chat/core-services@0.3.15-rc.2
+  - @yas chat/cron@0.0.35-rc.2
+  - @yas chat/fuselage-ui-kit@7.0.0-rc.2
+  - @yas chat/gazzodown@7.0.0-rc.2
+  - @yas chat/model-typings@0.4.1-rc.2
+  - @yas chat/ui-contexts@7.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.39-rc.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.0-rc.2
+  - @yas chat/ui-client@7.0.0-rc.2
+  - @yas chat/ui-video-conf@7.0.0-rc.2
+  - @yas chat/web-ui-registration@7.0.0-rc.2
+  - @yas chat/instance-status@0.0.39-rc.2
 
   </details>
 
@@ -16300,35 +16300,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32479](https://github.com/YasChat/YasChat/pull/32479)) Executing a logout and login action in the same "tab/instance", some streams were not being recreated, causing countless types of bugs.
 
   PS: as a workaround reloading after logout or login in also solves the problem.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.1
-  - @rocket.chat/rest-typings@6.9.0-rc.1
-  - @rocket.chat/api-client@0.1.33-rc.1
-  - @rocket.chat/license@0.1.15-rc.1
-  - @rocket.chat/omnichannel-services@0.1.15-rc.1
-  - @rocket.chat/pdf-worker@0.0.39-rc.1
-  - @rocket.chat/presence@0.1.15-rc.1
-  - @rocket.chat/apps@0.0.6-rc.1
-  - @rocket.chat/core-services@0.3.15-rc.1
-  - @rocket.chat/cron@0.0.35-rc.1
-  - @rocket.chat/fuselage-ui-kit@7.0.0-rc.1
-  - @rocket.chat/gazzodown@7.0.0-rc.1
-  - @rocket.chat/model-typings@0.4.1-rc.1
-  - @rocket.chat/ui-contexts@7.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.39-rc.1
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.0-rc.1
-  - @rocket.chat/ui-client@7.0.0-rc.1
-  - @rocket.chat/ui-video-conf@7.0.0-rc.1
-  - @rocket.chat/web-ui-registration@7.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.39-rc.1
+  - @yas chat/core-typings@6.9.0-rc.1
+  - @yas chat/rest-typings@6.9.0-rc.1
+  - @yas chat/api-client@0.1.33-rc.1
+  - @yas chat/license@0.1.15-rc.1
+  - @yas chat/omnichannel-services@0.1.15-rc.1
+  - @yas chat/pdf-worker@0.0.39-rc.1
+  - @yas chat/presence@0.1.15-rc.1
+  - @yas chat/apps@0.0.6-rc.1
+  - @yas chat/core-services@0.3.15-rc.1
+  - @yas chat/cron@0.0.35-rc.1
+  - @yas chat/fuselage-ui-kit@7.0.0-rc.1
+  - @yas chat/gazzodown@7.0.0-rc.1
+  - @yas chat/model-typings@0.4.1-rc.1
+  - @yas chat/ui-contexts@7.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.39-rc.1
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.0-rc.1
+  - @yas chat/ui-client@7.0.0-rc.1
+  - @yas chat/ui-video-conf@7.0.0-rc.1
+  - @yas chat/web-ui-registration@7.0.0-rc.1
+  - @yas chat/instance-status@0.0.39-rc.1
 
   </details>
 
@@ -16390,7 +16390,7 @@
   - The message toolbar visibility on hover (Firefox ESR)
   - `Bubble` missing font-family
 
-  [more details](https://github.com/YasChat/fuselage/releases/tag/%40rocket.chat%2Ffuselage%400.53.7)
+  [more details](https://github.com/YasChat/fuselage/releases/tag/%40yas chat%2Ffuselage%400.53.7)
 
 - ([#32398](https://github.com/YasChat/YasChat/pull/32398)) Fixed issue with external users being able to reset their passwords even when the "Allow Password Change for OAuth Users" setting is disabled
 
@@ -16399,30 +16399,30 @@
 - ([#32342](https://github.com/YasChat/YasChat/pull/32342)) bump fuselage adding `AttachmentAuthorName` missing color token
 
 - <details><summary>Updated dependencies [ff4e396416, bc50dd54a2, ad86761209, f83bd56cc5, 6205ef14f0, 724ba3a729, ee5cdfc367, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.0
-  - @rocket.chat/i18n@0.4.0-rc.0
-  - @rocket.chat/core-services@0.3.15-rc.0
-  - @rocket.chat/omnichannel-services@0.1.15-rc.0
-  - @rocket.chat/pdf-worker@0.0.39-rc.0
-  - @rocket.chat/rest-typings@6.9.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@7.0.0-rc.0
-  - @rocket.chat/ui-kit@0.34.0-rc.0
-  - @rocket.chat/api-client@0.1.33-rc.0
-  - @rocket.chat/license@0.1.15-rc.0
-  - @rocket.chat/presence@0.1.15-rc.0
-  - @rocket.chat/apps@0.0.6-rc.0
-  - @rocket.chat/cron@0.0.35-rc.0
-  - @rocket.chat/gazzodown@7.0.0-rc.0
-  - @rocket.chat/model-typings@0.4.1-rc.0
-  - @rocket.chat/ui-contexts@7.0.0-rc.0
-  - @rocket.chat/web-ui-registration@7.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.39-rc.0
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@3.0.0-rc.0
-  - @rocket.chat/ui-client@7.0.0-rc.0
-  - @rocket.chat/ui-video-conf@7.0.0-rc.0
-  - @rocket.chat/instance-status@0.0.39-rc.0
+  - @yas chat/core-typings@6.9.0-rc.0
+  - @yas chat/i18n@0.4.0-rc.0
+  - @yas chat/core-services@0.3.15-rc.0
+  - @yas chat/omnichannel-services@0.1.15-rc.0
+  - @yas chat/pdf-worker@0.0.39-rc.0
+  - @yas chat/rest-typings@6.9.0-rc.0
+  - @yas chat/fuselage-ui-kit@7.0.0-rc.0
+  - @yas chat/ui-kit@0.34.0-rc.0
+  - @yas chat/api-client@0.1.33-rc.0
+  - @yas chat/license@0.1.15-rc.0
+  - @yas chat/presence@0.1.15-rc.0
+  - @yas chat/apps@0.0.6-rc.0
+  - @yas chat/cron@0.0.35-rc.0
+  - @yas chat/gazzodown@7.0.0-rc.0
+  - @yas chat/model-typings@0.4.1-rc.0
+  - @yas chat/ui-contexts@7.0.0-rc.0
+  - @yas chat/web-ui-registration@7.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.39-rc.0
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@3.0.0-rc.0
+  - @yas chat/ui-client@7.0.0-rc.0
+  - @yas chat/ui-video-conf@7.0.0-rc.0
+  - @yas chat/instance-status@0.0.39-rc.0
 
   </details>
 
@@ -16466,11 +16466,11 @@
 
 - ([#32210](https://github.com/YasChat/YasChat/pull/32210)) Fixes error `audio.pause() is not a function` and makes the continuous new room notification (livechat) respect the volume set in user preferences.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32186](https://github.com/YasChat/YasChat/pull/32186)) Increased the timeout between calls for the three remaining Omnichannel Agenda Jobs. This should make them happen less often and reduce the load on MongoDB
 
@@ -16548,35 +16548,35 @@
 - ([#32284](https://github.com/YasChat/YasChat/pull/32284)) fixed Engagement Dashboard and Device Management admin pages loading indefinitely
 
 - <details><summary>Updated dependencies [845fd64f45, c47a8e3514, 9a6a7d0a40, da45cb6998, 845fd64f45, b94ca7c30b, 9902554388, 8b0986d15a, 4aba7c8a26, c4e58afd8b, c9a92e6ea2, c0d54d742a]:</summary>
-  - @rocket.chat/rest-typings@6.8.0
-  - @rocket.chat/core-typings@6.8.0
-  - @rocket.chat/i18n@0.3.0
-  - @rocket.chat/model-typings@0.4.0
-  - @rocket.chat/apps@0.0.5
-  - @rocket.chat/core-services@0.3.14
-  - @rocket.chat/fuselage-ui-kit@6.0.0
-  - @rocket.chat/presence@0.1.14
-  - @rocket.chat/ui-contexts@6.0.0
-  - @rocket.chat/api-client@0.1.32
-  - @rocket.chat/omnichannel-services@0.1.14
-  - @rocket.chat/license@0.1.14
-  - @rocket.chat/pdf-worker@0.0.38
-  - @rocket.chat/cron@0.0.34
-  - @rocket.chat/gazzodown@6.0.0
-  - @rocket.chat/web-ui-registration@6.0.0
-  - @rocket.chat/models@0.0.38
-  - @rocket.chat/base64@1.0.13
-  - @rocket.chat/instance-status@0.0.38
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/random@1.2.2
-  - @rocket.chat/sha256@1.0.10
-  - @rocket.chat/ui-composer@0.1.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@6.0.0
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@2.0.0
-  - @rocket.chat/ui-client@6.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@6.8.0
+  - @yas chat/core-typings@6.8.0
+  - @yas chat/i18n@0.3.0
+  - @yas chat/model-typings@0.4.0
+  - @yas chat/apps@0.0.5
+  - @yas chat/core-services@0.3.14
+  - @yas chat/fuselage-ui-kit@6.0.0
+  - @yas chat/presence@0.1.14
+  - @yas chat/ui-contexts@6.0.0
+  - @yas chat/api-client@0.1.32
+  - @yas chat/omnichannel-services@0.1.14
+  - @yas chat/license@0.1.14
+  - @yas chat/pdf-worker@0.0.38
+  - @yas chat/cron@0.0.34
+  - @yas chat/gazzodown@6.0.0
+  - @yas chat/web-ui-registration@6.0.0
+  - @yas chat/models@0.0.38
+  - @yas chat/base64@1.0.13
+  - @yas chat/instance-status@0.0.38
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/random@1.2.2
+  - @yas chat/sha256@1.0.10
+  - @yas chat/ui-composer@0.1.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@6.0.0
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@2.0.0
+  - @yas chat/ui-client@6.0.0
+  - @yas chat/server-cloud-communication@0.0.2
 
   </details>
 
@@ -16584,7 +16584,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32348](https://github.com/YasChat/YasChat/pull/32348)) Fixed an issue where translations would fallback to english some of the times.
 
@@ -16593,28 +16593,28 @@
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
 - <details><summary>Updated dependencies [b94ca7c30b]:</summary>
-  - @rocket.chat/apps@0.0.5-rc.2
-  - @rocket.chat/core-services@0.3.14-rc.2
-  - @rocket.chat/core-typings@6.8.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@6.0.0-rc.2
-  - @rocket.chat/rest-typings@6.8.0-rc.2
-  - @rocket.chat/presence@0.1.14-rc.2
-  - @rocket.chat/omnichannel-services@0.1.14-rc.2
-  - @rocket.chat/api-client@0.1.32-rc.2
-  - @rocket.chat/license@0.1.14-rc.2
-  - @rocket.chat/pdf-worker@0.0.38-rc.2
-  - @rocket.chat/cron@0.0.34-rc.2
-  - @rocket.chat/gazzodown@6.0.0-rc.2
-  - @rocket.chat/model-typings@0.4.0-rc.2
-  - @rocket.chat/ui-contexts@6.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.38-rc.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@2.0.0-rc.2
-  - @rocket.chat/ui-client@6.0.0-rc.2
-  - @rocket.chat/ui-video-conf@6.0.0-rc.2
-  - @rocket.chat/web-ui-registration@6.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.38-rc.2
+  - @yas chat/apps@0.0.5-rc.2
+  - @yas chat/core-services@0.3.14-rc.2
+  - @yas chat/core-typings@6.8.0-rc.2
+  - @yas chat/fuselage-ui-kit@6.0.0-rc.2
+  - @yas chat/rest-typings@6.8.0-rc.2
+  - @yas chat/presence@0.1.14-rc.2
+  - @yas chat/omnichannel-services@0.1.14-rc.2
+  - @yas chat/api-client@0.1.32-rc.2
+  - @yas chat/license@0.1.14-rc.2
+  - @yas chat/pdf-worker@0.0.38-rc.2
+  - @yas chat/cron@0.0.34-rc.2
+  - @yas chat/gazzodown@6.0.0-rc.2
+  - @yas chat/model-typings@0.4.0-rc.2
+  - @yas chat/ui-contexts@6.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.38-rc.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@2.0.0-rc.2
+  - @yas chat/ui-client@6.0.0-rc.2
+  - @yas chat/ui-video-conf@6.0.0-rc.2
+  - @yas chat/web-ui-registration@6.0.0-rc.2
+  - @yas chat/instance-status@0.0.38-rc.2
 
   </details>
 
@@ -16622,31 +16622,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.1
-  - @rocket.chat/rest-typings@6.8.0-rc.1
-  - @rocket.chat/api-client@0.1.31-rc.1
-  - @rocket.chat/license@0.1.13-rc.1
-  - @rocket.chat/omnichannel-services@0.1.13-rc.1
-  - @rocket.chat/pdf-worker@0.0.37-rc.1
-  - @rocket.chat/presence@0.1.13-rc.1
-  - @rocket.chat/apps@0.0.4-rc.1
-  - @rocket.chat/core-services@0.3.13-rc.1
-  - @rocket.chat/cron@0.0.33-rc.1
-  - @rocket.chat/gazzodown@6.0.0-rc.1
-  - @rocket.chat/model-typings@0.4.0-rc.1
-  - @rocket.chat/ui-contexts@6.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@6.0.0-rc.1
-  - @rocket.chat/models@0.0.37-rc.1
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@2.0.0-rc.1
-  - @rocket.chat/ui-client@6.0.0-rc.1
-  - @rocket.chat/ui-video-conf@6.0.0-rc.1
-  - @rocket.chat/web-ui-registration@6.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.37-rc.1
+  - @yas chat/core-typings@6.8.0-rc.1
+  - @yas chat/rest-typings@6.8.0-rc.1
+  - @yas chat/api-client@0.1.31-rc.1
+  - @yas chat/license@0.1.13-rc.1
+  - @yas chat/omnichannel-services@0.1.13-rc.1
+  - @yas chat/pdf-worker@0.0.37-rc.1
+  - @yas chat/presence@0.1.13-rc.1
+  - @yas chat/apps@0.0.4-rc.1
+  - @yas chat/core-services@0.3.13-rc.1
+  - @yas chat/cron@0.0.33-rc.1
+  - @yas chat/gazzodown@6.0.0-rc.1
+  - @yas chat/model-typings@0.4.0-rc.1
+  - @yas chat/ui-contexts@6.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@6.0.0-rc.1
+  - @yas chat/models@0.0.37-rc.1
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@2.0.0-rc.1
+  - @yas chat/ui-client@6.0.0-rc.1
+  - @yas chat/ui-video-conf@6.0.0-rc.1
+  - @yas chat/web-ui-registration@6.0.0-rc.1
+  - @yas chat/instance-status@0.0.37-rc.1
 
   </details>
 
@@ -16760,63 +16760,63 @@
 - ([#32062](https://github.com/YasChat/YasChat/pull/32062)) Fixed an issue where old exports would get overwritten by new ones if generated on the same day, when using external storage services (such as Amazon S3)
 
 - <details><summary>Updated dependencies [845fd64f45, c47a8e3514, 9a6a7d0a40, da45cb6998, 845fd64f45, 9902554388, 8b0986d15a, 4aba7c8a26, c4e58afd8b, c9a92e6ea2, c0d54d742a]:</summary>
-  - @rocket.chat/rest-typings@6.8.0-rc.0
-  - @rocket.chat/core-typings@6.8.0-rc.0
-  - @rocket.chat/i18n@0.3.0-rc.0
-  - @rocket.chat/model-typings@0.4.0-rc.0
-  - @rocket.chat/core-services@0.3.12-rc.0
-  - @rocket.chat/ui-contexts@6.0.0-rc.0
-  - @rocket.chat/api-client@0.1.30-rc.0
-  - @rocket.chat/omnichannel-services@0.1.12-rc.0
-  - @rocket.chat/presence@0.1.12-rc.0
-  - @rocket.chat/license@0.1.12-rc.0
-  - @rocket.chat/pdf-worker@0.0.36-rc.0
-  - @rocket.chat/apps@0.0.3-rc.0
-  - @rocket.chat/cron@0.0.32-rc.0
-  - @rocket.chat/gazzodown@6.0.0-rc.0
-  - @rocket.chat/web-ui-registration@6.0.0-rc.0
-  - @rocket.chat/models@0.0.36-rc.0
-  - @rocket.chat/base64@1.0.13
-  - @rocket.chat/fuselage-ui-kit@6.0.0-rc.0
-  - @rocket.chat/instance-status@0.0.36-rc.0
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/random@1.2.2
-  - @rocket.chat/sha256@1.0.10
-  - @rocket.chat/ui-composer@0.1.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@6.0.0-rc.0
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@2.0.0-rc.0
-  - @rocket.chat/ui-client@6.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
+  - @yas chat/rest-typings@6.8.0-rc.0
+  - @yas chat/core-typings@6.8.0-rc.0
+  - @yas chat/i18n@0.3.0-rc.0
+  - @yas chat/model-typings@0.4.0-rc.0
+  - @yas chat/core-services@0.3.12-rc.0
+  - @yas chat/ui-contexts@6.0.0-rc.0
+  - @yas chat/api-client@0.1.30-rc.0
+  - @yas chat/omnichannel-services@0.1.12-rc.0
+  - @yas chat/presence@0.1.12-rc.0
+  - @yas chat/license@0.1.12-rc.0
+  - @yas chat/pdf-worker@0.0.36-rc.0
+  - @yas chat/apps@0.0.3-rc.0
+  - @yas chat/cron@0.0.32-rc.0
+  - @yas chat/gazzodown@6.0.0-rc.0
+  - @yas chat/web-ui-registration@6.0.0-rc.0
+  - @yas chat/models@0.0.36-rc.0
+  - @yas chat/base64@1.0.13
+  - @yas chat/fuselage-ui-kit@6.0.0-rc.0
+  - @yas chat/instance-status@0.0.36-rc.0
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/random@1.2.2
+  - @yas chat/sha256@1.0.10
+  - @yas chat/ui-composer@0.1.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@6.0.0-rc.0
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@2.0.0-rc.0
+  - @yas chat/ui-client@6.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32315](https://github.com/YasChat/YasChat/pull/32315) by [@dionisio-bot](https://github.com/dionisio-bot)) fixed Engagement Dashboard and Device Management admin pages loading indefinitely
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.2
-  - @rocket.chat/rest-typings@6.7.2
-  - @rocket.chat/api-client@0.1.31
-  - @rocket.chat/license@0.1.13
-  - @rocket.chat/omnichannel-services@0.1.13
-  - @rocket.chat/pdf-worker@0.0.37
-  - @rocket.chat/presence@0.1.13
-  - @rocket.chat/apps@0.0.4
-  - @rocket.chat/core-services@0.3.13
-  - @rocket.chat/cron@0.0.33
-  - @rocket.chat/gazzodown@5.0.2
-  - @rocket.chat/model-typings@0.3.9
-  - @rocket.chat/ui-contexts@5.0.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.2
-  - @rocket.chat/models@0.0.37
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.2
-  - @rocket.chat/ui-client@5.0.2
-  - @rocket.chat/ui-video-conf@5.0.2
-  - @rocket.chat/web-ui-registration@5.0.2
-  - @rocket.chat/instance-status@0.0.37
+  - @yas chat/core-typings@6.7.2
+  - @yas chat/rest-typings@6.7.2
+  - @yas chat/api-client@0.1.31
+  - @yas chat/license@0.1.13
+  - @yas chat/omnichannel-services@0.1.13
+  - @yas chat/pdf-worker@0.0.37
+  - @yas chat/presence@0.1.13
+  - @yas chat/apps@0.0.4
+  - @yas chat/core-services@0.3.13
+  - @yas chat/cron@0.0.33
+  - @yas chat/gazzodown@5.0.2
+  - @yas chat/model-typings@0.3.9
+  - @yas chat/ui-contexts@5.0.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.2
+  - @yas chat/models@0.0.37
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.2
+  - @yas chat/ui-client@5.0.2
+  - @yas chat/ui-video-conf@5.0.2
+  - @yas chat/web-ui-registration@5.0.2
+  - @yas chat/instance-status@0.0.37
 
   </details>
 
@@ -16824,7 +16824,7 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32284](https://github.com/YasChat/YasChat/pull/32284)) fixed Engagement Dashboard and Device Management admin pages loading indefinitely
 
@@ -16832,9 +16832,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32253](https://github.com/YasChat/YasChat/pull/32253)) Increased the timeout between calls for the three remaining Omnichannel Agenda Jobs. This should make them happen less often and reduce the load on MongoDB
 
@@ -16849,28 +16849,28 @@
 - ([#32251](https://github.com/YasChat/YasChat/pull/32251)) Fixes an issue where message reactions are vertically misaligned when zooming out
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.1
-  - @rocket.chat/rest-typings@6.7.1
-  - @rocket.chat/api-client@0.1.30
-  - @rocket.chat/license@0.1.12
-  - @rocket.chat/omnichannel-services@0.1.12
-  - @rocket.chat/pdf-worker@0.0.36
-  - @rocket.chat/presence@0.1.12
-  - @rocket.chat/apps@0.0.3
-  - @rocket.chat/core-services@0.3.12
-  - @rocket.chat/cron@0.0.32
-  - @rocket.chat/gazzodown@5.0.1
-  - @rocket.chat/model-typings@0.3.8
-  - @rocket.chat/ui-contexts@5.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.1
-  - @rocket.chat/models@0.0.36
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.1
-  - @rocket.chat/ui-client@5.0.1
-  - @rocket.chat/ui-video-conf@5.0.1
-  - @rocket.chat/web-ui-registration@5.0.1
-  - @rocket.chat/instance-status@0.0.36
+  - @yas chat/core-typings@6.7.1
+  - @yas chat/rest-typings@6.7.1
+  - @yas chat/api-client@0.1.30
+  - @yas chat/license@0.1.12
+  - @yas chat/omnichannel-services@0.1.12
+  - @yas chat/pdf-worker@0.0.36
+  - @yas chat/presence@0.1.12
+  - @yas chat/apps@0.0.3
+  - @yas chat/core-services@0.3.12
+  - @yas chat/cron@0.0.32
+  - @yas chat/gazzodown@5.0.1
+  - @yas chat/model-typings@0.3.8
+  - @yas chat/ui-contexts@5.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.1
+  - @yas chat/models@0.0.36
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.1
+  - @yas chat/ui-client@5.0.1
+  - @yas chat/ui-video-conf@5.0.1
+  - @yas chat/web-ui-registration@5.0.1
+  - @yas chat/instance-status@0.0.36
 
   </details>
 
@@ -16935,15 +16935,15 @@
 
 - ([#31881](https://github.com/YasChat/YasChat/pull/31881)) Fixed a problem that caused Business Hours feature (Multiple) to make bot agents not available when turning on the feature, and not making them available after that. Now, Business Hours will ignore Bot users, allowing admins to decide manually if a bot should be or not be active during a period of time
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31720](https://github.com/YasChat/YasChat/pull/31720)) Now we are considering channels with auto-join inside teams on user creation
 
@@ -17051,35 +17051,35 @@
 - ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, f0475cc4cf, d1b1ffe9e5, 0570f6740a, 939a6fa35f, 8b10c6cf0f, b9e897a8f5, b876e4e0fc, 5ad65ff3da, f612d741f3, e203c40471]:</summary>
-  - @rocket.chat/core-typings@6.7.0
-  - @rocket.chat/web-ui-registration@5.0.0
-  - @rocket.chat/rest-typings@6.7.0
-  - @rocket.chat/model-typings@0.3.7
-  - @rocket.chat/i18n@0.2.0
-  - @rocket.chat/core-services@0.3.11
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/models@0.0.35
-  - @rocket.chat/api-client@0.1.29
-  - @rocket.chat/license@0.1.11
-  - @rocket.chat/omnichannel-services@0.1.11
-  - @rocket.chat/pdf-worker@0.0.35
-  - @rocket.chat/presence@0.1.11
-  - @rocket.chat/apps@0.0.2
-  - @rocket.chat/cron@0.0.31
-  - @rocket.chat/gazzodown@5.0.0
-  - @rocket.chat/ui-contexts@5.0.0
-  - @rocket.chat/base64@1.0.13
-  - @rocket.chat/fuselage-ui-kit@5.0.0
-  - @rocket.chat/instance-status@0.0.35
-  - @rocket.chat/random@1.2.2
-  - @rocket.chat/sha256@1.0.10
-  - @rocket.chat/ui-composer@0.1.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@5.0.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0
-  - @rocket.chat/ui-client@5.0.0
+  - @yas chat/core-typings@6.7.0
+  - @yas chat/web-ui-registration@5.0.0
+  - @yas chat/rest-typings@6.7.0
+  - @yas chat/model-typings@0.3.7
+  - @yas chat/i18n@0.2.0
+  - @yas chat/core-services@0.3.11
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/models@0.0.35
+  - @yas chat/api-client@0.1.29
+  - @yas chat/license@0.1.11
+  - @yas chat/omnichannel-services@0.1.11
+  - @yas chat/pdf-worker@0.0.35
+  - @yas chat/presence@0.1.11
+  - @yas chat/apps@0.0.2
+  - @yas chat/cron@0.0.31
+  - @yas chat/gazzodown@5.0.0
+  - @yas chat/ui-contexts@5.0.0
+  - @yas chat/base64@1.0.13
+  - @yas chat/fuselage-ui-kit@5.0.0
+  - @yas chat/instance-status@0.0.35
+  - @yas chat/random@1.2.2
+  - @yas chat/sha256@1.0.10
+  - @yas chat/ui-composer@0.1.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@5.0.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0
+  - @yas chat/ui-client@5.0.0
 
   </details>
 
@@ -17087,31 +17087,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.4
-  - @rocket.chat/rest-typings@6.7.0-rc.4
-  - @rocket.chat/api-client@0.1.29-rc.4
-  - @rocket.chat/license@0.1.11-rc.4
-  - @rocket.chat/omnichannel-services@0.1.11-rc.4
-  - @rocket.chat/pdf-worker@0.0.35-rc.4
-  - @rocket.chat/presence@0.1.11-rc.4
-  - @rocket.chat/apps@0.0.2-rc.4
-  - @rocket.chat/core-services@0.3.11-rc.4
-  - @rocket.chat/cron@0.0.31-rc.4
-  - @rocket.chat/gazzodown@5.0.0-rc.4
-  - @rocket.chat/model-typings@0.3.7-rc.4
-  - @rocket.chat/ui-contexts@5.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.0-rc.4
-  - @rocket.chat/models@0.0.35-rc.4
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.4
-  - @rocket.chat/ui-client@5.0.0-rc.4
-  - @rocket.chat/ui-video-conf@5.0.0-rc.4
-  - @rocket.chat/web-ui-registration@5.0.0-rc.4
-  - @rocket.chat/instance-status@0.0.35-rc.4
+  - @yas chat/core-typings@6.7.0-rc.4
+  - @yas chat/rest-typings@6.7.0-rc.4
+  - @yas chat/api-client@0.1.29-rc.4
+  - @yas chat/license@0.1.11-rc.4
+  - @yas chat/omnichannel-services@0.1.11-rc.4
+  - @yas chat/pdf-worker@0.0.35-rc.4
+  - @yas chat/presence@0.1.11-rc.4
+  - @yas chat/apps@0.0.2-rc.4
+  - @yas chat/core-services@0.3.11-rc.4
+  - @yas chat/cron@0.0.31-rc.4
+  - @yas chat/gazzodown@5.0.0-rc.4
+  - @yas chat/model-typings@0.3.7-rc.4
+  - @yas chat/ui-contexts@5.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.0-rc.4
+  - @yas chat/models@0.0.35-rc.4
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0-rc.4
+  - @yas chat/ui-client@5.0.0-rc.4
+  - @yas chat/ui-video-conf@5.0.0-rc.4
+  - @yas chat/web-ui-registration@5.0.0-rc.4
+  - @yas chat/instance-status@0.0.35-rc.4
 
   </details>
 
@@ -17119,33 +17119,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32069](https://github.com/YasChat/YasChat/pull/32069)) Livechat: A registered user loses their messages if 'registerGuest' is called using the same token.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.3
-  - @rocket.chat/rest-typings@6.7.0-rc.3
-  - @rocket.chat/api-client@0.1.29-rc.3
-  - @rocket.chat/license@0.1.11-rc.3
-  - @rocket.chat/omnichannel-services@0.1.11-rc.3
-  - @rocket.chat/pdf-worker@0.0.35-rc.3
-  - @rocket.chat/presence@0.1.11-rc.3
-  - @rocket.chat/apps@0.0.2-rc.3
-  - @rocket.chat/core-services@0.3.11-rc.3
-  - @rocket.chat/cron@0.0.31-rc.3
-  - @rocket.chat/gazzodown@5.0.0-rc.3
-  - @rocket.chat/model-typings@0.3.7-rc.3
-  - @rocket.chat/ui-contexts@5.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.0-rc.3
-  - @rocket.chat/models@0.0.35-rc.3
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.3
-  - @rocket.chat/ui-client@5.0.0-rc.3
-  - @rocket.chat/ui-video-conf@5.0.0-rc.3
-  - @rocket.chat/web-ui-registration@5.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.35-rc.3
+  - @yas chat/core-typings@6.7.0-rc.3
+  - @yas chat/rest-typings@6.7.0-rc.3
+  - @yas chat/api-client@0.1.29-rc.3
+  - @yas chat/license@0.1.11-rc.3
+  - @yas chat/omnichannel-services@0.1.11-rc.3
+  - @yas chat/pdf-worker@0.0.35-rc.3
+  - @yas chat/presence@0.1.11-rc.3
+  - @yas chat/apps@0.0.2-rc.3
+  - @yas chat/core-services@0.3.11-rc.3
+  - @yas chat/cron@0.0.31-rc.3
+  - @yas chat/gazzodown@5.0.0-rc.3
+  - @yas chat/model-typings@0.3.7-rc.3
+  - @yas chat/ui-contexts@5.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.0-rc.3
+  - @yas chat/models@0.0.35-rc.3
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0-rc.3
+  - @yas chat/ui-client@5.0.0-rc.3
+  - @yas chat/ui-video-conf@5.0.0-rc.3
+  - @yas chat/web-ui-registration@5.0.0-rc.3
+  - @yas chat/instance-status@0.0.35-rc.3
 
   </details>
 
@@ -17153,31 +17153,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.2
-  - @rocket.chat/rest-typings@6.7.0-rc.2
-  - @rocket.chat/api-client@0.1.29-rc.2
-  - @rocket.chat/license@0.1.11-rc.2
-  - @rocket.chat/omnichannel-services@0.1.11-rc.2
-  - @rocket.chat/pdf-worker@0.0.35-rc.2
-  - @rocket.chat/presence@0.1.11-rc.2
-  - @rocket.chat/apps@0.0.2-rc.2
-  - @rocket.chat/core-services@0.3.11-rc.2
-  - @rocket.chat/cron@0.0.31-rc.2
-  - @rocket.chat/gazzodown@5.0.0-rc.2
-  - @rocket.chat/model-typings@0.3.7-rc.2
-  - @rocket.chat/ui-contexts@5.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.0-rc.2
-  - @rocket.chat/models@0.0.35-rc.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.2
-  - @rocket.chat/ui-client@5.0.0-rc.2
-  - @rocket.chat/ui-video-conf@5.0.0-rc.2
-  - @rocket.chat/web-ui-registration@5.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.35-rc.2
+  - @yas chat/core-typings@6.7.0-rc.2
+  - @yas chat/rest-typings@6.7.0-rc.2
+  - @yas chat/api-client@0.1.29-rc.2
+  - @yas chat/license@0.1.11-rc.2
+  - @yas chat/omnichannel-services@0.1.11-rc.2
+  - @yas chat/pdf-worker@0.0.35-rc.2
+  - @yas chat/presence@0.1.11-rc.2
+  - @yas chat/apps@0.0.2-rc.2
+  - @yas chat/core-services@0.3.11-rc.2
+  - @yas chat/cron@0.0.31-rc.2
+  - @yas chat/gazzodown@5.0.0-rc.2
+  - @yas chat/model-typings@0.3.7-rc.2
+  - @yas chat/ui-contexts@5.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.0-rc.2
+  - @yas chat/models@0.0.35-rc.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0-rc.2
+  - @yas chat/ui-client@5.0.0-rc.2
+  - @yas chat/ui-video-conf@5.0.0-rc.2
+  - @yas chat/web-ui-registration@5.0.0-rc.2
+  - @yas chat/instance-status@0.0.35-rc.2
 
   </details>
 
@@ -17185,33 +17185,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32085](https://github.com/YasChat/YasChat/pull/32085)) Fixed an internal server error when using the backwards compatibility flag to connect to the real time API for listening to all server message notifications.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.1
-  - @rocket.chat/rest-typings@6.7.0-rc.1
-  - @rocket.chat/api-client@0.1.29-rc.1
-  - @rocket.chat/license@0.1.11-rc.1
-  - @rocket.chat/omnichannel-services@0.1.11-rc.1
-  - @rocket.chat/pdf-worker@0.0.35-rc.1
-  - @rocket.chat/presence@0.1.11-rc.1
-  - @rocket.chat/apps@0.0.2-rc.1
-  - @rocket.chat/core-services@0.3.11-rc.1
-  - @rocket.chat/cron@0.0.31-rc.1
-  - @rocket.chat/gazzodown@5.0.0-rc.1
-  - @rocket.chat/model-typings@0.3.7-rc.1
-  - @rocket.chat/ui-contexts@5.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@5.0.0-rc.1
-  - @rocket.chat/models@0.0.35-rc.1
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.1
-  - @rocket.chat/ui-client@5.0.0-rc.1
-  - @rocket.chat/ui-video-conf@5.0.0-rc.1
-  - @rocket.chat/web-ui-registration@5.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.35-rc.1
+  - @yas chat/core-typings@6.7.0-rc.1
+  - @yas chat/rest-typings@6.7.0-rc.1
+  - @yas chat/api-client@0.1.29-rc.1
+  - @yas chat/license@0.1.11-rc.1
+  - @yas chat/omnichannel-services@0.1.11-rc.1
+  - @yas chat/pdf-worker@0.0.35-rc.1
+  - @yas chat/presence@0.1.11-rc.1
+  - @yas chat/apps@0.0.2-rc.1
+  - @yas chat/core-services@0.3.11-rc.1
+  - @yas chat/cron@0.0.31-rc.1
+  - @yas chat/gazzodown@5.0.0-rc.1
+  - @yas chat/model-typings@0.3.7-rc.1
+  - @yas chat/ui-contexts@5.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@5.0.0-rc.1
+  - @yas chat/models@0.0.35-rc.1
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0-rc.1
+  - @yas chat/ui-client@5.0.0-rc.1
+  - @yas chat/ui-video-conf@5.0.0-rc.1
+  - @yas chat/web-ui-registration@5.0.0-rc.1
+  - @yas chat/instance-status@0.0.35-rc.1
 
   </details>
 
@@ -17378,35 +17378,35 @@
 - ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, f0475cc4cf, d1b1ffe9e5, 0570f6740a, 939a6fa35f, 8b10c6cf0f, b9e897a8f5, b876e4e0fc, 5ad65ff3da, f612d741f3, e203c40471]:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.0
-  - @rocket.chat/web-ui-registration@5.0.0-rc.0
-  - @rocket.chat/rest-typings@6.7.0-rc.0
-  - @rocket.chat/model-typings@0.3.7-rc.0
-  - @rocket.chat/i18n@0.2.0-rc.0
-  - @rocket.chat/core-services@0.3.11-rc.0
-  - @rocket.chat/message-parser@0.31.29-rc.0
-  - @rocket.chat/models@0.0.35-rc.0
-  - @rocket.chat/api-client@0.1.29-rc.0
-  - @rocket.chat/license@0.1.11-rc.0
-  - @rocket.chat/omnichannel-services@0.1.11-rc.0
-  - @rocket.chat/pdf-worker@0.0.35-rc.0
-  - @rocket.chat/presence@0.1.11-rc.0
-  - @rocket.chat/apps@0.0.2-rc.0
-  - @rocket.chat/cron@0.0.31-rc.0
-  - @rocket.chat/gazzodown@5.0.0-rc.0
-  - @rocket.chat/ui-contexts@5.0.0-rc.0
-  - @rocket.chat/base64@1.0.13
-  - @rocket.chat/fuselage-ui-kit@5.0.0-rc.0
-  - @rocket.chat/instance-status@0.0.35-rc.0
-  - @rocket.chat/random@1.2.2
-  - @rocket.chat/sha256@1.0.10
-  - @rocket.chat/ui-composer@0.1.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@5.0.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.0
-  - @rocket.chat/ui-client@5.0.0-rc.0
+  - @yas chat/core-typings@6.7.0-rc.0
+  - @yas chat/web-ui-registration@5.0.0-rc.0
+  - @yas chat/rest-typings@6.7.0-rc.0
+  - @yas chat/model-typings@0.3.7-rc.0
+  - @yas chat/i18n@0.2.0-rc.0
+  - @yas chat/core-services@0.3.11-rc.0
+  - @yas chat/message-parser@0.31.29-rc.0
+  - @yas chat/models@0.0.35-rc.0
+  - @yas chat/api-client@0.1.29-rc.0
+  - @yas chat/license@0.1.11-rc.0
+  - @yas chat/omnichannel-services@0.1.11-rc.0
+  - @yas chat/pdf-worker@0.0.35-rc.0
+  - @yas chat/presence@0.1.11-rc.0
+  - @yas chat/apps@0.0.2-rc.0
+  - @yas chat/cron@0.0.31-rc.0
+  - @yas chat/gazzodown@5.0.0-rc.0
+  - @yas chat/ui-contexts@5.0.0-rc.0
+  - @yas chat/base64@1.0.13
+  - @yas chat/fuselage-ui-kit@5.0.0-rc.0
+  - @yas chat/instance-status@0.0.35-rc.0
+  - @yas chat/random@1.2.2
+  - @yas chat/sha256@1.0.10
+  - @yas chat/ui-composer@0.1.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@5.0.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-avatar@1.0.0-rc.0
+  - @yas chat/ui-client@5.0.0-rc.0
 
   </details>
 
@@ -17414,35 +17414,35 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#32064](https://github.com/YasChat/YasChat/pull/32064)) Fix an issue affecting YasChat Apps utilizing the OAuth 2 library from Apps Engine, ensuring that apps like Google Drive and Google Calendar are operational once more.
 
 - ([#32056](https://github.com/YasChat/YasChat/pull/32056)) Fix error during migration 304. Throwing `Cannot read property 'finally' of undefined` error.
 
 - <details><summary>Updated dependencies [ada096901a]:</summary>
-  - @rocket.chat/models@0.0.34
-  - @rocket.chat/omnichannel-services@0.1.10
-  - @rocket.chat/presence@0.1.10
-  - @rocket.chat/core-services@0.3.10
-  - @rocket.chat/cron@0.0.30
-  - @rocket.chat/instance-status@0.0.34
-  - @rocket.chat/core-typings@6.6.6
-  - @rocket.chat/rest-typings@6.6.6
-  - @rocket.chat/api-client@0.1.28
-  - @rocket.chat/license@0.1.10
-  - @rocket.chat/pdf-worker@0.0.34
-  - @rocket.chat/gazzodown@4.0.6
-  - @rocket.chat/model-typings@0.3.6
-  - @rocket.chat/ui-contexts@4.0.6
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@4.0.6
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-client@4.0.6
-  - @rocket.chat/ui-video-conf@4.0.6
-  - @rocket.chat/web-ui-registration@4.0.6
+  - @yas chat/models@0.0.34
+  - @yas chat/omnichannel-services@0.1.10
+  - @yas chat/presence@0.1.10
+  - @yas chat/core-services@0.3.10
+  - @yas chat/cron@0.0.30
+  - @yas chat/instance-status@0.0.34
+  - @yas chat/core-typings@6.6.6
+  - @yas chat/rest-typings@6.6.6
+  - @yas chat/api-client@0.1.28
+  - @yas chat/license@0.1.10
+  - @yas chat/pdf-worker@0.0.34
+  - @yas chat/gazzodown@4.0.6
+  - @yas chat/model-typings@0.3.6
+  - @yas chat/ui-contexts@4.0.6
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@4.0.6
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-client@4.0.6
+  - @yas chat/ui-video-conf@4.0.6
+  - @yas chat/web-ui-registration@4.0.6
 
   </details>
 
@@ -17450,9 +17450,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31998](https://github.com/YasChat/YasChat/pull/31998)) Introduced a new step to the queue worker: when an inquiry that's on an improper status is selected for processing, queue worker will first check its status and will attempt to fix it.
   For example, if an inquiry points to a closed room, there's no point in processing, system will now remove the inquiry
@@ -17461,26 +17461,26 @@
   This prevents issues where the queue worker attempted to process an inquiry _forever_ because it was in an improper state.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@4.0.5
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/fuselage-ui-kit@4.0.5
-  - @rocket.chat/gazzodown@4.0.5
-  - @rocket.chat/ui-client@4.0.5
-  - @rocket.chat/ui-video-conf@4.0.5
-  - @rocket.chat/web-ui-registration@4.0.5
-  - @rocket.chat/core-typings@6.6.5
-  - @rocket.chat/rest-typings@6.6.5
-  - @rocket.chat/api-client@0.1.27
-  - @rocket.chat/license@0.1.9
-  - @rocket.chat/omnichannel-services@0.1.9
-  - @rocket.chat/pdf-worker@0.0.33
-  - @rocket.chat/presence@0.1.9
-  - @rocket.chat/core-services@0.3.9
-  - @rocket.chat/cron@0.0.29
-  - @rocket.chat/model-typings@0.3.5
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.33
-  - @rocket.chat/instance-status@0.0.33
+  - @yas chat/ui-contexts@4.0.5
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/fuselage-ui-kit@4.0.5
+  - @yas chat/gazzodown@4.0.5
+  - @yas chat/ui-client@4.0.5
+  - @yas chat/ui-video-conf@4.0.5
+  - @yas chat/web-ui-registration@4.0.5
+  - @yas chat/core-typings@6.6.5
+  - @yas chat/rest-typings@6.6.5
+  - @yas chat/api-client@0.1.27
+  - @yas chat/license@0.1.9
+  - @yas chat/omnichannel-services@0.1.9
+  - @yas chat/pdf-worker@0.0.33
+  - @yas chat/presence@0.1.9
+  - @yas chat/core-services@0.3.9
+  - @yas chat/cron@0.0.29
+  - @yas chat/model-typings@0.3.5
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.33
+  - @yas chat/instance-status@0.0.33
 
   </details>
 
@@ -17488,9 +17488,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31700](https://github.com/YasChat/YasChat/pull/31700)) Fixed matrix homeserver domain setting not being visible in admin panel
 
@@ -17499,26 +17499,26 @@
 - ([#31927](https://github.com/YasChat/YasChat/pull/31927)) `stopped` lifecycle method was unexpectedly synchronous when using microservices, causing our code to create race conditions.
 
 - <details><summary>Updated dependencies [c2872a93f2]:</summary>
-  - @rocket.chat/core-services@0.3.8
-  - @rocket.chat/omnichannel-services@0.1.8
-  - @rocket.chat/presence@0.1.8
-  - @rocket.chat/core-typings@6.6.4
-  - @rocket.chat/rest-typings@6.6.4
-  - @rocket.chat/api-client@0.1.26
-  - @rocket.chat/license@0.1.8
-  - @rocket.chat/pdf-worker@0.0.32
-  - @rocket.chat/cron@0.0.28
-  - @rocket.chat/gazzodown@4.0.4
-  - @rocket.chat/model-typings@0.3.4
-  - @rocket.chat/ui-contexts@4.0.4
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@4.0.4
-  - @rocket.chat/models@0.0.32
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-client@4.0.4
-  - @rocket.chat/ui-video-conf@4.0.4
-  - @rocket.chat/web-ui-registration@4.0.4
-  - @rocket.chat/instance-status@0.0.32
+  - @yas chat/core-services@0.3.8
+  - @yas chat/omnichannel-services@0.1.8
+  - @yas chat/presence@0.1.8
+  - @yas chat/core-typings@6.6.4
+  - @yas chat/rest-typings@6.6.4
+  - @yas chat/api-client@0.1.26
+  - @yas chat/license@0.1.8
+  - @yas chat/pdf-worker@0.0.32
+  - @yas chat/cron@0.0.28
+  - @yas chat/gazzodown@4.0.4
+  - @yas chat/model-typings@0.3.4
+  - @yas chat/ui-contexts@4.0.4
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@4.0.4
+  - @yas chat/models@0.0.32
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-client@4.0.4
+  - @yas chat/ui-video-conf@4.0.4
+  - @yas chat/web-ui-registration@4.0.4
+  - @yas chat/instance-status@0.0.32
 
   </details>
 
@@ -17526,33 +17526,33 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31895](https://github.com/YasChat/YasChat/pull/31895)) Fix users presence stuck as online after connecting using mobile apps
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.3
-  - @rocket.chat/rest-typings@6.6.3
-  - @rocket.chat/api-client@0.1.25
-  - @rocket.chat/license@0.1.7
-  - @rocket.chat/omnichannel-services@0.1.7
-  - @rocket.chat/pdf-worker@0.0.31
-  - @rocket.chat/presence@0.1.7
-  - @rocket.chat/core-services@0.3.7
-  - @rocket.chat/cron@0.0.27
-  - @rocket.chat/gazzodown@4.0.3
-  - @rocket.chat/model-typings@0.3.3
-  - @rocket.chat/ui-contexts@4.0.3
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@4.0.3
-  - @rocket.chat/models@0.0.31
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-client@4.0.3
-  - @rocket.chat/ui-video-conf@4.0.3
-  - @rocket.chat/web-ui-registration@4.0.3
-  - @rocket.chat/instance-status@0.0.31
+  - @yas chat/core-typings@6.6.3
+  - @yas chat/rest-typings@6.6.3
+  - @yas chat/api-client@0.1.25
+  - @yas chat/license@0.1.7
+  - @yas chat/omnichannel-services@0.1.7
+  - @yas chat/pdf-worker@0.0.31
+  - @yas chat/presence@0.1.7
+  - @yas chat/core-services@0.3.7
+  - @yas chat/cron@0.0.27
+  - @yas chat/gazzodown@4.0.3
+  - @yas chat/model-typings@0.3.3
+  - @yas chat/ui-contexts@4.0.3
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@4.0.3
+  - @yas chat/models@0.0.31
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-client@4.0.3
+  - @yas chat/ui-video-conf@4.0.3
+  - @yas chat/web-ui-registration@4.0.3
+  - @yas chat/instance-status@0.0.31
 
   </details>
 
@@ -17560,9 +17560,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31844](https://github.com/YasChat/YasChat/pull/31844)) Fixed Federation not working with Microservice deployments
 
@@ -17571,26 +17571,26 @@
 - ([#31833](https://github.com/YasChat/YasChat/pull/31833)) Fix web UI not showing users presence updating to offline
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@4.0.2
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/fuselage-ui-kit@4.0.2
-  - @rocket.chat/gazzodown@4.0.2
-  - @rocket.chat/ui-client@4.0.2
-  - @rocket.chat/ui-video-conf@4.0.2
-  - @rocket.chat/web-ui-registration@4.0.2
-  - @rocket.chat/core-typings@6.6.2
-  - @rocket.chat/rest-typings@6.6.2
-  - @rocket.chat/api-client@0.1.24
-  - @rocket.chat/license@0.1.6
-  - @rocket.chat/omnichannel-services@0.1.6
-  - @rocket.chat/pdf-worker@0.0.30
-  - @rocket.chat/presence@0.1.6
-  - @rocket.chat/core-services@0.3.6
-  - @rocket.chat/cron@0.0.26
-  - @rocket.chat/model-typings@0.3.2
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/models@0.0.30
-  - @rocket.chat/instance-status@0.0.30
+  - @yas chat/ui-contexts@4.0.2
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/fuselage-ui-kit@4.0.2
+  - @yas chat/gazzodown@4.0.2
+  - @yas chat/ui-client@4.0.2
+  - @yas chat/ui-video-conf@4.0.2
+  - @yas chat/web-ui-registration@4.0.2
+  - @yas chat/core-typings@6.6.2
+  - @yas chat/rest-typings@6.6.2
+  - @yas chat/api-client@0.1.24
+  - @yas chat/license@0.1.6
+  - @yas chat/omnichannel-services@0.1.6
+  - @yas chat/pdf-worker@0.0.30
+  - @yas chat/presence@0.1.6
+  - @yas chat/core-services@0.3.6
+  - @yas chat/cron@0.0.26
+  - @yas chat/model-typings@0.3.2
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/models@0.0.30
+  - @yas chat/instance-status@0.0.30
 
   </details>
 
@@ -17598,9 +17598,9 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31713](https://github.com/YasChat/YasChat/pull/31713)) Fixes an issue not allowing admin users to edit the room name
 
@@ -17611,26 +17611,26 @@
 - ([#31554](https://github.com/YasChat/YasChat/pull/31554) by [@shivang-16](https://github.com/shivang-16)) Fixed a bug on the rooms page's "Favorite" setting, which previously failed to designate selected rooms as favorites by default.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.1
-  - @rocket.chat/rest-typings@6.6.1
-  - @rocket.chat/api-client@0.1.23
-  - @rocket.chat/license@0.1.5
-  - @rocket.chat/omnichannel-services@0.1.5
-  - @rocket.chat/pdf-worker@0.0.29
-  - @rocket.chat/presence@0.1.5
-  - @rocket.chat/core-services@0.3.5
-  - @rocket.chat/cron@0.0.25
-  - @rocket.chat/gazzodown@4.0.1
-  - @rocket.chat/model-typings@0.3.1
-  - @rocket.chat/ui-contexts@4.0.1
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/fuselage-ui-kit@4.0.1
-  - @rocket.chat/models@0.0.29
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/ui-client@4.0.1
-  - @rocket.chat/ui-video-conf@4.0.1
-  - @rocket.chat/web-ui-registration@4.0.1
-  - @rocket.chat/instance-status@0.0.29
+  - @yas chat/core-typings@6.6.1
+  - @yas chat/rest-typings@6.6.1
+  - @yas chat/api-client@0.1.23
+  - @yas chat/license@0.1.5
+  - @yas chat/omnichannel-services@0.1.5
+  - @yas chat/pdf-worker@0.0.29
+  - @yas chat/presence@0.1.5
+  - @yas chat/core-services@0.3.5
+  - @yas chat/cron@0.0.25
+  - @yas chat/gazzodown@4.0.1
+  - @yas chat/model-typings@0.3.1
+  - @yas chat/ui-contexts@4.0.1
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/fuselage-ui-kit@4.0.1
+  - @yas chat/models@0.0.29
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/ui-client@4.0.1
+  - @yas chat/ui-video-conf@4.0.1
+  - @yas chat/web-ui-registration@4.0.1
+  - @yas chat/instance-status@0.0.29
 
   </details>
 
@@ -17674,7 +17674,7 @@
 
 - ([#31318](https://github.com/YasChat/YasChat/pull/31318) by [@hardikbhatia777](https://github.com/hardikbhatia777)) Fixed Attachments not respecting collapse property when using incoming webhook
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - ([#31380](https://github.com/YasChat/YasChat/pull/31380)) Fix user being logged out after using 2FA
 
@@ -17682,21 +17682,21 @@
 
 - ([#31104](https://github.com/YasChat/YasChat/pull/31104)) Clear message box related items from local storage on logout
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @rocket.chat/meteor version.
+- ([#31556](https://github.com/YasChat/YasChat/pull/31556)) Bump @yas chat/meteor version.
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
@@ -17809,43 +17809,43 @@
 - ([#30910](https://github.com/YasChat/YasChat/pull/30910)) fix: change the push sound sent when the push is from video conference
 
 - <details><summary>Updated dependencies [b223cbde14, b2b0035162, 9cb97965ba, dbb08ef948, fae558bd5d, 748e57984d, 4c2771fd0c, dd5fd6d2c8, 7c6198f49f, 9a6e9b4e28, fdd9852079, e1fa2b84fb, 2260c04ec6, c8ab6583dc, e7d3cdeef0, b4b2cd20a8, db2551906c]:</summary>
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/server-cloud-communication@0.0.2
-  - @rocket.chat/omnichannel-services@0.1.4
-  - @rocket.chat/web-ui-registration@4.0.0
-  - @rocket.chat/password-policies@0.0.2
-  - @rocket.chat/fuselage-ui-kit@4.0.0
-  - @rocket.chat/instance-status@0.0.28
-  - @rocket.chat/api-client@0.1.22
-  - @rocket.chat/pdf-worker@0.0.28
-  - @rocket.chat/ui-theming@0.1.2
-  - @rocket.chat/account-utils@0.0.2
-  - @rocket.chat/core-services@0.3.4
-  - @rocket.chat/model-typings@0.3.0
-  - @rocket.chat/ui-video-conf@4.0.0
-  - @rocket.chat/cas-validate@0.0.2
-  - @rocket.chat/core-typings@6.6.0
-  - @rocket.chat/rest-typings@6.6.0
-  - @rocket.chat/server-fetch@0.0.3
-  - @rocket.chat/presence@0.1.4
-  - @rocket.chat/poplib@0.0.2
-  - @rocket.chat/ui-composer@0.1.0
-  - @rocket.chat/ui-contexts@4.0.0
-  - @rocket.chat/license@0.1.4
-  - @rocket.chat/log-format@0.0.2
-  - @rocket.chat/gazzodown@4.0.0
-  - @rocket.chat/ui-client@4.0.0
-  - @rocket.chat/favicon@0.0.2
-  - @rocket.chat/agenda@0.1.0
-  - @rocket.chat/base64@1.0.13
-  - @rocket.chat/logger@0.0.2
-  - @rocket.chat/models@0.0.28
-  - @rocket.chat/random@1.2.2
-  - @rocket.chat/sha256@1.0.10
-  - @rocket.chat/tools@0.2.1
-  - @rocket.chat/cron@0.0.24
-  - @rocket.chat/i18n@0.1.0
-  - @rocket.chat/jwt@0.1.1
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/server-cloud-communication@0.0.2
+  - @yas chat/omnichannel-services@0.1.4
+  - @yas chat/web-ui-registration@4.0.0
+  - @yas chat/password-policies@0.0.2
+  - @yas chat/fuselage-ui-kit@4.0.0
+  - @yas chat/instance-status@0.0.28
+  - @yas chat/api-client@0.1.22
+  - @yas chat/pdf-worker@0.0.28
+  - @yas chat/ui-theming@0.1.2
+  - @yas chat/account-utils@0.0.2
+  - @yas chat/core-services@0.3.4
+  - @yas chat/model-typings@0.3.0
+  - @yas chat/ui-video-conf@4.0.0
+  - @yas chat/cas-validate@0.0.2
+  - @yas chat/core-typings@6.6.0
+  - @yas chat/rest-typings@6.6.0
+  - @yas chat/server-fetch@0.0.3
+  - @yas chat/presence@0.1.4
+  - @yas chat/poplib@0.0.2
+  - @yas chat/ui-composer@0.1.0
+  - @yas chat/ui-contexts@4.0.0
+  - @yas chat/license@0.1.4
+  - @yas chat/log-format@0.0.2
+  - @yas chat/gazzodown@4.0.0
+  - @yas chat/ui-client@4.0.0
+  - @yas chat/favicon@0.0.2
+  - @yas chat/agenda@0.1.0
+  - @yas chat/base64@1.0.13
+  - @yas chat/logger@0.0.2
+  - @yas chat/models@0.0.28
+  - @yas chat/random@1.2.2
+  - @yas chat/sha256@1.0.10
+  - @yas chat/tools@0.2.1
+  - @yas chat/cron@0.0.24
+  - @yas chat/i18n@0.1.0
+  - @yas chat/jwt@0.1.1
 
   </details>
 
@@ -17853,29 +17853,29 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.7
-  - @rocket.chat/rest-typings@6.6.0-rc.7
-  - @rocket.chat/api-client@0.1.22-rc.7
-  - @rocket.chat/license@0.1.4-rc.7
-  - @rocket.chat/omnichannel-services@0.1.4-rc.7
-  - @rocket.chat/pdf-worker@0.0.28-rc.7
-  - @rocket.chat/presence@0.1.4-rc.7
-  - @rocket.chat/core-services@0.3.4-rc.7
-  - @rocket.chat/cron@0.0.24-rc.7
-  - @rocket.chat/gazzodown@4.0.0-rc.7
-  - @rocket.chat/model-typings@0.3.0-rc.7
-  - @rocket.chat/ui-contexts@4.0.0-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.7
-  - @rocket.chat/models@0.0.28-rc.7
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.7
-  - @rocket.chat/ui-video-conf@4.0.0-rc.7
-  - @rocket.chat/web-ui-registration@4.0.0-rc.7
-  - @rocket.chat/instance-status@0.0.28-rc.7
+  - @yas chat/core-typings@6.6.0-rc.7
+  - @yas chat/rest-typings@6.6.0-rc.7
+  - @yas chat/api-client@0.1.22-rc.7
+  - @yas chat/license@0.1.4-rc.7
+  - @yas chat/omnichannel-services@0.1.4-rc.7
+  - @yas chat/pdf-worker@0.0.28-rc.7
+  - @yas chat/presence@0.1.4-rc.7
+  - @yas chat/core-services@0.3.4-rc.7
+  - @yas chat/cron@0.0.24-rc.7
+  - @yas chat/gazzodown@4.0.0-rc.7
+  - @yas chat/model-typings@0.3.0-rc.7
+  - @yas chat/ui-contexts@4.0.0-rc.7
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.7
+  - @yas chat/models@0.0.28-rc.7
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.7
+  - @yas chat/ui-video-conf@4.0.0-rc.7
+  - @yas chat/web-ui-registration@4.0.0-rc.7
+  - @yas chat/instance-status@0.0.28-rc.7
 
   </details>
 
@@ -17883,31 +17883,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31128](https://github.com/YasChat/YasChat/pull/31128)) Fix: Mentioning discussions are appearing as ID
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.6
-  - @rocket.chat/rest-typings@6.6.0-rc.6
-  - @rocket.chat/api-client@0.1.22-rc.6
-  - @rocket.chat/license@0.1.4-rc.6
-  - @rocket.chat/omnichannel-services@0.1.4-rc.6
-  - @rocket.chat/pdf-worker@0.0.28-rc.6
-  - @rocket.chat/presence@0.1.4-rc.6
-  - @rocket.chat/core-services@0.3.4-rc.6
-  - @rocket.chat/cron@0.0.24-rc.6
-  - @rocket.chat/gazzodown@4.0.0-rc.6
-  - @rocket.chat/model-typings@0.3.0-rc.6
-  - @rocket.chat/ui-contexts@4.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.6
-  - @rocket.chat/models@0.0.28-rc.6
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.6
-  - @rocket.chat/ui-video-conf@4.0.0-rc.6
-  - @rocket.chat/web-ui-registration@4.0.0-rc.6
-  - @rocket.chat/instance-status@0.0.28-rc.6
+  - @yas chat/core-typings@6.6.0-rc.6
+  - @yas chat/rest-typings@6.6.0-rc.6
+  - @yas chat/api-client@0.1.22-rc.6
+  - @yas chat/license@0.1.4-rc.6
+  - @yas chat/omnichannel-services@0.1.4-rc.6
+  - @yas chat/pdf-worker@0.0.28-rc.6
+  - @yas chat/presence@0.1.4-rc.6
+  - @yas chat/core-services@0.3.4-rc.6
+  - @yas chat/cron@0.0.24-rc.6
+  - @yas chat/gazzodown@4.0.0-rc.6
+  - @yas chat/model-typings@0.3.0-rc.6
+  - @yas chat/ui-contexts@4.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.6
+  - @yas chat/models@0.0.28-rc.6
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.6
+  - @yas chat/ui-video-conf@4.0.0-rc.6
+  - @yas chat/web-ui-registration@4.0.0-rc.6
+  - @yas chat/instance-status@0.0.28-rc.6
 
   </details>
 
@@ -17915,31 +17915,31 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 
 - ([#31594](https://github.com/YasChat/YasChat/pull/31594)) fix: missing slashcommand permissions for archive and unarchive
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.5
-  - @rocket.chat/rest-typings@6.6.0-rc.5
-  - @rocket.chat/api-client@0.1.22-rc.5
-  - @rocket.chat/license@0.1.4-rc.5
-  - @rocket.chat/omnichannel-services@0.1.4-rc.5
-  - @rocket.chat/pdf-worker@0.0.28-rc.5
-  - @rocket.chat/presence@0.1.4-rc.5
-  - @rocket.chat/core-services@0.3.4-rc.5
-  - @rocket.chat/cron@0.0.24-rc.5
-  - @rocket.chat/gazzodown@4.0.0-rc.5
-  - @rocket.chat/model-typings@0.3.0-rc.5
-  - @rocket.chat/ui-contexts@4.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.5
-  - @rocket.chat/models@0.0.28-rc.5
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.5
-  - @rocket.chat/ui-video-conf@4.0.0-rc.5
-  - @rocket.chat/web-ui-registration@4.0.0-rc.5
-  - @rocket.chat/instance-status@0.0.28-rc.5
+  - @yas chat/core-typings@6.6.0-rc.5
+  - @yas chat/rest-typings@6.6.0-rc.5
+  - @yas chat/api-client@0.1.22-rc.5
+  - @yas chat/license@0.1.4-rc.5
+  - @yas chat/omnichannel-services@0.1.4-rc.5
+  - @yas chat/pdf-worker@0.0.28-rc.5
+  - @yas chat/presence@0.1.4-rc.5
+  - @yas chat/core-services@0.3.4-rc.5
+  - @yas chat/cron@0.0.24-rc.5
+  - @yas chat/gazzodown@4.0.0-rc.5
+  - @yas chat/model-typings@0.3.0-rc.5
+  - @yas chat/ui-contexts@4.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.5
+  - @yas chat/models@0.0.28-rc.5
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.5
+  - @yas chat/ui-video-conf@4.0.0-rc.5
+  - @yas chat/web-ui-registration@4.0.0-rc.5
+  - @yas chat/instance-status@0.0.28-rc.5
 
   </details>
 
@@ -17947,105 +17947,105 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.6.0-rc.4
-  - @rocket.chat/rest-typings@6.6.0-rc.4
-  - @rocket.chat/api-client@0.1.22-rc.4
-  - @rocket.chat/license@0.1.4-rc.4
-  - @rocket.chat/omnichannel-services@0.1.4-rc.4
-  - @rocket.chat/pdf-worker@0.0.28-rc.4
-  - @rocket.chat/presence@0.1.4-rc.4
-  - @rocket.chat/core-services@0.3.4-rc.4
-  - @rocket.chat/cron@0.0.24-rc.4
-  - @rocket.chat/gazzodown@4.0.0-rc.4
-  - @rocket.chat/model-typings@0.3.0-rc.4
-  - @rocket.chat/ui-contexts@4.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.4
-  - @rocket.chat/models@0.0.28-rc.4
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.4
-  - @rocket.chat/ui-video-conf@4.0.0-rc.4
-  - @rocket.chat/web-ui-registration@4.0.0-rc.4
-  - @rocket.chat/instance-status@0.0.28-rc.4
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.6.0-rc.4
+  - @yas chat/rest-typings@6.6.0-rc.4
+  - @yas chat/api-client@0.1.22-rc.4
+  - @yas chat/license@0.1.4-rc.4
+  - @yas chat/omnichannel-services@0.1.4-rc.4
+  - @yas chat/pdf-worker@0.0.28-rc.4
+  - @yas chat/presence@0.1.4-rc.4
+  - @yas chat/core-services@0.3.4-rc.4
+  - @yas chat/cron@0.0.24-rc.4
+  - @yas chat/gazzodown@4.0.0-rc.4
+  - @yas chat/model-typings@0.3.0-rc.4
+  - @yas chat/ui-contexts@4.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.4
+  - @yas chat/models@0.0.28-rc.4
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.4
+  - @yas chat/ui-video-conf@4.0.0-rc.4
+  - @yas chat/web-ui-registration@4.0.0-rc.4
+  - @yas chat/instance-status@0.0.28-rc.4
 
 ## 6.6.0-rc.3
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.6.0-rc.3
-  - @rocket.chat/rest-typings@6.6.0-rc.3
-  - @rocket.chat/api-client@0.1.22-rc.3
-  - @rocket.chat/license@0.1.4-rc.3
-  - @rocket.chat/omnichannel-services@0.1.4-rc.3
-  - @rocket.chat/pdf-worker@0.0.28-rc.3
-  - @rocket.chat/presence@0.1.4-rc.3
-  - @rocket.chat/core-services@0.3.4-rc.3
-  - @rocket.chat/cron@0.0.24-rc.3
-  - @rocket.chat/gazzodown@4.0.0-rc.3
-  - @rocket.chat/model-typings@0.3.0-rc.3
-  - @rocket.chat/ui-contexts@4.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.3
-  - @rocket.chat/models@0.0.28-rc.3
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.3
-  - @rocket.chat/ui-video-conf@4.0.0-rc.3
-  - @rocket.chat/web-ui-registration@4.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.28-rc.3
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.6.0-rc.3
+  - @yas chat/rest-typings@6.6.0-rc.3
+  - @yas chat/api-client@0.1.22-rc.3
+  - @yas chat/license@0.1.4-rc.3
+  - @yas chat/omnichannel-services@0.1.4-rc.3
+  - @yas chat/pdf-worker@0.0.28-rc.3
+  - @yas chat/presence@0.1.4-rc.3
+  - @yas chat/core-services@0.3.4-rc.3
+  - @yas chat/cron@0.0.24-rc.3
+  - @yas chat/gazzodown@4.0.0-rc.3
+  - @yas chat/model-typings@0.3.0-rc.3
+  - @yas chat/ui-contexts@4.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.3
+  - @yas chat/models@0.0.28-rc.3
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.3
+  - @yas chat/ui-video-conf@4.0.0-rc.3
+  - @yas chat/web-ui-registration@4.0.0-rc.3
+  - @yas chat/instance-status@0.0.28-rc.3
 
 ## 6.6.0-rc.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.6.0-rc.2
-  - @rocket.chat/rest-typings@6.6.0-rc.2
-  - @rocket.chat/api-client@0.1.22-rc.2
-  - @rocket.chat/license@0.1.4-rc.2
-  - @rocket.chat/omnichannel-services@0.1.4-rc.2
-  - @rocket.chat/pdf-worker@0.0.28-rc.2
-  - @rocket.chat/presence@0.1.4-rc.2
-  - @rocket.chat/core-services@0.3.4-rc.2
-  - @rocket.chat/cron@0.0.24-rc.2
-  - @rocket.chat/gazzodown@4.0.0-rc.2
-  - @rocket.chat/model-typings@0.3.0-rc.2
-  - @rocket.chat/ui-contexts@4.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.2
-  - @rocket.chat/models@0.0.28-rc.2
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.2
-  - @rocket.chat/ui-video-conf@4.0.0-rc.2
-  - @rocket.chat/web-ui-registration@4.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.28-rc.2
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.6.0-rc.2
+  - @yas chat/rest-typings@6.6.0-rc.2
+  - @yas chat/api-client@0.1.22-rc.2
+  - @yas chat/license@0.1.4-rc.2
+  - @yas chat/omnichannel-services@0.1.4-rc.2
+  - @yas chat/pdf-worker@0.0.28-rc.2
+  - @yas chat/presence@0.1.4-rc.2
+  - @yas chat/core-services@0.3.4-rc.2
+  - @yas chat/cron@0.0.24-rc.2
+  - @yas chat/gazzodown@4.0.0-rc.2
+  - @yas chat/model-typings@0.3.0-rc.2
+  - @yas chat/ui-contexts@4.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.2
+  - @yas chat/models@0.0.28-rc.2
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.2
+  - @yas chat/ui-video-conf@4.0.0-rc.2
+  - @yas chat/web-ui-registration@4.0.0-rc.2
+  - @yas chat/instance-status@0.0.28-rc.2
 
 ## 6.6.0-rc.1
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.6.0-rc.1
-  - @rocket.chat/rest-typings@6.6.0-rc.1
-  - @rocket.chat/api-client@0.1.22-rc.1
-  - @rocket.chat/license@0.1.4-rc.1
-  - @rocket.chat/omnichannel-services@0.1.4-rc.1
-  - @rocket.chat/pdf-worker@0.0.28-rc.1
-  - @rocket.chat/presence@0.1.4-rc.1
-  - @rocket.chat/core-services@0.3.4-rc.1
-  - @rocket.chat/cron@0.0.24-rc.1
-  - @rocket.chat/gazzodown@4.0.0-rc.1
-  - @rocket.chat/model-typings@0.3.0-rc.1
-  - @rocket.chat/ui-contexts@4.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.1
-  - @rocket.chat/models@0.0.28-rc.1
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.1
-  - @rocket.chat/ui-video-conf@4.0.0-rc.1
-  - @rocket.chat/web-ui-registration@4.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.28-rc.1
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.6.0-rc.1
+  - @yas chat/rest-typings@6.6.0-rc.1
+  - @yas chat/api-client@0.1.22-rc.1
+  - @yas chat/license@0.1.4-rc.1
+  - @yas chat/omnichannel-services@0.1.4-rc.1
+  - @yas chat/pdf-worker@0.0.28-rc.1
+  - @yas chat/presence@0.1.4-rc.1
+  - @yas chat/core-services@0.3.4-rc.1
+  - @yas chat/cron@0.0.24-rc.1
+  - @yas chat/gazzodown@4.0.0-rc.1
+  - @yas chat/model-typings@0.3.0-rc.1
+  - @yas chat/ui-contexts@4.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.1
+  - @yas chat/models@0.0.28-rc.1
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/ui-client@4.0.0-rc.1
+  - @yas chat/ui-video-conf@4.0.0-rc.1
+  - @yas chat/web-ui-registration@4.0.0-rc.1
+  - @yas chat/instance-status@0.0.28-rc.1
 
 ## 6.6.0-rc.0
 
@@ -18076,7 +18076,7 @@
 ### Patch Changes
 
 - 87bba6d039: Fixed Attachments not respecting collapse property when using incoming webhook
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - 319f05ec79: Fix user being logged out after using 2FA
 - 371698ef5a: Improved support for higlighted words in threads (rooms are now marked as unread and notifications are sent)
 - 5c145e3170: Clear message box related items from local storage on logout
@@ -18151,108 +18151,108 @@
 - Updated dependencies [e7d3cdeef0]
 - Updated dependencies [b4b2cd20a8]
 - Updated dependencies [db2551906c]
-  - @rocket.chat/ui-kit@0.33.0-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.2-rc.0
-  - @rocket.chat/omnichannel-services@0.1.4-rc.0
-  - @rocket.chat/web-ui-registration@4.0.0-rc.0
-  - @rocket.chat/password-policies@0.0.2-rc.0
-  - @rocket.chat/fuselage-ui-kit@4.0.0-rc.0
-  - @rocket.chat/instance-status@0.0.28-rc.0
-  - @rocket.chat/api-client@0.1.22-rc.0
-  - @rocket.chat/pdf-worker@0.0.28-rc.0
-  - @rocket.chat/ui-theming@0.1.2-rc.0
-  - @rocket.chat/account-utils@0.0.2-rc.0
-  - @rocket.chat/core-services@0.3.4-rc.0
-  - @rocket.chat/model-typings@0.3.0-rc.0
-  - @rocket.chat/ui-video-conf@4.0.0-rc.0
-  - @rocket.chat/cas-validate@0.0.2-rc.0
-  - @rocket.chat/core-typings@6.6.0-rc.0
-  - @rocket.chat/rest-typings@6.6.0-rc.0
-  - @rocket.chat/server-fetch@0.0.3-rc.0
-  - @rocket.chat/presence@0.1.4-rc.0
-  - @rocket.chat/poplib@0.0.2-rc.0
-  - @rocket.chat/ui-composer@0.1.0-rc.0
-  - @rocket.chat/ui-contexts@4.0.0-rc.0
-  - @rocket.chat/license@0.1.4-rc.0
-  - @rocket.chat/log-format@0.0.2-rc.0
-  - @rocket.chat/gazzodown@4.0.0-rc.0
-  - @rocket.chat/ui-client@4.0.0-rc.0
-  - @rocket.chat/favicon@0.0.2-rc.0
-  - @rocket.chat/agenda@0.1.0-rc.0
-  - @rocket.chat/base64@1.0.13-rc.0
-  - @rocket.chat/logger@0.0.2-rc.0
-  - @rocket.chat/models@0.0.28-rc.0
-  - @rocket.chat/random@1.2.2-rc.0
-  - @rocket.chat/sha256@1.0.10-rc.0
-  - @rocket.chat/tools@0.2.1-rc.0
-  - @rocket.chat/cron@0.0.24-rc.0
-  - @rocket.chat/i18n@0.1.0-rc.0
-  - @rocket.chat/jwt@0.1.1-rc.0
+  - @yas chat/ui-kit@0.33.0-rc.0
+  - @yas chat/server-cloud-communication@0.0.2-rc.0
+  - @yas chat/omnichannel-services@0.1.4-rc.0
+  - @yas chat/web-ui-registration@4.0.0-rc.0
+  - @yas chat/password-policies@0.0.2-rc.0
+  - @yas chat/fuselage-ui-kit@4.0.0-rc.0
+  - @yas chat/instance-status@0.0.28-rc.0
+  - @yas chat/api-client@0.1.22-rc.0
+  - @yas chat/pdf-worker@0.0.28-rc.0
+  - @yas chat/ui-theming@0.1.2-rc.0
+  - @yas chat/account-utils@0.0.2-rc.0
+  - @yas chat/core-services@0.3.4-rc.0
+  - @yas chat/model-typings@0.3.0-rc.0
+  - @yas chat/ui-video-conf@4.0.0-rc.0
+  - @yas chat/cas-validate@0.0.2-rc.0
+  - @yas chat/core-typings@6.6.0-rc.0
+  - @yas chat/rest-typings@6.6.0-rc.0
+  - @yas chat/server-fetch@0.0.3-rc.0
+  - @yas chat/presence@0.1.4-rc.0
+  - @yas chat/poplib@0.0.2-rc.0
+  - @yas chat/ui-composer@0.1.0-rc.0
+  - @yas chat/ui-contexts@4.0.0-rc.0
+  - @yas chat/license@0.1.4-rc.0
+  - @yas chat/log-format@0.0.2-rc.0
+  - @yas chat/gazzodown@4.0.0-rc.0
+  - @yas chat/ui-client@4.0.0-rc.0
+  - @yas chat/favicon@0.0.2-rc.0
+  - @yas chat/agenda@0.1.0-rc.0
+  - @yas chat/base64@1.0.13-rc.0
+  - @yas chat/logger@0.0.2-rc.0
+  - @yas chat/models@0.0.28-rc.0
+  - @yas chat/random@1.2.2-rc.0
+  - @yas chat/sha256@1.0.10-rc.0
+  - @yas chat/tools@0.2.1-rc.0
+  - @yas chat/cron@0.0.24-rc.0
+  - @yas chat/i18n@0.1.0-rc.0
+  - @yas chat/jwt@0.1.1-rc.0
 
 ## 6.5.3
 
 ### Patch Changes
 
 - b1e72a84d9: Fix user being logged out after using 2FA
-- de2658e874: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- de2658e874: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 2a04cc850b: fix: multiple indexes creation error during 304 migration
-  - @rocket.chat/core-typings@6.5.3
-  - @rocket.chat/rest-typings@6.5.3
-  - @rocket.chat/api-client@0.1.21
-  - @rocket.chat/license@0.1.3
-  - @rocket.chat/omnichannel-services@0.1.3
-  - @rocket.chat/pdf-worker@0.0.27
-  - @rocket.chat/presence@0.1.3
-  - @rocket.chat/core-services@0.3.3
-  - @rocket.chat/cron@0.0.23
-  - @rocket.chat/gazzodown@3.0.3
-  - @rocket.chat/model-typings@0.2.3
-  - @rocket.chat/ui-contexts@3.0.3
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.3
-  - @rocket.chat/models@0.0.27
-  - @rocket.chat/ui-theming@0.1.1
-  - @rocket.chat/ui-client@3.0.3
-  - @rocket.chat/ui-video-conf@3.0.3
-  - @rocket.chat/web-ui-registration@3.0.3
-  - @rocket.chat/instance-status@0.0.27
+  - @yas chat/core-typings@6.5.3
+  - @yas chat/rest-typings@6.5.3
+  - @yas chat/api-client@0.1.21
+  - @yas chat/license@0.1.3
+  - @yas chat/omnichannel-services@0.1.3
+  - @yas chat/pdf-worker@0.0.27
+  - @yas chat/presence@0.1.3
+  - @yas chat/core-services@0.3.3
+  - @yas chat/cron@0.0.23
+  - @yas chat/gazzodown@3.0.3
+  - @yas chat/model-typings@0.2.3
+  - @yas chat/ui-contexts@3.0.3
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.3
+  - @yas chat/models@0.0.27
+  - @yas chat/ui-theming@0.1.1
+  - @yas chat/ui-client@3.0.3
+  - @yas chat/ui-video-conf@3.0.3
+  - @yas chat/web-ui-registration@3.0.3
+  - @yas chat/instance-status@0.0.27
 
 ## 6.5.2
 
 ### Patch Changes
 
-- a075950e23: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- a075950e23: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 84c4b0709e: Fixed conversations in queue being limited to 50 items
 - 886d92009e: Fix wrong value used for Workspace Registration
-  - @rocket.chat/core-typings@6.5.2
-  - @rocket.chat/rest-typings@6.5.2
-  - @rocket.chat/api-client@0.1.20
-  - @rocket.chat/license@0.1.2
-  - @rocket.chat/omnichannel-services@0.1.2
-  - @rocket.chat/pdf-worker@0.0.26
-  - @rocket.chat/presence@0.1.2
-  - @rocket.chat/core-services@0.3.2
-  - @rocket.chat/cron@0.0.22
-  - @rocket.chat/gazzodown@3.0.2
-  - @rocket.chat/model-typings@0.2.2
-  - @rocket.chat/ui-contexts@3.0.2
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.2
-  - @rocket.chat/models@0.0.26
-  - @rocket.chat/ui-theming@0.1.1
-  - @rocket.chat/ui-client@3.0.2
-  - @rocket.chat/ui-video-conf@3.0.2
-  - @rocket.chat/web-ui-registration@3.0.2
-  - @rocket.chat/instance-status@0.0.26
+  - @yas chat/core-typings@6.5.2
+  - @yas chat/rest-typings@6.5.2
+  - @yas chat/api-client@0.1.20
+  - @yas chat/license@0.1.2
+  - @yas chat/omnichannel-services@0.1.2
+  - @yas chat/pdf-worker@0.0.26
+  - @yas chat/presence@0.1.2
+  - @yas chat/core-services@0.3.2
+  - @yas chat/cron@0.0.22
+  - @yas chat/gazzodown@3.0.2
+  - @yas chat/model-typings@0.2.2
+  - @yas chat/ui-contexts@3.0.2
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.2
+  - @yas chat/models@0.0.26
+  - @yas chat/ui-theming@0.1.1
+  - @yas chat/ui-client@3.0.2
+  - @yas chat/ui-video-conf@3.0.2
+  - @yas chat/web-ui-registration@3.0.2
+  - @yas chat/instance-status@0.0.26
 
 ## 6.5.1
 
 ### Patch Changes
 
-- c2b224fd82: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- c2b224fd82: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - c2b224fd82: Security improvements
 - c2b224fd82: Fixed issue with the new `custom-roles` license module not being checked throughout the application
 - c2b224fd82: fix: stop refetching banner data each 5 minutes
@@ -18273,26 +18273,26 @@
 - c2b224fd82: Fixed the filter for file type in the list of room files
 - Updated dependencies [c2b224fd82]
 - Updated dependencies [c2b224fd82]
-  - @rocket.chat/rest-typings@6.5.1
-  - @rocket.chat/core-typings@6.5.1
-  - @rocket.chat/api-client@0.1.19
-  - @rocket.chat/omnichannel-services@0.1.1
-  - @rocket.chat/presence@0.1.1
-  - @rocket.chat/core-services@0.3.1
-  - @rocket.chat/ui-contexts@3.0.1
-  - @rocket.chat/license@0.1.1
-  - @rocket.chat/pdf-worker@0.0.25
-  - @rocket.chat/cron@0.0.21
-  - @rocket.chat/gazzodown@3.0.1
-  - @rocket.chat/model-typings@0.2.1
-  - @rocket.chat/ui-theming@0.1.1
-  - @rocket.chat/fuselage-ui-kit@3.0.1
-  - @rocket.chat/ui-client@3.0.1
-  - @rocket.chat/ui-video-conf@3.0.1
-  - @rocket.chat/web-ui-registration@3.0.1
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/models@0.0.25
-  - @rocket.chat/instance-status@0.0.25
+  - @yas chat/rest-typings@6.5.1
+  - @yas chat/core-typings@6.5.1
+  - @yas chat/api-client@0.1.19
+  - @yas chat/omnichannel-services@0.1.1
+  - @yas chat/presence@0.1.1
+  - @yas chat/core-services@0.3.1
+  - @yas chat/ui-contexts@3.0.1
+  - @yas chat/license@0.1.1
+  - @yas chat/pdf-worker@0.0.25
+  - @yas chat/cron@0.0.21
+  - @yas chat/gazzodown@3.0.1
+  - @yas chat/model-typings@0.2.1
+  - @yas chat/ui-theming@0.1.1
+  - @yas chat/fuselage-ui-kit@3.0.1
+  - @yas chat/ui-client@3.0.1
+  - @yas chat/ui-video-conf@3.0.1
+  - @yas chat/web-ui-registration@3.0.1
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/models@0.0.25
+  - @yas chat/instance-status@0.0.25
 
 ## 6.5.0
 
@@ -18331,26 +18331,26 @@
 - 8a02759e40: Fixed an issue where broadcasted events were published twice within the same instance
 - dea1fe9191: chore: Calculate & Store MAC stats
   Added new info to the stats: `omnichannelContactsBySource`, `uniqueContactsOfLastMonth`, `uniqueContactsOfLastWeek`, `uniqueContactsOfYesterday`
-- e134eef8cb: Bump @rocket.chat/meteor version.
-- ae4feeca3c: Bump @rocket.chat/meteor version.
-- cba9c283a1: Bump @rocket.chat/meteor version.
-- d94ebb9ceb: Bump @rocket.chat/meteor version.
-- cf63ab42bb: Bump @rocket.chat/meteor version.
-- 0e63407a4f: Bump @rocket.chat/meteor version.
-- 3173a17012: Bump @rocket.chat/meteor version.
-- 22bd4578d8: Bump @rocket.chat/meteor version.
-- 4856b718e0: Bump @rocket.chat/meteor version.
-- 3231645104: Bump @rocket.chat/meteor version.
-- 550188e34b: Bump @rocket.chat/meteor version.
-- 79d5478f80: Bump @rocket.chat/meteor version.
-- 0db5206ed3: Bump @rocket.chat/meteor version.
-- 24be625845: Bump @rocket.chat/meteor version.
-- 6f84660296: Bump @rocket.chat/meteor version.
-- e074217ae5: Bump @rocket.chat/meteor version.
-- b41d65d5e5: Bump @rocket.chat/meteor version.
-- a199adb29c: Bump @rocket.chat/meteor version.
-- 07d01b0e37: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- e134eef8cb: Bump @yas chat/meteor version.
+- ae4feeca3c: Bump @yas chat/meteor version.
+- cba9c283a1: Bump @yas chat/meteor version.
+- d94ebb9ceb: Bump @yas chat/meteor version.
+- cf63ab42bb: Bump @yas chat/meteor version.
+- 0e63407a4f: Bump @yas chat/meteor version.
+- 3173a17012: Bump @yas chat/meteor version.
+- 22bd4578d8: Bump @yas chat/meteor version.
+- 4856b718e0: Bump @yas chat/meteor version.
+- 3231645104: Bump @yas chat/meteor version.
+- 550188e34b: Bump @yas chat/meteor version.
+- 79d5478f80: Bump @yas chat/meteor version.
+- 0db5206ed3: Bump @yas chat/meteor version.
+- 24be625845: Bump @yas chat/meteor version.
+- 6f84660296: Bump @yas chat/meteor version.
+- e074217ae5: Bump @yas chat/meteor version.
+- b41d65d5e5: Bump @yas chat/meteor version.
+- a199adb29c: Bump @yas chat/meteor version.
+- 07d01b0e37: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 38e3933504: add support to DeepL open api
 - e8eeb2a79d: fixed threads breaking when sending messages too fast
 - 18ed36cdd1: fix: custom-css injection
@@ -18432,464 +18432,464 @@
 - Updated dependencies [a98f3ff303]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/ui-contexts@3.0.0
-  - @rocket.chat/web-ui-registration@3.0.0
-  - @rocket.chat/core-typings@6.5.0
-  - @rocket.chat/model-typings@0.2.0
-  - @rocket.chat/gazzodown@3.0.0
-  - @rocket.chat/i18n@0.0.3
-  - @rocket.chat/presence@0.1.0
-  - @rocket.chat/core-services@0.3.0
-  - @rocket.chat/rest-typings@6.5.0
-  - @rocket.chat/server-fetch@0.0.2
-  - @rocket.chat/tools@0.2.0
-  - @rocket.chat/ui-theming@0.1.1
-  - @rocket.chat/license@0.1.0
-  - @rocket.chat/jwt@0.1.0
-  - @rocket.chat/omnichannel-services@0.1.0
-  - @rocket.chat/fuselage-ui-kit@3.0.0
-  - @rocket.chat/ui-client@3.0.0
-  - @rocket.chat/ui-video-conf@3.0.0
-  - @rocket.chat/api-client@0.1.18
-  - @rocket.chat/pdf-worker@0.0.24
-  - @rocket.chat/cron@0.0.20
-  - @rocket.chat/models@0.0.24
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/instance-status@0.0.24
+  - @yas chat/ui-contexts@3.0.0
+  - @yas chat/web-ui-registration@3.0.0
+  - @yas chat/core-typings@6.5.0
+  - @yas chat/model-typings@0.2.0
+  - @yas chat/gazzodown@3.0.0
+  - @yas chat/i18n@0.0.3
+  - @yas chat/presence@0.1.0
+  - @yas chat/core-services@0.3.0
+  - @yas chat/rest-typings@6.5.0
+  - @yas chat/server-fetch@0.0.2
+  - @yas chat/tools@0.2.0
+  - @yas chat/ui-theming@0.1.1
+  - @yas chat/license@0.1.0
+  - @yas chat/jwt@0.1.0
+  - @yas chat/omnichannel-services@0.1.0
+  - @yas chat/fuselage-ui-kit@3.0.0
+  - @yas chat/ui-client@3.0.0
+  - @yas chat/ui-video-conf@3.0.0
+  - @yas chat/api-client@0.1.18
+  - @yas chat/pdf-worker@0.0.24
+  - @yas chat/cron@0.0.20
+  - @yas chat/models@0.0.24
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/instance-status@0.0.24
 
 ## 6.5.0-rc.19
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.19
-  - @rocket.chat/rest-typings@6.5.0-rc.19
-  - @rocket.chat/api-client@0.1.18-rc.12
-  - @rocket.chat/license@0.1.0-rc.19
-  - @rocket.chat/omnichannel-services@0.1.0-rc.19
-  - @rocket.chat/pdf-worker@0.0.24-rc.12
-  - @rocket.chat/presence@0.1.0-rc.19
-  - @rocket.chat/core-services@0.3.0-rc.19
-  - @rocket.chat/cron@0.0.20-rc.12
-  - @rocket.chat/gazzodown@3.0.0-rc.19
-  - @rocket.chat/model-typings@0.2.0-rc.19
-  - @rocket.chat/ui-contexts@3.0.0-rc.19
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.19
-  - @rocket.chat/models@0.0.24-rc.12
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.19
-  - @rocket.chat/ui-video-conf@3.0.0-rc.19
-  - @rocket.chat/web-ui-registration@3.0.0-rc.18
-  - @rocket.chat/instance-status@0.0.24-rc.12
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.19
+  - @yas chat/rest-typings@6.5.0-rc.19
+  - @yas chat/api-client@0.1.18-rc.12
+  - @yas chat/license@0.1.0-rc.19
+  - @yas chat/omnichannel-services@0.1.0-rc.19
+  - @yas chat/pdf-worker@0.0.24-rc.12
+  - @yas chat/presence@0.1.0-rc.19
+  - @yas chat/core-services@0.3.0-rc.19
+  - @yas chat/cron@0.0.20-rc.12
+  - @yas chat/gazzodown@3.0.0-rc.19
+  - @yas chat/model-typings@0.2.0-rc.19
+  - @yas chat/ui-contexts@3.0.0-rc.19
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.19
+  - @yas chat/models@0.0.24-rc.12
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.19
+  - @yas chat/ui-video-conf@3.0.0-rc.19
+  - @yas chat/web-ui-registration@3.0.0-rc.18
+  - @yas chat/instance-status@0.0.24-rc.12
 
 ## 6.5.0-rc.18
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.18
-  - @rocket.chat/rest-typings@6.5.0-rc.18
-  - @rocket.chat/api-client@0.1.18-rc.11
-  - @rocket.chat/license@0.1.0-rc.18
-  - @rocket.chat/omnichannel-services@0.1.0-rc.18
-  - @rocket.chat/pdf-worker@0.0.24-rc.11
-  - @rocket.chat/presence@0.1.0-rc.18
-  - @rocket.chat/core-services@0.3.0-rc.18
-  - @rocket.chat/cron@0.0.20-rc.11
-  - @rocket.chat/gazzodown@3.0.0-rc.18
-  - @rocket.chat/model-typings@0.2.0-rc.18
-  - @rocket.chat/ui-contexts@3.0.0-rc.18
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.18
-  - @rocket.chat/models@0.0.24-rc.11
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.18
-  - @rocket.chat/ui-video-conf@3.0.0-rc.18
-  - @rocket.chat/web-ui-registration@3.0.0-rc.17
-  - @rocket.chat/instance-status@0.0.24-rc.11
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.18
+  - @yas chat/rest-typings@6.5.0-rc.18
+  - @yas chat/api-client@0.1.18-rc.11
+  - @yas chat/license@0.1.0-rc.18
+  - @yas chat/omnichannel-services@0.1.0-rc.18
+  - @yas chat/pdf-worker@0.0.24-rc.11
+  - @yas chat/presence@0.1.0-rc.18
+  - @yas chat/core-services@0.3.0-rc.18
+  - @yas chat/cron@0.0.20-rc.11
+  - @yas chat/gazzodown@3.0.0-rc.18
+  - @yas chat/model-typings@0.2.0-rc.18
+  - @yas chat/ui-contexts@3.0.0-rc.18
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.18
+  - @yas chat/models@0.0.24-rc.11
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.18
+  - @yas chat/ui-video-conf@3.0.0-rc.18
+  - @yas chat/web-ui-registration@3.0.0-rc.17
+  - @yas chat/instance-status@0.0.24-rc.11
 
 ## 6.5.0-rc.17
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.17
-  - @rocket.chat/rest-typings@6.5.0-rc.17
-  - @rocket.chat/api-client@0.1.18-rc.10
-  - @rocket.chat/license@0.1.0-rc.17
-  - @rocket.chat/omnichannel-services@0.1.0-rc.17
-  - @rocket.chat/pdf-worker@0.0.24-rc.10
-  - @rocket.chat/presence@0.1.0-rc.17
-  - @rocket.chat/core-services@0.3.0-rc.17
-  - @rocket.chat/cron@0.0.20-rc.10
-  - @rocket.chat/gazzodown@3.0.0-rc.17
-  - @rocket.chat/model-typings@0.2.0-rc.17
-  - @rocket.chat/ui-contexts@3.0.0-rc.17
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.17
-  - @rocket.chat/models@0.0.24-rc.10
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.17
-  - @rocket.chat/ui-video-conf@3.0.0-rc.17
-  - @rocket.chat/web-ui-registration@3.0.0-rc.16
-  - @rocket.chat/instance-status@0.0.24-rc.10
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.17
+  - @yas chat/rest-typings@6.5.0-rc.17
+  - @yas chat/api-client@0.1.18-rc.10
+  - @yas chat/license@0.1.0-rc.17
+  - @yas chat/omnichannel-services@0.1.0-rc.17
+  - @yas chat/pdf-worker@0.0.24-rc.10
+  - @yas chat/presence@0.1.0-rc.17
+  - @yas chat/core-services@0.3.0-rc.17
+  - @yas chat/cron@0.0.20-rc.10
+  - @yas chat/gazzodown@3.0.0-rc.17
+  - @yas chat/model-typings@0.2.0-rc.17
+  - @yas chat/ui-contexts@3.0.0-rc.17
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.17
+  - @yas chat/models@0.0.24-rc.10
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.17
+  - @yas chat/ui-video-conf@3.0.0-rc.17
+  - @yas chat/web-ui-registration@3.0.0-rc.16
+  - @yas chat/instance-status@0.0.24-rc.10
 
 ## 6.5.0-rc.16
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.16
-  - @rocket.chat/rest-typings@6.5.0-rc.16
-  - @rocket.chat/api-client@0.1.18-rc.9
-  - @rocket.chat/license@0.1.0-rc.16
-  - @rocket.chat/omnichannel-services@0.1.0-rc.16
-  - @rocket.chat/pdf-worker@0.0.24-rc.9
-  - @rocket.chat/presence@0.1.0-rc.16
-  - @rocket.chat/core-services@0.3.0-rc.16
-  - @rocket.chat/cron@0.0.20-rc.9
-  - @rocket.chat/gazzodown@3.0.0-rc.16
-  - @rocket.chat/model-typings@0.2.0-rc.16
-  - @rocket.chat/ui-contexts@3.0.0-rc.16
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.16
-  - @rocket.chat/models@0.0.24-rc.9
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.16
-  - @rocket.chat/ui-video-conf@3.0.0-rc.16
-  - @rocket.chat/web-ui-registration@3.0.0-rc.15
-  - @rocket.chat/instance-status@0.0.24-rc.9
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.16
+  - @yas chat/rest-typings@6.5.0-rc.16
+  - @yas chat/api-client@0.1.18-rc.9
+  - @yas chat/license@0.1.0-rc.16
+  - @yas chat/omnichannel-services@0.1.0-rc.16
+  - @yas chat/pdf-worker@0.0.24-rc.9
+  - @yas chat/presence@0.1.0-rc.16
+  - @yas chat/core-services@0.3.0-rc.16
+  - @yas chat/cron@0.0.20-rc.9
+  - @yas chat/gazzodown@3.0.0-rc.16
+  - @yas chat/model-typings@0.2.0-rc.16
+  - @yas chat/ui-contexts@3.0.0-rc.16
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.16
+  - @yas chat/models@0.0.24-rc.9
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.16
+  - @yas chat/ui-video-conf@3.0.0-rc.16
+  - @yas chat/web-ui-registration@3.0.0-rc.15
+  - @yas chat/instance-status@0.0.24-rc.9
 
 ## 6.5.0-rc.15
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.15
-  - @rocket.chat/rest-typings@6.5.0-rc.15
-  - @rocket.chat/api-client@0.1.18-rc.8
-  - @rocket.chat/license@0.1.0-rc.15
-  - @rocket.chat/omnichannel-services@0.1.0-rc.15
-  - @rocket.chat/pdf-worker@0.0.24-rc.8
-  - @rocket.chat/presence@0.1.0-rc.15
-  - @rocket.chat/core-services@0.3.0-rc.15
-  - @rocket.chat/cron@0.0.20-rc.8
-  - @rocket.chat/gazzodown@3.0.0-rc.15
-  - @rocket.chat/model-typings@0.2.0-rc.15
-  - @rocket.chat/ui-contexts@3.0.0-rc.15
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.15
-  - @rocket.chat/models@0.0.24-rc.8
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.15
-  - @rocket.chat/ui-video-conf@3.0.0-rc.15
-  - @rocket.chat/web-ui-registration@3.0.0-rc.14
-  - @rocket.chat/instance-status@0.0.24-rc.8
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.15
+  - @yas chat/rest-typings@6.5.0-rc.15
+  - @yas chat/api-client@0.1.18-rc.8
+  - @yas chat/license@0.1.0-rc.15
+  - @yas chat/omnichannel-services@0.1.0-rc.15
+  - @yas chat/pdf-worker@0.0.24-rc.8
+  - @yas chat/presence@0.1.0-rc.15
+  - @yas chat/core-services@0.3.0-rc.15
+  - @yas chat/cron@0.0.20-rc.8
+  - @yas chat/gazzodown@3.0.0-rc.15
+  - @yas chat/model-typings@0.2.0-rc.15
+  - @yas chat/ui-contexts@3.0.0-rc.15
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.15
+  - @yas chat/models@0.0.24-rc.8
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.15
+  - @yas chat/ui-video-conf@3.0.0-rc.15
+  - @yas chat/web-ui-registration@3.0.0-rc.14
+  - @yas chat/instance-status@0.0.24-rc.8
 
 ## 6.5.0-rc.14
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.14
-  - @rocket.chat/rest-typings@6.5.0-rc.14
-  - @rocket.chat/api-client@0.1.18-rc.7
-  - @rocket.chat/license@0.1.0-rc.14
-  - @rocket.chat/omnichannel-services@0.1.0-rc.14
-  - @rocket.chat/pdf-worker@0.0.24-rc.7
-  - @rocket.chat/presence@0.1.0-rc.14
-  - @rocket.chat/core-services@0.3.0-rc.14
-  - @rocket.chat/cron@0.0.20-rc.7
-  - @rocket.chat/gazzodown@3.0.0-rc.14
-  - @rocket.chat/model-typings@0.2.0-rc.14
-  - @rocket.chat/ui-contexts@3.0.0-rc.14
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.14
-  - @rocket.chat/models@0.0.24-rc.7
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.14
-  - @rocket.chat/ui-video-conf@3.0.0-rc.14
-  - @rocket.chat/web-ui-registration@3.0.0-rc.13
-  - @rocket.chat/instance-status@0.0.24-rc.7
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.14
+  - @yas chat/rest-typings@6.5.0-rc.14
+  - @yas chat/api-client@0.1.18-rc.7
+  - @yas chat/license@0.1.0-rc.14
+  - @yas chat/omnichannel-services@0.1.0-rc.14
+  - @yas chat/pdf-worker@0.0.24-rc.7
+  - @yas chat/presence@0.1.0-rc.14
+  - @yas chat/core-services@0.3.0-rc.14
+  - @yas chat/cron@0.0.20-rc.7
+  - @yas chat/gazzodown@3.0.0-rc.14
+  - @yas chat/model-typings@0.2.0-rc.14
+  - @yas chat/ui-contexts@3.0.0-rc.14
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.14
+  - @yas chat/models@0.0.24-rc.7
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.14
+  - @yas chat/ui-video-conf@3.0.0-rc.14
+  - @yas chat/web-ui-registration@3.0.0-rc.13
+  - @yas chat/instance-status@0.0.24-rc.7
 
 ## 6.5.0-rc.13
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.13
-  - @rocket.chat/rest-typings@6.5.0-rc.13
-  - @rocket.chat/api-client@0.1.18-rc.6
-  - @rocket.chat/license@0.1.0-rc.13
-  - @rocket.chat/omnichannel-services@0.1.0-rc.13
-  - @rocket.chat/pdf-worker@0.0.24-rc.6
-  - @rocket.chat/presence@0.1.0-rc.13
-  - @rocket.chat/core-services@0.3.0-rc.13
-  - @rocket.chat/cron@0.0.20-rc.6
-  - @rocket.chat/gazzodown@3.0.0-rc.13
-  - @rocket.chat/model-typings@0.2.0-rc.13
-  - @rocket.chat/ui-contexts@3.0.0-rc.13
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.13
-  - @rocket.chat/models@0.0.24-rc.6
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.13
-  - @rocket.chat/ui-video-conf@3.0.0-rc.13
-  - @rocket.chat/web-ui-registration@3.0.0-rc.12
-  - @rocket.chat/instance-status@0.0.24-rc.6
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.13
+  - @yas chat/rest-typings@6.5.0-rc.13
+  - @yas chat/api-client@0.1.18-rc.6
+  - @yas chat/license@0.1.0-rc.13
+  - @yas chat/omnichannel-services@0.1.0-rc.13
+  - @yas chat/pdf-worker@0.0.24-rc.6
+  - @yas chat/presence@0.1.0-rc.13
+  - @yas chat/core-services@0.3.0-rc.13
+  - @yas chat/cron@0.0.20-rc.6
+  - @yas chat/gazzodown@3.0.0-rc.13
+  - @yas chat/model-typings@0.2.0-rc.13
+  - @yas chat/ui-contexts@3.0.0-rc.13
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.13
+  - @yas chat/models@0.0.24-rc.6
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.13
+  - @yas chat/ui-video-conf@3.0.0-rc.13
+  - @yas chat/web-ui-registration@3.0.0-rc.12
+  - @yas chat/instance-status@0.0.24-rc.6
 
 ## 6.5.0-rc.12
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.12
-  - @rocket.chat/rest-typings@6.5.0-rc.12
-  - @rocket.chat/api-client@0.1.18-rc.5
-  - @rocket.chat/license@0.1.0-rc.12
-  - @rocket.chat/omnichannel-services@0.1.0-rc.12
-  - @rocket.chat/pdf-worker@0.0.24-rc.5
-  - @rocket.chat/presence@0.1.0-rc.12
-  - @rocket.chat/core-services@0.3.0-rc.12
-  - @rocket.chat/cron@0.0.20-rc.5
-  - @rocket.chat/gazzodown@3.0.0-rc.12
-  - @rocket.chat/model-typings@0.2.0-rc.12
-  - @rocket.chat/ui-contexts@3.0.0-rc.12
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.12
-  - @rocket.chat/models@0.0.24-rc.5
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.12
-  - @rocket.chat/ui-video-conf@3.0.0-rc.12
-  - @rocket.chat/web-ui-registration@3.0.0-rc.11
-  - @rocket.chat/instance-status@0.0.24-rc.5
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.12
+  - @yas chat/rest-typings@6.5.0-rc.12
+  - @yas chat/api-client@0.1.18-rc.5
+  - @yas chat/license@0.1.0-rc.12
+  - @yas chat/omnichannel-services@0.1.0-rc.12
+  - @yas chat/pdf-worker@0.0.24-rc.5
+  - @yas chat/presence@0.1.0-rc.12
+  - @yas chat/core-services@0.3.0-rc.12
+  - @yas chat/cron@0.0.20-rc.5
+  - @yas chat/gazzodown@3.0.0-rc.12
+  - @yas chat/model-typings@0.2.0-rc.12
+  - @yas chat/ui-contexts@3.0.0-rc.12
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.12
+  - @yas chat/models@0.0.24-rc.5
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.12
+  - @yas chat/ui-video-conf@3.0.0-rc.12
+  - @yas chat/web-ui-registration@3.0.0-rc.11
+  - @yas chat/instance-status@0.0.24-rc.5
 
 ## 6.5.0-rc.11
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 7e96fbd75f: Fixed issue with the creation of groups with the name of an already existing room throwing `internalError`
-  - @rocket.chat/core-typings@6.5.0-rc.11
-  - @rocket.chat/rest-typings@6.5.0-rc.11
-  - @rocket.chat/api-client@0.1.18-rc.4
-  - @rocket.chat/license@0.1.0-rc.11
-  - @rocket.chat/omnichannel-services@0.1.0-rc.11
-  - @rocket.chat/pdf-worker@0.0.24-rc.4
-  - @rocket.chat/presence@0.1.0-rc.11
-  - @rocket.chat/core-services@0.3.0-rc.11
-  - @rocket.chat/cron@0.0.20-rc.4
-  - @rocket.chat/gazzodown@3.0.0-rc.11
-  - @rocket.chat/model-typings@0.2.0-rc.11
-  - @rocket.chat/ui-contexts@3.0.0-rc.11
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.11
-  - @rocket.chat/models@0.0.24-rc.4
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.11
-  - @rocket.chat/ui-video-conf@3.0.0-rc.11
-  - @rocket.chat/web-ui-registration@3.0.0-rc.10
-  - @rocket.chat/instance-status@0.0.24-rc.4
+  - @yas chat/core-typings@6.5.0-rc.11
+  - @yas chat/rest-typings@6.5.0-rc.11
+  - @yas chat/api-client@0.1.18-rc.4
+  - @yas chat/license@0.1.0-rc.11
+  - @yas chat/omnichannel-services@0.1.0-rc.11
+  - @yas chat/pdf-worker@0.0.24-rc.4
+  - @yas chat/presence@0.1.0-rc.11
+  - @yas chat/core-services@0.3.0-rc.11
+  - @yas chat/cron@0.0.20-rc.4
+  - @yas chat/gazzodown@3.0.0-rc.11
+  - @yas chat/model-typings@0.2.0-rc.11
+  - @yas chat/ui-contexts@3.0.0-rc.11
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.11
+  - @yas chat/models@0.0.24-rc.4
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.11
+  - @yas chat/ui-video-conf@3.0.0-rc.11
+  - @yas chat/web-ui-registration@3.0.0-rc.10
+  - @yas chat/instance-status@0.0.24-rc.4
 
 ## 6.5.0-rc.10
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.10
-  - @rocket.chat/rest-typings@6.5.0-rc.10
-  - @rocket.chat/api-client@0.1.18-rc.3
-  - @rocket.chat/license@0.1.0-rc.10
-  - @rocket.chat/omnichannel-services@0.1.0-rc.10
-  - @rocket.chat/pdf-worker@0.0.24-rc.3
-  - @rocket.chat/presence@0.1.0-rc.10
-  - @rocket.chat/core-services@0.3.0-rc.10
-  - @rocket.chat/cron@0.0.20-rc.3
-  - @rocket.chat/gazzodown@3.0.0-rc.10
-  - @rocket.chat/model-typings@0.2.0-rc.10
-  - @rocket.chat/ui-contexts@3.0.0-rc.10
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.10
-  - @rocket.chat/models@0.0.24-rc.3
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.10
-  - @rocket.chat/ui-video-conf@3.0.0-rc.10
-  - @rocket.chat/web-ui-registration@3.0.0-rc.9
-  - @rocket.chat/instance-status@0.0.24-rc.3
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.10
+  - @yas chat/rest-typings@6.5.0-rc.10
+  - @yas chat/api-client@0.1.18-rc.3
+  - @yas chat/license@0.1.0-rc.10
+  - @yas chat/omnichannel-services@0.1.0-rc.10
+  - @yas chat/pdf-worker@0.0.24-rc.3
+  - @yas chat/presence@0.1.0-rc.10
+  - @yas chat/core-services@0.3.0-rc.10
+  - @yas chat/cron@0.0.20-rc.3
+  - @yas chat/gazzodown@3.0.0-rc.10
+  - @yas chat/model-typings@0.2.0-rc.10
+  - @yas chat/ui-contexts@3.0.0-rc.10
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.10
+  - @yas chat/models@0.0.24-rc.3
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.10
+  - @yas chat/ui-video-conf@3.0.0-rc.10
+  - @yas chat/web-ui-registration@3.0.0-rc.9
+  - @yas chat/instance-status@0.0.24-rc.3
 
 ## 6.5.0-rc.9
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.9
-  - @rocket.chat/rest-typings@6.5.0-rc.9
-  - @rocket.chat/api-client@0.1.18-rc.2
-  - @rocket.chat/license@0.1.0-rc.9
-  - @rocket.chat/omnichannel-services@0.1.0-rc.9
-  - @rocket.chat/pdf-worker@0.0.24-rc.2
-  - @rocket.chat/presence@0.1.0-rc.9
-  - @rocket.chat/core-services@0.3.0-rc.9
-  - @rocket.chat/cron@0.0.20-rc.2
-  - @rocket.chat/gazzodown@3.0.0-rc.9
-  - @rocket.chat/model-typings@0.2.0-rc.9
-  - @rocket.chat/ui-contexts@3.0.0-rc.9
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.9
-  - @rocket.chat/models@0.0.24-rc.2
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.9
-  - @rocket.chat/ui-video-conf@3.0.0-rc.9
-  - @rocket.chat/web-ui-registration@3.0.0-rc.8
-  - @rocket.chat/instance-status@0.0.24-rc.2
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.9
+  - @yas chat/rest-typings@6.5.0-rc.9
+  - @yas chat/api-client@0.1.18-rc.2
+  - @yas chat/license@0.1.0-rc.9
+  - @yas chat/omnichannel-services@0.1.0-rc.9
+  - @yas chat/pdf-worker@0.0.24-rc.2
+  - @yas chat/presence@0.1.0-rc.9
+  - @yas chat/core-services@0.3.0-rc.9
+  - @yas chat/cron@0.0.20-rc.2
+  - @yas chat/gazzodown@3.0.0-rc.9
+  - @yas chat/model-typings@0.2.0-rc.9
+  - @yas chat/ui-contexts@3.0.0-rc.9
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.9
+  - @yas chat/models@0.0.24-rc.2
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.9
+  - @yas chat/ui-video-conf@3.0.0-rc.9
+  - @yas chat/web-ui-registration@3.0.0-rc.8
+  - @yas chat/instance-status@0.0.24-rc.2
 
 ## 6.5.0-rc.8
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 928177b602: Fix rocket.cat's app request message escaping
-  - @rocket.chat/core-typings@6.5.0-rc.8
-  - @rocket.chat/rest-typings@6.5.0-rc.8
-  - @rocket.chat/api-client@0.1.18-rc.1
-  - @rocket.chat/license@0.1.0-rc.8
-  - @rocket.chat/omnichannel-services@0.1.0-rc.8
-  - @rocket.chat/pdf-worker@0.0.24-rc.1
-  - @rocket.chat/presence@0.1.0-rc.8
-  - @rocket.chat/core-services@0.3.0-rc.8
-  - @rocket.chat/cron@0.0.20-rc.1
-  - @rocket.chat/gazzodown@3.0.0-rc.8
-  - @rocket.chat/model-typings@0.2.0-rc.8
-  - @rocket.chat/ui-contexts@3.0.0-rc.8
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.8
-  - @rocket.chat/models@0.0.24-rc.1
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.8
-  - @rocket.chat/ui-video-conf@3.0.0-rc.8
-  - @rocket.chat/web-ui-registration@3.0.0-rc.7
-  - @rocket.chat/instance-status@0.0.24-rc.1
+  - @yas chat/core-typings@6.5.0-rc.8
+  - @yas chat/rest-typings@6.5.0-rc.8
+  - @yas chat/api-client@0.1.18-rc.1
+  - @yas chat/license@0.1.0-rc.8
+  - @yas chat/omnichannel-services@0.1.0-rc.8
+  - @yas chat/pdf-worker@0.0.24-rc.1
+  - @yas chat/presence@0.1.0-rc.8
+  - @yas chat/core-services@0.3.0-rc.8
+  - @yas chat/cron@0.0.20-rc.1
+  - @yas chat/gazzodown@3.0.0-rc.8
+  - @yas chat/model-typings@0.2.0-rc.8
+  - @yas chat/ui-contexts@3.0.0-rc.8
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.8
+  - @yas chat/models@0.0.24-rc.1
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.8
+  - @yas chat/ui-video-conf@3.0.0-rc.8
+  - @yas chat/web-ui-registration@3.0.0-rc.7
+  - @yas chat/instance-status@0.0.24-rc.1
 
 ## 6.5.0-rc.7
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 88833b24e9: fix: Google Maps and Katex config settings were not visible
 - 150a580851: regression: changed UniqueID modal being displayed wrongly during startup
 - 7ed7cb41ce: Add the date and time to the email sent when a new device logs in
-  - @rocket.chat/core-typings@6.5.0-rc.7
-  - @rocket.chat/rest-typings@6.5.0-rc.7
-  - @rocket.chat/api-client@0.1.15-rc.7
-  - @rocket.chat/license@0.1.0-rc.7
-  - @rocket.chat/omnichannel-services@0.1.0-rc.7
-  - @rocket.chat/pdf-worker@0.0.21-rc.7
-  - @rocket.chat/presence@0.1.0-rc.7
-  - @rocket.chat/core-services@0.3.0-rc.7
-  - @rocket.chat/cron@0.0.17-rc.7
-  - @rocket.chat/gazzodown@3.0.0-rc.7
-  - @rocket.chat/model-typings@0.2.0-rc.7
-  - @rocket.chat/ui-contexts@3.0.0-rc.7
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.7
-  - @rocket.chat/models@0.0.21-rc.7
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.7
-  - @rocket.chat/ui-video-conf@3.0.0-rc.7
-  - @rocket.chat/web-ui-registration@3.0.0-rc.6
-  - @rocket.chat/instance-status@0.0.21-rc.7
+  - @yas chat/core-typings@6.5.0-rc.7
+  - @yas chat/rest-typings@6.5.0-rc.7
+  - @yas chat/api-client@0.1.15-rc.7
+  - @yas chat/license@0.1.0-rc.7
+  - @yas chat/omnichannel-services@0.1.0-rc.7
+  - @yas chat/pdf-worker@0.0.21-rc.7
+  - @yas chat/presence@0.1.0-rc.7
+  - @yas chat/core-services@0.3.0-rc.7
+  - @yas chat/cron@0.0.17-rc.7
+  - @yas chat/gazzodown@3.0.0-rc.7
+  - @yas chat/model-typings@0.2.0-rc.7
+  - @yas chat/ui-contexts@3.0.0-rc.7
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.7
+  - @yas chat/models@0.0.21-rc.7
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.7
+  - @yas chat/ui-video-conf@3.0.0-rc.7
+  - @yas chat/web-ui-registration@3.0.0-rc.6
+  - @yas chat/instance-status@0.0.21-rc.7
 
 ## 6.5.0-rc.6
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - aaf11e92dc: Fixed Canned responses stream not working, causing users to refresh to see newly created responses.
-  - @rocket.chat/core-typings@6.5.0-rc.6
-  - @rocket.chat/rest-typings@6.5.0-rc.6
-  - @rocket.chat/api-client@0.1.15-rc.6
-  - @rocket.chat/license@0.1.0-rc.6
-  - @rocket.chat/omnichannel-services@0.1.0-rc.6
-  - @rocket.chat/pdf-worker@0.0.21-rc.6
-  - @rocket.chat/presence@0.1.0-rc.6
-  - @rocket.chat/core-services@0.3.0-rc.6
-  - @rocket.chat/cron@0.0.17-rc.6
-  - @rocket.chat/gazzodown@3.0.0-rc.6
-  - @rocket.chat/model-typings@0.2.0-rc.6
-  - @rocket.chat/ui-contexts@3.0.0-rc.6
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.6
-  - @rocket.chat/models@0.0.21-rc.6
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.6
-  - @rocket.chat/ui-video-conf@3.0.0-rc.6
-  - @rocket.chat/web-ui-registration@3.0.0-rc.5
-  - @rocket.chat/instance-status@0.0.21-rc.6
+  - @yas chat/core-typings@6.5.0-rc.6
+  - @yas chat/rest-typings@6.5.0-rc.6
+  - @yas chat/api-client@0.1.15-rc.6
+  - @yas chat/license@0.1.0-rc.6
+  - @yas chat/omnichannel-services@0.1.0-rc.6
+  - @yas chat/pdf-worker@0.0.21-rc.6
+  - @yas chat/presence@0.1.0-rc.6
+  - @yas chat/core-services@0.3.0-rc.6
+  - @yas chat/cron@0.0.17-rc.6
+  - @yas chat/gazzodown@3.0.0-rc.6
+  - @yas chat/model-typings@0.2.0-rc.6
+  - @yas chat/ui-contexts@3.0.0-rc.6
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.6
+  - @yas chat/models@0.0.21-rc.6
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.6
+  - @yas chat/ui-video-conf@3.0.0-rc.6
+  - @yas chat/web-ui-registration@3.0.0-rc.5
+  - @yas chat/instance-status@0.0.21-rc.6
 
 ## 6.5.0-rc.5
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 3ce070a3de: fix: wrong client hash calculation due to race condition on assets
 
   Some deployments may suffer from some reloads if running multiple instances. It's caused by different client hashes generated due to a possible race condition on custom assets load at the startup time. Forcing the clients to talk to the right backend instances, which causes reloads if sticky sessions are not enabled.
   This change removes the assets from the hash calculation preventing the race condition and possible different hashes. After this change, the clients will not reload when the admin changes assets.
 
 - 26b8c8124c: fix: `TypeError`: Cannot use 'in' operator in `undefined` for every message sent
-  - @rocket.chat/core-typings@6.5.0-rc.5
-  - @rocket.chat/rest-typings@6.5.0-rc.5
-  - @rocket.chat/api-client@0.1.15-rc.5
-  - @rocket.chat/license@0.1.0-rc.5
-  - @rocket.chat/omnichannel-services@0.1.0-rc.5
-  - @rocket.chat/pdf-worker@0.0.21-rc.5
-  - @rocket.chat/presence@0.1.0-rc.5
-  - @rocket.chat/core-services@0.3.0-rc.5
-  - @rocket.chat/cron@0.0.17-rc.5
-  - @rocket.chat/gazzodown@3.0.0-rc.5
-  - @rocket.chat/model-typings@0.2.0-rc.5
-  - @rocket.chat/ui-contexts@3.0.0-rc.5
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.5
-  - @rocket.chat/models@0.0.21-rc.5
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.5
-  - @rocket.chat/ui-video-conf@3.0.0-rc.5
-  - @rocket.chat/web-ui-registration@3.0.0-rc.4
-  - @rocket.chat/instance-status@0.0.21-rc.5
+  - @yas chat/core-typings@6.5.0-rc.5
+  - @yas chat/rest-typings@6.5.0-rc.5
+  - @yas chat/api-client@0.1.15-rc.5
+  - @yas chat/license@0.1.0-rc.5
+  - @yas chat/omnichannel-services@0.1.0-rc.5
+  - @yas chat/pdf-worker@0.0.21-rc.5
+  - @yas chat/presence@0.1.0-rc.5
+  - @yas chat/core-services@0.3.0-rc.5
+  - @yas chat/cron@0.0.17-rc.5
+  - @yas chat/gazzodown@3.0.0-rc.5
+  - @yas chat/model-typings@0.2.0-rc.5
+  - @yas chat/ui-contexts@3.0.0-rc.5
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.5
+  - @yas chat/models@0.0.21-rc.5
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.5
+  - @yas chat/ui-video-conf@3.0.0-rc.5
+  - @yas chat/web-ui-registration@3.0.0-rc.4
+  - @yas chat/instance-status@0.0.21-rc.5
 
 ## 6.5.0-rc.4
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.4
-  - @rocket.chat/rest-typings@6.5.0-rc.4
-  - @rocket.chat/api-client@0.1.15-rc.4
-  - @rocket.chat/license@0.1.0-rc.4
-  - @rocket.chat/omnichannel-services@0.1.0-rc.4
-  - @rocket.chat/pdf-worker@0.0.21-rc.4
-  - @rocket.chat/presence@0.1.0-rc.4
-  - @rocket.chat/core-services@0.3.0-rc.4
-  - @rocket.chat/cron@0.0.17-rc.4
-  - @rocket.chat/gazzodown@3.0.0-rc.4
-  - @rocket.chat/model-typings@0.2.0-rc.4
-  - @rocket.chat/ui-contexts@3.0.0-rc.4
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.4
-  - @rocket.chat/models@0.0.21-rc.4
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.4
-  - @rocket.chat/ui-video-conf@3.0.0-rc.4
-  - @rocket.chat/web-ui-registration@3.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.21-rc.4
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.4
+  - @yas chat/rest-typings@6.5.0-rc.4
+  - @yas chat/api-client@0.1.15-rc.4
+  - @yas chat/license@0.1.0-rc.4
+  - @yas chat/omnichannel-services@0.1.0-rc.4
+  - @yas chat/pdf-worker@0.0.21-rc.4
+  - @yas chat/presence@0.1.0-rc.4
+  - @yas chat/core-services@0.3.0-rc.4
+  - @yas chat/cron@0.0.17-rc.4
+  - @yas chat/gazzodown@3.0.0-rc.4
+  - @yas chat/model-typings@0.2.0-rc.4
+  - @yas chat/ui-contexts@3.0.0-rc.4
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.4
+  - @yas chat/models@0.0.21-rc.4
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.4
+  - @yas chat/ui-video-conf@3.0.0-rc.4
+  - @yas chat/web-ui-registration@3.0.0-rc.3
+  - @yas chat/instance-status@0.0.21-rc.4
 
 ## 6.5.0-rc.3
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 8668485fda: fix: immediate auto reload issues
 
   Immediate auto reload increases server load on restarts/upgrades and increases the chance of getting 404 on Meteor's config file blocking the UI on a loading screen
@@ -18898,78 +18898,78 @@
 
   - Front-end, adds a warning message including the old and new hashes, and a delay of 60 seconds after being notified by the server
   - Back-end, delays the client notifications on a random value between 2 and 10 minutes per connection, allowing different clients to reload at different moments and distributing the load along the time.
-  - @rocket.chat/core-typings@6.5.0-rc.3
-  - @rocket.chat/rest-typings@6.5.0-rc.3
-  - @rocket.chat/api-client@0.1.15-rc.3
-  - @rocket.chat/license@0.1.0-rc.3
-  - @rocket.chat/omnichannel-services@0.1.0-rc.3
-  - @rocket.chat/pdf-worker@0.0.21-rc.3
-  - @rocket.chat/presence@0.1.0-rc.3
-  - @rocket.chat/core-services@0.3.0-rc.3
-  - @rocket.chat/cron@0.0.17-rc.3
-  - @rocket.chat/gazzodown@3.0.0-rc.3
-  - @rocket.chat/model-typings@0.2.0-rc.3
-  - @rocket.chat/ui-contexts@3.0.0-rc.3
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.3
-  - @rocket.chat/models@0.0.21-rc.3
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.3
-  - @rocket.chat/ui-video-conf@3.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.21-rc.3
-  - @rocket.chat/web-ui-registration@3.0.0-rc.2
+  - @yas chat/core-typings@6.5.0-rc.3
+  - @yas chat/rest-typings@6.5.0-rc.3
+  - @yas chat/api-client@0.1.15-rc.3
+  - @yas chat/license@0.1.0-rc.3
+  - @yas chat/omnichannel-services@0.1.0-rc.3
+  - @yas chat/pdf-worker@0.0.21-rc.3
+  - @yas chat/presence@0.1.0-rc.3
+  - @yas chat/core-services@0.3.0-rc.3
+  - @yas chat/cron@0.0.17-rc.3
+  - @yas chat/gazzodown@3.0.0-rc.3
+  - @yas chat/model-typings@0.2.0-rc.3
+  - @yas chat/ui-contexts@3.0.0-rc.3
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.3
+  - @yas chat/models@0.0.21-rc.3
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.3
+  - @yas chat/ui-video-conf@3.0.0-rc.3
+  - @yas chat/instance-status@0.0.21-rc.3
+  - @yas chat/web-ui-registration@3.0.0-rc.2
 
 ## 6.5.0-rc.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.2
-  - @rocket.chat/rest-typings@6.5.0-rc.2
-  - @rocket.chat/api-client@0.1.15-rc.2
-  - @rocket.chat/license@0.1.0-rc.2
-  - @rocket.chat/omnichannel-services@0.1.0-rc.2
-  - @rocket.chat/pdf-worker@0.0.21-rc.2
-  - @rocket.chat/presence@0.1.0-rc.2
-  - @rocket.chat/core-services@0.3.0-rc.2
-  - @rocket.chat/cron@0.0.17-rc.2
-  - @rocket.chat/gazzodown@3.0.0-rc.2
-  - @rocket.chat/model-typings@0.2.0-rc.2
-  - @rocket.chat/ui-contexts@3.0.0-rc.2
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.2
-  - @rocket.chat/models@0.0.21-rc.2
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.2
-  - @rocket.chat/ui-video-conf@3.0.0-rc.2
-  - @rocket.chat/web-ui-registration@3.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.21-rc.2
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.2
+  - @yas chat/rest-typings@6.5.0-rc.2
+  - @yas chat/api-client@0.1.15-rc.2
+  - @yas chat/license@0.1.0-rc.2
+  - @yas chat/omnichannel-services@0.1.0-rc.2
+  - @yas chat/pdf-worker@0.0.21-rc.2
+  - @yas chat/presence@0.1.0-rc.2
+  - @yas chat/core-services@0.3.0-rc.2
+  - @yas chat/cron@0.0.17-rc.2
+  - @yas chat/gazzodown@3.0.0-rc.2
+  - @yas chat/model-typings@0.2.0-rc.2
+  - @yas chat/ui-contexts@3.0.0-rc.2
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.2
+  - @yas chat/models@0.0.21-rc.2
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.2
+  - @yas chat/ui-video-conf@3.0.0-rc.2
+  - @yas chat/web-ui-registration@3.0.0-rc.2
+  - @yas chat/instance-status@0.0.21-rc.2
 
 ## 6.5.0-rc.1
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.5.0-rc.1
-  - @rocket.chat/rest-typings@6.5.0-rc.1
-  - @rocket.chat/api-client@0.1.15-rc.1
-  - @rocket.chat/license@0.1.0-rc.1
-  - @rocket.chat/omnichannel-services@0.1.0-rc.1
-  - @rocket.chat/pdf-worker@0.0.21-rc.1
-  - @rocket.chat/presence@0.1.0-rc.1
-  - @rocket.chat/core-services@0.3.0-rc.1
-  - @rocket.chat/cron@0.0.17-rc.1
-  - @rocket.chat/gazzodown@3.0.0-rc.1
-  - @rocket.chat/model-typings@0.2.0-rc.1
-  - @rocket.chat/ui-contexts@3.0.0-rc.1
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.1
-  - @rocket.chat/models@0.0.21-rc.1
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.1
-  - @rocket.chat/ui-video-conf@3.0.0-rc.1
-  - @rocket.chat/web-ui-registration@3.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.21-rc.1
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.5.0-rc.1
+  - @yas chat/rest-typings@6.5.0-rc.1
+  - @yas chat/api-client@0.1.15-rc.1
+  - @yas chat/license@0.1.0-rc.1
+  - @yas chat/omnichannel-services@0.1.0-rc.1
+  - @yas chat/pdf-worker@0.0.21-rc.1
+  - @yas chat/presence@0.1.0-rc.1
+  - @yas chat/core-services@0.3.0-rc.1
+  - @yas chat/cron@0.0.17-rc.1
+  - @yas chat/gazzodown@3.0.0-rc.1
+  - @yas chat/model-typings@0.2.0-rc.1
+  - @yas chat/ui-contexts@3.0.0-rc.1
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.1
+  - @yas chat/models@0.0.21-rc.1
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/ui-client@3.0.0-rc.1
+  - @yas chat/ui-video-conf@3.0.0-rc.1
+  - @yas chat/web-ui-registration@3.0.0-rc.1
+  - @yas chat/instance-status@0.0.21-rc.1
 
 ## 6.5.0-rc.0
 
@@ -19068,88 +19068,88 @@
 - Updated dependencies [a98f3ff303]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/ui-contexts@3.0.0-rc.0
-  - @rocket.chat/web-ui-registration@3.0.0-rc.0
-  - @rocket.chat/core-typings@6.5.0-rc.0
-  - @rocket.chat/model-typings@0.2.0-rc.0
-  - @rocket.chat/gazzodown@3.0.0-rc.0
-  - @rocket.chat/i18n@0.0.3-rc.0
-  - @rocket.chat/presence@0.1.0-rc.0
-  - @rocket.chat/core-services@0.3.0-rc.0
-  - @rocket.chat/rest-typings@6.5.0-rc.0
-  - @rocket.chat/server-fetch@0.0.2-rc.0
-  - @rocket.chat/tools@0.2.0-rc.0
-  - @rocket.chat/ui-theming@0.1.1-rc.0
-  - @rocket.chat/license@0.1.0-rc.0
-  - @rocket.chat/jwt@0.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.1.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@3.0.0-rc.0
-  - @rocket.chat/ui-client@3.0.0-rc.0
-  - @rocket.chat/ui-video-conf@3.0.0-rc.0
-  - @rocket.chat/api-client@0.1.15-rc.0
-  - @rocket.chat/pdf-worker@0.0.21-rc.0
-  - @rocket.chat/cron@0.0.17-rc.0
-  - @rocket.chat/models@0.0.21-rc.0
-  - @rocket.chat/server-cloud-communication@0.0.1
-  - @rocket.chat/instance-status@0.0.21-rc.0
+  - @yas chat/ui-contexts@3.0.0-rc.0
+  - @yas chat/web-ui-registration@3.0.0-rc.0
+  - @yas chat/core-typings@6.5.0-rc.0
+  - @yas chat/model-typings@0.2.0-rc.0
+  - @yas chat/gazzodown@3.0.0-rc.0
+  - @yas chat/i18n@0.0.3-rc.0
+  - @yas chat/presence@0.1.0-rc.0
+  - @yas chat/core-services@0.3.0-rc.0
+  - @yas chat/rest-typings@6.5.0-rc.0
+  - @yas chat/server-fetch@0.0.2-rc.0
+  - @yas chat/tools@0.2.0-rc.0
+  - @yas chat/ui-theming@0.1.1-rc.0
+  - @yas chat/license@0.1.0-rc.0
+  - @yas chat/jwt@0.1.0-rc.0
+  - @yas chat/omnichannel-services@0.1.0-rc.0
+  - @yas chat/fuselage-ui-kit@3.0.0-rc.0
+  - @yas chat/ui-client@3.0.0-rc.0
+  - @yas chat/ui-video-conf@3.0.0-rc.0
+  - @yas chat/api-client@0.1.15-rc.0
+  - @yas chat/pdf-worker@0.0.21-rc.0
+  - @yas chat/cron@0.0.17-rc.0
+  - @yas chat/models@0.0.21-rc.0
+  - @yas chat/server-cloud-communication@0.0.1
+  - @yas chat/instance-status@0.0.21-rc.0
 
 ## 6.4.8
 
 ### Patch Changes
 
-- 550900bb2b: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.4.8
-  - @rocket.chat/rest-typings@6.4.8
-  - @rocket.chat/api-client@0.1.17
-  - @rocket.chat/omnichannel-services@0.0.23
-  - @rocket.chat/pdf-worker@0.0.23
-  - @rocket.chat/presence@0.0.23
-  - @rocket.chat/core-services@0.2.8
-  - @rocket.chat/cron@0.0.19
-  - @rocket.chat/gazzodown@2.0.8
-  - @rocket.chat/model-typings@0.1.8
-  - @rocket.chat/ui-contexts@2.0.8
-  - @rocket.chat/fuselage-ui-kit@2.0.8
-  - @rocket.chat/models@0.0.23
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.8
-  - @rocket.chat/ui-video-conf@2.0.8
-  - @rocket.chat/web-ui-registration@2.0.8
-  - @rocket.chat/instance-status@0.0.23
+- 550900bb2b: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.4.8
+  - @yas chat/rest-typings@6.4.8
+  - @yas chat/api-client@0.1.17
+  - @yas chat/omnichannel-services@0.0.23
+  - @yas chat/pdf-worker@0.0.23
+  - @yas chat/presence@0.0.23
+  - @yas chat/core-services@0.2.8
+  - @yas chat/cron@0.0.19
+  - @yas chat/gazzodown@2.0.8
+  - @yas chat/model-typings@0.1.8
+  - @yas chat/ui-contexts@2.0.8
+  - @yas chat/fuselage-ui-kit@2.0.8
+  - @yas chat/models@0.0.23
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.8
+  - @yas chat/ui-video-conf@2.0.8
+  - @yas chat/web-ui-registration@2.0.8
+  - @yas chat/instance-status@0.0.23
 
 ## 6.4.7
 
 ### Patch Changes
 
-- 037efa4f4f: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 037efa4f4f: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - b98492e3ee: Add additional checks to the OAuth tokens to prevent future issues
-  - @rocket.chat/core-typings@6.4.7
-  - @rocket.chat/rest-typings@6.4.7
-  - @rocket.chat/api-client@0.1.16
-  - @rocket.chat/omnichannel-services@0.0.22
-  - @rocket.chat/pdf-worker@0.0.22
-  - @rocket.chat/presence@0.0.22
-  - @rocket.chat/core-services@0.2.7
-  - @rocket.chat/cron@0.0.18
-  - @rocket.chat/gazzodown@2.0.7
-  - @rocket.chat/model-typings@0.1.7
-  - @rocket.chat/ui-contexts@2.0.7
-  - @rocket.chat/fuselage-ui-kit@2.0.7
-  - @rocket.chat/models@0.0.22
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.7
-  - @rocket.chat/ui-video-conf@2.0.7
-  - @rocket.chat/web-ui-registration@2.0.7
-  - @rocket.chat/instance-status@0.0.22
+  - @yas chat/core-typings@6.4.7
+  - @yas chat/rest-typings@6.4.7
+  - @yas chat/api-client@0.1.16
+  - @yas chat/omnichannel-services@0.0.22
+  - @yas chat/pdf-worker@0.0.22
+  - @yas chat/presence@0.0.22
+  - @yas chat/core-services@0.2.7
+  - @yas chat/cron@0.0.18
+  - @yas chat/gazzodown@2.0.7
+  - @yas chat/model-typings@0.1.7
+  - @yas chat/ui-contexts@2.0.7
+  - @yas chat/fuselage-ui-kit@2.0.7
+  - @yas chat/models@0.0.22
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.7
+  - @yas chat/ui-video-conf@2.0.7
+  - @yas chat/web-ui-registration@2.0.7
+  - @yas chat/instance-status@0.0.22
 
 ## 6.4.6
 
 ### Patch Changes
 
-- 35ea15005a: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 35ea15005a: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 57deb49ceb: fix: OAuth login by redirect failing on firefox
 - 00875fc9ab: fix: wrong client hash calculation due to race condition on assets
 
@@ -19166,145 +19166,145 @@
   - Back-end, delays the client notifications on a random value between 2 and 10 minutes per connection, allowing different clients to reload at different moments and distributing the load along the time.
 
 - 873eea9d54: fix: `TypeError`: Cannot use 'in' operator in `undefined` for every message sent
-  - @rocket.chat/core-typings@6.4.6
-  - @rocket.chat/rest-typings@6.4.6
-  - @rocket.chat/api-client@0.1.15
-  - @rocket.chat/omnichannel-services@0.0.21
-  - @rocket.chat/pdf-worker@0.0.21
-  - @rocket.chat/presence@0.0.21
-  - @rocket.chat/core-services@0.2.6
-  - @rocket.chat/cron@0.0.17
-  - @rocket.chat/gazzodown@2.0.6
-  - @rocket.chat/model-typings@0.1.6
-  - @rocket.chat/ui-contexts@2.0.6
-  - @rocket.chat/fuselage-ui-kit@2.0.6
-  - @rocket.chat/models@0.0.21
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.6
-  - @rocket.chat/ui-video-conf@2.0.6
-  - @rocket.chat/web-ui-registration@2.0.6
-  - @rocket.chat/instance-status@0.0.21
+  - @yas chat/core-typings@6.4.6
+  - @yas chat/rest-typings@6.4.6
+  - @yas chat/api-client@0.1.15
+  - @yas chat/omnichannel-services@0.0.21
+  - @yas chat/pdf-worker@0.0.21
+  - @yas chat/presence@0.0.21
+  - @yas chat/core-services@0.2.6
+  - @yas chat/cron@0.0.17
+  - @yas chat/gazzodown@2.0.6
+  - @yas chat/model-typings@0.1.6
+  - @yas chat/ui-contexts@2.0.6
+  - @yas chat/fuselage-ui-kit@2.0.6
+  - @yas chat/models@0.0.21
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.6
+  - @yas chat/ui-video-conf@2.0.6
+  - @yas chat/web-ui-registration@2.0.6
+  - @yas chat/instance-status@0.0.21
 
 ## 6.4.5
 
 ### Patch Changes
 
-- 40ac9ea019: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.4.5
-  - @rocket.chat/rest-typings@6.4.5
-  - @rocket.chat/api-client@0.1.14
-  - @rocket.chat/omnichannel-services@0.0.20
-  - @rocket.chat/pdf-worker@0.0.20
-  - @rocket.chat/presence@0.0.20
-  - @rocket.chat/core-services@0.2.5
-  - @rocket.chat/cron@0.0.16
-  - @rocket.chat/gazzodown@2.0.5
-  - @rocket.chat/model-typings@0.1.5
-  - @rocket.chat/ui-contexts@2.0.5
-  - @rocket.chat/fuselage-ui-kit@2.0.5
-  - @rocket.chat/models@0.0.20
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.5
-  - @rocket.chat/ui-video-conf@2.0.5
-  - @rocket.chat/web-ui-registration@2.0.5
-  - @rocket.chat/instance-status@0.0.20
+- 40ac9ea019: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.4.5
+  - @yas chat/rest-typings@6.4.5
+  - @yas chat/api-client@0.1.14
+  - @yas chat/omnichannel-services@0.0.20
+  - @yas chat/pdf-worker@0.0.20
+  - @yas chat/presence@0.0.20
+  - @yas chat/core-services@0.2.5
+  - @yas chat/cron@0.0.16
+  - @yas chat/gazzodown@2.0.5
+  - @yas chat/model-typings@0.1.5
+  - @yas chat/ui-contexts@2.0.5
+  - @yas chat/fuselage-ui-kit@2.0.5
+  - @yas chat/models@0.0.20
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.5
+  - @yas chat/ui-video-conf@2.0.5
+  - @yas chat/web-ui-registration@2.0.5
+  - @yas chat/instance-status@0.0.20
 
 ## 6.4.4
 
 ### Patch Changes
 
-- 9e61d9c8b5: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 9e61d9c8b5: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - e832e9fe96: Fixed widget's `nextAgent` API sending an array of chars instead of an object for `departmentId` parameter
 - a20c4799a4: fix: custom-css injection
 - 4789616afd: Fixed a problem that would prevent private apps from being shown on air-gapped environments
 - e832e9fe96: Fixed a problem caused by `onlyAvailable` property of `livechat/users/agent` endpoint not having the proper type validation
-  - @rocket.chat/core-typings@6.4.4
-  - @rocket.chat/rest-typings@6.4.4
-  - @rocket.chat/api-client@0.1.13
-  - @rocket.chat/omnichannel-services@0.0.19
-  - @rocket.chat/pdf-worker@0.0.19
-  - @rocket.chat/presence@0.0.19
-  - @rocket.chat/core-services@0.2.4
-  - @rocket.chat/cron@0.0.15
-  - @rocket.chat/gazzodown@2.0.4
-  - @rocket.chat/model-typings@0.1.4
-  - @rocket.chat/ui-contexts@2.0.4
-  - @rocket.chat/fuselage-ui-kit@2.0.4
-  - @rocket.chat/models@0.0.19
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.4
-  - @rocket.chat/ui-video-conf@2.0.4
-  - @rocket.chat/web-ui-registration@2.0.4
-  - @rocket.chat/instance-status@0.0.19
+  - @yas chat/core-typings@6.4.4
+  - @yas chat/rest-typings@6.4.4
+  - @yas chat/api-client@0.1.13
+  - @yas chat/omnichannel-services@0.0.19
+  - @yas chat/pdf-worker@0.0.19
+  - @yas chat/presence@0.0.19
+  - @yas chat/core-services@0.2.4
+  - @yas chat/cron@0.0.15
+  - @yas chat/gazzodown@2.0.4
+  - @yas chat/model-typings@0.1.4
+  - @yas chat/ui-contexts@2.0.4
+  - @yas chat/fuselage-ui-kit@2.0.4
+  - @yas chat/models@0.0.19
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.4
+  - @yas chat/ui-video-conf@2.0.4
+  - @yas chat/web-ui-registration@2.0.4
+  - @yas chat/instance-status@0.0.19
 
 ## 6.4.3
 
 ### Patch Changes
 
-- a8676a3c5e: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- a8676a3c5e: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 69d89c4700: Fix unnecessary username validation on accounts profile form
 - 02f4491d5a: fix: Omnichannel webhook is not retrying requests
 - 02f4491d5a: Fixed intermittent errors caused by the removal of subscriptions and inquiries when lacking permissions.
 - 25a2129beb: Rolled back a change of route from `/admin/workspace` to `/admin/info`
 - 02f4491d5a: Add pagination & tooltips to agent's dropdown on forwarding modal
 - 02f4491d5a: Added new Omnichannel setting 'Hide conversation after closing'
-  - @rocket.chat/core-typings@6.4.3
-  - @rocket.chat/rest-typings@6.4.3
-  - @rocket.chat/api-client@0.1.12
-  - @rocket.chat/omnichannel-services@0.0.18
-  - @rocket.chat/pdf-worker@0.0.18
-  - @rocket.chat/presence@0.0.18
-  - @rocket.chat/core-services@0.2.3
-  - @rocket.chat/cron@0.0.14
-  - @rocket.chat/gazzodown@2.0.3
-  - @rocket.chat/model-typings@0.1.3
-  - @rocket.chat/ui-contexts@2.0.3
-  - @rocket.chat/fuselage-ui-kit@2.0.3
-  - @rocket.chat/models@0.0.18
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.3
-  - @rocket.chat/ui-video-conf@2.0.3
-  - @rocket.chat/web-ui-registration@2.0.3
-  - @rocket.chat/instance-status@0.0.18
+  - @yas chat/core-typings@6.4.3
+  - @yas chat/rest-typings@6.4.3
+  - @yas chat/api-client@0.1.12
+  - @yas chat/omnichannel-services@0.0.18
+  - @yas chat/pdf-worker@0.0.18
+  - @yas chat/presence@0.0.18
+  - @yas chat/core-services@0.2.3
+  - @yas chat/cron@0.0.14
+  - @yas chat/gazzodown@2.0.3
+  - @yas chat/model-typings@0.1.3
+  - @yas chat/ui-contexts@2.0.3
+  - @yas chat/fuselage-ui-kit@2.0.3
+  - @yas chat/models@0.0.18
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.3
+  - @yas chat/ui-video-conf@2.0.3
+  - @yas chat/web-ui-registration@2.0.3
+  - @yas chat/instance-status@0.0.18
 
 ## 6.4.2
 
 ### Patch Changes
 
-- eceeaf3b5d: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- eceeaf3b5d: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 8e155d4212: fixed threads breaking when sending messages too fast
 - 3f7ce23a90: fix: mobile ringing notification missing call id
 - 36bcec8e40: Forward headers when using proxy for file uploads
 - d20033723c: Handle the username update in the background
-  - @rocket.chat/core-typings@6.4.2
-  - @rocket.chat/rest-typings@6.4.2
-  - @rocket.chat/api-client@0.1.11
-  - @rocket.chat/omnichannel-services@0.0.17
-  - @rocket.chat/pdf-worker@0.0.17
-  - @rocket.chat/presence@0.0.17
-  - @rocket.chat/core-services@0.2.2
-  - @rocket.chat/cron@0.0.13
-  - @rocket.chat/gazzodown@2.0.2
-  - @rocket.chat/model-typings@0.1.2
-  - @rocket.chat/ui-contexts@2.0.2
-  - @rocket.chat/fuselage-ui-kit@2.0.2
-  - @rocket.chat/models@0.0.17
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.2
-  - @rocket.chat/ui-video-conf@2.0.2
-  - @rocket.chat/web-ui-registration@2.0.2
-  - @rocket.chat/instance-status@0.0.17
+  - @yas chat/core-typings@6.4.2
+  - @yas chat/rest-typings@6.4.2
+  - @yas chat/api-client@0.1.11
+  - @yas chat/omnichannel-services@0.0.17
+  - @yas chat/pdf-worker@0.0.17
+  - @yas chat/presence@0.0.17
+  - @yas chat/core-services@0.2.2
+  - @yas chat/cron@0.0.13
+  - @yas chat/gazzodown@2.0.2
+  - @yas chat/model-typings@0.1.2
+  - @yas chat/ui-contexts@2.0.2
+  - @yas chat/fuselage-ui-kit@2.0.2
+  - @yas chat/models@0.0.17
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.2
+  - @yas chat/ui-video-conf@2.0.2
+  - @yas chat/web-ui-registration@2.0.2
+  - @yas chat/instance-status@0.0.17
 
 ## 6.4.1
 
 ### Patch Changes
 
-- b289bbf26c: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- b289bbf26c: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 636a412866: fix: Remove model-level query restrictions for monitors
 - 5e3473a2c9: New setting to automatically enable autotranslate when joining rooms
 - 2fa78b0563: fix: Monitors now able to forward a chat without taking it first
@@ -19312,24 +19312,24 @@
 - 919fe1f33d: download translation files through CDN
 - eb4881ca53: fix: user dropdown menu position on RTL layout
 - 5ee909bd94: Improve cache of static files
-  - @rocket.chat/core-typings@6.4.1
-  - @rocket.chat/rest-typings@6.4.1
-  - @rocket.chat/api-client@0.1.10
-  - @rocket.chat/omnichannel-services@0.0.16
-  - @rocket.chat/pdf-worker@0.0.16
-  - @rocket.chat/presence@0.0.16
-  - @rocket.chat/core-services@0.2.1
-  - @rocket.chat/cron@0.0.12
-  - @rocket.chat/gazzodown@2.0.1
-  - @rocket.chat/model-typings@0.1.1
-  - @rocket.chat/ui-contexts@2.0.1
-  - @rocket.chat/fuselage-ui-kit@2.0.1
-  - @rocket.chat/models@0.0.16
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/ui-client@2.0.1
-  - @rocket.chat/ui-video-conf@2.0.1
-  - @rocket.chat/web-ui-registration@2.0.1
-  - @rocket.chat/instance-status@0.0.16
+  - @yas chat/core-typings@6.4.1
+  - @yas chat/rest-typings@6.4.1
+  - @yas chat/api-client@0.1.10
+  - @yas chat/omnichannel-services@0.0.16
+  - @yas chat/pdf-worker@0.0.16
+  - @yas chat/presence@0.0.16
+  - @yas chat/core-services@0.2.1
+  - @yas chat/cron@0.0.12
+  - @yas chat/gazzodown@2.0.1
+  - @yas chat/model-typings@0.1.1
+  - @yas chat/ui-contexts@2.0.1
+  - @yas chat/fuselage-ui-kit@2.0.1
+  - @yas chat/models@0.0.16
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/ui-client@2.0.1
+  - @yas chat/ui-video-conf@2.0.1
+  - @yas chat/web-ui-registration@2.0.1
+  - @yas chat/instance-status@0.0.16
 
 ## 6.4.0
 
@@ -19369,12 +19369,12 @@
   - For not served, but open rooms = now - queuedAt
   - For not served and closed rooms = closedAt - queuedAt
 - ea8998602b: fix: Performance issue on `Messages.countByType` aggregation caused by unindexed property on messages collection
-- f634601d90: Bump @rocket.chat/meteor version.
-- f46c1f7b70: Bump @rocket.chat/meteor version.
-- 6963cc2d00: Bump @rocket.chat/meteor version.
-- 7cc15ac814: Bump @rocket.chat/meteor version.
-- 40c5277197: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- f634601d90: Bump @yas chat/meteor version.
+- f46c1f7b70: Bump @yas chat/meteor version.
+- 6963cc2d00: Bump @yas chat/meteor version.
+- 7cc15ac814: Bump @yas chat/meteor version.
+- 40c5277197: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - a08006c9f0: feat: add sections to room header and user infos menus with menuV2
 - 203304782f: Fixed `overrideDestinationChannelEnabled` treated as a required param in `integrations.create` and `integration.update` endpoints
 - 9edca67b9b: feat(apps): `ActionManagerBusyState` component for apps `ui.interaction`
@@ -19486,30 +19486,30 @@
 - Updated dependencies [b8f3d5014f]
 - Updated dependencies [93d4912e17]
 - Updated dependencies [ee3815fce4]
-  - @rocket.chat/core-typings@6.4.0
-  - @rocket.chat/rest-typings@6.4.0
-  - @rocket.chat/fuselage-ui-kit@2.0.0
-  - @rocket.chat/model-typings@0.1.0
-  - @rocket.chat/core-services@0.2.0
-  - @rocket.chat/ui-client@2.0.0
-  - @rocket.chat/ui-contexts@2.0.0
-  - @rocket.chat/ui-theming@0.1.0
-  - @rocket.chat/presence@0.0.15
-  - @rocket.chat/tools@0.1.0
-  - @rocket.chat/cron@0.0.11
-  - @rocket.chat/i18n@0.0.2
-  - @rocket.chat/web-ui-registration@2.0.0
-  - @rocket.chat/api-client@0.1.9
-  - @rocket.chat/omnichannel-services@0.0.15
-  - @rocket.chat/pdf-worker@0.0.15
-  - @rocket.chat/gazzodown@2.0.0
-  - @rocket.chat/models@0.0.15
-  - @rocket.chat/ui-video-conf@2.0.0
-  - @rocket.chat/base64@1.0.12
-  - @rocket.chat/instance-status@0.0.15
-  - @rocket.chat/random@1.2.1
-  - @rocket.chat/sha256@1.0.9
-  - @rocket.chat/ui-composer@0.0.1
+  - @yas chat/core-typings@6.4.0
+  - @yas chat/rest-typings@6.4.0
+  - @yas chat/fuselage-ui-kit@2.0.0
+  - @yas chat/model-typings@0.1.0
+  - @yas chat/core-services@0.2.0
+  - @yas chat/ui-client@2.0.0
+  - @yas chat/ui-contexts@2.0.0
+  - @yas chat/ui-theming@0.1.0
+  - @yas chat/presence@0.0.15
+  - @yas chat/tools@0.1.0
+  - @yas chat/cron@0.0.11
+  - @yas chat/i18n@0.0.2
+  - @yas chat/web-ui-registration@2.0.0
+  - @yas chat/api-client@0.1.9
+  - @yas chat/omnichannel-services@0.0.15
+  - @yas chat/pdf-worker@0.0.15
+  - @yas chat/gazzodown@2.0.0
+  - @yas chat/models@0.0.15
+  - @yas chat/ui-video-conf@2.0.0
+  - @yas chat/base64@1.0.12
+  - @yas chat/instance-status@0.0.15
+  - @yas chat/random@1.2.1
+  - @yas chat/sha256@1.0.9
+  - @yas chat/ui-composer@0.0.1
 
 ## 6.4.0-rc.5
 
@@ -19519,58 +19519,58 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - ec60dbe8f5: Fixed custom translations not being displayed
 - Updated dependencies [1041d4d361]
-  - @rocket.chat/core-typings@6.4.0-rc.5
-  - @rocket.chat/rest-typings@6.4.0-rc.5
-  - @rocket.chat/tools@0.1.0-rc.0
-  - @rocket.chat/api-client@0.1.9-rc.5
-  - @rocket.chat/omnichannel-services@0.0.15-rc.5
-  - @rocket.chat/pdf-worker@0.0.15-rc.5
-  - @rocket.chat/presence@0.0.15-rc.5
-  - @rocket.chat/core-services@0.2.0-rc.5
-  - @rocket.chat/cron@0.0.11-rc.5
-  - @rocket.chat/gazzodown@2.0.0-rc.5
-  - @rocket.chat/model-typings@0.1.0-rc.5
-  - @rocket.chat/ui-contexts@2.0.0-rc.5
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.5
-  - @rocket.chat/models@0.0.15-rc.5
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.5
-  - @rocket.chat/ui-video-conf@2.0.0-rc.5
-  - @rocket.chat/web-ui-registration@2.0.0-rc.5
-  - @rocket.chat/instance-status@0.0.15-rc.5
+  - @yas chat/core-typings@6.4.0-rc.5
+  - @yas chat/rest-typings@6.4.0-rc.5
+  - @yas chat/tools@0.1.0-rc.0
+  - @yas chat/api-client@0.1.9-rc.5
+  - @yas chat/omnichannel-services@0.0.15-rc.5
+  - @yas chat/pdf-worker@0.0.15-rc.5
+  - @yas chat/presence@0.0.15-rc.5
+  - @yas chat/core-services@0.2.0-rc.5
+  - @yas chat/cron@0.0.11-rc.5
+  - @yas chat/gazzodown@2.0.0-rc.5
+  - @yas chat/model-typings@0.1.0-rc.5
+  - @yas chat/ui-contexts@2.0.0-rc.5
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.5
+  - @yas chat/models@0.0.15-rc.5
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.5
+  - @yas chat/ui-video-conf@2.0.0-rc.5
+  - @yas chat/web-ui-registration@2.0.0-rc.5
+  - @yas chat/instance-status@0.0.15-rc.5
 
 ## 6.4.0-rc.4
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.4.0-rc.4
-  - @rocket.chat/rest-typings@6.4.0-rc.4
-  - @rocket.chat/api-client@0.1.8-rc.4
-  - @rocket.chat/omnichannel-services@0.0.14-rc.4
-  - @rocket.chat/pdf-worker@0.0.14-rc.4
-  - @rocket.chat/presence@0.0.14-rc.4
-  - @rocket.chat/core-services@0.2.0-rc.4
-  - @rocket.chat/cron@0.0.10-rc.4
-  - @rocket.chat/gazzodown@2.0.0-rc.4
-  - @rocket.chat/model-typings@0.1.0-rc.4
-  - @rocket.chat/ui-contexts@2.0.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.4
-  - @rocket.chat/models@0.0.14-rc.4
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.4
-  - @rocket.chat/ui-video-conf@2.0.0-rc.4
-  - @rocket.chat/web-ui-registration@2.0.0-rc.4
-  - @rocket.chat/instance-status@0.0.14-rc.4
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.4.0-rc.4
+  - @yas chat/rest-typings@6.4.0-rc.4
+  - @yas chat/api-client@0.1.8-rc.4
+  - @yas chat/omnichannel-services@0.0.14-rc.4
+  - @yas chat/pdf-worker@0.0.14-rc.4
+  - @yas chat/presence@0.0.14-rc.4
+  - @yas chat/core-services@0.2.0-rc.4
+  - @yas chat/cron@0.0.10-rc.4
+  - @yas chat/gazzodown@2.0.0-rc.4
+  - @yas chat/model-typings@0.1.0-rc.4
+  - @yas chat/ui-contexts@2.0.0-rc.4
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.4
+  - @yas chat/models@0.0.14-rc.4
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.4
+  - @yas chat/ui-video-conf@2.0.0-rc.4
+  - @yas chat/web-ui-registration@2.0.0-rc.4
+  - @yas chat/instance-status@0.0.14-rc.4
 
 ## 6.4.0-rc.3
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 614a9b8fc8: Show correct date for last day time
 - 61a106fbf2: Increase cron job check delay to 1 min from 5s.
 
@@ -19578,72 +19578,72 @@
 
 - Updated dependencies [d9a150000d]
 - Updated dependencies [61a106fbf2]
-  - @rocket.chat/presence@0.0.13-rc.3
-  - @rocket.chat/cron@0.0.9-rc.3
-  - @rocket.chat/core-typings@6.4.0-rc.3
-  - @rocket.chat/rest-typings@6.4.0-rc.3
-  - @rocket.chat/api-client@0.1.7-rc.3
-  - @rocket.chat/omnichannel-services@0.0.13-rc.3
-  - @rocket.chat/pdf-worker@0.0.13-rc.3
-  - @rocket.chat/core-services@0.2.0-rc.3
-  - @rocket.chat/gazzodown@2.0.0-rc.3
-  - @rocket.chat/model-typings@0.1.0-rc.3
-  - @rocket.chat/ui-contexts@2.0.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.3
-  - @rocket.chat/models@0.0.13-rc.3
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.3
-  - @rocket.chat/ui-video-conf@2.0.0-rc.3
-  - @rocket.chat/web-ui-registration@2.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.13-rc.3
+  - @yas chat/presence@0.0.13-rc.3
+  - @yas chat/cron@0.0.9-rc.3
+  - @yas chat/core-typings@6.4.0-rc.3
+  - @yas chat/rest-typings@6.4.0-rc.3
+  - @yas chat/api-client@0.1.7-rc.3
+  - @yas chat/omnichannel-services@0.0.13-rc.3
+  - @yas chat/pdf-worker@0.0.13-rc.3
+  - @yas chat/core-services@0.2.0-rc.3
+  - @yas chat/gazzodown@2.0.0-rc.3
+  - @yas chat/model-typings@0.1.0-rc.3
+  - @yas chat/ui-contexts@2.0.0-rc.3
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.3
+  - @yas chat/models@0.0.13-rc.3
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.3
+  - @yas chat/ui-video-conf@2.0.0-rc.3
+  - @yas chat/web-ui-registration@2.0.0-rc.3
+  - @yas chat/instance-status@0.0.13-rc.3
 
 ## 6.4.0-rc.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.4.0-rc.2
-  - @rocket.chat/rest-typings@6.4.0-rc.2
-  - @rocket.chat/api-client@0.1.7-rc.2
-  - @rocket.chat/omnichannel-services@0.0.13-rc.2
-  - @rocket.chat/pdf-worker@0.0.13-rc.2
-  - @rocket.chat/presence@0.0.13-rc.2
-  - @rocket.chat/core-services@0.2.0-rc.2
-  - @rocket.chat/cron@0.0.9-rc.2
-  - @rocket.chat/gazzodown@2.0.0-rc.2
-  - @rocket.chat/model-typings@0.1.0-rc.2
-  - @rocket.chat/ui-contexts@2.0.0-rc.2
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.2
-  - @rocket.chat/models@0.0.13-rc.2
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.2
-  - @rocket.chat/ui-video-conf@2.0.0-rc.2
-  - @rocket.chat/web-ui-registration@2.0.0-rc.2
-  - @rocket.chat/instance-status@0.0.13-rc.2
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.4.0-rc.2
+  - @yas chat/rest-typings@6.4.0-rc.2
+  - @yas chat/api-client@0.1.7-rc.2
+  - @yas chat/omnichannel-services@0.0.13-rc.2
+  - @yas chat/pdf-worker@0.0.13-rc.2
+  - @yas chat/presence@0.0.13-rc.2
+  - @yas chat/core-services@0.2.0-rc.2
+  - @yas chat/cron@0.0.9-rc.2
+  - @yas chat/gazzodown@2.0.0-rc.2
+  - @yas chat/model-typings@0.1.0-rc.2
+  - @yas chat/ui-contexts@2.0.0-rc.2
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.2
+  - @yas chat/models@0.0.13-rc.2
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.2
+  - @yas chat/ui-video-conf@2.0.0-rc.2
+  - @yas chat/web-ui-registration@2.0.0-rc.2
+  - @yas chat/instance-status@0.0.13-rc.2
 
 ## 6.4.0-rc.1
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.4.0-rc.1
-  - @rocket.chat/rest-typings@6.4.0-rc.1
-  - @rocket.chat/api-client@0.1.5-rc.1
-  - @rocket.chat/omnichannel-services@0.0.11-rc.1
-  - @rocket.chat/pdf-worker@0.0.11-rc.1
-  - @rocket.chat/presence@0.0.11-rc.1
-  - @rocket.chat/core-services@0.2.0-rc.1
-  - @rocket.chat/cron@0.0.7-rc.1
-  - @rocket.chat/gazzodown@2.0.0-rc.1
-  - @rocket.chat/model-typings@0.1.0-rc.1
-  - @rocket.chat/ui-contexts@2.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.1
-  - @rocket.chat/models@0.0.11-rc.1
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.1
-  - @rocket.chat/ui-video-conf@2.0.0-rc.1
-  - @rocket.chat/web-ui-registration@2.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.11-rc.1
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.4.0-rc.1
+  - @yas chat/rest-typings@6.4.0-rc.1
+  - @yas chat/api-client@0.1.5-rc.1
+  - @yas chat/omnichannel-services@0.0.11-rc.1
+  - @yas chat/pdf-worker@0.0.11-rc.1
+  - @yas chat/presence@0.0.11-rc.1
+  - @yas chat/core-services@0.2.0-rc.1
+  - @yas chat/cron@0.0.7-rc.1
+  - @yas chat/gazzodown@2.0.0-rc.1
+  - @yas chat/model-typings@0.1.0-rc.1
+  - @yas chat/ui-contexts@2.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.1
+  - @yas chat/models@0.0.11-rc.1
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.1
+  - @yas chat/ui-video-conf@2.0.0-rc.1
+  - @yas chat/web-ui-registration@2.0.0-rc.1
+  - @yas chat/instance-status@0.0.11-rc.1
 
 ## 6.4.0-rc.0
 
@@ -19784,61 +19784,61 @@
 - Updated dependencies [b8f3d5014f]
 - Updated dependencies [93d4912e17]
 - Updated dependencies [ee3815fce4]
-  - @rocket.chat/core-typings@6.4.0-rc.0
-  - @rocket.chat/rest-typings@6.4.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@2.0.0-rc.0
-  - @rocket.chat/model-typings@0.1.0-rc.0
-  - @rocket.chat/core-services@0.2.0-rc.0
-  - @rocket.chat/ui-client@2.0.0-rc.0
-  - @rocket.chat/ui-contexts@2.0.0-rc.0
-  - @rocket.chat/ui-theming@0.1.0-rc.0
-  - @rocket.chat/i18n@0.0.2-rc.0
-  - @rocket.chat/web-ui-registration@2.0.0-rc.0
-  - @rocket.chat/api-client@0.1.5-rc.0
-  - @rocket.chat/omnichannel-services@0.0.11-rc.0
-  - @rocket.chat/pdf-worker@0.0.11-rc.0
-  - @rocket.chat/presence@0.0.11-rc.0
-  - @rocket.chat/cron@0.0.7-rc.0
-  - @rocket.chat/gazzodown@2.0.0-rc.0
-  - @rocket.chat/models@0.0.11-rc.0
-  - @rocket.chat/ui-video-conf@2.0.0-rc.0
-  - @rocket.chat/base64@1.0.12
-  - @rocket.chat/instance-status@0.0.11-rc.0
-  - @rocket.chat/random@1.2.1
-  - @rocket.chat/sha256@1.0.9
-  - @rocket.chat/ui-composer@0.0.1
+  - @yas chat/core-typings@6.4.0-rc.0
+  - @yas chat/rest-typings@6.4.0-rc.0
+  - @yas chat/fuselage-ui-kit@2.0.0-rc.0
+  - @yas chat/model-typings@0.1.0-rc.0
+  - @yas chat/core-services@0.2.0-rc.0
+  - @yas chat/ui-client@2.0.0-rc.0
+  - @yas chat/ui-contexts@2.0.0-rc.0
+  - @yas chat/ui-theming@0.1.0-rc.0
+  - @yas chat/i18n@0.0.2-rc.0
+  - @yas chat/web-ui-registration@2.0.0-rc.0
+  - @yas chat/api-client@0.1.5-rc.0
+  - @yas chat/omnichannel-services@0.0.11-rc.0
+  - @yas chat/pdf-worker@0.0.11-rc.0
+  - @yas chat/presence@0.0.11-rc.0
+  - @yas chat/cron@0.0.7-rc.0
+  - @yas chat/gazzodown@2.0.0-rc.0
+  - @yas chat/models@0.0.11-rc.0
+  - @yas chat/ui-video-conf@2.0.0-rc.0
+  - @yas chat/base64@1.0.12
+  - @yas chat/instance-status@0.0.11-rc.0
+  - @yas chat/random@1.2.1
+  - @yas chat/sha256@1.0.9
+  - @yas chat/ui-composer@0.0.1
 
 ## 6.3.8
 
 ### Patch Changes
 
-- ff8e9d9f54: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.3.8
-  - @rocket.chat/rest-typings@6.3.8
-  - @rocket.chat/api-client@0.1.8
-  - @rocket.chat/omnichannel-services@0.0.14
-  - @rocket.chat/pdf-worker@0.0.14
-  - @rocket.chat/presence@0.0.14
-  - @rocket.chat/core-services@0.1.8
-  - @rocket.chat/cron@0.0.10
-  - @rocket.chat/gazzodown@1.0.8
-  - @rocket.chat/model-typings@0.0.14
-  - @rocket.chat/ui-contexts@1.0.8
-  - @rocket.chat/fuselage-ui-kit@1.0.8
-  - @rocket.chat/models@0.0.14
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.8
-  - @rocket.chat/ui-video-conf@1.0.8
-  - @rocket.chat/web-ui-registration@1.0.8
-  - @rocket.chat/instance-status@0.0.14
+- ff8e9d9f54: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.3.8
+  - @yas chat/rest-typings@6.3.8
+  - @yas chat/api-client@0.1.8
+  - @yas chat/omnichannel-services@0.0.14
+  - @yas chat/pdf-worker@0.0.14
+  - @yas chat/presence@0.0.14
+  - @yas chat/core-services@0.1.8
+  - @yas chat/cron@0.0.10
+  - @yas chat/gazzodown@1.0.8
+  - @yas chat/model-typings@0.0.14
+  - @yas chat/ui-contexts@1.0.8
+  - @yas chat/fuselage-ui-kit@1.0.8
+  - @yas chat/models@0.0.14
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.8
+  - @yas chat/ui-video-conf@1.0.8
+  - @yas chat/web-ui-registration@1.0.8
+  - @yas chat/instance-status@0.0.14
 
 ## 6.3.7
 
 ### Patch Changes
 
-- f1e36a5e46: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- f1e36a5e46: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - e1acdda0a3: User information crashing for some locales
 - deffcb187c: Increase cron job check delay to 1 min from 5s.
 
@@ -19846,57 +19846,57 @@
 
 - Updated dependencies [c655be17ca]
 - Updated dependencies [deffcb187c]
-  - @rocket.chat/presence@0.0.13
-  - @rocket.chat/cron@0.0.9
-  - @rocket.chat/core-typings@6.3.7
-  - @rocket.chat/rest-typings@6.3.7
-  - @rocket.chat/api-client@0.1.7
-  - @rocket.chat/omnichannel-services@0.0.13
-  - @rocket.chat/pdf-worker@0.0.13
-  - @rocket.chat/core-services@0.1.7
-  - @rocket.chat/gazzodown@1.0.7
-  - @rocket.chat/model-typings@0.0.13
-  - @rocket.chat/ui-contexts@1.0.7
-  - @rocket.chat/fuselage-ui-kit@1.0.7
-  - @rocket.chat/models@0.0.13
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.7
-  - @rocket.chat/ui-video-conf@1.0.7
-  - @rocket.chat/web-ui-registration@1.0.7
-  - @rocket.chat/instance-status@0.0.13
+  - @yas chat/presence@0.0.13
+  - @yas chat/cron@0.0.9
+  - @yas chat/core-typings@6.3.7
+  - @yas chat/rest-typings@6.3.7
+  - @yas chat/api-client@0.1.7
+  - @yas chat/omnichannel-services@0.0.13
+  - @yas chat/pdf-worker@0.0.13
+  - @yas chat/core-services@0.1.7
+  - @yas chat/gazzodown@1.0.7
+  - @yas chat/model-typings@0.0.13
+  - @yas chat/ui-contexts@1.0.7
+  - @yas chat/fuselage-ui-kit@1.0.7
+  - @yas chat/models@0.0.13
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.7
+  - @yas chat/ui-video-conf@1.0.7
+  - @yas chat/web-ui-registration@1.0.7
+  - @yas chat/instance-status@0.0.13
 
 ## 6.3.6
 
 ### Patch Changes
 
-- 3bbe12e850: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 3bbe12e850: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 285e591a73: Fix engagement dashboard not showing data
-  - @rocket.chat/core-typings@6.3.6
-  - @rocket.chat/rest-typings@6.3.6
-  - @rocket.chat/api-client@0.1.6
-  - @rocket.chat/omnichannel-services@0.0.12
-  - @rocket.chat/pdf-worker@0.0.12
-  - @rocket.chat/presence@0.0.12
-  - @rocket.chat/core-services@0.1.6
-  - @rocket.chat/cron@0.0.8
-  - @rocket.chat/gazzodown@1.0.6
-  - @rocket.chat/model-typings@0.0.12
-  - @rocket.chat/ui-contexts@1.0.6
-  - @rocket.chat/fuselage-ui-kit@1.0.6
-  - @rocket.chat/models@0.0.12
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.6
-  - @rocket.chat/ui-video-conf@1.0.6
-  - @rocket.chat/web-ui-registration@1.0.6
-  - @rocket.chat/instance-status@0.0.12
+  - @yas chat/core-typings@6.3.6
+  - @yas chat/rest-typings@6.3.6
+  - @yas chat/api-client@0.1.6
+  - @yas chat/omnichannel-services@0.0.12
+  - @yas chat/pdf-worker@0.0.12
+  - @yas chat/presence@0.0.12
+  - @yas chat/core-services@0.1.6
+  - @yas chat/cron@0.0.8
+  - @yas chat/gazzodown@1.0.6
+  - @yas chat/model-typings@0.0.12
+  - @yas chat/ui-contexts@1.0.6
+  - @yas chat/fuselage-ui-kit@1.0.6
+  - @yas chat/models@0.0.12
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.6
+  - @yas chat/ui-video-conf@1.0.6
+  - @yas chat/web-ui-registration@1.0.6
+  - @yas chat/instance-status@0.0.12
 
 ## 6.3.5
 
 ### Patch Changes
 
-- 4cb0b6ba6f: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 4cb0b6ba6f: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - f75564c449: Fix a bug that prevented the error message from being shown in the private app installation page
 - 03923405e8: Fixed selected departments not being displayed due to pagination
 - 92d25b9c7a: Change SAU aggregation to consider only sessions from few days ago instead of the whole past.
@@ -19904,110 +19904,110 @@
   This is particularly important for large workspaces in case the cron job did not run for some time, in that case the amount of sessions would accumulate and the aggregation would take a long time to run.
 
 - Updated dependencies [92d25b9c7a]
-  - @rocket.chat/model-typings@0.0.11
-  - @rocket.chat/omnichannel-services@0.0.11
-  - @rocket.chat/models@0.0.11
-  - @rocket.chat/presence@0.0.11
-  - @rocket.chat/core-services@0.1.5
-  - @rocket.chat/cron@0.0.7
-  - @rocket.chat/instance-status@0.0.11
-  - @rocket.chat/core-typings@6.3.5
-  - @rocket.chat/rest-typings@6.3.5
-  - @rocket.chat/api-client@0.1.5
-  - @rocket.chat/pdf-worker@0.0.11
-  - @rocket.chat/gazzodown@1.0.5
-  - @rocket.chat/ui-contexts@1.0.5
-  - @rocket.chat/fuselage-ui-kit@1.0.5
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.5
-  - @rocket.chat/ui-video-conf@1.0.5
-  - @rocket.chat/web-ui-registration@1.0.5
+  - @yas chat/model-typings@0.0.11
+  - @yas chat/omnichannel-services@0.0.11
+  - @yas chat/models@0.0.11
+  - @yas chat/presence@0.0.11
+  - @yas chat/core-services@0.1.5
+  - @yas chat/cron@0.0.7
+  - @yas chat/instance-status@0.0.11
+  - @yas chat/core-typings@6.3.5
+  - @yas chat/rest-typings@6.3.5
+  - @yas chat/api-client@0.1.5
+  - @yas chat/pdf-worker@0.0.11
+  - @yas chat/gazzodown@1.0.5
+  - @yas chat/ui-contexts@1.0.5
+  - @yas chat/fuselage-ui-kit@1.0.5
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.5
+  - @yas chat/ui-video-conf@1.0.5
+  - @yas chat/web-ui-registration@1.0.5
 
 ## 6.3.4
 
 ### Patch Changes
 
-- db919f9b23: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- db919f9b23: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - ebeb088441: fix: Prevent `RoomProvider.useEffect` from subscribing to room-data stream multiple times
 - 8a7d5d3898: fix: agent role being removed upon user deactivation
 - 759fe2472a: chore: Increase cache time from 5s to 10s on `getUnits` helpers. This should reduce the number of DB calls made by this method to fetch the unit limitations for a user.
 - Updated dependencies [8a7d5d3898]
-  - @rocket.chat/model-typings@0.0.10
-  - @rocket.chat/omnichannel-services@0.0.10
-  - @rocket.chat/models@0.0.10
-  - @rocket.chat/presence@0.0.10
-  - @rocket.chat/core-services@0.1.4
-  - @rocket.chat/cron@0.0.6
-  - @rocket.chat/instance-status@0.0.10
-  - @rocket.chat/core-typings@6.3.4
-  - @rocket.chat/rest-typings@6.3.4
-  - @rocket.chat/api-client@0.1.4
-  - @rocket.chat/pdf-worker@0.0.10
-  - @rocket.chat/gazzodown@1.0.4
-  - @rocket.chat/ui-contexts@1.0.4
-  - @rocket.chat/fuselage-ui-kit@1.0.4
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.4
-  - @rocket.chat/ui-video-conf@1.0.4
-  - @rocket.chat/web-ui-registration@1.0.4
+  - @yas chat/model-typings@0.0.10
+  - @yas chat/omnichannel-services@0.0.10
+  - @yas chat/models@0.0.10
+  - @yas chat/presence@0.0.10
+  - @yas chat/core-services@0.1.4
+  - @yas chat/cron@0.0.6
+  - @yas chat/instance-status@0.0.10
+  - @yas chat/core-typings@6.3.4
+  - @yas chat/rest-typings@6.3.4
+  - @yas chat/api-client@0.1.4
+  - @yas chat/pdf-worker@0.0.10
+  - @yas chat/gazzodown@1.0.4
+  - @yas chat/ui-contexts@1.0.4
+  - @yas chat/fuselage-ui-kit@1.0.4
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.4
+  - @yas chat/ui-video-conf@1.0.4
+  - @yas chat/web-ui-registration@1.0.4
 
 ## 6.3.3
 
 ### Patch Changes
 
-- bcf147f515: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- bcf147f515: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - c2fe38cb34: Added ability to disable private app installation via envvar (DISABLE_PRIVATE_APP_INSTALLATION)
 - ded9666f27: Fix CORS headers not being set for assets
 - f25081bc8a: Removed an unused authentication flow
-  - @rocket.chat/core-typings@6.3.3
-  - @rocket.chat/rest-typings@6.3.3
-  - @rocket.chat/api-client@0.1.3
-  - @rocket.chat/omnichannel-services@0.0.9
-  - @rocket.chat/pdf-worker@0.0.9
-  - @rocket.chat/presence@0.0.9
-  - @rocket.chat/core-services@0.1.3
-  - @rocket.chat/cron@0.0.5
-  - @rocket.chat/gazzodown@1.0.3
-  - @rocket.chat/model-typings@0.0.9
-  - @rocket.chat/ui-contexts@1.0.3
-  - @rocket.chat/fuselage-ui-kit@1.0.3
-  - @rocket.chat/models@0.0.9
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.3
-  - @rocket.chat/ui-video-conf@1.0.3
-  - @rocket.chat/web-ui-registration@1.0.3
-  - @rocket.chat/instance-status@0.0.9
+  - @yas chat/core-typings@6.3.3
+  - @yas chat/rest-typings@6.3.3
+  - @yas chat/api-client@0.1.3
+  - @yas chat/omnichannel-services@0.0.9
+  - @yas chat/pdf-worker@0.0.9
+  - @yas chat/presence@0.0.9
+  - @yas chat/core-services@0.1.3
+  - @yas chat/cron@0.0.5
+  - @yas chat/gazzodown@1.0.3
+  - @yas chat/model-typings@0.0.9
+  - @yas chat/ui-contexts@1.0.3
+  - @yas chat/fuselage-ui-kit@1.0.3
+  - @yas chat/models@0.0.9
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.3
+  - @yas chat/ui-video-conf@1.0.3
+  - @yas chat/web-ui-registration@1.0.3
+  - @yas chat/instance-status@0.0.9
 
 ## 6.3.2
 
 ### Patch Changes
 
-- 778b155ab4: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 778b155ab4: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 5660169ec8: fixed layout changing from embedded view when navigating
 - f7b93f2a6a: Fixed an issue where timeout for http requests in Apps-Engine bridges was too short
 - 653d97ce22: fix: mobile app unable to detect successful SAML login
 - 8a0e36f7b1: fixed the video recorder window not closing after permission is denied.
-  - @rocket.chat/core-typings@6.3.2
-  - @rocket.chat/rest-typings@6.3.2
-  - @rocket.chat/api-client@0.1.2
-  - @rocket.chat/omnichannel-services@0.0.8
-  - @rocket.chat/pdf-worker@0.0.8
-  - @rocket.chat/presence@0.0.8
-  - @rocket.chat/core-services@0.1.2
-  - @rocket.chat/cron@0.0.4
-  - @rocket.chat/gazzodown@1.0.2
-  - @rocket.chat/model-typings@0.0.8
-  - @rocket.chat/ui-contexts@1.0.2
-  - @rocket.chat/fuselage-ui-kit@1.0.2
-  - @rocket.chat/models@0.0.8
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.2
-  - @rocket.chat/ui-video-conf@1.0.2
-  - @rocket.chat/web-ui-registration@1.0.2
-  - @rocket.chat/instance-status@0.0.8
+  - @yas chat/core-typings@6.3.2
+  - @yas chat/rest-typings@6.3.2
+  - @yas chat/api-client@0.1.2
+  - @yas chat/omnichannel-services@0.0.8
+  - @yas chat/pdf-worker@0.0.8
+  - @yas chat/presence@0.0.8
+  - @yas chat/core-services@0.1.2
+  - @yas chat/cron@0.0.4
+  - @yas chat/gazzodown@1.0.2
+  - @yas chat/model-typings@0.0.8
+  - @yas chat/ui-contexts@1.0.2
+  - @yas chat/fuselage-ui-kit@1.0.2
+  - @yas chat/models@0.0.8
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.2
+  - @yas chat/ui-video-conf@1.0.2
+  - @yas chat/web-ui-registration@1.0.2
+  - @yas chat/instance-status@0.0.8
 
 ## 6.3.1
 
@@ -20015,8 +20015,8 @@
 
 - a874d5b305: Translation files are requested multiple times
 - cf9f16b17c: fix: Performance issue on `Messages.countByType` aggregation caused by unindexed property on messages collection
-- be2b5c66cf: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- be2b5c66cf: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - ce2f2eaad3: Added ability to freeze or completely disable integration scripts through envvars
 - f29c3268ee: fixed an issue where 2fa was not working after an OAuth redirect
 - 09a24e59ef: Fix performance issue on Engagement Dashboard aggregation
@@ -20024,24 +20024,24 @@
 - 25d5e3cd9e: Fixed unable to create admin user using ADMIN\_\* environment variables
 - 34f08e7c95: Fixed failing user data exports
 - f29c3268ee: fixed an issue on oauth login that caused missing emails to be detected as changed data
-  - @rocket.chat/core-typings@6.3.1
-  - @rocket.chat/rest-typings@6.3.1
-  - @rocket.chat/api-client@0.1.1
-  - @rocket.chat/omnichannel-services@0.0.7
-  - @rocket.chat/pdf-worker@0.0.7
-  - @rocket.chat/presence@0.0.7
-  - @rocket.chat/core-services@0.1.1
-  - @rocket.chat/cron@0.0.3
-  - @rocket.chat/gazzodown@1.0.1
-  - @rocket.chat/model-typings@0.0.7
-  - @rocket.chat/ui-contexts@1.0.1
-  - @rocket.chat/fuselage-ui-kit@1.0.1
-  - @rocket.chat/models@0.0.7
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.1
-  - @rocket.chat/ui-video-conf@1.0.1
-  - @rocket.chat/web-ui-registration@1.0.1
-  - @rocket.chat/instance-status@0.0.7
+  - @yas chat/core-typings@6.3.1
+  - @yas chat/rest-typings@6.3.1
+  - @yas chat/api-client@0.1.1
+  - @yas chat/omnichannel-services@0.0.7
+  - @yas chat/pdf-worker@0.0.7
+  - @yas chat/presence@0.0.7
+  - @yas chat/core-services@0.1.1
+  - @yas chat/cron@0.0.3
+  - @yas chat/gazzodown@1.0.1
+  - @yas chat/model-typings@0.0.7
+  - @yas chat/ui-contexts@1.0.1
+  - @yas chat/fuselage-ui-kit@1.0.1
+  - @yas chat/models@0.0.7
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.1
+  - @yas chat/ui-video-conf@1.0.1
+  - @yas chat/web-ui-registration@1.0.1
+  - @yas chat/instance-status@0.0.7
 
 ## 6.3.0
 
@@ -20093,17 +20093,17 @@
 - 7832a40a6d: refactor: Move units check outside of model for finds
 - ea0bbba8ab: fixed system messages for room role changes
 - fef33034e4: Fixed a problem where the setting `Show Agent Email` from Omnichannel was not being used by the back when returning agent's info
-- 160fde5318: Bump @rocket.chat/meteor version.
-- 1a3eac1780: Bump @rocket.chat/meteor version.
-- df1be067b5: Bump @rocket.chat/meteor version.
-- 737fab0f12: Bump @rocket.chat/meteor version.
-- 906e575d4e: Bump @rocket.chat/meteor version.
-- 524d40c67e: Bump @rocket.chat/meteor version.
-- d0b6dc13f6: Bump @rocket.chat/meteor version.
-- 9bea8af4ad: Bump @rocket.chat/meteor version.
-- b44da84997: Bump @rocket.chat/meteor version.
-- 59daa595a7: Bump @rocket.chat/meteor version.
-- Bump @rocket.chat/meteor version.
+- 160fde5318: Bump @yas chat/meteor version.
+- 1a3eac1780: Bump @yas chat/meteor version.
+- df1be067b5: Bump @yas chat/meteor version.
+- 737fab0f12: Bump @yas chat/meteor version.
+- 906e575d4e: Bump @yas chat/meteor version.
+- 524d40c67e: Bump @yas chat/meteor version.
+- d0b6dc13f6: Bump @yas chat/meteor version.
+- 9bea8af4ad: Bump @yas chat/meteor version.
+- b44da84997: Bump @yas chat/meteor version.
+- 59daa595a7: Bump @yas chat/meteor version.
+- Bump @yas chat/meteor version.
 - 8ac0758335: fix: Permission to start conference calls was not being considered
 - 7d769b96e3: fix: Importer crashes when sending the "active status" e-mail notification to users
 - 222c8ec5bb: feat: [ENTERPRISE] Add setting to control user merge on LDAP Background Sync
@@ -20251,25 +20251,25 @@
 - Updated dependencies [94477bd9f8]
 - Updated dependencies [cde2539619]
 - Updated dependencies [16dca466ea]
-  - @rocket.chat/web-ui-registration@1.0.0
-  - @rocket.chat/model-typings@0.0.6
-  - @rocket.chat/core-typings@6.3.0
-  - @rocket.chat/rest-typings@6.3.0
-  - @rocket.chat/ui-client@1.0.0
-  - @rocket.chat/ui-contexts@1.0.0
-  - @rocket.chat/api-client@0.1.0
-  - @rocket.chat/gazzodown@1.0.0
-  - @rocket.chat/agenda@0.0.2
-  - @rocket.chat/core-services@0.1.0
-  - @rocket.chat/fuselage-ui-kit@1.0.0
-  - @rocket.chat/omnichannel-services@0.0.6
-  - @rocket.chat/models@0.0.6
-  - @rocket.chat/pdf-worker@0.0.6
-  - @rocket.chat/presence@0.0.6
-  - @rocket.chat/cron@0.0.2
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-video-conf@1.0.0
-  - @rocket.chat/instance-status@0.0.6
+  - @yas chat/web-ui-registration@1.0.0
+  - @yas chat/model-typings@0.0.6
+  - @yas chat/core-typings@6.3.0
+  - @yas chat/rest-typings@6.3.0
+  - @yas chat/ui-client@1.0.0
+  - @yas chat/ui-contexts@1.0.0
+  - @yas chat/api-client@0.1.0
+  - @yas chat/gazzodown@1.0.0
+  - @yas chat/agenda@0.0.2
+  - @yas chat/core-services@0.1.0
+  - @yas chat/fuselage-ui-kit@1.0.0
+  - @yas chat/omnichannel-services@0.0.6
+  - @yas chat/models@0.0.6
+  - @yas chat/pdf-worker@0.0.6
+  - @yas chat/presence@0.0.6
+  - @yas chat/cron@0.0.2
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-video-conf@1.0.0
+  - @yas chat/instance-status@0.0.6
 
 ## 6.3.0-rc.10
 
@@ -20279,29 +20279,29 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - cc88a6100b: fix: Add index to federated field of Users collection
 - 5743638170: fix: Performance issue on username availability check
 - e5e5742025: fix: cannot invite LDAP users via `/invite-all` slashcommand
 - Updated dependencies [f379336951]
-  - @rocket.chat/core-services@0.1.0-rc.10
-  - @rocket.chat/ui-contexts@1.0.0-rc.10
-  - @rocket.chat/omnichannel-services@0.0.6-rc.10
-  - @rocket.chat/presence@0.0.6-rc.10
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.10
-  - @rocket.chat/gazzodown@1.0.0-rc.10
-  - @rocket.chat/ui-client@1.0.0-rc.10
-  - @rocket.chat/ui-video-conf@1.0.0-rc.10
-  - @rocket.chat/web-ui-registration@1.0.0-rc.10
-  - @rocket.chat/core-typings@6.3.0-rc.10
-  - @rocket.chat/rest-typings@6.3.0-rc.10
-  - @rocket.chat/api-client@0.1.0-rc.10
-  - @rocket.chat/pdf-worker@0.0.6-rc.10
-  - @rocket.chat/cron@0.0.2-rc.10
-  - @rocket.chat/model-typings@0.0.6-rc.10
-  - @rocket.chat/models@0.0.6-rc.10
-  - @rocket.chat/instance-status@0.0.6-rc.10
+  - @yas chat/core-services@0.1.0-rc.10
+  - @yas chat/ui-contexts@1.0.0-rc.10
+  - @yas chat/omnichannel-services@0.0.6-rc.10
+  - @yas chat/presence@0.0.6-rc.10
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.10
+  - @yas chat/gazzodown@1.0.0-rc.10
+  - @yas chat/ui-client@1.0.0-rc.10
+  - @yas chat/ui-video-conf@1.0.0-rc.10
+  - @yas chat/web-ui-registration@1.0.0-rc.10
+  - @yas chat/core-typings@6.3.0-rc.10
+  - @yas chat/rest-typings@6.3.0-rc.10
+  - @yas chat/api-client@0.1.0-rc.10
+  - @yas chat/pdf-worker@0.0.6-rc.10
+  - @yas chat/cron@0.0.2-rc.10
+  - @yas chat/model-typings@0.0.6-rc.10
+  - @yas chat/models@0.0.6-rc.10
+  - @yas chat/instance-status@0.0.6-rc.10
 
 ## 6.3.0-rc.9
 
@@ -20311,228 +20311,228 @@
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 8f5e05cc97: Introduces a fix to let the Admin view reported messages of the deleted users on the Moderation Console
 - Updated dependencies [48ac55f4ea]
-  - @rocket.chat/core-services@0.1.0-rc.9
-  - @rocket.chat/core-typings@6.3.0-rc.9
-  - @rocket.chat/rest-typings@6.3.0-rc.9
-  - @rocket.chat/omnichannel-services@0.0.6-rc.9
-  - @rocket.chat/presence@0.0.6-rc.9
-  - @rocket.chat/api-client@0.1.0-rc.9
-  - @rocket.chat/pdf-worker@0.0.6-rc.9
-  - @rocket.chat/cron@0.0.2-rc.9
-  - @rocket.chat/gazzodown@1.0.0-rc.9
-  - @rocket.chat/model-typings@0.0.6-rc.9
-  - @rocket.chat/ui-contexts@1.0.0-rc.9
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.9
-  - @rocket.chat/models@0.0.6-rc.9
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.9
-  - @rocket.chat/ui-video-conf@1.0.0-rc.9
-  - @rocket.chat/web-ui-registration@1.0.0-rc.9
-  - @rocket.chat/instance-status@0.0.6-rc.9
+  - @yas chat/core-services@0.1.0-rc.9
+  - @yas chat/core-typings@6.3.0-rc.9
+  - @yas chat/rest-typings@6.3.0-rc.9
+  - @yas chat/omnichannel-services@0.0.6-rc.9
+  - @yas chat/presence@0.0.6-rc.9
+  - @yas chat/api-client@0.1.0-rc.9
+  - @yas chat/pdf-worker@0.0.6-rc.9
+  - @yas chat/cron@0.0.2-rc.9
+  - @yas chat/gazzodown@1.0.0-rc.9
+  - @yas chat/model-typings@0.0.6-rc.9
+  - @yas chat/ui-contexts@1.0.0-rc.9
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.9
+  - @yas chat/models@0.0.6-rc.9
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.9
+  - @yas chat/ui-video-conf@1.0.0-rc.9
+  - @yas chat/web-ui-registration@1.0.0-rc.9
+  - @yas chat/instance-status@0.0.6-rc.9
 
 ## 6.3.0-rc.8
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 6437cdfbe0: fix: Performance issue when using api to create users
-  - @rocket.chat/core-typings@6.3.0-rc.8
-  - @rocket.chat/rest-typings@6.3.0-rc.8
-  - @rocket.chat/api-client@0.1.0-rc.8
-  - @rocket.chat/omnichannel-services@0.0.6-rc.8
-  - @rocket.chat/pdf-worker@0.0.6-rc.8
-  - @rocket.chat/presence@0.0.6-rc.8
-  - @rocket.chat/core-services@0.1.0-rc.8
-  - @rocket.chat/cron@0.0.2-rc.8
-  - @rocket.chat/gazzodown@1.0.0-rc.8
-  - @rocket.chat/model-typings@0.0.6-rc.8
-  - @rocket.chat/ui-contexts@1.0.0-rc.8
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.8
-  - @rocket.chat/models@0.0.6-rc.8
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.8
-  - @rocket.chat/ui-video-conf@1.0.0-rc.8
-  - @rocket.chat/web-ui-registration@1.0.0-rc.8
-  - @rocket.chat/instance-status@0.0.6-rc.8
+  - @yas chat/core-typings@6.3.0-rc.8
+  - @yas chat/rest-typings@6.3.0-rc.8
+  - @yas chat/api-client@0.1.0-rc.8
+  - @yas chat/omnichannel-services@0.0.6-rc.8
+  - @yas chat/pdf-worker@0.0.6-rc.8
+  - @yas chat/presence@0.0.6-rc.8
+  - @yas chat/core-services@0.1.0-rc.8
+  - @yas chat/cron@0.0.2-rc.8
+  - @yas chat/gazzodown@1.0.0-rc.8
+  - @yas chat/model-typings@0.0.6-rc.8
+  - @yas chat/ui-contexts@1.0.0-rc.8
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.8
+  - @yas chat/models@0.0.6-rc.8
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.8
+  - @yas chat/ui-video-conf@1.0.0-rc.8
+  - @yas chat/web-ui-registration@1.0.0-rc.8
+  - @yas chat/instance-status@0.0.6-rc.8
 
 ## 6.3.0-rc.7
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.3.0-rc.7
-  - @rocket.chat/rest-typings@6.3.0-rc.7
-  - @rocket.chat/api-client@0.1.0-rc.7
-  - @rocket.chat/omnichannel-services@0.0.6-rc.7
-  - @rocket.chat/pdf-worker@0.0.6-rc.7
-  - @rocket.chat/presence@0.0.6-rc.7
-  - @rocket.chat/core-services@0.1.0-rc.7
-  - @rocket.chat/cron@0.0.2-rc.7
-  - @rocket.chat/gazzodown@1.0.0-rc.7
-  - @rocket.chat/model-typings@0.0.6-rc.7
-  - @rocket.chat/ui-contexts@1.0.0-rc.7
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.7
-  - @rocket.chat/models@0.0.6-rc.7
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.7
-  - @rocket.chat/ui-video-conf@1.0.0-rc.7
-  - @rocket.chat/web-ui-registration@1.0.0-rc.7
-  - @rocket.chat/instance-status@0.0.6-rc.7
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.3.0-rc.7
+  - @yas chat/rest-typings@6.3.0-rc.7
+  - @yas chat/api-client@0.1.0-rc.7
+  - @yas chat/omnichannel-services@0.0.6-rc.7
+  - @yas chat/pdf-worker@0.0.6-rc.7
+  - @yas chat/presence@0.0.6-rc.7
+  - @yas chat/core-services@0.1.0-rc.7
+  - @yas chat/cron@0.0.2-rc.7
+  - @yas chat/gazzodown@1.0.0-rc.7
+  - @yas chat/model-typings@0.0.6-rc.7
+  - @yas chat/ui-contexts@1.0.0-rc.7
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.7
+  - @yas chat/models@0.0.6-rc.7
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.7
+  - @yas chat/ui-video-conf@1.0.0-rc.7
+  - @yas chat/web-ui-registration@1.0.0-rc.7
+  - @yas chat/instance-status@0.0.6-rc.7
 
 ## 6.3.0-rc.6
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 212be17076: Fix End to End Encryption modal translation
 - 5d653ccdb7: Fix some slash commands not working due to invalid permissions checking
 - 5858cacef1: Fixed Welcome Email header to show Workspace name
-  - @rocket.chat/core-typings@6.3.0-rc.6
-  - @rocket.chat/rest-typings@6.3.0-rc.6
-  - @rocket.chat/api-client@0.1.0-rc.6
-  - @rocket.chat/omnichannel-services@0.0.6-rc.6
-  - @rocket.chat/pdf-worker@0.0.6-rc.6
-  - @rocket.chat/presence@0.0.6-rc.6
-  - @rocket.chat/core-services@0.1.0-rc.6
-  - @rocket.chat/cron@0.0.2-rc.6
-  - @rocket.chat/gazzodown@1.0.0-rc.6
-  - @rocket.chat/model-typings@0.0.6-rc.6
-  - @rocket.chat/ui-contexts@1.0.0-rc.6
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.6
-  - @rocket.chat/models@0.0.6-rc.6
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.6
-  - @rocket.chat/ui-video-conf@1.0.0-rc.6
-  - @rocket.chat/web-ui-registration@1.0.0-rc.6
-  - @rocket.chat/instance-status@0.0.6-rc.6
+  - @yas chat/core-typings@6.3.0-rc.6
+  - @yas chat/rest-typings@6.3.0-rc.6
+  - @yas chat/api-client@0.1.0-rc.6
+  - @yas chat/omnichannel-services@0.0.6-rc.6
+  - @yas chat/pdf-worker@0.0.6-rc.6
+  - @yas chat/presence@0.0.6-rc.6
+  - @yas chat/core-services@0.1.0-rc.6
+  - @yas chat/cron@0.0.2-rc.6
+  - @yas chat/gazzodown@1.0.0-rc.6
+  - @yas chat/model-typings@0.0.6-rc.6
+  - @yas chat/ui-contexts@1.0.0-rc.6
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.6
+  - @yas chat/models@0.0.6-rc.6
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.6
+  - @yas chat/ui-video-conf@1.0.0-rc.6
+  - @yas chat/web-ui-registration@1.0.0-rc.6
+  - @yas chat/instance-status@0.0.6-rc.6
 
 ## 6.3.0-rc.5
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - 54f09197f6: Fix emoji preview on hovering emojis
 - 28b59b4a53: Align user status on discussions header
-  - @rocket.chat/core-typings@6.3.0-rc.5
-  - @rocket.chat/rest-typings@6.3.0-rc.5
-  - @rocket.chat/api-client@0.1.0-rc.5
-  - @rocket.chat/omnichannel-services@0.0.6-rc.5
-  - @rocket.chat/pdf-worker@0.0.6-rc.5
-  - @rocket.chat/presence@0.0.6-rc.5
-  - @rocket.chat/core-services@0.1.0-rc.5
-  - @rocket.chat/cron@0.0.2-rc.5
-  - @rocket.chat/gazzodown@1.0.0-rc.5
-  - @rocket.chat/model-typings@0.0.6-rc.5
-  - @rocket.chat/ui-contexts@1.0.0-rc.5
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.5
-  - @rocket.chat/models@0.0.6-rc.5
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.5
-  - @rocket.chat/ui-video-conf@1.0.0-rc.5
-  - @rocket.chat/web-ui-registration@1.0.0-rc.5
-  - @rocket.chat/instance-status@0.0.6-rc.5
+  - @yas chat/core-typings@6.3.0-rc.5
+  - @yas chat/rest-typings@6.3.0-rc.5
+  - @yas chat/api-client@0.1.0-rc.5
+  - @yas chat/omnichannel-services@0.0.6-rc.5
+  - @yas chat/pdf-worker@0.0.6-rc.5
+  - @yas chat/presence@0.0.6-rc.5
+  - @yas chat/core-services@0.1.0-rc.5
+  - @yas chat/cron@0.0.2-rc.5
+  - @yas chat/gazzodown@1.0.0-rc.5
+  - @yas chat/model-typings@0.0.6-rc.5
+  - @yas chat/ui-contexts@1.0.0-rc.5
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.5
+  - @yas chat/models@0.0.6-rc.5
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.5
+  - @yas chat/ui-video-conf@1.0.0-rc.5
+  - @yas chat/web-ui-registration@1.0.0-rc.5
+  - @yas chat/instance-status@0.0.6-rc.5
 
 ## 6.3.0-rc.4
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.3.0-rc.4
-  - @rocket.chat/rest-typings@6.3.0-rc.4
-  - @rocket.chat/api-client@0.1.0-rc.4
-  - @rocket.chat/omnichannel-services@0.0.6-rc.4
-  - @rocket.chat/pdf-worker@0.0.6-rc.4
-  - @rocket.chat/presence@0.0.6-rc.4
-  - @rocket.chat/core-services@0.1.0-rc.4
-  - @rocket.chat/cron@0.0.2-rc.4
-  - @rocket.chat/gazzodown@1.0.0-rc.4
-  - @rocket.chat/model-typings@0.0.6-rc.4
-  - @rocket.chat/ui-contexts@1.0.0-rc.4
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.4
-  - @rocket.chat/models@0.0.6-rc.4
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.4
-  - @rocket.chat/ui-video-conf@1.0.0-rc.4
-  - @rocket.chat/web-ui-registration@1.0.0-rc.4
-  - @rocket.chat/instance-status@0.0.6-rc.4
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.3.0-rc.4
+  - @yas chat/rest-typings@6.3.0-rc.4
+  - @yas chat/api-client@0.1.0-rc.4
+  - @yas chat/omnichannel-services@0.0.6-rc.4
+  - @yas chat/pdf-worker@0.0.6-rc.4
+  - @yas chat/presence@0.0.6-rc.4
+  - @yas chat/core-services@0.1.0-rc.4
+  - @yas chat/cron@0.0.2-rc.4
+  - @yas chat/gazzodown@1.0.0-rc.4
+  - @yas chat/model-typings@0.0.6-rc.4
+  - @yas chat/ui-contexts@1.0.0-rc.4
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.4
+  - @yas chat/models@0.0.6-rc.4
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.4
+  - @yas chat/ui-video-conf@1.0.0-rc.4
+  - @yas chat/web-ui-registration@1.0.0-rc.4
+  - @yas chat/instance-status@0.0.6-rc.4
 
 ## 6.3.0-rc.3
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - cea3697828: Fix leader direct message opening
-  - @rocket.chat/core-typings@6.3.0-rc.3
-  - @rocket.chat/rest-typings@6.3.0-rc.3
-  - @rocket.chat/api-client@0.1.0-rc.3
-  - @rocket.chat/omnichannel-services@0.0.6-rc.3
-  - @rocket.chat/pdf-worker@0.0.6-rc.3
-  - @rocket.chat/presence@0.0.6-rc.3
-  - @rocket.chat/core-services@0.1.0-rc.3
-  - @rocket.chat/cron@0.0.2-rc.3
-  - @rocket.chat/gazzodown@1.0.0-rc.3
-  - @rocket.chat/model-typings@0.0.6-rc.3
-  - @rocket.chat/ui-contexts@1.0.0-rc.3
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.3
-  - @rocket.chat/models@0.0.6-rc.3
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.3
-  - @rocket.chat/ui-video-conf@1.0.0-rc.3
-  - @rocket.chat/web-ui-registration@1.0.0-rc.3
-  - @rocket.chat/instance-status@0.0.6-rc.3
+  - @yas chat/core-typings@6.3.0-rc.3
+  - @yas chat/rest-typings@6.3.0-rc.3
+  - @yas chat/api-client@0.1.0-rc.3
+  - @yas chat/omnichannel-services@0.0.6-rc.3
+  - @yas chat/pdf-worker@0.0.6-rc.3
+  - @yas chat/presence@0.0.6-rc.3
+  - @yas chat/core-services@0.1.0-rc.3
+  - @yas chat/cron@0.0.2-rc.3
+  - @yas chat/gazzodown@1.0.0-rc.3
+  - @yas chat/model-typings@0.0.6-rc.3
+  - @yas chat/ui-contexts@1.0.0-rc.3
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.3
+  - @yas chat/models@0.0.6-rc.3
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.3
+  - @yas chat/ui-video-conf@1.0.0-rc.3
+  - @yas chat/web-ui-registration@1.0.0-rc.3
+  - @yas chat/instance-status@0.0.6-rc.3
 
 ## 6.3.0-rc.2
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
+- Bump @yas chat/meteor version.
 - f76d514341: Implemented a visual password verification in the Register User form, My Profile page, and reset password page. With this, the user will know exactly why their password is weak and how to improve it.
 - Updated dependencies [f76d514341]
-  - @rocket.chat/rest-typings@6.3.0-rc.2
-  - @rocket.chat/ui-client@1.0.0-rc.2
-  - @rocket.chat/ui-contexts@1.0.0-rc.2
-  - @rocket.chat/web-ui-registration@1.0.0-rc.2
-  - @rocket.chat/api-client@0.1.0-rc.2
-  - @rocket.chat/omnichannel-services@0.0.6-rc.2
-  - @rocket.chat/presence@0.0.6-rc.2
-  - @rocket.chat/core-services@0.1.0-rc.2
-  - @rocket.chat/gazzodown@1.0.0-rc.2
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.2
-  - @rocket.chat/ui-video-conf@1.0.0-rc.2
-  - @rocket.chat/core-typings@6.3.0-rc.2
-  - @rocket.chat/pdf-worker@0.0.6-rc.2
-  - @rocket.chat/cron@0.0.2-rc.2
-  - @rocket.chat/model-typings@0.0.6-rc.2
-  - @rocket.chat/models@0.0.6-rc.2
-  - @rocket.chat/instance-status@0.0.6-rc.2
+  - @yas chat/rest-typings@6.3.0-rc.2
+  - @yas chat/ui-client@1.0.0-rc.2
+  - @yas chat/ui-contexts@1.0.0-rc.2
+  - @yas chat/web-ui-registration@1.0.0-rc.2
+  - @yas chat/api-client@0.1.0-rc.2
+  - @yas chat/omnichannel-services@0.0.6-rc.2
+  - @yas chat/presence@0.0.6-rc.2
+  - @yas chat/core-services@0.1.0-rc.2
+  - @yas chat/gazzodown@1.0.0-rc.2
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.2
+  - @yas chat/ui-video-conf@1.0.0-rc.2
+  - @yas chat/core-typings@6.3.0-rc.2
+  - @yas chat/pdf-worker@0.0.6-rc.2
+  - @yas chat/cron@0.0.2-rc.2
+  - @yas chat/model-typings@0.0.6-rc.2
+  - @yas chat/models@0.0.6-rc.2
+  - @yas chat/instance-status@0.0.6-rc.2
 
 ## 6.3.0-rc.1
 
 ### Patch Changes
 
-- Bump @rocket.chat/meteor version.
-  - @rocket.chat/core-typings@6.3.0-rc.1
-  - @rocket.chat/rest-typings@6.3.0-rc.1
-  - @rocket.chat/api-client@0.1.0-rc.1
-  - @rocket.chat/omnichannel-services@0.0.6-rc.1
-  - @rocket.chat/pdf-worker@0.0.6-rc.1
-  - @rocket.chat/presence@0.0.6-rc.1
-  - @rocket.chat/core-services@0.1.0-rc.1
-  - @rocket.chat/cron@0.0.2-rc.1
-  - @rocket.chat/gazzodown@1.0.0-rc.1
-  - @rocket.chat/model-typings@0.0.6-rc.1
-  - @rocket.chat/ui-contexts@1.0.0-rc.1
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.1
-  - @rocket.chat/models@0.0.6-rc.1
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-client@1.0.0-rc.1
-  - @rocket.chat/ui-video-conf@1.0.0-rc.1
-  - @rocket.chat/web-ui-registration@1.0.0-rc.1
-  - @rocket.chat/instance-status@0.0.6-rc.1
+- Bump @yas chat/meteor version.
+  - @yas chat/core-typings@6.3.0-rc.1
+  - @yas chat/rest-typings@6.3.0-rc.1
+  - @yas chat/api-client@0.1.0-rc.1
+  - @yas chat/omnichannel-services@0.0.6-rc.1
+  - @yas chat/pdf-worker@0.0.6-rc.1
+  - @yas chat/presence@0.0.6-rc.1
+  - @yas chat/core-services@0.1.0-rc.1
+  - @yas chat/cron@0.0.2-rc.1
+  - @yas chat/gazzodown@1.0.0-rc.1
+  - @yas chat/model-typings@0.0.6-rc.1
+  - @yas chat/ui-contexts@1.0.0-rc.1
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.1
+  - @yas chat/models@0.0.6-rc.1
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-client@1.0.0-rc.1
+  - @yas chat/ui-video-conf@1.0.0-rc.1
+  - @yas chat/web-ui-registration@1.0.0-rc.1
+  - @yas chat/instance-status@0.0.6-rc.1
 
 ## 6.3.0-rc.0
 
@@ -20714,25 +20714,25 @@
 - Updated dependencies [94477bd9f8]
 - Updated dependencies [cde2539619]
 - Updated dependencies [16dca466ea]
-  - @rocket.chat/web-ui-registration@1.0.0-rc.0
-  - @rocket.chat/model-typings@0.0.3-rc.0
-  - @rocket.chat/core-typings@6.3.0-rc.0
-  - @rocket.chat/rest-typings@6.3.0-rc.0
-  - @rocket.chat/ui-client@1.0.0-rc.0
-  - @rocket.chat/ui-contexts@1.0.0-rc.0
-  - @rocket.chat/api-client@0.1.0-rc.0
-  - @rocket.chat/gazzodown@1.0.0-rc.0
-  - @rocket.chat/agenda@0.0.2-rc.0
-  - @rocket.chat/core-services@0.1.0-rc.0
-  - @rocket.chat/fuselage-ui-kit@1.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.0.3-rc.0
-  - @rocket.chat/models@0.0.3-rc.0
-  - @rocket.chat/pdf-worker@0.0.3-rc.0
-  - @rocket.chat/presence@0.0.3-rc.0
-  - @rocket.chat/cron@0.0.2-rc.0
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/ui-video-conf@1.0.0-rc.0
-  - @rocket.chat/instance-status@0.0.3-rc.0
+  - @yas chat/web-ui-registration@1.0.0-rc.0
+  - @yas chat/model-typings@0.0.3-rc.0
+  - @yas chat/core-typings@6.3.0-rc.0
+  - @yas chat/rest-typings@6.3.0-rc.0
+  - @yas chat/ui-client@1.0.0-rc.0
+  - @yas chat/ui-contexts@1.0.0-rc.0
+  - @yas chat/api-client@0.1.0-rc.0
+  - @yas chat/gazzodown@1.0.0-rc.0
+  - @yas chat/agenda@0.0.2-rc.0
+  - @yas chat/core-services@0.1.0-rc.0
+  - @yas chat/fuselage-ui-kit@1.0.0-rc.0
+  - @yas chat/omnichannel-services@0.0.3-rc.0
+  - @yas chat/models@0.0.3-rc.0
+  - @yas chat/pdf-worker@0.0.3-rc.0
+  - @yas chat/presence@0.0.3-rc.0
+  - @yas chat/cron@0.0.2-rc.0
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/ui-video-conf@1.0.0-rc.0
+  - @yas chat/instance-status@0.0.3-rc.0
 
 ## 6.2.10
 
@@ -20740,23 +20740,23 @@
 
 - 2a09b648b9: fix: Prevent app's bridges from overriding the lastMsg prop which further was affecting Omni-Visitor abandonment feature for app
 - ef4cd97c61: Fix Toggle message box formatting toolbar on click
-  - @rocket.chat/core-typings@6.2.10
-  - @rocket.chat/rest-typings@6.2.10
-  - @rocket.chat/omnichannel-services@0.0.5
-  - @rocket.chat/pdf-worker@0.0.5
-  - @rocket.chat/presence@0.0.5
-  - @rocket.chat/api-client@0.0.5
-  - @rocket.chat/core-services@0.0.5
-  - @rocket.chat/gazzodown@0.0.1
-  - @rocket.chat/model-typings@0.0.5
-  - @rocket.chat/ui-contexts@0.0.5
-  - @rocket.chat/models@0.0.5
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@0.31.16
-  - @rocket.chat/ui-client@0.0.1
-  - @rocket.chat/ui-video-conf@0.0.1
-  - @rocket.chat/web-ui-registration@0.0.1
-  - @rocket.chat/instance-status@0.0.5
+  - @yas chat/core-typings@6.2.10
+  - @yas chat/rest-typings@6.2.10
+  - @yas chat/omnichannel-services@0.0.5
+  - @yas chat/pdf-worker@0.0.5
+  - @yas chat/presence@0.0.5
+  - @yas chat/api-client@0.0.5
+  - @yas chat/core-services@0.0.5
+  - @yas chat/gazzodown@0.0.1
+  - @yas chat/model-typings@0.0.5
+  - @yas chat/ui-contexts@0.0.5
+  - @yas chat/models@0.0.5
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@0.31.16
+  - @yas chat/ui-client@0.0.1
+  - @yas chat/ui-video-conf@0.0.1
+  - @yas chat/web-ui-registration@0.0.1
+  - @yas chat/instance-status@0.0.5
 
 ## 6.2.9
 
@@ -20765,23 +20765,23 @@
 - 2f0f67f313: fixed `room-opened` event not dispatching when navigating cached rooms
 - 1ffc60dfd6: fixed video message button disabled on iOS browsers
 - 1ffc60dfd6: fixed an error on mobile ios browser where if you started recording audio and denied permission, it would look like it is still recording
-  - @rocket.chat/core-typings@6.2.9
-  - @rocket.chat/rest-typings@6.2.9
-  - @rocket.chat/omnichannel-services@0.0.4
-  - @rocket.chat/pdf-worker@0.0.4
-  - @rocket.chat/presence@0.0.4
-  - @rocket.chat/api-client@0.0.4
-  - @rocket.chat/core-services@0.0.4
-  - @rocket.chat/gazzodown@0.0.1
-  - @rocket.chat/model-typings@0.0.4
-  - @rocket.chat/ui-contexts@0.0.4
-  - @rocket.chat/models@0.0.4
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@0.31.16
-  - @rocket.chat/ui-client@0.0.1
-  - @rocket.chat/ui-video-conf@0.0.1
-  - @rocket.chat/web-ui-registration@0.0.1
-  - @rocket.chat/instance-status@0.0.4
+  - @yas chat/core-typings@6.2.9
+  - @yas chat/rest-typings@6.2.9
+  - @yas chat/omnichannel-services@0.0.4
+  - @yas chat/pdf-worker@0.0.4
+  - @yas chat/presence@0.0.4
+  - @yas chat/api-client@0.0.4
+  - @yas chat/core-services@0.0.4
+  - @yas chat/gazzodown@0.0.1
+  - @yas chat/model-typings@0.0.4
+  - @yas chat/ui-contexts@0.0.4
+  - @yas chat/models@0.0.4
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@0.31.16
+  - @yas chat/ui-client@0.0.1
+  - @yas chat/ui-video-conf@0.0.1
+  - @yas chat/web-ui-registration@0.0.1
+  - @yas chat/instance-status@0.0.4
 
 ## 6.2.7
 
@@ -20792,23 +20792,23 @@
 - [#29596](https://github.com/YasChat/YasChat/pull/29596) [`929f457161`](https://github.com/YasChat/YasChat/commit/929f45716141dcc4d49ad2afe8315492c9028f9c) Thanks [@yaschat-github-ci](https://github.com/yaschat-github-ci)! - Fixed ENOTFOUND error in k8s deployments
 
 - Updated dependencies []:
-  - @rocket.chat/core-typings@6.2.7
-  - @rocket.chat/rest-typings@6.2.7
-  - @rocket.chat/omnichannel-services@0.0.3
-  - @rocket.chat/pdf-worker@0.0.3
-  - @rocket.chat/presence@0.0.3
-  - @rocket.chat/api-client@0.0.3
-  - @rocket.chat/core-services@0.0.3
-  - @rocket.chat/gazzodown@0.0.1
-  - @rocket.chat/model-typings@0.0.3
-  - @rocket.chat/ui-contexts@0.0.3
-  - @rocket.chat/models@0.0.3
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@0.31.16
-  - @rocket.chat/ui-client@0.0.1
-  - @rocket.chat/ui-video-conf@0.0.1
-  - @rocket.chat/web-ui-registration@0.0.1
-  - @rocket.chat/instance-status@0.0.3
+  - @yas chat/core-typings@6.2.7
+  - @yas chat/rest-typings@6.2.7
+  - @yas chat/omnichannel-services@0.0.3
+  - @yas chat/pdf-worker@0.0.3
+  - @yas chat/presence@0.0.3
+  - @yas chat/api-client@0.0.3
+  - @yas chat/core-services@0.0.3
+  - @yas chat/gazzodown@0.0.1
+  - @yas chat/model-typings@0.0.3
+  - @yas chat/ui-contexts@0.0.3
+  - @yas chat/models@0.0.3
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@0.31.16
+  - @yas chat/ui-client@0.0.1
+  - @yas chat/ui-video-conf@0.0.1
+  - @yas chat/web-ui-registration@0.0.1
+  - @yas chat/instance-status@0.0.3
 
 ## 6.2.6
 
@@ -20817,20 +20817,20 @@
 - [#29545](https://github.com/YasChat/YasChat/pull/29545) [`8ade880306`](https://github.com/YasChat/YasChat/commit/8ade880306a2f4be6fb979c9db32a1ca5bdf4c1f) Thanks [@github-actions](https://github.com/apps/github-actions)! - fix: Frontend crash if IndexedDB is not available, i.e. in Firefox private mode
 
 - Updated dependencies []:
-  - @rocket.chat/core-typings@6.2.6
-  - @rocket.chat/rest-typings@6.2.6
-  - @rocket.chat/omnichannel-services@0.0.2
-  - @rocket.chat/pdf-worker@0.0.2
-  - @rocket.chat/presence@0.0.2
-  - @rocket.chat/api-client@0.0.2
-  - @rocket.chat/core-services@0.0.2
-  - @rocket.chat/gazzodown@0.0.1
-  - @rocket.chat/model-typings@0.0.2
-  - @rocket.chat/ui-contexts@0.0.2
-  - @rocket.chat/models@0.0.2
-  - @rocket.chat/ui-theming@0.0.1
-  - @rocket.chat/fuselage-ui-kit@0.31.16
-  - @rocket.chat/ui-client@0.0.1
-  - @rocket.chat/ui-video-conf@0.0.1
-  - @rocket.chat/web-ui-registration@0.0.1
-  - @rocket.chat/instance-status@0.0.2
+  - @yas chat/core-typings@6.2.6
+  - @yas chat/rest-typings@6.2.6
+  - @yas chat/omnichannel-services@0.0.2
+  - @yas chat/pdf-worker@0.0.2
+  - @yas chat/presence@0.0.2
+  - @yas chat/api-client@0.0.2
+  - @yas chat/core-services@0.0.2
+  - @yas chat/gazzodown@0.0.1
+  - @yas chat/model-typings@0.0.2
+  - @yas chat/ui-contexts@0.0.2
+  - @yas chat/models@0.0.2
+  - @yas chat/ui-theming@0.0.1
+  - @yas chat/fuselage-ui-kit@0.31.16
+  - @yas chat/ui-client@0.0.1
+  - @yas chat/ui-video-conf@0.0.1
+  - @yas chat/web-ui-registration@0.0.1
+  - @yas chat/instance-status@0.0.2

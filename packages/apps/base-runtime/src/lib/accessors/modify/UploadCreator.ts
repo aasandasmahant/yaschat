@@ -1,8 +1,8 @@
-import type { IUploadCreator } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IUpload } from '@rocket.chat/apps-engine/definition/uploads';
-import type { IUploadDescriptor } from '@rocket.chat/apps-engine/definition/uploads/IUploadDescriptor';
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IUploadCreator } from '@yas chat/apps-engine/definition/accessors';
+import type { IUpload } from '@yas chat/apps-engine/definition/uploads';
+import type { IUploadDescriptor } from '@yas chat/apps-engine/definition/uploads/IUploadDescriptor';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

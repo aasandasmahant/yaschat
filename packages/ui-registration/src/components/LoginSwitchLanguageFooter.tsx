@@ -1,8 +1,8 @@
-import { Box, Button } from '@rocket.chat/fuselage';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { HorizontalWizardLayoutCaption } from '@rocket.chat/layout';
-import { normalizeLanguage } from '@rocket.chat/tools';
-import { type TranslationLanguage, useSetting, useLoadLanguage, useLanguage, useLanguages } from '@rocket.chat/ui-contexts';
+import { Box, Button } from '@yas chat/fuselage';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { HorizontalWizardLayoutCaption } from '@yas chat/layout';
+import { normalizeLanguage } from '@yas chat/tools';
+import { type TranslationLanguage, useSetting, useLoadLanguage, useLanguage, useLanguages } from '@yas chat/ui-contexts';
 import { useMemo, useEffect } from 'react';
 import type { UIEvent } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

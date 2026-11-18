@@ -1,8 +1,8 @@
-import type { IAuditLog } from '@rocket.chat/core-typings';
-import { Box, Text } from '@rocket.chat/fuselage';
-import { useMediaQuery } from '@rocket.chat/fuselage-hooks';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { IAuditLog } from '@yas chat/core-typings';
+import { Box, Text } from '@yas chat/fuselage';
+import { useMediaQuery } from '@yas chat/fuselage-hooks';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yas chat/ui-client';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

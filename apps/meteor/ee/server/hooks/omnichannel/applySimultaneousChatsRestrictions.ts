@@ -1,5 +1,5 @@
-import type { ILivechatDepartment, AvailableAgentsAggregation } from '@rocket.chat/core-typings';
-import { LivechatDepartment } from '@rocket.chat/models';
+import type { ILivechatDepartment, AvailableAgentsAggregation } from '@yas chat/core-typings';
+import { LivechatDepartment } from '@yas chat/models';
 import type { Filter } from 'mongodb';
 
 import { callbacks } from '../../../../server/lib/callbacks';

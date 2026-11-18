@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
+import type { IUser } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useUserDisplayName } from '@yas chat/ui-client';
 
 export type UserMenuHeaderProps = { user: IUser };
 

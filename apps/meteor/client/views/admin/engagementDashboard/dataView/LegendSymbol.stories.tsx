@@ -1,5 +1,5 @@
-import { Box, Margins } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
+import { Box, Margins } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
 import type { Meta, StoryFn } from '@storybook/react';
 
 import LegendSymbol from './LegendSymbol';

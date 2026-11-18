@@ -1,5 +1,5 @@
-import type { IEmailInbox } from '@rocket.chat/core-typings';
-import { EmailInbox, EmailMessageHistory } from '@rocket.chat/models';
+import type { IEmailInbox } from '@yas chat/core-typings';
+import { EmailInbox, EmailMessageHistory } from '@yas chat/models';
 import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 

@@ -1,5 +1,5 @@
-import type { Options } from '@rocket.chat/message-parser';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { Options } from '@yas chat/message-parser';
+import { escapeHTML } from '@yas chat/tools';
 import type { RefObject } from 'react';
 
 import type { ComposerAPI } from './chats/ChatAPI';

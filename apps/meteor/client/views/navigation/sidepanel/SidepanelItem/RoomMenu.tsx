@@ -1,6 +1,6 @@
-import type { RoomType } from '@rocket.chat/core-typings';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import type { LocationPathname } from '@rocket.chat/ui-contexts';
+import type { RoomType } from '@yas chat/core-typings';
+import { GenericMenu } from '@yas chat/ui-client';
+import type { LocationPathname } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

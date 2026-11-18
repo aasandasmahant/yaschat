@@ -1,4 +1,4 @@
-# @rocket.chat/tracing
+# @yas chat/tracing
 
 ## 0.0.2
 

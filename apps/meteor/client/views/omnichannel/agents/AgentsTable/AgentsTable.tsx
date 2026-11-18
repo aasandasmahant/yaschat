@@ -1,5 +1,5 @@
-import { Pagination, type TableColumnWidth } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useMediaQuery, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { Pagination, type TableColumnWidth } from '@yas chat/fuselage';
+import { useDebouncedValue, useMediaQuery, useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -11,7 +11,7 @@ import {
 	GenericNoResults,
 	links,
 	GenericError,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { hashKey } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

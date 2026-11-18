@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { IMessage } from '@yas chat/core-typings';
+import { escapeHTML } from '@yas chat/tools';
 import type { TFunction } from 'i18next';
 
 import { shortnameToUnicode } from '../../../../lib/emoji-native/shortnameToUnicode';

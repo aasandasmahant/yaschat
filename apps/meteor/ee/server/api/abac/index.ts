@@ -1,14 +1,14 @@
-import { AbacAttributeStoreExternalError, AbacContractError, AbacErrorCode, getPdpHealthErrorCode } from '@rocket.chat/abac';
-import { Abac } from '@rocket.chat/core-services';
-import type { AbacRoomAttributesGrant } from '@rocket.chat/core-services';
-import type { IServerEvents, IUser } from '@rocket.chat/core-typings';
-import { ServerEvents } from '@rocket.chat/models';
+import { AbacAttributeStoreExternalError, AbacContractError, AbacErrorCode, getPdpHealthErrorCode } from '@yas chat/abac';
+import { Abac } from '@yas chat/core-services';
+import type { AbacRoomAttributesGrant } from '@yas chat/core-services';
+import type { IServerEvents, IUser } from '@yas chat/core-typings';
+import { ServerEvents } from '@yas chat/models';
 import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings/src/v1/Ajv';
-import { convertSubObjectsIntoPaths } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings/src/v1/Ajv';
+import { convertSubObjectsIntoPaths } from '@yas chat/tools';
 
 import {
 	GenericSuccessSchema,
@@ -605,7 +605,7 @@ const abacEndpoints = API.v1
 
 export type AbacEndpoints = ExtractRoutesFromAPI<typeof abacEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends AbacEndpoints {}
 }

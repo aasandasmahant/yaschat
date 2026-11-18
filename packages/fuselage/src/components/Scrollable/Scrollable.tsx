@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { css } from '@yas chat/css-in-js';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import type { PropsWithChildren, RefObject, UIEvent } from 'react';
 import { useRef, useCallback } from 'react';
 

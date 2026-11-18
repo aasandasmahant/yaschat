@@ -1,6 +1,6 @@
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Settings } from '@rocket.chat/models';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Settings } from '@yas chat/models';
 
 import { notifyOnSettingChangedById } from '../../../../server/lib/notifyListener';
 import { settings } from '../../../../server/settings';

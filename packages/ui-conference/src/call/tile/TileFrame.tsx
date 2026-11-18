@@ -1,6 +1,6 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Icon, Palette, borderRadius } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Icon, Palette, borderRadius } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

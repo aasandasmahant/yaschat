@@ -1,4 +1,4 @@
-import { StatusBullet } from '@rocket.chat/fuselage';
+import { StatusBullet } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

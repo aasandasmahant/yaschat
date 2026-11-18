@@ -1,15 +1,15 @@
 import * as assert from 'node:assert';
 import { describe, it } from 'node:test';
 
-import { EVENT_RESULT_KIND, EventResult } from '@rocket.chat/apps-engine/definition/eventResult';
+import { EVENT_RESULT_KIND, EventResult } from '@yas chat/apps-engine/definition/eventResult';
 import type {
 	IMediaCall,
 	IMediaCallEndedContext,
 	IMediaCallParticipantJoinedContext,
 	IMediaCallStartedContext,
 	IPreMediaCallCreatedContext,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
-import { AppInterface, AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/mediaCalls';
+import { AppInterface, AppMethod } from '@yas chat/apps-engine/definition/metadata';
 
 import type { AppManager } from '../../../src/server/AppManager';
 import type { ProxiedApp } from '../../../src/server/ProxiedApp';

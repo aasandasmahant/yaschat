@@ -1,5 +1,5 @@
-import { Box, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import { Box, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import type { ComponentProps } from 'react';
 
 export type UserColumnProps = {

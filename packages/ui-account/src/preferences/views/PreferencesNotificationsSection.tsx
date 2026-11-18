@@ -1,6 +1,6 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { AccordionItem, Button } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, Select, ToggleSwitch } from '@rocket.chat/fuselage-forms';
+import type { SelectOption } from '@yas chat/fuselage';
+import { AccordionItem, Button } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, Select, ToggleSwitch } from '@yas chat/fuselage-forms';
 import { useCallback, useEffect, useId, useMemo, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

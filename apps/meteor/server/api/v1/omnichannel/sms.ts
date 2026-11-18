@@ -1,4 +1,4 @@
-import { OmnichannelIntegration, ClientSafeError } from '@rocket.chat/core-services';
+import { OmnichannelIntegration, ClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatVisitor,
 	IUpload,
@@ -6,13 +6,13 @@ import type {
 	ServiceData,
 	FileAttachmentProps,
 	IOmnichannelRoomInfo,
-} from '@rocket.chat/core-typings';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { LivechatVisitors, LivechatRooms, LivechatDepartment } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
-import { Random } from '@rocket.chat/random';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+} from '@yas chat/core-typings';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { LivechatVisitors, LivechatRooms, LivechatDepartment } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
+import { Random } from '@yas chat/random';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { API } from '../..';
 import { setCustomField } from './lib/customFields';

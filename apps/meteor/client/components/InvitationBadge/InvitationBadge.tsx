@@ -1,5 +1,5 @@
-import { Icon } from '@rocket.chat/fuselage';
-import { useTimeAgo } from '@rocket.chat/ui-client';
+import { Icon } from '@yas chat/fuselage';
+import { useTimeAgo } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

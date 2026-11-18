@@ -1,5 +1,5 @@
 {
-	"extends": "@rocket.chat/tsconfig/server.json",
+	"extends": "@yas chat/tsconfig/server.json",
 	"compilerOptions": {
 		"rootDir": "./src",
 		"outDir": "./dist/ee/apps/xmpp-server-service/src",

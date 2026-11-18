@@ -1,4 +1,4 @@
-import { useSearchParameter } from '@rocket.chat/ui-contexts';
+import { useSearchParameter } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 import { flushSync } from 'react-dom';
 

@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 
 export const sendConfirmationEmail = async (to: string): Promise<boolean> => {

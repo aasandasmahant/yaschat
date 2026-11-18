@@ -1,5 +1,5 @@
-import { Field, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@rocket.chat/fuselage-forms';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { Field, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@yas chat/fuselage-forms';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

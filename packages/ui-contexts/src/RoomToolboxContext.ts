@@ -1,4 +1,4 @@
-import type { Keys as IconName } from '@rocket.chat/icons';
+import type { Keys as IconName } from '@yas chat/icons';
 import { createContext } from 'react';
 import type { ReactNode, ComponentType } from 'react';
 

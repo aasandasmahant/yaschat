@@ -1,4 +1,4 @@
-import { Form, FormHeader, FormTitle } from '@rocket.chat/layout';
+import { Form, FormHeader, FormTitle } from '@yas chat/layout';
 import { useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';

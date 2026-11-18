@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@rocket.chat/fuselage';
+import { Box, Skeleton } from '@yas chat/fuselage';
 
 const AppDetailsPageLoading = () => (
 	<Box display='flex' flexDirection='row' gap={32} marginBlockEnd={20} width='full'>

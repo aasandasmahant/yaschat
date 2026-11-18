@@ -1,6 +1,6 @@
-import type { IYasChatRecord } from '@rocket.chat/core-typings';
-import type { StreamNames } from '@rocket.chat/ddp-client';
-import { isTruthy } from '@rocket.chat/tools';
+import type { IYasChatRecord } from '@yas chat/core-typings';
+import type { StreamNames } from '@yas chat/ddp-client';
+import { isTruthy } from '@yas chat/tools';
 import localforage from 'localforage';
 import { create, type StoreApi, type UseBoundStore } from 'zustand';
 

@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useSetting, usePermission, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useSetting, usePermission, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

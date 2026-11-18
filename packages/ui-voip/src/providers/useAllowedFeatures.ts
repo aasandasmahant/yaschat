@@ -1,5 +1,5 @@
-import type { CallFeature } from '@rocket.chat/media-signaling';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import type { CallFeature } from '@yas chat/media-signaling';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 export const useAllowedFeatures = (supportedFeatures: readonly CallFeature[]): readonly CallFeature[] => {

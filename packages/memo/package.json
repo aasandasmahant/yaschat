@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/memo",
+	"name": "@yas chat/memo",
 	"version": "0.31.26",
 	"description": "Memoization utilities",
 	"type": "module",
@@ -23,7 +23,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -39,8 +39,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

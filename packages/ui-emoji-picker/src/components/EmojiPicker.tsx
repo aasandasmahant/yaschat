@@ -1,7 +1,7 @@
-import { Box, TextInput, Icon, Button, Divider } from '@rocket.chat/fuselage';
-import { useMediaQuery, useOutsideClick } from '@rocket.chat/fuselage-hooks';
-import { useMergedRefsV2, useIsVisible } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { Box, TextInput, Icon, Button, Divider } from '@yas chat/fuselage';
+import { useMediaQuery, useOutsideClick } from '@yas chat/fuselage-hooks';
+import { useMergedRefsV2, useIsVisible } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react';
 import { useLayoutEffect, useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

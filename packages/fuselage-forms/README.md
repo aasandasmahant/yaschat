@@ -1,10 +1,10 @@
-# `@rocket.chat/fuselage-forms`
+# `@yas chat/fuselage-forms`
 
 > Accessible form fields for Fuselage: inputs that wire up their label, description, hint and error automatically.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-forms?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-forms) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-forms?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-forms)
+[![npm](https://img.shields.io/npm/v/@yas chat/fuselage-forms?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-forms) [![downloads](https://img.shields.io/npm/dw/@yas chat/fuselage-forms?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-forms)
 
-This package wraps the field and input components of [`@rocket.chat/fuselage`](https://www.npmjs.com/package/@rocket.chat/fuselage). Inside a `Field`, the wrapped components generate their own ids and set the ARIA attributes that tie an input to its label and messages, so you do not pass `id`, `htmlFor`, `aria-labelledby` or `aria-describedby` by hand.
+This package wraps the field and input components of [`@yas chat/fuselage`](https://www.npmjs.com/package/@yas chat/fuselage). Inside a `Field`, the wrapped components generate their own ids and set the ARIA attributes that tie an input to its label and messages, so you do not pass `id`, `htmlFor`, `aria-labelledby` or `aria-describedby` by hand.
 
 - The input is labelled by its `FieldLabel`, whichever way the input needs it (`htmlFor`, `aria-labelledby`, or a visually hidden label for checkboxes, radio buttons and toggles).
 - `aria-describedby` points at the `FieldDescription`, `FieldError` and `FieldHint` that are rendered.
@@ -14,19 +14,19 @@ This package wraps the field and input components of [`@rocket.chat/fuselage`](h
 ## Installation
 
 ```sh
-npm install @rocket.chat/fuselage-forms @rocket.chat/fuselage @rocket.chat/fuselage-hooks react@19 react-dom@19
+npm install @yas chat/fuselage-forms @yas chat/fuselage @yas chat/fuselage-hooks react@19 react-dom@19
 ```
 
-`@rocket.chat/fuselage`, `@rocket.chat/fuselage-hooks`, `react` and `react-dom` are peer dependencies. `@rocket.chat/fuselage` has its own peer dependencies and stylesheet; see its README. The components rely on React 19 (they read `ref` as a regular prop).
+`@yas chat/fuselage`, `@yas chat/fuselage-hooks`, `react` and `react-dom` are peer dependencies. `@yas chat/fuselage` has its own peer dependencies and stylesheet; see its README. The components rely on React 19 (they read `ref` as a regular prop).
 
 The package ships CommonJS and ES module builds with TypeScript declarations.
 
 ## Usage
 
-Import the field parts and the inputs from this package instead of from `@rocket.chat/fuselage`:
+Import the field parts and the inputs from this package instead of from `@yas chat/fuselage`:
 
 ```tsx
-import { Field, FieldDescription, FieldError, FieldHint, FieldLabel, FieldRow, TextInput } from '@rocket.chat/fuselage-forms';
+import { Field, FieldDescription, FieldError, FieldHint, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage-forms';
 import { useState } from 'react';
 
 function EmailField() {
@@ -54,7 +54,7 @@ The input gets an id that matches the label's `htmlFor`, `aria-describedby` list
 Put the label and the control in the same `FieldRow`. The control renders a visually hidden copy of the label text, and clicking the visible label toggles it:
 
 ```tsx
-import { Field, FieldDescription, FieldLabel, FieldRow, ToggleSwitch } from '@rocket.chat/fuselage-forms';
+import { Field, FieldDescription, FieldLabel, FieldRow, ToggleSwitch } from '@yas chat/fuselage-forms';
 
 <Field>
 	<FieldRow>
@@ -67,10 +67,10 @@ import { Field, FieldDescription, FieldLabel, FieldRow, ToggleSwitch } from '@ro
 
 ### Grouping fields
 
-`FieldGroup`, `FieldRow`, `FieldLink` and `FieldLabelInfo` are re-exported from `@rocket.chat/fuselage` unchanged, so a whole form can import from one place:
+`FieldGroup`, `FieldRow`, `FieldLink` and `FieldLabelInfo` are re-exported from `@yas chat/fuselage` unchanged, so a whole form can import from one place:
 
 ```tsx
-import { Field, FieldGroup, FieldLabel, FieldLabelInfo, FieldRow, PasswordInput, TextInput } from '@rocket.chat/fuselage-forms';
+import { Field, FieldGroup, FieldLabel, FieldLabelInfo, FieldRow, PasswordInput, TextInput } from '@yas chat/fuselage-forms';
 
 <FieldGroup>
 	<Field>
@@ -96,7 +96,7 @@ import { Field, FieldGroup, FieldLabel, FieldLabelInfo, FieldRow, PasswordInput,
 To connect your own input to a `Field`, use one of the context hooks and spread its result onto the element:
 
 ```tsx
-import { useFieldReferencedByInput } from '@rocket.chat/fuselage-forms';
+import { useFieldReferencedByInput } from '@yas chat/fuselage-forms';
 
 function ColorInput(props: { value: string; onChange: (value: string) => void }) {
 	const fieldProps = useFieldReferencedByInput(); // { id, 'aria-describedby', 'aria-invalid' }
@@ -118,7 +118,7 @@ function ColorInput(props: { value: string; onChange: (value: string) => void })
 | `FieldHint`                                             | Fuselage `FieldHint`, registered as a description of the input.                                     |
 | `FieldProvider`                                         | Context provider used by `Field`. Use it directly to give a field context to a different container. |
 | `LabelFor`, `ReferencedLabel`, `HiddenLabel`            | The three label variants `FieldLabel` chooses from. Use them only to force a variant.               |
-| `FieldGroup`, `FieldRow`, `FieldLink`, `FieldLabelInfo` | Re-exported from `@rocket.chat/fuselage`.                                                           |
+| `FieldGroup`, `FieldRow`, `FieldLink`, `FieldLabelInfo` | Re-exported from `@yas chat/fuselage`.                                                           |
 
 ### Inputs
 
@@ -130,7 +130,7 @@ Each input takes the same props as the Fuselage component with the same name.
 | `aria-labelledby`                   | `Select`, `Slider`, `MultiSelect`, `MultiSelectFiltered`, `AutoComplete` (deprecated)                 |
 | A visually hidden label             | `CheckBox`, `RadioButton`, `ToggleSwitch`                                                             |
 
-`AutoComplete` is deprecated; use `MultiSelectFiltered`, or `SelectFiltered` from `@rocket.chat/fuselage` for single selection.
+`AutoComplete` is deprecated; use `MultiSelectFiltered`, or `SelectFiltered` from `@yas chat/fuselage` for single selection.
 
 ### Context hooks
 
@@ -151,18 +151,18 @@ Each input takes the same props as the Fuselage component with the same name.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-forms). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-forms build
-yarn workspace @rocket.chat/fuselage-forms testunit
-yarn workspace @rocket.chat/fuselage-forms typecheck
-yarn workspace @rocket.chat/fuselage-forms lint
-yarn workspace @rocket.chat/fuselage-forms lint:fix
+yarn workspace @yas chat/fuselage-forms build
+yarn workspace @yas chat/fuselage-forms testunit
+yarn workspace @yas chat/fuselage-forms typecheck
+yarn workspace @yas chat/fuselage-forms lint
+yarn workspace @yas chat/fuselage-forms lint:fix
 ```
 
 Run Storybook to try every input inside a `Field`:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-forms storybook
-yarn workspace @rocket.chat/fuselage-forms build-storybook
+yarn workspace @yas chat/fuselage-forms storybook
+yarn workspace @yas chat/fuselage-forms build-storybook
 ```
 
 ## License

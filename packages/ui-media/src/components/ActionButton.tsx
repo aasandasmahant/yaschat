@@ -1,5 +1,5 @@
-import { Icon, IconButton, SplitButtonTrigger } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
+import { Icon, IconButton, SplitButtonTrigger } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
 import type { ComponentProps, ReactElement } from 'react';
 import { forwardRef } from 'react';
 

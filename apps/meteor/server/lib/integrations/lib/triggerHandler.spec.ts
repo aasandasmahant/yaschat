@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IOutgoingIntegration, IUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
-import { serverFetch } from '@rocket.chat/server-fetch';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IOutgoingIntegration, IUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
+import { serverFetch } from '@yas chat/server-fetch';
 import { Response } from 'node-fetch';
 
 import { triggerHandler as sharedTriggerHandler } from './triggerHandler';
@@ -24,7 +24,7 @@ const registerModels = () => {
 	mockModel('Messages', messagesModel);
 };
 
-jest.mock('@rocket.chat/server-fetch', () => ({ serverFetch: jest.fn() }));
+jest.mock('@yas chat/server-fetch', () => ({ serverFetch: jest.fn() }));
 jest.mock('./isolated-vm/isolated-vm', () => ({
 	IsolatedVMScriptEngine: class {
 		public prepareOutgoingRequest = jest.fn();
@@ -67,7 +67,7 @@ beforeEach(() => {
 		url,
 		data,
 		auth: undefined,
-		headers: { 'User-Agent': 'rocket.chat-test' },
+		headers: { 'User-Agent': 'yas chat-test' },
 	}));
 	jest
 		.mocked(serverFetch)

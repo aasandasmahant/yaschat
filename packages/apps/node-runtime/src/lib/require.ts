@@ -15,7 +15,7 @@ const ALLOWED_MODULES = [
 	'fs',
 	// External libraries
 	'uuid',
-	'@rocket.chat/apps-engine',
+	'@yas chat/apps-engine',
 ];
 
 // As the apps are bundled, the only times they will call require are
@@ -26,7 +26,7 @@ export const sandboxRequire = (module: string) => {
 	// Normalize Node built-in specifiers: accept both 'crypto' and 'node:crypto'
 	const normalized = module.replace('node:', '');
 
-	// We allow variants like 'fs', 'node:fs' or 'node:fs/promises', or even '@rocket.chat/apps-engine/**'
+	// We allow variants like 'fs', 'node:fs' or 'node:fs/promises', or even '@yas chat/apps-engine/**'
 	if (!ALLOWED_MODULES.some((mod) => normalized.startsWith(mod))) {
 		throw new Error(`Module ${module} is not allowed`);
 	}

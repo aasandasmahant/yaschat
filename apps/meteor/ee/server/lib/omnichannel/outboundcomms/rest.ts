@@ -1,9 +1,9 @@
-import type { IOutboundMessage, IOutboundProvider, IOutboundProviderMetadata, ValidOutboundProvider } from '@rocket.chat/core-typings';
-import { ajv } from '@rocket.chat/rest-typings';
+import type { IOutboundMessage, IOutboundProvider, IOutboundProviderMetadata, ValidOutboundProvider } from '@yas chat/core-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { OutboundCommsEndpoints } from '../../../api/v1/omnichannel/outbound';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends OutboundCommsEndpoints {}
 }

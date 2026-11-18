@@ -1,4 +1,4 @@
-import type { IVideoCallWindow } from '@rocket.chat/desktop-api';
+import type { IVideoCallWindow } from '@yas chat/desktop-api';
 
 import { _relativeToSiteRootUrl } from '../../../lib/absoluteUrl';
 

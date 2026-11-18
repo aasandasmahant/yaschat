@@ -1,8 +1,8 @@
-import type { LicenseInfo } from '@rocket.chat/core-typings';
-import { Box, Callout, Skeleton } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { UsersListStatusParamsGET } from '@rocket.chat/rest-typings';
-import type { OptionProp } from '@rocket.chat/ui-client';
+import type { LicenseInfo } from '@yas chat/core-typings';
+import { Box, Callout, Skeleton } from '@yas chat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
+import type { UsersListStatusParamsGET } from '@yas chat/rest-typings';
+import type { OptionProp } from '@yas chat/ui-client';
 import {
 	ExternalLink,
 	ContextualbarHeader,
@@ -14,8 +14,8 @@ import {
 	Page,
 	PageHeader,
 	PageContent,
-} from '@rocket.chat/ui-client';
-import { useRouteParameter, useRouter, useEndpoint, useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRouteParameter, useRouter, useEndpoint, useSetting } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

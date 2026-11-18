@@ -1,8 +1,8 @@
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IMessage, IRoom, ISubscription, IThreadMessage, IUser } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import type { IMessage, IRoom, ISubscription, IThreadMessage, IUser } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 
@@ -95,7 +95,7 @@ describe('[Chat]', () => {
 							message_link: 12,
 							collapsed: false,
 							author_name: 'Bradley Hilton',
-							author_link: 'https://rocket.chat/',
+							author_link: 'https://yas chat/',
 							author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 							title: 'Attachment Example',
 							title_link: 'https://youtube.com',
@@ -457,7 +457,7 @@ describe('[Chat]', () => {
 							message_link: 'https://google.com',
 							collapsed: false,
 							author_name: 'Bradley Hilton',
-							author_link: 'https://rocket.chat/',
+							author_link: 'https://yas chat/',
 							author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 							title: 'Attachment Example',
 							title_link: 'https://youtube.com',
@@ -501,7 +501,7 @@ describe('[Chat]', () => {
 							message_link: 'https://google.com',
 							collapsed: false,
 							author_name: 'Bradley Hilton',
-							author_link: 'https://rocket.chat/',
+							author_link: 'https://yas chat/',
 							author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 							title: 'Attachment Example',
 							title_link: 'https://youtube.com',
@@ -544,7 +544,7 @@ describe('[Chat]', () => {
 							message_link: 'https://google.com',
 							collapsed: false,
 							author_name: 'Bradley Hilton',
-							author_link: 'https://rocket.chat/',
+							author_link: 'https://yas chat/',
 							author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 							title: 'Attachment Example',
 							title_link: 'https://youtube.com',
@@ -641,7 +641,7 @@ describe('[Chat]', () => {
 							message_link: 'https://google.com',
 							collapsed: false,
 							author_name: 'Bradley Hilton',
-							author_link: 'https://rocket.chat/',
+							author_link: 'https://yas chat/',
 							author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 							title: 'Attachment Example',
 							title_link: 'https://youtube.com',
@@ -770,7 +770,7 @@ describe('[Chat]', () => {
 								message_link: 'https://google.com',
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',
@@ -806,7 +806,7 @@ describe('[Chat]', () => {
 								message_link: 'https://google.com',
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',
@@ -824,7 +824,7 @@ describe('[Chat]', () => {
 								message_link: 'https://google.com',
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',
@@ -860,7 +860,7 @@ describe('[Chat]', () => {
 								message_link: 'https://google.com',
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',
@@ -1221,7 +1221,7 @@ describe('[Chat]', () => {
 								message_link: 12,
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',
@@ -1261,7 +1261,7 @@ describe('[Chat]', () => {
 								message_link: 'https://google.com',
 								collapsed: false,
 								author_name: 'Bradley Hilton',
-								author_link: 'https://rocket.chat/',
+								author_link: 'https://yas chat/',
 								author_icon: 'https://avatars.githubusercontent.com/u/850391?v=3',
 								title: 'Attachment Example',
 								title_link: 'https://youtube.com',

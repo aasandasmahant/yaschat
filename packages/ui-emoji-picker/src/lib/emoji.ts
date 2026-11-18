@@ -1,5 +1,5 @@
-import { escapeRegExp } from '@rocket.chat/tools';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { escapeRegExp } from '@yas chat/tools';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 import type { EmojiCategory, EmojiItem } from './types';
 import type { EmojiPackages } from '../contexts/EmojiRegistryContext';

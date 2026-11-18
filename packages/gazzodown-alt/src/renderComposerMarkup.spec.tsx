@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 import fc from 'fast-check';
 
 import { anchorsOf, mountBareTokens, mountSource, mountTokens, textOf } from './testUtils.js';
@@ -212,18 +212,18 @@ describe('every renderer emits the text it was parsed from', () => {
 		['inline code', 'a `code` b'],
 		['code block', '```js\nconst a = 1;\n```'],
 		['heading', '# Title'],
-		['heading with a link', '# see rocket.chat'],
+		['heading with a link', '# see yas chat'],
 		['quote', '> quoted'],
 		['multiline', 'first\nsecond\nthird'],
 		['user mention', 'hi @rocket.cat'],
 		['channel mention', 'hi #general'],
-		['markdown link', 'see [the docs](https://rocket.chat/docs)'],
-		['bare domain', 'see rocket.chat/docs now'],
-		['email', 'mail me@rocket.chat now'],
-		['link inside bold', 'a *see rocket.chat* b'],
-		['markdown link inside bold', 'a *[docs](https://rocket.chat)* b'],
+		['markdown link', 'see [the docs](https://yas chat/docs)'],
+		['bare domain', 'see yas chat/docs now'],
+		['email', 'mail me@yas chat now'],
+		['link inside bold', 'a *see yas chat* b'],
+		['markdown link inside bold', 'a *[docs](https://yas chat)* b'],
 		['link with an unsafe scheme', 'see [x](javascript:alert(1))'],
-		['image', 'look ![alt](https://rocket.chat/a.png)'],
+		['image', 'look ![alt](https://yas chat/a.png)'],
 		['timestamp', 'at <t:1700000000:t> ok'],
 		['horizontal rule', '---'],
 		['horizontal rule between paragraphs', 'a\n---\nb'],
@@ -296,7 +296,7 @@ describe('markup the renderer cannot reproduce', () => {
 		['hyphen list with extra spacing', '-  one'],
 		['ordered list with a leading zero', '01. one'],
 		['ordered list with extra spacing', '1.  one'],
-		['slack-style link', '<https://rocket.chat|docs>'],
+		['slack-style link', '<https://yas chat|docs>'],
 		['phone link', 'call +15551234567 now'],
 		['padded horizontal rule', '  ---'],
 		['several big emoji', '😄 😄'],
@@ -310,9 +310,9 @@ describe('markup the renderer cannot reproduce', () => {
 
 describe('link wiring', () => {
 	it.each([
-		['a markdown link', 'see [the docs](https://rocket.chat/docs)', '[the docs](https://rocket.chat/docs)', 'https://rocket.chat/docs'],
-		['a bare domain', 'see rocket.chat/docs now', 'rocket.chat/docs', 'https://rocket.chat/docs'],
-		['an email', 'mail me@rocket.chat now', 'me@rocket.chat', 'mailto:me@rocket.chat'],
+		['a markdown link', 'see [the docs](https://yas chat/docs)', '[the docs](https://yas chat/docs)', 'https://yas chat/docs'],
+		['a bare domain', 'see yas chat/docs now', 'yas chat/docs', 'https://yas chat/docs'],
+		['an email', 'mail me@yas chat now', 'me@yas chat', 'mailto:me@yas chat'],
 	])('carries the parsed target of %s onto the anchor', (_label, text, expectedText, expectedHref) => {
 		const anchors = anchorsOf(mountSource(text));
 
@@ -329,13 +329,13 @@ describe('link wiring', () => {
 	});
 
 	it('styles every link like the message list does', () => {
-		const [anchor] = anchorsOf(mountSource('see [the docs](https://rocket.chat/docs)'));
+		const [anchor] = anchorsOf(mountSource('see [the docs](https://yas chat/docs)'));
 
 		expect(anchor.getAttribute('style')).toBe('color:var(--rcx-color-font-info, #095ad2);text-decoration:underline');
 	});
 
 	it('renders a link nested in the markup around it', () => {
-		const [anchor] = anchorsOf(mountSource('a *[docs](https://rocket.chat)* b'));
+		const [anchor] = anchorsOf(mountSource('a *[docs](https://yas chat)* b'));
 
 		expect(anchor.closest('strong')).not.toBeNull();
 	});
@@ -351,13 +351,13 @@ describe('the caret cannot be trapped', () => {
 		'1. one\n2. two',
 		'- [x] done',
 		'```js\nconst a = 1;\n```',
-		'see [the docs](https://rocket.chat/docs)',
-		'look ![alt](https://rocket.chat/a.png)',
+		'see [the docs](https://yas chat/docs)',
+		'look ![alt](https://yas chat/a.png)',
 		'hi @rocket.cat and #general',
 		'at <t:1700000000:t> ok',
 		'|a|b|\n|-|-|\n|1|2|',
 		'---',
-		'see [<img src=x onerror=alert(1)>](https://rocket.chat/<script>alert(2)</script>)',
+		'see [<img src=x onerror=alert(1)>](https://yas chat/<script>alert(2)</script>)',
 	];
 
 	it.each(samples)('renders no focusable or interactive node for %j', (text) => {
@@ -368,7 +368,7 @@ describe('the caret cannot be trapped', () => {
 	});
 
 	it('never marks a subtree as non-editable inside the composer', () => {
-		const input = mountSource('a *bold* [link](https://rocket.chat) @cat');
+		const input = mountSource('a *bold* [link](https://yas chat) @cat');
 
 		expect(input.querySelectorAll('[aria-hidden="true"]')).toHaveLength(0);
 	});

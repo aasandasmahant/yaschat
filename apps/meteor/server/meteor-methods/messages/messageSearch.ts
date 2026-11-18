@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Messages, Subscriptions, Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISubscription } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Messages, Subscriptions, Users } from '@yas chat/models';
 
 import { readSecondaryPreferred } from '../../database/readSecondaryPreferred';
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';

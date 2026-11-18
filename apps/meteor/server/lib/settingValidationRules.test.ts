@@ -17,7 +17,7 @@ const settingsGetSettingMock = sinon.stub();
 const loggerErrorMock = sinon.stub();
 
 const { validateSettingRules, SettingValidationError } = p.noCallThru().load('./settingValidationRules.ts', {
-	'@rocket.chat/logger': {
+	'@yas chat/logger': {
 		Logger: class {
 			error = loggerErrorMock;
 		},

@@ -1,4 +1,4 @@
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import type { Meta } from '@storybook/react';
 
 import ActionSettingInput from './ActionSettingInput';

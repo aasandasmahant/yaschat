@@ -1,5 +1,5 @@
-import { Presence } from '@rocket.chat/core-services';
-import { UserStatus } from '@rocket.chat/core-typings';
+import { Presence } from '@yas chat/core-services';
+import { UserStatus } from '@yas chat/core-typings';
 
 import type { Server } from '../Server';
 

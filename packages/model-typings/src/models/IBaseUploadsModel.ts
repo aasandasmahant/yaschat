@@ -1,4 +1,4 @@
-import type { EncryptedContent, IUpload } from '@rocket.chat/core-typings';
+import type { EncryptedContent, IUpload } from '@yas chat/core-typings';
 import type { DeleteResult, UpdateResult, ClientSession, Document, InsertOneResult, WithId, FindCursor } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

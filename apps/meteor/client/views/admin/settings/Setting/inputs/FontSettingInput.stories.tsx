@@ -1,4 +1,4 @@
-import { Field } from '@rocket.chat/fuselage';
+import { Field } from '@yas chat/fuselage';
 import type { Meta } from '@storybook/react';
 
 import FontSettingInput from './FontSettingInput';

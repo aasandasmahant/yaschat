@@ -1,4 +1,4 @@
-# @rocket.chat/xmpp-server
+# @yas chat/xmpp-server
 
 Native XMPP server-to-server (S2S) federation for YasChat. Lets a YasChat instance act
 as an XMPP server: exchange 1:1 messages and presence with remote XMPP users, host MUC rooms,
@@ -20,7 +20,7 @@ This package is developed spec-first. Everything about it lives in [docs/](docs/
 - **Protocol core** (`src/`, excluding `src/service/`): transport and protocol only, with no
   YasChat dependencies. Built on `ltx`/`@xmpp/jid` plus Node `net`/`tls`/`dns`. Exposes
   the `XMPPServer` class: lifecycle, imperative send methods, and a typed event map.
-- **Integration service** (`src/service/`): `XMPPServerService`, a `@rocket.chat/core-services`
+- **Integration service** (`src/service/`): `XMPPServerService`, a `@yas chat/core-services`
   `ServiceClass` that bridges the protocol core to YasChat models and events. It runs only
   in the `ee/apps/xmpp-server-service` microservice, never inside Meteor.
 

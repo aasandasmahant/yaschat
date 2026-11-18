@@ -1,11 +1,11 @@
 import { Buffer } from 'node:buffer';
 
-import { AppStatus, AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
-import { UserType } from '@rocket.chat/apps-engine/definition/users';
+import { AppStatus, AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
+import { UserType } from '@yas chat/apps-engine/definition/users';
 
 import type { IGetAppsFilter } from './IGetAppsFilter';
 import { ProxiedApp } from './ProxiedApp';

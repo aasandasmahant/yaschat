@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { StepsLinkedList, WizardContext } from '@rocket.chat/ui-client';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { StepsLinkedList, WizardContext } from '@yas chat/ui-client';
 import { act, render, screen, waitFor } from '@testing-library/react';
 
 import OutboundMessageWizard from './OutboundMessageWizard';

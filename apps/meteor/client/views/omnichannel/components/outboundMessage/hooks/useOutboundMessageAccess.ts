@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 
 import { useOmnichannelEnabled } from '../../../hooks/useOmnichannelEnabled';
 

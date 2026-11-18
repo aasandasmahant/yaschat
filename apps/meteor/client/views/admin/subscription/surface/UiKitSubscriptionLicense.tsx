@@ -1,6 +1,6 @@
-import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
-import { UiKitContext, bannerParser, UiKitComponent } from '@rocket.chat/fuselage-ui-kit';
-import type { View } from '@rocket.chat/ui-kit';
+import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
+import { UiKitContext, bannerParser, UiKitComponent } from '@yas chat/fuselage-ui-kit';
+import type { View } from '@yas chat/ui-kit';
 import type { ContextType, Dispatch } from 'react';
 import { useMemo } from 'react';
 

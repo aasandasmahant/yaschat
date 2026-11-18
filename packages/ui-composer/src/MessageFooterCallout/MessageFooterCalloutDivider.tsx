@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { forwardRef } from 'react';
 
 const MessageFooterCalloutDivider = forwardRef<HTMLButtonElement>(function MessageFooterCalloutDivider(props, ref) {

@@ -1,5 +1,5 @@
-import { Icon, IconButton } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
+import { Icon, IconButton } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
 import type { ComponentProps } from 'react';
 
 import { getButtonVariant } from './getButtonVariant';

@@ -1,4 +1,4 @@
-import type { IImport } from '@rocket.chat/core-typings';
+import type { IImport } from '@yas chat/core-typings';
 import type { UpdateResult, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

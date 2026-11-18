@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Settings, Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Settings, Users } from '@yas chat/models';
 import semver from 'semver';
 
 import { Info } from '../../../../../yaschat.info';

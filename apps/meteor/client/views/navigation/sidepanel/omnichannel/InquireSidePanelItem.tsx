@@ -1,8 +1,8 @@
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { SidebarItemIcon } from '@rocket.chat/fuselage';
-import { escapeHTML } from '@rocket.chat/tools';
-import { RoomAvatar } from '@rocket.chat/ui-avatar';
-import { useUserId } from '@rocket.chat/ui-contexts';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { SidebarItemIcon } from '@yas chat/fuselage';
+import { escapeHTML } from '@yas chat/tools';
+import { RoomAvatar } from '@yas chat/ui-avatar';
+import { useUserId } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

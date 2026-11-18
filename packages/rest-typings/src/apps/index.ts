@@ -1,9 +1,9 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IApiEndpointMetadata } from '@rocket.chat/apps-engine/definition/api';
-import type { IExternalComponent } from '@rocket.chat/apps-engine/definition/externalComponent';
-import type { IPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
-import type { IUIActionButton } from '@rocket.chat/apps-engine/definition/ui';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IApiEndpointMetadata } from '@yas chat/apps-engine/definition/api';
+import type { IExternalComponent } from '@yas chat/apps-engine/definition/externalComponent';
+import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
+import type { IUIActionButton } from '@yas chat/apps-engine/definition/ui';
 import type {
 	AppCategory,
 	AppScreenshot,
@@ -12,8 +12,8 @@ import type {
 	ILogItem,
 	AppRequestFilter,
 	AppRequest,
-} from '@rocket.chat/core-typings';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/core-typings';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import type { AppLogsExportProps } from './appLogsExportProps';
 import type { AppLogsProps } from './appLogsProps';

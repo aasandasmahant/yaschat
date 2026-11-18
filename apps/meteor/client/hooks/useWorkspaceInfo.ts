@@ -1,6 +1,6 @@
-import type { IStats, IWorkspaceInfo, Serialized } from '@rocket.chat/core-typings';
-import type { IInstance } from '@rocket.chat/rest-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IStats, IWorkspaceInfo, Serialized } from '@yas chat/core-typings';
+import type { IInstance } from '@yas chat/rest-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { keepPreviousData, useMutation, useQueries, useQuery, useQueryClient } from '@tanstack/react-query';
 
 const useServerInfoQueryOptions = () => {

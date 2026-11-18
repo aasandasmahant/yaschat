@@ -1,4 +1,4 @@
-import { Tooltip, PositionAnimated, AnimatedVisibility } from '@rocket.chat/fuselage';
+import { Tooltip, PositionAnimated, AnimatedVisibility } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useRef } from 'react';
 

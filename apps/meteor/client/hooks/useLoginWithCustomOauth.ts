@@ -1,5 +1,5 @@
-import type { OAuthConfiguration } from '@rocket.chat/core-typings';
-import { useSearchParameter } from '@rocket.chat/ui-contexts';
+import type { OAuthConfiguration } from '@yas chat/core-typings';
+import { useSearchParameter } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 type LoginWithCustomOauthOptions = {

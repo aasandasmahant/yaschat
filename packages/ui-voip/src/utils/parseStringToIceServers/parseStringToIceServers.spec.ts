@@ -23,13 +23,13 @@ describe('parseStringToIceServers', () => {
 
 		it('should parse string to servers with multiple urls, with password and username', () => {
 			const servers = parseStringToIceServers(
-				'stun:stun.l.google.com:19302,stun:stun1.l.google.com:19302,team%40rocket.chat:demo@turn:numb.viagenie.ca:3478',
+				'stun:stun.l.google.com:19302,stun:stun1.l.google.com:19302,team%40yas chat:demo@turn:numb.viagenie.ca:3478',
 			);
 			expect(servers.length).toEqual(3);
 			expect(servers[0].urls).toEqual('stun:stun.l.google.com:19302');
 			expect(servers[1].urls).toEqual('stun:stun1.l.google.com:19302');
 			expect(servers[2].urls).toEqual('turn:numb.viagenie.ca:3478');
-			expect(servers[2].username).toEqual('team@rocket.chat');
+			expect(servers[2].username).toEqual('team@yas chat');
 			expect(servers[2].credential).toEqual('demo');
 		});
 	});
@@ -41,9 +41,9 @@ describe('parseStringToIceServers', () => {
 		});
 
 		it('should parse string to server with username and password', () => {
-			const server = parseStringToIceServer('team%40rocket.chat:demo@turn:numb.viagenie.ca:3478');
+			const server = parseStringToIceServer('team%40yas chat:demo@turn:numb.viagenie.ca:3478');
 			expect(server.urls).toEqual('turn:numb.viagenie.ca:3478');
-			expect(server.username).toEqual('team@rocket.chat');
+			expect(server.username).toEqual('team@yas chat');
 			expect(server.credential).toEqual('demo');
 		});
 	});

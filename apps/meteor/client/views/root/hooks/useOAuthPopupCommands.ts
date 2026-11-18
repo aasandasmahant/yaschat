@@ -1,5 +1,5 @@
-import { escapeRegExp } from '@rocket.chat/tools';
-import { type LocationPathname, useLoginWithToken } from '@rocket.chat/ui-contexts';
+import { escapeRegExp } from '@yas chat/tools';
+import { type LocationPathname, useLoginWithToken } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { ltrim, rtrim } from '../../../../lib/utils/stringUtils';

@@ -5,12 +5,12 @@ import { useCallDeviceSwitching } from './useCallDeviceSwitching';
 
 const persist = jest.fn();
 
-jest.mock('@rocket.chat/ui-conference', () => ({
+jest.mock('@yas chat/ui-conference', () => ({
 	callDeviceIdField: { audioinput: 'micId', videoinput: 'camId', audiooutput: 'speakerId' },
 	useUpdateCallPreferences: () => persist,
 }));
 
-jest.mock('@rocket.chat/ui-media', () => ({
+jest.mock('@yas chat/ui-media', () => ({
 	useMediaDevices: () => ({ devices: [], refresh: jest.fn() }),
 }));
 

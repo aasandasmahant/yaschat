@@ -1,4 +1,4 @@
-import type { ClassificationBannerStyle } from '@rocket.chat/core-typings';
+import type { ClassificationBannerStyle } from '@yas chat/core-typings';
 
 export type ClassificationBannerValue = {
 	source: string;

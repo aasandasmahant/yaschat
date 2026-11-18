@@ -1,5 +1,5 @@
-import { ServiceClassInternal, Authorization, Message, ClientSafeError, FederationMatrix } from '@rocket.chat/core-services';
-import type { ICreateRoomParams, IRoomService } from '@rocket.chat/core-services';
+import { ServiceClassInternal, Authorization, Message, ClientSafeError, FederationMatrix } from '@yas chat/core-services';
+import type { ICreateRoomParams, IRoomService } from '@yas chat/core-services';
 import {
 	type AtLeast,
 	type IRoom,
@@ -9,8 +9,8 @@ import {
 	isOmnichannelRoom,
 	isRoomWithJoinCode,
 	isUserNativeFederated,
-} from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { getNameForDMs } from './getNameForDMs';
 import { FederationActions } from './hooks/BeforeFederationActions';

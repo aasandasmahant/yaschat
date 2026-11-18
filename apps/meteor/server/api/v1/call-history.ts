@@ -1,7 +1,7 @@
-import { CallHistory as CallHistoryService } from '@rocket.chat/core-services';
-import type { CallHistoryItem, CallHistoryItemState, IMediaCall } from '@rocket.chat/core-typings';
-import { CallHistory, MediaCalls } from '@rocket.chat/models';
-import type { PaginatedRequest, PaginatedResult } from '@rocket.chat/rest-typings';
+import { CallHistory as CallHistoryService } from '@yas chat/core-services';
+import type { CallHistoryItem, CallHistoryItemState, IMediaCall } from '@yas chat/core-typings';
+import { CallHistory, MediaCalls } from '@yas chat/models';
+import type { PaginatedRequest, PaginatedResult } from '@yas chat/rest-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -11,7 +11,7 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { ensureArray } from '../../../lib/utils/arrayUtils';
 import type { ExtractRoutesFromAPI } from '../ApiClass';
@@ -211,7 +211,7 @@ const callHistoryInfoEndpoints = API.v1.get(
 
 type CallHistoryInfoEndpoints = ExtractRoutesFromAPI<typeof callHistoryInfoEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends CallHistoryListEndpoints {}
 

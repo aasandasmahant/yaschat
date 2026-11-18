@@ -1,4 +1,4 @@
-import type { LicenseLimitKind, LimitContext } from '@rocket.chat/core-typings';
+import type { LicenseLimitKind, LimitContext } from '@yas chat/core-typings';
 
 import type { LicenseManager } from '../license';
 import { logger } from '../logger';

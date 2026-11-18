@@ -1,8 +1,8 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
-import { escapeHTML, validateEmail } from '@rocket.chat/tools';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISetting } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
+import { escapeHTML, validateEmail } from '@yas chat/tools';
 import juice from 'juice';
 import { stripHtml } from 'string-strip-html';
 import _ from 'underscore';

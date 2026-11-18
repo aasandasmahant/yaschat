@@ -1,8 +1,8 @@
 import type { Socket } from 'node:net';
 
-import type { IMediaCall, MediaCallContact } from '@rocket.chat/core-typings';
-import type { ClientMediaSignalBody } from '@rocket.chat/media-signaling';
-import { Random } from '@rocket.chat/random';
+import type { IMediaCall, MediaCallContact } from '@yas chat/core-typings';
+import type { ClientMediaSignalBody } from '@yas chat/media-signaling';
+import { Random } from '@yas chat/random';
 import Srf, { type SrfResponse, type SrfRequest } from 'drachtio-srf';
 
 import { SipError, SipErrorCodes } from './errorCodes';

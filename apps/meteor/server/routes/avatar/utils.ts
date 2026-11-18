@@ -1,8 +1,8 @@
 import type { ServerResponse } from 'node:http';
 
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import type { IIncomingMessage, IUpload } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import type { IIncomingMessage, IUpload } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { NextFunction } from 'connect';
 import { parseCookie } from 'cookie';
 import sanitizeHtml from 'sanitize-html';

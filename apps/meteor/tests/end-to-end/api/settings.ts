@@ -1,6 +1,6 @@
 import { after, afterEach, before, describe, it } from 'node:test';
 
-import type { IServerEvents, LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { IServerEvents, LoginServiceConfiguration } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Label, Chevron, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Label, Chevron, useStyle } from '@yas chat/fuselage';
 import { useState, useContext } from 'react';
 
 import ItemsIcon from './ItemsIcon';

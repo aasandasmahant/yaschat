@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { usePermission, useSetting, useUser } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { usePermission, useSetting, useUser } from '@yas chat/ui-contexts';
 import type { DragEvent, ReactNode } from 'react';
 import { useMemo, useSyncExternalStore } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,8 +1,8 @@
-import type { ProgressStep } from '@rocket.chat/core-typings';
-import { Box, ProgressBar, Text, Throbber } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useStream, useRouter } from '@rocket.chat/ui-contexts';
+import type { ProgressStep } from '@yas chat/core-typings';
+import { Box, ProgressBar, Text, Throbber } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useStream, useRouter } from '@yas chat/ui-contexts';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

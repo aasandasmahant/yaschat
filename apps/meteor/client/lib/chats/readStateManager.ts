@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 
 import { withDebouncing } from '../../../lib/utils/highOrderFunctions';
 import { Messages } from '../../stores';

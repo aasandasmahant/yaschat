@@ -1,8 +1,8 @@
 import { faker } from '@faker-js/faker';
-import type { IAuditServerUserActor, IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { UpdaterImpl } from '@rocket.chat/models';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IAuditServerUserActor, IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { UpdaterImpl } from '@yas chat/models';
+import { mockModel } from '@yas chat/models/testing';
 
 import { UserChangedAuditStore } from './userChanged';
 import { createFakeUser } from '../../../tests/mocks/data';

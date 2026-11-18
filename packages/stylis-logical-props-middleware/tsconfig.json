@@ -1,5 +1,5 @@
 {
-	"extends": "@rocket.chat/tsconfig/client.json",
+	"extends": "@yas chat/tsconfig/client.json",
 	"compilerOptions": {
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
@@ -7,7 +7,7 @@
 		"outDir": "./dist"
 	},
 	// Deliberately empty: it clears the `**/*.spec.ts` exclusion inherited from
-	// @rocket.chat/tsconfig, so `tsc --noEmit` covers the specs as well. Nothing
+	// @yas chat/tsconfig, so `tsc --noEmit` covers the specs as well. Nothing
 	// else typechecks them — the jest preset transpiles with @swc/jest — and the
 	// build passes drop them through their own `exclude`.
 	"exclude": [],

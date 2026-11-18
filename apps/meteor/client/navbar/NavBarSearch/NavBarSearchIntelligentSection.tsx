@@ -1,8 +1,8 @@
-import type { NavBarSearchFormValues } from '@rocket.chat/ai-search';
-import { parseSearchInput, removeDraftFilter, serializeSearchQuery } from '@rocket.chat/ai-search';
-import { Box, Button, IconButton, ItemActions, ItemGroupHeader, ItemGroupTitle } from '@rocket.chat/fuselage';
-import type { AISearchResult } from '@rocket.chat/rest-typings';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { NavBarSearchFormValues } from '@yas chat/ai-search';
+import { parseSearchInput, removeDraftFilter, serializeSearchQuery } from '@yas chat/ai-search';
+import { Box, Button, IconButton, ItemActions, ItemGroupHeader, ItemGroupTitle } from '@yas chat/fuselage';
+import type { AISearchResult } from '@yas chat/rest-typings';
+import { useRouter } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 import { useFormContext, useWatch } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

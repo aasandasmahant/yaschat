@@ -1,6 +1,6 @@
-import { Skeleton, Callout } from '@rocket.chat/fuselage';
-import { TextInput } from '@rocket.chat/fuselage-forms';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { Skeleton, Callout } from '@yas chat/fuselage';
+import { TextInput } from '@yas chat/fuselage-forms';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ComponentPropsWithoutRef } from 'react';
 import { useMemo } from 'react';

@@ -1,6 +1,6 @@
-import { Upload, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { Upload, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import { DDPRateLimiter } from 'meteor/ddp-rate-limiter';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

@@ -1,6 +1,6 @@
-import { Team } from '@rocket.chat/core-services';
-import type { AtLeast, IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated, isRoomXMPPFederated, TeamType } from '@rocket.chat/core-typings';
+import { Team } from '@yas chat/core-services';
+import type { AtLeast, IRoom } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomNativeFederated, isRoomXMPPFederated, TeamType } from '@yas chat/core-typings';
 
 import type { IRoomTypeServerDirectives } from '../../../../definition/IRoomTypeConfig';
 import { RoomSettingsEnum, RoomMemberActions } from '../../../../definition/IRoomTypeConfig';

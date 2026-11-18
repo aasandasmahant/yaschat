@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Divider } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Divider } from '@yas chat/fuselage';
 import type { Dispatch, RefObject, SetStateAction } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { isEditedMessage } from '@rocket.chat/core-typings';
+import { isEditedMessage } from '@yas chat/core-typings';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { ReadReceipt } from '../../lib/message-read-receipt/ReadReceipt';

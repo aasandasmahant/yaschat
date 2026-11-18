@@ -1,5 +1,5 @@
-import type { CloudConfirmationPollData } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { CloudConfirmationPollData } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { assertNotOfflineLicense } from './offlineLicense';
 import { settings } from '../../settings';

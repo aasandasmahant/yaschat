@@ -1,8 +1,8 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { isUserNativeFederated } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Invites, Users, Subscriptions } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { isUserNativeFederated } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Invites, Users, Subscriptions } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 import type { ClientSession } from 'mongodb';
 import _ from 'underscore';

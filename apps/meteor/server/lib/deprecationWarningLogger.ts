@@ -1,5 +1,5 @@
-import { Logger } from '@rocket.chat/logger';
-import type { PathPattern } from '@rocket.chat/rest-typings';
+import { Logger } from '@yas chat/logger';
+import type { PathPattern } from '@yas chat/rest-typings';
 import semver from 'semver';
 
 import { metrics } from './metrics/lib/metrics';

@@ -1,4 +1,4 @@
-import type { XmppDnsResolver, XmppServerAddress } from '@rocket.chat/xmpp-server';
+import type { XmppDnsResolver, XmppServerAddress } from '@yas chat/xmpp-server';
 
 const normalize = (domain: string): string => domain.trim().toLowerCase().replace(/\.$/, '');
 

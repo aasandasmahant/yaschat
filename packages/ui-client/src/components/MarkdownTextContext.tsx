@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { ComponentType } from 'react';
 import { createContext } from 'react';
 

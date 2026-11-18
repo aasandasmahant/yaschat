@@ -1,5 +1,5 @@
-import type { IMessage, ISupportedLanguage } from '@rocket.chat/core-typings';
-import { Messages, Rooms } from '@rocket.chat/models';
+import type { IMessage, ISupportedLanguage } from '@yas chat/core-typings';
+import { Messages, Rooms } from '@yas chat/models';
 import {
 	ajv,
 	validateUnauthorizedErrorResponse,
@@ -7,7 +7,7 @@ import {
 	validateForbiddenErrorResponse,
 	isAutotranslateSaveSettingsParamsPOST,
 	isAutotranslateGetSupportedLanguagesParamsGET,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { canAccessRoomAsync } from '../../lib/authorization';
 import { TranslationProviderRegistry } from '../../lib/autotranslate/autotranslate';
@@ -203,7 +203,7 @@ const autotranslateEndpoints = API.v1
 
 type AutotranslateEndpoints = ExtractRoutesFromAPI<typeof autotranslateEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends AutotranslateEndpoints {}
 }

@@ -1,6 +1,6 @@
-import type { AppStatus } from '@rocket.chat/apps';
-import { AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
-import { Box, Tag, type TableColumnWidth } from '@rocket.chat/fuselage';
+import type { AppStatus } from '@yas chat/apps';
+import { AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
+import { Box, Tag, type TableColumnWidth } from '@yas chat/fuselage';
 import {
 	GenericMenu,
 	CustomScrollbars,
@@ -11,8 +11,8 @@ import {
 	GenericTableHeaderCell,
 	GenericTableRow,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import AccordionLoading from '../../../components/AccordionLoading';

@@ -1,5 +1,5 @@
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

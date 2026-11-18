@@ -1,4 +1,4 @@
-import { Base64 } from '@rocket.chat/base64';
+import { Base64 } from '@yas chat/base64';
 
 import { PrefixedBase64 } from './prefixed';
 

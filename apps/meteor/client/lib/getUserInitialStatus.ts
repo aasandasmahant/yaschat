@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus as UserStatusType } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus as UserStatusType } from '@yas chat/core-typings';
 
 export type UserStatusInitialValues = {
 	statusText: string;

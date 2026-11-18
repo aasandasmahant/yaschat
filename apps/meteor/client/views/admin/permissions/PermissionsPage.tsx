@@ -1,7 +1,7 @@
-import { Margins, Button } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { usePagination, Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
-import { useRoute, usePermission, useSetModal } from '@rocket.chat/ui-contexts';
+import { Margins, Button } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { usePagination, Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { useRoute, usePermission, useSetModal } from '@yas chat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

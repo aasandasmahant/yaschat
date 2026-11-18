@@ -1,8 +1,8 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { TextAreaInput, FieldGroup, Field, FieldRow, FieldError, FieldLabel, FieldDescription, Box } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { TextAreaInput, FieldGroup, Field, FieldRow, FieldError, FieldLabel, FieldDescription, Box } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

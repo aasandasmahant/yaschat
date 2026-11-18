@@ -1,4 +1,4 @@
-import type { CloudRegistrationIntentData, CloudConfirmationPollData, CloudRegistrationStatus } from '@rocket.chat/core-typings';
+import type { CloudRegistrationIntentData, CloudConfirmationPollData, CloudRegistrationStatus } from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 

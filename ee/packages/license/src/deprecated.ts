@@ -1,4 +1,4 @@
-import type { ILicenseV3, LicenseLimitKind } from '@rocket.chat/core-typings';
+import type { ILicenseV3, LicenseLimitKind } from '@yas chat/core-typings';
 
 import type { LicenseManager } from './license';
 import { getModules } from './modules';

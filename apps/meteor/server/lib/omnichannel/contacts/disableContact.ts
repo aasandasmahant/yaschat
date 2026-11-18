@@ -1,5 +1,5 @@
-import type { ILivechatContact } from '@rocket.chat/core-typings';
-import { LivechatContacts, LivechatRooms } from '@rocket.chat/models';
+import type { ILivechatContact } from '@yas chat/core-typings';
+import { LivechatContacts, LivechatRooms } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 import { removeGuest } from '../guests';

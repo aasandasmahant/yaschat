@@ -1,5 +1,5 @@
-import type { ImageAttachmentProps } from '@rocket.chat/core-typings';
-import { useMediaUrl } from '@rocket.chat/ui-contexts';
+import type { ImageAttachmentProps } from '@yas chat/core-typings';
+import { useMediaUrl } from '@yas chat/ui-contexts';
 
 import { useLoadImage } from './hooks/useLoadImage';
 import MarkdownText from '../../../../MarkdownText';

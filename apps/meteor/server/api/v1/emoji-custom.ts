@@ -1,7 +1,7 @@
-import { Media, ClientSafeError } from '@rocket.chat/core-services';
-import type { IEmojiCustom, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { EmojiCustom } from '@rocket.chat/models';
-import type { PaginatedRequest } from '@rocket.chat/rest-typings';
+import { Media, ClientSafeError } from '@yas chat/core-services';
+import type { IEmojiCustom, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { EmojiCustom } from '@yas chat/models';
+import type { PaginatedRequest } from '@yas chat/rest-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -9,8 +9,8 @@ import {
 	paginatedResponseProperties,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { WithId } from 'mongodb';
 
 import type { EmojiData } from '../../lib/media/emoji-custom/lib/insertOrUpdateEmoji';
@@ -324,7 +324,7 @@ type EmojiCustomCreateEndpoints = ExtractRoutesFromAPI<typeof emojiCustomCreateE
 
 export type EmojiCustomEndpoints = EmojiCustomCreateEndpoints;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends EmojiCustomCreateEndpoints {}
 }

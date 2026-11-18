@@ -1,7 +1,7 @@
-import type { ILivechatDepartmentAgents, Serialized } from '@rocket.chat/core-typings';
-import { AutoComplete, Box, Chip, Option, OptionAvatar, OptionContent } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@rocket.chat/ui-avatar';
+import type { ILivechatDepartmentAgents, Serialized } from '@yas chat/core-typings';
+import { AutoComplete, Box, Chip, Option, OptionAvatar, OptionContent } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
 import type { AllHTMLAttributes } from 'react';
 import { useMemo, useState } from 'react';
 

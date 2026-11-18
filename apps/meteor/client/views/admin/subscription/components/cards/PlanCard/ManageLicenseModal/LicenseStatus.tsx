@@ -1,4 +1,4 @@
-import { Callout, Skeleton } from '@rocket.chat/fuselage';
+import { Callout, Skeleton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 type LicenseStatusProps = {

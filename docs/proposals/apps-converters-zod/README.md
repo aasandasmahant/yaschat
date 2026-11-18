@@ -202,8 +202,8 @@ extended with the nested `{ from, map, list }` branch so it fully reproduces `tr
 two were migrated by swapping their `transformMappedData` calls for the shared `mappedDecodeAsync`
 helper *in place*, rather than being wrapped in `create*Codec` factories. Reasons:
 
-1. **Test harness.** `messages.test.js` uses `proxyquire` to stub `@rocket.chat/models`,
-   `@rocket.chat/random` and `@rocket.chat/core-typings` (`isMessageFromVisitor`) on the `messages.ts`
+1. **Test harness.** `messages.test.js` uses `proxyquire` to stub `@yas chat/models`,
+   `@yas chat/random` and `@yas chat/core-typings` (`isMessageFromVisitor`) on the `messages.ts`
    module. `proxyquire` only replaces a module's *own* `require`s, so moving `convertAppMessage`'s
    model/`Random` usage into a separate `codecs/messages.ts` module would bypass the stubs and break
    the test (real `Rooms.findOneById` → no `GENERAL` room → the "proper schema"/"invalid room" cases

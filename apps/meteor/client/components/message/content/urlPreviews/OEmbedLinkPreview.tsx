@@ -1,5 +1,5 @@
-import { MessageGenericPreviewCoverImage } from '@rocket.chat/fuselage';
-import { ExternalLink } from '@rocket.chat/ui-client';
+import { MessageGenericPreviewCoverImage } from '@yas chat/fuselage';
+import { ExternalLink } from '@yas chat/ui-client';
 
 import OEmbedCollapsible from './OEmbedCollapsible';
 import type { OEmbedPreviewMetadata } from './OEmbedPreviewMetadata';

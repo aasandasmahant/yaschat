@@ -1,4 +1,4 @@
-import { Margins, Palette } from '@rocket.chat/fuselage';
+import { Margins, Palette } from '@yas chat/fuselage';
 import type { ReactNode, ComponentProps, CSSProperties } from 'react';
 
 import { ListComponent } from './List.styles';

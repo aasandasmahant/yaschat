@@ -1,4 +1,4 @@
-import { useRoute, useRouteParameter, useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { useRoute, useRouteParameter, useRoomToolbox } from '@yas chat/ui-contexts';
 
 import ContactInfo from './ContactInfo';
 import ContactInfoError from './ContactInfoError';

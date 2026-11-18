@@ -1,4 +1,4 @@
-export const GO_ROCKET_CHAT_PREFIX = 'https://go.rocket.chat';
+export const GO_ROCKET_CHAT_PREFIX = 'https://go.yas chat';
 
 export const links = {
 	go: {
@@ -18,7 +18,7 @@ export const links = {
 		getAddons: `${GO_ROCKET_CHAT_PREFIX}/i/get-addons`,
 		glossary: `${GO_ROCKET_CHAT_PREFIX}/i/glossary`,
 		homepage: `${GO_ROCKET_CHAT_PREFIX}/home`,
-		invite: `${GO_ROCKET_CHAT_PREFIX}/invite?host=open.rocket.chat&path=invite%2F5sBs3a`,
+		invite: `${GO_ROCKET_CHAT_PREFIX}/invite?host=open.yas chat&path=invite%2F5sBs3a`,
 		ldapDocs: `${GO_ROCKET_CHAT_PREFIX}/i/ldap-docs`,
 		matrixFederation: `${GO_ROCKET_CHAT_PREFIX}/i/matrix-federation`,
 		mobileAppGoogle: `${GO_ROCKET_CHAT_PREFIX}/i/hp-mobile-app-google`,
@@ -35,26 +35,26 @@ export const links = {
 		abacLDAPDocs: `${GO_ROCKET_CHAT_PREFIX}/i/abac-ldap`,
 		logsDocs: `${GO_ROCKET_CHAT_PREFIX}/i/logs-docs`,
 	},
-	/** @deprecated use `go.rocket.chat` links */
-	desktopAppDownload: 'https://rocket.chat/download',
-	/** @deprecated use `go.rocket.chat` links */
-	enterprise: 'https://www.rocket.chat/enterprise',
-	/** @deprecated use `go.rocket.chat` links */
-	outboundDocs: 'https://docs.rocket.chat/docs/p2p-outbound-messaging',
-	/** @deprecated use `go.rocket.chat` links */
-	privacy: 'https://rocket.chat/privacy',
-	/** @deprecated use `go.rocket.chat` links */
-	retentionPolicy: 'https://docs.rocket.chat/use-rocket.chat/workspace-administration/settings/retention-policies',
-	/** @deprecated use `go.rocket.chat` links */
-	rocketChat: 'https://rocket.chat/',
-	/** @deprecated use `go.rocket.chat` links */
-	rocketChatUpdated: 'https://rocket.chat/updated',
-	/** @deprecated use `go.rocket.chat` links */
-	scaling: 'https://docs.rocket.chat/deploy/scaling-rocket.chat',
-	/** @deprecated use `go.rocket.chat` links */
-	terms: 'https://rocket.chat/terms',
-	/** @deprecated use `go.rocket.chat` links */
-	updatingYasChat: 'https://docs.rocket.chat/v1/docs/en/updating-yaschat',
-	/** @deprecated use `go.rocket.chat` links */
-	webhooks: 'https://docs.rocket.chat/use-rocket.chat/omnichannel/webhooks',
+	/** @deprecated use `go.yas chat` links */
+	desktopAppDownload: 'https://yas chat/download',
+	/** @deprecated use `go.yas chat` links */
+	enterprise: 'https://www.yas chat/enterprise',
+	/** @deprecated use `go.yas chat` links */
+	outboundDocs: 'https://docs.yas chat/docs/p2p-outbound-messaging',
+	/** @deprecated use `go.yas chat` links */
+	privacy: 'https://yas chat/privacy',
+	/** @deprecated use `go.yas chat` links */
+	retentionPolicy: 'https://docs.yas chat/use-yas chat/workspace-administration/settings/retention-policies',
+	/** @deprecated use `go.yas chat` links */
+	YasChat: 'https://yas chat/',
+	/** @deprecated use `go.yas chat` links */
+	YasChatUpdated: 'https://yas chat/updated',
+	/** @deprecated use `go.yas chat` links */
+	scaling: 'https://docs.yas chat/deploy/scaling-yas chat',
+	/** @deprecated use `go.yas chat` links */
+	terms: 'https://yas chat/terms',
+	/** @deprecated use `go.yas chat` links */
+	updatingYasChat: 'https://docs.yas chat/v1/docs/en/updating-yaschat',
+	/** @deprecated use `go.yas chat` links */
+	webhooks: 'https://docs.yas chat/use-yas chat/omnichannel/webhooks',
 } as const;

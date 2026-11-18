@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import type { Editor, EditorConfiguration, EditorFromTextArea } from 'codemirror';
 import { useEffect, useRef, useState } from 'react';
 

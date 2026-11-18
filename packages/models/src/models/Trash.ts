@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@yas chat/core-typings';
 import type { Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

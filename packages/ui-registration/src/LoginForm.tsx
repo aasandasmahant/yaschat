@@ -10,10 +10,10 @@ import {
 	ButtonGroup,
 	Button,
 	Callout,
-} from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@rocket.chat/layout';
-import { useDocumentTitle } from '@rocket.chat/ui-client';
-import { useLoginWithPassword, useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@yas chat/layout';
+import { useDocumentTitle } from '@yas chat/ui-client';
+import { useLoginWithPassword, useSetting } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect, useId, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';

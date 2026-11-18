@@ -1,9 +1,9 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import { AI_SEARCH_PAGE_SIZE, MAX_INTELLIGENT_SEARCH_RESULTS, MAX_SEARCH_FILTER_VALUES } from '@rocket.chat/ai-search';
-import { ClientSafeError, LocalBroker, ServiceClass, api } from '@rocket.chat/core-services';
-import type { IAISearchService, IAuthorization } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { AI_SEARCH_PAGE_SIZE, MAX_INTELLIGENT_SEARCH_RESULTS, MAX_SEARCH_FILTER_VALUES } from '@yas chat/ai-search';
+import { ClientSafeError, LocalBroker, ServiceClass, api } from '@yas chat/core-services';
+import type { IAISearchService, IAuthorization } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

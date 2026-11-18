@@ -1,5 +1,5 @@
-import { manageFavicon } from '@rocket.chat/favicon';
-import { useSession, useSessionDispatch, useUserPreference, useUserSubscriptions } from '@rocket.chat/ui-contexts';
+import { manageFavicon } from '@yas chat/favicon';
+import { useSession, useSessionDispatch, useUserPreference, useUserSubscriptions } from '@yas chat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { useFireGlobalEvent } from '../../../../hooks/useFireGlobalEvent';

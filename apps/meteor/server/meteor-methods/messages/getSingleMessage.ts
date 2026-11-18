@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';
 

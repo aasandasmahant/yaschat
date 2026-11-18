@@ -1,4 +1,4 @@
-import { addSprinfToI18n } from '@rocket.chat/i18n';
+import { addSprinfToI18n } from '@yas chat/i18n';
 import i18next from 'i18next';
 import sprintf from 'i18next-sprintf-postprocessor';
 

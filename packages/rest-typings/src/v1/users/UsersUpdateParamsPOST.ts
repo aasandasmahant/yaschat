@@ -1,4 +1,4 @@
-import type { IUserPhoneNumber, IUserSettings } from '@rocket.chat/core-typings';
+import type { IUserPhoneNumber, IUserSettings } from '@yas chat/core-typings';
 
 import { ajv } from '../Ajv';
 import { phonesSchema } from './phonesSchema';

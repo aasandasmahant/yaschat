@@ -9,7 +9,7 @@ import {
 	Field,
 	FieldLabel,
 	FieldRow,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import {
 	ContextualbarFooter,
 	ContextualbarScrollableContent,
@@ -17,8 +17,8 @@ import {
 	GenericNoResults,
 	UserCardRoles,
 	FormSkeleton,
-} from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

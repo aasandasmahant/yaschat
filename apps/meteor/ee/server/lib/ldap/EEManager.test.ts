@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -21,8 +21,8 @@ class LDAPManagerStub {
 }
 
 const { LDAPEEManager } = proxyquire.noCallThru().load('./EEManager', {
-	'@rocket.chat/core-services': { Abac: {}, Team: {} },
-	'@rocket.chat/license': { License: { hasModule: () => false } },
+	'@yas chat/core-services': { Abac: {}, Team: {} },
+	'@yas chat/license': { License: { hasModule: () => false } },
 	'../../../../server/lib/import/definitions/IConversionCallbacks': {},
 	'../../../../server/settings': { settings: settingsStub },
 	'../../../../server/lib/utils/lib/getValidRoomName': { getValidRoomName: (name: string) => Promise.resolve(name) },

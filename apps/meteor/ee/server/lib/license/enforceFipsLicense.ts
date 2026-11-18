@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 import { showErrorBox } from '../../../../server/lib/logger/showBox';
 
@@ -26,8 +26,8 @@ export function enforceFipsLicense(): void {
 			'This server is running in FIPS mode, which requires a valid license',
 			"including the 'fips' module.",
 			'',
-			'Provide your license through the ROCKETCHAT_LICENSE environment variable,',
-			'or contact YasChat to obtain one: https://www.rocket.chat/sales-contact',
+			'Provide your license through the YasChat_LICENSE environment variable,',
+			'or contact YasChat to obtain one: https://www.yas chat/sales-contact',
 		].join('\n'),
 	);
 

@@ -1,4 +1,4 @@
-import type { ISetting, SettingValue } from '@rocket.chat/core-typings';
+import type { ISetting, SettingValue } from '@yas chat/core-typings';
 
 const parseIntegerValue = (value: string): number => {
 	const parsed = Number(value);

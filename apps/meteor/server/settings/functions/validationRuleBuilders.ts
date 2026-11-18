@@ -1,4 +1,4 @@
-import type { ISetting, SettingValidationRule } from '@rocket.chat/core-typings';
+import type { ISetting, SettingValidationRule } from '@yas chat/core-typings';
 
 export const validCron = (): SettingValidationRule => ({ type: 'cron' });
 

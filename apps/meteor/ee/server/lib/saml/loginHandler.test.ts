@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -21,7 +21,7 @@ const hasModule = sinon.stub().returns(true);
 
 const handler = sinon.stub();
 proxyquire.noCallThru().load('./loginHandler', {
-	'@rocket.chat/license': {
+	'@yas chat/license': {
 		License: { hasModule },
 	},
 	'meteor/accounts-base': {

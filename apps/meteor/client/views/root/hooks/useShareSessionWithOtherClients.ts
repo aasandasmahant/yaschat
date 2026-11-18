@@ -1,4 +1,4 @@
-import { useRouter, useSearchParameter, useUserId } from '@rocket.chat/ui-contexts';
+import { useRouter, useSearchParameter, useUserId } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { buildDeepLinkURL } from '../../../lib/buildAuthDeeplinkURL';

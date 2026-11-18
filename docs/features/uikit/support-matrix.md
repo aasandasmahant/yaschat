@@ -4,7 +4,7 @@
 
 Which layout blocks each surface accepts, and which renderer draws them.
 
-Each surface has one list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`). The surface layout type is derived from that list, the `UiKitParser*` class passes it to `SurfaceRenderer`, and the matching Fuselage renderer passes it too, where one exists. The `ui-kit` spec checks that each parser lets through exactly its list; the Fuselage spec checks that each renderer has a method for every block in it. Apps do not see the lists at compile time: the apps-engine types every surface and message as `Array<IBlock | LayoutBlock>`.
+Each surface has one list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`). The surface layout type is derived from that list, the `UiKitParser*` class passes it to `SurfaceRenderer`, and the matching Fuselage renderer passes it too, where one exists. The `ui-kit` spec checks that each parser lets through exactly its list; the Fuselage spec checks that each renderer has a method for every block in it. Apps do not see the lists at compile time: the apps-engine types every surface and message as `Array<IBlock | LayoutBlock>`.
 
 `conditional` is omitted: it is unwrapped before the list is checked.
 

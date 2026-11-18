@@ -1,5 +1,5 @@
-import type { IRoom, RoomType } from '@rocket.chat/core-typings';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { IRoom, RoomType } from '@yas chat/core-typings';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 type RoomRouteData = {

@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Subscriptions } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Subscriptions } from '@yas chat/models';
 
 import { callbacks } from '../lib/callbacks';
 import { notifyOnSubscriptionChangedByUserId } from '../lib/notifyListener';

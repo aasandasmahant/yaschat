@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
-import { Box, Button, Callout, Field, FieldGroup, FieldLabel, InputBoxSkeleton } from '@rocket.chat/fuselage';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
+import { Box, Button, Callout, Field, FieldGroup, FieldLabel, InputBoxSkeleton } from '@yas chat/fuselage';
 import { useEffect, useMemo } from 'react';
 import { useFieldArray, useFormContext, useWatch } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

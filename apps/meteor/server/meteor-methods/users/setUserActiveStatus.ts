@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { setUserActiveStatus } from '../../lib/users/setUserActiveStatus';

@@ -1,5 +1,5 @@
-import { Emitter } from '@rocket.chat/emitter';
-import type { CallRole, CallState } from '@rocket.chat/media-signaling';
+import { Emitter } from '@yas chat/emitter';
+import type { CallRole, CallState } from '@yas chat/media-signaling';
 import { renderHook, act } from '@testing-library/react';
 import type { ReactNode } from 'react';
 

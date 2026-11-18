@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IIntegration, INewIncomingIntegration, IUpdateIncomingIntegration } from '@rocket.chat/core-typings';
-import { Integrations, Subscriptions, Users, Rooms } from '@rocket.chat/models';
-import { wrapExceptions } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IIntegration, INewIncomingIntegration, IUpdateIncomingIntegration } from '@yas chat/core-typings';
+import { Integrations, Subscriptions, Users, Rooms } from '@yas chat/models';
+import { wrapExceptions } from '@yas chat/tools';
 
 import { hasAllPermissionAsync, hasPermissionAsync } from '../../../lib/authorization/hasPermission';
 import { isScriptEngineFrozen, validateScriptEngine } from '../../../lib/integrations/lib/validateScriptEngine';

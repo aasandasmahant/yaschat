@@ -1,7 +1,7 @@
-import type { IMessage, IRoom, IUser, RoomType } from '@rocket.chat/core-typings';
-import { isEditedMessage } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Subscriptions, Rooms } from '@rocket.chat/models';
+import type { IMessage, IRoom, IUser, RoomType } from '@yas chat/core-typings';
+import { isEditedMessage } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Subscriptions, Rooms } from '@yas chat/models';
 import moment from 'moment';
 
 import { callbacks } from '../../lib/callbacks';

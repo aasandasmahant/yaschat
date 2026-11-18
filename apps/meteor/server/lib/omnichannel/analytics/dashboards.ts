@@ -1,6 +1,6 @@
-import { OmnichannelAnalytics } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { LivechatRooms, Users, LivechatVisitors, LivechatAgentActivity } from '@rocket.chat/models';
+import { OmnichannelAnalytics } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { LivechatRooms, Users, LivechatVisitors, LivechatAgentActivity } from '@yas chat/models';
 import mem from 'mem';
 import moment from 'moment';
 

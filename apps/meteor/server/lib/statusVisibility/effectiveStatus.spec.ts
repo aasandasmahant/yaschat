@@ -1,5 +1,5 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import { UserStatus } from '@rocket.chat/core-typings';
+import type { PresenceScope } from '@yas chat/core-services';
+import { UserStatus } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { effectiveStatusExpression, effectiveStatusFilter, excludingHiddenFilter, excludingOfflineFilter } from './effectiveStatus';

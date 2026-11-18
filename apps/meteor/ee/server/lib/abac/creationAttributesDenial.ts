@@ -1,5 +1,5 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import type { AbacCreationAttributesDenialReason, AbacCreationAttributesResult } from '@rocket.chat/core-services';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import type { AbacCreationAttributesDenialReason, AbacCreationAttributesResult } from '@yas chat/core-services';
 
 type AbacCreationAttributesDenial = Extract<AbacCreationAttributesResult, { allowed: false }>;
 

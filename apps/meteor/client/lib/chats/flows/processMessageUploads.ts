@@ -1,5 +1,5 @@
-import type { AtLeast, FileAttachmentProps, IE2EEMessage, IMessage, IUploadToConfirm } from '@rocket.chat/core-typings';
-import { imperativeModal, GenericModal } from '@rocket.chat/ui-client';
+import type { AtLeast, FileAttachmentProps, IE2EEMessage, IMessage, IUploadToConfirm } from '@yas chat/core-typings';
+import { imperativeModal, GenericModal } from '@yas chat/ui-client';
 
 import { t } from '../../../../lib/i18n';
 import { getFileExtension } from '../../../../lib/utils/getFileExtension';

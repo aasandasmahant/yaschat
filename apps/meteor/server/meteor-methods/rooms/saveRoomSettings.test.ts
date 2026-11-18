@@ -1,9 +1,9 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError, LocalBroker, ServiceClass, api } from '@rocket.chat/core-services';
-import type { IAuthorization, IMessageService, IRoomService, ITeamService } from '@rocket.chat/core-services';
-import { TeamType } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError, LocalBroker, ServiceClass, api } from '@yas chat/core-services';
+import type { IAuthorization, IMessageService, IRoomService, ITeamService } from '@yas chat/core-services';
+import { TeamType } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

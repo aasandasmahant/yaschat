@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
+import type { IUser } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
 import { Accounts } from 'meteor/accounts-base';
 
 import { BusinessHourManager } from './BusinessHourManager';

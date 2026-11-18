@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 import type { IncomingMessage } from 'http';
 
-import type { ISocketConnection } from '@rocket.chat/core-typings';
+import type { ISocketConnection } from '@yas chat/core-typings';
 import { throttle } from 'underscore';
 import { v1 as uuidv1 } from 'uuid';
 import type WebSocket from 'ws';

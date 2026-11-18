@@ -1,5 +1,5 @@
-import type { OperationResult } from '@rocket.chat/rest-typings';
-import { useEndpoint, usePermission } from '@rocket.chat/ui-contexts';
+import type { OperationResult } from '@yas chat/rest-typings';
+import { useEndpoint, usePermission } from '@yas chat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

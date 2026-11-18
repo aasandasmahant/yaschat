@@ -1,5 +1,5 @@
-import type { IEmailInbox, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IEmailInboxModel } from '@rocket.chat/model-typings';
+import type { IEmailInbox, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IEmailInboxModel } from '@yas chat/model-typings';
 import type { Collection, Db, FindCursor, IndexDescription, InsertOneResult, UpdateFilter, WithId } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

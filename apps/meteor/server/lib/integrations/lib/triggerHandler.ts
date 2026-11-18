@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import type {
 	IIntegrationHistory,
 	IMessage,
@@ -8,10 +8,10 @@ import type {
 	IRoom,
 	RequiredField,
 	AtLeast,
-} from '@rocket.chat/core-typings';
-import { Integrations, Users, Rooms, Messages } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import { wrapExceptions } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { Integrations, Users, Rooms, Messages } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import { wrapExceptions } from '@yas chat/tools';
 import _ from 'underscore';
 
 import type { OutgoingRequestData } from './ScriptEngine';

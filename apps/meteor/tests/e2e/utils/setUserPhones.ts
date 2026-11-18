@@ -1,5 +1,5 @@
 import type { APIResponse } from '@playwright/test';
-import type { IUser, IUserPhoneNumber } from '@rocket.chat/core-typings';
+import type { IUser, IUserPhoneNumber } from '@yas chat/core-typings';
 
 import type { BaseTest } from './test';
 

@@ -1,4 +1,4 @@
-import { Card, CardControls, CardTitle } from '@rocket.chat/fuselage';
+import { Card, CardControls, CardTitle } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

@@ -1,5 +1,5 @@
-import type { IStats } from '@rocket.chat/core-typings';
-import { LivechatContacts } from '@rocket.chat/models';
+import type { IStats } from '@yas chat/core-typings';
+import { LivechatContacts } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 

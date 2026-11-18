@@ -1,5 +1,5 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { Omnichannel, ClientSafeError } from '@rocket.chat/core-services';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { Omnichannel, ClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatVisitor,
 	IMessage,
@@ -8,8 +8,8 @@ import type {
 	IOmnichannelRoomExtraData,
 	IOmnichannelRoom,
 	TransferData,
-} from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
 import {
 	LivechatRooms,
 	LivechatContacts,
@@ -21,7 +21,7 @@ import {
 	Users,
 	ReadReceipts,
 	ReadReceiptsArchive,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 
 import { normalizeTransferredByData } from './Helper';
 import { QueueManager } from './QueueManager';

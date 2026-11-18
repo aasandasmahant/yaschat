@@ -1,5 +1,5 @@
-import type { ILivechatVisitor, IOmnichannelSource } from '@rocket.chat/core-typings';
-import { LivechatRooms } from '@rocket.chat/models';
+import type { ILivechatVisitor, IOmnichannelSource } from '@yas chat/core-typings';
+import { LivechatRooms } from '@yas chat/models';
 
 import { createContact } from './createContact';
 import { mapVisitorToContact } from './mapVisitorToContact';

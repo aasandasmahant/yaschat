@@ -1,6 +1,6 @@
-import type { IOmnichannelBusinessUnit } from '@rocket.chat/core-typings';
-import { ContextualbarSkeletonBody } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelBusinessUnit } from '@yas chat/core-typings';
+import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import UnitEdit from './UnitEdit';

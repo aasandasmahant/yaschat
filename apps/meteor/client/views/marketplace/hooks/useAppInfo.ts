@@ -1,5 +1,5 @@
-import type { App } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useState, useEffect } from 'react';
 
 import { useApps } from './useApps';

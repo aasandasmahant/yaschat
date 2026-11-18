@@ -1,4 +1,4 @@
-import { Pagination, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@rocket.chat/fuselage';
+import { Pagination, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yas chat/fuselage';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -11,8 +11,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useRoute, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRoute, useEndpoint } from '@yas chat/ui-contexts';
 import { useMemo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

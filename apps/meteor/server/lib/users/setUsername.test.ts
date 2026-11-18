@@ -1,7 +1,7 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -50,7 +50,7 @@ describe('setUsername', () => {
 
 	const { setUsernameWithValidation, _setUsername } = proxyquire.noCallThru().load('./setUsername', {
 		'../../database/utils': { onceTransactionCommitedSuccessfully: async (cb: any, _sess: any) => cb() },
-		'@rocket.chat/core-services': { api: stubs.api, ClientSafeError },
+		'@yas chat/core-services': { api: stubs.api, ClientSafeError },
 		'meteor/accounts-base': { Accounts: stubs.Accounts },
 		'underscore': stubs.underscore,
 		'../../settings': { settings: stubs.settings },

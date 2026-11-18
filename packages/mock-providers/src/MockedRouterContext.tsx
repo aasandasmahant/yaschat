@@ -1,4 +1,4 @@
-import { RouterContext } from '@rocket.chat/ui-contexts';
+import { RouterContext } from '@yas chat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 
 export type MockedRouterContextProps = { children: ReactNode; router?: Partial<ContextType<typeof RouterContext>> };

@@ -1,11 +1,11 @@
-import { isE2EEMessage } from '@rocket.chat/core-typings';
+import { isE2EEMessage } from '@yas chat/core-typings';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useDecryptedMessage } from './useDecryptedMessage';
 import { e2e } from '../../../../../lib/e2ee/yaschat.e2e';
 
 // Mock the dependencies
-jest.mock('@rocket.chat/core-typings', () => ({
+jest.mock('@yas chat/core-typings', () => ({
 	isE2EEMessage: jest.fn(),
 }));
 

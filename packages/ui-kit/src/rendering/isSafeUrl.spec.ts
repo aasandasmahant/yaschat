@@ -1,14 +1,14 @@
 import { isSafeUrl } from './isSafeUrl.js';
 
 it.each([
-	'https://rocket.chat',
+	'https://yas chat',
 	'http://localhost:3000/path?q=1',
-	'mailto:someone@rocket.chat',
+	'mailto:someone@yas chat',
 	'tel:+5511999999999',
 	'zoommtg://zoom.us/join?confno=123',
 	'msteams:/l/meetup-join/abc',
 	'sip:alice@example.com',
-	'yaschat://room?host=open.rocket.chat&rid=GENERAL',
+	'yaschat://room?host=open.yas chat&rid=GENERAL',
 	'//cdn.example.com/file.pdf',
 	'/admin/apps',
 	'admin/apps',

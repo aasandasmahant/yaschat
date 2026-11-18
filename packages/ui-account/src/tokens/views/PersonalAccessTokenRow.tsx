@@ -1,5 +1,5 @@
-import { ButtonGroup, IconButton } from '@rocket.chat/fuselage';
-import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import { ButtonGroup, IconButton } from '@yas chat/fuselage';
+import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { PersonalAccessToken } from '../logic/personalAccessTokens';

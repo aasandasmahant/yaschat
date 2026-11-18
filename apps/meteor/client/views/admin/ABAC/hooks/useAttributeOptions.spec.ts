@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useAttributeOptions } from './useAttributeOptions';
@@ -13,8 +13,8 @@ jest.mock('./useIsABACAvailable', () => ({
 	useIsABACAvailable: () => useIsABACAvailableMock(),
 }));
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useRouter: () => ({
 		navigate: mockNavigate,
 	}),

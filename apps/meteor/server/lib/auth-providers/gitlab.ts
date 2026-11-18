@@ -1,4 +1,4 @@
-import type { OAuthConfiguration } from '@rocket.chat/core-typings';
+import type { OAuthConfiguration } from '@yas chat/core-typings';
 import passport from 'passport';
 import _ from 'underscore';
 

@@ -1,7 +1,7 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { AtLeast, IMessage, IUser } from '@rocket.chat/core-typings';
-import type { RocketchatI18nKeys } from '@rocket.chat/i18n';
-import { Messages, Users } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { AtLeast, IMessage, IUser } from '@yas chat/core-typings';
+import type { YasChatI18nKeys } from '@yas chat/i18n';
+import { Messages, Users } from '@yas chat/models';
 import type { TOptions } from 'i18next';
 import moment from 'moment';
 
@@ -104,7 +104,7 @@ export async function executeSendMessage(
 	} catch (err: any) {
 		SystemLogger.error({ msg: 'Error sending message:', err });
 
-		const errorMessage: RocketchatI18nKeys = typeof err === 'string' ? err : err.error || err.message;
+		const errorMessage: YasChatI18nKeys = typeof err === 'string' ? err : err.error || err.message;
 		const errorContext: TOptions = err.details ?? {};
 		void api.broadcast('notify.ephemeralMessage', user._id, message.rid, {
 			msg: i18n.t(errorMessage, { ...errorContext, lng: user.language }),

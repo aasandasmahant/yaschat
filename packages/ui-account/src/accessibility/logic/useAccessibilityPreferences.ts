@@ -1,7 +1,7 @@
-import type { ThemePreference } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { FontSize } from '@rocket.chat/rest-typings';
-import { useEndpoint, useSetting, useToastMessageDispatch, useUserPreference } from '@rocket.chat/ui-contexts';
+import type { ThemePreference } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { FontSize } from '@yas chat/rest-typings';
+import { useEndpoint, useSetting, useToastMessageDispatch, useUserPreference } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export type AccessibilityPreferencesData = {

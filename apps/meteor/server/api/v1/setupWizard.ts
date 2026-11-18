@@ -1,4 +1,4 @@
-import { ajv, validateBadRequestErrorResponse, validateForbiddenErrorResponse } from '@rocket.chat/rest-typings';
+import { ajv, validateBadRequestErrorResponse, validateForbiddenErrorResponse } from '@yas chat/rest-typings';
 
 import type { SetupWizardParameters } from '../../lib/getSetupWizardParameters';
 import { getSetupWizardParameters, isSetupWizardCompleted } from '../../lib/getSetupWizardParameters';

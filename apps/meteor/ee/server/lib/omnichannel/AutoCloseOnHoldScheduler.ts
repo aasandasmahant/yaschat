@@ -1,7 +1,7 @@
-import { Agenda } from '@rocket.chat/agenda';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { MainLogger } from '@rocket.chat/logger';
-import { LivechatRooms, Users } from '@rocket.chat/models';
+import { Agenda } from '@yas chat/agenda';
+import type { IUser } from '@yas chat/core-typings';
+import type { MainLogger } from '@yas chat/logger';
+import { LivechatRooms, Users } from '@yas chat/models';
 import moment from 'moment';
 
 import { schedulerLogger } from './logger';

@@ -1,4 +1,4 @@
-import { Subscriptions } from '@rocket.chat/models';
+import { Subscriptions } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 import { i18n } from '../../i18n';

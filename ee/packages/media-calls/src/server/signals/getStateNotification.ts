@@ -1,6 +1,6 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import { isPendingState } from '@rocket.chat/media-signaling';
-import type { CallFeature, CallNotification, CallRole, ServerMediaSignalNotification } from '@rocket.chat/media-signaling';
+import type { IMediaCall } from '@yas chat/core-typings';
+import { isPendingState } from '@yas chat/media-signaling';
+import type { CallFeature, CallNotification, CallRole, ServerMediaSignalNotification } from '@yas chat/media-signaling';
 
 function getStateForNotification(call: IMediaCall): CallNotification | null {
 	if (call.ended || call.state === 'hangup') {

@@ -1,5 +1,5 @@
-import type { MessageTypesValues } from '@rocket.chat/core-typings';
-import { Messages, Rooms, VideoConference } from '@rocket.chat/models';
+import type { MessageTypesValues } from '@yas chat/core-typings';
+import { Messages, Rooms, VideoConference } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import { SystemLogger } from '../../lib/logger/system';

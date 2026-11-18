@@ -16,9 +16,9 @@ import {
 	Stack,
 	Text,
 	TextInput,
-} from '@rocket.chat/fuselage';
-import { ExternalLink, links } from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ExternalLink, links } from '@yas chat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 

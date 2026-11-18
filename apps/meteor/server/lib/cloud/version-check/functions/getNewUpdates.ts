@@ -1,8 +1,8 @@
 import os from 'node:os';
 
-import { Settings } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { Settings } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { getWorkspaceAccessToken } from '../..';
 import { Info } from '../../../../../yaschat.info';
@@ -86,7 +86,7 @@ export const getNewUpdates = async () => {
 		const headers = {
 			...(token && { Authorization: `Bearer ${token}` }),
 		};
-		const url = 'https://releases.rocket.chat/updates/check';
+		const url = 'https://releases.yas chat/updates/check';
 		const response = await fetch(url, {
 			headers,
 			params,

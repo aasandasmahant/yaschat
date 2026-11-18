@@ -1,4 +1,4 @@
-import { Badge, Box, Button } from '@rocket.chat/fuselage';
+import { Badge, Box, Button } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

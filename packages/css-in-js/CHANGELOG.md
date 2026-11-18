@@ -5,9 +5,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec]:</summary>
-  - @rocket.chat/memo@0.31.26
-  - @rocket.chat/css-supports@0.31.27
-  - @rocket.chat/stylis-logical-props-middleware@0.31.27
+  - @yas chat/memo@0.31.26
+  - @yas chat/css-supports@0.31.27
+  - @yas chat/stylis-logical-props-middleware@0.31.27
 
   </details>
 
@@ -16,9 +16,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec, a9e0d93eb3c6e17476f5bf6081199a3ed8b253ec]:</summary>
-  - @rocket.chat/memo@0.31.26-rc.0
-  - @rocket.chat/css-supports@0.31.27-rc.0
-  - @rocket.chat/stylis-logical-props-middleware@0.31.27-rc.0
+  - @yas chat/memo@0.31.26-rc.0
+  - @yas chat/css-supports@0.31.27-rc.0
+  - @yas chat/stylis-logical-props-middleware@0.31.27-rc.0
 
   </details>
 
@@ -26,11 +26,11 @@
 
 ### Patch Changes
 
-- ([#41880](https://github.com/YasChat/YasChat/pull/41880)) Moved `@rocket.chat/css-in-js` into the YasChat monorepo, continuing from the frozen Fuselage 0.33.1 release. The exported API and its declarations are unchanged.
+- ([#41880](https://github.com/YasChat/YasChat/pull/41880)) Moved `@yas chat/css-in-js` into the YasChat monorepo, continuing from the frozen Fuselage 0.33.1 release. The exported API and its declarations are unchanged.
 
 - <details><summary>Updated dependencies [131bbceaff27f5c3f0156fdb21a4b2a79129c851, 5e8a7cb1432e5078ca87360a4c0ae83a0f21dd7b]:</summary>
-  - @rocket.chat/css-supports@0.31.26
-  - @rocket.chat/stylis-logical-props-middleware@0.31.26
+  - @yas chat/css-supports@0.31.26
+  - @yas chat/stylis-logical-props-middleware@0.31.26
 
   </details>
 
@@ -38,11 +38,11 @@
 
 ### Patch Changes
 
-- ([#41880](https://github.com/YasChat/YasChat/pull/41880)) Moved `@rocket.chat/css-in-js` into the YasChat monorepo, continuing from the frozen Fuselage 0.33.1 release. The exported API and its declarations are unchanged.
+- ([#41880](https://github.com/YasChat/YasChat/pull/41880)) Moved `@yas chat/css-in-js` into the YasChat monorepo, continuing from the frozen Fuselage 0.33.1 release. The exported API and its declarations are unchanged.
 
 - <details><summary>Updated dependencies [131bbceaff27f5c3f0156fdb21a4b2a79129c851, 5e8a7cb1432e5078ca87360a4c0ae83a0f21dd7b]:</summary>
-  - @rocket.chat/css-supports@0.31.26-rc.0
-  - @rocket.chat/stylis-logical-props-middleware@0.31.26-rc.0
+  - @yas chat/css-supports@0.31.26-rc.0
+  - @yas chat/stylis-logical-props-middleware@0.31.26-rc.0
 
   </details>
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.29.0](https://github.com/YasChat/fuselage/compare/v0.28.0...v0.29.0) (2021-08-31)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.28.0](https://github.com/YasChat/fuselage/compare/v0.27.0...v0.28.0) (2021-07-30)
 
@@ -97,11 +97,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.27.0](https://github.com/YasChat/fuselage/compare/v0.26.0...v0.27.0) (2021-06-28)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.26.0](https://github.com/YasChat/fuselage/compare/v0.25.0...v0.26.0) (2021-05-28)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.25.0](https://github.com/YasChat/fuselage/compare/v0.24.0...v0.25.0) (2021-05-19)
 
@@ -145,7 +145,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.20.1](https://github.com/YasChat/fuselage/compare/v0.20.0...v0.20.1) (2020-12-22)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.20.0](https://github.com/YasChat/fuselage/compare/v0.19.0...v0.20.0) (2020-12-21)
 
@@ -155,19 +155,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.19.0](https://github.com/YasChat/fuselage/compare/v0.18.0...v0.19.0) (2020-11-28)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.18.0](https://github.com/YasChat/fuselage/compare/v0.17.3...v0.18.0) (2020-11-16)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.17.2](https://github.com/YasChat/fuselage/compare/v0.17.1...v0.17.2) (2020-10-28)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.17.1](https://github.com/YasChat/fuselage/compare/v0.17.0...v0.17.1) (2020-10-26)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.17.0](https://github.com/YasChat/fuselage/compare/v0.16.0...v0.17.0) (2020-10-25)
 
@@ -177,39 +177,39 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.16.0](https://github.com/YasChat/fuselage/compare/v0.15.1...v0.16.0) (2020-09-30)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.15.1](https://github.com/YasChat/fuselage/compare/v0.15.0...v0.15.1) (2020-09-22)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.15.0](https://github.com/YasChat/fuselage/compare/v0.14.1...v0.15.0) (2020-09-17)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.14.1](https://github.com/YasChat/fuselage/compare/v0.14.0...v0.14.1) (2020-08-22)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.14.0](https://github.com/YasChat/fuselage/compare/v0.13.2...v0.14.0) (2020-08-18)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.13.1](https://github.com/YasChat/fuselage/compare/v0.13.0...v0.13.1) (2020-07-17)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.13.0](https://github.com/YasChat/fuselage/compare/v0.12.0...v0.13.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.12.0](https://github.com/YasChat/fuselage/compare/v0.11.0...v0.12.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.11.0](https://github.com/YasChat/fuselage/compare/v0.10.0...v0.11.0) (2020-07-11)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.10.0](https://github.com/YasChat/fuselage/compare/v0.9.0...v0.10.0) (2020-06-20)
 
@@ -227,15 +227,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.9.0](https://github.com/YasChat/fuselage/compare/v0.8.0...v0.9.0) (2020-05-21)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.8.0](https://github.com/YasChat/fuselage/compare/v0.7.1...v0.8.0) (2020-04-22)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.7.1](https://github.com/YasChat/fuselage/compare/v0.7.0...v0.7.1) (2020-04-01)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.7.0](https://github.com/YasChat/fuselage/compare/v0.6.2...v0.7.0) (2020-04-01)
 
@@ -245,19 +245,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.2](https://github.com/YasChat/fuselage/compare/v0.6.1...v0.6.2) (2020-03-31)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.6.1](https://github.com/YasChat/fuselage/compare/v0.6.0...v0.6.1) (2020-03-24)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.6.0](https://github.com/YasChat/fuselage/compare/v0.5.0...v0.6.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 # [0.5.0](https://github.com/YasChat/fuselage/compare/v0.4.1...v0.5.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js
 
 ## [0.4.1](https://github.com/YasChat/fuselage/compare/v0.4.0...v0.4.1) (2020-03-16)
 
@@ -267,4 +267,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.4.0](https://github.com/YasChat/fuselage/compare/v0.3.0...v0.4.0) (2020-03-10)
 
-**Note:** Version bump only for package @rocket.chat/css-in-js
+**Note:** Version bump only for package @yas chat/css-in-js

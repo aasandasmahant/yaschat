@@ -1,4 +1,4 @@
-import { MessageRole, MessageRoles as FuselageMessageRoles } from '@rocket.chat/fuselage';
+import { MessageRole, MessageRoles as FuselageMessageRoles } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type MessageRolesProps = {

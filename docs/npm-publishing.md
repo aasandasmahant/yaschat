@@ -1,6 +1,6 @@
 # npm publishing
 
-The public `@rocket.chat/*` packages under `packages/` are published to npm by
+The public `@yas chat/*` packages under `packages/` are published to npm by
 `.github/workflows/release.yml`, which delegates to the local `packages/release-action`.
 Everything else in the workspace is `private: true` and never published.
 
@@ -58,10 +58,10 @@ both references (the `setup-node` input and the `Release` step's `env`).
 npm allows one trusted publisher per package, so packages move over one at a time:
 
 1. Register the package (see below). Watch for packages previously released from another repo —
-   `@rocket.chat/emitter`'s last provenance came from `YasChat/fuselage`'s `cd.yml`, and that
+   `@yas chat/emitter`'s last provenance came from `YasChat/fuselage`'s `cd.yml`, and that
    registration has to be re-pointed here before this workflow can publish it.
 2. Let a release run. The job log is not evidence — a token fallback looks identical to success.
-3. Confirm with `npm view @rocket.chat/<name> --json dist.attestations`; non-null means the package
+3. Confirm with `npm view @yas chat/<name> --json dist.attestations`; non-null means the package
    is publishing through OIDC.
 4. When all published packages are attested, remove `NPM_TOKEN` from `release.yml`.
 
@@ -84,15 +84,15 @@ Register from a machine with npm >= 11.15.0 and account-level 2FA (granular toke
 bypass-2FA option are rejected):
 
 ```sh
-npm trust github @rocket.chat/<name> \
+npm trust github @yas chat/<name> \
   --file release.yml \
   --repo YasChat/YasChat \
   --allow-publish
 
-npm trust list @rocket.chat/<name>
+npm trust list @yas chat/<name>
 ```
 
-Or on `npmjs.com/package/@rocket.chat/<name>/access`:
+Or on `npmjs.com/package/@yas chat/<name>/access`:
 
 | Field             | Value                                  |
 | ----------------- | -------------------------------------- |
@@ -125,7 +125,7 @@ The org/repo casing (`YasChat/YasChat`) has to match too.
 Verify after a release:
 
 ```sh
-npm view @rocket.chat/<name> --json dist.attestations
+npm view @yas chat/<name> --json dist.attestations
 ```
 
 A non-null result is proof the publish went through OIDC — token-based publishes from this repo

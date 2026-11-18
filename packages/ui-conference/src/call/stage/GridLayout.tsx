@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { useMemo, useRef } from 'react';
 
 import MainTile from './MainTile';

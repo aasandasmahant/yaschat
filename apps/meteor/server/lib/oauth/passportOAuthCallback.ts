@@ -1,8 +1,8 @@
 import crypto from 'crypto';
 
-import type { IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { LoginCodes } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { LoginCodes } from '@yas chat/models';
 import type { Request, Response } from 'express';
 
 import { doesUserRequire2FA } from './twoFactorAuth';

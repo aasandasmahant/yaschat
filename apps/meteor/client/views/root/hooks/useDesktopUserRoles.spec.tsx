@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { UserContext } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { UserContext } from '@yas chat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { useContext } from 'react';

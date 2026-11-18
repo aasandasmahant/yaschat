@@ -1,5 +1,5 @@
-import { Option, PaginatedSelectFiltered } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { Option, PaginatedSelectFiltered } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

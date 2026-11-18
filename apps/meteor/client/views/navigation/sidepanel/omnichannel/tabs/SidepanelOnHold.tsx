@@ -1,4 +1,4 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import {

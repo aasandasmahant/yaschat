@@ -1,9 +1,9 @@
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 import type {
 	IOutboundMessage,
 	IOutboundMessageProviders,
 	ProviderMetadata,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication';
+} from '@yas chat/apps-engine/definition/outboundCommunication';
 
 import type { ProxiedApp } from '../ProxiedApp';
 import { AppOutboundProcessError } from '../errors/AppOutboundProcessError';

@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Box, Select, Throbber, ButtonGroup, Button, Text } from '@rocket.chat/fuselage';
-import { useStableCallback, useAutoFocus, useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
+import type { IRoom } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Select, Throbber, ButtonGroup, Button, Text } from '@yas chat/fuselage';
+import { useStableCallback, useAutoFocus, useDebouncedCallback } from '@yas chat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -13,7 +13,7 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarSection,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import type { ChangeEvent, Dispatch, SetStateAction, SyntheticEvent } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

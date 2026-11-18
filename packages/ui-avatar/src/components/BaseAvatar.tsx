@@ -1,6 +1,6 @@
-import type { AvatarProps } from '@rocket.chat/fuselage';
-import { Avatar, Skeleton } from '@rocket.chat/fuselage';
-import { useStableCallback, usePrevious } from '@rocket.chat/fuselage-hooks';
+import type { AvatarProps } from '@yas chat/fuselage';
+import { Avatar, Skeleton } from '@yas chat/fuselage';
+import { useStableCallback, usePrevious } from '@yas chat/fuselage-hooks';
 import type { SyntheticEvent } from 'react';
 import { useState } from 'react';
 

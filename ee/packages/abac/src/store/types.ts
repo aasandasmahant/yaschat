@@ -1,5 +1,5 @@
-import type { AbacActor } from '@rocket.chat/core-services';
-import type { AbacPdpType, IAbacAttribute, IAbacAttributeDefinition, IRoom, IRoomAbacRedaction } from '@rocket.chat/core-typings';
+import type { AbacActor } from '@yas chat/core-services';
+import type { AbacPdpType, IAbacAttribute, IAbacAttributeDefinition, IRoom, IRoomAbacRedaction } from '@yas chat/core-typings';
 
 export type AttributeEntitlements = Map<string, Set<string>>;
 

@@ -1,11 +1,11 @@
-import { imperativeModal } from '@rocket.chat/ui-client';
+import { imperativeModal } from '@yas chat/ui-client';
 
 import * as banners from '../banners';
 import { e2e } from './yaschat.e2e';
 import { dispatchToastMessage } from '../toast';
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	imperativeModal: {
 		open: jest.fn(),
 		close: jest.fn(),

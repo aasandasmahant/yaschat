@@ -1,5 +1,5 @@
-import { Emitter } from '@rocket.chat/emitter';
-import type { EventHandlerOf, OffCallbackHandler } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
+import type { EventHandlerOf, OffCallbackHandler } from '@yas chat/emitter';
 import type Element from 'ltx/lib/Element';
 
 import type { XMPPServerConfig, ResolvedXMPPServerConfig } from './config';

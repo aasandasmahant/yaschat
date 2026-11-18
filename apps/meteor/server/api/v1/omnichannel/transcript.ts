@@ -1,7 +1,7 @@
-import { Omnichannel } from '@rocket.chat/core-services';
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatRooms, Users } from '@rocket.chat/models';
-import { isPOSTLivechatTranscriptParams, isPOSTLivechatTranscriptRequestParams } from '@rocket.chat/rest-typings';
+import { Omnichannel } from '@yas chat/core-services';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatRooms, Users } from '@yas chat/models';
+import { isPOSTLivechatTranscriptParams, isPOSTLivechatTranscriptRequestParams } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { i18n } from '../../../lib/i18n';

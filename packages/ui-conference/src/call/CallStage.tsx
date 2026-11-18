@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { useMemo } from 'react';
 
 import type { RemoteParticipantInfo } from './context';

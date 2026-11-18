@@ -1,5 +1,5 @@
-import type { FederationKey, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IFederationKeysModel } from '@rocket.chat/model-typings';
+import type { FederationKey, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IFederationKeysModel } from '@yas chat/model-typings';
 import type { Db, Collection } from 'mongodb';
 import NodeRSA from 'node-rsa';
 

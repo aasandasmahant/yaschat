@@ -1,6 +1,6 @@
-import { AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
-import { HttpStatusCode } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IApi, IApiEndpointMetadata, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
+import { AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
+import { HttpStatusCode } from '@yas chat/apps-engine/definition/accessors';
+import type { IApi, IApiEndpointMetadata, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
 
 import type { AppManager } from '../AppManager';
 import type { ApiBridge } from '../bridges';

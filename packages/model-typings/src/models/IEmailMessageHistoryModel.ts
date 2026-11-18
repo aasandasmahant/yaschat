@@ -1,4 +1,4 @@
-import type { IEmailMessageHistory } from '@rocket.chat/core-typings';
+import type { IEmailMessageHistory } from '@yas chat/core-typings';
 import type { InsertOneResult, WithId } from 'mongodb';
 
 import type { IBaseModel, InsertionModel } from './IBaseModel';

@@ -1,18 +1,18 @@
-import type { App } from '@rocket.chat/apps-engine/definition/App';
+import type { App } from '@yas chat/apps-engine/definition/App';
 import type {
 	IUIKitBlockIncomingInteraction,
 	IUIKitViewSubmitIncomingInteraction,
 	IUIKitViewCloseIncomingInteraction,
 	IUIKitActionButtonIncomingInteraction,
-} from '@rocket.chat/apps-engine/definition/uikit/UIKitIncomingInteractionTypes';
+} from '@yas chat/apps-engine/definition/uikit/UIKitIncomingInteractionTypes';
 import {
 	UIKitBlockInteractionContext,
 	UIKitViewSubmitInteractionContext,
 	UIKitViewCloseInteractionContext,
 	UIKitActionButtonInteractionContext,
-} from '@rocket.chat/apps-engine/definition/uikit/UIKitInteractionContext';
-import type { IUIKitLivechatBlockIncomingInteraction } from '@rocket.chat/apps-engine/definition/uikit/livechat/UIKitLivechatIncomingInteractionType';
-import { UIKitLivechatBlockInteractionContext } from '@rocket.chat/apps-engine/definition/uikit/livechat/UIKitLivechatInteractionContext';
+} from '@yas chat/apps-engine/definition/uikit/UIKitInteractionContext';
+import type { IUIKitLivechatBlockIncomingInteraction } from '@yas chat/apps-engine/definition/uikit/livechat/UIKitLivechatIncomingInteractionType';
+import { UIKitLivechatBlockInteractionContext } from '@yas chat/apps-engine/definition/uikit/livechat/UIKitLivechatInteractionContext';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { AppAccessorsInstance } from '../../lib/accessors/mod';

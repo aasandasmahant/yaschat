@@ -1,7 +1,7 @@
-import type { IRoomExtender } from '@rocket.chat/apps-engine/definition/accessors/IRoomExtender';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
+import type { IRoomExtender } from '@yas chat/apps-engine/definition/accessors/IRoomExtender';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
 
 export class RoomExtender implements IRoomExtender {
 	public kind: YasChatAssociationModel.ROOM;

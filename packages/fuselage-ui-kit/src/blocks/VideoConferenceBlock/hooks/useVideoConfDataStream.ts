@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useStream } from '@rocket.chat/ui-contexts';
-import { useVideoConferenceInfo, videoConferenceInfoQueryKey } from '@rocket.chat/ui-video-conf';
+import type { IRoom } from '@yas chat/core-typings';
+import { useStream } from '@yas chat/ui-contexts';
+import { useVideoConferenceInfo, videoConferenceInfoQueryKey } from '@yas chat/ui-video-conf';
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

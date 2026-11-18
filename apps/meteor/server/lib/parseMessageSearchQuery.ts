@@ -1,5 +1,5 @@
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Filter, FindOptions } from 'mongodb';
 
 class MessageSearchQueryParser {

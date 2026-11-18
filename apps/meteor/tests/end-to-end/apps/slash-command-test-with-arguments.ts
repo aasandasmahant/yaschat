@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, request, credentials, api } from '../../data/api-data';

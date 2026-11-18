@@ -1,4 +1,4 @@
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useSetting } from '@yas chat/ui-contexts';
 
 export const useAirGappedRestriction = (): [isRestrictionPhase: boolean, isWarningPhase: boolean, remainingDays: number] => {
 	const airGappedRestrictionRemainingDays = useSetting('Cloud_Workspace_AirGapped_Restrictions_Remaining_Days');

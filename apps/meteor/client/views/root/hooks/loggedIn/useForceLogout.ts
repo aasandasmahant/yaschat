@@ -1,4 +1,4 @@
-import { useSessionDispatch, useStream, useWipeLocalAuth } from '@rocket.chat/ui-contexts';
+import { useSessionDispatch, useStream, useWipeLocalAuth } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { getConnectionSessionId } from '../../../../meteor/connection';

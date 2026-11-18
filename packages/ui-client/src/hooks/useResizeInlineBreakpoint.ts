@@ -1,4 +1,4 @@
-import { useResizeObserver, useStableArray } from '@rocket.chat/fuselage-hooks';
+import { useResizeObserver, useStableArray } from '@yas chat/fuselage-hooks';
 import { useMemo } from 'react';
 
 export const useResizeInlineBreakpoint = <TElement extends Element>(sizes: number[] = [], debounceDelay = 0) => {

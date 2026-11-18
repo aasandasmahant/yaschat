@@ -1,4 +1,4 @@
-import { Banner, Icon } from '@rocket.chat/fuselage';
+import { Banner, Icon } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type MessageSurfaceProps = { children: ReactNode };

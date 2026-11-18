@@ -1,5 +1,5 @@
-import { UIActionButtonContext } from '@rocket.chat/apps-engine/definition/ui';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { UIActionButtonContext } from '@yas chat/apps-engine/definition/ui';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useUserMenu } from './useUserMenu';

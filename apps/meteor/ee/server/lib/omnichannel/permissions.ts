@@ -1,4 +1,4 @@
-import { Permissions, Roles } from '@rocket.chat/models';
+import { Permissions, Roles } from '@yas chat/models';
 
 import { createOrUpdateProtectedRoleAsync } from '../../../../server/lib/roles/createOrUpdateProtectedRole';
 

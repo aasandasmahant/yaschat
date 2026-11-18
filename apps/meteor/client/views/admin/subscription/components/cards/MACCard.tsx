@@ -1,4 +1,4 @@
-import { Palette } from '@rocket.chat/fuselage';
+import { Palette } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import type { CardProps } from '../FeatureUsageCard';

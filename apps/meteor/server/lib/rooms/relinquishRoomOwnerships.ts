@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Subscriptions, ReadReceipts, ReadReceiptsArchive, Team } from '@rocket.chat/models';
+import type { IRoom } from '@yas chat/core-typings';
+import { Messages, Rooms, Subscriptions, ReadReceipts, ReadReceiptsArchive, Team } from '@yas chat/models';
 
 import type { SubscribedRoomsForUserWithDetails } from './getRoomsWithSingleOwner';
 import { eraseRoomLooseValidation, eraseTeamOnRelinquishRoomOwnerships } from '../../api/lib/eraseTeam';

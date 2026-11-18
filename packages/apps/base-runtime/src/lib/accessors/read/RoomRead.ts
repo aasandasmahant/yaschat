@@ -1,13 +1,13 @@
-import type { IRoomRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IMessageRaw } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom, IRoomRaw } from '@rocket.chat/apps-engine/definition/rooms';
+import type { IRoomRead } from '@yas chat/apps-engine/definition/accessors';
+import type { IMessageRaw } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom, IRoomRaw } from '@yas chat/apps-engine/definition/rooms';
 import {
 	type GetMessagesOptions,
 	type GetRoomsFilters,
 	type GetRoomsOptions,
 	GetMessagesSortableFields,
-} from '@rocket.chat/apps-engine/definition/rooms/IGetMessagesOptions';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+} from '@yas chat/apps-engine/definition/rooms/IGetMessagesOptions';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

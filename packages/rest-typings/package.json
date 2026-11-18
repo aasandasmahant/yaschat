@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/rest-typings",
+	"name": "@yas chat/rest-typings",
 	"version": "9.1.0-develop",
 	"repository": {
 		"type": "git",
@@ -21,14 +21,14 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/message-parser": "workspace:^",
-		"@rocket.chat/ui-kit": "workspace:~",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/message-parser": "workspace:^",
+		"@yas chat/ui-kit": "workspace:~",
 		"ajv": "^8.20.0",
 		"ajv-formats": "^3.0.1"
 	},
 	"devDependencies": {
-		"@rocket.chat/apps-engine": "workspace:^",
+		"@yas chat/apps-engine": "workspace:^",
 		"mongodb": "6.16.0",
 		"tsx": "~4.22.5",
 		"typescript": "~7.0.2"

@@ -1,9 +1,9 @@
-import type { IRoom, IUpload } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { Text } from '@rocket.chat/fuselage';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import { useUserId } from '@rocket.chat/ui-contexts';
+import type { IRoom, IUpload } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { Text } from '@yas chat/fuselage';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { GenericMenu } from '@yas chat/ui-client';
+import { useUserId } from '@yas chat/ui-contexts';
 import { memo, useEffect, useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

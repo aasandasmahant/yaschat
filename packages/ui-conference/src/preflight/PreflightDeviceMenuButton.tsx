@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Button, Icon, useStyle } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { css } from '@yas chat/css-in-js';
+import { Box, Button, Icon, useStyle } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { ComponentProps } from 'react';
 import { forwardRef } from 'react';
 

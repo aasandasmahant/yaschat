@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IUser } from '@yas chat/core-typings';
 import type { Room } from 'matrix-js-sdk';
 import { EventTimeline } from 'matrix-js-sdk';
 
@@ -50,7 +50,7 @@ import { SynapseClient } from '../helper/synapse-client';
 			{
 				username: rc1User1Name,
 				password: 'random',
-				email: `${rc1User1Name}@rocket.chat`,
+				email: `${rc1User1Name}@yas chat`,
 				name: rc1User1Name,
 			},
 			rc1AdminRequestConfig,
@@ -1670,7 +1670,7 @@ import { SynapseClient } from '../helper/synapse-client';
 					await acceptRoomInvite(rid, rc1AdminRequestConfig);
 				}, 15000);
 
-				describe('It should reflect all the members and messagens on the rocket.chat side', () => {
+				describe('It should reflect all the members and messagens on the yas chat side', () => {
 					it('should show all the three users in the members list', async () => {
 						await retry(
 							'Getting room members until all are present',
@@ -1938,7 +1938,7 @@ import { SynapseClient } from '../helper/synapse-client';
 					{
 						username: rcUser1.username,
 						password: 'random',
-						email: `${rcUser1.username}@rocket.chat`,
+						email: `${rcUser1.username}@yas chat`,
 						name: rcUser1.fullName,
 					},
 					rc1AdminRequestConfig,

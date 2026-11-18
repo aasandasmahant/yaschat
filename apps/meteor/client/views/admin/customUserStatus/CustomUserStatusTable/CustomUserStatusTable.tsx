@@ -1,6 +1,6 @@
-import { Pagination } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { Pagination } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { escapeRegExp } from '@yas chat/tools';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -10,8 +10,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults as GenericNoResult,
-} from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { MutableRefObject, ReactNode } from 'react';
 import { useState, useMemo, useEffect } from 'react';

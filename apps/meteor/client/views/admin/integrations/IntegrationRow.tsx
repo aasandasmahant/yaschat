@@ -1,6 +1,6 @@
-import type { IIntegration, Serialized } from '@rocket.chat/core-typings';
-import { Text } from '@rocket.chat/fuselage';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { IIntegration, Serialized } from '@yas chat/core-typings';
+import { Text } from '@yas chat/fuselage';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
 
 export type IntegrationRowProps = {
 	integration: Serialized<IIntegration>;

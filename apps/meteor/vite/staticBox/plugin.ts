@@ -89,12 +89,12 @@ const walk = (node: unknown, visit: (node: Node) => void): void => {
 // without the `Box` runtime: their styles are compiled into a stylesheet,
 // and `StaticBox` renders the element with the class names `Box` would give it.
 export const staticBox = ({ report = false }: { report?: boolean } = {}): Plugin => {
-	const { extractStylingProps } = require('@rocket.chat/fuselage') as {
+	const { extractStylingProps } = require('@yas chat/fuselage') as {
 		extractStylingProps: (props: Record<string, unknown>) => [Record<string, unknown>, ((arg?: unknown) => string) | undefined];
 	};
 
-	const { createClassName, escapeName, transpile } = require('@rocket.chat/css-in-js');
-	const { createLogicalPropertiesMiddleware } = require('@rocket.chat/stylis-logical-props-middleware');
+	const { createClassName, escapeName, transpile } = require('@yas chat/css-in-js');
+	const { createLogicalPropertiesMiddleware } = require('@yas chat/stylis-logical-props-middleware');
 	const { middleware, prefixer, stringify } = require('stylis');
 
 	const transpileMiddleware = middleware([
@@ -131,7 +131,7 @@ export const staticBox = ({ report = false }: { report?: boolean } = {}): Plugin
 		load: (id) => (id.startsWith(virtualPrefix) ? stylesheets.get(id.slice(virtualPrefix.length, -'.css'.length)) : undefined),
 
 		transform(code, id) {
-			if (id.includes('?') || id.includes('/node_modules/') || !/\.[jt]sx$/.test(id) || !code.includes('@rocket.chat/fuselage')) {
+			if (id.includes('?') || id.includes('/node_modules/') || !/\.[jt]sx$/.test(id) || !code.includes('@yas chat/fuselage')) {
 				return null;
 			}
 
@@ -156,7 +156,7 @@ export const staticBox = ({ report = false }: { report?: boolean } = {}): Plugin
 			for (const statement of program.body as Node[]) {
 				if (
 					statement.type !== 'ImportDeclaration' ||
-					statement.source.value !== '@rocket.chat/fuselage' ||
+					statement.source.value !== '@yas chat/fuselage' ||
 					statement.importKind === 'type'
 				) {
 					continue;

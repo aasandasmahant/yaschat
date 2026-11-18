@@ -9,7 +9,7 @@ export {
 	ContextualbarHeader,
 	ContextualbarIcon,
 	ContextualbarSection,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 
 export { default as ContextualbarBack } from './ContextualbarBack';
 export { default as ContextualbarClose } from './ContextualbarClose';

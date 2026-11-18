@@ -1,4 +1,4 @@
-import { IconButton } from '@rocket.chat/fuselage';
+import { IconButton } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type ActionProps = ComponentProps<typeof IconButton> & { icon: string };

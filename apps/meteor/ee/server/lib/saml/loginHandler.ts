@@ -1,6 +1,6 @@
-import { isClientSafeError, ClientSafeError } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
-import { CredentialTokens } from '@rocket.chat/models';
+import { isClientSafeError, ClientSafeError } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
+import { CredentialTokens } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 
 import { SAML } from './lib/SAML';

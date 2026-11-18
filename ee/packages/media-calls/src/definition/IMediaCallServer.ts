@@ -1,6 +1,6 @@
-import type { CallPreventionRecord, IMediaCall, IUser, MediaCallContact } from '@rocket.chat/core-typings';
-import type { Emitter } from '@rocket.chat/emitter';
-import type { CallFeature, ClientMediaSignal, ClientMediaSignalBody, ServerMediaSignal } from '@rocket.chat/media-signaling';
+import type { CallPreventionRecord, IMediaCall, IUser, MediaCallContact } from '@yas chat/core-typings';
+import type { Emitter } from '@yas chat/emitter';
+import type { CallFeature, ClientMediaSignal, ClientMediaSignalBody, ServerMediaSignal } from '@yas chat/media-signaling';
 
 import type { InternalCallParams, SignalProcessingOptions } from './common';
 

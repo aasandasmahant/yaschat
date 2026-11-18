@@ -1,5 +1,5 @@
-import type { CloudRegistrationIntentData } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { CloudRegistrationIntentData } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { buildWorkspaceRegistrationData } from './buildRegistrationData';
 import { assertNotOfflineLicense } from './offlineLicense';

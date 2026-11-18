@@ -1,6 +1,6 @@
-import { Team, ClientSafeError } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { Team, ClientSafeError } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 import _ from 'underscore';
 
 import { settings } from '../../settings';

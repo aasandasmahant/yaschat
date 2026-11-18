@@ -1,4 +1,4 @@
-import { isOAuthUser, type IMeApiUser, type IUser, type IUserEmail, type IUserCalendar } from '@rocket.chat/core-typings';
+import { isOAuthUser, type IMeApiUser, type IUser, type IUserEmail, type IUserCalendar } from '@yas chat/core-typings';
 import semver from 'semver';
 
 import { Info } from '../../../yaschat.info';

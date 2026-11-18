@@ -15,7 +15,7 @@ const airgappedModule = {
 };
 
 proxyquire.noCallThru().load('./airGappedRestrictionsWrapper.ts', {
-	'@rocket.chat/license': {
+	'@yas chat/license': {
 		AirGappedRestriction: airgappedModule,
 	},
 	'../../../server/lib/cloud/license/airGappedRestrictionsWrapper': {

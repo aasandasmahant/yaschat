@@ -1,7 +1,7 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { VideoConference } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { VideoConference } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -58,7 +58,7 @@ const broadcastStub = sinon.stub().resolves();
 
 const { VideoConfService } = proxyquire.noCallThru().load('./service', {
 	...commonServiceStubs,
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		api: { broadcast: broadcastStub },
 		ServiceClassInternal: class {
 			onEvent() {

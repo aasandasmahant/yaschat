@@ -1,6 +1,6 @@
-import { Box, Field, FieldError, FieldLabel, FieldRow, Option, OptionContent, OptionDescription } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@rocket.chat/ui-avatar';
+import { Box, Field, FieldError, FieldLabel, FieldRow, Option, OptionContent, OptionDescription } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
 import { useId } from 'react';
 import type { ComponentProps } from 'react';
 import { useController, type Control } from 'react-hook-form';

@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Button, Icon, Scrollable } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Button, Icon, Scrollable } from '@yas chat/fuselage';
 import { useContext } from 'react';
 
 import Container from './Container';

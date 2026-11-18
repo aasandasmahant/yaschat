@@ -1,5 +1,5 @@
-import type { EventSignatures } from '@rocket.chat/core-services';
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { EventSignatures } from '@yas chat/core-services';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
 
 import { publishMeteorCollection } from './meteorCollection';
 import type { Server } from '../Server';

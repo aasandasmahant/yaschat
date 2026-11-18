@@ -1,4 +1,4 @@
-import { PageSkeleton, useHasLicenseModule } from '@rocket.chat/ui-client';
+import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
 import {
 	useIsPrivilegedSettingsContext,
 	usePermission,
@@ -6,7 +6,7 @@ import {
 	useRouter,
 	useSetting,
 	useSettings,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { memo, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import { STATUS_SETTING_IDS } from './SettingsTab';

@@ -1,4 +1,4 @@
-import { Users } from '@rocket.chat/models';
+import { Users } from '@yas chat/models';
 
 import type { IRoutingManagerConfig } from './IRoutingManagerConfig';
 import { RoutingManager } from '../../../../../server/lib/omnichannel/RoutingManager';

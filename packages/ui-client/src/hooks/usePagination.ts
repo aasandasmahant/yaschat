@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { hashKey } from '@tanstack/react-query';
 import type { SetStateAction } from 'react';
 import { useMemo, useState } from 'react';

@@ -1,8 +1,8 @@
-import { api, getConnection, getTrashCollection } from '@rocket.chat/core-services';
-import { Logger } from '@rocket.chat/logger';
-import { registerServiceModels } from '@rocket.chat/models';
-import { startBroker } from '@rocket.chat/network-broker';
-import { startTracing } from '@rocket.chat/tracing';
+import { api, getConnection, getTrashCollection } from '@yas chat/core-services';
+import { Logger } from '@yas chat/logger';
+import { registerServiceModels } from '@yas chat/models';
+import { startBroker } from '@yas chat/network-broker';
+import { startTracing } from '@yas chat/tracing';
 import polka from 'polka';
 
 import { i18n } from './i18n';
@@ -19,7 +19,7 @@ void (async () => {
 	api.setBroker(startBroker());
 
 	// need to import service after models are registered
-	const { OmnichannelTranscript } = await import('@rocket.chat/omnichannel-services');
+	const { OmnichannelTranscript } = await import('@yas chat/omnichannel-services');
 
 	api.registerService(new OmnichannelTranscript(Logger, i18n), ['queue-worker']);
 

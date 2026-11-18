@@ -1,5 +1,5 @@
-import type { IWorkspaceInfo } from '@rocket.chat/core-typings';
-import { ajv } from '@rocket.chat/rest-typings';
+import type { IWorkspaceInfo } from '@yas chat/core-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 import { API } from '../api';
 import { getServerInfo } from '../lib/getServerInfo';

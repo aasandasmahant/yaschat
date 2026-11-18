@@ -1,5 +1,5 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import type { IUser } from '@rocket.chat/core-typings';
+import { AppEvents, Apps } from '@yas chat/apps';
+import type { IUser } from '@yas chat/core-typings';
 import { Accounts } from 'meteor/accounts-base';
 
 import { afterLogoutCleanUpCallback } from '../lib/callbacks/afterLogoutCleanUpCallback';

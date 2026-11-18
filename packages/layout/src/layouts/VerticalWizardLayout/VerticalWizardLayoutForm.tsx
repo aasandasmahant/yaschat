@@ -1,4 +1,4 @@
-import { Box, Tile } from '@rocket.chat/fuselage';
+import { Box, Tile } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 const VerticalWizardLayoutForm = ({ children }: { children: ReactNode }) => (

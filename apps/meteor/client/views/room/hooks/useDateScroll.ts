@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
+import type { IMessage } from '@yas chat/core-typings';
+import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
 import type { MutableRefObject } from 'react';
 import { useCallback, useRef, useState } from 'react';
 

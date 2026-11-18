@@ -1,4 +1,4 @@
-import { useStableCallback, useResizeObserver, useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback, useResizeObserver, useMergedRefs } from '@yas chat/fuselage-hooks';
 import type {
 	AllHTMLAttributes,
 	ChangeEvent,

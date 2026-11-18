@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { mountRouter } from '@rocket.chat/http-router';
-import type { Router } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
+import type { IRoom } from '@yas chat/core-typings';
+import { mountRouter } from '@yas chat/http-router';
+import type { Router } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
 
 import { APIClass } from './ApiClass';
 import type { RateLimiterOptions } from './definition';

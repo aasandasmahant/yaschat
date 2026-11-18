@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import type { ISlashCommand } from '@rocket.chat/apps-engine/definition/slashcommands/ISlashCommand';
-import { SlashCommandContext } from '@rocket.chat/apps-engine/definition/slashcommands/SlashCommandContext';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import type { ISlashCommand } from '@yas chat/apps-engine/definition/slashcommands/ISlashCommand';
+import { SlashCommandContext } from '@yas chat/apps-engine/definition/slashcommands/SlashCommandContext';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';
 import type { AppAccessors } from '../lib/accessors/mod';

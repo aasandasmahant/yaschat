@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { afterRemoveRoomAbacAttributes } from '../../hooks/rooms/afterRemoveRoomAbacAttributes';
 import { beforeRemoveRoomAbacAttributes } from '../../hooks/rooms/beforeRemoveRoomAbacAttributes';

@@ -1,6 +1,6 @@
-import type { INpsVote, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { INpsVoteStatus } from '@rocket.chat/core-typings';
-import type { INpsVoteModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { INpsVote, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { INpsVoteStatus } from '@yas chat/core-typings';
+import type { INpsVoteModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, Document, IndexDescription, UpdateResult } from 'mongodb';
 import { ObjectId } from 'mongodb';
 

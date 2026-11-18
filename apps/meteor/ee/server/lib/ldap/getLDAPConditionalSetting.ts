@@ -1,4 +1,4 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
+import type { SettingValue } from '@yas chat/core-typings';
 
 import { settings } from '../../../../server/settings';
 

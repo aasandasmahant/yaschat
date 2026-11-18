@@ -53,7 +53,7 @@ test.describe('E2EE File Encryption', () => {
 			.poll(
 				() =>
 					page.evaluate(async (rid) => {
-						const room = await window.__rocketChatE2E?.getInstanceByRoomId(rid);
+						const room = await window.__YasChatE2E?.getInstanceByRoomId(rid);
 						return room?.getState();
 					}, group._id),
 				{ message: 'expect room encryption key to be ready before sending messages' },

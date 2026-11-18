@@ -1,4 +1,4 @@
-import { Box, Button, States, StatesIcon, StatesTitle } from '@rocket.chat/fuselage';
+import { Box, Button, States, StatesIcon, StatesTitle } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Wizard from './Wizard';

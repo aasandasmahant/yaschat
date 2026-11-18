@@ -1,5 +1,5 @@
-import { Box, Palette } from '@rocket.chat/fuselage';
-import styled from '@rocket.chat/styled';
+import { Box, Palette } from '@yas chat/fuselage';
+import styled from '@yas chat/styled';
 import type { ReactNode } from 'react';
 
 const slotPositionStyles = {

@@ -1,4 +1,4 @@
-import { nodeHandler } from '@rocket.chat/http-router';
+import { nodeHandler } from '@yas chat/http-router';
 
 import { nodeLoggerMiddleware } from '../api/v1/middlewares/logger';
 import { httpApp } from '../lib/http/httpServer';

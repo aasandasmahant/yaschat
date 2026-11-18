@@ -1,4 +1,4 @@
-import type { IInstanceStatus } from '@rocket.chat/core-typings';
+import type { IInstanceStatus } from '@yas chat/core-typings';
 import type { ChangeStream, DeleteResult, UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

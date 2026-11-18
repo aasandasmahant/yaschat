@@ -1,7 +1,7 @@
-import { ButtonGroup, Button, Stack } from '@rocket.chat/fuselage';
-import { SHA256 } from '@rocket.chat/sha256';
-import { Page, PageFooter, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useUser, useLogout, useEndpoint, useSetting, useLayout } from '@rocket.chat/ui-contexts';
+import { ButtonGroup, Button, Stack } from '@yas chat/fuselage';
+import { SHA256 } from '@yas chat/sha256';
+import { Page, PageFooter, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useUser, useLogout, useEndpoint, useSetting, useLayout } from '@yas chat/ui-contexts';
 import { useId, useState, useCallback } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

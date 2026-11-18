@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import type { IPublication } from '@rocket.chat/streamer';
+import type { IPublication } from '@yas chat/streamer';
 
 import type { IPacket } from './IPacket';
 import type { Session } from './Session';

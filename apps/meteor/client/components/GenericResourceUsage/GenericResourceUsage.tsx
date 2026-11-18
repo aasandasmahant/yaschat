@@ -1,4 +1,4 @@
-import { Box, ProgressBar } from '@rocket.chat/fuselage';
+import { Box, ProgressBar } from '@yas chat/fuselage';
 import { useId } from 'react';
 import type { ReactNode } from 'react';
 

@@ -1,5 +1,5 @@
-import type { IAbacMembershipPreview } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IAbacMembershipPreview } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen, within } from '@testing-library/react';
 import { axe } from 'jest-axe';
 

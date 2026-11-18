@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import type * as chartjs from 'chart.js';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

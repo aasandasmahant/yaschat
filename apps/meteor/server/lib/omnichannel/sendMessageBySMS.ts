@@ -1,6 +1,6 @@
-import { OmnichannelIntegration } from '@rocket.chat/core-services';
-import { isEditedMessage } from '@rocket.chat/core-typings';
-import { LivechatVisitors } from '@rocket.chat/models';
+import { OmnichannelIntegration } from '@yas chat/core-services';
+import { isEditedMessage } from '@yas chat/core-typings';
+import { LivechatVisitors } from '@yas chat/models';
 
 import { callbackLogger } from './logger';
 import { settings } from '../../settings';

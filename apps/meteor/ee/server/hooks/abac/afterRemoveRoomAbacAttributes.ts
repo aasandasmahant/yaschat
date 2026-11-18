@@ -1,6 +1,6 @@
-import { Abac } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
+import { Abac } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
 
 import { afterRemoveRoomAbacAttributes } from '../../../../server/hooks/rooms/afterRemoveRoomAbacAttributes';
 import { toAbacActor } from '../../lib/abac/toAbacActor';

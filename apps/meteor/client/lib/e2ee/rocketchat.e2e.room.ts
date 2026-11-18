@@ -1,4 +1,4 @@
-import { Base64 } from '@rocket.chat/base64';
+import { Base64 } from '@yas chat/base64';
 import type {
 	IE2EEMessage,
 	IMessage,
@@ -8,9 +8,9 @@ import type {
 	AtLeast,
 	EncryptedMessageContent,
 	EncryptedContent,
-} from '@rocket.chat/core-typings';
-import { isEncryptedMessageContent, isFileAttachment, isRemovedFileAttachment } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+} from '@yas chat/core-typings';
+import { isEncryptedMessageContent, isFileAttachment, isRemovedFileAttachment } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import type { Optional } from '@tanstack/react-query';
 import EJSON from 'ejson';
 

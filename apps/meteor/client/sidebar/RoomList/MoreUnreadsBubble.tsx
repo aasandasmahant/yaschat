@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Bubble } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Bubble } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type MoreUnreadsBubbleProps = {

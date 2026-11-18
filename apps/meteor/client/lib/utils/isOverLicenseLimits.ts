@@ -1,4 +1,4 @@
-import type { LicenseLimitKind } from '@rocket.chat/core-typings';
+import type { LicenseLimitKind } from '@yas chat/core-typings';
 
 type Limits = Record<
 	LicenseLimitKind,

@@ -172,7 +172,7 @@ export const createGeneralSettings = async () => {
 			public: true,
 		});
 
-		await this.add('DeepLink_Url', 'https://go.rocket.chat', {
+		await this.add('DeepLink_Url', 'https://go.yas chat', {
 			type: 'string',
 			public: true,
 		});

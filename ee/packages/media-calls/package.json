@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/media-calls",
+	"name": "@yas chat/media-calls",
 	"version": "1.0.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -18,16 +18,16 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/emitter": "workspace:~",
-		"@rocket.chat/logger": "workspace:^",
-		"@rocket.chat/media-signaling": "workspace:^",
-		"@rocket.chat/models": "workspace:^",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/emitter": "workspace:~",
+		"@yas chat/logger": "workspace:^",
+		"@yas chat/media-signaling": "workspace:^",
+		"@yas chat/models": "workspace:^",
 		"drachtio-srf": "patch:drachtio-srf@npm%3A5.0.12#~/.yarn/patches/drachtio-srf-npm-5.0.12-b0b1afaad6.patch"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	}

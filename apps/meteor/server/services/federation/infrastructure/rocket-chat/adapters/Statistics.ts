@@ -1,5 +1,5 @@
-import type { IMatrixFederationStatistics } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
+import type { IMatrixFederationStatistics } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
 
 import { settings } from '../../../../../settings';
 

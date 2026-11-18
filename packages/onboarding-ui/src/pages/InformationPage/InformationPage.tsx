@@ -1,4 +1,4 @@
-import { HeroLayout, HeroLayoutSubtitle, HeroLayoutTitle } from '@rocket.chat/layout';
+import { HeroLayout, HeroLayoutSubtitle, HeroLayoutTitle } from '@yas chat/layout';
 import type { ReactNode } from 'react';
 
 export type InformationPageProps = {

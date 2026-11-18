@@ -1,5 +1,5 @@
-import type { IUser, IMessage } from '@rocket.chat/core-typings';
-import { Roles, Users } from '@rocket.chat/models';
+import type { IUser, IMessage } from '@yas chat/core-typings';
+import { Roles, Users } from '@yas chat/models';
 
 import { SystemLogger } from './logger/system';
 import { notifyOnUserChangeAsync } from './notifyListener';

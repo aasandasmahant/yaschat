@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import type { Options, Root } from '@rocket.chat/message-parser';
+import type { IMessage } from '@yas chat/core-typings';
+import type { Options, Root } from '@yas chat/message-parser';
 import { useMemo } from 'react';
 
 import { useAutoLinkDomains } from './useAutoLinkDomains';

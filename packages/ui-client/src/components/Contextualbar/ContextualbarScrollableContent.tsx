@@ -1,4 +1,4 @@
-import { Margins } from '@rocket.chat/fuselage';
+import { Margins } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { forwardRef, memo } from 'react';
 

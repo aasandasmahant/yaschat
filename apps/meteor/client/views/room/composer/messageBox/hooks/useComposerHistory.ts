@@ -1,4 +1,4 @@
-import type { Options } from '@rocket.chat/message-parser';
+import type { Options } from '@yas chat/message-parser';
 import { useCallback } from 'react';
 
 import { createComposerHistory } from '../../../../../lib/composerHistory';

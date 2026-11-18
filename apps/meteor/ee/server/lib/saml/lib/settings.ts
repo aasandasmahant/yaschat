@@ -1,6 +1,6 @@
-import type { SAMLConfiguration } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { LoginServiceConfiguration } from '@rocket.chat/models';
+import type { SAMLConfiguration } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { LoginServiceConfiguration } from '@yas chat/models';
 
 import { SAMLUtils } from './Utils';
 import {

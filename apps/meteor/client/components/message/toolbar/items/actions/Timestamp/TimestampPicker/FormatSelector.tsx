@@ -1,4 +1,4 @@
-import { Box, Field, FieldLabel, FieldRow, Select } from '@rocket.chat/fuselage';
+import { Box, Field, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
 import type { Key } from 'react';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';

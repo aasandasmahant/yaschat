@@ -1,5 +1,5 @@
-import type { IUIKitInteraction } from '@rocket.chat/apps-engine/definition/uikit';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IUIKitInteraction } from '@yas chat/apps-engine/definition/uikit';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { BaseBridge } from './BaseBridge';
 import { PermissionDeniedError } from '../errors/PermissionDeniedError';

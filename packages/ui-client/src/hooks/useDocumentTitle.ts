@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import { useCallback, useEffect, useSyncExternalStore } from 'react';
 
 const ee = new Emitter<{

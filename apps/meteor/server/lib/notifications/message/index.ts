@@ -1,6 +1,6 @@
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { isFileAttachment, isFileImageAttachment } from '@rocket.chat/core-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { isFileAttachment, isFileImageAttachment } from '@yas chat/core-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { settings } from '../../../settings';
 import { callbacks } from '../../callbacks';

@@ -1,10 +1,10 @@
-import type { IDirectMessageRoom, IRoom } from '@rocket.chat/core-typings';
+import type { IDirectMessageRoom, IRoom } from '@yas chat/core-typings';
 import {
 	ajv,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../../server/api';
 import { isDateRangeParams, transformDatesForAPI } from '../../lib/engagementDashboard/date';
@@ -108,7 +108,7 @@ const topFivePopularChannelsResponseSchema = ajv.compile<{
 	additionalProperties: false,
 });
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/engagement-dashboard/messages/origin': {
 			GET: (params: { start: string; end: string }) => {

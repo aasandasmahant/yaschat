@@ -1,5 +1,5 @@
 import { View, Text } from '@react-pdf/renderer';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 import { useMemo } from 'react';
 
 import BoldSpan from './BoldSpan';

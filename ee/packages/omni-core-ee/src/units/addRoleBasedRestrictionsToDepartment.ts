@@ -1,4 +1,4 @@
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
 import type { Filter } from 'mongodb';
 
 import { getUnitsFromUser } from './getUnitsFromUser';

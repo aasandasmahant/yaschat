@@ -1,5 +1,5 @@
 import './Thumbnail.scss';
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { ReactNode, ComponentProps } from 'react';
 
 const ScreenThumbnailWrapper = ({

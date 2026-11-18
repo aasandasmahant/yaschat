@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import type { ILivechatInquiryRecord, IRoom, IUser } from '@rocket.chat/core-typings';
-import { LivechatDepartmentAgents, LivechatDepartment, LivechatInquiry } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import { LivechatInquiryStatus } from '@yas chat/core-typings';
+import type { ILivechatInquiryRecord, IRoom, IUser } from '@yas chat/core-typings';
+import { LivechatDepartmentAgents, LivechatDepartment, LivechatInquiry } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 import type { Filter } from 'mongodb';
 
 import { getOmniChatSortQuery } from '../../../../../lib/livechat/inquiries';

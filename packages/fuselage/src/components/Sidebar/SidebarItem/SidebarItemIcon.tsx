@@ -1,4 +1,4 @@
-import type { Keys as IconKeys } from '@rocket.chat/icons';
+import type { Keys as IconKeys } from '@yas chat/icons';
 import { isValidElement, type ReactElement } from 'react';
 
 import { cx } from '../../../helpers/composeClassNames';

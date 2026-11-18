@@ -1,4 +1,4 @@
-import { ExternalLink } from '@rocket.chat/ui-client';
+import { ExternalLink } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import VersionCardActionItem from './VersionCardActionItem';
@@ -26,7 +26,7 @@ export const WithLink: Story = {
 	args: {
 		label: (
 			<>
-				Version <ExternalLink to='https://go.rocket.chat/i/version-support'>supported</ExternalLink> until Dec 31, 2026
+				Version <ExternalLink to='https://go.yas chat/i/version-support'>supported</ExternalLink> until Dec 31, 2026
 			</>
 		),
 	},

@@ -1,5 +1,5 @@
-import type { Router } from '@rocket.chat/http-router';
-import { ajv, ajvQuery } from '@rocket.chat/rest-typings';
+import type { Router } from '@yas chat/http-router';
+import { ajv, ajvQuery } from '@yas chat/rest-typings';
 
 import { logger } from '../../logger';
 

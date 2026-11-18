@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import type { IAppsEngineService } from '@rocket.chat/core-services';
+import type { IAppsEngineService } from '@yas chat/core-services';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -24,8 +24,8 @@ const apiMock = {
 const isRunningMsMock = sinon.stub();
 
 const serviceMocks = {
-	'@rocket.chat/apps': { Apps: AppsMock },
-	'@rocket.chat/core-services': {
+	'@yas chat/apps': { Apps: AppsMock },
+	'@yas chat/core-services': {
 		api: apiMock,
 		ServiceClassInternal: class {
 			onEvent = sinon.stub();

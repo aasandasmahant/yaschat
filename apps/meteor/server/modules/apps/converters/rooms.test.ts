@@ -1,7 +1,7 @@
 import { before, describe, it } from 'node:test';
 
-import type { IAppRoomsConverter, IAppServerOrchestrator, IAppsRoom } from '@rocket.chat/apps';
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IAppRoomsConverter, IAppServerOrchestrator, IAppsRoom } from '@yas chat/apps';
+import type { IRoom } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { AppRoomsConverter } from './rooms';

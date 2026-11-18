@@ -31,7 +31,7 @@ WithAgentEmail.args = {
 	agent: {
 		name: 'Guilherme Gazzo',
 		status: 'away',
-		email: 'guilherme.gazzo@rocket.chat',
+		email: 'guilherme.gazzo@yas chat',
 		avatar: {
 			description: 'guilherme.gazzo',
 			src: gazzoAvatar,
@@ -59,7 +59,7 @@ WithAgentPhoneAndEmail.args = {
 	agent: {
 		name: 'Guilherme Gazzo',
 		status: 'away',
-		email: 'guilherme.gazzo@rocket.chat',
+		email: 'guilherme.gazzo@yas chat',
 		phone: '+ 55 42423 24242',
 		avatar: {
 			description: 'guilherme.gazzo',

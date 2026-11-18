@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 import type { KeyboardEvent } from 'react';
 import { lazy, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -5,7 +5,7 @@ import {
 	HorizontalWizardLayoutSubtitle,
 	HorizontalWizardLayoutDescription,
 	HorizontalWizardLayoutContent,
-} from '@rocket.chat/layout';
+} from '@yas chat/layout';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

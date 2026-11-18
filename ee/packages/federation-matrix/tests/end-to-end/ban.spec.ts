@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-import type { IRoomNativeFederated, IUser } from '@rocket.chat/core-typings';
+import type { IRoomNativeFederated, IUser } from '@yas chat/core-typings';
 import { Visibility } from 'matrix-js-sdk';
 
 import { api } from '../../../../../apps/meteor/tests/data/api-data';
@@ -38,7 +38,7 @@ import { SynapseClient } from '../helper/synapse-client';
 			{
 				username: rc1User1Name,
 				password: 'random',
-				email: `${rc1User1Name}@rocket.chat`,
+				email: `${rc1User1Name}@yas chat`,
 				name: rc1User1Name,
 			},
 			rc1AdminRequestConfig,

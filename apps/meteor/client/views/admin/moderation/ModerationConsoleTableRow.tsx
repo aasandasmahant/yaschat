@@ -1,5 +1,5 @@
-import type { IModerationAudit, IUser } from '@rocket.chat/core-typings';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { IModerationAudit, IUser } from '@yas chat/core-typings';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
 
 import ModerationConsoleActions from './ModerationConsoleActions';
 import UserColumn from './helpers/UserColumn';

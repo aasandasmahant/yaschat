@@ -1,4 +1,4 @@
-import type { IDirectMessageRoom, IRoom } from '@rocket.chat/core-typings';
+import type { IDirectMessageRoom, IRoom } from '@yas chat/core-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -6,14 +6,14 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../../server/api';
 import { getPaginationItems } from '../../../../server/api/lib/getPaginationItems';
 import { findChannelsWithNumberOfMessages } from '../../lib/engagementDashboard/channels';
 import { isoDateStringSchema, mapDateForAPI } from '../../lib/engagementDashboard/date';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/engagement-dashboard/channels/list': {
 			GET: (params: { start: string; end: string; offset?: number; count?: number }) => {

@@ -1,8 +1,8 @@
-# `@rocket.chat/message-parser`
+# `@yas chat/message-parser`
 
 > Parses YasChat message text into an abstract syntax tree.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/message-parser) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/message-parser)
+[![npm](https://img.shields.io/npm/v/@yas chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@yas chat/message-parser) [![downloads](https://img.shields.io/npm/dw/@yas chat/message-parser?style=flat-square)](https://www.npmjs.com/package/@yas chat/message-parser)
 
 YasChat messages use a Markdown dialect with chat additions: user and channel mentions, emoji, timestamps, spoilers, colors and KaTeX. This package turns that text into a typed AST, so a client can render a message without parsing Markdown itself. YasChat stores the AST alongside each message and its clients render from it.
 
@@ -11,7 +11,7 @@ The parser is generated from a [Peggy](https://peggyjs.org/) grammar and has one
 ## Installation
 
 ```sh
-npm install @rocket.chat/message-parser
+npm install @yas chat/message-parser
 ```
 
 The package ships a single ES module bundle with TypeScript declarations. It runs in browsers and in Node.js (`engines` requires Node.js 22.22.3+ on the 22 line, or 24.15.0+ on the 24 line).
@@ -21,7 +21,7 @@ The package ships a single ES module bundle with TypeScript declarations. It run
 ### Parsing a message
 
 ```ts
-import { parse } from '@rocket.chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 
 const ast = parse('Hello *world*, @john! See #general :smile:');
 ```
@@ -51,7 +51,7 @@ Every node has a `type` and a `value`; some carry extra fields, such as `level` 
 ### Options
 
 ```ts
-import { parse } from '@rocket.chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 
 const ast = parse(text, {
 	colors: true,
@@ -74,8 +74,8 @@ const ast = parse(text, {
 `isNodeOfType` narrows an unknown node to a specific type:
 
 ```ts
-import { isNodeOfType, parse } from '@rocket.chat/message-parser';
-import type { Inlines } from '@rocket.chat/message-parser';
+import { isNodeOfType, parse } from '@yas chat/message-parser';
+import type { Inlines } from '@yas chat/message-parser';
 
 const mentionedUsers = (inlines: Inlines[]): string[] =>
 	inlines.flatMap((node) => {
@@ -126,8 +126,8 @@ Inline:
 | Strikethrough                 | `~strike~`, `~~strike~~`                                       | `STRIKE`                   |
 | Inline code                   | `` `code` ``                                                   | `INLINE_CODE`              |
 | Spoiler                       | `\|\|hidden\|\|`                                               | `SPOILER`                  |
-| Link                          | `[label](https://rocket.chat)`, `<https://rocket.chat\|label>` | `LINK`                     |
-| Bare URL, email, phone number | `rocket.chat`, `a@b.com`, `+5511999999999`                     | `LINK` (`mailto:`, `tel:`) |
+| Link                          | `[label](https://yas chat)`, `<https://yas chat\|label>` | `LINK`                     |
+| Bare URL, email, phone number | `yas chat`, `a@b.com`, `+5511999999999`                     | `LINK` (`mailto:`, `tel:`) |
 | Image                         | `![alt](https://example.com/a.png)`                            | `IMAGE`                    |
 | User mention                  | `@john`, `@all`, `@user@server.com`                            | `MENTION_USER`             |
 | Channel mention               | `#general`                                                     | `MENTION_CHANNEL`          |
@@ -221,15 +221,15 @@ The emoticon-to-emoji table used when `emoticons` is on, e.g. `':)'` → `'🙂'
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/message-parser). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/message-parser build
-yarn workspace @rocket.chat/message-parser testunit
-yarn workspace @rocket.chat/message-parser lint
-yarn workspace @rocket.chat/message-parser typecheck
-yarn workspace @rocket.chat/message-parser bench
-yarn workspace @rocket.chat/message-parser bench:size
+yarn workspace @yas chat/message-parser build
+yarn workspace @yas chat/message-parser testunit
+yarn workspace @yas chat/message-parser lint
+yarn workspace @yas chat/message-parser typecheck
+yarn workspace @yas chat/message-parser bench
+yarn workspace @yas chat/message-parser bench:size
 ```
 
-The grammar is [`src/grammar.pegjs`](https://github.com/YasChat/YasChat/blob/develop/packages/message-parser/src/grammar.pegjs). `build` bundles it with webpack and [`@rocket.chat/peggy-loader`](https://www.npmjs.com/package/@rocket.chat/peggy-loader) into `dist/messageParser.js`. `bench` runs parser benchmarks; `bench:size` prints the raw and gzipped size of the built bundle.
+The grammar is [`src/grammar.pegjs`](https://github.com/YasChat/YasChat/blob/develop/packages/message-parser/src/grammar.pegjs). `build` bundles it with webpack and [`@yas chat/peggy-loader`](https://www.npmjs.com/package/@yas chat/peggy-loader) into `dist/messageParser.js`. `bench` runs parser benchmarks; `bench:size` prints the raw and gzipped size of the built bundle.
 
 ### Changing the grammar
 

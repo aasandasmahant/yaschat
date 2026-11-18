@@ -1,7 +1,7 @@
-import { isInVideoConference } from '@rocket.chat/core-typings';
-import { Box, Button, IconButton } from '@rocket.chat/fuselage';
-import { AnnouncementBanner } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { isInVideoConference } from '@yas chat/core-typings';
+import { Box, Button, IconButton } from '@yas chat/fuselage';
+import { AnnouncementBanner } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { ConferenceContext, useConference, useConferenceViewer } from '../../context/ConferenceContext';

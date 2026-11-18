@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { usePermission, useSetting } from '@rocket.chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
+import { usePermission, useSetting } from '@yas chat/ui-contexts';
 
 import { canPreviewRoom } from '../lib/canPreviewRoom';
 

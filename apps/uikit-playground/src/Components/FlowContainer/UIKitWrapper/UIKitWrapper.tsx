@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { useContext } from 'react';
 import { Handle, Position } from 'reactflow';
 import './UIKitWrapper.scss';

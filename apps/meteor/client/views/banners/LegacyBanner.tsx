@@ -1,4 +1,4 @@
-import { Banner, Icon } from '@rocket.chat/fuselage';
+import { Banner, Icon } from '@yas chat/fuselage';
 import DOMPurify from 'dompurify';
 import { useCallback, useEffect } from 'react';
 

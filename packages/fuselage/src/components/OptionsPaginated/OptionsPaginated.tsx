@@ -1,4 +1,4 @@
-import { useStableCallback, useDebouncedState } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback, useDebouncedState } from '@yas chat/fuselage-hooks';
 import type { ComponentType, ElementType, MouseEvent, ReactNode, RefAttributes } from 'react';
 import { Virtuoso } from 'react-virtuoso';
 

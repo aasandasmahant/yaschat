@@ -1,7 +1,7 @@
-import type { IUser, RequiredField } from '@rocket.chat/core-typings';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import type { IUser, RequiredField } from '@yas chat/core-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 
 import { createOrUpdateFederatedUser } from './createOrUpdateFederatedUser';
 import { getUsernameServername } from './getUsernameServername';

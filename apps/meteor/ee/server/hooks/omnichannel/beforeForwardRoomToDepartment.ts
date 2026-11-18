@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { LivechatDepartment } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { LivechatDepartment } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 

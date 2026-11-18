@@ -1,4 +1,4 @@
-import breakpointTokens from '@rocket.chat/fuselage-tokens/dist/breakpoints.json';
+import breakpointTokens from '@yas chat/fuselage-tokens/dist/breakpoints.json';
 import type { Preview } from '@storybook/react';
 import { useSyncExternalStore } from 'react';
 
@@ -8,7 +8,7 @@ import { globalTypes, initialGlobals } from './globals';
 import { resolveThemeMode, subscribeToSystemColorScheme } from './theme';
 
 import 'normalize.css/normalize.css';
-import '@rocket.chat/icons/dist/rocketchat.css';
+import '@yas chat/icons/dist/YasChat.css';
 
 export default {
 	parameters: {

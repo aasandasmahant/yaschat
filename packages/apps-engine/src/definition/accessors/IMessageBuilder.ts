@@ -1,4 +1,4 @@
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 import type { IMessage, IMessageAttachment } from '../messages';
 import type { YasChatAssociationModel } from '../metadata';

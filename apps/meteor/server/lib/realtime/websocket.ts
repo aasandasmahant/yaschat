@@ -1,7 +1,7 @@
 import type { IncomingMessage } from 'node:http';
 import type { Duplex } from 'node:stream';
 
-import { Session } from '@rocket.chat/ddp-server';
+import { Session } from '@yas chat/ddp-server';
 import { WebSocketServer } from 'ws';
 
 import { ddpServer } from './ddpServer';

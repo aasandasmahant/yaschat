@@ -1,8 +1,8 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -44,13 +44,13 @@ describe('/invite', () => {
 		mockModel('Users', { findByUsernames: findUsers, findOneById: findActor });
 		mockModel('Subscriptions', { findOneByRoomIdAndUserId: subscription });
 		slashCommand = loadSlashCommand('invite/server', {
-			'@rocket.chat/core-services': {
+			'@yas chat/core-services': {
 				api: { broadcast },
 				FederationMatrix: { ensureFederatedUsersExistLocally: ensureFederatedUsers },
 				isClientSafeError,
 			},
-			'@rocket.chat/core-typings': { isBannedSubscription },
-			'@rocket.chat/federation-matrix': { validateFederatedUsername: (username: string) => username === external.username },
+			'@yas chat/core-typings': { isBannedSubscription },
+			'@yas chat/federation-matrix': { validateFederatedUsername: (username: string) => username === external.username },
 			'../../meteor-methods/rooms/addUsersToRoom': { addUsersToRoomMethod: addUsers, sanitizeUsername: sanitize },
 			'../../services/room/hooks/BeforeFederationActions': { FederationActions: { shouldPerformFederationAction: shouldFederate } },
 		});

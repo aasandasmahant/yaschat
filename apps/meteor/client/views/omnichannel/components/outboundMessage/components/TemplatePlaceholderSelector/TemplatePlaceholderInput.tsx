@@ -1,6 +1,6 @@
-import type { ILivechatContact, Serialized } from '@rocket.chat/core-typings';
-import { Box, Icon, TextInput } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
+import { Box, Icon, TextInput } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useRef, type ChangeEventHandler, type ChangeEvent, type ComponentProps } from 'react';
 
 import PlaceholderSelector from './TemplatePlaceholderSelector';

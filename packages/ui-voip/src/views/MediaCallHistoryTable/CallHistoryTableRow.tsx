@@ -1,6 +1,6 @@
-import type { CallHistoryItemState } from '@rocket.chat/core-typings';
-import { GenericTableCell, GenericTableRow } from '@rocket.chat/ui-client';
-import { useLanguage } from '@rocket.chat/ui-contexts';
+import type { CallHistoryItemState } from '@yas chat/core-typings';
+import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
+import { useLanguage } from '@yas chat/ui-contexts';
 import { intlFormatDistance } from 'date-fns/intlFormatDistance';
 import type { ReactNode } from 'react';
 

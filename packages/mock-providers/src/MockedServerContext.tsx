@@ -1,7 +1,7 @@
-import type { Serialized } from '@rocket.chat/core-typings';
-import type { ServerMethodName, ServerMethodParameters, ServerMethodReturn } from '@rocket.chat/ddp-client';
-import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@rocket.chat/rest-typings';
-import { ServerContext } from '@rocket.chat/ui-contexts';
+import type { Serialized } from '@yas chat/core-typings';
+import type { ServerMethodName, ServerMethodParameters, ServerMethodReturn } from '@yas chat/ddp-client';
+import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@yas chat/rest-typings';
+import { ServerContext } from '@yas chat/ui-contexts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useState } from 'react';

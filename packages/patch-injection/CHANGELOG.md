@@ -1,4 +1,4 @@
-# @rocket.chat/patch-injection
+# @yas chat/patch-injection
 
 ## 0.0.2
 

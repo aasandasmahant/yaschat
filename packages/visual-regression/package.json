@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/visual-regression",
+	"name": "@yas chat/visual-regression",
 	"version": "0.0.1",
 	"private": true,
 	"type": "module",
@@ -13,7 +13,7 @@
 		"@playwright/test": "~1.52.0"
 	},
 	"devDependencies": {
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/tsconfig": "workspace:*",
 		"@types/node": "~24.13.6",
 		"typescript": "~7.0.2"
 	},

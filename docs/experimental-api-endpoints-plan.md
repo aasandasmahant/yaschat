@@ -170,7 +170,7 @@ and CORS preflight rejections; `/api/v1/*` responses do not.
 3. Consumers who want typed experimental calls import `ExperimentalEndpoints`
    explicitly.
 
-**Acceptance:** `import type { Endpoints } from '@rocket.chat/rest-typings'` does NOT
+**Acceptance:** `import type { Endpoints } from '@yas chat/rest-typings'` does NOT
 include experimental paths; `import type { ExperimentalEndpoints }` does.
 
 **Commit (4 of 5):** `feat(rest-typings): add opt-in ExperimentalEndpoints`

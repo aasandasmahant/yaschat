@@ -1,7 +1,7 @@
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { capitalize } from '@rocket.chat/tools';
-import type { LoginService } from '@rocket.chat/ui-contexts';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { capitalize } from '@yas chat/tools';
+import type { LoginService } from '@yas chat/ui-contexts';
 
 import { sdk } from './SDKClient';
 

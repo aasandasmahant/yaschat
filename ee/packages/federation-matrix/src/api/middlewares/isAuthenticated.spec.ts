@@ -1,10 +1,10 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
 import { Hono } from 'hono';
 
 import { isAuthenticatedMiddleware } from './isAuthenticated';
 import { logger } from '../logger';
 
-jest.mock('@rocket.chat/federation-sdk', () => ({
+jest.mock('@yas chat/federation-sdk', () => ({
 	federationSDK: { verifyRequestSignature: jest.fn() },
 	errCodes: {
 		M_UNAUTHORIZED: { errcode: 'M_UNAUTHORIZED', error: 'Unauthorized', status: 401 },

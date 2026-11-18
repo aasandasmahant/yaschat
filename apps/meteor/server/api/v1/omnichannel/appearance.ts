@@ -1,7 +1,7 @@
-import type { ISettingSelectOption } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
-import { isPOSTLivechatAppearanceParams } from '@rocket.chat/rest-typings';
-import { isTruthy } from '@rocket.chat/tools';
+import type { ISettingSelectOption } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
+import { isPOSTLivechatAppearanceParams } from '@yas chat/rest-typings';
+import { isTruthy } from '@yas chat/tools';
 
 import { API } from '../..';
 import { findAppearance } from './lib/appearance';

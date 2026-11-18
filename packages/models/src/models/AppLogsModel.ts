@@ -1,4 +1,4 @@
-import type { IAppLogsModel } from '@rocket.chat/model-typings';
+import type { IAppLogsModel } from '@yas chat/model-typings';
 import type { Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

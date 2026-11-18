@@ -1,7 +1,7 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { GenericTable, GenericTableBody } from '@rocket.chat/ui-client';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { GenericTable, GenericTableBody } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ChannelsTableRow from './ChannelsTableRow';

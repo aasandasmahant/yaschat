@@ -1,8 +1,8 @@
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { Box, ButtonGroup, Button, Icon, PositionAnimated } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { Box, ButtonGroup, Button, Icon, PositionAnimated } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { AllHTMLAttributes, RefObject } from 'react';
 import { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

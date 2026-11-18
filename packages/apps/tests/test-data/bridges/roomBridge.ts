@@ -1,7 +1,7 @@
-import type { IMessage, IMessageRaw } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import type { IRoomRaw } from '@rocket.chat/apps-engine/definition/rooms/IRoomRaw';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IMessage, IMessageRaw } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import type { IRoomRaw } from '@yas chat/apps-engine/definition/rooms/IRoomRaw';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { RoomBridge } from '../../../src/server/bridges';
 import type { GetMessagesOptions, GetRoomsOptions, GetRoomsFilters } from '../../../src/server/bridges/RoomBridge';

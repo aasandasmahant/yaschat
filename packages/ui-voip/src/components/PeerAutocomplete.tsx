@@ -1,4 +1,4 @@
-import { UserStatus } from '@rocket.chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 import {
 	AutoComplete,
 	Avatar,
@@ -11,8 +11,8 @@ import {
 	ItemTitle,
 	Option,
 	StatusBullet,
-} from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE } from '@rocket.chat/ui-avatar';
+} from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE } from '@yas chat/ui-avatar';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

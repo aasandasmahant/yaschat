@@ -1,12 +1,12 @@
-import type { RestClientInterface } from '@rocket.chat/api-client';
-import type { SDK, ClientStream, StreamKeys, StreamNames, StreamerCallbackArgs, ServerMethods } from '@rocket.chat/ddp-client';
-import { Emitter } from '@rocket.chat/emitter';
+import type { RestClientInterface } from '@yas chat/api-client';
+import type { SDK, ClientStream, StreamKeys, StreamNames, StreamerCallbackArgs, ServerMethods } from '@yas chat/ddp-client';
+import { Emitter } from '@yas chat/emitter';
 
 import { APIClient } from './RestApiClient';
 import { ensureConnectedAndAuthenticated, getDdpSdk } from './sdk/ddpSdk';
 import { callMethod } from '../meteor/connection';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface SDK {
 		stream<N extends StreamNames, K extends StreamKeys<N>>(
 			streamName: N,

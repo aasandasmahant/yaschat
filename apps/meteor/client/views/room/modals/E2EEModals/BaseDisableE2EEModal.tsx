@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useState } from 'react';
 
 import DisableE2EEModal from './DisableE2EEModal';

@@ -7,7 +7,7 @@
 ## Decision
 
 The Meteor-free DDP server built for `ee/apps/ddp-streamer` moves to `packages/ddp-server`
-(`@rocket.chat/ddp-server`), under the repository's MIT license. That covers the codec, sessions, method and
+(`@yas chat/ddp-server`), under the repository's MIT license. That covers the codec, sessions, method and
 publication dispatch, the connection lifecycle and registry, the Streamer adapter, the presence methods, and the
 client-version and login-service publications. ddp-streamer becomes a service around the package. `apps/meteor`
 becomes its second consumer when it stops relying on Meteor's own DDP server.
@@ -32,7 +32,7 @@ These stay in ddp-streamer:
 ## Consequences
 
 - The moved code is MIT-licensed from now on.
-- Like `@rocket.chat/streamer` ([ADR 0002](0002-streamer-package-barrel-entry.md)), the package has a single entry
+- Like `@yas chat/streamer` ([ADR 0002](0002-streamer-package-barrel-entry.md)), the package has a single entry
   that exports only what its consumers import. The monolith adds the exports it needs when it adopts the package.
 - Names (`Server`, `Session`, `MeteorCollection`) and the `DDP-Streamer` log label are unchanged. Renaming them is a
   separate change.

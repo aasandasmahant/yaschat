@@ -1,5 +1,5 @@
-import type { UserStatus } from '@rocket.chat/core-typings';
-import type { CallFeature } from '@rocket.chat/media-signaling';
+import type { UserStatus } from '@yas chat/core-typings';
+import type { CallFeature } from '@yas chat/media-signaling';
 
 export type InternalPeerInfo = {
 	type: 'user';

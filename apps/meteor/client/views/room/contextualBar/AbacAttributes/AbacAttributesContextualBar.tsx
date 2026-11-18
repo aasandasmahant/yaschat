@@ -1,5 +1,5 @@
-import { ContextualbarDialog, ContextualbarSkeleton } from '@rocket.chat/ui-client';
-import { useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { ContextualbarDialog, ContextualbarSkeleton } from '@yas chat/ui-client';
+import { useRoomToolbox } from '@yas chat/ui-contexts';
 
 import AbacAttributesInfo from './AbacAttributesInfo';
 import AbacAttributesManage from './AbacAttributesManage';

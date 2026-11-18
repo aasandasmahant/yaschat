@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
+import type { Credentials } from '@yas chat/api-client';
 import type {
 	ILivechatInquiryRecord,
 	ILivechatAgent,
@@ -7,7 +7,7 @@ import type {
 	ILivechatVisitor,
 	IMessage,
 	IOmnichannelRoom,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type { Response } from 'supertest';
 
 import { api, credentials, request } from '../api-data';

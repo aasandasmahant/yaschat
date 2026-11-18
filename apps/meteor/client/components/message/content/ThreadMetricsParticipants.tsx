@@ -4,9 +4,9 @@ import {
 	MessageMetricsItemAvatarRow,
 	MessageMetricsItemIcon,
 	MessageMetricsItemAvatarRowContent,
-} from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export type ThreadMetricsParticipantsProps = {

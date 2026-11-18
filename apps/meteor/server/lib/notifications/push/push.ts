@@ -1,10 +1,10 @@
-import type { IPushToken, RequiredField, Optional, IPushNotificationConfig } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { PushToken } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
-import type { ExtendedFetchOptions } from '@rocket.chat/server-fetch';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import { isRecord, pick, truncateString } from '@rocket.chat/tools';
+import type { IPushToken, RequiredField, Optional, IPushNotificationConfig } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { PushToken } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
+import type { ExtendedFetchOptions } from '@yas chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import { isRecord, pick, truncateString } from '@yas chat/tools';
 import { JWT } from 'google-auth-library';
 
 import { initAPN, sendAPN, shutdownAPN } from './apn';

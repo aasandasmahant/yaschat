@@ -1,10 +1,10 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import { api, ServiceClassInternal } from '@rocket.chat/core-services';
-import type { AutoUpdateRecord, IMeteor } from '@rocket.chat/core-services';
-import type { ILivechatAgent, LoginServiceConfiguration, UserStatus } from '@rocket.chat/core-typings';
-import { LoginServiceConfiguration as LoginServiceConfigurationModel, Users } from '@rocket.chat/models';
-import { ListenersModule, invalidatePublicationUserCache } from '@rocket.chat/streamer';
-import { wrapExceptions } from '@rocket.chat/tools';
+import { api, ServiceClassInternal } from '@yas chat/core-services';
+import type { AutoUpdateRecord, IMeteor } from '@yas chat/core-services';
+import type { ILivechatAgent, LoginServiceConfiguration, UserStatus } from '@yas chat/core-typings';
+import { LoginServiceConfiguration as LoginServiceConfigurationModel, Users } from '@yas chat/models';
+import { ListenersModule, invalidatePublicationUserCache } from '@yas chat/streamer';
+import { wrapExceptions } from '@yas chat/tools';
 import { DDP } from 'meteor/ddp';
 import { DDPCommon } from 'meteor/ddp-common';
 import { Meteor } from 'meteor/meteor';

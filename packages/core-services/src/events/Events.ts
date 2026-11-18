@@ -1,5 +1,5 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { ISetting as AppsSetting } from '@rocket.chat/apps-engine/definition/settings';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { ISetting as AppsSetting } from '@yas chat/apps-engine/definition/settings';
 import type {
 	IEmailInbox,
 	IEmoji,
@@ -30,9 +30,9 @@ import type {
 	LicenseLimitKind,
 	ICustomUserStatus,
 	MessageAttachment,
-} from '@rocket.chat/core-typings';
-import type { ClientMediaSignalBody, ServerMediaSignal } from '@rocket.chat/media-signaling';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/core-typings';
+import type { ClientMediaSignalBody, ServerMediaSignal } from '@yas chat/media-signaling';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import type { AutoUpdateRecord } from '../types/IMeteor';
 

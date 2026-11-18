@@ -1,12 +1,12 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { DDPRateLimiter } from 'meteor/ddp-rate-limiter';
 import { Meteor } from 'meteor/meteor';
 
 import * as Mailer from '../../lib/notifications/email/api';
 import { settings } from '../../settings';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		sendSMTPTestEmail(): {
 			message: string;

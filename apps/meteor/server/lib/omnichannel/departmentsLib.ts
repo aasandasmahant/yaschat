@@ -1,8 +1,8 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { LivechatDepartmentDTO, ILivechatDepartment, ILivechatDepartmentAgents, ILivechatAgent } from '@rocket.chat/core-typings';
-import { LivechatDepartment, LivechatDepartmentAgents, LivechatVisitors, LivechatRooms, Users } from '@rocket.chat/models';
-import { isDepartmentCreationAvailable } from '@rocket.chat/omni-core';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { LivechatDepartmentDTO, ILivechatDepartment, ILivechatDepartmentAgents, ILivechatAgent } from '@yas chat/core-typings';
+import { LivechatDepartment, LivechatDepartmentAgents, LivechatVisitors, LivechatRooms, Users } from '@yas chat/models';
+import { isDepartmentCreationAvailable } from '@yas chat/omni-core';
 
 import { updateDepartmentAgents } from './Helper';
 import { afterDepartmentArchived, afterDepartmentUnarchived } from './hooks';
@@ -12,7 +12,7 @@ import { callbacks } from '../callbacks';
 import { notifyOnLivechatDepartmentAgentChangedByDepartmentId, notifyOnLivechatDepartmentAgentChanged } from '../notifyListener';
 /**
  * @param {string|null} _id - The department id
- * @param {Partial<import('@rocket.chat/core-typings').ILivechatDepartment>} departmentData
+ * @param {Partial<import('@yas chat/core-typings').ILivechatDepartment>} departmentData
  * @param {{upsert?: { agentId: string; count?: number; order?: number; }[], remove?: { agentId: string; count?: number; order?: number; }}} [departmentAgents] - The department agents
  * @param {{_id?: string}} [departmentUnit] - The department's unit id
  */

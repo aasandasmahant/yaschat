@@ -1,6 +1,6 @@
-import { ComposerMarkup, ComposerMarkupContext } from '@rocket.chat/gazzodown-alt';
-import type { Options } from '@rocket.chat/message-parser';
-import { parse } from '@rocket.chat/message-parser';
+import { ComposerMarkup, ComposerMarkupContext } from '@yas chat/gazzodown-alt';
+import type { Options } from '@yas chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 import {
 	MessageComposer,
 	MessageComposerAction,
@@ -9,7 +9,7 @@ import {
 	MessageComposerToolbarActions,
 	MessageComposerToolbarSubmit,
 	RichTextComposerInput,
-} from '@rocket.chat/ui-composer';
+} from '@yas chat/ui-composer';
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Mirrors the options RichTextMessageBox feeds the parser: emoticons, KaTeX and colors are all off
@@ -26,7 +26,7 @@ const markdownSample = [
 	'',
 	'Mentions @rocket.cat and #general, emoji :smile: and 😀.',
 	'',
-	'Links [markdown link](https://rocket.chat), <https://rocket.chat|angle bracket link>, bare https://rocket.chat, support@rocket.chat, +15551234567 and ![alt text](https://rocket.chatdata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>).',
+	'Links [markdown link](https://yas chat), <https://yas chat|angle bracket link>, bare https://yas chat, support@yas chat, +15551234567 and ![alt text](https://yas chatdata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>).',
 	'',
 	'Timestamp <t:1700000000:F>, escaped \\<t:1700000000:F> and color:#ff0000.',
 	'',

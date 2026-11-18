@@ -8,7 +8,7 @@ import type { IUser } from './IUser';
  * event
  *
  * This event is triggered *after* the
- * user logged into Rocket.chat
+ * user logged into Yas chat
  */
 export interface IPostUserLoggedIn {
 	[AppMethod.EXECUTE_POST_USER_LOGGED_IN](context: IUser, read: IRead, http: IHttp, persis: IPersistence, modify: IModify): Promise<void>;

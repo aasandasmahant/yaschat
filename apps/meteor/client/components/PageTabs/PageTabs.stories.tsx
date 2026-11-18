@@ -1,4 +1,4 @@
-import { Badge, Skeleton } from '@rocket.chat/fuselage';
+import { Badge, Skeleton } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 

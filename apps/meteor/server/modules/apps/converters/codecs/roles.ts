@@ -1,4 +1,4 @@
-import type { IRole } from '@rocket.chat/core-typings';
+import type { IRole } from '@yas chat/core-typings';
 
 import { createMappedCodec } from './mappedData';
 

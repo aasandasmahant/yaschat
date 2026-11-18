@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, OAuthConfiguration } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser, OAuthConfiguration } from '@yas chat/core-typings';
 import type { Accounts } from 'meteor/accounts-base';
 import type { OAuth2 } from 'oauth';
 
@@ -91,15 +91,15 @@ function setup() {
 
 	jest.isolateModules(() => {
 		jest.doMock('meteor/accounts-base', () => ({ Accounts: accounts }), { virtual: true });
-		jest.doMock('@rocket.chat/core-services', () => ({ LDAP: { loginAuthenticatedUserRequest: ldapLogin }, ClientSafeError }));
-		jest.doMock('@rocket.chat/logger', () => ({ Logger: jest.fn(() => ({ debug: jest.fn() })) }));
-		const { mockModel } = jest.requireActual<typeof import('@rocket.chat/models/testing')>('@rocket.chat/models/testing');
+		jest.doMock('@yas chat/core-services', () => ({ LDAP: { loginAuthenticatedUserRequest: ldapLogin }, ClientSafeError }));
+		jest.doMock('@yas chat/logger', () => ({ Logger: jest.fn(() => ({ debug: jest.fn() })) }));
+		const { mockModel } = jest.requireActual<typeof import('@yas chat/models/testing')>('@yas chat/models/testing');
 		mockModel('Users', users);
 		jest.doMock('../../../database/utils', () => ({ client: { startSession } }));
 		jest.doMock('../../../settings/cached', () => ({ settings }));
 		jest.doMock('../../callbacks', () => ({ callbacks: { run: runCallback } }));
 		jest.doMock('../../notifyListener', () => ({ notifyOnUserChange: notify }));
-		jest.doMock('@rocket.chat/license', () => ({ License: { hasModule } }));
+		jest.doMock('@yas chat/license', () => ({ License: { hasModule } }));
 		jest.doMock('../../users/saveUserIdentity', () => ({ saveUserIdentity: saveIdentity }));
 		// Each test gets fresh service registrations and exactly one Accounts wrapper.
 		Strategy = jest.requireActual<typeof import('./customOAuth')>('./customOAuth').CustomOAuthStrategy;

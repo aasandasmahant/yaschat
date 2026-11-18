@@ -1,7 +1,7 @@
-import { Button } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { LocationPathname } from '@rocket.chat/ui-contexts';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { Button } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { LocationPathname } from '@yas chat/ui-contexts';
+import { useRouter } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

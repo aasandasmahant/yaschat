@@ -1,4 +1,4 @@
-import { useLanguage } from '@rocket.chat/ui-contexts';
+import { useLanguage } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 export const useFullStartDate = (startedAt: Date) => {

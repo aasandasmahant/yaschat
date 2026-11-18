@@ -3,7 +3,7 @@ import type {
 	IOutboundProviderTemplate,
 	TemplateComponent,
 	TemplateParameter as CoreTemplateParameter,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import type { MessageFormSubmitPayload } from '../components/OutboundMessageWizard/forms/MessageForm';
 import type { RecipientFormSubmitPayload } from '../components/OutboundMessageWizard/forms/RecipientForm/RecipientForm';

@@ -1,4 +1,4 @@
-import { useRoomAvatarPath } from '@rocket.chat/ui-contexts';
+import { useRoomAvatarPath } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 
 import type { BaseAvatarProps } from './BaseAvatar';

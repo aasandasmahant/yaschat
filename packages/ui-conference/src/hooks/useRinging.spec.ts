@@ -1,4 +1,4 @@
-import { VIDEO_CONF_RINGING_WINDOW_MS } from '@rocket.chat/core-typings';
+import { VIDEO_CONF_RINGING_WINDOW_MS } from '@yas chat/core-typings';
 import { act, renderHook } from '@testing-library/react';
 
 import type { RingingCandidate } from './useRinging';

@@ -1,4 +1,4 @@
-import { Text, Throbber } from '@rocket.chat/fuselage';
+import { Text, Throbber } from '@yas chat/fuselage';
 
 const LoadingMessagesIndicator = () => (
 	<Text color='default'>

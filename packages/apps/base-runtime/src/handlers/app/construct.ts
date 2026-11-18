@@ -1,5 +1,5 @@
-import type { IParseAppPackageResult } from '@rocket.chat/apps/dist/server/compiler/IParseAppPackageResult';
-import type { App } from '@rocket.chat/apps-engine/definition/App';
+import type { IParseAppPackageResult } from '@yas chat/apps/dist/server/compiler/IParseAppPackageResult';
+import type { App } from '@yas chat/apps-engine/definition/App';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { AppAccessorsInstance } from '../../lib/accessors/mod';

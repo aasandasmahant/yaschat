@@ -4,17 +4,17 @@ import type {
 	Serialized,
 	IOmnichannelBusinessUnit,
 	OmnichannelBusinessUnitPayload,
-} from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { FieldError, Field, TextInput, Button, Select, ButtonGroup, FieldGroup, Box, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
+} from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { FieldError, Field, TextInput, Button, Select, ButtonGroup, FieldGroup, Box, FieldLabel, FieldRow } from '@yas chat/fuselage';
 import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
 	ContextualbarTitle,
 	ContextualbarHeader,
 	ContextualbarClose,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';

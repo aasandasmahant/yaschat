@@ -1,5 +1,5 @@
-import { Box, Callout, Field, FieldLabel, FieldRow, FieldError, ButtonGroup, Button } from '@rocket.chat/fuselage';
-import { ContextualbarFooter, ContextualbarScrollableContent } from '@rocket.chat/ui-client';
+import { Box, Callout, Field, FieldLabel, FieldRow, FieldError, ButtonGroup, Button } from '@yas chat/fuselage';
+import { ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
 import type { Dispatch, SetStateAction } from 'react';
 import { useId } from 'react';
 import { Controller, useFieldArray, useFormContext } from 'react-hook-form';

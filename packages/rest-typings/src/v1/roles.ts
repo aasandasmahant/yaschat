@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted, IRole, IUserInRole } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted, IRole, IUserInRole } from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 import { paginationQueryProperties } from './pagination';

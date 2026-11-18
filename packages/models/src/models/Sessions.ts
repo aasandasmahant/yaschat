@@ -10,9 +10,9 @@ import type {
 	OSSessionAggregationResult,
 	IUser,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
-import type { ISessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import type { PaginatedResult, WithItemCount } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import type { ISessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import type { PaginatedResult, WithItemCount } from '@yas chat/rest-typings';
 import type {
 	AggregationCursor,
 	AnyBulkWriteOperation,

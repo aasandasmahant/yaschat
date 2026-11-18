@@ -1,4 +1,4 @@
-import { useRouter, useSetting } from '@rocket.chat/ui-contexts';
+import { useRouter, useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import type { AdminUserAction } from './useAdminUserInfoActions';

@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useCallback, useRef, useState } from 'react';
 
 const events = ['error', 'stalled', 'play'];

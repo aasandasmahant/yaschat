@@ -1,8 +1,8 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { Message, Team, Room, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser, MessageTypesValues } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { Message, Team, Room, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser, MessageTypesValues } from '@yas chat/core-typings';
+import { Subscriptions, Rooms } from '@yas chat/models';
 
 import { settings } from '../../settings';
 import { afterLeaveRoomCallback } from '../callbacks/afterLeaveRoomCallback';

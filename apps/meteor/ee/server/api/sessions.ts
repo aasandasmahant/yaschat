@@ -1,8 +1,8 @@
-import { api } from '@rocket.chat/core-services';
-import type { IUser, ISession, DeviceManagementSession, DeviceManagementPopulatedSession } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Users, Sessions } from '@rocket.chat/models';
-import type { PaginatedResult, PaginatedRequest } from '@rocket.chat/rest-typings';
+import { api } from '@yas chat/core-services';
+import type { IUser, ISession, DeviceManagementSession, DeviceManagementPopulatedSession } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Users, Sessions } from '@yas chat/models';
+import type { PaginatedResult, PaginatedRequest } from '@yas chat/rest-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -12,8 +12,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { API } from '../../../server/api/api';
 import { getPaginationItems } from '../../../server/api/lib/getPaginationItems';
@@ -58,7 +58,7 @@ const validateSortKeys = (sortKeys: string[]): boolean => {
 	return sortKeys.every((s) => validSortKeys.includes(s));
 };
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/sessions/list': {
 			GET: (params: SessionsPaginateProps) => PaginatedResult<{ sessions: Array<DeviceManagementSession> }>;

@@ -1,4 +1,4 @@
-import { NotFoundState } from '@rocket.chat/ui-client';
+import { NotFoundState } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const NotFoundPage = () => {

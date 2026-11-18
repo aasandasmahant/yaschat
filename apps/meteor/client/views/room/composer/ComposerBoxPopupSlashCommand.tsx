@@ -1,4 +1,4 @@
-import { ItemContent, ItemDescription, ItemMeta, ItemTitle } from '@rocket.chat/fuselage';
+import { ItemContent, ItemDescription, ItemMeta, ItemTitle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type ComposerBoxPopupSlashCommandProps = {

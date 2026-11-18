@@ -1,8 +1,8 @@
-import type { IImport, IImporterSelection, IImporterSelectionContact, Serialized } from '@rocket.chat/core-typings';
-import { Badge, Box, Button, ButtonGroup, ProgressBar, Text, Throbber } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useSafely } from '@rocket.chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useEndpoint, useStream, useRouter } from '@rocket.chat/ui-contexts';
+import type { IImport, IImporterSelection, IImporterSelectionContact, Serialized } from '@yas chat/core-typings';
+import { Badge, Box, Button, ButtonGroup, ProgressBar, Text, Throbber } from '@yas chat/fuselage';
+import { useDebouncedValue, useSafely } from '@yas chat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useEndpoint, useStream, useRouter } from '@yas chat/ui-contexts';
 import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

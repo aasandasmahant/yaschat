@@ -1,8 +1,8 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import { Team } from '@rocket.chat/core-services';
-import type { ITeamAutocompleteResult, ITeamMemberInfo } from '@rocket.chat/core-services';
-import type { IRoom, ITeam, IUser, UserStatus } from '@rocket.chat/core-typings';
-import { Users, Rooms, Subscriptions } from '@rocket.chat/models';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import { Team } from '@yas chat/core-services';
+import type { ITeamAutocompleteResult, ITeamMemberInfo } from '@yas chat/core-services';
+import type { IRoom, ITeam, IUser, UserStatus } from '@yas chat/core-typings';
+import { Users, Rooms, Subscriptions } from '@yas chat/models';
 import {
 	ajv,
 	isTeamsAddMembersProps,
@@ -27,8 +27,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { canAccessRoomAsync } from '../../lib/authorization';
 import { hasPermissionAsync, hasAtLeastOnePermissionAsync, hasAllPermissionAsync } from '../../lib/authorization/hasPermission';
@@ -872,7 +872,7 @@ API.v1.post(
 
 export type TeamsEndpoints = ExtractRoutesFromAPI<typeof teamsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends TeamsEndpoints {}
 }

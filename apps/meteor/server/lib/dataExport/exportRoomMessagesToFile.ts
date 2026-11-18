@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
-import type { IMessage, IRoom, IUser, MessageAttachment, FileProp, RoomType, IExportOperation } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { IMessage, IRoom, IUser, MessageAttachment, FileProp, RoomType, IExportOperation } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
+import { escapeHTML } from '@yas chat/tools';
 
 import { readSecondaryPreferred } from '../../database/readSecondaryPreferred';
 import { settings } from '../../settings';

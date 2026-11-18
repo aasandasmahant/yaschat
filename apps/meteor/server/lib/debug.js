@@ -1,6 +1,6 @@
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { Logger } from '@rocket.chat/logger';
-import { tracerActiveSpan } from '@rocket.chat/tracing';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { Logger } from '@yas chat/logger';
+import { tracerActiveSpan } from '@yas chat/tracing';
 import { Meteor } from 'meteor/meteor';
 import _ from 'underscore';
 
@@ -131,7 +131,7 @@ Meteor.publish = function (name, func) {
 	});
 };
 
-/** @type {import('@rocket.chat/http-router').RootMiddleware} */
+/** @type {import('@yas chat/http-router').RootMiddleware} */
 export const instanceIdHeader = async (c, next) => {
 	c.env.outgoing.setHeader('X-Instance-ID', InstanceStatus.id());
 	return next();

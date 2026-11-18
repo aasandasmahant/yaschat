@@ -1,5 +1,5 @@
-import { useDebouncedState, useMediaQuery } from '@rocket.chat/fuselage-hooks';
-import { TooltipContext } from '@rocket.chat/ui-contexts';
+import { useDebouncedState, useMediaQuery } from '@yas chat/fuselage-hooks';
+import { TooltipContext } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useMemo, useRef, memo, useState } from 'react';
 

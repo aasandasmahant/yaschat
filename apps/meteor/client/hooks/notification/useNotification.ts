@@ -1,8 +1,8 @@
-import type { INotificationDesktop } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { Random } from '@rocket.chat/random';
-import { useRouter, useUserPreference } from '@rocket.chat/ui-contexts';
-import { useVideoConfJoinCall } from '@rocket.chat/ui-video-conf';
+import type { INotificationDesktop } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { Random } from '@yas chat/random';
+import { useRouter, useUserPreference } from '@yas chat/ui-contexts';
+import { useVideoConfJoinCall } from '@yas chat/ui-video-conf';
 
 import { useNotificationAllowed } from './useNotificationAllowed';
 import { stripTags } from '../../../lib/utils/stringUtils';

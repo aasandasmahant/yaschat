@@ -1,4 +1,4 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
 
 export const getUidDirectMessage = (room: Pick<IRoom, 't' | 'uids' | 'usernames'>, uid?: IUser['_id']) => {
 	if (room.t !== 'd' || !room.uids?.length || room.uids.length > 2) {

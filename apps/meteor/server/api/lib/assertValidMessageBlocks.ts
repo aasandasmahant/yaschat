@@ -1,5 +1,5 @@
-import { isRecord } from '@rocket.chat/tools';
-import { isValidAppId } from '@rocket.chat/ui-kit';
+import { isRecord } from '@yas chat/tools';
+import { isValidAppId } from '@yas chat/ui-kit';
 
 const MAX_LINEAR_SCALE_POINTS = 100;
 const MAX_NESTING_DEPTH = 10;

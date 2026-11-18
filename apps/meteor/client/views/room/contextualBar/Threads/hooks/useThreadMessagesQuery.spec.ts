@@ -1,5 +1,5 @@
-import type { IMessage, Serialized } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IMessage, Serialized } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useThreadMessagesQuery } from './useThreadMessagesQuery';

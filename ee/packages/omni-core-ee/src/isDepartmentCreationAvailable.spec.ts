@@ -1,6 +1,6 @@
-import { License, MockedLicenseBuilder } from '@rocket.chat/license';
-import { mockModel } from '@rocket.chat/models/testing';
-import { isDepartmentCreationAvailable } from '@rocket.chat/omni-core';
+import { License, MockedLicenseBuilder } from '@yas chat/license';
+import { mockModel } from '@yas chat/models/testing';
+import { isDepartmentCreationAvailable } from '@yas chat/omni-core';
 
 import { isDepartmentCreationAvailablePatch } from './isDepartmentCreationAvailable';
 

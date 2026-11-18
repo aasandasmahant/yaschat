@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useSearchItems } from './useSearchItems';
@@ -30,7 +30,7 @@ describe('useSearchItems', () => {
 				} as unknown as SubscriptionWithRoom,
 			])
 			.withEndpoint('GET', '/v1/spotlight', () => ({
-				users: [{ _id: myUserId, username: myUserName, name: 'Rocket Chat Test' }],
+				users: [{ _id: myUserId, username: myUserName, name: 'Yas chat Test' }],
 				rooms: [],
 			}))
 			.build();

@@ -1,8 +1,8 @@
 import { strict as assert } from 'node:assert';
 import { before, describe, it } from 'node:test';
 
-import type { IRoom, IRoomAbacRedaction } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IRoom, IRoomAbacRedaction } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
 
@@ -22,8 +22,8 @@ const { isABACManagedRoom } = proxyquire.noCallThru().load('../../../../server/l
 });
 
 proxyquire.noCallThru().load('./scopeAdminRoomsForAbac.ts', {
-	'@rocket.chat/core-services': { Abac: { scopeRoomsForAdmin } },
-	'@rocket.chat/license': { License: { hasModule: () => true } },
+	'@yas chat/core-services': { Abac: { scopeRoomsForAdmin } },
+	'@yas chat/license': { License: { hasModule: () => true } },
 	'../../../../server/api/lib/scopeAdminRoomsForAbac': {
 		scopeAdminRoomsForAbac: {
 			patch: (fn: Scope) => {

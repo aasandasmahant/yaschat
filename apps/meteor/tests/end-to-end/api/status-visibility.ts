@@ -1,8 +1,8 @@
 import { after, afterEach, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IRoom, ITeam, IUser } from '@rocket.chat/core-typings';
-import { TeamType, UserStatus } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IRoom, ITeam, IUser } from '@yas chat/core-typings';
+import { TeamType, UserStatus } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { sleep } from '../../../lib/utils/sleep';

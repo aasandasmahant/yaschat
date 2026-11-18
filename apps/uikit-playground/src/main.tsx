@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import '@rocket.chat/icons/dist/yaschat.css';
-import '@rocket.chat/fuselage/dist/fuselage.css';
+import '@yas chat/icons/dist/yaschat.css';
+import '@yas chat/fuselage/dist/fuselage.css';
 
 import App from './App';
 import PersistStore from './Components/PersistStore/PersistStore';

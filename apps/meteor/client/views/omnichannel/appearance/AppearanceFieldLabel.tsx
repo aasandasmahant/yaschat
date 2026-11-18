@@ -1,5 +1,5 @@
-import { FieldLabel, Box, Tag } from '@rocket.chat/fuselage';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { FieldLabel, Box, Tag } from '@yas chat/fuselage';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IDiscussionMessage } from '@rocket.chat/core-typings';
-import { Box, Icon, TextInput, Callout, Throbber } from '@rocket.chat/fuselage';
-import { useAutoFocus } from '@rocket.chat/fuselage-hooks';
+import type { IDiscussionMessage } from '@yas chat/core-typings';
+import { Box, Icon, TextInput, Callout, Throbber } from '@yas chat/fuselage';
+import { useAutoFocus } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -10,8 +10,8 @@ import {
 	ContextualbarTitle,
 	ContextualbarSection,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import type { UseInfiniteQueryResult } from '@tanstack/react-query';
 import type { ChangeEvent, MouseEvent, RefObject } from 'react';
 import { useCallback, useId } from 'react';

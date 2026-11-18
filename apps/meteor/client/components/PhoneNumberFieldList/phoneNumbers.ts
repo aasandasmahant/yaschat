@@ -1,4 +1,4 @@
-import type { IUserPhoneNumber } from '@rocket.chat/core-typings';
+import type { IUserPhoneNumber } from '@yas chat/core-typings';
 import type { TFunction } from 'i18next';
 
 import { E164_PHONE_REGEX } from './e164PhoneRegex';

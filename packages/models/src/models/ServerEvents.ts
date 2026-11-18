@@ -4,9 +4,9 @@ import type {
 	IServerEvent,
 	IServerEvents,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
-import { ServerEventType } from '@rocket.chat/core-typings';
-import type { InsertionModel, IServerEventsModel } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import { ServerEventType } from '@yas chat/core-typings';
+import type { InsertionModel, IServerEventsModel } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

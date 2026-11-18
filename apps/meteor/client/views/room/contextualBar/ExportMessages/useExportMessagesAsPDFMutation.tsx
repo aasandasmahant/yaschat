@@ -1,9 +1,9 @@
 import { Document, Font, Image, Page, pdf, StyleSheet, Text, View } from '@react-pdf/renderer';
-import type { IMessage, MessageAttachmentDefault } from '@rocket.chat/core-typings';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { escapeHTML } from '@rocket.chat/tools';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { useSetting, useToastMessageDispatch, useAbsoluteUrl } from '@rocket.chat/ui-contexts';
+import type { IMessage, MessageAttachmentDefault } from '@yas chat/core-typings';
+import { MessageTypes } from '@yas chat/message-types';
+import { escapeHTML } from '@yas chat/tools';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
+import { useSetting, useToastMessageDispatch, useAbsoluteUrl } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

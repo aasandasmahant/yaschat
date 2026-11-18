@@ -1,6 +1,6 @@
-import type { ILivechatContact, ILivechatVisitor, IOmnichannelSource } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { LivechatContacts } from '@rocket.chat/models';
+import type { ILivechatContact, ILivechatVisitor, IOmnichannelSource } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { LivechatContacts } from '@yas chat/models';
 
 import { isAgentAvailableToTakeContactInquiry } from '../../../server/lib/omnichannel/contacts/isAgentAvailableToTakeContactInquiry';
 import { isVerifiedChannelInSource } from '../../../server/lib/omnichannel/contacts/isVerifiedChannelInSource';

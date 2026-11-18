@@ -1,11 +1,11 @@
-You can find our full security documentation in our [handbook](https://handbook.rocket.chat/space/SEC/6226148/SECURITY).
+You can find our full security documentation in our [handbook](https://handbook.yas chat/space/SEC/6226148/SECURITY).
 
 ---
 
 ## Supported Versions
 
 We currently provide security updates for the latest versions.  
-You can find more information about this [here](https://docs.rocket.chat/docs/version-durability).
+You can find more information about this [here](https://docs.yas chat/docs/version-durability).
 
 ---
 

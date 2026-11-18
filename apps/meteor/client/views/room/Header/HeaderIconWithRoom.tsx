@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { HeaderIcon } from '@rocket.chat/ui-client';
+import type { IRoom } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { HeaderIcon } from '@yas chat/ui-client';
 
 import { OmnichannelRoomIcon } from '../../../components/RoomIcon/OmnichannelRoomIcon';
 import { useRoomIcon } from '../../../hooks/useRoomIcon';

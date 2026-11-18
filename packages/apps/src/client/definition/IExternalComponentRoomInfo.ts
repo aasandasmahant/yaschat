@@ -1,4 +1,4 @@
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
 
 import type { IExternalComponentUserInfo } from './IExternalComponentUserInfo';
 

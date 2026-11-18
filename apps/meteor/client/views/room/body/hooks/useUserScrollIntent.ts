@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import type { RefCallback, RefObject } from 'react';
 import { useCallback, useRef } from 'react';
 

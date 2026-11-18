@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 
-import type { ILicenseV3 } from '@rocket.chat/core-typings';
-import { verify, sign, getPairs } from '@rocket.chat/jwt';
+import type { ILicenseV3 } from '@yas chat/core-typings';
+import { verify, sign, getPairs } from '@yas chat/jwt';
 
 const base64Decode = (key: string): string => Buffer.from(key, 'base64').toString('utf-8');
 

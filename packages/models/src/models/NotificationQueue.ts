@@ -1,5 +1,5 @@
-import type { INotification, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { INotificationQueueModel } from '@rocket.chat/model-typings';
+import type { INotification, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { INotificationQueueModel } from '@yas chat/model-typings';
 import type { Collection, Db, Document, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

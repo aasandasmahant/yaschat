@@ -1,5 +1,5 @@
-import type { OptionType } from '@rocket.chat/fuselage';
-import { IconButton, useCursor, PositionAnimated, Options } from '@rocket.chat/fuselage';
+import type { OptionType } from '@yas chat/fuselage';
+import { IconButton, useCursor, PositionAnimated, Options } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useMemo, useRef, useCallback, useEffect } from 'react';
 

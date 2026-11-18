@@ -1,5 +1,5 @@
-import { Icon, StatesAction } from '@rocket.chat/fuselage';
-import { ServerContext, useRouter } from '@rocket.chat/ui-contexts';
+import { Icon, StatesAction } from '@yas chat/fuselage';
+import { ServerContext, useRouter } from '@yas chat/ui-contexts';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 

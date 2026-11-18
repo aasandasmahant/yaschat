@@ -1,4 +1,4 @@
-import { MAX_USER_PHONES } from '@rocket.chat/core-typings';
+import { MAX_USER_PHONES } from '@yas chat/core-typings';
 
 export const phonesSchema = {
 	type: 'array',

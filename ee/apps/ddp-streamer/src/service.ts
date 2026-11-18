@@ -1,6 +1,6 @@
 import os from 'os';
 
-import { api, getConnection, getTrashCollection } from '@rocket.chat/core-services';
+import { api, getConnection, getTrashCollection } from '@yas chat/core-services';
 import {
 	ConnectionLifecycle,
 	ConnectionRegistry,
@@ -10,12 +10,12 @@ import {
 	registerAutoupdatePublication,
 	registerLoginServiceConfigurationPublication,
 	registerPresenceMethods,
-} from '@rocket.chat/ddp-server';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { registerServiceModels } from '@rocket.chat/models';
-import { startBroker } from '@rocket.chat/network-broker';
-import { NotificationsModule } from '@rocket.chat/streamer';
-import { startTracing } from '@rocket.chat/tracing';
+} from '@yas chat/ddp-server';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { registerServiceModels } from '@yas chat/models';
+import { startBroker } from '@yas chat/network-broker';
+import { NotificationsModule } from '@yas chat/streamer';
+import { startTracing } from '@yas chat/tracing';
 
 import { DDPStreamer } from './DDPStreamer';
 import { sessionAccounts } from './methods/accounts';

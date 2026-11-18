@@ -1,8 +1,8 @@
-import { api, Room } from '@rocket.chat/core-services';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Messages, Rooms, Users } from '@rocket.chat/models';
+import { api, Room } from '@yas chat/core-services';
+import { UserStatus } from '@yas chat/core-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Messages, Rooms, Users } from '@yas chat/models';
 
 import { getActivityDisplayName } from '../helpers/getActivityDisplayName';
 

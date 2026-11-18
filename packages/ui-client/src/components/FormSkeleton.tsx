@@ -1,4 +1,4 @@
-import { Box, Skeleton, Stack } from '@rocket.chat/fuselage';
+import { Box, Skeleton, Stack } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 export const FormSkeleton = (props: ComponentProps<typeof Box>) => (

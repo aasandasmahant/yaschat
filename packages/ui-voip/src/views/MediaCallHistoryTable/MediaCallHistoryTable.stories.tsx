@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { GenericMenu, useSort } from '@rocket.chat/ui-client';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { GenericMenu, useSort } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

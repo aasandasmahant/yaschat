@@ -1,7 +1,7 @@
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { App, AppPermission } from '@rocket.chat/core-typings';
-import { Box, Icon } from '@rocket.chat/fuselage';
-import { useHasLicenseModule, useIsEnterprise } from '@rocket.chat/ui-client';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { App, AppPermission } from '@yas chat/core-typings';
+import { Box, Icon } from '@yas chat/fuselage';
+import { useHasLicenseModule, useIsEnterprise } from '@yas chat/ui-client';
 import {
 	useSetModal,
 	useEndpoint,
@@ -10,7 +10,7 @@ import {
 	useToastMessageDispatch,
 	usePermission,
 	useRouter,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import type { ComponentProps, MouseEvent, ReactNode } from 'react';
 import { useMemo, useCallback, useState } from 'react';
 import semver from 'semver';

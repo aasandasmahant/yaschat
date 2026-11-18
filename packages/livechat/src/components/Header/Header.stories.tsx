@@ -133,7 +133,7 @@ export const ForUserChat: Story = {
 			</HeaderPicture>
 			<HeaderContent>
 				<HeaderTitle>@guilherme.gazzo</HeaderTitle>
-				<HeaderSubTitle>guilherme.gazzo@rocket.chat</HeaderSubTitle>
+				<HeaderSubTitle>guilherme.gazzo@yas chat</HeaderSubTitle>
 			</HeaderContent>
 			<HeaderActions>
 				<HeaderAction onClick={action('notifications')}>
@@ -162,7 +162,7 @@ export const WithCustomField: Story = {
 			</HeaderPicture>
 			<HeaderContent>
 				<HeaderTitle>Guilherme Gazzo</HeaderTitle>
-				<HeaderSubTitle>guilherme.gazzo@rocket.chat</HeaderSubTitle>
+				<HeaderSubTitle>guilherme.gazzo@yas chat</HeaderSubTitle>
 				<HeaderCustomField>+ 55 42423 24242</HeaderCustomField>
 			</HeaderContent>
 			<HeaderActions>
@@ -200,7 +200,7 @@ export const WithCustomFieldAndAlert: Story = {
 			</HeaderPicture>
 			<HeaderContent>
 				<HeaderTitle>Guilherme Gazzo</HeaderTitle>
-				<HeaderSubTitle>guilherme.gazzo@rocket.chat</HeaderSubTitle>
+				<HeaderSubTitle>guilherme.gazzo@yas chat</HeaderSubTitle>
 				<HeaderCustomField>+ 55 42423 24242</HeaderCustomField>
 			</HeaderContent>
 			<HeaderActions>
@@ -234,7 +234,7 @@ export const WithTheme: Story = {
 			</HeaderPicture>
 			<HeaderContent>
 				<HeaderTitle>Guilherme Gazzo</HeaderTitle>
-				<HeaderSubTitle>guilherme.gazzo@rocket.chat</HeaderSubTitle>
+				<HeaderSubTitle>guilherme.gazzo@yas chat</HeaderSubTitle>
 				<HeaderCustomField>+ 55 42423 24242</HeaderCustomField>
 			</HeaderContent>
 			<HeaderActions>

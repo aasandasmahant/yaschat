@@ -1,4 +1,4 @@
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import type { HTMLAttributes, RefAttributes, TrackHTMLAttributes } from 'react';
 import { useState, useRef } from 'react';
 

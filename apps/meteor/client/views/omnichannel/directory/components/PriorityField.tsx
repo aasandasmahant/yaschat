@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { FormSkeleton } from '@rocket.chat/ui-client';
+import { Box } from '@yas chat/fuselage';
+import { FormSkeleton } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import Field from '../../components/Field';

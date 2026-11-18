@@ -1,6 +1,6 @@
 import '../cron/apps';
 import '../cron/appRequests';
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 import { settings, settingsRegistry } from '../../../server/settings';
 import { disableAppsWithAddonsCallback } from '../lib/apps/disableAppsWithAddonsCallback';

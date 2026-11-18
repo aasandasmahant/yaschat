@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { DeepWritable } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { DeepWritable } from '@yas chat/core-typings';
 import type { Filter } from 'mongodb';
 
 import { hasPermissionAsync } from '../../authorization/hasPermission';

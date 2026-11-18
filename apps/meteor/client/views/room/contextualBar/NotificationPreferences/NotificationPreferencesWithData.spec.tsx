@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -8,8 +8,8 @@ const mockPlay = jest.fn();
 const mockCloseTab = jest.fn();
 const mockUseRoomSubscription = jest.fn();
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useCustomSound: () => ({ play: mockPlay, list: [] }),
 	useRoomToolbox: () => ({ closeTab: mockCloseTab }),
 	useToastMessageDispatch: () => jest.fn(),

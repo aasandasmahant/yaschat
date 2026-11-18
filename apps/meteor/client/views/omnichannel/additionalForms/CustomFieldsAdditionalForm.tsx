@@ -1,6 +1,6 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Field, FieldLabel, FieldRow, FieldError, FieldHint, ToggleSwitch, TextInput, Select } from '@rocket.chat/fuselage';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Field, FieldLabel, FieldRow, FieldError, FieldHint, ToggleSwitch, TextInput, Select } from '@yas chat/fuselage';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 import { useId, useMemo } from 'react';
 import { useFormContext, Controller } from 'react-hook-form';

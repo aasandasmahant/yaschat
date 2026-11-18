@@ -1,4 +1,4 @@
-import { useOwnerDocument } from '@rocket.chat/fuselage';
+import { useOwnerDocument } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 import { createPortal } from 'react-dom';

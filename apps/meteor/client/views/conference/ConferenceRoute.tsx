@@ -1,5 +1,5 @@
-import { ConferenceViewport, ConferenceWindow } from '@rocket.chat/ui-conference';
-import { useRouteParameter, useSearchParameter } from '@rocket.chat/ui-contexts';
+import { ConferenceViewport, ConferenceWindow } from '@yas chat/ui-conference';
+import { useRouteParameter, useSearchParameter } from '@yas chat/ui-contexts';
 
 import ConferencePage from './ConferencePage';
 import ConferencePageError from './ConferencePageError';

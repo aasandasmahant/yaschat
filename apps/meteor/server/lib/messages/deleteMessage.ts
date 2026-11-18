@@ -1,7 +1,7 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { api, Message, ClientSafeError } from '@rocket.chat/core-services';
-import { isThreadMessage, type AtLeast, type IMessage, type IRoom, type IThreadMessage, type IUser } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Uploads, Users, ReadReceipts, ReadReceiptsArchive, Subscriptions } from '@rocket.chat/models';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { api, Message, ClientSafeError } from '@yas chat/core-services';
+import { isThreadMessage, type AtLeast, type IMessage, type IRoom, type IThreadMessage, type IUser } from '@yas chat/core-typings';
+import { Messages, Rooms, Uploads, Users, ReadReceipts, ReadReceiptsArchive, Subscriptions } from '@yas chat/models';
 
 import { settings } from '../../settings';
 import { canDeleteMessageAsync } from '../authorization/canDeleteMessage';

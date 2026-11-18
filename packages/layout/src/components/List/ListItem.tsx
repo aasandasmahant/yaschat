@@ -1,4 +1,4 @@
-import { Box, Icon } from '@rocket.chat/fuselage';
+import { Box, Icon } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 const iconColors = {

@@ -1,5 +1,5 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { CustomUserStatus } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { CustomUserStatus } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 

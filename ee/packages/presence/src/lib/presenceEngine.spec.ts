@@ -1,5 +1,5 @@
-import type { IUser, IUserSessionConnection } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
+import type { IUser, IUserSessionConnection } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 
 import { processPresence } from './presenceEngine';
 

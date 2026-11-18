@@ -1,4 +1,4 @@
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 export const sectionWithButtonDefault: readonly LayoutBlock[] = [
 	{
@@ -149,7 +149,7 @@ export const sectionWithButtonAsLink: readonly LayoutBlock[] = [
 				text: 'Click Me',
 				emoji: true,
 			},
-			url: 'https://rocket.chat',
+			url: 'https://yas chat',
 		},
 	},
 ];

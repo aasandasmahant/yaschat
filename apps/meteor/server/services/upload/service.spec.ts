@@ -4,10 +4,10 @@ import path from 'node:path';
 import { PassThrough, Readable } from 'node:stream';
 import { buffer } from 'node:stream/consumers';
 
-import { api } from '@rocket.chat/core-services';
-import type { IMessage, IUpload, IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { mockModel } from '@rocket.chat/models/testing';
+import { api } from '@yas chat/core-services';
+import type { IMessage, IUpload, IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { mockModel } from '@yas chat/models/testing';
 import sharp from 'sharp';
 
 import { UploadService } from './service';
@@ -18,11 +18,11 @@ import { updateMessage } from '../../lib/messages/updateMessage';
 import { setUserAvatar } from '../../lib/users/setUserAvatar';
 import { UploadFS } from '../../ufs';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	api: { broadcast: jest.fn() },
 	ServiceClassInternal: class {},
 }));
-jest.mock('@rocket.chat/logger', () => ({ Logger: jest.fn(() => ({ error: jest.fn() })) }));
+jest.mock('@yas chat/logger', () => ({ Logger: jest.fn(() => ({ error: jest.fn() })) }));
 jest.mock('../../lib/media/file-upload', () => ({ FileUpload: { getStore: jest.fn(), getBuffer: jest.fn() } }));
 jest.mock('../../lib/authorization/canAccessRoom', () => ({ canAccessRoomIdAsync: jest.fn() }));
 jest.mock('../../lib/authorization/canDeleteMessage', () => ({ canDeleteMessageAsync: jest.fn() }));

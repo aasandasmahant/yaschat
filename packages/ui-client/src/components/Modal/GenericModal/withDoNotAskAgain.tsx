@@ -1,4 +1,4 @@
-import { Box, CheckBox, Stack } from '@rocket.chat/fuselage';
+import { Box, CheckBox, Stack } from '@yas chat/fuselage';
 import type { ComponentType, ReactNode } from 'react';
 import { useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Box, Throbber, Stack } from '@rocket.chat/fuselage';
+import { Box, Throbber, Stack } from '@yas chat/fuselage';
 
 export type VideoConfPopupTitleProps = {
 	text: string;

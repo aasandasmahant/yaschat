@@ -1,7 +1,7 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { ICustomUserStatus } from '@rocket.chat/core-typings';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { CustomUserStatus } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { ICustomUserStatus } from '@yas chat/core-typings';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { CustomUserStatus } from '@yas chat/models';
 
 import { trim } from '../../../lib/utils/stringUtils';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

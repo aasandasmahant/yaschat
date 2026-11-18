@@ -104,7 +104,7 @@ describe('[IconButton Component]', () => {
 	});
 
 	it('should open an external link in a new tab without access to the opener', () => {
-		render(<IconButton is='a' href='https://rocket.chat' external icon='balloon' aria-label='balloon' />);
+		render(<IconButton is='a' href='https://yas chat' external icon='balloon' aria-label='balloon' />);
 		const link = screen.getByRole('link', { name: 'balloon' });
 		expect(link).toHaveAttribute('target', '_blank');
 		expect(link).toHaveAttribute('rel', 'noopener noreferrer');

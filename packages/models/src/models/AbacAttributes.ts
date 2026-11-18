@@ -1,5 +1,5 @@
-import type { IAbacAttribute } from '@rocket.chat/core-typings';
-import type { DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IAbacAttribute } from '@yas chat/core-typings';
+import type { DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Db, Document, FindCursor, FindOptions, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

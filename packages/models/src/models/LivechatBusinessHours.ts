@@ -1,6 +1,6 @@
-import type { ILivechatBusinessHour, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { LivechatBusinessHourTypes } from '@rocket.chat/core-typings';
-import type { ILivechatBusinessHoursModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { ILivechatBusinessHour, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
+import type { ILivechatBusinessHoursModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, Db, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

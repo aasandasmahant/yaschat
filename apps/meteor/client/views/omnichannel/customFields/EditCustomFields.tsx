@@ -1,5 +1,5 @@
-import type { ILivechatCustomField, Serialized } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { ILivechatCustomField, Serialized } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldError,
 	Button,
@@ -12,15 +12,15 @@ import {
 	TextInput,
 	ToggleSwitch,
 	Box,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import {
 	ContextualbarTitle,
 	ContextualbarHeader,
 	ContextualbarClose,
 	ContextualbarFooter,
 	ContextualbarScrollableContent,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { FormProvider, useForm, Controller } from 'react-hook-form';

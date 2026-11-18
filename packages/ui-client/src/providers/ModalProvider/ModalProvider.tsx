@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ModalContext } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ModalContext } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo, memo, useSyncExternalStore } from 'react';
 

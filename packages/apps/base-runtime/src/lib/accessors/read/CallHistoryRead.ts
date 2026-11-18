@@ -3,8 +3,8 @@ import type {
 	ICallHistorySearchFilters,
 	ICallHistorySearchPagination,
 	ICallHistorySearchResult,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import type { ICallHistoryItem } from '@rocket.chat/apps-engine/definition/mediaCalls';
+} from '@yas chat/apps-engine/definition/accessors';
+import type { ICallHistoryItem } from '@yas chat/apps-engine/definition/mediaCalls';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

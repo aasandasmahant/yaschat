@@ -11,10 +11,10 @@ import {
 	Button,
 	TextAreaInput,
 	Callout,
-} from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@rocket.chat/layout';
-import { CustomFieldsForm, PasswordVerifier, useValidatePassword } from '@rocket.chat/ui-client';
-import { useAccountsCustomFields, useSetting, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@yas chat/layout';
+import { CustomFieldsForm, PasswordVerifier, useValidatePassword } from '@yas chat/ui-client';
+import { useAccountsCustomFields, useSetting, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useEffect, useId, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';

@@ -1,7 +1,7 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { AccordionItem, Box } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, Select, ToggleSwitch, Slider } from '@rocket.chat/fuselage-forms';
-import { useCustomSound } from '@rocket.chat/ui-contexts';
+import type { SelectOption } from '@yas chat/fuselage';
+import { AccordionItem, Box } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, Select, ToggleSwitch, Slider } from '@yas chat/fuselage-forms';
+import { useCustomSound } from '@yas chat/ui-contexts';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

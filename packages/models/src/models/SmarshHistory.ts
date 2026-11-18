@@ -1,5 +1,5 @@
-import type { ISmarshHistory, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ISmarshHistoryModel } from '@rocket.chat/model-typings';
+import type { ISmarshHistory, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ISmarshHistoryModel } from '@yas chat/model-typings';
 import type { Db, Collection } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

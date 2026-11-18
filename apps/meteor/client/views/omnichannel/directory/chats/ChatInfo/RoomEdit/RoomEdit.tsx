@@ -1,13 +1,13 @@
-import type { ILivechatVisitor, IOmnichannelRoom, Serialized } from '@rocket.chat/core-typings';
-import { Field, FieldLabel, FieldRow, TextInput, ButtonGroup, Button } from '@rocket.chat/fuselage';
+import type { ILivechatVisitor, IOmnichannelRoom, Serialized } from '@yas chat/core-typings';
+import { Field, FieldLabel, FieldRow, TextInput, ButtonGroup, Button } from '@yas chat/fuselage';
 import {
 	CustomFieldsForm,
 	ContextualbarContent,
 	ContextualbarFooter,
 	ContextualbarScrollableContent,
 	FormSkeleton,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCallback, useId } from 'react';
 import { useController, useForm } from 'react-hook-form';

@@ -1,5 +1,5 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { SettingValue } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 
 const cache = new Map();
 

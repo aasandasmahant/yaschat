@@ -1,10 +1,10 @@
-import { type RoomType, isDirectMessageRoom } from '@rocket.chat/core-typings';
-import { AutoComplete, Box, Option, OptionAvatar, OptionContent, Chip } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useStableArray } from '@rocket.chat/fuselage-hooks';
-import { escapeRegExp } from '@rocket.chat/tools';
-import { ITEM_MEDIA_SIZE, RoomAvatar } from '@rocket.chat/ui-avatar';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { useUser, useUserSubscriptions } from '@rocket.chat/ui-contexts';
+import { type RoomType, isDirectMessageRoom } from '@yas chat/core-typings';
+import { AutoComplete, Box, Option, OptionAvatar, OptionContent, Chip } from '@yas chat/fuselage';
+import { useDebouncedValue, useStableArray } from '@yas chat/fuselage-hooks';
+import { escapeRegExp } from '@yas chat/tools';
+import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yas chat/ui-avatar';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { useUser, useUserSubscriptions } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { memo, useMemo, useState } from 'react';
 

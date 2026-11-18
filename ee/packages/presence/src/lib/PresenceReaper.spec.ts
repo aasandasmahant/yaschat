@@ -1,5 +1,5 @@
-import { UserStatus, type IUserSession, type IUserSessionConnection } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { UserStatus, type IUserSession, type IUserSessionConnection } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import type { Collection, FindCursor, WithId } from 'mongodb';
 
 import { PresenceReaper } from './PresenceReaper';

@@ -1,4 +1,4 @@
-import { Icon } from '@rocket.chat/fuselage';
+import { Icon } from '@yas chat/fuselage';
 
 export type ItemsIconProps = { layer: number; lastNode: boolean };
 

@@ -31,8 +31,8 @@ class MockImporter {
 }
 
 const { executeDownloadPublicImportFile } = proxyquire.noCallThru().load('./downloadPublicImportFile.ts', {
-	'@rocket.chat/core-services': { Import: { newOperation: stubs.newOperation } },
-	'@rocket.chat/server-fetch': { serverFetch: stubs.serverFetch },
+	'@yas chat/core-services': { Import: { newOperation: stubs.newOperation } },
+	'@yas chat/server-fetch': { serverFetch: stubs.serverFetch },
 	'meteor/meteor': { Meteor: { methods: sinon.stub() } },
 	'../../lib/authorization/hasPermission': { hasPermissionAsync: sinon.stub() },
 	'../../lib/deprecationWarningLogger': { methodDeprecationLogger: { method: sinon.stub() } },

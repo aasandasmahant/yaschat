@@ -12,11 +12,11 @@ supports TS7.
 
 | Package | Blocker |
 | --- | --- |
-| `@rocket.chat/core-typings`, `@rocket.chat/ui-kit` | typia toolchain — they build with `ttsc`/`tsgo` but keep TS5.9 for the editor/`typecheck` path until typia settles on a released TS7 binary. |
-| `@rocket.chat/lint-config` | the ESLint plugins oxlint loads as JS plugins (jest, storybook, testing-library) import `@typescript-eslint/utils`, which links the JS compiler API. Typed linting itself runs on oxlint's TS7-based tsgolint. `installConfig.hoistingLimits: workspaces` nests the plugins beside the pinned TS. |
-| `@rocket.chat/message-parser`, `@rocket.chat/livechat` | webpack configs load `webpack.config.ts` through ts-node. |
-| `@rocket.chat/emitter`, `@rocket.chat/mp3-encoder`, `@rocket.chat/css-in-js`, `@rocket.chat/fuselage-hooks`, `@rocket.chat/styled` | `@rollup/plugin-typescript` links the JS compiler API. |
-| `@rocket.chat/apps` | `node --test` suites load TS through ts-node (extensionless CJS relative imports rule out native type stripping). |
+| `@yas chat/core-typings`, `@yas chat/ui-kit` | typia toolchain — they build with `ttsc`/`tsgo` but keep TS5.9 for the editor/`typecheck` path until typia settles on a released TS7 binary. |
+| `@yas chat/lint-config` | the ESLint plugins oxlint loads as JS plugins (jest, storybook, testing-library) import `@typescript-eslint/utils`, which links the JS compiler API. Typed linting itself runs on oxlint's TS7-based tsgolint. `installConfig.hoistingLimits: workspaces` nests the plugins beside the pinned TS. |
+| `@yas chat/message-parser`, `@yas chat/livechat` | webpack configs load `webpack.config.ts` through ts-node. |
+| `@yas chat/emitter`, `@yas chat/mp3-encoder`, `@yas chat/css-in-js`, `@yas chat/fuselage-hooks`, `@yas chat/styled` | `@rollup/plugin-typescript` links the JS compiler API. |
+| `@yas chat/apps` | `node --test` suites load TS through ts-node (extensionless CJS relative imports rule out native type stripping). |
 
 ## Constraints to respect when migrating the rest
 
@@ -31,7 +31,7 @@ supports TS7.
   tree with them.
 - `typedoc` supports TS ≤ 6, so `apps-engine`'s `gen-doc` needs a local TS5.9
   until typedoc ships TS7 support (manual doc script, not in CI).
-- `@rocket.chat/federation-sdk` (external) declares a `typescript ~5.9.2`
+- `@yas chat/federation-sdk` (external) declares a `typescript ~5.9.2`
   peer — warning only.
 
 ## Follow-ups

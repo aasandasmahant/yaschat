@@ -1,6 +1,6 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -27,7 +27,7 @@ const mocks = {
 };
 
 const { sendUsageReport } = proxyquire.noCallThru().load('./sendUsageReport', {
-	'@rocket.chat/server-fetch': { serverFetch: mocks.serverFetch },
+	'@yas chat/server-fetch': { serverFetch: mocks.serverFetch },
 	'../index': { statistics: mocks.statistics },
 	'../../cloud': { getWorkspaceAccessToken: mocks.getWorkspaceAccessToken },
 	'../../utils/getURL': { getWorkspaceURL: mocks.getWorkspaceURL },
@@ -64,7 +64,7 @@ describe('sendUsageReport', () => {
 
 		expect(mocks.statistics.save.called).to.be.true;
 		expect(mocks.serverFetch.calledOnce).to.be.true;
-		expect(mocks.serverFetch.calledWith('https://collector.rocket.chat/', sinon.match({ method: 'POST' }))).to.be.true;
+		expect(mocks.serverFetch.calledWith('https://collector.yas chat/', sinon.match({ method: 'POST' }))).to.be.true;
 		expect(mocks.serverFetch.firstCall.args[1].body.host).to.equal('http://localhost:3000/');
 		expect(result).to.be.undefined;
 	});

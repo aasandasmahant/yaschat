@@ -1,4 +1,4 @@
-import type { IRoom, IUser, IVideoConferenceUser, VideoConference } from '@rocket.chat/core-typings';
+import type { IRoom, IUser, IVideoConferenceUser, VideoConference } from '@yas chat/core-typings';
 
 type NameableConference = {
 	type: VideoConference['type'];

@@ -1,9 +1,9 @@
 import { after, before, describe, it } from 'node:test';
 
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { ILivechatDepartment, IUser, ILivechatAgent } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import { UserStatus } from '@yas chat/core-typings';
+import type { ILivechatDepartment, IUser, ILivechatAgent } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, request, api, credentials } from '../../data/api-data';

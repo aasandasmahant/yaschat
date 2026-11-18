@@ -1,6 +1,6 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions/AppsEngineException';
-import { Message, Omnichannel, ClientSafeError } from '@rocket.chat/core-services';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions/AppsEngineException';
+import { Message, Omnichannel, ClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatDepartment,
 	IOmnichannelRoomInfo,
@@ -10,12 +10,12 @@ import type {
 	ILivechatVisitor,
 	IOmnichannelRoom,
 	SelectedAgent,
-} from '@rocket.chat/core-typings';
-import { LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { LivechatContacts, LivechatDepartment, LivechatInquiry, LivechatRooms, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+} from '@yas chat/core-typings';
+import { LivechatInquiryStatus } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { LivechatContacts, LivechatDepartment, LivechatInquiry, LivechatRooms, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { createLivechatRoom, createLivechatInquiry, allowAgentSkipQueue, prepareLivechatRoom } from './Helper';
 import { RoutingManager } from './RoutingManager';

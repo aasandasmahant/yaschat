@@ -10,9 +10,9 @@ import {
 	StatesSubtitle,
 	Text,
 	ToggleSwitch,
-} from '@rocket.chat/fuselage';
-import { ContextualbarContent, ContextualbarFooter, links, useIsEnterprise } from '@rocket.chat/ui-client';
-import { useEndpoint, useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ContextualbarContent, ContextualbarFooter, links, useIsEnterprise } from '@yas chat/ui-client';
+import { useEndpoint, useSetting } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { Trans, useTranslation } from 'react-i18next';
 

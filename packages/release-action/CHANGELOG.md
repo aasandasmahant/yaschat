@@ -1,4 +1,4 @@
-# @rocket.chat/release-action
+# @yas chat/release-action
 
 ## 2.2.5
 
@@ -30,7 +30,7 @@
 
 - <details><summary>Updated dependencies [b7f5035442]:</summary>
 
-  - @rocket.chat/eslint-config@0.7.0
+  - @yas chat/eslint-config@0.7.0
   </details>
 
 ## 2.2.3-rc.0
@@ -39,7 +39,7 @@
 
 - <details><summary>Updated dependencies [b7f5035442]:</summary>
 
-  - @rocket.chat/eslint-config@0.7.0-rc.0
+  - @yas chat/eslint-config@0.7.0-rc.0
   </details>
 
 ## 2.2.2
@@ -48,7 +48,7 @@
 
 - <details><summary>Updated dependencies [7ac473df7a]:</summary>
 
-  - @rocket.chat/eslint-config@0.6.2
+  - @yas chat/eslint-config@0.6.2
   </details>
 
 ## 2.2.2-rc.0
@@ -57,28 +57,28 @@
 
 - <details><summary>Updated dependencies [7ac473df7a]:</summary>
 
-  - @rocket.chat/eslint-config@0.6.2-rc.0
+  - @yas chat/eslint-config@0.6.2-rc.0
   </details>
 
 ## 2.2.1
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [642745f289, b223cbde14]:</summary>
 
-  - @rocket.chat/eslint-config@0.6.1
+  - @yas chat/eslint-config@0.6.1
   </details>
 
 ## 2.2.1-rc.0
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - Updated dependencies [642745f289]
 - Updated dependencies [b223cbde14]
-  - @rocket.chat/eslint-config@0.6.1-rc.0
+  - @yas chat/eslint-config@0.6.1-rc.0
 
 ## 2.2.0
 
@@ -89,7 +89,7 @@
 ### Patch Changes
 
 - Updated dependencies [0f56aacc4d]
-  - @rocket.chat/eslint-config@0.6.0
+  - @yas chat/eslint-config@0.6.0
 
 ## 2.2.0-rc.0
 
@@ -100,7 +100,7 @@
 ### Patch Changes
 
 - Updated dependencies [0f56aacc4d]
-  - @rocket.chat/eslint-config@0.6.0-rc.0
+  - @yas chat/eslint-config@0.6.0-rc.0
 
 ## 2.1.0
 

@@ -1,4 +1,4 @@
-import { Box, IconButton } from '@rocket.chat/fuselage';
+import { Box, IconButton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { stopShareButtonStyles } from './stageStyles';

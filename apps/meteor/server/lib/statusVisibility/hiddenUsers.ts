@@ -1,7 +1,7 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import { StatusVisibility } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { statusVisibilityGate, NOTHING_HIDDEN, isHiddenFor, scopeHidesAnyone } from '@rocket.chat/streamer';
+import type { PresenceScope } from '@yas chat/core-services';
+import { StatusVisibility } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { statusVisibilityGate, NOTHING_HIDDEN, isHiddenFor, scopeHidesAnyone } from '@yas chat/streamer';
 
 import { redactStatus } from './redactStatus';
 import { isAdminHidingAllowed } from './settings';

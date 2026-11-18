@@ -1,8 +1,8 @@
-import type { ISetting, SettingValidationRule } from '@rocket.chat/core-typings';
-import { isSettingCode } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { createPredicateFromFilter } from '@rocket.chat/mongo-adapter';
-import { isRecord } from '@rocket.chat/tools';
+import type { ISetting, SettingValidationRule } from '@yas chat/core-typings';
+import { isSettingCode } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import { isRecord } from '@yas chat/tools';
 import { isValidCron } from 'cron-validator';
 
 import { settings } from '../settings';

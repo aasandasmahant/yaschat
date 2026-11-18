@@ -1,9 +1,9 @@
-import { MeteorService } from '@rocket.chat/core-services';
+import { MeteorService } from '@yas chat/core-services';
 
 import { callMeteorMethod } from './meteorFallback';
 import { makeSession } from '../__tests__/helpers';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	MeteorService: {
 		callMethodWithToken: jest.fn(),
 	},

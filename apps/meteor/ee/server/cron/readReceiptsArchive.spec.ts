@@ -1,4 +1,4 @@
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 
 import { archiveOldReadReceipts } from './readReceiptsArchive';
 import { settings } from '../../../server/settings';
@@ -14,7 +14,7 @@ const messagesModel = {
 	setReceiptsArchivedById: jest.fn(),
 };
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockImplementation(() => ({
 		info: jest.fn(),
 		error: jest.fn(),
@@ -28,7 +28,7 @@ jest.mock('../../../server/settings', () => ({
 	},
 }));
 
-jest.mock('@rocket.chat/cron', () => ({
+jest.mock('@yas chat/cron', () => ({
 	cronJobs: {
 		add: jest.fn(),
 		has: jest.fn(),

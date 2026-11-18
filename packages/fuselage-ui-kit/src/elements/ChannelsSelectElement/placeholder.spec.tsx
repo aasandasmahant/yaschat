@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type * as UiKit from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 
 import { modalParser } from '../../surfaces';

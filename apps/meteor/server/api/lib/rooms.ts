@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IRoomAbacRedaction, ISubscription, RoomAdminFieldsType, RoomType } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions } from '@rocket.chat/models';
-import type { RoomAvailableForTeams } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IRoomAbacRedaction, ISubscription, RoomAdminFieldsType, RoomType } from '@yas chat/core-typings';
+import { Rooms, Subscriptions } from '@yas chat/models';
+import type { RoomAvailableForTeams } from '@yas chat/rest-typings';
 import type { FindOptions, Sort } from 'mongodb';
 
 import { scopeAdminRoomsForAbac } from './scopeAdminRoomsForAbac';

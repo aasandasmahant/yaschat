@@ -1,13 +1,13 @@
-import type { AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import type { IAbacAttributeDefinition, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import type { IAbacAttributeDefinition, IRoom, IUser } from '@yas chat/core-typings';
 import type { Collection } from 'mongodb';
 
 import { LOCAL_PREVIEW_PAGE_SIZE, LocalPDP } from './LocalPDP';
 import { previewRetainingEveryone } from '../helper';
 import { acquireSharedInMemoryMongo, type SharedMongoConnection } from '../test-helpers/mongoMemoryServer';
 
-jest.mock('@rocket.chat/core-services', () => ({
-	...jest.requireActual('@rocket.chat/core-services'),
+jest.mock('@yas chat/core-services', () => ({
+	...jest.requireActual('@yas chat/core-services'),
 	LDAPEnterprise: { syncUsersAbacAttributesByIds: jest.fn() },
 }));
 

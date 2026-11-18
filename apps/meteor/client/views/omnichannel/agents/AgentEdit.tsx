@@ -1,7 +1,7 @@
-import type { ILivechatAgent, ILivechatAgentStatus, ILivechatDepartmentAgents } from '@rocket.chat/core-typings';
-import { Field, FieldLabel, FieldGroup, FieldRow, TextInput, Button, Box, Icon, Select, ButtonGroup } from '@rocket.chat/fuselage';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { ILivechatAgent, ILivechatAgentStatus, ILivechatDepartmentAgents } from '@yas chat/core-typings';
+import { Field, FieldLabel, FieldGroup, FieldRow, TextInput, Button, Box, Icon, Select, ButtonGroup } from '@yas chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarClose,
 	ContextualbarFooter,
@@ -9,8 +9,8 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarTitle,
 	UserInfoAvatar,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { useForm, Controller, FormProvider } from 'react-hook-form';

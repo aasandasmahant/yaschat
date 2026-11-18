@@ -1,5 +1,5 @@
-import { SHA256 } from '@rocket.chat/sha256';
-import { imperativeModal } from '@rocket.chat/ui-client';
+import { SHA256 } from '@yas chat/sha256';
+import { imperativeModal } from '@yas chat/ui-client';
 import { lazy } from 'react';
 
 import type { LoginCallback } from './overrideLoginMethod';

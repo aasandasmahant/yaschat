@@ -4,7 +4,7 @@ How `SurfaceRenderer.render(blocks)` in [`packages/ui-kit/src/rendering/SurfaceR
 
 ## Steps
 
-1. **Conditional blocks are unwrapped.** Each `conditional` block is replaced by its `render` list when its `when` filter matches the renderer's `Conditions`, and dropped otherwise. The only condition is `engine` (`'rocket.chat'` or `'livechat'`). With no `Conditions` passed, every conditional block matches. Conditional blocks do not nest: a `conditional` inside `render` is not unwrapped, and the allowlist step then drops it.
+1. **Conditional blocks are unwrapped.** Each `conditional` block is replaced by its `render` list when its `when` filter matches the renderer's `Conditions`, and dropped otherwise. The only condition is `engine` (`'yas chat'` or `'livechat'`). With no `Conditions` passed, every conditional block matches. Conditional blocks do not nest: a `conditional` inside `render` is not unwrapped, and the allowlist step then drops it.
 2. **Blocks outside the surface allowlist are dropped.** The allowlist is the array the renderer class passes to `super()`. Nothing is reported; the block simply does not appear.
 3. **Each remaining block goes to the renderer method named after its `type`** (`section`, `actions`, ...), called with `BlockContext.BLOCK`. A missing method means the block renders as nothing.
 4. **Block components render their children** through the renderer again, using the context helpers below. Text objects go to `plain_text` and `mrkdwn`, which every renderer must implement.
@@ -32,7 +32,7 @@ The guard lists are also shorter than the types. For example, `isInputBlockEleme
 
 ## Which allowlist applies
 
-Each surface's allowlist is a constant exported by `@rocket.chat/ui-kit` (for example `modalSurfaceLayoutBlockTypes`), and the surface layout type is derived from it. Both families of renderer use the same constant:
+Each surface's allowlist is a constant exported by `@yas chat/ui-kit` (for example `modalSurfaceLayoutBlockTypes`), and the surface layout type is derived from it. Both families of renderer use the same constant:
 
 - **Livechat** (`MessageParser`) extends `UiKitParserMessage`, which passes `messageSurfaceLayoutBlockTypes`.
 - **Fuselage** renderers extend `FuselageSurfaceRenderer`, which extends `SurfaceRenderer` directly rather than the `UiKitParser*` classes. Each surface renderer passes its surface's constant to `super()`.
@@ -43,7 +43,7 @@ A renderer still needs a method for every block in its list. Fuselage has a spec
 
 ## Links
 
-`button`, `icon_button` and overflow options open their `url` unless `isSafeUrl` from `@rocket.chat/ui-kit` rejects it. It rejects URLs whose scheme runs code in the page (`javascript:`, `data:`, `vbscript:`, in any letter case or with leading whitespace) and URLs that cannot be parsed. Everything else opens in a new tab without access to the opener, including app deep links such as `zoommtg:` or `msteams:` and relative URLs. A rejected URL is ignored, and the element behaves as if it had none: it sends its `blockAction` instead of opening a link. Both Fuselage and Livechat apply the same check.
+`button`, `icon_button` and overflow options open their `url` unless `isSafeUrl` from `@yas chat/ui-kit` rejects it. It rejects URLs whose scheme runs code in the page (`javascript:`, `data:`, `vbscript:`, in any letter case or with leading whitespace) and URLs that cannot be parsed. Everything else opens in a new tab without access to the opener, including app deep links such as `zoommtg:` or `msteams:` and relative URLs. A rejected URL is ignored, and the element behaves as if it had none: it sends its `blockAction` instead of opening a link. Both Fuselage and Livechat apply the same check.
 
 ## Other renderers
 

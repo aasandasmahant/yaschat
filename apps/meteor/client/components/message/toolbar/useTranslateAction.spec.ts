@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useTranslateAction } from './useTranslateAction';

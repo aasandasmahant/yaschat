@@ -1,4 +1,4 @@
-import type { JoinableVideoConference } from '@rocket.chat/core-typings';
+import type { JoinableVideoConference } from '@yas chat/core-typings';
 import { createContext, useContext } from 'react';
 
 /**

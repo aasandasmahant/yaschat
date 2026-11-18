@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { WizardContext, StepsLinkedList } from '@rocket.chat/ui-client';
+import { Box } from '@yas chat/fuselage';
+import { WizardContext, StepsLinkedList } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ReviewStep from './ReviewStep';

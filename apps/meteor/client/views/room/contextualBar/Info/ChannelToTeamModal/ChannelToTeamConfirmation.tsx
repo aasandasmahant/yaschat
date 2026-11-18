@@ -1,5 +1,5 @@
-import { Box, Stack } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import { Box, Stack } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import AbacAttributesRemovalWarning from '../../../../../components/ABAC/AbacAttributesRemovalWarning';

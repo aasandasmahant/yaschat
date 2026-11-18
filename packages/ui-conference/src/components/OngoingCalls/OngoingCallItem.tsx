@@ -1,4 +1,4 @@
-import { Item, ItemActions, ItemContent, ItemDescription, ItemLink, ItemMeta, ItemRow, ItemTitle } from '@rocket.chat/fuselage';
+import { Item, ItemActions, ItemContent, ItemDescription, ItemLink, ItemMeta, ItemRow, ItemTitle } from '@yas chat/fuselage';
 import type { MouseEvent, ReactNode } from 'react';
 
 export type OngoingCallItemProps = {

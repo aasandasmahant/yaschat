@@ -1,7 +1,7 @@
-import type { ILogItem } from '@rocket.chat/core-typings';
-import { Box, Pagination } from '@rocket.chat/fuselage';
-import { CustomScrollbars, usePagination, GenericNoResults, GenericError } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { ILogItem } from '@yas chat/core-typings';
+import { Box, Pagination } from '@yas chat/fuselage';
+import { CustomScrollbars, usePagination, GenericNoResults, GenericError } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useEffect, useMemo, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 

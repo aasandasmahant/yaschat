@@ -1,5 +1,5 @@
-import { useToggle } from '@rocket.chat/fuselage-hooks';
-import { useAttachmentIsCollapsedByDefault } from '@rocket.chat/ui-contexts';
+import { useToggle } from '@yas chat/fuselage-hooks';
+import { useAttachmentIsCollapsedByDefault } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { useIsCollapsibleToggled } from './useIsCollapsibleToggled';

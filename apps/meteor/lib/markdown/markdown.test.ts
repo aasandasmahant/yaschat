@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { escapeHTML } from '@rocket.chat/tools';
+import { escapeHTML } from '@yas chat/tools';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

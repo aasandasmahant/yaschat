@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IInvite } from '@rocket.chat/core-typings';
-import { Invites } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IInvite } from '@yas chat/core-typings';
+import { Invites } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../authorization/hasPermission';
 

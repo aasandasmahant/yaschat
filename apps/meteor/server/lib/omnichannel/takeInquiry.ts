@@ -1,5 +1,5 @@
-import { Omnichannel, ClientSafeError } from '@rocket.chat/core-services';
-import { LivechatInquiry, LivechatRooms, Users } from '@rocket.chat/models';
+import { Omnichannel, ClientSafeError } from '@yas chat/core-services';
+import { LivechatInquiry, LivechatRooms, Users } from '@yas chat/models';
 
 import { RoutingManager } from './RoutingManager';
 import { isAgentAvailableToTakeContactInquiry } from './contacts/isAgentAvailableToTakeContactInquiry';

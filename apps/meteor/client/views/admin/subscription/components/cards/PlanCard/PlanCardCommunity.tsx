@@ -1,4 +1,4 @@
-import { Card, CardBody, Icon, Stack } from '@rocket.chat/fuselage';
+import { Card, CardBody, Icon, Stack } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import PlanCardHeader from './PlanCardHeader';

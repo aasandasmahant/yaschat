@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 const MessageComposerFileGroup = ({ children, style, ...props }: ComponentProps<typeof Box>) => {

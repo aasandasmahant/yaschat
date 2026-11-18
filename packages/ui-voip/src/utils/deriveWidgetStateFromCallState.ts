@@ -1,4 +1,4 @@
-import type { CallRole, CallState } from '@rocket.chat/media-signaling';
+import type { CallRole, CallState } from '@yas chat/media-signaling';
 
 import type { State } from '../context/definitions';
 

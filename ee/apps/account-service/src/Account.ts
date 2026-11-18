@@ -1,6 +1,6 @@
-import { ServiceClass, Settings } from '@rocket.chat/core-services';
-import type { IAccount, ILoginResult } from '@rocket.chat/core-services';
-import { getLoginExpirationInDays } from '@rocket.chat/tools';
+import { ServiceClass, Settings } from '@yas chat/core-services';
+import type { IAccount, ILoginResult } from '@yas chat/core-services';
+import { getLoginExpirationInDays } from '@yas chat/tools';
 
 import { loginViaResume } from './lib/loginViaResume';
 import { removeSession } from './lib/removeSession';

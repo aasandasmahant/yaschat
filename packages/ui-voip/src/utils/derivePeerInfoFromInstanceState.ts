@@ -1,4 +1,4 @@
-import type { AnyMediaCallData } from '@rocket.chat/media-signaling';
+import type { AnyMediaCallData } from '@yas chat/media-signaling';
 
 import { derivePeerInfoFromInstanceContact } from './derivePeerInfoFromInstanceContact';
 import type { UnknownPeerInfo } from '../context';

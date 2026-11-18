@@ -1,6 +1,6 @@
-import type { OperationResult, PaginatedRequest } from '@rocket.chat/rest-typings';
-import { usePaginatedQuery } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { OperationResult, PaginatedRequest } from '@yas chat/rest-typings';
+import { usePaginatedQuery } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 
 type CurrentContactsQuery = PaginatedRequest<{
 	searchText: string;

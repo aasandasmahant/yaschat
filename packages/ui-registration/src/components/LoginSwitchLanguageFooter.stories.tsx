@@ -1,5 +1,5 @@
-import { Box, Tile } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Box, Tile } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';

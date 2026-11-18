@@ -1,5 +1,5 @@
-import { MeteorService } from '@rocket.chat/core-services';
-import type { RemoteMethodCall } from '@rocket.chat/ddp-server';
+import { MeteorService } from '@yas chat/core-services';
+import type { RemoteMethodCall } from '@yas chat/ddp-server';
 
 /** Runs a method this process does not implement on the Meteor service, as the connected user. */
 export const callMeteorMethod: RemoteMethodCall = async (session, method, params) => {

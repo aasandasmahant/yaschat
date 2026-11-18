@@ -1,9 +1,9 @@
 import { useFocusManager } from '@react-aria/focus';
 import { useOverlayTrigger } from '@react-aria/overlays';
 import { useOverlayTriggerState } from '@react-stately/overlays';
-import type { NavBarSearchFormValues } from '@rocket.chat/ai-search';
-import { Box, TextInput } from '@rocket.chat/fuselage';
-import { useMergedRefs, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { NavBarSearchFormValues } from '@yas chat/ai-search';
+import { Box, TextInput } from '@yas chat/fuselage';
+import { useMergedRefs, useStableCallback } from '@yas chat/fuselage-hooks';
 import type { ChangeEvent, FocusEvent, KeyboardEvent } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useFormContext, useWatch } from 'react-hook-form';

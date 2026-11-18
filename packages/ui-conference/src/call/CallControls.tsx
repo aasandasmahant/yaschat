@@ -1,9 +1,9 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, ButtonGroup, Palette, RadioButton, SplitButton, borderRadius, backgroundColor, fontColor } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { ActionButton, ToggleButton } from '@rocket.chat/ui-media';
+import { css } from '@yas chat/css-in-js';
+import { Box, ButtonGroup, Palette, RadioButton, SplitButton, borderRadius, backgroundColor, fontColor } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
+import { GenericMenu } from '@yas chat/ui-client';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { ActionButton, ToggleButton } from '@yas chat/ui-media';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

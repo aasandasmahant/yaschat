@@ -1,6 +1,6 @@
 import './PrototypeRender.scss';
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
 import { useRef, useState } from 'react';
 import type { Edge } from 'reactflow';
 

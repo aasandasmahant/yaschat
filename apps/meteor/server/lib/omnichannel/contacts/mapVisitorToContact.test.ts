@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { OmnichannelSourceType, type ILivechatVisitor, type IOmnichannelSource } from '@rocket.chat/core-typings';
+import { OmnichannelSourceType, type ILivechatVisitor, type IOmnichannelSource } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

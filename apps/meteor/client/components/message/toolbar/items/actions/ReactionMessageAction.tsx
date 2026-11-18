@@ -5,9 +5,9 @@ import {
 	type IMessage,
 	type IRoom,
 	type ISubscription,
-} from '@rocket.chat/core-typings';
-import { useUser, useEndpoint, usePermission } from '@rocket.chat/ui-contexts';
-import { EmojiElement, useEmojiPickerData } from '@rocket.chat/ui-emoji-picker';
+} from '@yas chat/core-typings';
+import { useUser, useEndpoint, usePermission } from '@yas chat/ui-contexts';
+import { EmojiElement, useEmojiPickerData } from '@yas chat/ui-emoji-picker';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ILivechatDepartment, ILivechatInquiryRecord, ILivechatVisitor, IOmnichannelRoom, IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { ILivechatDepartment, ILivechatInquiryRecord, ILivechatVisitor, IOmnichannelRoom, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

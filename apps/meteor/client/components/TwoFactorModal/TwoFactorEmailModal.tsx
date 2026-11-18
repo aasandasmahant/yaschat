@@ -1,7 +1,7 @@
-import { Box, Button, ButtonGroup, Stack } from '@rocket.chat/fuselage';
-import { FieldGroup, TextInput, Field, FieldLabel, FieldRow, FieldError } from '@rocket.chat/fuselage-forms';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import { Box, Button, ButtonGroup, Stack } from '@yas chat/fuselage';
+import { FieldGroup, TextInput, Field, FieldLabel, FieldRow, FieldError } from '@yas chat/fuselage-forms';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

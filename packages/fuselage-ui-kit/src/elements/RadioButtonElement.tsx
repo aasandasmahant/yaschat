@@ -1,5 +1,5 @@
-import { Box, RadioButton } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Box, RadioButton } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import OptionLabel from './OptionLabel';
 import { useUiKitState } from '../hooks/useUiKitState';

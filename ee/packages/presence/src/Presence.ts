@@ -1,12 +1,12 @@
 import { setTimeout, clearTimeout } from 'node:timers';
 
-import type { IPresence, IBrokerNode } from '@rocket.chat/core-services';
-import { License, ClientSafeError, ServiceClass, Settings, StatusVisibility } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { Logger } from '@rocket.chat/logger';
-import { Users, UsersSessions } from '@rocket.chat/models';
+import type { IPresence, IBrokerNode } from '@yas chat/core-services';
+import { License, ClientSafeError, ServiceClass, Settings, StatusVisibility } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { Logger } from '@yas chat/logger';
+import { Users, UsersSessions } from '@yas chat/models';
 
 import { PresenceReaper } from './lib/PresenceReaper';
 import { normalizeStatusText } from './lib/normalizeStatusText';

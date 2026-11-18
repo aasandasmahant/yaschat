@@ -5,7 +5,7 @@ import type {
 	ILivechatContactVisitorAssociation,
 	ILivechatVisitor,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type {
 	FindPaginated,
 	ILivechatContactsModel,
@@ -13,8 +13,8 @@ import type {
 	Updater,
 	DocumentWithProjection,
 	FindOptionsWithProjection,
-} from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	Document,
 	Collection,

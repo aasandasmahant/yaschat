@@ -1,5 +1,5 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import type { EventResultMeta, MediaCallEvent, PreMediaCallCreatedOutcome } from '@rocket.chat/apps';
+import { AppEvents, Apps } from '@yas chat/apps';
+import type { EventResultMeta, MediaCallEvent, PreMediaCallCreatedOutcome } from '@yas chat/apps';
 import type {
 	IAcceptedMediaCall as IAppsAcceptedMediaCall,
 	IActiveMediaCall as IAppsActiveMediaCall,
@@ -9,11 +9,11 @@ import type {
 	IMediaCallContact as IAppsMediaCallContact,
 	IPreMediaCallCreatedContext,
 	MediaCallOrigin,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import type { CallPreventionRecord, IMediaCall, MediaCallActor, MediaCallContact, ServerActor } from '@rocket.chat/core-typings';
-import type { PreCallCreatedHookParams, PreCallCreatedHookResult } from '@rocket.chat/media-calls';
-import { callFeatureList, type CallFeature } from '@rocket.chat/media-signaling';
+} from '@yas chat/apps-engine/definition/mediaCalls';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import type { CallPreventionRecord, IMediaCall, MediaCallActor, MediaCallContact, ServerActor } from '@yas chat/core-typings';
+import type { PreCallCreatedHookParams, PreCallCreatedHookResult } from '@yas chat/media-calls';
+import { callFeatureList, type CallFeature } from '@yas chat/media-signaling';
 
 import { logger } from './logger';
 import { i18n } from '../../lib/i18n';

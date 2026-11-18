@@ -1,12 +1,12 @@
 {
-	"name": "@rocket.chat/fuselage-hooks",
+	"name": "@yas chat/fuselage-hooks",
 	"version": "0.44.0",
 	"description": "React hooks for Fuselage, YasChat's design system and UI toolkit",
 	"keywords": [
 		"react",
 		"hooks",
 		"fuselage",
-		"rocket.chat"
+		"yas chat"
 	],
 	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
@@ -20,7 +20,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/index.js",
 	"module": "dist/index.module.js",
@@ -38,12 +38,12 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/emitter": "workspace:~",
-		"@rocket.chat/fuselage-tokens": "workspace:^"
+		"@yas chat/emitter": "workspace:~",
+		"@yas chat/fuselage-tokens": "workspace:^"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@rollup/plugin-commonjs": "~29.0.3",
 		"@rollup/plugin-json": "~6.1.0",
 		"@rollup/plugin-node-resolve": "~16.0.3",

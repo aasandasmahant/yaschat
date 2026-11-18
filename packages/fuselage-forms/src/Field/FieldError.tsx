@@ -1,4 +1,4 @@
-import { FieldError as FieldErrorComponent } from '@rocket.chat/fuselage';
+import { FieldError as FieldErrorComponent } from '@yas chat/fuselage';
 import type { ReactNode, ComponentProps } from 'react';
 
 import { useFieldDescriptorId } from './FieldContext';

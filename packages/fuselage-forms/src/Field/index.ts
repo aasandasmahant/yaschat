@@ -8,4 +8,4 @@ export * from './FieldContext';
 
 export * from './Label';
 
-export { FieldGroup, FieldRow, FieldLink, FieldLabelInfo } from '@rocket.chat/fuselage';
+export { FieldGroup, FieldRow, FieldLink, FieldLabelInfo } from '@yas chat/fuselage';

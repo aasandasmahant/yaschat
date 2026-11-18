@@ -1,16 +1,16 @@
-import { ClientSafeError, XMPPServer } from '@rocket.chat/core-services';
+import { ClientSafeError, XMPPServer } from '@yas chat/core-services';
 import {
 	isEditedMessage,
 	isRoomXMPPFederated,
 	isRoomXMPPHostedMuc,
 	isRoomXMPPRemoteMuc,
 	isUserXMPPFederated,
-} from '@rocket.chat/core-typings';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Subscriptions, Users } from '@rocket.chat/models';
-import { isBareJid } from '@rocket.chat/tools';
-import { escapeLocalpart, XMPP_SERVER_DEFAULTS } from '@rocket.chat/xmpp-server';
+} from '@yas chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Subscriptions, Users } from '@yas chat/models';
+import { isBareJid } from '@yas chat/tools';
+import { escapeLocalpart, XMPP_SERVER_DEFAULTS } from '@yas chat/xmpp-server';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { afterLeaveRoomCallback } from '../../../../server/lib/callbacks/afterLeaveRoomCallback';

@@ -16,9 +16,9 @@ const settingsGetStub = sinon.stub();
 const loggerErrorStub = sinon.stub();
 
 const { getWorkspaceAccessTokenWithScope } = proxyquire.noCallThru().load('./getWorkspaceAccessTokenWithScope.ts', {
-	'@rocket.chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
-	'@rocket.chat/server-fetch': { serverFetch: fetchStub },
-	'./getRedirectUri': { getRedirectUri: () => 'https://open.rocket.chat/admin/cloud/oauth-callback' },
+	'@yas chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
+	'@yas chat/server-fetch': { serverFetch: fetchStub },
+	'./getRedirectUri': { getRedirectUri: () => 'https://open.yas chat/admin/cloud/oauth-callback' },
 	'./getWorkspaceAccessToken': { CloudWorkspaceAccessTokenError },
 	'./removeWorkspaceRegistrationInfo': { removeWorkspaceRegistrationInfo: removeWorkspaceRegistrationInfoStub },
 	'./retrieveRegistrationStatus': { retrieveRegistrationStatus: retrieveRegistrationStatusStub },
@@ -44,7 +44,7 @@ describe('getWorkspaceAccessTokenWithScope', () => {
 		hasOfflineLicenseStub.returns(false);
 		settingsGetStub.withArgs('Cloud_Workspace_Client_Id').returns('client-id');
 		settingsGetStub.withArgs('Cloud_Workspace_Client_Secret').returns('client-secret');
-		settingsGetStub.withArgs('Cloud_Url').returns('https://cloud.rocket.chat');
+		settingsGetStub.withArgs('Cloud_Url').returns('https://cloud.yas chat');
 	});
 
 	afterEach(() => {
@@ -86,14 +86,14 @@ describe('getWorkspaceAccessTokenWithScope', () => {
 				scope: 'marketplace:purchase',
 			});
 			const [url, { method, body }] = fetchStub.firstCall.args;
-			expect(url).to.equal('https://cloud.rocket.chat/api/oauth/token');
+			expect(url).to.equal('https://cloud.yas chat/api/oauth/token');
 			expect(method).to.equal('POST');
 			expect(Object.fromEntries(body)).to.deep.equal({
 				client_id: 'client-id',
 				client_secret: 'client-secret',
 				scope: 'marketplace:purchase',
 				grant_type: 'client_credentials',
-				redirect_uri: 'https://open.rocket.chat/admin/cloud/oauth-callback',
+				redirect_uri: 'https://open.yas chat/admin/cloud/oauth-callback',
 			});
 		});
 

@@ -18,7 +18,7 @@ export default [
 				},
 				{
 					test: /\.pegjs$/,
-					use: ['@rocket.chat/peggy-loader'],
+					use: ['@yas chat/peggy-loader'],
 				},
 			],
 		},

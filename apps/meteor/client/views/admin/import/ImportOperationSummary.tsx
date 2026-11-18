@@ -1,7 +1,7 @@
-import type { Serialized } from '@rocket.chat/core-typings';
-import { TableRow, TableCell } from '@rocket.chat/fuselage';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { Serialized } from '@yas chat/core-typings';
+import { TableRow, TableCell } from '@yas chat/fuselage';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

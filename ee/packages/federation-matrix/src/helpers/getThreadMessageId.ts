@@ -1,6 +1,6 @@
-import { type EventID } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Messages } from '@rocket.chat/models';
+import { type EventID } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Messages } from '@yas chat/models';
 
 // TODO replace by a reusable logger
 const logger = new Logger('federation-matrix:message');

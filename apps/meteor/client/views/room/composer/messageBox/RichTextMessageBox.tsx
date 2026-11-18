@@ -1,10 +1,10 @@
 /* oxlint-disable complexity */
-import { isRoomFederated, isRoomNativeFederated } from '@rocket.chat/core-typings';
-import { useContentBoxSize, useMediaQuery, useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { Options } from '@rocket.chat/message-parser';
-import { useFormatDateAndTime, useMergedRefsV2 } from '@rocket.chat/ui-client';
-import { MessageComposerHint, RichTextComposerInputExpandable } from '@rocket.chat/ui-composer';
-import { useUserPreference, useLayout, useSetting } from '@rocket.chat/ui-contexts';
+import { isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
+import { useContentBoxSize, useMediaQuery, useStableCallback } from '@yas chat/fuselage-hooks';
+import type { Options } from '@yas chat/message-parser';
+import { useFormatDateAndTime, useMergedRefsV2 } from '@yas chat/ui-client';
+import { MessageComposerHint, RichTextComposerInputExpandable } from '@yas chat/ui-composer';
+import { useUserPreference, useLayout, useSetting } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import type { ReactElement, FormEvent, MouseEvent, ClipboardEvent } from 'react';
 import { memo, useRef, useReducer, useCallback, useState, useSyncExternalStore, useMemo } from 'react';

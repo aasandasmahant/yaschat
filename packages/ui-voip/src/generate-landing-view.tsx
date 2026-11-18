@@ -21,7 +21,7 @@ g.window = jsdomWindow;
 g.document = jsdomWindow.document;
 
 // 2. Redirect all React-family CJS requires to this repo's copy.
-//    When @rocket.chat/fuselage is symlinked from a separate dev repo it has its own
+//    When @yas chat/fuselage is symlinked from a separate dev repo it has its own
 //    node_modules/react, which creates a second React instance and breaks hook calls.
 //    Module._resolveFilename runs before the module cache lookup, so this forces every
 //    require('react') — including fuselage's internal ones — to resolve to the same file.
@@ -44,15 +44,15 @@ const { renderToStaticMarkup } = require('react-dom/server') as typeof import('r
 const { flushSync } = require('react-dom') as typeof import('react-dom');
 const { createRoot } = require('react-dom/client') as typeof import('react-dom/client');
 const { States, StatesIcon, StatesSubtitle, StatesTitle, PaletteStyleTag } =
-	require('@rocket.chat/fuselage') as typeof import('@rocket.chat/fuselage');
+	require('@yas chat/fuselage') as typeof import('@yas chat/fuselage');
 
-const fuselageCssPath = require.resolve('@rocket.chat/fuselage/dist/fuselage.css');
+const fuselageCssPath = require.resolve('@yas chat/fuselage/dist/fuselage.css');
 
 // 4. Embed the YasChat icon font as a base64 data URI.
 //    fuselage.css sets font-family:YasChat on .rcx-icon but does not include the
-//    @font-face declaration — that lives in @rocket.chat/icons. Inlining the woff2
+//    @font-face declaration — that lives in @yas chat/icons. Inlining the woff2
 //    makes the HTML fully self-contained with no external font file dependencies.
-const iconFontPath = require.resolve('@rocket.chat/icons/dist/font/yaschat.woff2');
+const iconFontPath = require.resolve('@yas chat/icons/dist/font/yaschat.woff2');
 const iconFontBase64 = readFileSync(iconFontPath).toString('base64');
 const iconFontCss = `@font-face {
   font-family: 'YasChat';
@@ -109,7 +109,7 @@ function LandingView() {
 
 const body = renderToStaticMarkup(<LandingView />);
 
-// In browser mode (jsdom present), @rocket.chat/css-in-js inserts generated styles
+// In browser mode (jsdom present), @yas chat/css-in-js inserts generated styles
 // into document.head via attachRules. Collect them now so we can inline them.
 // Read the CSSOM rather than the text: in production builds rules are added with insertRule.
 const dynamicStyles = Array.from(jsdomWindow.document.head.querySelectorAll('style'))

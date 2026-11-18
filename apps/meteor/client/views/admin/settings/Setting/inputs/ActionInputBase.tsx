@@ -1,6 +1,6 @@
-import { Button, Field, FieldHint, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Button, Field, FieldHint, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

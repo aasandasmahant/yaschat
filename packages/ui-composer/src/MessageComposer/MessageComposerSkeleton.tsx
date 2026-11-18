@@ -1,4 +1,4 @@
-import { Skeleton, Box } from '@rocket.chat/fuselage';
+import { Skeleton, Box } from '@yas chat/fuselage';
 
 import { MessageComposer, MessageComposerToolbar } from '.';
 

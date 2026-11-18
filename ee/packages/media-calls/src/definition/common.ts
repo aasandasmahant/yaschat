@@ -1,5 +1,5 @@
-import type { AtLeast, IMediaCall, IUser, MediaCallActorType, MediaCallContact, MediaCallSignedContact } from '@rocket.chat/core-typings';
-import type { CallFeature, CallRejectedReason, CallService } from '@rocket.chat/media-signaling';
+import type { AtLeast, IMediaCall, IUser, MediaCallActorType, MediaCallContact, MediaCallSignedContact } from '@yas chat/core-typings';
+import type { CallFeature, CallRejectedReason, CallService } from '@yas chat/media-signaling';
 
 export type MinimalUserData = Pick<IUser, '_id' | 'username' | 'name' | 'sipExtension'>;
 

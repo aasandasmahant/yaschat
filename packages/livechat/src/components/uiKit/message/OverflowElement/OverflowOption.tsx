@@ -1,4 +1,4 @@
-import * as uikit from '@rocket.chat/ui-kit';
+import * as uikit from '@yas chat/ui-kit';
 import type { ComponentChild } from 'preact';
 import type { TargetedEvent } from 'preact/compat';
 import { useCallback } from 'preact/compat';

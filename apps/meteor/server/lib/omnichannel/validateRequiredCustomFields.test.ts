@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { ILivechatCustomField } from '@rocket.chat/core-typings';
+import type { ILivechatCustomField } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { validateRequiredCustomFields } from './custom-fields';

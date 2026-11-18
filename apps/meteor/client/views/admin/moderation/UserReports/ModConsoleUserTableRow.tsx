@@ -1,5 +1,5 @@
-import type { IUser, UserReport, Serialized } from '@rocket.chat/core-typings';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { IUser, UserReport, Serialized } from '@yas chat/core-typings';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
 
 import ModConsoleUserActions from './ModConsoleUserActions';
 import { normalizeUsername } from '../../../../../lib/utils/normalizeUsername';

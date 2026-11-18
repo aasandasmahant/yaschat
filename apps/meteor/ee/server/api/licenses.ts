@@ -1,6 +1,6 @@
-import type { Cloud, LicenseInfo } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Settings, Users } from '@rocket.chat/models';
+import type { Cloud, LicenseInfo } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Settings, Users } from '@yas chat/models';
 import {
 	ajv,
 	isLicensesAddProps,
@@ -9,7 +9,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api/api';
 import { hasPermissionAsync } from '../../../server/lib/authorization/hasPermission';

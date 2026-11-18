@@ -1,7 +1,7 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { ClientSafeError, Presence, Team, isClientSafeError } from '@rocket.chat/core-services';
-import type { IExportOperation, ILoginToken, IPersonalAccessToken, IUser, UserStatus } from '@rocket.chat/core-typings';
-import { Users, Subscriptions, Sessions, OAuthAccessTokens, OAuthRefreshTokens, OAuthAuthCodes } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { ClientSafeError, Presence, Team, isClientSafeError } from '@yas chat/core-services';
+import type { IExportOperation, ILoginToken, IPersonalAccessToken, IUser, UserStatus } from '@yas chat/core-typings';
+import { Users, Subscriptions, Sessions, OAuthAccessTokens, OAuthRefreshTokens, OAuthAuthCodes } from '@yas chat/models';
 import {
 	ajv,
 	isUserCreateParamsPOST,
@@ -30,9 +30,9 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { isHiddenFor } from '@rocket.chat/streamer';
-import { escapeRegExp, getLoginExpirationInMs } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { isHiddenFor } from '@yas chat/streamer';
+import { escapeRegExp, getLoginExpirationInMs } from '@yas chat/tools';
 import type { Filter } from 'mongodb';
 
 import { generatePersonalAccessTokenOfUser } from '../../../imports/personal-access-tokens/server/api/methods/generateToken';
@@ -2388,7 +2388,7 @@ settings.watch<number>('Rate_Limiter_Limit_RegisterUser', (value) => {
 
 type UsersEndpoints = ExtractRoutesFromAPI<typeof usersEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends UsersEndpoints {}
 }

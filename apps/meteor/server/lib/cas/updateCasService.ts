@@ -1,5 +1,5 @@
-import type { LoginServiceConfiguration as LoginServiceConfigurationData } from '@rocket.chat/core-typings';
-import { LoginServiceConfiguration } from '@rocket.chat/models';
+import type { LoginServiceConfiguration as LoginServiceConfigurationData } from '@yas chat/core-typings';
+import { LoginServiceConfiguration } from '@yas chat/models';
 
 import { logger } from './logger';
 import { settings } from '../../settings/cached';
@@ -11,7 +11,7 @@ export async function updateCasServices(): Promise<void> {
 		enabled: settings.get('CAS_enabled'),
 		base_url: settings.get('CAS_base_url'),
 		login_url: settings.get('CAS_login_url'),
-		// Rocketchat Visuals
+		// YasChat Visuals
 		buttonLabelText: settings.get('CAS_button_label_text'),
 		buttonLabelColor: settings.get('CAS_button_label_color'),
 		buttonColor: settings.get('CAS_button_color'),

@@ -1,4 +1,4 @@
-import type { ISupportedLanguage } from '@rocket.chat/core-typings';
+import type { ISupportedLanguage } from '@yas chat/core-typings';
 
 import type { AutotranslateGetSupportedLanguagesParamsGET } from './autotranslate/AutotranslateGetSupportedLanguagesParamsGET';
 import type { AutotranslateSaveSettingsParamsPOST } from './autotranslate/AutotranslateSaveSettingsParamsPOST';

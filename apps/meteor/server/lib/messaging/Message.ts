@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageTypes } from '@yas chat/message-types';
+import { escapeHTML } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 
 import { trim } from '../../../lib/utils/stringUtils';

@@ -1,4 +1,4 @@
-import { useUserId, useSetting } from '@rocket.chat/ui-contexts';
+import { useUserId, useSetting } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

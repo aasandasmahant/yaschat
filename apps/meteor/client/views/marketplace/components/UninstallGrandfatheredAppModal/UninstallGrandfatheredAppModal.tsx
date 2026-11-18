@@ -9,8 +9,8 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@rocket.chat/fuselage';
-import { links } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import { links } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import MarkdownText from '../../../../components/MarkdownText';

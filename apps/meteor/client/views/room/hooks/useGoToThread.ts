@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useRouter } from '@yas chat/ui-contexts';
 
 export const useGoToThread = ({ replace = false }: { replace?: boolean } = {}) => {
 	const router = useRouter();

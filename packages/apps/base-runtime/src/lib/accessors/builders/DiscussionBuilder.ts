@@ -1,8 +1,8 @@
-import type { IDiscussionBuilder } from '@rocket.chat/apps-engine/definition/accessors/IDiscussionBuilder';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
+import type { IDiscussionBuilder } from '@yas chat/apps-engine/definition/accessors/IDiscussionBuilder';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms/RoomType';
 
 import { RoomBuilder } from './RoomBuilder';
 

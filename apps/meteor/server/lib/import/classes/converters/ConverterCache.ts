@@ -1,5 +1,5 @@
-import type { IImportUser, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
+import type { IImportUser, IUser } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
 
 export type UserIdentification = {
 	_id: string;

@@ -1,5 +1,5 @@
-import { isEditedMessage } from '@rocket.chat/core-typings';
-import { LivechatInquiry } from '@rocket.chat/models';
+import { isEditedMessage } from '@yas chat/core-typings';
+import { LivechatInquiry } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import { notifyOnLivechatInquiryChanged } from '../../lib/notifyListener';

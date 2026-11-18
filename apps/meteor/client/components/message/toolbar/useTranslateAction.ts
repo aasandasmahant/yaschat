@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription, IRoom } from '@rocket.chat/core-typings';
-import { useEndpoint, usePermission, useSetting, useUser } from '@rocket.chat/ui-contexts';
+import type { IMessage, ISubscription, IRoom } from '@yas chat/core-typings';
+import { useEndpoint, usePermission, useSetting, useUser } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';

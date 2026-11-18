@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IMediaCall } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -37,15 +37,15 @@ class ServiceClassInternalMock {
 }
 
 const { MediaCallService } = proxyquire.noCallThru().load('./service', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		ServiceClassInternal: ServiceClassInternalMock,
 		api: { broadcast: sandbox.stub() },
 		Presence: {},
 		Authorization: {},
 	},
-	'@rocket.chat/media-calls': { callServer: callServerMock, getSignalsForExistingCall: sandbox.stub() },
-	'@rocket.chat/media-signaling': { isClientMediaSignal: sandbox.stub() },
-	'@rocket.chat/ui-voip/dist/ui-kit/getHistoryMessagePayload': { callStateToTranslationKey, getHistoryMessagePayload },
+	'@yas chat/media-calls': { callServer: callServerMock, getSignalsForExistingCall: sandbox.stub() },
+	'@yas chat/media-signaling': { isClientMediaSignal: sandbox.stub() },
+	'@yas chat/ui-voip/dist/ui-kit/getHistoryMessagePayload': { callStateToTranslationKey, getHistoryMessagePayload },
 	'./appEvents': {
 		notifyAppsOfMediaCallEnded: sandbox.stub(),
 		notifyAppsOfMediaCallParticipantJoined: sandbox.stub(),

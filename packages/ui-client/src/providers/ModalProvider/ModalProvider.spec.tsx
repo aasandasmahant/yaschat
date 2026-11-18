@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { act, render, screen } from '@testing-library/react';
 import type { ForwardedRef, ReactNode } from 'react';
 import { Suspense, createContext, createRef, forwardRef, useContext, useImperativeHandle } from 'react';

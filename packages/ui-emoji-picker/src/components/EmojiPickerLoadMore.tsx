@@ -1,4 +1,4 @@
-import { Box, Button } from '@rocket.chat/fuselage';
+import { Box, Button } from '@yas chat/fuselage';
 import type { ButtonHTMLAttributes } from 'react';
 
 const EmojiPickerLoadMore = ({ children, ...props }: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'style' | 'is'>) => (

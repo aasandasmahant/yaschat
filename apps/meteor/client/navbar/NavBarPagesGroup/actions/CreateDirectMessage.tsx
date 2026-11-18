@@ -1,4 +1,4 @@
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 import {
 	Box,
 	Modal,
@@ -9,9 +9,9 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@rocket.chat/fuselage';
-import { FieldGroup, Field, FieldLabel, FieldRow, FieldError, FieldHint } from '@rocket.chat/fuselage-forms';
-import { useEndpoint, useToastMessageDispatch, useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { FieldGroup, Field, FieldLabel, FieldRow, FieldError, FieldHint } from '@yas chat/fuselage-forms';
+import { useEndpoint, useToastMessageDispatch, useSetting } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useId, memo } from 'react';
 import { useForm, Controller } from 'react-hook-form';

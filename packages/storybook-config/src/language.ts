@@ -1,5 +1,5 @@
-import { extractTranslationNamespaces } from '@rocket.chat/i18n';
-import languages from '@rocket.chat/i18n/dist/languages';
+import { extractTranslationNamespaces } from '@yas chat/i18n';
+import languages from '@yas chat/i18n/dist/languages';
 import type { GlobalTypes } from 'storybook/internal/types';
 
 export const FALLBACK_LANGUAGE = 'en';

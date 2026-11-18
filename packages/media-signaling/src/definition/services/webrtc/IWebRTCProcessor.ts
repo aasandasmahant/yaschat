@@ -1,4 +1,4 @@
-import type { Emitter } from '@rocket.chat/emitter';
+import type { Emitter } from '@yas chat/emitter';
 
 import type { IClientMediaCall } from '../../call/index.js';
 import type { IMediaSignalLogger } from '../../logger.js';

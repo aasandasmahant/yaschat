@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { afterEach, beforeEach, describe, it, mock } from 'node:test';
 
-import type { IPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
+import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
 
 import { PermissionDeniedError } from '../../../src/server/errors/PermissionDeniedError';
 import { AppPermissionManager } from '../../../src/server/managers/AppPermissionManager';

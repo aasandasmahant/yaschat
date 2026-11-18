@@ -1,4 +1,4 @@
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { getWorkspaceAccessTokenOrThrow } from './getWorkspaceAccessToken';
 import { syncWorkspace } from './syncWorkspace';
@@ -6,7 +6,7 @@ import { settings } from '../../settings';
 import { SystemLogger } from '../logger/system';
 import { getURL } from '../utils/getURL';
 
-export const fallback = 'https://go.rocket.chat/i/contact-sales';
+export const fallback = 'https://go.yas chat/i/contact-sales';
 
 export const getCheckoutUrl = async (): Promise<{
 	url: string;

@@ -1,7 +1,7 @@
-import { OmnichannelEEService } from '@rocket.chat/core-services';
-import type { ILivechatVisitor, IMessage, IOmnichannelRoom, IUser } from '@rocket.chat/core-typings';
-import { isMessageFromVisitor, isEditedMessage } from '@rocket.chat/core-typings';
-import { LivechatRooms, LivechatVisitors, Users } from '@rocket.chat/models';
+import { OmnichannelEEService } from '@yas chat/core-services';
+import type { ILivechatVisitor, IMessage, IOmnichannelRoom, IUser } from '@yas chat/core-typings';
+import { isMessageFromVisitor, isEditedMessage } from '@yas chat/core-typings';
+import { LivechatRooms, LivechatVisitors, Users } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { i18n } from '../../../../server/lib/i18n';

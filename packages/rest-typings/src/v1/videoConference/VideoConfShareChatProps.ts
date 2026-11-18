@@ -1,4 +1,4 @@
-import type { VideoConferenceChatAccessMode } from '@rocket.chat/core-typings';
+import type { VideoConferenceChatAccessMode } from '@yas chat/core-typings';
 import type { JSONSchemaType } from 'ajv';
 
 import { ajv } from '../Ajv';

@@ -1,7 +1,7 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { Box, CheckBox, Icon, Text } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@rocket.chat/ui-client';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { Box, CheckBox, Icon, Text } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yas chat/ui-client';
 import { useId } from 'react';
 
 export type ChannelDesertionTableRowProps = {

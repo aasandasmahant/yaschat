@@ -1,4 +1,4 @@
-import { Box, CheckBox, Option, PopoverSurface } from '@rocket.chat/fuselage';
+import { Box, CheckBox, Option, PopoverSurface } from '@yas chat/fuselage';
 import { Fragment } from 'react';
 
 import type { CategoryDropDownListProps } from '../../definitions/CategoryDropdownDefinitions';

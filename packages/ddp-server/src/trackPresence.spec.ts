@@ -1,11 +1,11 @@
-import { Presence } from '@rocket.chat/core-services';
+import { Presence } from '@yas chat/core-services';
 
 import { makeSession } from './__tests__/helpers';
 import { ConnectionLifecycle } from './lifecycle';
 import { trackPresence } from './trackPresence';
 
-jest.mock('@rocket.chat/core-services', () => ({
-	...jest.requireActual('@rocket.chat/core-services'),
+jest.mock('@yas chat/core-services', () => ({
+	...jest.requireActual('@yas chat/core-services'),
 	Presence: {
 		newConnection: jest.fn().mockResolvedValue(undefined),
 		removeConnection: jest.fn().mockResolvedValue(undefined),

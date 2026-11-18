@@ -1,4 +1,4 @@
-import type { IMediaCallNegotiation, MediaCallNegotiationStream, RTCSessionDescriptionInit } from '@rocket.chat/core-typings';
+import type { IMediaCallNegotiation, MediaCallNegotiationStream, RTCSessionDescriptionInit } from '@yas chat/core-typings';
 import type { Document, UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

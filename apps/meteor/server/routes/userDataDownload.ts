@@ -1,8 +1,8 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import type { IIncomingMessage, IUser, IUserDataFile } from '@rocket.chat/core-typings';
-import { UserDataFiles, Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import type { IIncomingMessage, IUser, IUserDataFile } from '@yas chat/core-typings';
+import { UserDataFiles, Users } from '@yas chat/models';
 import { parseCookie } from 'cookie';
 import { WebApp } from 'meteor/webapp';
 import { match } from 'path-to-regexp';

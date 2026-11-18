@@ -1,5 +1,5 @@
-import { AccordionItem, Box, Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { AccordionItem, Box, Button, ButtonGroup } from '@yas chat/fuselage';
+import { useSetModal } from '@yas chat/ui-contexts';
 import DOMPurify from 'dompurify';
 import type { TFunction } from 'i18next';
 import { useEffect } from 'react';

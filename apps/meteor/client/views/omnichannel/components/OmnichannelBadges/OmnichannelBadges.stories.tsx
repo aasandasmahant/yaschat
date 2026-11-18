@@ -1,6 +1,6 @@
-import { LivechatPriorityWeight } from '@rocket.chat/core-typings';
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { LivechatPriorityWeight } from '@yas chat/core-typings';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta } from '@storybook/react';
 
 import OmnichannelBadges from './OmnichannelBadges';

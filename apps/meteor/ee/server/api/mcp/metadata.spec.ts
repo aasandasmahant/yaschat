@@ -1,4 +1,4 @@
-import { createRootApp } from '@rocket.chat/http-router';
+import { createRootApp } from '@yas chat/http-router';
 
 import { getProtectedResourceMetadataUrl, serveProtectedResourceMetadata } from './metadata';
 

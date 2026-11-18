@@ -1,5 +1,5 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { Message, ClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatInquiryRecord,
 	ILivechatVisitor,
@@ -11,10 +11,10 @@ import type {
 	InquiryWithAgentInfo,
 	TransferData,
 	IUser,
-} from '@rocket.chat/core-typings';
-import { LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { LivechatInquiry, LivechatRooms, Subscriptions, Rooms, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { LivechatInquiryStatus } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { LivechatInquiry, LivechatRooms, Subscriptions, Rooms, Users } from '@yas chat/models';
 
 import {
 	createLivechatSubscription,

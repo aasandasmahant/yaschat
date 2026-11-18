@@ -1,4 +1,4 @@
-import type { MediaSignalingSession } from '@rocket.chat/media-signaling';
+import type { MediaSignalingSession } from '@yas chat/media-signaling';
 
 export const getEndCall = (instance?: MediaSignalingSession) => () => {
 	if (!instance) {

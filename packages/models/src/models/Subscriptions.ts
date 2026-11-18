@@ -1,6 +1,6 @@
-import type { AtLeast, IRole, IRoom, ISubscription, IUser, YasChatRecordDeleted, SpotlightUser } from '@rocket.chat/core-typings';
-import type { ISubscriptionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { AtLeast, IRole, IRoom, ISubscription, IUser, YasChatRecordDeleted, SpotlightUser } from '@yas chat/core-typings';
+import type { ISubscriptionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import { compact } from 'lodash';
 import type {
 	Collection,

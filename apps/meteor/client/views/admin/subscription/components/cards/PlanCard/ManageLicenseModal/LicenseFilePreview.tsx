@@ -1,5 +1,5 @@
-import { Box, IconButton, Text } from '@rocket.chat/fuselage';
-import { FilePreviewIcon } from '@rocket.chat/ui-client';
+import { Box, IconButton, Text } from '@yas chat/fuselage';
+import { FilePreviewIcon } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { getFileExtension } from '../../../../../../../../lib/utils/getFileExtension';

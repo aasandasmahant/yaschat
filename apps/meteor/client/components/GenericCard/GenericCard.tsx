@@ -1,4 +1,4 @@
-import { Card, CardTitle, CardBody, CardControls, CardHeader, FramedIcon } from '@rocket.chat/fuselage';
+import { Card, CardTitle, CardBody, CardControls, CardHeader, FramedIcon } from '@yas chat/fuselage';
 import { useId } from 'react';
 import type { ComponentProps, ReactElement } from 'react';
 

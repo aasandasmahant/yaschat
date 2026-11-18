@@ -1,4 +1,4 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
 
 // The federation SDK does not re-export `NamespaceType`, so mirror the union it accepts.
 type NamespaceType = 'users' | 'aliases' | 'rooms';

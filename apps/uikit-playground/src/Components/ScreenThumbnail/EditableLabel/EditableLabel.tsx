@@ -1,6 +1,6 @@
 import './Editablelabel.scss';
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Icon, Input, fontScale, useStyle, type FontScale } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Icon, Input, fontScale, useStyle, type FontScale } from '@yas chat/fuselage';
 import { type MouseEventHandler, type ComponentProps, useRef } from 'react';
 
 type EditableLabelProps = ComponentProps<typeof Input> & {

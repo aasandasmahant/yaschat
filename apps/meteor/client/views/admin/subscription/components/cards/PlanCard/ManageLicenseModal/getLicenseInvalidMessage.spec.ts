@@ -1,4 +1,4 @@
-import type { BehaviorWithContext } from '@rocket.chat/core-typings';
+import type { BehaviorWithContext } from '@yas chat/core-typings';
 
 import { getLicenseInvalidMessage } from './getLicenseInvalidMessage';
 

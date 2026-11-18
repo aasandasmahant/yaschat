@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Palette, borderRadius } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Palette, borderRadius } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 

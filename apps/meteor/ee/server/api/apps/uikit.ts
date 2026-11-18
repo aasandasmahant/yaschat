@@ -1,8 +1,8 @@
-import { AppEvents, type IAppServerOrchestrator } from '@rocket.chat/apps';
-import { UiKitCoreApp } from '@rocket.chat/core-services';
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
-import type { OperationParams, OperationResult, UrlParams } from '@rocket.chat/rest-typings';
+import { AppEvents, type IAppServerOrchestrator } from '@yas chat/apps';
+import { UiKitCoreApp } from '@yas chat/core-services';
+import { nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
+import type { OperationParams, OperationResult, UrlParams } from '@yas chat/rest-typings';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import type { Request, Response } from 'express';

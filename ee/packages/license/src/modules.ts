@@ -1,5 +1,5 @@
-import type { LicenseModule, InternalModuleName, ExternalModule } from '@rocket.chat/core-typings';
-import { CoreModules } from '@rocket.chat/core-typings';
+import type { LicenseModule, InternalModuleName, ExternalModule } from '@yas chat/core-typings';
+import { CoreModules } from '@yas chat/core-typings';
 
 import { moduleRemoved, moduleValidated } from './events/emitter';
 import type { LicenseManager } from './license';

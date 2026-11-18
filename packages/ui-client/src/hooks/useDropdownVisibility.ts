@@ -1,4 +1,4 @@
-import { useOutsideClick, useToggle } from '@rocket.chat/fuselage-hooks';
+import { useOutsideClick, useToggle } from '@yas chat/fuselage-hooks';
 import type { RefCallback, RefObject } from 'react';
 import { useCallback, useMemo, useRef } from 'react';
 

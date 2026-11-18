@@ -1,5 +1,5 @@
-import type { IEmailCreator } from '@rocket.chat/apps-engine/definition/accessors/IEmailCreator';
-import type { IEmail } from '@rocket.chat/apps-engine/definition/email';
+import type { IEmailCreator } from '@yas chat/apps-engine/definition/accessors/IEmailCreator';
+import type { IEmail } from '@yas chat/apps-engine/definition/email';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

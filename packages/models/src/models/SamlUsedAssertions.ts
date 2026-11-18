@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
-import type { ISamlUsedAssertions, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ISamlUsedAssertionsModel } from '@rocket.chat/model-typings';
+import type { ISamlUsedAssertions, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ISamlUsedAssertionsModel } from '@yas chat/model-typings';
 import type { MongoServerError, Collection, Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

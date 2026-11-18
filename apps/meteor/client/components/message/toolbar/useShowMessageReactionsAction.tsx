@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { useSetModal } from '@yas chat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import ReactionListModal from '../../../views/room/modals/ReactionListModal';

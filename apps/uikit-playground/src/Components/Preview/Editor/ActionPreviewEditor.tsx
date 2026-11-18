@@ -1,4 +1,4 @@
-import { Box, Scrollable } from '@rocket.chat/fuselage';
+import { Box, Scrollable } from '@yas chat/fuselage';
 
 import { actionPreviewExtensions } from '../../CodeEditor/Extensions/Extensions';
 import PreviewEditor from '../../CodeEditor/PreviewEditor';

@@ -1,5 +1,5 @@
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import type { IRoom, IOmnichannelGenericRoom } from '@rocket.chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import type { IRoom, IOmnichannelGenericRoom } from '@yas chat/core-typings';
 
 import { useIsOverMacLimit } from './useIsOverMacLimit';
 

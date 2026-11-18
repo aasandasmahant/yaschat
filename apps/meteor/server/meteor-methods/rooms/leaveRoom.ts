@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Roles, Subscriptions, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Roles, Subscriptions, Rooms } from '@yas chat/models';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

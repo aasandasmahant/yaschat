@@ -1,4 +1,4 @@
-import type { AutoUpdateRecord } from '@rocket.chat/core-services';
+import type { AutoUpdateRecord } from '@yas chat/core-services';
 
 import { publishMeteorCollection } from './meteorCollection';
 import type { Server } from '../Server';

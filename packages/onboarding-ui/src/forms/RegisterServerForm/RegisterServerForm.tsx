@@ -1,6 +1,6 @@
-import { Box, ButtonGroup, Button, Field, EmailInput, FieldLabel, FieldRow, FieldError, FieldGroup } from '@rocket.chat/fuselage';
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
-import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormTitle } from '@rocket.chat/layout';
+import { Box, ButtonGroup, Button, Field, EmailInput, FieldLabel, FieldRow, FieldError, FieldGroup } from '@yas chat/fuselage';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormTitle } from '@yas chat/layout';
 import { useEffect, useId, useRef } from 'react';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 import { Controller, useForm, FormProvider } from 'react-hook-form';
@@ -33,8 +33,8 @@ const RegisterServerForm = ({
 	validateEmail,
 	offline,
 	onSubmit,
-	termsHref = 'https://rocket.chat/terms',
-	policyHref = 'https://rocket.chat/privacy',
+	termsHref = 'https://yas chat/terms',
+	policyHref = 'https://yas chat/privacy',
 	onClickRegisterOffline,
 }: RegisterServerFormProps) => {
 	const { t } = useTranslation();

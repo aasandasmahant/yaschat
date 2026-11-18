@@ -1,6 +1,6 @@
-import { Box, Icon, Stack } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import { List, DarkModeProvider, ListItem } from '@rocket.chat/layout';
+import { Box, Icon, Stack } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import { List, DarkModeProvider, ListItem } from '@yas chat/layout';
 import { useMemo } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useTranslation } from 'react-i18next';

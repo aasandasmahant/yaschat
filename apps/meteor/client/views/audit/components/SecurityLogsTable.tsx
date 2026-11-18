@@ -1,6 +1,6 @@
-import type { IAuditServerAppActor, IAuditServerSystemActor, IAuditServerUserActor } from '@rocket.chat/core-typings';
-import { Box, Button, Field, FieldLabel, Pagination, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import type { IAuditServerAppActor, IAuditServerSystemActor, IAuditServerUserActor } from '@yas chat/core-typings';
+import { Box, Button, Field, FieldLabel, Pagination, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -12,8 +12,8 @@ import {
 	usePaginatedQuery,
 	usePagination,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { format } from 'date-fns/format';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

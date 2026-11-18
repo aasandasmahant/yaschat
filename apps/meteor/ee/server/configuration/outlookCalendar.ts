@@ -1,5 +1,5 @@
-import { Calendar } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
+import { Calendar } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
 
 import { addSettings } from '../settings/outlookCalendar';
 

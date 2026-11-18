@@ -1,5 +1,5 @@
-import type { RoomType } from '@rocket.chat/core-typings';
-import { isRecord } from '@rocket.chat/tools';
+import type { RoomType } from '@yas chat/core-typings';
+import { isRecord } from '@yas chat/tools';
 
 import type { RoomToolboxLayoutConfig } from './processRoomActions';
 

@@ -1,5 +1,5 @@
-import { Box, FieldGroup, Accordion, AccordionItem } from '@rocket.chat/fuselage';
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+import { Box, FieldGroup, Accordion, AccordionItem } from '@yas chat/fuselage';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import AppSetting from './AppSetting';

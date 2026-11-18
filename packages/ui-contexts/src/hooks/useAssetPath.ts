@@ -1,4 +1,4 @@
-import type { IYasChatAssets, ISettingAsset } from '@rocket.chat/core-typings';
+import type { IYasChatAssets, ISettingAsset } from '@yas chat/core-typings';
 
 import { useAbsoluteUrl } from './useAbsoluteUrl';
 import { useSetting } from './useSetting';

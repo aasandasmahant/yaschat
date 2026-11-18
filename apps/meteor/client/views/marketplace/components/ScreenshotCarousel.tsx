@@ -1,5 +1,5 @@
-import type { AppScreenshot } from '@rocket.chat/core-typings';
-import { Box, IconButton } from '@rocket.chat/fuselage';
+import type { AppScreenshot } from '@yas chat/core-typings';
+import { Box, IconButton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type ScreenshotCarouselProps = {

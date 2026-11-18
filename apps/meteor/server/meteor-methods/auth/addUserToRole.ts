@@ -1,6 +1,6 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRole, IUser } from '@rocket.chat/core-typings';
-import { Roles, Users } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { IRole, IUser } from '@yas chat/core-typings';
+import { Roles, Users } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { addUserRolesAsync } from '../../lib/roles/addUserRoles';

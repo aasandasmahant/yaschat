@@ -1,4 +1,4 @@
-import type { cssFn } from '@rocket.chat/css-in-js';
+import type { cssFn } from '@yas chat/css-in-js';
 import type { AllHTMLAttributes, ElementType, RefAttributes, SVGAttributes } from 'react';
 import { createElement, memo } from 'react';
 

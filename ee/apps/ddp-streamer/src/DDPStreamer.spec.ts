@@ -1,15 +1,15 @@
-import type { IApiService, IBroker, IServiceMetrics } from '@rocket.chat/core-services';
-import { Presence, asyncLocalStorage } from '@rocket.chat/core-services';
-import { ConnectionLifecycle, ConnectionRegistry, MeteorCollection, Server, createStreamAdapter } from '@rocket.chat/ddp-server';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { mockModel } from '@rocket.chat/models/testing';
-import { NotificationsModule } from '@rocket.chat/streamer';
+import type { IApiService, IBroker, IServiceMetrics } from '@yas chat/core-services';
+import { Presence, asyncLocalStorage } from '@yas chat/core-services';
+import { ConnectionLifecycle, ConnectionRegistry, MeteorCollection, Server, createStreamAdapter } from '@yas chat/ddp-server';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { mockModel } from '@yas chat/models/testing';
+import { NotificationsModule } from '@yas chat/streamer';
 
 import { DDPStreamer } from './DDPStreamer';
 import { makeSession, sentPackets } from './__tests__/helpers';
 
-jest.mock('@rocket.chat/core-services', () => ({
-	...jest.requireActual('@rocket.chat/core-services'),
+jest.mock('@yas chat/core-services', () => ({
+	...jest.requireActual('@yas chat/core-services'),
 	Presence: {
 		newConnection: jest.fn().mockResolvedValue(undefined),
 		removeConnection: jest.fn().mockResolvedValue(undefined),
@@ -17,15 +17,15 @@ jest.mock('@rocket.chat/core-services', () => ({
 	},
 }));
 
-jest.mock('@rocket.chat/instance-status', () => ({
-	...jest.requireActual('@rocket.chat/instance-status'),
+jest.mock('@yas chat/instance-status', () => ({
+	...jest.requireActual('@yas chat/instance-status'),
 	InstanceStatus: {
 		updateConnections: jest.fn().mockResolvedValue(undefined),
 		registerInstance: jest.fn(),
 	},
 }));
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

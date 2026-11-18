@@ -1,13 +1,13 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IPermission } from '@rocket.chat/core-typings';
-import { Permissions, Roles } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IPermission } from '@yas chat/core-typings';
+import { Permissions, Roles } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
 	validateUnauthorizedErrorResponse,
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { addPermissionToRoleMethod, removeRoleFromPermissionMethod } from '../../lib/authorization/permissionRole';
 import { permissionsGetMethod } from '../../lib/authorization/streamer/permissions';
@@ -247,7 +247,7 @@ const permissionsEndpoints = API.v1
 
 export type PermissionsEndpoints = ExtractRoutesFromAPI<typeof permissionsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends PermissionsEndpoints {}
 }

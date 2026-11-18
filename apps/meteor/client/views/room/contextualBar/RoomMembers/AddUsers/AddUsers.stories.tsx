@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { Contextualbar } from '@rocket.chat/ui-client';
+import { Box } from '@yas chat/fuselage';
+import { Contextualbar } from '@yas chat/ui-client';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import AddUsers from './AddUsers';

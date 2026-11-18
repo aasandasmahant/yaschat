@@ -1,5 +1,5 @@
-import { Abac } from '@rocket.chat/core-services';
-import { Logger } from '@rocket.chat/logger';
+import { Abac } from '@yas chat/core-services';
+import { Logger } from '@yas chat/logger';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { afterCreateRoomCallback } from '../../../../server/lib/callbacks/afterCreateRoomCallback';

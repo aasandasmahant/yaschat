@@ -1,4 +1,4 @@
-import type { IYasChatRecord } from '@rocket.chat/core-typings';
+import type { IYasChatRecord } from '@yas chat/core-typings';
 import type { FindOptions } from 'mongodb';
 
 export function projectionAllowsAttribute(attributeName: string, options?: FindOptions<IYasChatRecord>): boolean {

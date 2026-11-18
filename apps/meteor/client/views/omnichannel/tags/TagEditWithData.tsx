@@ -1,6 +1,6 @@
-import type { ILivechatTag } from '@rocket.chat/core-typings';
-import { ContextualbarSkeletonBody } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ILivechatTag } from '@yas chat/core-typings';
+import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import TagEdit from './TagEdit';

@@ -1,4 +1,4 @@
-import { Divider } from '@rocket.chat/fuselage';
+import { Divider } from '@yas chat/fuselage';
 import { Fragment, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

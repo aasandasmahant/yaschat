@@ -1,5 +1,5 @@
-import { Settings } from '@rocket.chat/models';
-import { isPOSTomnichannelIntegrations } from '@rocket.chat/rest-typings';
+import { Settings } from '@yas chat/models';
+import { isPOSTomnichannelIntegrations } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { trim } from '../../../../lib/utils/stringUtils';

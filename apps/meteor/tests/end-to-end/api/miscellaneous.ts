@@ -1,9 +1,9 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IInstanceStatus, IRoom, ITeam, IUser } from '@rocket.chat/core-typings';
-import { TeamType } from '@rocket.chat/core-typings';
-import type { IInstance } from '@rocket.chat/rest-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IInstanceStatus, IRoom, ITeam, IUser } from '@yas chat/core-typings';
+import { TeamType } from '@yas chat/core-typings';
+import type { IInstance } from '@yas chat/rest-typings';
 import { AssertionError, expect } from 'chai';
 import { MongoClient } from 'mongodb';
 
@@ -668,7 +668,7 @@ describe('miscellaneous', () => {
 
 			const instances = res.body.instances as IInstance[];
 
-			const instanceName = IS_EE ? 'ddp-streamer' : 'rocket.chat';
+			const instanceName = IS_EE ? 'ddp-streamer' : 'yas chat';
 
 			const instance = instances.find((i): i is IInstance & { instanceRecord: IInstanceStatus } => i.instanceRecord?.name === instanceName);
 

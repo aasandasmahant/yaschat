@@ -1,6 +1,6 @@
-import { Import, ClientSafeError } from '@rocket.chat/core-services';
-import type { IImport } from '@rocket.chat/core-typings';
-import { Imports } from '@rocket.chat/models';
+import { Import, ClientSafeError } from '@yas chat/core-services';
+import type { IImport } from '@yas chat/core-typings';
+import { Imports } from '@yas chat/models';
 import {
 	ajv,
 	isUploadImportFileParamsPOST,
@@ -17,7 +17,7 @@ import {
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	validateBadRequestErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { Importers } from '../../lib/import';
 import { PendingAvatarImporter } from '../../lib/import/pending-avatars/PendingAvatarImporter';

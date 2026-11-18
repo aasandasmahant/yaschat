@@ -1,6 +1,6 @@
-import { Authorization } from '@rocket.chat/core-services';
-import type { UserWithRoles } from '@rocket.chat/core-services';
-import type { IUser, IPermission, IRoom } from '@rocket.chat/core-typings';
+import { Authorization } from '@yas chat/core-services';
+import type { UserWithRoles } from '@yas chat/core-services';
+import type { IUser, IPermission, IRoom } from '@yas chat/core-typings';
 
 // Forward only the fields the permission check needs, so a full user document
 // (with services, e2e keys, etc.) isn't serialized to the authorization service.

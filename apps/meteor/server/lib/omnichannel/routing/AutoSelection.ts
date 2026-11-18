@@ -1,5 +1,5 @@
-import type { IRoutingMethod, RoutingMethodConfig, SelectedAgent } from '@rocket.chat/core-typings';
-import { LivechatDepartmentAgents, Users } from '@rocket.chat/models';
+import type { IRoutingMethod, RoutingMethodConfig, SelectedAgent } from '@yas chat/core-typings';
+import { LivechatDepartmentAgents, Users } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 import { callbacks } from '../../callbacks';

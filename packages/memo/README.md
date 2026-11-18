@@ -1,8 +1,8 @@
-# `@rocket.chat/memo`
+# `@yas chat/memo`
 
 > Small memoization helper for single-argument functions, with optional time-based expiry.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/memo?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/memo) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/memo?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/memo)
+[![npm](https://img.shields.io/npm/v/@yas chat/memo?style=flat-square)](https://www.npmjs.com/package/@yas chat/memo) [![downloads](https://img.shields.io/npm/dw/@yas chat/memo?style=flat-square)](https://www.npmjs.com/package/@yas chat/memo)
 
 `memoize` wraps a function of one argument and caches its results by that argument. Entries can expire after a period of inactivity, and a memoized function's cache can be cleared on demand with `clear`.
 
@@ -11,7 +11,7 @@ YasChat's styling packages use it to cache CSS support checks and evaluated CSS.
 ## Installation
 
 ```sh
-npm install @rocket.chat/memo
+npm install @yas chat/memo
 ```
 
 There are no dependencies. The package ships CommonJS (`dist/cjs`), ES modules (`dist/esm`) and TypeScript types.
@@ -21,7 +21,7 @@ There are no dependencies. The package ships CommonJS (`dist/cjs`), ES modules (
 ### Cache results forever
 
 ```ts
-import { memoize } from '@rocket.chat/memo';
+import { memoize } from '@yas chat/memo';
 
 const slugify = memoize((title: string) => title.toLowerCase().trim().replace(/\s+/g, '-'));
 
@@ -36,7 +36,7 @@ The argument is used as a `Map` key, so objects are compared by reference, not b
 Pass `maxAge` in milliseconds. Each cached entry is dropped after `maxAge` ms without being read. Every cache hit restarts that entry's timer.
 
 ```ts
-import { memoize } from '@rocket.chat/memo';
+import { memoize } from '@yas chat/memo';
 
 const fetchUser = memoize((id: string) => fetch(`/api/users/${id}`).then((res) => res.json()), { maxAge: 60_000 });
 ```
@@ -44,7 +44,7 @@ const fetchUser = memoize((id: string) => fetch(`/api/users/${id}`).then((res) =
 ### Clear a cache
 
 ```ts
-import { clear, memoize } from '@rocket.chat/memo';
+import { clear, memoize } from '@yas chat/memo';
 
 const square = memoize((n: number) => n * n);
 
@@ -83,10 +83,10 @@ type Options = { maxAge: number };
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/memo). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/memo build
-yarn workspace @rocket.chat/memo testunit
-yarn workspace @rocket.chat/memo lint
-yarn workspace @rocket.chat/memo typecheck
+yarn workspace @yas chat/memo build
+yarn workspace @yas chat/memo testunit
+yarn workspace @yas chat/memo lint
+yarn workspace @yas chat/memo typecheck
 ```
 
 ## License

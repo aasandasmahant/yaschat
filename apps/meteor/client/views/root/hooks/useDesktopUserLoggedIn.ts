@@ -1,4 +1,4 @@
-import { useIsLoggingIn, useUserId } from '@rocket.chat/ui-contexts';
+import { useIsLoggingIn, useUserId } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { callDesktopBridge } from '../../../lib/utils/callDesktopBridge';

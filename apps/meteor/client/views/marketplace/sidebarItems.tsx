@@ -1,4 +1,4 @@
-import { links } from '@rocket.chat/ui-client';
+import { links } from '@yas chat/ui-client';
 
 import MarketplaceRequestBadge from './components/MarketplaceRequestBadge';
 import { hasAtLeastOnePermission, hasPermission } from '../../lib/authorization';

@@ -5,7 +5,7 @@ import {
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	validateBadRequestErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { sendMail } from '../../lib/notifications/mail-messages/functions/sendMail';
 import { Mailer } from '../../lib/notifications/mail-messages/lib/Mailer';

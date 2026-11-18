@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { memo } from 'react';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 

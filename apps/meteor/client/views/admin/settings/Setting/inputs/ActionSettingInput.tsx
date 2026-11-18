@@ -1,7 +1,7 @@
-import { isActionSettingWithEndpoint } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
-import type { PathPattern, Method } from '@rocket.chat/rest-typings';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { isActionSettingWithEndpoint } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
+import type { PathPattern, Method } from '@yas chat/rest-typings';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 import EndpointActionInput from './EndpointActionInput';
 import MethodActionInput from './MethodActionInput';

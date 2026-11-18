@@ -1,5 +1,5 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -8,7 +8,7 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

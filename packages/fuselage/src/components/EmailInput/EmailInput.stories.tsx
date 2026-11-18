@@ -100,7 +100,7 @@ export const WithPlaceholder: Story = {
 export const WithValue: Story = {
 	args: {
 		'aria-label': 'email',
-		'defaultValue': 'support@rocket.chat',
+		'defaultValue': 'support@yas chat',
 	},
 };
 
@@ -114,10 +114,10 @@ export const States: Story = {
 				xAxis={{
 					'default': {},
 					'with placeholder': { placeholder: 'Placeholder' },
-					'with value': { value: 'support@rocket.chat' },
+					'with value': { value: 'support@yas chat' },
 					'with icon': {
 						endAddon: <Icon name='at' size='x20' />,
-						value: 'support@rocket.chat',
+						value: 'support@yas chat',
 					},
 				}}
 				yAxis={{
@@ -138,10 +138,10 @@ export const States: Story = {
 				xAxis={{
 					'small': {},
 					'with placeholder': { placeholder: 'Placeholder' },
-					'with value': { value: 'support@rocket.chat' },
+					'with value': { value: 'support@yas chat' },
 					'with icon': {
 						endAddon: <Icon name='at' size='x20' />,
-						value: 'support@rocket.chat',
+						value: 'support@yas chat',
 					},
 				}}
 				yAxis={{

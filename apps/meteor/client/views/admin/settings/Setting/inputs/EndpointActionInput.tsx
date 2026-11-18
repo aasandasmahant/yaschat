@@ -1,5 +1,5 @@
-import type { Method, PathPattern } from '@rocket.chat/rest-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { Method, PathPattern } from '@yas chat/rest-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 
 import type { ActionInputBaseProps } from './ActionInputBase';
 import ActionInputBase from './ActionInputBase';

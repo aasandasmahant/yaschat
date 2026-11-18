@@ -1,4 +1,4 @@
-import type { SlashCommandCallbackParams } from '@rocket.chat/core-typings';
+import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { slashCommands } from '../../lib/utils/slashCommand';

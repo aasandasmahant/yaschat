@@ -1,4 +1,4 @@
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import { render } from '@testing-library/react';
 import type { Ref, RefCallback } from 'react';
 import { createRef, useCallback } from 'react';

@@ -11,10 +11,10 @@ import type {
 	ILivechatContactVisitorAssociation,
 	ILivechatContact,
 	AtLeast,
-} from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { FindPaginated, ILivechatRoomsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { FindPaginated, ILivechatRoomsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	Db,
 	Collection,

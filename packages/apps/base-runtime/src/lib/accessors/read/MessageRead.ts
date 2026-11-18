@@ -1,7 +1,7 @@
-import type { IMessageRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IMessageRead } from '@yas chat/apps-engine/definition/accessors';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

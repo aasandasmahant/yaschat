@@ -42,8 +42,8 @@ jest.mock('virtua', () => {
 	};
 });
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	CustomVirtuaScrollbars: forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(function CustomVirtuaScrollbars(
 		{ children, ...props },
 		ref,

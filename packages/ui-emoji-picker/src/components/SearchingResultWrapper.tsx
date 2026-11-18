@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
 import type { Ref } from 'react';
 import { forwardRef } from 'react';
 

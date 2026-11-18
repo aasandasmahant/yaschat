@@ -1,4 +1,4 @@
-import type { AppCategory } from '@rocket.chat/core-typings';
+import type { AppCategory } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { getMarketplaceHeaders } from './getMarketplaceHeaders';

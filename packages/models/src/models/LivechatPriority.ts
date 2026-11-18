@@ -1,6 +1,6 @@
-import type { ILivechatPriority } from '@rocket.chat/core-typings';
-import type { ILivechatPriorityModel } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { ILivechatPriority } from '@yas chat/core-typings';
+import type { ILivechatPriorityModel } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Db, UpdateFilter, WithId, IndexDescription, FindCursor } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

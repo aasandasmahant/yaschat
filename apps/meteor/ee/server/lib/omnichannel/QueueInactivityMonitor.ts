@@ -1,7 +1,7 @@
-import { Agenda } from '@rocket.chat/agenda';
-import type { IUser, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import type { MainLogger } from '@rocket.chat/logger';
-import { LivechatRooms, LivechatInquiry as LivechatInquiryRaw, Users } from '@rocket.chat/models';
+import { Agenda } from '@yas chat/agenda';
+import type { IUser, IOmnichannelRoom } from '@yas chat/core-typings';
+import type { MainLogger } from '@yas chat/logger';
+import { LivechatRooms, LivechatInquiry as LivechatInquiryRaw, Users } from '@yas chat/models';
 import type { Db } from 'mongodb';
 
 import { schedulerLogger } from './logger';

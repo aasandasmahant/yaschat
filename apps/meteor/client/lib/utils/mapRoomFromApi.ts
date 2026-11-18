@@ -1,4 +1,4 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
 
 import { mapMessageFromApi } from './mapMessageFromApi';
 

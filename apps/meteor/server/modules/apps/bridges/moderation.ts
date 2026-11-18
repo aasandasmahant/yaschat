@@ -1,8 +1,8 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { ModerationBridge } from '@rocket.chat/apps/dist/server/bridges/ModerationBridge';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
-import { ModerationReports } from '@rocket.chat/models';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { ModerationBridge } from '@yas chat/apps/dist/server/bridges/ModerationBridge';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
+import { ModerationReports } from '@yas chat/models';
 
 import { reportMessage } from '../../../lib/moderation/reportMessage';
 

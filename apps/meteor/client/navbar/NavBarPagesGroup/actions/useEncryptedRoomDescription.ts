@@ -1,4 +1,4 @@
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export const useEncryptedRoomDescription = (roomType: 'channel' | 'team' | 'discussion') => {

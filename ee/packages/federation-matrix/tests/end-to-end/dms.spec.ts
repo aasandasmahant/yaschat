@@ -1,4 +1,4 @@
-import type { IRoom, IRoomNativeFederated, ISubscription, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, IRoomNativeFederated, ISubscription, IUser } from '@yas chat/core-typings';
 import type { MatrixEvent, Room, RoomEmittedEvents } from 'matrix-js-sdk';
 import { RoomStateEvent } from 'matrix-js-sdk';
 
@@ -104,7 +104,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDm,
 							password: 'random',
-							email: `${userDm}@rocket.chat`,
+							email: `${userDm}@yas chat`,
 							name: userDmName,
 						},
 						rc1AdminRequestConfig,
@@ -218,7 +218,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDm,
 							password: 'random',
-							email: `${userDm}@rocket.chat`,
+							email: `${userDm}@yas chat`,
 							name: `DM Federation User ${Date.now()}`,
 						},
 						rc1AdminRequestConfig,
@@ -320,7 +320,7 @@ const waitForRoomEvent = async (
 					{
 						username: userDm,
 						password: 'random',
-						email: `${userDm}@rocket.chat`,
+						email: `${userDm}@yas chat`,
 						name: userDmName,
 					},
 					rc1AdminRequestConfig,
@@ -516,7 +516,7 @@ const waitForRoomEvent = async (
 					{
 						username: userDm1,
 						password: 'random',
-						email: `${userDm1}@rocket.chat`,
+						email: `${userDm1}@yas chat`,
 						name: userDm1Name,
 					},
 					rc1AdminRequestConfig,
@@ -528,7 +528,7 @@ const waitForRoomEvent = async (
 					{
 						username: userDm2,
 						password: 'random',
-						email: `${userDm2}@rocket.chat`,
+						email: `${userDm2}@yas chat`,
 						name: userDm2Name,
 					},
 					rc1AdminRequestConfig,
@@ -667,7 +667,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDm3,
 							password: 'random',
-							email: `${userDm3}@rocket.chat`,
+							email: `${userDm3}@yas chat`,
 							name: userDm3Name,
 						},
 						rc1AdminRequestConfig,
@@ -745,7 +745,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDmA,
 							password: 'random',
-							email: `${userDmA}@rocket.chat`,
+							email: `${userDmA}@yas chat`,
 							name: userDmAName,
 						},
 						rc1AdminRequestConfig,
@@ -757,7 +757,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDmB,
 							password: 'random',
-							email: `${userDmB}@rocket.chat`,
+							email: `${userDmB}@yas chat`,
 							name: userDmBName,
 						},
 						rc1AdminRequestConfig,
@@ -916,7 +916,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUser1.username,
 							password: 'random',
-							email: `${rcUser1.username}@rocket.chat`,
+							email: `${rcUser1.username}@yas chat`,
 							name: rcUser1.fullName,
 						},
 						rc1AdminRequestConfig,
@@ -928,7 +928,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUser2.username,
 							password: 'random',
-							email: `${rcUser2.username}@rocket.chat`,
+							email: `${rcUser2.username}@yas chat`,
 							name: rcUser2.fullName,
 						},
 						rc1AdminRequestConfig,
@@ -1072,7 +1072,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUserName1,
 							password: 'random',
-							email: `${rcUserName1}@rocket.chat`,
+							email: `${rcUserName1}@yas chat`,
 							name: rcUserFullName1,
 						},
 						rc1AdminRequestConfig,
@@ -1084,7 +1084,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUserName2,
 							password: 'random',
-							email: `${rcUserName2}@rocket.chat`,
+							email: `${rcUserName2}@yas chat`,
 							name: rcUserFullName2,
 						},
 						rc1AdminRequestConfig,
@@ -1096,7 +1096,7 @@ const waitForRoomEvent = async (
 						{
 							username: userDm3,
 							password: 'random',
-							email: `${userDm3}@rocket.chat`,
+							email: `${userDm3}@yas chat`,
 							name: userDm3Name,
 						},
 						rc1AdminRequestConfig,
@@ -1222,7 +1222,7 @@ const waitForRoomEvent = async (
 								{
 									username: rcUser1.username,
 									password: 'random',
-									email: `${rcUser1.username}@rocket.chat`,
+									email: `${rcUser1.username}@yas chat`,
 									name: rcUser1.fullName,
 								},
 								rc1AdminRequestConfig,
@@ -1234,7 +1234,7 @@ const waitForRoomEvent = async (
 								{
 									username: rcUser2.username,
 									password: 'random',
-									email: `${rcUser2.username}@rocket.chat`,
+									email: `${rcUser2.username}@yas chat`,
 									name: rcUser2.fullName,
 								},
 								rc1AdminRequestConfig,
@@ -1414,7 +1414,7 @@ const waitForRoomEvent = async (
 								{
 									username: rcUser1.username,
 									password: 'random',
-									email: `${rcUser1.username}@rocket.chat`,
+									email: `${rcUser1.username}@yas chat`,
 									name: rcUser1.fullName,
 								},
 								rc1AdminRequestConfig,
@@ -1426,7 +1426,7 @@ const waitForRoomEvent = async (
 								{
 									username: rcUser2.username,
 									password: 'random',
-									email: `${rcUser2.username}@rocket.chat`,
+									email: `${rcUser2.username}@yas chat`,
 									name: rcUser2.fullName,
 								},
 								rc1AdminRequestConfig,
@@ -1672,7 +1672,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUser1.username,
 							password: 'random',
-							email: `${rcUser1.username}@rocket.chat`,
+							email: `${rcUser1.username}@yas chat`,
 							name: rcUser1.fullName,
 						},
 						rc1AdminRequestConfig,
@@ -1684,7 +1684,7 @@ const waitForRoomEvent = async (
 						{
 							username: rcUser2.username,
 							password: 'random',
-							email: `${rcUser2.username}@rocket.chat`,
+							email: `${rcUser2.username}@yas chat`,
 							name: rcUser2.fullName,
 						},
 						rc1AdminRequestConfig,
@@ -1761,7 +1761,7 @@ const waitForRoomEvent = async (
 				});
 
 				it('should send an invite to another Synapse user', async () => {
-					// invite from rocket.chat
+					// invite from yas chat
 					await addUserToRoomSlashCommand({
 						usernames: [federationConfig.hs1.additionalUser1.matrixUserId],
 						rid: rcRoom._id,
@@ -1851,7 +1851,7 @@ const waitForRoomEvent = async (
 				{
 					username: userDm,
 					password: 'random',
-					email: `${userDm}@rocket.chat`,
+					email: `${userDm}@yas chat`,
 					name: initialDisplayName,
 				},
 				rc1AdminRequestConfig,

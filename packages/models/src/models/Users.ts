@@ -10,8 +10,8 @@ import type {
 	IRoom,
 	IUser,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
-import { ILivechatAgentStatus, UserStatus } from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
+import { ILivechatAgentStatus, UserStatus } from '@yas chat/core-typings';
 import type {
 	DefaultFields,
 	InsertionModel,
@@ -19,8 +19,8 @@ import type {
 	DocumentWithProjection,
 	FindOptionsWithProjection,
 	FindPaginated,
-} from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	Collection,
 	Db,
@@ -2834,7 +2834,7 @@ export class UsersRaw extends BaseRaw<IUser, DefaultFields<IUser>> implements IU
 	}
 
 	/**
-	 * @param {import('mongodb').Filter<import('@rocket.chat/core-typings').IStats>} projection
+	 * @param {import('mongodb').Filter<import('@yas chat/core-typings').IStats>} projection
 	 */
 	getOldest<T extends Document = IUser, O extends FindOptionsWithProjection<T> = FindOptionsWithProjection<T>>(
 		optionsParams?: O,

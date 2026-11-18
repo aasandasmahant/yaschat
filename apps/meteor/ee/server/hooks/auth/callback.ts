@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
+import { ClientSafeError } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { i18n } from '../../../../server/lib/i18n';

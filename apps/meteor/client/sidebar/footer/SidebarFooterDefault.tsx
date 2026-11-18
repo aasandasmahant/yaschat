@@ -1,7 +1,7 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, SidebarDivider, Palette, SidebarFooter as Footer } from '@rocket.chat/fuselage';
-import { useThemeMode } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { css } from '@yas chat/css-in-js';
+import { Box, SidebarDivider, Palette, SidebarFooter as Footer } from '@yas chat/fuselage';
+import { useThemeMode } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 

@@ -1,13 +1,13 @@
-import { Upload } from '@rocket.chat/core-services';
-import type { IUpload } from '@rocket.chat/core-typings';
-import { Messages, Uploads, Users } from '@rocket.chat/models';
+import { Upload } from '@yas chat/core-services';
+import type { IUpload } from '@yas chat/core-typings';
+import { Messages, Uploads, Users } from '@yas chat/models';
 import {
 	ajv,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import type { ExtractRoutesFromAPI } from '../ApiClass';
 import { API } from '../api';
@@ -94,7 +94,7 @@ const uploadsDeleteEndpoint = API.v1.post(
 
 type UploadsEndpoints = ExtractRoutesFromAPI<typeof uploadsDeleteEndpoint>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends UploadsEndpoints {}
 }

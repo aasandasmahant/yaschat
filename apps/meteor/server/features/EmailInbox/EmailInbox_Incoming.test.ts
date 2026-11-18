@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -19,7 +19,7 @@ const notifyOnMessageChange = sinon.stub();
 const fileStore = { insert: sinon.stub() };
 
 const { onEmailReceived } = proxyquire.noCallThru().load('./EmailInbox_Incoming', {
-	'@rocket.chat/omni-core': { registerGuest },
+	'@yas chat/omni-core': { registerGuest },
 	'./logger': { logger: { info: sinon.stub(), debug: sinon.stub(), error: sinon.stub() } },
 	'../../lib/media/file-upload': {
 		FileUpload: { getStore: () => fileStore, getPath: (path: string) => `/file-upload/${path}` },

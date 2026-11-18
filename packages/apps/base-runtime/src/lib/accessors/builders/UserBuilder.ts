@@ -1,8 +1,8 @@
-import type { IUserBuilder } from '@rocket.chat/apps-engine/definition/accessors/IUserBuilder';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
-import type { IUserEmail } from '@rocket.chat/apps-engine/definition/users/IUserEmail';
-import type { IUserSettings } from '@rocket.chat/apps-engine/definition/users/IUserSettings';
+import type { IUserBuilder } from '@yas chat/apps-engine/definition/accessors/IUserBuilder';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
+import type { IUserEmail } from '@yas chat/apps-engine/definition/users/IUserEmail';
+import type { IUserSettings } from '@yas chat/apps-engine/definition/users/IUserSettings';
 
 export class UserBuilder implements IUserBuilder {
 	public kind: YasChatAssociationModel.USER;

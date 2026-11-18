@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -15,7 +15,7 @@ const UserDataFiles = { findOneById: sandbox.stub() };
 const Users = { findOneByIdAndLoginToken: sandbox.stub() };
 
 proxyquire.noCallThru().load('./userDataDownload', {
-	'@rocket.chat/account-utils': { hashLoginToken: (token: string) => `hashed:${token}` },
+	'@yas chat/account-utils': { hashLoginToken: (token: string) => `hashed:${token}` },
 	'meteor/webapp': { WebApp: { connectHandlers: { use: connectHandlersUse } } },
 	'../lib/media/file-upload': { FileUpload: { getStore } },
 	'../settings': { settings: { get: settingsGet } },

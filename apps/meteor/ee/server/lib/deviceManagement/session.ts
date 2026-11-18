@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISocketConnection } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISocketConnection } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 import moment from 'moment';
 import { UAParser } from 'ua-parser-js';

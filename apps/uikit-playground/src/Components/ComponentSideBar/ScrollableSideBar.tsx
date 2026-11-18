@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Scrollable, Box } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Scrollable, Box } from '@yas chat/fuselage';
 
 import BlocksTree from '../../Payload/actionBlock/BlocksTree';
 import DropDown from '../DropDown';

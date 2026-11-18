@@ -1,6 +1,6 @@
-import { CheckOption, Option, PaginatedMultiSelectFiltered } from '@rocket.chat/fuselage';
-import type { PaginatedMultiSelectOption } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { CheckOption, Option, PaginatedMultiSelectFiltered } from '@yas chat/fuselage';
+import type { PaginatedMultiSelectOption } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

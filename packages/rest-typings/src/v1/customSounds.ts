@@ -1,4 +1,4 @@
-import type { ICustomSound } from '@rocket.chat/core-typings';
+import type { ICustomSound } from '@yas chat/core-typings';
 
 import { ajvQuery, ajv } from './Ajv';
 import { paginationQueryProperties } from './pagination';

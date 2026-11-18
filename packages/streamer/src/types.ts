@@ -1,4 +1,4 @@
-import type { StreamNames, StreamKeys, StreamerCallbackArgs } from '@rocket.chat/ddp-client';
+import type { StreamNames, StreamKeys, StreamerCallbackArgs } from '@yas chat/ddp-client';
 
 export type Connection = any;
 

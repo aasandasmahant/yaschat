@@ -1,6 +1,6 @@
 import type { DropResult } from '@hello-pangea/dnd';
-import { Box } from '@rocket.chat/fuselage';
-import { UiKitContext } from '@rocket.chat/fuselage-ui-kit';
+import { Box } from '@yas chat/fuselage';
+import { UiKitContext } from '@yas chat/fuselage-ui-kit';
 import { useContext, useState, useEffect } from 'react';
 
 import { reorder } from './Reorder';

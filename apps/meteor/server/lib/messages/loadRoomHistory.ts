@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, MessageTypesValues } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IRoom, MessageTypesValues } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 import type { FindOptions } from 'mongodb';
 
 import { settings } from '../../settings/cached';

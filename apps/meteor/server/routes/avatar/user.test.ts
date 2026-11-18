@@ -1,6 +1,6 @@
 import { afterEach, before, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import { Headers } from 'node-fetch';
 import proxyquire from 'proxyquire';
@@ -28,7 +28,7 @@ const { userAvatarById, userAvatarByUsername } = proxyquire.noCallThru().load('.
 		},
 	},
 	'./utils': mocks.utils,
-	'@rocket.chat/server-fetch': {
+	'@yas chat/server-fetch': {
 		serverFetch: mocks.serverFetch,
 	},
 });

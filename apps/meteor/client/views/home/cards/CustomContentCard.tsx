@@ -1,6 +1,6 @@
-import { Box, Button, Card, CardBody, CardControls, CardHeader, Icon, Tag } from '@rocket.chat/fuselage';
-import { useIsEnterprise } from '@rocket.chat/ui-client';
-import { useRole, useSettingSetValue, useSetting, useToastMessageDispatch, useRouter } from '@rocket.chat/ui-contexts';
+import { Box, Button, Card, CardBody, CardControls, CardHeader, Icon, Tag } from '@yas chat/fuselage';
+import { useIsEnterprise } from '@yas chat/ui-client';
+import { useRole, useSettingSetValue, useSetting, useToastMessageDispatch, useRouter } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

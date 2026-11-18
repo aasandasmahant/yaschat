@@ -1,12 +1,12 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IReadReceiptWithUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IReadReceiptWithUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 import {
 	ajv,
 	isChatGetMessageReadReceiptsProps,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api/api';
 import { getReadReceiptsFunction } from '../meteor-methods/getReadReceipts';
@@ -15,7 +15,7 @@ type GetMessageReadReceiptsProps = {
 	messageId: IMessage['_id'];
 };
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/chat.getMessageReadReceipts': {
 			GET: (params: GetMessageReadReceiptsProps) => {

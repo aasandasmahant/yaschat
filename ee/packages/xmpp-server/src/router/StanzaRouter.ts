@@ -1,4 +1,4 @@
-import type { Emitter } from '@rocket.chat/emitter';
+import type { Emitter } from '@yas chat/emitter';
 import type Element from 'ltx/lib/Element';
 
 import type { ResolvedXMPPServerConfig } from '../config';

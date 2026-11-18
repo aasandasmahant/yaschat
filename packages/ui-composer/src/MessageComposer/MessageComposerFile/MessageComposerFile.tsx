@@ -1,7 +1,7 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Avatar, Box, Palette, Skeleton } from '@rocket.chat/fuselage';
-import { useButtonPattern } from '@rocket.chat/fuselage-hooks';
-import { FilePreviewIcon } from '@rocket.chat/ui-client';
+import { css } from '@yas chat/css-in-js';
+import { Avatar, Box, Palette, Skeleton } from '@yas chat/fuselage';
+import { useButtonPattern } from '@yas chat/fuselage-hooks';
+import { FilePreviewIcon } from '@yas chat/ui-client';
 import type { ReactNode, KeyboardEvent, MouseEvent, AllHTMLAttributes } from 'react';
 import { useMemo } from 'react';
 

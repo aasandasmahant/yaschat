@@ -1,7 +1,7 @@
-import { Apps } from '@rocket.chat/apps';
-import type { SlashCommand, SlashCommandPreviewItem } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { Apps } from '@yas chat/apps';
+import type { SlashCommand, SlashCommandPreviewItem } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import {
 	ajv,
 	ajvQuery,
@@ -10,7 +10,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import objectPath from 'object-path';
 
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';
@@ -510,7 +510,7 @@ API.v1.post(
 
 export type CommandsEndpoints = ExtractRoutesFromAPI<typeof commandsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends CommandsEndpoints {}
 }

@@ -1,7 +1,7 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { FieldError, FieldLabel, FieldRow, FieldGroup, Field, ButtonGroup, Button, TextInput, Select, Box } from '@rocket.chat/fuselage';
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
-import { ActionLink, Form, FormContainer, FormFooter, FormHeader, FormSteps, FormSubtitle, FormTitle } from '@rocket.chat/layout';
+import type { SelectOption } from '@yas chat/fuselage';
+import { FieldError, FieldLabel, FieldRow, FieldGroup, Field, ButtonGroup, Button, TextInput, Select, Box } from '@yas chat/fuselage';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { ActionLink, Form, FormContainer, FormFooter, FormHeader, FormSteps, FormSubtitle, FormTitle } from '@yas chat/layout';
 import type { ReactNode } from 'react';
 import { useRef, useEffect, useId } from 'react';
 import type { SubmitHandler } from 'react-hook-form';

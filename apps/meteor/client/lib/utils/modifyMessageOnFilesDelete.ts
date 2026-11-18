@@ -1,5 +1,5 @@
-import { isFileAttachment } from '@rocket.chat/core-typings';
-import type { IMessage, MessageAttachment } from '@rocket.chat/core-typings';
+import { isFileAttachment } from '@yas chat/core-typings';
+import type { IMessage, MessageAttachment } from '@yas chat/core-typings';
 
 /**
  * Clone a message and clear or replace its file attachments.

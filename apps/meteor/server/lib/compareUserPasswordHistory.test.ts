@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { SHA256 } from '@rocket.chat/sha256';
+import { SHA256 } from '@yas chat/sha256';
 import bcrypt from 'bcrypt';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';

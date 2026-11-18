@@ -1,4 +1,4 @@
-import { Box, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@rocket.chat/fuselage';
+import { Box, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 /**

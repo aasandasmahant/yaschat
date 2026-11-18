@@ -1,5 +1,5 @@
-import type { IUser, IRoom, FileAttachmentProps } from '@rocket.chat/core-typings';
-import { type MessageType, type FileMessageContent, type EventID } from '@rocket.chat/federation-sdk';
+import type { IUser, IRoom, FileAttachmentProps } from '@yas chat/core-typings';
+import { type MessageType, type FileMessageContent, type EventID } from '@yas chat/federation-sdk';
 
 import { MatrixMediaService } from '../services/MatrixMediaService';
 

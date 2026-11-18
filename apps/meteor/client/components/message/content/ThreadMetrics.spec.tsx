@@ -1,4 +1,4 @@
-import { mockAppRoot, MockedRouterContext } from '@rocket.chat/mock-providers';
+import { mockAppRoot, MockedRouterContext } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ReactNode } from 'react';
@@ -49,8 +49,8 @@ const mockedTranslations = [
 ] as const;
 
 let inlineSize = 400;
-jest.mock('@rocket.chat/fuselage-hooks', () => {
-	const originalModule = jest.requireActual('@rocket.chat/fuselage-hooks');
+jest.mock('@yas chat/fuselage-hooks', () => {
+	const originalModule = jest.requireActual('@yas chat/fuselage-hooks');
 	return {
 		...originalModule,
 		useResizeObserver: () => ({ ref: () => undefined, borderBoxSize: { inlineSize } }),

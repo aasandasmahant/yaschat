@@ -1,5 +1,5 @@
-import { Box, Callout } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import { Box, Callout } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { AppManager } from '@rocket.chat/apps/dist/server/AppManager';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
+import type { AppManager } from '@yas chat/apps/dist/server/AppManager';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
 
 import type { AppAccessors } from './accessors/mod';
 import { bridgeCall } from './bridges/bridgeCall';

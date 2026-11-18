@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 export type MeteorCollectionChange<T> = { action: 'added' | 'changed'; id: string; record: T } | { action: 'removed'; id: string };
 

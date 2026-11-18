@@ -1,8 +1,8 @@
 // import type { Db } from 'mongodb';
 
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { ISAUMonitorService } from '@rocket.chat/core-services';
-import { getHeader } from '@rocket.chat/tools';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { ISAUMonitorService } from '@yas chat/core-services';
+import { getHeader } from '@yas chat/tools';
 
 import { sauEvents } from './events';
 

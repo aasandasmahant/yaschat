@@ -1,4 +1,4 @@
-import type { AtLeast, IRoom, ISubscription, IUser, MessageTypesValues, MinimalApp } from '@rocket.chat/core-typings';
+import type { AtLeast, IRoom, ISubscription, IUser, MessageTypesValues, MinimalApp } from '@yas chat/core-typings';
 
 export interface ISubscriptionExtraData {
 	open: boolean;

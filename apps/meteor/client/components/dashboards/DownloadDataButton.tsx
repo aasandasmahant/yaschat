@@ -1,5 +1,5 @@
-import { IconButton } from '@rocket.chat/fuselage';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { IconButton } from '@yas chat/fuselage';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

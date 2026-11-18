@@ -1,6 +1,6 @@
-import type { IAppVideoConferencesConverter, AppsVideoConference } from '@rocket.chat/apps';
-import { VideoConf } from '@rocket.chat/core-services';
-import type { VideoConference } from '@rocket.chat/core-typings';
+import type { IAppVideoConferencesConverter, AppsVideoConference } from '@yas chat/apps';
+import { VideoConf } from '@yas chat/core-services';
+import type { VideoConference } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { VideoConferenceCodec } from './codecs';

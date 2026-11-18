@@ -1,4 +1,4 @@
-import type { Serialized } from '@rocket.chat/core-typings';
+import type { Serialized } from '@yas chat/core-typings';
 import type {
 	MatchPathPattern,
 	ParamsFor,
@@ -6,7 +6,7 @@ import type {
 	PathFor,
 	PathWithoutParamsFor,
 	PathWithParamsFor,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import { stringify } from 'query-string';
 
 import type { Credentials } from './Credentials';

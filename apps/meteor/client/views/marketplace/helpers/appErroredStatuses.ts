@@ -1,4 +1,4 @@
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
 
 export const appErroredStatuses = [
 	AppStatus.COMPILER_ERROR_DISABLED,

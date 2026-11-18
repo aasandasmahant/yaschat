@@ -19,7 +19,7 @@ it, it is too broad.
 
 - Bad: "Presence is relayed."
 - Good: "An `unavailable` presence from a remote occupant removes them from the room, is
-  broadcast to the remaining remote occupants, and removes their Rocket.Chat subscription."
+  broadcast to the remaining remote occupants, and removes their Yas chat subscription."
 
 ## 3. Says MUST or SHOULD
 
@@ -33,7 +33,7 @@ nothing prevents it, and a test may skip when the condition is absent.
 ## 4. Cites the standard with a section
 
 When the requirement implements a standard, name the section, so a reviewer can check the
-reading. A requirement that is a Rocket.Chat decision rather than a standard says so.
+reading. A requirement that is a Yas chat decision rather than a standard says so.
 
 - Bad: "Invitations follow XEP-0045."
 - Good: "A remote JID added as a member receives a mediated invitation (XEP-0045 §7.8.2)

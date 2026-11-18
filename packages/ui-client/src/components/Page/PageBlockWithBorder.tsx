@@ -1,4 +1,4 @@
-import type { Box } from '@rocket.chat/fuselage';
+import type { Box } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { forwardRef, useContext } from 'react';
 

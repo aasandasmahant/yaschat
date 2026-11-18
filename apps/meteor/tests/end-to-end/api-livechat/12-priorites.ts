@@ -6,8 +6,8 @@ import type {
 	ILivechatPriority,
 	IOmnichannelRoom,
 	IOmnichannelServiceLevelAgreements,
-} from '@rocket.chat/core-typings';
-import { OmnichannelSortingMechanismSettingType } from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
+import { OmnichannelSortingMechanismSettingType } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

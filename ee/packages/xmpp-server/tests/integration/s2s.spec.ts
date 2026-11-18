@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import type Element from 'ltx/lib/Element';
 
 import { resolveConfig } from '../../src/config';

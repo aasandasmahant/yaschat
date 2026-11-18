@@ -1,4 +1,4 @@
-import type { IUpload } from '@rocket.chat/core-typings';
+import type { IUpload } from '@yas chat/core-typings';
 
 // Uploads stored before the `/ufs` route was removed keep `/ufs/<Store>:Uploads/<id>/<name>` in the database.
 const LEGACY_UFS_LOCATION = /\/ufs\/[^/:]+:Uploads\/.*$/;

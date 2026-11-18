@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-import type { IRoomNativeFederated, IUser } from '@rocket.chat/core-typings';
+import type { IRoomNativeFederated, IUser } from '@yas chat/core-typings';
 import { Visibility } from 'matrix-js-sdk';
 
 import { api } from '../../../../../apps/meteor/tests/data/api-data';
@@ -48,7 +48,7 @@ const localUser = {
 			{
 				username: localUser.username,
 				password: localUser.password,
-				email: `${localUser.username}@rocket.chat`,
+				email: `${localUser.username}@yas chat`,
 				name: localUser.username,
 			},
 			rc1AdminRequestConfig,

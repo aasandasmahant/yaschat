@@ -1,5 +1,5 @@
-import { validateEmail } from '@rocket.chat/tools';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { validateEmail } from '@yas chat/tools';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useEffect, useState } from 'react';
 
 import RegisteredWorkspaceModal from '../RegisteredWorkspaceModal';

@@ -1,5 +1,5 @@
-import { Box, ButtonGroup } from '@rocket.chat/fuselage';
-import { ActionButton, ToggleButton } from '@rocket.chat/ui-media';
+import { Box, ButtonGroup } from '@yas chat/fuselage';
+import { ActionButton, ToggleButton } from '@yas chat/ui-media';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

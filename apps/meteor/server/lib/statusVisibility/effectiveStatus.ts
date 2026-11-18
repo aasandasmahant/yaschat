@@ -1,7 +1,7 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { hiddenIds } from '@rocket.chat/streamer';
+import type { PresenceScope } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { hiddenIds } from '@yas chat/streamer';
 import type { Filter } from 'mongodb';
 
 const matchesNobody = (): Filter<IUser> => ({ $nor: [{}] });

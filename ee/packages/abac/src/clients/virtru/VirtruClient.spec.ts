@@ -1,7 +1,7 @@
 import { VirtruClient } from './VirtruClient';
 
 const serverFetchMock = jest.fn();
-jest.mock('@rocket.chat/server-fetch', () => ({ serverFetch: (...a: unknown[]) => serverFetchMock(...a) }));
+jest.mock('@yas chat/server-fetch', () => ({ serverFetch: (...a: unknown[]) => serverFetchMock(...a) }));
 
 const logErrorMock = jest.fn();
 jest.mock('../../logger', () => ({

@@ -1,5 +1,5 @@
-import type { IExportOperation, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IExportOperationsModel } from '@rocket.chat/model-typings';
+import type { IExportOperation, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IExportOperationsModel } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

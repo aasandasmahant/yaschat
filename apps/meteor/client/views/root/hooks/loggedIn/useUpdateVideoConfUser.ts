@@ -1,5 +1,5 @@
-import { useEmbeddedLayout } from '@rocket.chat/ui-client';
-import { useConnectionStatus, useIsLoggingIn } from '@rocket.chat/ui-contexts';
+import { useEmbeddedLayout } from '@yas chat/ui-client';
+import { useConnectionStatus, useIsLoggingIn } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { VideoConfManager } from '../../../../lib/VideoConfManager';

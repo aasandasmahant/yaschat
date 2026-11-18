@@ -1,6 +1,6 @@
-import type { ISettingColor } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { ISettingColor } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
+import { escapeHTML } from '@yas chat/tools';
 
 import { injectIntoBody, injectIntoHead } from './inject';
 import { getMessageMaxParseLength } from '../../../lib/getMessageMaxParseLength';

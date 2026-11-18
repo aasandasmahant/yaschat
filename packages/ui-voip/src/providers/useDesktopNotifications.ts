@@ -1,4 +1,4 @@
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

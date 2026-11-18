@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/fuselage-toastbar",
+	"name": "@yas chat/fuselage-toastbar",
 	"version": "1.0.0",
 	"description": "Fuselage ToastBar component",
 	"keywords": [
@@ -21,7 +21,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
@@ -43,12 +43,12 @@
 		"react-timing-hooks": "~5.2.0"
 	},
 	"devDependencies": {
-		"@rocket.chat/fuselage": "workspace:~",
-		"@rocket.chat/fuselage-hooks": "workspace:^",
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/storybook-config": "workspace:~",
-		"@rocket.chat/styled": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/fuselage": "workspace:~",
+		"@yas chat/fuselage-hooks": "workspace:^",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/storybook-config": "workspace:~",
+		"@yas chat/styled": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@testing-library/dom": "~10.4.2",
 		"@testing-library/react": "~16.3.3",
 		"@testing-library/user-event": "~14.6.7",
@@ -61,8 +61,8 @@
 		"typescript": "~7.0.2"
 	},
 	"peerDependencies": {
-		"@rocket.chat/fuselage": "1.0.0",
-		"@rocket.chat/styled": "0.34.2",
+		"@yas chat/fuselage": "1.0.0",
+		"@yas chat/styled": "0.34.2",
 		"react": "*",
 		"react-dom": "*"
 	},

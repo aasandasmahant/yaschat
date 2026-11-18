@@ -1,6 +1,6 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { MultiSelectFiltered } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { SelectOption } from '@yas chat/fuselage';
+import { MultiSelectFiltered } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import { memo, useCallback, useMemo } from 'react';
 
 import { useStringFromTextObject } from '../hooks/useStringFromTextObject';

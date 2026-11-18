@@ -1,4 +1,4 @@
-import type { UsePositionOptions } from '@rocket.chat/fuselage-hooks';
+import type { UsePositionOptions } from '@yas chat/fuselage-hooks';
 
 type ReactAriaPlacement =
 	| 'bottom'

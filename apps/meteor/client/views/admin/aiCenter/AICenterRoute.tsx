@@ -1,4 +1,4 @@
-import { useIsPrivilegedSettingsContext, useRouteParameter } from '@rocket.chat/ui-contexts';
+import { useIsPrivilegedSettingsContext, useRouteParameter } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 
 import AICenterOverview from './AICenterOverview';

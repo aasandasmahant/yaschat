@@ -1,8 +1,8 @@
 import dns from 'node:dns';
 import util from 'node:util';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { validateEmail } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { validateEmail } from '@yas chat/tools';
 
 import { emailDomainDefaultBlackList } from './defaultBlockedDomainsList';
 import { settings } from '../settings';

@@ -1,11 +1,11 @@
-# @rocket.chat/stylis-logical-props-middleware
+# @yas chat/stylis-logical-props-middleware
 
 ## 0.31.27
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/css-supports@0.31.27
+  - @yas chat/css-supports@0.31.27
 
   </details>
 
@@ -14,7 +14,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/css-supports@0.31.27-rc.0
+  - @yas chat/css-supports@0.31.27-rc.0
 
   </details>
 
@@ -22,7 +22,7 @@
 
 ### Patch Changes
 
-- ([#41861](https://github.com/YasChat/YasChat/pull/41861)) Moved `@rocket.chat/stylis-logical-props-middleware` into the YasChat monorepo, continuing from the frozen Fuselage 0.31.25 release.
+- ([#41861](https://github.com/YasChat/YasChat/pull/41861)) Moved `@yas chat/stylis-logical-props-middleware` into the YasChat monorepo, continuing from the frozen Fuselage 0.31.25 release.
 
   Fixed logical shorthands that take one value per side losing their declarations entirely on the fallback path. `margin-inline: 4px 8px` expanded to `margin-left: 4px 8px` and `margin-right: 4px 8px`, and since two values on a longhand is invalid, browsers without logical property support dropped both — the element ended up with no inline margin at all rather than the wrong spacing. The value is now split across the two sides, covering `margin-inline`, `padding-inline`, `inset-inline`, their block counterparts, and `border-{inline,block}-{width,style,color}`. Splitting happens on top-level whitespace only, so values nested in `calc()`, `var()` and friends stay intact, and an `!important` flag is reattached to every expansion.
 
@@ -33,7 +33,7 @@
   The CommonJS build no longer ships a duplicate copy of the type declarations, leaving `dist/esm` as the single source of types — where `types` already pointed.
 
 - <details><summary>Updated dependencies [131bbceaff27f5c3f0156fdb21a4b2a79129c851]:</summary>
-  - @rocket.chat/css-supports@0.31.26
+  - @yas chat/css-supports@0.31.26
 
   </details>
 
@@ -41,7 +41,7 @@
 
 ### Patch Changes
 
-- ([#41861](https://github.com/YasChat/YasChat/pull/41861)) Moved `@rocket.chat/stylis-logical-props-middleware` into the YasChat monorepo, continuing from the frozen Fuselage 0.31.25 release.
+- ([#41861](https://github.com/YasChat/YasChat/pull/41861)) Moved `@yas chat/stylis-logical-props-middleware` into the YasChat monorepo, continuing from the frozen Fuselage 0.31.25 release.
 
   Fixed logical shorthands that take one value per side losing their declarations entirely on the fallback path. `margin-inline: 4px 8px` expanded to `margin-left: 4px 8px` and `margin-right: 4px 8px`, and since two values on a longhand is invalid, browsers without logical property support dropped both — the element ended up with no inline margin at all rather than the wrong spacing. The value is now split across the two sides, covering `margin-inline`, `padding-inline`, `inset-inline`, their block counterparts, and `border-{inline,block}-{width,style,color}`. Splitting happens on top-level whitespace only, so values nested in `calc()`, `var()` and friends stay intact, and an `!important` flag is reattached to every expansion.
 
@@ -52,6 +52,6 @@
   The CommonJS build no longer ships a duplicate copy of the type declarations, leaving `dist/esm` as the single source of types — where `types` already pointed.
 
 - <details><summary>Updated dependencies [131bbceaff27f5c3f0156fdb21a4b2a79129c851]:</summary>
-  - @rocket.chat/css-supports@0.31.26-rc.0
+  - @yas chat/css-supports@0.31.26-rc.0
 
   </details>

@@ -57,7 +57,7 @@ function buildSubject(options?: {
 	};
 
 	const { sendRequest } = proxyquire.noCallThru().load(MODULE_PATH, {
-		'@rocket.chat/server-fetch': { serverFetch: fetchStub },
+		'@yas chat/server-fetch': { serverFetch: fetchStub },
 		'./logger': { webhooksLogger: logger },
 		'../metrics': { metrics },
 		'../../settings': { settings },

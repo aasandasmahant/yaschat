@@ -1,4 +1,4 @@
-import type { Keys } from '@rocket.chat/icons';
+import type { Keys } from '@yas chat/icons';
 import type { AllHTMLAttributes } from 'react';
 
 import { Icon, type IconProps } from '../Icon';

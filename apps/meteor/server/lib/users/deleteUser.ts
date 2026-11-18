@@ -1,6 +1,6 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { isUserFederated, type IUser } from '@rocket.chat/core-typings';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { isUserFederated, type IUser } from '@yas chat/core-typings';
 import {
 	Integrations,
 	LivechatVisitors,
@@ -13,7 +13,7 @@ import {
 	ReadReceiptsArchive,
 	LivechatUnitMonitors,
 	ModerationReports,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 
 import { getUserSingleOwnedRooms } from './getUserSingleOwnedRooms';
 import { settings } from '../../settings';

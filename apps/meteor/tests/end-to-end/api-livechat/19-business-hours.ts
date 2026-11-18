@@ -1,8 +1,8 @@
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ILivechatAgent, ILivechatBusinessHour, ILivechatDepartment } from '@rocket.chat/core-typings';
-import { LivechatBusinessHourBehaviors, LivechatBusinessHourTypes, ILivechatAgentStatus } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { ILivechatAgent, ILivechatBusinessHour, ILivechatDepartment } from '@yas chat/core-typings';
+import { LivechatBusinessHourBehaviors, LivechatBusinessHourTypes, ILivechatAgentStatus } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { sleep } from '../../../lib/utils/sleep';

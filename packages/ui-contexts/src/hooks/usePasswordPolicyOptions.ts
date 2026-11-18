@@ -1,4 +1,4 @@
-import type { PasswordPolicyOptions } from '@rocket.chat/password-policies';
+import type { PasswordPolicyOptions } from '@yas chat/password-policies';
 import { useMemo } from 'react';
 
 import { useSetting } from './useSetting';

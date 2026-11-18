@@ -1,12 +1,12 @@
-import { PaletteStyleTag } from '@rocket.chat/fuselage';
+import { PaletteStyleTag } from '@yas chat/fuselage';
 import type { Parameters, Decorator } from '@storybook/react';
 import { useSyncExternalStore } from 'react';
 
 import DocsContainer from './DocsContainer.js';
 import { resolveThemeMode, subscribeToSystemColorScheme, type ThemeMode } from './theme.js';
 
-import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/yaschat.css';
+import '@yas chat/fuselage/dist/fuselage.css';
+import '@yas chat/icons/dist/yaschat.css';
 
 export const parameters: Parameters = {
 	backgrounds: {

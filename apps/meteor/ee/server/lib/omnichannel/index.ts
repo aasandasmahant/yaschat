@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { patchOmniCore } from '@rocket.chat/omni-core-ee';
+import { License } from '@yas chat/license';
+import { patchOmniCore } from '@yas chat/omni-core-ee';
 
 import '../../hooks/omnichannel/afterTakeInquiry';
 import '../../hooks/omnichannel/beforeNewInquiry';

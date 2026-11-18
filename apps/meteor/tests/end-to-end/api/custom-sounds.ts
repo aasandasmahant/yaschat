@@ -3,8 +3,8 @@ import fs from 'fs';
 import { after, before, describe, it } from 'node:test';
 import path from 'path';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

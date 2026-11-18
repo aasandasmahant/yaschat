@@ -1,4 +1,4 @@
-import { Button } from '@rocket.chat/fuselage';
+import { Button } from '@yas chat/fuselage';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
 import { useEffect, useState } from 'react';
 

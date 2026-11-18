@@ -1,11 +1,11 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISubscriptionExtraData } from '@rocket.chat/core-services';
-import type { ICreatedRoom, IRoom, ISubscription, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { isTruthy } from '@rocket.chat/tools';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISubscriptionExtraData } from '@yas chat/core-services';
+import type { ICreatedRoom, IRoom, ISubscription, IUser } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { isTruthy } from '@yas chat/tools';
 import type { MatchKeysAndValues } from 'mongodb';
 
 import { getNameForDMs } from '../../services/room/getNameForDMs';

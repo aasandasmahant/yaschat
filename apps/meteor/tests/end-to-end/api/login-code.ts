@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto';
 import { after, before, describe, it } from 'node:test';
 
-import type { ILoginCode, IUser } from '@rocket.chat/core-typings';
+import type { ILoginCode, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 

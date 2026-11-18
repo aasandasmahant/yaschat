@@ -1,8 +1,8 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom, isMultipleDirectMessageRoom } from '@rocket.chat/core-typings';
-import { RoomAvatar } from '@rocket.chat/ui-avatar';
-import { useUser } from '@rocket.chat/ui-contexts';
-import { VideoConfPopupInfo } from '@rocket.chat/ui-video-conf';
+import type { IRoom } from '@yas chat/core-typings';
+import { isDirectMessageRoom, isMultipleDirectMessageRoom } from '@yas chat/core-typings';
+import { RoomAvatar } from '@yas chat/ui-avatar';
+import { useUser } from '@yas chat/ui-contexts';
+import { VideoConfPopupInfo } from '@yas chat/ui-video-conf';
 
 import { RoomIcon } from '../../../../../../components/RoomIcon';
 import ReactiveUserStatus from '../../../../../../components/UserStatus/ReactiveUserStatus';

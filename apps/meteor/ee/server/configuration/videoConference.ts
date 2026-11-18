@@ -1,8 +1,8 @@
-import { VideoConf } from '@rocket.chat/core-services';
-import type { IRoom, IUser, VideoConference } from '@rocket.chat/core-typings';
-import { VideoConferenceStatus } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Rooms } from '@rocket.chat/models';
+import { VideoConf } from '@yas chat/core-services';
+import type { IRoom, IUser, VideoConference } from '@yas chat/core-typings';
+import { VideoConferenceStatus } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Rooms } from '@yas chat/models';
 
 import { callbacks } from '../../../server/lib/callbacks';
 import { CORE_PROVIDER_APP_ID, videoConfProviders } from '../../../server/lib/videoConfProviders';

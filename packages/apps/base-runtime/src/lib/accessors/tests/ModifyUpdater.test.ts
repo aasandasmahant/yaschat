@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { after, beforeEach, describe, it, mock } from 'node:test';
 
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { AppObjectRegistry } from '../../../AppObjectRegistry';
 import jsonrpc from '../../jsonrpc';

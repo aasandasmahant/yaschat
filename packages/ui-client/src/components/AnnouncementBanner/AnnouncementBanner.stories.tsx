@@ -19,7 +19,7 @@ export const Default: StoryObj<typeof AnnouncementBanner> = {
 export const WithLink: StoryObj<typeof AnnouncementBanner> = {
 	args: {
 		children: (
-			<a target='_blank' href='https://rocket.chat' rel='noreferrer'>
+			<a target='_blank' href='https://yas chat' rel='noreferrer'>
 				Announcement
 			</a>
 		),

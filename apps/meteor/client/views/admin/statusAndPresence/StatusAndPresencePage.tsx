@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarClose,
@@ -9,8 +9,8 @@ import {
 	PageHeader,
 	PageContent,
 	useIsEnterprise,
-} from '@rocket.chat/ui-client';
-import { useRouteParameter, useRouter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 import { memo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

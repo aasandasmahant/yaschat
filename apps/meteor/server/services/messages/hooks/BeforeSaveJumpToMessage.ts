@@ -1,8 +1,8 @@
 import QueryString from 'node:querystring';
 import URL from 'node:url';
 
-import type { MessageAttachment, IMessage, IUser, IOmnichannelRoom, IRoom } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom, isQuoteAttachment } from '@rocket.chat/core-typings';
+import type { MessageAttachment, IMessage, IUser, IOmnichannelRoom, IRoom } from '@yas chat/core-typings';
+import { isOmnichannelRoom, isQuoteAttachment } from '@yas chat/core-typings';
 
 import { createQuoteAttachment } from '../../../../lib/createQuoteAttachment';
 

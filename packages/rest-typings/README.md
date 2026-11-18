@@ -1,19 +1,19 @@
-# `@rocket.chat/rest-typings`
+# `@yas chat/rest-typings`
 
 > TypeScript definitions and JSON Schema validators for the YasChat REST API.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/rest-typings) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/rest-typings)
+[![npm](https://img.shields.io/npm/v/@yas chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@yas chat/rest-typings) [![downloads](https://img.shields.io/npm/dw/@yas chat/rest-typings?style=flat-square)](https://www.npmjs.com/package/@yas chat/rest-typings)
 
-This package describes YasChat's REST endpoints as types: for each path and HTTP method, the parameters it accepts and the result it returns. The entity types it refers to (`IUser`, `IRoom`, `IMessage`, ...) come from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings).
+This package describes YasChat's REST endpoints as types: for each path and HTTP method, the parameters it accepts and the result it returns. The entity types it refers to (`IUser`, `IRoom`, `IMessage`, ...) come from [`@yas chat/core-typings`](https://www.npmjs.com/package/@yas chat/core-typings).
 
-It is mostly consumed indirectly. [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) use it to type their REST calls, and the YasChat server uses its validators to check incoming requests.
+It is mostly consumed indirectly. [`@yas chat/api-client`](https://www.npmjs.com/package/@yas chat/api-client) and [`@yas chat/ddp-client`](https://www.npmjs.com/package/@yas chat/ddp-client) use it to type their REST calls, and the YasChat server uses its validators to check incoming requests.
 
 It also ships runtime code: [AJV](https://ajv.js.org/) validators for many endpoints' parameters (`isChatSendMessageProps`, `isLoginProps`, ...), the shared `ajv` and `ajvQuery` instances, and validators for standard error responses.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/rest-typings
+npm install @yas chat/rest-typings
 ```
 
 The package is published as CommonJS with TypeScript declarations.
@@ -24,12 +24,12 @@ Not every endpoint is in this package. Endpoints the server defines with its new
 
 ### Typing a REST call
 
-With [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client), the endpoint path picks the parameter and result types:
+With [`@yas chat/api-client`](https://www.npmjs.com/package/@yas chat/api-client), the endpoint path picks the parameter and result types:
 
 ```ts
-import { RestClient } from '@rocket.chat/api-client';
+import { RestClient } from '@yas chat/api-client';
 
-const client = new RestClient({ baseUrl: 'https://open.rocket.chat' });
+const client = new RestClient({ baseUrl: 'https://open.yas chat' });
 
 // params: ChatSendMessage; result: { message: IMessage } (serialized)
 const { message } = await client.post('/v1/chat.sendMessage', {
@@ -42,28 +42,28 @@ const { message } = await client.post('/v1/chat.sendMessage', {
 The helper types work with any HTTP library:
 
 ```ts
-import type { OperationParams, OperationResult, PathPattern } from '@rocket.chat/rest-typings';
+import type { OperationParams, OperationResult, PathPattern } from '@yas chat/rest-typings';
 
 async function get<TPathPattern extends PathPattern>(
 	path: TPathPattern,
 	params: OperationParams<'GET', TPathPattern>,
 ): Promise<OperationResult<'GET', TPathPattern>> {
 	const query = new URLSearchParams(params as Record<string, string>);
-	const response = await fetch(`https://open.rocket.chat/api${path}?${query}`);
+	const response = await fetch(`https://open.yas chat/api${path}?${query}`);
 	return response.json();
 }
 
 const { user } = await get('/v1/users.info', { username: 'alice' });
 ```
 
-Results are typed as the server's objects, with `Date` fields. Over JSON those arrive as strings; wrap a result in `Serialized<...>` from `@rocket.chat/core-typings` to type what you actually receive, as `@rocket.chat/api-client` does.
+Results are typed as the server's objects, with `Date` fields. Over JSON those arrive as strings; wrap a result in `Serialized<...>` from `@yas chat/core-typings` to type what you actually receive, as `@yas chat/api-client` does.
 
 ### Validating parameters
 
 Many endpoints come with a compiled AJV validator named `is<Endpoint>Props`. Each one is a type guard and keeps the errors of the last call in `errors`:
 
 ```ts
-import { isChatSendMessageProps } from '@rocket.chat/rest-typings';
+import { isChatSendMessageProps } from '@yas chat/rest-typings';
 
 if (!isChatSendMessageProps(body)) {
 	throw new Error(JSON.stringify(isChatSendMessageProps.errors));
@@ -77,9 +77,9 @@ if (!isChatSendMessageProps(body)) {
 `Endpoints` is an interface, so you can add endpoints through declaration merging, for example for an app's custom endpoints or a route your server version has but this package does not:
 
 ```ts
-import type { PaginatedRequest, PaginatedResult } from '@rocket.chat/rest-typings';
+import type { PaginatedRequest, PaginatedResult } from '@yas chat/rest-typings';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/custom.endpoint': {
 			GET: (params: PaginatedRequest<{ query: string }>) => PaginatedResult<{ items: string[] }>;
@@ -94,10 +94,10 @@ The new path is then accepted by every client typed with this package.
 
 Endpoints under `/api/experimental/` are typed by `ExperimentalEndpoints`. They carry no semver promise and may change or disappear in any release.
 
-They are not part of `Endpoints`, and importing `ExperimentalEndpoints` does not add them to it. Clients typed against `Endpoints`, such as `@rocket.chat/api-client` and `@rocket.chat/ddp-client`, keep rejecting these paths. To call one with types, type the call against `ExperimentalEndpoints` yourself:
+They are not part of `Endpoints`, and importing `ExperimentalEndpoints` does not add them to it. Clients typed against `Endpoints`, such as `@yas chat/api-client` and `@yas chat/ddp-client`, keep rejecting these paths. To call one with types, type the call against `ExperimentalEndpoints` yourself:
 
 ```ts
-import type { ExperimentalEndpoints } from '@rocket.chat/rest-typings';
+import type { ExperimentalEndpoints } from '@yas chat/rest-typings';
 
 type SetCategory = ExperimentalEndpoints['/experimental/rooms.setCategory']['POST'];
 
@@ -155,10 +155,10 @@ Both instances know the `basic_email` and `rfc_email` formats and the `isNotEmpt
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/rest-typings). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/rest-typings build
-yarn workspace @rocket.chat/rest-typings dev
-yarn workspace @rocket.chat/rest-typings lint
-yarn workspace @rocket.chat/rest-typings typecheck
+yarn workspace @yas chat/rest-typings build
+yarn workspace @yas chat/rest-typings dev
+yarn workspace @yas chat/rest-typings lint
+yarn workspace @yas chat/rest-typings typecheck
 ```
 
 New server endpoints should use the validated route API, which declares their types next to the route. See [docs/api-endpoint-migration.md](https://github.com/YasChat/YasChat/blob/develop/docs/api-endpoint-migration.md). For the choice between `ajv` and `ajvQuery`, see [docs/ajv-instances.md](https://github.com/YasChat/YasChat/blob/develop/docs/ajv-instances.md).

@@ -1,5 +1,5 @@
-import type { IIntegration, IIntegrationHistory, INewIncomingIntegration, INewOutgoingIntegration } from '@rocket.chat/core-typings';
-import { Integrations, IntegrationHistory } from '@rocket.chat/models';
+import type { IIntegration, IIntegrationHistory, INewIncomingIntegration, INewOutgoingIntegration } from '@yas chat/core-typings';
+import { Integrations, IntegrationHistory } from '@yas chat/models';
 import {
 	ajv,
 	isIntegrationsClearHistoryProps,
@@ -14,8 +14,8 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Filter } from 'mongodb';
 
 import { clearIntegrationHistoryMethod, replayOutgoingIntegrationMethod } from '../../lib/integrations/functions/clearIntegrationHistory';

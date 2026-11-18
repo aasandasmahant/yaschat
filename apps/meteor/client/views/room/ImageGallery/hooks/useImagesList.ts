@@ -1,6 +1,6 @@
-import { Base64 } from '@rocket.chat/base64';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { Base64 } from '@yas chat/base64';
+import type { IRoom } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { e2e } from '../../../../lib/e2ee/yaschat.e2e';

@@ -1,6 +1,6 @@
-import { Box, ModalFooterAnnotation, ModalIcon } from '@rocket.chat/fuselage';
-import { ExternalLink, GenericModal, links } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Box, ModalFooterAnnotation, ModalIcon } from '@yas chat/fuselage';
+import { ExternalLink, GenericModal, links } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { useE2EEResetRoomKey } from '../../hooks/useE2EEResetRoomKey';

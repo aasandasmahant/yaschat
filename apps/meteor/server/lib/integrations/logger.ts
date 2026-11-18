@@ -1,4 +1,4 @@
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 
 export const integrationLogger = new Logger('Integrations');
 

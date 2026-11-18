@@ -1,5 +1,5 @@
-import type { ICalendarEvent, IUser } from '@rocket.chat/core-typings';
-import type { InsertionModel } from '@rocket.chat/model-typings';
+import type { ICalendarEvent, IUser } from '@yas chat/core-typings';
+import type { InsertionModel } from '@yas chat/model-typings';
 import type { UpdateResult, DeleteResult } from 'mongodb';
 
 export interface ICalendarService {

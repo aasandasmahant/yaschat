@@ -1,6 +1,6 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import type { CallRole, ServerMediaSignalRemoteSDP } from '@rocket.chat/media-signaling';
-import { MediaCallNegotiations } from '@rocket.chat/models';
+import type { IMediaCall } from '@yas chat/core-typings';
+import type { CallRole, ServerMediaSignalRemoteSDP } from '@yas chat/media-signaling';
+import { MediaCallNegotiations } from '@yas chat/models';
 
 export async function getInitialOfferSignal(call: IMediaCall, role: CallRole): Promise<ServerMediaSignalRemoteSDP | null> {
 	const { [role]: actor } = call;

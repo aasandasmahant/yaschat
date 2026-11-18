@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import { ActionLink } from '@rocket.chat/layout';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { ActionLink } from '@yas chat/layout';
+import { useSetting } from '@yas chat/ui-contexts';
 import { Trans } from 'react-i18next';
 
 export const LoginPoweredBy = () => {
@@ -12,7 +12,7 @@ export const LoginPoweredBy = () => {
 		<Box marginBlockEnd='x16'>
 			<Trans i18nKey='registration.page.poweredBy'>
 				{'Powered by '}
-				<ActionLink href='https://rocket.chat/' target='_blank' rel='noopener noreferrer'>
+				<ActionLink href='https://yas chat/' target='_blank' rel='noopener noreferrer'>
 					YasChat
 				</ActionLink>
 			</Trans>

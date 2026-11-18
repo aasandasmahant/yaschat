@@ -1,4 +1,4 @@
-import { TrashRaw } from '@rocket.chat/models';
+import { TrashRaw } from '@yas chat/models';
 
 import { db } from './utils';
 

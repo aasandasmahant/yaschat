@@ -4,8 +4,8 @@ import type {
 	IMediaCallStartedContext,
 	IPreMediaCallCreatedContext,
 	MediaCallCreateEventResult,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
-import type { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/mediaCalls';
+import type { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 
 import type { HostEventResult } from '../eventResult';
 

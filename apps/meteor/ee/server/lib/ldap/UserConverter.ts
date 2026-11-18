@@ -1,7 +1,7 @@
-import type { IImportUser, IUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import type { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import type { IImportUser, IUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import type { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 
 import { logger } from './Logger';
 import type { ConverterCache } from '../../../../server/lib/import/classes/converters/ConverterCache';

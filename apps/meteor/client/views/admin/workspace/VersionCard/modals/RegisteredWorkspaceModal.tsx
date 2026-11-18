@@ -8,9 +8,9 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@rocket.chat/fuselage';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useSafely } from '@yas chat/fuselage-hooks';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

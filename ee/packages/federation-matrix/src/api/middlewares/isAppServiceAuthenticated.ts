@@ -1,4 +1,4 @@
-import { errCodes, federationSDK } from '@rocket.chat/federation-sdk';
+import { errCodes, federationSDK } from '@yas chat/federation-sdk';
 import type { Context, MiddlewareHandler } from 'hono';
 import { createMiddleware } from 'hono/factory';
 

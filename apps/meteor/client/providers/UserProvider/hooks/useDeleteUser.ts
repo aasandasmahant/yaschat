@@ -1,4 +1,4 @@
-import { useStream, useUserId } from '@rocket.chat/ui-contexts';
+import { useStream, useUserId } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { Messages } from '../../../stores';

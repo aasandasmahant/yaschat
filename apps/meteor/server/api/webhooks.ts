@@ -1,9 +1,9 @@
-import { isClientSafeError } from '@rocket.chat/core-services';
-import type { IIncomingIntegration, IIntegration, IOutgoingIntegration, IUser, RequiredField } from '@rocket.chat/core-typings';
-import { mountRouter } from '@rocket.chat/http-router';
-import { Integrations, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { isIntegrationsHooksAddSchema, isIntegrationsHooksRemoveSchema } from '@rocket.chat/rest-typings';
+import { isClientSafeError } from '@yas chat/core-services';
+import type { IIncomingIntegration, IIntegration, IOutgoingIntegration, IUser, RequiredField } from '@yas chat/core-typings';
+import { mountRouter } from '@yas chat/http-router';
+import { Integrations, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { isIntegrationsHooksAddSchema, isIntegrationsHooksRemoveSchema } from '@yas chat/rest-typings';
 import type { RateLimiterOptionsToCheck } from 'meteor/rate-limit';
 import _ from 'underscore';
 

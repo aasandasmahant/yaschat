@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-import type { IImport } from '@rocket.chat/core-typings';
+import type { IImport } from '@yas chat/core-typings';
 import { parse } from 'csv-parse/lib/sync';
 
 import { Importer, ProgressStep, ImporterWebsocket } from '..';

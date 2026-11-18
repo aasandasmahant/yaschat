@@ -1,5 +1,5 @@
-import { FieldLabel, MultiSelectFiltered, MultiSelect, Field, FieldRow, FieldHint } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { FieldLabel, MultiSelectFiltered, MultiSelect, Field, FieldRow, FieldHint } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ResetSettingButton from '../ResetSettingButton';

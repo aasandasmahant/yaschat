@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import { sourceOf } from './sourceOf.js';
 
@@ -70,21 +70,21 @@ describe('emoji', () => {
 
 describe('links', () => {
 	it.each([
-		['an autolinked URL', link('https://rocket.chat', plain('https://rocket.chat')), 'https://rocket.chat'],
-		['a schemeless autolinked URL', link('//rocket.chat/docs', plain('rocket.chat/docs')), 'rocket.chat/docs'],
-		['an autolinked email', link('mailto:me@rocket.chat', plain('me@rocket.chat')), 'me@rocket.chat'],
+		['an autolinked URL', link('https://yas chat', plain('https://yas chat')), 'https://yas chat'],
+		['a schemeless autolinked URL', link('//yas chat/docs', plain('yas chat/docs')), 'yas chat/docs'],
+		['an autolinked email', link('mailto:me@yas chat', plain('me@yas chat')), 'me@yas chat'],
 	])('keeps only the typed text of %s', (_label, node, expected) => {
 		expect(sourceOf(node, '')).toBe(expected);
 	});
 
 	it('restores the bracket form of a markdown link', () => {
-		expect(sourceOf(link('https://rocket.chat/docs', plain('the docs')), '')).toBe('[the docs](https://rocket.chat/docs)');
+		expect(sourceOf(link('https://yas chat/docs', plain('the docs')), '')).toBe('[the docs](https://yas chat/docs)');
 	});
 
 	it('restores a label made of several nodes', () => {
-		const node = link('https://rocket.chat', [plain('see '), { type: 'BOLD', value: [plain('docs')] }]);
+		const node = link('https://yas chat', [plain('see '), { type: 'BOLD', value: [plain('docs')] }]);
 
-		expect(sourceOf(node, '')).toBe('[see *docs*](https://rocket.chat)');
+		expect(sourceOf(node, '')).toBe('[see *docs*](https://yas chat)');
 	});
 });
 
@@ -92,19 +92,19 @@ describe('images', () => {
 	it('restores the bracket form of an image', () => {
 		const node: MessageParser.Image = {
 			type: 'IMAGE',
-			value: { src: plain('https://rocket.chat/a.png'), label: plain('alt') },
+			value: { src: plain('https://yas chat/a.png'), label: plain('alt') },
 		};
 
-		expect(sourceOf(node, '')).toBe('![alt](https://rocket.chat/a.png)');
+		expect(sourceOf(node, '')).toBe('![alt](https://yas chat/a.png)');
 	});
 
 	it('leaves the label empty when it only repeats the source', () => {
 		const node: MessageParser.Image = {
 			type: 'IMAGE',
-			value: { src: plain('https://rocket.chat/a.png'), label: plain('https://rocket.chat/a.png') },
+			value: { src: plain('https://yas chat/a.png'), label: plain('https://yas chat/a.png') },
 		};
 
-		expect(sourceOf(node, '')).toBe('![](https://rocket.chat/a.png)');
+		expect(sourceOf(node, '')).toBe('![](https://yas chat/a.png)');
 	});
 });
 

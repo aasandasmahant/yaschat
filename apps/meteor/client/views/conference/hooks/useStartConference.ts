@@ -1,5 +1,5 @@
-import type { CallPreferences } from '@rocket.chat/ui-conference';
-import { useEndpoint, usePermission, useRouter } from '@rocket.chat/ui-contexts';
+import type { CallPreferences } from '@yas chat/ui-conference';
+import { useEndpoint, usePermission, useRouter } from '@yas chat/ui-contexts';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { useRoomSubscriptionQuery } from './useRoomSubscriptionQuery';

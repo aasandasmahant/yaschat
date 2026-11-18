@@ -1,4 +1,4 @@
-import { Skeleton, Box, Stack } from '@rocket.chat/fuselage';
+import { Skeleton, Box, Stack } from '@yas chat/fuselage';
 
 const AppsPageContentSkeleton = () => {
 	const loadingSection = (

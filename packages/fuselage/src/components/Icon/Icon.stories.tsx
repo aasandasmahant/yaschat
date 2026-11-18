@@ -1,5 +1,5 @@
-import type { Keys } from '@rocket.chat/icons';
-import nameToCharacterMapping from '@rocket.chat/icons';
+import type { Keys } from '@yas chat/icons';
+import nameToCharacterMapping from '@yas chat/icons';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 

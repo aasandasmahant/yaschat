@@ -1,5 +1,5 @@
-import type { ICredentialToken, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ICredentialTokensModel, InsertionModel } from '@rocket.chat/model-typings';
+import type { ICredentialToken, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ICredentialTokensModel, InsertionModel } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

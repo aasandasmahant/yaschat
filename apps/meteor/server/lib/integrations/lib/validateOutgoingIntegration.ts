@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, INewOutgoingIntegration, IOutgoingIntegration, IUpdateOutgoingIntegration } from '@rocket.chat/core-typings';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser, INewOutgoingIntegration, IOutgoingIntegration, IUpdateOutgoingIntegration } from '@yas chat/core-typings';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
 
 import { isScriptEngineFrozen } from './validateScriptEngine';
 import { validateScriptSyntax } from './validateScriptSyntax';

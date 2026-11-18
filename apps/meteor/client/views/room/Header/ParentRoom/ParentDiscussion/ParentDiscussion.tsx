@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
-import { useRoomRoute, useUserDisplayName } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
+import { useRoomRoute, useUserDisplayName } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ParentRoomButton from '../ParentRoomButton';

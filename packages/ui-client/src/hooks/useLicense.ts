@@ -1,6 +1,6 @@
-import type { Serialized } from '@rocket.chat/core-typings';
-import type { OperationResult } from '@rocket.chat/rest-typings';
-import { useEndpoint, useStream, useUserId } from '@rocket.chat/ui-contexts';
+import type { Serialized } from '@yas chat/core-typings';
+import type { OperationResult } from '@yas chat/rest-typings';
+import { useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
 import type { QueryClient, UseQueryResult } from '@tanstack/react-query';
 import { keepPreviousData, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useCallback, useEffect } from 'react';

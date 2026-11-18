@@ -20,24 +20,24 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 		it('should parse the mentions correctly when there is some room mention in RC format', async () => {
 			expect(
 				await toInternalMessageFormat({
-					rawMessage: "hello @marcos.defendi:tests-b.fed.rocket.chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.rocket.chat",
+					rawMessage: "hello @marcos.defendi:tests-b.fed.yas chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.yas chat",
 					formattedMessage:
-						'<p>hello <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.rocket.chat">@marcos.defendi:tests-b.fed.rocket.chat</a>, here&#39;s from Server A, <a href="https://matrix.to/#/!nAWjvnrjAoUWVMpqTy:tests-b.fed.rocket.chat">!nAWjvnrjAoUWVMpqTy:tests-b.fed.rocket.chat</a>, <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.rocket.chat">@marcos.defendi:tests-b.fed.rocket.chat</a></p>',
+						'<p>hello <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.yas chat">@marcos.defendi:tests-b.fed.yas chat</a>, here&#39;s from Server A, <a href="https://matrix.to/#/!nAWjvnrjAoUWVMpqTy:tests-b.fed.yas chat">!nAWjvnrjAoUWVMpqTy:tests-b.fed.yas chat</a>, <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.yas chat">@marcos.defendi:tests-b.fed.yas chat</a></p>',
 					homeServerDomain: 'localDomain',
 					senderExternalId: '@user:externalDomain.com',
 				}),
-			).toBe("hello @marcos.defendi:tests-b.fed.rocket.chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.rocket.chat");
+			).toBe("hello @marcos.defendi:tests-b.fed.yas chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.yas chat");
 		});
 		it('should parse the mentions correctly when there is some room mention in Element format', async () => {
 			expect(
 				await toInternalMessageFormat({
 					rawMessage: "hello marcos.defendi, here's from Server A, #test-thread:matrix.org, marcos.defendi",
 					formattedMessage:
-						'hello <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.rocket.chat">marcos.defendi</a>, here\'s from Server A, <a href="https://matrix.to/#/#test-thread:matrix.org">#test-thread:matrix.org</a>, <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.rocket.chat">marcos.defendi</a>',
+						'hello <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.yas chat">marcos.defendi</a>, here\'s from Server A, <a href="https://matrix.to/#/#test-thread:matrix.org">#test-thread:matrix.org</a>, <a href="https://matrix.to/#/@marcos.defendi:tests-b.fed.yas chat">marcos.defendi</a>',
 					homeServerDomain: 'localDomain',
 					senderExternalId: '@user:externalDomain.com',
 				}),
-			).toBe("hello @marcos.defendi:tests-b.fed.rocket.chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.rocket.chat");
+			).toBe("hello @marcos.defendi:tests-b.fed.yas chat, here's from Server A, @all, @marcos.defendi:tests-b.fed.yas chat");
 		});
 
 		it('should parse the user mention correctly when using the RC format', async () => {
@@ -343,13 +343,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -358,7 +358,7 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 
 				`,
 					formattedMessage:
-						'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` </code></pre>',
+						'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` </code></pre>',
 					homeServerDomain: 'localDomain.com',
 					senderExternalId: '@user:externalDomain.com',
 				}),
@@ -393,13 +393,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -441,13 +441,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -459,7 +459,7 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					😀
 				`,
 					formattedMessage:
-						'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` 😀 😀 😀 😀 </code></pre>',
+						'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` 😀 😀 😀 😀 </code></pre>',
 					homeServerDomain: 'localDomain.com',
 					senderExternalId: '@user:externalDomain.com',
 				}),
@@ -494,13 +494,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -547,7 +547,7 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 		});
 
 		it('should parse the nested quotes correctly', async () => {
-			const rawMessage = '> <@marcos.defendi:tests-a.fed.rocket.chat>\n> test\nhello nested quote';
+			const rawMessage = '> <@marcos.defendi:tests-a.fed.yas chat>\n> test\nhello nested quote';
 			const nested =
 				'<mx-reply><blockquote><a href="https://matrix.to/#/externalRoomId/eventToReplyToId">In reply to</a> <a href="https://matrix.to/#/originalEventSender">originalEventSender</a><br>test</blockquote></mx-reply>hello nested quote';
 
@@ -839,20 +839,20 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
 					const applyMarkdownIfRequires = ( list: MessageAttachmentDefault['mrkdwn_in'] = ['text', 'pretext'], key: MarkdownFields, text: string, variant: 'inline' | 'inlineWithoutBreaks' | 'document' = 'inline', ): ReactNode => (list?.includes(key) ? <MarkdownText parseEmoji variant={variant} content={text} /> : text); 
 					\`\`\`
 			`;
-			const formattedMessage = `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` </code></pre>`;
+			const formattedMessage = `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` </code></pre>`;
 
 			expect(
 				await toInternalQuoteMessageFormat({
@@ -894,13 +894,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -940,13 +940,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -957,7 +957,7 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					😀
 					😀
 		`;
-			const formattedMessage = `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` 😀 😀 😀 😀 </code></pre>`;
+			const formattedMessage = `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">User Real Name</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">Remote User Real Name</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` 😀 😀 😀 😀 </code></pre>`;
 
 			expect(
 				await toInternalQuoteMessageFormat({
@@ -999,13 +999,13 @@ describe('Federation - Infrastructure - Matrix - RocketTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -1286,13 +1286,13 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -1304,7 +1304,7 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 					homeServerDomain: 'localDomain.com',
 				}),
 			).toBe(
-				'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` </code></pre>',
+				'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` </code></pre>',
 			);
 		});
 
@@ -1342,13 +1342,13 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 					**Links:** 
 
 					[Google](google.com)
-					[YasChat](rocket.chat)
-					[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-					marcos.defendi@rocket.chat 
+					[YasChat](yas chat)
+					[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+					marcos.defendi@yas chat 
 					+55991999999 
 					\`Inline code\`
 					\`\`\`typescript 
@@ -1363,7 +1363,7 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 					homeServerDomain: 'localDomain.com',
 				}),
 			).toBe(
-				'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` 😀 😀 😀 😀 </code></pre>',
+				'<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 `Inline code` ```typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); ``` 😀 😀 😀 😀 </code></pre>',
 			);
 		});
 	});
@@ -1654,13 +1654,13 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 			**Links:** 
 
 			[Google](google.com)
-			[YasChat](rocket.chat)
-			[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			marcos.defendi@rocket.chat 
+			[YasChat](yas chat)
+			[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			marcos.defendi@yas chat 
 			+55991999999 
 			\`Inline code\`
 			\`\`\`typescript 
@@ -1679,7 +1679,7 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 				}),
 			).toEqual({
 				message: `> <${originalEventSender}> \n\n${message}`,
-				formattedMessage: `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` </code></pre>`,
+				formattedMessage: `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` </code></pre>`,
 			});
 		});
 
@@ -1715,13 +1715,13 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 			**Links:** 
 
 			[Google](google.com)
-			[YasChat](rocket.chat)
-			[YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			[__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
-			marcos.defendi@rocket.chat 
+			[YasChat](yas chat)
+			[YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			[__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)
+			marcos.defendi@yas chat 
 			+55991999999 
 			\`Inline code\`
 			\`\`\`typescript 
@@ -1743,7 +1743,7 @@ describe('Federation - Infrastructure - Matrix - MatrixTextParser', () => {
 				}),
 			).toEqual({
 				message: `> <${originalEventSender}> \n\n${message}`,
-				formattedMessage: `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](rocket.chat) [YasChat Link Test](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@rocket.chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` 😀 😀 😀 😀 </code></pre>`,
+				formattedMessage: `${quotedMessage}<p>hey <a href="https://matrix.to/#/@user:localDomain.com">@user:localDomain.com</a>, here its <a href="https://matrix.to/#/@remoteuser:matrix.org">@remoteuser:matrix.org</a>, how are you? Hope <strong>you</strong> <strong>are</strong> doing well, please see: # Heading 1 </p> <pre><code> **Paragraph text**: **Bold** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ## Heading 2 _Italict Text_: _Italict_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. ### Heading 3 - Lists, Links and elements **Unordered List** - List Item 1 - List Item 2 - List Item 3 - List Item 4 **Ordered List** 1. List Item 2. List Item 3. List Item 4. List Item &gt; Quote test: **Bold** _Italic_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. **Links:** [Google](google.com) [YasChat](yas chat) [YasChat Link Test](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [**YasChat Link Test**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [~~YasChat Link Test~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__YasChat Link Test__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) [__**~~YasChat Link Test~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351) marcos.defendi@yas chat +55991999999 \`Inline code\` \`\`\`typescript const applyMarkdownIfRequires = ( list: MessageAttachmentDefault[&#39;mrkdwn_in&#39;] = [&#39;text&#39;, &#39;pretext&#39;], key: MarkdownFields, text: string, variant: &#39;inline&#39; | &#39;inlineWithoutBreaks&#39; | &#39;document&#39; = &#39;inline&#39;, ): ReactNode =&gt; (list?.includes(key) ? &lt;MarkdownText parseEmoji variant={variant} content={text} /&gt; : text); \`\`\` 😀 😀 😀 😀 </code></pre>`,
 			});
 		});
 	});

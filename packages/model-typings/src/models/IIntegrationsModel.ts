@@ -1,4 +1,4 @@
-import type { IIntegration, IUser } from '@rocket.chat/core-typings';
+import type { IIntegration, IUser } from '@yas chat/core-typings';
 import type { AggregateOptions, FindCursor, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

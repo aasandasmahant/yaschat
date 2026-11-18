@@ -1,6 +1,6 @@
-import type { IEditedMessage, IMessage } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { clientCallbacks } from '@rocket.chat/ui-client';
+import type { IEditedMessage, IMessage } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { clientCallbacks } from '@yas chat/ui-client';
 import { renderHook, act } from '@testing-library/react';
 
 import { useHasNewMessages } from './useHasNewMessages';

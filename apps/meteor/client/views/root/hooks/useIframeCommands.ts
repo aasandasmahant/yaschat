@@ -1,6 +1,6 @@
-import type { OAuthConfiguration, UserStatus } from '@rocket.chat/core-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
-import { type LocationPathname, UserContext, useLoginWithToken, useSetting, useUserId } from '@rocket.chat/ui-contexts';
+import type { OAuthConfiguration, UserStatus } from '@yas chat/core-typings';
+import { escapeRegExp } from '@yas chat/tools';
+import { type LocationPathname, UserContext, useLoginWithToken, useSetting, useUserId } from '@yas chat/ui-contexts';
 import { useContext, useEffect, useRef } from 'react';
 
 import { ltrim, rtrim } from '../../../../lib/utils/stringUtils';

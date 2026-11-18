@@ -1,6 +1,6 @@
-import { Button, Stack } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Button, Stack } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { AriaAttributes } from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

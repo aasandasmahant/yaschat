@@ -1,5 +1,5 @@
-import type { IIntegrationHistory, Serialized } from '@rocket.chat/core-typings';
-import { Skeleton, Box, Accordion, Stack } from '@rocket.chat/fuselage';
+import type { IIntegrationHistory, Serialized } from '@yas chat/core-typings';
+import { Skeleton, Box, Accordion, Stack } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import HistoryItem from './HistoryItem';

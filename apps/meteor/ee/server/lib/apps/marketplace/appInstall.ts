@@ -1,4 +1,4 @@
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 
 import { Info } from '../../../../../yaschat.info';
 import { getWorkspaceAccessToken } from '../../../../../server/lib/cloud';
@@ -37,7 +37,7 @@ export async function notifyMarketplace(action: MarketplaceNotificationType, app
 		appName: appInfo.name,
 		appSlug: appInfo.nameSlug,
 		appVersion: appInfo.version,
-		rocketChatVersion: Info.version,
+		YasChatVersion: Info.version,
 		engineVersion: Info.marketplaceApiVersion,
 		siteUrl,
 	};

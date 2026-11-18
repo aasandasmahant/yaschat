@@ -1,7 +1,7 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { IInvite } from '@rocket.chat/core-typings';
-import { Invites, Subscriptions, Rooms } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { IInvite } from '@yas chat/core-typings';
+import { Invites, Subscriptions, Rooms } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { RoomMemberActions } from '../../../../definition/IRoomTypeConfig';
 import { settings } from '../../../settings';

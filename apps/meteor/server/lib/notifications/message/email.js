@@ -1,4 +1,4 @@
-import { escapeHTML } from '@rocket.chat/tools';
+import { escapeHTML } from '@yas chat/tools';
 
 import { ltrim } from '../../../../lib/utils/stringUtils';
 import { settings } from '../../../settings';

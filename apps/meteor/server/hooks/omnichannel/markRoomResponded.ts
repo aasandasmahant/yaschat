@@ -1,7 +1,7 @@
-import type { IOmnichannelRoom, IMessage } from '@rocket.chat/core-typings';
-import { isEditedMessage, isMessageFromVisitor, isSystemMessage } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { LivechatRooms, LivechatContacts, LivechatInquiry } from '@rocket.chat/models';
+import type { IOmnichannelRoom, IMessage } from '@yas chat/core-typings';
+import { isEditedMessage, isMessageFromVisitor, isSystemMessage } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { LivechatRooms, LivechatContacts, LivechatInquiry } from '@yas chat/models';
 import moment from 'moment';
 
 import { callbacks } from '../../lib/callbacks';

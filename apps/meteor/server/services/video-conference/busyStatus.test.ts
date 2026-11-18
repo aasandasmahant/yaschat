@@ -1,8 +1,8 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { IVideoConferenceUser, VideoConference } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IVideoConferenceUser, VideoConference } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -11,7 +11,7 @@ import { PRESENCE_LEASE_MS } from '../../../lib/videoConference/presence';
 
 /**
  * The claim this suite is about is made through `Presence`, which the shared harness has no stub for — so this one
- * assembles `@rocket.chat/core-services` itself rather than teaching every other spec about presence.
+ * assembles `@yas chat/core-services` itself rather than teaching every other spec about presence.
  */
 const proxyquire = require('proxyquire');
 
@@ -66,7 +66,7 @@ const broadcastStub = sinon.stub().resolves();
 
 const { VideoConfService } = proxyquire.noCallThru().load('./service', {
 	...commonServiceStubs,
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		api: { broadcast: broadcastStub },
 		ServiceClassInternal: class {
 			onEvent() {

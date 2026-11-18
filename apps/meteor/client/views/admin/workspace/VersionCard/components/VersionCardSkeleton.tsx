@@ -1,4 +1,4 @@
-import { Skeleton } from '@rocket.chat/fuselage';
+import { Skeleton } from '@yas chat/fuselage';
 
 import VersionCardSkeletonRow from '../layout/VersionCardSkeletonRow';
 

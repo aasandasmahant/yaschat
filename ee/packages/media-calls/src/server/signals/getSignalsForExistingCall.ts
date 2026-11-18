@@ -1,5 +1,5 @@
-import type { IMediaCall, IUser } from '@rocket.chat/core-typings';
-import type { ServerMediaCallSignal } from '@rocket.chat/media-signaling';
+import type { IMediaCall, IUser } from '@yas chat/core-typings';
+import type { ServerMediaCallSignal } from '@yas chat/media-signaling';
 
 import { getNewCallSignal } from './getNewCallSignal';
 import { getCallRoleForUser } from '../getCallRoleForUser';

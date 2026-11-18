@@ -1,4 +1,4 @@
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 import { ABAC_ATTRIBUTES_TAB } from '../../lib/constants';

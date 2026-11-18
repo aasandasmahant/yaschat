@@ -1,11 +1,11 @@
 import crypto from 'crypto';
 
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
-import { Upload } from '@rocket.chat/core-services';
-import type { IUpload } from '@rocket.chat/core-typings';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Avatars, Uploads } from '@rocket.chat/models';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
+import { Upload } from '@yas chat/core-services';
+import type { IUpload } from '@yas chat/core-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Avatars, Uploads } from '@yas chat/models';
 
 const logger = new Logger('federation-matrix:media-service');
 
@@ -87,7 +87,7 @@ export class MatrixMediaService {
 	}): Promise<{ mediaId: string; mxcUri: string }> {
 		try {
 			const serverName = federationSDK.getConfig('serverName');
-			const mediaId = crypto.randomUUID().replace(/-/g, ''); // TODO maybe change to @rocket.chat/random ?
+			const mediaId = crypto.randomUUID().replace(/-/g, ''); // TODO maybe change to @yas chat/random ?
 			const mxcUri = this.generateMXCUri(mediaId, serverName);
 
 			await Upload.uploadFile({

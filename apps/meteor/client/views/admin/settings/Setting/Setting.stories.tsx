@@ -1,4 +1,4 @@
-import { FieldGroup } from '@rocket.chat/fuselage';
+import { FieldGroup } from '@yas chat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import MemoizedSetting from './MemoizedSetting';

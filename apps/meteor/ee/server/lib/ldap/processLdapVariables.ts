@@ -1,4 +1,4 @@
-import type { ILDAPEntry } from '@rocket.chat/core-typings';
+import type { ILDAPEntry } from '@yas chat/core-typings';
 
 import { mapLogger } from './Logger';
 import { getLdapDynamicValue } from './getLdapDynamicValue';

@@ -1,7 +1,7 @@
-import { StatusVisibility, ClientSafeError } from '@rocket.chat/core-services';
-import type { ISidebarCategory, ISubscription, ThemePreference } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
-import type { FontSize } from '@rocket.chat/rest-typings';
+import { StatusVisibility, ClientSafeError } from '@yas chat/core-services';
+import type { ISidebarCategory, ISubscription, ThemePreference } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
+import type { FontSize } from '@yas chat/rest-typings';
 
 import {
 	notifyOnSubscriptionChangedByAutoTranslateAndUserId,

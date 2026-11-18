@@ -1,13 +1,13 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import type { RouterContextValue } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import type { RouterContextValue } from '@yas chat/ui-contexts';
 import { render } from '@testing-library/react';
 
 import EngagementDashboardRoute from './EngagementDashboardRoute';
 import { useUpsellActions } from '../../../components/GenericUpsellModal/hooks';
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	useHasLicenseModule: jest.fn(),
 	PageSkeleton: () => null,
 }));

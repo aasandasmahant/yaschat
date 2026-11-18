@@ -1,7 +1,7 @@
-import { Box, RadioButton } from '@rocket.chat/fuselage';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
+import { Box, RadioButton } from '@yas chat/fuselage';
+import { useSafely } from '@yas chat/fuselage-hooks';
+import { GenericMenu } from '@yas chat/ui-client';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
 import type { ReactElement } from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

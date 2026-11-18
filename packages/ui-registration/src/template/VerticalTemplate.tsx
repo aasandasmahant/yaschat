@@ -1,5 +1,5 @@
-import { LayoutLogoImage, VerticalWizardLayout, VerticalWizardLayoutTitle, VerticalWizardLayoutFooter } from '@rocket.chat/layout';
-import { useSetting, useAssetWithDarkModePath } from '@rocket.chat/ui-contexts';
+import { LayoutLogoImage, VerticalWizardLayout, VerticalWizardLayoutTitle, VerticalWizardLayoutFooter } from '@yas chat/layout';
+import { useSetting, useAssetWithDarkModePath } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import LoginPoweredBy from '../components/LoginPoweredBy';

@@ -1,8 +1,8 @@
 // Convenience method, almost need to turn it into a middleware of sorts
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { isTruthy } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { isTruthy } from '@yas chat/tools';
 
 export async function getUserFromParams<T extends boolean = false>(
 	params: {

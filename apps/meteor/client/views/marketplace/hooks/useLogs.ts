@@ -1,7 +1,7 @@
-import type { OperationResult } from '@rocket.chat/rest-typings';
-import type { PaginatedQueryResult } from '@rocket.chat/ui-client';
-import { usePaginatedQuery } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { OperationResult } from '@yas chat/rest-typings';
+import type { PaginatedQueryResult } from '@yas chat/ui-client';
+import { usePaginatedQuery } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { marketplaceQueryKeys } from '../../../lib/queryKeys';

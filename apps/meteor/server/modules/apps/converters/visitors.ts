@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator, IAppVisitorsConverter, IAppsVisitor } from '@rocket.chat/apps';
-import type { ILivechatVisitor } from '@rocket.chat/core-typings';
-import { LivechatVisitors } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, IAppVisitorsConverter, IAppsVisitor } from '@yas chat/apps';
+import type { ILivechatVisitor } from '@yas chat/core-typings';
+import { LivechatVisitors } from '@yas chat/models';
 import * as z from 'zod';
 
 import { VisitorCodec } from './codecs';

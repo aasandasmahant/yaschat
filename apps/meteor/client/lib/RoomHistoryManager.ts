@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { Random } from '@rocket.chat/random';
+import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { Random } from '@yas chat/random';
 import { differenceInMilliseconds } from 'date-fns/differenceInMilliseconds';
 import { useCallback, useSyncExternalStore } from 'react';
 

@@ -1,5 +1,5 @@
-import type { IUpload } from '@rocket.chat/apps-engine/definition/uploads';
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
+import type { IUpload } from '@yas chat/apps-engine/definition/uploads';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
 
 import { UploadBridge } from '../../../src/server/bridges/UploadBridge';
 

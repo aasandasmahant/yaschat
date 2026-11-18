@@ -1,6 +1,6 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -14,7 +14,7 @@ const removeLoginTokensOlderThan = sinon.stub().resolves();
 const broadcast = sinon.stub();
 
 const { expireLoginTokens } = proxyquire.noCallThru().load('./expireLoginTokens.ts', {
-	'@rocket.chat/core-services': { api: { broadcast } },
+	'@yas chat/core-services': { api: { broadcast } },
 });
 
 describe('expireLoginTokens', () => {

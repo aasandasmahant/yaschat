@@ -1,4 +1,4 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
 
 export type CustomFieldMetadata = {
 	name: string;

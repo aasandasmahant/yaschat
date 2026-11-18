@@ -1,10 +1,10 @@
-import type { AvailableAgentsAggregation, ILivechatDepartmentAgents, YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { AvailableAgentsAggregation, ILivechatDepartmentAgents, YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	FindPaginated,
 	ILivechatDepartmentAgentsModel,
 	DocumentWithProjection,
 	FindOptionsWithProjection,
-} from '@rocket.chat/model-typings';
+} from '@yas chat/model-typings';
 import type {
 	Collection,
 	FindCursor,

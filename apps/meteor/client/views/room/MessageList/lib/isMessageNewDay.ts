@@ -1,4 +1,4 @@
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 import { isSameDay } from 'date-fns/isSameDay';
 
 export const isMessageNewDay = (current: IMessage, previous: IMessage | undefined): boolean =>

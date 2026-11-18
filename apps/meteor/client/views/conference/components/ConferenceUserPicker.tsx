@@ -1,6 +1,6 @@
-import { isDirectMessageRoom, isPrivateRoom, isPublicRoom } from '@rocket.chat/core-typings';
-import type { UserPickerProps } from '@rocket.chat/ui-conference';
-import { useEndpoint, useUserRoom } from '@rocket.chat/ui-contexts';
+import { isDirectMessageRoom, isPrivateRoom, isPublicRoom } from '@yas chat/core-typings';
+import type { UserPickerProps } from '@yas chat/ui-conference';
+import { useEndpoint, useUserRoom } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

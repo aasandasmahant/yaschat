@@ -1,4 +1,4 @@
-import { useLogout, useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useLogout, useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { MutationOptions } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';

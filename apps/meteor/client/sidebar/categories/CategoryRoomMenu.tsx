@@ -1,7 +1,7 @@
-import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger } from '@rocket.chat/fuselage';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { GenericMenuItem, useHandleMenuAction } from '@rocket.chat/ui-client';
-import { useUserSubscription } from '@rocket.chat/ui-contexts';
+import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger } from '@yas chat/fuselage';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { GenericMenuItem, useHandleMenuAction } from '@yas chat/ui-client';
+import { useUserSubscription } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

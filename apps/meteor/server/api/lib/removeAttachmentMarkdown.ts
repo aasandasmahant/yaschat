@@ -1,4 +1,4 @@
-import { isRecord } from '@rocket.chat/tools';
+import { isRecord } from '@yas chat/tools';
 
 /** Drops the markdown trees from sent attachments, so the only trees a message carries are the ones the server built. */
 export const removeAttachmentMarkdown = (attachments: unknown): unknown => {

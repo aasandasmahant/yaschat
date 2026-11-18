@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -21,7 +21,7 @@ const hasAnyRoleStub = sinon.stub();
 const getUnitsFromUserStub = sinon.stub();
 
 const { manageDepartmentUnit } = proxyquire.noCallThru().load('./manageDepartmentUnit.ts', {
-	'@rocket.chat/omni-core-ee': {
+	'@yas chat/omni-core-ee': {
 		getUnitsFromUser: getUnitsFromUserStub,
 	},
 	'../../../../server/lib/authorization/hasRole': {

@@ -1,4 +1,4 @@
-import type { VideoConferenceChatAccessMode } from '@rocket.chat/core-typings';
+import type { VideoConferenceChatAccessMode } from '@yas chat/core-typings';
 
 /**
  * The mode to act on, or `null` when the room cannot do what was asked.

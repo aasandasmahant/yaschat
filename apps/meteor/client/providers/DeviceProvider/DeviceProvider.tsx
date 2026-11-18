@@ -1,7 +1,7 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { Device, DeviceContextValue } from '@rocket.chat/ui-contexts';
-import { DeviceContext } from '@rocket.chat/ui-contexts';
-import { useMediaDevices } from '@rocket.chat/ui-media';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { Device, DeviceContextValue } from '@yas chat/ui-contexts';
+import { DeviceContext } from '@yas chat/ui-contexts';
+import { useMediaDevices } from '@yas chat/ui-media';
 import { useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useState, useMemo } from 'react';

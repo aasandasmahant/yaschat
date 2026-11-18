@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { MessageTypesValues, IRoom } from '@rocket.chat/core-typings';
-import { Rooms, Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { MessageTypesValues, IRoom } from '@yas chat/core-typings';
+import { Rooms, Messages } from '@yas chat/models';
 
 export async function getRoomMessages({ rid }: { rid: string }) {
 	const room = await Rooms.findOneById<Pick<IRoom, 't'>>(rid, { projection: { t: 1 } });

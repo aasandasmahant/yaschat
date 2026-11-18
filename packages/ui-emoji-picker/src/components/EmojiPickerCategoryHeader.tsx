@@ -1,4 +1,4 @@
-import { ButtonGroup, Box } from '@rocket.chat/fuselage';
+import { ButtonGroup, Box } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type EmojiPickerCategoryHeaderProps = ComponentPropsWithoutRef<typeof ButtonGroup>;

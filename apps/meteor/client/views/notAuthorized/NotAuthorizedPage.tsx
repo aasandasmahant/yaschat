@@ -1,5 +1,5 @@
-import { Text } from '@rocket.chat/fuselage';
-import { Page, PageContent } from '@rocket.chat/ui-client';
+import { Text } from '@yas chat/fuselage';
+import { Page, PageContent } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const NotAuthorizedPage = () => {

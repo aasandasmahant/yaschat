@@ -8,7 +8,7 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import {
 	TextInput,
 	TextAreaInput,
@@ -18,7 +18,7 @@ import {
 	FieldLabel,
 	FieldGroup,
 	FieldDescription,
-} from '@rocket.chat/fuselage-forms';
+} from '@yas chat/fuselage-forms';
 import type { ComponentProps } from 'react';
 import { memo, useCallback, useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

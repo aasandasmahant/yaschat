@@ -1,7 +1,7 @@
-import type { IAppStorageItem } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import { Apps } from '@rocket.chat/core-services';
-import type { LicenseModule } from '@rocket.chat/core-typings';
-import { License, type LicenseImp } from '@rocket.chat/license';
+import type { IAppStorageItem } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import { Apps } from '@yas chat/core-services';
+import type { LicenseModule } from '@yas chat/core-typings';
+import { License, type LicenseImp } from '@yas chat/license';
 
 import { getInstallationSourceFromAppStorageItem } from '../../../../lib/apps/getInstallationSourceFromAppStorageItem';
 

@@ -1,8 +1,8 @@
-# `@rocket.chat/ui-kit`
+# `@yas chat/ui-kit`
 
 > Types, validators and rendering contracts for UiKit, the block language YasChat Apps use to build UI.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ui-kit) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ui-kit)
+[![npm](https://img.shields.io/npm/v/@yas chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@yas chat/ui-kit) [![downloads](https://img.shields.io/npm/dw/@yas chat/ui-kit?style=flat-square)](https://www.npmjs.com/package/@yas chat/ui-kit)
 
 UiKit describes UI as plain JSON: a list of layout blocks (sections, actions, inputs, images, ...), each holding elements (buttons, selects, date pickers, ...) and text objects. YasChat Apps send these blocks to the client, which draws them on one of five surfaces: message, modal, banner, contextual bar and attachment.
 
@@ -12,15 +12,15 @@ This package is the shared contract between the parties:
 - **Runtime validators** for views and interaction payloads (`isModalView`, `isServerInteraction`, ...).
 - **Renderer base classes**, one per surface, that walk a block list and call your rendering functions. YasChat's React renderer, [`fuselage-ui-kit`](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-ui-kit), is built on them.
 
-App authors usually get these types through [`@rocket.chat/apps-engine`](https://www.npmjs.com/package/@rocket.chat/apps-engine). Use this package directly when you build a renderer or handle UiKit payloads yourself.
+App authors usually get these types through [`@yas chat/apps-engine`](https://www.npmjs.com/package/@yas chat/apps-engine). Use this package directly when you build a renderer or handle UiKit payloads yourself.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/ui-kit @rocket.chat/icons
+npm install @yas chat/ui-kit @yas chat/icons
 ```
 
-`@rocket.chat/icons` is a peer dependency; the banner view uses its icon names. The package is compiled to ES2024 JavaScript with ES module syntax and ships TypeScript declarations. It depends on [`typia`](https://typia.io/) for its runtime validators.
+`@yas chat/icons` is a peer dependency; the banner view uses its icon names. The package is compiled to ES2024 JavaScript with ES module syntax and ships TypeScript declarations. It depends on [`typia`](https://typia.io/) for its runtime validators.
 
 ## Usage
 
@@ -29,7 +29,7 @@ npm install @rocket.chat/ui-kit @rocket.chat/icons
 Blocks are plain objects. Each surface has a layout type that only accepts the blocks it can show, such as `MessageSurfaceLayout` and `ModalSurfaceLayout`.
 
 ```ts
-import type { MessageSurfaceLayout } from '@rocket.chat/ui-kit';
+import type { MessageSurfaceLayout } from '@yas chat/ui-kit';
 
 const appId = 'my-app-id';
 
@@ -69,7 +69,7 @@ Interactive elements (buttons, selects, inputs, ...) carry `appId`, `blockId` an
 A view wraps blocks with what its surface needs, such as a title and submit button for a modal.
 
 ```ts
-import { isModalView, type ModalView } from '@rocket.chat/ui-kit';
+import { isModalView, type ModalView } from '@yas chat/ui-kit';
 
 const view: ModalView = {
 	id: 'feedback-modal',
@@ -109,8 +109,8 @@ isModalView(view); // true
 Extend the parser for the surface you draw and add a method for each block, element and text object type you support. The method is named after the `type` and receives the block, a `BlockContext` and its index. Blocks without a method are skipped, and so are blocks the surface does not accept.
 
 ```ts
-import { BlockContext, UiKitParserMessage, uiKitMessage } from '@rocket.chat/ui-kit';
-import type { ButtonElement, Markdown, PlainText, SectionBlock } from '@rocket.chat/ui-kit';
+import { BlockContext, UiKitParserMessage, uiKitMessage } from '@yas chat/ui-kit';
+import type { ButtonElement, Markdown, PlainText, SectionBlock } from '@yas chat/ui-kit';
 
 class TextRenderer extends UiKitParserMessage<string> {
 	plain_text({ text }: PlainText): string {
@@ -156,7 +156,7 @@ Each surface has the same trio: a parser class, a render function and the list o
 A `conditional` block shows its `render` blocks only on the engines listed in `when`. Pass the current engine as the second argument of a render function; without it, every conditional block is shown.
 
 ```ts
-import type { ConditionalBlock } from '@rocket.chat/ui-kit';
+import type { ConditionalBlock } from '@yas chat/ui-kit';
 
 const livechatOnly: ConditionalBlock = {
 	type: 'conditional',
@@ -165,7 +165,7 @@ const livechatOnly: ConditionalBlock = {
 };
 
 uiKitMessage(new TextRenderer(), { engine: 'livechat' })([livechatOnly]); // ['Only in Livechat']
-uiKitMessage(new TextRenderer(), { engine: 'rocket.chat' })([livechatOnly]); // []
+uiKitMessage(new TextRenderer(), { engine: 'yas chat' })([livechatOnly]); // []
 ```
 
 ### Interactions
@@ -173,7 +173,7 @@ uiKitMessage(new TextRenderer(), { engine: 'rocket.chat' })([livechatOnly]); // 
 `UserInteraction` types what the client sends to an App (`blockAction`, `viewSubmit`, `viewClosed`, action buttons). `ServerInteraction` types what the App answers with (`modal.open`, `banner.update`, `contextual_bar.close`, `errors`, ...). Each variant has a validator:
 
 ```ts
-import { isOpenModalServerInteraction, isServerInteraction } from '@rocket.chat/ui-kit';
+import { isOpenModalServerInteraction, isServerInteraction } from '@yas chat/ui-kit';
 
 if (isServerInteraction(payload) && isOpenModalServerInteraction(payload)) {
 	openModal(payload.view);
@@ -226,10 +226,10 @@ The [UiKit feature notes](https://github.com/YasChat/YasChat/tree/develop/docs/f
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/ui-kit). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/ui-kit build
-yarn workspace @rocket.chat/ui-kit testunit
-yarn workspace @rocket.chat/ui-kit lint
-yarn workspace @rocket.chat/ui-kit typecheck
+yarn workspace @yas chat/ui-kit build
+yarn workspace @yas chat/ui-kit testunit
+yarn workspace @yas chat/ui-kit lint
+yarn workspace @yas chat/ui-kit typecheck
 ```
 
 The build patches TypeScript with `ts-patch` and `typia` so that the `typia.createIs<T>()` calls are turned into validators at compile time.

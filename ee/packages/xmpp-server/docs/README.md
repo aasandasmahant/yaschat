@@ -1,6 +1,6 @@
 # How this package is developed
 
-`@rocket.chat/xmpp-server` is developed spec-first. Every capability the package offers, or
+`@yas chat/xmpp-server` is developed spec-first. Every capability the package offers, or
 is meant to offer, has a written spec in this folder. Work starts by writing or changing a
 spec, continues with a plan derived from it, and ends with code whose tests cite the spec.
 Decisions that constrain future work are recorded as ADRs. Nothing in this folder is

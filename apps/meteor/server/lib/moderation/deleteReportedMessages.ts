@@ -1,6 +1,6 @@
-import { api } from '@rocket.chat/core-services';
-import type { IUser, IMessage } from '@rocket.chat/core-typings';
-import { Messages, Uploads, ReadReceipts, ReadReceiptsArchive } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { IUser, IMessage } from '@yas chat/core-typings';
+import { Messages, Uploads, ReadReceipts, ReadReceiptsArchive } from '@yas chat/models';
 
 import { settings } from '../../settings';
 import { FileUpload } from '../media/file-upload';

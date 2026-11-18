@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 
-import { Random } from '@rocket.chat/random';
-import { SHA256 } from '@rocket.chat/sha256';
+import { Random } from '@yas chat/random';
+import { SHA256 } from '@yas chat/sha256';
 import bcrypt from 'bcrypt';
 
 export type StampedLoginToken = {

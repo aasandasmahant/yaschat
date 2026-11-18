@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useChat } from '../../contexts/ChatContext';

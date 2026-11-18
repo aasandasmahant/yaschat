@@ -1,5 +1,5 @@
-import type { INotificationDesktop } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { INotificationDesktop } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useNotification } from './useNotification';

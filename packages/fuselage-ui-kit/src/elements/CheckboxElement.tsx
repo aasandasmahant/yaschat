@@ -1,5 +1,5 @@
-import { CheckBox, Box } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { CheckBox, Box } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import OptionLabel from './OptionLabel';
 import { useUiKitState } from '../hooks/useUiKitState';

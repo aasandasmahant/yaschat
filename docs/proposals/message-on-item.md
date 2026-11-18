@@ -98,7 +98,7 @@ Each change is its own commit, with a changeset when it changes published behavi
 2. Row, header, system and thread parts move to `Item` slots and variations; rules and `rcx-box` classes that restated `Item` or the client body go away.
 3. Fixes found on the way: header height, long names, reaction border, editing color key, nested list markers, `clamp={4}`, empty preview title, status icon labels, thread unfollow by keyboard, system timestamp contrast, hidden toolbar catching the pointer, divider label backgrounds, follow badge in RTL, non-interactive role tags.
 4. Dead content rules removed; reactions and avatar rows spaced with `gap`; emoji sized by `--emoji-size`.
-5. Visual regression baselines regenerated with the Playwright Docker image (`yarn workspace @rocket.chat/fuselage visual-regression-update`).
+5. Visual regression baselines regenerated with the Playwright Docker image (`yarn workspace @yas chat/fuselage visual-regression-update`).
 
 Verified: Fuselage jest, `tsc`, oxlint and stylelint; the `apps/meteor` message specs and `tsc`; Storybook screenshots of every `Message*` story at 800px and 400px in Chromium, light theme, before and after each change.
 
@@ -119,10 +119,10 @@ Verified: Fuselage jest, `tsc`, oxlint and stylelint; the `apps/meteor` message 
 
 ### Running the branch
 
-Fuselage resolves its workspace dependencies from their `dist`. If Storybook fails with `Can't resolve '@rocket.chat/fuselage-hooks'`, build them first:
+Fuselage resolves its workspace dependencies from their `dist`. If Storybook fails with `Can't resolve '@yas chat/fuselage-hooks'`, build them first:
 
 ```sh
-yarn turbo run build --filter='@rocket.chat/fuselage^...'
+yarn turbo run build --filter='@yas chat/fuselage^...'
 cd packages/fuselage && yarn storybook
 ```
 

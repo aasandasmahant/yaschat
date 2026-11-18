@@ -1,6 +1,6 @@
-import type { ILivechatUnitMonitor } from '@rocket.chat/core-typings';
-import type { ILivechatUnitMonitorsModel } from '@rocket.chat/model-typings';
-import { BaseRaw } from '@rocket.chat/models';
+import type { ILivechatUnitMonitor } from '@yas chat/core-typings';
+import type { ILivechatUnitMonitorsModel } from '@yas chat/model-typings';
+import { BaseRaw } from '@yas chat/models';
 import type { Db, FindCursor, UpdateResult, DeleteResult, IndexDescription } from 'mongodb';
 
 export class LivechatUnitMonitorsRaw extends BaseRaw<ILivechatUnitMonitor> implements ILivechatUnitMonitorsModel {

@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { isDepartmentCreationAvailable } from '@rocket.chat/omni-core';
+import { License } from '@yas chat/license';
+import { isDepartmentCreationAvailable } from '@yas chat/omni-core';
 
 export function isDepartmentCreationAvailablePatch(): void {
 	isDepartmentCreationAvailable.patch(async (next) => {

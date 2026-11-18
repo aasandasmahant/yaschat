@@ -1,6 +1,6 @@
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
-import { DarkModeProvider } from '@rocket.chat/layout';
-import { ModalRegion } from '@rocket.chat/ui-client';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { DarkModeProvider } from '@yas chat/layout';
+import { ModalRegion } from '@yas chat/ui-client';
 
 import SetupWizardPage from './SetupWizardPage';
 import { useBodyPosition } from './hooks/useBodyPosition';

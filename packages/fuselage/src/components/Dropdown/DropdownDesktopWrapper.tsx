@@ -1,5 +1,5 @@
-import type { UsePositionOptions } from '@rocket.chat/fuselage-hooks';
-import { usePosition } from '@rocket.chat/fuselage-hooks';
+import type { UsePositionOptions } from '@yas chat/fuselage-hooks';
+import { usePosition } from '@yas chat/fuselage-hooks';
 import type { HTMLAttributes, ReactNode, RefAttributes, RefObject } from 'react';
 
 import { DropdownDesktop } from './DropdownDesktop';

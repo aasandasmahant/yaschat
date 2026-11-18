@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { Box } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 
 import IconElement from '../elements/IconElement';
 import type { BlockProps } from '../utils/BlockProps';

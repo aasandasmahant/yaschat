@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 
 import { isPlainObject } from '../../../lib/utils/isPlainObject';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

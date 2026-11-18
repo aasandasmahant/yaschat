@@ -1,4 +1,4 @@
-import { isInVideoConference } from '@rocket.chat/core-typings';
+import { isInVideoConference } from '@yas chat/core-typings';
 
 import type { PluginFeature, PluginParticipant, PluginSelf } from './providerPlugin';
 import type { ConferenceMember } from '../context/definitions';

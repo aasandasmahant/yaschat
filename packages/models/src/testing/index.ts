@@ -1,4 +1,4 @@
-import type { IBaseModel } from '@rocket.chat/model-typings';
+import type { IBaseModel } from '@yas chat/model-typings';
 
 import type * as models from '../index';
 import { registerModel } from '../proxify';

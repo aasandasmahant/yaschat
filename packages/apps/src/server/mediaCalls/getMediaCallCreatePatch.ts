@@ -1,4 +1,4 @@
-import type { MediaCallCreatePatch } from '@rocket.chat/apps-engine/definition/mediaCalls';
+import type { MediaCallCreatePatch } from '@yas chat/apps-engine/definition/mediaCalls';
 
 /**
  * Contacts are the outcome of routing and of permission checks, so only features may be patched.

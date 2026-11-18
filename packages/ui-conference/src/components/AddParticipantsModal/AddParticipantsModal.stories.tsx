@@ -1,4 +1,4 @@
-import { Box, MultiSelect } from '@rocket.chat/fuselage';
+import { Box, MultiSelect } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

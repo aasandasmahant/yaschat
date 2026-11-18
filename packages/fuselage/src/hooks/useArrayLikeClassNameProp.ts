@@ -1,5 +1,5 @@
-import type { cssFn } from '@rocket.chat/css-in-js';
-import { css } from '@rocket.chat/css-in-js';
+import type { cssFn } from '@yas chat/css-in-js';
+import { css } from '@yas chat/css-in-js';
 
 import { useStyle } from './useStyle';
 import { appendClassName } from '../helpers/appendClassName';

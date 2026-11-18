@@ -1,4 +1,4 @@
-import type { IYasChatDesktop, IVideoCallWindow } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop, IVideoCallWindow } from '@yas chat/desktop-api';
 
 declare global {
 	interface Window {
@@ -7,11 +7,11 @@ declare global {
 		videoCallWindow?: IVideoCallWindow;
 		opera?: string;
 		/** Logs in with a resume token through the same path as a page load; end-to-end specs use it. */
-		__rocketChatLoginWithToken?: (token: string) => Promise<void>;
+		__YasChatLoginWithToken?: (token: string) => Promise<void>;
 		/** Calls a server method through the same path as the UI; end-to-end specs use it. */
-		__rocketChatCallMethod?: (method: string, ...args: unknown[]) => Promise<unknown>;
+		__YasChatCallMethod?: (method: string, ...args: unknown[]) => Promise<unknown>;
 		/** The client's end-to-end encryption state; end-to-end specs use it. */
-		__rocketChatE2E?: typeof import('../lib/e2ee/yaschat.e2e').e2e;
+		__YasChatE2E?: typeof import('../lib/e2ee/yaschat.e2e').e2e;
 	}
 
 	interface Navigator {

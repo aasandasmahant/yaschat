@@ -3,7 +3,7 @@ import { after, before, beforeEach, describe, it } from 'node:test';
 import * as os from 'os';
 import * as path from 'path';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import AdmZip from 'adm-zip';
 import { expect } from 'chai';
 import { parse } from 'csv-parse/sync';

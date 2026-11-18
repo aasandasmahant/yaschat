@@ -1,11 +1,11 @@
-import { ServiceClassInternal } from '@rocket.chat/core-services';
+import { ServiceClassInternal } from '@yas chat/core-services';
 import type {
 	IUiKitCoreApp,
 	IUiKitCoreAppService,
 	UiKitCoreAppBlockActionPayload,
 	UiKitCoreAppViewClosedPayload,
 	UiKitCoreAppViewSubmitPayload,
-} from '@rocket.chat/core-services';
+} from '@yas chat/core-services';
 
 const registeredApps = new Map<string, IUiKitCoreApp>();
 

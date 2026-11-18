@@ -1,8 +1,8 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Button } from '@rocket.chat/fuselage';
-import { capitalize } from '@rocket.chat/tools';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useAbsoluteUrl, useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { Button } from '@yas chat/fuselage';
+import { capitalize } from '@yas chat/tools';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useAbsoluteUrl, useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { memo, useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

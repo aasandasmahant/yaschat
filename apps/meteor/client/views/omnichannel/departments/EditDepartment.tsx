@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, ILivechatDepartmentAgents, Serialized } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment, ILivechatDepartmentAgents, Serialized } from '@yas chat/core-typings';
 import {
 	FieldGroup,
 	Field,
@@ -17,11 +17,11 @@ import {
 	FieldHint,
 	Option,
 	Stack,
-} from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { validateEmail } from '@rocket.chat/tools';
-import { Page, PageHeader, PageScrollableContentWithShadow, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter, usePermission } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { validateEmail } from '@yas chat/tools';
+import { Page, PageHeader, PageScrollableContentWithShadow, useHasLicenseModule } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter, usePermission } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

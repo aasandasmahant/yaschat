@@ -1,4 +1,4 @@
-import type { Keys as Icons } from '@rocket.chat/icons';
+import type { Keys as Icons } from '@yas chat/icons';
 import type { HTMLAttributes, MouseEvent } from 'react';
 
 import { Icon } from '../../Icon';

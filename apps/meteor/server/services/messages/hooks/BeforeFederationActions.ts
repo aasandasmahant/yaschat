@@ -1,5 +1,5 @@
-import { isRoomFederated, isRoomNativeFederated } from '@rocket.chat/core-typings';
-import type { AtLeast, IMessage, IRoom } from '@rocket.chat/core-typings';
+import { isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
+import type { AtLeast, IMessage, IRoom } from '@yas chat/core-typings';
 
 import { isFederationEnabled } from '../../federation/utils';
 

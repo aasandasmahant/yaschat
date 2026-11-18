@@ -1,5 +1,5 @@
-import type { IAuditLog, IMessage, IUser, IRoom } from '@rocket.chat/core-typings';
-import { Rooms, AuditLog, ServerEvents } from '@rocket.chat/models';
+import type { IAuditLog, IMessage, IUser, IRoom } from '@yas chat/core-typings';
+import { Rooms, AuditLog, ServerEvents } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -10,9 +10,9 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import type { PaginatedRequest, PaginatedResult } from '@rocket.chat/rest-typings';
-import { convertSubObjectsIntoPaths } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import type { PaginatedRequest, PaginatedResult } from '@yas chat/rest-typings';
+import { convertSubObjectsIntoPaths } from '@yas chat/tools';
 
 import { API } from '../../../server/api/api';
 import { getPaginationItems } from '../../../server/api/lib/getPaginationItems';
@@ -109,7 +109,7 @@ const auditOmnichannelMessagesSchema = {
 
 const isAuditOmnichannelMessagesProps = ajv.compile<AuditOmnichannelMessagesPayload>(auditOmnichannelMessagesSchema);
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/audit/rooms.members': {
 			GET: (

@@ -1,8 +1,8 @@
 /* oxlint-disable no-nested-ternary */
-import { Box } from '@rocket.chat/fuselage';
-import { useResizeObserver } from '@rocket.chat/fuselage-hooks';
-import breakpointsDefinitions from '@rocket.chat/fuselage-tokens/dist/breakpoints.json';
-import { LayoutContext, useLayout } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { useResizeObserver } from '@yas chat/fuselage-hooks';
+import breakpointsDefinitions from '@yas chat/fuselage-tokens/dist/breakpoints.json';
+import { LayoutContext, useLayout } from '@yas chat/ui-contexts';
 import type { ComponentProps, ReactNode } from 'react';
 import { Suspense, useMemo } from 'react';
 

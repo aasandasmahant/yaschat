@@ -1,7 +1,7 @@
-import { Button } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import type { LoginService } from '@rocket.chat/ui-contexts';
-import { useLoginWithService } from '@rocket.chat/ui-contexts';
+import { Button } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
+import type { LoginService } from '@yas chat/ui-contexts';
+import { useLoginWithService } from '@yas chat/ui-contexts';
 import type { SetStateAction, Dispatch } from 'react';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

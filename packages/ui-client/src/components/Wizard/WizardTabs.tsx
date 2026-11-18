@@ -1,4 +1,4 @@
-import { Tabs, TabsItem } from '@rocket.chat/fuselage';
+import { Tabs, TabsItem } from '@yas chat/fuselage';
 
 import { useWizardContext } from './useWizardContext';
 import { useWizardSteps } from './useWizardSteps';

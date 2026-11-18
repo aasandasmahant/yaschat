@@ -1,4 +1,4 @@
-import { AppBridges } from '@rocket.chat/apps/dist/server/bridges/AppBridges';
+import { AppBridges } from '@yas chat/apps/dist/server/bridges/AppBridges';
 
 import { AppActivationBridge } from './activation';
 import { AppApisBridge } from './api';

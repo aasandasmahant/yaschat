@@ -1,6 +1,6 @@
-import type { StreamControllerRef } from '@rocket.chat/mock-providers';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { buildJoinableCall } from '@rocket.chat/ui-conference';
+import type { StreamControllerRef } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { buildJoinableCall } from '@yas chat/ui-conference';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useJoinableCalls } from './useJoinableCalls';

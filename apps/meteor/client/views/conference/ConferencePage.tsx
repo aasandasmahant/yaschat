@@ -1,5 +1,5 @@
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { useRoute, useSetModal, useUser } from '@rocket.chat/ui-contexts';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { useRoute, useSetModal, useUser } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import ConferencePageError from './ConferencePageError';

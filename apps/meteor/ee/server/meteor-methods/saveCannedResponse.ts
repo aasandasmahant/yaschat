@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@rocket.chat/core-typings';
-import { LivechatDepartment, CannedResponse, Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@yas chat/core-typings';
+import { LivechatDepartment, CannedResponse, Users } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../../server/lib/authorization/hasPermission';
 import notifications from '../../../server/lib/notifications/core/lib/Notifications';

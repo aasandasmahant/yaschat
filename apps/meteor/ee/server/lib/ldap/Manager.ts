@@ -1,8 +1,8 @@
-import { hashPassword } from '@rocket.chat/account-utils';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILDAPEntry, LDAPLoginResult, ILDAPUniqueIdentifierField, IUser, LoginUsername, IImportUser } from '@rocket.chat/core-typings';
-import { Users as UsersRaw } from '@rocket.chat/models';
-import { SHA256 } from '@rocket.chat/sha256';
+import { hashPassword } from '@yas chat/account-utils';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILDAPEntry, LDAPLoginResult, ILDAPUniqueIdentifierField, IUser, LoginUsername, IImportUser } from '@yas chat/core-typings';
+import { Users as UsersRaw } from '@yas chat/models';
+import { SHA256 } from '@yas chat/sha256';
 import ldapEscape from 'ldap-escape';
 import limax from 'limax';
 // #ToDo: #TODO: Remove Meteor dependencies

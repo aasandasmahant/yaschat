@@ -1,5 +1,5 @@
-import { Button } from '@rocket.chat/fuselage';
-import { useSessionDispatch } from '@rocket.chat/ui-contexts';
+import { Button } from '@yas chat/fuselage';
+import { useSessionDispatch } from '@yas chat/ui-contexts';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

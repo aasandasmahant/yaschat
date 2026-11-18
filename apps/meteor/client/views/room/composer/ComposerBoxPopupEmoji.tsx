@@ -1,4 +1,4 @@
-import { ItemContent, ItemMedia, ItemTitle } from '@rocket.chat/fuselage';
+import { ItemContent, ItemMedia, ItemTitle } from '@yas chat/fuselage';
 
 import Emoji from '../../../components/Emoji';
 

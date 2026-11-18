@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import type { TFunction } from 'i18next';
 import type { MouseEvent } from 'react';
 import { useId, useCallback, useEffect } from 'react';

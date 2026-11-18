@@ -1,4 +1,4 @@
-# `@rocket.chat/streamer` ships one barrel entry
+# `@yas chat/streamer` ships one barrel entry
 
 - **Status:** accepted
 - **Date:** 2026-09
@@ -6,10 +6,10 @@
 
 ## Decision
 
-The Streamer, Notifications and Listeners modules move out of `apps/meteor/server` into `@rocket.chat/streamer`
+The Streamer, Notifications and Listeners modules move out of `apps/meteor/server` into `@yas chat/streamer`
 so that `ee/apps/ddp-streamer` imports only workspace packages and never `../../../../apps/meteor`.
 The package exposes a single entry, `src/index.ts`, compiled to `dist/index.js`, and consumers import
-`@rocket.chat/streamer` only. Inside the package, modules import each other by file, never through the barrel.
+`@yas chat/streamer` only. Inside the package, modules import each other by file, never through the barrel.
 
 ## Why a barrel here
 

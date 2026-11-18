@@ -1,4 +1,4 @@
-import { PageSkeleton, useHasLicenseModule } from '@rocket.chat/ui-client';
+import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
 import {
 	usePermission,
 	useRouter,
@@ -7,7 +7,7 @@ import {
 	useTranslation,
 	useRouteParameter,
 	useEndpoint,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import EngagementDashboardPage from './EngagementDashboardPage';

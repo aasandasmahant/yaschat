@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { ModalContext } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { ModalContext } from '@yas chat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useNewDiscussionMessageAction } from './useNewDiscussionMessageAction';

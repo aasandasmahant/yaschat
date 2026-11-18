@@ -1,7 +1,7 @@
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { Icon, IconButton, SidebarItemActions } from '@rocket.chat/fuselage';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { useLayout } from '@rocket.chat/ui-contexts';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { Icon, IconButton, SidebarItemActions } from '@yas chat/fuselage';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { useLayout } from '@yas chat/ui-contexts';
 import type { TFunction } from 'i18next';
 import type { AllHTMLAttributes } from 'react';
 import { memo, useMemo } from 'react';

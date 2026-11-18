@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -12,7 +12,7 @@ const validate = sandbox.stub();
 const CredentialTokens = { create: sandbox.stub() };
 
 const { middlewareCAS } = p.noCallThru().load('./middleware.ts', {
-	'@rocket.chat/cas-validate': { validate },
+	'@yas chat/cas-validate': { validate },
 	'../../settings': { settings: { get: (key: string) => settingValues.get(key) } },
 	'../utils/getURL': { getWorkspaceURL: (path: string) => `https://chat.example.com/${path}` },
 });

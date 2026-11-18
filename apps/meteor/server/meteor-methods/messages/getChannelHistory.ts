@@ -1,6 +1,6 @@
-import { Authorization, ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, MessageTypesValues } from '@rocket.chat/core-typings';
-import { Messages, Rooms } from '@rocket.chat/models';
+import { Authorization, ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, MessageTypesValues } from '@yas chat/core-typings';
+import { Messages, Rooms } from '@yas chat/models';
 
 import { getHiddenSystemMessages } from '../../lib/messaging/getHiddenSystemMessages';
 import { normalizeMessagesForUser } from '../../lib/utils/lib/normalizeMessagesForUser';

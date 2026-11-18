@@ -1,8 +1,8 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { ClientSafeError, Presence, StatusVisibility } from '@rocket.chat/core-services';
-import { isUserFederated, UserStatus } from '@rocket.chat/core-typings';
-import type { IUser, IRole, IUserSettings, RequiredField } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { ClientSafeError, Presence, StatusVisibility } from '@yas chat/core-services';
+import { isUserFederated, UserStatus } from '@yas chat/core-typings';
+import type { IUser, IRole, IUserSettings, RequiredField } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { ClientSession } from 'mongodb';
 
 import { handleBio } from './handleBio';

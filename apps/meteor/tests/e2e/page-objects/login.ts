@@ -1,5 +1,5 @@
 import type { Page } from '@playwright/test';
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 import { MongoClient } from 'mongodb';
 
 import * as constants from '../config/constants';
@@ -55,7 +55,7 @@ export class LoginPage {
 				});
 
 				// The page already loaded without a session, so the injected token has to be logged in explicitly.
-				return (window as any).__rocketChatLoginWithToken(loginToken);
+				return (window as any).__YasChatLoginWithToken(loginToken);
 			},
 			{ items: localStorageItems, loginToken: userState.data.loginToken },
 		);

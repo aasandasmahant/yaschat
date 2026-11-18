@@ -1,7 +1,7 @@
-import type { RoomType } from '@rocket.chat/core-typings';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { usePermission, useRouter, useSetting, useUserSubscription } from '@rocket.chat/ui-contexts';
-import type { LocationPathname } from '@rocket.chat/ui-contexts';
+import type { RoomType } from '@yas chat/core-typings';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { usePermission, useRouter, useSetting, useUserSubscription } from '@yas chat/ui-contexts';
+import type { LocationPathname } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

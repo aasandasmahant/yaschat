@@ -1,7 +1,7 @@
-import { schemas } from '@rocket.chat/core-typings';
-import type { Route } from '@rocket.chat/http-router';
-import { getSharedSchemas, openAPIErrorComponents, withOperationIds } from '@rocket.chat/http-router';
-import { ajv, isOpenAPIJSONEndpoint } from '@rocket.chat/rest-typings';
+import { schemas } from '@yas chat/core-typings';
+import type { Route } from '@yas chat/http-router';
+import { getSharedSchemas, openAPIErrorComponents, withOperationIds } from '@yas chat/http-router';
+import { ajv, isOpenAPIJSONEndpoint } from '@yas chat/rest-typings';
 import express from 'express';
 import { WebApp } from 'meteor/webapp';
 import swaggerUi from 'swagger-ui-express';
@@ -71,7 +71,7 @@ const makeOpenAPIResponse = (paths: Record<string, Record<string, Route>>) => ({
 		version: getTrimmedServerVersion(),
 	},
 	externalDocs: {
-		url: 'https://developer.rocket.chat/apidocs',
+		url: 'https://developer.yas chat/apidocs',
 		description: 'YasChat developer documentation',
 	},
 	// trailing slash would make every path in the document resolve with a double one, and a Server

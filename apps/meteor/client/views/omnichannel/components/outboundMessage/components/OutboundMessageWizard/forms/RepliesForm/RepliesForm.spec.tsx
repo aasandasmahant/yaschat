@@ -1,6 +1,6 @@
-import type { ILivechatAgent, Serialized } from '@rocket.chat/core-typings';
-import { ILivechatAgentStatus, UserStatus } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { ILivechatAgent, Serialized } from '@yas chat/core-typings';
+import { ILivechatAgentStatus, UserStatus } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { screen, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';

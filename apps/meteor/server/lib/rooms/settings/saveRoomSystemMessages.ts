@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { MessageTypesValues } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { MessageTypesValues } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { MessageTypesValues as messageTypesValues } from '../../../../lib/MessageTypes';
 

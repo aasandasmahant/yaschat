@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/emitter",
+	"name": "@yas chat/emitter",
 	"version": "0.33.1",
 	"description": "Event Emitter by YasChat",
 	"type": "module",
@@ -10,7 +10,7 @@
 		}
 	},
 	"keywords": [
-		"rocket.chat"
+		"yas chat"
 	],
 	"bugs": {
 		"url": "https://github.com/YasChat/YasChat/issues"
@@ -23,7 +23,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/index.js",
 	"source": "src/index.ts",
@@ -40,8 +40,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@rollup/plugin-terser": "~1.0.0",
 		"@rollup/plugin-typescript": "~12.3.0",
 		"jest": "~30.5.2",

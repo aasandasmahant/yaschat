@@ -1,5 +1,5 @@
-import type { MediaSignalingSession } from '@rocket.chat/media-signaling';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { MediaSignalingSession } from '@yas chat/media-signaling';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useMediaSession } from './useMediaSession';

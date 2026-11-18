@@ -1,5 +1,5 @@
-import type { BehaviorWithContext } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { BehaviorWithContext } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { composeStories } from '@storybook/react';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

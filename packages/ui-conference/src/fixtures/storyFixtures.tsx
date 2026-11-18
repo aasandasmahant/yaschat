@@ -1,10 +1,10 @@
 /* One story harness; the wrappers below are three lines each and read as a unit. */
 /* oxlint-disable react/no-multi-comp */
-import type { VideoConferenceCapabilities } from '@rocket.chat/core-typings';
-import { VIDEO_CONF_RINGING_WINDOW_MS } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { VideoConfContextValue } from '@rocket.chat/ui-video-conf';
-import { VideoConfContext } from '@rocket.chat/ui-video-conf';
+import type { VideoConferenceCapabilities } from '@yas chat/core-typings';
+import { VIDEO_CONF_RINGING_WINDOW_MS } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { VideoConfContextValue } from '@yas chat/ui-video-conf';
+import { VideoConfContext } from '@yas chat/ui-video-conf';
 import type { Decorator } from '@storybook/react';
 import type { ReactNode } from 'react';
 import { useContext, useEffect, useMemo, useState } from 'react';

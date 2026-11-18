@@ -1,7 +1,7 @@
-import type { IRole, IRoom, IUserInRole } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IRole, IRoom, IUserInRole } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

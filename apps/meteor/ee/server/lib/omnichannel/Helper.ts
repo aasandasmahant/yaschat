@@ -1,11 +1,11 @@
-import { api } from '@rocket.chat/core-services';
+import { api } from '@yas chat/core-services';
 import type {
 	ILivechatDepartment,
 	IOmnichannelRoom,
 	IOmnichannelServiceLevelAgreements,
 	InquiryWithAgentInfo,
-} from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
 import {
 	Rooms as RoomRaw,
 	LivechatRooms,
@@ -13,7 +13,7 @@ import {
 	LivechatCustomField,
 	LivechatInquiry,
 	Users,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 import moment from 'moment';
 import type { Document } from 'mongodb';
 

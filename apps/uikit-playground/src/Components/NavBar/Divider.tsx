@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 
 const Divider = () => <Box height='70%' width='1px' backgroundColor='#c7c7c7' />;
 

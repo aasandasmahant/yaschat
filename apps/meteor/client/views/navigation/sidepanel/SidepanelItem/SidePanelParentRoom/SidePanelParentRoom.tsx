@@ -1,5 +1,5 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { isPrivateRoom } from '@rocket.chat/core-typings';
+import type { ISubscription } from '@yas chat/core-typings';
+import { isPrivateRoom } from '@yas chat/core-typings';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';
 import SidePanelTag from '../SidePanelTag';

@@ -1,7 +1,7 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { FeaturePreviewProps } from '@rocket.chat/ui-client';
-import { usePreferenceFeaturePreviewList } from '@rocket.chat/ui-client';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { FeaturePreviewProps } from '@yas chat/ui-client';
+import { usePreferenceFeaturePreviewList } from '@yas chat/ui-client';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

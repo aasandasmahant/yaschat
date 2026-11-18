@@ -1,4 +1,4 @@
-import { ajv } from '@rocket.chat/rest-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 import { resolveLayoutForRoomType } from './parseLayoutSetting';
 import type { RoomToolboxLayoutSetting } from './parseLayoutSetting';

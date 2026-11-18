@@ -1,5 +1,5 @@
-import { links, useIsEnterprise } from '@rocket.chat/ui-client';
-import { useSetModal, useSetting } from '@rocket.chat/ui-contexts';
+import { links, useIsEnterprise } from '@yas chat/ui-client';
+import { useSetModal, useSetting } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

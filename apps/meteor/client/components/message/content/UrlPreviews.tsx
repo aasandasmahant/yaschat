@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageBlock } from '@rocket.chat/fuselage';
-import { useLayout } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageBlock } from '@yas chat/fuselage';
+import { useLayout } from '@yas chat/ui-contexts';
 
 import type { OEmbedPreviewMetadata } from './urlPreviews/OEmbedPreviewMetadata';
 import OEmbedResolver from './urlPreviews/OEmbedResolver';

@@ -1,6 +1,6 @@
-import { Box, TextInput, Chip, Button, FieldLabel, FieldRow, Stack } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Box, TextInput, Chip, Button, FieldLabel, FieldRow, Stack } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useId, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import type { LivechatPriorityWeight } from '@rocket.chat/core-typings';
-import { GenericTableCell, GenericTableRow } from '@rocket.chat/ui-client';
+import type { LivechatPriorityWeight } from '@yas chat/core-typings';
+import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { PriorityIcon } from './PriorityIcon';

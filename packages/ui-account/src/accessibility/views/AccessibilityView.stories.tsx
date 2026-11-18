@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import AccessibilityView from './AccessibilityView';

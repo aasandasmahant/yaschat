@@ -1,6 +1,6 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { ContextualbarScrollableContent, ContextualbarFooter, ContextualbarEmptyContent } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { ContextualbarScrollableContent, ContextualbarFooter, ContextualbarEmptyContent } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

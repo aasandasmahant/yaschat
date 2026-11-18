@@ -1,6 +1,6 @@
-import { Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { SHA256 } from '@rocket.chat/sha256';
+import { Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { SHA256 } from '@yas chat/sha256';
 import speakeasy from 'speakeasy';
 
 import { settings } from '../../../settings';

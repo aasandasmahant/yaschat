@@ -1,8 +1,8 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUsersModel } from '@rocket.chat/model-typings';
-import { registerModel } from '@rocket.chat/models';
+import type { ClientSafeError } from '@yas chat/core-services';
+import type { IUsersModel } from '@yas chat/model-typings';
+import { registerModel } from '@yas chat/models';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

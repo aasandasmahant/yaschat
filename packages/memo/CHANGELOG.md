@@ -1,4 +1,4 @@
-# @rocket.chat/memo
+# @yas chat/memo
 
 ## 0.31.26
 

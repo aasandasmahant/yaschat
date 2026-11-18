@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISetting } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISetting } from '@yas chat/core-typings';
 
 const hasNumericBounds = (setting: ISetting): setting is ISetting & { minValue?: number; maxValue?: number } => {
 	return setting.type === 'int' || setting.type === 'range';

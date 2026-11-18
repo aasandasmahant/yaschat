@@ -1,4 +1,4 @@
-import { Box, Field, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@rocket.chat/fuselage';
+import { Box, Field, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@yas chat/fuselage';
 import type { ChangeEvent } from 'react';
 
 import ResetSettingButton from '../ResetSettingButton';

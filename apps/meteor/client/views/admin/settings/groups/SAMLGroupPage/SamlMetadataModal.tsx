@@ -1,5 +1,5 @@
-import { Box, Callout, Field, FieldLabel, FieldRow, TextAreaInput, TextInput, Stack } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import { Box, Callout, Field, FieldLabel, FieldRow, TextAreaInput, TextInput, Stack } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import type { ChangeEvent } from 'react';
 import { useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';

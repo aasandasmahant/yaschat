@@ -1,6 +1,6 @@
-import type { INps, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { NPSStatus } from '@rocket.chat/core-typings';
-import type { INpsModel } from '@rocket.chat/model-typings';
+import type { INps, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { NPSStatus } from '@yas chat/core-typings';
+import type { INpsModel } from '@yas chat/model-typings';
 import type { Collection, Db, Document, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

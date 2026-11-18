@@ -1,4 +1,4 @@
-import type { Serialized } from '@rocket.chat/core-typings';
+import type { Serialized } from '@yas chat/core-typings';
 import type {
 	ServerMethodName,
 	ServerMethodParameters,
@@ -6,11 +6,11 @@ import type {
 	StreamerCallbackArgs,
 	StreamNames,
 	StreamKeys,
-} from '@rocket.chat/ddp-client';
-import { Emitter } from '@rocket.chat/emitter';
-import type { Method, PathFor, OperationParams, OperationResult, UrlParams, PathPattern } from '@rocket.chat/rest-typings';
-import type { ServerContextValue, UploadResult } from '@rocket.chat/ui-contexts';
-import { ServerContext } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ddp-client';
+import { Emitter } from '@yas chat/emitter';
+import type { Method, PathFor, OperationParams, OperationResult, UrlParams, PathPattern } from '@yas chat/rest-typings';
+import type { ServerContextValue, UploadResult } from '@yas chat/ui-contexts';
+import { ServerContext } from '@yas chat/ui-contexts';
 import { compile } from 'path-to-regexp';
 import type { ComponentChildren } from 'preact';
 import { useMemo } from 'preact/hooks';

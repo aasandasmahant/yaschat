@@ -1,5 +1,5 @@
-import type { SearchAnswer } from '@rocket.chat/rest-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { SearchAnswer } from '@yas chat/rest-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 export const useAISearchAnswer = (query: string, messages: SearchAnswer['messages'], enabled: boolean) => {

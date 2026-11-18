@@ -1,16 +1,16 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import PrivateEmptyState from './PrivateEmptyState';
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	useLicense: jest.fn(),
 }));
 
 describe('with private apps enabled', () => {
 	beforeEach(async () => {
-		const { useLicense } = await import('@rocket.chat/ui-client');
+		const { useLicense } = await import('@yas chat/ui-client');
 		(useLicense as jest.Mock).mockReturnValue({
 			data: {
 				limits: {
@@ -37,7 +37,7 @@ describe('with private apps enabled', () => {
 
 describe('without private apps enabled', () => {
 	beforeEach(async () => {
-		const { useLicense } = await import('@rocket.chat/ui-client');
+		const { useLicense } = await import('@yas chat/ui-client');
 		(useLicense as jest.Mock).mockReturnValue({
 			data: {
 				limits: {

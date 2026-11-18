@@ -1,5 +1,5 @@
-import type { IRoom, IUser, IVideoConferenceUser, VideoConferenceCapabilities, VideoConferenceChatAccess } from '@rocket.chat/core-typings';
-import type { Badge } from '@rocket.chat/fuselage';
+import type { IRoom, IUser, IVideoConferenceUser, VideoConferenceCapabilities, VideoConferenceChatAccess } from '@yas chat/core-typings';
+import type { Badge } from '@yas chat/fuselage';
 import type { ComponentProps, ComponentType, ReactNode } from 'react';
 
 import type { PreviewVideoProviderProps } from '../call/previewVideo';

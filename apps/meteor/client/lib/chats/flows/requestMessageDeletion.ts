@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { imperativeModal } from '@rocket.chat/ui-client';
+import type { IMessage } from '@yas chat/core-typings';
+import { imperativeModal } from '@yas chat/ui-client';
 
 import { t } from '../../../../lib/i18n';
 import DeleteMessageConfirmModal from '../../../views/room/modals/DeleteMessageConfirmModal';

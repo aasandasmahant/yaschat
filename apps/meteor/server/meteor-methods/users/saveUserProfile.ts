@@ -1,8 +1,8 @@
-import { hashPassword } from '@rocket.chat/account-utils';
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUserPhoneNumber, UserStatus, IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { hashPassword } from '@yas chat/account-utils';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUserPhoneNumber, UserStatus, IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { UpdateFilter } from 'mongodb';
 
 import { setEmailFunction } from './setEmail';
@@ -199,7 +199,7 @@ const saveUserProfileWithTwoFactor = twoFactorRequired(saveUserProfile, {
 	requireSecondFactor: true,
 });
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		saveUserProfile(
 			settings: {

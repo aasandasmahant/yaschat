@@ -1,8 +1,8 @@
-import type { App } from '@rocket.chat/core-typings';
-import { Box, Button, Tag, Icon, Stack } from '@rocket.chat/fuselage';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
-import { useHasLicenseModule, useIsEnterprise } from '@rocket.chat/ui-client';
-import { useRouteParameter, usePermission, useSetModal } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { Box, Button, Tag, Icon, Stack } from '@yas chat/fuselage';
+import { useSafely } from '@yas chat/fuselage-hooks';
+import { useHasLicenseModule, useIsEnterprise } from '@yas chat/ui-client';
+import { useRouteParameter, usePermission, useSetModal } from '@yas chat/ui-contexts';
 import { useCallback, useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import semver from 'semver';

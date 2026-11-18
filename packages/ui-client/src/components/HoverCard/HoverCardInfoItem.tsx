@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Icon, Item, ItemContent, ItemLink, ItemMedia, ItemTitle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, Icon, Item, ItemContent, ItemLink, ItemMedia, ItemTitle } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 const srOnly = css`

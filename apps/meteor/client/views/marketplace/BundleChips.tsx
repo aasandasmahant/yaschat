@@ -1,4 +1,4 @@
-import { Tag } from '@rocket.chat/fuselage';
+import { Tag } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import type { App } from './types';

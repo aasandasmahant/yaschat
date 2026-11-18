@@ -1,10 +1,10 @@
-# `@rocket.chat/css-in-js`
+# `@yas chat/css-in-js`
 
 > Low-level toolset to write CSS in JavaScript, transpile it with Stylis and attach it to a document at runtime.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/css-in-js?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/css-in-js) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/css-in-js?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/css-in-js)
+[![npm](https://img.shields.io/npm/v/@yas chat/css-in-js?style=flat-square)](https://www.npmjs.com/package/@yas chat/css-in-js) [![downloads](https://img.shields.io/npm/dw/@yas chat/css-in-js?style=flat-square)](https://www.npmjs.com/package/@yas chat/css-in-js)
 
-This package holds the building blocks behind Fuselage's styling and [`@rocket.chat/styled`](https://www.npmjs.com/package/@rocket.chat/styled). It does not render components. It gives you the pieces to build your own styling layer:
+This package holds the building blocks behind Fuselage's styling and [`@yas chat/styled`](https://www.npmjs.com/package/@yas chat/styled). It does not render components. It gives you the pieces to build your own styling layer:
 
 - `css` and `keyframes` template tags that evaluate lazily, with function interpolations.
 - Deterministic, hash-based class and animation names.
@@ -14,7 +14,7 @@ This package holds the building blocks behind Fuselage's styling and [`@rocket.c
 ## Installation
 
 ```sh
-npm install @rocket.chat/css-in-js
+npm install @yas chat/css-in-js
 ```
 
 There are no peer dependencies. The package ships an ES module (`dist/index.js`) and TypeScript types.
@@ -26,7 +26,7 @@ There are no peer dependencies. The package ships an ES module (`dist/index.js`)
 ### Style an element by hand
 
 ```ts
-import { attachRules, createClassName, css, escapeName, transpile } from '@rocket.chat/css-in-js';
+import { attachRules, createClassName, css, escapeName, transpile } from '@yas chat/css-in-js';
 
 const button = css`
 	padding-inline: 16px;
@@ -50,7 +50,7 @@ detach();
 `css` returns a function. Arguments passed to it are forwarded to every function interpolation. Interpolated `false`, `null` and `undefined` render as nothing, and arrays are joined.
 
 ```ts
-import { css } from '@rocket.chat/css-in-js';
+import { css } from '@yas chat/css-in-js';
 
 const box = css`
 	display: block;
@@ -68,7 +68,7 @@ A `css` chunk can be interpolated into another one and receives the same argumen
 Interpolate a `keyframes` tag inside `css`. It renders the hashed animation name in place and appends the `@keyframes` rule to the output.
 
 ```ts
-import { css, keyframes } from '@rocket.chat/css-in-js';
+import { css, keyframes } from '@yas chat/css-in-js';
 
 const fadeIn = keyframes`
 	from { opacity: 0; }
@@ -88,7 +88,7 @@ An empty `keyframes` tag evaluates to `none`.
 Pass a `document` to target an iframe or a popup window. Each document gets its own `<style id="rcx-styles">` element.
 
 ```ts
-import { attachRules } from '@rocket.chat/css-in-js';
+import { attachRules } from '@yas chat/css-in-js';
 
 const detach = attachRules('.foo{color:red;}', { document: iframe.contentDocument! });
 ```
@@ -125,7 +125,7 @@ type Evaluable = <T extends readonly unknown[]>(...args: T) => string;
 const transpile: (selector: string, content: string, middleware?: Middleware) => string;
 ```
 
-Wraps `content` in `selector` and compiles it with Stylis. The default middleware applies [`@rocket.chat/stylis-logical-props-middleware`](https://www.npmjs.com/package/@rocket.chat/stylis-logical-props-middleware), Stylis's `prefixer` and `stringify`. Nested selectors such as `&:hover` are supported.
+Wraps `content` in `selector` and compiles it with Stylis. The default middleware applies [`@yas chat/stylis-logical-props-middleware`](https://www.npmjs.com/package/@yas chat/stylis-logical-props-middleware), Stylis's `prefixer` and `stringify`. Nested selectors such as `&:hover` are supported.
 
 ```ts
 transpile('div', 'display: flex;');
@@ -155,17 +155,17 @@ const escapeName: (animationOrClassName: string) => string;
 
 ### `cssSupports`
 
-Re-exported from [`@rocket.chat/css-supports`](https://www.npmjs.com/package/@rocket.chat/css-supports).
+Re-exported from [`@yas chat/css-supports`](https://www.npmjs.com/package/@yas chat/css-supports).
 
 ## Development
 
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/css-in-js). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/css-in-js build
-yarn workspace @rocket.chat/css-in-js testunit
-yarn workspace @rocket.chat/css-in-js lint
-yarn workspace @rocket.chat/css-in-js typecheck
+yarn workspace @yas chat/css-in-js build
+yarn workspace @yas chat/css-in-js testunit
+yarn workspace @yas chat/css-in-js lint
+yarn workspace @yas chat/css-in-js typecheck
 ```
 
 ## License

@@ -1,6 +1,6 @@
 import { before, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 
@@ -15,12 +15,12 @@ import { UsersMock } from '../../../../tests/mocks/server/modules/apps/models/Us
 import { AppServerOrchestratorMock } from '../../../../tests/mocks/server/modules/apps/orchestrator.mock';
 
 const { AppMessagesConverter } = proxyquire.noCallThru().load('./messages', {
-	'@rocket.chat/random': {
+	'@yas chat/random': {
 		Random: {
 			id: () => 1,
 		},
 	},
-	'@rocket.chat/core-typings': {
+	'@yas chat/core-typings': {
 		isMessageFromVisitor: (message) => 'token' in message,
 	},
 });

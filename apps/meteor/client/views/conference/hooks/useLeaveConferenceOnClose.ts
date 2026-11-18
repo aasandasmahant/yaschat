@@ -1,4 +1,4 @@
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 
 import { closeCallWindow } from '../lib/callWindow';

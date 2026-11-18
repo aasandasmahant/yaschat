@@ -1,4 +1,4 @@
-import { CoreModules } from '@rocket.chat/core-typings';
+import { CoreModules } from '@yas chat/core-typings';
 import type {
 	InternalModuleName,
 	GrantedModules,
@@ -7,7 +7,7 @@ import type {
 	LicenseLimit,
 	LicenseModule,
 	LicensePeriod,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import { encrypt, encryptStatsToken } from './token';
 

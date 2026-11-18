@@ -1,4 +1,4 @@
-import { useAudioLevel } from '@rocket.chat/ui-media';
+import { useAudioLevel } from '@yas chat/ui-media';
 import { useCallback, useEffect, useRef } from 'react';
 
 import { AUTO_LOWER_AFTER_MS, AUTO_LOWER_SPEAKING_THRESHOLD, SPEAKING_GAP_TOLERANCE_MS } from '../lib/autoLowerHand';

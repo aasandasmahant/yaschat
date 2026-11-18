@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IRoom } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import { useMemo, useSyncExternalStore } from 'react';
 import type { CacheSnapshot } from 'virtua';
 

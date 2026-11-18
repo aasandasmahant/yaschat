@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { Random } from '@rocket.chat/random';
+import type { IMessage } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { Random } from '@yas chat/random';
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

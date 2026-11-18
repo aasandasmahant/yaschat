@@ -38,7 +38,7 @@ export interface IModifyCreator {
 	getContactCreator(): IContactCreator;
 
 	/**
-	 * @deprecated please prefer the rocket.chat/ui-kit components
+	 * @deprecated please prefer the yas chat/ui-kit components
 	 *
 	 * Gets a new instance of a BlockBuilder
 	 */

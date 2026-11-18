@@ -10,7 +10,7 @@ const Authorization = {
 class ClientSafeError extends Error {}
 
 const { BeforeSavePreventMention } = proxyquire.noCallThru().load('./BeforeSavePreventMention', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		Authorization,
 		ClientSafeError,
 	},

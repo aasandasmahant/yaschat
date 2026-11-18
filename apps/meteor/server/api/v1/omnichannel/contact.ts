@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { LivechatContacts, LivechatCustomField, LivechatVisitors } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { LivechatContacts, LivechatCustomField, LivechatVisitors } from '@yas chat/models';
 import {
 	isPOSTOmnichannelContactProps,
 	isGETOmnichannelContactProps,
@@ -17,8 +17,8 @@ import {
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp, removeEmpty } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp, removeEmpty } from '@yas chat/tools';
 
 import { API } from '../..';
 import { createContact } from '../../../lib/omnichannel/contacts/createContact';
@@ -244,7 +244,7 @@ const omnichannelContactsEndpoints = API.v1.post(
 
 type OmnichannelContactsEndpoints = ExtractRoutesFromAPI<typeof omnichannelContactsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends OmnichannelContactsEndpoints {}
 }

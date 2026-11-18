@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
-import { useAllPermissions, usePermission } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
+import { useAllPermissions, usePermission } from '@yas chat/ui-contexts';
 
 import { useIsRoomAbacLocked } from './useIsRoomAbacLocked';
 import { useIsABACAvailable } from '../../admin/ABAC/hooks/useIsABACAvailable';

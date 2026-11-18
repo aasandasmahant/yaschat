@@ -1,4 +1,4 @@
-import type { IMessage, IOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { IMessage, IOmnichannelRoom } from '@yas chat/core-typings';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import type { CloseRoomParams } from '../../../../server/lib/omnichannel/localTypes';

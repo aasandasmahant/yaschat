@@ -1,4 +1,4 @@
-import { HeaderTag, HeaderTagIcon } from '@rocket.chat/ui-client';
+import { HeaderTag, HeaderTagIcon } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 
 import type { IRoomWithFederationOriginalName } from '../contexts/RoomContext';

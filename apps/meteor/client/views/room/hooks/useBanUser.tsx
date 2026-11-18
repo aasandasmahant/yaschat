@@ -1,6 +1,6 @@
-import { escapeHTML } from '@rocket.chat/tools';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useUserRoom, useEndpoint } from '@rocket.chat/ui-contexts';
+import { escapeHTML } from '@yas chat/tools';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useUserRoom, useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

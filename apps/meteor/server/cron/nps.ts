@@ -1,5 +1,5 @@
-import { NPS } from '@rocket.chat/core-services';
-import { cronJobs } from '@rocket.chat/cron';
+import { NPS } from '@yas chat/core-services';
+import { cronJobs } from '@yas chat/cron';
 
 import { settings } from '../settings';
 

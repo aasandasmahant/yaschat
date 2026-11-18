@@ -1,5 +1,5 @@
-import type { MessageMention } from '@rocket.chat/core-typings';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type { MessageMention } from '@yas chat/core-typings';
+import type * as MessageParser from '@yas chat/message-parser';
 import type { AriaAttributes, FormEvent, UIEvent } from 'react';
 import { createContext } from 'react';
 

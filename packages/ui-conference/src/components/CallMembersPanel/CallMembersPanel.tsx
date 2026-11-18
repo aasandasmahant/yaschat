@@ -1,6 +1,6 @@
-import { Box, Button, ItemGroup, ItemGroupHeader, ItemGroupTitle } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Box, Button, ItemGroup, ItemGroupHeader, ItemGroupTitle } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

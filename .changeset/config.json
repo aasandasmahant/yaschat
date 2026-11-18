@@ -1,8 +1,8 @@
 {
 	"$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-	"changelog": ["@rocket.chat/release-changelog", { "repo": "RocketChat/Rocket.Chat" }],
+	"changelog": ["@yas chat/release-changelog", { "repo": "YasChat/Yas chat" }],
 	"commit": false,
-	"fixed": [["@rocket.chat/meteor", "@rocket.chat/core-typings", "@rocket.chat/rest-typings"]],
+	"fixed": [["@yas chat/meteor", "@yas chat/core-typings", "@yas chat/rest-typings"]],
 	"linked": [],
 	"access": "public",
 	"baseBranch": "develop",

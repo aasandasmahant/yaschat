@@ -1,5 +1,5 @@
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
-import type { RemoteMethodCall } from '@rocket.chat/ddp-server';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
+import type { RemoteMethodCall } from '@yas chat/ddp-server';
 import { Meteor } from 'meteor/meteor';
 
 import { getMeteorConnection } from './meteorConnection';

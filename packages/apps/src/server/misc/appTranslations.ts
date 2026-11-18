@@ -1,4 +1,4 @@
-import { normalizeLanguage } from '@rocket.chat/tools';
+import { normalizeLanguage } from '@yas chat/tools';
 
 import type { ProxiedApp } from '../ProxiedApp';
 

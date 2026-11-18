@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUpload } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUpload } from '@yas chat/core-typings';
 import type { ClientSession } from 'mongodb';
 
 import { UploadFS } from './ufs';

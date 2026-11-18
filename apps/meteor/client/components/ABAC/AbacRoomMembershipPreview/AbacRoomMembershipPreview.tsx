@@ -1,7 +1,7 @@
-import type { AbacMembershipGroup } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Box, Button, ButtonGroup, Callout, Icon, Select, TextInput } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import type { AbacMembershipGroup } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Button, ButtonGroup, Callout, Icon, Select, TextInput } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarContent,
 	ContextualbarEmptyContent,
@@ -9,9 +9,9 @@ import {
 	ContextualbarSection,
 	GenericModal,
 	VirtualizedScrollbars,
-} from '@rocket.chat/ui-client';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useSetModal } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

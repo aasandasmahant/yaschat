@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription, ITranslatedMessage } from '@rocket.chat/core-typings';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import type { IMessage, ISubscription, ITranslatedMessage } from '@yas chat/core-typings';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useCallback, useMemo } from 'react';
 
 import { AutoTranslate } from '../../../../lib/autotranslate';

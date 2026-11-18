@@ -6,7 +6,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { findTags, findTagById } from './lib/tags';
 import { API } from '../../../../../server/api';
@@ -117,7 +117,7 @@ const livechatTagsEndpoints = API.v1
 
 type LivechatTagsEndpoints = ExtractRoutesFromAPI<typeof livechatTagsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatTagsEndpoints {}
 }

@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { MessageFooterCallout, MessageFooterCalloutContent } from '@rocket.chat/ui-composer';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { MessageFooterCallout, MessageFooterCalloutContent } from '@yas chat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 import type { ComposerMessageProps } from './ComposerMessage';

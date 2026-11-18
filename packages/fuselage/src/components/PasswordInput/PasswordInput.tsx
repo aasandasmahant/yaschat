@@ -1,4 +1,4 @@
-import { useToggle } from '@rocket.chat/fuselage-hooks';
+import { useToggle } from '@yas chat/fuselage-hooks';
 
 import { Icon } from '../Icon';
 import { InputBox, type InputBoxProps } from '../InputBox';

@@ -1,6 +1,6 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { IMessage, IModerationAudit, IModerationReport, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IModerationAudit, IModerationReport, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

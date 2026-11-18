@@ -1,8 +1,8 @@
-import { Message } from '@rocket.chat/core-services';
-import type { ILivechatPriority, IOmnichannelRoom, IUser } from '@rocket.chat/core-typings';
-import { LivechatInquiry, LivechatPriority, LivechatRooms } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { Message } from '@yas chat/core-services';
+import type { ILivechatPriority, IOmnichannelRoom, IUser } from '@yas chat/core-typings';
+import { LivechatInquiry, LivechatPriority, LivechatRooms } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { FindOptions } from 'mongodb';
 
 import { notifyOnLivechatInquiryChangedByRoom, notifyOnRoomChanged } from '../../../../../../server/lib/notifyListener';

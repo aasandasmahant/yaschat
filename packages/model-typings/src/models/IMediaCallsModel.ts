@@ -5,7 +5,7 @@ import type {
 	MediaCallActorType,
 	MediaCallContact,
 	MediaCallSignedContact,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type { Document, FindCursor, UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

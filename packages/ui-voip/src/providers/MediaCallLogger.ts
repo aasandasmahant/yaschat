@@ -1,4 +1,4 @@
-import type { IMediaSignalLogger } from '@rocket.chat/media-signaling';
+import type { IMediaSignalLogger } from '@yas chat/media-signaling';
 
 export class MediaCallLogger implements IMediaSignalLogger {
 	private isDebug: boolean;

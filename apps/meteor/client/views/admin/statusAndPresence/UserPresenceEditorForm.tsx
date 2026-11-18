@@ -12,11 +12,11 @@ import {
 	IconButton,
 	TextInput,
 	ToggleSwitch,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { ContextualbarFooter, ContextualbarScrollableContent, UserAutoComplete } from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { ContextualbarFooter, ContextualbarScrollableContent, UserAutoComplete } from '@yas chat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { Random } from '@rocket.chat/random';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { Random } from '@yas chat/random';
 import fileSize from 'filesize';
 
 import { getErrorMessage } from '../errorHandling';

@@ -1,4 +1,4 @@
-import { GenericNoResults } from '@rocket.chat/ui-client';
+import { GenericNoResults } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { sidePanelFiltersConfig } from '../contexts/RoomsNavigationContext';

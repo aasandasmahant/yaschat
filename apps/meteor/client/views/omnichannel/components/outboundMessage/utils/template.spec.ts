@@ -1,5 +1,5 @@
-import type { IOutboundProviderTemplate } from '@rocket.chat/apps-engine/definition/outboundCommunication';
-import { capitalize } from '@rocket.chat/tools';
+import type { IOutboundProviderTemplate } from '@yas chat/apps-engine/definition/outboundCommunication';
+import { capitalize } from '@yas chat/tools';
 
 import { extractParameterMetadata, processTemplatePreviewText } from './template';
 import type { TemplateMediaParameter, TemplateComponent, TemplateParameterMetadata } from '../types/template';

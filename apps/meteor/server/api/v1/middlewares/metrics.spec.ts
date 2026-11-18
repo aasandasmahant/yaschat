@@ -1,4 +1,4 @@
-import { Router, createNodeServer, createRootApp, mountRouter } from '@rocket.chat/http-router';
+import { Router, createNodeServer, createRootApp, mountRouter } from '@yas chat/http-router';
 import Ajv from 'ajv';
 import request from 'supertest';
 

@@ -1,7 +1,7 @@
-import type { ILivechatContact, Serialized } from '@rocket.chat/core-typings';
-import { Box, ButtonGroup, Button, IconButton, Divider, Stack } from '@rocket.chat/fuselage';
-import { Field, FieldLabel, FieldRow, FieldError, TextInput } from '@rocket.chat/fuselage-forms';
-import { validateEmail } from '@rocket.chat/tools';
+import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
+import { Box, ButtonGroup, Button, IconButton, Divider, Stack } from '@yas chat/fuselage';
+import { Field, FieldLabel, FieldRow, FieldError, TextInput } from '@yas chat/fuselage-forms';
+import { validateEmail } from '@yas chat/tools';
 import {
 	CustomFieldsForm,
 	ContextualbarScrollableContent,
@@ -13,8 +13,8 @@ import {
 	ContextualbarDialog,
 	ContextualbarSkeleton,
 	useHasLicenseModule,
-} from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { Fragment, useId } from 'react';
 import { Controller, useFieldArray, useForm } from 'react-hook-form';

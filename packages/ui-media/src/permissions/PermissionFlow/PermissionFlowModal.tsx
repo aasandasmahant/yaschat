@@ -1,4 +1,4 @@
-import { css } from '@rocket.chat/css-in-js';
+import { css } from '@yas chat/css-in-js';
 import {
 	Box,
 	Button,
@@ -9,8 +9,8 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@rocket.chat/fuselage';
-import { useAbsoluteUrl } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useAbsoluteUrl } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

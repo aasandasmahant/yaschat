@@ -4,11 +4,11 @@ import type {
 	VideoAttachmentProps,
 	ImageAttachmentProps,
 	AudioAttachmentProps,
-} from '@rocket.chat/core-typings';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatRooms, Messages } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
-import { Random } from '@rocket.chat/random';
+} from '@yas chat/core-typings';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatRooms, Messages } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
+import { Random } from '@yas chat/random';
 import type { ParsedMail, Attachment } from 'mailparser';
 import { stripHtml } from 'string-strip-html';
 

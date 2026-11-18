@@ -7,9 +7,9 @@ import {
 	MessageGenericPreviewFooter,
 	MessageGenericPreviewThumb,
 	Box,
-} from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
-import { isPreviewBlockWithThumb, isPreviewBlockWithPreview } from '@rocket.chat/ui-kit';
+} from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
+import { isPreviewBlockWithThumb, isPreviewBlockWithPreview } from '@yas chat/ui-kit';
 import { memo } from 'react';
 
 import ContextBlock from './ContextBlock';

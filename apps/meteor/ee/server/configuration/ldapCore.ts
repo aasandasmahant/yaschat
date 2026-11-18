@@ -1,5 +1,5 @@
-import { LDAP } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
+import { LDAP } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
 import { Accounts } from 'meteor/accounts-base';
 
 import { callbacks } from '../../../server/lib/callbacks';

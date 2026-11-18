@@ -1,7 +1,7 @@
 /* oxlint-disable complexity */
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import type { UpdateUserData } from './saveUser';
 import { settings } from '../../../settings';

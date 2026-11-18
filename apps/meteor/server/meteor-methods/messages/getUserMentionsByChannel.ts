@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Messages, Users, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Messages, Users, Rooms } from '@yas chat/models';
 
 import { canAccessRoomAsync } from '../../lib/authorization';
 

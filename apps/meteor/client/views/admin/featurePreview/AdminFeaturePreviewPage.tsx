@@ -12,7 +12,7 @@ import {
 	FieldRow,
 	Text,
 	ToggleSwitch,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import {
 	useDefaultSettingFeaturePreviewList,
 	Page,
@@ -20,8 +20,8 @@ import {
 	PageScrollableContentWithShadow,
 	PageFooter,
 	useFeaturePreviewEnableQuery,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useSettingsDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useSettingsDispatch } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { Fragment } from 'react';
 import { useForm } from 'react-hook-form';

@@ -1,6 +1,6 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { CallFeature } from '@rocket.chat/media-signaling';
-import { callFeatureList } from '@rocket.chat/media-signaling';
+import { UserStatus } from '@yas chat/core-typings';
+import type { CallFeature } from '@yas chat/media-signaling';
+import { callFeatureList } from '@yas chat/media-signaling';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 

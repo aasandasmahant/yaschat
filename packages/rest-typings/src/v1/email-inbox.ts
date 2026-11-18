@@ -1,4 +1,4 @@
-import type { IEmailInbox } from '@rocket.chat/core-typings';
+import type { IEmailInbox } from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 import { paginationQueryProperties } from './pagination';

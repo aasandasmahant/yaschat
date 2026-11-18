@@ -1,5 +1,5 @@
-import { Box, PaletteStyleTag } from '@rocket.chat/fuselage';
-import { ModalProviderWithRegion, useThemeMode } from '@rocket.chat/ui-client';
+import { Box, PaletteStyleTag } from '@yas chat/fuselage';
+import { ModalProviderWithRegion, useThemeMode } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 
 import { CONFERENCE_THEMED_CLASS } from '../lib/panelStyles';

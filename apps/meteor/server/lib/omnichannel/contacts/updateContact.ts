@@ -1,5 +1,5 @@
-import type { ILivechatContact, ILivechatContactChannel } from '@rocket.chat/core-typings';
-import { LivechatContacts, LivechatInquiry, LivechatRooms, Settings, Subscriptions } from '@rocket.chat/models';
+import type { ILivechatContact, ILivechatContactChannel } from '@yas chat/core-typings';
+import { LivechatContacts, LivechatInquiry, LivechatRooms, Settings, Subscriptions } from '@yas chat/models';
 
 import { getAllowedCustomFields } from './getAllowedCustomFields';
 import { patchContact } from './patchContact';

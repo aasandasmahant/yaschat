@@ -1,4 +1,4 @@
-import { Box, Text } from '@rocket.chat/fuselage';
+import { Box, Text } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type ToneSelectorWrapperProps = {

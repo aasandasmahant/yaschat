@@ -1,5 +1,5 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { Box, Tag } from '@rocket.chat/fuselage';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { Box, Tag } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type RoomTagsProps = {

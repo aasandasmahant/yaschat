@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { MultipleBusinessHoursBehavior } from '../../../lib/omnichannel/businessHours/MultipleBusinessHoursBehavior';

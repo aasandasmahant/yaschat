@@ -1,6 +1,6 @@
-import { Box, Text } from '@rocket.chat/fuselage';
-import { useMediaQuery } from '@rocket.chat/fuselage-hooks';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import { Box, Text } from '@yas chat/fuselage';
+import { useMediaQuery } from '@yas chat/fuselage-hooks';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import { memo } from 'react';
 
 export type AgentAvatarProps = { name: string; username: string; eTag?: string };

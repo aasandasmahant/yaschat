@@ -1,6 +1,6 @@
-import type { PathPattern } from '@rocket.chat/rest-typings';
-import { isRecord } from '@rocket.chat/tools';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { PathPattern } from '@yas chat/rest-typings';
+import { isRecord } from '@yas chat/tools';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { miscQueryKeys } from '../../../../lib/queryKeys';

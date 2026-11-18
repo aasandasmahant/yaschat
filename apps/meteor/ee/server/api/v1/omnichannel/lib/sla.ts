@@ -1,7 +1,7 @@
-import type { IOmnichannelServiceLevelAgreements, IUser } from '@rocket.chat/core-typings';
-import { OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IOmnichannelServiceLevelAgreements, IUser } from '@yas chat/core-typings';
+import { OmnichannelServiceLevelAgreements } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { FindOptions } from 'mongodb';
 
 import {

@@ -1,7 +1,7 @@
-import type { App } from '@rocket.chat/core-typings';
-import { Badge, Card, CardBody, CardCol, CardControls, CardHeader, CardRow, CardTitle } from '@rocket.chat/fuselage';
-import { AppAvatar } from '@rocket.chat/ui-avatar';
-import { useRouteParameter, useRouter } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { Badge, Card, CardBody, CardCol, CardControls, CardHeader, CardRow, CardTitle } from '@yas chat/fuselage';
+import { AppAvatar } from '@yas chat/ui-avatar';
+import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { memo } from 'react';
 import semver from 'semver';

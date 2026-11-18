@@ -1,6 +1,6 @@
-import type { IOmnichannelSource } from '@rocket.chat/core-typings';
-import { UserStatus, isOmnichannelSourceFromApp } from '@rocket.chat/core-typings';
-import type { IconProps } from '@rocket.chat/fuselage';
+import type { IOmnichannelSource } from '@yas chat/core-typings';
+import { UserStatus, isOmnichannelSourceFromApp } from '@yas chat/core-typings';
+import type { IconProps } from '@yas chat/fuselage';
 
 import { OmnichannelAppSourceRoomIcon } from './OmnichannelAppSourceRoomIcon';
 import { OmnichannelCoreSourceRoomIcon } from './OmnichannelCoreSourceRoomIcon';

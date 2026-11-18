@@ -1,9 +1,9 @@
 import type { IncomingMessage } from 'node:http';
 
-import type { IUser, LicenseModule, RequiredField } from '@rocket.chat/core-typings';
-import type { OpenAPIDocumentation } from '@rocket.chat/http-router';
-import type { Logger } from '@rocket.chat/logger';
-import type { Method, MethodOf, OperationParams, OperationResult, PathPattern, UrlParams } from '@rocket.chat/rest-typings';
+import type { IUser, LicenseModule, RequiredField } from '@yas chat/core-typings';
+import type { OpenAPIDocumentation } from '@yas chat/http-router';
+import type { Logger } from '@yas chat/logger';
+import type { Method, MethodOf, OperationParams, OperationResult, PathPattern, UrlParams } from '@yas chat/rest-typings';
 import type { ValidateFunction } from 'ajv';
 
 import type { ITwoFactorOptions } from '../lib/2fa/code';

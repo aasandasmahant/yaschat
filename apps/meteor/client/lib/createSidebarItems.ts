@@ -1,6 +1,6 @@
-import type { Keys as IconName } from '@rocket.chat/icons';
-import { GO_ROCKET_CHAT_PREFIX } from '@rocket.chat/ui-client';
-import type { LocationPathname } from '@rocket.chat/ui-contexts';
+import type { Keys as IconName } from '@yas chat/icons';
+import { GO_ROCKET_CHAT_PREFIX } from '@yas chat/ui-client';
+import type { LocationPathname } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 
 export type Item = {

@@ -1,5 +1,5 @@
-import type { IMessage, IReport, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IReportsModel } from '@rocket.chat/model-typings';
+import type { IMessage, IReport, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IReportsModel } from '@yas chat/model-typings';
 import type { Db, Collection } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

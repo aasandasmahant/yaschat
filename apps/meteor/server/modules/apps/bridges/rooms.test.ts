@@ -1,9 +1,9 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { suppliesAbacAttributes } from '@rocket.chat/apps/dist/server/bridges/RoomBridge';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
-import { mockModel } from '@rocket.chat/models/testing';
+import { suppliesAbacAttributes } from '@yas chat/apps/dist/server/bridges/RoomBridge';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -14,7 +14,7 @@ const createDirectMessage = sinon.stub();
 const getSetting = sinon.stub();
 
 const { AppRoomBridge } = proxyquire.noCallThru().load('./rooms', {
-	'@rocket.chat/apps/dist/server/bridges/RoomBridge': { RoomBridge: class {}, suppliesAbacAttributes },
+	'@yas chat/apps/dist/server/bridges/RoomBridge': { RoomBridge: class {}, suppliesAbacAttributes },
 	'../../../lib/rooms/addUserToRoom': {},
 	'../../../lib/rooms/deleteRoom': {},
 	'../../../lib/rooms/removeUserFromRoom': {},

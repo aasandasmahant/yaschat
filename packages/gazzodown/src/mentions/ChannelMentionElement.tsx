@@ -1,5 +1,5 @@
-import { MessageHighlight } from '@rocket.chat/fuselage';
-import { useButtonPattern } from '@rocket.chat/fuselage-hooks';
+import { MessageHighlight } from '@yas chat/fuselage';
+import { useButtonPattern } from '@yas chat/fuselage-hooks';
 import { memo, useContext, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

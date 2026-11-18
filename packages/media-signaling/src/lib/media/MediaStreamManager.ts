@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { MediaStreamWrapper } from './MediaStreamWrapper.js';
 import type { IMediaSignalLogger } from '../../definition/index.js';

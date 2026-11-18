@@ -1,6 +1,6 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
-import { Box, Button, Callout } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
+import { Box, Button, Callout } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 type AbacError = {

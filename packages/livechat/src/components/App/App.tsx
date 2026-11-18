@@ -1,4 +1,4 @@
-import type { ILivechatTrigger } from '@rocket.chat/core-typings';
+import type { ILivechatTrigger } from '@yas chat/core-typings';
 import { useLayoutEffect, useState } from 'preact/hooks';
 import Router, { route } from 'preact-router';
 import { useTranslation } from 'react-i18next';

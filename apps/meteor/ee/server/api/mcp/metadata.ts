@@ -1,5 +1,5 @@
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
+import { nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
 import type { MiddlewareHandler } from 'hono';
 
 import { nodeLoggerMiddleware } from '../../../../server/api/v1/middlewares/logger';

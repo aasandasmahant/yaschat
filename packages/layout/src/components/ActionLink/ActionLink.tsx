@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { MouseEvent, ComponentProps, ReactNode, AnchorHTMLAttributes } from 'react';
 import { useCallback } from 'react';
 

@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { Subscriptions } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISubscription } from '@yas chat/core-typings';
+import { Subscriptions } from '@yas chat/models';
 
 import { notifyOnSubscriptionChangedById } from '../../lib/notifyListener';
 import { getUserNotificationPreference } from '../../lib/utils/getUserNotificationPreference';

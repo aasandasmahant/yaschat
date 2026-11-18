@@ -1,5 +1,5 @@
-import { Icon } from '@rocket.chat/fuselage';
-import { TooltipWrapper } from '@rocket.chat/layout';
+import { Icon } from '@yas chat/fuselage';
+import { TooltipWrapper } from '@yas chat/layout';
 
 type InformationTooltipTriggerProps = {
 	text: string;

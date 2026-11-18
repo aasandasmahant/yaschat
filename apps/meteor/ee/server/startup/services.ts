@@ -1,5 +1,5 @@
-import { AbacService } from '@rocket.chat/abac';
-import { api } from '@rocket.chat/core-services';
+import { AbacService } from '@yas chat/abac';
+import { api } from '@yas chat/core-services';
 
 import { isRunningMs } from '../../../server/lib/isRunningMs';
 import { localBroker } from '../../../server/startup/localBroker';

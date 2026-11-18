@@ -1,6 +1,6 @@
-import { Box, ButtonGroup } from '@rocket.chat/fuselage';
-import { useResizeObserver } from '@rocket.chat/fuselage-hooks';
-import { ActionButton, ToggleButton } from '@rocket.chat/ui-media';
+import { Box, ButtonGroup } from '@yas chat/fuselage';
+import { useResizeObserver } from '@yas chat/fuselage-hooks';
+import { ActionButton, ToggleButton } from '@yas chat/ui-media';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

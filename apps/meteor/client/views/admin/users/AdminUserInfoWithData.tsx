@@ -1,8 +1,8 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Box, Callout } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ContextualbarContent, FormSkeleton, UserCardRole, UserInfo } from '@rocket.chat/ui-client';
-import { useSetting, useRolesDescription, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { Box, Callout } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ContextualbarContent, FormSkeleton, UserCardRole, UserInfo } from '@yas chat/ui-client';
+import { useSetting, useRolesDescription, useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

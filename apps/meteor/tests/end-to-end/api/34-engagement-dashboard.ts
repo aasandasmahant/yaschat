@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

@@ -1,5 +1,5 @@
-import { Users } from '@rocket.chat/models';
-import { isLivechatUsersManagerGETProps, isPOSTLivechatUsersTypeProps } from '@rocket.chat/rest-typings';
+import { Users } from '@yas chat/models';
+import { isLivechatUsersManagerGETProps, isPOSTLivechatUsersTypeProps } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findAgents, findManagers } from './lib/users';

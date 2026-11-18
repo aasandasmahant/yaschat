@@ -1,7 +1,7 @@
-import type { ICalendarNotification, IUser } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { imperativeModal } from '@rocket.chat/ui-client';
-import { useStream, useUserPreference } from '@rocket.chat/ui-contexts';
+import type { ICalendarNotification, IUser } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { imperativeModal } from '@yas chat/ui-client';
+import { useStream, useUserPreference } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import OutlookCalendarEventModal from '../../../outlookCalendar/OutlookCalendarEventModal';

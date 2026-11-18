@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { BackgroundLayer } from '@rocket.chat/layout';
+import { Box } from '@yas chat/fuselage';
+import { BackgroundLayer } from '@yas chat/layout';
 import { useTranslation, Trans } from 'react-i18next';
 
 import Description from './Description';
@@ -24,7 +24,7 @@ const CreateCloudWorkspacePage = (props: CreateCloudWorkspacePageProps) => {
 							is='a'
 							color='primary-400'
 							textDecorationLine='none'
-							href='https://cloud.rocket.chat/login'
+							href='https://cloud.yas chat/login'
 							target='_blank'
 							rel='noopener noreferrer'
 						>

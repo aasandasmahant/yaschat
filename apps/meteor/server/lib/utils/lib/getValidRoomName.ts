@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Rooms } from '@rocket.chat/models';
-import { escapeHTML } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Rooms } from '@yas chat/models';
+import { escapeHTML } from '@yas chat/tools';
 import limax from 'limax';
 
 import { settings } from '../../../settings';

@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -24,7 +24,7 @@ const servicesMock = {
 const getbannerforadminsMock = sinon.stub();
 
 const { NPSService } = p('./service.ts', {
-	'@rocket.chat/core-services': servicesMock,
+	'@yas chat/core-services': servicesMock,
 	'./sendNpsResults': { 'sendNpsResults': sinon.stub(), '@noCallThru': true },
 	'../../lib/logger/system': { 'SystemLogger': { error: sinon.stub() }, '@noCallThru': true },
 	'./notification': { 'notifyAdmins': sinon.stub(), 'getBannerForAdmins': getbannerforadminsMock, '@noCallThru': true },

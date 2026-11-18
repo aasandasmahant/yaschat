@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useEffect } from 'react';
 
 import { useIdleDetection } from './useIdleDetection';

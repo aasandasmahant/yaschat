@@ -1,5 +1,5 @@
-import type { IIncomingIntegration, Serialized } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { IIncomingIntegration, Serialized } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldError,
 	IconButton,
@@ -16,9 +16,9 @@ import {
 	FieldLabel,
 	FieldRow,
 	FieldHint,
-} from '@rocket.chat/fuselage';
-import { useClipboardWithToast } from '@rocket.chat/ui-client';
-import { useAbsoluteUrl } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useClipboardWithToast } from '@yas chat/ui-client';
+import { useAbsoluteUrl } from '@yas chat/ui-contexts';
 import DOMPurify from 'dompurify';
 import { useId, useMemo } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';

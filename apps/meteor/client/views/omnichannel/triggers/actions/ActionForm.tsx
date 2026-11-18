@@ -9,9 +9,9 @@ import {
 	SelectLegacy,
 	Tag,
 	type SelectOption,
-} from '@rocket.chat/fuselage';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useCallback, useId, useMemo } from 'react';
 import type { Control, UseFormTrigger } from 'react-hook-form';

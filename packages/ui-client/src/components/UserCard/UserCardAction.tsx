@@ -1,4 +1,4 @@
-import { Button } from '@rocket.chat/fuselage';
+import { Button } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 export type UserCardActionProps = { label?: ReactNode } & ComponentProps<typeof Button>;

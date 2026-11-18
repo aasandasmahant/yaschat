@@ -1,5 +1,5 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import { Team, isClientSafeError, ClientSafeError } from '@rocket.chat/core-services';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import { Team, isClientSafeError, ClientSafeError } from '@yas chat/core-services';
 import {
 	type IIntegration,
 	type IMessage,
@@ -9,8 +9,8 @@ import {
 	type IRoom,
 	type RoomType,
 	type UserStatus,
-} from '@rocket.chat/core-typings';
-import { Integrations, Messages, Rooms, Subscriptions, Uploads, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { Integrations, Messages, Rooms, Subscriptions, Uploads, Users } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -31,8 +31,8 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { isTruthy } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { isTruthy } from '@yas chat/tools';
 import type { Filter } from 'mongodb';
 
 import { canAccessRoomAsync, roomAccessAttributes } from '../../lib/authorization';

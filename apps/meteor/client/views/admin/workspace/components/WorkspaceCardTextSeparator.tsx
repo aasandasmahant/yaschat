@@ -1,6 +1,6 @@
-import { Icon, Stack, StatusBullet } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
-import { TextSeparator } from '@rocket.chat/ui-client';
+import { Icon, Stack, StatusBullet } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
+import { TextSeparator } from '@yas chat/ui-client';
 import type { ComponentProps, ReactNode } from 'react';
 
 import StatusBulletSlot from '../layout/StatusBulletSlot';

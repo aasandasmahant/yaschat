@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoom } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';
 import { notifyOnRoomChanged } from '../../lib/notifyListener';

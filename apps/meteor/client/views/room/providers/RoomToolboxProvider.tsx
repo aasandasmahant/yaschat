@@ -1,4 +1,4 @@
-import { useStableCallback, useStableArray } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback, useStableArray } from '@yas chat/fuselage-hooks';
 import {
 	useUserId,
 	useSetting,
@@ -7,7 +7,7 @@ import {
 	useLayoutHiddenActions,
 	RoomToolboxContext,
 	type RoomToolboxContextValue,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import { Box } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type UrlChangeModalProps = {

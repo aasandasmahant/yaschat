@@ -1,6 +1,6 @@
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { Pagination, type TableColumnWidth } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { Pagination, type TableColumnWidth } from '@yas chat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -14,8 +14,8 @@ import {
 	useSort,
 	GenericNoResults,
 	links,
-} from '@rocket.chat/ui-client';
-import { useEndpoint, useRouter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint, useRouter } from '@yas chat/ui-contexts';
 import { hashKey, keepPreviousData } from '@tanstack/react-query';
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,8 +1,8 @@
-import { LDAPEnterprise } from '@rocket.chat/core-services';
-import type { IImportUser, ILDAPEntry, IUser } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { License } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
+import { LDAPEnterprise } from '@yas chat/core-services';
+import type { IImportUser, ILDAPEntry, IUser } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { License } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
 import { isValidCron } from 'cron-validator';
 
 import { callbacks } from '../../../server/lib/callbacks';

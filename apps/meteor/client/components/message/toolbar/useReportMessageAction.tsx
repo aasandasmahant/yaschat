@@ -1,5 +1,5 @@
-import type { ISubscription, IRoom, IMessage } from '@rocket.chat/core-typings';
-import { useSetModal, useUser } from '@rocket.chat/ui-contexts';
+import type { ISubscription, IRoom, IMessage } from '@yas chat/core-typings';
+import { useSetModal, useUser } from '@yas chat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import { roomCoordinator } from '../../../lib/rooms/roomCoordinator';

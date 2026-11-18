@@ -1,6 +1,6 @@
-import type { INotificationDesktop } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useUser } from '@rocket.chat/ui-contexts';
+import type { INotificationDesktop } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useUser } from '@yas chat/ui-contexts';
 
 import { useNotification } from '../../../../hooks/notification/useNotification';
 import { RoomManager } from '../../../../lib/RoomManager';

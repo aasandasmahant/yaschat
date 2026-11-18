@@ -1,6 +1,6 @@
-import { Box, Chip, Icon } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
+import { Box, Chip, Icon } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useUserDisplayName } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 
 export type UserAvatarChipProps = ComponentProps<typeof Chip> & {

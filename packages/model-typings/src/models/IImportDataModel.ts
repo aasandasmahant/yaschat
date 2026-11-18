@@ -1,4 +1,4 @@
-import type { IImportRecord, IImportUserRecord, IImportContactRecord, IImportChannelRecord } from '@rocket.chat/core-typings';
+import type { IImportRecord, IImportUserRecord, IImportContactRecord, IImportChannelRecord } from '@yas chat/core-typings';
 
 import type { IBaseModel } from './IBaseModel';
 

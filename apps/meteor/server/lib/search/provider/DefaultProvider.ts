@@ -1,4 +1,4 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
 
 import { messageSearch } from '../../../meteor-methods/messages/messageSearch';
 import type { IRawSearchResult } from '../model/ISearchResult';

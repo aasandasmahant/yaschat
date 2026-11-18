@@ -1,4 +1,4 @@
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 import { useContext } from 'react';
 
 import { Subscriptions } from '../../../stores';

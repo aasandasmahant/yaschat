@@ -1,11 +1,11 @@
-import { LDAP, isClientSafeError } from '@rocket.chat/core-services';
+import { LDAP, isClientSafeError } from '@yas chat/core-services';
 import {
 	ajv,
 	isLdapTestSearch,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api/api';
 import { SystemLogger } from '../../../server/lib/logger/system';

@@ -1,4 +1,4 @@
-import type { YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import type { YasChatAssociationRecord } from '@yas chat/apps-engine/definition/metadata';
 
 import { BaseBridge } from './BaseBridge';
 import { PermissionDeniedError } from '../errors/PermissionDeniedError';

@@ -1,6 +1,6 @@
-import { generateEd25519RandomSecretKey } from '@rocket.chat/federation-matrix';
-import { Random } from '@rocket.chat/random';
-import { XMPP_SERVER_DEFAULTS } from '@rocket.chat/xmpp-server';
+import { generateEd25519RandomSecretKey } from '@yas chat/federation-matrix';
+import { Random } from '@yas chat/random';
+import { XMPP_SERVER_DEFAULTS } from '@yas chat/xmpp-server';
 
 import { settingsRegistry } from '.';
 

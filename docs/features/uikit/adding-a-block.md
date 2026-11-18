@@ -21,16 +21,16 @@ A UiKit block or element only works once every layer knows about it. Missing one
 - [ ] Add the renderer method named after the `type`: on `FuselageSurfaceRenderer` if every surface should draw it, otherwise on the specific `*SurfaceRenderer`. Check the `BlockContext` it will be called with.
 ## 4. Livechat (`packages/livechat`), message blocks only
 
-- [ ] If Livechat should show it, add a component under `src/components/uiKit/message/` and a method on `MessageParser`. Otherwise, apps can wrap YasChat-only content in a `conditional` block with `when: { engine: ['rocket.chat'] }`.
+- [ ] If Livechat should show it, add a component under `src/components/uiKit/message/` and a method on `MessageParser`. Otherwise, apps can wrap YasChat-only content in a `conditional` block with `when: { engine: ['yas chat'] }`.
 
 ## 5. Apps-engine (`packages/apps-engine`)
 
-- [ ] New blocks need nothing: messages and surfaces are typed as `LayoutBlock[]` from `@rocket.chat/ui-kit`. Do not extend the deprecated `BlockBuilder`.
+- [ ] New blocks need nothing: messages and surfaces are typed as `LayoutBlock[]` from `@yas chat/ui-kit`. Do not extend the deprecated `BlockBuilder`.
 - [ ] A new **interaction** (a new payload type, or a new kind of response) needs apps-engine and host changes; see [interactions.md](interactions.md).
 
 ## 6. Playground, tests, docs
 
-- [ ] Add a sample payload in `packages/fuselage-ui-kit/src/stories/payloads/` (export it from `payloads/index.ts`). Add a story in `Message.stories.tsx`, `Modal.stories.tsx` or `Banner.stories.tsx` for each surface that accepts it. The Storybook (`yarn workspace @rocket.chat/fuselage-ui-kit storybook`) is the UiKit playground.
+- [ ] Add a sample payload in `packages/fuselage-ui-kit/src/stories/payloads/` (export it from `payloads/index.ts`). Add a story in `Message.stories.tsx`, `Modal.stories.tsx` or `Banner.stories.tsx` for each surface that accepts it. The Storybook (`yarn workspace @yas chat/fuselage-ui-kit storybook`) is the UiKit playground.
 - [ ] Extend `src/surfaces/<surface>/UiKitParser<Surface>.spec.ts` in `ui-kit` and add a component spec in `fuselage-ui-kit`.
 - [ ] Add the block's fields to [reference.md](reference.md) and its surfaces and renderers to [support-matrix.md](support-matrix.md). If the type, the `ui-kit` parser and the renderers do not all agree, list the difference under **Divergences**.
-- [ ] Add a changeset for every published package you touched (`@rocket.chat/ui-kit`, `@rocket.chat/fuselage-ui-kit`, and `@rocket.chat/apps-engine` if its types changed).
+- [ ] Add a changeset for every published package you touched (`@yas chat/ui-kit`, `@yas chat/fuselage-ui-kit`, and `@yas chat/apps-engine` if its types changed).

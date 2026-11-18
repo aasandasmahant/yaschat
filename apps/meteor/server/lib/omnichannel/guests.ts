@@ -1,5 +1,5 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import type { ILivechatVisitor, IOmnichannelRoom, IUser, UserStatus } from '@rocket.chat/core-typings';
+import { Apps, AppEvents } from '@yas chat/apps';
+import type { ILivechatVisitor, IOmnichannelRoom, IUser, UserStatus } from '@yas chat/core-typings';
 import {
 	LivechatVisitors,
 	LivechatCustomField,
@@ -11,7 +11,7 @@ import {
 	Subscriptions,
 	LivechatContacts,
 	Users,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 import UAParser from 'ua-parser-js';
 
 import { parseAgentCustomFields } from './Helper';

@@ -1,5 +1,5 @@
-import type { IMessageUpdater } from '@rocket.chat/apps-engine/definition/accessors/IMessageUpdater';
-import type { Reaction } from '@rocket.chat/apps-engine/definition/messages';
+import type { IMessageUpdater } from '@yas chat/apps-engine/definition/accessors/IMessageUpdater';
+import type { Reaction } from '@yas chat/apps-engine/definition/messages';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

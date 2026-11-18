@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import Markup from '../Markup';
 

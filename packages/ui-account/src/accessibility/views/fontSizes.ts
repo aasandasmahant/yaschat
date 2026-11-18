@@ -1,5 +1,5 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { SelectOption } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 type TranslationFunction = (key: TranslationKey) => string;
 

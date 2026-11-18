@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted, ISubscription, ILivechatInquiryRecord, ILivechatDepartmentAgents } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted, ISubscription, ILivechatInquiryRecord, ILivechatDepartmentAgents } from '@yas chat/core-typings';
 import {
 	AnalyticsRaw,
 	AppsLogsModel,
@@ -75,7 +75,7 @@ import {
 	AbacAttributesRaw,
 	TwoFactorChallengesRaw,
 	SamlUsedAssertionsRaw,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 import type { Collection } from 'mongodb';
 
 import { trashCollection } from './database/trash';

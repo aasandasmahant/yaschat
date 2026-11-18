@@ -1,6 +1,6 @@
-import { GenericMenu } from '@rocket.chat/ui-client';
-import { CallHistoryTableRow } from '@rocket.chat/ui-voip';
-import type { CallHistoryTableRowProps, CallHistoryUnknownContact } from '@rocket.chat/ui-voip';
+import { GenericMenu } from '@yas chat/ui-client';
+import { CallHistoryTableRow } from '@yas chat/ui-voip';
+import type { CallHistoryTableRowProps, CallHistoryUnknownContact } from '@yas chat/ui-voip';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

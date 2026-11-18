@@ -1,15 +1,15 @@
-import type { IEmailDescriptor, IPreEmailSentContext } from '@rocket.chat/apps-engine/definition/email';
-import type { MarkedEventResult } from '@rocket.chat/apps-engine/definition/eventResult';
-import { EssentialAppDisabledException } from '@rocket.chat/apps-engine/definition/exceptions';
-import type { IExternalComponent } from '@rocket.chat/apps-engine/definition/externalComponent';
+import type { IEmailDescriptor, IPreEmailSentContext } from '@yas chat/apps-engine/definition/email';
+import type { MarkedEventResult } from '@yas chat/apps-engine/definition/eventResult';
+import { EssentialAppDisabledException } from '@yas chat/apps-engine/definition/exceptions';
+import type { IExternalComponent } from '@yas chat/apps-engine/definition/externalComponent';
 import type {
 	ILivechatEventContext,
 	ILivechatRoom,
 	ILivechatTransferEventContext,
 	IVisitor,
-} from '@rocket.chat/apps-engine/definition/livechat';
-import type { ILivechatDepartmentEventContext } from '@rocket.chat/apps-engine/definition/livechat/ILivechatEventContext';
-import type { IPreMediaCallCreatedContext } from '@rocket.chat/apps-engine/definition/mediaCalls';
+} from '@yas chat/apps-engine/definition/livechat';
+import type { ILivechatDepartmentEventContext } from '@yas chat/apps-engine/definition/livechat/ILivechatEventContext';
+import type { IPreMediaCallCreatedContext } from '@yas chat/apps-engine/definition/mediaCalls';
 import type {
 	IMessage,
 	IMessageDeleteContext,
@@ -18,20 +18,20 @@ import type {
 	IMessageReactionContext,
 	IMessageReportContext,
 	IMessageStarContext,
-} from '@rocket.chat/apps-engine/definition/messages';
-import { AppInterface, AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IRoom, IRoomUserJoinedContext, IRoomUserLeaveContext } from '@rocket.chat/apps-engine/definition/rooms';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
-import { UIActionButtonContext } from '@rocket.chat/apps-engine/definition/ui';
-import type { IUIKitResponse, IUIKitSurface, UIKitIncomingInteraction } from '@rocket.chat/apps-engine/definition/uikit';
-import { UIKitIncomingInteractionType } from '@rocket.chat/apps-engine/definition/uikit';
-import { isUIKitIncomingInteractionActionButtonMessageBox } from '@rocket.chat/apps-engine/definition/uikit/IUIKitIncomingInteractionActionButton';
+} from '@yas chat/apps-engine/definition/messages';
+import { AppInterface, AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import type { IRoom, IRoomUserJoinedContext, IRoomUserLeaveContext } from '@yas chat/apps-engine/definition/rooms';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
+import { UIActionButtonContext } from '@yas chat/apps-engine/definition/ui';
+import type { IUIKitResponse, IUIKitSurface, UIKitIncomingInteraction } from '@yas chat/apps-engine/definition/uikit';
+import { UIKitIncomingInteractionType } from '@yas chat/apps-engine/definition/uikit';
+import { isUIKitIncomingInteractionActionButtonMessageBox } from '@yas chat/apps-engine/definition/uikit/IUIKitIncomingInteractionActionButton';
 import type {
 	IUIKitLivechatBlockIncomingInteraction,
 	IUIKitLivechatIncomingInteraction,
-} from '@rocket.chat/apps-engine/definition/uikit/livechat';
-import type { IFileUploadInternalContext } from '@rocket.chat/apps-engine/definition/uploads/IFileUploadContext';
-import type { IUser, IUserContext, IUserStatusContext, IUserUpdateContext } from '@rocket.chat/apps-engine/definition/users';
+} from '@yas chat/apps-engine/definition/uikit/livechat';
+import type { IFileUploadInternalContext } from '@yas chat/apps-engine/definition/uploads/IFileUploadContext';
+import type { IUser, IUserContext, IUserStatusContext, IUserUpdateContext } from '@yas chat/apps-engine/definition/users';
 
 import type { AppManager } from '../AppManager';
 import type { ProxiedApp } from '../ProxiedApp';

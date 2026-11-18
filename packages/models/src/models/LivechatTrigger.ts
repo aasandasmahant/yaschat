@@ -1,5 +1,5 @@
-import type { ILivechatTrigger, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ILivechatTriggerModel } from '@rocket.chat/model-typings';
+import type { ILivechatTrigger, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ILivechatTriggerModel } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

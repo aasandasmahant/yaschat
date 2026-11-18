@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 export async function verifyEmail(user: Pick<IUser, '_id' | 'services' | 'emails'>, token: string): Promise<boolean> {
 	if (user.services?.email?.verificationTokens?.length === 0) {

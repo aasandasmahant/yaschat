@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { ISetting } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 import { isValidCron } from 'cron-validator';
 
 import { addMigration } from '../../lib/migrations';

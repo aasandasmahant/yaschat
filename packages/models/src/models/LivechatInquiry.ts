@@ -4,9 +4,9 @@ import type {
 	YasChatRecordDeleted,
 	ILivechatPriority,
 	SelectedAgent,
-} from '@rocket.chat/core-typings';
-import { LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import type { ILivechatInquiryModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import { LivechatInquiryStatus } from '@yas chat/core-typings';
+import type { ILivechatInquiryModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type {
 	Collection,
 	Db,

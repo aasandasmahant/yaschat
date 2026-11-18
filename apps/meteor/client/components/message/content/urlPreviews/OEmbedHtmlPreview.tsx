@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 

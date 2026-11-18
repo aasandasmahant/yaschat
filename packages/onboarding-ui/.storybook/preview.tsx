@@ -1,7 +1,7 @@
-import { DarkModeProvider } from '@rocket.chat/layout';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { appRootDecorator, languageGlobalTypes, languageInitialGlobals } from '@rocket.chat/storybook-config/app-root';
-import { parameters, decorators, useThemeMode } from '@rocket.chat/storybook-config/preview';
+import { DarkModeProvider } from '@yas chat/layout';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { appRootDecorator, languageGlobalTypes, languageInitialGlobals } from '@yas chat/storybook-config/app-root';
+import { parameters, decorators, useThemeMode } from '@yas chat/storybook-config/preview';
 import type { Decorator, Preview } from '@storybook/react-webpack5';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 

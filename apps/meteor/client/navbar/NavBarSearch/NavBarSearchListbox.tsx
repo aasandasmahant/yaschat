@@ -1,8 +1,8 @@
 import type { OverlayTriggerAria } from '@react-aria/overlays';
 import type { OverlayTriggerState } from '@react-stately/overlays';
-import { Box, ItemGroupHeader, ItemGroupTitle, PopoverSurface } from '@rocket.chat/fuselage';
-import { useStableCallback, useOutsideClick } from '@rocket.chat/fuselage-hooks';
-import { CustomScrollbars } from '@rocket.chat/ui-client';
+import { Box, ItemGroupHeader, ItemGroupTitle, PopoverSurface } from '@yas chat/fuselage';
+import { useStableCallback, useOutsideClick } from '@yas chat/fuselage-hooks';
+import { CustomScrollbars } from '@yas chat/ui-client';
 import { useRef } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

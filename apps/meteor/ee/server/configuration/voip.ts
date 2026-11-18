@@ -1,5 +1,5 @@
-import { MediaCall } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
+import { MediaCall } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
 
 import { addSettings } from '../settings/voip';
 

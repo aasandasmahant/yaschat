@@ -1,5 +1,5 @@
-import type { IOmnichannelCustomAgent } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IOmnichannelCustomAgent } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import type { IRoutingManagerConfig } from './IRoutingManagerConfig';
 import { RoutingManager } from '../../../../../server/lib/omnichannel/RoutingManager';

@@ -1,6 +1,6 @@
-import type { IDiscussionMessage, IMessage } from '@rocket.chat/core-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IDiscussionMessage, IMessage } from '@yas chat/core-typings';
+import { escapeRegExp } from '@yas chat/tools';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { useInfiniteMessageQueryUpdates } from '../../../../hooks/useInfiniteMessageQueryUpdates';

@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@rocket.chat/fuselage-hooks';
+import { useMediaQuery } from '@yas chat/fuselage-hooks';
 
 import { CARD_TOTAL_HEIGHT } from './Card';
 import { SECTION_MAX_HEIGHT } from './CardListSection';

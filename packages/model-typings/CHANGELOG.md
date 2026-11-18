@@ -1,4 +1,4 @@
-# @rocket.chat/model-typings
+# @yas chat/model-typings
 
 ## 3.0.0
 
@@ -39,7 +39,7 @@
 - ([#43278](https://github.com/YasChat/YasChat/pull/43278)) Fixes instances started at the same time after an upgrade hanging at startup on a duplicate key error; they now start without a restart
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, a39b03fe5c248079365162e31994e1dece63e7c2]:</summary>
-  - @rocket.chat/core-typings@9.0.0
+  - @yas chat/core-typings@9.0.0
 
   </details>
 
@@ -54,7 +54,7 @@
 - ([#43278](https://github.com/YasChat/YasChat/pull/43278)) Fixes instances started at the same time after an upgrade hanging at startup on a duplicate key error; they now start without a restart
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@9.0.0-rc.4
+  - @yas chat/core-typings@9.0.0-rc.4
 
   </details>
 
@@ -91,7 +91,7 @@
 - ([#42410](https://github.com/YasChat/YasChat/pull/42410)) Fixes the retention policy failing to prune rooms with a large backlog. Messages are now removed in batches and their trash copies written in bulk, a room that fails to prune no longer stops the rest of the run, the room's message counter is decremented by the right amount, read receipts of pruned messages are removed, and deleting a room with a very large history no longer fails
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, a39b03fe5c248079365162e31994e1dece63e7c2]:</summary>
-  - @rocket.chat/core-typings@9.0.0-rc.0
+  - @yas chat/core-typings@9.0.0-rc.0
 
   </details>
 
@@ -106,7 +106,7 @@
 - ([#43278](https://github.com/YasChat/YasChat/pull/43278)) Fixes instances started at the same time after an upgrade hanging at startup on a duplicate key error; they now start without a restart
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.9.1
+  - @yas chat/core-typings@8.9.1
 
   </details>
 
@@ -147,7 +147,7 @@
 - ([#42099](https://github.com/YasChat/YasChat/pull/42099)) Fixes two factor authentication for SAML authentication method.
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/core-typings@8.9.0
+  - @yas chat/core-typings@8.9.0
 
   </details>
 
@@ -188,7 +188,7 @@
 - ([#42099](https://github.com/YasChat/YasChat/pull/42099)) Fixes two factor authentication for SAML authentication method.
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.0
+  - @yas chat/core-typings@8.9.0-rc.0
 
   </details>
 
@@ -199,7 +199,7 @@
 - ([#42042](https://github.com/YasChat/YasChat/pull/42042) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes Omnichannel rooms failing to register agent responses (and showing send errors on messages and file uploads that were actually delivered) when the room carried corrupted visitor activity data created by older app integrations
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.8.1
+  - @yas chat/core-typings@8.8.1
 
   </details>
 
@@ -218,7 +218,7 @@
 - ([#41702](https://github.com/YasChat/YasChat/pull/41702)) Fixes discussion parent message count and last-message timestamp out of sync with the discussion
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
-  - @rocket.chat/core-typings@8.8.0
+  - @yas chat/core-typings@8.8.0
 
   </details>
 
@@ -237,7 +237,7 @@
 - ([#41702](https://github.com/YasChat/YasChat/pull/41702)) Fixes discussion parent message count and last-message timestamp out of sync with the discussion
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
-  - @rocket.chat/core-typings@8.8.0-rc.0
+  - @yas chat/core-typings@8.8.0-rc.0
 
   </details>
 
@@ -269,12 +269,12 @@
 
 - ([#41169](https://github.com/YasChat/YasChat/pull/41169)) Fixes a race condition that left messages permanently undecryptable ("incorrect encryption key") in rooms created with encryption enabled. When several members opened such a room at the same time, each client could independently generate and distribute a different group key. Establishing the room key is now atomic (first-write-wins) on the server, and a client that loses the race discards its locally generated key and adopts the established one instead of encrypting with a divergent key.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41402](https://github.com/YasChat/YasChat/pull/41402)) Fixes broken pagination on `rooms.bannedUsers` and on omnichannel department listing endpoints, which ignored the `offset` parameter and always returned results from the first page. Also reduces payload over-fetching on several endpoints that unintentionally loaded full documents (`rooms.hide`, private group lookups, direct email replies, omnichannel auto-transfer), and removes the permissive model query typings that allowed these invalid find options to compile unnoticed.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17]:</summary>
-  - @rocket.chat/core-typings@8.7.0
+  - @yas chat/core-typings@8.7.0
 
   </details>
 
@@ -306,21 +306,21 @@
 
 - ([#41169](https://github.com/YasChat/YasChat/pull/41169)) Fixes a race condition that left messages permanently undecryptable ("incorrect encryption key") in rooms created with encryption enabled. When several members opened such a room at the same time, each client could independently generate and distribute a different group key. Establishing the room key is now atomic (first-write-wins) on the server, and a client that loses the race discards its locally generated key and adopts the established one instead of encrypting with a divergent key.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41402](https://github.com/YasChat/YasChat/pull/41402)) Fixes broken pagination on `rooms.bannedUsers` and on omnichannel department listing endpoints, which ignored the `offset` parameter and always returned results from the first page. Also reduces payload over-fetching on several endpoints that unintentionally loaded full documents (`rooms.hide`, private group lookups, direct email replies, omnichannel auto-transfer), and removes the permissive model query typings that allowed these invalid find options to compile unnoticed.
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17]:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.0
+  - @yas chat/core-typings@8.7.0-rc.0
 
 ## 2.3.2
 
 ### Patch Changes
 
-- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [89ab75ca9121feb289a0f5744a526361364b8867]:</summary>
-  - @rocket.chat/core-typings@8.6.1
+  - @yas chat/core-typings@8.6.1
 
   </details>
 
@@ -333,7 +333,7 @@
 - ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 - <details><summary>Updated dependencies [7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53]:</summary>
-  - @rocket.chat/core-typings@8.6.0
+  - @yas chat/core-typings@8.6.0
 
   </details>
 
@@ -346,7 +346,7 @@
 - ([#40274](https://github.com/YasChat/YasChat/pull/40274)) Adds the backend foundation for a unified presence engine with a priority-based claim system (internal > manual > external), status expiration, and previous state restore.
 
 - <details><summary>Updated dependencies [7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53]:</summary>
-  - @rocket.chat/core-typings@8.6.0-rc.0
+  - @yas chat/core-typings@8.6.0-rc.0
 
   </details>
 
@@ -362,10 +362,10 @@
 
 - ([#40496](https://github.com/YasChat/YasChat/pull/40496)) Ensures that deactivated users have their login tokens cleaned up in users.deactivateidle
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [12897e25d0dc25b7373f5264d38f38a5a7444257]:</summary>
-  - @rocket.chat/core-typings@8.5.0
+  - @yas chat/core-typings@8.5.0
 
   </details>
 
@@ -395,10 +395,10 @@
 
 - ([#40496](https://github.com/YasChat/YasChat/pull/40496)) Ensures that deactivated users have their login tokens cleaned up in users.deactivateidle
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [ae9f740d6af20557eac61b4af902c868b4132b49, 12897e25d0dc25b7373f5264d38f38a5a7444257]:</summary>
-  - @rocket.chat/core-typings@8.5.0-rc.0
+  - @yas chat/core-typings@8.5.0-rc.0
 
   </details>
 
@@ -411,7 +411,7 @@
 - ([#40559](https://github.com/YasChat/YasChat/pull/40559) by [@dionisio-bot](https://github.com/dionisio-bot)) Ensures that deactivated users have their login tokens cleaned up in users.deactivateidle
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.2
+  - @yas chat/core-typings@8.4.2
 
   </details>
 
@@ -419,10 +419,10 @@
 
 ### Patch Changes
 
-- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [5b291c38600757482aaf261a02487abdf5f14007]:</summary>
-  - @rocket.chat/core-typings@8.4.1
+  - @yas chat/core-typings@8.4.1
 
   </details>
 
@@ -441,7 +441,7 @@
 - ([#40175](https://github.com/YasChat/YasChat/pull/40175)) Fixes an issue where the Omnichannel routing system ignored the `Livechat_accept_chats_with_no_agents` setting. Now, offline agents are correctly considered for assignment when the setting allows it.
 
 - <details><summary>Updated dependencies [278b84f78360e53792a2e5d7620615039a0e15e9, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 8c0e16ca29b393cfa50b425520db48ba5a74f678]:</summary>
-  - @rocket.chat/core-typings@8.4.0
+  - @yas chat/core-typings@8.4.0
 
   </details>
 
@@ -450,7 +450,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.2
+  - @yas chat/core-typings@8.4.0-rc.2
 
   </details>
 
@@ -459,7 +459,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.1
+  - @yas chat/core-typings@8.4.0-rc.1
 
   </details>
 
@@ -468,7 +468,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.2
+  - @yas chat/core-typings@8.3.2
 
   </details>
 
@@ -477,7 +477,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.1
+  - @yas chat/core-typings@8.3.1
 
   </details>
 
@@ -496,7 +496,7 @@
 - ([#40175](https://github.com/YasChat/YasChat/pull/40175)) Fixes an issue where the Omnichannel routing system ignored the `Livechat_accept_chats_with_no_agents` setting. Now, offline agents are correctly considered for assignment when the setting allows it.
 
 - <details><summary>Updated dependencies [278b84f78360e53792a2e5d7620615039a0e15e9, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 8c0e16ca29b393cfa50b425520db48ba5a74f678]:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.0
+  - @yas chat/core-typings@8.4.0-rc.0
 
   </details>
 
@@ -511,7 +511,7 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/core-typings@8.3.0
+  - @yas chat/core-typings@8.3.0
 
   </details>
 
@@ -520,7 +520,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.4
+  - @yas chat/core-typings@8.3.0-rc.4
 
   </details>
 
@@ -529,7 +529,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.3
+  - @yas chat/core-typings@8.3.0-rc.3
 
   </details>
 
@@ -538,7 +538,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.2
+  - @yas chat/core-typings@8.3.0-rc.2
 
   </details>
 
@@ -547,7 +547,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.1
+  - @yas chat/core-typings@8.3.0-rc.1
 
   </details>
 
@@ -562,7 +562,7 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.0
+  - @yas chat/core-typings@8.3.0-rc.0
 
   </details>
 
@@ -571,7 +571,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.1
+  - @yas chat/core-typings@8.2.1
 
   </details>
 
@@ -590,7 +590,7 @@
 - ([#38265](https://github.com/YasChat/YasChat/pull/38265)) Fixes endpoints `omnichannel/contacts.update` and `omnichannel/contacts.conflicts` where the contact manager field could not be cleared.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34]:</summary>
-  - @rocket.chat/core-typings@8.2.0
+  - @yas chat/core-typings@8.2.0
 
   </details>
 
@@ -599,7 +599,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.2
+  - @yas chat/core-typings@8.2.0-rc.2
 
   </details>
 
@@ -608,7 +608,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.1
+  - @yas chat/core-typings@8.2.0-rc.1
 
   </details>
 
@@ -627,7 +627,7 @@
 - ([#38265](https://github.com/YasChat/YasChat/pull/38265)) Fixes endpoints `omnichannel/contacts.update` and `omnichannel/contacts.conflicts` where the contact manager field could not be cleared.
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34]:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.0
+  - @yas chat/core-typings@8.2.0-rc.0
 
   </details>
 
@@ -636,7 +636,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.1
+  - @yas chat/core-typings@8.1.1
 
   </details>
 
@@ -651,7 +651,7 @@
 - ([#38105](https://github.com/YasChat/YasChat/pull/38105)) Fixes user deletion not removing thumbnails of images sent by the deleted user
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
-  - @rocket.chat/core-typings@8.1.0
+  - @yas chat/core-typings@8.1.0
 
   </details>
 
@@ -660,7 +660,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.0-rc.2
+  - @yas chat/core-typings@8.1.0-rc.2
 
   </details>
 
@@ -669,7 +669,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.0-rc.1
+  - @yas chat/core-typings@8.1.0-rc.1
   </details>
 
 ## 2.0.2-rc.0
@@ -683,7 +683,7 @@
 - ([#38105](https://github.com/YasChat/YasChat/pull/38105)) Fixes user deletion not removing thumbnails of images sent by the deleted user
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e]:</summary>
-  - @rocket.chat/core-typings@8.1.0-rc.0
+  - @yas chat/core-typings@8.1.0-rc.0
 
   </details>
 
@@ -692,7 +692,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@8.0.1
+- @yas chat/core-typings@8.0.1
 
 </details>
 
@@ -715,7 +715,7 @@
 - ([#37846](https://github.com/YasChat/YasChat/pull/37846)) Fixes /v1/users.logout not marking user sessions as logged out, leaving stale sessions active.
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260]:</summary>
-  - @rocket.chat/core-typings@8.0.0
+  - @yas chat/core-typings@8.0.0
 
   </details>
 
@@ -724,7 +724,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.5
+  - @yas chat/core-typings@8.0.0-rc.5
 
   </details>
 
@@ -733,7 +733,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.4
+  - @yas chat/core-typings@8.0.0-rc.4
 
   </details>
 
@@ -742,7 +742,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.3
+  - @yas chat/core-typings@8.0.0-rc.3
 
   </details>
 
@@ -751,7 +751,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.2
+  - @yas chat/core-typings@8.0.0-rc.2
 
   </details>
 
@@ -760,7 +760,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.1
+  - @yas chat/core-typings@8.0.0-rc.1
 
   </details>
 
@@ -783,7 +783,7 @@
 - ([#37846](https://github.com/YasChat/YasChat/pull/37846)) Fixes /v1/users.logout not marking user sessions as logged out, leaving stale sessions active.
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ac11ea05ffadeca978c794ff38d5199d9acb2c29, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260]:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.0
+  - @yas chat/core-typings@8.0.0-rc.0
 
   </details>
 
@@ -792,7 +792,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.2
+  - @yas chat/core-typings@7.13.2
 
   </details>
 
@@ -801,7 +801,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.1
+  - @yas chat/core-typings@7.13.1
 
   </details>
 
@@ -814,7 +814,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339]:</summary>
-  - @rocket.chat/core-typings@7.13.0
+  - @yas chat/core-typings@7.13.0
 
   </details>
 
@@ -823,7 +823,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.2
+  - @yas chat/core-typings@7.13.0-rc.2
 
   </details>
 
@@ -832,7 +832,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.1
+  - @yas chat/core-typings@7.13.0-rc.1
   </details>
 
 ## 1.9.0-rc.0
@@ -844,7 +844,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339]:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.0
+  - @yas chat/core-typings@7.13.0-rc.0
 
   </details>
 
@@ -853,7 +853,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.2
+  - @yas chat/core-typings@7.12.2
   </details>
 
 ## 1.8.2
@@ -861,7 +861,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.1
+  - @yas chat/core-typings@7.12.1
 
   </details>
 
@@ -870,7 +870,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/core-typings@7.12.0
+  - @yas chat/core-typings@7.12.0
 
   </details>
 
@@ -879,7 +879,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.4
+  - @yas chat/core-typings@7.12.0-rc.4
 
   </details>
 
@@ -888,7 +888,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.3
+  - @yas chat/core-typings@7.12.0-rc.3
 
   </details>
 
@@ -897,7 +897,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.2
+  - @yas chat/core-typings@7.12.0-rc.2
 
   </details>
 
@@ -906,7 +906,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.1
+  - @yas chat/core-typings@7.12.0-rc.1
 
   </details>
 
@@ -915,7 +915,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.0
+  - @yas chat/core-typings@7.12.0-rc.0
 
   </details>
 
@@ -928,7 +928,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b0a4602a4461200b9872b2b073ec56fa55ecb466]:</summary>
-  - @rocket.chat/core-typings@7.11.0
+  - @yas chat/core-typings@7.11.0
 
   </details>
 
@@ -937,7 +937,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.7
+  - @yas chat/core-typings@7.11.0-rc.7
 
   </details>
 
@@ -946,7 +946,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.6
+  - @yas chat/core-typings@7.11.0-rc.6
 
   </details>
 
@@ -955,7 +955,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.5
+  - @yas chat/core-typings@7.11.0-rc.5
 
   </details>
 
@@ -964,7 +964,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.4
+  - @yas chat/core-typings@7.11.0-rc.4
 
   </details>
 
@@ -973,7 +973,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.3
+  - @yas chat/core-typings@7.11.0-rc.3
 
   </details>
 
@@ -982,7 +982,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.2
+  - @yas chat/core-typings@7.11.0-rc.2
   </details>
 
 ## 1.8.0-rc.1
@@ -990,7 +990,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.1
+  - @yas chat/core-typings@7.11.0-rc.1
 
   </details>
 
@@ -1003,7 +1003,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b0a4602a4461200b9872b2b073ec56fa55ecb466]:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.0
+  - @yas chat/core-typings@7.11.0-rc.0
 
   </details>
 
@@ -1012,7 +1012,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.2
+  - @yas chat/core-typings@7.10.2
 
   </details>
 
@@ -1021,7 +1021,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.10.1
+- @yas chat/core-typings@7.10.1
 
   </details>
 
@@ -1039,7 +1039,7 @@
 - ([#36749](https://github.com/YasChat/YasChat/pull/36749)) Fixes an issue with Omnichannel inquiries where multiple instances could take the same inquiry from the queue resulting in the same room being assined to multiple agents.
 
 - <details><summary>Updated dependencies [17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/core-typings@7.10.0
+  - @yas chat/core-typings@7.10.0
 
   </details>
 
@@ -1048,7 +1048,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.6
+  - @yas chat/core-typings@7.10.0-rc.6
 
   </details>
 
@@ -1057,7 +1057,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.5
+  - @yas chat/core-typings@7.10.0-rc.5
   </details>
 
 ## 1.7.0-rc.4
@@ -1065,7 +1065,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.4
+  - @yas chat/core-typings@7.10.0-rc.4
   </details>
 
 ## 1.7.0-rc.3
@@ -1073,7 +1073,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.10.0-rc.3
+- @yas chat/core-typings@7.10.0-rc.3
   </details>
 
 ## 1.7.0-rc.2
@@ -1081,7 +1081,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.2
+  - @yas chat/core-typings@7.10.0-rc.2
 
   </details>
 
@@ -1090,7 +1090,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.1
+  - @yas chat/core-typings@7.10.0-rc.1
 
   </details>
 
@@ -1108,7 +1108,7 @@
 - ([#36749](https://github.com/YasChat/YasChat/pull/36749)) Fixes an issue with Omnichannel inquiries where multiple instances could take the same inquiry from the queue resulting in the same room being assined to multiple agents.
 
 - <details><summary>Updated dependencies [17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.0
+  - @yas chat/core-typings@7.10.0-rc.0
     </details>
 
 ## 1.6.15
@@ -1116,7 +1116,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.3
+  - @yas chat/core-typings@7.9.3
   </details>
 
 ## 1.6.14
@@ -1124,7 +1124,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.2
+  - @yas chat/core-typings@7.9.2
   </details>
 
 ## 1.6.13
@@ -1132,7 +1132,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.1
+  - @yas chat/core-typings@7.9.1
   </details>
 
 ## 1.6.12
@@ -1150,7 +1150,7 @@
 - ([#36235](https://github.com/YasChat/YasChat/pull/36235)) Fixes the issue of deactivation emails being sent to users that were removed from AD even if they were not active in the workspace
 
 - <details><summary>Updated dependencies [2cec8acd5beddf5ad0c67c29fe632487cb82b026, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
-  - @rocket.chat/core-typings@7.9.0
+  - @yas chat/core-typings@7.9.0
 
   </details>
 
@@ -1159,7 +1159,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.2
+  - @yas chat/core-typings@7.9.0-rc.2
 
   </details>
 
@@ -1168,7 +1168,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.1
+  - @yas chat/core-typings@7.9.0-rc.1
 
   </details>
 
@@ -1187,7 +1187,7 @@
 - ([#36235](https://github.com/YasChat/YasChat/pull/36235)) Fixes the issue of deactivation emails being sent to users that were removed from AD even if they were not active in the workspace
 
 - <details><summary>Updated dependencies [2cec8acd5beddf5ad0c67c29fe632487cb82b026, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a]:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.0
+  - @yas chat/core-typings@7.9.0-rc.0
 
   </details>
 
@@ -1196,7 +1196,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.3
+  - @yas chat/core-typings@7.8.3
   </details>
 
 ## 1.6.10
@@ -1206,7 +1206,7 @@
 - ([#36474](https://github.com/YasChat/YasChat/pull/36474) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixes priorities, sla changes & inquiries not being propagated when change streams were not being used
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.2
+  - @yas chat/core-typings@7.8.2
 
   </details>
 
@@ -1215,7 +1215,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.1
+  - @yas chat/core-typings@7.8.1
 
   </details>
 
@@ -1228,7 +1228,7 @@
 - ([#36236](https://github.com/YasChat/YasChat/pull/36236)) Fixes the `channels.counters`, `groups.counters` and `im.counters` endpoint to include only active users in members count.
 
 - <details><summary>Updated dependencies [3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/core-typings@7.8.0
+  - @yas chat/core-typings@7.8.0
 
   </details>
 
@@ -1237,7 +1237,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.9
+  - @yas chat/core-typings@7.8.0-rc.9
 
   </details>
 
@@ -1246,7 +1246,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.8
+  - @yas chat/core-typings@7.8.0-rc.8
 
   </details>
 
@@ -1255,7 +1255,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.7
+  - @yas chat/core-typings@7.8.0-rc.7
 
   </details>
 
@@ -1264,7 +1264,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.6
+  - @yas chat/core-typings@7.8.0-rc.6
 
   </details>
 
@@ -1273,7 +1273,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.5
+  - @yas chat/core-typings@7.8.0-rc.5
 
   </details>
 
@@ -1282,7 +1282,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.4
+  - @yas chat/core-typings@7.8.0-rc.4
 
   </details>
 
@@ -1291,7 +1291,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.3
+  - @yas chat/core-typings@7.8.0-rc.3
 
   </details>
 
@@ -1300,7 +1300,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.2
+  - @yas chat/core-typings@7.8.0-rc.2
 
   </details>
 
@@ -1311,7 +1311,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.1
+  - @yas chat/core-typings@7.8.0-rc.1
   </details>
 
 ## 1.6.5-rc.0
@@ -1323,7 +1323,7 @@
 - ([#36236](https://github.com/YasChat/YasChat/pull/36236)) Fixes the `channels.counters`, `groups.counters` and `im.counters` endpoint to include only active users in members count.
 
 - <details><summary>Updated dependencies [3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.0
+  - @yas chat/core-typings@7.8.0-rc.0
 
   </details>
 
@@ -1332,7 +1332,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.4
+  - @yas chat/core-typings@7.7.4
   </details>
 
 ## 1.6.6
@@ -1340,7 +1340,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.3
+  - @yas chat/core-typings@7.7.3
 
   </details>
 
@@ -1349,7 +1349,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.2
+  - @yas chat/core-typings@7.7.2
 
   </details>
 
@@ -1360,7 +1360,7 @@
 - ([#36200](https://github.com/YasChat/YasChat/pull/36200) by [@dionisio-bot](https://github.com/dionisio-bot)) Fixed contacts being marked as `known` after editing a custom field, or resolving conflicts by adding a new model function that only updates the `customFields` or `conflictingFields` prop.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.1
+  - @yas chat/core-typings@7.7.1
 
   </details>
 
@@ -1371,7 +1371,7 @@
 - ([#35797](https://github.com/YasChat/YasChat/pull/35797)) Fixes the room history pruning behavior when filesOnly is true to ensure only file-type attachments are removed, preserving quotes and non-file attachments.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0
+  - @yas chat/core-typings@7.7.0
 
   </details>
 
@@ -1380,7 +1380,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.6
+  - @yas chat/core-typings@7.7.0-rc.6
 
   </details>
 
@@ -1389,7 +1389,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.5
+  - @yas chat/core-typings@7.7.0-rc.5
 
   </details>
 
@@ -1398,7 +1398,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.1-rc.4
+  - @yas chat/core-typings@7.7.1-rc.4
 
   </details>
 
@@ -1407,7 +1407,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.3
+  - @yas chat/core-typings@7.7.0-rc.3
   </details>
 
 ## 1.6.3-rc.2
@@ -1415,7 +1415,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.2
+  - @yas chat/core-typings@7.7.0-rc.2
   </details>
 
 ## 1.6.3-rc.1
@@ -1423,7 +1423,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.1
+  - @yas chat/core-typings@7.7.0-rc.1
 
   </details>
 
@@ -1434,7 +1434,7 @@
 - ([#35797](https://github.com/YasChat/YasChat/pull/35797)) Fixes the room history pruning behavior when filesOnly is true to ensure only file-type attachments are removed, preserving quotes and non-file attachments.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.0
+  - @yas chat/core-typings@7.7.0-rc.0
 
   </details>
 
@@ -1443,7 +1443,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.2
+  - @yas chat/core-typings@7.6.2
   </details>
 
 ## 1.6.1
@@ -1451,7 +1451,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.6.1
+- @yas chat/core-typings@7.6.1
 
 </details>
 
@@ -1477,7 +1477,7 @@
   - If no limits are set at any level, there is no restriction on the number of chats an agent can handle.
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
-  - @rocket.chat/core-typings@7.6.0
+  - @yas chat/core-typings@7.6.0
 
   </details>
 
@@ -1486,7 +1486,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.8
+  - @yas chat/core-typings@7.6.0-rc.8
 
   </details>
 
@@ -1495,7 +1495,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.7
+  - @yas chat/core-typings@7.6.0-rc.7
 
   </details>
 
@@ -1504,7 +1504,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.6
+  - @yas chat/core-typings@7.6.0-rc.6
 
   </details>
 
@@ -1513,7 +1513,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.5
+  - @yas chat/core-typings@7.6.0-rc.5
 
   </details>
 
@@ -1522,7 +1522,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.4
+  - @yas chat/core-typings@7.6.0-rc.4
 
   </details>
 
@@ -1531,7 +1531,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.3
+  - @yas chat/core-typings@7.6.0-rc.3
 
   </details>
 
@@ -1540,7 +1540,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.2
+  - @yas chat/core-typings@7.6.0-rc.2
 
   </details>
 
@@ -1549,7 +1549,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.1
+  - @yas chat/core-typings@7.6.0-rc.1
 
   </details>
 
@@ -1575,7 +1575,7 @@
   - If no limits are set at any level, there is no restriction on the number of chats an agent can handle.
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.0
+  - @yas chat/core-typings@7.6.0-rc.0
 
   </details>
 
@@ -1584,7 +1584,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.1
+  - @yas chat/core-typings@7.5.1
 
   </details>
 
@@ -1599,7 +1599,7 @@
 - ([#35374](https://github.com/YasChat/YasChat/pull/35374)) Enforces app limitations on license downgrade by disabling premium marketplace apps, limiting marketplace apps to the oldest 5, and disabling private apps unless grandfathered based on historical statistics.
 
 - <details><summary>Updated dependencies [25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1]:</summary>
-  - @rocket.chat/core-typings@7.5.0
+  - @yas chat/core-typings@7.5.0
 
   </details>
 
@@ -1608,7 +1608,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.5
+  - @yas chat/core-typings@7.5.0-rc.5
 
   </details>
 
@@ -1617,7 +1617,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.4
+  - @yas chat/core-typings@7.5.0-rc.4
 
   </details>
 
@@ -1626,7 +1626,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.3
+  - @yas chat/core-typings@7.5.0-rc.3
 
   </details>
 
@@ -1635,7 +1635,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.2
+  - @yas chat/core-typings@7.5.0-rc.2
 
   </details>
 
@@ -1644,7 +1644,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.1
+  - @yas chat/core-typings@7.5.0-rc.1
 
   </details>
 
@@ -1659,7 +1659,7 @@
 - ([#35374](https://github.com/YasChat/YasChat/pull/35374)) Enforces app limitations on license downgrade by disabling premium marketplace apps, limiting marketplace apps to the oldest 5, and disabling private apps unless grandfathered based on historical statistics.
 
 - <details><summary>Updated dependencies [25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1]:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.0
+  - @yas chat/core-typings@7.5.0-rc.0
 
   </details>
 
@@ -1668,7 +1668,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.1
+  - @yas chat/core-typings@7.4.1
 
   </details>
 
@@ -1689,7 +1689,7 @@
 - ([#35029](https://github.com/YasChat/YasChat/pull/35029)) Fixes a bug that caused routing algorithms to ignore the `Livechat_enabled_when_agent_idle` setting, effectively ignoring idle users from being assigned to inquiries.
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
-  - @rocket.chat/core-typings@7.4.0
+  - @yas chat/core-typings@7.4.0
 
   </details>
 
@@ -1698,7 +1698,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.5
+  - @yas chat/core-typings@7.4.0-rc.5
 
   </details>
 
@@ -1707,7 +1707,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.4
+  - @yas chat/core-typings@7.4.0-rc.4
 
   </details>
 
@@ -1716,7 +1716,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.3
+  - @yas chat/core-typings@7.4.0-rc.3
   </details>
 
 ## 1.4.0-rc.2
@@ -1724,7 +1724,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.2
+  - @yas chat/core-typings@7.4.0-rc.2
 
   </details>
 
@@ -1733,7 +1733,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.1
+  - @yas chat/core-typings@7.4.0-rc.1
 
   </details>
 
@@ -1754,7 +1754,7 @@
 - ([#35029](https://github.com/YasChat/YasChat/pull/35029)) Fixes a bug that caused routing algorithms to ignore the `Livechat_enabled_when_agent_idle` setting, effectively ignoring idle users from being assigned to inquiries.
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.0
+  - @yas chat/core-typings@7.4.0-rc.0
 
   </details>
 
@@ -1763,7 +1763,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.3
+  - @yas chat/core-typings@7.3.3
 
   </details>
 
@@ -1772,7 +1772,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.2
+  - @yas chat/core-typings@7.3.2
 
   </details>
 
@@ -1785,7 +1785,7 @@
   - Changes how the queue executes: previously, it was executed in a kind of chain: We fetched a list of "queues", then we took one, processed it, and after that we scheduled the next run, which could take some time. Now, every TIMEOUT, server will try to process all the queues, 1 by 1, and then schedule the next run for all queues after TIMEOUT. This should speed up chat assignment and reduce waiting time when waiting queue is enabled.
   - Removes the unlockAndRequeue and replcaes it with just unlock. This change shouldn't be noticeable. The original idea of the requeueing was to iterate over the inquiries when 1 wasn't being able to be taken. Idea was to avoid blocking the queue by rotating them instead of fetching the same until it gets routed, however this never worked cause we never modified the global sorting for the inquiries and it kept using the ts as the sorting, which returned always the oldest and ignored the requeing. So we're removing those extra steps as well.
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.1
+  - @yas chat/core-typings@7.3.1
 
   </details>
 
@@ -1804,7 +1804,7 @@
 - ([#34210](https://github.com/YasChat/YasChat/pull/34210)) Fixes livechat conversations not being assigned to the contact manager even when the "Assign new conversations to the contact manager" setting is enabled
 
 - <details><summary>Updated dependencies [8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944]:</summary>
-  - @rocket.chat/core-typings@7.3.0
+  - @yas chat/core-typings@7.3.0
 
   </details>
 
@@ -1813,7 +1813,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.5
+  - @yas chat/core-typings@7.3.0-rc.5
 
   </details>
 
@@ -1822,7 +1822,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.4
+  - @yas chat/core-typings@7.3.0-rc.4
 
   </details>
 
@@ -1831,7 +1831,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.3
+  - @yas chat/core-typings@7.3.0-rc.3
 
   </details>
 
@@ -1840,7 +1840,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.2
+  - @yas chat/core-typings@7.3.0-rc.2
 
   </details>
 
@@ -1849,7 +1849,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.1
+  - @yas chat/core-typings@7.3.0-rc.1
 
   </details>
 
@@ -1866,7 +1866,7 @@
 - ([#34210](https://github.com/YasChat/YasChat/pull/34210)) Fixes livechat conversations not being assigned to the contact manager even when the "Assign new conversations to the contact manager" setting is enabled
 
 - <details><summary>Updated dependencies [8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944]:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.0
+  - @yas chat/core-typings@7.3.0-rc.0
 
   </details>
 
@@ -1875,7 +1875,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.1
+  - @yas chat/core-typings@7.2.1
 
   </details>
 
@@ -1914,7 +1914,7 @@
 - ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
-  - @rocket.chat/core-typings@7.2.0
+  - @yas chat/core-typings@7.2.0
 
   </details>
 
@@ -1923,7 +1923,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.3
+  - @yas chat/core-typings@7.2.0-rc.3
 
   </details>
 
@@ -1932,7 +1932,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.2
+  - @yas chat/core-typings@7.2.0-rc.2
 
   </details>
 
@@ -1941,7 +1941,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.1
+  - @yas chat/core-typings@7.2.0-rc.1
 
   </details>
 
@@ -1980,7 +1980,7 @@
 - ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.0
+  - @yas chat/core-typings@7.2.0-rc.0
 
   </details>
 
@@ -2002,7 +2002,7 @@
 - ([#32991](https://github.com/YasChat/YasChat/pull/32991)) Fixes an issue where updating custom emojis didn’t work as expected, ensuring that uploaded emojis now update correctly and display without any caching problems.
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0]:</summary>
-  - @rocket.chat/core-typings@7.1.0
+  - @yas chat/core-typings@7.1.0
 
   </details>
 
@@ -2011,7 +2011,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.3
+  - @yas chat/core-typings@7.1.0-rc.3
 
   </details>
 
@@ -2020,7 +2020,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.2
+  - @yas chat/core-typings@7.1.0-rc.2
 
   </details>
 
@@ -2029,7 +2029,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.1
+  - @yas chat/core-typings@7.1.0-rc.1
 
   </details>
 
@@ -2051,7 +2051,7 @@
 - ([#32991](https://github.com/YasChat/YasChat/pull/32991)) Fixes an issue where updating custom emojis didn’t work as expected, ensuring that uploaded emojis now update correctly and display without any caching problems.
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0]:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.0
+  - @yas chat/core-typings@7.1.0-rc.0
 
   </details>
 
@@ -2071,7 +2071,7 @@
 - ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [bcacbb1cee, b338807d76, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/core-typings@7.0.0
+  - @yas chat/core-typings@7.0.0
 
   </details>
 
@@ -2080,7 +2080,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.6
+  - @yas chat/core-typings@7.0.0-rc.6
 
   </details>
 
@@ -2089,7 +2089,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.5
+  - @yas chat/core-typings@7.0.0-rc.5
 
   </details>
 
@@ -2098,7 +2098,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.4
+  - @yas chat/core-typings@7.0.0-rc.4
 
   </details>
 
@@ -2107,7 +2107,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.3
+  - @yas chat/core-typings@7.0.0-rc.3
 
   </details>
 
@@ -2116,7 +2116,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.2
+  - @yas chat/core-typings@7.0.0-rc.2
 
   </details>
 
@@ -2125,7 +2125,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.1
+  - @yas chat/core-typings@7.0.0-rc.1
 
   </details>
 
@@ -2150,7 +2150,7 @@
 - ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [7726d68374, bcacbb1cee, b338807d76, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.0
+  - @yas chat/core-typings@7.0.0-rc.0
 
   </details>
 
@@ -2169,7 +2169,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [274f4f5881, 927710d778, 12d6307998]:</summary>
-  - @rocket.chat/core-typings@6.13.0
+  - @yas chat/core-typings@6.13.0
 
   </details>
 
@@ -2178,7 +2178,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.6
+  - @yas chat/core-typings@6.13.0-rc.6
 
   </details>
 
@@ -2187,7 +2187,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.5
+  - @yas chat/core-typings@6.13.0-rc.5
 
   </details>
 
@@ -2196,7 +2196,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.4
+  - @yas chat/core-typings@6.13.0-rc.4
 
   </details>
 
@@ -2205,7 +2205,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.3
+  - @yas chat/core-typings@6.13.0-rc.3
 
   </details>
 
@@ -2214,7 +2214,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.2
+  - @yas chat/core-typings@6.13.0-rc.2
 
   </details>
 
@@ -2223,7 +2223,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.1
+  - @yas chat/core-typings@6.13.0-rc.1
 
   </details>
 
@@ -2242,7 +2242,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [274f4f5881, 927710d778, 12d6307998]:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.0
+  - @yas chat/core-typings@6.13.0-rc.0
 
   </details>
 
@@ -2251,7 +2251,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.1
+  - @yas chat/core-typings@6.12.1
 
   </details>
 
@@ -2268,7 +2268,7 @@
 - ([#33054](https://github.com/YasChat/YasChat/pull/33054)) Fixed issue with livechat analytics in a given date range considering conversation data from the following day
 
 - <details><summary>Updated dependencies [7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/core-typings@6.12.0
+  - @yas chat/core-typings@6.12.0
 
   </details>
 
@@ -2277,7 +2277,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.6
+  - @yas chat/core-typings@6.12.0-rc.6
 
   </details>
 
@@ -2286,7 +2286,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.5
+  - @yas chat/core-typings@6.12.0-rc.5
 
   </details>
 
@@ -2295,7 +2295,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.4
+  - @yas chat/core-typings@6.12.0-rc.4
 
   </details>
 
@@ -2304,7 +2304,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.2
+  - @yas chat/core-typings@6.11.2
 
   </details>
 
@@ -2313,7 +2313,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.3
+  - @yas chat/core-typings@6.12.0-rc.3
 
   </details>
 
@@ -2322,7 +2322,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.2
+  - @yas chat/core-typings@6.12.0-rc.2
 
   </details>
 
@@ -2331,7 +2331,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.1
+  - @yas chat/core-typings@6.12.0-rc.1
 
   </details>
 
@@ -2348,7 +2348,7 @@
 - ([#33054](https://github.com/YasChat/YasChat/pull/33054)) Fixed issue with livechat analytics in a given date range considering conversation data from the following day
 
 - <details><summary>Updated dependencies [7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.0
+  - @yas chat/core-typings@6.12.0-rc.0
 
   </details>
   </details>
@@ -2372,7 +2372,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, b8e5887fb9]:</summary>
-  - @rocket.chat/core-typings@6.11.0
+  - @yas chat/core-typings@6.11.0
 
   </details>
 
@@ -2381,7 +2381,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.6
+  - @yas chat/core-typings@6.11.0-rc.6
 
   </details>
 
@@ -2390,7 +2390,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.5
+  - @yas chat/core-typings@6.11.0-rc.5
 
   </details>
 
@@ -2399,7 +2399,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.4
+  - @yas chat/core-typings@6.11.0-rc.4
 
   </details>
 
@@ -2408,7 +2408,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.3
+  - @yas chat/core-typings@6.11.0-rc.3
 
   </details>
 
@@ -2417,7 +2417,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.2
+  - @yas chat/core-typings@6.11.0-rc.2
 
   </details>
 
@@ -2426,7 +2426,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.1
+  - @yas chat/core-typings@6.11.0-rc.1
 
   </details>
 
@@ -2449,7 +2449,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, b8e5887fb9]:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.0
+  - @yas chat/core-typings@6.11.0-rc.0
 
   </details>
 
@@ -2458,7 +2458,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
-  - @rocket.chat/core-typings@6.10.2
+  - @yas chat/core-typings@6.10.2
 
   </details>
 
@@ -2467,7 +2467,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.1
+  - @yas chat/core-typings@6.10.1
 
   </details>
 
@@ -2484,7 +2484,7 @@
 - ([#32431](https://github.com/YasChat/YasChat/pull/32431)) Fixed last message preview in Sidebar for E2E Ecrypted channels
 
 - <details><summary>Updated dependencies [1240c874a5, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/core-typings@6.10.0
+  - @yas chat/core-typings@6.10.0
 
   </details>
 
@@ -2493,7 +2493,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.7
+  - @yas chat/core-typings@6.10.0-rc.7
 
   </details>
 
@@ -2502,7 +2502,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.6
+  - @yas chat/core-typings@6.10.0-rc.6
 
   </details>
 
@@ -2511,7 +2511,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.5
+  - @yas chat/core-typings@6.10.0-rc.5
 
   </details>
 
@@ -2520,7 +2520,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.4
+  - @yas chat/core-typings@6.10.0-rc.4
 
   </details>
 
@@ -2529,7 +2529,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.3
+  - @yas chat/core-typings@6.10.0-rc.3
 
   </details>
 
@@ -2538,7 +2538,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.2
+  - @yas chat/core-typings@6.10.0-rc.2
 
   </details>
 
@@ -2547,7 +2547,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.1
+  - @yas chat/core-typings@6.10.0-rc.1
 
   </details>
 
@@ -2564,14 +2564,14 @@
 - ([#32431](https://github.com/YasChat/YasChat/pull/32431)) Fixed last message preview in Sidebar for E2E Ecrypted channels
 
 - <details><summary>Updated dependencies [1240c874a5, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.0
+  - @yas chat/core-typings@6.10.0-rc.0
 
 ## 0.4.4
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.3
+  - @yas chat/core-typings@6.9.3
 
   </details>
 
@@ -2580,7 +2580,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.2
+  - @yas chat/core-typings@6.9.2
 
   </details>
 
@@ -2589,7 +2589,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.1
+  - @yas chat/core-typings@6.9.1
 
   </details>
 
@@ -2598,7 +2598,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ff4e396416, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0
+  - @yas chat/core-typings@6.9.0
 
   </details>
 
@@ -2607,7 +2607,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.2
+  - @yas chat/core-typings@6.9.0-rc.2
 
   </details>
 
@@ -2616,7 +2616,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.1
+  - @yas chat/core-typings@6.9.0-rc.1
 
   </details>
 
@@ -2625,7 +2625,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ff4e396416, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.0
+  - @yas chat/core-typings@6.9.0-rc.0
 
   </details>
 
@@ -2638,7 +2638,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c47a8e3514, b94ca7c30b, 4aba7c8a26]:</summary>
-  - @rocket.chat/core-typings@6.8.0
+  - @yas chat/core-typings@6.8.0
 
   </details>
 
@@ -2647,7 +2647,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b94ca7c30b]:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.2
+  - @yas chat/core-typings@6.8.0-rc.2
 
   </details>
 
@@ -2656,7 +2656,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.1
+  - @yas chat/core-typings@6.8.0-rc.1
 
   </details>
 
@@ -2669,14 +2669,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c47a8e3514, 4aba7c8a26]:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.0
+  - @yas chat/core-typings@6.8.0-rc.0
 
 ## 0.3.9
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.2
+  - @yas chat/core-typings@6.7.2
 
   </details>
 
@@ -2685,7 +2685,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.1
+  - @yas chat/core-typings@6.7.1
 
   </details>
 
@@ -2696,7 +2696,7 @@
 - ([#31890](https://github.com/YasChat/YasChat/pull/31890)) Changed logic that process custom fields from visitors when updating its data, making the process more reliable and faster.
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, b9e897a8f5]:</summary>
-  - @rocket.chat/core-typings@6.7.0
+  - @yas chat/core-typings@6.7.0
 
   </details>
 
@@ -2705,7 +2705,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.4
+  - @yas chat/core-typings@6.7.0-rc.4
 
   </details>
 
@@ -2714,7 +2714,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.3
+  - @yas chat/core-typings@6.7.0-rc.3
 
   </details>
 
@@ -2723,7 +2723,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.2
+  - @yas chat/core-typings@6.7.0-rc.2
 
   </details>
 
@@ -2732,7 +2732,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.1
+  - @yas chat/core-typings@6.7.0-rc.1
 
   </details>
 
@@ -2743,7 +2743,7 @@
 - ([#31890](https://github.com/YasChat/YasChat/pull/31890)) Changed logic that process custom fields from visitors when updating its data, making the process more reliable and faster.
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, b9e897a8f5]:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.0
+  - @yas chat/core-typings@6.7.0-rc.0
 
   </details>
 
@@ -2752,7 +2752,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.6
+  - @yas chat/core-typings@6.6.6
 
   </details>
 
@@ -2761,7 +2761,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.5
+  - @yas chat/core-typings@6.6.5
 
   </details>
 
@@ -2770,7 +2770,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.4
+  - @yas chat/core-typings@6.6.4
 
   </details>
 
@@ -2779,7 +2779,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.3
+  - @yas chat/core-typings@6.6.3
 
   </details>
 
@@ -2788,7 +2788,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.2
+  - @yas chat/core-typings@6.6.2
 
   </details>
 
@@ -2797,7 +2797,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.1
+  - @yas chat/core-typings@6.6.1
 
   </details>
 
@@ -2811,7 +2811,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - ([#31181](https://github.com/YasChat/YasChat/pull/31181)) Fixed issue with notifications for thread messages still being sent after thread has been read
 
@@ -2820,7 +2820,7 @@
 - ([#31328](https://github.com/YasChat/YasChat/pull/31328)) Fixed an issue caused by the `Fallback Forward Department` feature. Feature could be configured by admins in a way that mimis a loop, causing a chat to be forwarded "infinitely" between those departments. System will now prevent Self & 1-level deep circular references from being saved, and a new setting is added to control the maximum number of hops that the system will do between fallback departments before considering a transfer failure.
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fdd9852079, b4b2cd20a8]:</summary>
-  - @rocket.chat/core-typings@6.6.0
+  - @yas chat/core-typings@6.6.0
 
   </details>
 
@@ -2829,7 +2829,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.7
+  - @yas chat/core-typings@6.6.0-rc.7
 
   </details>
 
@@ -2838,7 +2838,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.6
+  - @yas chat/core-typings@6.6.0-rc.6
 
   </details>
 
@@ -2847,7 +2847,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.5
+  - @yas chat/core-typings@6.6.0-rc.5
 
   </details>
 
@@ -2855,25 +2855,25 @@
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.4
+- @yas chat/core-typings@6.6.0-rc.4
 
 ## 0.3.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.3
+- @yas chat/core-typings@6.6.0-rc.3
 
 ## 0.3.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.2
+- @yas chat/core-typings@6.6.0-rc.2
 
 ## 0.3.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.1
+- @yas chat/core-typings@6.6.0-rc.1
 
 ## 0.3.0-rc.0
 
@@ -2884,7 +2884,7 @@
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - fae558bd5d: Fixed issue with notifications for thread messages still being sent after thread has been read
 - c8ab6583dc: Fixed issue with OEmbed cache not being cleared daily
 - b4b2cd20a8: Fixed an issue caused by the `Fallback Forward Department` feature. Feature could be configured by admins in a way that mimis a loop, causing a chat to be forwarded "infinitely" between those departments. System will now prevent Self & 1-level deep circular references from being saved, and a new setting is added to control the maximum number of hops that the system will do between fallback departments before considering a transfer failure.
@@ -2892,26 +2892,26 @@
 - Updated dependencies [dbb08ef948]
 - Updated dependencies [fdd9852079]
 - Updated dependencies [b4b2cd20a8]
-  - @rocket.chat/core-typings@6.6.0-rc.0
+  - @yas chat/core-typings@6.6.0-rc.0
 
 ## 0.2.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.3
+- @yas chat/core-typings@6.5.3
 
 ## 0.2.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.2
+- @yas chat/core-typings@6.5.2
 
 ## 0.2.1
 
 ### Patch Changes
 
 - Updated dependencies [c2b224fd82]
-  - @rocket.chat/core-typings@6.5.1
+  - @yas chat/core-typings@6.5.1
 
 ## 0.2.0
 
@@ -2936,121 +2936,121 @@
 - Updated dependencies [ec1b2b9846]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/core-typings@6.5.0
+  - @yas chat/core-typings@6.5.0
 
 ## 0.2.0-rc.19
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.19
+- @yas chat/core-typings@6.5.0-rc.19
 
 ## 0.2.0-rc.18
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.18
+- @yas chat/core-typings@6.5.0-rc.18
 
 ## 0.2.0-rc.17
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.17
+- @yas chat/core-typings@6.5.0-rc.17
 
 ## 0.2.0-rc.16
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.16
+- @yas chat/core-typings@6.5.0-rc.16
 
 ## 0.2.0-rc.15
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.15
+- @yas chat/core-typings@6.5.0-rc.15
 
 ## 0.2.0-rc.14
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.14
+- @yas chat/core-typings@6.5.0-rc.14
 
 ## 0.2.0-rc.13
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.13
+- @yas chat/core-typings@6.5.0-rc.13
 
 ## 0.2.0-rc.12
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.12
+- @yas chat/core-typings@6.5.0-rc.12
 
 ## 0.2.0-rc.11
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.11
+- @yas chat/core-typings@6.5.0-rc.11
 
 ## 0.2.0-rc.10
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.10
+- @yas chat/core-typings@6.5.0-rc.10
 
 ## 0.2.0-rc.9
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.9
+- @yas chat/core-typings@6.5.0-rc.9
 
 ## 0.2.0-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.8
+- @yas chat/core-typings@6.5.0-rc.8
 
 ## 0.2.0-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.7
+- @yas chat/core-typings@6.5.0-rc.7
 
 ## 0.2.0-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.6
+- @yas chat/core-typings@6.5.0-rc.6
 
 ## 0.2.0-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.5
+- @yas chat/core-typings@6.5.0-rc.5
 
 ## 0.2.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.4
+- @yas chat/core-typings@6.5.0-rc.4
 
 ## 0.2.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.3
+- @yas chat/core-typings@6.5.0-rc.3
 
 ## 0.2.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.2
+- @yas chat/core-typings@6.5.0-rc.2
 
 ## 0.2.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.1
+- @yas chat/core-typings@6.5.0-rc.1
 
 ## 0.2.0-rc.0
 
@@ -3075,55 +3075,55 @@
 - Updated dependencies [ec1b2b9846]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/core-typings@6.5.0-rc.0
+  - @yas chat/core-typings@6.5.0-rc.0
 
 ## 0.1.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.8
+- @yas chat/core-typings@6.4.8
 
 ## 0.1.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.7
+- @yas chat/core-typings@6.4.7
 
 ## 0.1.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.6
+- @yas chat/core-typings@6.4.6
 
 ## 0.1.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.5
+- @yas chat/core-typings@6.4.5
 
 ## 0.1.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.4
+- @yas chat/core-typings@6.4.4
 
 ## 0.1.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.3
+- @yas chat/core-typings@6.4.3
 
 ## 0.1.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.2
+- @yas chat/core-typings@6.4.2
 
 ## 0.1.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.1
+- @yas chat/core-typings@6.4.1
 
 ## 0.1.0
 
@@ -3150,38 +3150,38 @@
 - Updated dependencies [1041d4d361]
 - Updated dependencies [61128364d6]
 - Updated dependencies [d45365436e]
-  - @rocket.chat/core-typings@6.4.0
+  - @yas chat/core-typings@6.4.0
 
 ## 0.1.0-rc.5
 
 ### Patch Changes
 
 - Updated dependencies [1041d4d361]
-  - @rocket.chat/core-typings@6.4.0-rc.5
+  - @yas chat/core-typings@6.4.0-rc.5
 
 ## 0.1.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.4
+- @yas chat/core-typings@6.4.0-rc.4
 
 ## 0.1.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.3
+- @yas chat/core-typings@6.4.0-rc.3
 
 ## 0.1.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.2
+- @yas chat/core-typings@6.4.0-rc.2
 
 ## 0.1.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.1
+- @yas chat/core-typings@6.4.0-rc.1
 
 ## 0.1.0-rc.0
 
@@ -3207,25 +3207,25 @@
 - Updated dependencies [ebab8c4dd8]
 - Updated dependencies [61128364d6]
 - Updated dependencies [d45365436e]
-  - @rocket.chat/core-typings@6.4.0-rc.0
+  - @yas chat/core-typings@6.4.0-rc.0
 
 ## 0.0.14
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.8
+- @yas chat/core-typings@6.3.8
 
 ## 0.0.13
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.7
+- @yas chat/core-typings@6.3.7
 
 ## 0.0.12
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.6
+- @yas chat/core-typings@6.3.6
 
 ## 0.0.11
 
@@ -3235,32 +3235,32 @@
 
   This is particularly important for large workspaces in case the cron job did not run for some time, in that case the amount of sessions would accumulate and the aggregation would take a long time to run.
 
-  - @rocket.chat/core-typings@6.3.5
+  - @yas chat/core-typings@6.3.5
 
 ## 0.0.10
 
 ### Patch Changes
 
 - 8a7d5d3898: fix: agent role being removed upon user deactivation
-  - @rocket.chat/core-typings@6.3.4
+  - @yas chat/core-typings@6.3.4
 
 ## 0.0.9
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.3
+- @yas chat/core-typings@6.3.3
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.2
+- @yas chat/core-typings@6.3.2
 
 ## 0.0.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.1
+- @yas chat/core-typings@6.3.1
 
 ## 0.0.6
 
@@ -3280,74 +3280,74 @@
 - Updated dependencies [9da856cc67]
 - Updated dependencies [12d97e16c2]
 - Updated dependencies [48ac55f4ea]
-  - @rocket.chat/core-typings@6.3.0
+  - @yas chat/core-typings@6.3.0
 
 ## 0.0.6-rc.10
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.10
+- @yas chat/core-typings@6.3.0-rc.10
 
 ## 0.0.6-rc.9
 
 ### Patch Changes
 
 - Updated dependencies [48ac55f4ea]
-  - @rocket.chat/core-typings@6.3.0-rc.9
+  - @yas chat/core-typings@6.3.0-rc.9
 
 ## 0.0.6-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.8
+- @yas chat/core-typings@6.3.0-rc.8
 
 ## 0.0.6-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.7
+- @yas chat/core-typings@6.3.0-rc.7
 
 ## 0.0.6-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.6
+- @yas chat/core-typings@6.3.0-rc.6
 
 ## 0.0.6-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.5
+- @yas chat/core-typings@6.3.0-rc.5
 
 ## 0.0.6-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.4
+- @yas chat/core-typings@6.3.0-rc.4
 
 ## 0.0.6-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.3
+- @yas chat/core-typings@6.3.0-rc.3
 
 ## 0.0.6-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.2
+- @yas chat/core-typings@6.3.0-rc.2
 
 ## 0.0.6-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.1
+- @yas chat/core-typings@6.3.0-rc.1
 
 ## 0.0.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.2.10
+- @yas chat/core-typings@6.2.10
 
 ## 0.0.4
 
@@ -3368,11 +3368,11 @@
 - Updated dependencies [e14ec50816]
 - Updated dependencies [9da856cc67]
 - Updated dependencies [12d97e16c2]
-  - @rocket.chat/core-typings@6.3.0-rc.0
+  - @yas chat/core-typings@6.3.0-rc.0
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @rocket.chat/core-typings@6.2.6
+  - @yas chat/core-typings@6.2.6

@@ -1,4 +1,4 @@
-import type { ServerMediaSignalNewCall } from '@rocket.chat/media-signaling';
+import type { ServerMediaSignalNewCall } from '@yas chat/media-signaling';
 
 import { stripSensitiveDataFromSignal } from './stripSensitiveData';
 

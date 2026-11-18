@@ -1,4 +1,4 @@
-import type { AtLeast, IUser } from '@rocket.chat/core-typings';
+import type { AtLeast, IUser } from '@yas chat/core-typings';
 
 import { settings } from '../settings';
 

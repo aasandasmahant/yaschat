@@ -1,4 +1,4 @@
-import type { ILivechatTag } from '@rocket.chat/core-typings';
+import type { ILivechatTag } from '@yas chat/core-typings';
 import type { DeleteResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

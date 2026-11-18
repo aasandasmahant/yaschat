@@ -1,4 +1,4 @@
-import bannersConfigSchema from '@rocket.chat/abac/docs/classification-banners.schema.json';
+import bannersConfigSchema from '@yas chat/abac/docs/classification-banners.schema.json';
 
 import { settingsRegistry } from '../../../server/settings';
 import { validCron } from '../../../server/settings/functions/validationRuleBuilders';

@@ -1,7 +1,7 @@
-import { Button, Box, Field, FieldLabel, FieldRow, Stack } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { UserAutoComplete } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Button, Box, Field, FieldLabel, FieldRow, Stack } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { UserAutoComplete } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';

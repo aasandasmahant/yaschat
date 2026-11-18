@@ -1,4 +1,4 @@
-# @rocket.chat/layout
+# @yas chat/layout
 
 ## 1.0.0
 
@@ -107,16 +107,16 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@rocket.chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
+- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@yas chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373]:</summary>
-  - @rocket.chat/fuselage@1.0.0
-  - @rocket.chat/fuselage-hooks@0.44.0
-  - @rocket.chat/fuselage-tokens@0.36.0
-  - @rocket.chat/logo@0.33.3
-  - @rocket.chat/styled@0.34.2
+  - @yas chat/fuselage@1.0.0
+  - @yas chat/fuselage-hooks@0.44.0
+  - @yas chat/fuselage-tokens@0.36.0
+  - @yas chat/logo@0.33.3
+  - @yas chat/styled@0.34.2
 
   </details>
 
@@ -125,7 +125,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.1
+  - @yas chat/fuselage@1.0.0-rc.1
 
   </details>
 
@@ -236,16 +236,16 @@
   - The login services divider takes its spacing from a padded container.
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
-- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@rocket.chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
+- ([#42408](https://github.com/YasChat/YasChat/pull/42408)) Moved `@yas chat/layout` into the YasChat monorepo, continuing from the frozen Fuselage 0.36.3 release. The exported layouts and components keep the same API; only the build, lint, test and Storybook wiring changed.
 
 - ([#43047](https://github.com/YasChat/YasChat/pull/43047)) Moves spacing that was off the design system's scale to the nearest step (18px becomes 16px, 28px becomes 24px) in the vertical wizard title and the onboarding pages
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, ec381cf4a88002601fd2b83b7eed734a2e8165b6, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, ec381cf4a88002601fd2b83b7eed734a2e8165b6, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 909b2e6aa0a360075c5a91eb52b955824909423a, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.0
-  - @rocket.chat/fuselage-hooks@0.44.0-rc.0
-  - @rocket.chat/fuselage-tokens@0.36.0-rc.0
-  - @rocket.chat/logo@0.33.3-rc.0
-  - @rocket.chat/styled@0.34.2-rc.0
+  - @yas chat/fuselage@1.0.0-rc.0
+  - @yas chat/fuselage-hooks@0.44.0-rc.0
+  - @yas chat/fuselage-tokens@0.36.0-rc.0
+  - @yas chat/logo@0.33.3-rc.0
+  - @yas chat/styled@0.34.2-rc.0
 
   </details>
 
@@ -305,7 +305,7 @@
 
 ### Patch Changes
 
-- [#1762](https://github.com/YasChat/fuselage/pull/1762) [`cce8e7f`](https://github.com/YasChat/fuselage/commit/cce8e7f7ae5bb261e95936c586ac831366579b7d) Thanks [@tassoevan](https://github.com/tassoevan)! - Deletes the `@rocket.chat/fuselage-polyfills` package
+- [#1762](https://github.com/YasChat/fuselage/pull/1762) [`cce8e7f`](https://github.com/YasChat/fuselage/commit/cce8e7f7ae5bb261e95936c586ac831366579b7d) Thanks [@tassoevan](https://github.com/tassoevan)! - Deletes the `@yas chat/fuselage-polyfills` package
 
 ## 0.33.1
 

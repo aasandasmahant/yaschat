@@ -1,9 +1,9 @@
-import { ServiceClassInternal, Message } from '@rocket.chat/core-services';
-import type { IOmnichannelEEService } from '@rocket.chat/core-services';
-import { isOmnichannelRoom, LivechatInquiryStatus } from '@rocket.chat/core-typings';
-import type { IOmnichannelRoom, IUser, ILivechatInquiryRecord, IOmnichannelSystemMessage } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { LivechatRooms, Subscriptions, LivechatInquiry } from '@rocket.chat/models';
+import { ServiceClassInternal, Message } from '@yas chat/core-services';
+import type { IOmnichannelEEService } from '@yas chat/core-services';
+import { isOmnichannelRoom, LivechatInquiryStatus } from '@yas chat/core-typings';
+import type { IOmnichannelRoom, IUser, ILivechatInquiryRecord, IOmnichannelSystemMessage } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { LivechatRooms, Subscriptions, LivechatInquiry } from '@yas chat/models';
 
 import { callbacks } from '../../../server/lib/callbacks';
 import {

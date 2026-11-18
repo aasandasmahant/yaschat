@@ -1,5 +1,5 @@
-import type { IUIKitInteractionParam } from '@rocket.chat/apps-engine/definition/accessors/IUIController';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IUIKitInteractionParam } from '@yas chat/apps-engine/definition/accessors/IUIController';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { UiInteractionBridge } from '../../../src/server/bridges';
 

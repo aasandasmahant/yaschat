@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { S2SManager } from './S2SManager';
 import { resolveConfig } from '../config';

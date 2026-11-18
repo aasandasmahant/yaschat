@@ -1,5 +1,5 @@
-import type { IOmnichannelSource } from '@rocket.chat/core-typings';
-import { Icon, type IconColor, type IconProps } from '@rocket.chat/fuselage';
+import type { IOmnichannelSource } from '@yas chat/core-typings';
+import { Icon, type IconColor, type IconProps } from '@yas chat/fuselage';
 
 const iconMap = {
 	widget: 'livechat',

@@ -1,5 +1,5 @@
-import { Emitter } from '@rocket.chat/emitter';
-import type { OffCallbackHandler } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
+import type { OffCallbackHandler } from '@yas chat/emitter';
 import { useCallback, useRef, useState } from 'react';
 
 const GRAB_DOM_EVENTS = ['pointerdown'] as const;

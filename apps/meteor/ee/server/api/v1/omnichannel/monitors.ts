@@ -1,5 +1,5 @@
-import { isClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatMonitor } from '@rocket.chat/core-typings';
+import { isClientSafeError } from '@yas chat/core-services';
+import type { ILivechatMonitor } from '@yas chat/core-typings';
 import {
 	isPOSTLivechatMonitorCreateRequest,
 	isPOSTLivechatMonitorsDeleteRequest,
@@ -8,7 +8,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { findMonitors, findMonitorByUsername } from './lib/monitors';
 import { API } from '../../../../../server/api';
@@ -122,7 +122,7 @@ const livechatMonitorsEndpoints = API.v1
 
 type LivechatMonitorsEndpoints = ExtractRoutesFromAPI<typeof livechatMonitorsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatMonitorsEndpoints {}
 }

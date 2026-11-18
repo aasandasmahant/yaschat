@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Bubble } from '@rocket.chat/fuselage';
-import { isTruthy } from '@rocket.chat/tools';
+import { css } from '@yas chat/css-in-js';
+import { Box, Bubble } from '@yas chat/fuselage';
+import { isTruthy } from '@yas chat/tools';
 
 export type JumpToRecentMessageButtonProps = {
 	visible: boolean;

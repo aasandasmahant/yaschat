@@ -1,4 +1,4 @@
-import type { ILicenseV3, LicenseLimitKind, BehaviorWithContext, LicenseValidationOptions } from '@rocket.chat/core-typings';
+import type { ILicenseV3, LicenseLimitKind, BehaviorWithContext, LicenseValidationOptions } from '@yas chat/core-typings';
 
 import { isLimitAllowed, isBehaviorAllowed } from '../isItemAllowed';
 import type { LicenseManager } from '../license';

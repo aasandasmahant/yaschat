@@ -2,9 +2,9 @@ import { sanitizeUrl } from './sanitizeUrl.js';
 
 describe('allowed schemes', () => {
 	it.each([
-		['http', 'http://rocket.chat/docs', 'http://rocket.chat/docs'],
-		['https', 'https://rocket.chat/docs', 'https://rocket.chat/docs'],
-		['mailto', 'mailto:me@rocket.chat', 'mailto:me@rocket.chat'],
+		['http', 'http://yas chat/docs', 'http://yas chat/docs'],
+		['https', 'https://yas chat/docs', 'https://yas chat/docs'],
+		['mailto', 'mailto:me@yas chat', 'mailto:me@yas chat'],
 		['tel with a country code', 'tel:+15551234567', 'tel:+15551234567'],
 		['tel with a national number', 'tel:07563546725', 'tel:07563546725'],
 		['tel with a short number', 'tel:5551', 'tel:5551'],
@@ -13,16 +13,16 @@ describe('allowed schemes', () => {
 	});
 
 	it('reads the scheme case-insensitively', () => {
-		expect(sanitizeUrl('HTTPS://ROCKET.CHAT/Docs')).toBe('https://rocket.chat/Docs');
+		expect(sanitizeUrl('HTTPS://Yas chat/Docs')).toBe('https://yas chat/Docs');
 	});
 
 	it('keeps credentials the user typed', () => {
-		expect(sanitizeUrl('http://user:pass@rocket.chat/')).toBe('http://user:pass@rocket.chat/');
+		expect(sanitizeUrl('http://user:pass@yas chat/')).toBe('http://user:pass@yas chat/');
 	});
 
 	it('keeps a query string untouched', () => {
-		expect(sanitizeUrl('https://rocket.chat/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E')).toBe(
-			'https://rocket.chat/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E',
+		expect(sanitizeUrl('https://yas chat/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E')).toBe(
+			'https://yas chat/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E',
 		);
 	});
 });
@@ -35,7 +35,7 @@ describe('refused schemes', () => {
 		['vbscript', 'vbscript:msgbox(1)'],
 		['file', 'file:///etc/passwd'],
 		['smb', 'smb://attacker.example/share'],
-		['blob', 'blob:https://rocket.chat/2b1f'],
+		['blob', 'blob:https://yas chat/2b1f'],
 		['vscode', 'vscode://file/etc/passwd'],
 		['ms-msdt', 'ms-msdt:/id'],
 		['intent', 'intent://evil.example'],
@@ -86,25 +86,25 @@ describe('root-relative paths', () => {
 
 describe('schemeless targets', () => {
 	it.each([
-		['a bare domain', 'rocket.chat', 'https://rocket.chat/'],
-		['a bare domain with a path', 'rocket.chat/docs', 'https://rocket.chat/docs'],
-		['a bare domain with a port', 'rocket.chat:8080', 'https://rocket.chat:8080/'],
+		['a bare domain', 'yas chat', 'https://yas chat/'],
+		['a bare domain with a path', 'yas chat/docs', 'https://yas chat/docs'],
+		['a bare domain with a port', 'yas chat:8080', 'https://yas chat:8080/'],
 		['an IP address with a port', '192.168.1.5:8080/admin', 'https://192.168.1.5:8080/admin'],
-		['a protocol-relative URL', '//rocket.chat/docs', 'https://rocket.chat/docs'],
+		['a protocol-relative URL', '//yas chat/docs', 'https://yas chat/docs'],
 	])('resolves %s to an explicit https target', (_label, href, expected) => {
 		expect(sanitizeUrl(href)).toBe(expected);
 	});
 
 	it('never returns a scheme-relative URL that would inherit the page scheme', () => {
-		const sanitized = sanitizeUrl('rocket.chat/docs') ?? '';
+		const sanitized = sanitizeUrl('yas chat/docs') ?? '';
 
 		expect(sanitized.startsWith('//')).toBe(false);
 		expect(new URL(sanitized).protocol).toBe('https:');
 	});
 
 	it.each([
-		['as typed', 'evil.example\\@rocket.chat'],
-		['as the parser emits it', '//evil.example\\@rocket.chat'],
+		['as typed', 'evil.example\\@yas chat'],
+		['as the parser emits it', '//evil.example\\@yas chat'],
 	])('resolves the real host when a backslash is used to disguise it, %s', (_label, href) => {
 		const sanitized = sanitizeUrl(href) ?? '';
 

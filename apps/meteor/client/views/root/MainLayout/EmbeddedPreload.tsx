@@ -1,5 +1,5 @@
-import { getObjectKeys } from '@rocket.chat/tools';
-import { useEndpoint, useMethod, useRouter, useUserId } from '@rocket.chat/ui-contexts';
+import { getObjectKeys } from '@yas chat/tools';
+import { useEndpoint, useMethod, useRouter, useUserId } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useEffect, useMemo } from 'react';

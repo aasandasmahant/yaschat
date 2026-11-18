@@ -1,4 +1,4 @@
-import { useDebouncedState, useSafely } from '@rocket.chat/fuselage-hooks';
+import { useDebouncedState, useSafely } from '@yas chat/fuselage-hooks';
 import type { RefCallback } from 'react';
 import { useCallback } from 'react';
 

@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 import type { ReactElement } from 'react';
 import { memo, useContext } from 'react';
 
@@ -17,13 +17,13 @@ type ComposerMarkupProps = {
 /**
  * Real-time WYSIWYG-friendly markup renderer.
  *
- * Unlike the standard `Markup` from `@rocket.chat/gazzodown`, this component:
+ * Unlike the standard `Markup` from `@yas chat/gazzodown`, this component:
  * - Renders paragraphs as `<span>` instead of `<div>` for inline layout
  * - Represents line breaks with `\n` characters instead of `<br>` tags
  * - Avoids heavy Fuselage dependencies (MessageHighlight, CheckBox, etc.)
  * - Is optimized for re-rendering on every keystroke
  *
- * It consumes the same AST produced by `@rocket.chat/message-parser` (grammar.pegjs),
+ * It consumes the same AST produced by `@yas chat/message-parser` (grammar.pegjs),
  * making it a drop-in replacement for the rendering layer.
  *
  * Every renderer must emit the exact text it was parsed from: caret positions are flat character

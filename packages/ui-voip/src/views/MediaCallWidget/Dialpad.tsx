@@ -1,4 +1,4 @@
-import { Divider, Box, TextInput, Field, FieldRow, Stack } from '@rocket.chat/fuselage';
+import { Divider, Box, TextInput, Field, FieldRow, Stack } from '@yas chat/fuselage';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

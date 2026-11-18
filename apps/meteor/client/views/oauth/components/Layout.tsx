@@ -1,5 +1,5 @@
-import { LayoutLogoImage, VerticalWizardLayout } from '@rocket.chat/layout';
-import { useAssetWithDarkModePath, useSetting } from '@rocket.chat/ui-contexts';
+import { LayoutLogoImage, VerticalWizardLayout } from '@yas chat/layout';
+import { useAssetWithDarkModePath, useSetting } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 
 export type LayoutProps = {

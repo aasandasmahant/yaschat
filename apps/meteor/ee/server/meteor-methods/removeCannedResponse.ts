@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { CannedResponse } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { CannedResponse } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../../server/lib/authorization/hasPermission';
 import notifications from '../../../server/lib/notifications/core/lib/Notifications';

@@ -1,4 +1,4 @@
-import type { Optional } from '@rocket.chat/core-typings';
+import type { Optional } from '@yas chat/core-typings';
 import type { ReactNode } from 'react';
 import { useContext, createContext } from 'react';
 

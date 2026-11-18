@@ -1,5 +1,5 @@
 {
-	"name": "rocket.chat",
+	"name": "yas chat",
 	"version": "9.1.0-develop",
 	"private": true,
 	"description": "YasChat Monorepo",
@@ -22,14 +22,14 @@
 	],
 	"scripts": {
 		"build": "turbo run build",
-		"dev": "turbo run dev --env-mode=loose --parallel --filter=@rocket.chat/meteor...",
+		"dev": "turbo run dev --env-mode=loose --parallel --filter=@yas chat/meteor...",
 		"docs:check-links": "node scripts/check-docs-links.mjs docs",
-		"dsv": "turbo run dsv --env-mode=loose --filter=@rocket.chat/meteor...",
+		"dsv": "turbo run dsv --env-mode=loose --filter=@yas chat/meteor...",
 		"ms": "turbo run ms --env-mode=loose",
 		"fossify": "tsx scripts/fossify.ts",
 		"lint": "turbo run lint",
 		"lint:spacing": "node scripts/spacing-scale/check.mjs",
-		"storybook": "yarn workspace @rocket.chat/meteor run storybook",
+		"storybook": "yarn workspace @yas chat/meteor run storybook",
 		"test-storybook": "turbo run test-storybook",
 		"testunit": "turbo run testunit"
 	},
@@ -227,7 +227,7 @@
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.27.12",
-		"@rocket.chat/lint-config": "workspace:~",
+		"@yas chat/lint-config": "workspace:~",
 		"@types/chart.js": "^2.9.41",
 		"@types/js-yaml": "^4.0.9",
 		"@types/node": "~24.13.6",

@@ -10,11 +10,11 @@ import {
 	SidebarItemRow,
 	SidebarItemTimestamp,
 	SidebarItemTitle,
-} from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE, RoomAvatar } from '@rocket.chat/ui-avatar';
-import type { ItemMediaSizeName } from '@rocket.chat/ui-avatar';
-import { useDeferredMenuMount } from '@rocket.chat/ui-client';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yas chat/ui-avatar';
+import type { ItemMediaSizeName } from '@yas chat/ui-avatar';
+import { useDeferredMenuMount } from '@yas chat/ui-client';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import type { AriaAttributes, HTMLAttributes, MouseEventHandler, ReactElement, ReactNode } from 'react';
 import { memo } from 'react';
 

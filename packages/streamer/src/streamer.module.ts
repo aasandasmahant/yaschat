@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { StreamNames } from '@rocket.chat/ddp-client';
-import { Logger } from '@rocket.chat/logger';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { StreamNames } from '@yas chat/ddp-client';
+import { Logger } from '@yas chat/logger';
 import { EventEmitter } from 'eventemitter3';
 
 import type {

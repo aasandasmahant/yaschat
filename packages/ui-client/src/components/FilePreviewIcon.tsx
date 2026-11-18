@@ -1,4 +1,4 @@
-import { Box, Icon } from '@rocket.chat/fuselage';
+import { Box, Icon } from '@yas chat/fuselage';
 
 export type FilePreviewIconProps = { format: string };
 

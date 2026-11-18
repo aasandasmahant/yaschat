@@ -1,9 +1,9 @@
-import { api, getConnection, getTrashCollection } from '@rocket.chat/core-services';
-import { logLevel } from '@rocket.chat/logger';
-import type { LogLevelSetting } from '@rocket.chat/logger';
-import { registerServiceModels } from '@rocket.chat/models';
-import { startBroker } from '@rocket.chat/network-broker';
-import { startTracing } from '@rocket.chat/tracing';
+import { api, getConnection, getTrashCollection } from '@yas chat/core-services';
+import { logLevel } from '@yas chat/logger';
+import type { LogLevelSetting } from '@yas chat/logger';
+import { registerServiceModels } from '@yas chat/models';
+import { startBroker } from '@yas chat/network-broker';
+import { startTracing } from '@yas chat/tracing';
 import polka from 'polka';
 
 import { parseDnsOverrides } from './dnsOverrides';
@@ -31,7 +31,7 @@ void (async () => {
 	api.setBroker(startBroker());
 
 	// need to import service after models are registered
-	const { XMPPServerService, resolveXmppServer } = await import('@rocket.chat/xmpp-server');
+	const { XMPPServerService, resolveXmppServer } = await import('@yas chat/xmpp-server');
 
 	const metrics = createInboundMetrics({ decodeOnly: DECODE_ONLY });
 

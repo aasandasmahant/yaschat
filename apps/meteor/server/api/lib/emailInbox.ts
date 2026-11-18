@@ -1,5 +1,5 @@
-import type { IEmailInbox } from '@rocket.chat/core-typings';
-import { EmailInbox, Users } from '@rocket.chat/models';
+import type { IEmailInbox } from '@yas chat/core-typings';
+import { EmailInbox, Users } from '@yas chat/models';
 import type { DeleteResult, InsertOneResult, Sort } from 'mongodb';
 
 import { notifyOnEmailInboxChanged } from '../../lib/notifyListener';

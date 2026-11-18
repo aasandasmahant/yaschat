@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/stylis-logical-props-middleware",
+	"name": "@yas chat/stylis-logical-props-middleware",
 	"version": "0.31.27",
 	"description": "Stylis middleware to handle CSS Logical Properties and their fallbacks",
 	"bugs": {
@@ -13,7 +13,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"type": "module",
 	"exports": {
@@ -36,11 +36,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/css-supports": "workspace:~"
+		"@yas chat/css-supports": "workspace:~"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@types/stylis": "^4.2.7",
 		"jest": "~30.5.2",
 		"stylis": "~4.4.0",

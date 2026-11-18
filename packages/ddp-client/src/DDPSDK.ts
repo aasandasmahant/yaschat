@@ -1,4 +1,4 @@
-import { RestClient } from '@rocket.chat/api-client';
+import { RestClient } from '@yas chat/api-client';
 
 import { ClientStreamImpl, ConnectionLostError } from './ClientStream';
 import type { Connection, WebSocketConstructor } from './Connection';
@@ -210,7 +210,7 @@ export class DDPSDK implements SDK {
 	 *
 	 * @example
 	 * ```ts
-	 * const sdk = DDPSDK.create('https://open.rocket.chat');
+	 * const sdk = DDPSDK.create('https://open.yas chat');
 	 * sdk.connection.connect();
 	 * ```
 	 */
@@ -281,7 +281,7 @@ export class DDPSDK implements SDK {
 	 * @returns A promise that resolves to the SDK interface
 	 * @example
 	 * ```ts
-	 * const sdk = await DDPSDK.createAndConnect('https://open.rocket.chat');
+	 * const sdk = await DDPSDK.createAndConnect('https://open.yas chat');
 	 * ```
 	 */
 	static async createAndConnect<T extends typeof DDPSDK>(this: T, url: string, options: DDPSDKOptions = {}): Promise<InstanceType<T>> {

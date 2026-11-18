@@ -1,6 +1,6 @@
-import type { IMessageSearchProvider } from '@rocket.chat/core-typings';
-import { Box, Callout, Field, FieldHint, FieldLabel, Icon, Text, TextInput, ToggleSwitch } from '@rocket.chat/fuselage';
-import { useDebouncedCallback, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { IMessageSearchProvider } from '@yas chat/core-typings';
+import { Box, Callout, Field, FieldHint, FieldLabel, Icon, Text, TextInput, ToggleSwitch } from '@yas chat/fuselage';
+import { useDebouncedCallback, useStableCallback } from '@yas chat/fuselage-hooks';
 import DOMPurify from 'dompurify';
 import { useEffect, useId } from 'react';
 import { useForm, useWatch } from 'react-hook-form';

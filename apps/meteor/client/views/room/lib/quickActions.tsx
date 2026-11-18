@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import type { Keys as IconName } from '@yas chat/icons';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 export type QuickActionsActionOptions = Array<{
 	id: string;

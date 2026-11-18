@@ -1,4 +1,4 @@
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import type { ForwardedRef, HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';

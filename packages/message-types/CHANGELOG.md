@@ -1,4 +1,4 @@
-# @rocket.chat/message-types
+# @yas chat/message-types
 
 ## 0.2.0
 

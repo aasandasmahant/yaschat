@@ -1,7 +1,7 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Button } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useEndpoint, useSetModal, useToastMessageDispatch, useSettingStructure } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { Button } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useEndpoint, useSetModal, useToastMessageDispatch, useSettingStructure } from '@yas chat/ui-contexts';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

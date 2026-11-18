@@ -13,7 +13,7 @@ import type {
 	ILDAPEntry,
 	AbacUserIdentifiers,
 	MinimalApp,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 export type AbacActor = Pick<IUser, '_id' | 'name'> & { username: NonNullable<IUser['username']> };
 

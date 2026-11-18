@@ -1,5 +1,5 @@
-import { Box, Margins } from '@rocket.chat/fuselage';
-import { BackgroundLayer, LayoutLogo } from '@rocket.chat/layout';
+import { Box, Margins } from '@yas chat/fuselage';
+import { BackgroundLayer, LayoutLogo } from '@yas chat/layout';
 import { Trans, useTranslation } from 'react-i18next';
 
 import EmailCodeFallback from '../../common/EmailCodeFallback';

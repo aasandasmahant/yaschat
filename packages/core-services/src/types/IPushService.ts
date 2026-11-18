@@ -1,4 +1,4 @@
-import type { IPushToken, RegisterPushTokenInput } from '@rocket.chat/core-typings';
+import type { IPushToken, RegisterPushTokenInput } from '@yas chat/core-typings';
 
 import type { IServiceClass } from './ServiceClass';
 

@@ -1,5 +1,5 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IRole } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IRole } from '@yas chat/core-typings';
 
 import { api, credentials, request } from './api-data';
 

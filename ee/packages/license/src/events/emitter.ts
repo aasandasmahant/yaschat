@@ -1,4 +1,4 @@
-import type { BehaviorWithContext, LicenseModule } from '@rocket.chat/core-typings';
+import type { BehaviorWithContext, LicenseModule } from '@yas chat/core-typings';
 
 import type { LicenseManager } from '../license';
 import { logger } from '../logger';

@@ -1,5 +1,5 @@
-import { NumberInput, Field, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { NumberInput, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 
 export type EeNumberInputProps = { label: string } & ComponentProps<typeof NumberInput>;

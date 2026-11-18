@@ -1,8 +1,8 @@
-import type { ILoggerStorageEntry } from '@rocket.chat/apps/dist/server/logging/ILoggerStorageEntry';
-import type { IAppLogStorageFindOptions } from '@rocket.chat/apps/dist/server/storage/AppLogStorage';
-import { AppLogStorage } from '@rocket.chat/apps/dist/server/storage/AppLogStorage';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import type { AppLogs } from '@rocket.chat/models';
+import type { ILoggerStorageEntry } from '@yas chat/apps/dist/server/logging/ILoggerStorageEntry';
+import type { IAppLogStorageFindOptions } from '@yas chat/apps/dist/server/storage/AppLogStorage';
+import { AppLogStorage } from '@yas chat/apps/dist/server/storage/AppLogStorage';
+import { InstanceStatus } from '@yas chat/instance-status';
+import type { AppLogs } from '@yas chat/models';
 
 import { redact } from '../redactor';
 

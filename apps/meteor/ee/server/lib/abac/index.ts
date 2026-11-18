@@ -1,4 +1,4 @@
-import { Permissions } from '@rocket.chat/models';
+import { Permissions } from '@yas chat/models';
 
 export const createPermissions = async () => {
 	const permissions = [

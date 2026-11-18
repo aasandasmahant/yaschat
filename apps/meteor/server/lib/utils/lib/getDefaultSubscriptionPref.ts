@@ -1,7 +1,7 @@
-import type { AtLeast, ISubscription, IUser } from '@rocket.chat/core-typings';
+import type { AtLeast, ISubscription, IUser } from '@yas chat/core-typings';
 
 /**
- * @type {(userPref: Pick<import('@rocket.chat/core-typings').IUser, 'settings'>) => {
+ * @type {(userPref: Pick<import('@yas chat/core-typings').IUser, 'settings'>) => {
  * 	desktopPrefOrigin: 'user';
  * 	mobilePrefOrigin: 'user';
  * 	emailPrefOrigin: 'user';

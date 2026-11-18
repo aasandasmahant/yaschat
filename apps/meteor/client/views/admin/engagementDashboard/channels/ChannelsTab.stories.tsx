@@ -1,4 +1,4 @@
-import { Margins } from '@rocket.chat/fuselage';
+import { Margins } from '@yas chat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import ChannelsTab from './ChannelsOverview';

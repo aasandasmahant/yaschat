@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { after, beforeEach, describe, it, mock } from 'node:test';
 
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import type { IUploadDescriptor } from '@rocket.chat/apps-engine/definition/uploads/IUploadDescriptor';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import type { IUploadDescriptor } from '@yas chat/apps-engine/definition/uploads/IUploadDescriptor';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { AppObjectRegistry } from '../../../AppObjectRegistry';
 import { ModifyCreator } from '../modify/ModifyCreator';

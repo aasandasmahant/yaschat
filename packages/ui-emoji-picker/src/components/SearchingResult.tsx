@@ -1,4 +1,4 @@
-import { VirtualizedScrollbars } from '@rocket.chat/ui-client';
+import { VirtualizedScrollbars } from '@yas chat/ui-client';
 import type { MouseEvent } from 'react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';

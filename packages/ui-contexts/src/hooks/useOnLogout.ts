@@ -1,4 +1,4 @@
-import type { OffCallbackHandler } from '@rocket.chat/emitter';
+import type { OffCallbackHandler } from '@yas chat/emitter';
 import { useContext } from 'react';
 
 import { UserContext } from '../UserContext';

@@ -1,5 +1,5 @@
-import type { AppsVideoConference } from '@rocket.chat/apps';
-import type { VideoConference } from '@rocket.chat/core-typings';
+import type { AppsVideoConference } from '@yas chat/apps';
+import type { VideoConference } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 /**

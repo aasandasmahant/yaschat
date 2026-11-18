@@ -1,6 +1,6 @@
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
@@ -8,7 +8,7 @@ import { callbacks } from '../../lib/callbacks';
 import { notifyOnRoomChangedById } from '../../lib/notifyListener';
 import { roomCoordinator } from '../../lib/rooms/roomCoordinator';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		muteUserInRoom(data: { rid: IRoom['_id']; username: string }): boolean;
 	}

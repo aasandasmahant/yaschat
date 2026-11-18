@@ -1,4 +1,4 @@
-import type { VideoQuality } from '@rocket.chat/ui-conference';
+import type { VideoQuality } from '@yas chat/ui-conference';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import type { LocalVideoTrack, Room } from 'livekit-client';
 import { VideoPresets } from 'livekit-client';
@@ -8,7 +8,7 @@ import { useVideoQuality } from './useVideoQuality';
 
 const persisted = jest.fn();
 
-jest.mock('@rocket.chat/ui-conference', () => ({
+jest.mock('@yas chat/ui-conference', () => ({
 	useVideoQualityPreference: () => {
 		const [videoQuality, setVideoQuality] = useState<VideoQuality>('h720');
 		return {

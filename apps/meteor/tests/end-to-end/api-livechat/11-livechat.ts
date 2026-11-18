@@ -1,7 +1,7 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ILivechatDepartment, IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { ILivechatDepartment, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { sleep } from '../../../lib/utils/sleep';
@@ -76,7 +76,7 @@ describe('LIVECHAT - Utils', () => {
 		});
 		it('should send an offline email', async () => {
 			await updateSetting('Livechat_validate_offline_email', false);
-			await updateSetting('Livechat_offline_email', 'test-email@rocket.chat');
+			await updateSetting('Livechat_offline_email', 'test-email@yas chat');
 			await request
 				.post(api('livechat/offline.message'))
 				.set(credentials)
@@ -276,7 +276,7 @@ describe('LIVECHAT - Utils', () => {
 			const { body } = await request
 				.post(api('livechat/page.visited'))
 				.set(credentials)
-				.send({ token: 'test', rid: 'test', pageInfo: { change: 'url', title: 'YasChat', location: { href: 'https://rocket.chat' } } });
+				.send({ token: 'test', rid: 'test', pageInfo: { change: 'url', title: 'YasChat', location: { href: 'https://yas chat' } } });
 			expect(body).to.have.property('success', true);
 			expect(body).to.have.property('page');
 			expect(body.page).to.have.property('navigation');
@@ -292,7 +292,7 @@ describe('LIVECHAT - Utils', () => {
 				.send({
 					token: visitor.token,
 					rid: room._id,
-					pageInfo: { change: 'url', title: 'YasChat', location: { href: 'https://rocket.chat' } },
+					pageInfo: { change: 'url', title: 'YasChat', location: { href: 'https://yas chat' } },
 				});
 
 			expect(body).to.have.property('success', true);

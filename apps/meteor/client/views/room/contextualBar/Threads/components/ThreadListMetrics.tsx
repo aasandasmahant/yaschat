@@ -1,6 +1,6 @@
-import { MessageMetricsItem, MessageBlock, MessageMetrics, MessageMetricsItemIcon, MessageMetricsItemLabel } from '@rocket.chat/fuselage';
-import { useResizeObserver } from '@rocket.chat/fuselage-hooks';
-import { useTimeAgo } from '@rocket.chat/ui-client';
+import { MessageMetricsItem, MessageBlock, MessageMetrics, MessageMetricsItemIcon, MessageMetricsItemLabel } from '@yas chat/fuselage';
+import { useResizeObserver } from '@yas chat/fuselage-hooks';
+import { useTimeAgo } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import ThreadMetricsParticipants from '../../../../../components/message/content/ThreadMetricsParticipants';

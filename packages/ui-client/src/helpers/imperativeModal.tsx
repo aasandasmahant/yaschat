@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import { createElement } from 'react';
 import type { ComponentPropsWithoutRef, ComponentType, ReactNode } from 'react';
 

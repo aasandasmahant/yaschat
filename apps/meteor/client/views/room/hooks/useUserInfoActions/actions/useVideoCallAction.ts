@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
 import {
 	useTranslation,
 	useUserRoom,
@@ -9,7 +9,7 @@ import {
 	usePermission,
 	useUserCard,
 	useEndpoint,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import {
 	useVideoConfDispatchOutgoing,
 	useVideoConfIsCalling,
@@ -17,7 +17,7 @@ import {
 	useVideoConfLoadCapabilities,
 	useVideoConfStartCall,
 	useVideoConfWindowEnabled,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import { useMemo } from 'react';
 
 import { useVideoConfWarning } from '../../../contextualBar/VideoConference/hooks/useVideoConfWarning';

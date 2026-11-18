@@ -1,10 +1,10 @@
-import { api, FederationMatrix, Room } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { isUserNativeFederated } from '@rocket.chat/core-typings';
-import type { EventID, FileMessageContent, FileMessageType, PduForType, RoomID, UserID } from '@rocket.chat/federation-sdk';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Rooms, Users } from '@rocket.chat/models';
-import { ajv, ajvQuery } from '@rocket.chat/rest-typings';
+import { api, FederationMatrix, Room } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { isUserNativeFederated } from '@yas chat/core-typings';
+import type { EventID, FileMessageContent, FileMessageType, PduForType, RoomID, UserID } from '@yas chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Rooms, Users } from '@yas chat/models';
+import { ajv, ajvQuery } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import {

@@ -1,4 +1,4 @@
-import { Button, Avatar } from '@rocket.chat/fuselage';
+import { Button, Avatar } from '@yas chat/fuselage';
 import { useCallback } from 'react';
 
 import type { UserAvatarSuggestion } from './UserAvatarSuggestion';

@@ -1,22 +1,22 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import type { MediaCallEvent } from '@rocket.chat/apps';
+import type { MediaCallEvent } from '@yas chat/apps';
 import {
 	isAnsweredCall,
 	isKnownMediaCallHangupReason,
 	isMissedCall,
 	isRejectedCall,
 	mediaCallHangupReasonList,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
+} from '@yas chat/apps-engine/definition/mediaCalls';
 import type {
 	IMediaCallEndedContext,
 	IMediaCallParticipantJoinedContext,
 	IMediaCallStartedContext,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
-import { AppInterface, AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import type { PreCallCreatedHookParams } from '@rocket.chat/media-calls';
-import { callHangupReasonList } from '@rocket.chat/media-signaling';
+} from '@yas chat/apps-engine/definition/mediaCalls';
+import { AppInterface, AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import type { IMediaCall } from '@yas chat/core-typings';
+import type { PreCallCreatedHookParams } from '@yas chat/media-calls';
+import { callHangupReasonList } from '@yas chat/media-signaling';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -40,7 +40,7 @@ const i18nMock = {
 
 const { notifyAppsOfMediaCallStarted, notifyAppsOfMediaCallParticipantJoined, notifyAppsOfMediaCallEnded, runPreMediaCallCreatedAppHook } =
 	proxyquire.noCallThru().load('./appEvents', {
-		'@rocket.chat/apps': { Apps: AppsMock, AppEvents: AppInterface },
+		'@yas chat/apps': { Apps: AppsMock, AppEvents: AppInterface },
 		'./logger': { logger: loggerMock },
 		'../../lib/i18n': { i18n: i18nMock },
 		'../../settings': { settings: settingsMock },

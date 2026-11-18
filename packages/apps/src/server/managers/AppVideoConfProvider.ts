@@ -1,13 +1,13 @@
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IBlock } from '@rocket.chat/apps-engine/definition/uikit';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import type { IBlock } from '@yas chat/apps-engine/definition/uikit';
 import type {
 	IVideoConferenceOptions,
 	IVideoConfProvider,
 	VideoConfData,
 	VideoConfDataExtended,
-} from '@rocket.chat/apps-engine/definition/videoConfProviders';
-import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences';
-import type { IVideoConferenceUser } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
+} from '@yas chat/apps-engine/definition/videoConfProviders';
+import type { VideoConference } from '@yas chat/apps-engine/definition/videoConferences';
+import type { IVideoConferenceUser } from '@yas chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
 
 import type { ProxiedApp } from '../ProxiedApp';
 import { JSONRPC_METHOD_NOT_FOUND } from '../runtime/base/BaseRuntimeSubprocessController';

@@ -14,7 +14,7 @@ const { configureMailTransport, sendMail } = proxyquire.noCallThru().load('./tra
 
 const fakeTransport = () => ({ sendMail: sinon.stub().resolves(), close: sinon.stub() });
 
-const mail = { to: 'someone@example.com', from: 'rocket.chat@example.com', subject: 'Hello', text: 'Hello' };
+const mail = { to: 'someone@example.com', from: 'yas chat@example.com', subject: 'Hello', text: 'Hello' };
 
 describe('email transport', () => {
 	const originalEnv = { TEST_MODE: process.env.TEST_MODE, NODE_ENV: process.env.NODE_ENV };

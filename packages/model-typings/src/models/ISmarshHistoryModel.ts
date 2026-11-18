@@ -1,4 +1,4 @@
-import type { ISmarshHistory } from '@rocket.chat/core-typings';
+import type { ISmarshHistory } from '@yas chat/core-typings';
 
 import type { IBaseModel } from './IBaseModel';
 

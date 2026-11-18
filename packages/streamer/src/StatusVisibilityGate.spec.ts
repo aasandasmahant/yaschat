@@ -12,7 +12,7 @@ const getRestrictedUsers = jest.fn(
 
 const settingsGet = jest.fn(async (_id: string) => true as boolean);
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	Settings: { get: (id: string) => settingsGet(id) },
 	StatusVisibility: { getRestrictedUsers: () => getRestrictedUsers() },
 }));

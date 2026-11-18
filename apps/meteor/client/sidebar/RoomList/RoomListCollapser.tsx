@@ -1,5 +1,5 @@
-import { Badge, IconButton, SidebarCollapseGroup, SidebarCollapseGroupMenu } from '@rocket.chat/fuselage';
-import { useDeferredMenuMount, useIsEnterprise } from '@rocket.chat/ui-client';
+import { Badge, IconButton, SidebarCollapseGroup, SidebarCollapseGroupMenu } from '@yas chat/fuselage';
+import { useDeferredMenuMount, useIsEnterprise } from '@yas chat/ui-client';
 import type { HTMLAttributes, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

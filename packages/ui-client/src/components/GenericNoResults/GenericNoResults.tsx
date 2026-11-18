@@ -1,5 +1,5 @@
-import { Box, States, StatesIcon, StatesLink, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Box, States, StatesIcon, StatesLink, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import { useTranslation } from 'react-i18next';
 
 type LinkProps = { linkText: string; linkHref: string } | { linkText?: never; linkHref?: never };

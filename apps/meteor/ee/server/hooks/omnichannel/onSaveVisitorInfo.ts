@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom, IOmnichannelServiceLevelAgreements, IUser } from '@rocket.chat/core-typings';
-import { OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
+import type { IOmnichannelRoom, IOmnichannelServiceLevelAgreements, IUser } from '@yas chat/core-typings';
+import { OmnichannelServiceLevelAgreements } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { removePriorityFromRoom, updateRoomPriority } from '../../api/v1/omnichannel/lib/priorities';

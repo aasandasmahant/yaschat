@@ -1,5 +1,5 @@
-import { Table, TableBody, TableCell, TableHead, TableRow } from '@rocket.chat/fuselage';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@yas chat/fuselage';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import InlineElements from '../elements/InlineElements';
 

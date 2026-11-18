@@ -1,6 +1,6 @@
-import type { ConferenceContextValue, ConferenceFailure, ConferencePanel } from '@rocket.chat/ui-conference';
-import { ConferenceContext, useCallDevicesInitialState } from '@rocket.chat/ui-conference';
-import { useEndpoint, usePermission, useSetting, useUserId, useUserPreference, useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { ConferenceContextValue, ConferenceFailure, ConferencePanel } from '@yas chat/ui-conference';
+import { ConferenceContext, useCallDevicesInitialState } from '@yas chat/ui-conference';
+import { useEndpoint, usePermission, useSetting, useUserId, useUserPreference, useUserSubscription } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { Suspense, useCallback, useMemo, useState } from 'react';

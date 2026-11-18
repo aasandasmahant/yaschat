@@ -3,8 +3,8 @@ import type {
 	IMediaCallNegotiation,
 	MediaCallNegotiationStream,
 	RTCSessionDescriptionInit,
-} from '@rocket.chat/core-typings';
-import type { IMediaCallNegotiationsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import type { IMediaCallNegotiationsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { IndexDescription, Collection, Db, Document, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

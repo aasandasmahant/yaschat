@@ -1,5 +1,5 @@
-import type { IVideoConferenceRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences';
+import type { IVideoConferenceRead } from '@yas chat/apps-engine/definition/accessors';
+import type { VideoConference } from '@yas chat/apps-engine/definition/videoConferences';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

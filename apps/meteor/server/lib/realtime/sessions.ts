@@ -1,4 +1,4 @@
-import { ConnectionLifecycle, ConnectionRegistry } from '@rocket.chat/ddp-server';
+import { ConnectionLifecycle, ConnectionRegistry } from '@yas chat/ddp-server';
 
 export const lifecycle = new ConnectionLifecycle();
 

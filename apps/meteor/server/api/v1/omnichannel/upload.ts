@@ -1,4 +1,4 @@
-import { LivechatVisitors, LivechatRooms } from '@rocket.chat/models';
+import { LivechatVisitors, LivechatRooms } from '@yas chat/models';
 
 import { API } from '../..';
 import { FileUpload } from '../../../lib/media/file-upload';

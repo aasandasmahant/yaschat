@@ -1,4 +1,4 @@
-import { useUser } from '@rocket.chat/ui-contexts';
+import { useUser } from '@yas chat/ui-contexts';
 import { useMemo, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 

@@ -1,12 +1,12 @@
-import type { IApi } from '@rocket.chat/apps-engine/definition/api';
-import type { IApiEndpointMetadata } from '@rocket.chat/apps-engine/definition/api/IApiEndpointMetadata';
-import type { IExternalComponent } from '@rocket.chat/apps-engine/definition/externalComponent/IExternalComponent';
-import type { IOutboundMessageProviders } from '@rocket.chat/apps-engine/definition/outboundCommunication';
-import type { IProcessor } from '@rocket.chat/apps-engine/definition/scheduler';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
-import type { ISlashCommand } from '@rocket.chat/apps-engine/definition/slashcommands';
-import type { IUIActionButtonDescriptor } from '@rocket.chat/apps-engine/definition/ui';
-import type { IVideoConfProvider } from '@rocket.chat/apps-engine/definition/videoConfProviders';
+import type { IApi } from '@yas chat/apps-engine/definition/api';
+import type { IApiEndpointMetadata } from '@yas chat/apps-engine/definition/api/IApiEndpointMetadata';
+import type { IExternalComponent } from '@yas chat/apps-engine/definition/externalComponent/IExternalComponent';
+import type { IOutboundMessageProviders } from '@yas chat/apps-engine/definition/outboundCommunication';
+import type { IProcessor } from '@yas chat/apps-engine/definition/scheduler';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
+import type { ISlashCommand } from '@yas chat/apps-engine/definition/slashcommands';
+import type { IUIActionButtonDescriptor } from '@yas chat/apps-engine/definition/ui';
+import type { IVideoConfProvider } from '@yas chat/apps-engine/definition/videoConfProviders';
 
 import type { AppManager } from '../AppManager';
 

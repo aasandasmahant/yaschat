@@ -1,9 +1,9 @@
-import type { Job } from '@rocket.chat/agenda';
-import { Agenda } from '@rocket.chat/agenda';
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { SchedulerBridge } from '@rocket.chat/apps/dist/server/bridges/SchedulerBridge';
-import type { IProcessor, IOnetimeSchedule, IRecurringSchedule, IJobContext } from '@rocket.chat/apps-engine/definition/scheduler';
-import { StartupType } from '@rocket.chat/apps-engine/definition/scheduler';
+import type { Job } from '@yas chat/agenda';
+import { Agenda } from '@yas chat/agenda';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { SchedulerBridge } from '@yas chat/apps/dist/server/bridges/SchedulerBridge';
+import type { IProcessor, IOnetimeSchedule, IRecurringSchedule, IJobContext } from '@yas chat/apps-engine/definition/scheduler';
+import { StartupType } from '@yas chat/apps-engine/definition/scheduler';
 import { ObjectId } from 'bson';
 
 import { client } from '../../../database/utils';

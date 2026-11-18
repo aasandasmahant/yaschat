@@ -1,6 +1,6 @@
-import { getUserDisplayName } from '@rocket.chat/core-typings';
-import type { IRoom, RoomType, IUser, IMessage, ValueOf, AtLeast, IUpload } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { getUserDisplayName } from '@yas chat/core-typings';
+import type { IRoom, RoomType, IUser, IMessage, ValueOf, AtLeast, IUpload } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import type { IRoomTypeConfig, IRoomTypeServerDirectives, RoomSettingsEnum, RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { RoomCoordinator } from '../../../lib/rooms/coordinator';

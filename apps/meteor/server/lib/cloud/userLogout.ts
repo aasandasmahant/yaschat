@@ -1,6 +1,6 @@
-import { License } from '@rocket.chat/license';
-import { Users } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { License } from '@yas chat/license';
+import { Users } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { retrieveRegistrationStatus } from './retrieveRegistrationStatus';
 import { userLoggedOut } from './userLoggedOut';

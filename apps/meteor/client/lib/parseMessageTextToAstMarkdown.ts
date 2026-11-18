@@ -1,4 +1,4 @@
-import type { IMessage, ITranslatedMessage, MessageAttachment } from '@rocket.chat/core-typings';
+import type { IMessage, ITranslatedMessage, MessageAttachment } from '@yas chat/core-typings';
 import {
 	isFileAttachment,
 	isE2EEMessage,
@@ -6,9 +6,9 @@ import {
 	isTranslatedAttachment,
 	isTranslatedMessage,
 	isEncryptedMessageAttachment,
-} from '@rocket.chat/core-typings';
-import type { Options, Root } from '@rocket.chat/message-parser';
-import { parse } from '@rocket.chat/message-parser';
+} from '@yas chat/core-typings';
+import type { Options, Root } from '@yas chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 
 import { getMarkdownParserLimit } from './getMarkdownParserLimit';
 import { toPlainTextRoot } from './toPlainTextRoot';

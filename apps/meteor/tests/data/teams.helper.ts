@@ -1,4 +1,4 @@
-import type { ITeam, TeamType } from '@rocket.chat/core-typings';
+import type { ITeam, TeamType } from '@yas chat/core-typings';
 
 import { api, request } from './api-data';
 

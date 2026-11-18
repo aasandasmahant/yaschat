@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { ActionLink, BackgroundLayer } from '@rocket.chat/layout';
+import { Box } from '@yas chat/fuselage';
+import { ActionLink, BackgroundLayer } from '@yas chat/layout';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 

@@ -4,9 +4,9 @@ import {
 	isRegisterUser,
 	isUserNativeFederated,
 	UserStatus,
-} from '@rocket.chat/core-typings';
-import type { UserID } from '@rocket.chat/federation-sdk';
-import { Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import type { UserID } from '@yas chat/federation-sdk';
+import { Users } from '@yas chat/models';
 
 /**
  * Helper function to create a federated user

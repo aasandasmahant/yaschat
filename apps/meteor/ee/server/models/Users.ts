@@ -1,4 +1,4 @@
-import { registerModel } from '@rocket.chat/models';
+import { registerModel } from '@yas chat/models';
 
 import { UsersEE } from './raw/Users';
 import { trashCollection } from '../../../server/database/trash';

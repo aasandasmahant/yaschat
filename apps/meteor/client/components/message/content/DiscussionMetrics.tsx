@@ -5,8 +5,8 @@ import {
 	MessageMetricsItemIcon,
 	MessageMetricsItemLabel,
 	MessageMetricsReply,
-} from '@rocket.chat/fuselage';
-import { useTimeAgo } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import { useTimeAgo } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useGoToRoom } from '../../../views/room/hooks/useGoToRoom';

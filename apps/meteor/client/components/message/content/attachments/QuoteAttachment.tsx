@@ -1,8 +1,8 @@
-import type { MessageQuoteAttachment } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { Palette } from '@rocket.chat/fuselage';
-import { useTimeAgo } from '@rocket.chat/ui-client';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import type { MessageQuoteAttachment } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { Palette } from '@yas chat/fuselage';
+import { useTimeAgo } from '@yas chat/ui-client';
+import { useUserPreference } from '@yas chat/ui-contexts';
 
 import MessageContentBody from '../../MessageContentBody';
 import Attachments from '../Attachments';

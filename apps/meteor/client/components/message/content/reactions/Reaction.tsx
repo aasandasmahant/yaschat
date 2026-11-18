@@ -1,6 +1,6 @@
-import { MessageReaction as MessageReactionTemplate, MessageReactionEmoji, MessageReactionCounter } from '@rocket.chat/fuselage';
-import { useButtonPattern } from '@rocket.chat/fuselage-hooks';
-import { useTooltipClose, useTooltipOpen } from '@rocket.chat/ui-contexts';
+import { MessageReaction as MessageReactionTemplate, MessageReactionEmoji, MessageReactionCounter } from '@yas chat/fuselage';
+import { useButtonPattern } from '@yas chat/fuselage-hooks';
+import { useTooltipClose, useTooltipOpen } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useRef, useContext } from 'react';
 import { useTranslation } from 'react-i18next';

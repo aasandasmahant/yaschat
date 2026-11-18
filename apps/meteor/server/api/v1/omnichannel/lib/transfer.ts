@@ -1,6 +1,6 @@
-import type { IOmnichannelSystemMessage } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import type { IOmnichannelSystemMessage } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 
 const normalizeTransferHistory = ({ transferData }: IOmnichannelSystemMessage): IOmnichannelSystemMessage['transferData'] => transferData;
 

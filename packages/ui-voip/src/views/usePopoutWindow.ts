@@ -1,5 +1,5 @@
-import { useThemeMode } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useThemeMode } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { TFunction } from 'i18next';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

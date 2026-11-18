@@ -1,4 +1,4 @@
-import type { ILivechatPriority, IOmnichannelServiceLevelAgreements } from '@rocket.chat/core-typings';
+import type { ILivechatPriority, IOmnichannelServiceLevelAgreements } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { generateRandomSLAData } from '../../e2e/utils/omnichannel/sla';

@@ -1,6 +1,6 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ILivechatInquiryRecord } from '@rocket.chat/core-typings';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { ILivechatInquiryRecord } from '@yas chat/core-typings';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 
 import { api, request } from '../api-data';
 

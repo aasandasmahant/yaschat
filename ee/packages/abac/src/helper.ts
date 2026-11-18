@@ -1,4 +1,4 @@
-import type { AbacCreationAttributesResult, AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
+import type { AbacCreationAttributesResult, AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
 import type {
 	AbacMembershipGroup,
 	AbacMembershipVerdict,
@@ -8,9 +8,9 @@ import type {
 	IRoom,
 	ISubscription,
 	IUser,
-} from '@rocket.chat/core-typings';
-import { isDiscussion, isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
-import { AbacAttributes, Rooms, Subscriptions, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { isDiscussion, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
+import { AbacAttributes, Rooms, Subscriptions, Users } from '@yas chat/models';
 import mem from 'mem';
 
 import {

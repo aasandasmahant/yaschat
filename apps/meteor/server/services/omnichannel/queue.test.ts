@@ -1,6 +1,6 @@
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import Sinon from 'sinon';
@@ -58,7 +58,7 @@ const { OmnichannelQueue } = p.noCallThru().load('./queue', {
 	'../../lib/notifyListener': { notifyOnLivechatInquiryChangedByRoom: Sinon.stub() },
 	'../../settings': { settings },
 	'./logger': { queueLogger },
-	'@rocket.chat/license': { License: license },
+	'@yas chat/license': { License: license },
 	'../../lib/metrics': {
 		metrics: {
 			timeToQueueProcessingByQueue: { observe: Sinon.stub() },

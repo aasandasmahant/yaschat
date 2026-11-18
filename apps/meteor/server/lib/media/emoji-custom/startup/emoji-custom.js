@@ -1,4 +1,4 @@
-import { EmojiCustom } from '@rocket.chat/models';
+import { EmojiCustom } from '@yas chat/models';
 import { WebApp } from 'meteor/webapp';
 import _ from 'underscore';
 

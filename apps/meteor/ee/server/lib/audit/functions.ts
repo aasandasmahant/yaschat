@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatAgent, ILivechatVisitor, IMessage, IRoom, IUser, IAuditLog } from '@rocket.chat/core-typings';
-import { LivechatRooms, Messages, Rooms, Users, AuditLog } from '@rocket.chat/models';
-import { escapeRegExp, isTruthy } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILivechatAgent, ILivechatVisitor, IMessage, IRoom, IUser, IAuditLog } from '@yas chat/core-typings';
+import { LivechatRooms, Messages, Rooms, Users, AuditLog } from '@yas chat/models';
+import { escapeRegExp, isTruthy } from '@yas chat/tools';
 import type { Filter } from 'mongodb';
 
 import { hasPermissionAsync } from '../../../../server/lib/authorization/hasPermission';

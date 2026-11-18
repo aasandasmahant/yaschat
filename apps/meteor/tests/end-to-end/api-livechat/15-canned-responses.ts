@@ -1,7 +1,7 @@
 import { before, describe, it } from 'node:test';
 
 import { faker } from '@faker-js/faker';
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

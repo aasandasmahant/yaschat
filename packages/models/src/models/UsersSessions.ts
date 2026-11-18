@@ -1,5 +1,5 @@
-import type { IUserSession, IUserSessionConnection, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IUsersSessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IUserSession, IUserSessionConnection, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IUsersSessionsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { FindCursor, Collection, Db, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

@@ -1,4 +1,4 @@
-import { useCustomSound } from '@rocket.chat/ui-contexts';
+import { useCustomSound } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import type { State } from '../context/definitions';

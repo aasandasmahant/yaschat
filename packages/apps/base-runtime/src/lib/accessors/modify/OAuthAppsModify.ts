@@ -1,5 +1,5 @@
-import type { IOAuthAppParams } from '@rocket.chat/apps-engine/definition/accessors/IOAuthApp';
-import type { IOAuthAppsModify } from '@rocket.chat/apps-engine/definition/accessors/IOAuthAppsModify';
+import type { IOAuthAppParams } from '@yas chat/apps-engine/definition/accessors/IOAuthApp';
+import type { IOAuthAppsModify } from '@yas chat/apps-engine/definition/accessors/IOAuthAppsModify';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

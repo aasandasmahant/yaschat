@@ -1,7 +1,7 @@
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { isPublicRoom } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions } from '@rocket.chat/models';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { isPublicRoom } from '@yas chat/core-typings';
+import { Rooms, Subscriptions } from '@yas chat/models';
 import type { UpdateResult, Document } from 'mongodb';
 
 import { RoomSettingsEnum } from '../../../../definition/IRoomTypeConfig';

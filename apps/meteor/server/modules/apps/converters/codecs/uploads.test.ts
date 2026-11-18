@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

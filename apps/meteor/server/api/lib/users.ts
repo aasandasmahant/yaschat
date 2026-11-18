@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users, Subscriptions } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IUser } from '@yas chat/core-typings';
+import { Users, Subscriptions } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Mongo } from 'meteor/mongo';
 import type { Filter, FindOptions, RootFilterOperators } from 'mongodb';
 

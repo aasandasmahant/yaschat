@@ -1,8 +1,8 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IUser, IRoom, ISubscription } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
 
 import { callbacks } from '../callbacks';
 import { notifyOnSubscriptionChangedById } from '../notifyListener';

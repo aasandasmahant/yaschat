@@ -1,7 +1,7 @@
-import { Abac } from '@rocket.chat/core-services';
-import type { IRoom, IRoomAbacRedaction } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Users } from '@rocket.chat/models';
+import { Abac } from '@yas chat/core-services';
+import type { IRoom, IRoomAbacRedaction } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Users } from '@yas chat/models';
 
 import { scopeAdminRoomsForAbac } from '../../../../server/api/lib/scopeAdminRoomsForAbac';
 import { isABACManagedRoom } from '../../../../server/lib/authorization/isABACManagedRoom';

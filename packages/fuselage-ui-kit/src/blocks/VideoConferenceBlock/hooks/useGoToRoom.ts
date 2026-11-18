@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useEndpoint, useRouter } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useEndpoint, useRouter } from '@yas chat/ui-contexts';
 
 export const useGoToRoom = (): ((roomId: IRoom['_id']) => Promise<void>) => {
 	const router = useRouter();

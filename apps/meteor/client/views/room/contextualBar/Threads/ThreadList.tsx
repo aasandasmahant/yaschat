@@ -1,6 +1,6 @@
-import type { IMessage, IThreadMainMessage } from '@rocket.chat/core-typings';
-import { Box, Select, Callout, Throbber } from '@rocket.chat/fuselage';
-import { useResizeObserver, useAutoFocus, useLocalStorage, useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import type { IMessage, IThreadMainMessage } from '@yas chat/core-typings';
+import { Box, Select, Callout, Throbber } from '@yas chat/fuselage';
+import { useResizeObserver, useAutoFocus, useLocalStorage, useDebouncedValue } from '@yas chat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarClose,
@@ -11,8 +11,8 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarSection,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
-import { useUserId, useRoomToolbox } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useUserId, useRoomToolbox } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useMemo, useState, useCallback, useId } from 'react';
 import { useTranslation } from 'react-i18next';

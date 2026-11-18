@@ -1,11 +1,11 @@
-import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
 import {
 	ajv,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { notifyOnSubscriptionsChangedByRoomIdsAndUserId } from '../../lib/notifyListener';
 import { API } from '../api';

@@ -1,4 +1,4 @@
-import { BaseAvatar } from '@rocket.chat/ui-avatar';
+import { BaseAvatar } from '@yas chat/ui-avatar';
 
 export type AttachmentAuthorAvatarProps = { url: string };
 

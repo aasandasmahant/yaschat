@@ -1,12 +1,12 @@
-import { Presence, ClientSafeError } from '@rocket.chat/core-services';
-import { UserStatus, type IUser } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import { Presence, ClientSafeError } from '@yas chat/core-services';
+import { UserStatus, type IUser } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { Meteor } from 'meteor/meteor';
 
 import { RateLimiterClass as RateLimiter } from '../../lib/RateLimiter';
 import { settings } from '../../settings';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		setUserStatus(statusType: IUser['status'], statusText: IUser['statusText']): void;
 	}

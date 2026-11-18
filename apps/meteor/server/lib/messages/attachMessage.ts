@@ -1,5 +1,5 @@
-import { getUserDisplayName } from '@rocket.chat/core-typings';
-import type { IMessage, IRoom, MessageAttachment } from '@rocket.chat/core-typings';
+import { getUserDisplayName } from '@yas chat/core-typings';
+import type { IMessage, IRoom, MessageAttachment } from '@yas chat/core-typings';
 
 import { settings } from '../../settings/cached';
 import { roomCoordinator } from '../rooms/roomCoordinator';

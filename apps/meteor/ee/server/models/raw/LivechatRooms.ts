@@ -5,17 +5,17 @@ import type {
 	YasChatRecordDeleted,
 	ReportResult,
 	ILivechatContact,
-} from '@rocket.chat/core-typings';
-import { LivechatPriorityWeight, DEFAULT_SLA_CONFIG } from '@rocket.chat/core-typings';
-import type { FindPaginated, ILivechatRoomsModel } from '@rocket.chat/model-typings';
-import type { Updater } from '@rocket.chat/models';
-import { LivechatRoomsRaw } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { LivechatPriorityWeight, DEFAULT_SLA_CONFIG } from '@yas chat/core-typings';
+import type { FindPaginated, ILivechatRoomsModel } from '@yas chat/model-typings';
+import type { Updater } from '@yas chat/models';
+import { LivechatRoomsRaw } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 import type { FindCursor, UpdateResult, Document, FindOptions, Db, Collection, Filter, AggregationCursor, UpdateOptions } from 'mongodb';
 
 import { readSecondaryPreferred } from '../../../../server/database/readSecondaryPreferred';
 
-declare module '@rocket.chat/model-typings' {
+declare module '@yas chat/model-typings' {
 	interface ILivechatRoomsModel {
 		associateRoomsWithDepartmentToUnit: (departments: string[], unit: string) => Promise<void>;
 		removeUnitAssociationFromRooms: (unit: string) => Promise<void>;

@@ -1,4 +1,4 @@
-import type { ISetting, ISettingColor, ISettingSelectOption, SettingValue } from '@rocket.chat/core-typings';
+import type { ISetting, ISettingColor, ISettingSelectOption, SettingValue } from '@yas chat/core-typings';
 import type { FindCursor, UpdateFilter, UpdateResult, Document, FindOneAndUpdateOptions, WithId, UpdateOptions } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

@@ -12,10 +12,10 @@ import {
 	FieldLabel,
 	FieldRow,
 	FieldHint,
-} from '@rocket.chat/fuselage';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useRouter, useRouteParameter, useSetting, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useSafely } from '@yas chat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useRouter, useRouteParameter, useSetting, useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ChangeEvent, DragEvent, Key, SyntheticEvent } from 'react';
 import { useState, useMemo, useEffect, useId } from 'react';

@@ -1,4 +1,4 @@
-import nameToCharacterMapping from '@rocket.chat/icons';
+import nameToCharacterMapping from '@yas chat/icons';
 import { composeStories } from '@storybook/react';
 import { screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

@@ -1,4 +1,4 @@
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 
 import UnreadBadge from '../badges/UnreadBadge';
 import { useUnreadDisplay } from '../hooks/useUnreadDisplay';

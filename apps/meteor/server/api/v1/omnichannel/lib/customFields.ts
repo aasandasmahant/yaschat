@@ -1,7 +1,7 @@
-import type { ILivechatCustomField } from '@rocket.chat/core-typings';
-import { LivechatCustomField, LivechatVisitors, LivechatRooms } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { ILivechatCustomField } from '@yas chat/core-typings';
+import { LivechatCustomField, LivechatVisitors, LivechatRooms } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { UpdateResult, Document } from 'mongodb';
 
 export async function findLivechatCustomFields({

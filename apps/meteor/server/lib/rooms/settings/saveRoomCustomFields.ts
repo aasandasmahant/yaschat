@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Rooms, Subscriptions } from '@rocket.chat/models';
-import { isRecord } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Rooms, Subscriptions } from '@yas chat/models';
+import { isRecord } from '@yas chat/tools';
 import type { UpdateResult } from 'mongodb';
 
 import { notifyOnSubscriptionChangedByRoomId } from '../../notifyListener';

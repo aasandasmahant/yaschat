@@ -1,10 +1,10 @@
 import http from 'node:http';
 import https from 'node:https';
 
-import { api } from '@rocket.chat/core-services';
-import type { IImport, MessageAttachment, IUpload, IImporterShortSelection } from '@rocket.chat/core-typings';
-import { Messages, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { api } from '@yas chat/core-services';
+import type { IImport, MessageAttachment, IUpload, IImporterShortSelection } from '@yas chat/core-typings';
+import { Messages, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { Importer, ProgressStep } from '..';
 import { parseFileIntoMessageAttachments } from '../../../meteor-methods/messages/sendFileMessage';
@@ -127,13 +127,13 @@ export class PendingFileImporter extends Importer {
 							// Bypass the fileStore filters
 							const file = await fileStore._doInsert(details, rawData);
 
-							const rocketChatUrl = FileUpload.getPath(`${file._id}/${encodeURI(file.name || '')}`);
+							const YasChatUrl = FileUpload.getPath(`${file._id}/${encodeURI(file.name || '')}`);
 							const user = await Users.findOneById(message.u._id);
 							const attachment = user
 								? (await parseFileIntoMessageAttachments(file, message.rid, user)).attachments[0]
-								: this.getMessageAttachment(file, rocketChatUrl);
+								: this.getMessageAttachment(file, YasChatUrl);
 
-							await Messages.setImportFileYasChatAttachment(_importFile.id, rocketChatUrl, attachment);
+							await Messages.setImportFileYasChatAttachment(_importFile.id, YasChatUrl, attachment);
 							await completeFile(details);
 							importedRoomIds.add(message.rid);
 						})

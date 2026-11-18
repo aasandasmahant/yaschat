@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { License } from '@yas chat/license';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { getRedirectUri } from './getRedirectUri';
 import { CloudWorkspaceAccessTokenError } from './getWorkspaceAccessToken';

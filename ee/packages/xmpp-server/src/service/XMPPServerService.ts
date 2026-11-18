@@ -1,5 +1,5 @@
-import { api, License, Message, Room, ServiceClass, Settings } from '@rocket.chat/core-services';
-import type { IXMPPServerService } from '@rocket.chat/core-services';
+import { api, License, Message, Room, ServiceClass, Settings } from '@yas chat/core-services';
+import type { IXMPPServerService } from '@yas chat/core-services';
 import {
 	isBannedSubscription,
 	isEditedMessage,
@@ -7,11 +7,11 @@ import {
 	isRoomXMPPHostedMuc,
 	isRoomXMPPRemoteMuc,
 	isUserXMPPFederated,
-} from '@rocket.chat/core-typings';
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Messages, Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+} from '@yas chat/core-typings';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Messages, Rooms, Subscriptions, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { XMPPServer } from '../XMPPServer';
 import { XMPP_SERVER_DEFAULTS, type MucJoinDecision, type XMPPServerConfig } from '../config';

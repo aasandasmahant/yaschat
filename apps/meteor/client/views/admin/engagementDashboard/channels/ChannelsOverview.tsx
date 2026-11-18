@@ -1,4 +1,4 @@
-import { Box, Icon, Pagination, Skeleton, Table, TableBody, TableCell, TableHead, TableRow, Tile } from '@rocket.chat/fuselage';
+import { Box, Icon, Pagination, Skeleton, Table, TableBody, TableCell, TableHead, TableRow, Tile } from '@yas chat/fuselage';
 import { format } from 'date-fns/format';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { ModerationBridge } from '../../../src/server/bridges';
 

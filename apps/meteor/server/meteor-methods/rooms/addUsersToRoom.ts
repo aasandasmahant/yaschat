@@ -1,7 +1,7 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { isBannedSubscription, isRoomNativeFederated, isRoomXMPPHostedMuc, type IRoom, type IUser } from '@rocket.chat/core-typings';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
-import { normalizeBareJid } from '@rocket.chat/tools';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { isBannedSubscription, isRoomNativeFederated, isRoomXMPPHostedMuc, type IRoom, type IUser } from '@yas chat/core-typings';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
+import { normalizeBareJid } from '@yas chat/tools';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { beforeAddUsersToRoom } from '../../lib/callbacks/beforeAddUserToRoom';

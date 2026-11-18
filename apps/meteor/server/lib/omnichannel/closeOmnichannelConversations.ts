@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { LivechatRooms } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { LivechatRooms } from '@yas chat/models';
 
 import { closeRoom } from './closeRoom';
 import { settings } from '../../settings';

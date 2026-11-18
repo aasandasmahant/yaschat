@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 import type { IncomingMessage } from 'http';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import ejson from 'ejson';
 import WebSocket from 'ws';
 
@@ -12,7 +12,7 @@ import { SERVER_ID, preframe } from './codec';
 import { TIMEOUT, WS_ERRORS, WS_ERRORS_MESSAGES } from './constants';
 import { ConnectionLifecycle } from './lifecycle';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

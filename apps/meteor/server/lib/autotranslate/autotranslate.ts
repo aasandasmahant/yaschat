@@ -5,10 +5,10 @@ import type {
 	IProviderMetadata,
 	ISupportedLanguage,
 	ITranslationResult,
-} from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Messages, Subscriptions } from '@rocket.chat/models';
-import { escapeHTML, isTruthy } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Messages, Subscriptions } from '@yas chat/models';
+import { escapeHTML, isTruthy } from '@yas chat/tools';
 import _ from 'underscore';
 
 import { settings } from '../../settings';

@@ -1,6 +1,6 @@
-import type { JoinableVideoConference } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { buildJoinableCall as call } from '@rocket.chat/ui-conference';
+import type { JoinableVideoConference } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { buildJoinableCall as call } from '@yas chat/ui-conference';
 import { act, renderHook, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -9,8 +9,8 @@ import { useJoinableCalls } from './useJoinableCalls';
 
 const joinCall = jest.fn();
 
-jest.mock('@rocket.chat/ui-video-conf', () => ({
-	...jest.requireActual('@rocket.chat/ui-video-conf'),
+jest.mock('@yas chat/ui-video-conf', () => ({
+	...jest.requireActual('@yas chat/ui-video-conf'),
 	useVideoConfJoinCall: () => joinCall,
 }));
 

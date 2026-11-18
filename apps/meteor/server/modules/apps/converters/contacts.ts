@@ -1,6 +1,6 @@
-import type { IAppContactsConverter, IAppsLivechatContact } from '@rocket.chat/apps';
-import type { ILivechatContact } from '@rocket.chat/core-typings';
-import { LivechatContacts } from '@rocket.chat/models';
+import type { IAppContactsConverter, IAppsLivechatContact } from '@yas chat/apps';
+import type { ILivechatContact } from '@yas chat/core-typings';
+import { LivechatContacts } from '@yas chat/models';
 import * as z from 'zod';
 
 import { ContactCodec } from './codecs/contacts';

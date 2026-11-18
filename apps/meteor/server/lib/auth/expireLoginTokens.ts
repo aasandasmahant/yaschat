@@ -1,7 +1,7 @@
-import { api } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Settings, Users } from '@rocket.chat/models';
-import { getLoginExpirationInMs } from '@rocket.chat/tools';
+import { api } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Settings, Users } from '@yas chat/models';
+import { getLoginExpirationInMs } from '@yas chat/tools';
 
 export async function expireLoginTokens(): Promise<void> {
 	const loginExpiration = await Settings.getValueById<number>('Accounts_LoginExpiration');

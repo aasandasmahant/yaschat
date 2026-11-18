@@ -1,5 +1,5 @@
-import { MeteorService, ServiceClassInternal } from '@rocket.chat/core-services';
-import { applyLoginServiceConfigurationChange, setClientVersion } from '@rocket.chat/ddp-server';
+import { MeteorService, ServiceClassInternal } from '@yas chat/core-services';
+import { applyLoginServiceConfigurationChange, setClientVersion } from '@yas chat/ddp-server';
 
 import { meteorCollections } from '../../lib/realtime/ddpServer';
 import { sessions } from '../../lib/realtime/sessions';

@@ -1,5 +1,5 @@
-import { GenericModal, GenericModalSkeleton } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { GenericModal, GenericModalSkeleton } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,17 +1,17 @@
-# `@rocket.chat/icons`
+# `@yas chat/icons`
 
 > The YasChat icon set, shipped as an icon font, standalone SVG files, an SVG sprite and a name-to-character map.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/icons?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/icons) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/icons?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/icons)
+[![npm](https://img.shields.io/npm/v/@yas chat/icons?style=flat-square)](https://www.npmjs.com/package/@yas chat/icons) [![downloads](https://img.shields.io/npm/dw/@yas chat/icons?style=flat-square)](https://www.npmjs.com/package/@yas chat/icons)
 
-This package holds the icons used across YasChat and the [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage) design system. Every icon is drawn once as an SVG and then built into several formats, so you can pick the one that fits your stack.
+This package holds the icons used across YasChat and the [Fuselage](https://www.npmjs.com/package/@yas chat/fuselage) design system. Every icon is drawn once as an SVG and then built into several formats, so you can pick the one that fits your stack.
 
-The package contains no React components. In a React app built on Fuselage, use the `Icon` component from `@rocket.chat/fuselage`, which renders icons from this package's font.
+The package contains no React components. In a React app built on Fuselage, use the `Icon` component from `@yas chat/fuselage`, which renders icons from this package's font.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/icons
+npm install @yas chat/icons
 ```
 
 The package has no dependencies and no peer dependencies. It ships as an ES module, and its `exports` map exposes the package root and every file under `dist/` by path. CommonJS code can `require()` it on a Node.js version that can load ES modules that way (20.19 or 22.12 and later); the character map is then under `.default`.
@@ -34,8 +34,8 @@ The package has no dependencies and no peer dependencies. It ships as an ES modu
 Load the font once, then use Fuselage's `Icon` component. Its `name` prop is typed with this package's `Keys`.
 
 ```tsx
-import '@rocket.chat/icons/dist/yaschat.css';
-import { Icon } from '@rocket.chat/fuselage';
+import '@yas chat/icons/dist/yaschat.css';
+import { Icon } from '@yas chat/fuselage';
 
 const Bell = () => <Icon name='bell' size='x20' />;
 ```
@@ -45,8 +45,8 @@ const Bell = () => <Icon name='bell' size='x20' />;
 Load `yaschat.css`, set `font-family: 'YasChat'` on an element, and put the icon's character inside it. The default export gives you the character for each name.
 
 ```ts
-import '@rocket.chat/icons/dist/yaschat.css';
-import icons from '@rocket.chat/icons';
+import '@yas chat/icons/dist/yaschat.css';
+import icons from '@yas chat/icons';
 
 const element = document.createElement('i');
 element.style.fontFamily = 'YasChat';
@@ -74,14 +74,14 @@ Inline `dist/icons.svg` once in your page, then reference symbols by id:
 ### Typing icon names
 
 ```ts
-import type { Keys as IconName } from '@rocket.chat/icons';
+import type { Keys as IconName } from '@yas chat/icons';
 
 const toolbarIcons: IconName[] = ['bell', 'cog', 'magnifier'];
 ```
 
 ### Finding icon names
 
-- List the keys of the default export: `Object.keys((await import('@rocket.chat/icons')).default)`.
+- List the keys of the default export: `Object.keys((await import('@yas chat/icons')).default)`.
 - Look at the file names in `dist/svg/` of the installed package.
 - Browse the [source SVGs](https://github.com/YasChat/YasChat/tree/develop/packages/icons/src) in the repository. The file name is the icon name, without the `.svg` extension and without a `.dir` or `.other` suffix. Icons with the `.other` suffix are left out of the font and the character map, and ship only as SVG.
 
@@ -94,8 +94,8 @@ Icons whose source file ends in `.dir.svg` are directional (arrows, chevrons and
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/icons). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/icons build
-yarn workspace @rocket.chat/icons lint
+yarn workspace @yas chat/icons build
+yarn workspace @yas chat/icons lint
 ```
 
 To add an icon, put its SVG in `src/` and run `build`. Use the `.dir.svg` suffix for icons that should mirror in right-to-left layouts. The build assigns a font character to every new icon and records it in `glyphsMapping.json`; commit that file too, so existing icons keep their characters. The full guide, including the design and naming conventions, is in [docs/frontend/adding-icons.md](https://github.com/YasChat/YasChat/blob/develop/docs/frontend/adding-icons.md).

@@ -1,12 +1,12 @@
-# `@rocket.chat/layout`
+# `@yas chat/layout`
 
 > React page layouts and building blocks for YasChat's full-screen pages, such as setup wizards, login and registration.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/layout?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/layout) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/layout?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/layout)
+[![npm](https://img.shields.io/npm/v/@yas chat/layout?style=flat-square)](https://www.npmjs.com/package/@yas chat/layout) [![downloads](https://img.shields.io/npm/dw/@yas chat/layout?style=flat-square)](https://www.npmjs.com/package/@yas chat/layout)
 
-This package provides the page shells used by YasChat's standalone screens: a patterned background, the logo, a centered or two-column arrangement, and a form card. The pages in [`@rocket.chat/onboarding-ui`](https://www.npmjs.com/package/@rocket.chat/onboarding-ui) are built on it.
+This package provides the page shells used by YasChat's standalone screens: a patterned background, the logo, a centered or two-column arrangement, and a form card. The pages in [`@yas chat/onboarding-ui`](https://www.npmjs.com/package/@yas chat/onboarding-ui) are built on it.
 
-It is built with [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage) components and supports light and dark mode.
+It is built with [Fuselage](https://www.npmjs.com/package/@yas chat/fuselage) components and supports light and dark mode.
 
 - Three layouts: `HeroLayout`, `VerticalWizardLayout` and `HorizontalWizardLayout`.
 - Form building blocks: `Form`, `FormHeader`, `FormTitle`, `FormSubtitle`, `FormSteps`, `FormContainer`, `FormFooter`.
@@ -16,16 +16,16 @@ It is built with [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage)
 ## Installation
 
 ```sh
-npm install @rocket.chat/layout @rocket.chat/fuselage @rocket.chat/icons react@19 react-dom@19 react-i18next i18next react-virtuoso
+npm install @yas chat/layout @yas chat/fuselage @yas chat/icons react@19 react-dom@19 react-i18next i18next react-virtuoso
 ```
 
-Peer dependencies: `@rocket.chat/fuselage`, `react` and `react-dom` (19 or later) and `react-i18next` (which itself needs `i18next`). `@rocket.chat/icons` and `react-virtuoso` are peer dependencies of Fuselage, and the icon font comes from `@rocket.chat/icons`. The package ships both CommonJS and ES modules, with TypeScript declarations.
+Peer dependencies: `@yas chat/fuselage`, `react` and `react-dom` (19 or later) and `react-i18next` (which itself needs `i18next`). `@yas chat/icons` and `react-virtuoso` are peer dependencies of Fuselage, and the icon font comes from `@yas chat/icons`. The package ships both CommonJS and ES modules, with TypeScript declarations.
 
 The components rely on Fuselage's styles and on the YasChat icon font. Load them once in your app:
 
 ```ts
-import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/yaschat.css';
+import '@yas chat/fuselage/dist/fuselage.css';
+import '@yas chat/icons/dist/yaschat.css';
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ import '@rocket.chat/icons/dist/yaschat.css';
 ### A centered form page
 
 ```tsx
-import { Button, Field, FieldLabel, FieldRow, TextInput } from '@rocket.chat/fuselage';
+import { Button, Field, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
 import {
 	Form,
 	FormContainer,
@@ -45,7 +45,7 @@ import {
 	VerticalWizardLayoutFooter,
 	VerticalWizardLayoutForm,
 	VerticalWizardLayoutTitle,
-} from '@rocket.chat/layout';
+} from '@yas chat/layout';
 
 const SignInPage = () => (
 	<VerticalWizardLayout>
@@ -94,7 +94,7 @@ import {
 	HorizontalWizardLayoutSubtitle,
 	HorizontalWizardLayoutTitle,
 	HorizontalWizardTextHighlight,
-} from '@rocket.chat/layout';
+} from '@yas chat/layout';
 
 const SetupStep = () => (
 	<HorizontalWizardLayout>
@@ -104,7 +104,7 @@ const SetupStep = () => (
 			</HorizontalWizardLayoutTitle>
 			<HorizontalWizardLayoutSubtitle>It takes a few minutes.</HorizontalWizardLayoutSubtitle>
 			<HorizontalWizardLayoutDescription>
-				Need help? <ActionLink href='https://docs.rocket.chat'>Read the docs</ActionLink>
+				Need help? <ActionLink href='https://docs.yas chat'>Read the docs</ActionLink>
 			</HorizontalWizardLayoutDescription>
 		</HorizontalWizardLayoutAside>
 		<HorizontalWizardLayoutContent>
@@ -123,7 +123,7 @@ const SetupStep = () => (
 ### A message page
 
 ```tsx
-import { HeroLayout, HeroLayoutSubtitle, HeroLayoutTitle } from '@rocket.chat/layout';
+import { HeroLayout, HeroLayoutSubtitle, HeroLayoutTitle } from '@yas chat/layout';
 
 const EmailConfirmed = () => (
 	<HeroLayout>
@@ -156,7 +156,7 @@ Without `logo`, the YasChat logo is shown. Without `background`, a built-in patt
 `BackgroundLayer`, `LayoutLogo`, `HorizontalWizardLayoutCaption` and `HorizontalWizardTextHighlight` read the color scheme from context. The layouts provide it. When you use these pieces on their own, wrap them in `DarkModeProvider`; with no provider, they render in dark mode.
 
 ```tsx
-import { BackgroundLayer, DarkModeProvider } from '@rocket.chat/layout';
+import { BackgroundLayer, DarkModeProvider } from '@yas chat/layout';
 
 const Page = () => (
 	<DarkModeProvider.default>
@@ -223,17 +223,17 @@ The `LayoutContextValue` type describes these props.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/layout). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/layout build
-yarn workspace @rocket.chat/layout testunit
-yarn workspace @rocket.chat/layout typecheck
-yarn workspace @rocket.chat/layout lint
+yarn workspace @yas chat/layout build
+yarn workspace @yas chat/layout testunit
+yarn workspace @yas chat/layout typecheck
+yarn workspace @yas chat/layout lint
 ```
 
 Components are developed in Storybook:
 
 ```sh
-yarn workspace @rocket.chat/layout storybook
-yarn workspace @rocket.chat/layout build-storybook
+yarn workspace @yas chat/layout storybook
+yarn workspace @yas chat/layout build-storybook
 ```
 
 ## License

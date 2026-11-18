@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { IMessage } from '@yas chat/core-typings';
+import { escapeHTML } from '@yas chat/tools';
 
 export type MentionsParserArgs = {
 	pattern: () => string;

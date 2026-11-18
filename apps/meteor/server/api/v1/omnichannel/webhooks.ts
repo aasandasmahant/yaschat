@@ -1,6 +1,6 @@
-import { Logger } from '@rocket.chat/logger';
-import type { ExtendedFetchOptions } from '@rocket.chat/server-fetch';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { Logger } from '@yas chat/logger';
+import type { ExtendedFetchOptions } from '@yas chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { API } from '../..';
 import { settings } from '../../../settings';

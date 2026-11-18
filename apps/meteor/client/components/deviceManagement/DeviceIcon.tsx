@@ -1,5 +1,5 @@
-import { Box, Icon } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Box, Icon } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 
 const iconMap: Record<string, IconName> = {
 	'browser': 'desktop',

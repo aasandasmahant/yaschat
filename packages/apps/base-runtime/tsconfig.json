@@ -10,7 +10,7 @@
 		"target": "es2023",
 		"declaration": true,
 		"paths": {
-			"@rocket.chat/apps/*": ["../*"]
+			"@yas chat/apps/*": ["../*"]
 		}
 	},
 	"include": ["./src/**/*"]

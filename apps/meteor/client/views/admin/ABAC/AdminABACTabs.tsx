@@ -1,4 +1,4 @@
-import { useRouteParameter, useRouter } from '@rocket.chat/ui-contexts';
+import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useABACTabPermissions } from './hooks/useABACTabPermissions';

@@ -1,5 +1,5 @@
-import type { IMessage, IRoomFederated, IRoomNativeFederated, ISubscription, IUser } from '@rocket.chat/core-typings';
-import type { EventID, EventStore, PduForType } from '@rocket.chat/federation-sdk';
+import type { IMessage, IRoomFederated, IRoomNativeFederated, ISubscription, IUser } from '@yas chat/core-typings';
+import type { EventID, EventStore, PduForType } from '@yas chat/federation-sdk';
 
 export interface IFederationMatrixService {
 	createRoom(room: IRoomFederated, owner: IUser): Promise<{ room_id: string; event_id: string }>;

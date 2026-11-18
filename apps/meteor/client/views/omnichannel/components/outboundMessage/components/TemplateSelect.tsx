@@ -1,7 +1,7 @@
-import type { IOutboundProviderTemplate } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Option, OptionDescription, SelectFiltered } from '@rocket.chat/fuselage';
-import { useLanguages } from '@rocket.chat/ui-contexts';
+import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Option, OptionDescription, SelectFiltered } from '@yas chat/fuselage';
+import { useLanguages } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import type { Key, ComponentProps } from 'react';
 

@@ -1,4 +1,4 @@
-import type { Emitter } from '@rocket.chat/emitter';
+import type { Emitter } from '@yas chat/emitter';
 
 import type { CallEvents } from './CallEvents.js';
 import type {

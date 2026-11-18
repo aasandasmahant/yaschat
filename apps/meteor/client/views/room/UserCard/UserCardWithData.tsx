@@ -1,9 +1,9 @@
-import { getUserDisplayName } from '@rocket.chat/core-typings';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { IconButton } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericMenu, UserCard, UserCardAction, UserCardRole, UserCardSkeleton } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { getUserDisplayName } from '@yas chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { IconButton } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericMenu, UserCard, UserCardAction, UserCardRole, UserCardSkeleton } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { StreamVideo } from '@rocket.chat/ui-media';
+import { Box } from '@yas chat/fuselage';
+import { StreamVideo } from '@yas chat/ui-media';
 import type { ReactNode } from 'react';
 
 import { mainStreamStyles, ownBadgeStyles } from './stageStyles';

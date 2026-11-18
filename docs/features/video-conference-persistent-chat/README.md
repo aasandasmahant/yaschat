@@ -296,7 +296,7 @@ else would — the conference renders outside the main app, so the sidebar's own
 |-----------|---------|------|
 | `?callUrl=` present | `ConferencePage` — hands off to the provider's external URL | `guest` allowed |
 | `:id` is `new`, with `?rid=` | `ConferenceStartPage` — the preflight for a conference that doesn't exist yet | authentication required (`guest={false}`) |
-| `:id` present | `ConferenceWindow` (`@rocket.chat/ui-conference`), assembled by `ConferenceProvider` — call + chat split view | authentication required (`guest={false}`) |
+| `:id` present | `ConferenceWindow` (`@yas chat/ui-conference`), assembled by `ConferenceProvider` — call + chat split view | authentication required (`guest={false}`) |
 | neither | `ConferencePageError` | — |
 
 Guests can't be members of the conference's room, so the embedded page requires a real account. A user without access to the conference's room gets `ConferenceUnauthorizedPage`, which logs out **without navigating away**, so re-login returns to the same conference. It and `ConferencePageError` are the same `ConferenceStatePage` with different words: the window is all the user has, so both keep the conference header and carry whatever way out they have.
@@ -1096,7 +1096,7 @@ git — `git show 5ab58858d7d:<path>` restores any of them intact.
 | **Handing internal links to the opener** (the desktop bridge and the `postMessage` handshake) | needs a bridge on both sides for a nicer landing | a `noopener` new tab — see [Confined Navigation](#confined-navigation) |
 | **Regrouping the room's call list** into Ongoing/Past, named after the discussion | a redesign of a list that already works, and one every workspace sees | the existing flat list, with the fix that it no longer counts members who never joined |
 | ~~**Disabling join on message blocks inside the call window**~~ | done — `videoConfJoinDisabled` on `UiKitContext`, set when `useCurrentRoutePath` starts with `/conference/` | join and call-back buttons are disabled inside the call window |
-| **The embedded-provider join path** (`call/joinEmbedded` on `VideoConfManager`, and the HS256 signing helpers in `@rocket.chat/jwt`) | no embedded provider exists to reach it — it was dead the moment it was written, and the shape it should take is the native LiveKit provider's to decide | nothing; the manager handles URL providers only, and the branch was removed rather than shipped unreachable |
+| **The embedded-provider join path** (`call/joinEmbedded` on `VideoConfManager`, and the HS256 signing helpers in `@yas chat/jwt`) | no embedded provider exists to reach it — it was dead the moment it was written, and the shape it should take is the native LiveKit provider's to decide | nothing; the manager handles URL providers only, and the branch was removed rather than shipped unreachable |
 
 The end-to-end REST suite (`tests/end-to-end/apps/video-conference-membership.ts`) is held back for a different
 reason: it has never been run locally — the API suite authenticates as a fixture admin a dev workspace does not

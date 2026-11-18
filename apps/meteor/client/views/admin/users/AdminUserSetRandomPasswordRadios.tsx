@@ -1,4 +1,4 @@
-import { Box, FieldHint, FieldLabel, FieldRow, RadioButton } from '@rocket.chat/fuselage';
+import { Box, FieldHint, FieldLabel, FieldRow, RadioButton } from '@yas chat/fuselage';
 import { useId } from 'react';
 import type { Control, UseFormSetValue } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

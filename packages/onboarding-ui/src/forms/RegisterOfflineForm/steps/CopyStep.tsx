@@ -1,6 +1,6 @@
-import { Box, Button, ButtonGroup, Scrollable } from '@rocket.chat/fuselage';
-import { useBreakpoints, useClipboard } from '@rocket.chat/fuselage-hooks';
-import { FormContainer, FormFooter } from '@rocket.chat/layout';
+import { Box, Button, ButtonGroup, Scrollable } from '@yas chat/fuselage';
+import { useBreakpoints, useClipboard } from '@yas chat/fuselage-hooks';
+import { FormContainer, FormFooter } from '@yas chat/layout';
 import { useId } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
@@ -18,8 +18,8 @@ type CopyStepProps = {
 };
 
 const CopyStep = ({
-	termsHref = 'https://rocket.chat/terms',
-	policyHref = 'https://rocket.chat/privacy',
+	termsHref = 'https://yas chat/terms',
+	policyHref = 'https://yas chat/privacy',
 	clientKey,
 	setStep,
 	onCopySecurityCode,
@@ -44,10 +44,10 @@ const CopyStep = ({
 					<Trans key='form.registerOfflineForm.copyStep.description'>
 						If for any reason your workspace can’t be connected to the internet, follow these steps:
 						<Box marginBlockEnd='24px' />
-						1. Go to: <strong>{'cloud.rocket.chat > Workspaces'}</strong> and click “<strong>Register self-managed</strong>”<br />
+						1. Go to: <strong>{'cloud.yas chat > Workspaces'}</strong> and click “<strong>Register self-managed</strong>”<br />
 						2. Click “<strong>Continue offline</strong>”
 						<br />
-						3. In the <strong>Register offline workspace</strong> dialog in cloud.rocket.chat, paste the token in the box below
+						3. In the <strong>Register offline workspace</strong> dialog in cloud.yas chat, paste the token in the box below
 					</Trans>
 				</Box>
 				<Box display='flex' flexDirection='column' alignItems='stretch' padding={16} flexGrow={1} backgroundColor='dark'>

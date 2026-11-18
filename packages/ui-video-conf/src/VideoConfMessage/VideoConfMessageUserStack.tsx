@@ -1,7 +1,7 @@
-import type { IVideoConferenceUser, Serialized } from '@rocket.chat/core-typings';
-import { getUserDisplayName } from '@rocket.chat/core-typings';
-import { Avatar, Box, Icon } from '@rocket.chat/fuselage';
-import { useUserAvatarPath } from '@rocket.chat/ui-contexts';
+import type { IVideoConferenceUser, Serialized } from '@yas chat/core-typings';
+import { getUserDisplayName } from '@yas chat/core-typings';
+import { Avatar, Box, Icon } from '@yas chat/fuselage';
+import { useUserAvatarPath } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 
 const MAX_USERS = 3;

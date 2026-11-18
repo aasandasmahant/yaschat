@@ -1,4 +1,4 @@
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { useLayoutEffect } from 'react';
 
 import { getEmojiConfig } from '../../../../lib/emoji-native/getEmojiConfig';

@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { after, before, describe, it } from 'node:test';
 import { setTimeout as sleep } from 'node:timers/promises';
 
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 
 import { config, DUPLICATE_SETTLE_MS, federationPolling, uniqueSuffix } from './helper/config';
 import { isGroupchat, isOccupantPresence, replacedId } from './helper/predicates';
@@ -125,7 +125,7 @@ describe('XMPP federation: rooms hosted by the XMPP server', () => {
 			const stored = await expectStoredOnce(a, shadow, inbound);
 			assert.equal(stored.u.username, anonymousOccupantUsername(alice.username, roomJid));
 
-			const outbound = `hello from rocket.chat ${uniqueSuffix()}`;
+			const outbound = `hello from yas chat ${uniqueSuffix()}`;
 			await sendMessage(a, shadow._id, outbound);
 			await alice.waitFor(isGroupchat({ roomJid, nick: a.username, body: outbound }), 'the YasChat message');
 		});

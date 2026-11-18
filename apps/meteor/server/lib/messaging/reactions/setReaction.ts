@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Messages, EmojiCustom, Rooms, Users } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { Messages, EmojiCustom, Rooms, Users } from '@yas chat/models';
 
 import { canAccessRoomAsync } from '../../authorization';
 import { hasPermissionAsync } from '../../authorization/hasPermission';
@@ -141,7 +141,7 @@ export async function executeSetReaction(
 	return setReaction(room, user, message, reaction, userAlreadyReacted);
 }
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		setReaction(reaction: string, messageId: IMessage['_id'], shouldReact?: boolean): boolean | undefined;
 	}

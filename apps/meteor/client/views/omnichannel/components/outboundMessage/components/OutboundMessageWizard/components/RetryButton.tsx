@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { IconButton, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { IconButton, useStyle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type RetryButtonProps = {

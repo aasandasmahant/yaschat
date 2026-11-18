@@ -1,8 +1,8 @@
-import type { IRoom, RoomAdminFieldsType } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRouter, usePermission, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IRoom, RoomAdminFieldsType } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRouter, usePermission, useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

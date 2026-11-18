@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import { parse } from 'ltx';
 import type Element from 'ltx/lib/Element';
 

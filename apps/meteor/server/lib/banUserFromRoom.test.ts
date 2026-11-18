@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -35,7 +35,7 @@ const RoomMemberActions = {
 };
 
 const { banUserFromRoomMethod } = p.noCallThru().load('./banUserFromRoom.ts', {
-	'@rocket.chat/core-typings': {
+	'@yas chat/core-typings': {
 		isBannedSubscription: (sub: { status?: string } | null) => sub?.status === 'BANNED',
 	},
 	'./authorization': { canAccessRoomAsync: canAccessRoomAsyncMock },

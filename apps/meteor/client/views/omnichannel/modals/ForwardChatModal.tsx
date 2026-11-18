@@ -1,6 +1,6 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { Field, FieldGroup, TextAreaInput, Box, Divider, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { Field, FieldGroup, TextAreaInput, Box, Divider, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import { useEffect, useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

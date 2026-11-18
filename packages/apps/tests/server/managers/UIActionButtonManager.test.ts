@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { afterEach, beforeEach, describe, it, mock } from 'node:test';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IUIActionButtonDescriptor } from '@rocket.chat/apps-engine/definition/ui';
-import { UIActionButtonContext } from '@rocket.chat/apps-engine/definition/ui';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IUIActionButtonDescriptor } from '@yas chat/apps-engine/definition/ui';
+import { UIActionButtonContext } from '@yas chat/apps-engine/definition/ui';
 
 import type { AppManager } from '../../../src/server/AppManager';
 import type { ProxiedApp } from '../../../src/server/ProxiedApp';

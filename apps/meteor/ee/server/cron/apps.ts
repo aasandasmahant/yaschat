@@ -1,8 +1,8 @@
-import type { ProxiedApp } from '@rocket.chat/apps/dist/server/ProxiedApp';
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import { cronJobs } from '@rocket.chat/cron';
-import { License } from '@rocket.chat/license';
-import { Settings, Users } from '@rocket.chat/models';
+import type { ProxiedApp } from '@yas chat/apps/dist/server/ProxiedApp';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import { cronJobs } from '@yas chat/cron';
+import { License } from '@yas chat/license';
+import { Settings, Users } from '@yas chat/models';
 
 import { getWorkspaceAccessToken } from '../../../server/lib/cloud';
 import { i18n } from '../../../server/lib/i18n';

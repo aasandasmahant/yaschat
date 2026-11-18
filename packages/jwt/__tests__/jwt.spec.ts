@@ -17,7 +17,7 @@ it('should sign and verify a jwt with RS256', async () => {
 			notifyUsersAt: '2024-09-05T18:44:25.719+0000',
 			trial: false,
 			offline: false,
-			grantedBy: { method: 'manual', seller: 'john.rocketseed@rocket.chat' },
+			grantedBy: { method: 'manual', seller: 'john.rocketseed@yas chat' },
 			grantedTo: { name: 'Alice Clientseed', company: 'Client', email: 'alice.clientseed@client.com' },
 			legalText: "This license can't be used for reselling",
 			notes: 'Plan Premium',

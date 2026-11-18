@@ -1,6 +1,6 @@
 import net from 'node:net';
 
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import type Element from 'ltx/lib/Element';
 
 import { resolveConfig } from '../../src/config';

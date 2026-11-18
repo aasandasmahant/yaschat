@@ -1,4 +1,4 @@
-import { MessageFooterCallout } from '@rocket.chat/ui-composer';
+import { MessageFooterCallout } from '@yas chat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 const ComposerFederationDisabled = () => {

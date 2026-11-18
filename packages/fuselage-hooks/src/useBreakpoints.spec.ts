@@ -1,4 +1,4 @@
-import breakpointsTokens from '@rocket.chat/fuselage-tokens/dist/breakpoints.json';
+import breakpointsTokens from '@yas chat/fuselage-tokens/dist/breakpoints.json';
 
 import { renderHook, act } from './testing';
 import { useBreakpoints } from './useBreakpoints';

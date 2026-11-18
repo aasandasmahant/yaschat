@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { RING_RECIPIENTS_LIMIT, hasJoinedVideoConference } from '@rocket.chat/core-typings';
+import { RING_RECIPIENTS_LIMIT, hasJoinedVideoConference } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { shouldRingRecipients } from './constants';

@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Avatar, Badge, Box, IconButton } from '@rocket.chat/fuselage';
-import { SettingsContext } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { Avatar, Badge, Box, IconButton } from '@yas chat/fuselage';
+import { SettingsContext } from '@yas chat/ui-contexts';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ComponentPropsWithoutRef, ComponentType } from 'react';
 import { action } from 'storybook/actions';

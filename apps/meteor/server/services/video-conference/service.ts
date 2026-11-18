@@ -1,8 +1,8 @@
-import { Apps } from '@rocket.chat/apps';
-import type { AppVideoConfProviderManager } from '@rocket.chat/apps/dist/server/managers/AppVideoConfProviderManager';
-import type { VideoConfData, VideoConfDataExtended } from '@rocket.chat/apps-engine/definition/videoConfProviders';
-import type { IVideoConfService, VideoConferenceJoinOptions } from '@rocket.chat/core-services';
-import { api, ServiceClassInternal, Message, Presence, Room } from '@rocket.chat/core-services';
+import { Apps } from '@yas chat/apps';
+import type { AppVideoConfProviderManager } from '@yas chat/apps/dist/server/managers/AppVideoConfProviderManager';
+import type { VideoConfData, VideoConfDataExtended } from '@yas chat/apps-engine/definition/videoConfProviders';
+import type { IVideoConfService, VideoConferenceJoinOptions } from '@yas chat/core-services';
+import { api, ServiceClassInternal, Message, Presence, Room } from '@yas chat/core-services';
 import type {
 	IDirectVideoConference,
 	ILivechatVideoConference,
@@ -26,7 +26,7 @@ import type {
 	Optional,
 	ExternalVideoConference,
 	IVoIPVideoConference,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import {
 	UserStatus,
 	VideoConferenceStatus,
@@ -35,14 +35,14 @@ import {
 	isInVideoConference,
 	isGroupVideoConference,
 	isLivechatVideoConference,
-} from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { Users, VideoConference as VideoConferenceModel, Rooms, Messages, Subscriptions } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
-import { wrapExceptions } from '@rocket.chat/tools';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { Users, VideoConference as VideoConferenceModel, Rooms, Messages, Subscriptions } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import type { PaginatedResult } from '@yas chat/rest-typings';
+import { wrapExceptions } from '@yas chat/tools';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { resolveChatAccessMode } from '../../../lib/videoConference/chatAccess';

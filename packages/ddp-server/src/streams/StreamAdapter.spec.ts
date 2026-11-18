@@ -1,11 +1,11 @@
-import type { DDPSubscription } from '@rocket.chat/streamer';
+import type { DDPSubscription } from '@yas chat/streamer';
 import WebSocket from 'ws';
 
 import { createStreamAdapter } from './StreamAdapter';
 import { Server } from '../Server';
 import { preframe } from '../codec';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

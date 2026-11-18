@@ -1,6 +1,6 @@
-import { Message } from '@rocket.chat/core-services';
-import type { IOmnichannelServiceLevelAgreements, IUser } from '@rocket.chat/core-typings';
-import { LivechatInquiry, LivechatRooms } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import type { IOmnichannelServiceLevelAgreements, IUser } from '@yas chat/core-typings';
+import { LivechatInquiry, LivechatRooms } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import {

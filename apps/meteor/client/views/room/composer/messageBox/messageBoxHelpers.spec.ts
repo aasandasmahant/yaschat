@@ -28,34 +28,34 @@ describe('getModifierClickHref', () => {
 	it('ignores a click without the platform modifier so it only moves the caret', () => {
 		setPlatform('Linux x86_64');
 
-		expect(clickOn('<a href="https://rocket.chat">rocket.chat</a>')).toBeUndefined();
+		expect(clickOn('<a href="https://yas chat">yas chat</a>')).toBeUndefined();
 	});
 
 	it('resolves the href on ctrl+click outside macOS', () => {
 		setPlatform('Linux x86_64');
 
-		expect(clickOn('<a href="https://rocket.chat">rocket.chat</a>', { ctrlKey: true })).toBe('https://rocket.chat/');
-		expect(clickOn('<a href="https://rocket.chat">rocket.chat</a>', { metaKey: true })).toBeUndefined();
+		expect(clickOn('<a href="https://yas chat">yas chat</a>', { ctrlKey: true })).toBe('https://yas chat/');
+		expect(clickOn('<a href="https://yas chat">yas chat</a>', { metaKey: true })).toBeUndefined();
 	});
 
 	it('resolves the href on cmd+click on macOS', () => {
 		setPlatform('MacIntel');
 
-		expect(clickOn('<a href="https://rocket.chat">rocket.chat</a>', { metaKey: true })).toBe('https://rocket.chat/');
-		expect(clickOn('<a href="https://rocket.chat">rocket.chat</a>', { ctrlKey: true })).toBeUndefined();
+		expect(clickOn('<a href="https://yas chat">yas chat</a>', { metaKey: true })).toBe('https://yas chat/');
+		expect(clickOn('<a href="https://yas chat">yas chat</a>', { ctrlKey: true })).toBeUndefined();
 	});
 
 	it('finds the link when the click lands on markup nested in it', () => {
 		setPlatform('Linux x86_64');
 
-		expect(clickOn('<a href="//rocket.chat/docs"><strong data-target>docs</strong></a>', { ctrlKey: true })).toBe(
-			'https://rocket.chat/docs',
+		expect(clickOn('<a href="//yas chat/docs"><strong data-target>docs</strong></a>', { ctrlKey: true })).toBe(
+			'https://yas chat/docs',
 		);
 	});
 
 	it.each([
-		['a schemeless href', 'rocket.chat/docs', 'https://rocket.chat/docs'],
-		['a host:port href', 'rocket.chat:8080', 'https://rocket.chat:8080/'],
+		['a schemeless href', 'yas chat/docs', 'https://yas chat/docs'],
+		['a host:port href', 'yas chat:8080', 'https://yas chat:8080/'],
 	])('resolves %s to the target the renderer validated instead of a same-origin path', (_label, href, expected) => {
 		setPlatform('Linux x86_64');
 
@@ -105,9 +105,9 @@ describe('getModifierClickHref on anchors the renderer did not produce', () => {
 	});
 
 	it.each([
-		['http', 'http://rocket.chat/docs'],
-		['https', 'https://rocket.chat/docs'],
-		['mailto', 'mailto:me@rocket.chat'],
+		['http', 'http://yas chat/docs'],
+		['https', 'https://yas chat/docs'],
+		['mailto', 'mailto:me@yas chat'],
 		['tel', 'tel:07563546725'],
 	])('still resolves a %s href', (_label, href) => {
 		expect(clickOn(`<a href="${href}">x</a>`, { ctrlKey: true })).toBe(href);
@@ -130,11 +130,11 @@ describe('getClickedLink', () => {
 	});
 
 	it('reports a link pointing at the server itself', () => {
-		expect(linkOn('<a href="https://rocket.chat/admin/rooms">x</a>')?.getAttribute('href')).toBe('https://rocket.chat/admin/rooms');
+		expect(linkOn('<a href="https://yas chat/admin/rooms">x</a>')?.getAttribute('href')).toBe('https://yas chat/admin/rooms');
 	});
 
 	it('reports the link when the click lands on markup nested in it', () => {
-		expect(linkOn('<a href="//rocket.chat/docs"><strong data-target>docs</strong></a>')?.getAttribute('href')).toBe('//rocket.chat/docs');
+		expect(linkOn('<a href="//yas chat/docs"><strong data-target>docs</strong></a>')?.getAttribute('href')).toBe('//yas chat/docs');
 	});
 
 	it('reports nothing for a click outside a link', () => {
@@ -177,6 +177,6 @@ describe('pasting into the composer', () => {
 	});
 
 	it('lets a plain-text-only paste reach the browser default', () => {
-		expect(extractPastedPlainText?.(clipboardEvent({ 'text/plain': 'see rocket.chat/docs' }))).toBeUndefined();
+		expect(extractPastedPlainText?.(clipboardEvent({ 'text/plain': 'see yas chat/docs' }))).toBeUndefined();
 	});
 });

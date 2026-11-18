@@ -1,7 +1,7 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { escapeHTML } from '@rocket.chat/tools';
-import { GenericModal } from '@rocket.chat/ui-client';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { escapeHTML } from '@yas chat/tools';
+import { GenericModal } from '@yas chat/ui-client';
 import {
 	useAllPermissions,
 	usePermission,
@@ -12,7 +12,7 @@ import {
 	useUserRoom,
 	useUserSubscription,
 	useEndpoint,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';

@@ -78,7 +78,7 @@ describe('Convert Spotify syntax to URLs', () => {
 
 		const message = await spotify.convertSpotifyLinks({
 			message: createMessage('spotify:track:1q6IK1l4qpYykOaWaLJkWG', {
-				urls: [{ url: 'https://rocket.chat' }],
+				urls: [{ url: 'https://yas chat' }],
 			}),
 		});
 
@@ -86,7 +86,7 @@ describe('Convert Spotify syntax to URLs', () => {
 
 		const [url1, url2] = message.urls ?? [];
 
-		expect(url1).to.have.property('url', 'https://rocket.chat');
+		expect(url1).to.have.property('url', 'https://yas chat');
 
 		expect(url2).to.have.property('url', 'https://open.spotify.com/track/1q6IK1l4qpYykOaWaLJkWG');
 		expect(url2).to.have.property('source', 'spotify:track:1q6IK1l4qpYykOaWaLJkWG');

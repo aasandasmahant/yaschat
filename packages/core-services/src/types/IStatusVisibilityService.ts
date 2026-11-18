@@ -1,4 +1,4 @@
-import type { IUser, UserPresence } from '@rocket.chat/core-typings';
+import type { IUser, UserPresence } from '@yas chat/core-typings';
 
 export type PresenceScope = { hideAll: true } | { hideAll: false; hidden?: IUser['_id'][] };
 

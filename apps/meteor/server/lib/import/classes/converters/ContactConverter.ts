@@ -1,5 +1,5 @@
-import type { IImportContact, IImportContactRecord } from '@rocket.chat/core-typings';
-import { LivechatVisitors } from '@rocket.chat/models';
+import type { IImportContact, IImportContactRecord } from '@yas chat/core-typings';
+import { LivechatVisitors } from '@yas chat/models';
 
 import { RecordConverter } from './RecordConverter';
 import { createContact } from '../../../omnichannel/contacts/createContact';

@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Users } from '@rocket.chat/models';
-import { escapeHTML } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Users } from '@yas chat/models';
+import { escapeHTML } from '@yas chat/tools';
 import type { ClientSession } from 'mongodb';
 
 import { checkEmailAvailability } from './checkEmailAvailability';

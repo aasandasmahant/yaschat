@@ -1,12 +1,12 @@
 {
-	"name": "@rocket.chat/styled",
+	"name": "@yas chat/styled",
 	"version": "0.34.2",
 	"description": "A simple styled API for React components",
 	"keywords": [
 		"react",
 		"styled",
 		"css-in-js",
-		"rocket.chat"
+		"yas chat"
 	],
 	"homepage": "https://github.com/YasChat/YasChat#readme",
 	"bugs": {
@@ -20,7 +20,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"type": "module",
 	"exports": {
@@ -44,11 +44,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/css-in-js": "workspace:~"
+		"@yas chat/css-in-js": "workspace:~"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@rollup/plugin-commonjs": "~29.0.3",
 		"@rollup/plugin-json": "~6.1.0",
 		"@rollup/plugin-node-resolve": "~16.0.3",

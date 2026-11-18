@@ -1,4 +1,4 @@
-import type { IRoomWithRetentionPolicy } from '@rocket.chat/core-typings';
+import type { IRoomWithRetentionPolicy } from '@yas chat/core-typings';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { usePruneWarningMessage } from './usePruneWarningMessage';

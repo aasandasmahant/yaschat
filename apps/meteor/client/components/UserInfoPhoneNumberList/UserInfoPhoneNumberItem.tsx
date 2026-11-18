@@ -1,8 +1,8 @@
-import type { IUserPhoneNumber } from '@rocket.chat/core-typings';
-import { Box, IconButton } from '@rocket.chat/fuselage';
-import { useClipboardWithToast } from '@rocket.chat/ui-client';
-import { usePermission, useSetting } from '@rocket.chat/ui-contexts';
-import { usePeekMediaSessionState, useWidgetExternalControls } from '@rocket.chat/ui-voip';
+import type { IUserPhoneNumber } from '@yas chat/core-typings';
+import { Box, IconButton } from '@yas chat/fuselage';
+import { useClipboardWithToast } from '@yas chat/ui-client';
+import { usePermission, useSetting } from '@yas chat/ui-contexts';
+import { usePeekMediaSessionState, useWidgetExternalControls } from '@yas chat/ui-voip';
 import { useTranslation } from 'react-i18next';
 
 import { formatPhoneNumber } from '../../lib/formatPhoneNumber';

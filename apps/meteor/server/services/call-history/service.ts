@@ -1,6 +1,6 @@
-import { ServiceClassInternal, type ICallHistoryService } from '@rocket.chat/core-services';
-import type { IUser, CallHistoryItem } from '@rocket.chat/core-typings';
-import { CallHistory } from '@rocket.chat/models';
+import { ServiceClassInternal, type ICallHistoryService } from '@yas chat/core-services';
+import type { IUser, CallHistoryItem } from '@yas chat/core-typings';
+import { CallHistory } from '@yas chat/models';
 
 export class CallHistoryService extends ServiceClassInternal implements ICallHistoryService {
 	protected name = 'call-history';

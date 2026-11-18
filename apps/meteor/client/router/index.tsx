@@ -1,5 +1,5 @@
-import type { RoomType, RoomRouteData } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { RoomType, RoomRouteData } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import type {
 	LocationHash,
 	LocationPathname,
@@ -10,7 +10,7 @@ import type {
 	RouterContextValue,
 	SearchParameters,
 	To,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 
 import { Context, Page } from './page';
 import { appLayout } from '../lib/appLayout';

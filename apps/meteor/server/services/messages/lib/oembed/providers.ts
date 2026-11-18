@@ -1,4 +1,4 @@
-import type { OEmbedMeta, OEmbedUrlContent, OEmbedProvider } from '@rocket.chat/core-typings';
+import type { OEmbedMeta, OEmbedUrlContent, OEmbedProvider } from '@yas chat/core-typings';
 import { camelCase } from 'change-case';
 
 import { SystemLogger } from '../../../../lib/logger/system';

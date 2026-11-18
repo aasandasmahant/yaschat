@@ -1,5 +1,5 @@
-import { IconButton, type IconButtonProps } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { IconButton, type IconButtonProps } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { ButtonHTMLAttributes } from 'react';
 
 export type VideoConfControllerProps = {

@@ -1,5 +1,5 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { SettingValue } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	Box,
 	FieldGroup,
@@ -11,10 +11,10 @@ import {
 	ButtonGroup,
 	NumberInput,
 	FieldLabel,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ExternalLink, links, Page, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ExternalLink, links, Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';

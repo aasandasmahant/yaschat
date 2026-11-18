@@ -1,7 +1,7 @@
-import { isInVideoConference } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { useBreakpoints, useLocalStorage, useMediaQuery } from '@rocket.chat/fuselage-hooks';
-import { useCustomSound } from '@rocket.chat/ui-contexts';
+import { isInVideoConference } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { useBreakpoints, useLocalStorage, useMediaQuery } from '@yas chat/fuselage-hooks';
+import { useCustomSound } from '@yas chat/ui-contexts';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import ConferencePanelToggles from './ConferencePanelToggles';

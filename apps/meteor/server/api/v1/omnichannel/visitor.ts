@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { LivechatVisitors as VisitorsRaw, LivechatRooms } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
-import { isLivechatVisitorStatusProps, isPOSTLivechatVisitorProps } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoom } from '@yas chat/core-typings';
+import { LivechatVisitors as VisitorsRaw, LivechatRooms } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
+import { isLivechatVisitorStatusProps, isPOSTLivechatVisitorProps } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findGuest, normalizeHttpHeaderData } from './lib/livechat';

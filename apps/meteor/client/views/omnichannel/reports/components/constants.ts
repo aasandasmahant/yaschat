@@ -1,4 +1,4 @@
-import { Palette } from '@rocket.chat/fuselage';
+import { Palette } from '@yas chat/fuselage';
 
 import type { Period } from '../../../../components/dashboards/periods';
 

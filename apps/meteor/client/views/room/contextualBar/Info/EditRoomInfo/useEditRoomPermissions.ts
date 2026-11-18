@@ -1,5 +1,5 @@
-import type { IRoom, IRoomWithRetentionPolicy } from '@rocket.chat/core-typings';
-import { usePermission, useAtLeastOnePermission, useRole } from '@rocket.chat/ui-contexts';
+import type { IRoom, IRoomWithRetentionPolicy } from '@yas chat/core-typings';
+import { usePermission, useAtLeastOnePermission, useRole } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { RoomSettingsEnum } from '../../../../../../definition/IRoomTypeConfig';

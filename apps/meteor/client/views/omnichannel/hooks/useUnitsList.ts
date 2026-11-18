@@ -1,5 +1,5 @@
-import type { IOmnichannelBusinessUnit, Serialized } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelBusinessUnit, Serialized } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

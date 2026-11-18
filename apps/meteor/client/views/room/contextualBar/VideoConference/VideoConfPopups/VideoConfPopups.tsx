@@ -1,6 +1,6 @@
 import { FocusScope } from '@react-aria/focus';
-import { useCustomSound } from '@rocket.chat/ui-contexts';
-import type { VideoConfPopupPayload } from '@rocket.chat/ui-video-conf';
+import { useCustomSound } from '@yas chat/ui-contexts';
+import type { VideoConfPopupPayload } from '@yas chat/ui-video-conf';
 import {
 	VideoConfPopupBackdrop,
 	VideoConfPopupSkeleton,
@@ -8,7 +8,7 @@ import {
 	useVideoConfIsCalling,
 	useVideoConfIsRinging,
 	useVideoConfWindowEnabled,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import { lazy, Suspense, useEffect, useMemo } from 'react';
 
 import VideoConfPopupPortal from '../../../../../portals/VideoConfPopupPortal';

@@ -1,6 +1,6 @@
 import { monitorEventLoopDelay } from 'node:perf_hooks';
 
-import type { InboundHandlerObserver } from '@rocket.chat/xmpp-server';
+import type { InboundHandlerObserver } from '@yas chat/xmpp-server';
 import { Counter, Gauge, Histogram, Registry, collectDefaultMetrics } from 'prom-client';
 
 const LOOP_DELAY_RESOLUTION_MS = 10;

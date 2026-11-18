@@ -1,5 +1,5 @@
-import { Callout } from '@rocket.chat/fuselage';
-import { ContextualbarSkeletonBody } from '@rocket.chat/ui-client';
+import { Callout } from '@yas chat/fuselage';
+import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import UserPresenceEditorForm from './UserPresenceEditorForm';

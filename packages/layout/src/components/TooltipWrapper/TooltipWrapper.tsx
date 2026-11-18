@@ -1,5 +1,5 @@
-import { AnimatedVisibility, PositionAnimated } from '@rocket.chat/fuselage';
-import { useDebouncedState } from '@rocket.chat/fuselage-hooks';
+import { AnimatedVisibility, PositionAnimated } from '@yas chat/fuselage';
+import { useDebouncedState } from '@yas chat/fuselage-hooks';
 import type { Dispatch, RefObject, ReactElement, ReactNode, SetStateAction } from 'react';
 import { cloneElement, useCallback, useId, useMemo, useRef } from 'react';
 

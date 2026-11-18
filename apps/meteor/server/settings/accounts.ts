@@ -1,4 +1,4 @@
-import { Random } from '@rocket.chat/random';
+import { Random } from '@yas chat/random';
 
 import { settingsRegistry } from '.';
 import { positiveOrDisabled, notGreaterThanSetting, notLowerThanSetting } from './functions/validationRuleBuilders';

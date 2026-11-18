@@ -1,6 +1,6 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 import supertest from 'supertest';
 import type { Response } from 'supertest';
 
@@ -61,7 +61,7 @@ export const createUser = <TUser extends IUser>(
 ) =>
 	new Promise<TestUser<TUser>>((resolve, reject) => {
 		const username = userData.username || `user.test.${Date.now()}.${Math.random()}`;
-		const email = userData.email || `${username}@rocket.chat`;
+		const email = userData.email || `${username}@yas chat`;
 		const requestInstance = config?.request || request;
 		const credentialsInstance = config?.credentials || credentials;
 

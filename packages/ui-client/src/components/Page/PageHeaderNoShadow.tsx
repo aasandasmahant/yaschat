@@ -1,5 +1,5 @@
-import { Box, IconButton } from '@rocket.chat/fuselage';
-import { useLayout } from '@rocket.chat/ui-contexts';
+import { Box, IconButton } from '@yas chat/fuselage';
+import { useLayout } from '@yas chat/ui-contexts';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { VideoConferenceCapabilities } from '@rocket.chat/core-typings';
-import { useUserId } from '@rocket.chat/ui-contexts';
+import type { VideoConferenceCapabilities } from '@yas chat/core-typings';
+import { useUserId } from '@yas chat/ui-contexts';
 import { useCallback, useMemo, useSyncExternalStore } from 'react';
 
 import { NOISE_METHOD_LABELS, VIDEO_QUALITY_LABELS, choicesOf } from '../call/lib/mediaChoiceLabels';

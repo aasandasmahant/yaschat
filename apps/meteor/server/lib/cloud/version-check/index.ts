@@ -1,4 +1,4 @@
-import { cronJobs } from '@rocket.chat/cron';
+import { cronJobs } from '@yas chat/cron';
 
 import { checkVersionUpdate } from './functions/checkVersionUpdate';
 import { settings } from '../../../settings';

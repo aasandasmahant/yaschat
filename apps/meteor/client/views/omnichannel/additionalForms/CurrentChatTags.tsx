@@ -1,4 +1,4 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 
 import AutoCompleteTagsMultiple from '../tags/AutoCompleteTagsMultiple';

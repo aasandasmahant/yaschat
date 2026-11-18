@@ -1,6 +1,6 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -15,7 +15,7 @@ const notificationQueueModelStub = {
 const pushNotificationStub = { send: sinon.stub() };
 
 const { Notification } = proxyquire.noCallThru().load('./NotificationQueue', {
-	'@rocket.chat/tracing': { tracerSpan: (_name: string, _options: unknown, fn: () => unknown) => fn() },
+	'@yas chat/tracing': { tracerSpan: (_name: string, _options: unknown, fn: () => unknown) => fn() },
 	'../../logger/system': { SystemLogger: { error: sinon.stub() } },
 	'../message/email': { sendEmailFromData: sinon.stub() },
 	'../push-config': { PushNotification: pushNotificationStub },

@@ -1,5 +1,5 @@
-import type { ILivechatCustomField, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ILivechatCustomFieldModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { ILivechatCustomField, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ILivechatCustomFieldModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Db, Collection, IndexDescription, FindCursor, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

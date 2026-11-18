@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isInVideoConference } from '@rocket.chat/core-typings';
-import { Box, Icon, IconButton } from '@rocket.chat/fuselage';
+import type { IRoom } from '@yas chat/core-typings';
+import { isInVideoConference } from '@yas chat/core-typings';
+import { Box, Icon, IconButton } from '@yas chat/fuselage';
 import {
 	CallPanelHeader,
 	ChatAccessModal,
@@ -9,8 +9,8 @@ import {
 	hasConferenceChatAccess,
 	useConference,
 	useConferenceChatPanel,
-} from '@rocket.chat/ui-conference';
-import { useSetModal, useUserId } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-conference';
+import { useSetModal, useUserId } from '@yas chat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import ConferenceRoomPanel from './ConferenceRoomPanel';

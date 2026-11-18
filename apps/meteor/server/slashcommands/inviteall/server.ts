@@ -3,9 +3,9 @@
  * @param {Object} message - The message object
  */
 
-import { api, isClientSafeError, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, SlashCommand, SlashCommandCallbackParams } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { api, isClientSafeError, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, SlashCommand, SlashCommandCallbackParams } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { canAccessRoomAsync } from '../../lib/authorization';
 import { i18n } from '../../lib/i18n';

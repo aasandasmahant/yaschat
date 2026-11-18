@@ -1,4 +1,4 @@
-import type { AvatarObject, IRole, IUser, IUserPhoneNumber, Serialized } from '@rocket.chat/core-typings';
+import type { AvatarObject, IRole, IUser, IUserPhoneNumber, Serialized } from '@yas chat/core-typings';
 import {
 	Accordion,
 	AccordionItem,
@@ -21,12 +21,12 @@ import {
 	TextAreaInput,
 	TextInput,
 	ToggleSwitch,
-} from '@rocket.chat/fuselage';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { UserCreateParamsPOST } from '@rocket.chat/rest-typings';
-import { validateEmail } from '@rocket.chat/tools';
-import { CustomFieldsForm, ContextualbarScrollableContent, ContextualbarFooter } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { UserCreateParamsPOST } from '@yas chat/rest-typings';
+import { validateEmail } from '@yas chat/tools';
+import { CustomFieldsForm, ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
 import {
 	useAccountsCustomFields,
 	useSetting,
@@ -34,7 +34,7 @@ import {
 	useRouter,
 	useToastMessageDispatch,
 	useTranslation,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { ChangeEvent } from 'react';
 import { useId, useMemo, useState } from 'react';

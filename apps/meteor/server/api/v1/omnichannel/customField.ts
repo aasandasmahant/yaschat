@@ -1,4 +1,4 @@
-import { LivechatCustomField } from '@rocket.chat/models';
+import { LivechatCustomField } from '@yas chat/models';
 import {
 	isLivechatCustomFieldsProps,
 	isPOSTLivechatCustomFieldParams,
@@ -10,7 +10,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { setCustomFields, setMultipleCustomFields } from '../../../lib/omnichannel/custom-fields';
@@ -160,7 +160,7 @@ const livechatCustomFieldsEndpoints = API.v1
 
 type LivechatCustomFieldsEndpoints = ExtractRoutesFromAPI<typeof livechatCustomFieldsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatCustomFieldsEndpoints {}
 }

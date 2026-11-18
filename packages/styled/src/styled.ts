@@ -1,4 +1,4 @@
-import { attachRules, createClassName, css, escapeName, transpile } from '@rocket.chat/css-in-js';
+import { attachRules, createClassName, css, escapeName, transpile } from '@yas chat/css-in-js';
 import type { JSX, ReactElement } from 'react';
 import { createElement, Fragment, useDebugValue, useInsertionEffect } from 'react';
 

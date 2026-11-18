@@ -3,8 +3,8 @@ import * as path from 'node:path';
 import { EventEmitter } from 'node:stream';
 import { inspect as utilInspect } from 'node:util';
 
-import { AppStatus, AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppStatus, AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
+import type { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 import debugFactory from 'debug';
 
 import { LivenessManager } from './LivenessManager';
@@ -40,12 +40,12 @@ function getRuntimeTimeout() {
 }
 
 /**
- * Resolves the absolute path to @rocket.chat/apps-engine's src/ directory.
+ * Resolves the absolute path to @yas chat/apps-engine's src/ directory.
  * Uses require.resolve so it works regardless of the runtime environment
  * (monorepo dev, Meteor bundle, standalone node_modules).
  */
 export function getAppsEngineDir(): string {
-	return path.dirname(require.resolve('@rocket.chat/apps-engine/package.json'));
+	return path.dirname(require.resolve('@yas chat/apps-engine/package.json'));
 }
 
 type AbortFunction = (reason?: any) => void;

@@ -1,5 +1,5 @@
-import type { MediaSignalingSession } from '@rocket.chat/media-signaling';
-import { useEndpoint, useSetting, useUser, useUserAvatarPath } from '@rocket.chat/ui-contexts';
+import type { MediaSignalingSession } from '@yas chat/media-signaling';
+import { useEndpoint, useSetting, useUser, useUserAvatarPath } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { getExtensionFromInstanceContact } from './useMediaSession';

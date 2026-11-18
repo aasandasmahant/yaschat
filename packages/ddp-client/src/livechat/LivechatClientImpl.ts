@@ -1,7 +1,7 @@
-import type { IOmnichannelRoom, Serialized } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import type { OperationParams, OperationResult } from '@rocket.chat/rest-typings';
-import { isValidAppId } from '@rocket.chat/ui-kit';
+import type { IOmnichannelRoom, Serialized } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import type { OperationParams, OperationResult } from '@yas chat/rest-typings';
+import { isValidAppId } from '@yas chat/ui-kit';
 
 import { DDPSDK } from '../DDPSDK';
 import type { StreamerCallbackArgs } from '../types/streams';

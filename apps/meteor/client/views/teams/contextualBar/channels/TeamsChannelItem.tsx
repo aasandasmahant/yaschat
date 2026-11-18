@@ -1,4 +1,4 @@
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 import {
 	Icon,
 	IconButton,
@@ -12,10 +12,10 @@ import {
 	ItemSkeleton,
 	ItemTitle,
 	Tag,
-} from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE, RoomAvatar } from '@rocket.chat/ui-avatar';
-import { useDeferredMenuMount } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yas chat/ui-avatar';
+import { useDeferredMenuMount } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import TeamsChannelItemMenu from './TeamsChannelItemMenu';

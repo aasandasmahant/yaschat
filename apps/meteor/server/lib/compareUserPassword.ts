@@ -1,5 +1,5 @@
-import { verifyPassword } from '@rocket.chat/account-utils';
-import type { IUser, IPassword } from '@rocket.chat/core-typings';
+import { verifyPassword } from '@yas chat/account-utils';
+import type { IUser, IPassword } from '@yas chat/core-typings';
 
 /**
  * Check if a given password is the one user by given user or if the user doesn't have a password

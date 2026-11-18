@@ -1,4 +1,4 @@
-import type { RoomType, RoomRouteData, DirectRoomRouteData, OmnichannelRoomRouteData, ChannelRouteData } from '@rocket.chat/core-typings';
+import type { RoomType, RoomRouteData, DirectRoomRouteData, OmnichannelRoomRouteData, ChannelRouteData } from '@yas chat/core-typings';
 import type { ReactNode } from 'react';
 import { createContext } from 'react';
 

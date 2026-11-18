@@ -1,8 +1,8 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Message, MessageLeftContainer, MessageContainer, CheckBox } from '@rocket.chat/fuselage';
-import { useToggle } from '@rocket.chat/fuselage-hooks';
-import { MessageAvatar } from '@rocket.chat/ui-avatar';
-import { useUserId, useUserCard } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { Message, MessageLeftContainer, MessageContainer, CheckBox } from '@yas chat/fuselage';
+import { useToggle } from '@yas chat/fuselage-hooks';
+import { MessageAvatar } from '@yas chat/ui-avatar';
+import { useUserId, useUserCard } from '@yas chat/ui-contexts';
 import type { ComponentProps, KeyboardEvent } from 'react';
 import { memo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';

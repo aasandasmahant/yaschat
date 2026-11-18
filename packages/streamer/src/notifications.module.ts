@@ -1,5 +1,5 @@
-import { api, Authorization, MediaCall, VideoConf, Settings } from '@rocket.chat/core-services';
-import type { RelayedStreamEvent } from '@rocket.chat/core-services';
+import { api, Authorization, MediaCall, VideoConf, Settings } from '@yas chat/core-services';
+import type { RelayedStreamEvent } from '@yas chat/core-services';
 import type {
 	IImportProgress,
 	ISubscription,
@@ -8,10 +8,10 @@ import type {
 	IUserDataEvent,
 	PresenceSource,
 	PresenceStatusCode,
-} from '@rocket.chat/core-typings';
-import type { StreamerCallbackArgs, StreamKeys, StreamNames } from '@rocket.chat/ddp-client';
-import { Logger } from '@rocket.chat/logger';
-import { Rooms, Subscriptions, Users, VideoConference } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import type { StreamerCallbackArgs, StreamKeys, StreamNames } from '@yas chat/ddp-client';
+import { Logger } from '@yas chat/logger';
+import { Rooms, Subscriptions, Users, VideoConference } from '@yas chat/models';
 
 import { emit, StreamPresence } from './StreamPresence';
 import { getCachedUserForPublication } from './publication-user-cache';

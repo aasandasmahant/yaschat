@@ -1,9 +1,9 @@
-import type { IAppMessagesConverter, IAppServerOrchestrator, IAppsMessage, IAppsMesssageRaw } from '@rocket.chat/apps';
-import { isMessageFromVisitor } from '@rocket.chat/core-typings';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { removeEmpty } from '@rocket.chat/tools';
+import type { IAppMessagesConverter, IAppServerOrchestrator, IAppsMessage, IAppsMesssageRaw } from '@yas chat/apps';
+import { isMessageFromVisitor } from '@yas chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
+import { Messages, Rooms, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { removeEmpty } from '@yas chat/tools';
 
 import { cachedFunction } from './cachedFunction';
 import { mappedDecodeAsync } from './codecs/mappedData';

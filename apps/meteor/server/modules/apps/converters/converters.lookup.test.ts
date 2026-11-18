@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -40,7 +40,7 @@ const { AppUploadsConverter } = load('uploads', {
 	'./codecs/uploads': uploadsCodec,
 });
 const { AppVideoConferencesConverter } = load('videoConferences', {
-	'@rocket.chat/core-services': { VideoConf: { getUnfiltered: getVideoConf } },
+	'@yas chat/core-services': { VideoConf: { getUnfiltered: getVideoConf } },
 });
 
 const orch = {

@@ -1,10 +1,10 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { Meteor } from 'meteor/meteor';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		restart_server(): {
 			message: string;

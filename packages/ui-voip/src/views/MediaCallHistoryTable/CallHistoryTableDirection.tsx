@@ -1,4 +1,4 @@
-import { Icon, Stack } from '@rocket.chat/fuselage';
+import { Icon, Stack } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type CallHistoryTableDirectionProps = { direction: 'outbound' | 'inbound' };

@@ -1,11 +1,11 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import type { AvatarObject } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Button, Divider, Icon, Stack } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, TextAreaInput } from '@rocket.chat/fuselage-forms';
-import { validateEmail } from '@rocket.chat/tools';
-import { CustomFieldsForm } from '@rocket.chat/ui-client';
+import type { AvatarObject } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Button, Divider, Icon, Stack } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, TextAreaInput } from '@yas chat/fuselage-forms';
+import { validateEmail } from '@yas chat/tools';
+import { CustomFieldsForm } from '@yas chat/ui-client';
 import {
 	useAccountsCustomFields,
 	useToastMessageDispatch,
@@ -14,7 +14,7 @@ import {
 	useUser,
 	useLayout,
 	useSetting,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { AllHTMLAttributes } from 'react';
 import { useCallback, useEffect, useMemo } from 'react';

@@ -4,7 +4,7 @@ import {
 	ContextualbarClose,
 	ContextualbarScrollableContent,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { PriorityFormData } from './PriorityEditForm';

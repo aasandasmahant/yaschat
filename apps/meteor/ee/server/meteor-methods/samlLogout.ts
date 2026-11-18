@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
-import { License } from '@rocket.chat/license';
-import { Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ServerMethods } from '@yas chat/ddp-client';
+import { License } from '@yas chat/license';
+import { Users } from '@yas chat/models';
 import { Meteor } from 'meteor/meteor';
 
 import type { IServiceProviderOptions } from '../lib/saml/definition/IServiceProviderOptions';
@@ -27,7 +27,7 @@ function getSamlServiceProviderOptions(provider: string): IServiceProviderOption
 	return providers.filter(samlProvider)[0];
 }
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		samlLogout(provider: string): string | undefined;
 	}

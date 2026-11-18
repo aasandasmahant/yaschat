@@ -3,7 +3,7 @@ import { Server } from '../Server';
 import { makeSession, makeSubscription, sentPackets } from '../__tests__/helpers';
 import { MeteorCollection } from '../lib/MeteorCollection';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

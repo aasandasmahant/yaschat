@@ -1,4 +1,4 @@
-import type { IVideoConfProvider } from '@rocket.chat/apps-engine/definition/videoConfProviders/IVideoConfProvider';
+import type { IVideoConfProvider } from '@yas chat/apps-engine/definition/videoConfProviders/IVideoConfProvider';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';
 import { AppAccessorsInstance } from '../lib/accessors/mod';

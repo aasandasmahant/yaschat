@@ -1,5 +1,5 @@
-import { type IMediaStreamWrapper, type CallFeature } from '@rocket.chat/media-signaling';
-import type { Device } from '@rocket.chat/ui-contexts';
+import { type IMediaStreamWrapper, type CallFeature } from '@yas chat/media-signaling';
+import type { Device } from '@yas chat/ui-contexts';
 import { createContext, useContext } from 'react';
 
 import type { SessionState, PeerInfo } from './definitions';

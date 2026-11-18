@@ -1,4 +1,4 @@
-import { useDarkMode as useDarkModeFuselage } from '@rocket.chat/fuselage-hooks';
+import { useDarkMode as useDarkModeFuselage } from '@yas chat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { createContext, useContext } from 'react';
 

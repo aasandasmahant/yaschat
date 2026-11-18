@@ -1,6 +1,6 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { ButtonGroup, IconButton, Skeleton } from '@rocket.chat/fuselage';
-import { GenericMenu, UserInfoAction } from '@rocket.chat/ui-client';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { ButtonGroup, IconButton, Skeleton } from '@yas chat/fuselage';
+import { GenericMenu, UserInfoAction } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import type { AbacPreviewCursor, IAbacRoomMembershipPreview } from '@rocket.chat/core-typings';
+import type { AbacPreviewCursor, IAbacRoomMembershipPreview } from '@yas chat/core-typings';
 import type { InfiniteData } from '@tanstack/react-query';
 
 import { useRoomMembershipPreviewPages } from './useRoomMembershipPreviewPages';

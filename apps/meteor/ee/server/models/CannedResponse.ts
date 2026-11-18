@@ -1,4 +1,4 @@
-import { registerModel } from '@rocket.chat/models';
+import { registerModel } from '@yas chat/models';
 
 import { CannedResponseRaw } from './raw/CannedResponse';
 import { db } from '../../../server/database/utils';

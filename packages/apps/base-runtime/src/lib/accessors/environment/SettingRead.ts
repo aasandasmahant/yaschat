@@ -1,5 +1,5 @@
-import type { ISettingRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
+import type { ISettingRead } from '@yas chat/apps-engine/definition/accessors';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

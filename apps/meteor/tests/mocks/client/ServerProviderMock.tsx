@@ -1,7 +1,7 @@
-import type { Serialized } from '@rocket.chat/core-typings';
-import type { Method, PathPattern, OperationParams, UrlParams, OperationResult } from '@rocket.chat/rest-typings';
-import type { EndpointFunction, ServerContextValue } from '@rocket.chat/ui-contexts';
-import { ServerContext } from '@rocket.chat/ui-contexts';
+import type { Serialized } from '@yas chat/core-typings';
+import type { Method, PathPattern, OperationParams, UrlParams, OperationResult } from '@yas chat/rest-typings';
+import type { EndpointFunction, ServerContextValue } from '@yas chat/ui-contexts';
+import { ServerContext } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import type { ContextType, ReactNode } from 'react';
 

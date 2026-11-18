@@ -198,7 +198,7 @@ const parser = new TestParser();
 const parse = uiKitAttachment(parser);
 
 const conditionalParse = uiKitAttachment(parser, {
-	engine: 'rocket.chat',
+	engine: 'yas chat',
 });
 
 describe('divider', () => {
@@ -1325,7 +1325,7 @@ describe('conditional', () => {
 			{
 				type: 'conditional',
 				when: {
-					engine: ['rocket.chat'],
+					engine: ['yas chat'],
 				},
 				render: [
 					{
@@ -1367,7 +1367,7 @@ describe('conditional', () => {
 			{
 				type: 'conditional',
 				when: {
-					engine: ['rocket.chat'],
+					engine: ['yas chat'],
 				},
 				render: [
 					{

@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { SDP } from './sdp.js';
 import type { IWebRTCProcessor, WebRTCInternalStateMap, WebRTCProcessorConfig, WebRTCProcessorEvents } from '../../../definition/index.js';
@@ -8,7 +8,7 @@ import type { ServerMediaSignalRemoteSDP } from '../../../definition/signals/ind
 import { MediaStreamManager } from '../../media/MediaStreamManager.js';
 import { getExternalWaiter, type PromiseWaiterData } from '../../utils/getExternalWaiter.js';
 
-const DATA_CHANNEL_LABEL = 'rocket.chat';
+const DATA_CHANNEL_LABEL = 'yas chat';
 type P2PCommand = 'mute' | 'unmute' | 'end';
 
 export class MediaCallWebRTCProcessor implements IWebRTCProcessor {

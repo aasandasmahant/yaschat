@@ -12,11 +12,11 @@ import type {
 	IUploadRead,
 	IUserRead,
 	IVideoConferenceRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import type { IContactRead } from '@rocket.chat/apps-engine/definition/accessors/IContactRead';
-import type { IOAuthAppsReader } from '@rocket.chat/apps-engine/definition/accessors/IOAuthAppsReader';
-import type { IRoleRead } from '@rocket.chat/apps-engine/definition/accessors/IRoleRead';
-import type { IThreadRead } from '@rocket.chat/apps-engine/definition/accessors/IThreadRead';
+} from '@yas chat/apps-engine/definition/accessors';
+import type { IContactRead } from '@yas chat/apps-engine/definition/accessors/IContactRead';
+import type { IOAuthAppsReader } from '@yas chat/apps-engine/definition/accessors/IOAuthAppsReader';
+import type { IRoleRead } from '@yas chat/apps-engine/definition/accessors/IRoleRead';
+import type { IThreadRead } from '@yas chat/apps-engine/definition/accessors/IThreadRead';
 
 export class Reader implements IRead {
 	constructor(

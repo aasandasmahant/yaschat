@@ -1,4 +1,4 @@
-import type * as uikit from '@rocket.chat/ui-kit';
+import type * as uikit from '@yas chat/ui-kit';
 import { useState, useMemo, useCallback } from 'preact/compat';
 import { useTranslation } from 'react-i18next';
 

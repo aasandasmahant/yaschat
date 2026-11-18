@@ -1,6 +1,6 @@
-import type { AbacMembershipVerdict, AbacPreviewMember } from '@rocket.chat/core-typings';
-import { Box, Divider, Icon } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import type { AbacMembershipVerdict, AbacPreviewMember } from '@yas chat/core-typings';
+import { Box, Divider, Icon } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import type { ComponentProps } from 'react';
 
 const verdictIcons: Record<AbacMembershipVerdict, Pick<ComponentProps<typeof Icon>, 'name' | 'color'>> = {

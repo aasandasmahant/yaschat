@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
 import {
 	addSprinfToI18n,
 	extractTranslationKeys,
@@ -6,12 +6,12 @@ import {
 	availableTranslationNamespaces,
 	defaultTranslationNamespace,
 	extractTranslationNamespaces,
-} from '@rocket.chat/i18n';
-import languages from '@rocket.chat/i18n/dist/languages';
-import en from '@rocket.chat/i18n/dist/resources/en.i18n.json';
-import { capitalize, normalizeLanguage } from '@rocket.chat/tools';
-import type { TranslationContextValue } from '@rocket.chat/ui-contexts';
-import { useSetting, TranslationContext } from '@rocket.chat/ui-contexts';
+} from '@yas chat/i18n';
+import languages from '@yas chat/i18n/dist/languages';
+import en from '@yas chat/i18n/dist/resources/en.i18n.json';
+import { capitalize, normalizeLanguage } from '@yas chat/tools';
+import type { TranslationContextValue } from '@yas chat/ui-contexts';
+import { useSetting, TranslationContext } from '@yas chat/ui-contexts';
 import type i18next from 'i18next';
 import I18NextHttpBackend from 'i18next-http-backend';
 import type { ReactNode } from 'react';

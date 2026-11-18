@@ -1,5 +1,5 @@
-import { Tag } from '@rocket.chat/fuselage';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import { Tag } from '@yas chat/fuselage';
+import type * as MessageParser from '@yas chat/message-parser';
 import { format } from 'date-fns/format';
 import { intlFormatDistance } from 'date-fns/intlFormatDistance';
 import { useContext, useEffect, useState } from 'react';

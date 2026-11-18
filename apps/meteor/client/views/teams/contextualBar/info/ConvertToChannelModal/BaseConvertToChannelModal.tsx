@@ -1,5 +1,5 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useState, useCallback } from 'react';
 
 import FirstStep from './ModalSteps/FirstStep';

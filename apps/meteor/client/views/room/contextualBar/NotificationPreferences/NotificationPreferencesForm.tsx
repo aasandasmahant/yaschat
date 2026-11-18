@@ -1,5 +1,5 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { FieldGroup, IconButton, Margins } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { FieldGroup, IconButton, Margins } from '@yas chat/fuselage';
 import { useFormContext, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

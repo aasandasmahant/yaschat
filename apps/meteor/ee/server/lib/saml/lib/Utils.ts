@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import { EventEmitter } from 'node:events';
 import zlib from 'node:zlib';
 
-import type { Logger } from '@rocket.chat/logger';
+import type { Logger } from '@yas chat/logger';
 
 import { StatusCode } from './constants';
 import { ensureArray } from '../../../../../lib/utils/arrayUtils';

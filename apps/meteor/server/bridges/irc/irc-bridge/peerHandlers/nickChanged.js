@@ -1,4 +1,4 @@
-import { Users } from '@rocket.chat/models';
+import { Users } from '@yas chat/models';
 
 import { notifyOnUserChange } from '../../../../lib/notifyListener';
 

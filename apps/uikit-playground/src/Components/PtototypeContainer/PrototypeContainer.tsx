@@ -1,4 +1,4 @@
-import { Box, Scrollable } from '@rocket.chat/fuselage';
+import { Box, Scrollable } from '@yas chat/fuselage';
 import { useContext, useMemo, useState } from 'react';
 
 import { context } from '../../Context';

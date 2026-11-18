@@ -1,5 +1,5 @@
-import type { Logger } from '@rocket.chat/logger';
-import type { IAppsPersistenceModel } from '@rocket.chat/model-typings';
+import type { Logger } from '@yas chat/logger';
+import type { IAppsPersistenceModel } from '@yas chat/model-typings';
 
 import type { AppBridges, AppEvents, AppMetadataStorage } from './AppsEngine';
 import type { IAppServerNotifier } from './IAppServerNotifier';

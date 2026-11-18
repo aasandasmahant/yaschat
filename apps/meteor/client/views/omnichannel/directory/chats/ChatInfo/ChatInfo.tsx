@@ -1,6 +1,6 @@
-import type { IOmnichannelRoom, IVisitor } from '@rocket.chat/core-typings';
-import { Box, Margins, Tag, Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { IOmnichannelRoom, IVisitor } from '@yas chat/core-typings';
+import { Box, Margins, Tag, Button, ButtonGroup } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
@@ -8,9 +8,9 @@ import {
 	InfoPanelLabel,
 	InfoPanelText,
 	useFormatDateAndTime,
-} from '@rocket.chat/ui-client';
-import type { IRouterPaths } from '@rocket.chat/ui-contexts';
-import { useToastMessageDispatch, useRoute, useUserSubscription, usePermission, useUserId } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import type { IRouterPaths } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch, useRoute, useUserSubscription, usePermission, useUserId } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

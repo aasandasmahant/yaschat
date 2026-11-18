@@ -1,7 +1,7 @@
-import type { IServiceClass } from '@rocket.chat/core-services';
-import { Settings, StatusVisibility } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
+import type { IServiceClass } from '@yas chat/core-services';
+import { Settings, StatusVisibility } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
 
 const logger = new Logger('StatusVisibilityGate');
 

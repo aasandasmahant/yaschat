@@ -1,5 +1,5 @@
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export enum TextObjectType {
 	MARKDOWN = 'mrkdwn',
@@ -7,7 +7,7 @@ export enum TextObjectType {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface ITextObject {
 	type: TextObjectType;
@@ -23,7 +23,7 @@ export interface ITextObject {
 // }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IOptionObject {
 	text: ITextObject;

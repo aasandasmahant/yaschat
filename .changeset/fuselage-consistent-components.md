@@ -1,5 +1,5 @@
 ---
-'@rocket.chat/fuselage': major
+'@yas chat/fuselage': major
 ---
 
 Makes Fuselage components keep what a consumer passes and style themselves with static CSS.

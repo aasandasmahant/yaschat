@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 
-import type { ILivechatContactVisitorAssociation } from '@rocket.chat/core-typings';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
+import type { ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { isSameChannel } from './isSameChannel';

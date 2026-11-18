@@ -1,11 +1,11 @@
-import badge from '@rocket.chat/fuselage-tokens/dist/badge.json';
-import button from '@rocket.chat/fuselage-tokens/dist/button.json';
-import font from '@rocket.chat/fuselage-tokens/dist/font.json';
-import shadow from '@rocket.chat/fuselage-tokens/dist/shadow.json';
-import status from '@rocket.chat/fuselage-tokens/dist/status.json';
-import statusBullet from '@rocket.chat/fuselage-tokens/dist/statusBullet.json';
-import stroke from '@rocket.chat/fuselage-tokens/dist/stroke.json';
-import surface from '@rocket.chat/fuselage-tokens/dist/surface.json';
+import badge from '@yas chat/fuselage-tokens/dist/badge.json';
+import button from '@yas chat/fuselage-tokens/dist/button.json';
+import font from '@yas chat/fuselage-tokens/dist/font.json';
+import shadow from '@yas chat/fuselage-tokens/dist/shadow.json';
+import status from '@yas chat/fuselage-tokens/dist/status.json';
+import statusBullet from '@yas chat/fuselage-tokens/dist/statusBullet.json';
+import stroke from '@yas chat/fuselage-tokens/dist/stroke.json';
+import surface from '@yas chat/fuselage-tokens/dist/surface.json';
 
 import type { Themes } from '../types/themes';
 

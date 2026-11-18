@@ -1,7 +1,7 @@
 import { afterEach, before, describe, it } from 'node:test';
 
-import { BaseRaw } from '@rocket.chat/models';
-import { mockModel } from '@rocket.chat/models/testing';
+import { BaseRaw } from '@yas chat/models';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';

@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { LayoutContext } from '@rocket.chat/ui-contexts';
-import type { LayoutContextValue, RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { LayoutContext } from '@yas chat/ui-contexts';
+import type { LayoutContextValue, RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 

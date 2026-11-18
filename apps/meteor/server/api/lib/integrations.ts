@@ -1,5 +1,5 @@
-import type { IIntegration, IUser } from '@rocket.chat/core-typings';
-import { Integrations } from '@rocket.chat/models';
+import type { IIntegration, IUser } from '@yas chat/core-typings';
+import { Integrations } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 

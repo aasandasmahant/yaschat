@@ -1,7 +1,7 @@
-import type { IRoomWithRetentionPolicy } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { Logger } from '@rocket.chat/logger';
-import { Rooms } from '@rocket.chat/models';
+import type { IRoomWithRetentionPolicy } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { Logger } from '@yas chat/logger';
+import { Rooms } from '@yas chat/models';
 
 import { getCronAdvancedTimerFromPrecisionSetting } from '../../../../lib/getCronAdvancedTimerFromPrecisionSetting';
 import { settings } from '../../../settings';

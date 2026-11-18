@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import type { IAppServerOrchestrator, IAppsMessage } from '@rocket.chat/apps';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IAppServerOrchestrator, IAppsMessage } from '@yas chat/apps';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

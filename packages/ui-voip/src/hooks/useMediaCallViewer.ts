@@ -1,5 +1,5 @@
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { useUser, useUserAvatarPath } from '@rocket.chat/ui-contexts';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { useUser, useUserAvatarPath } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 export type MediaCallViewer = {

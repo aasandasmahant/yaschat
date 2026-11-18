@@ -1,5 +1,5 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
-import { getBaseURI, isExternal } from '@rocket.chat/ui-client';
+import type * as MessageParser from '@yas chat/message-parser';
+import { getBaseURI, isExternal } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { api, Message, Team, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import { api, Message, Team, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { notifyOnSubscriptionChangedById } from '../../lib/notifyListener';

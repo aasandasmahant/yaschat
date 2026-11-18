@@ -1,8 +1,8 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { usePermission, useUserSubscriptionByName, useRouter } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { usePermission, useUserSubscriptionByName, useRouter } from '@yas chat/ui-contexts';
 
 // TODO: Routes type definitions are declared in-file for most places, so this route doesn't exist in this package
-declare module '@rocket.chat/ui-contexts' {
+declare module '@yas chat/ui-contexts' {
 	export interface IRouterPaths {
 		direct: {
 			pathname: `/direct/:rid${`/${string}` | ''}${`/${string}` | ''}`;

@@ -99,7 +99,7 @@ Extracted data:
 ```ts
 /**
  * TODO: Should we reinvent the wheel here?
- * We already have a good one in @rocket.chat/core
+ * We already have a good one in @yas chat/core
  */
 ```
 
@@ -108,7 +108,7 @@ Extracted data:
 | Field  | Value                                             |
 | ------ | ------------------------------------------------- |
 | Title  | `Should we reinvent the wheel here?`              |
-| Body   | `We already have a good one in @rocket.chat/core` |
+| Body   | `We already have a good one in @yas chat/core` |
 | Labels | `todo`                                            |
 
 ---

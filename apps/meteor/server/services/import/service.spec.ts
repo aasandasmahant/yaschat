@@ -1,5 +1,5 @@
-import type { IImport, IImportUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IImport, IImportUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { ObjectId } from 'mongodb';
 
 const mockImportsInvalidateAllOperations = jest.fn();
@@ -11,7 +11,7 @@ const mockImportsSetOperationStatus = jest.fn();
 const mockImportDataDeleteMany = jest.fn();
 const mockImportDataInsertMany = jest.fn();
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClassInternal: class {
 		protected name = '';
 	},

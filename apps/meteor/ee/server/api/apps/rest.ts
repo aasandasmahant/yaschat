@@ -1,13 +1,13 @@
-import type { AppManager } from '@rocket.chat/apps/dist/server/AppManager';
-import type { IMarketplaceInfo } from '@rocket.chat/apps/dist/server/marketplace/IMarketplaceInfo';
-import { AppStatus, AppStatusUtils } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import type { AppStatusReport } from '@rocket.chat/core-services';
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Settings, Users } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { AppManager } from '@yas chat/apps/dist/server/AppManager';
+import type { IMarketplaceInfo } from '@yas chat/apps/dist/server/marketplace/IMarketplaceInfo';
+import { AppStatus, AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import type { AppStatusReport } from '@yas chat/core-services';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Settings, Users } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 import * as z from 'zod';
 
 import { registerActionButtonsHandler } from './endpoints/actionButtonsHandler';
@@ -44,7 +44,7 @@ import type { AppServerOrchestrator } from '../../lib/apps/orchestrator';
 import { Apps } from '../../lib/apps/orchestrator';
 import { canEnableApp } from '../../lib/license/canEnableApp';
 
-const rocketChatVersion = Info.version;
+const YasChatVersion = Info.version;
 const appsEngineVersionForMarketplace = Info.marketplaceApiVersion.replace(/-.*/g, '');
 const getDefaultHeaders = (): Record<string, any> => ({
 	'X-Apps-Engine-Version': appsEngineVersionForMarketplace,
@@ -146,7 +146,7 @@ export class AppsRestApi {
 					const { action, appId, appVersion } = this.queryParams;
 
 					return API.v1.success({
-						url: `${baseUrl}/apps/${appId}/incompatible/${appVersion}/${action}?workspaceId=${workspaceId}&rocketChatVersion=${rocketChatVersion}`,
+						url: `${baseUrl}/apps/${appId}/incompatible/${appVersion}/${action}?workspaceId=${workspaceId}&YasChatVersion=${YasChatVersion}`,
 					});
 				},
 			},

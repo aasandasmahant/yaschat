@@ -1,4 +1,4 @@
-import { Room, Authorization, Message, ServiceClassInternal, api, isClientSafeError } from '@rocket.chat/core-services';
+import { Room, Authorization, Message, ServiceClassInternal, api, isClientSafeError } from '@yas chat/core-services';
 import type {
 	IListRoomsFilter,
 	ITeamAutocompleteResult,
@@ -8,8 +8,8 @@ import type {
 	ITeamMemberParams,
 	ITeamService,
 	ITeamUpdateData,
-} from '@rocket.chat/core-services';
-import { TeamType } from '@rocket.chat/core-typings';
+} from '@yas chat/core-services';
+import { TeamType } from '@yas chat/core-typings';
 import type {
 	IRoom,
 	IUser,
@@ -21,10 +21,10 @@ import type {
 	ITeamMember,
 	ITeamStats,
 	AtLeast,
-} from '@rocket.chat/core-typings';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { Team, Rooms, Subscriptions, Users, TeamMember } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { Team, Rooms, Subscriptions, Users, TeamMember } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Document, FindOptions, Filter } from 'mongodb';
 
 import { notifyOnSubscriptionChangedByRoomIdAndUserId, notifyOnRoomChangedById } from '../../lib/notifyListener';

@@ -1,6 +1,6 @@
-import type { RoomAccessValidator } from '@rocket.chat/core-services';
-import { Authorization } from '@rocket.chat/core-services';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import type { RoomAccessValidator } from '@yas chat/core-services';
+import { Authorization } from '@yas chat/core-services';
+import { Subscriptions, Users } from '@yas chat/models';
 
 import { canAccessRoom, isPartialUser } from './canAccessRoom';
 

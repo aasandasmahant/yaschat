@@ -1,4 +1,4 @@
-import { escapeRegExp, isAbsoluteURL } from '@rocket.chat/tools';
+import { escapeRegExp, isAbsoluteURL } from '@yas chat/tools';
 
 import { ltrim, rtrim, trim } from './utils/stringUtils';
 

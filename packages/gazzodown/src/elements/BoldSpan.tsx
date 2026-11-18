@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import ItalicSpan from './ItalicSpan';
 import LinkSpan from './LinkSpan';

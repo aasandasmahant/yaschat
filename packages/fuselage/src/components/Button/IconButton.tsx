@@ -1,4 +1,4 @@
-import type { Keys as IconName } from '@rocket.chat/icons';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { AllHTMLAttributes, ReactElement, ReactNode, RefAttributes } from 'react';
 import { isValidElement, useMemo } from 'react';
 

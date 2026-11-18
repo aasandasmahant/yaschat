@@ -1,9 +1,9 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { escapeRegExp, isTruthy } from '@rocket.chat/tools';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { useEndpoint, useSetting, useUserId, useUserPreference } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { escapeRegExp, isTruthy } from '@yas chat/tools';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { useEndpoint, useSetting, useUserId, useUserPreference } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import type { ReactNode } from 'react';

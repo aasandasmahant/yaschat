@@ -1,7 +1,7 @@
-import { AccordionItem, Tag } from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldHint, ToggleSwitch } from '@rocket.chat/fuselage-forms';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { usePermission, useSetting } from '@rocket.chat/ui-contexts';
+import { AccordionItem, Tag } from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldHint, ToggleSwitch } from '@yas chat/fuselage-forms';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { usePermission, useSetting } from '@yas chat/ui-contexts';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

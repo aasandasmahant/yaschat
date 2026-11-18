@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type WarningModalProps = {

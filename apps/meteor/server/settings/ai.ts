@@ -1,4 +1,4 @@
-import { AI_LICENSE_MODULE } from '@rocket.chat/ai-search';
+import { AI_LICENSE_MODULE } from '@yas chat/ai-search';
 
 import { settingsRegistry } from '.';
 

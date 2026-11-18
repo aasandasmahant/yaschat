@@ -1,8 +1,8 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Button, Box, TextInput, Field, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal, links } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useSetting, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { Button, Box, TextInput, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal, links } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useSetting, useEndpoint } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

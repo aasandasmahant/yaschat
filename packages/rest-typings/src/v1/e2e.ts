@@ -1,4 +1,4 @@
-import type { IRoom, ISubscription, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, ISubscription, IUser } from '@yas chat/core-typings';
 
 import { ajv } from './Ajv';
 

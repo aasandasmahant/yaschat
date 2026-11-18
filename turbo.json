@@ -40,11 +40,11 @@
 			"dependsOn": ["^build"],
 			"cache": false
 		},
-		"@rocket.chat/meteor#build": {
+		"@yas chat/meteor#build": {
 			"dependsOn": ["^build"],
 			"cache": false
 		},
-		"@rocket.chat/meteor#build:ci": {
+		"@yas chat/meteor#build:ci": {
 			"env": ["BABEL_ENV"],
 			"cache": false
 		}

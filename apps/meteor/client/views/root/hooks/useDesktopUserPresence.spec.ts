@@ -1,9 +1,9 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { clientCallbacks } from '@rocket.chat/ui-client';
-import { AuthenticationContext, UserContext } from '@rocket.chat/ui-contexts';
+import { UserStatus } from '@yas chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
+import type { IYasChatDesktop } from '@yas chat/desktop-api';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { clientCallbacks } from '@yas chat/ui-client';
+import { AuthenticationContext, UserContext } from '@yas chat/ui-contexts';
 import { QueryClient } from '@tanstack/react-query';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { createElement, useContext } from 'react';

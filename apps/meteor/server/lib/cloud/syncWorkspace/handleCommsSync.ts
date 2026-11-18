@@ -1,5 +1,5 @@
-import { NPS, Banner } from '@rocket.chat/core-services';
-import type { Cloud, IBanner, Optional } from '@rocket.chat/core-typings';
+import { NPS, Banner } from '@yas chat/core-services';
+import type { Cloud, IBanner, Optional } from '@yas chat/core-typings';
 
 import { getAndCreateNpsSurvey } from '../../../services/nps/getAndCreateNpsSurvey';
 

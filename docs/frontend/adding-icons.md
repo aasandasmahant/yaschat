@@ -1,6 +1,6 @@
 # Adding icons
 
-Icons live in `packages/icons` and are published as `@rocket.chat/icons`. Every SVG file in `packages/icons/src/` becomes one icon, shipped as a font glyph, a standalone SVG, a symbol in the SVG sprite, and a key of the `Keys` type that Fuselage's `Icon` component accepts as `name`.
+Icons live in `packages/icons` and are published as `@yas chat/icons`. Every SVG file in `packages/icons/src/` becomes one icon, shipped as a font glyph, a standalone SVG, a symbol in the SVG sprite, and a key of the `Keys` type that Fuselage's `Icon` component accepts as `name`.
 
 ## Design
 
@@ -49,7 +49,7 @@ The build draws the mirrored version itself. In the font, a directional icon tak
 From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/icons build
+yarn workspace @yas chat/icons build
 ```
 
 The build assigns a font character to every icon that does not have one yet and records it in `packages/icons/glyphsMapping.json`. **Commit that file with the new icon.** Existing entries must never change: consumers using the icon font address icons by character, and a reassigned character shows a different icon.
@@ -57,16 +57,16 @@ The build assigns a font character to every icon that does not have one yet and 
 Check the source style before committing:
 
 ```sh
-yarn workspace @rocket.chat/icons lint
+yarn workspace @yas chat/icons lint
 ```
 
 ## Releasing
 
-`@rocket.chat/icons` is published to npm, so a new icon needs a changeset with a minor bump:
+`@yas chat/icons` is published to npm, so a new icon needs a changeset with a minor bump:
 
 ```md
 ---
-'@rocket.chat/icons': minor
+'@yas chat/icons': minor
 ---
 
 Adds the `balloon` icon

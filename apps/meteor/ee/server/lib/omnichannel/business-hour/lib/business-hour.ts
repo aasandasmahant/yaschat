@@ -1,6 +1,6 @@
-import type { ILivechatBusinessHour } from '@rocket.chat/core-typings';
-import { LivechatBusinessHours, LivechatDepartment } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import { LivechatBusinessHours, LivechatDepartment } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { hasPermissionAsync } from '../../../../../../server/lib/authorization/hasPermission';
 import type { IPaginatedResponse, IPagination } from '../../../../api/v1/omnichannel/lib/definition';

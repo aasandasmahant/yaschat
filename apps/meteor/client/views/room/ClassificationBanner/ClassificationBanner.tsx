@@ -1,5 +1,5 @@
-import { Box, Text } from '@rocket.chat/fuselage';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Box, Text } from '@yas chat/fuselage';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useRoom } from '../contexts/RoomContext';

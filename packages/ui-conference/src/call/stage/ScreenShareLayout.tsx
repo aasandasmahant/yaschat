@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import ScreenShareThumb from './ScreenShareThumb';

@@ -1,5 +1,5 @@
-import { Users } from '@rocket.chat/models';
-import { isLivechatAnalyticsAgentOverviewProps, isLivechatAnalyticsOverviewProps } from '@rocket.chat/rest-typings';
+import { Users } from '@yas chat/models';
+import { isLivechatAnalyticsAgentOverviewProps, isLivechatAnalyticsOverviewProps } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { getAgentOverviewDataCached, getAnalyticsOverviewDataCached } from '../../../lib/omnichannel/AnalyticsTyped';

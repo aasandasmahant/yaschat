@@ -1,4 +1,4 @@
-import type { Root } from '@rocket.chat/message-parser';
+import type { Root } from '@yas chat/message-parser';
 
 /**
  * Extracts all URLs from parsed message AST (message-parser output)

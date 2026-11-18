@@ -1,6 +1,6 @@
-import type { AbacActor } from '@rocket.chat/core-services';
-import type { IAbacAttributeDefinition, IRoom, IRoomAbacRedaction } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { AbacActor } from '@yas chat/core-services';
+import type { IAbacAttributeDefinition, IRoom, IRoomAbacRedaction } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import mem from 'mem';
 
 import {

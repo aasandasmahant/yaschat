@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { AllHTMLAttributes } from 'react';
 
 export type VideoConfMessageContentProps = Omit<AllHTMLAttributes<HTMLDivElement>, 'is'>;

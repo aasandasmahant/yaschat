@@ -1,10 +1,10 @@
-import type { DistributiveOmit } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { Random } from '@rocket.chat/random';
-import { imperativeModal } from '@rocket.chat/ui-client';
-import type { RouterContext, IActionManager } from '@rocket.chat/ui-contexts';
-import { isValidAppId } from '@rocket.chat/ui-kit';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { DistributiveOmit } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { Random } from '@yas chat/random';
+import { imperativeModal } from '@yas chat/ui-client';
+import type { RouterContext, IActionManager } from '@yas chat/ui-contexts';
+import { isValidAppId } from '@yas chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 import { t } from 'i18next';
 import type { ContextType } from 'react';
 import { lazy } from 'react';

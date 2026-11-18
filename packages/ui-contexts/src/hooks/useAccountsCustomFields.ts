@@ -1,4 +1,4 @@
-import type { CustomFieldMetadata } from '@rocket.chat/core-typings';
+import type { CustomFieldMetadata } from '@yas chat/core-typings';
 import { useMemo } from 'react';
 
 import { useSetting } from './useSetting';

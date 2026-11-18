@@ -1,5 +1,5 @@
-import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@rocket.chat/fuselage';
-import { canonicalizeTimezone } from '@rocket.chat/tools';
+import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
+import { canonicalizeTimezone } from '@yas chat/tools';
 
 import { useTimezoneNameList } from '../../../../../hooks/useTimezoneNameList';
 import ResetSettingButton from '../ResetSettingButton';

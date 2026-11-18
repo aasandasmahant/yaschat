@@ -1,10 +1,10 @@
-import { License } from '@rocket.chat/license';
-import { mockModel } from '@rocket.chat/models/testing';
+import { License } from '@yas chat/license';
+import { mockModel } from '@yas chat/models/testing';
 
 import { registerOAuthClient } from './registerOAuthClient';
 import { settings } from '../../../settings/cached';
 
-jest.mock('@rocket.chat/license', () => ({
+jest.mock('@yas chat/license', () => ({
 	License: { hasModule: jest.fn() },
 }));
 

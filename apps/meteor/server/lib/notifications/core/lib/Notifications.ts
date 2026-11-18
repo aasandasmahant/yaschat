@@ -1,6 +1,6 @@
-import { createStreamAdapter } from '@rocket.chat/ddp-server';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { NotificationsModule } from '@rocket.chat/streamer';
+import { createStreamAdapter } from '@yas chat/ddp-server';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { NotificationsModule } from '@yas chat/streamer';
 
 import { ddpServer } from '../../../realtime/ddpServer';
 

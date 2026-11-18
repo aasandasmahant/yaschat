@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { Box } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { useCallback, useEffect } from 'react';
 

@@ -1,4 +1,4 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 import { useContext, useEffect, useMemo } from 'react';
 
 import { UiKitContext } from '../../../contexts/UiKitContext';

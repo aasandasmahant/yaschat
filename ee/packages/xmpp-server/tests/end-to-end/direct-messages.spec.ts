@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { after, before, describe, it } from 'node:test';
 import { setTimeout as sleep } from 'node:timers/promises';
 
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 
 import { uniqueSuffix, withUppercaseDomain } from './helper/config';
 import { isChat, replacedId } from './helper/predicates';
@@ -77,7 +77,7 @@ describe('XMPP federation: direct messages', () => {
 		const room = await createDirectMessage(rc, local, alice.bareJid);
 		assert.equal(room._id, dm._id, 'im.create should reuse the federated DM');
 
-		const text = `from rocket.chat ${uniqueSuffix()}`;
+		const text = `from yas chat ${uniqueSuffix()}`;
 		const sent = await sendMessage(local, room._id, text);
 		const received = await alice.waitFor(isChat({ from: local.jid, body: text }), 'the DM from YasChat');
 		assert.equal(received.attrs.id, sent._id);

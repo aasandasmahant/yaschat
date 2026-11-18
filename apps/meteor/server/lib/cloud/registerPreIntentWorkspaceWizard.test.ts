@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -11,10 +11,10 @@ const fetchStub = sinon.stub();
 const buildRegistrationDataStub = sinon.stub();
 
 const { registerPreIntentWorkspaceWizard } = proxyquire.noCallThru().load('./registerPreIntentWorkspaceWizard.ts', {
-	'@rocket.chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
-	'@rocket.chat/server-fetch': { serverFetch: fetchStub },
+	'@yas chat/license': { License: { hasOfflineLicense: hasOfflineLicenseStub } },
+	'@yas chat/server-fetch': { serverFetch: fetchStub },
 	'./buildRegistrationData': { buildWorkspaceRegistrationData: buildRegistrationDataStub },
-	'../../settings': { settings: { get: sinon.stub().returns('https://cloud.rocket.chat') } },
+	'../../settings': { settings: { get: sinon.stub().returns('https://cloud.yas chat') } },
 	'../logger/system': { SystemLogger: { error: sinon.stub() } },
 });
 

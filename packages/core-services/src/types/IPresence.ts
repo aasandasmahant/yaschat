@@ -1,4 +1,4 @@
-import type { IUser, UserStatus } from '@rocket.chat/core-typings';
+import type { IUser, UserStatus } from '@yas chat/core-typings';
 
 import type { IServiceClass } from './ServiceClass';
 

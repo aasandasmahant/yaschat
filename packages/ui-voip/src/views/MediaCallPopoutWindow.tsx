@@ -1,6 +1,6 @@
-import { Box, OwnerDocument as FuselageOwnerDocument } from '@rocket.chat/fuselage';
-import { OwnerDocument as StyledOwnerDocument } from '@rocket.chat/styled';
-import { ModalProvider, ModalRegion, TooltipProvider } from '@rocket.chat/ui-client';
+import { Box, OwnerDocument as FuselageOwnerDocument } from '@yas chat/fuselage';
+import { OwnerDocument as StyledOwnerDocument } from '@yas chat/styled';
+import { ModalProvider, ModalRegion, TooltipProvider } from '@yas chat/ui-client';
 import { useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 

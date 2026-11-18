@@ -1,4 +1,4 @@
-import { Box, Callout } from '@rocket.chat/fuselage';
+import { Box, Callout } from '@yas chat/fuselage';
 import type { Meta, StoryFn } from '@storybook/react-webpack5';
 import { useState } from 'react';
 

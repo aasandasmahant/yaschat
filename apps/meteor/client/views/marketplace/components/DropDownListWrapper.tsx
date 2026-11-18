@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { usePosition, useOutsideClick } from '@rocket.chat/fuselage-hooks';
+import { Box } from '@yas chat/fuselage';
+import { usePosition, useOutsideClick } from '@yas chat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { forwardRef, useRef } from 'react';
 

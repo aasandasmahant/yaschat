@@ -1,6 +1,6 @@
-import { Callout } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@rocket.chat/ui-client';
-import { useEndpoint, usePermission } from '@rocket.chat/ui-contexts';
+import { Callout } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@yas chat/ui-client';
+import { useEndpoint, usePermission } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
 import proxyquire from 'proxyquire';
 
 const mocks = {
-	'@rocket.chat/random': {
+	'@yas chat/random': {
 		'Random': {
 			id() {
 				return Math.random().toString().replace('0.', 'A');

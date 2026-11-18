@@ -1,4 +1,4 @@
-import { Rooms, Users } from '@rocket.chat/models';
+import { Rooms, Users } from '@yas chat/models';
 
 import { canAccessRoomAsync } from './authorization';
 import { hasPermissionAsync } from './authorization/hasPermission';

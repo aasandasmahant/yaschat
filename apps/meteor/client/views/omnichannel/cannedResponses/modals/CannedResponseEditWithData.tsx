@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
-import { FormSkeleton } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
+import { FormSkeleton } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import CannedResponseEdit from './CannedResponseEdit';

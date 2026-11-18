@@ -1,4 +1,4 @@
-import { Integrations } from '@rocket.chat/models';
+import { Integrations } from '@yas chat/models';
 
 import { addMigration } from '../../lib/migrations';
 

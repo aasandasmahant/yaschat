@@ -1,5 +1,5 @@
-import type { IRoom, IOmnichannelRoom, ISubscription } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { IRoom, IOmnichannelRoom, ISubscription } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
 import { createContext, useContext } from 'react';
 
 export interface IRoomWithFederationOriginalName extends IRoom {

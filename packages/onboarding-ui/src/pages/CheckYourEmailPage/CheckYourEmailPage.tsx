@@ -1,4 +1,4 @@
-import { HeroLayout, HeroLayoutTitle, HeroLayoutSubtitle } from '@rocket.chat/layout';
+import { HeroLayout, HeroLayoutTitle, HeroLayoutSubtitle } from '@yas chat/layout';
 import type { ReactNode } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 

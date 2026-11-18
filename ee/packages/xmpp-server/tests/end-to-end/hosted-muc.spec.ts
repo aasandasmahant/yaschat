@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { after, before, describe, it } from 'node:test';
 import { setTimeout as sleep } from 'node:timers/promises';
 
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 
 import { DUPLICATE_SETTLE_MS, federationPolling, uniqueSuffix, withUppercaseDomain } from './helper/config';
 import { isGroupchat, isOccupantPresence, isRoomInvite, isRoomSubject, replacedId, statusCodes } from './helper/predicates';
@@ -142,7 +142,7 @@ describe('XMPP federation: rooms hosted by YasChat', () => {
 			const stored = await expectStoredOnce(owner, room, inbound);
 			assert.equal(stored.u.username, alice.bareJid);
 
-			const outbound = `hello from rocket.chat ${uniqueSuffix()}`;
+			const outbound = `hello from yas chat ${uniqueSuffix()}`;
 			await sendMessage(owner, room._id, outbound);
 			await alice.waitFor(isGroupchat({ roomJid: muc, nick: owner.username, body: outbound }), 'the owner message');
 		});
@@ -347,7 +347,7 @@ describe('XMPP federation: rooms hosted by YasChat', () => {
 		});
 
 		it('delivers a YasChat message to the XMPP user once (R14)', async () => {
-			const text = `once from rocket.chat ${uniqueSuffix()}`;
+			const text = `once from yas chat ${uniqueSuffix()}`;
 			await sendMessage(members[0], room._id, text);
 			await alice.expectOnce(isGroupchat({ roomJid: muc, nick: members[0].username, body: text }), 'the message');
 		});
@@ -361,7 +361,7 @@ describe('XMPP federation: rooms hosted by YasChat', () => {
 			await alice.sendGroupchat(muc, inbound);
 			await expectStoredOnce(late, room, inbound);
 
-			const outbound = `after join from rocket.chat ${uniqueSuffix()}`;
+			const outbound = `after join from yas chat ${uniqueSuffix()}`;
 			await sendMessage(late, room._id, outbound);
 			await alice.expectOnce(isGroupchat({ roomJid: muc, nick: late.username, body: outbound }), 'the late member message');
 		});

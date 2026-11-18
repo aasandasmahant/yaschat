@@ -27,7 +27,7 @@
     },
     "emailConfirmed": {
       "title": "Email Confirmed!",
-      "subtitle": "You can return to your Rocket.Chat application – we have launched your workspace already."
+      "subtitle": "You can return to your Yas chat application – we have launched your workspace already."
     },
     "checkYourEmail": {
       "title": "Check your email",
@@ -75,7 +75,7 @@
     },
     "oauthAuthorizationPage": {
       "title": "Authorization",
-      "allowLogin": "Do you wish to allow <1>{{name}}</1> to login with your Rocket.Chat Cloud Account?",
+      "allowLogin": "Do you wish to allow <1>{{name}}</1> to login with your Yas chat Cloud Account?",
       "buttons": {
         "authorize": "Authorize",
         "goBack": "Go Back"
@@ -101,7 +101,7 @@
     },
     "createCloudWorkspace": {
       "title": "Launch new workspace and <1>30-day trial</1>",
-      "tryGold": "Try Rocket.Chat Gold Edition for 30 days. No credit card required.",
+      "tryGold": "Try Yas chat Gold Edition for 30 days. No credit card required.",
       "auditing": "Message audit panel / Audit logs",
       "numberOfIntegrations": "Apps and integrations",
       "ldap": "LDAP enhanced sync",
@@ -140,7 +140,7 @@
           "placeholder": "Create password"
         },
         "keepPosted": {
-          "label": "Keep me posted about Rocket.Chat updates"
+          "label": "Keep me posted about Yas chat updates"
         }
       }
     },
@@ -186,8 +186,8 @@
       "keepInformed": "Keep me informed about news and events",
       "registerLater": "Register later",
       "notConnectedToInternet": "The server is not connected to the internet, so you’ll have to do an offline registration for this workspace.",
-      "registrationEngagement": "Registration allows automatic license updates, notifications of critical vulnerabilities and access to Rocket.Chat Cloud services. No sensitive workspace data is shared; statistics sent to Rocket.Chat are made visible to you within the administration area.",
-      "registrationKeepInformed": "By submitting this form you consent to receive more information about Rocket.Chat products, events and updates, according to our <1>privacy policy</1>. You may unsubscribe at any time."
+      "registrationEngagement": "Registration allows automatic license updates, notifications of critical vulnerabilities and access to Yas chat Cloud services. No sensitive workspace data is shared; statistics sent to Yas chat are made visible to you within the administration area.",
+      "registrationKeepInformed": "By submitting this form you consent to receive more information about Yas chat products, events and updates, according to our <1>privacy policy</1>. You may unsubscribe at any time."
     },
     "createCloudWorkspace": {
       "title": "New Cloud Workspace",
@@ -218,10 +218,10 @@
     "registerOfflineForm": {
       "title": "Register Offline",
       "copyStep": {
-        "description": "If for any reason your workspace can’t be connected to the internet, follow these steps:<1></1>1. Go to: <2>cloud.rocket.chat > Workspaces</2> and click “<3>Register self-managed</3>”<4></4>2. Click “<5>Continue offline</5>”<6></6>3. In the <7>Register offline workspace</7> dialog in cloud.rocket.chat, paste the token in the box below"
+        "description": "If for any reason your workspace can’t be connected to the internet, follow these steps:<1></1>1. Go to: <2>cloud.yas chat > Workspaces</2> and click “<3>Register self-managed</3>”<4></4>2. Click “<5>Continue offline</5>”<6></6>3. In the <7>Register offline workspace</7> dialog in cloud.yas chat, paste the token in the box below"
       },
       "pasteStep": {
-        "description": "1. In <1>cloud.rocket.chat</1> get the generated text and paste below to complete your registration process"
+        "description": "1. In <1>cloud.yas chat</1> get the generated text and paste below to complete your registration process"
       },
       "fields": {
         "registrationToken": {

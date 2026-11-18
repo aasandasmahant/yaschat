@@ -2,9 +2,9 @@ import { mkdtemp } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path, { join } from 'node:path';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IExportOperation, IUser } from '@rocket.chat/core-typings';
-import { ExportOperations, UserDataFiles } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IExportOperation, IUser } from '@yas chat/core-typings';
+import { ExportOperations, UserDataFiles } from '@yas chat/models';
 
 import * as dataExport from '../../lib/dataExport';
 import { settings } from '../../settings';

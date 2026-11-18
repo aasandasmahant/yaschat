@@ -1,4 +1,4 @@
-import { Users } from '@rocket.chat/models';
+import { Users } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 import passport from 'passport';
 import type { Profile, DoneCallback } from 'passport';

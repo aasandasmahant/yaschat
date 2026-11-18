@@ -1,6 +1,6 @@
-import type { OptionType } from '@rocket.chat/fuselage';
-import { IconButton, PositionAnimated, Options, useCursor } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import type { OptionType } from '@yas chat/fuselage';
+import { IconButton, PositionAnimated, Options, useCursor } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 import { useRef, useCallback, useMemo } from 'react';
 
 import { useStringFromTextObject } from '../hooks/useStringFromTextObject';

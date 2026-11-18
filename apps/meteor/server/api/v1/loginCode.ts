@@ -1,5 +1,5 @@
-import { LoginCodes } from '@rocket.chat/models';
-import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@rocket.chat/rest-typings';
+import { LoginCodes } from '@yas chat/models';
+import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@yas chat/rest-typings';
 import type { JSONSchemaType } from 'ajv';
 
 import { issueLoginToken } from '../../lib/auth/issueLoginToken';
@@ -64,7 +64,7 @@ const loginCodeEndpoints = API.v1.post(
 
 type LoginCodeEndpoints = ExtractRoutesFromAPI<typeof loginCodeEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LoginCodeEndpoints {}
 }

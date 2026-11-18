@@ -1,6 +1,6 @@
-import { Apps } from '@rocket.chat/apps';
-import type { IAppStorageItem } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import { License } from '@rocket.chat/license';
+import { Apps } from '@yas chat/apps';
+import type { IAppStorageItem } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import { License } from '@yas chat/license';
 
 import { addMigration } from '../../lib/migrations';
 

@@ -1,5 +1,5 @@
-import type { ILivechatContact, ILivechatContactConflictingField } from '@rocket.chat/core-typings';
-import { LivechatContacts, Settings } from '@rocket.chat/models';
+import type { ILivechatContact, ILivechatContactConflictingField } from '@yas chat/core-typings';
+import { LivechatContacts, Settings } from '@yas chat/models';
 
 import { patchContact } from './patchContact';
 import { validateContactManager } from './validateContactManager';

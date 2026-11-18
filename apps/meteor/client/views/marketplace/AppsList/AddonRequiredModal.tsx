@@ -8,7 +8,7 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

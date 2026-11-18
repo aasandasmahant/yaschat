@@ -1,4 +1,4 @@
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { usePermission } from '@yas chat/ui-contexts';
 
 export const useCanCreateCannedResponse = () => {
 	const saveCannedResponsesPermission = usePermission('save-canned-responses');

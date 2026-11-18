@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -6,7 +6,7 @@ import {
 	GenericTableHeader,
 	GenericTableHeaderCell,
 	GenericTableRow,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

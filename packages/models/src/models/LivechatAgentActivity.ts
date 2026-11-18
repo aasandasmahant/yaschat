@@ -1,5 +1,5 @@
-import type { ILivechatAgentActivity, IServiceHistory, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ILivechatAgentActivityModel } from '@rocket.chat/model-typings';
+import type { ILivechatAgentActivity, IServiceHistory, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ILivechatAgentActivityModel } from '@yas chat/model-typings';
 import { format } from 'date-fns/format';
 import { parseISO } from 'date-fns/parseISO';
 import type { AggregationCursor, Collection, Document, FindCursor, Db, WithId, IndexDescription, UpdateResult } from 'mongodb';

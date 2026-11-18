@@ -1,4 +1,4 @@
-import { AnimatedVisibility, Box } from '@rocket.chat/fuselage';
+import { AnimatedVisibility, Box } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type PageFooterProps = { isDirty: boolean } & ComponentProps<typeof Box>;

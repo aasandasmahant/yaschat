@@ -18,7 +18,7 @@ whichever **broker** is installed. The broker is the only thing that knows wheth
 the service is an object in this process or a container on the other side of the
 network, which is what lets the same call site work in both deployments.
 
-Everything above `@rocket.chat/core-services` is written against `IBroker`
+Everything above `@yas chat/core-services` is written against `IBroker`
 (`packages/core-services/src/types/IBroker.ts`) and never learns which
 implementation it got.
 

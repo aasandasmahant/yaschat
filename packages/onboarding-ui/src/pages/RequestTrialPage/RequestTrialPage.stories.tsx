@@ -11,7 +11,7 @@ export default {
 		layout: 'fullscreen',
 	},
 	args: {
-		validateEmail: (email) => (email === 'rocket@rocket.chat' ? 'invalid email' : true),
+		validateEmail: (email) => (email === 'rocket@yas chat' ? 'invalid email' : true),
 		organizationSizeOptions: [
 			['0', '1-10 people'],
 			['1', '11-50 people'],

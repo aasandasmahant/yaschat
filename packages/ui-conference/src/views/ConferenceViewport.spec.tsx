@@ -1,5 +1,5 @@
-import { PaletteStyleTag } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { PaletteStyleTag } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import ConferenceViewport from './ConferenceViewport';

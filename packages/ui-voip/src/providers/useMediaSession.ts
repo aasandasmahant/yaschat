@@ -1,6 +1,6 @@
-import type { UserStatus } from '@rocket.chat/core-typings';
-import type { MediaSignalingSession, CallState, CallContact } from '@rocket.chat/media-signaling';
-import { useUserAvatarPath, useUserPresence } from '@rocket.chat/ui-contexts';
+import type { UserStatus } from '@yas chat/core-typings';
+import type { MediaSignalingSession, CallState, CallContact } from '@yas chat/media-signaling';
+import { useUserAvatarPath, useUserPresence } from '@yas chat/ui-contexts';
 import { useEffect, useReducer } from 'react';
 
 import { defaultSessionState } from '../context/MediaCallViewContext';

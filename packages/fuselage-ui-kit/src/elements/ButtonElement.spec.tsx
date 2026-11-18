@@ -1,6 +1,6 @@
-import { MockedServerContext } from '@rocket.chat/mock-providers';
-import type * as UiKit from '@rocket.chat/ui-kit';
-import { BlockContext } from '@rocket.chat/ui-kit';
+import { MockedServerContext } from '@yas chat/mock-providers';
+import type * as UiKit from '@yas chat/ui-kit';
+import { BlockContext } from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 
 import ButtonElement from './ButtonElement';
@@ -24,9 +24,9 @@ const renderButton = (url: string) => {
 };
 
 it('renders a link for a safe url', () => {
-	renderButton('https://rocket.chat');
+	renderButton('https://yas chat');
 
-	expect(screen.getByRole('link', { name: 'Open' })).toHaveAttribute('href', 'https://rocket.chat');
+	expect(screen.getByRole('link', { name: 'Open' })).toHaveAttribute('href', 'https://yas chat');
 });
 
 it('renders a plain button for an unsafe url', () => {

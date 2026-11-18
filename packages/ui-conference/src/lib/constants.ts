@@ -1,4 +1,4 @@
-import type { JoinableVideoConference } from '@rocket.chat/core-typings';
+import type { JoinableVideoConference } from '@yas chat/core-typings';
 
 /** How many faces the preflight has room to show before it starts counting instead. */
 export const PREFLIGHT_FACES_SHOWN = 10;

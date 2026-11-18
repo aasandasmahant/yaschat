@@ -1,4 +1,4 @@
-import type { IStats } from '@rocket.chat/core-typings';
+import type { IStats } from '@yas chat/core-typings';
 import {
 	ajv,
 	isTelemetryPayload,
@@ -6,7 +6,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { getStatistics, getLastStatistics } from '../../lib/statistics';
 import telemetryEvent from '../../lib/statistics/lib/telemetryEvents';

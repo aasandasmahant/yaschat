@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageSystemBody } from '@rocket.chat/fuselage';
-import { MessageTypes } from '@rocket.chat/message-types';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageSystemBody } from '@yas chat/fuselage';
+import { MessageTypes } from '@yas chat/message-types';
 import { useTranslation } from 'react-i18next';
 
 type SystemMessageBodyProps = {

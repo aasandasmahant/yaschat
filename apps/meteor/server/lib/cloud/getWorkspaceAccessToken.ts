@@ -1,6 +1,6 @@
-import type { IWorkspaceCredentials } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { WorkspaceCredentials } from '@rocket.chat/models';
+import type { IWorkspaceCredentials } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { WorkspaceCredentials } from '@yas chat/models';
 
 import { getWorkspaceAccessTokenWithScope } from './getWorkspaceAccessTokenWithScope';
 import { workspaceScopes } from './oauthScopes';

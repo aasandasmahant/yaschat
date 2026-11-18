@@ -1,4 +1,4 @@
-import { useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { useRoomToolbox } from '@yas chat/ui-contexts';
 
 import Thread from './Thread';
 import ThreadList from './ThreadList';

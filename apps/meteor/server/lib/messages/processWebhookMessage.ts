@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IUser, RequiredField, MessageAttachment, IRoom } from '@rocket.chat/core-typings';
-import { removeEmpty } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IUser, RequiredField, MessageAttachment, IRoom } from '@yas chat/core-typings';
+import { removeEmpty } from '@yas chat/tools';
 import _ from 'underscore';
 
 import { sendMessage, validateMessage } from './sendMessage';

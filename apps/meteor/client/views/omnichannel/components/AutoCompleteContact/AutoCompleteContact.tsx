@@ -1,7 +1,7 @@
-import type { Serialized } from '@rocket.chat/core-typings';
-import { Box, PaginatedSelectFiltered } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import type { ILivechatContactWithManagerData } from '@rocket.chat/rest-typings';
+import type { Serialized } from '@yas chat/core-typings';
+import { Box, PaginatedSelectFiltered } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import type { ILivechatContactWithManagerData } from '@yas chat/rest-typings';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

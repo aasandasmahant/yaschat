@@ -1,7 +1,7 @@
-import type { IAppServerOrchestrator, IAppsRoom, IAppsLivechatRoom, IAppsRoomRaw } from '@rocket.chat/apps';
-import { secureFieldsMapper } from '@rocket.chat/apps/dist/lib/SecureFields';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatDepartment, Users, LivechatContacts } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, IAppsRoom, IAppsLivechatRoom, IAppsRoomRaw } from '@yas chat/apps';
+import { secureFieldsMapper } from '@yas chat/apps/dist/lib/SecureFields';
+import type { IRoom } from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatDepartment, Users, LivechatContacts } from '@yas chat/models';
 import * as z from 'zod';
 
 import { RoomTypeCodec } from './enums';

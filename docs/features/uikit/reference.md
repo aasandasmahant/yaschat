@@ -2,7 +2,7 @@
 
 # UiKit reference
 
-Every block, element, text object, composition object and view that `@rocket.chat/ui-kit` defines, with its fields as the types declare them. For where each one is accepted and rendered, see [support-matrix.md](support-matrix.md).
+Every block, element, text object, composition object and view that `@yas chat/ui-kit` defines, with its fields as the types declare them. For where each one is accepted and rendered, see [support-matrix.md](support-matrix.md).
 
 ## Layout blocks
 

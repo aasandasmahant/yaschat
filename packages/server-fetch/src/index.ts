@@ -2,8 +2,8 @@ import http from 'node:http';
 import https from 'node:https';
 import type { Readable } from 'node:stream';
 
-import { Logger } from '@rocket.chat/logger';
-import { censorUrl } from '@rocket.chat/tools';
+import { Logger } from '@yas chat/logger';
+import { censorUrl } from '@yas chat/tools';
 import { HttpProxyAgent } from 'http-proxy-agent';
 import { HttpsProxyAgent } from 'https-proxy-agent';
 import fetch, { FetchError, Headers as NodeFetchHeaders, Response } from 'node-fetch';

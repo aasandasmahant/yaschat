@@ -1,6 +1,6 @@
-import type { Keys as IconName } from '@rocket.chat/icons';
-import { imperativeModal } from '@rocket.chat/ui-client';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { Keys as IconName } from '@yas chat/icons';
+import { imperativeModal } from '@yas chat/ui-client';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { flushSync } from 'react-dom';
 
 import type { ComposerAPI } from './chats/ChatAPI';

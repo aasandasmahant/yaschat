@@ -1,5 +1,5 @@
-import { NumberInput } from '@rocket.chat/fuselage';
-import { GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
+import { NumberInput } from '@yas chat/fuselage';
+import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
 import { memo } from 'react';
 import type { UseFormRegister } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

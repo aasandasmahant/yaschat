@@ -1,4 +1,4 @@
-import { Field, FieldLabel, FieldRow, FieldHint, FieldDescription, Skeleton, InputBoxSkeleton } from '@rocket.chat/fuselage';
+import { Field, FieldLabel, FieldRow, FieldHint, FieldDescription, Skeleton, InputBoxSkeleton } from '@yas chat/fuselage';
 
 import Form from './Form';
 import FormContainer from './FormContainer';

@@ -1,10 +1,10 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { ILivechatAgentStatus, isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { LivechatContacts, LivechatRooms } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
-import { validateEmail, wrapExceptions } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { ILivechatAgentStatus, isOmnichannelRoom } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { LivechatContacts, LivechatRooms } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
+import { validateEmail, wrapExceptions } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 
 import { businessHourManager } from './business-hour';

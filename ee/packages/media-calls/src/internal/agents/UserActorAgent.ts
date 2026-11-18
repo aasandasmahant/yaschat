@@ -1,7 +1,7 @@
-import type { IMediaCall, MediaCallSignedContact } from '@rocket.chat/core-typings';
-import { isBusyState, isCallHangupReason } from '@rocket.chat/media-signaling';
-import type { ClientMediaSignal, ServerMediaSignal, CallFeature, CallHangupReason } from '@rocket.chat/media-signaling';
-import { MediaCallNegotiations, MediaCalls } from '@rocket.chat/models';
+import type { IMediaCall, MediaCallSignedContact } from '@yas chat/core-typings';
+import { isBusyState, isCallHangupReason } from '@yas chat/media-signaling';
+import type { ClientMediaSignal, ServerMediaSignal, CallFeature, CallHangupReason } from '@yas chat/media-signaling';
+import { MediaCallNegotiations, MediaCalls } from '@yas chat/models';
 
 import { UserActorSignalProcessor } from './CallSignalProcessor';
 import { BaseMediaCallAgent } from '../../base/BaseAgent';

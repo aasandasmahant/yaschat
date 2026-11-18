@@ -1,4 +1,4 @@
-import { BackgroundLayer, FormPageLayout as FormLayout } from '@rocket.chat/layout';
+import { BackgroundLayer, FormPageLayout as FormLayout } from '@yas chat/layout';
 import { useTranslation, Trans } from 'react-i18next';
 
 import Description from './Description';

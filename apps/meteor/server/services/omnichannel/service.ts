@@ -1,7 +1,7 @@
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IOmnichannelService } from '@rocket.chat/core-services';
-import type { AtLeast, IOmnichannelQueue, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { IOmnichannelService } from '@yas chat/core-services';
+import type { AtLeast, IOmnichannelQueue, IOmnichannelRoom } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 import moment from 'moment';
 
 import { OmnichannelQueue } from './queue';

@@ -1,4 +1,4 @@
-import { GETLivechatConfigRouting, isGETLivechatConfigParams } from '@rocket.chat/rest-typings';
+import { GETLivechatConfigRouting, isGETLivechatConfigParams } from '@yas chat/rest-typings';
 import mem from 'mem';
 
 import { API } from '../..';
@@ -61,7 +61,7 @@ const livechatConfigEndpoints = API.v1.get(
 
 type LivechatConfigEndpoints = ExtractRoutesFromAPI<typeof livechatConfigEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatConfigEndpoints {}
 }

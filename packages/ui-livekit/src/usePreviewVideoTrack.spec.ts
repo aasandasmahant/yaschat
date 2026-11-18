@@ -1,4 +1,4 @@
-import type { VideoQuality } from '@rocket.chat/ui-conference';
+import type { VideoQuality } from '@yas chat/ui-conference';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import type { LocalVideoTrack } from 'livekit-client';
 import { VideoPresets, createLocalVideoTrack } from 'livekit-client';

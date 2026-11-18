@@ -1,25 +1,25 @@
 import { Readable } from 'node:stream';
 import { setImmediate } from 'node:timers/promises';
 
-import { Upload } from '@rocket.chat/core-services';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { defaultTranslationNamespace, availableTranslationNamespaces, extractTranslationNamespaces } from '@rocket.chat/i18n';
-import { Logger } from '@rocket.chat/logger';
-import { mockModel } from '@rocket.chat/models/testing';
+import { Upload } from '@yas chat/core-services';
+import type { IMessage } from '@yas chat/core-typings';
+import { defaultTranslationNamespace, availableTranslationNamespaces, extractTranslationNamespaces } from '@yas chat/i18n';
+import { Logger } from '@yas chat/logger';
+import { mockModel } from '@yas chat/models/testing';
 import * as i18next from 'i18next';
 import sprintf from 'i18next-sprintf-postprocessor';
 
 import { OmnichannelTranscript } from './OmnichannelTranscript';
 import { invalidSystemMessage, messages, validSystemMessage, validTranslatableSystemMessage } from './OmnichannelTranscript.fixtures';
 
-jest.mock('@rocket.chat/pdf-worker', () => ({
+jest.mock('@yas chat/pdf-worker', () => ({
 	PdfWorker: jest.fn().mockImplementation(() => ({
 		renderToStream: jest.fn().mockResolvedValue(Buffer.from('')),
 		isMimeTypeValid: jest.fn(() => true),
 	})),
 }));
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClass: class {
 		onSettingChanged = jest.fn();
 	},
@@ -40,7 +40,7 @@ jest.mock('@rocket.chat/core-services', () => ({
 	},
 }));
 
-jest.mock('@rocket.chat/tools', () => ({
+jest.mock('@yas chat/tools', () => ({
 	guessTimezone: jest.fn().mockReturnValue('UTC'),
 	guessTimezoneFromOffset: jest.fn().mockReturnValue('UTC'),
 	streamToBuffer: jest.fn().mockResolvedValue(Buffer.from('')),

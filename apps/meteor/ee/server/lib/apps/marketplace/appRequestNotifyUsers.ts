@@ -1,5 +1,5 @@
-import type { AppRequest, IUser } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { AppRequest, IUser } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { getWorkspaceAccessToken } from '../../../../../server/lib/cloud';
 import { i18n } from '../../../../../server/lib/i18n';

@@ -1,6 +1,6 @@
-import { Box, Skeleton, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { Box, Skeleton, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

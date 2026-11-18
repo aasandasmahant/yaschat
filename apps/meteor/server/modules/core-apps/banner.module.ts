@@ -1,6 +1,6 @@
-import { Banner } from '@rocket.chat/core-services';
-import type { IUiKitCoreApp, UiKitCoreAppViewClosedPayload } from '@rocket.chat/core-services';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Banner } from '@yas chat/core-services';
+import type { IUiKitCoreApp, UiKitCoreAppViewClosedPayload } from '@yas chat/core-services';
+import type * as UiKit from '@yas chat/ui-kit';
 
 export class BannerModule implements IUiKitCoreApp {
 	appId = 'banner-core';

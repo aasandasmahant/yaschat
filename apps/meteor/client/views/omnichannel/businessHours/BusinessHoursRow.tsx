@@ -1,7 +1,7 @@
-import type { ILivechatBusinessHour, Serialized } from '@rocket.chat/core-typings';
-import { IconButton } from '@rocket.chat/fuselage';
-import { GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { ILivechatBusinessHour, Serialized } from '@yas chat/core-typings';
+import { IconButton } from '@yas chat/fuselage';
+import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import type { KeyboardEvent } from 'react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

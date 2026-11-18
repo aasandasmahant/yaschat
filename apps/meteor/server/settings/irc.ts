@@ -33,7 +33,7 @@ export const createIRCSettings = () =>
 			i18nDescription: 'IRC_Port',
 		});
 
-		await this.add('IRC_Name', 'irc.rocket.chat', {
+		await this.add('IRC_Name', 'irc.yas chat', {
 			type: 'string',
 			i18nLabel: 'Name',
 			i18nDescription: 'IRC_Name',

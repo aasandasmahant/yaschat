@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/logger",
+	"name": "@yas chat/logger",
 	"version": "1.0.2",
 	"private": true,
 	"main": "./dist/index.js",
@@ -15,7 +15,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/emitter": "workspace:~",
+		"@yas chat/emitter": "workspace:~",
 		"pino": "10.3.1"
 	},
 	"devDependencies": {

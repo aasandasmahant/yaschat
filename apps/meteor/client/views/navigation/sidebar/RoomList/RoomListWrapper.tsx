@@ -1,4 +1,4 @@
-import { useMergedRefsV2 } from '@rocket.chat/ui-client';
+import { useMergedRefsV2 } from '@yas chat/ui-client';
 import type { ForwardedRef, HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';

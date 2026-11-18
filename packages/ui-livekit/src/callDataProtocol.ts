@@ -1,4 +1,4 @@
-import type { ActiveReaction } from '@rocket.chat/ui-conference';
+import type { ActiveReaction } from '@yas chat/ui-conference';
 
 /** How long a reaction stays in state: the length of its animation, and a little over. */
 export const REACTION_TTL_MS = 3500;

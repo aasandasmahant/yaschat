@@ -1,4 +1,4 @@
-import { Divider, Stack } from '@rocket.chat/fuselage';
+import { Divider, Stack } from '@yas chat/fuselage';
 
 import { ChangePassphrase } from './ChangePassphrase';
 import { ResetPassphrase } from './ResetPassphrase';

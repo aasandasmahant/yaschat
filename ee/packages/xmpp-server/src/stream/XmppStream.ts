@@ -1,7 +1,7 @@
 import type net from 'node:net';
 import tls from 'node:tls';
 
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import { escapeXML } from 'ltx';
 import type Element from 'ltx/lib/Element';
 

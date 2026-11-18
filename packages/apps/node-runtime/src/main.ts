@@ -1,7 +1,7 @@
 import './lib/loader-hook';
 
-import { setSandboxGlobals, setSandboxRequire } from '@rocket.chat/apps/base-runtime/dist/handlers/app/construct';
-import { startMainLoop } from '@rocket.chat/apps/base-runtime/dist/mainLoop';
+import { setSandboxGlobals, setSandboxRequire } from '@yas chat/apps/base-runtime/dist/handlers/app/construct';
+import { startMainLoop } from '@yas chat/apps/base-runtime/dist/mainLoop';
 
 import registerErrorListeners from './error-handlers';
 import { sandboxRequire } from './lib/require';

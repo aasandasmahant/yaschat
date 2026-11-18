@@ -17,7 +17,7 @@ export const appMessageMock = {
 			username: 'rocket.cat',
 			emails: [
 				{
-					address: 'rocketcat@rocket.chat',
+					address: 'rocketcat@yas chat',
 					verified: true,
 				},
 			],
@@ -37,7 +37,7 @@ export const appMessageMock = {
 		username: 'rocket.cat',
 		emails: [
 			{
-				address: 'rocketcat@rocket.chat',
+				address: 'rocketcat@yas chat',
 				verified: true,
 			},
 		],
@@ -79,7 +79,7 @@ export const appMessageInvalidRoomMock = {
 			username: 'rocket.cat',
 			emails: [
 				{
-					address: 'rocketcat@rocket.chat',
+					address: 'rocketcat@yas chat',
 					verified: true,
 				},
 			],
@@ -99,7 +99,7 @@ export const appMessageInvalidRoomMock = {
 		username: 'rocket.cat',
 		emails: [
 			{
-				address: 'rocketcat@rocket.chat',
+				address: 'rocketcat@yas chat',
 				verified: true,
 			},
 		],

@@ -1,16 +1,16 @@
-import { Settings } from '@rocket.chat/core-services';
-import { createRootApp, mountRouter } from '@rocket.chat/http-router';
-import type { HttpBindings } from '@rocket.chat/http-router';
+import { Settings } from '@yas chat/core-services';
+import { createRootApp, mountRouter } from '@yas chat/http-router';
+import type { HttpBindings } from '@yas chat/http-router';
 
 import { getFederationRoutes } from './routes';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	Settings: { get: jest.fn() },
 	License: { hasModule: jest.fn() },
 	FederationMatrix: {},
 }));
 
-jest.mock('@rocket.chat/federation-sdk', () => ({
+jest.mock('@yas chat/federation-sdk', () => ({
 	federationSDK: {},
 	errCodes: {},
 	NotAllowedError: class NotAllowedError extends Error {},

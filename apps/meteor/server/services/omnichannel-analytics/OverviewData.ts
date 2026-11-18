@@ -1,6 +1,6 @@
 /* oxlint-disable new-cap */
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import type { ILivechatRoomsModel } from '@rocket.chat/model-typings';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import type { ILivechatRoomsModel } from '@yas chat/model-typings';
 import moment from 'moment-timezone';
 import type { Filter } from 'mongodb';
 

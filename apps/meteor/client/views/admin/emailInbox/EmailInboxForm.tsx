@@ -1,4 +1,4 @@
-import type { IEmailInboxPayload } from '@rocket.chat/core-typings';
+import type { IEmailInboxPayload } from '@yas chat/core-typings';
 import {
 	Accordion,
 	AccordionItem,
@@ -16,11 +16,11 @@ import {
 	FieldRow,
 	FieldError,
 	FieldHint,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { validateEmail } from '@rocket.chat/tools';
-import { GenericModal, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { validateEmail } from '@yas chat/tools';
+import { GenericModal, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
 import { useId, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

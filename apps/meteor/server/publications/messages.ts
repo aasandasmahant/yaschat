@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 import type { FindOptions } from 'mongodb';
 
 import { canAccessRoomIdAsync } from '../lib/authorization/canAccessRoom';

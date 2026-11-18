@@ -1,8 +1,8 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus as UserStatusEnum } from '@rocket.chat/core-typings';
-import { Box, Icon, RadioButton } from '@rocket.chat/fuselage';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus as UserStatusEnum } from '@yas chat/core-typings';
+import { Box, Icon, RadioButton } from '@yas chat/fuselage';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

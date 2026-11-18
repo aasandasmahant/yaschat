@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { act, renderHook } from '@testing-library/react';
 
 import { useNotifyUser } from './useNotifyUser';
@@ -7,8 +7,8 @@ import { openNotifications } from '../../../../lib/openNotifications';
 
 const mockStreamCallbacks = new Map<string, (...args: unknown[]) => void>();
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useStream: () => (key: string, callback: (...args: unknown[]) => void) => {
 		mockStreamCallbacks.set(key, callback);
 		return () => undefined;

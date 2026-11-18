@@ -1,5 +1,5 @@
-import { Box, Button } from '@rocket.chat/fuselage';
-import { AnchorPortal } from '@rocket.chat/ui-client';
+import { Box, Button } from '@yas chat/fuselage';
+import { AnchorPortal } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useLayoutEffect, useState, type Ref } from 'react';
 import { within, fireEvent, waitFor, expect, userEvent } from 'storybook/test';

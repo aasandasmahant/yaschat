@@ -1,5 +1,5 @@
-import { AutoComplete, Option } from '@rocket.chat/fuselage';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { AutoComplete, Option } from '@yas chat/fuselage';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { memo, useMemo, useState } from 'react';

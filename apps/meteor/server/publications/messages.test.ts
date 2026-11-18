@@ -1,8 +1,8 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -32,7 +32,7 @@ const {
 	'../meteor-methods/messages/getChannelHistory': {
 		getChannelHistory: getChannelHistoryStub,
 	},
-	'@rocket.chat/core-services': { ClientSafeError },
+	'@yas chat/core-services': { ClientSafeError },
 });
 
 describe('extractTimestampFromCursor', () => {

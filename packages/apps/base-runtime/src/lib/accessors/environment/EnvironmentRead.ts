@@ -3,7 +3,7 @@ import type {
 	IEnvironmentRead,
 	IServerSettingRead,
 	ISettingRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
+} from '@yas chat/apps-engine/definition/accessors';
 
 export class EnvironmentRead implements IEnvironmentRead {
 	constructor(

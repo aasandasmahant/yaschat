@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import ConferenceIframe from './ConferenceIframe';

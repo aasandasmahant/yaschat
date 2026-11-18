@@ -1,8 +1,8 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IPermission as IAppPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { App, IAbacAttributeDefinition, IPermission, IRoom, ISetting, IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IPermission as IAppPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { App, IAbacAttributeDefinition, IPermission, IRoom, ISetting, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 

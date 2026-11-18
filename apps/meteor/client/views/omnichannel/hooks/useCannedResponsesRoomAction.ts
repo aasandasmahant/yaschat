@@ -1,6 +1,6 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 const CannedResponse = lazy(() => import('../cannedResponses/contextualBar/CannedResponse/WrapCannedResponseList'));

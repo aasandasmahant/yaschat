@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { ContactBridge } from '@rocket.chat/apps/dist/server/bridges/ContactBridge';
-import type { ILivechatContact } from '@rocket.chat/apps-engine/definition/livechat';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { ContactBridge } from '@yas chat/apps/dist/server/bridges/ContactBridge';
+import type { ILivechatContact } from '@yas chat/apps-engine/definition/livechat';
 
 import { addContactEmail } from '../../../lib/omnichannel/contacts/addContactEmail';
 import { verifyContactChannel } from '../../../lib/omnichannel/contacts/verifyContactChannel';

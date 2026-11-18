@@ -1,4 +1,4 @@
-import type { IImportRecord } from '@rocket.chat/core-typings';
+import type { IImportRecord } from '@yas chat/core-typings';
 
 export type ImporterBeforeImportCallback = {
 	(data: IImportRecord): Promise<boolean>;

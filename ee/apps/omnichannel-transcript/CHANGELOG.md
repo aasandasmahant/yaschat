@@ -1,21 +1,21 @@
-# @rocket.chat/omnichannel-transcript
+# @yas chat/omnichannel-transcript
 
 ## 0.5.3
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies [1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 687d88ff58975ac7d21ec059a0d151dcb75d8bd6, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 203d5ff96b613a12f85d9e59c57b4d177a4858c0, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 60102b6e0ae410a45631ee494a3a302b9c863b48, 3dcddc61941c7896bc750220220cc7d5b72b9b46, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 467d8139d2bf33f23f5792fa364bf16c65a24bda, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 8b00fa367d7be9793c31bf578eb1b6c99bf240e9, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2f77d817051c919f29615babbb3ecd1964575b52, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, 9277d940be7fbca8b5a2cc890b368d0e803e1130, 9277d940be7fbca8b5a2cc890b368d0e803e1130, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 4c152661022d34bfbe9bf78811eac286a31c47a5, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 034260ee3eec49db0a2a86572bacf5e14490815d, bff76c34b21caddbc316d69b62fac858a73d7164, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, aff24fc27c79644a077192f9b0daf4e93c837014, 94a22a577e6f160b687b9ddffeade19417c66f1e, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a, ae9c28d6ebe0d3f7be1b474ebd2c15eb73c461a6]:</summary>
-  - @rocket.chat/i18n@5.0.0
-  - @rocket.chat/core-typings@9.0.0
-  - @rocket.chat/core-services@1.0.0
-  - @rocket.chat/model-typings@3.0.0
-  - @rocket.chat/models@3.0.0
-  - @rocket.chat/emitter@0.33.1
-  - @rocket.chat/pdf-worker@0.3.37
-  - @rocket.chat/tools@0.5.0
-  - @rocket.chat/omnichannel-services@0.3.59
-  - @rocket.chat/network-broker@0.2.41
-  - @rocket.chat/logger@1.0.2
+  - @yas chat/i18n@5.0.0
+  - @yas chat/core-typings@9.0.0
+  - @yas chat/core-services@1.0.0
+  - @yas chat/model-typings@3.0.0
+  - @yas chat/models@3.0.0
+  - @yas chat/emitter@0.33.1
+  - @yas chat/pdf-worker@0.3.37
+  - @yas chat/tools@0.5.0
+  - @yas chat/omnichannel-services@0.3.59
+  - @yas chat/network-broker@0.2.41
+  - @yas chat/logger@1.0.2
 
   </details>
 
@@ -24,17 +24,17 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [1034e1f85d8e82788ca9590a185370aaf6efc4fb, 4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, 12f0c0a9d48ded61bd12ba2e3dcee7b3d877e860, dd082311778ac467d36a72589bc675f1ab2b2cbe, 568ae8378c90785fcc32502e447e1bc44dbfdf2d, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 575d467b826f8057995e4cabad4c8369cfd45409, 575d467b826f8057995e4cabad4c8369cfd45409, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 60102b6e0ae410a45631ee494a3a302b9c863b48, 9c39b5dbfb3f2269e355802d44c9ea64ab85d2ec, 58eacc4ba44053744df9a32b4a70a44c37428265, 86decd8694ca09043ac5c6b7b50efc8a4278e113, 2aea648f6431c710fc022c8ec37946a368abe6a2, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2f77d817051c919f29615babbb3ecd1964575b52, 5e82e67eaa4c998870d3eb0597f485b30c244f02, 05bbcccf3779fe8df3c96c6d80c4ce0d56bf6e9c, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 0c244a62b0e632a55cf87a84e1b321ba6e48f6c2, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, 80223cb35a1bbd2b7026f70cfbd3e80ddc4935c5, bb69cb6c2e190cc3dffe33c3970f0e7c706d24a1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, eaf5cedcce9f8e800415b4c49bce242f661462ea, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, 40243c4ba0ed19120a571d37883aec203af1b747, a10c48ca6e4fd76f4d8ce4435e04e70c1e89d771, 1df95ff2d31f1e077084596f0024c3e2c53ca1df, daa677895dad92d6aab1e84a09f190efd2755ef9, 07a2ddb3dc22c4046e5cd66897a2f9232a717d3f, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, e729e558908abfb9915a9dc7fb6ed14ac79c51df, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, eb808dd70cfbd41a127d8655c62a21c4658fd2c0, 034260ee3eec49db0a2a86572bacf5e14490815d, 857482ad1e0c6330fb57f96db40d2b08676bbf7e, 01204df7088b1362f14438d99c44bc4f6d6e840e, a39b03fe5c248079365162e31994e1dece63e7c2, aff24fc27c79644a077192f9b0daf4e93c837014, 94a22a577e6f160b687b9ddffeade19417c66f1e, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 3f26ea55ffb1b571247a5da12e1b74d3ee65a17c, 202de9fa4953c6c984e893567f9c03178551bf5a]:</summary>
-  - @rocket.chat/i18n@5.0.0-rc.0
-  - @rocket.chat/core-typings@9.0.0-rc.0
-  - @rocket.chat/core-services@1.0.0-rc.0
-  - @rocket.chat/model-typings@3.0.0-rc.0
-  - @rocket.chat/models@3.0.0-rc.0
-  - @rocket.chat/emitter@0.33.1-rc.0
-  - @rocket.chat/pdf-worker@0.3.37-rc.0
-  - @rocket.chat/tools@0.5.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.59-rc.0
-  - @rocket.chat/network-broker@0.2.41-rc.0
-  - @rocket.chat/logger@1.0.2-rc.0
+  - @yas chat/i18n@5.0.0-rc.0
+  - @yas chat/core-typings@9.0.0-rc.0
+  - @yas chat/core-services@1.0.0-rc.0
+  - @yas chat/model-typings@3.0.0-rc.0
+  - @yas chat/models@3.0.0-rc.0
+  - @yas chat/emitter@0.33.1-rc.0
+  - @yas chat/pdf-worker@0.3.37-rc.0
+  - @yas chat/tools@0.5.0-rc.0
+  - @yas chat/omnichannel-services@0.3.59-rc.0
+  - @yas chat/network-broker@0.2.41-rc.0
+  - @yas chat/logger@1.0.2-rc.0
 
   </details>
 
@@ -43,13 +43,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [eeca122b913518d2231f9d9568a10873705845ee, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
-  - @rocket.chat/i18n@4.1.0
-  - @rocket.chat/model-typings@2.6.0
-  - @rocket.chat/models@2.6.0
-  - @rocket.chat/core-services@0.17.0
-  - @rocket.chat/core-typings@8.9.0
-  - @rocket.chat/network-broker@0.2.40
-  - @rocket.chat/omnichannel-services@0.3.58
+  - @yas chat/i18n@4.1.0
+  - @yas chat/model-typings@2.6.0
+  - @yas chat/models@2.6.0
+  - @yas chat/core-services@0.17.0
+  - @yas chat/core-typings@8.9.0
+  - @yas chat/network-broker@0.2.40
+  - @yas chat/omnichannel-services@0.3.58
 
   </details>
 
@@ -58,14 +58,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [eeca122b913518d2231f9d9568a10873705845ee, 75e5b937aab6f6884df522af9e4aee2b6463fdfd, e7fd972c86b04b8cf80e7be8ec825f176939203b, 1c48beb3300fe2dcbae5094aca4f27ab2ce985e4, 17dfc71b4ad7294655e7fab9043cddbea23cb071, 38ea6ba80fd0e8d7c41a44278d54703b5d70da56, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 7d7a5c403e175df889afe303c34b9154c4ad6d70, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 6b7ce0cc0f32cda7a78b91effaff5fc02aab4340, 37faaa89ad1b4b721d6054e40a91327bd8140525, 4964afe2dd4301ae02ba0299231fc946920837b9]:</summary>
-  - @rocket.chat/i18n@4.1.0-rc.0
-  - @rocket.chat/model-typings@2.6.0-rc.0
-  - @rocket.chat/models@2.6.0-rc.0
-  - @rocket.chat/core-services@0.17.0-rc.0
-  - @rocket.chat/core-typings@8.9.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.58-rc.0
-  - @rocket.chat/network-broker@0.2.40-rc.0
-  - @rocket.chat/pdf-worker@0.3.36
+  - @yas chat/i18n@4.1.0-rc.0
+  - @yas chat/model-typings@2.6.0-rc.0
+  - @yas chat/models@2.6.0-rc.0
+  - @yas chat/core-services@0.17.0-rc.0
+  - @yas chat/core-typings@8.9.0-rc.0
+  - @yas chat/omnichannel-services@0.3.58-rc.0
+  - @yas chat/network-broker@0.2.40-rc.0
+  - @yas chat/pdf-worker@0.3.36
 
   </details>
 
@@ -74,15 +74,15 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535, 1c01809baea9fc6dd06f3f4b0e38ce41a6f4f5e1]:</summary>
-  - @rocket.chat/i18n@4.0.0
-  - @rocket.chat/pdf-worker@0.3.36
-  - @rocket.chat/model-typings@2.5.0
-  - @rocket.chat/core-typings@8.8.0
-  - @rocket.chat/models@2.5.0
-  - @rocket.chat/core-services@0.16.0
-  - @rocket.chat/tools@0.4.0
-  - @rocket.chat/omnichannel-services@0.3.57
-  - @rocket.chat/network-broker@0.2.39
+  - @yas chat/i18n@4.0.0
+  - @yas chat/pdf-worker@0.3.36
+  - @yas chat/model-typings@2.5.0
+  - @yas chat/core-typings@8.8.0
+  - @yas chat/models@2.5.0
+  - @yas chat/core-services@0.16.0
+  - @yas chat/tools@0.4.0
+  - @yas chat/omnichannel-services@0.3.57
+  - @yas chat/network-broker@0.2.39
 
   </details>
 
@@ -91,16 +91,16 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [e6779053a5a75f90e4fd72fa42c6cb3e138078ab, b4557f57143d19ff857484a44892427c806bd5d2, 5a3fd5267bf3dcaee645b2121539a8802761a2e4, 097884fb750bb68396a299230e2f20219dfe0e5a, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, 7b7f88ffa061d72db8297e9e62d72c3ab94603ab, 18f5eb45d098ca64d403fdae4704211000efba29, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba, 5deefe2766132f13118f38dc42cf1c9895208961, 8984df841e1ecc46198e073982adabc1f069c352, a9f3e6cd3f31eac17bec626287fcf815d802e9b9, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/i18n@4.0.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.36-rc.0
-  - @rocket.chat/model-typings@2.5.0-rc.0
-  - @rocket.chat/core-typings@8.8.0-rc.0
-  - @rocket.chat/models@2.5.0-rc.0
-  - @rocket.chat/core-services@0.16.0-rc.0
-  - @rocket.chat/tools@0.4.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.57-rc.0
-  - @rocket.chat/emitter@0.33.0
-  - @rocket.chat/network-broker@0.2.39-rc.0
+  - @yas chat/i18n@4.0.0-rc.0
+  - @yas chat/pdf-worker@0.3.36-rc.0
+  - @yas chat/model-typings@2.5.0-rc.0
+  - @yas chat/core-typings@8.8.0-rc.0
+  - @yas chat/models@2.5.0-rc.0
+  - @yas chat/core-services@0.16.0-rc.0
+  - @yas chat/tools@0.4.0-rc.0
+  - @yas chat/omnichannel-services@0.3.57-rc.0
+  - @yas chat/emitter@0.33.0
+  - @yas chat/network-broker@0.2.39-rc.0
 
   </details>
 
@@ -113,13 +113,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 115dfe8f7e0ac788a2ef92c6ca298cf37b61b136, 719e3db9734708e812ceb33483ffaa2e064b4d59, 376c9d862f63cb7dd4995842a23340e581056eee, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 1cc7bbdef9330899a8207d3d55130f48321d68f1, 6041285601ce6f9586f85cff72fb167642893245]:</summary>
-  - @rocket.chat/model-typings@2.4.0
-  - @rocket.chat/core-typings@8.7.0
-  - @rocket.chat/models@2.4.0
-  - @rocket.chat/i18n@3.3.0
-  - @rocket.chat/core-services@0.15.0
-  - @rocket.chat/network-broker@0.2.38
-  - @rocket.chat/omnichannel-services@0.3.56
+  - @yas chat/model-typings@2.4.0
+  - @yas chat/core-typings@8.7.0
+  - @yas chat/models@2.4.0
+  - @yas chat/i18n@3.3.0
+  - @yas chat/core-services@0.15.0
+  - @yas chat/network-broker@0.2.38
+  - @yas chat/omnichannel-services@0.3.56
 
   </details>
 
@@ -132,14 +132,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 4b57346a59b5c9433c25845c886be11af1bf71d4, 8d8cd01d0a4e6872ed543320c966efd52140e884, ffe1b646226eeeda5a4d4697c831e568ec1eec64, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 115dfe8f7e0ac788a2ef92c6ca298cf37b61b136, 719e3db9734708e812ceb33483ffaa2e064b4d59, 376c9d862f63cb7dd4995842a23340e581056eee, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, b2b5edf5b37be3ee070290553f6aec42c39c98f6, 1cc7bbdef9330899a8207d3d55130f48321d68f1, 6041285601ce6f9586f85cff72fb167642893245]:</summary>
-  - @rocket.chat/model-typings@2.4.0-rc.0
-  - @rocket.chat/core-typings@8.7.0-rc.0
-  - @rocket.chat/models@2.4.0-rc.0
-  - @rocket.chat/i18n@3.3.0-rc.0
-  - @rocket.chat/core-services@0.15.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.56-rc.0
-  - @rocket.chat/pdf-worker@0.3.35
-  - @rocket.chat/network-broker@0.2.38-rc.0
+  - @yas chat/model-typings@2.4.0-rc.0
+  - @yas chat/core-typings@8.7.0-rc.0
+  - @yas chat/models@2.4.0-rc.0
+  - @yas chat/i18n@3.3.0-rc.0
+  - @yas chat/core-services@0.15.0-rc.0
+  - @yas chat/omnichannel-services@0.3.56-rc.0
+  - @yas chat/pdf-worker@0.3.35
+  - @yas chat/network-broker@0.2.38-rc.0
 
   </details>
 
@@ -148,13 +148,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6ae500ab8983b334d0df3e07925b610d0ff9d38c, 4319d3eda1df3cd45b8e2b7b2b193ae9798a9ade, 73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, 7380c44c751eff9ee624d80bf26370411ffed78b, 25722dbb970665c66d0acfee415650f96e52cd50, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53, ff751747f8a0637888364bde42ae18ac92a38768]:</summary>
-  - @rocket.chat/i18n@3.2.0
-  - @rocket.chat/model-typings@2.3.1
-  - @rocket.chat/models@2.3.1
-  - @rocket.chat/core-services@0.14.2
-  - @rocket.chat/core-typings@8.6.0
-  - @rocket.chat/network-broker@0.2.37
-  - @rocket.chat/omnichannel-services@0.3.55
+  - @yas chat/i18n@3.2.0
+  - @yas chat/model-typings@2.3.1
+  - @yas chat/models@2.3.1
+  - @yas chat/core-services@0.14.2
+  - @yas chat/core-typings@8.6.0
+  - @yas chat/network-broker@0.2.37
+  - @yas chat/omnichannel-services@0.3.55
 
   </details>
 
@@ -163,13 +163,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6ae500ab8983b334d0df3e07925b610d0ff9d38c, 4319d3eda1df3cd45b8e2b7b2b193ae9798a9ade, 73e12e1707baea845395e0582892f65456598672, a7279cebc73edfa4b991eb593730c08e8f5e9001, 7380c44c751eff9ee624d80bf26370411ffed78b, 25722dbb970665c66d0acfee415650f96e52cd50, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53, ff751747f8a0637888364bde42ae18ac92a38768]:</summary>
-  - @rocket.chat/i18n@3.2.0-rc.0
-  - @rocket.chat/model-typings@2.3.1-rc.0
-  - @rocket.chat/models@2.3.1-rc.0
-  - @rocket.chat/core-services@0.14.2-rc.0
-  - @rocket.chat/core-typings@8.6.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.55-rc.0
-  - @rocket.chat/network-broker@0.2.37-rc.0
+  - @yas chat/i18n@3.2.0-rc.0
+  - @yas chat/model-typings@2.3.1-rc.0
+  - @yas chat/models@2.3.1-rc.0
+  - @yas chat/core-services@0.14.2-rc.0
+  - @yas chat/core-typings@8.6.0-rc.0
+  - @yas chat/omnichannel-services@0.3.55-rc.0
+  - @yas chat/network-broker@0.2.37-rc.0
 
   </details>
 
@@ -178,13 +178,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [f7d47dd3517ec14ca2ec5c3c95fcdf9e1e2fb8b0, cdb264fec803e234a6ad2000018b31d4b2074e99, b6b04aadfcc8558f888b334e37c46a77e5816237, ad7d42400ea36f1eb0aaf7cc3361c77fdabf9ebc, 4704bf81ca370f120af32185a7c55407a26f8514, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, ebc9babf55dd26613027c28dcacf77909116b342, fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257, e45585b70a3a7b75434c88e4b2ea9af0a0764a76]:</summary>
-  - @rocket.chat/model-typings@2.3.0
-  - @rocket.chat/models@2.3.0
-  - @rocket.chat/i18n@3.1.0
-  - @rocket.chat/core-typings@8.5.0
-  - @rocket.chat/network-broker@0.2.36
-  - @rocket.chat/omnichannel-services@0.3.54
-  - @rocket.chat/core-services@0.14.1
+  - @yas chat/model-typings@2.3.0
+  - @yas chat/models@2.3.0
+  - @yas chat/i18n@3.1.0
+  - @yas chat/core-typings@8.5.0
+  - @yas chat/network-broker@0.2.36
+  - @yas chat/omnichannel-services@0.3.54
+  - @yas chat/core-services@0.14.1
 
   </details>
 
@@ -193,13 +193,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [f7d47dd3517ec14ca2ec5c3c95fcdf9e1e2fb8b0, cdb264fec803e234a6ad2000018b31d4b2074e99, ae9f740d6af20557eac61b4af902c868b4132b49, b6b04aadfcc8558f888b334e37c46a77e5816237, ad7d42400ea36f1eb0aaf7cc3361c77fdabf9ebc, 4704bf81ca370f120af32185a7c55407a26f8514, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, ebc9babf55dd26613027c28dcacf77909116b342, fac64728505b312d5da786e92d3134450ce4a7c1, 12897e25d0dc25b7373f5264d38f38a5a7444257, e45585b70a3a7b75434c88e4b2ea9af0a0764a76]:</summary>
-  - @rocket.chat/model-typings@2.3.0-rc.0
-  - @rocket.chat/models@2.3.0-rc.0
-  - @rocket.chat/i18n@3.1.0-rc.0
-  - @rocket.chat/core-typings@8.5.0-rc.0
-  - @rocket.chat/core-services@0.14.1-rc.0
-  - @rocket.chat/omnichannel-services@0.3.54-rc.0
-  - @rocket.chat/network-broker@0.2.36-rc.0
+  - @yas chat/model-typings@2.3.0-rc.0
+  - @yas chat/models@2.3.0-rc.0
+  - @yas chat/i18n@3.1.0-rc.0
+  - @yas chat/core-typings@8.5.0-rc.0
+  - @yas chat/core-services@0.14.1-rc.0
+  - @yas chat/omnichannel-services@0.3.54-rc.0
+  - @yas chat/network-broker@0.2.36-rc.0
 
   </details>
 
@@ -208,15 +208,15 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, 32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, c544b805d1c03f8eae9d061cd48838206207a7c9, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 95a82f72dd45fc51d54bb1beed295315facf9109, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, f4dfb8ddc2049692371aeb084110b5768151b5df, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
-  - @rocket.chat/core-services@0.14.0
-  - @rocket.chat/model-typings@2.2.0
-  - @rocket.chat/models@2.2.0
-  - @rocket.chat/core-typings@8.4.0
-  - @rocket.chat/i18n@3.0.0
-  - @rocket.chat/tools@0.3.0
-  - @rocket.chat/pdf-worker@0.3.35
-  - @rocket.chat/network-broker@0.2.35
-  - @rocket.chat/omnichannel-services@0.3.53
+  - @yas chat/core-services@0.14.0
+  - @yas chat/model-typings@2.2.0
+  - @yas chat/models@2.2.0
+  - @yas chat/core-typings@8.4.0
+  - @yas chat/i18n@3.0.0
+  - @yas chat/tools@0.3.0
+  - @yas chat/pdf-worker@0.3.35
+  - @yas chat/network-broker@0.2.35
+  - @yas chat/omnichannel-services@0.3.53
 
   </details>
 
@@ -225,13 +225,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.53-rc.2
-  - @rocket.chat/pdf-worker@0.3.35-rc.2
-  - @rocket.chat/core-services@0.14.0-rc.2
-  - @rocket.chat/model-typings@2.2.0-rc.2
-  - @rocket.chat/models@2.2.0-rc.2
-  - @rocket.chat/network-broker@0.2.35-rc.2
+  - @yas chat/core-typings@8.4.0-rc.2
+  - @yas chat/omnichannel-services@0.3.53-rc.2
+  - @yas chat/pdf-worker@0.3.35-rc.2
+  - @yas chat/core-services@0.14.0-rc.2
+  - @yas chat/model-typings@2.2.0-rc.2
+  - @yas chat/models@2.2.0-rc.2
+  - @yas chat/network-broker@0.2.35-rc.2
 
   </details>
 
@@ -240,13 +240,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.14.0-rc.1
-  - @rocket.chat/network-broker@0.2.35-rc.1
-  - @rocket.chat/omnichannel-services@0.3.53-rc.1
-  - @rocket.chat/core-typings@8.4.0-rc.1
-  - @rocket.chat/pdf-worker@0.3.35-rc.1
-  - @rocket.chat/model-typings@2.2.0-rc.1
-  - @rocket.chat/models@2.2.0-rc.1
+  - @yas chat/core-services@0.14.0-rc.1
+  - @yas chat/network-broker@0.2.35-rc.1
+  - @yas chat/omnichannel-services@0.3.53-rc.1
+  - @yas chat/core-typings@8.4.0-rc.1
+  - @yas chat/pdf-worker@0.3.35-rc.1
+  - @yas chat/model-typings@2.2.0-rc.1
+  - @yas chat/models@2.2.0-rc.1
 
   </details>
 
@@ -255,13 +255,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.13.4
-  - @rocket.chat/core-typings@8.3.2
-  - @rocket.chat/omnichannel-services@0.3.52
-  - @rocket.chat/pdf-worker@0.3.34
-  - @rocket.chat/model-typings@2.1.4
-  - @rocket.chat/models@2.1.4
-  - @rocket.chat/network-broker@0.2.34
+  - @yas chat/core-services@0.13.4
+  - @yas chat/core-typings@8.3.2
+  - @yas chat/omnichannel-services@0.3.52
+  - @yas chat/pdf-worker@0.3.34
+  - @yas chat/model-typings@2.1.4
+  - @yas chat/models@2.1.4
+  - @yas chat/network-broker@0.2.34
 
   </details>
 
@@ -270,13 +270,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.1
-  - @rocket.chat/omnichannel-services@0.3.51
-  - @rocket.chat/pdf-worker@0.3.33
-  - @rocket.chat/core-services@0.13.3
-  - @rocket.chat/model-typings@2.1.3
-  - @rocket.chat/models@2.1.3
-  - @rocket.chat/network-broker@0.2.33
+  - @yas chat/core-typings@8.3.1
+  - @yas chat/omnichannel-services@0.3.51
+  - @yas chat/pdf-worker@0.3.33
+  - @yas chat/core-services@0.13.3
+  - @yas chat/model-typings@2.1.3
+  - @yas chat/models@2.1.3
+  - @yas chat/network-broker@0.2.33
 
   </details>
 
@@ -285,15 +285,15 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [21cd54f87de5837fe6c999a44bd15be34b9fe905, 278b84f78360e53792a2e5d7620615039a0e15e9, 12c44d2db65af9f90c741da621164f5738fc19f5, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 9713af36f5c0d673f2d2093015f322341706bab0, f3fa3ee2f2e53b777de9abd466f1b76a1ec1b96c, 32f67f20fbcfdab051c7d2f99d8a7a3d18ebf474, c544b805d1c03f8eae9d061cd48838206207a7c9, 8c0e16ca29b393cfa50b425520db48ba5a74f678, 95a82f72dd45fc51d54bb1beed295315facf9109, 9f38b54c671ba3f0583c0d248a2afe09652fcdf4, f4dfb8ddc2049692371aeb084110b5768151b5df, 2356c889ed82507e1dd1208fab6d4ab186701fef]:</summary>
-  - @rocket.chat/core-services@0.14.0-rc.0
-  - @rocket.chat/model-typings@2.2.0-rc.0
-  - @rocket.chat/models@2.2.0-rc.0
-  - @rocket.chat/core-typings@8.4.0-rc.0
-  - @rocket.chat/i18n@3.0.0-rc.0
-  - @rocket.chat/tools@0.3.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.33-rc.0
-  - @rocket.chat/network-broker@0.2.33-rc.0
-  - @rocket.chat/omnichannel-services@0.3.51-rc.0
+  - @yas chat/core-services@0.14.0-rc.0
+  - @yas chat/model-typings@2.2.0-rc.0
+  - @yas chat/models@2.2.0-rc.0
+  - @yas chat/core-typings@8.4.0-rc.0
+  - @yas chat/i18n@3.0.0-rc.0
+  - @yas chat/tools@0.3.0-rc.0
+  - @yas chat/pdf-worker@0.3.33-rc.0
+  - @yas chat/network-broker@0.2.33-rc.0
+  - @yas chat/omnichannel-services@0.3.51-rc.0
 
   </details>
 
@@ -304,17 +304,17 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, 788c161bb6c9544bec37034c93e2f60de1a6c316, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/model-typings@2.1.2
-  - @rocket.chat/models@2.1.2
-  - @rocket.chat/i18n@2.2.0
-  - @rocket.chat/omnichannel-services@0.3.50
-  - @rocket.chat/network-broker@0.2.32
-  - @rocket.chat/pdf-worker@0.3.32
-  - @rocket.chat/core-services@0.13.2
-  - @rocket.chat/core-typings@8.3.0
-  - @rocket.chat/tracing@0.0.2
-  - @rocket.chat/logger@1.0.1
-  - @rocket.chat/tools@0.2.5
+  - @yas chat/model-typings@2.1.2
+  - @yas chat/models@2.1.2
+  - @yas chat/i18n@2.2.0
+  - @yas chat/omnichannel-services@0.3.50
+  - @yas chat/network-broker@0.2.32
+  - @yas chat/pdf-worker@0.3.32
+  - @yas chat/core-services@0.13.2
+  - @yas chat/core-typings@8.3.0
+  - @yas chat/tracing@0.0.2
+  - @yas chat/logger@1.0.1
+  - @yas chat/tools@0.2.5
 
   </details>
 
@@ -323,13 +323,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.50-rc.4
-  - @rocket.chat/pdf-worker@0.3.32-rc.4
-  - @rocket.chat/core-services@0.13.2-rc.4
-  - @rocket.chat/model-typings@2.1.2-rc.4
-  - @rocket.chat/models@2.1.2-rc.4
-  - @rocket.chat/network-broker@0.2.32-rc.4
+  - @yas chat/core-typings@8.3.0-rc.4
+  - @yas chat/omnichannel-services@0.3.50-rc.4
+  - @yas chat/pdf-worker@0.3.32-rc.4
+  - @yas chat/core-services@0.13.2-rc.4
+  - @yas chat/model-typings@2.1.2-rc.4
+  - @yas chat/models@2.1.2-rc.4
+  - @yas chat/network-broker@0.2.32-rc.4
 
   </details>
 
@@ -338,13 +338,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.50-rc.3
-  - @rocket.chat/pdf-worker@0.3.32-rc.3
-  - @rocket.chat/core-services@0.13.2-rc.3
-  - @rocket.chat/model-typings@2.1.2-rc.3
-  - @rocket.chat/models@2.1.2-rc.3
-  - @rocket.chat/network-broker@0.2.32-rc.3
+  - @yas chat/core-typings@8.3.0-rc.3
+  - @yas chat/omnichannel-services@0.3.50-rc.3
+  - @yas chat/pdf-worker@0.3.32-rc.3
+  - @yas chat/core-services@0.13.2-rc.3
+  - @yas chat/model-typings@2.1.2-rc.3
+  - @yas chat/models@2.1.2-rc.3
+  - @yas chat/network-broker@0.2.32-rc.3
 
   </details>
 
@@ -353,13 +353,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.50-rc.2
-  - @rocket.chat/pdf-worker@0.3.32-rc.2
-  - @rocket.chat/core-services@0.13.2-rc.2
-  - @rocket.chat/model-typings@2.1.2-rc.2
-  - @rocket.chat/models@2.1.2-rc.2
-  - @rocket.chat/network-broker@0.2.32-rc.2
+  - @yas chat/core-typings@8.3.0-rc.2
+  - @yas chat/omnichannel-services@0.3.50-rc.2
+  - @yas chat/pdf-worker@0.3.32-rc.2
+  - @yas chat/core-services@0.13.2-rc.2
+  - @yas chat/model-typings@2.1.2-rc.2
+  - @yas chat/models@2.1.2-rc.2
+  - @yas chat/network-broker@0.2.32-rc.2
 
   </details>
 
@@ -368,13 +368,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.50-rc.1
-  - @rocket.chat/pdf-worker@0.3.32-rc.1
-  - @rocket.chat/core-services@0.13.2-rc.1
-  - @rocket.chat/model-typings@2.1.2-rc.1
-  - @rocket.chat/models@2.1.2-rc.1
-  - @rocket.chat/network-broker@0.2.32-rc.1
+  - @yas chat/core-typings@8.3.0-rc.1
+  - @yas chat/omnichannel-services@0.3.50-rc.1
+  - @yas chat/pdf-worker@0.3.32-rc.1
+  - @yas chat/core-services@0.13.2-rc.1
+  - @yas chat/model-typings@2.1.2-rc.1
+  - @yas chat/models@2.1.2-rc.1
+  - @yas chat/network-broker@0.2.32-rc.1
 
   </details>
 
@@ -385,17 +385,17 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [602b20a8c570b895eb296ecfe39c9b7fcb12fabd, e2068892bf1ffc88b15ab71ad743cf84e5d31ed5, cd2fc208d351032c0b729755af4886665dca08b6, 652ff8cfe26b9068a776c39132c0eb5440702894, 539659af22bc19880eda047dfc0b152472ccb65c, 1741a20dd86c353755becfc706cd9ad63df09cfa, 85c0ac7d8c7a5b7b89ef58f4a42b18467a8e2dd4, c217b0bde182e5f76dbe1892d9b37d61ffab71db, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, d83a1a9753464ee916845b3c88757bbcf76884a5, eae3fb3136bd0b48294c050a71b0a36d05ca02b0, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/model-typings@2.1.2-rc.0
-  - @rocket.chat/models@2.1.2-rc.0
-  - @rocket.chat/i18n@2.2.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.50-rc.0
-  - @rocket.chat/network-broker@0.2.32-rc.0
-  - @rocket.chat/pdf-worker@0.3.32-rc.0
-  - @rocket.chat/core-services@0.13.2-rc.0
-  - @rocket.chat/core-typings@8.3.0-rc.0
-  - @rocket.chat/tracing@0.0.2-rc.0
-  - @rocket.chat/logger@1.0.1-rc.0
-  - @rocket.chat/tools@0.2.5-rc.0
+  - @yas chat/model-typings@2.1.2-rc.0
+  - @yas chat/models@2.1.2-rc.0
+  - @yas chat/i18n@2.2.0-rc.0
+  - @yas chat/omnichannel-services@0.3.50-rc.0
+  - @yas chat/network-broker@0.2.32-rc.0
+  - @yas chat/pdf-worker@0.3.32-rc.0
+  - @yas chat/core-services@0.13.2-rc.0
+  - @yas chat/core-typings@8.3.0-rc.0
+  - @yas chat/tracing@0.0.2-rc.0
+  - @yas chat/logger@1.0.1-rc.0
+  - @yas chat/tools@0.2.5-rc.0
 
   </details>
 
@@ -404,13 +404,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.1
-  - @rocket.chat/omnichannel-services@0.3.49
-  - @rocket.chat/pdf-worker@0.3.31
-  - @rocket.chat/core-services@0.13.1
-  - @rocket.chat/model-typings@2.1.1
-  - @rocket.chat/models@2.1.1
-  - @rocket.chat/network-broker@0.2.31
+  - @yas chat/core-typings@8.2.1
+  - @yas chat/omnichannel-services@0.3.49
+  - @yas chat/pdf-worker@0.3.31
+  - @yas chat/core-services@0.13.1
+  - @yas chat/model-typings@2.1.1
+  - @yas chat/models@2.1.1
+  - @yas chat/network-broker@0.2.31
 
   </details>
 
@@ -419,14 +419,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
-  - @rocket.chat/model-typings@2.1.0
-  - @rocket.chat/core-typings@8.2.0
-  - @rocket.chat/models@2.1.0
-  - @rocket.chat/core-services@0.13.0
-  - @rocket.chat/i18n@2.1.0
-  - @rocket.chat/omnichannel-services@0.3.48
-  - @rocket.chat/pdf-worker@0.3.30
-  - @rocket.chat/network-broker@0.2.30
+  - @yas chat/model-typings@2.1.0
+  - @yas chat/core-typings@8.2.0
+  - @yas chat/models@2.1.0
+  - @yas chat/core-services@0.13.0
+  - @yas chat/i18n@2.1.0
+  - @yas chat/omnichannel-services@0.3.48
+  - @yas chat/pdf-worker@0.3.30
+  - @yas chat/network-broker@0.2.30
 
   </details>
 
@@ -435,13 +435,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.48-rc.2
-  - @rocket.chat/pdf-worker@0.3.30-rc.2
-  - @rocket.chat/core-services@0.13.0-rc.2
-  - @rocket.chat/model-typings@2.1.0-rc.2
-  - @rocket.chat/models@2.1.0-rc.2
-  - @rocket.chat/network-broker@0.2.30-rc.2
+  - @yas chat/core-typings@8.2.0-rc.2
+  - @yas chat/omnichannel-services@0.3.48-rc.2
+  - @yas chat/pdf-worker@0.3.30-rc.2
+  - @yas chat/core-services@0.13.0-rc.2
+  - @yas chat/model-typings@2.1.0-rc.2
+  - @yas chat/models@2.1.0-rc.2
+  - @yas chat/network-broker@0.2.30-rc.2
 
   </details>
 
@@ -450,13 +450,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.48-rc.1
-  - @rocket.chat/pdf-worker@0.3.30-rc.1
-  - @rocket.chat/core-services@0.13.0-rc.1
-  - @rocket.chat/model-typings@2.1.0-rc.1
-  - @rocket.chat/models@2.1.0-rc.1
-  - @rocket.chat/network-broker@0.2.30-rc.1
+  - @yas chat/core-typings@8.2.0-rc.1
+  - @yas chat/omnichannel-services@0.3.48-rc.1
+  - @yas chat/pdf-worker@0.3.30-rc.1
+  - @yas chat/core-services@0.13.0-rc.1
+  - @yas chat/model-typings@2.1.0-rc.1
+  - @yas chat/models@2.1.0-rc.1
+  - @yas chat/network-broker@0.2.30-rc.1
 
   </details>
 
@@ -465,14 +465,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [d3758a7d57ab602745369ef9d2ccdbf9271cf305, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34, 11e1c51f0867a35c69ce9b6eeca25dbbe2c71872, 3b003e6b69c11b280d55bcc8db2f3e4ae7a4a573, 87faec13b3c0efc3e85627f9b70c4561b7231416, 508b4a17d76dc1cd7d3a55bdba826216f51432e2, 123aebec2caa74b17d2b5dcbd2a2db2e687cf3ac]:</summary>
-  - @rocket.chat/model-typings@2.1.0-rc.0
-  - @rocket.chat/core-typings@8.2.0-rc.0
-  - @rocket.chat/models@2.1.0-rc.0
-  - @rocket.chat/core-services@0.13.0-rc.0
-  - @rocket.chat/i18n@2.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.48-rc.0
-  - @rocket.chat/pdf-worker@0.3.30-rc.0
-  - @rocket.chat/network-broker@0.2.30-rc.0
+  - @yas chat/model-typings@2.1.0-rc.0
+  - @yas chat/core-typings@8.2.0-rc.0
+  - @yas chat/models@2.1.0-rc.0
+  - @yas chat/core-services@0.13.0-rc.0
+  - @yas chat/i18n@2.1.0-rc.0
+  - @yas chat/omnichannel-services@0.3.48-rc.0
+  - @yas chat/pdf-worker@0.3.30-rc.0
+  - @yas chat/network-broker@0.2.30-rc.0
 
   </details>
 
@@ -481,13 +481,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.1
-  - @rocket.chat/omnichannel-services@0.3.47
-  - @rocket.chat/pdf-worker@0.3.29
-  - @rocket.chat/core-services@0.12.3
-  - @rocket.chat/model-typings@2.0.3
-  - @rocket.chat/models@2.0.3
-  - @rocket.chat/network-broker@0.2.29
+  - @yas chat/core-typings@8.1.1
+  - @yas chat/omnichannel-services@0.3.47
+  - @yas chat/pdf-worker@0.3.29
+  - @yas chat/core-services@0.12.3
+  - @yas chat/model-typings@2.0.3
+  - @yas chat/models@2.0.3
+  - @yas chat/network-broker@0.2.29
 
   </details>
 
@@ -496,14 +496,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, e639382ee1faee44cfce44bdf6113d1b56da8692, 7b51ba84340480fa28e85c8f35d9d2f947d3250e, 9a205633c25065fda9024184c406ac9675c3f23f, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e]:</summary>
-  - @rocket.chat/model-typings@2.0.2
-  - @rocket.chat/models@2.0.2
-  - @rocket.chat/pdf-worker@0.3.28
-  - @rocket.chat/core-services@0.12.2
-  - @rocket.chat/i18n@2.0.1
-  - @rocket.chat/core-typings@8.1.0
-  - @rocket.chat/omnichannel-services@0.3.46
-  - @rocket.chat/network-broker@0.2.28
+  - @yas chat/model-typings@2.0.2
+  - @yas chat/models@2.0.2
+  - @yas chat/pdf-worker@0.3.28
+  - @yas chat/core-services@0.12.2
+  - @yas chat/i18n@2.0.1
+  - @yas chat/core-typings@8.1.0
+  - @yas chat/omnichannel-services@0.3.46
+  - @yas chat/network-broker@0.2.28
 
   </details>
 
@@ -512,13 +512,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/pdf-worker@0.3.28-rc.2
-  - @rocket.chat/core-services@0.12.2-rc.2
-  - @rocket.chat/core-typings@8.1.0-rc.2
-  - @rocket.chat/network-broker@0.2.28-rc.2
-  - @rocket.chat/omnichannel-services@0.3.46-rc.2
-  - @rocket.chat/model-typings@2.0.2-rc.2
-  - @rocket.chat/models@2.0.2-rc.2
+  - @yas chat/pdf-worker@0.3.28-rc.2
+  - @yas chat/core-services@0.12.2-rc.2
+  - @yas chat/core-typings@8.1.0-rc.2
+  - @yas chat/network-broker@0.2.28-rc.2
+  - @yas chat/omnichannel-services@0.3.46-rc.2
+  - @yas chat/model-typings@2.0.2-rc.2
+  - @yas chat/models@2.0.2-rc.2
 
   </details>
 
@@ -527,13 +527,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/omnichannel-services@0.3.45-rc.1
-  - @rocket.chat/core-services@0.12.1-rc.1
-  - @rocket.chat/models@2.0.1-rc.1
-  - @rocket.chat/network-broker@0.2.27-rc.1
-  - @rocket.chat/core-typings@8.1.0-rc.1
-  - @rocket.chat/pdf-worker@0.3.27-rc.1
-  - @rocket.chat/model-typings@2.0.1-rc.1
+  - @yas chat/omnichannel-services@0.3.45-rc.1
+  - @yas chat/core-services@0.12.1-rc.1
+  - @yas chat/models@2.0.1-rc.1
+  - @yas chat/network-broker@0.2.27-rc.1
+  - @yas chat/core-typings@8.1.0-rc.1
+  - @yas chat/pdf-worker@0.3.27-rc.1
+  - @yas chat/model-typings@2.0.1-rc.1
   </details>
 
 ## 0.4.49-rc.0
@@ -541,14 +541,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [f4fa393fccb6abefbe6fb6550563e8ca21fc792d, e639382ee1faee44cfce44bdf6113d1b56da8692, 7b51ba84340480fa28e85c8f35d9d2f947d3250e, 9a205633c25065fda9024184c406ac9675c3f23f, 6654c5b481f91bdcb03d68ee0f3a12d58201137e, 020dfbcab6a940ca2e03d802d0f6b54714a34aa2, 5fa150953b86ff36face25083ed49e8c97a8044d, 05c415b94cb91907de39a39c6d277579258f334e]:</summary>
-  - @rocket.chat/model-typings@2.0.1-rc.0
-  - @rocket.chat/models@2.0.1-rc.0
-  - @rocket.chat/pdf-worker@0.3.27-rc.0
-  - @rocket.chat/core-services@0.12.1-rc.0
-  - @rocket.chat/i18n@2.0.1-rc.0
-  - @rocket.chat/core-typings@8.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.45-rc.0
-  - @rocket.chat/network-broker@0.2.27-rc.0
+  - @yas chat/model-typings@2.0.1-rc.0
+  - @yas chat/models@2.0.1-rc.0
+  - @yas chat/pdf-worker@0.3.27-rc.0
+  - @yas chat/core-services@0.12.1-rc.0
+  - @yas chat/i18n@2.0.1-rc.0
+  - @yas chat/core-typings@8.1.0-rc.0
+  - @yas chat/omnichannel-services@0.3.45-rc.0
+  - @yas chat/network-broker@0.2.27-rc.0
 
   </details>
 
@@ -557,13 +557,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.1
-  - @rocket.chat/omnichannel-services@0.3.45
-  - @rocket.chat/pdf-worker@0.3.27
-  - @rocket.chat/core-services@0.12.1
-  - @rocket.chat/model-typings@2.0.1
-  - @rocket.chat/models@2.0.1
-  - @rocket.chat/network-broker@0.2.27
+  - @yas chat/core-typings@8.0.1
+  - @yas chat/omnichannel-services@0.3.45
+  - @yas chat/pdf-worker@0.3.27
+  - @yas chat/core-services@0.12.1
+  - @yas chat/model-typings@2.0.1
+  - @yas chat/models@2.0.1
+  - @yas chat/network-broker@0.2.27
 
   </details>
 
@@ -572,16 +572,16 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, 9e03ed5c5ea829c62c2da2de9413a27a4696f8a3, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, ec0f8b435dd12c218adffa8892737c7ced4debb8, f056c451c2926e849f52b95fed957945398ef5f6]:</summary>
-  - @rocket.chat/core-typings@8.0.0
-  - @rocket.chat/i18n@2.0.0
-  - @rocket.chat/model-typings@2.0.0
-  - @rocket.chat/models@2.0.0
-  - @rocket.chat/core-services@0.12.0
-  - @rocket.chat/tools@0.2.4
-  - @rocket.chat/logger@1.0.0
-  - @rocket.chat/omnichannel-services@0.3.44
-  - @rocket.chat/pdf-worker@0.3.26
-  - @rocket.chat/network-broker@0.2.26
+  - @yas chat/core-typings@8.0.0
+  - @yas chat/i18n@2.0.0
+  - @yas chat/model-typings@2.0.0
+  - @yas chat/models@2.0.0
+  - @yas chat/core-services@0.12.0
+  - @yas chat/tools@0.2.4
+  - @yas chat/logger@1.0.0
+  - @yas chat/omnichannel-services@0.3.44
+  - @yas chat/pdf-worker@0.3.26
+  - @yas chat/network-broker@0.2.26
 
   </details>
 
@@ -590,13 +590,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.44-rc.5
-  - @rocket.chat/pdf-worker@0.3.26-rc.5
-  - @rocket.chat/core-services@0.12.0-rc.5
-  - @rocket.chat/model-typings@2.0.0-rc.5
-  - @rocket.chat/models@2.0.0-rc.5
-  - @rocket.chat/network-broker@0.2.26-rc.5
+  - @yas chat/core-typings@8.0.0-rc.5
+  - @yas chat/omnichannel-services@0.3.44-rc.5
+  - @yas chat/pdf-worker@0.3.26-rc.5
+  - @yas chat/core-services@0.12.0-rc.5
+  - @yas chat/model-typings@2.0.0-rc.5
+  - @yas chat/models@2.0.0-rc.5
+  - @yas chat/network-broker@0.2.26-rc.5
 
   </details>
 
@@ -605,13 +605,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.44-rc.4
-  - @rocket.chat/pdf-worker@0.3.26-rc.4
-  - @rocket.chat/core-services@0.12.0-rc.4
-  - @rocket.chat/model-typings@2.0.0-rc.4
-  - @rocket.chat/models@2.0.0-rc.4
-  - @rocket.chat/network-broker@0.2.26-rc.4
+  - @yas chat/core-typings@8.0.0-rc.4
+  - @yas chat/omnichannel-services@0.3.44-rc.4
+  - @yas chat/pdf-worker@0.3.26-rc.4
+  - @yas chat/core-services@0.12.0-rc.4
+  - @yas chat/model-typings@2.0.0-rc.4
+  - @yas chat/models@2.0.0-rc.4
+  - @yas chat/network-broker@0.2.26-rc.4
 
   </details>
 
@@ -620,13 +620,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.12.0-rc.3
-  - @rocket.chat/network-broker@0.2.26-rc.3
-  - @rocket.chat/omnichannel-services@0.3.44-rc.3
-  - @rocket.chat/core-typings@8.0.0-rc.3
-  - @rocket.chat/pdf-worker@0.3.26-rc.3
-  - @rocket.chat/model-typings@2.0.0-rc.3
-  - @rocket.chat/models@2.0.0-rc.3
+  - @yas chat/core-services@0.12.0-rc.3
+  - @yas chat/network-broker@0.2.26-rc.3
+  - @yas chat/omnichannel-services@0.3.44-rc.3
+  - @yas chat/core-typings@8.0.0-rc.3
+  - @yas chat/pdf-worker@0.3.26-rc.3
+  - @yas chat/model-typings@2.0.0-rc.3
+  - @yas chat/models@2.0.0-rc.3
 
   </details>
 
@@ -635,13 +635,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.44-rc.2
-  - @rocket.chat/pdf-worker@0.3.26-rc.2
-  - @rocket.chat/core-services@0.12.0-rc.2
-  - @rocket.chat/model-typings@2.0.0-rc.2
-  - @rocket.chat/models@2.0.0-rc.2
-  - @rocket.chat/network-broker@0.2.26-rc.2
+  - @yas chat/core-typings@8.0.0-rc.2
+  - @yas chat/omnichannel-services@0.3.44-rc.2
+  - @yas chat/pdf-worker@0.3.26-rc.2
+  - @yas chat/core-services@0.12.0-rc.2
+  - @yas chat/model-typings@2.0.0-rc.2
+  - @yas chat/models@2.0.0-rc.2
+  - @yas chat/network-broker@0.2.26-rc.2
 
   </details>
 
@@ -650,13 +650,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.44-rc.1
-  - @rocket.chat/pdf-worker@0.3.26-rc.1
-  - @rocket.chat/core-services@0.12.0-rc.1
-  - @rocket.chat/model-typings@2.0.0-rc.1
-  - @rocket.chat/models@2.0.0-rc.1
-  - @rocket.chat/network-broker@0.2.26-rc.1
+  - @yas chat/core-typings@8.0.0-rc.1
+  - @yas chat/omnichannel-services@0.3.44-rc.1
+  - @yas chat/pdf-worker@0.3.26-rc.1
+  - @yas chat/core-services@0.12.0-rc.1
+  - @yas chat/model-typings@2.0.0-rc.1
+  - @yas chat/models@2.0.0-rc.1
+  - @yas chat/network-broker@0.2.26-rc.1
 
   </details>
 
@@ -665,16 +665,16 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 2de4547580c472f4458568629d7bf98fd5faf342, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 1baa03cced8f94584da1224ad59cad86f219707a, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, bd5edfc2993c93bd77f42dcd30d38b57eeb50481, ddc935727e9a7275813006d9dcaa7fe866610844, 73d9eb2783176954f42aa2cbeda8abf1d49ac260, 611e4cdfa04849416a58071646b853b95e9b817b, 9e03ed5c5ea829c62c2da2de9413a27a4696f8a3, be80b724a636877294b5e5baa501d070941131dd, 4aa3634186d97f4144c39f6b42a65107d3d30df0, ec0f8b435dd12c218adffa8892737c7ced4debb8, f056c451c2926e849f52b95fed957945398ef5f6]:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.0
-  - @rocket.chat/i18n@2.0.0-rc.0
-  - @rocket.chat/model-typings@2.0.0-rc.0
-  - @rocket.chat/models@2.0.0-rc.0
-  - @rocket.chat/core-services@0.12.0-rc.0
-  - @rocket.chat/tools@0.2.4-rc.0
-  - @rocket.chat/logger@1.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.44-rc.0
-  - @rocket.chat/pdf-worker@0.3.26-rc.0
-  - @rocket.chat/network-broker@0.2.26-rc.0
+  - @yas chat/core-typings@8.0.0-rc.0
+  - @yas chat/i18n@2.0.0-rc.0
+  - @yas chat/model-typings@2.0.0-rc.0
+  - @yas chat/models@2.0.0-rc.0
+  - @yas chat/core-services@0.12.0-rc.0
+  - @yas chat/tools@0.2.4-rc.0
+  - @yas chat/logger@1.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.44-rc.0
+  - @yas chat/pdf-worker@0.3.26-rc.0
+  - @yas chat/network-broker@0.2.26-rc.0
 
   </details>
 
@@ -683,13 +683,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [eef2b390a8e4664ad4b974e7ea579982245efce5]:</summary>
-  - @rocket.chat/core-services@0.11.2
-  - @rocket.chat/network-broker@0.2.25
-  - @rocket.chat/omnichannel-services@0.3.43
-  - @rocket.chat/core-typings@7.13.2
-  - @rocket.chat/pdf-worker@0.3.25
-  - @rocket.chat/model-typings@1.9.2
-  - @rocket.chat/models@1.8.2
+  - @yas chat/core-services@0.11.2
+  - @yas chat/network-broker@0.2.25
+  - @yas chat/omnichannel-services@0.3.43
+  - @yas chat/core-typings@7.13.2
+  - @yas chat/pdf-worker@0.3.25
+  - @yas chat/model-typings@1.9.2
+  - @yas chat/models@1.8.2
 
   </details>
 
@@ -698,13 +698,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.1
-  - @rocket.chat/omnichannel-services@0.3.42
-  - @rocket.chat/pdf-worker@0.3.24
-  - @rocket.chat/core-services@0.11.1
-  - @rocket.chat/model-typings@1.9.1
-  - @rocket.chat/models@1.8.1
-  - @rocket.chat/network-broker@0.2.24
+  - @yas chat/core-typings@7.13.1
+  - @yas chat/omnichannel-services@0.3.42
+  - @yas chat/pdf-worker@0.3.24
+  - @yas chat/core-services@0.11.1
+  - @yas chat/model-typings@1.9.1
+  - @yas chat/models@1.8.1
+  - @yas chat/network-broker@0.2.24
 
   </details>
 
@@ -713,14 +713,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8596daf01ac84864caa63dd937971e557933d401, 83642cbe499ba399329449fb8cd652a0405c0795, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
-  - @rocket.chat/core-services@0.11.0
-  - @rocket.chat/models@1.8.0
-  - @rocket.chat/i18n@1.13.0
-  - @rocket.chat/core-typings@7.13.0
-  - @rocket.chat/model-typings@1.9.0
-  - @rocket.chat/network-broker@0.2.23
-  - @rocket.chat/omnichannel-services@0.3.41
-  - @rocket.chat/pdf-worker@0.3.23
+  - @yas chat/core-services@0.11.0
+  - @yas chat/models@1.8.0
+  - @yas chat/i18n@1.13.0
+  - @yas chat/core-typings@7.13.0
+  - @yas chat/model-typings@1.9.0
+  - @yas chat/network-broker@0.2.23
+  - @yas chat/omnichannel-services@0.3.41
+  - @yas chat/pdf-worker@0.3.23
 
   </details>
 
@@ -729,13 +729,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.41-rc.2
-  - @rocket.chat/pdf-worker@0.3.23-rc.2
-  - @rocket.chat/core-services@0.11.0-rc.2
-  - @rocket.chat/model-typings@1.9.0-rc.2
-  - @rocket.chat/models@1.8.0-rc.2
-  - @rocket.chat/network-broker@0.2.23-rc.2
+  - @yas chat/core-typings@7.13.0-rc.2
+  - @yas chat/omnichannel-services@0.3.41-rc.2
+  - @yas chat/pdf-worker@0.3.23-rc.2
+  - @yas chat/core-services@0.11.0-rc.2
+  - @yas chat/model-typings@1.9.0-rc.2
+  - @yas chat/models@1.8.0-rc.2
+  - @yas chat/network-broker@0.2.23-rc.2
 
   </details>
 
@@ -744,13 +744,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.39-rc.1
-  - @rocket.chat/pdf-worker@0.3.21-rc.1
-  - @rocket.chat/core-services@0.11.0-rc.1
-  - @rocket.chat/model-typings@1.9.0-rc.1
-  - @rocket.chat/models@1.8.0-rc.1
-  - @rocket.chat/network-broker@0.2.21-rc.1
+  - @yas chat/core-typings@7.13.0-rc.1
+  - @yas chat/omnichannel-services@0.3.39-rc.1
+  - @yas chat/pdf-worker@0.3.21-rc.1
+  - @yas chat/core-services@0.11.0-rc.1
+  - @yas chat/model-typings@1.9.0-rc.1
+  - @yas chat/models@1.8.0-rc.1
+  - @yas chat/network-broker@0.2.21-rc.1
   </details>
 
 ## 0.4.44-rc.0
@@ -758,14 +758,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8596daf01ac84864caa63dd937971e557933d401, 83642cbe499ba399329449fb8cd652a0405c0795, 150efb9d3c1a72a16bb9fe5fc4fc97fc441172d0, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 65fbcbed9f64004b953dd9d4182b3fccb8147339, 04f26855675e199e13d6f05dfdb97be90e89c7e8, 035e0c7c387d6c99703513c7c00bf37e86538b71, f771dd3669ebf8b2065b9faae045b8258e1312d9]:</summary>
-  - @rocket.chat/core-services@0.11.0-rc.0
-  - @rocket.chat/models@1.8.0-rc.0
-  - @rocket.chat/i18n@1.13.0-rc.0
-  - @rocket.chat/core-typings@7.13.0-rc.0
-  - @rocket.chat/model-typings@1.9.0-rc.0
-  - @rocket.chat/network-broker@0.2.21-rc.0
-  - @rocket.chat/omnichannel-services@0.3.39-rc.0
-  - @rocket.chat/pdf-worker@0.3.21-rc.0
+  - @yas chat/core-services@0.11.0-rc.0
+  - @yas chat/models@1.8.0-rc.0
+  - @yas chat/i18n@1.13.0-rc.0
+  - @yas chat/core-typings@7.13.0-rc.0
+  - @yas chat/model-typings@1.9.0-rc.0
+  - @yas chat/network-broker@0.2.21-rc.0
+  - @yas chat/omnichannel-services@0.3.39-rc.0
+  - @yas chat/pdf-worker@0.3.21-rc.0
 
   </details>
 
@@ -774,13 +774,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.2
-  - @rocket.chat/omnichannel-services@0.3.40
-  - @rocket.chat/pdf-worker@0.3.22
-  - @rocket.chat/core-services@0.10.6
-  - @rocket.chat/model-typings@1.8.3
-  - @rocket.chat/models@1.7.3
-  - @rocket.chat/network-broker@0.2.22
+  - @yas chat/core-typings@7.12.2
+  - @yas chat/omnichannel-services@0.3.40
+  - @yas chat/pdf-worker@0.3.22
+  - @yas chat/core-services@0.10.6
+  - @yas chat/model-typings@1.8.3
+  - @yas chat/models@1.7.3
+  - @yas chat/network-broker@0.2.22
 
   </details>
 
@@ -789,13 +789,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8cbd9bfd0566cbd7d86d8b40ea7d58d6ef382742]:</summary>
-  - @rocket.chat/models@1.7.2
-  - @rocket.chat/omnichannel-services@0.3.39
-  - @rocket.chat/core-services@0.10.5
-  - @rocket.chat/core-typings@7.12.1
-  - @rocket.chat/network-broker@0.2.21
-  - @rocket.chat/pdf-worker@0.3.21
-  - @rocket.chat/model-typings@1.8.2
+  - @yas chat/models@1.7.2
+  - @yas chat/omnichannel-services@0.3.39
+  - @yas chat/core-services@0.10.5
+  - @yas chat/core-typings@7.12.1
+  - @yas chat/network-broker@0.2.21
+  - @yas chat/pdf-worker@0.3.21
+  - @yas chat/model-typings@1.8.2
 
   </details>
 
@@ -804,14 +804,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/i18n@1.12.0
-  - @rocket.chat/core-typings@7.12.0
-  - @rocket.chat/omnichannel-services@0.3.38
-  - @rocket.chat/core-services@0.10.4
-  - @rocket.chat/models@1.7.1
-  - @rocket.chat/pdf-worker@0.3.20
-  - @rocket.chat/model-typings@1.8.1
-  - @rocket.chat/network-broker@0.2.20
+  - @yas chat/i18n@1.12.0
+  - @yas chat/core-typings@7.12.0
+  - @yas chat/omnichannel-services@0.3.38
+  - @yas chat/core-services@0.10.4
+  - @yas chat/models@1.7.1
+  - @yas chat/pdf-worker@0.3.20
+  - @yas chat/model-typings@1.8.1
+  - @yas chat/network-broker@0.2.20
 
   </details>
 
@@ -820,13 +820,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.38-rc.4
-  - @rocket.chat/pdf-worker@0.3.20-rc.4
-  - @rocket.chat/core-services@0.10.4-rc.4
-  - @rocket.chat/model-typings@1.8.1-rc.4
-  - @rocket.chat/models@1.7.1-rc.4
-  - @rocket.chat/network-broker@0.2.20-rc.4
+  - @yas chat/core-typings@7.12.0-rc.4
+  - @yas chat/omnichannel-services@0.3.38-rc.4
+  - @yas chat/pdf-worker@0.3.20-rc.4
+  - @yas chat/core-services@0.10.4-rc.4
+  - @yas chat/model-typings@1.8.1-rc.4
+  - @yas chat/models@1.7.1-rc.4
+  - @yas chat/network-broker@0.2.20-rc.4
 
   </details>
 
@@ -835,13 +835,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.38-rc.3
-  - @rocket.chat/pdf-worker@0.3.20-rc.3
-  - @rocket.chat/core-services@0.10.4-rc.3
-  - @rocket.chat/model-typings@1.8.1-rc.3
-  - @rocket.chat/models@1.7.1-rc.3
-  - @rocket.chat/network-broker@0.2.20-rc.3
+  - @yas chat/core-typings@7.12.0-rc.3
+  - @yas chat/omnichannel-services@0.3.38-rc.3
+  - @yas chat/pdf-worker@0.3.20-rc.3
+  - @yas chat/core-services@0.10.4-rc.3
+  - @yas chat/model-typings@1.8.1-rc.3
+  - @yas chat/models@1.7.1-rc.3
+  - @yas chat/network-broker@0.2.20-rc.3
 
   </details>
 
@@ -850,13 +850,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.38-rc.2
-  - @rocket.chat/pdf-worker@0.3.20-rc.2
-  - @rocket.chat/core-services@0.10.4-rc.2
-  - @rocket.chat/model-typings@1.8.1-rc.2
-  - @rocket.chat/models@1.7.1-rc.2
-  - @rocket.chat/network-broker@0.2.20-rc.2
+  - @yas chat/core-typings@7.12.0-rc.2
+  - @yas chat/omnichannel-services@0.3.38-rc.2
+  - @yas chat/pdf-worker@0.3.20-rc.2
+  - @yas chat/core-services@0.10.4-rc.2
+  - @yas chat/model-typings@1.8.1-rc.2
+  - @yas chat/models@1.7.1-rc.2
+  - @yas chat/network-broker@0.2.20-rc.2
 
   </details>
 
@@ -865,13 +865,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.38-rc.1
-  - @rocket.chat/pdf-worker@0.3.20-rc.1
-  - @rocket.chat/core-services@0.10.4-rc.1
-  - @rocket.chat/model-typings@1.8.1-rc.1
-  - @rocket.chat/models@1.7.1-rc.1
-  - @rocket.chat/network-broker@0.2.20-rc.1
+  - @yas chat/core-typings@7.12.0-rc.1
+  - @yas chat/omnichannel-services@0.3.38-rc.1
+  - @yas chat/pdf-worker@0.3.20-rc.1
+  - @yas chat/core-services@0.10.4-rc.1
+  - @yas chat/model-typings@1.8.1-rc.1
+  - @yas chat/models@1.7.1-rc.1
+  - @yas chat/network-broker@0.2.20-rc.1
 
   </details>
 
@@ -880,14 +880,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [74f2232bade0e5082097432b740e933a8960af54, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/i18n@1.12.0-rc.0
-  - @rocket.chat/core-typings@7.12.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.38-rc.0
-  - @rocket.chat/core-services@0.10.4-rc.0
-  - @rocket.chat/models@1.7.1-rc.0
-  - @rocket.chat/pdf-worker@0.3.20-rc.0
-  - @rocket.chat/model-typings@1.8.1-rc.0
-  - @rocket.chat/network-broker@0.2.20-rc.0
+  - @yas chat/i18n@1.12.0-rc.0
+  - @yas chat/core-typings@7.12.0-rc.0
+  - @yas chat/omnichannel-services@0.3.38-rc.0
+  - @yas chat/core-services@0.10.4-rc.0
+  - @yas chat/models@1.7.1-rc.0
+  - @yas chat/pdf-worker@0.3.20-rc.0
+  - @yas chat/model-typings@1.8.1-rc.0
+  - @yas chat/network-broker@0.2.20-rc.0
 
   </details>
 
@@ -896,14 +896,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, 3dfb557f723a395bc1e00f2647675968c46656bc, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
-  - @rocket.chat/models@1.7.0
-  - @rocket.chat/i18n@1.11.0
-  - @rocket.chat/model-typings@1.8.0
-  - @rocket.chat/core-services@0.10.3
-  - @rocket.chat/core-typings@7.11.0
-  - @rocket.chat/omnichannel-services@0.3.37
-  - @rocket.chat/network-broker@0.2.19
-  - @rocket.chat/pdf-worker@0.3.19
+  - @yas chat/models@1.7.0
+  - @yas chat/i18n@1.11.0
+  - @yas chat/model-typings@1.8.0
+  - @yas chat/core-services@0.10.3
+  - @yas chat/core-typings@7.11.0
+  - @yas chat/omnichannel-services@0.3.37
+  - @yas chat/network-broker@0.2.19
+  - @yas chat/pdf-worker@0.3.19
 
   </details>
 
@@ -912,13 +912,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.7
-  - @rocket.chat/omnichannel-services@0.3.37-rc.7
-  - @rocket.chat/pdf-worker@0.3.19-rc.7
-  - @rocket.chat/core-services@0.10.3-rc.7
-  - @rocket.chat/model-typings@1.8.0-rc.7
-  - @rocket.chat/models@1.7.0-rc.7
-  - @rocket.chat/network-broker@0.2.19-rc.7
+  - @yas chat/core-typings@7.11.0-rc.7
+  - @yas chat/omnichannel-services@0.3.37-rc.7
+  - @yas chat/pdf-worker@0.3.19-rc.7
+  - @yas chat/core-services@0.10.3-rc.7
+  - @yas chat/model-typings@1.8.0-rc.7
+  - @yas chat/models@1.7.0-rc.7
+  - @yas chat/network-broker@0.2.19-rc.7
 
   </details>
 
@@ -927,13 +927,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.36-rc.6
-  - @rocket.chat/pdf-worker@0.3.18-rc.6
-  - @rocket.chat/core-services@0.10.2-rc.6
-  - @rocket.chat/model-typings@1.8.0-rc.6
-  - @rocket.chat/models@1.7.0-rc.6
-  - @rocket.chat/network-broker@0.2.18-rc.6
+  - @yas chat/core-typings@7.11.0-rc.6
+  - @yas chat/omnichannel-services@0.3.36-rc.6
+  - @yas chat/pdf-worker@0.3.18-rc.6
+  - @yas chat/core-services@0.10.2-rc.6
+  - @yas chat/model-typings@1.8.0-rc.6
+  - @yas chat/models@1.7.0-rc.6
+  - @yas chat/network-broker@0.2.18-rc.6
 
   </details>
 
@@ -942,13 +942,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.36-rc.5
-  - @rocket.chat/pdf-worker@0.3.18-rc.5
-  - @rocket.chat/core-services@0.10.2-rc.5
-  - @rocket.chat/model-typings@1.8.0-rc.5
-  - @rocket.chat/models@1.7.0-rc.5
-  - @rocket.chat/network-broker@0.2.18-rc.5
+  - @yas chat/core-typings@7.11.0-rc.5
+  - @yas chat/omnichannel-services@0.3.36-rc.5
+  - @yas chat/pdf-worker@0.3.18-rc.5
+  - @yas chat/core-services@0.10.2-rc.5
+  - @yas chat/model-typings@1.8.0-rc.5
+  - @yas chat/models@1.7.0-rc.5
+  - @yas chat/network-broker@0.2.18-rc.5
 
   </details>
 
@@ -957,13 +957,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.36-rc.4
-  - @rocket.chat/pdf-worker@0.3.18-rc.4
-  - @rocket.chat/core-services@0.10.2-rc.4
-  - @rocket.chat/model-typings@1.8.0-rc.4
-  - @rocket.chat/models@1.7.0-rc.4
-  - @rocket.chat/network-broker@0.2.18-rc.4
+  - @yas chat/core-typings@7.11.0-rc.4
+  - @yas chat/omnichannel-services@0.3.36-rc.4
+  - @yas chat/pdf-worker@0.3.18-rc.4
+  - @yas chat/core-services@0.10.2-rc.4
+  - @yas chat/model-typings@1.8.0-rc.4
+  - @yas chat/models@1.7.0-rc.4
+  - @yas chat/network-broker@0.2.18-rc.4
 
   </details>
 
@@ -972,13 +972,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.36-rc.3
-  - @rocket.chat/pdf-worker@0.3.18-rc.3
-  - @rocket.chat/core-services@0.10.2-rc.3
-  - @rocket.chat/model-typings@1.8.0-rc.3
-  - @rocket.chat/models@1.7.0-rc.3
-  - @rocket.chat/network-broker@0.2.18-rc.3
+  - @yas chat/core-typings@7.11.0-rc.3
+  - @yas chat/omnichannel-services@0.3.36-rc.3
+  - @yas chat/pdf-worker@0.3.18-rc.3
+  - @yas chat/core-services@0.10.2-rc.3
+  - @yas chat/model-typings@1.8.0-rc.3
+  - @yas chat/models@1.7.0-rc.3
+  - @yas chat/network-broker@0.2.18-rc.3
 
   </details>
 
@@ -987,13 +987,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.35-rc.2
-  - @rocket.chat/pdf-worker@0.3.17-rc.2
-  - @rocket.chat/core-services@0.10.1-rc.2
-  - @rocket.chat/model-typings@1.8.0-rc.2
-  - @rocket.chat/models@1.7.0-rc.2
-  - @rocket.chat/network-broker@0.2.17-rc.2
+  - @yas chat/core-typings@7.11.0-rc.2
+  - @yas chat/omnichannel-services@0.3.35-rc.2
+  - @yas chat/pdf-worker@0.3.17-rc.2
+  - @yas chat/core-services@0.10.1-rc.2
+  - @yas chat/model-typings@1.8.0-rc.2
+  - @yas chat/models@1.7.0-rc.2
+  - @yas chat/network-broker@0.2.17-rc.2
   </details>
 
 ## 0.4.39-rc.1
@@ -1001,13 +1001,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.35-rc.1
-  - @rocket.chat/pdf-worker@0.3.17-rc.1
-  - @rocket.chat/core-services@0.10.1-rc.1
-  - @rocket.chat/model-typings@1.8.0-rc.1
-  - @rocket.chat/models@1.7.0-rc.1
-  - @rocket.chat/network-broker@0.2.17-rc.1
+  - @yas chat/core-typings@7.11.0-rc.1
+  - @yas chat/omnichannel-services@0.3.35-rc.1
+  - @yas chat/pdf-worker@0.3.17-rc.1
+  - @yas chat/core-services@0.10.1-rc.1
+  - @yas chat/model-typings@1.8.0-rc.1
+  - @yas chat/models@1.7.0-rc.1
+  - @yas chat/network-broker@0.2.17-rc.1
 
   </details>
 
@@ -1016,14 +1016,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c102712222cc18c050f45f9279f8eafcff3e7e8a, 752e6d41463a1d24e6478e9a815d096c61bcccd9, 3e177dbd0b65d70bce8587287ba73b30170eb0f7, dca0b3a44b0c780c0f2b3d78e87074599bc7d43c, d0467df80694fa1bac560085fa704a138872b3cb, 3dfb557f723a395bc1e00f2647675968c46656bc, 5af5203455a41e52dc2a9562d5f30708c7a5e6a5, e82cfaa98321338b86597506c8e872d9f81dc638, b0a4602a4461200b9872b2b073ec56fa55ecb466, 3cbb7da0d8db7f83cd8fa6f9e8f18182b97704f5, 3b2905b476d62817e551ca639600195ebe614c40, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
-  - @rocket.chat/models@1.7.0-rc.0
-  - @rocket.chat/i18n@1.11.0-rc.0
-  - @rocket.chat/model-typings@1.8.0-rc.0
-  - @rocket.chat/core-services@0.10.1-rc.0
-  - @rocket.chat/core-typings@7.11.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.35-rc.0
-  - @rocket.chat/network-broker@0.2.17-rc.0
-  - @rocket.chat/pdf-worker@0.3.17-rc.0
+  - @yas chat/models@1.7.0-rc.0
+  - @yas chat/i18n@1.11.0-rc.0
+  - @yas chat/model-typings@1.8.0-rc.0
+  - @yas chat/core-services@0.10.1-rc.0
+  - @yas chat/core-typings@7.11.0-rc.0
+  - @yas chat/omnichannel-services@0.3.35-rc.0
+  - @yas chat/network-broker@0.2.17-rc.0
+  - @yas chat/pdf-worker@0.3.17-rc.0
 
   </details>
 
@@ -1032,13 +1032,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.2
-  - @rocket.chat/omnichannel-services@0.3.36
-  - @rocket.chat/pdf-worker@0.3.18
-  - @rocket.chat/core-services@0.10.2
-  - @rocket.chat/model-typings@1.7.2
-  - @rocket.chat/models@1.6.2
-  - @rocket.chat/network-broker@0.2.18
+  - @yas chat/core-typings@7.10.2
+  - @yas chat/omnichannel-services@0.3.36
+  - @yas chat/pdf-worker@0.3.18
+  - @yas chat/core-services@0.10.2
+  - @yas chat/model-typings@1.7.2
+  - @yas chat/models@1.6.2
+  - @yas chat/network-broker@0.2.18
 
   </details>
 
@@ -1047,13 +1047,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-    - @rocket.chat/core-services@0.10.1
-    - @rocket.chat/core-typings@7.10.1
-    - @rocket.chat/omnichannel-services@0.3.35
-    - @rocket.chat/pdf-worker@0.3.17
-    - @rocket.chat/model-typings@1.7.1
-    - @rocket.chat/models@1.6.1
-    - @rocket.chat/network-broker@0.2.17
+    - @yas chat/core-services@0.10.1
+    - @yas chat/core-typings@7.10.1
+    - @yas chat/omnichannel-services@0.3.35
+    - @yas chat/pdf-worker@0.3.17
+    - @yas chat/model-typings@1.7.1
+    - @yas chat/models@1.6.1
+    - @yas chat/network-broker@0.2.17
   </details>
 
 ## 0.4.37
@@ -1061,14 +1061,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b25f05acd07762387fa45d67a1241b982c192f5d, fd32867fd4949bc2951a22075498ccb551cc6bbc, 8942187a9b062be3aaac8fee4b576dcad467641e, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/model-typings@1.7.0
-  - @rocket.chat/models@1.6.0
-  - @rocket.chat/i18n@1.10.0
-  - @rocket.chat/core-typings@7.10.0
-  - @rocket.chat/core-services@0.10.0
-  - @rocket.chat/omnichannel-services@0.3.34
-  - @rocket.chat/pdf-worker@0.3.16
-  - @rocket.chat/network-broker@0.2.16
+  - @yas chat/model-typings@1.7.0
+  - @yas chat/models@1.6.0
+  - @yas chat/i18n@1.10.0
+  - @yas chat/core-typings@7.10.0
+  - @yas chat/core-services@0.10.0
+  - @yas chat/omnichannel-services@0.3.34
+  - @yas chat/pdf-worker@0.3.16
+  - @yas chat/network-broker@0.2.16
 
   </details>
 
@@ -1077,13 +1077,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.34-rc.6
-  - @rocket.chat/pdf-worker@0.3.16-rc.6
-  - @rocket.chat/core-services@0.10.0-rc.6
-  - @rocket.chat/model-typings@1.7.0-rc.6
-  - @rocket.chat/models@1.6.0-rc.6
-  - @rocket.chat/network-broker@0.2.16-rc.6
+  - @yas chat/core-typings@7.10.0-rc.6
+  - @yas chat/omnichannel-services@0.3.34-rc.6
+  - @yas chat/pdf-worker@0.3.16-rc.6
+  - @yas chat/core-services@0.10.0-rc.6
+  - @yas chat/model-typings@1.7.0-rc.6
+  - @yas chat/models@1.6.0-rc.6
+  - @yas chat/network-broker@0.2.16-rc.6
 
   </details>
 
@@ -1093,13 +1093,13 @@
 
 - <details><summary>Updated dependencies []:</summary>
 
-- @rocket.chat/core-typings@7.10.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.31-rc.5
-  - @rocket.chat/pdf-worker@0.3.13-rc.5
-  - @rocket.chat/core-services@0.10.0-rc.5
-  - @rocket.chat/model-typings@1.7.0-rc.5
-  - @rocket.chat/models@1.6.0-rc.5
-  - @rocket.chat/network-broker@0.2.13-rc.5
+- @yas chat/core-typings@7.10.0-rc.5
+  - @yas chat/omnichannel-services@0.3.31-rc.5
+  - @yas chat/pdf-worker@0.3.13-rc.5
+  - @yas chat/core-services@0.10.0-rc.5
+  - @yas chat/model-typings@1.7.0-rc.5
+  - @yas chat/models@1.6.0-rc.5
+  - @yas chat/network-broker@0.2.13-rc.5
   </details>
 
 ## 0.4.34-rc.4
@@ -1107,13 +1107,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.31-rc.4
-  - @rocket.chat/pdf-worker@0.3.13-rc.4
-  - @rocket.chat/core-services@0.10.0-rc.4
-  - @rocket.chat/model-typings@1.7.0-rc.4
-  - @rocket.chat/models@1.6.0-rc.4
-  - @rocket.chat/network-broker@0.2.13-rc.4
+  - @yas chat/core-typings@7.10.0-rc.4
+  - @yas chat/omnichannel-services@0.3.31-rc.4
+  - @yas chat/pdf-worker@0.3.13-rc.4
+  - @yas chat/core-services@0.10.0-rc.4
+  - @yas chat/model-typings@1.7.0-rc.4
+  - @yas chat/models@1.6.0-rc.4
+  - @yas chat/network-broker@0.2.13-rc.4
   </details>
 
 ## 0.4.34-rc.3
@@ -1121,13 +1121,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.10.0-rc.3
-  - @rocket.chat/core-typings@7.10.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.31-rc.3
-  - @rocket.chat/pdf-worker@0.3.13-rc.3
-  - @rocket.chat/model-typings@1.7.0-rc.3
-  - @rocket.chat/models@1.6.0-rc.3
-  - @rocket.chat/network-broker@0.2.13-rc.3
+  - @yas chat/core-services@0.10.0-rc.3
+  - @yas chat/core-typings@7.10.0-rc.3
+  - @yas chat/omnichannel-services@0.3.31-rc.3
+  - @yas chat/pdf-worker@0.3.13-rc.3
+  - @yas chat/model-typings@1.7.0-rc.3
+  - @yas chat/models@1.6.0-rc.3
+  - @yas chat/network-broker@0.2.13-rc.3
   </details>
 
 ## 0.4.34-rc.2
@@ -1135,13 +1135,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.31-rc.2
-  - @rocket.chat/pdf-worker@0.3.13-rc.2
-  - @rocket.chat/core-services@0.10.0-rc.2
-  - @rocket.chat/model-typings@1.7.0-rc.2
-  - @rocket.chat/models@1.6.0-rc.2
-  - @rocket.chat/network-broker@0.2.13-rc.2
+  - @yas chat/core-typings@7.10.0-rc.2
+  - @yas chat/omnichannel-services@0.3.31-rc.2
+  - @yas chat/pdf-worker@0.3.13-rc.2
+  - @yas chat/core-services@0.10.0-rc.2
+  - @yas chat/model-typings@1.7.0-rc.2
+  - @yas chat/models@1.6.0-rc.2
+  - @yas chat/network-broker@0.2.13-rc.2
 
   </details>
 
@@ -1150,13 +1150,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.31-rc.1
-  - @rocket.chat/pdf-worker@0.3.13-rc.1
-  - @rocket.chat/core-services@0.10.0-rc.1
-  - @rocket.chat/model-typings@1.7.0-rc.1
-  - @rocket.chat/models@1.6.0-rc.1
-  - @rocket.chat/network-broker@0.2.13-rc.1
+  - @yas chat/core-typings@7.10.0-rc.1
+  - @yas chat/omnichannel-services@0.3.31-rc.1
+  - @yas chat/pdf-worker@0.3.13-rc.1
+  - @yas chat/core-services@0.10.0-rc.1
+  - @yas chat/model-typings@1.7.0-rc.1
+  - @yas chat/models@1.6.0-rc.1
+  - @yas chat/network-broker@0.2.13-rc.1
 
   </details>
 
@@ -1165,14 +1165,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b25f05acd07762387fa45d67a1241b982c192f5d, fd32867fd4949bc2951a22075498ccb551cc6bbc, 8942187a9b062be3aaac8fee4b576dcad467641e, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/model-typings@1.7.0-rc.0
-  - @rocket.chat/models@1.6.0-rc.0
-  - @rocket.chat/i18n@1.10.0-rc.0
-  - @rocket.chat/core-typings@7.10.0-rc.0
-  - @rocket.chat/core-services@0.10.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.31-rc.0
-  - @rocket.chat/pdf-worker@0.3.13-rc.0
-  - @rocket.chat/network-broker@0.2.13-rc.0
+  - @yas chat/model-typings@1.7.0-rc.0
+  - @yas chat/models@1.6.0-rc.0
+  - @yas chat/i18n@1.10.0-rc.0
+  - @yas chat/core-typings@7.10.0-rc.0
+  - @yas chat/core-services@0.10.0-rc.0
+  - @yas chat/omnichannel-services@0.3.31-rc.0
+  - @yas chat/pdf-worker@0.3.13-rc.0
+  - @yas chat/network-broker@0.2.13-rc.0
 
   </details>
 
@@ -1182,13 +1182,13 @@
 
 - <details><summary>Updated dependencies []:</summary>
 
-- @rocket.chat/core-typings@7.9.3
-  - @rocket.chat/omnichannel-services@0.3.33
-  - @rocket.chat/pdf-worker@0.3.15
-  - @rocket.chat/core-services@0.9.15
-  - @rocket.chat/model-typings@1.6.15
-  - @rocket.chat/models@1.5.15
-  - @rocket.chat/network-broker@0.2.15
+- @yas chat/core-typings@7.9.3
+  - @yas chat/omnichannel-services@0.3.33
+  - @yas chat/pdf-worker@0.3.15
+  - @yas chat/core-services@0.9.15
+  - @yas chat/model-typings@1.6.15
+  - @yas chat/models@1.5.15
+  - @yas chat/network-broker@0.2.15
   </details>
 
 ## 0.4.35
@@ -1196,13 +1196,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.2
-  - @rocket.chat/omnichannel-services@0.3.32
-  - @rocket.chat/pdf-worker@0.3.14
-  - @rocket.chat/core-services@0.9.14
-  - @rocket.chat/model-typings@1.6.14
-  - @rocket.chat/models@1.5.14
-  - @rocket.chat/network-broker@0.2.14
+  - @yas chat/core-typings@7.9.2
+  - @yas chat/omnichannel-services@0.3.32
+  - @yas chat/pdf-worker@0.3.14
+  - @yas chat/core-services@0.9.14
+  - @yas chat/model-typings@1.6.14
+  - @yas chat/models@1.5.14
+  - @yas chat/network-broker@0.2.14
   </details>
 
 ## 0.4.34
@@ -1210,13 +1210,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-    - @rocket.chat/core-typings@7.9.1
-    - @rocket.chat/omnichannel-services@0.3.31
-    - @rocket.chat/pdf-worker@0.3.13
-    - @rocket.chat/core-services@0.9.13
-    - @rocket.chat/model-typings@1.6.13
-    - @rocket.chat/models@1.5.13
-    - @rocket.chat/network-broker@0.2.13
+    - @yas chat/core-typings@7.9.1
+    - @yas chat/omnichannel-services@0.3.31
+    - @yas chat/pdf-worker@0.3.13
+    - @yas chat/core-services@0.9.13
+    - @yas chat/model-typings@1.6.13
+    - @yas chat/models@1.5.13
+    - @yas chat/network-broker@0.2.13
   </details>
 
 ## 0.4.33
@@ -1224,15 +1224,15 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6f4429f1ac0e8a6aaed3b1fb378711388cafc325, adfc1acc06a693b9a1c09bcc660d3909da56b477, 3f000d7381b857eaefcc2a750a8fb64547bd0058, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 0ba4d8bc18c6f2183f2fe32e8739d7455aab75e7, 170a413f1f12500e053580f01d43af65e515da42, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 208fe33880e1b980fa275ed5be9b5fc0da20e267, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 4ec3b92df6cb68072447b1931e89b7f4b92124f5, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
-  - @rocket.chat/core-services@0.9.12
-  - @rocket.chat/i18n@1.9.0
-  - @rocket.chat/model-typings@1.6.12
-  - @rocket.chat/models@1.5.12
-  - @rocket.chat/core-typings@7.9.0
-  - @rocket.chat/tools@0.2.3
-  - @rocket.chat/network-broker@0.2.12
-  - @rocket.chat/omnichannel-services@0.3.30
-  - @rocket.chat/pdf-worker@0.3.12
+  - @yas chat/core-services@0.9.12
+  - @yas chat/i18n@1.9.0
+  - @yas chat/model-typings@1.6.12
+  - @yas chat/models@1.5.12
+  - @yas chat/core-typings@7.9.0
+  - @yas chat/tools@0.2.3
+  - @yas chat/network-broker@0.2.12
+  - @yas chat/omnichannel-services@0.3.30
+  - @yas chat/pdf-worker@0.3.12
 
   </details>
 
@@ -1241,13 +1241,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.9.11-rc.2
-  - @rocket.chat/core-typings@7.9.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.29-rc.2
-  - @rocket.chat/pdf-worker@0.3.11-rc.2
-  - @rocket.chat/model-typings@1.6.11-rc.2
-  - @rocket.chat/models@1.5.11-rc.2
-  - @rocket.chat/network-broker@0.2.11-rc.2
+  - @yas chat/core-services@0.9.11-rc.2
+  - @yas chat/core-typings@7.9.0-rc.2
+  - @yas chat/omnichannel-services@0.3.29-rc.2
+  - @yas chat/pdf-worker@0.3.11-rc.2
+  - @yas chat/model-typings@1.6.11-rc.2
+  - @yas chat/models@1.5.11-rc.2
+  - @yas chat/network-broker@0.2.11-rc.2
   </details>
 
 ## 0.4.33-rc.1
@@ -1255,13 +1255,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.29-rc.1
-  - @rocket.chat/pdf-worker@0.3.11-rc.1
-  - @rocket.chat/core-services@0.9.11-rc.1
-  - @rocket.chat/model-typings@1.6.11-rc.1
-  - @rocket.chat/models@1.5.11-rc.1
-  - @rocket.chat/network-broker@0.2.11-rc.1
+  - @yas chat/core-typings@7.9.0-rc.1
+  - @yas chat/omnichannel-services@0.3.29-rc.1
+  - @yas chat/pdf-worker@0.3.11-rc.1
+  - @yas chat/core-services@0.9.11-rc.1
+  - @yas chat/model-typings@1.6.11-rc.1
+  - @yas chat/models@1.5.11-rc.1
+  - @yas chat/network-broker@0.2.11-rc.1
 
   </details>
 
@@ -1270,28 +1270,28 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6f4429f1ac0e8a6aaed3b1fb378711388cafc325, adfc1acc06a693b9a1c09bcc660d3909da56b477, 3f000d7381b857eaefcc2a750a8fb64547bd0058, 459f635a5160fcb0f73fb96b267f76145c11b3e4, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 0ba4d8bc18c6f2183f2fe32e8739d7455aab75e7, 170a413f1f12500e053580f01d43af65e515da42, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 208fe33880e1b980fa275ed5be9b5fc0da20e267, 0b4f3d3c2745ded2c3d299aa6aef01e107cb2de0, 4ec3b92df6cb68072447b1931e89b7f4b92124f5, 68426bdfae63f7be8db55d17bd40b076290fd102, e5eda7eb5c3e45ff0798559922c732f5b537d023]:</summary>
-  - @rocket.chat/core-services@0.9.11-rc.0
-  - @rocket.chat/i18n@1.9.0-rc.0
-  - @rocket.chat/model-typings@1.6.11-rc.0
-  - @rocket.chat/models@1.5.11-rc.0
-  - @rocket.chat/core-typings@7.9.0-rc.0
-  - @rocket.chat/tools@0.2.3-rc.0
-  - @rocket.chat/network-broker@0.2.11-rc.0
-  - @rocket.chat/omnichannel-services@0.3.29-rc.0
-  - @rocket.chat/pdf-worker@0.3.11-rc.0
+  - @yas chat/core-services@0.9.11-rc.0
+  - @yas chat/i18n@1.9.0-rc.0
+  - @yas chat/model-typings@1.6.11-rc.0
+  - @yas chat/models@1.5.11-rc.0
+  - @yas chat/core-typings@7.9.0-rc.0
+  - @yas chat/tools@0.2.3-rc.0
+  - @yas chat/network-broker@0.2.11-rc.0
+  - @yas chat/omnichannel-services@0.3.29-rc.0
+  - @yas chat/pdf-worker@0.3.11-rc.0
 
 ## 0.4.32
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.9.11
-  - @rocket.chat/core-typings@7.8.3
-  - @rocket.chat/omnichannel-services@0.3.29
-  - @rocket.chat/pdf-worker@0.3.11
-  - @rocket.chat/model-typings@1.6.11
-  - @rocket.chat/models@1.5.11
-  - @rocket.chat/network-broker@0.2.11
+  - @yas chat/core-services@0.9.11
+  - @yas chat/core-typings@7.8.3
+  - @yas chat/omnichannel-services@0.3.29
+  - @yas chat/pdf-worker@0.3.11
+  - @yas chat/model-typings@1.6.11
+  - @yas chat/models@1.5.11
+  - @yas chat/network-broker@0.2.11
 
   </details>
 
@@ -1300,13 +1300,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [617caa8e7be9c650b96cc1fcc5b836eaa3e7ae39]:</summary>
-  - @rocket.chat/model-typings@1.6.10
-  - @rocket.chat/models@1.5.10
-  - @rocket.chat/omnichannel-services@0.3.28
-  - @rocket.chat/core-services@0.9.10
-  - @rocket.chat/network-broker@0.2.10
-  - @rocket.chat/core-typings@7.8.2
-  - @rocket.chat/pdf-worker@0.3.10
+  - @yas chat/model-typings@1.6.10
+  - @yas chat/models@1.5.10
+  - @yas chat/omnichannel-services@0.3.28
+  - @yas chat/core-services@0.9.10
+  - @yas chat/network-broker@0.2.10
+  - @yas chat/core-typings@7.8.2
+  - @yas chat/pdf-worker@0.3.10
 
   </details>
 
@@ -1315,13 +1315,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.1
-  - @rocket.chat/omnichannel-services@0.3.27
-  - @rocket.chat/pdf-worker@0.3.9
-  - @rocket.chat/core-services@0.9.9
-  - @rocket.chat/model-typings@1.6.9
-  - @rocket.chat/models@1.5.9
-  - @rocket.chat/network-broker@0.2.9
+  - @yas chat/core-typings@7.8.1
+  - @yas chat/omnichannel-services@0.3.27
+  - @yas chat/pdf-worker@0.3.9
+  - @yas chat/core-services@0.9.9
+  - @yas chat/model-typings@1.6.9
+  - @yas chat/models@1.5.9
+  - @yas chat/network-broker@0.2.9
 
   </details>
 
@@ -1330,14 +1330,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8033bdb1f611eb8954a2626aca2583a285a94b27, 2f8213e4c5b64201eb11c97e6e33d2488df9089d, 2de3aa60aa84bb262d3748065654b4ca7a000858, c77056f1d5d7269d9fb4bb16d86711b037ec547f, dc26071ba3e0242d1ea7cf819f05c76ab307b229, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/i18n@1.8.0
-  - @rocket.chat/model-typings@1.6.8
-  - @rocket.chat/models@1.5.8
-  - @rocket.chat/core-typings@7.8.0
-  - @rocket.chat/omnichannel-services@0.3.26
-  - @rocket.chat/core-services@0.9.8
-  - @rocket.chat/pdf-worker@0.3.8
-  - @rocket.chat/network-broker@0.2.8
+  - @yas chat/i18n@1.8.0
+  - @yas chat/model-typings@1.6.8
+  - @yas chat/models@1.5.8
+  - @yas chat/core-typings@7.8.0
+  - @yas chat/omnichannel-services@0.3.26
+  - @yas chat/core-services@0.9.8
+  - @yas chat/pdf-worker@0.3.8
+  - @yas chat/network-broker@0.2.8
 
   </details>
 
@@ -1346,13 +1346,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.9
-  - @rocket.chat/omnichannel-services@0.3.26-rc.9
-  - @rocket.chat/pdf-worker@0.3.8-rc.9
-  - @rocket.chat/core-services@0.9.8-rc.9
-  - @rocket.chat/model-typings@1.6.8-rc.9
-  - @rocket.chat/models@1.5.8-rc.9
-  - @rocket.chat/network-broker@0.2.8-rc.9
+  - @yas chat/core-typings@7.8.0-rc.9
+  - @yas chat/omnichannel-services@0.3.26-rc.9
+  - @yas chat/pdf-worker@0.3.8-rc.9
+  - @yas chat/core-services@0.9.8-rc.9
+  - @yas chat/model-typings@1.6.8-rc.9
+  - @yas chat/models@1.5.8-rc.9
+  - @yas chat/network-broker@0.2.8-rc.9
 
   </details>
 
@@ -1361,13 +1361,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.9.5-rc.8
-  - @rocket.chat/core-typings@7.8.0-rc.8
-  - @rocket.chat/omnichannel-services@0.3.23-rc.8
-  - @rocket.chat/pdf-worker@0.3.5-rc.8
-  - @rocket.chat/model-typings@1.6.5-rc.8
-  - @rocket.chat/models@1.5.5-rc.8
-  - @rocket.chat/network-broker@0.2.5-rc.8
+  - @yas chat/core-services@0.9.5-rc.8
+  - @yas chat/core-typings@7.8.0-rc.8
+  - @yas chat/omnichannel-services@0.3.23-rc.8
+  - @yas chat/pdf-worker@0.3.5-rc.8
+  - @yas chat/model-typings@1.6.5-rc.8
+  - @yas chat/models@1.5.5-rc.8
+  - @yas chat/network-broker@0.2.5-rc.8
 
   </details>
 
@@ -1376,13 +1376,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.7
-  - @rocket.chat/omnichannel-services@0.3.23-rc.7
-  - @rocket.chat/pdf-worker@0.3.5-rc.7
-  - @rocket.chat/core-services@0.9.5-rc.7
-  - @rocket.chat/model-typings@1.6.5-rc.7
-  - @rocket.chat/models@1.5.5-rc.7
-  - @rocket.chat/network-broker@0.2.5-rc.7
+  - @yas chat/core-typings@7.8.0-rc.7
+  - @yas chat/omnichannel-services@0.3.23-rc.7
+  - @yas chat/pdf-worker@0.3.5-rc.7
+  - @yas chat/core-services@0.9.5-rc.7
+  - @yas chat/model-typings@1.6.5-rc.7
+  - @yas chat/models@1.5.5-rc.7
+  - @yas chat/network-broker@0.2.5-rc.7
 
   </details>
 
@@ -1391,13 +1391,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.23-rc.6
-  - @rocket.chat/pdf-worker@0.3.5-rc.6
-  - @rocket.chat/core-services@0.9.5-rc.6
-  - @rocket.chat/model-typings@1.6.5-rc.6
-  - @rocket.chat/models@1.5.5-rc.6
-  - @rocket.chat/network-broker@0.2.5-rc.6
+  - @yas chat/core-typings@7.8.0-rc.6
+  - @yas chat/omnichannel-services@0.3.23-rc.6
+  - @yas chat/pdf-worker@0.3.5-rc.6
+  - @yas chat/core-services@0.9.5-rc.6
+  - @yas chat/model-typings@1.6.5-rc.6
+  - @yas chat/models@1.5.5-rc.6
+  - @yas chat/network-broker@0.2.5-rc.6
 
   </details>
 
@@ -1406,13 +1406,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.23-rc.5
-  - @rocket.chat/pdf-worker@0.3.5-rc.5
-  - @rocket.chat/core-services@0.9.5-rc.5
-  - @rocket.chat/model-typings@1.6.5-rc.5
-  - @rocket.chat/models@1.5.5-rc.5
-  - @rocket.chat/network-broker@0.2.5-rc.5
+  - @yas chat/core-typings@7.8.0-rc.5
+  - @yas chat/omnichannel-services@0.3.23-rc.5
+  - @yas chat/pdf-worker@0.3.5-rc.5
+  - @yas chat/core-services@0.9.5-rc.5
+  - @yas chat/model-typings@1.6.5-rc.5
+  - @yas chat/models@1.5.5-rc.5
+  - @yas chat/network-broker@0.2.5-rc.5
 
   </details>
 
@@ -1421,13 +1421,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.23-rc.4
-  - @rocket.chat/pdf-worker@0.3.5-rc.4
-  - @rocket.chat/core-services@0.9.5-rc.4
-  - @rocket.chat/model-typings@1.6.5-rc.4
-  - @rocket.chat/models@1.5.5-rc.4
-  - @rocket.chat/network-broker@0.2.5-rc.4
+  - @yas chat/core-typings@7.8.0-rc.4
+  - @yas chat/omnichannel-services@0.3.23-rc.4
+  - @yas chat/pdf-worker@0.3.5-rc.4
+  - @yas chat/core-services@0.9.5-rc.4
+  - @yas chat/model-typings@1.6.5-rc.4
+  - @yas chat/models@1.5.5-rc.4
+  - @yas chat/network-broker@0.2.5-rc.4
 
   </details>
 
@@ -1436,13 +1436,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/omnichannel-services@0.3.23-rc.3
-  - @rocket.chat/core-services@0.9.5-rc.3
-  - @rocket.chat/models@1.5.5-rc.3
-  - @rocket.chat/network-broker@0.2.5-rc.3
-  - @rocket.chat/core-typings@7.8.0-rc.3
-  - @rocket.chat/pdf-worker@0.3.5-rc.3
-  - @rocket.chat/model-typings@1.6.5-rc.3
+  - @yas chat/omnichannel-services@0.3.23-rc.3
+  - @yas chat/core-services@0.9.5-rc.3
+  - @yas chat/models@1.5.5-rc.3
+  - @yas chat/network-broker@0.2.5-rc.3
+  - @yas chat/core-typings@7.8.0-rc.3
+  - @yas chat/pdf-worker@0.3.5-rc.3
+  - @yas chat/model-typings@1.6.5-rc.3
 
   </details>
 
@@ -1451,13 +1451,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.23-rc.2
-  - @rocket.chat/pdf-worker@0.3.5-rc.2
-  - @rocket.chat/core-services@0.9.5-rc.2
-  - @rocket.chat/model-typings@1.6.5-rc.2
-  - @rocket.chat/models@1.5.5-rc.2
-  - @rocket.chat/network-broker@0.2.5-rc.2
+  - @yas chat/core-typings@7.8.0-rc.2
+  - @yas chat/omnichannel-services@0.3.23-rc.2
+  - @yas chat/pdf-worker@0.3.5-rc.2
+  - @yas chat/core-services@0.9.5-rc.2
+  - @yas chat/model-typings@1.6.5-rc.2
+  - @yas chat/models@1.5.5-rc.2
+  - @yas chat/network-broker@0.2.5-rc.2
 
   </details>
 
@@ -1468,13 +1468,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.23-rc.1
-  - @rocket.chat/pdf-worker@0.3.5-rc.1
-  - @rocket.chat/core-services@0.9.5-rc.1
-  - @rocket.chat/model-typings@1.6.5-rc.1
-  - @rocket.chat/models@1.5.5-rc.1
-  - @rocket.chat/network-broker@0.2.5-rc.1
+  - @yas chat/core-typings@7.8.0-rc.1
+  - @yas chat/omnichannel-services@0.3.23-rc.1
+  - @yas chat/pdf-worker@0.3.5-rc.1
+  - @yas chat/core-services@0.9.5-rc.1
+  - @yas chat/model-typings@1.6.5-rc.1
+  - @yas chat/models@1.5.5-rc.1
+  - @yas chat/network-broker@0.2.5-rc.1
   </details>
 
 ## 0.4.26-rc.0
@@ -1482,14 +1482,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8033bdb1f611eb8954a2626aca2583a285a94b27, 2f8213e4c5b64201eb11c97e6e33d2488df9089d, 2de3aa60aa84bb262d3748065654b4ca7a000858, c77056f1d5d7269d9fb4bb16d86711b037ec547f, dc26071ba3e0242d1ea7cf819f05c76ab307b229, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/i18n@1.8.0-rc.0
-  - @rocket.chat/model-typings@1.6.5-rc.0
-  - @rocket.chat/models@1.5.5-rc.0
-  - @rocket.chat/core-typings@7.8.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.23-rc.0
-  - @rocket.chat/core-services@0.9.5-rc.0
-  - @rocket.chat/pdf-worker@0.3.5-rc.0
-  - @rocket.chat/network-broker@0.2.5-rc.0
+  - @yas chat/i18n@1.8.0-rc.0
+  - @yas chat/model-typings@1.6.5-rc.0
+  - @yas chat/models@1.5.5-rc.0
+  - @yas chat/core-typings@7.8.0-rc.0
+  - @yas chat/omnichannel-services@0.3.23-rc.0
+  - @yas chat/core-services@0.9.5-rc.0
+  - @yas chat/pdf-worker@0.3.5-rc.0
+  - @yas chat/network-broker@0.2.5-rc.0
 
   </details>
 
@@ -1498,13 +1498,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.9.7
-  - @rocket.chat/core-typings@7.7.4
-  - @rocket.chat/omnichannel-services@0.3.25
-  - @rocket.chat/pdf-worker@0.3.7
-  - @rocket.chat/model-typings@1.6.7
-  - @rocket.chat/models@1.5.7
-  - @rocket.chat/network-broker@0.2.7
+  - @yas chat/core-services@0.9.7
+  - @yas chat/core-typings@7.7.4
+  - @yas chat/omnichannel-services@0.3.25
+  - @yas chat/pdf-worker@0.3.7
+  - @yas chat/model-typings@1.6.7
+  - @yas chat/models@1.5.7
+  - @yas chat/network-broker@0.2.7
   </details>
 
 ## 0.4.27
@@ -1512,13 +1512,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.3
-  - @rocket.chat/omnichannel-services@0.3.24
-  - @rocket.chat/pdf-worker@0.3.6
-  - @rocket.chat/core-services@0.9.6
-  - @rocket.chat/model-typings@1.6.6
-  - @rocket.chat/models@1.5.6
-  - @rocket.chat/network-broker@0.2.6
+  - @yas chat/core-typings@7.7.3
+  - @yas chat/omnichannel-services@0.3.24
+  - @yas chat/pdf-worker@0.3.6
+  - @yas chat/core-services@0.9.6
+  - @yas chat/model-typings@1.6.6
+  - @yas chat/models@1.5.6
+  - @yas chat/network-broker@0.2.6
 
   </details>
 
@@ -1527,14 +1527,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/omnichannel-services@0.3.23
-  - @rocket.chat/core-services@0.9.5
-  - @rocket.chat/models@1.5.5
-  - @rocket.chat/network-broker@0.2.5
-  - @rocket.chat/core-typings@7.7.2
-  - @rocket.chat/pdf-worker@0.3.5
+  - @yas chat/omnichannel-services@0.3.23
+  - @yas chat/core-services@0.9.5
+  - @yas chat/models@1.5.5
+  - @yas chat/network-broker@0.2.5
+  - @yas chat/core-typings@7.7.2
+  - @yas chat/pdf-worker@0.3.5
 
-- @rocket.chat/model-typings@1.6.5
+- @yas chat/model-typings@1.6.5
 
   </details>
 
@@ -1543,13 +1543,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [710f6b2bc211ba1d06d701f99d17bf2405d19b32]:</summary>
-  - @rocket.chat/model-typings@1.6.4
-  - @rocket.chat/models@1.5.4
-  - @rocket.chat/omnichannel-services@0.3.22
-  - @rocket.chat/core-services@0.9.4
-  - @rocket.chat/network-broker@0.2.4
-  - @rocket.chat/core-typings@7.7.1
-  - @rocket.chat/pdf-worker@0.3.4
+  - @yas chat/model-typings@1.6.4
+  - @yas chat/models@1.5.4
+  - @yas chat/omnichannel-services@0.3.22
+  - @yas chat/core-services@0.9.4
+  - @yas chat/network-broker@0.2.4
+  - @yas chat/core-typings@7.7.1
+  - @yas chat/pdf-worker@0.3.4
 
   </details>
 
@@ -1558,14 +1558,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [0c3ac1f67922e25f8122f4e34c22f4d7278ad97a, aadc7956bdeb281007ef06f158088640a44171df, 5a74a78a2ba5e5733df7599b22f3ad0504f89a49, fdb3b5783053c2705936ee2941e46f9351901e66, 1c7f00a5edcb070f48a2cb137bf7101a21c3c34a, 996f5b9df477097fe496902b8a2700dee747895b, 6d36fc25a47281aad298edc6fc3a6e981d279f61]:</summary>
-  - @rocket.chat/models@1.5.3
-  - @rocket.chat/i18n@1.7.0
-  - @rocket.chat/model-typings@1.6.3
-  - @rocket.chat/omnichannel-services@0.3.21
-  - @rocket.chat/core-services@0.9.3
-  - @rocket.chat/core-typings@7.7.0
-  - @rocket.chat/network-broker@0.2.3
-  - @rocket.chat/pdf-worker@0.3.3
+  - @yas chat/models@1.5.3
+  - @yas chat/i18n@1.7.0
+  - @yas chat/model-typings@1.6.3
+  - @yas chat/omnichannel-services@0.3.21
+  - @yas chat/core-services@0.9.3
+  - @yas chat/core-typings@7.7.0
+  - @yas chat/network-broker@0.2.3
+  - @yas chat/pdf-worker@0.3.3
 
   </details>
 
@@ -1574,13 +1574,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.21-rc.6
-  - @rocket.chat/pdf-worker@0.3.3-rc.6
-  - @rocket.chat/core-services@0.9.3-rc.6
-  - @rocket.chat/model-typings@1.6.3-rc.6
-  - @rocket.chat/models@1.5.3-rc.6
-  - @rocket.chat/network-broker@0.2.3-rc.6
+  - @yas chat/core-typings@7.7.0-rc.6
+  - @yas chat/omnichannel-services@0.3.21-rc.6
+  - @yas chat/pdf-worker@0.3.3-rc.6
+  - @yas chat/core-services@0.9.3-rc.6
+  - @yas chat/model-typings@1.6.3-rc.6
+  - @yas chat/models@1.5.3-rc.6
+  - @yas chat/network-broker@0.2.3-rc.6
 
   </details>
 
@@ -1589,13 +1589,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.21-rc.5
-  - @rocket.chat/pdf-worker@0.3.3-rc.5
-  - @rocket.chat/core-services@0.9.3-rc.5
-  - @rocket.chat/model-typings@1.6.3-rc.5
-  - @rocket.chat/models@1.5.3-rc.5
-  - @rocket.chat/network-broker@0.2.3-rc.5
+  - @yas chat/core-typings@7.7.0-rc.5
+  - @yas chat/omnichannel-services@0.3.21-rc.5
+  - @yas chat/pdf-worker@0.3.3-rc.5
+  - @yas chat/core-services@0.9.3-rc.5
+  - @yas chat/model-typings@1.6.3-rc.5
+  - @yas chat/models@1.5.3-rc.5
+  - @yas chat/network-broker@0.2.3-rc.5
 
   </details>
 
@@ -1604,13 +1604,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.1-rc.4
-  - @rocket.chat/omnichannel-services@0.3.21-rc.4
-  - @rocket.chat/pdf-worker@0.3.3-rc.4
-  - @rocket.chat/core-services@0.9.3-rc.4
-  - @rocket.chat/model-typings@1.6.3-rc.4
-  - @rocket.chat/models@1.5.3-rc.4
-  - @rocket.chat/network-broker@0.2.3-rc.4
+  - @yas chat/core-typings@7.7.1-rc.4
+  - @yas chat/omnichannel-services@0.3.21-rc.4
+  - @yas chat/pdf-worker@0.3.3-rc.4
+  - @yas chat/core-services@0.9.3-rc.4
+  - @yas chat/model-typings@1.6.3-rc.4
+  - @yas chat/models@1.5.3-rc.4
+  - @yas chat/network-broker@0.2.3-rc.4
 
   </details>
 
@@ -1619,13 +1619,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.19-rc.3
-  - @rocket.chat/pdf-worker@0.3.1-rc.3
-  - @rocket.chat/core-services@0.9.1-rc.3
-  - @rocket.chat/model-typings@1.6.1-rc.3
-  - @rocket.chat/models@1.5.1-rc.3
-  - @rocket.chat/network-broker@0.2.1-rc.3
+  - @yas chat/core-typings@7.7.0-rc.3
+  - @yas chat/omnichannel-services@0.3.19-rc.3
+  - @yas chat/pdf-worker@0.3.1-rc.3
+  - @yas chat/core-services@0.9.1-rc.3
+  - @yas chat/model-typings@1.6.1-rc.3
+  - @yas chat/models@1.5.1-rc.3
+  - @yas chat/network-broker@0.2.1-rc.3
   </details>
 
 ## 0.4.24-rc.2
@@ -1633,13 +1633,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.7.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.19-rc.2
-  - @rocket.chat/pdf-worker@0.3.1-rc.2
-  - @rocket.chat/core-services@0.9.1-rc.2
-  - @rocket.chat/model-typings@1.6.1-rc.2
-  - @rocket.chat/models@1.5.1-rc.2
-  - @rocket.chat/network-broker@0.2.1-rc.2
+- @yas chat/core-typings@7.7.0-rc.2
+  - @yas chat/omnichannel-services@0.3.19-rc.2
+  - @yas chat/pdf-worker@0.3.1-rc.2
+  - @yas chat/core-services@0.9.1-rc.2
+  - @yas chat/model-typings@1.6.1-rc.2
+  - @yas chat/models@1.5.1-rc.2
+  - @yas chat/network-broker@0.2.1-rc.2
   </details>
 
 ## 0.4.24-rc.1
@@ -1647,13 +1647,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.19-rc.1
-  - @rocket.chat/pdf-worker@0.3.1-rc.1
-  - @rocket.chat/core-services@0.9.1-rc.1
-  - @rocket.chat/model-typings@1.6.1-rc.1
-  - @rocket.chat/models@1.5.1-rc.1
-  - @rocket.chat/network-broker@0.2.1-rc.1
+  - @yas chat/core-typings@7.7.0-rc.1
+  - @yas chat/omnichannel-services@0.3.19-rc.1
+  - @yas chat/pdf-worker@0.3.1-rc.1
+  - @yas chat/core-services@0.9.1-rc.1
+  - @yas chat/model-typings@1.6.1-rc.1
+  - @yas chat/models@1.5.1-rc.1
+  - @yas chat/network-broker@0.2.1-rc.1
 
   </details>
 
@@ -1662,14 +1662,14 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [0c3ac1f67922e25f8122f4e34c22f4d7278ad97a, aadc7956bdeb281007ef06f158088640a44171df, 5a74a78a2ba5e5733df7599b22f3ad0504f89a49, fdb3b5783053c2705936ee2941e46f9351901e66, 1c7f00a5edcb070f48a2cb137bf7101a21c3c34a, 996f5b9df477097fe496902b8a2700dee747895b, 6d36fc25a47281aad298edc6fc3a6e981d279f61]:</summary>
-  - @rocket.chat/models@1.5.1-rc.0
-  - @rocket.chat/i18n@1.7.0-rc.0
-  - @rocket.chat/model-typings@1.6.1-rc.0
-  - @rocket.chat/omnichannel-services@0.3.19-rc.0
-  - @rocket.chat/core-services@0.9.1-rc.0
-  - @rocket.chat/core-typings@7.7.0-rc.0
-  - @rocket.chat/network-broker@0.2.1-rc.0
-  - @rocket.chat/pdf-worker@0.3.1-rc.0
+  - @yas chat/models@1.5.1-rc.0
+  - @yas chat/i18n@1.7.0-rc.0
+  - @yas chat/model-typings@1.6.1-rc.0
+  - @yas chat/omnichannel-services@0.3.19-rc.0
+  - @yas chat/core-services@0.9.1-rc.0
+  - @yas chat/core-typings@7.7.0-rc.0
+  - @yas chat/network-broker@0.2.1-rc.0
+  - @yas chat/pdf-worker@0.3.1-rc.0
 
   </details>
 
@@ -1678,13 +1678,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.2
-  - @rocket.chat/omnichannel-services@0.3.20
-  - @rocket.chat/pdf-worker@0.3.2
-  - @rocket.chat/core-services@0.9.2
-  - @rocket.chat/model-typings@1.6.2
-  - @rocket.chat/models@1.5.2
-  - @rocket.chat/network-broker@0.2.2
+  - @yas chat/core-typings@7.6.2
+  - @yas chat/omnichannel-services@0.3.20
+  - @yas chat/pdf-worker@0.3.2
+  - @yas chat/core-services@0.9.2
+  - @yas chat/model-typings@1.6.2
+  - @yas chat/models@1.5.2
+  - @yas chat/network-broker@0.2.2
   </details>
 
 ## 0.4.22
@@ -1692,13 +1692,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-services@0.9.1
-  - @rocket.chat/core-typings@7.6.1
-  - @rocket.chat/omnichannel-services@0.3.19
-  - @rocket.chat/pdf-worker@0.3.1
-  - @rocket.chat/model-typings@1.6.1
-  - @rocket.chat/models@1.5.1
-  - @rocket.chat/network-broker@0.2.1
+- @yas chat/core-services@0.9.1
+  - @yas chat/core-typings@7.6.1
+  - @yas chat/omnichannel-services@0.3.19
+  - @yas chat/pdf-worker@0.3.1
+  - @yas chat/model-typings@1.6.1
+  - @yas chat/models@1.5.1
+  - @yas chat/network-broker@0.2.1
   </details>
 
 ## 0.4.21
@@ -1706,13 +1706,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, e868a6f6598b7eb2843ef79126d18abd1f604b4f, 2ee1a81de770a682f6e7a8590a896e76a32f4e3c, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
-  - @rocket.chat/core-typings@7.6.0
-  - @rocket.chat/models@1.5.0
-  - @rocket.chat/model-typings@1.6.0
-  - @rocket.chat/network-broker@0.2.0
-  - @rocket.chat/pdf-worker@0.3.0
-  - @rocket.chat/core-services@0.9.0
-  - @rocket.chat/omnichannel-services@0.3.18
+  - @yas chat/core-typings@7.6.0
+  - @yas chat/models@1.5.0
+  - @yas chat/model-typings@1.6.0
+  - @yas chat/network-broker@0.2.0
+  - @yas chat/pdf-worker@0.3.0
+  - @yas chat/core-services@0.9.0
+  - @yas chat/omnichannel-services@0.3.18
 
   </details>
 
@@ -1721,13 +1721,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.8
-  - @rocket.chat/omnichannel-services@0.3.18-rc.8
-  - @rocket.chat/pdf-worker@0.3.0-rc.8
-  - @rocket.chat/core-services@0.9.0-rc.8
-  - @rocket.chat/model-typings@1.6.0-rc.8
-  - @rocket.chat/models@1.5.0-rc.8
-  - @rocket.chat/network-broker@0.2.0-rc.8
+  - @yas chat/core-typings@7.6.0-rc.8
+  - @yas chat/omnichannel-services@0.3.18-rc.8
+  - @yas chat/pdf-worker@0.3.0-rc.8
+  - @yas chat/core-services@0.9.0-rc.8
+  - @yas chat/model-typings@1.6.0-rc.8
+  - @yas chat/models@1.5.0-rc.8
+  - @yas chat/network-broker@0.2.0-rc.8
 
   </details>
 
@@ -1736,13 +1736,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.7
-  - @rocket.chat/omnichannel-services@0.3.18-rc.7
-  - @rocket.chat/pdf-worker@0.3.0-rc.7
-  - @rocket.chat/core-services@0.9.0-rc.7
-  - @rocket.chat/model-typings@1.6.0-rc.7
-  - @rocket.chat/models@1.5.0-rc.7
-  - @rocket.chat/network-broker@0.2.0-rc.7
+  - @yas chat/core-typings@7.6.0-rc.7
+  - @yas chat/omnichannel-services@0.3.18-rc.7
+  - @yas chat/pdf-worker@0.3.0-rc.7
+  - @yas chat/core-services@0.9.0-rc.7
+  - @yas chat/model-typings@1.6.0-rc.7
+  - @yas chat/models@1.5.0-rc.7
+  - @yas chat/network-broker@0.2.0-rc.7
 
   </details>
 
@@ -1751,13 +1751,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.18-rc.6
-  - @rocket.chat/pdf-worker@0.3.0-rc.6
-  - @rocket.chat/core-services@0.9.0-rc.6
-  - @rocket.chat/model-typings@1.6.0-rc.6
-  - @rocket.chat/models@1.5.0-rc.6
-  - @rocket.chat/network-broker@0.2.0-rc.6
+  - @yas chat/core-typings@7.6.0-rc.6
+  - @yas chat/omnichannel-services@0.3.18-rc.6
+  - @yas chat/pdf-worker@0.3.0-rc.6
+  - @yas chat/core-services@0.9.0-rc.6
+  - @yas chat/model-typings@1.6.0-rc.6
+  - @yas chat/models@1.5.0-rc.6
+  - @yas chat/network-broker@0.2.0-rc.6
 
   </details>
 
@@ -1766,13 +1766,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.18-rc.5
-  - @rocket.chat/pdf-worker@0.3.0-rc.5
-  - @rocket.chat/core-services@0.9.0-rc.5
-  - @rocket.chat/model-typings@1.6.0-rc.5
-  - @rocket.chat/models@1.5.0-rc.5
-  - @rocket.chat/network-broker@0.2.0-rc.5
+  - @yas chat/core-typings@7.6.0-rc.5
+  - @yas chat/omnichannel-services@0.3.18-rc.5
+  - @yas chat/pdf-worker@0.3.0-rc.5
+  - @yas chat/core-services@0.9.0-rc.5
+  - @yas chat/model-typings@1.6.0-rc.5
+  - @yas chat/models@1.5.0-rc.5
+  - @yas chat/network-broker@0.2.0-rc.5
 
   </details>
 
@@ -1781,13 +1781,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.18-rc.4
-  - @rocket.chat/pdf-worker@0.3.0-rc.4
-  - @rocket.chat/core-services@0.9.0-rc.4
-  - @rocket.chat/model-typings@1.6.0-rc.4
-  - @rocket.chat/models@1.5.0-rc.4
-  - @rocket.chat/network-broker@0.2.0-rc.4
+  - @yas chat/core-typings@7.6.0-rc.4
+  - @yas chat/omnichannel-services@0.3.18-rc.4
+  - @yas chat/pdf-worker@0.3.0-rc.4
+  - @yas chat/core-services@0.9.0-rc.4
+  - @yas chat/model-typings@1.6.0-rc.4
+  - @yas chat/models@1.5.0-rc.4
+  - @yas chat/network-broker@0.2.0-rc.4
 
   </details>
 
@@ -1796,13 +1796,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.18-rc.3
-  - @rocket.chat/pdf-worker@0.3.0-rc.3
-  - @rocket.chat/core-services@0.9.0-rc.3
-  - @rocket.chat/model-typings@1.6.0-rc.3
-  - @rocket.chat/models@1.5.0-rc.3
-  - @rocket.chat/network-broker@0.2.0-rc.3
+  - @yas chat/core-typings@7.6.0-rc.3
+  - @yas chat/omnichannel-services@0.3.18-rc.3
+  - @yas chat/pdf-worker@0.3.0-rc.3
+  - @yas chat/core-services@0.9.0-rc.3
+  - @yas chat/model-typings@1.6.0-rc.3
+  - @yas chat/models@1.5.0-rc.3
+  - @yas chat/network-broker@0.2.0-rc.3
 
   </details>
 
@@ -1811,13 +1811,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.18-rc.2
-  - @rocket.chat/pdf-worker@0.3.0-rc.2
-  - @rocket.chat/core-services@0.9.0-rc.2
-  - @rocket.chat/model-typings@1.6.0-rc.2
-  - @rocket.chat/models@1.5.0-rc.2
-  - @rocket.chat/network-broker@0.2.0-rc.2
+  - @yas chat/core-typings@7.6.0-rc.2
+  - @yas chat/omnichannel-services@0.3.18-rc.2
+  - @yas chat/pdf-worker@0.3.0-rc.2
+  - @yas chat/core-services@0.9.0-rc.2
+  - @yas chat/model-typings@1.6.0-rc.2
+  - @yas chat/models@1.5.0-rc.2
+  - @yas chat/network-broker@0.2.0-rc.2
 
   </details>
 
@@ -1826,13 +1826,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.17-rc.1
-  - @rocket.chat/pdf-worker@0.3.0-rc.1
-  - @rocket.chat/core-services@0.9.0-rc.1
-  - @rocket.chat/model-typings@1.6.0-rc.1
-  - @rocket.chat/models@1.5.0-rc.1
-  - @rocket.chat/network-broker@0.2.0-rc.1
+  - @yas chat/core-typings@7.6.0-rc.1
+  - @yas chat/omnichannel-services@0.3.17-rc.1
+  - @yas chat/pdf-worker@0.3.0-rc.1
+  - @yas chat/core-services@0.9.0-rc.1
+  - @yas chat/model-typings@1.6.0-rc.1
+  - @yas chat/models@1.5.0-rc.1
+  - @yas chat/network-broker@0.2.0-rc.1
 
   </details>
 
@@ -1841,13 +1841,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, 3f1cddac558a1edc68c94d635698e1245c7172e2, 45a93a7713546ed2e3e0b3988e1f989371ebf53a, 5f11fea4ab1dc149f82b7d8c5fc556a2cf09fa5e, a8896a7ed96021f1c0d0b1eb44945ee3f69a080b, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, e868a6f6598b7eb2843ef79126d18abd1f604b4f, 2ee1a81de770a682f6e7a8590a896e76a32f4e3c, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4]:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.0
-  - @rocket.chat/models@1.5.0-rc.0
-  - @rocket.chat/model-typings@1.6.0-rc.0
-  - @rocket.chat/network-broker@0.2.0-rc.0
-  - @rocket.chat/pdf-worker@0.3.0-rc.0
-  - @rocket.chat/core-services@0.9.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.17-rc.0
+  - @yas chat/core-typings@7.6.0-rc.0
+  - @yas chat/models@1.5.0-rc.0
+  - @yas chat/model-typings@1.6.0-rc.0
+  - @yas chat/network-broker@0.2.0-rc.0
+  - @yas chat/pdf-worker@0.3.0-rc.0
+  - @yas chat/core-services@0.9.0-rc.0
+  - @yas chat/omnichannel-services@0.3.17-rc.0
 
   </details>
 
@@ -1856,13 +1856,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.1
-  - @rocket.chat/omnichannel-services@0.3.17
-  - @rocket.chat/pdf-worker@0.2.17
-  - @rocket.chat/core-services@0.8.1
-  - @rocket.chat/model-typings@1.5.1
-  - @rocket.chat/models@1.4.1
-  - @rocket.chat/network-broker@0.1.12
+  - @yas chat/core-typings@7.5.1
+  - @yas chat/omnichannel-services@0.3.17
+  - @yas chat/pdf-worker@0.2.17
+  - @yas chat/core-services@0.8.1
+  - @yas chat/model-typings@1.5.1
+  - @yas chat/models@1.4.1
+  - @yas chat/network-broker@0.1.12
 
   </details>
 
@@ -1871,13 +1871,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [3b5406172c5575f09e9f5a2cb3ff99122900afde, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, cc4111cf0b1458dd97369baf8969734f337650dc, 4129dbc934f240a9972aa92ab159ee34e518587a]:</summary>
-  - @rocket.chat/model-typings@1.5.0
-  - @rocket.chat/models@1.4.0
-  - @rocket.chat/core-typings@7.5.0
-  - @rocket.chat/core-services@0.8.0
-  - @rocket.chat/omnichannel-services@0.3.16
-  - @rocket.chat/pdf-worker@0.2.16
-  - @rocket.chat/network-broker@0.1.11
+  - @yas chat/model-typings@1.5.0
+  - @yas chat/models@1.4.0
+  - @yas chat/core-typings@7.5.0
+  - @yas chat/core-services@0.8.0
+  - @yas chat/omnichannel-services@0.3.16
+  - @yas chat/pdf-worker@0.2.16
+  - @yas chat/network-broker@0.1.11
 
   </details>
 
@@ -1886,13 +1886,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.16-rc.5
-  - @rocket.chat/pdf-worker@0.2.16-rc.5
-  - @rocket.chat/core-services@0.8.0-rc.5
-  - @rocket.chat/model-typings@1.5.0-rc.5
-  - @rocket.chat/models@1.4.0-rc.5
-  - @rocket.chat/network-broker@0.1.11-rc.5
+  - @yas chat/core-typings@7.5.0-rc.5
+  - @yas chat/omnichannel-services@0.3.16-rc.5
+  - @yas chat/pdf-worker@0.2.16-rc.5
+  - @yas chat/core-services@0.8.0-rc.5
+  - @yas chat/model-typings@1.5.0-rc.5
+  - @yas chat/models@1.4.0-rc.5
+  - @yas chat/network-broker@0.1.11-rc.5
 
   </details>
 
@@ -1901,13 +1901,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.8.0-rc.4
-  - @rocket.chat/core-typings@7.5.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.16-rc.4
-  - @rocket.chat/pdf-worker@0.2.16-rc.4
-  - @rocket.chat/model-typings@1.5.0-rc.4
-  - @rocket.chat/models@1.4.0-rc.4
-  - @rocket.chat/network-broker@0.1.11-rc.4
+  - @yas chat/core-services@0.8.0-rc.4
+  - @yas chat/core-typings@7.5.0-rc.4
+  - @yas chat/omnichannel-services@0.3.16-rc.4
+  - @yas chat/pdf-worker@0.2.16-rc.4
+  - @yas chat/model-typings@1.5.0-rc.4
+  - @yas chat/models@1.4.0-rc.4
+  - @yas chat/network-broker@0.1.11-rc.4
 
   </details>
 
@@ -1916,13 +1916,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.16-rc.3
-  - @rocket.chat/pdf-worker@0.2.16-rc.3
-  - @rocket.chat/core-services@0.8.0-rc.3
-  - @rocket.chat/model-typings@1.5.0-rc.3
-  - @rocket.chat/models@1.4.0-rc.3
-  - @rocket.chat/network-broker@0.1.11-rc.3
+  - @yas chat/core-typings@7.5.0-rc.3
+  - @yas chat/omnichannel-services@0.3.16-rc.3
+  - @yas chat/pdf-worker@0.2.16-rc.3
+  - @yas chat/core-services@0.8.0-rc.3
+  - @yas chat/model-typings@1.5.0-rc.3
+  - @yas chat/models@1.4.0-rc.3
+  - @yas chat/network-broker@0.1.11-rc.3
 
   </details>
 
@@ -1931,13 +1931,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [cc4111cf0b1458dd97369baf8969734f337650dc]:</summary>
-  - @rocket.chat/core-services@0.8.0-rc.2
-  - @rocket.chat/models@1.4.0-rc.2
-  - @rocket.chat/network-broker@0.1.11-rc.2
-  - @rocket.chat/omnichannel-services@0.3.16-rc.2
-  - @rocket.chat/core-typings@7.5.0-rc.2
-  - @rocket.chat/pdf-worker@0.2.16-rc.2
-  - @rocket.chat/model-typings@1.5.0-rc.2
+  - @yas chat/core-services@0.8.0-rc.2
+  - @yas chat/models@1.4.0-rc.2
+  - @yas chat/network-broker@0.1.11-rc.2
+  - @yas chat/omnichannel-services@0.3.16-rc.2
+  - @yas chat/core-typings@7.5.0-rc.2
+  - @yas chat/pdf-worker@0.2.16-rc.2
+  - @yas chat/model-typings@1.5.0-rc.2
 
   </details>
 
@@ -1946,13 +1946,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.16-rc.1
-  - @rocket.chat/pdf-worker@0.2.16-rc.1
-  - @rocket.chat/core-services@0.7.11-rc.1
-  - @rocket.chat/model-typings@1.5.0-rc.1
-  - @rocket.chat/models@1.4.0-rc.1
-  - @rocket.chat/network-broker@0.1.11-rc.1
+  - @yas chat/core-typings@7.5.0-rc.1
+  - @yas chat/omnichannel-services@0.3.16-rc.1
+  - @yas chat/pdf-worker@0.2.16-rc.1
+  - @yas chat/core-services@0.7.11-rc.1
+  - @yas chat/model-typings@1.5.0-rc.1
+  - @yas chat/models@1.4.0-rc.1
+  - @yas chat/network-broker@0.1.11-rc.1
 
   </details>
 
@@ -1961,13 +1961,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [3b5406172c5575f09e9f5a2cb3ff99122900afde, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 4129dbc934f240a9972aa92ab159ee34e518587a]:</summary>
-  - @rocket.chat/model-typings@1.5.0-rc.0
-  - @rocket.chat/models@1.4.0-rc.0
-  - @rocket.chat/core-typings@7.5.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.15-rc.0
-  - @rocket.chat/core-services@0.7.10-rc.0
-  - @rocket.chat/pdf-worker@0.2.15-rc.0
-  - @rocket.chat/network-broker@0.1.10-rc.0
+  - @yas chat/model-typings@1.5.0-rc.0
+  - @yas chat/models@1.4.0-rc.0
+  - @yas chat/core-typings@7.5.0-rc.0
+  - @yas chat/omnichannel-services@0.3.15-rc.0
+  - @yas chat/core-services@0.7.10-rc.0
+  - @yas chat/pdf-worker@0.2.15-rc.0
+  - @yas chat/network-broker@0.1.10-rc.0
 
   </details>
 
@@ -1976,13 +1976,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.1
-  - @rocket.chat/omnichannel-services@0.3.15
-  - @rocket.chat/pdf-worker@0.2.15
-  - @rocket.chat/core-services@0.7.10
-  - @rocket.chat/model-typings@1.4.1
-  - @rocket.chat/models@1.3.1
-  - @rocket.chat/network-broker@0.1.10
+  - @yas chat/core-typings@7.4.1
+  - @yas chat/omnichannel-services@0.3.15
+  - @yas chat/pdf-worker@0.2.15
+  - @yas chat/core-services@0.7.10
+  - @yas chat/model-typings@1.4.1
+  - @yas chat/models@1.3.1
+  - @yas chat/network-broker@0.1.10
 
   </details>
 
@@ -1995,13 +1995,13 @@
 - ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
-  - @rocket.chat/models@1.3.0
-  - @rocket.chat/model-typings@1.4.0
-  - @rocket.chat/network-broker@0.1.9
-  - @rocket.chat/core-typings@7.4.0
-  - @rocket.chat/omnichannel-services@0.3.14
-  - @rocket.chat/pdf-worker@0.2.14
-  - @rocket.chat/core-services@0.7.9
+  - @yas chat/models@1.3.0
+  - @yas chat/model-typings@1.4.0
+  - @yas chat/network-broker@0.1.9
+  - @yas chat/core-typings@7.4.0
+  - @yas chat/omnichannel-services@0.3.14
+  - @yas chat/pdf-worker@0.2.14
+  - @yas chat/core-services@0.7.9
 
   </details>
 
@@ -2010,13 +2010,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.14-rc.5
-  - @rocket.chat/pdf-worker@0.2.14-rc.5
-  - @rocket.chat/core-services@0.7.9-rc.5
-  - @rocket.chat/model-typings@1.4.0-rc.5
-  - @rocket.chat/models@1.3.0-rc.5
-  - @rocket.chat/network-broker@0.1.9-rc.5
+  - @yas chat/core-typings@7.4.0-rc.5
+  - @yas chat/omnichannel-services@0.3.14-rc.5
+  - @yas chat/pdf-worker@0.2.14-rc.5
+  - @yas chat/core-services@0.7.9-rc.5
+  - @yas chat/model-typings@1.4.0-rc.5
+  - @yas chat/models@1.3.0-rc.5
+  - @yas chat/network-broker@0.1.9-rc.5
 
   </details>
 
@@ -2025,13 +2025,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.14-rc.4
-  - @rocket.chat/pdf-worker@0.2.14-rc.4
-  - @rocket.chat/core-services@0.7.9-rc.4
-  - @rocket.chat/model-typings@1.4.0-rc.4
-  - @rocket.chat/models@1.3.0-rc.4
-  - @rocket.chat/network-broker@0.1.9-rc.4
+  - @yas chat/core-typings@7.4.0-rc.4
+  - @yas chat/omnichannel-services@0.3.14-rc.4
+  - @yas chat/pdf-worker@0.2.14-rc.4
+  - @yas chat/core-services@0.7.9-rc.4
+  - @yas chat/model-typings@1.4.0-rc.4
+  - @yas chat/models@1.3.0-rc.4
+  - @yas chat/network-broker@0.1.9-rc.4
 
   </details>
 
@@ -2040,13 +2040,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.13-rc.3
-  - @rocket.chat/pdf-worker@0.2.13-rc.3
-  - @rocket.chat/core-services@0.7.8-rc.3
-  - @rocket.chat/model-typings@1.4.0-rc.3
-  - @rocket.chat/models@1.3.0-rc.3
-  - @rocket.chat/network-broker@0.1.8-rc.3
+  - @yas chat/core-typings@7.4.0-rc.3
+  - @yas chat/omnichannel-services@0.3.13-rc.3
+  - @yas chat/pdf-worker@0.2.13-rc.3
+  - @yas chat/core-services@0.7.8-rc.3
+  - @yas chat/model-typings@1.4.0-rc.3
+  - @yas chat/models@1.3.0-rc.3
+  - @yas chat/network-broker@0.1.8-rc.3
 
   </details>
 
@@ -2055,13 +2055,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.13-rc.2
-  - @rocket.chat/pdf-worker@0.2.13-rc.2
-  - @rocket.chat/core-services@0.7.8-rc.2
-  - @rocket.chat/model-typings@1.4.0-rc.2
-  - @rocket.chat/models@1.3.0-rc.2
-  - @rocket.chat/network-broker@0.1.8-rc.2
+  - @yas chat/core-typings@7.4.0-rc.2
+  - @yas chat/omnichannel-services@0.3.13-rc.2
+  - @yas chat/pdf-worker@0.2.13-rc.2
+  - @yas chat/core-services@0.7.8-rc.2
+  - @yas chat/model-typings@1.4.0-rc.2
+  - @yas chat/models@1.3.0-rc.2
+  - @yas chat/network-broker@0.1.8-rc.2
 
   </details>
 
@@ -2070,13 +2070,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.13-rc.1
-  - @rocket.chat/pdf-worker@0.2.13-rc.1
-  - @rocket.chat/core-services@0.7.8-rc.1
-  - @rocket.chat/model-typings@1.4.0-rc.1
-  - @rocket.chat/models@1.3.0-rc.1
-  - @rocket.chat/network-broker@0.1.8-rc.1
+  - @yas chat/core-typings@7.4.0-rc.1
+  - @yas chat/omnichannel-services@0.3.13-rc.1
+  - @yas chat/pdf-worker@0.2.13-rc.1
+  - @yas chat/core-services@0.7.8-rc.1
+  - @yas chat/model-typings@1.4.0-rc.1
+  - @yas chat/models@1.3.0-rc.1
+  - @yas chat/network-broker@0.1.8-rc.1
 
   </details>
 
@@ -2089,13 +2089,13 @@
 - ([#35181](https://github.com/YasChat/YasChat/pull/35181)) Bump meteor to 3.1.2 and Node version to 20.13.1
 
 - <details><summary>Updated dependencies [eba8e364e4bef7ed71ebb527738515e8f7914ec7, d5175eeb5be81bab061e5ff8c6991c589bfeb0f4, 0df16c4ca50a6ad8613cfdc11a8ef6cb216fb6a4, 89964144e042c8d9282b51efd89e1e684077fdd7, f80ac66b006080313f4aa5a04706ff9c8790622b, dac213d8c955d1e5dd1c8b434e07070dedecba2d, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, be5031a21bdcda31270d53d319f7d183e77d84d7]:</summary>
-  - @rocket.chat/models@1.3.0-rc.0
-  - @rocket.chat/model-typings@1.4.0-rc.0
-  - @rocket.chat/network-broker@0.1.6-rc.0
-  - @rocket.chat/core-typings@7.4.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.11-rc.0
-  - @rocket.chat/pdf-worker@0.2.11-rc.0
-  - @rocket.chat/core-services@0.7.6-rc.0
+  - @yas chat/models@1.3.0-rc.0
+  - @yas chat/model-typings@1.4.0-rc.0
+  - @yas chat/network-broker@0.1.6-rc.0
+  - @yas chat/core-typings@7.4.0-rc.0
+  - @yas chat/omnichannel-services@0.3.11-rc.0
+  - @yas chat/pdf-worker@0.2.11-rc.0
+  - @yas chat/core-services@0.7.6-rc.0
 
   </details>
 
@@ -2104,13 +2104,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b2d71461a6a73157024e4594cc1228419a34673e]:</summary>
-  - @rocket.chat/omnichannel-services@0.3.13
-  - @rocket.chat/pdf-worker@0.2.13
-  - @rocket.chat/core-typings@7.3.3
-  - @rocket.chat/core-services@0.7.8
-  - @rocket.chat/model-typings@1.3.3
-  - @rocket.chat/models@1.2.3
-  - @rocket.chat/network-broker@0.1.8
+  - @yas chat/omnichannel-services@0.3.13
+  - @yas chat/pdf-worker@0.2.13
+  - @yas chat/core-typings@7.3.3
+  - @yas chat/core-services@0.7.8
+  - @yas chat/model-typings@1.3.3
+  - @yas chat/models@1.2.3
+  - @yas chat/network-broker@0.1.8
 
   </details>
 
@@ -2119,13 +2119,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.2
-  - @rocket.chat/omnichannel-services@0.3.12
-  - @rocket.chat/pdf-worker@0.2.12
-  - @rocket.chat/core-services@0.7.7
-  - @rocket.chat/model-typings@1.3.2
-  - @rocket.chat/models@1.2.2
-  - @rocket.chat/network-broker@0.1.7
+  - @yas chat/core-typings@7.3.2
+  - @yas chat/omnichannel-services@0.3.12
+  - @yas chat/pdf-worker@0.2.12
+  - @yas chat/core-services@0.7.7
+  - @yas chat/model-typings@1.3.2
+  - @yas chat/models@1.2.2
+  - @yas chat/network-broker@0.1.7
 
   </details>
 
@@ -2134,13 +2134,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b7905dfebe48d27d0d774fb23cc579ea9dfd01f4]:</summary>
-  - @rocket.chat/model-typings@1.3.1
-  - @rocket.chat/models@1.2.1
-  - @rocket.chat/omnichannel-services@0.3.11
-  - @rocket.chat/core-services@0.7.6
-  - @rocket.chat/network-broker@0.1.6
-  - @rocket.chat/core-typings@7.3.1
-  - @rocket.chat/pdf-worker@0.2.11
+  - @yas chat/model-typings@1.3.1
+  - @yas chat/models@1.2.1
+  - @yas chat/omnichannel-services@0.3.11
+  - @yas chat/core-services@0.7.6
+  - @yas chat/network-broker@0.1.6
+  - @yas chat/core-typings@7.3.1
+  - @yas chat/pdf-worker@0.2.11
 
   </details>
 
@@ -2151,13 +2151,13 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, 4aa95b61edaf6ce4fe0c5bdbc3d0157bf3d6794b, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72]:</summary>
-  - @rocket.chat/model-typings@1.3.0
-  - @rocket.chat/models@1.2.0
-  - @rocket.chat/core-typings@7.3.0
-  - @rocket.chat/omnichannel-services@0.3.10
-  - @rocket.chat/core-services@0.7.5
-  - @rocket.chat/pdf-worker@0.2.10
-  - @rocket.chat/network-broker@0.1.5
+  - @yas chat/model-typings@1.3.0
+  - @yas chat/models@1.2.0
+  - @yas chat/core-typings@7.3.0
+  - @yas chat/omnichannel-services@0.3.10
+  - @yas chat/core-services@0.7.5
+  - @yas chat/pdf-worker@0.2.10
+  - @yas chat/network-broker@0.1.5
 
   </details>
 
@@ -2166,13 +2166,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.10-rc.5
-  - @rocket.chat/pdf-worker@0.2.10-rc.5
-  - @rocket.chat/core-services@0.7.5-rc.5
-  - @rocket.chat/model-typings@1.3.0-rc.5
-  - @rocket.chat/models@1.2.0-rc.5
-  - @rocket.chat/network-broker@0.1.5-rc.5
+  - @yas chat/core-typings@7.3.0-rc.5
+  - @yas chat/omnichannel-services@0.3.10-rc.5
+  - @yas chat/pdf-worker@0.2.10-rc.5
+  - @yas chat/core-services@0.7.5-rc.5
+  - @yas chat/model-typings@1.3.0-rc.5
+  - @yas chat/models@1.2.0-rc.5
+  - @yas chat/network-broker@0.1.5-rc.5
 
   </details>
 
@@ -2181,13 +2181,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.10-rc.4
-  - @rocket.chat/pdf-worker@0.2.10-rc.4
-  - @rocket.chat/core-services@0.7.5-rc.4
-  - @rocket.chat/model-typings@1.3.0-rc.4
-  - @rocket.chat/models@1.2.0-rc.4
-  - @rocket.chat/network-broker@0.1.5-rc.4
+  - @yas chat/core-typings@7.3.0-rc.4
+  - @yas chat/omnichannel-services@0.3.10-rc.4
+  - @yas chat/pdf-worker@0.2.10-rc.4
+  - @yas chat/core-services@0.7.5-rc.4
+  - @yas chat/model-typings@1.3.0-rc.4
+  - @yas chat/models@1.2.0-rc.4
+  - @yas chat/network-broker@0.1.5-rc.4
 
   </details>
 
@@ -2196,13 +2196,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.10-rc.3
-  - @rocket.chat/pdf-worker@0.2.10-rc.3
-  - @rocket.chat/core-services@0.7.5-rc.3
-  - @rocket.chat/model-typings@1.3.0-rc.3
-  - @rocket.chat/models@1.2.0-rc.3
-  - @rocket.chat/network-broker@0.1.5-rc.3
+  - @yas chat/core-typings@7.3.0-rc.3
+  - @yas chat/omnichannel-services@0.3.10-rc.3
+  - @yas chat/pdf-worker@0.2.10-rc.3
+  - @yas chat/core-services@0.7.5-rc.3
+  - @yas chat/model-typings@1.3.0-rc.3
+  - @yas chat/models@1.2.0-rc.3
+  - @yas chat/network-broker@0.1.5-rc.3
 
   </details>
 
@@ -2211,13 +2211,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.10-rc.2
-  - @rocket.chat/pdf-worker@0.2.10-rc.2
-  - @rocket.chat/core-services@0.7.5-rc.2
-  - @rocket.chat/model-typings@1.3.0-rc.2
-  - @rocket.chat/models@1.2.0-rc.2
-  - @rocket.chat/network-broker@0.1.5-rc.2
+  - @yas chat/core-typings@7.3.0-rc.2
+  - @yas chat/omnichannel-services@0.3.10-rc.2
+  - @yas chat/pdf-worker@0.2.10-rc.2
+  - @yas chat/core-services@0.7.5-rc.2
+  - @yas chat/model-typings@1.3.0-rc.2
+  - @yas chat/models@1.2.0-rc.2
+  - @yas chat/network-broker@0.1.5-rc.2
 
   </details>
 
@@ -2226,13 +2226,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.10-rc.1
-  - @rocket.chat/pdf-worker@0.2.10-rc.1
-  - @rocket.chat/core-services@0.7.5-rc.1
-  - @rocket.chat/model-typings@1.3.0-rc.1
-  - @rocket.chat/models@1.2.0-rc.1
-  - @rocket.chat/network-broker@0.1.5-rc.1
+  - @yas chat/core-typings@7.3.0-rc.1
+  - @yas chat/omnichannel-services@0.3.10-rc.1
+  - @yas chat/pdf-worker@0.2.10-rc.1
+  - @yas chat/core-services@0.7.5-rc.1
+  - @yas chat/model-typings@1.3.0-rc.1
+  - @yas chat/models@1.2.0-rc.1
+  - @yas chat/network-broker@0.1.5-rc.1
 
   </details>
 
@@ -2243,13 +2243,13 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [79cba772bd8ae0a1e084687b47e05f312e85078a, 5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, 4aa95b61edaf6ce4fe0c5bdbc3d0157bf3d6794b, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, b4ce5797b7fc52e851aa4afc54c4617fc12cbf72]:</summary>
-  - @rocket.chat/model-typings@1.3.0-rc.0
-  - @rocket.chat/models@1.2.0-rc.0
-  - @rocket.chat/core-typings@7.3.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.10-rc.0
-  - @rocket.chat/core-services@0.7.5-rc.0
-  - @rocket.chat/pdf-worker@0.2.10-rc.0
-  - @rocket.chat/network-broker@0.1.5-rc.0
+  - @yas chat/model-typings@1.3.0-rc.0
+  - @yas chat/models@1.2.0-rc.0
+  - @yas chat/core-typings@7.3.0-rc.0
+  - @yas chat/omnichannel-services@0.3.10-rc.0
+  - @yas chat/core-services@0.7.5-rc.0
+  - @yas chat/pdf-worker@0.2.10-rc.0
+  - @yas chat/network-broker@0.1.5-rc.0
 
   </details>
 
@@ -2258,13 +2258,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [f9e531fce6c0a9e8b9e1836eecfea189f6626bea]:</summary>
-  - @rocket.chat/omnichannel-services@0.3.9
-  - @rocket.chat/core-typings@7.2.1
-  - @rocket.chat/pdf-worker@0.2.9
-  - @rocket.chat/core-services@0.7.4
-  - @rocket.chat/model-typings@1.2.1
-  - @rocket.chat/network-broker@0.1.4
-  - @rocket.chat/models@1.1.1
+  - @yas chat/omnichannel-services@0.3.9
+  - @yas chat/core-typings@7.2.1
+  - @yas chat/pdf-worker@0.2.9
+  - @yas chat/core-services@0.7.4
+  - @yas chat/model-typings@1.2.1
+  - @yas chat/network-broker@0.1.4
+  - @yas chat/models@1.1.1
 
   </details>
 
@@ -2275,13 +2275,13 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, c43220dcd8c1df86a6143d6553964ad2173903b3, 47f24c2fb795eee33cb021d56508298b8a548eec, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
-  - @rocket.chat/model-typings@1.2.0
-  - @rocket.chat/core-typings@7.2.0
-  - @rocket.chat/models@1.1.0
-  - @rocket.chat/omnichannel-services@0.3.8
-  - @rocket.chat/core-services@0.7.3
-  - @rocket.chat/pdf-worker@0.2.8
-  - @rocket.chat/network-broker@0.1.3
+  - @yas chat/model-typings@1.2.0
+  - @yas chat/core-typings@7.2.0
+  - @yas chat/models@1.1.0
+  - @yas chat/omnichannel-services@0.3.8
+  - @yas chat/core-services@0.7.3
+  - @yas chat/pdf-worker@0.2.8
+  - @yas chat/network-broker@0.1.3
 
   </details>
 
@@ -2290,13 +2290,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.8-rc.3
-  - @rocket.chat/pdf-worker@0.2.8-rc.3
-  - @rocket.chat/core-services@0.7.3-rc.3
-  - @rocket.chat/model-typings@1.2.0-rc.3
-  - @rocket.chat/network-broker@0.1.3-rc.3
-  - @rocket.chat/models@1.1.0-rc.3
+  - @yas chat/core-typings@7.2.0-rc.3
+  - @yas chat/omnichannel-services@0.3.8-rc.3
+  - @yas chat/pdf-worker@0.2.8-rc.3
+  - @yas chat/core-services@0.7.3-rc.3
+  - @yas chat/model-typings@1.2.0-rc.3
+  - @yas chat/network-broker@0.1.3-rc.3
+  - @yas chat/models@1.1.0-rc.3
 
   </details>
 
@@ -2307,13 +2307,13 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
-  - @rocket.chat/models@1.1.0-rc.2
-  - @rocket.chat/core-services@0.7.3-rc.2
-  - @rocket.chat/core-typings@7.2.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.8-rc.2
-  - @rocket.chat/network-broker@0.1.3-rc.2
-  - @rocket.chat/pdf-worker@0.2.8-rc.2
-  - @rocket.chat/model-typings@1.2.0-rc.2
+  - @yas chat/models@1.1.0-rc.2
+  - @yas chat/core-services@0.7.3-rc.2
+  - @yas chat/core-typings@7.2.0-rc.2
+  - @yas chat/omnichannel-services@0.3.8-rc.2
+  - @yas chat/network-broker@0.1.3-rc.2
+  - @yas chat/pdf-worker@0.2.8-rc.2
+  - @yas chat/model-typings@1.2.0-rc.2
 
   </details>
 
@@ -2322,13 +2322,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.8-rc.1
-  - @rocket.chat/pdf-worker@0.2.8-rc.1
-  - @rocket.chat/core-services@0.7.3-rc.1
-  - @rocket.chat/model-typings@1.2.0-rc.1
-  - @rocket.chat/network-broker@0.1.3-rc.1
-  - @rocket.chat/models@1.1.0-rc.1
+  - @yas chat/core-typings@7.2.0-rc.1
+  - @yas chat/omnichannel-services@0.3.8-rc.1
+  - @yas chat/pdf-worker@0.2.8-rc.1
+  - @yas chat/core-services@0.7.3-rc.1
+  - @yas chat/model-typings@1.2.0-rc.1
+  - @yas chat/network-broker@0.1.3-rc.1
+  - @yas chat/models@1.1.0-rc.1
 
   </details>
 
@@ -2337,13 +2337,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, f11efb4011db4efcdbf978d4b76671028daeed6e, 47f24c2fb795eee33cb021d56508298b8a548eec, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8]:</summary>
-  - @rocket.chat/model-typings@1.2.0-rc.0
-  - @rocket.chat/core-typings@7.2.0-rc.0
-  - @rocket.chat/models@1.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.8-rc.0
-  - @rocket.chat/core-services@0.7.3-rc.0
-  - @rocket.chat/pdf-worker@0.2.8-rc.0
-  - @rocket.chat/network-broker@0.1.3-rc.0
+  - @yas chat/model-typings@1.2.0-rc.0
+  - @yas chat/core-typings@7.2.0-rc.0
+  - @yas chat/models@1.1.0-rc.0
+  - @yas chat/omnichannel-services@0.3.8-rc.0
+  - @yas chat/core-services@0.7.3-rc.0
+  - @yas chat/pdf-worker@0.2.8-rc.0
+  - @yas chat/network-broker@0.1.3-rc.0
 
   </details>
 
@@ -2354,13 +2354,13 @@
 - ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
-  - @rocket.chat/model-typings@1.1.0
-  - @rocket.chat/core-typings@7.1.0
-  - @rocket.chat/core-services@0.7.2
-  - @rocket.chat/omnichannel-services@0.3.7
-  - @rocket.chat/models@1.0.1
-  - @rocket.chat/pdf-worker@0.2.7
-  - @rocket.chat/network-broker@0.1.2
+  - @yas chat/model-typings@1.1.0
+  - @yas chat/core-typings@7.1.0
+  - @yas chat/core-services@0.7.2
+  - @yas chat/omnichannel-services@0.3.7
+  - @yas chat/models@1.0.1
+  - @yas chat/pdf-worker@0.2.7
+  - @yas chat/network-broker@0.1.2
 
   </details>
 
@@ -2369,13 +2369,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.7-rc.3
-  - @rocket.chat/pdf-worker@0.2.7-rc.3
-  - @rocket.chat/core-services@0.7.2-rc.3
-  - @rocket.chat/model-typings@1.1.0-rc.3
-  - @rocket.chat/network-broker@0.1.2-rc.3
-  - @rocket.chat/models@1.0.1-rc.3
+  - @yas chat/core-typings@7.1.0-rc.3
+  - @yas chat/omnichannel-services@0.3.7-rc.3
+  - @yas chat/pdf-worker@0.2.7-rc.3
+  - @yas chat/core-services@0.7.2-rc.3
+  - @yas chat/model-typings@1.1.0-rc.3
+  - @yas chat/network-broker@0.1.2-rc.3
+  - @yas chat/models@1.0.1-rc.3
 
   </details>
 
@@ -2384,13 +2384,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.7-rc.2
-  - @rocket.chat/pdf-worker@0.2.7-rc.2
-  - @rocket.chat/core-services@0.7.2-rc.2
-  - @rocket.chat/model-typings@1.1.0-rc.2
-  - @rocket.chat/network-broker@0.1.2-rc.2
-  - @rocket.chat/models@1.0.1-rc.2
+  - @yas chat/core-typings@7.1.0-rc.2
+  - @yas chat/omnichannel-services@0.3.7-rc.2
+  - @yas chat/pdf-worker@0.2.7-rc.2
+  - @yas chat/core-services@0.7.2-rc.2
+  - @yas chat/model-typings@1.1.0-rc.2
+  - @yas chat/network-broker@0.1.2-rc.2
+  - @yas chat/models@1.0.1-rc.2
 
   </details>
 
@@ -2399,13 +2399,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.7-rc.1
-  - @rocket.chat/pdf-worker@0.2.7-rc.1
-  - @rocket.chat/core-services@0.7.2-rc.1
-  - @rocket.chat/model-typings@1.1.0-rc.1
-  - @rocket.chat/network-broker@0.1.2-rc.1
-  - @rocket.chat/models@1.0.1-rc.1
+  - @yas chat/core-typings@7.1.0-rc.1
+  - @yas chat/omnichannel-services@0.3.7-rc.1
+  - @yas chat/pdf-worker@0.2.7-rc.1
+  - @yas chat/core-services@0.7.2-rc.1
+  - @yas chat/model-typings@1.1.0-rc.1
+  - @yas chat/network-broker@0.1.2-rc.1
+  - @yas chat/models@1.0.1-rc.1
 
   </details>
 
@@ -2416,13 +2416,13 @@
 - ([#33596](https://github.com/YasChat/YasChat/pull/33596)) Bump meteor to 3.0.4 and Node version to 20.18.0
 
 - <details><summary>Updated dependencies [80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, 63ccadc012499e004445ad6bc6cd2ff777aecbd1]:</summary>
-  - @rocket.chat/model-typings@1.1.0-rc.0
-  - @rocket.chat/core-typings@7.1.0-rc.0
-  - @rocket.chat/core-services@0.7.2-rc.0
-  - @rocket.chat/omnichannel-services@0.3.7-rc.0
-  - @rocket.chat/models@1.0.1-rc.0
-  - @rocket.chat/pdf-worker@0.2.7-rc.0
-  - @rocket.chat/network-broker@0.1.2-rc.0
+  - @yas chat/model-typings@1.1.0-rc.0
+  - @yas chat/core-typings@7.1.0-rc.0
+  - @yas chat/core-services@0.7.2-rc.0
+  - @yas chat/omnichannel-services@0.3.7-rc.0
+  - @yas chat/models@1.0.1-rc.0
+  - @yas chat/pdf-worker@0.2.7-rc.0
+  - @yas chat/network-broker@0.1.2-rc.0
 
   </details>
 
@@ -2431,13 +2431,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [bcacbb1cee, d9fe5bbe0b, b338807d76, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/core-services@0.7.1
-  - @rocket.chat/model-typings@1.0.0
-  - @rocket.chat/core-typings@7.0.0
-  - @rocket.chat/models@1.0.0
-  - @rocket.chat/omnichannel-services@0.3.6
-  - @rocket.chat/network-broker@0.1.1
-  - @rocket.chat/pdf-worker@0.2.6
+  - @yas chat/core-services@0.7.1
+  - @yas chat/model-typings@1.0.0
+  - @yas chat/core-typings@7.0.0
+  - @yas chat/models@1.0.0
+  - @yas chat/omnichannel-services@0.3.6
+  - @yas chat/network-broker@0.1.1
+  - @yas chat/pdf-worker@0.2.6
 
   </details>
 
@@ -2446,13 +2446,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.6-rc.6
-  - @rocket.chat/pdf-worker@0.2.6-rc.6
-  - @rocket.chat/core-services@0.7.1-rc.6
-  - @rocket.chat/model-typings@1.0.0-rc.6
-  - @rocket.chat/network-broker@0.1.1-rc.6
-  - @rocket.chat/models@1.0.0-rc.6
+  - @yas chat/core-typings@7.0.0-rc.6
+  - @yas chat/omnichannel-services@0.3.6-rc.6
+  - @yas chat/pdf-worker@0.2.6-rc.6
+  - @yas chat/core-services@0.7.1-rc.6
+  - @yas chat/model-typings@1.0.0-rc.6
+  - @yas chat/network-broker@0.1.1-rc.6
+  - @yas chat/models@1.0.0-rc.6
 
   </details>
 
@@ -2461,13 +2461,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/omnichannel-services@0.3.6-rc.5
-  - @rocket.chat/core-services@0.7.1-rc.5
-  - @rocket.chat/network-broker@0.1.1-rc.5
-  - @rocket.chat/core-typings@7.0.0-rc.5
-  - @rocket.chat/pdf-worker@0.2.6-rc.5
-  - @rocket.chat/model-typings@1.0.0-rc.5
-  - @rocket.chat/models@1.0.0-rc.5
+  - @yas chat/omnichannel-services@0.3.6-rc.5
+  - @yas chat/core-services@0.7.1-rc.5
+  - @yas chat/network-broker@0.1.1-rc.5
+  - @yas chat/core-typings@7.0.0-rc.5
+  - @yas chat/pdf-worker@0.2.6-rc.5
+  - @yas chat/model-typings@1.0.0-rc.5
+  - @yas chat/models@1.0.0-rc.5
 
   </details>
 
@@ -2476,13 +2476,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.6-rc.4
-  - @rocket.chat/pdf-worker@0.2.6-rc.4
-  - @rocket.chat/core-services@0.7.1-rc.4
-  - @rocket.chat/model-typings@1.0.0-rc.4
-  - @rocket.chat/network-broker@0.1.1-rc.4
-  - @rocket.chat/models@1.0.0-rc.4
+  - @yas chat/core-typings@7.0.0-rc.4
+  - @yas chat/omnichannel-services@0.3.6-rc.4
+  - @yas chat/pdf-worker@0.2.6-rc.4
+  - @yas chat/core-services@0.7.1-rc.4
+  - @yas chat/model-typings@1.0.0-rc.4
+  - @yas chat/network-broker@0.1.1-rc.4
+  - @yas chat/models@1.0.0-rc.4
 
   </details>
 
@@ -2491,13 +2491,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.6-rc.3
-  - @rocket.chat/pdf-worker@0.2.6-rc.3
-  - @rocket.chat/core-services@0.7.1-rc.3
-  - @rocket.chat/model-typings@1.0.0-rc.3
-  - @rocket.chat/network-broker@0.1.1-rc.3
-  - @rocket.chat/models@1.0.0-rc.3
+  - @yas chat/core-typings@7.0.0-rc.3
+  - @yas chat/omnichannel-services@0.3.6-rc.3
+  - @yas chat/pdf-worker@0.2.6-rc.3
+  - @yas chat/core-services@0.7.1-rc.3
+  - @yas chat/model-typings@1.0.0-rc.3
+  - @yas chat/network-broker@0.1.1-rc.3
+  - @yas chat/models@1.0.0-rc.3
 
   </details>
 
@@ -2506,13 +2506,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.6-rc.2
-  - @rocket.chat/pdf-worker@0.2.6-rc.2
-  - @rocket.chat/core-services@0.7.1-rc.2
-  - @rocket.chat/model-typings@1.0.0-rc.2
-  - @rocket.chat/network-broker@0.1.1-rc.2
-  - @rocket.chat/models@1.0.0-rc.2
+  - @yas chat/core-typings@7.0.0-rc.2
+  - @yas chat/omnichannel-services@0.3.6-rc.2
+  - @yas chat/pdf-worker@0.2.6-rc.2
+  - @yas chat/core-services@0.7.1-rc.2
+  - @yas chat/model-typings@1.0.0-rc.2
+  - @yas chat/network-broker@0.1.1-rc.2
+  - @yas chat/models@1.0.0-rc.2
 
   </details>
 
@@ -2521,13 +2521,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.6-rc.1
-  - @rocket.chat/pdf-worker@0.2.6-rc.1
-  - @rocket.chat/core-services@0.7.1-rc.1
-  - @rocket.chat/model-typings@1.0.0-rc.1
-  - @rocket.chat/network-broker@0.1.1-rc.1
-  - @rocket.chat/models@1.0.0-rc.1
+  - @yas chat/core-typings@7.0.0-rc.1
+  - @yas chat/omnichannel-services@0.3.6-rc.1
+  - @yas chat/pdf-worker@0.2.6-rc.1
+  - @yas chat/core-services@0.7.1-rc.1
+  - @yas chat/model-typings@1.0.0-rc.1
+  - @yas chat/network-broker@0.1.1-rc.1
+  - @yas chat/models@1.0.0-rc.1
 
   </details>
 
@@ -2536,13 +2536,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7726d68374, bcacbb1cee, d9fe5bbe0b, b338807d76, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.0
-  - @rocket.chat/model-typings@1.0.0-rc.0
-  - @rocket.chat/core-services@0.7.1-rc.0
-  - @rocket.chat/models@1.0.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.6-rc.0
-  - @rocket.chat/pdf-worker@0.2.6-rc.0
-  - @rocket.chat/network-broker@0.1.1-rc.0
+  - @yas chat/core-typings@7.0.0-rc.0
+  - @yas chat/model-typings@1.0.0-rc.0
+  - @yas chat/core-services@0.7.1-rc.0
+  - @yas chat/models@1.0.0-rc.0
+  - @yas chat/omnichannel-services@0.3.6-rc.0
+  - @yas chat/pdf-worker@0.2.6-rc.0
+  - @yas chat/network-broker@0.1.1-rc.0
 
   </details>
 
@@ -2551,12 +2551,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [9a38c8e13f, 274f4f5881, 532f08819e, 927710d778, 3a161c4310, 12d6307998]:</summary>
-  - @rocket.chat/model-typings@0.8.0
-  - @rocket.chat/core-typings@6.13.0
-  - @rocket.chat/core-services@0.7.0
-  - @rocket.chat/models@0.3.0
-  - @rocket.chat/omnichannel-services@0.3.5
-  - @rocket.chat/pdf-worker@0.2.5
+  - @yas chat/model-typings@0.8.0
+  - @yas chat/core-typings@6.13.0
+  - @yas chat/core-services@0.7.0
+  - @yas chat/models@0.3.0
+  - @yas chat/omnichannel-services@0.3.5
+  - @yas chat/pdf-worker@0.2.5
 
   </details>
 
@@ -2565,12 +2565,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.5-rc.6
-  - @rocket.chat/pdf-worker@0.2.5-rc.6
-  - @rocket.chat/core-services@0.7.0-rc.6
-  - @rocket.chat/model-typings@0.8.0-rc.6
-  - @rocket.chat/models@0.3.0-rc.6
+  - @yas chat/core-typings@6.13.0-rc.6
+  - @yas chat/omnichannel-services@0.3.5-rc.6
+  - @yas chat/pdf-worker@0.2.5-rc.6
+  - @yas chat/core-services@0.7.0-rc.6
+  - @yas chat/model-typings@0.8.0-rc.6
+  - @yas chat/models@0.3.0-rc.6
 
   </details>
 
@@ -2579,12 +2579,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.5-rc.5
-  - @rocket.chat/pdf-worker@0.2.5-rc.5
-  - @rocket.chat/core-services@0.7.0-rc.5
-  - @rocket.chat/model-typings@0.8.0-rc.5
-  - @rocket.chat/models@0.3.0-rc.5
+  - @yas chat/core-typings@6.13.0-rc.5
+  - @yas chat/omnichannel-services@0.3.5-rc.5
+  - @yas chat/pdf-worker@0.2.5-rc.5
+  - @yas chat/core-services@0.7.0-rc.5
+  - @yas chat/model-typings@0.8.0-rc.5
+  - @yas chat/models@0.3.0-rc.5
 
   </details>
 
@@ -2593,12 +2593,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.5-rc.4
-  - @rocket.chat/pdf-worker@0.2.5-rc.4
-  - @rocket.chat/core-services@0.7.0-rc.4
-  - @rocket.chat/model-typings@0.8.0-rc.4
-  - @rocket.chat/models@0.3.0-rc.4
+  - @yas chat/core-typings@6.13.0-rc.4
+  - @yas chat/omnichannel-services@0.3.5-rc.4
+  - @yas chat/pdf-worker@0.2.5-rc.4
+  - @yas chat/core-services@0.7.0-rc.4
+  - @yas chat/model-typings@0.8.0-rc.4
+  - @yas chat/models@0.3.0-rc.4
 
   </details>
 
@@ -2607,12 +2607,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.5-rc.3
-  - @rocket.chat/pdf-worker@0.2.5-rc.3
-  - @rocket.chat/core-services@0.7.0-rc.3
-  - @rocket.chat/model-typings@0.8.0-rc.3
-  - @rocket.chat/models@0.3.0-rc.3
+  - @yas chat/core-typings@6.13.0-rc.3
+  - @yas chat/omnichannel-services@0.3.5-rc.3
+  - @yas chat/pdf-worker@0.2.5-rc.3
+  - @yas chat/core-services@0.7.0-rc.3
+  - @yas chat/model-typings@0.8.0-rc.3
+  - @yas chat/models@0.3.0-rc.3
 
   </details>
 
@@ -2621,12 +2621,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.5-rc.2
-  - @rocket.chat/pdf-worker@0.2.5-rc.2
-  - @rocket.chat/core-services@0.7.0-rc.2
-  - @rocket.chat/model-typings@0.8.0-rc.2
-  - @rocket.chat/models@0.3.0-rc.2
+  - @yas chat/core-typings@6.13.0-rc.2
+  - @yas chat/omnichannel-services@0.3.5-rc.2
+  - @yas chat/pdf-worker@0.2.5-rc.2
+  - @yas chat/core-services@0.7.0-rc.2
+  - @yas chat/model-typings@0.8.0-rc.2
+  - @yas chat/models@0.3.0-rc.2
 
   </details>
 
@@ -2635,12 +2635,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.5-rc.1
-  - @rocket.chat/pdf-worker@0.2.5-rc.1
-  - @rocket.chat/core-services@0.7.0-rc.1
-  - @rocket.chat/model-typings@0.8.0-rc.1
-  - @rocket.chat/models@0.3.0-rc.1
+  - @yas chat/core-typings@6.13.0-rc.1
+  - @yas chat/omnichannel-services@0.3.5-rc.1
+  - @yas chat/pdf-worker@0.2.5-rc.1
+  - @yas chat/core-services@0.7.0-rc.1
+  - @yas chat/model-typings@0.8.0-rc.1
+  - @yas chat/models@0.3.0-rc.1
 
   </details>
 
@@ -2649,12 +2649,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [9a38c8e13f, 274f4f5881, 532f08819e, 927710d778, 3a161c4310, 12d6307998]:</summary>
-  - @rocket.chat/model-typings@0.8.0-rc.0
-  - @rocket.chat/core-typings@6.13.0-rc.0
-  - @rocket.chat/core-services@0.7.0-rc.0
-  - @rocket.chat/models@0.3.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.4-rc.0
-  - @rocket.chat/pdf-worker@0.2.4-rc.0
+  - @yas chat/model-typings@0.8.0-rc.0
+  - @yas chat/core-typings@6.13.0-rc.0
+  - @yas chat/core-services@0.7.0-rc.0
+  - @yas chat/models@0.3.0-rc.0
+  - @yas chat/omnichannel-services@0.3.4-rc.0
+  - @yas chat/pdf-worker@0.2.4-rc.0
 
   </details>
 
@@ -2663,12 +2663,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-services@0.6.1
-  - @rocket.chat/core-typings@6.12.1
-  - @rocket.chat/omnichannel-services@0.3.4
-  - @rocket.chat/pdf-worker@0.2.4
-  - @rocket.chat/model-typings@0.7.1
-  - @rocket.chat/models@0.2.4
+  - @yas chat/core-services@0.6.1
+  - @yas chat/core-typings@6.12.1
+  - @yas chat/omnichannel-services@0.3.4
+  - @yas chat/pdf-worker@0.2.4
+  - @yas chat/model-typings@0.7.1
+  - @yas chat/models@0.2.4
 
   </details>
 
@@ -2677,12 +2677,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7f88158036, 7937ff741a, a14c0678bb, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/model-typings@0.7.0
-  - @rocket.chat/core-typings@6.12.0
-  - @rocket.chat/core-services@0.6.0
-  - @rocket.chat/omnichannel-services@0.3.3
-  - @rocket.chat/models@0.2.3
-  - @rocket.chat/pdf-worker@0.2.3
+  - @yas chat/model-typings@0.7.0
+  - @yas chat/core-typings@6.12.0
+  - @yas chat/core-services@0.6.0
+  - @yas chat/omnichannel-services@0.3.3
+  - @yas chat/models@0.2.3
+  - @yas chat/pdf-worker@0.2.3
 
   </details>
 
@@ -2691,12 +2691,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.3-rc.6
-  - @rocket.chat/pdf-worker@0.2.3-rc.6
-  - @rocket.chat/core-services@0.6.0-rc.6
-  - @rocket.chat/model-typings@0.7.0-rc.6
-  - @rocket.chat/models@0.2.3-rc.6
+  - @yas chat/core-typings@6.12.0-rc.6
+  - @yas chat/omnichannel-services@0.3.3-rc.6
+  - @yas chat/pdf-worker@0.2.3-rc.6
+  - @yas chat/core-services@0.6.0-rc.6
+  - @yas chat/model-typings@0.7.0-rc.6
+  - @yas chat/models@0.2.3-rc.6
 
   </details>
 
@@ -2705,12 +2705,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.3-rc.5
-  - @rocket.chat/pdf-worker@0.2.3-rc.5
-  - @rocket.chat/core-services@0.6.0-rc.5
-  - @rocket.chat/model-typings@0.7.0-rc.5
-  - @rocket.chat/models@0.2.3-rc.5
+  - @yas chat/core-typings@6.12.0-rc.5
+  - @yas chat/omnichannel-services@0.3.3-rc.5
+  - @yas chat/pdf-worker@0.2.3-rc.5
+  - @yas chat/core-services@0.6.0-rc.5
+  - @yas chat/model-typings@0.7.0-rc.5
+  - @yas chat/models@0.2.3-rc.5
 
   </details>
 
@@ -2719,12 +2719,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.3-rc.4
-  - @rocket.chat/pdf-worker@0.2.3-rc.4
-  - @rocket.chat/core-services@0.6.0-rc.4
-  - @rocket.chat/model-typings@0.7.0-rc.4
-  - @rocket.chat/models@0.2.3-rc.4
+  - @yas chat/core-typings@6.12.0-rc.4
+  - @yas chat/omnichannel-services@0.3.3-rc.4
+  - @yas chat/pdf-worker@0.2.3-rc.4
+  - @yas chat/core-services@0.6.0-rc.4
+  - @yas chat/model-typings@0.7.0-rc.4
+  - @yas chat/models@0.2.3-rc.4
 
   </details>
 
@@ -2733,12 +2733,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.2-rc.3
-  - @rocket.chat/pdf-worker@0.2.2-rc.3
-  - @rocket.chat/core-services@0.6.0-rc.3
-  - @rocket.chat/model-typings@0.7.0-rc.3
-  - @rocket.chat/models@0.2.2-rc.3
+  - @yas chat/core-typings@6.12.0-rc.3
+  - @yas chat/omnichannel-services@0.3.2-rc.3
+  - @yas chat/pdf-worker@0.2.2-rc.3
+  - @yas chat/core-services@0.6.0-rc.3
+  - @yas chat/model-typings@0.7.0-rc.3
+  - @yas chat/models@0.2.2-rc.3
 
   </details>
 
@@ -2747,12 +2747,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.2-rc.2
-  - @rocket.chat/pdf-worker@0.2.2-rc.2
-  - @rocket.chat/core-services@0.6.0-rc.2
-  - @rocket.chat/model-typings@0.7.0-rc.2
-  - @rocket.chat/models@0.2.2-rc.2
+  - @yas chat/core-typings@6.12.0-rc.2
+  - @yas chat/omnichannel-services@0.3.2-rc.2
+  - @yas chat/pdf-worker@0.2.2-rc.2
+  - @yas chat/core-services@0.6.0-rc.2
+  - @yas chat/model-typings@0.7.0-rc.2
+  - @yas chat/models@0.2.2-rc.2
 
   </details>
 
@@ -2761,12 +2761,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.2-rc.1
-  - @rocket.chat/pdf-worker@0.2.2-rc.1
-  - @rocket.chat/core-services@0.6.0-rc.1
-  - @rocket.chat/model-typings@0.7.0-rc.1
-  - @rocket.chat/models@0.2.2-rc.1
+  - @yas chat/core-typings@6.12.0-rc.1
+  - @yas chat/omnichannel-services@0.3.2-rc.1
+  - @yas chat/pdf-worker@0.2.2-rc.1
+  - @yas chat/core-services@0.6.0-rc.1
+  - @yas chat/model-typings@0.7.0-rc.1
+  - @yas chat/models@0.2.2-rc.1
 
   </details>
 
@@ -2775,12 +2775,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7f88158036, 7937ff741a, a14c0678bb, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/model-typings@0.7.0-rc.0
-  - @rocket.chat/core-typings@6.12.0-rc.0
-  - @rocket.chat/core-services@0.6.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.1-rc.0
-  - @rocket.chat/models@0.2.1-rc.0
-  - @rocket.chat/pdf-worker@0.2.1-rc.0
+  - @yas chat/model-typings@0.7.0-rc.0
+  - @yas chat/core-typings@6.12.0-rc.0
+  - @yas chat/core-services@0.6.0-rc.0
+  - @yas chat/omnichannel-services@0.3.1-rc.0
+  - @yas chat/models@0.2.1-rc.0
+  - @yas chat/pdf-worker@0.2.1-rc.0
 
   </details>
 
@@ -2789,12 +2789,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.2
-  - @rocket.chat/omnichannel-services@0.3.2
-  - @rocket.chat/pdf-worker@0.2.2
-  - @rocket.chat/core-services@0.5.2
-  - @rocket.chat/model-typings@0.6.2
-  - @rocket.chat/models@0.2.2
+  - @yas chat/core-typings@6.11.2
+  - @yas chat/omnichannel-services@0.3.2
+  - @yas chat/pdf-worker@0.2.2
+  - @yas chat/core-services@0.5.2
+  - @yas chat/model-typings@0.6.2
+  - @yas chat/models@0.2.2
 
   </details>
 
@@ -2803,12 +2803,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.1
-  - @rocket.chat/omnichannel-services@0.3.1
-  - @rocket.chat/pdf-worker@0.2.1
-  - @rocket.chat/core-services@0.5.1
-  - @rocket.chat/model-typings@0.6.1
-  - @rocket.chat/models@0.2.1
+  - @yas chat/core-typings@6.11.1
+  - @yas chat/omnichannel-services@0.3.1
+  - @yas chat/pdf-worker@0.2.1
+  - @yas chat/core-services@0.5.1
+  - @yas chat/model-typings@0.6.1
+  - @yas chat/models@0.2.1
 
   </details>
 
@@ -2817,13 +2817,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
-  - @rocket.chat/tools@0.2.2
-  - @rocket.chat/model-typings@0.6.0
-  - @rocket.chat/omnichannel-services@0.3.0
-  - @rocket.chat/pdf-worker@0.2.0
-  - @rocket.chat/core-services@0.5.0
-  - @rocket.chat/core-typings@6.11.0
-  - @rocket.chat/models@0.2.0
+  - @yas chat/tools@0.2.2
+  - @yas chat/model-typings@0.6.0
+  - @yas chat/omnichannel-services@0.3.0
+  - @yas chat/pdf-worker@0.2.0
+  - @yas chat/core-services@0.5.0
+  - @yas chat/core-typings@6.11.0
+  - @yas chat/models@0.2.0
 
   </details>
 
@@ -2832,12 +2832,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.6
-  - @rocket.chat/omnichannel-services@0.3.0-rc.6
-  - @rocket.chat/pdf-worker@0.2.0-rc.6
-  - @rocket.chat/core-services@0.5.0-rc.6
-  - @rocket.chat/model-typings@0.6.0-rc.6
-  - @rocket.chat/models@0.2.0-rc.6
+  - @yas chat/core-typings@6.11.0-rc.6
+  - @yas chat/omnichannel-services@0.3.0-rc.6
+  - @yas chat/pdf-worker@0.2.0-rc.6
+  - @yas chat/core-services@0.5.0-rc.6
+  - @yas chat/model-typings@0.6.0-rc.6
+  - @yas chat/models@0.2.0-rc.6
 
   </details>
 
@@ -2846,12 +2846,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.5
-  - @rocket.chat/omnichannel-services@0.3.0-rc.5
-  - @rocket.chat/pdf-worker@0.2.0-rc.5
-  - @rocket.chat/core-services@0.5.0-rc.5
-  - @rocket.chat/model-typings@0.6.0-rc.5
-  - @rocket.chat/models@0.2.0-rc.5
+  - @yas chat/core-typings@6.11.0-rc.5
+  - @yas chat/omnichannel-services@0.3.0-rc.5
+  - @yas chat/pdf-worker@0.2.0-rc.5
+  - @yas chat/core-services@0.5.0-rc.5
+  - @yas chat/model-typings@0.6.0-rc.5
+  - @yas chat/models@0.2.0-rc.5
 
   </details>
 
@@ -2860,12 +2860,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.4
-  - @rocket.chat/omnichannel-services@0.3.0-rc.4
-  - @rocket.chat/pdf-worker@0.2.0-rc.4
-  - @rocket.chat/core-services@0.5.0-rc.4
-  - @rocket.chat/model-typings@0.6.0-rc.4
-  - @rocket.chat/models@0.2.0-rc.4
+  - @yas chat/core-typings@6.11.0-rc.4
+  - @yas chat/omnichannel-services@0.3.0-rc.4
+  - @yas chat/pdf-worker@0.2.0-rc.4
+  - @yas chat/core-services@0.5.0-rc.4
+  - @yas chat/model-typings@0.6.0-rc.4
+  - @yas chat/models@0.2.0-rc.4
 
   </details>
 
@@ -2874,12 +2874,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.3
-  - @rocket.chat/omnichannel-services@0.3.0-rc.3
-  - @rocket.chat/pdf-worker@0.2.0-rc.3
-  - @rocket.chat/core-services@0.5.0-rc.3
-  - @rocket.chat/model-typings@0.6.0-rc.3
-  - @rocket.chat/models@0.2.0-rc.3
+  - @yas chat/core-typings@6.11.0-rc.3
+  - @yas chat/omnichannel-services@0.3.0-rc.3
+  - @yas chat/pdf-worker@0.2.0-rc.3
+  - @yas chat/core-services@0.5.0-rc.3
+  - @yas chat/model-typings@0.6.0-rc.3
+  - @yas chat/models@0.2.0-rc.3
 
   </details>
 
@@ -2888,12 +2888,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.2
-  - @rocket.chat/omnichannel-services@0.3.0-rc.2
-  - @rocket.chat/pdf-worker@0.2.0-rc.2
-  - @rocket.chat/core-services@0.5.0-rc.2
-  - @rocket.chat/model-typings@0.6.0-rc.2
-  - @rocket.chat/models@0.2.0-rc.2
+  - @yas chat/core-typings@6.11.0-rc.2
+  - @yas chat/omnichannel-services@0.3.0-rc.2
+  - @yas chat/pdf-worker@0.2.0-rc.2
+  - @yas chat/core-services@0.5.0-rc.2
+  - @yas chat/model-typings@0.6.0-rc.2
+  - @yas chat/models@0.2.0-rc.2
 
   </details>
 
@@ -2902,12 +2902,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.1
-  - @rocket.chat/omnichannel-services@0.3.0-rc.1
-  - @rocket.chat/pdf-worker@0.2.0-rc.1
-  - @rocket.chat/core-services@0.5.0-rc.1
-  - @rocket.chat/model-typings@0.6.0-rc.1
-  - @rocket.chat/models@0.2.0-rc.1
+  - @yas chat/core-typings@6.11.0-rc.1
+  - @yas chat/omnichannel-services@0.3.0-rc.1
+  - @yas chat/pdf-worker@0.2.0-rc.1
+  - @yas chat/core-services@0.5.0-rc.1
+  - @yas chat/model-typings@0.6.0-rc.1
+  - @yas chat/models@0.2.0-rc.1
 
   </details>
 
@@ -2916,13 +2916,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [8fc6ca8b4e, 439faa87d3, 03c8b066f9, 2d89a0c448, 439faa87d3, 24f7df4894, 03c8b066f9, 264d7d5496, b8e5887fb9]:</summary>
-  - @rocket.chat/tools@0.2.2-rc.0
-  - @rocket.chat/model-typings@0.6.0-rc.0
-  - @rocket.chat/omnichannel-services@0.3.0-rc.0
-  - @rocket.chat/pdf-worker@0.2.0-rc.0
-  - @rocket.chat/core-services@0.5.0-rc.0
-  - @rocket.chat/core-typings@6.11.0-rc.0
-  - @rocket.chat/models@0.2.0-rc.0
+  - @yas chat/tools@0.2.2-rc.0
+  - @yas chat/model-typings@0.6.0-rc.0
+  - @yas chat/omnichannel-services@0.3.0-rc.0
+  - @yas chat/pdf-worker@0.2.0-rc.0
+  - @yas chat/core-services@0.5.0-rc.0
+  - @yas chat/core-typings@6.11.0-rc.0
+  - @yas chat/models@0.2.0-rc.0
 
   </details>
 
@@ -2931,12 +2931,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
-  - @rocket.chat/core-services@0.4.2
-  - @rocket.chat/core-typings@6.10.2
-  - @rocket.chat/omnichannel-services@0.2.2
-  - @rocket.chat/pdf-worker@0.1.2
-  - @rocket.chat/model-typings@0.5.2
-  - @rocket.chat/models@0.1.2
+  - @yas chat/core-services@0.4.2
+  - @yas chat/core-typings@6.10.2
+  - @yas chat/omnichannel-services@0.2.2
+  - @yas chat/pdf-worker@0.1.2
+  - @yas chat/model-typings@0.5.2
+  - @yas chat/models@0.1.2
 
   </details>
 
@@ -2945,12 +2945,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.1
-  - @rocket.chat/omnichannel-services@0.2.1
-  - @rocket.chat/pdf-worker@0.1.1
-  - @rocket.chat/core-services@0.4.1
-  - @rocket.chat/model-typings@0.5.1
-  - @rocket.chat/models@0.1.1
+  - @yas chat/core-typings@6.10.1
+  - @yas chat/omnichannel-services@0.2.1
+  - @yas chat/pdf-worker@0.1.1
+  - @yas chat/core-services@0.4.1
+  - @yas chat/model-typings@0.5.1
+  - @yas chat/models@0.1.1
 
   </details>
 
@@ -2963,12 +2963,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [1240c874a5, eaf2f11a6c, 5f95c4ec6b, f75a2cb4bb, 30399688fc, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/core-typings@6.10.0
-  - @rocket.chat/model-typings@0.5.0
-  - @rocket.chat/omnichannel-services@0.2.0
-  - @rocket.chat/pdf-worker@0.1.0
-  - @rocket.chat/core-services@0.4.0
-  - @rocket.chat/models@0.1.0
+  - @yas chat/core-typings@6.10.0
+  - @yas chat/model-typings@0.5.0
+  - @yas chat/omnichannel-services@0.2.0
+  - @yas chat/pdf-worker@0.1.0
+  - @yas chat/core-services@0.4.0
+  - @yas chat/models@0.1.0
 
   </details>
 
@@ -2977,12 +2977,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.7
-  - @rocket.chat/omnichannel-services@0.2.0-rc.7
-  - @rocket.chat/pdf-worker@0.1.0-rc.7
-  - @rocket.chat/core-services@0.4.0-rc.7
-  - @rocket.chat/model-typings@0.5.0-rc.7
-  - @rocket.chat/models@0.1.0-rc.7
+  - @yas chat/core-typings@6.10.0-rc.7
+  - @yas chat/omnichannel-services@0.2.0-rc.7
+  - @yas chat/pdf-worker@0.1.0-rc.7
+  - @yas chat/core-services@0.4.0-rc.7
+  - @yas chat/model-typings@0.5.0-rc.7
+  - @yas chat/models@0.1.0-rc.7
 
   </details>
 
@@ -2991,12 +2991,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.6
-  - @rocket.chat/omnichannel-services@0.2.0-rc.6
-  - @rocket.chat/pdf-worker@0.1.0-rc.6
-  - @rocket.chat/core-services@0.4.0-rc.6
-  - @rocket.chat/model-typings@0.5.0-rc.6
-  - @rocket.chat/models@0.1.0-rc.6
+  - @yas chat/core-typings@6.10.0-rc.6
+  - @yas chat/omnichannel-services@0.2.0-rc.6
+  - @yas chat/pdf-worker@0.1.0-rc.6
+  - @yas chat/core-services@0.4.0-rc.6
+  - @yas chat/model-typings@0.5.0-rc.6
+  - @yas chat/models@0.1.0-rc.6
 
   </details>
 
@@ -3005,12 +3005,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.5
-  - @rocket.chat/omnichannel-services@0.2.0-rc.5
-  - @rocket.chat/pdf-worker@0.1.0-rc.5
-  - @rocket.chat/core-services@0.4.0-rc.5
-  - @rocket.chat/model-typings@0.5.0-rc.5
-  - @rocket.chat/models@0.1.0-rc.5
+  - @yas chat/core-typings@6.10.0-rc.5
+  - @yas chat/omnichannel-services@0.2.0-rc.5
+  - @yas chat/pdf-worker@0.1.0-rc.5
+  - @yas chat/core-services@0.4.0-rc.5
+  - @yas chat/model-typings@0.5.0-rc.5
+  - @yas chat/models@0.1.0-rc.5
 
   </details>
 
@@ -3019,12 +3019,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.4
-  - @rocket.chat/omnichannel-services@0.2.0-rc.4
-  - @rocket.chat/pdf-worker@0.1.0-rc.4
-  - @rocket.chat/core-services@0.4.0-rc.4
-  - @rocket.chat/model-typings@0.5.0-rc.4
-  - @rocket.chat/models@0.1.0-rc.4
+  - @yas chat/core-typings@6.10.0-rc.4
+  - @yas chat/omnichannel-services@0.2.0-rc.4
+  - @yas chat/pdf-worker@0.1.0-rc.4
+  - @yas chat/core-services@0.4.0-rc.4
+  - @yas chat/model-typings@0.5.0-rc.4
+  - @yas chat/models@0.1.0-rc.4
 
   </details>
 
@@ -3033,12 +3033,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.3
-  - @rocket.chat/omnichannel-services@0.2.0-rc.3
-  - @rocket.chat/pdf-worker@0.1.0-rc.3
-  - @rocket.chat/core-services@0.4.0-rc.3
-  - @rocket.chat/model-typings@0.5.0-rc.3
-  - @rocket.chat/models@0.1.0-rc.3
+  - @yas chat/core-typings@6.10.0-rc.3
+  - @yas chat/omnichannel-services@0.2.0-rc.3
+  - @yas chat/pdf-worker@0.1.0-rc.3
+  - @yas chat/core-services@0.4.0-rc.3
+  - @yas chat/model-typings@0.5.0-rc.3
+  - @yas chat/models@0.1.0-rc.3
 
   </details>
 
@@ -3047,12 +3047,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.2
-  - @rocket.chat/omnichannel-services@0.2.0-rc.2
-  - @rocket.chat/pdf-worker@0.1.0-rc.2
-  - @rocket.chat/core-services@0.4.0-rc.2
-  - @rocket.chat/model-typings@0.5.0-rc.2
-  - @rocket.chat/models@0.1.0-rc.2
+  - @yas chat/core-typings@6.10.0-rc.2
+  - @yas chat/omnichannel-services@0.2.0-rc.2
+  - @yas chat/pdf-worker@0.1.0-rc.2
+  - @yas chat/core-services@0.4.0-rc.2
+  - @yas chat/model-typings@0.5.0-rc.2
+  - @yas chat/models@0.1.0-rc.2
 
   </details>
 
@@ -3061,12 +3061,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.1
-  - @rocket.chat/omnichannel-services@0.2.0-rc.1
-  - @rocket.chat/pdf-worker@0.1.0-rc.1
-  - @rocket.chat/core-services@0.4.0-rc.1
-  - @rocket.chat/model-typings@0.5.0-rc.1
-  - @rocket.chat/models@0.1.0-rc.1
+  - @yas chat/core-typings@6.10.0-rc.1
+  - @yas chat/omnichannel-services@0.2.0-rc.1
+  - @yas chat/pdf-worker@0.1.0-rc.1
+  - @yas chat/core-services@0.4.0-rc.1
+  - @yas chat/model-typings@0.5.0-rc.1
+  - @yas chat/models@0.1.0-rc.1
 
   </details>
 
@@ -3079,24 +3079,24 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [1240c874a5, eaf2f11a6c, 5f95c4ec6b, f75a2cb4bb, 30399688fc, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.0
-  - @rocket.chat/model-typings@0.5.0-rc.0
-  - @rocket.chat/omnichannel-services@0.2.0-rc.0
-  - @rocket.chat/pdf-worker@0.1.0-rc.0
-  - @rocket.chat/core-services@0.4.0-rc.0
-  - @rocket.chat/models@0.1.0-rc.0
+  - @yas chat/core-typings@6.10.0-rc.0
+  - @yas chat/model-typings@0.5.0-rc.0
+  - @yas chat/omnichannel-services@0.2.0-rc.0
+  - @yas chat/pdf-worker@0.1.0-rc.0
+  - @yas chat/core-services@0.4.0-rc.0
+  - @yas chat/models@0.1.0-rc.0
 
 ## 0.3.18
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.3
-  - @rocket.chat/omnichannel-services@0.1.18
-  - @rocket.chat/pdf-worker@0.0.42
-  - @rocket.chat/core-services@0.3.18
-  - @rocket.chat/model-typings@0.4.4
-  - @rocket.chat/models@0.0.42
+  - @yas chat/core-typings@6.9.3
+  - @yas chat/omnichannel-services@0.1.18
+  - @yas chat/pdf-worker@0.0.42
+  - @yas chat/core-services@0.3.18
+  - @yas chat/model-typings@0.4.4
+  - @yas chat/models@0.0.42
 
   </details>
 
@@ -3105,12 +3105,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.2
-  - @rocket.chat/omnichannel-services@0.1.17
-  - @rocket.chat/pdf-worker@0.0.41
-  - @rocket.chat/core-services@0.3.17
-  - @rocket.chat/model-typings@0.4.3
-  - @rocket.chat/models@0.0.41
+  - @yas chat/core-typings@6.9.2
+  - @yas chat/omnichannel-services@0.1.17
+  - @yas chat/pdf-worker@0.0.41
+  - @yas chat/core-services@0.3.17
+  - @yas chat/model-typings@0.4.3
+  - @yas chat/models@0.0.41
 
   </details>
 
@@ -3119,12 +3119,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.1
-  - @rocket.chat/omnichannel-services@0.1.16
-  - @rocket.chat/pdf-worker@0.0.40
-  - @rocket.chat/core-services@0.3.16
-  - @rocket.chat/model-typings@0.4.2
-  - @rocket.chat/models@0.0.40
+  - @yas chat/core-typings@6.9.1
+  - @yas chat/omnichannel-services@0.1.16
+  - @yas chat/pdf-worker@0.0.40
+  - @yas chat/core-services@0.3.16
+  - @yas chat/model-typings@0.4.2
+  - @yas chat/models@0.0.40
 
   </details>
 
@@ -3133,12 +3133,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ff4e396416, ad86761209, 724ba3a729, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0
-  - @rocket.chat/core-services@0.3.15
-  - @rocket.chat/omnichannel-services@0.1.15
-  - @rocket.chat/pdf-worker@0.0.39
-  - @rocket.chat/model-typings@0.4.1
-  - @rocket.chat/models@0.0.39
+  - @yas chat/core-typings@6.9.0
+  - @yas chat/core-services@0.3.15
+  - @yas chat/omnichannel-services@0.1.15
+  - @yas chat/pdf-worker@0.0.39
+  - @yas chat/model-typings@0.4.1
+  - @yas chat/models@0.0.39
 
   </details>
 
@@ -3147,12 +3147,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.2
-  - @rocket.chat/omnichannel-services@0.1.15-rc.2
-  - @rocket.chat/pdf-worker@0.0.39-rc.2
-  - @rocket.chat/core-services@0.3.15-rc.2
-  - @rocket.chat/model-typings@0.4.1-rc.2
-  - @rocket.chat/models@0.0.39-rc.2
+  - @yas chat/core-typings@6.9.0-rc.2
+  - @yas chat/omnichannel-services@0.1.15-rc.2
+  - @yas chat/pdf-worker@0.0.39-rc.2
+  - @yas chat/core-services@0.3.15-rc.2
+  - @yas chat/model-typings@0.4.1-rc.2
+  - @yas chat/models@0.0.39-rc.2
 
   </details>
 
@@ -3161,12 +3161,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.1
-  - @rocket.chat/omnichannel-services@0.1.15-rc.1
-  - @rocket.chat/pdf-worker@0.0.39-rc.1
-  - @rocket.chat/core-services@0.3.15-rc.1
-  - @rocket.chat/model-typings@0.4.1-rc.1
-  - @rocket.chat/models@0.0.39-rc.1
+  - @yas chat/core-typings@6.9.0-rc.1
+  - @yas chat/omnichannel-services@0.1.15-rc.1
+  - @yas chat/pdf-worker@0.0.39-rc.1
+  - @yas chat/core-services@0.3.15-rc.1
+  - @yas chat/model-typings@0.4.1-rc.1
+  - @yas chat/models@0.0.39-rc.1
 
   </details>
 
@@ -3175,12 +3175,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ff4e396416, ad86761209, 724ba3a729, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.0
-  - @rocket.chat/core-services@0.3.15-rc.0
-  - @rocket.chat/omnichannel-services@0.1.15-rc.0
-  - @rocket.chat/pdf-worker@0.0.39-rc.0
-  - @rocket.chat/model-typings@0.4.1-rc.0
-  - @rocket.chat/models@0.0.39-rc.0
+  - @yas chat/core-typings@6.9.0-rc.0
+  - @yas chat/core-services@0.3.15-rc.0
+  - @yas chat/omnichannel-services@0.1.15-rc.0
+  - @yas chat/pdf-worker@0.0.39-rc.0
+  - @yas chat/model-typings@0.4.1-rc.0
+  - @yas chat/models@0.0.39-rc.0
 
   </details>
 
@@ -3189,12 +3189,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c47a8e3514, da45cb6998, b94ca7c30b, 8b0986d15a, 4aba7c8a26]:</summary>
-  - @rocket.chat/core-typings@6.8.0
-  - @rocket.chat/model-typings@0.4.0
-  - @rocket.chat/core-services@0.3.14
-  - @rocket.chat/omnichannel-services@0.1.14
-  - @rocket.chat/pdf-worker@0.0.38
-  - @rocket.chat/models@0.0.38
+  - @yas chat/core-typings@6.8.0
+  - @yas chat/model-typings@0.4.0
+  - @yas chat/core-services@0.3.14
+  - @yas chat/omnichannel-services@0.1.14
+  - @yas chat/pdf-worker@0.0.38
+  - @yas chat/models@0.0.38
 
   </details>
 
@@ -3203,12 +3203,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b94ca7c30b]:</summary>
-  - @rocket.chat/core-services@0.3.14-rc.2
-  - @rocket.chat/core-typings@6.8.0-rc.2
-  - @rocket.chat/omnichannel-services@0.1.14-rc.2
-  - @rocket.chat/pdf-worker@0.0.38-rc.2
-  - @rocket.chat/model-typings@0.4.0-rc.2
-  - @rocket.chat/models@0.0.38-rc.2
+  - @yas chat/core-services@0.3.14-rc.2
+  - @yas chat/core-typings@6.8.0-rc.2
+  - @yas chat/omnichannel-services@0.1.14-rc.2
+  - @yas chat/pdf-worker@0.0.38-rc.2
+  - @yas chat/model-typings@0.4.0-rc.2
+  - @yas chat/models@0.0.38-rc.2
 
   </details>
 
@@ -3217,12 +3217,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.1
-  - @rocket.chat/omnichannel-services@0.1.13-rc.1
-  - @rocket.chat/pdf-worker@0.0.37-rc.1
-  - @rocket.chat/core-services@0.3.14-rc.1
-  - @rocket.chat/model-typings@0.4.0-rc.1
-  - @rocket.chat/models@0.0.37-rc.1
+  - @yas chat/core-typings@6.8.0-rc.1
+  - @yas chat/omnichannel-services@0.1.13-rc.1
+  - @yas chat/pdf-worker@0.0.37-rc.1
+  - @yas chat/core-services@0.3.14-rc.1
+  - @yas chat/model-typings@0.4.0-rc.1
+  - @yas chat/models@0.0.37-rc.1
 
   </details>
 
@@ -3231,24 +3231,24 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c47a8e3514, da45cb6998, 8b0986d15a, 4aba7c8a26]:</summary>
-  - @rocket.chat/core-typings@6.8.0-rc.0
-  - @rocket.chat/model-typings@0.4.0-rc.0
-  - @rocket.chat/core-services@0.3.12-rc.0
-  - @rocket.chat/omnichannel-services@0.1.12-rc.0
-  - @rocket.chat/pdf-worker@0.0.36-rc.0
-  - @rocket.chat/models@0.0.36-rc.0
+  - @yas chat/core-typings@6.8.0-rc.0
+  - @yas chat/model-typings@0.4.0-rc.0
+  - @yas chat/core-services@0.3.12-rc.0
+  - @yas chat/omnichannel-services@0.1.12-rc.0
+  - @yas chat/pdf-worker@0.0.36-rc.0
+  - @yas chat/models@0.0.36-rc.0
 
 ## 0.3.13
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.2
-  - @rocket.chat/omnichannel-services@0.1.13
-  - @rocket.chat/pdf-worker@0.0.37
-  - @rocket.chat/core-services@0.3.13
-  - @rocket.chat/model-typings@0.3.9
-  - @rocket.chat/models@0.0.37
+  - @yas chat/core-typings@6.7.2
+  - @yas chat/omnichannel-services@0.1.13
+  - @yas chat/pdf-worker@0.0.37
+  - @yas chat/core-services@0.3.13
+  - @yas chat/model-typings@0.3.9
+  - @yas chat/models@0.0.37
   </details>
 
 ## 0.3.12
@@ -3256,12 +3256,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.1
-  - @rocket.chat/omnichannel-services@0.1.12
-  - @rocket.chat/pdf-worker@0.0.36
-  - @rocket.chat/core-services@0.3.12
-  - @rocket.chat/model-typings@0.3.8
-  - @rocket.chat/models@0.0.36
+  - @yas chat/core-typings@6.7.1
+  - @yas chat/omnichannel-services@0.1.12
+  - @yas chat/pdf-worker@0.0.36
+  - @yas chat/core-services@0.3.12
+  - @yas chat/model-typings@0.3.8
+  - @yas chat/models@0.0.36
 
   </details>
 
@@ -3270,12 +3270,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, 0570f6740a, b9e897a8f5, b876e4e0fc, e203c40471]:</summary>
-  - @rocket.chat/core-typings@6.7.0
-  - @rocket.chat/model-typings@0.3.7
-  - @rocket.chat/core-services@0.3.11
-  - @rocket.chat/models@0.0.35
-  - @rocket.chat/omnichannel-services@0.1.11
-  - @rocket.chat/pdf-worker@0.0.35
+  - @yas chat/core-typings@6.7.0
+  - @yas chat/model-typings@0.3.7
+  - @yas chat/core-services@0.3.11
+  - @yas chat/models@0.0.35
+  - @yas chat/omnichannel-services@0.1.11
+  - @yas chat/pdf-worker@0.0.35
 
   </details>
 
@@ -3284,12 +3284,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.4
-  - @rocket.chat/omnichannel-services@0.1.11-rc.4
-  - @rocket.chat/pdf-worker@0.0.35-rc.4
-  - @rocket.chat/core-services@0.3.11-rc.4
-  - @rocket.chat/model-typings@0.3.7-rc.4
-  - @rocket.chat/models@0.0.35-rc.4
+  - @yas chat/core-typings@6.7.0-rc.4
+  - @yas chat/omnichannel-services@0.1.11-rc.4
+  - @yas chat/pdf-worker@0.0.35-rc.4
+  - @yas chat/core-services@0.3.11-rc.4
+  - @yas chat/model-typings@0.3.7-rc.4
+  - @yas chat/models@0.0.35-rc.4
 
   </details>
 
@@ -3298,12 +3298,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.3
-  - @rocket.chat/omnichannel-services@0.1.11-rc.3
-  - @rocket.chat/pdf-worker@0.0.35-rc.3
-  - @rocket.chat/core-services@0.3.11-rc.3
-  - @rocket.chat/model-typings@0.3.7-rc.3
-  - @rocket.chat/models@0.0.35-rc.3
+  - @yas chat/core-typings@6.7.0-rc.3
+  - @yas chat/omnichannel-services@0.1.11-rc.3
+  - @yas chat/pdf-worker@0.0.35-rc.3
+  - @yas chat/core-services@0.3.11-rc.3
+  - @yas chat/model-typings@0.3.7-rc.3
+  - @yas chat/models@0.0.35-rc.3
 
   </details>
 
@@ -3312,12 +3312,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.2
-  - @rocket.chat/omnichannel-services@0.1.11-rc.2
-  - @rocket.chat/pdf-worker@0.0.35-rc.2
-  - @rocket.chat/core-services@0.3.11-rc.2
-  - @rocket.chat/model-typings@0.3.7-rc.2
-  - @rocket.chat/models@0.0.35-rc.2
+  - @yas chat/core-typings@6.7.0-rc.2
+  - @yas chat/omnichannel-services@0.1.11-rc.2
+  - @yas chat/pdf-worker@0.0.35-rc.2
+  - @yas chat/core-services@0.3.11-rc.2
+  - @yas chat/model-typings@0.3.7-rc.2
+  - @yas chat/models@0.0.35-rc.2
 
   </details>
 
@@ -3326,12 +3326,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.1
-  - @rocket.chat/omnichannel-services@0.1.11-rc.1
-  - @rocket.chat/pdf-worker@0.0.35-rc.1
-  - @rocket.chat/core-services@0.3.11-rc.1
-  - @rocket.chat/model-typings@0.3.7-rc.1
-  - @rocket.chat/models@0.0.35-rc.1
+  - @yas chat/core-typings@6.7.0-rc.1
+  - @yas chat/omnichannel-services@0.1.11-rc.1
+  - @yas chat/pdf-worker@0.0.35-rc.1
+  - @yas chat/core-services@0.3.11-rc.1
+  - @yas chat/model-typings@0.3.7-rc.1
+  - @yas chat/models@0.0.35-rc.1
 
   </details>
 
@@ -3340,12 +3340,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b9ef630816, 3eb4dd7f50, 0570f6740a, b9e897a8f5, b876e4e0fc, e203c40471]:</summary>
-  - @rocket.chat/core-typings@6.7.0-rc.0
-  - @rocket.chat/model-typings@0.3.7-rc.0
-  - @rocket.chat/core-services@0.3.11-rc.0
-  - @rocket.chat/models@0.0.35-rc.0
-  - @rocket.chat/omnichannel-services@0.1.11-rc.0
-  - @rocket.chat/pdf-worker@0.0.35-rc.0
+  - @yas chat/core-typings@6.7.0-rc.0
+  - @yas chat/model-typings@0.3.7-rc.0
+  - @yas chat/core-services@0.3.11-rc.0
+  - @yas chat/models@0.0.35-rc.0
+  - @yas chat/omnichannel-services@0.1.11-rc.0
+  - @yas chat/pdf-worker@0.0.35-rc.0
 
   </details>
 
@@ -3354,12 +3354,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ada096901a]:</summary>
-  - @rocket.chat/models@0.0.34
-  - @rocket.chat/omnichannel-services@0.1.10
-  - @rocket.chat/core-services@0.3.10
-  - @rocket.chat/core-typings@6.6.6
-  - @rocket.chat/pdf-worker@0.0.34
-  - @rocket.chat/model-typings@0.3.6
+  - @yas chat/models@0.0.34
+  - @yas chat/omnichannel-services@0.1.10
+  - @yas chat/core-services@0.3.10
+  - @yas chat/core-typings@6.6.6
+  - @yas chat/pdf-worker@0.0.34
+  - @yas chat/model-typings@0.3.6
 
   </details>
 
@@ -3368,12 +3368,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.5
-  - @rocket.chat/omnichannel-services@0.1.9
-  - @rocket.chat/pdf-worker@0.0.33
-  - @rocket.chat/core-services@0.3.9
-  - @rocket.chat/model-typings@0.3.5
-  - @rocket.chat/models@0.0.33
+  - @yas chat/core-typings@6.6.5
+  - @yas chat/omnichannel-services@0.1.9
+  - @yas chat/pdf-worker@0.0.33
+  - @yas chat/core-services@0.3.9
+  - @yas chat/model-typings@0.3.5
+  - @yas chat/models@0.0.33
 
   </details>
 
@@ -3382,12 +3382,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c2872a93f2]:</summary>
-  - @rocket.chat/core-services@0.3.8
-  - @rocket.chat/omnichannel-services@0.1.8
-  - @rocket.chat/core-typings@6.6.4
-  - @rocket.chat/pdf-worker@0.0.32
-  - @rocket.chat/model-typings@0.3.4
-  - @rocket.chat/models@0.0.32
+  - @yas chat/core-services@0.3.8
+  - @yas chat/omnichannel-services@0.1.8
+  - @yas chat/core-typings@6.6.4
+  - @yas chat/pdf-worker@0.0.32
+  - @yas chat/model-typings@0.3.4
+  - @yas chat/models@0.0.32
 
   </details>
 
@@ -3396,12 +3396,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.3
-  - @rocket.chat/omnichannel-services@0.1.7
-  - @rocket.chat/pdf-worker@0.0.31
-  - @rocket.chat/core-services@0.3.7
-  - @rocket.chat/model-typings@0.3.3
-  - @rocket.chat/models@0.0.31
+  - @yas chat/core-typings@6.6.3
+  - @yas chat/omnichannel-services@0.1.7
+  - @yas chat/pdf-worker@0.0.31
+  - @yas chat/core-services@0.3.7
+  - @yas chat/model-typings@0.3.3
+  - @yas chat/models@0.0.31
 
   </details>
 
@@ -3410,12 +3410,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.2
-  - @rocket.chat/omnichannel-services@0.1.6
-  - @rocket.chat/pdf-worker@0.0.30
-  - @rocket.chat/core-services@0.3.6
-  - @rocket.chat/model-typings@0.3.2
-  - @rocket.chat/models@0.0.30
+  - @yas chat/core-typings@6.6.2
+  - @yas chat/omnichannel-services@0.1.6
+  - @yas chat/pdf-worker@0.0.30
+  - @yas chat/core-services@0.3.6
+  - @yas chat/model-typings@0.3.2
+  - @yas chat/models@0.0.30
 
   </details>
 
@@ -3424,12 +3424,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.1
-  - @rocket.chat/omnichannel-services@0.1.5
-  - @rocket.chat/pdf-worker@0.0.29
-  - @rocket.chat/core-services@0.3.5
-  - @rocket.chat/model-typings@0.3.1
-  - @rocket.chat/models@0.0.29
+  - @yas chat/core-typings@6.6.1
+  - @yas chat/omnichannel-services@0.1.5
+  - @yas chat/pdf-worker@0.0.29
+  - @yas chat/core-services@0.3.5
+  - @yas chat/model-typings@0.3.1
+  - @yas chat/models@0.0.29
 
   </details>
 
@@ -3437,17 +3437,17 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [b223cbde14, dbb08ef948, fae558bd5d, 9a6e9b4e28, fdd9852079, 2260c04ec6, c8ab6583dc, e7d3cdeef0, b4b2cd20a8]:</summary>
-  - @rocket.chat/omnichannel-services@0.1.4
-  - @rocket.chat/pdf-worker@0.0.28
-  - @rocket.chat/core-services@0.3.4
-  - @rocket.chat/model-typings@0.3.0
-  - @rocket.chat/core-typings@6.6.0
-  - @rocket.chat/logger@0.0.2
-  - @rocket.chat/models@0.0.28
-  - @rocket.chat/tools@0.2.1
+  - @yas chat/omnichannel-services@0.1.4
+  - @yas chat/pdf-worker@0.0.28
+  - @yas chat/core-services@0.3.4
+  - @yas chat/model-typings@0.3.0
+  - @yas chat/core-typings@6.6.0
+  - @yas chat/logger@0.0.2
+  - @yas chat/models@0.0.28
+  - @yas chat/tools@0.2.1
 
   </details>
 
@@ -3456,12 +3456,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.7
-  - @rocket.chat/omnichannel-services@0.1.4-rc.7
-  - @rocket.chat/pdf-worker@0.0.28-rc.7
-  - @rocket.chat/core-services@0.3.4-rc.7
-  - @rocket.chat/model-typings@0.3.0-rc.7
-  - @rocket.chat/models@0.0.28-rc.7
+  - @yas chat/core-typings@6.6.0-rc.7
+  - @yas chat/omnichannel-services@0.1.4-rc.7
+  - @yas chat/pdf-worker@0.0.28-rc.7
+  - @yas chat/core-services@0.3.4-rc.7
+  - @yas chat/model-typings@0.3.0-rc.7
+  - @yas chat/models@0.0.28-rc.7
 
   </details>
 
@@ -3470,12 +3470,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.6
-  - @rocket.chat/omnichannel-services@0.1.4-rc.6
-  - @rocket.chat/pdf-worker@0.0.28-rc.6
-  - @rocket.chat/core-services@0.3.4-rc.6
-  - @rocket.chat/model-typings@0.3.0-rc.6
-  - @rocket.chat/models@0.0.28-rc.6
+  - @yas chat/core-typings@6.6.0-rc.6
+  - @yas chat/omnichannel-services@0.1.4-rc.6
+  - @yas chat/pdf-worker@0.0.28-rc.6
+  - @yas chat/core-services@0.3.4-rc.6
+  - @yas chat/model-typings@0.3.0-rc.6
+  - @yas chat/models@0.0.28-rc.6
 
   </details>
 
@@ -3484,12 +3484,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.6.0-rc.5
-  - @rocket.chat/omnichannel-services@0.1.4-rc.5
-  - @rocket.chat/pdf-worker@0.0.28-rc.5
-  - @rocket.chat/core-services@0.3.4-rc.5
-  - @rocket.chat/model-typings@0.3.0-rc.5
-  - @rocket.chat/models@0.0.28-rc.5
+  - @yas chat/core-typings@6.6.0-rc.5
+  - @yas chat/omnichannel-services@0.1.4-rc.5
+  - @yas chat/pdf-worker@0.0.28-rc.5
+  - @yas chat/core-services@0.3.4-rc.5
+  - @yas chat/model-typings@0.3.0-rc.5
+  - @yas chat/models@0.0.28-rc.5
 
   </details>
 
@@ -3497,51 +3497,51 @@
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.4
-- @rocket.chat/omnichannel-services@0.1.4-rc.4
-- @rocket.chat/pdf-worker@0.0.28-rc.4
-- @rocket.chat/core-services@0.3.4-rc.4
-- @rocket.chat/model-typings@0.3.0-rc.4
-- @rocket.chat/models@0.0.28-rc.4
+- @yas chat/core-typings@6.6.0-rc.4
+- @yas chat/omnichannel-services@0.1.4-rc.4
+- @yas chat/pdf-worker@0.0.28-rc.4
+- @yas chat/core-services@0.3.4-rc.4
+- @yas chat/model-typings@0.3.0-rc.4
+- @yas chat/models@0.0.28-rc.4
 
 ## 0.3.4-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.3
-- @rocket.chat/omnichannel-services@0.1.4-rc.3
-- @rocket.chat/pdf-worker@0.0.28-rc.3
-- @rocket.chat/core-services@0.3.4-rc.3
-- @rocket.chat/model-typings@0.3.0-rc.3
-- @rocket.chat/models@0.0.28-rc.3
+- @yas chat/core-typings@6.6.0-rc.3
+- @yas chat/omnichannel-services@0.1.4-rc.3
+- @yas chat/pdf-worker@0.0.28-rc.3
+- @yas chat/core-services@0.3.4-rc.3
+- @yas chat/model-typings@0.3.0-rc.3
+- @yas chat/models@0.0.28-rc.3
 
 ## 0.3.4-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.2
-- @rocket.chat/omnichannel-services@0.1.4-rc.2
-- @rocket.chat/pdf-worker@0.0.28-rc.2
-- @rocket.chat/core-services@0.3.4-rc.2
-- @rocket.chat/model-typings@0.3.0-rc.2
-- @rocket.chat/models@0.0.28-rc.2
+- @yas chat/core-typings@6.6.0-rc.2
+- @yas chat/omnichannel-services@0.1.4-rc.2
+- @yas chat/pdf-worker@0.0.28-rc.2
+- @yas chat/core-services@0.3.4-rc.2
+- @yas chat/model-typings@0.3.0-rc.2
+- @yas chat/models@0.0.28-rc.2
 
 ## 0.3.4-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.6.0-rc.1
-- @rocket.chat/omnichannel-services@0.1.4-rc.1
-- @rocket.chat/pdf-worker@0.0.28-rc.1
-- @rocket.chat/core-services@0.3.4-rc.1
-- @rocket.chat/model-typings@0.3.0-rc.1
-- @rocket.chat/models@0.0.28-rc.1
+- @yas chat/core-typings@6.6.0-rc.1
+- @yas chat/omnichannel-services@0.1.4-rc.1
+- @yas chat/pdf-worker@0.0.28-rc.1
+- @yas chat/core-services@0.3.4-rc.1
+- @yas chat/model-typings@0.3.0-rc.1
+- @yas chat/models@0.0.28-rc.1
 
 ## 0.3.4-rc.0
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - Updated dependencies [b223cbde14]
 - Updated dependencies [dbb08ef948]
 - Updated dependencies [fae558bd5d]
@@ -3551,48 +3551,48 @@
 - Updated dependencies [c8ab6583dc]
 - Updated dependencies [e7d3cdeef0]
 - Updated dependencies [b4b2cd20a8]
-  - @rocket.chat/omnichannel-services@0.1.4-rc.0
-  - @rocket.chat/pdf-worker@0.0.28-rc.0
-  - @rocket.chat/core-services@0.3.4-rc.0
-  - @rocket.chat/model-typings@0.3.0-rc.0
-  - @rocket.chat/core-typings@6.6.0-rc.0
-  - @rocket.chat/logger@0.0.2-rc.0
-  - @rocket.chat/models@0.0.28-rc.0
-  - @rocket.chat/tools@0.2.1-rc.0
+  - @yas chat/omnichannel-services@0.1.4-rc.0
+  - @yas chat/pdf-worker@0.0.28-rc.0
+  - @yas chat/core-services@0.3.4-rc.0
+  - @yas chat/model-typings@0.3.0-rc.0
+  - @yas chat/core-typings@6.6.0-rc.0
+  - @yas chat/logger@0.0.2-rc.0
+  - @yas chat/models@0.0.28-rc.0
+  - @yas chat/tools@0.2.1-rc.0
 
 ## 0.3.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.3
-- @rocket.chat/omnichannel-services@0.1.3
-- @rocket.chat/pdf-worker@0.0.27
-- @rocket.chat/core-services@0.3.3
-- @rocket.chat/model-typings@0.2.3
-- @rocket.chat/models@0.0.27
+- @yas chat/core-typings@6.5.3
+- @yas chat/omnichannel-services@0.1.3
+- @yas chat/pdf-worker@0.0.27
+- @yas chat/core-services@0.3.3
+- @yas chat/model-typings@0.2.3
+- @yas chat/models@0.0.27
 
 ## 0.3.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.2
-- @rocket.chat/omnichannel-services@0.1.2
-- @rocket.chat/pdf-worker@0.0.26
-- @rocket.chat/core-services@0.3.2
-- @rocket.chat/model-typings@0.2.2
-- @rocket.chat/models@0.0.26
+- @yas chat/core-typings@6.5.2
+- @yas chat/omnichannel-services@0.1.2
+- @yas chat/pdf-worker@0.0.26
+- @yas chat/core-services@0.3.2
+- @yas chat/model-typings@0.2.2
+- @yas chat/models@0.0.26
 
 ## 0.3.1
 
 ### Patch Changes
 
 - Updated dependencies [c2b224fd82]
-  - @rocket.chat/core-typings@6.5.1
-  - @rocket.chat/omnichannel-services@0.1.1
-  - @rocket.chat/core-services@0.3.1
-  - @rocket.chat/pdf-worker@0.0.25
-  - @rocket.chat/model-typings@0.2.1
-  - @rocket.chat/models@0.0.25
+  - @yas chat/core-typings@6.5.1
+  - @yas chat/omnichannel-services@0.1.1
+  - @yas chat/core-services@0.3.1
+  - @yas chat/pdf-worker@0.0.25
+  - @yas chat/model-typings@0.2.1
+  - @yas chat/models@0.0.25
 
 ## 0.3.0
 
@@ -3612,222 +3612,222 @@
 - Updated dependencies [ec1b2b9846]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/core-typings@6.5.0
-  - @rocket.chat/model-typings@0.2.0
-  - @rocket.chat/core-services@0.3.0
-  - @rocket.chat/tools@0.2.0
-  - @rocket.chat/omnichannel-services@0.1.0
-  - @rocket.chat/pdf-worker@0.0.24
-  - @rocket.chat/models@0.0.24
+  - @yas chat/core-typings@6.5.0
+  - @yas chat/model-typings@0.2.0
+  - @yas chat/core-services@0.3.0
+  - @yas chat/tools@0.2.0
+  - @yas chat/omnichannel-services@0.1.0
+  - @yas chat/pdf-worker@0.0.24
+  - @yas chat/models@0.0.24
 
 ## 0.3.0-rc.19
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.19
-- @rocket.chat/omnichannel-services@0.1.0-rc.19
-- @rocket.chat/pdf-worker@0.0.24-rc.12
-- @rocket.chat/core-services@0.3.0-rc.19
-- @rocket.chat/model-typings@0.2.0-rc.19
-- @rocket.chat/models@0.0.24-rc.12
+- @yas chat/core-typings@6.5.0-rc.19
+- @yas chat/omnichannel-services@0.1.0-rc.19
+- @yas chat/pdf-worker@0.0.24-rc.12
+- @yas chat/core-services@0.3.0-rc.19
+- @yas chat/model-typings@0.2.0-rc.19
+- @yas chat/models@0.0.24-rc.12
 
 ## 0.3.0-rc.18
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.18
-- @rocket.chat/omnichannel-services@0.1.0-rc.18
-- @rocket.chat/pdf-worker@0.0.24-rc.11
-- @rocket.chat/core-services@0.3.0-rc.18
-- @rocket.chat/model-typings@0.2.0-rc.18
-- @rocket.chat/models@0.0.24-rc.11
+- @yas chat/core-typings@6.5.0-rc.18
+- @yas chat/omnichannel-services@0.1.0-rc.18
+- @yas chat/pdf-worker@0.0.24-rc.11
+- @yas chat/core-services@0.3.0-rc.18
+- @yas chat/model-typings@0.2.0-rc.18
+- @yas chat/models@0.0.24-rc.11
 
 ## 0.3.0-rc.17
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.17
-- @rocket.chat/omnichannel-services@0.1.0-rc.17
-- @rocket.chat/pdf-worker@0.0.24-rc.10
-- @rocket.chat/core-services@0.3.0-rc.17
-- @rocket.chat/model-typings@0.2.0-rc.17
-- @rocket.chat/models@0.0.24-rc.10
+- @yas chat/core-typings@6.5.0-rc.17
+- @yas chat/omnichannel-services@0.1.0-rc.17
+- @yas chat/pdf-worker@0.0.24-rc.10
+- @yas chat/core-services@0.3.0-rc.17
+- @yas chat/model-typings@0.2.0-rc.17
+- @yas chat/models@0.0.24-rc.10
 
 ## 0.3.0-rc.16
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.16
-- @rocket.chat/omnichannel-services@0.1.0-rc.16
-- @rocket.chat/pdf-worker@0.0.24-rc.9
-- @rocket.chat/core-services@0.3.0-rc.16
-- @rocket.chat/model-typings@0.2.0-rc.16
-- @rocket.chat/models@0.0.24-rc.9
+- @yas chat/core-typings@6.5.0-rc.16
+- @yas chat/omnichannel-services@0.1.0-rc.16
+- @yas chat/pdf-worker@0.0.24-rc.9
+- @yas chat/core-services@0.3.0-rc.16
+- @yas chat/model-typings@0.2.0-rc.16
+- @yas chat/models@0.0.24-rc.9
 
 ## 0.3.0-rc.15
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.15
-- @rocket.chat/omnichannel-services@0.1.0-rc.15
-- @rocket.chat/pdf-worker@0.0.24-rc.8
-- @rocket.chat/core-services@0.3.0-rc.15
-- @rocket.chat/model-typings@0.2.0-rc.15
-- @rocket.chat/models@0.0.24-rc.8
+- @yas chat/core-typings@6.5.0-rc.15
+- @yas chat/omnichannel-services@0.1.0-rc.15
+- @yas chat/pdf-worker@0.0.24-rc.8
+- @yas chat/core-services@0.3.0-rc.15
+- @yas chat/model-typings@0.2.0-rc.15
+- @yas chat/models@0.0.24-rc.8
 
 ## 0.3.0-rc.14
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.14
-- @rocket.chat/omnichannel-services@0.1.0-rc.14
-- @rocket.chat/pdf-worker@0.0.24-rc.7
-- @rocket.chat/core-services@0.3.0-rc.14
-- @rocket.chat/model-typings@0.2.0-rc.14
-- @rocket.chat/models@0.0.24-rc.7
+- @yas chat/core-typings@6.5.0-rc.14
+- @yas chat/omnichannel-services@0.1.0-rc.14
+- @yas chat/pdf-worker@0.0.24-rc.7
+- @yas chat/core-services@0.3.0-rc.14
+- @yas chat/model-typings@0.2.0-rc.14
+- @yas chat/models@0.0.24-rc.7
 
 ## 0.3.0-rc.13
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.13
-- @rocket.chat/omnichannel-services@0.1.0-rc.13
-- @rocket.chat/pdf-worker@0.0.24-rc.6
-- @rocket.chat/core-services@0.3.0-rc.13
-- @rocket.chat/model-typings@0.2.0-rc.13
-- @rocket.chat/models@0.0.24-rc.6
+- @yas chat/core-typings@6.5.0-rc.13
+- @yas chat/omnichannel-services@0.1.0-rc.13
+- @yas chat/pdf-worker@0.0.24-rc.6
+- @yas chat/core-services@0.3.0-rc.13
+- @yas chat/model-typings@0.2.0-rc.13
+- @yas chat/models@0.0.24-rc.6
 
 ## 0.3.0-rc.12
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.12
-- @rocket.chat/omnichannel-services@0.1.0-rc.12
-- @rocket.chat/pdf-worker@0.0.24-rc.5
-- @rocket.chat/core-services@0.3.0-rc.12
-- @rocket.chat/model-typings@0.2.0-rc.12
-- @rocket.chat/models@0.0.24-rc.5
+- @yas chat/core-typings@6.5.0-rc.12
+- @yas chat/omnichannel-services@0.1.0-rc.12
+- @yas chat/pdf-worker@0.0.24-rc.5
+- @yas chat/core-services@0.3.0-rc.12
+- @yas chat/model-typings@0.2.0-rc.12
+- @yas chat/models@0.0.24-rc.5
 
 ## 0.3.0-rc.11
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.11
-- @rocket.chat/omnichannel-services@0.1.0-rc.11
-- @rocket.chat/pdf-worker@0.0.24-rc.4
-- @rocket.chat/core-services@0.3.0-rc.11
-- @rocket.chat/model-typings@0.2.0-rc.11
-- @rocket.chat/models@0.0.24-rc.4
+- @yas chat/core-typings@6.5.0-rc.11
+- @yas chat/omnichannel-services@0.1.0-rc.11
+- @yas chat/pdf-worker@0.0.24-rc.4
+- @yas chat/core-services@0.3.0-rc.11
+- @yas chat/model-typings@0.2.0-rc.11
+- @yas chat/models@0.0.24-rc.4
 
 ## 0.3.0-rc.10
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.10
-- @rocket.chat/omnichannel-services@0.1.0-rc.10
-- @rocket.chat/pdf-worker@0.0.24-rc.3
-- @rocket.chat/core-services@0.3.0-rc.10
-- @rocket.chat/model-typings@0.2.0-rc.10
-- @rocket.chat/models@0.0.24-rc.3
+- @yas chat/core-typings@6.5.0-rc.10
+- @yas chat/omnichannel-services@0.1.0-rc.10
+- @yas chat/pdf-worker@0.0.24-rc.3
+- @yas chat/core-services@0.3.0-rc.10
+- @yas chat/model-typings@0.2.0-rc.10
+- @yas chat/models@0.0.24-rc.3
 
 ## 0.3.0-rc.9
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.9
-- @rocket.chat/omnichannel-services@0.1.0-rc.9
-- @rocket.chat/pdf-worker@0.0.24-rc.2
-- @rocket.chat/core-services@0.3.0-rc.9
-- @rocket.chat/model-typings@0.2.0-rc.9
-- @rocket.chat/models@0.0.24-rc.2
+- @yas chat/core-typings@6.5.0-rc.9
+- @yas chat/omnichannel-services@0.1.0-rc.9
+- @yas chat/pdf-worker@0.0.24-rc.2
+- @yas chat/core-services@0.3.0-rc.9
+- @yas chat/model-typings@0.2.0-rc.9
+- @yas chat/models@0.0.24-rc.2
 
 ## 0.3.0-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.8
-- @rocket.chat/omnichannel-services@0.1.0-rc.8
-- @rocket.chat/pdf-worker@0.0.24-rc.1
-- @rocket.chat/core-services@0.3.0-rc.8
-- @rocket.chat/model-typings@0.2.0-rc.8
-- @rocket.chat/models@0.0.24-rc.1
+- @yas chat/core-typings@6.5.0-rc.8
+- @yas chat/omnichannel-services@0.1.0-rc.8
+- @yas chat/pdf-worker@0.0.24-rc.1
+- @yas chat/core-services@0.3.0-rc.8
+- @yas chat/model-typings@0.2.0-rc.8
+- @yas chat/models@0.0.24-rc.1
 
 ## 0.3.0-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.7
-- @rocket.chat/omnichannel-services@0.1.0-rc.7
-- @rocket.chat/pdf-worker@0.0.21-rc.7
-- @rocket.chat/core-services@0.3.0-rc.7
-- @rocket.chat/model-typings@0.2.0-rc.7
-- @rocket.chat/models@0.0.21-rc.7
+- @yas chat/core-typings@6.5.0-rc.7
+- @yas chat/omnichannel-services@0.1.0-rc.7
+- @yas chat/pdf-worker@0.0.21-rc.7
+- @yas chat/core-services@0.3.0-rc.7
+- @yas chat/model-typings@0.2.0-rc.7
+- @yas chat/models@0.0.21-rc.7
 
 ## 0.3.0-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.6
-- @rocket.chat/omnichannel-services@0.1.0-rc.6
-- @rocket.chat/pdf-worker@0.0.21-rc.6
-- @rocket.chat/core-services@0.3.0-rc.6
-- @rocket.chat/model-typings@0.2.0-rc.6
-- @rocket.chat/models@0.0.21-rc.6
+- @yas chat/core-typings@6.5.0-rc.6
+- @yas chat/omnichannel-services@0.1.0-rc.6
+- @yas chat/pdf-worker@0.0.21-rc.6
+- @yas chat/core-services@0.3.0-rc.6
+- @yas chat/model-typings@0.2.0-rc.6
+- @yas chat/models@0.0.21-rc.6
 
 ## 0.3.0-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.5
-- @rocket.chat/omnichannel-services@0.1.0-rc.5
-- @rocket.chat/pdf-worker@0.0.21-rc.5
-- @rocket.chat/core-services@0.3.0-rc.5
-- @rocket.chat/model-typings@0.2.0-rc.5
-- @rocket.chat/models@0.0.21-rc.5
+- @yas chat/core-typings@6.5.0-rc.5
+- @yas chat/omnichannel-services@0.1.0-rc.5
+- @yas chat/pdf-worker@0.0.21-rc.5
+- @yas chat/core-services@0.3.0-rc.5
+- @yas chat/model-typings@0.2.0-rc.5
+- @yas chat/models@0.0.21-rc.5
 
 ## 0.3.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.4
-- @rocket.chat/omnichannel-services@0.1.0-rc.4
-- @rocket.chat/pdf-worker@0.0.21-rc.4
-- @rocket.chat/core-services@0.3.0-rc.4
-- @rocket.chat/model-typings@0.2.0-rc.4
-- @rocket.chat/models@0.0.21-rc.4
+- @yas chat/core-typings@6.5.0-rc.4
+- @yas chat/omnichannel-services@0.1.0-rc.4
+- @yas chat/pdf-worker@0.0.21-rc.4
+- @yas chat/core-services@0.3.0-rc.4
+- @yas chat/model-typings@0.2.0-rc.4
+- @yas chat/models@0.0.21-rc.4
 
 ## 0.3.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.3
-- @rocket.chat/omnichannel-services@0.1.0-rc.3
-- @rocket.chat/pdf-worker@0.0.21-rc.3
-- @rocket.chat/core-services@0.3.0-rc.3
-- @rocket.chat/model-typings@0.2.0-rc.3
-- @rocket.chat/models@0.0.21-rc.3
+- @yas chat/core-typings@6.5.0-rc.3
+- @yas chat/omnichannel-services@0.1.0-rc.3
+- @yas chat/pdf-worker@0.0.21-rc.3
+- @yas chat/core-services@0.3.0-rc.3
+- @yas chat/model-typings@0.2.0-rc.3
+- @yas chat/models@0.0.21-rc.3
 
 ## 0.3.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.2
-- @rocket.chat/omnichannel-services@0.1.0-rc.2
-- @rocket.chat/pdf-worker@0.0.21-rc.2
-- @rocket.chat/core-services@0.3.0-rc.2
-- @rocket.chat/model-typings@0.2.0-rc.2
-- @rocket.chat/models@0.0.21-rc.2
+- @yas chat/core-typings@6.5.0-rc.2
+- @yas chat/omnichannel-services@0.1.0-rc.2
+- @yas chat/pdf-worker@0.0.21-rc.2
+- @yas chat/core-services@0.3.0-rc.2
+- @yas chat/model-typings@0.2.0-rc.2
+- @yas chat/models@0.0.21-rc.2
 
 ## 0.3.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.5.0-rc.1
-- @rocket.chat/omnichannel-services@0.1.0-rc.1
-- @rocket.chat/pdf-worker@0.0.21-rc.1
-- @rocket.chat/core-services@0.3.0-rc.1
-- @rocket.chat/model-typings@0.2.0-rc.1
-- @rocket.chat/models@0.0.21-rc.1
+- @yas chat/core-typings@6.5.0-rc.1
+- @yas chat/omnichannel-services@0.1.0-rc.1
+- @yas chat/pdf-worker@0.0.21-rc.1
+- @yas chat/core-services@0.3.0-rc.1
+- @yas chat/model-typings@0.2.0-rc.1
+- @yas chat/models@0.0.21-rc.1
 
 ## 0.3.0-rc.0
 
@@ -3847,101 +3847,101 @@
 - Updated dependencies [ec1b2b9846]
 - Updated dependencies [5f81a0f3cb]
 - Updated dependencies [dea1fe9191]
-  - @rocket.chat/core-typings@6.5.0-rc.0
-  - @rocket.chat/model-typings@0.2.0-rc.0
-  - @rocket.chat/core-services@0.3.0-rc.0
-  - @rocket.chat/tools@0.2.0-rc.0
-  - @rocket.chat/omnichannel-services@0.1.0-rc.0
-  - @rocket.chat/pdf-worker@0.0.21-rc.0
-  - @rocket.chat/models@0.0.21-rc.0
+  - @yas chat/core-typings@6.5.0-rc.0
+  - @yas chat/model-typings@0.2.0-rc.0
+  - @yas chat/core-services@0.3.0-rc.0
+  - @yas chat/tools@0.2.0-rc.0
+  - @yas chat/omnichannel-services@0.1.0-rc.0
+  - @yas chat/pdf-worker@0.0.21-rc.0
+  - @yas chat/models@0.0.21-rc.0
 
 ## 0.2.17
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.8
-- @rocket.chat/omnichannel-services@0.0.23
-- @rocket.chat/pdf-worker@0.0.23
-- @rocket.chat/core-services@0.2.8
-- @rocket.chat/model-typings@0.1.8
-- @rocket.chat/models@0.0.23
+- @yas chat/core-typings@6.4.8
+- @yas chat/omnichannel-services@0.0.23
+- @yas chat/pdf-worker@0.0.23
+- @yas chat/core-services@0.2.8
+- @yas chat/model-typings@0.1.8
+- @yas chat/models@0.0.23
 
 ## 0.2.16
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.7
-- @rocket.chat/omnichannel-services@0.0.22
-- @rocket.chat/pdf-worker@0.0.22
-- @rocket.chat/core-services@0.2.7
-- @rocket.chat/model-typings@0.1.7
-- @rocket.chat/models@0.0.22
+- @yas chat/core-typings@6.4.7
+- @yas chat/omnichannel-services@0.0.22
+- @yas chat/pdf-worker@0.0.22
+- @yas chat/core-services@0.2.7
+- @yas chat/model-typings@0.1.7
+- @yas chat/models@0.0.22
 
 ## 0.2.15
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.6
-- @rocket.chat/omnichannel-services@0.0.21
-- @rocket.chat/pdf-worker@0.0.21
-- @rocket.chat/core-services@0.2.6
-- @rocket.chat/model-typings@0.1.6
-- @rocket.chat/models@0.0.21
+- @yas chat/core-typings@6.4.6
+- @yas chat/omnichannel-services@0.0.21
+- @yas chat/pdf-worker@0.0.21
+- @yas chat/core-services@0.2.6
+- @yas chat/model-typings@0.1.6
+- @yas chat/models@0.0.21
 
 ## 0.2.14
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.5
-- @rocket.chat/omnichannel-services@0.0.20
-- @rocket.chat/pdf-worker@0.0.20
-- @rocket.chat/core-services@0.2.5
-- @rocket.chat/model-typings@0.1.5
-- @rocket.chat/models@0.0.20
+- @yas chat/core-typings@6.4.5
+- @yas chat/omnichannel-services@0.0.20
+- @yas chat/pdf-worker@0.0.20
+- @yas chat/core-services@0.2.5
+- @yas chat/model-typings@0.1.5
+- @yas chat/models@0.0.20
 
 ## 0.2.13
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.4
-- @rocket.chat/omnichannel-services@0.0.19
-- @rocket.chat/pdf-worker@0.0.19
-- @rocket.chat/core-services@0.2.4
-- @rocket.chat/model-typings@0.1.4
-- @rocket.chat/models@0.0.19
+- @yas chat/core-typings@6.4.4
+- @yas chat/omnichannel-services@0.0.19
+- @yas chat/pdf-worker@0.0.19
+- @yas chat/core-services@0.2.4
+- @yas chat/model-typings@0.1.4
+- @yas chat/models@0.0.19
 
 ## 0.2.12
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.3
-- @rocket.chat/omnichannel-services@0.0.18
-- @rocket.chat/pdf-worker@0.0.18
-- @rocket.chat/core-services@0.2.3
-- @rocket.chat/model-typings@0.1.3
-- @rocket.chat/models@0.0.18
+- @yas chat/core-typings@6.4.3
+- @yas chat/omnichannel-services@0.0.18
+- @yas chat/pdf-worker@0.0.18
+- @yas chat/core-services@0.2.3
+- @yas chat/model-typings@0.1.3
+- @yas chat/models@0.0.18
 
 ## 0.2.11
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.2
-- @rocket.chat/omnichannel-services@0.0.17
-- @rocket.chat/pdf-worker@0.0.17
-- @rocket.chat/core-services@0.2.2
-- @rocket.chat/model-typings@0.1.2
-- @rocket.chat/models@0.0.17
+- @yas chat/core-typings@6.4.2
+- @yas chat/omnichannel-services@0.0.17
+- @yas chat/pdf-worker@0.0.17
+- @yas chat/core-services@0.2.2
+- @yas chat/model-typings@0.1.2
+- @yas chat/models@0.0.17
 
 ## 0.2.10
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.1
-- @rocket.chat/omnichannel-services@0.0.16
-- @rocket.chat/pdf-worker@0.0.16
-- @rocket.chat/core-services@0.2.1
-- @rocket.chat/model-typings@0.1.1
-- @rocket.chat/models@0.0.16
+- @yas chat/core-typings@6.4.1
+- @yas chat/omnichannel-services@0.0.16
+- @yas chat/pdf-worker@0.0.16
+- @yas chat/core-services@0.2.1
+- @yas chat/model-typings@0.1.1
+- @yas chat/models@0.0.16
 
 ## 0.2.9
 
@@ -3962,37 +3962,37 @@
 - Updated dependencies [1041d4d361]
 - Updated dependencies [61128364d6]
 - Updated dependencies [d45365436e]
-  - @rocket.chat/core-typings@6.4.0
-  - @rocket.chat/model-typings@0.1.0
-  - @rocket.chat/core-services@0.2.0
-  - @rocket.chat/tools@0.1.0
-  - @rocket.chat/omnichannel-services@0.0.15
-  - @rocket.chat/pdf-worker@0.0.15
-  - @rocket.chat/models@0.0.15
+  - @yas chat/core-typings@6.4.0
+  - @yas chat/model-typings@0.1.0
+  - @yas chat/core-services@0.2.0
+  - @yas chat/tools@0.1.0
+  - @yas chat/omnichannel-services@0.0.15
+  - @yas chat/pdf-worker@0.0.15
+  - @yas chat/models@0.0.15
 
 ## 0.2.9-rc.5
 
 ### Patch Changes
 
 - Updated dependencies [1041d4d361]
-  - @rocket.chat/core-typings@6.4.0-rc.5
-  - @rocket.chat/tools@0.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.0.15-rc.5
-  - @rocket.chat/pdf-worker@0.0.15-rc.5
-  - @rocket.chat/core-services@0.2.0-rc.5
-  - @rocket.chat/model-typings@0.1.0-rc.5
-  - @rocket.chat/models@0.0.15-rc.5
+  - @yas chat/core-typings@6.4.0-rc.5
+  - @yas chat/tools@0.1.0-rc.0
+  - @yas chat/omnichannel-services@0.0.15-rc.5
+  - @yas chat/pdf-worker@0.0.15-rc.5
+  - @yas chat/core-services@0.2.0-rc.5
+  - @yas chat/model-typings@0.1.0-rc.5
+  - @yas chat/models@0.0.15-rc.5
 
 ## 0.2.8-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.4
-- @rocket.chat/omnichannel-services@0.0.14-rc.4
-- @rocket.chat/pdf-worker@0.0.14-rc.4
-- @rocket.chat/core-services@0.2.0-rc.4
-- @rocket.chat/model-typings@0.1.0-rc.4
-- @rocket.chat/models@0.0.14-rc.4
+- @yas chat/core-typings@6.4.0-rc.4
+- @yas chat/omnichannel-services@0.0.14-rc.4
+- @yas chat/pdf-worker@0.0.14-rc.4
+- @yas chat/core-services@0.2.0-rc.4
+- @yas chat/model-typings@0.1.0-rc.4
+- @yas chat/models@0.0.14-rc.4
 
 ## 0.2.8-rc.3
 
@@ -4000,45 +4000,45 @@
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.7
-- @rocket.chat/omnichannel-services@0.0.13
-- @rocket.chat/pdf-worker@0.0.13
-- @rocket.chat/core-services@0.1.7
-- @rocket.chat/model-typings@0.0.13
-- @rocket.chat/models@0.0.13
+- @yas chat/core-typings@6.3.7
+- @yas chat/omnichannel-services@0.0.13
+- @yas chat/pdf-worker@0.0.13
+- @yas chat/core-services@0.1.7
+- @yas chat/model-typings@0.0.13
+- @yas chat/models@0.0.13
 
 ## 0.2.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.3
-- @rocket.chat/omnichannel-services@0.0.13-rc.3
-- @rocket.chat/pdf-worker@0.0.13-rc.3
-- @rocket.chat/core-services@0.2.0-rc.3
-- @rocket.chat/model-typings@0.1.0-rc.3
-- @rocket.chat/models@0.0.13-rc.3
+- @yas chat/core-typings@6.4.0-rc.3
+- @yas chat/omnichannel-services@0.0.13-rc.3
+- @yas chat/pdf-worker@0.0.13-rc.3
+- @yas chat/core-services@0.2.0-rc.3
+- @yas chat/model-typings@0.1.0-rc.3
+- @yas chat/models@0.0.13-rc.3
 
 ## 0.2.7-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.2
-- @rocket.chat/omnichannel-services@0.0.13-rc.2
-- @rocket.chat/pdf-worker@0.0.13-rc.2
-- @rocket.chat/core-services@0.2.0-rc.2
-- @rocket.chat/model-typings@0.1.0-rc.2
-- @rocket.chat/models@0.0.13-rc.2
+- @yas chat/core-typings@6.4.0-rc.2
+- @yas chat/omnichannel-services@0.0.13-rc.2
+- @yas chat/pdf-worker@0.0.13-rc.2
+- @yas chat/core-services@0.2.0-rc.2
+- @yas chat/model-typings@0.1.0-rc.2
+- @yas chat/models@0.0.13-rc.2
 
 ## 0.2.7-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.4.0-rc.1
-- @rocket.chat/omnichannel-services@0.0.11-rc.1
-- @rocket.chat/pdf-worker@0.0.11-rc.1
-- @rocket.chat/core-services@0.2.0-rc.1
-- @rocket.chat/model-typings@0.1.0-rc.1
-- @rocket.chat/models@0.0.11-rc.1
+- @yas chat/core-typings@6.4.0-rc.1
+- @yas chat/omnichannel-services@0.0.11-rc.1
+- @yas chat/pdf-worker@0.0.11-rc.1
+- @yas chat/core-services@0.2.0-rc.1
+- @yas chat/model-typings@0.1.0-rc.1
+- @yas chat/models@0.0.11-rc.1
 
 ## 0.2.7-rc.0
 
@@ -4058,57 +4058,57 @@
 - Updated dependencies [ead7c7bef2]
 - Updated dependencies [61128364d6]
 - Updated dependencies [d45365436e]
-  - @rocket.chat/core-typings@6.4.0-rc.0
-  - @rocket.chat/model-typings@0.1.0-rc.0
-  - @rocket.chat/core-services@0.2.0-rc.0
-  - @rocket.chat/omnichannel-services@0.0.11-rc.0
-  - @rocket.chat/pdf-worker@0.0.11-rc.0
-  - @rocket.chat/models@0.0.11-rc.0
+  - @yas chat/core-typings@6.4.0-rc.0
+  - @yas chat/model-typings@0.1.0-rc.0
+  - @yas chat/core-services@0.2.0-rc.0
+  - @yas chat/omnichannel-services@0.0.11-rc.0
+  - @yas chat/pdf-worker@0.0.11-rc.0
+  - @yas chat/models@0.0.11-rc.0
 
 ## 0.2.4
 
 ### Patch Changes
 
 - Updated dependencies [8a7d5d3898]
-  - @rocket.chat/model-typings@0.0.10
-  - @rocket.chat/omnichannel-services@0.0.10
-  - @rocket.chat/models@0.0.10
-  - @rocket.chat/core-services@0.1.4
-  - @rocket.chat/core-typings@6.3.4
-  - @rocket.chat/pdf-worker@0.0.10
+  - @yas chat/model-typings@0.0.10
+  - @yas chat/omnichannel-services@0.0.10
+  - @yas chat/models@0.0.10
+  - @yas chat/core-services@0.1.4
+  - @yas chat/core-typings@6.3.4
+  - @yas chat/pdf-worker@0.0.10
 
 ## 0.2.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.3
-- @rocket.chat/omnichannel-services@0.0.9
-- @rocket.chat/pdf-worker@0.0.9
-- @rocket.chat/core-services@0.1.3
-- @rocket.chat/model-typings@0.0.9
-- @rocket.chat/models@0.0.9
+- @yas chat/core-typings@6.3.3
+- @yas chat/omnichannel-services@0.0.9
+- @yas chat/pdf-worker@0.0.9
+- @yas chat/core-services@0.1.3
+- @yas chat/model-typings@0.0.9
+- @yas chat/models@0.0.9
 
 ## 0.2.2
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.2
-- @rocket.chat/omnichannel-services@0.0.8
-- @rocket.chat/pdf-worker@0.0.8
-- @rocket.chat/core-services@0.1.2
-- @rocket.chat/model-typings@0.0.8
-- @rocket.chat/models@0.0.8
+- @yas chat/core-typings@6.3.2
+- @yas chat/omnichannel-services@0.0.8
+- @yas chat/pdf-worker@0.0.8
+- @yas chat/core-services@0.1.2
+- @yas chat/model-typings@0.0.8
+- @yas chat/models@0.0.8
 
 ## 0.2.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.1
-- @rocket.chat/omnichannel-services@0.0.7
-- @rocket.chat/pdf-worker@0.0.7
-- @rocket.chat/core-services@0.1.1
-- @rocket.chat/model-typings@0.0.7
-- @rocket.chat/models@0.0.7
+- @yas chat/core-typings@6.3.1
+- @yas chat/omnichannel-services@0.0.7
+- @yas chat/pdf-worker@0.0.7
+- @yas chat/core-services@0.1.1
+- @yas chat/model-typings@0.0.7
+- @yas chat/models@0.0.7
 
 ## 0.2.0
 
@@ -4136,12 +4136,12 @@
 - Updated dependencies [48ac55f4ea]
 - Updated dependencies [94477bd9f8]
 - Updated dependencies [16dca466ea]
-  - @rocket.chat/model-typings@0.0.6
-  - @rocket.chat/core-typings@6.3.0
-  - @rocket.chat/core-services@0.1.0
-  - @rocket.chat/omnichannel-services@0.0.6
-  - @rocket.chat/models@0.0.6
-  - @rocket.chat/pdf-worker@0.0.6
+  - @yas chat/model-typings@0.0.6
+  - @yas chat/core-typings@6.3.0
+  - @yas chat/core-services@0.1.0
+  - @yas chat/omnichannel-services@0.0.6
+  - @yas chat/models@0.0.6
+  - @yas chat/pdf-worker@0.0.6
 
 ## 0.2.0-rc.10
 
@@ -4155,123 +4155,123 @@
 ### Patch Changes
 
 - Updated dependencies [f379336951]
-  - @rocket.chat/core-services@0.1.0-rc.10
-  - @rocket.chat/omnichannel-services@0.0.6-rc.10
-  - @rocket.chat/core-typings@6.3.0-rc.10
-  - @rocket.chat/pdf-worker@0.0.6-rc.10
-  - @rocket.chat/model-typings@0.0.6-rc.10
-  - @rocket.chat/models@0.0.6-rc.10
+  - @yas chat/core-services@0.1.0-rc.10
+  - @yas chat/omnichannel-services@0.0.6-rc.10
+  - @yas chat/core-typings@6.3.0-rc.10
+  - @yas chat/pdf-worker@0.0.6-rc.10
+  - @yas chat/model-typings@0.0.6-rc.10
+  - @yas chat/models@0.0.6-rc.10
 
 ## 0.1.5-rc.9
 
 ### Patch Changes
 
 - Updated dependencies [48ac55f4ea]
-  - @rocket.chat/core-services@0.1.0-rc.9
-  - @rocket.chat/core-typings@6.3.0-rc.9
-  - @rocket.chat/omnichannel-services@0.0.6-rc.9
-  - @rocket.chat/pdf-worker@0.0.6-rc.9
-  - @rocket.chat/model-typings@0.0.6-rc.9
-  - @rocket.chat/models@0.0.6-rc.9
+  - @yas chat/core-services@0.1.0-rc.9
+  - @yas chat/core-typings@6.3.0-rc.9
+  - @yas chat/omnichannel-services@0.0.6-rc.9
+  - @yas chat/pdf-worker@0.0.6-rc.9
+  - @yas chat/model-typings@0.0.6-rc.9
+  - @yas chat/models@0.0.6-rc.9
 
 ## 0.1.5-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.8
-- @rocket.chat/omnichannel-services@0.0.6-rc.8
-- @rocket.chat/pdf-worker@0.0.6-rc.8
-- @rocket.chat/core-services@0.1.0-rc.8
-- @rocket.chat/model-typings@0.0.6-rc.8
-- @rocket.chat/models@0.0.6-rc.8
+- @yas chat/core-typings@6.3.0-rc.8
+- @yas chat/omnichannel-services@0.0.6-rc.8
+- @yas chat/pdf-worker@0.0.6-rc.8
+- @yas chat/core-services@0.1.0-rc.8
+- @yas chat/model-typings@0.0.6-rc.8
+- @yas chat/models@0.0.6-rc.8
 
 ## 0.1.5-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.7
-- @rocket.chat/omnichannel-services@0.0.6-rc.7
-- @rocket.chat/pdf-worker@0.0.6-rc.7
-- @rocket.chat/core-services@0.1.0-rc.7
-- @rocket.chat/model-typings@0.0.6-rc.7
-- @rocket.chat/models@0.0.6-rc.7
+- @yas chat/core-typings@6.3.0-rc.7
+- @yas chat/omnichannel-services@0.0.6-rc.7
+- @yas chat/pdf-worker@0.0.6-rc.7
+- @yas chat/core-services@0.1.0-rc.7
+- @yas chat/model-typings@0.0.6-rc.7
+- @yas chat/models@0.0.6-rc.7
 
 ## 0.1.5-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.6
-- @rocket.chat/omnichannel-services@0.0.6-rc.6
-- @rocket.chat/pdf-worker@0.0.6-rc.6
-- @rocket.chat/core-services@0.1.0-rc.6
-- @rocket.chat/model-typings@0.0.6-rc.6
-- @rocket.chat/models@0.0.6-rc.6
+- @yas chat/core-typings@6.3.0-rc.6
+- @yas chat/omnichannel-services@0.0.6-rc.6
+- @yas chat/pdf-worker@0.0.6-rc.6
+- @yas chat/core-services@0.1.0-rc.6
+- @yas chat/model-typings@0.0.6-rc.6
+- @yas chat/models@0.0.6-rc.6
 
 ## 0.1.5-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.5
-- @rocket.chat/omnichannel-services@0.0.6-rc.5
-- @rocket.chat/pdf-worker@0.0.6-rc.5
-- @rocket.chat/core-services@0.1.0-rc.5
-- @rocket.chat/model-typings@0.0.6-rc.5
-- @rocket.chat/models@0.0.6-rc.5
+- @yas chat/core-typings@6.3.0-rc.5
+- @yas chat/omnichannel-services@0.0.6-rc.5
+- @yas chat/pdf-worker@0.0.6-rc.5
+- @yas chat/core-services@0.1.0-rc.5
+- @yas chat/model-typings@0.0.6-rc.5
+- @yas chat/models@0.0.6-rc.5
 
 ## 0.1.5-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.4
-- @rocket.chat/omnichannel-services@0.0.6-rc.4
-- @rocket.chat/pdf-worker@0.0.6-rc.4
-- @rocket.chat/core-services@0.1.0-rc.4
-- @rocket.chat/model-typings@0.0.6-rc.4
-- @rocket.chat/models@0.0.6-rc.4
+- @yas chat/core-typings@6.3.0-rc.4
+- @yas chat/omnichannel-services@0.0.6-rc.4
+- @yas chat/pdf-worker@0.0.6-rc.4
+- @yas chat/core-services@0.1.0-rc.4
+- @yas chat/model-typings@0.0.6-rc.4
+- @yas chat/models@0.0.6-rc.4
 
 ## 0.1.5-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.3
-- @rocket.chat/omnichannel-services@0.0.6-rc.3
-- @rocket.chat/pdf-worker@0.0.6-rc.3
-- @rocket.chat/core-services@0.1.0-rc.3
-- @rocket.chat/model-typings@0.0.6-rc.3
-- @rocket.chat/models@0.0.6-rc.3
+- @yas chat/core-typings@6.3.0-rc.3
+- @yas chat/omnichannel-services@0.0.6-rc.3
+- @yas chat/pdf-worker@0.0.6-rc.3
+- @yas chat/core-services@0.1.0-rc.3
+- @yas chat/model-typings@0.0.6-rc.3
+- @yas chat/models@0.0.6-rc.3
 
 ## 0.1.5-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/omnichannel-services@0.0.6-rc.2
-- @rocket.chat/core-services@0.1.0-rc.2
-- @rocket.chat/core-typings@6.3.0-rc.2
-- @rocket.chat/pdf-worker@0.0.6-rc.2
-- @rocket.chat/model-typings@0.0.6-rc.2
-- @rocket.chat/models@0.0.6-rc.2
+- @yas chat/omnichannel-services@0.0.6-rc.2
+- @yas chat/core-services@0.1.0-rc.2
+- @yas chat/core-typings@6.3.0-rc.2
+- @yas chat/pdf-worker@0.0.6-rc.2
+- @yas chat/model-typings@0.0.6-rc.2
+- @yas chat/models@0.0.6-rc.2
 
 ## 0.1.5-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.3.0-rc.1
-- @rocket.chat/omnichannel-services@0.0.6-rc.1
-- @rocket.chat/pdf-worker@0.0.6-rc.1
-- @rocket.chat/core-services@0.1.0-rc.1
-- @rocket.chat/model-typings@0.0.6-rc.1
-- @rocket.chat/models@0.0.6-rc.1
+- @yas chat/core-typings@6.3.0-rc.1
+- @yas chat/omnichannel-services@0.0.6-rc.1
+- @yas chat/pdf-worker@0.0.6-rc.1
+- @yas chat/core-services@0.1.0-rc.1
+- @yas chat/model-typings@0.0.6-rc.1
+- @yas chat/models@0.0.6-rc.1
 
 ## 0.1.4
 
 ### Patch Changes
 
-- @rocket.chat/core-typings@6.2.10
-- @rocket.chat/omnichannel-services@0.0.5
-- @rocket.chat/pdf-worker@0.0.5
-- @rocket.chat/core-services@0.0.5
-- @rocket.chat/model-typings@0.0.5
-- @rocket.chat/models@0.0.5
+- @yas chat/core-typings@6.2.10
+- @yas chat/omnichannel-services@0.0.5
+- @yas chat/pdf-worker@0.0.5
+- @yas chat/core-services@0.0.5
+- @yas chat/model-typings@0.0.5
+- @yas chat/models@0.0.5
 
 ## 0.1.3
 
@@ -4292,21 +4292,21 @@
 - Updated dependencies [12d97e16c2]
 - Updated dependencies [94477bd9f8]
 - Updated dependencies [16dca466ea]
-  - @rocket.chat/model-typings@0.0.3-rc.0
-  - @rocket.chat/core-typings@6.3.0-rc.0
-  - @rocket.chat/core-services@0.1.0-rc.0
-  - @rocket.chat/omnichannel-services@0.0.3-rc.0
-  - @rocket.chat/models@0.0.3-rc.0
-  - @rocket.chat/pdf-worker@0.0.3-rc.0
+  - @yas chat/model-typings@0.0.3-rc.0
+  - @yas chat/core-typings@6.3.0-rc.0
+  - @yas chat/core-services@0.1.0-rc.0
+  - @yas chat/omnichannel-services@0.0.3-rc.0
+  - @yas chat/models@0.0.3-rc.0
+  - @yas chat/pdf-worker@0.0.3-rc.0
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @rocket.chat/core-typings@6.2.6
-  - @rocket.chat/omnichannel-services@0.0.2
-  - @rocket.chat/pdf-worker@0.0.2
-  - @rocket.chat/core-services@0.0.2
-  - @rocket.chat/model-typings@0.0.2
-  - @rocket.chat/models@0.0.2
+  - @yas chat/core-typings@6.2.6
+  - @yas chat/omnichannel-services@0.0.2
+  - @yas chat/pdf-worker@0.0.2
+  - @yas chat/core-services@0.0.2
+  - @yas chat/model-typings@0.0.2
+  - @yas chat/models@0.0.2

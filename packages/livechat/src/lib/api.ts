@@ -1,4 +1,4 @@
-import type { IOmnichannelAgent, Serialized } from '@rocket.chat/core-typings';
+import type { IOmnichannelAgent, Serialized } from '@yas chat/core-typings';
 import i18next from 'i18next';
 
 import { getDateFnsLocale } from './locale';

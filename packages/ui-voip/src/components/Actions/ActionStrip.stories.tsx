@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { ActionButton, ToggleButton } from '@rocket.chat/ui-media';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { ActionButton, ToggleButton } from '@yas chat/ui-media';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 import type { ServerResponse } from 'node:http';
 
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 import bodyParser from 'body-parser';
 import express from 'express';
 import { RoutePolicy } from 'meteor/routepolicy';

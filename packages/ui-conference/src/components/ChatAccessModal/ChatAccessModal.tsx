@@ -1,5 +1,5 @@
-import type { VideoConferenceChatAccessMode } from '@rocket.chat/core-typings';
-import { getUserDisplayName } from '@rocket.chat/core-typings';
+import type { VideoConferenceChatAccessMode } from '@yas chat/core-typings';
+import { getUserDisplayName } from '@yas chat/core-typings';
 import {
 	Box,
 	Button,
@@ -16,9 +16,9 @@ import {
 	ItemGroup,
 	ItemMedia,
 	ItemTitle,
-} from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@rocket.chat/ui-avatar';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useId, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

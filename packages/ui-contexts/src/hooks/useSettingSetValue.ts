@@ -1,4 +1,4 @@
-import type { ISetting } from '@rocket.chat/core-typings';
+import type { ISetting } from '@yas chat/core-typings';
 import { useCallback } from 'react';
 
 import { useSettingsDispatch } from './useSettingsDispatch';

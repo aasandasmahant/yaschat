@@ -1,4 +1,4 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
+import { useHasLicenseModule } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 
 import { QuickActionsEnum, type QuickActionsActionConfig } from '../../views/room/lib/quickActions';

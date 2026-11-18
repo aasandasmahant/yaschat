@@ -8,7 +8,7 @@ const LoginServiceConfiguration = { removeByService: sandbox.stub() };
 const notifyOnLoginServiceConfigurationChanged = sandbox.stub();
 
 const { removeOAuthService } = p.noCallThru().load('./removeOAuthService.ts', {
-	'@rocket.chat/models': { LoginServiceConfiguration },
+	'@yas chat/models': { LoginServiceConfiguration },
 	'../notifyListener': { notifyOnLoginServiceConfigurationChanged },
 });
 

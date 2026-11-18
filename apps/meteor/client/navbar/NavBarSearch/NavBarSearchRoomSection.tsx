@@ -1,5 +1,5 @@
-import { ItemGroupHeader, ItemGroupTitle } from '@rocket.chat/fuselage';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { ItemGroupHeader, ItemGroupTitle } from '@yas chat/fuselage';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 

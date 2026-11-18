@@ -1,7 +1,7 @@
-import type { IEmailInboxPayload } from '@rocket.chat/core-typings';
-import { Button } from '@rocket.chat/fuselage';
-import { GenericTableCell } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IEmailInboxPayload } from '@yas chat/core-typings';
+import { Button } from '@yas chat/fuselage';
+import { GenericTableCell } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

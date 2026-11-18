@@ -1,4 +1,4 @@
-import { IconButton } from '@rocket.chat/fuselage';
+import { IconButton } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 import { forwardRef } from 'react';
 

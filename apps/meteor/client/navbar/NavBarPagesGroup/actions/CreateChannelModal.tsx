@@ -1,8 +1,8 @@
-import type { IAbacAttributeDefinition, IRoom } from '@rocket.chat/core-typings';
-import { Box, Modal, Icon, Callout, ModalHeader, ModalTitle, ModalClose } from '@rocket.chat/fuselage';
-import { TextInput, Field, ToggleSwitch, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint } from '@rocket.chat/fuselage-forms';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IAbacAttributeDefinition, IRoom } from '@yas chat/core-typings';
+import { Box, Modal, Icon, Callout, ModalHeader, ModalTitle, ModalClose } from '@yas chat/fuselage';
+import { TextInput, Field, ToggleSwitch, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint } from '@yas chat/fuselage-forms';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import {
 	useSetting,
 	useTranslation,
@@ -10,7 +10,7 @@ import {
 	useToastMessageDispatch,
 	usePermissionWithScopedRoles,
 	usePermission,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useId, useEffect, useMemo } from 'react';
 import { useForm, Controller, FormProvider } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import { getUserDisplayNames } from '@rocket.chat/core-typings';
+import { getUserDisplayNames } from '@yas chat/core-typings';
 import {
 	Icon,
 	IconButton,
@@ -10,8 +10,8 @@ import {
 	ItemMedia,
 	ItemRow,
 	ItemTitle,
-} from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@rocket.chat/ui-avatar';
+} from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

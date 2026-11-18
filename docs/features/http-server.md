@@ -36,7 +36,7 @@ DDP server claims its endpoints. Any other upgrade goes to Meteor's server.
 ## Adding a route
 
 - **A Hono handler:** register it on `httpApp` (`httpApp.get(path, handler)`). This is the default for new code.
-- **A `Router` from `@rocket.chat/http-router`:** `mountRouter(httpApp, router)` answers every request under the
+- **A `Router` from `@yas chat/http-router`:** `mountRouter(httpApp, router)` answers every request under the
   router's base. A router can be mounted after the server has started answering requests, which the federation routes
   rely on once a license allows them.
 - **An existing Express or connect app:** `httpApp.use('<path>/*', nodeHandler(app))`. A request the app hands on with
@@ -53,7 +53,7 @@ the REST API, webhooks and health probes
 global that is never set.
 
 The Hono and Node plumbing (`createRootApp`, `createNodeServer`, `createMiddlewareSlot`, `mountRouter`, `nodeHandler`)
-lives in `@rocket.chat/http-router`: Meteor's bundler cannot load ESM-only packages or package `exports` subpaths, such
+lives in `@yas chat/http-router`: Meteor's bundler cannot load ESM-only packages or package `exports` subpaths, such
 as `@hono/node-server` or `hono/router/trie-router`, from app code, while workspace packages load through Node.
 
 ## Connection handling
@@ -73,6 +73,6 @@ as `@hono/node-server` or `hono/router/trie-router`, from app code, while worksp
 ## Deployment
 
 The production bundle only ships the third-party dependencies listed in `apps/meteor/package.json`. A workspace
-package the server loads, such as `@rocket.chat/http-router` or `@rocket.chat/ddp-server`, has its own dependencies
+package the server loads, such as `@yas chat/http-router` or `@yas chat/ddp-server`, has its own dependencies
 repeated there; otherwise the container fails at startup with `MODULE_NOT_FOUND`. `yarn dev` does not show this,
 because it loads packages from the hoisted root `node_modules`.

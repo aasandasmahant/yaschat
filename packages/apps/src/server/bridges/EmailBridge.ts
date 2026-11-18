@@ -1,4 +1,4 @@
-import type { IEmail } from '@rocket.chat/apps-engine/definition/email';
+import type { IEmail } from '@yas chat/apps-engine/definition/email';
 
 import { BaseBridge } from './BaseBridge';
 import { PermissionDeniedError } from '../errors/PermissionDeniedError';

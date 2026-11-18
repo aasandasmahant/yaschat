@@ -1,6 +1,6 @@
-import { cronJobs } from '@rocket.chat/cron';
-import { License } from '@rocket.chat/license';
-import type { ExtendedFetchOptions } from '@rocket.chat/server-fetch';
+import { cronJobs } from '@yas chat/cron';
+import { License } from '@yas chat/license';
+import type { ExtendedFetchOptions } from '@yas chat/server-fetch';
 
 import { getWorkspaceAccessToken } from '../../../server/lib/cloud';
 import { settings } from '../../../server/settings';

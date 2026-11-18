@@ -1,5 +1,5 @@
-import type { IStats } from '@rocket.chat/core-typings';
-import type { IStatisticsModel } from '@rocket.chat/model-typings';
+import type { IStats } from '@yas chat/core-typings';
+import type { IStatisticsModel } from '@yas chat/model-typings';
 import type { Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

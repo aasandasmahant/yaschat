@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Invites, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Invites, Rooms } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 

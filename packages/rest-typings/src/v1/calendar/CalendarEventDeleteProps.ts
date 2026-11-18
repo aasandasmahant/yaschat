@@ -1,4 +1,4 @@
-import type { ICalendarEvent } from '@rocket.chat/core-typings';
+import type { ICalendarEvent } from '@yas chat/core-typings';
 import type { JSONSchemaType } from 'ajv';
 
 import { ajv } from '../Ajv';

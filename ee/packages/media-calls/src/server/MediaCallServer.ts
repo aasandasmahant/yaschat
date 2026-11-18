@@ -1,12 +1,12 @@
-import type { IUser, MediaCallContact, MediaCallSignedContact } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IUser, MediaCallContact, MediaCallSignedContact } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import type {
 	CallFeature,
 	CallRejectedReason,
 	ClientMediaSignal,
 	ClientMediaSignalBody,
 	ServerMediaSignal,
-} from '@rocket.chat/media-signaling';
+} from '@yas chat/media-signaling';
 
 import { mediaCallDirector } from './CallDirector';
 import { getDefaultSettings } from './getDefaultSettings';
@@ -183,7 +183,7 @@ export class MediaCallServer implements IMediaCallServer {
 	 * */
 	private async parseCallContacts(params: InternalCallParams): Promise<InternalCallParams> {
 		// On call transfers, do not mutate the caller
-		// On new calls, force the caller type to be 'user' (since the call is being created in rocket.chat first)
+		// On new calls, force the caller type to be 'user' (since the call is being created in yas chat first)
 		const isTransfer = Boolean(params.parentCallId);
 		const callerRequiredType = isTransfer ? params.caller.type : 'user';
 
@@ -207,7 +207,7 @@ export class MediaCallServer implements IMediaCallServer {
 			throw new CallRejectedError('invalid-call-params');
 		}
 
-		// The callee contact type will determine if the call is going to go through SIP or directly to another rocket.chat user
+		// The callee contact type will determine if the call is going to go through SIP or directly to another yas chat user
 		const callee = await mediaCallDirector.cast.getContactForActor(params.callee, this.getCalleeContactOptions());
 		if (!callee) {
 			logger.debug('Failed to load callee contact information');

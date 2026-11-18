@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	BulkWriteOptions,
 	ChangeStream,

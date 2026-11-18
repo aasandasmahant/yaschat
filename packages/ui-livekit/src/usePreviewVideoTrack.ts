@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { VideoQuality } from '@rocket.chat/ui-conference';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { VideoQuality } from '@yas chat/ui-conference';
 import type { LocalVideoTrack } from 'livekit-client';
 import { createLocalVideoTrack } from 'livekit-client';
 import { useEffect, useMemo, useRef, useState } from 'react';

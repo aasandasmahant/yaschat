@@ -1,7 +1,7 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
-import { useDocumentTitle } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
+import { useDocumentTitle } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useCallback } from 'react';
 

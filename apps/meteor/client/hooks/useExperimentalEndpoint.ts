@@ -1,5 +1,5 @@
-import type { ExperimentalEndpoints } from '@rocket.chat/rest-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ExperimentalEndpoints } from '@yas chat/rest-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 
 type ExperimentalParams<
 	TPath extends keyof ExperimentalEndpoints,

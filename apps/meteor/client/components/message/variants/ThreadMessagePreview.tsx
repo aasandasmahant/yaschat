@@ -1,4 +1,4 @@
-import type { IThreadMessage } from '@rocket.chat/core-typings';
+import type { IThreadMessage } from '@yas chat/core-typings';
 import {
 	Skeleton,
 	ThreadMessage,
@@ -11,9 +11,9 @@ import {
 	ThreadMessageUnfollow,
 	CheckBox,
 	MessageStatusIndicatorItem,
-} from '@rocket.chat/fuselage';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { MessageAvatar } from '@rocket.chat/ui-avatar';
+} from '@yas chat/fuselage';
+import { MessageTypes } from '@yas chat/message-types';
+import { MessageAvatar } from '@yas chat/ui-avatar';
 import type { ComponentProps } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { LayoutContext, RoomToolboxContext } from '@rocket.chat/ui-contexts';
-import type { RoomToolboxActionConfig, LayoutContextValue } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { LayoutContext, RoomToolboxContext } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig, LayoutContextValue } from '@yas chat/ui-contexts';
 import { render, screen, within } from '@testing-library/react';
 import { axe } from 'jest-axe';
 

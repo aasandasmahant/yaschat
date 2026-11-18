@@ -15,7 +15,7 @@
 
 
 
-[YasChat](https://rocket.chat) is an open-source, secure, fully customizable communications platform developed in TypeScript for organizations with high standards of data protection.
+[YasChat](https://yas chat) is an open-source, secure, fully customizable communications platform developed in TypeScript for organizations with high standards of data protection.
 
 We are the ultimate solution for team communications, enabling real-time conversations between colleagues, with other companies, and with your customers or citizens, regardless of how they connect with you. The result is an increase in productivity and user satisfaction rates.
 
@@ -25,13 +25,13 @@ Every day, tens of millions of users in over 150 countries and in organizations 
 
 YasChat provides endless possibilities. Here’s an overview of the features you benefit from:
 
-- [**Deployment and workspace management**](https://docs.rocket.chat/docs/deploy-yaschat): Flexible and reliable self-hosted, cloud, and air-gapped deployment options with scalable architecture and performance monitoring.
+- [**Deployment and workspace management**](https://docs.yas chat/docs/deploy-yaschat): Flexible and reliable self-hosted, cloud, and air-gapped deployment options with scalable architecture and performance monitoring.
 
-- [**Security and sovereignty**](https://docs.rocket.chat/docs/secure-yaschat): YasChat is secure by design, with features such as identity management, end-to-end encryption, and role and attribute-based access control.
+- [**Security and sovereignty**](https://docs.yas chat/docs/secure-yaschat): YasChat is secure by design, with features such as identity management, end-to-end encryption, and role and attribute-based access control.
 
-- [**Team collaboration**](https://docs.rocket.chat/docs/collaborate-using-yaschat): Unified collaboration experience for asynchronous and real-time communication with seamless messaging options, voice calls, and federation.
+- [**Team collaboration**](https://docs.yas chat/docs/collaborate-using-yaschat): Unified collaboration experience for asynchronous and real-time communication with seamless messaging options, voice calls, and federation.
 
-- [**Extend and integrate**](https://docs.rocket.chat/docs/extend-and-integrate-yaschat-capabilities): Install public apps from the YasChat Marketplace, build your own apps with Apps-Engine, and integrate with external systems.
+- [**Extend and integrate**](https://docs.yas chat/docs/extend-and-integrate-yaschat-capabilities): Install public apps from the YasChat Marketplace, build your own apps with Apps-Engine, and integrate with external systems.
 
 <img src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp" data-canonical-src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp"  />
 
@@ -39,13 +39,13 @@ YasChat provides endless possibilities. Here’s an overview of the features you
 
 We support different methods of deployment for different needs. Choose your method:
 
-- Are you deploying YasChat on your own servers? You can deploy using one of the recommended methods: Docker, Podman, or Kubernetes. Refer to the [Deployment Guide](https://docs.rocket.chat/docs/deploy-yaschat) for details. Before you deploy, make sure to check the [system requirements](https://docs.rocket.chat/docs/system-requirements) to deploy a workspace successfully. Alternatively, deploy YasChat using [Launchpad](https://docs.rocket.chat/docs/deploy-with-launchpad) for a quick and straightforward Kubernetes setup where you don't have to manage each dependency.
+- Are you deploying YasChat on your own servers? You can deploy using one of the recommended methods: Docker, Podman, or Kubernetes. Refer to the [Deployment Guide](https://docs.yas chat/docs/deploy-yaschat) for details. Before you deploy, make sure to check the [system requirements](https://docs.yas chat/docs/system-requirements) to deploy a workspace successfully. Alternatively, deploy YasChat using [Launchpad](https://docs.yas chat/docs/deploy-with-launchpad) for a quick and straightforward Kubernetes setup where you don't have to manage each dependency.
 
-- Do you need to run the workspace on an isolated network? Set up an [air-gapped workspace](https://docs.rocket.chat/docs/yaschat-air-gapped-deployment) to use YasChat without internet access, suitable for high-security or regulated environments.
+- Do you need to run the workspace on an isolated network? Set up an [air-gapped workspace](https://docs.yas chat/docs/yaschat-air-gapped-deployment) to use YasChat without internet access, suitable for high-security or regulated environments.
 
-- Looking for a custom cloud-hosted solution without handling infrastructure? Check out our premium, dedicated [cloud hosting options](https://docs.rocket.chat/docs/yaschat-cloud-hosting-service-level-agreement-sla) that adapt to your needs.
+- Looking for a custom cloud-hosted solution without handling infrastructure? Check out our premium, dedicated [cloud hosting options](https://docs.yas chat/docs/yaschat-cloud-hosting-service-level-agreement-sla) that adapt to your needs.
 
-- Interested in decentralized communication? Enable [federation](https://docs.rocket.chat/docs/yaschat-native-federation) to securely communicate and share resources across a federated network.
+- Interested in decentralized communication? Enable [federation](https://docs.yas chat/docs/yaschat-native-federation) to securely communicate and share resources across a federated network.
 
 # 📱 Desktop and mobile apps
 
@@ -58,61 +58,61 @@ Download the desktop app:
 - [Install from the Windows Store](https://apps.microsoft.com/detail/9nblggh52jv6?hl=en-us&gl=NG&ocid=pdpshare)
 - [Get from Snapcraft for Linux](https://snapcraft.io/yaschat-desktop) or use the command `sudo snap install yaschat-desktop`
 
-Refer to the [Installation guide](https://docs.rocket.chat/docs/desktop-mobile-apps) for further details.
+Refer to the [Installation guide](https://docs.yas chat/docs/desktop-mobile-apps) for further details.
 
 # 📖 YasChat documentation
 
-- [User documentation](https://docs.rocket.chat/docs/yaschat)
-- [Administrator's guide](https://docs.rocket.chat/docs/administrators-guide)
-- [Developer documentation](https://developer.rocket.chat/docs/yaschat-developer)
-- [API documentation](https://developer.rocket.chat/apidocs)
+- [User documentation](https://docs.yas chat/docs/yaschat)
+- [Administrator's guide](https://docs.yas chat/docs/administrators-guide)
+- [Developer documentation](https://developer.yas chat/docs/yaschat-developer)
+- [API documentation](https://developer.yas chat/apidocs)
 - [YouTube YasChat Learning Center](https://www.youtube.com/playlist?list=PLee3gqXJQrFVXnNs5GiuoTMy269ydvcOB)
 
 # 🛡️ Trust and compliance
 
 The architecture of YasChat is designed to protect sensitive data, enforce rigorous compliance, and ensure secure, reliable communications for governments, defense, and critical infrastructure organizations operating in high-stakes environments.
 
-- **[Trust Center](https://trust.rocket.chat/)**: The Trust Center provides a comprehensive view of how we protect data and maintain transparency. You will find details on our security practices, privacy commitments, compliance certifications, and governance policies.
+- **[Trust Center](https://trust.yas chat/)**: The Trust Center provides a comprehensive view of how we protect data and maintain transparency. You will find details on our security practices, privacy commitments, compliance certifications, and governance policies.
 
-- **[Compliance Center](https://docs.rocket.chat/docs/compliance-center)**: Explore the Compliance Center for additional information on how we commit to providing modern collaboration while protecting sensitive data.
+- **[Compliance Center](https://docs.yas chat/docs/compliance-center)**: Explore the Compliance Center for additional information on how we commit to providing modern collaboration while protecting sensitive data.
 
 # 🛠️ Additional resources for developers
 
 You can set up a YasChat development environment by following the guides below:
 
-- **[Server](https://developer.rocket.chat/docs/server)**: See how to set up a YasChat server development environment on Linux distributions, Windows, Mac, and Gitpod.
+- **[Server](https://developer.yas chat/docs/server)**: See how to set up a YasChat server development environment on Linux distributions, Windows, Mac, and Gitpod.
 
-- **[Desktop](https://developer.rocket.chat/docs/desktop-app)**: Learn how to set up and customize a desktop development environment. You can follow and contribute to the [YasChat.Electron](https://github.com/YasChat/YasChat.Electron) repository.
+- **[Desktop](https://developer.yas chat/docs/desktop-app)**: Learn how to set up and customize a desktop development environment. You can follow and contribute to the [YasChat.Electron](https://github.com/YasChat/YasChat.Electron) repository.
 
-- **[Mobile](https://developer.rocket.chat/docs/mobile-app)**: Learn about mobile app development and configuring push notifications. You can follow and contribute to the [YasChat.ReactNative](https://github.com/YasChat/YasChat.ReactNative) repository.
+- **[Mobile](https://developer.yas chat/docs/mobile-app)**: Learn about mobile app development and configuring push notifications. You can follow and contribute to the [YasChat.ReactNative](https://github.com/YasChat/YasChat.ReactNative) repository.
 
 # 🧩 Apps-Engine
 
-Develop your own apps that can be integrated with YasChat. We provide an [open-source Apps-Engine framework](https://developer.rocket.chat/docs/yaschat-apps-engine) which expands the integration possibilities within the YasChat ecosystem.
+Develop your own apps that can be integrated with YasChat. We provide an [open-source Apps-Engine framework](https://developer.yas chat/docs/yaschat-apps-engine) which expands the integration possibilities within the YasChat ecosystem.
 
 # 🆕 Feature request
 
-[YasChat/feature-requests](https://github.com/YasChat/feature-requests) is used to track YasChat feature requests and discussions. Click [here](https://github.com/YasChat/feature-requests/issues/new?template=feature_request.md) to open a new feature request. [Feature Request Forums](https://forums.rocket.chat/c/feature-requests/8) stores the historical archives of old feature requests (up to 2018).
+[YasChat/feature-requests](https://github.com/YasChat/feature-requests) is used to track YasChat feature requests and discussions. Click [here](https://github.com/YasChat/feature-requests/issues/new?template=feature_request.md) to open a new feature request. [Feature Request Forums](https://forums.yas chat/c/feature-requests/8) stores the historical archives of old feature requests (up to 2018).
 
 # 🤝 Community
 
-Join thousands of members worldwide in our [community server](https://open.rocket.chat).
-Join [#support](https://open.rocket.chat/channel/support) and [#general](https://open.rocket.chat/channel/general) for help from the community.
+Join thousands of members worldwide in our [community server](https://open.yas chat).
+Join [#support](https://open.yas chat/channel/support) and [#general](https://open.yas chat/channel/general) for help from the community.
 
 ![Alt](https://repobeats.axiom.co/api/embed/1efe0f0a7c366bd58068a1ab1f555ab912ec3895.svg "Repobeats analytics image")
 
 # 👥 Contributions
 
-YasChat is an open-source project, and we are very happy to accept community contributions. Refer to the [Contribution guide](https://developer.rocket.chat/docs/contribute-to-yaschat) for more details.
+YasChat is an open-source project, and we are very happy to accept community contributions. Refer to the [Contribution guide](https://developer.yas chat/docs/contribute-to-yaschat) for more details.
 
 
 # 💼 Become a Rocketeer
 
-We're hiring developers, technical support, and product managers all the time. Check out our [jobs page](https://rocket.chat/jobs).
+We're hiring developers, technical support, and product managers all the time. Check out our [jobs page](https://yas chat/jobs).
 
 # 🗞️ Get the Latest News
 
-- [Blog](https://rocket.chat/blog)
+- [Blog](https://yas chat/blog)
 - [Twitter](https://twitter.com/YasChat)
 - [Facebook](https://www.facebook.com/YasChatApp)
 - [LinkedIn](https://www.linkedin.com/company/rocket-chat)

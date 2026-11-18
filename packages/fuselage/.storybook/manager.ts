@@ -38,7 +38,7 @@ applyComponentStatusColors(document.documentElement, initialMode);
 
 addons.setConfig({ theme: createManagerTheme(initialMode), sidebar: { renderLabel } });
 
-addons.register('rocket.chat/fuselage-theme', (api) => {
+addons.register('yas chat/fuselage-theme', (api) => {
 	subscribeToThemeMode(api, readThemeGlobalFromUrl(), (mode) => {
 		applyComponentStatusColors(document.documentElement, mode);
 		api.setOptions({ theme: createManagerTheme(mode) });

@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/message-types",
+	"name": "@yas chat/message-types",
 	"version": "0.2.0",
 	"private": true,
 	"type": "module",
@@ -21,7 +21,7 @@
 		"testunit": "jest"
 	},
 	"devDependencies": {
-		"@rocket.chat/core-typings": "workspace:~",
+		"@yas chat/core-typings": "workspace:~",
 		"date-fns": "~4.1.0",
 		"i18next": "~26.4.2",
 		"jest": "~30.5.2",

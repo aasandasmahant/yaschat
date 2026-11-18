@@ -1,4 +1,4 @@
-import { IconButton, Skeleton } from '@rocket.chat/fuselage';
+import { IconButton, Skeleton } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type ParentRoomButtonProps = Omit<ComponentProps<typeof IconButton>, 'icon'> & { loading: boolean };

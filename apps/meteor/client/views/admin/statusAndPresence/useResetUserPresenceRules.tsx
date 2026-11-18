@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import UserPresenceConfirmModal from './UserPresenceConfirmModal';

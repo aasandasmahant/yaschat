@@ -1,8 +1,8 @@
-import { FederationMatrix } from '@rocket.chat/core-services';
-import { getFederationRoutes } from '@rocket.chat/federation-matrix';
-import { mountRouter, nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
-import { ajv, ajvQuery } from '@rocket.chat/rest-typings';
+import { FederationMatrix } from '@yas chat/core-services';
+import { getFederationRoutes } from '@yas chat/federation-matrix';
+import { mountRouter, nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
+import { ajv, ajvQuery } from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api';
 import { getTrimmedServerVersion } from '../../../server/api/lib/getTrimmedServerVersion';

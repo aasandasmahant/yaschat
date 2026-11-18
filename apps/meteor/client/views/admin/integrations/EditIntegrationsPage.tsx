@@ -1,4 +1,4 @@
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 
 import EditIncomingWebhook from './incoming/EditIncomingWebhook';
 import EditOutgoingWebhook from './outgoing/EditOutgoingWebhook';

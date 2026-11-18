@@ -1,5 +1,5 @@
-import type { IBannerDismiss, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IBannersDismissModel } from '@rocket.chat/model-typings';
+import type { IBannerDismiss, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IBannersDismissModel } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, Document, FindOptions } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

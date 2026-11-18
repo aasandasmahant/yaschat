@@ -1,5 +1,5 @@
-import { InputBox } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { InputBox } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { FormEvent } from 'react';
 
 import { useUiKitState } from '../hooks/useUiKitState';

@@ -1,7 +1,7 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import { type IUser, ROOM_ROLE_PRIORITY_MAP, type ISubscription, type UserStatus } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { PresenceScope } from '@yas chat/core-services';
+import { type IUser, ROOM_ROLE_PRIORITY_MAP, type ISubscription, type UserStatus } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Document } from 'mongodb';
 
 import { settings } from '../settings';

@@ -1,5 +1,5 @@
-import { Callout } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { Callout } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 
 import type { BlockProps } from '../utils/BlockProps';
 

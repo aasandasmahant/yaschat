@@ -1,6 +1,6 @@
-import type { DeviceManagementPopulatedSession } from '@rocket.chat/core-typings';
-import { Box, Button, ButtonGroup, StatusBullet, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import type { DeviceManagementPopulatedSession } from '@yas chat/core-typings';
+import { Box, Button, ButtonGroup, StatusBullet, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import {
 	ContextualbarHeader,
 	ContextualbarClose,
@@ -12,8 +12,8 @@ import {
 	InfoPanelLabel,
 	InfoPanelText,
 	useFormatDateAndTime,
-} from '@rocket.chat/ui-client';
-import { useRoute, useUserPresence } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRoute, useUserPresence } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

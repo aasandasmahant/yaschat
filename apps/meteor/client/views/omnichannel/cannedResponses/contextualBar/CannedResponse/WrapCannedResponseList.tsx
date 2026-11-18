@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@rocket.chat/core-typings';
-import { useDebouncedValue, useLocalStorage, useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useSetModal, useRouter, useRoomToolbox } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@yas chat/core-typings';
+import { useDebouncedValue, useLocalStorage, useStableCallback } from '@yas chat/fuselage-hooks';
+import { useSetModal, useRouter, useRoomToolbox } from '@yas chat/ui-contexts';
 import type { ChangeEvent, MouseEvent } from 'react';
 import { memo, useCallback, useState } from 'react';
 

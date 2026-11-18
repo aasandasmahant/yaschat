@@ -1,5 +1,5 @@
-import type { AppManager } from '@rocket.chat/apps/dist/server/AppManager';
-import { License } from '@rocket.chat/license';
+import type { AppManager } from '@yas chat/apps/dist/server/AppManager';
+import { License } from '@yas chat/license';
 
 import { getInstallationSourceFromAppStorageItem } from '../../../../../lib/apps/getInstallationSourceFromAppStorageItem';
 import { API } from '../../../../../server/api';

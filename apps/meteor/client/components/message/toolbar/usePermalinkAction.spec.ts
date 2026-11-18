@@ -1,6 +1,6 @@
-import type { MessageActionContext } from '@rocket.chat/apps-engine/definition/ui';
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { MessageActionContext } from '@yas chat/apps-engine/definition/ui';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { usePermalinkAction } from './usePermalinkAction';

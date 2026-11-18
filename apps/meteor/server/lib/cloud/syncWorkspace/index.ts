@@ -1,4 +1,4 @@
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 import { CloudWorkspaceRegistrationError } from '../../../../lib/errors/CloudWorkspaceRegistrationError';
 import { SystemLogger } from '../../logger/system';

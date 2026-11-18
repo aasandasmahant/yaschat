@@ -1,6 +1,6 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormHeader, FormTitle } from '@rocket.chat/layout';
-import { useDocumentTitle } from '@rocket.chat/ui-client';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { Form, FormContainer, FormHeader, FormTitle } from '@yas chat/layout';
+import { useDocumentTitle } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { DispatchLoginRouter } from './hooks/useLoginRouter';

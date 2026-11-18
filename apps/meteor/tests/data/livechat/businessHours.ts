@@ -1,6 +1,6 @@
-import type { ILivechatBusinessHour } from '@rocket.chat/core-typings';
-import { LivechatBusinessHourTypes } from '@rocket.chat/core-typings';
-import type { POSTLivechatBusinessHoursSaveParams } from '@rocket.chat/rest-typings';
+import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
+import type { POSTLivechatBusinessHoursSaveParams } from '@yas chat/rest-typings';
 import moment from 'moment';
 
 import { api, credentials, request } from '../api-data';

@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Button, Icon, Scrollable, useStyle } from '@rocket.chat/fuselage';
-import { useOutsideClick, useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { css } from '@yas chat/css-in-js';
+import { Box, Button, Icon, Scrollable, useStyle } from '@yas chat/fuselage';
+import { useOutsideClick, useMergedRefs } from '@yas chat/fuselage-hooks';
 import { useContext, useRef } from 'react';
 
 import ScreenThumbnail from './ScreenThumbnail';

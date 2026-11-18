@@ -1,4 +1,4 @@
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
 import { useLayoutEffect, useRef, useCallback } from 'react';
 

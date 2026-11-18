@@ -1,5 +1,5 @@
-import { LoginServiceConfiguration } from '@rocket.chat/models';
-import { makeFunction } from '@rocket.chat/patch-injection';
+import { LoginServiceConfiguration } from '@yas chat/models';
+import { makeFunction } from '@yas chat/patch-injection';
 
 import { updateCasServices } from './cas/updateCasService';
 import { notifyOnLoginServiceConfigurationChanged } from './notifyListener';

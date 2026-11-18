@@ -1,5 +1,5 @@
-import type { TooltipProps } from '@rocket.chat/fuselage';
-import { Tooltip } from '@rocket.chat/fuselage';
+import type { TooltipProps } from '@yas chat/fuselage';
+import { Tooltip } from '@yas chat/fuselage';
 import type { Dispatch, RefObject, SetStateAction, RefAttributes } from 'react';
 
 export type AnchorParams = {

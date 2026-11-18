@@ -231,10 +231,10 @@ describe('Mention Server', () => {
 		describe('for message with only an md link', () => {
 			const result = [];
 			[
-				'[@rocket.cat](https://rocket.chat)',
-				'[@rocket.cat](https://rocket.chat) hello',
-				'[@rocket.cat](https://rocket.chat) hello how are you?',
-				'[test](https://rocket.chat)',
+				'[@rocket.cat](https://yas chat)',
+				'[@rocket.cat](https://yas chat) hello',
+				'[@rocket.cat](https://yas chat) hello how are you?',
+				'[test](https://yas chat)',
 			].forEach((text) => {
 				it(`should return "${JSON.stringify(result)}" from "${text}"`, () => {
 					expect(result).to.be.deep.equal(mention.getUserMentions(text));
@@ -245,10 +245,10 @@ describe('Mention Server', () => {
 		describe('for message with md link and text', () => {
 			const result = ['@sauron'];
 			[
-				'@sauron please work on [user@password](https://rocket.chat)',
-				'@sauron hello [user@password](https://rocket.chat) hello',
-				'[user@password](https://rocket.chat) hello @sauron',
-				'@sauron please work on [user@password](https://rocket.chat) hello',
+				'@sauron please work on [user@password](https://yas chat)',
+				'@sauron hello [user@password](https://yas chat) hello',
+				'[user@password](https://yas chat) hello @sauron',
+				'@sauron please work on [user@password](https://yas chat) hello',
 			].forEach((text) => {
 				it(`should return "${JSON.stringify(result)}" from "${text}"`, () => {
 					expect(result).to.be.deep.equal(mention.getUserMentions(text));
@@ -261,10 +261,10 @@ describe('Mention Server', () => {
 		describe('for message with md link', () => {
 			const result = [];
 			[
-				'[#general](https://rocket.chat)',
-				'[#general](https://rocket.chat) hello',
-				'[#general](https://rocket.chat) hello how are you?',
-				'[test #general #other](https://rocket.chat)',
+				'[#general](https://yas chat)',
+				'[#general](https://yas chat) hello',
+				'[#general](https://yas chat) hello how are you?',
+				'[test #general #other](https://yas chat)',
 			].forEach((text) => {
 				it(`should return "${JSON.stringify(result)}" from "${text}"`, () => {
 					expect(result).to.be.deep.equal(mention.getChannelMentions(text));
@@ -275,10 +275,10 @@ describe('Mention Server', () => {
 		describe('for message with md link and text', () => {
 			const result = ['#somechannel'];
 			[
-				'#somechannel please [user#password](https://rocket.chat)',
-				'#somechannel hello [user#password](https://rocket.chat) hello',
-				'[user#password](https://rocket.chat) hello #somechannel',
-				'#somechannel join [#general on #other](https://rocket.chat)',
+				'#somechannel please [user#password](https://yas chat)',
+				'#somechannel hello [user#password](https://yas chat) hello',
+				'[user#password](https://yas chat) hello #somechannel',
+				'#somechannel join [#general on #other](https://yas chat)',
 			].forEach((text) => {
 				it(`should return "${JSON.stringify(result)}" from "${text}"`, () => {
 					expect(result).to.be.deep.equal(mention.getChannelMentions(text));

@@ -1,4 +1,4 @@
-import { CheckBox, Table, Tag, Pagination, TableHead, TableRow, TableCell, TableBody } from '@rocket.chat/fuselage';
+import { CheckBox, Table, Tag, Pagination, TableHead, TableRow, TableCell, TableBody } from '@yas chat/fuselage';
 import type { Dispatch, SetStateAction, ChangeEvent } from 'react';
 import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

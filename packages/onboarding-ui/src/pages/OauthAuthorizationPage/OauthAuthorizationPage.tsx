@@ -1,6 +1,6 @@
-import { Box, Button } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import { VerticalWizardLayout, VerticalWizardLayoutTitle, VerticalWizardLayoutForm } from '@rocket.chat/layout';
+import { Box, Button } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import { VerticalWizardLayout, VerticalWizardLayoutTitle, VerticalWizardLayoutForm } from '@yas chat/layout';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type OauthAuthorizationPageProps = {

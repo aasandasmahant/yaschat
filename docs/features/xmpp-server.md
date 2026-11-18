@@ -7,7 +7,7 @@ YasChat; YasChat users can message any XMPP address and take part in rooms on re
 servers. It is independent from, and coexists with, the XMPP support offered through the
 Matrix federation bridge.
 
-The feature is implemented by `@rocket.chat/xmpp-server` (`ee/packages/xmpp-server`) and
+The feature is implemented by `@yas chat/xmpp-server` (`ee/packages/xmpp-server`) and
 documented inside that package, which is developed spec-first:
 
 - [How the package is developed](../../ee/packages/xmpp-server/docs/README.md): intents,

@@ -1,4 +1,4 @@
-import type { LicenseInfo, Cloud } from '@rocket.chat/core-typings';
+import type { LicenseInfo, Cloud } from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 

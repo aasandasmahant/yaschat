@@ -1,5 +1,5 @@
-import { api } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, IUser, AtLeast } from '@rocket.chat/core-typings';
+import { api } from '@yas chat/core-services';
+import type { IMessage, IRoom, IUser, AtLeast } from '@yas chat/core-typings';
 
 import { settings } from '../../../settings';
 import { metrics } from '../../metrics';

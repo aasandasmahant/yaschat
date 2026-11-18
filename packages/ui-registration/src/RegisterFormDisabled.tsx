@@ -1,6 +1,6 @@
-import { Callout } from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@rocket.chat/layout';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Callout } from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormTitle, ActionLink } from '@yas chat/layout';
+import { useSetting } from '@yas chat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import type { DispatchLoginRouter } from './hooks/useLoginRouter';

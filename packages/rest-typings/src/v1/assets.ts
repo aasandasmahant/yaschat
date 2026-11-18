@@ -1,4 +1,4 @@
-import type { IYasChatAssets } from '@rocket.chat/core-typings';
+import type { IYasChatAssets } from '@yas chat/core-typings';
 import type { JSONSchemaType } from 'ajv';
 
 import { ajv } from './Ajv';

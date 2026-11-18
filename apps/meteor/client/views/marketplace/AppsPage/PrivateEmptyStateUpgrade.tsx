@@ -1,5 +1,5 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, Button } from '@rocket.chat/fuselage';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, Button } from '@yas chat/fuselage';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

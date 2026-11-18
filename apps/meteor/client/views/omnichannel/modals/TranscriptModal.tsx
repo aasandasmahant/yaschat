@@ -1,4 +1,4 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
 import {
 	Button,
 	Modal,
@@ -10,8 +10,8 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@rocket.chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, TextInput } from '@rocket.chat/fuselage-forms';
+} from '@yas chat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, TextInput } from '@yas chat/fuselage-forms';
 import { useCallback, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

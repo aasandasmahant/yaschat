@@ -1,6 +1,6 @@
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { useSetting } from '@rocket.chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { useSetting } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { lazy, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

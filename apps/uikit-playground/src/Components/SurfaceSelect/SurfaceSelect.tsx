@@ -1,4 +1,4 @@
-import { Select } from '@rocket.chat/fuselage';
+import { Select } from '@yas chat/fuselage';
 import { useContext } from 'react';
 
 import options from './options';

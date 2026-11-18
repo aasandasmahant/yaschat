@@ -1,6 +1,6 @@
-import type { PreviewVideoProviderProps } from '@rocket.chat/ui-conference';
-import { PreviewVideoContext } from '@rocket.chat/ui-conference';
-import { useMediaDevices } from '@rocket.chat/ui-media';
+import type { PreviewVideoProviderProps } from '@yas chat/ui-conference';
+import { PreviewVideoContext } from '@yas chat/ui-conference';
+import { useMediaDevices } from '@yas chat/ui-media';
 
 import { usePreviewVideoTrack } from './usePreviewVideoTrack';
 

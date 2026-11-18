@@ -1,8 +1,8 @@
 import crypto from 'node:crypto';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IDirectoryChannelResult, IDirectoryUserResult, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Settings, Users, WorkspaceCredentials } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IDirectoryChannelResult, IDirectoryUserResult, IRoom, IUser } from '@yas chat/core-typings';
+import { Settings, Users, WorkspaceCredentials } from '@yas chat/models';
 import {
 	ajv,
 	isDirectoryProps,
@@ -17,9 +17,9 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import type { MeApiSuccessResponse } from '@rocket.chat/rest-typings';
-import { escapeHTML } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import type { MeApiSuccessResponse } from '@yas chat/rest-typings';
+import { escapeHTML } from '@yas chat/tools';
 import EJSON from 'ejson';
 import { Meteor } from 'meteor/meteor';
 
@@ -550,7 +550,7 @@ API.v1.get(
  *                $ref: '#/components/schemas/ApiFailureV1'
  */
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'method.call/:method': {
 			POST: (params: { method: string; args: any[] }) => any;

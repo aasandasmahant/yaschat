@@ -1,6 +1,6 @@
-import type { IUiKitCoreApp, UiKitCoreAppBlockActionPayload } from '@rocket.chat/core-services';
-import { VideoConf } from '@rocket.chat/core-services';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { IUiKitCoreApp, UiKitCoreAppBlockActionPayload } from '@yas chat/core-services';
+import { VideoConf } from '@yas chat/core-services';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { i18n } from '../../lib/i18n';
 

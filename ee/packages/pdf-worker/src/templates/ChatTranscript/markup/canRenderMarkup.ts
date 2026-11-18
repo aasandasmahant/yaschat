@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 const canRenderInline = (inline: MessageParser.Inlines, parent?: 'BOLD' | 'ITALIC' | 'STRIKE' | 'LINK'): boolean => {
 	switch (inline.type) {

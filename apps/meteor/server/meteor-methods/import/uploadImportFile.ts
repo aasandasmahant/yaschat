@@ -1,5 +1,5 @@
-import { Import, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
+import { Import, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
 
 import { ProgressStep } from '../../../lib/importer/ImporterProgressStep';
 import { Importers } from '../../lib/import';

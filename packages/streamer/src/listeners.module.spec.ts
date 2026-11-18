@@ -1,10 +1,10 @@
-import { api, ServiceClass } from '@rocket.chat/core-services';
+import { api, ServiceClass } from '@yas chat/core-services';
 
 import { ListenersModule } from './listeners.module';
 import { NotificationsModule } from './notifications.module';
 import { Streamer } from './streamer.module';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

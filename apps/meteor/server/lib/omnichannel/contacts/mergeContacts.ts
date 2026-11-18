@@ -1,5 +1,5 @@
-import type { ILivechatContact, ILivechatContactVisitorAssociation } from '@rocket.chat/core-typings';
-import { makeFunction } from '@rocket.chat/patch-injection';
+import type { ILivechatContact, ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
+import { makeFunction } from '@yas chat/patch-injection';
 import type { ClientSession } from 'mongodb';
 
 export const mergeContacts = makeFunction(

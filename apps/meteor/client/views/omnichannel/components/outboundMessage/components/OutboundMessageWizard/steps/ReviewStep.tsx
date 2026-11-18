@@ -1,5 +1,5 @@
-import { Box, Button, Scrollable } from '@rocket.chat/fuselage';
-import { WizardActions, WizardBackButton } from '@rocket.chat/ui-client';
+import { Box, Button, Scrollable } from '@yas chat/fuselage';
+import { WizardActions, WizardBackButton } from '@yas chat/ui-client';
 import { useMutation } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import type { IMessage, IThreadMainMessage, MessageAttachment } from '@rocket.chat/core-typings';
-import { useStream } from '@rocket.chat/ui-contexts';
+import type { IMessage, IThreadMainMessage, MessageAttachment } from '@yas chat/core-typings';
+import { useStream } from '@yas chat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useQueryClient, useQuery } from '@tanstack/react-query';
 import { useCallback, useEffect, useRef } from 'react';

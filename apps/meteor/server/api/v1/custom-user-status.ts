@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ICustomUserStatus } from '@rocket.chat/core-typings';
-import { CustomUserStatus } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ICustomUserStatus } from '@yas chat/core-typings';
+import { CustomUserStatus } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -9,9 +9,9 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import type { PaginatedRequest, PaginatedResult } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import type { PaginatedRequest, PaginatedResult } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { deleteCustomUserStatus } from '../../meteor-methods/users/deleteCustomUserStatus';
 import { insertOrUpdateUserStatus } from '../../meteor-methods/users/insertOrUpdateUserStatus';
@@ -256,7 +256,7 @@ API.v1.post(
 
 export type CustomUserStatusEndpoints = ExtractRoutesFromAPI<typeof customUserStatusEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends CustomUserStatusEndpoints {}
 }

@@ -1,4 +1,4 @@
-import { registerModel, UsersRaw, RoomsRaw, AbacAttributesRaw, ServerEventsRaw, SubscriptionsRaw } from '@rocket.chat/models';
+import { registerModel, UsersRaw, RoomsRaw, AbacAttributesRaw, ServerEventsRaw, SubscriptionsRaw } from '@yas chat/models';
 import type { Db } from 'mongodb';
 import { MongoClient } from 'mongodb';
 import { MongoMemoryServer } from 'mongodb-memory-server';

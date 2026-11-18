@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
 import type { AllHTMLAttributes } from 'react';
 
 const MainContent = ({ className, ...props }: Omit<AllHTMLAttributes<HTMLDivElement>, 'is'>) => {

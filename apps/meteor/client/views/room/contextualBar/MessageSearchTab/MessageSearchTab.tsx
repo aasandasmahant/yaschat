@@ -1,5 +1,5 @@
-import { Callout, Box, MessageDivider, Throbber } from '@rocket.chat/fuselage';
-import { MessageTypes } from '@rocket.chat/message-types';
+import { Callout, Box, MessageDivider, Throbber } from '@yas chat/fuselage';
+import { MessageTypes } from '@yas chat/message-types';
 import {
 	ContextualbarClose,
 	ContextualbarContent,
@@ -10,8 +10,8 @@ import {
 	ContextualbarDialog,
 	VirtualizedScrollbars,
 	ContextualbarEmptyContent,
-} from '@rocket.chat/ui-client';
-import { useRoomToolbox, useUserPreference, useSetting } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRoomToolbox, useUserPreference, useSetting } from '@yas chat/ui-contexts';
 import { useState, memo, Fragment, useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';

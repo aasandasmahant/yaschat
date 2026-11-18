@@ -1,4 +1,4 @@
-import type { AdminInfoPage, OrganizationInfoPage, RegisterServerPage } from '@rocket.chat/onboarding-ui';
+import type { AdminInfoPage, OrganizationInfoPage, RegisterServerPage } from '@yas chat/onboarding-ui';
 import type { ComponentProps, Dispatch, SetStateAction } from 'react';
 import { createContext, useContext } from 'react';
 

@@ -1,8 +1,8 @@
-import { ServiceStarter } from '@rocket.chat/core-services';
-import { LivechatInquiryStatus, type InquiryWithAgentInfo, type IOmnichannelQueue } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { LivechatInquiry, LivechatRooms } from '@rocket.chat/models';
-import { tracerSpan } from '@rocket.chat/tracing';
+import { ServiceStarter } from '@yas chat/core-services';
+import { LivechatInquiryStatus, type InquiryWithAgentInfo, type IOmnichannelQueue } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { LivechatInquiry, LivechatRooms } from '@yas chat/models';
+import { tracerSpan } from '@yas chat/tracing';
 
 import { queueLogger } from './logger';
 import { getOmniChatSortQuery } from '../../../lib/livechat/inquiries';

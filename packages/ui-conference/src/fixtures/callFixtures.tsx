@@ -1,5 +1,5 @@
-import type { DeviceSelection } from '@rocket.chat/ui-media';
-import { DeviceSelectionProvider } from '@rocket.chat/ui-media';
+import type { DeviceSelection } from '@yas chat/ui-media';
+import { DeviceSelectionProvider } from '@yas chat/ui-media';
 import type { Decorator } from '@storybook/react';
 import type { ReactNode } from 'react';
 import { useState } from 'react';

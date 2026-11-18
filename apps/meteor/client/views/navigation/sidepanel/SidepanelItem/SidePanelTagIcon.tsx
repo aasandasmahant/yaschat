@@ -1,4 +1,4 @@
-import { Icon } from '@rocket.chat/fuselage';
+import { Icon } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type SidePanelTagIconProps = { icon: Pick<ComponentProps<typeof Icon>, 'name' | 'color'> | null };

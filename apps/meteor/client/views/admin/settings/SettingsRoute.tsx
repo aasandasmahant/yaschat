@@ -1,4 +1,4 @@
-import { useRouteParameter, useIsPrivilegedSettingsContext, useRouter } from '@rocket.chat/ui-contexts';
+import { useRouteParameter, useIsPrivilegedSettingsContext, useRouter } from '@yas chat/ui-contexts';
 
 import EditableSettingsProvider from './EditableSettingsProvider';
 import SettingsGroupSelector from './SettingsGroupSelector';

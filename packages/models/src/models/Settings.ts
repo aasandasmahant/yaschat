@@ -1,5 +1,5 @@
-import type { ISetting, ISettingColor, ISettingSelectOption, YasChatRecordDeleted, SettingValue } from '@rocket.chat/core-typings';
-import type { ISettingsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { ISetting, ISettingColor, ISettingSelectOption, YasChatRecordDeleted, SettingValue } from '@yas chat/core-typings';
+import type { ISettingsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type {
 	Collection,
 	FindCursor,

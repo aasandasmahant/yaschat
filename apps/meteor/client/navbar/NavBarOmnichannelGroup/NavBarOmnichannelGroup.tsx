@@ -1,4 +1,4 @@
-import { NavBarGroup } from '@rocket.chat/fuselage';
+import { NavBarGroup } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import NavBarItemOmnichannelContact from './NavBarItemOmnichannelContact';

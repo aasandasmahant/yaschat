@@ -1,4 +1,4 @@
-import type { ILicenseTag } from '@rocket.chat/core-typings';
+import type { ILicenseTag } from '@yas chat/core-typings';
 
 import type { LicenseManager } from './license';
 

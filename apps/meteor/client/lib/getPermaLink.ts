@@ -1,4 +1,4 @@
-import type { IMessage, Serialized } from '@rocket.chat/core-typings';
+import type { IMessage, Serialized } from '@yas chat/core-typings';
 
 import { getUserId } from './user';
 

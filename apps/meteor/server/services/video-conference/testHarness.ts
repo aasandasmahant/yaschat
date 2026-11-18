@@ -4,9 +4,9 @@ import type {
 	IVideoConferenceUser,
 	VideoConference,
 	VideoConferenceCapabilities,
-} from '@rocket.chat/core-typings';
-import { VideoConferenceStatus } from '@rocket.chat/core-typings';
-import { mockModel, type ModelName } from '@rocket.chat/models/testing';
+} from '@yas chat/core-typings';
+import { VideoConferenceStatus } from '@yas chat/core-typings';
+import { mockModel, type ModelName } from '@yas chat/models/testing';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
 
@@ -23,7 +23,7 @@ export const providerCapabilities: { current: VideoConferenceCapabilities | unde
 // The stubs below never vary between specs in this directory — they satisfy imports the service file needs
 // at load time but that no test here actually exercises. Kept in one place so a new spec doesn't have to
 // re-list all ~25 of them just to get the module to load; only the modules a spec actually cares about
-// (`@rocket.chat/models`, `@rocket.chat/core-services`, and anything else under test) are assembled by the
+// (`@yas chat/models`, `@yas chat/core-services`, and anything else under test) are assembled by the
 // spec itself.
 /**
  * Settings the service reads, per test. Mutable so a spec can turn one on without rebuilding the module — the
@@ -32,10 +32,10 @@ export const providerCapabilities: { current: VideoConferenceCapabilities | unde
 export const settingValues: Record<string, unknown> = {};
 
 export const commonServiceStubs = {
-	'@rocket.chat/apps': { Apps: {} },
+	'@yas chat/apps': { Apps: {} },
 	// Every level, not just `error`: a missing one throws where the service only meant to say something, and the
 	// service catches around its logging — so the failure surfaces as the work silently not happening.
-	'@rocket.chat/logger': {
+	'@yas chat/logger': {
 		Logger: class {
 			error() {
 				/* no-op */
@@ -54,8 +54,8 @@ export const commonServiceStubs = {
 			}
 		},
 	},
-	'@rocket.chat/random': { Random: { id: () => 'randomId' } },
-	'@rocket.chat/tools': { wrapExceptions: (fn: () => unknown) => fn() },
+	'@yas chat/random': { Random: { id: () => 'randomId' } },
+	'@yas chat/tools': { wrapExceptions: (fn: () => unknown) => fn() },
 	'../../../definition/IRoomTypeConfig': { RoomMemberActions: {} },
 	'../../../lib/videoConference/chatAccess': { resolveChatAccessMode: () => undefined },
 	'../../database/readSecondaryPreferred': { readSecondaryPreferred: () => undefined },
@@ -102,12 +102,12 @@ export const commonServiceStubs = {
  * Loads the service with the stubs a spec actually cares about, and the inert ones filled in.
  *
  * Every spec here needs the same three things beyond `commonServiceStubs`: a `broadcast` it can read, the
- * do-nothing `ServiceClassInternal`/`Message`/`Room` the service calls into, and a `@rocket.chat/models` map with
+ * do-nothing `ServiceClassInternal`/`Message`/`Room` the service calls into, and a `@yas chat/models` map with
  * only the collections that spec exercises. Nine copies of that arrangement is nine places to update when the
  * service reaches for one more module.
  *
  * @param broadcast the stub to observe `api.broadcast` through.
- * @param models the `@rocket.chat/models` collections this spec stubs; the rest default to inert. They are registered
+ * @param models the `@yas chat/models` collections this spec stubs; the rest default to inert. They are registered
  * each time the service is constructed, because the model registry is shared by every spec file in the run.
  * @param overrides any other module to replace — where a spec is testing something `commonServiceStubs` fakes.
  */
@@ -122,7 +122,7 @@ export const createService = ({
 } = {}) => {
 	const { VideoConfService } = proxyquire.noCallThru().load('./service', {
 		...commonServiceStubs,
-		'@rocket.chat/core-services': {
+		'@yas chat/core-services': {
 			api: { broadcast },
 			ServiceClassInternal: class {
 				onEvent() {

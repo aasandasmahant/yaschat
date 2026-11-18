@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Tabs, TabsItem, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Tabs, TabsItem, useStyle } from '@yas chat/fuselage';
 
 const ToggleTabs = ({
 	tabsItem,

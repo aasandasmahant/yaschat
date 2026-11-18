@@ -1,4 +1,4 @@
-import { PushToken } from '@rocket.chat/models';
+import { PushToken } from '@yas chat/models';
 
 import { addMigration } from '../../lib/migrations';
 

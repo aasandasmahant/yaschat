@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ITeam } from '@rocket.chat/core-typings';
-import { Users, Team } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ITeam } from '@yas chat/core-typings';
+import { Users, Team } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { createRoom } from '../../lib/rooms/createRoom';

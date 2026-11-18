@@ -1,6 +1,6 @@
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IUserService } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { IUserService } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
 
 import { getMaxLoginTokens } from '../../lib/getMaxLoginTokens';
 

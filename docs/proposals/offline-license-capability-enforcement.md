@@ -111,4 +111,4 @@ Rules, to be stated in the proofs' JSDoc and enforced in review:
 
 TypeScript cannot forbid an import: a new file can still `import { serverFetch }` directly and hardcode an endpoint, and `{} as ModuleProof<'auditing'>` defeats the brand (both are greppable and glaring in review — the cast requires importing a type whose only documented constructor is the license manager). What the type system guarantees is narrower but real: **code routed through proof-demanding signatures cannot skip the check, cannot check the wrong module, and must handle the denied case explicitly** — and violations shrink to two obvious review signals: a raw `serverFetch` near a YasChat domain, or a forged cast.
 
-A directory-scoped lint rule (`no-restricted-imports` on `@rocket.chat/server-fetch` with `cloudClient.ts` exempt) or a CI grep could close the import hole; both were considered and deliberately left out in favor of a types-only approach.
+A directory-scoped lint rule (`no-restricted-imports` on `@yas chat/server-fetch` with `cloudClient.ts` exempt) or a CI grep could close the import hole; both were considered and deliberately left out in favor of a types-only approach.

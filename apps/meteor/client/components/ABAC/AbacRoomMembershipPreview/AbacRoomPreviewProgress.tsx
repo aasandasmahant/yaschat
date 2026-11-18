@@ -1,6 +1,6 @@
-import type { AbacMembershipGroup } from '@rocket.chat/core-typings';
-import { Box, Callout, Skeleton } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { AbacMembershipGroup } from '@yas chat/core-typings';
+import { Box, Callout, Skeleton } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 type ProgressLabels = { done: TranslationKey; soFar: TranslationKey };

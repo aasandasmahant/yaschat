@@ -15,8 +15,8 @@ import {
 	ModalFooter,
 	Stack,
 	Text,
-} from '@rocket.chat/fuselage';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
@@ -81,7 +81,7 @@ const RegisterWorkspaceTokenModal = ({ onClose, onStatusChange, ...props }: Regi
 					<Trans i18nKey='RegisterWorkspace_Token_Step_One'>
 						1. Go to:{' '}
 						<Text is='strong' fontScale='p2b'>
-							cloud.rocket.chat {'>'} Workspaces
+							cloud.yas chat {'>'} Workspaces
 						</Text>{' '}
 						and click{' '}
 						<Text is='strong' fontScale='p2b'>

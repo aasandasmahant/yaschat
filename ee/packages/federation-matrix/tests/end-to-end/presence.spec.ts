@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 
-import type { IRoomNativeFederated } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
+import type { IRoomNativeFederated } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 import { Visibility } from 'matrix-js-sdk';
 
 import { api } from '../../../../../apps/meteor/tests/data/api-data';
@@ -62,7 +62,7 @@ const PRESENCE_SETTING = 'Federation_Service_EDU_Process_Presence';
 				{
 					username: localUser.username,
 					password: localUser.password,
-					email: `${localUser.username}@rocket.chat`,
+					email: `${localUser.username}@yas chat`,
 					name: localUser.username,
 				},
 				rc1AdminRequestConfig,

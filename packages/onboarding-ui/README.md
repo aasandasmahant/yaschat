@@ -1,26 +1,26 @@
-# `@rocket.chat/onboarding-ui`
+# `@yas chat/onboarding-ui`
 
 > Ready-made React pages and forms for YasChat's onboarding, login, registration and password recovery screens.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/onboarding-ui) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/onboarding-ui)
+[![npm](https://img.shields.io/npm/v/@yas chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@yas chat/onboarding-ui) [![downloads](https://img.shields.io/npm/dw/@yas chat/onboarding-ui?style=flat-square)](https://www.npmjs.com/package/@yas chat/onboarding-ui)
 
 This package holds the full-page screens a user sees before entering a YasChat workspace: the setup wizard, workspace registration, cloud workspace creation, trial requests, login, account creation and password reset. Each page is a presentational component. It renders the UI and validates input, and hands every action back to you through callbacks such as `onSubmit`, `onLogin` or `onBackButtonClick`.
 
-Pages are built with [Fuselage](https://www.npmjs.com/package/@rocket.chat/fuselage) and [`@rocket.chat/layout`](https://www.npmjs.com/package/@rocket.chat/layout). Forms use [React Hook Form](https://react-hook-form.com/), and all text goes through [react-i18next](https://react.i18next.com/).
+Pages are built with [Fuselage](https://www.npmjs.com/package/@yas chat/fuselage) and [`@yas chat/layout`](https://www.npmjs.com/package/@yas chat/layout). Forms use [React Hook Form](https://react-hook-form.com/), and all text goes through [react-i18next](https://react.i18next.com/).
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/onboarding-ui @rocket.chat/fuselage @rocket.chat/fuselage-hooks @rocket.chat/icons @rocket.chat/layout @rocket.chat/logo @rocket.chat/styled react react-dom react-i18next i18next react-virtuoso
+npm install @yas chat/onboarding-ui @yas chat/fuselage @yas chat/fuselage-hooks @yas chat/icons @yas chat/layout @yas chat/logo @yas chat/styled react react-dom react-i18next i18next react-virtuoso
 ```
 
-All the packages after `@rocket.chat/onboarding-ui` are peer dependencies, except two: `i18next`, which `react-i18next` needs and the setup below imports, and `react-virtuoso`, a peer dependency of Fuselage. The package ships both CommonJS and ES modules, with TypeScript declarations.
+All the packages after `@yas chat/onboarding-ui` are peer dependencies, except two: `i18next`, which `react-i18next` needs and the setup below imports, and `react-virtuoso`, a peer dependency of Fuselage. The package ships both CommonJS and ES modules, with TypeScript declarations.
 
 Load Fuselage's styles and the icon font once in your app:
 
 ```ts
-import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/yaschat.css';
+import '@yas chat/fuselage/dist/fuselage.css';
+import '@yas chat/icons/dist/yaschat.css';
 ```
 
 ## Usage
@@ -30,12 +30,12 @@ import '@rocket.chat/icons/dist/yaschat.css';
 The pages expect three things around them:
 
 - An i18next instance provided through `react-i18next`. The package does not ship translations; your resources must contain its keys (for example `form.adminInfoForm.title` or `component.form.action.next`). The English source strings live in [`.i18n/en.i18n.json`](https://github.com/YasChat/YasChat/blob/develop/packages/onboarding-ui/.i18n/en.i18n.json) in the repository; they are not included in the npm package.
-- A `DarkModeProvider` from `@rocket.chat/layout`. Without it, most pages render in dark mode regardless of the user's preference.
+- A `DarkModeProvider` from `@yas chat/layout`. Without it, most pages render in dark mode regardless of the user's preference.
 - Fuselage's `PaletteStyleTag`, which injects the color palette for the chosen theme.
 
 ```tsx
-import { PaletteStyleTag } from '@rocket.chat/fuselage';
-import { DarkModeProvider } from '@rocket.chat/layout';
+import { PaletteStyleTag } from '@yas chat/fuselage';
+import { DarkModeProvider } from '@yas chat/layout';
 import i18next from 'i18next';
 import type { ReactNode } from 'react';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
@@ -60,7 +60,7 @@ Pass `forcedDarkMode` to `DarkModeProvider.default` to pin a theme, and the matc
 ### A login page
 
 ```tsx
-import { LoginPage, type LoginFormPayload } from '@rocket.chat/onboarding-ui';
+import { LoginPage, type LoginFormPayload } from '@yas chat/onboarding-ui';
 
 const Login = () => {
 	const handleSubmit = async ({ email, password }: LoginFormPayload) => {
@@ -87,7 +87,7 @@ const Login = () => {
 Wizard pages take `currentStep` and `stepCount` and show a "Step X of Y" caption. Validators follow React Hook Form's `validate` signature: return `true` when the value is valid, or an error message.
 
 ```tsx
-import { AdminInfoPage, type AdminInfoPayload } from '@rocket.chat/onboarding-ui';
+import { AdminInfoPage, type AdminInfoPayload } from '@yas chat/onboarding-ui';
 
 const AdminStep = ({ onNext }: { onNext: (data: AdminInfoPayload) => void }) => (
 	<AdminInfoPage
@@ -107,7 +107,7 @@ const AdminStep = ({ onNext }: { onNext: (data: AdminInfoPayload) => void }) => 
 Some pages only show a message and need few or no props:
 
 ```tsx
-import { EmailConfirmedPage, InformationPage, SomethingWentWrongPage } from '@rocket.chat/onboarding-ui';
+import { EmailConfirmedPage, InformationPage, SomethingWentWrongPage } from '@yas chat/onboarding-ui';
 
 <EmailConfirmedPage />
 <InformationPage title='Workspace removed' description='You can close this tab.' />
@@ -193,17 +193,17 @@ Each `onSubmit` receives a typed payload. These types are exported:
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/onboarding-ui). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/onboarding-ui build
-yarn workspace @rocket.chat/onboarding-ui testunit
-yarn workspace @rocket.chat/onboarding-ui typecheck
-yarn workspace @rocket.chat/onboarding-ui lint
+yarn workspace @yas chat/onboarding-ui build
+yarn workspace @yas chat/onboarding-ui testunit
+yarn workspace @yas chat/onboarding-ui typecheck
+yarn workspace @yas chat/onboarding-ui lint
 ```
 
-Pages are developed in Storybook. Its Language toolbar control renders them in any language YasChat ships, with the `onboarding.*` strings from `@rocket.chat/i18n`; English comes from `.i18n/en.i18n.json`, and strings missing in another language fall back to it:
+Pages are developed in Storybook. Its Language toolbar control renders them in any language YasChat ships, with the `onboarding.*` strings from `@yas chat/i18n`; English comes from `.i18n/en.i18n.json`, and strings missing in another language fall back to it:
 
 ```sh
-yarn workspace @rocket.chat/onboarding-ui storybook
-yarn workspace @rocket.chat/onboarding-ui build-storybook
+yarn workspace @yas chat/onboarding-ui storybook
+yarn workspace @yas chat/onboarding-ui build-storybook
 ```
 
 ## License

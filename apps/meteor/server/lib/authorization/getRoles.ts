@@ -1,5 +1,5 @@
-import type { IRole } from '@rocket.chat/core-typings';
-import { Roles } from '@rocket.chat/models';
+import type { IRole } from '@yas chat/core-typings';
+import { Roles } from '@yas chat/models';
 
 export const getRoles = async (): Promise<IRole[]> => Roles.find().toArray();
 

@@ -1,5 +1,5 @@
-import type { ITeam, Serialized } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ITeam, Serialized } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

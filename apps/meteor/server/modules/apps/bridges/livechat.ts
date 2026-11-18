@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator, IAppsLivechatMessage } from '@rocket.chat/apps';
-import { LivechatBridge } from '@rocket.chat/apps/dist/server/bridges/LivechatBridge';
-import type { IExtraRoomParams } from '@rocket.chat/apps-engine/definition/accessors/ILivechatCreator';
+import type { IAppServerOrchestrator, IAppsLivechatMessage } from '@yas chat/apps';
+import { LivechatBridge } from '@yas chat/apps/dist/server/bridges/LivechatBridge';
+import type { IExtraRoomParams } from '@yas chat/apps-engine/definition/accessors/ILivechatCreator';
 import type {
 	IVisitorExternalIdentifier,
 	IVisitor,
@@ -8,13 +8,13 @@ import type {
 	ILivechatTransferData,
 	IDepartment,
 	ResolveVisitorContactData,
-} from '@rocket.chat/apps-engine/definition/livechat';
-import type { IMessage as IAppsEngineMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
-import type { ILivechatDepartment, IOmnichannelRoom, SelectedAgent, ILivechatVisitor } from '@rocket.chat/core-typings';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatRooms, LivechatDepartment, Users } from '@rocket.chat/models';
-import { registerGuest } from '@rocket.chat/omni-core';
+} from '@yas chat/apps-engine/definition/livechat';
+import type { IMessage as IAppsEngineMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
+import type { ILivechatDepartment, IOmnichannelRoom, SelectedAgent, ILivechatVisitor } from '@yas chat/core-typings';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatRooms, LivechatDepartment, Users } from '@yas chat/models';
+import { registerGuest } from '@yas chat/omni-core';
 
 import { deasyncPromise } from '../../../deasync/deasync';
 import { callbacks } from '../../../lib/callbacks';
@@ -29,7 +29,7 @@ import { online } from '../../../lib/omnichannel/service-status';
 import { transfer } from '../../../lib/omnichannel/transfer';
 import { settings } from '../../../settings';
 
-declare module '@rocket.chat/apps-engine/definition/accessors/ILivechatCreator' {
+declare module '@yas chat/apps-engine/definition/accessors/ILivechatCreator' {
 	interface IExtraRoomParams {
 		customFields?: Record<string, unknown>;
 	}

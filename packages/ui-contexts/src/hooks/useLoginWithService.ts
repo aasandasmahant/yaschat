@@ -1,4 +1,4 @@
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
 import { useContext, useMemo } from 'react';
 
 import { AuthenticationContext } from '../AuthenticationContext';

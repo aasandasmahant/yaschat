@@ -1,4 +1,4 @@
-import type { ILivechatSendMessageAction, ILivechatTriggerCondition, ILivechatUseExternalServiceAction } from '@rocket.chat/core-typings';
+import type { ILivechatSendMessageAction, ILivechatTriggerCondition, ILivechatUseExternalServiceAction } from '@yas chat/core-typings';
 import { route } from 'preact-router';
 
 import store from '../store';

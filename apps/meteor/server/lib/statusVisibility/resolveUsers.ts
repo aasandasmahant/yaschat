@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { FindCursor } from 'mongodb';
 
 type ResolvedUsers = { ids: IUser['_id'][]; usernames: NonNullable<IUser['username']>[] };

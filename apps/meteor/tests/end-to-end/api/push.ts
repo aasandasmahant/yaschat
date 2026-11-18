@@ -464,9 +464,9 @@ describe('[Push]', () => {
 	});
 
 	describe('[/push.info]', () => {
-		before(() => Promise.all([updateSetting('Push_gateway', 'https://random-gateway.rocket.chat')]));
+		before(() => Promise.all([updateSetting('Push_gateway', 'https://random-gateway.yas chat')]));
 
-		after(() => Promise.all([updateSetting('Push_gateway', 'https://gateway.rocket.chat')]));
+		after(() => Promise.all([updateSetting('Push_gateway', 'https://gateway.yas chat')]));
 
 		it('should fail if not logged in', async () => {
 			await request
@@ -490,7 +490,7 @@ describe('[Push]', () => {
 		});
 
 		it('should succesfully retrieve default push notification info', async () => {
-			await updateSetting('Push_gateway', 'https://gateway.rocket.chat');
+			await updateSetting('Push_gateway', 'https://gateway.yas chat');
 			await request
 				.get(api('push.info'))
 				.set(credentials)

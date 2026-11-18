@@ -133,7 +133,7 @@
 						"paths": [
 							{
 								"name": "meteor/check",
-								"message": "Validate with an ajv schema (endpoint `body`/`query` from @rocket.chat/rest-typings) or a type guard instead."
+								"message": "Validate with an ajv schema (endpoint `body`/`query` from @yas chat/rest-typings) or a type guard instead."
 							}
 						]
 					}
@@ -342,11 +342,11 @@
 					"error",
 					{
 						"selector": "MemberExpression[object.name='Meteor'][property.name='Error']",
-						"message": "Use ClientSafeError from '@rocket.chat/core-services' instead."
+						"message": "Use ClientSafeError from '@yas chat/core-services' instead."
 					},
 					{
 						"selector": "TSQualifiedName[left.name='Meteor'][right.name='Error']",
-						"message": "Use ClientSafeError from '@rocket.chat/core-services' instead."
+						"message": "Use ClientSafeError from '@yas chat/core-services' instead."
 					},
 					{
 						"selector": "MemberExpression[object.name='Meteor'][property.name='absoluteUrl']",
@@ -358,7 +358,7 @@
 					},
 					{
 						"selector": "MemberExpression[object.name='Accounts'][property.name=/^_(generateStampedLoginToken|insertLoginToken|insertHashedLoginToken|hashStampedToken|hashLoginToken)$/]",
-						"message": "Use issueLoginToken from 'server/lib/auth/issueLoginToken', or the helpers in '@rocket.chat/account-utils', instead."
+						"message": "Use issueLoginToken from 'server/lib/auth/issueLoginToken', or the helpers in '@yas chat/account-utils', instead."
 					},
 					{
 						"selector": "MemberExpression[object.name='Accounts'][property.name='_clearAllLoginTokens']",
@@ -366,11 +366,11 @@
 					},
 					{
 						"selector": "MemberExpression[object.name='Accounts'][property.name=/^(_checkPassword|_checkPasswordAsync|_bcryptRounds)$/]",
-						"message": "Use compareUserPassword from 'server/lib/compareUserPassword', or verifyPassword and BCRYPT_ROUNDS from '@rocket.chat/account-utils', instead."
+						"message": "Use compareUserPassword from 'server/lib/compareUserPassword', or verifyPassword and BCRYPT_ROUNDS from '@yas chat/account-utils', instead."
 					},
 					{
 						"selector": "MemberExpression[object.name='Accounts'][property.name=/^setPassword(Async)?$/]",
-						"message": "Use Users.setPasswordHash(userId, await hashPassword(password)) with hashPassword from '@rocket.chat/account-utils' instead."
+						"message": "Use Users.setPasswordHash(userId, await hashPassword(password)) with hashPassword from '@yas chat/account-utils' instead."
 					}
 				]
 			}
@@ -383,7 +383,7 @@
 					{
 						"paths": [
 							{
-								"name": "@rocket.chat/ui-client",
+								"name": "@yas chat/ui-client",
 								"allowTypeImports": true,
 								"allowImportNames": ["usePreferenceFeaturePreviewList"],
 								"message": "logic/ may only use headless hooks from ui-client; add the hook to the allow list if it renders nothing."
@@ -391,7 +391,7 @@
 						],
 						"patterns": [
 							{
-								"group": ["@rocket.chat/fuselage", "react-dom", "**/views/**"],
+								"group": ["@yas chat/fuselage", "react-dom", "**/views/**"],
 								"message": "logic/ must not depend on rendering; move this to views/ or pass it in."
 							}
 						]

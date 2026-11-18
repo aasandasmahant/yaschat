@@ -1,4 +1,4 @@
-import { Imports } from '@rocket.chat/models';
+import { Imports } from '@yas chat/models';
 
 export const executeGetLatestImportOperations = async () => {
 	const data = Imports.find(

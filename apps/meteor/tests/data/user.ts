@@ -1,9 +1,9 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IUser } from '@yas chat/core-typings';
 
 export const password = 'R0ck3t.ch@tP@ssw0rd1234.!';
 export const adminUsername = 'yaschat.internal.admin.test';
-export const adminEmail = `${adminUsername}@rocket.chat`;
+export const adminEmail = `${adminUsername}@yas chat`;
 export const adminPassword = adminUsername;
 
 export type IUserWithCredentials = {

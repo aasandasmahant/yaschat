@@ -1,4 +1,4 @@
-import { FederationMatrix, ClientSafeError, Room, Team } from '@rocket.chat/core-services';
+import { FederationMatrix, ClientSafeError, Room, Team } from '@yas chat/core-services';
 import {
 	type IRoom,
 	type IRoomAbacRedaction,
@@ -10,9 +10,9 @@ import {
 	isPublicRoom,
 	type IUser,
 	type UserStatus,
-} from '@rocket.chat/core-typings';
-import { Messages, Rooms, Users, Uploads, Subscriptions } from '@rocket.chat/models';
-import type { Notifications, RoomAvailableForTeams } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import { Messages, Rooms, Users, Uploads, Subscriptions } from '@yas chat/models';
+import type { Notifications, RoomAvailableForTeams } from '@yas chat/rest-typings';
 import {
 	ajv,
 	ajvQuery,
@@ -46,8 +46,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { isTruthy } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { isTruthy } from '@yas chat/tools';
 
 import { adminFields } from '../../../lib/rooms/adminFields';
 import { omit } from '../../../lib/utils/omit';
@@ -1837,7 +1837,7 @@ type RoomEndpoints = ExtractRoutesFromAPI<typeof roomEndpoints> &
 	ExtractRoutesFromAPI<typeof roomsSaveNotificationEndpoint> &
 	ExtractRoutesFromAPI<typeof roomsSaveDraftEndpoint>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends RoomEndpoints {}
 }

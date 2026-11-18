@@ -208,7 +208,7 @@ describe('buildOperation', () => {
 		]);
 	});
 
-	it('should generate the operation id published at developer.rocket.chat', () => {
+	it('should generate the operation id published at developer.yas chat', () => {
 		expect(buildOperationId('GET', '/api/v1/banners/{id}')).toBe('get-api-v1-banners-id');
 		expect(buildOperationId('POST', '/api/v1/banners.dismiss')).toBe('post-api-v1-banners.dismiss');
 	});

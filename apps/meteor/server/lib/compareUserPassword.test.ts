@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 
-import { hashPassword } from '@rocket.chat/account-utils';
-import { SHA256 } from '@rocket.chat/sha256';
+import { hashPassword } from '@yas chat/account-utils';
+import { SHA256 } from '@yas chat/sha256';
 import bcrypt from 'bcrypt';
 import { expect } from 'chai';
 

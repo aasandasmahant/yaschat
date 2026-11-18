@@ -1,4 +1,4 @@
-import type { IExportOperation } from '@rocket.chat/core-typings';
+import type { IExportOperation } from '@yas chat/core-typings';
 import type { UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

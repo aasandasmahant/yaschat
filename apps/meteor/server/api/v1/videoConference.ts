@@ -1,5 +1,5 @@
-import { Authorization, VideoConf } from '@rocket.chat/core-services';
-import type { VideoConference, VideoConferenceCapabilities, VideoConferenceInstructions } from '@rocket.chat/core-typings';
+import { Authorization, VideoConf } from '@yas chat/core-services';
+import type { VideoConference, VideoConferenceCapabilities, VideoConferenceInstructions } from '@yas chat/core-typings';
 import {
 	ajv,
 	isVideoConfAddParticipantsProps,
@@ -16,7 +16,7 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { availabilityErrors } from '../../../lib/videoConference/constants';
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';

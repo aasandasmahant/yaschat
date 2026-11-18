@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Skeleton } from '@rocket.chat/fuselage';
+import { Box, Button, ButtonGroup, Skeleton } from '@yas chat/fuselage';
 
 import { Page, PageHeader, PageContent } from './Page';
 

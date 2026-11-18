@@ -1,3 +1,3 @@
-import { LocalBroker } from '@rocket.chat/core-services';
+import { LocalBroker } from '@yas chat/core-services';
 
 export const localBroker = new LocalBroker();

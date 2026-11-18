@@ -1,5 +1,5 @@
-import { Dropdown as DropdownMobile } from '@rocket.chat/fuselage';
-import { useLayout } from '@rocket.chat/ui-contexts';
+import { Dropdown as DropdownMobile } from '@yas chat/fuselage';
+import { useLayout } from '@yas chat/ui-contexts';
 import type { ForwardedRef, ReactNode, RefObject } from 'react';
 import { forwardRef } from 'react';
 

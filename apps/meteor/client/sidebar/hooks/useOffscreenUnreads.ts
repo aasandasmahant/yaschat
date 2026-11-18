@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import { useMemo, useState } from 'react';
 
 import type { SidebarVirtualListRange } from '../components/SidebarVirtualList';

@@ -28,7 +28,7 @@ class MeteorErrorMock extends Error {
 process.env.CREATE_TOKENS_FOR_USERS_SECRET = 'V@9#mK2$pL8!nQ5^rT1&wX6*jY3%uZ7';
 
 const { generateAccessToken } = p.noCallThru().load('./createToken.ts', {
-	'@rocket.chat/core-services': { Authorization: AuthorizationMock, ClientSafeError: MeteorErrorMock, User: UserMock },
+	'@yas chat/core-services': { Authorization: AuthorizationMock, ClientSafeError: MeteorErrorMock, User: UserMock },
 	'../../lib/auth/issueLoginToken': { issueLoginToken: issueLoginTokenStub },
 });
 

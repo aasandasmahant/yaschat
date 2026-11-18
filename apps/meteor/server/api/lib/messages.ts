@@ -1,5 +1,5 @@
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Messages, Users } from '@rocket.chat/models';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { Rooms, Messages, Users } from '@yas chat/models';
 import type { FindOptions } from 'mongodb';
 
 import { canAccessRoomAsync } from '../../lib/authorization/canAccessRoom';

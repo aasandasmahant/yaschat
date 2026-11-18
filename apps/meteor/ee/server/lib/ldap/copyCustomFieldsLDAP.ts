@@ -1,5 +1,5 @@
-import type { IImportUser, ILDAPEntry } from '@rocket.chat/core-typings';
-import type { Logger } from '@rocket.chat/logger';
+import type { IImportUser, ILDAPEntry } from '@yas chat/core-typings';
+import type { Logger } from '@yas chat/logger';
 
 import { replacesNestedValues } from './replacesNestedValues';
 import { getNestedProp } from '../../../../server/lib/getNestedProp';

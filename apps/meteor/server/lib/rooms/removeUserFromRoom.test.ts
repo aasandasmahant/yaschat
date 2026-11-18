@@ -1,6 +1,6 @@
 import { before, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -8,8 +8,8 @@ import sinon from 'sinon';
 const messageMock = { saveSystemMessage: sinon.stub().resolves() };
 
 const { performUserRemoval } = p.noCallThru().load('./removeUserFromRoom.ts', {
-	'@rocket.chat/apps': { Apps: {}, AppEvents: {} },
-	'@rocket.chat/core-services': { Message: messageMock, Team: {}, Room: {}, ClientSafeError: Error },
+	'@yas chat/apps': { Apps: {}, AppEvents: {} },
+	'@yas chat/core-services': { Message: messageMock, Team: {}, Room: {}, ClientSafeError: Error },
 	'../../settings': { settings: { get: sinon.stub() } },
 	'../callbacks/afterLeaveRoomCallback': { afterLeaveRoomCallback: { run: sinon.stub() } },
 	'../callbacks/beforeLeaveRoomCallback': { beforeLeaveRoomCallback: { run: sinon.stub() } },

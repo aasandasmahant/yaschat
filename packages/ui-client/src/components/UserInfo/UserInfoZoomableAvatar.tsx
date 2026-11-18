@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Palette } from '@rocket.chat/fuselage';
-import { useUserAvatarPath } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { Box, Palette } from '@yas chat/fuselage';
+import { useUserAvatarPath } from '@yas chat/ui-contexts';
 import { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

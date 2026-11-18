@@ -1,4 +1,4 @@
-import { UserStatus } from '@rocket.chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 import type { Meta } from '@storybook/react';
 
 import UsersTable from './UsersTable';
@@ -13,7 +13,7 @@ const mockedUsers = [
 		_id: '1',
 		username: 'example.user',
 		name: 'Example User',
-		emails: [{ address: 'example@rocket.chat', verified: true }],
+		emails: [{ address: 'example@yas chat', verified: true }],
 		status: UserStatus.ONLINE,
 		roles: ['user'],
 		active: true,
@@ -23,7 +23,7 @@ const mockedUsers = [
 		_id: '2',
 		username: 'john.doe',
 		name: 'John Doe',
-		emails: [{ address: 'john@rocket.chat', verified: true }],
+		emails: [{ address: 'john@yas chat', verified: true }],
 		status: UserStatus.OFFLINE,
 		roles: ['admin', 'user'],
 		active: true,
@@ -33,7 +33,7 @@ const mockedUsers = [
 		_id: '3',
 		username: 'sarah.smith',
 		name: 'Sarah Smith',
-		emails: [{ address: 'sarah@rocket.chat', verified: true }],
+		emails: [{ address: 'sarah@yas chat', verified: true }],
 		status: UserStatus.AWAY,
 		roles: ['user'],
 		active: true,
@@ -43,7 +43,7 @@ const mockedUsers = [
 		_id: '4',
 		username: 'mike.wilson',
 		name: 'Mike Wilson',
-		emails: [{ address: 'mike@rocket.chat', verified: false }],
+		emails: [{ address: 'mike@yas chat', verified: false }],
 		status: UserStatus.BUSY,
 		roles: ['user'],
 		active: true,
@@ -53,7 +53,7 @@ const mockedUsers = [
 		_id: '5',
 		username: 'emma.davis',
 		name: 'Emma Davis',
-		emails: [{ address: 'emma@rocket.chat', verified: true }],
+		emails: [{ address: 'emma@yas chat', verified: true }],
 		status: UserStatus.ONLINE,
 		roles: ['moderator', 'user'],
 		active: true,

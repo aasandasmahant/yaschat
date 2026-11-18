@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
+import { Box } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
 import type { ReactNode } from 'react';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';

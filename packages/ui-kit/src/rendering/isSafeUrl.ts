@@ -2,7 +2,7 @@
 const blockedProtocols = ['javascript:', 'data:', 'vbscript:'];
 
 // Resolves relative URLs the way an anchor would, so they are checked by the scheme they end up with.
-const base = 'https://rocket.chat/';
+const base = 'https://yas chat/';
 
 /** Whether a URL sent by an app is safe to open from a button or menu option. */
 export const isSafeUrl = (url: string): boolean => {

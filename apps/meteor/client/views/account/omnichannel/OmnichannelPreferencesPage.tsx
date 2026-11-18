@@ -1,6 +1,6 @@
-import { ButtonGroup, Button, Accordion, Stack } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useUserPreference, useSetting } from '@rocket.chat/ui-contexts';
+import { ButtonGroup, Button, Accordion, Stack } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useUserPreference, useSetting } from '@yas chat/ui-contexts';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

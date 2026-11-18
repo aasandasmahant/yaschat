@@ -1,4 +1,4 @@
-import type { ISidebarCategory } from '@rocket.chat/core-typings';
+import type { ISidebarCategory } from '@yas chat/core-typings';
 import { useCallback } from 'react';
 
 import { usePersistCategoriesMutation } from './usePersistCategoriesMutation';

@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { IconButton, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { IconButton, useStyle } from '@yas chat/fuselage';
 import DOMPurify from 'dompurify';
 import type { MouseEvent, AllHTMLAttributes } from 'react';
 import { memo } from 'react';

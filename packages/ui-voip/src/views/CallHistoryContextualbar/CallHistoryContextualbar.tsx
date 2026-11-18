@@ -1,6 +1,6 @@
-import type { CallPreventionRecord } from '@rocket.chat/core-typings';
-import { Box, Button, ButtonGroup, Icon, MessageBlock } from '@rocket.chat/fuselage';
-import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@rocket.chat/fuselage-ui-kit';
+import type { CallPreventionRecord } from '@yas chat/core-typings';
+import { Box, Button, ButtonGroup, Icon, MessageBlock } from '@yas chat/fuselage';
+import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@yas chat/fuselage-ui-kit';
 import {
 	ContextualbarDialog,
 	ContextualbarHeader,
@@ -12,7 +12,7 @@ import {
 	InfoPanelSection,
 	InfoPanelLabel,
 	InfoPanelText,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { HistoryActionCallbacks } from './CallHistoryActions';

@@ -1,5 +1,5 @@
-import type { AbacMembershipGroup, AbacPreviewCursor, IAbacRoomMembershipPreview } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { AbacMembershipGroup, AbacPreviewCursor, IAbacRoomMembershipPreview } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import type { InfiniteData } from '@tanstack/react-query';
 import { useInfiniteQuery } from '@tanstack/react-query';
 

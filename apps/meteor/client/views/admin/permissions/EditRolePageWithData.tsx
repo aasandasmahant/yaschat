@@ -1,7 +1,7 @@
-import type { IRole } from '@rocket.chat/core-typings';
-import { Callout } from '@rocket.chat/fuselage';
-import { GenericError, PageSkeleton, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+import type { IRole } from '@yas chat/core-typings';
+import { Callout } from '@yas chat/fuselage';
+import { GenericError, PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import EditRolePage from './EditRolePage';

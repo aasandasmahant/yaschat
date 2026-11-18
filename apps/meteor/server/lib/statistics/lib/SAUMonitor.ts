@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISession, ISessionDevice, IUser } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { Logger } from '@rocket.chat/logger';
-import { Sessions, Users, aggregates } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISession, ISessionDevice, IUser } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { Logger } from '@yas chat/logger';
+import { Sessions, Users, aggregates } from '@yas chat/models';
 import mem from 'mem';
 import UAParser from 'ua-parser-js';
 

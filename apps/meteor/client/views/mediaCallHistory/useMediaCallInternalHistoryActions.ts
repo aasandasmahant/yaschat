@@ -1,7 +1,7 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useGoToDirectMessage } from '@rocket.chat/ui-client';
-import { useRouter, useUserAvatarPath } from '@rocket.chat/ui-contexts';
-import { useWidgetExternalControls, usePeekMediaSessionState, type CallHistoryInternalContact } from '@rocket.chat/ui-voip';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useGoToDirectMessage } from '@yas chat/ui-client';
+import { useRouter, useUserAvatarPath } from '@yas chat/ui-contexts';
+import { useWidgetExternalControls, usePeekMediaSessionState, type CallHistoryInternalContact } from '@yas chat/ui-voip';
 import { useMemo } from 'react';
 
 type UseMediaCallInternalHistoryActionsBaseOptions = {

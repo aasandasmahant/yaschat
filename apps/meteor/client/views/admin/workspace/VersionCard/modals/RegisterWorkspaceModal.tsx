@@ -9,9 +9,9 @@ import {
 	ModalHeaderText,
 	ModalTitle,
 	Text,
-} from '@rocket.chat/fuselage';
-import { ExternalLink, links } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { ExternalLink, links } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import RegisterWorkspaceSetupModal from './RegisterWorkspaceSetupModal';

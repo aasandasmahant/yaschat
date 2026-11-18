@@ -1,6 +1,6 @@
-import type { UseClipboardReturn } from '@rocket.chat/fuselage-hooks';
-import { useClipboard, useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { UseClipboardReturn } from '@yas chat/fuselage-hooks';
+import { useClipboard, useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export function useClipboardWithToast(text: string): UseClipboardReturn {

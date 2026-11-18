@@ -1,7 +1,7 @@
-import { api } from '@rocket.chat/core-services';
-import type { IUser, IRole, AtLeast } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Users } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { IUser, IRole, AtLeast } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Users } from '@yas chat/models';
 
 import { addUserRolesAsync } from '../../../server/lib/roles/addUserRoles';
 import { removeUserFromRolesAsync } from '../../../server/lib/roles/removeUserFromRoles';

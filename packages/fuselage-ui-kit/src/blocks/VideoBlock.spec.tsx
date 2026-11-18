@@ -1,8 +1,8 @@
 /**
  * @jest-environment-options {"url": "https://workspace.example.com/channel/general"}
  */
-import { MockedServerContext } from '@rocket.chat/mock-providers';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { MockedServerContext } from '@yas chat/mock-providers';
+import type * as UiKit from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

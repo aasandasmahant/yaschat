@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 
 import { RateLimiterClass as RateLimiter } from '../../lib/RateLimiter';
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';

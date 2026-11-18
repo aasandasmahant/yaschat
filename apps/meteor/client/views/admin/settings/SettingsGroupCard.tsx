@@ -1,8 +1,8 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { css } from '@rocket.chat/css-in-js';
-import { Button, Box, Card, CardTitle, CardBody, CardControls } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { css } from '@yas chat/css-in-js';
+import { Button, Box, Card, CardTitle, CardBody, CardControls } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

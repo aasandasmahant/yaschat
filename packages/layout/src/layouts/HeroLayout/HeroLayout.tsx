@@ -1,4 +1,4 @@
-import { Box, Margins } from '@rocket.chat/fuselage';
+import { Box, Margins } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 import DarkModeProvider from '../../DarkModeProvider';

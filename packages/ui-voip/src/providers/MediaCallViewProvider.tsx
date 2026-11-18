@@ -1,13 +1,13 @@
-import { useGoToDirectMessage } from '@rocket.chat/ui-client';
-import type { Device } from '@rocket.chat/ui-contexts';
+import { useGoToDirectMessage } from '@yas chat/ui-client';
+import type { Device } from '@yas chat/ui-contexts';
 import {
 	useSetOutputMediaDevice,
 	useSetInputMediaDevice,
 	useSetModal,
 	useSelectedDevices,
 	useToastMessageDispatch,
-} from '@rocket.chat/ui-contexts';
-import { stopTracks, useDevicePermissionPrompt2 } from '@rocket.chat/ui-media';
+} from '@yas chat/ui-contexts';
+import { stopTracks, useDevicePermissionPrompt2 } from '@yas chat/ui-media';
 import type { ReactNode } from 'react';
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

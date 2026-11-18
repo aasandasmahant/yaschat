@@ -1,5 +1,5 @@
-import { MessageTypes } from '@rocket.chat/message-types';
-import { Messages, SmarshHistory, Users, Rooms } from '@rocket.chat/models';
+import { MessageTypes } from '@yas chat/message-types';
+import { Messages, SmarshHistory, Users, Rooms } from '@yas chat/models';
 import moment from 'moment-timezone';
 
 import { sendEmail } from './sendEmail';

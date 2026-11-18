@@ -1,5 +1,5 @@
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import styled from '@rocket.chat/styled';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import styled from '@yas chat/styled';
 import type { PropsWithChildren } from 'react';
 import { useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';

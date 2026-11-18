@@ -1,6 +1,6 @@
-import { Field, FieldLabel, FieldRow, TextInput, Box, Button, ButtonGroup, IconButton } from '@rocket.chat/fuselage';
-import { ContextualbarScrollableContent, ContextualbarFooter } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, type UploadResult } from '@rocket.chat/ui-contexts';
+import { Field, FieldLabel, FieldRow, TextInput, Box, Button, ButtonGroup, IconButton } from '@yas chat/fuselage';
+import { ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
+import { useToastMessageDispatch, type UploadResult } from '@yas chat/ui-contexts';
 import fileSize from 'filesize';
 import type { ChangeEvent } from 'react';
 import { useState, useCallback } from 'react';

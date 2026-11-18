@@ -1,4 +1,4 @@
-import type { Session } from '@rocket.chat/ddp-server';
+import type { Session } from '@yas chat/ddp-server';
 import { Meteor } from 'meteor/meteor';
 
 type MeteorConnection = Omit<Meteor.Connection, 'httpHeaders'> & { httpHeaders: Session['connection']['httpHeaders'] };

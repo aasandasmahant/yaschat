@@ -1,4 +1,4 @@
-import type { IReport, IMessage } from '@rocket.chat/core-typings';
+import type { IReport, IMessage } from '@yas chat/core-typings';
 
 import type { IBaseModel } from './IBaseModel';
 

@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useUserId, useUserPresence } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useUserId, useUserPresence } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 
 import MarkdownText from '../../../components/MarkdownText';

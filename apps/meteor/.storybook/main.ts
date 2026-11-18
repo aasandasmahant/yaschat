@@ -1,7 +1,7 @@
 import { createRequire } from 'node:module';
 import { dirname, join, resolve } from 'node:path';
 
-import baseConfig from '@rocket.chat/storybook-config/main';
+import baseConfig from '@yas chat/storybook-config/main';
 import webpack from 'webpack';
 
 const require = createRequire(import.meta.url);
@@ -21,7 +21,7 @@ export default baseConfig({
 				// 'react/jsx-runtime': require.resolve('../../../node_modules/react/jsx-runtime'),
 				'@tanstack/react-query': require.resolve('../../../node_modules/@tanstack/react-query'),
 				'react-i18next$': require.resolve('../../../node_modules/react-i18next'),
-				'@rocket.chat/fuselage$': require.resolve('../../../node_modules/@rocket.chat/fuselage'),
+				'@yas chat/fuselage$': require.resolve('../../../node_modules/@yas chat/fuselage'),
 				// Meteor's bundler ignores the `exports` field, so source code reaches
 				// into swiper's internals via deep file paths. Webpack honors `exports`
 				// and rejects them, so map each subpath to the actual file.
@@ -31,7 +31,7 @@ export default baseConfig({
 				'swiper/swiper.css$': join(swiperRoot, 'swiper.css'),
 				'swiper/modules/zoom.css$': join(swiperRoot, 'modules/zoom.css'),
 			},
-			// This is only needed because of Rocket.Chat's icon font.
+			// This is only needed because of Yas chat's icon font.
 			roots: [...(config.resolve?.roots ?? []), resolve(import.meta.dirname, '../../../apps/meteor/public')],
 		};
 
@@ -46,7 +46,7 @@ export default baseConfig({
 		config.plugins?.push(
 			new webpack.NormalModuleReplacementPlugin(/^meteor/, require.resolve('./mocks/meteor.ts')),
 			new webpack.NormalModuleReplacementPlugin(/(app)\/*.*\/(server)\/*/, require.resolve('./mocks/empty.ts')),
-			new webpack.NormalModuleReplacementPlugin(/rocketchat\.info$/, require.resolve('./mocks/rocketchat.info.ts')),
+			new webpack.NormalModuleReplacementPlugin(/YasChat\.info$/, require.resolve('./mocks/YasChat.info.ts')),
 			// The MIME database, which `lib/mimeTypes` loads and every story that reaches the message
 			// composer therefore loads too. Its own dependencies are written for Node — see the mock for why that
 			// is replaced here rather than shimmed for the whole preview.

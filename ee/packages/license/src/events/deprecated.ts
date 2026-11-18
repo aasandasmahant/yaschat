@@ -1,4 +1,4 @@
-import type { LicenseModule } from '@rocket.chat/core-typings';
+import type { LicenseModule } from '@yas chat/core-typings';
 
 import type { LicenseManager } from '../license';
 import { hasModule } from '../modules';

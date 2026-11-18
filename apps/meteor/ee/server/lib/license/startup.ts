@@ -1,8 +1,8 @@
-import { api } from '@rocket.chat/core-services';
-import type { LicenseLimitKind } from '@rocket.chat/core-typings';
-import { applyLicense, applyLicenseOrRemove, applyNewestLicense, License } from '@rocket.chat/license';
-import { Subscriptions, Users, Settings, LivechatContacts } from '@rocket.chat/models';
-import { wrapExceptions } from '@rocket.chat/tools';
+import { api } from '@yas chat/core-services';
+import type { LicenseLimitKind } from '@yas chat/core-typings';
+import { applyLicense, applyLicenseOrRemove, applyNewestLicense, License } from '@yas chat/license';
+import { Subscriptions, Users, Settings, LivechatContacts } from '@yas chat/models';
+import { wrapExceptions } from '@yas chat/tools';
 import moment from 'moment';
 
 import { getAppCount } from './lib/getAppCount';
@@ -17,7 +17,7 @@ const applyStartupLicense = async (): Promise<void> => {
 	// so the startup license is never left pending behind the Site_Url watcher.
 	await License.setWorkspaceUrl(settings.get<string>('Site_Url'));
 
-	await applyNewestLicense(License, settings.get<string>('Enterprise_License') ?? '', process.env.ROCKETCHAT_LICENSE ?? '');
+	await applyNewestLicense(License, settings.get<string>('Enterprise_License') ?? '', process.env.YasChat_LICENSE ?? '');
 };
 
 export const startLicense = async () => {

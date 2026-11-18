@@ -1,6 +1,6 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse, IUser } from '@rocket.chat/core-typings';
-import { isPOSTCannedResponsesProps, isCannedResponsesProps } from '@rocket.chat/rest-typings';
-import type { PaginatedResult, PaginatedRequest } from '@rocket.chat/rest-typings';
+import type { ILivechatDepartment, IOmnichannelCannedResponse, IUser } from '@yas chat/core-typings';
+import { isPOSTCannedResponsesProps, isCannedResponsesProps } from '@yas chat/rest-typings';
+import type { PaginatedResult, PaginatedRequest } from '@yas chat/rest-typings';
 
 import { API } from '../../../../server/api';
 import { getPaginationItems } from '../../../../server/api/lib/getPaginationItems';
@@ -8,7 +8,7 @@ import { removeCannedResponse } from '../../meteor-methods/removeCannedResponse'
 import { saveCannedResponse } from '../../meteor-methods/saveCannedResponse';
 import { findAllCannedResponses, findAllCannedResponsesFilter, findOneCannedResponse } from '../lib/canned-responses';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/canned-responses': {
 			GET: (

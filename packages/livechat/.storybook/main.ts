@@ -124,7 +124,7 @@ const dateFnsLocales = (): Plugin => {
 const config: StorybookConfig = {
 	stories: ['../src/**/{*.story,story,*.stories,stories}.tsx'],
 
-	addons: [getAbsolutePath('@storybook/addon-docs'), require.resolve('@rocket.chat/storybook-config/preset')],
+	addons: [getAbsolutePath('@storybook/addon-docs'), require.resolve('@yas chat/storybook-config/preset')],
 
 	framework: {
 		name: getAbsolutePath('@storybook/preact-vite'),
@@ -158,7 +158,7 @@ const config: StorybookConfig = {
 			optimizeDeps: {
 				// Vite serves linked workspace packages as they are, and these ship CommonJS, whose named exports only
 				// pre-bundling exposes to the browser.
-				include: ['@rocket.chat/core-typings', '@rocket.chat/ddp-client'],
+				include: ['@yas chat/core-typings', '@yas chat/ddp-client'],
 			},
 		}),
 };

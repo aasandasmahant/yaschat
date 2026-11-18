@@ -1,5 +1,5 @@
-import { Button, Select } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Button, Select } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import FilterBar from './FilterBar';

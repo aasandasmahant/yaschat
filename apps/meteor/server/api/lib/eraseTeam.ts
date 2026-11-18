@@ -1,7 +1,7 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { ClientSafeError, Team } from '@rocket.chat/core-services';
-import type { IRoom, ITeam, IUser, AtLeast } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { ClientSafeError, Team } from '@yas chat/core-services';
+import type { IRoom, ITeam, IUser, AtLeast } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { eraseRoom } from '../../lib/eraseRoom';
 import { SystemLogger } from '../../lib/logger/system';

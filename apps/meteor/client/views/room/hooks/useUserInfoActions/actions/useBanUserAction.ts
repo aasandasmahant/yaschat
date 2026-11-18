@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { usePermission, useUserId, useUserRoom, useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { usePermission, useUserId, useUserRoom, useUserSubscription } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

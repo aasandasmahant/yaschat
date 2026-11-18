@@ -6,7 +6,7 @@ export { isReservedByExclusiveBridge } from './helpers/isReservedByExclusiveBrid
 
 export { FederationMatrix } from './FederationMatrix';
 
-export { generateEd25519RandomSecretKey } from '@rocket.chat/federation-sdk';
+export { generateEd25519RandomSecretKey } from '@yas chat/federation-sdk';
 
 export { getFederationRoutes } from './api/routes';
 

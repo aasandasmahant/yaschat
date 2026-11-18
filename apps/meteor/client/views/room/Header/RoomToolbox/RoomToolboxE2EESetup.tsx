@@ -1,6 +1,6 @@
-import { useStableArray } from '@rocket.chat/fuselage-hooks';
-import { HeaderToolbarAction } from '@rocket.chat/ui-client';
-import { useRoomToolbox, type RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { useStableArray } from '@yas chat/fuselage-hooks';
+import { HeaderToolbarAction } from '@yas chat/ui-client';
+import { useRoomToolbox, type RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { roomActionHooksForE2EESetup } from '../../../../ui';

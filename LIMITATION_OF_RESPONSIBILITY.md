@@ -14,10 +14,10 @@ In particular:
 
 For total transparency, YasChat Technologies Corp. owns and operates only ONE publicly available YasChat server in the world. The server that YasChat Technologies Corp. operates can only be accessed at:
 
-https://open.rocket.chat     
+https://open.yas chat     
 
 Any other YasChat server you access is not operated by YasChat Technologies Corp. and is subjected to the usage warning above.
 
-## ROCKET.CHAT CLOUD
+## Yas chat CLOUD
 
-YasChat Technologies Corp. provides a cloud service for hosting YasChat instances. The data, messages and files on those instances are subject to our [Terms of Use](https://rocket.chat/terms). If you have evidence of misuse or a breach of our terms, contact us at [contact@rocket.chat](mailto:contact@rocket.chat) and include a description of the breach as well as the instance's URL.
+YasChat Technologies Corp. provides a cloud service for hosting YasChat instances. The data, messages and files on those instances are subject to our [Terms of Use](https://yas chat/terms). If you have evidence of misuse or a breach of our terms, contact us at [contact@yas chat](mailto:contact@yas chat) and include a description of the breach as well as the instance's URL.

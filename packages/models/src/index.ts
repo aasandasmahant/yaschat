@@ -1,4 +1,4 @@
-import type { ILivechatDepartmentAgents, ILivechatInquiryRecord, ISubscription, YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ILivechatDepartmentAgents, ILivechatInquiryRecord, ISubscription, YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	IAnalyticsModel,
 	IAvatarsModel,
@@ -80,7 +80,7 @@ import type {
 	IAbacAttributesModel,
 	ITwoFactorChallengesModel,
 	ISamlUsedAssertionsModel,
-} from '@rocket.chat/model-typings';
+} from '@yas chat/model-typings';
 import type { Collection, Db } from 'mongodb';
 
 import {

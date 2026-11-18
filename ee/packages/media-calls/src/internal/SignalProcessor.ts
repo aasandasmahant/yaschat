@@ -1,14 +1,14 @@
-import type { IMediaCall, IUser } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { isPendingState } from '@rocket.chat/media-signaling';
+import type { IMediaCall, IUser } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { isPendingState } from '@yas chat/media-signaling';
 import type {
 	ClientMediaSignal,
 	ClientMediaSignalRegister,
 	ClientMediaSignalRequestCall,
 	ServerMediaSignal,
 	ServerMediaSignalRejectedCallRequest,
-} from '@rocket.chat/media-signaling';
-import { MediaCalls } from '@rocket.chat/models';
+} from '@yas chat/media-signaling';
+import { MediaCalls } from '@yas chat/models';
 
 import { DEFAULT_CALL_FEATURES } from '../constants';
 import type { InternalCallParams, SignalProcessingOptions } from '../definition/common';

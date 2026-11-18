@@ -1,9 +1,9 @@
-import { api, FederationMatrix, isClientSafeError, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, SlashCommandCallbackParams } from '@rocket.chat/core-typings';
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import { validateFederatedUsername } from '@rocket.chat/federation-matrix';
-import { Logger } from '@rocket.chat/logger';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import { api, FederationMatrix, isClientSafeError, ClientSafeError } from '@yas chat/core-services';
+import type { IUser, SlashCommandCallbackParams } from '@yas chat/core-typings';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import { validateFederatedUsername } from '@yas chat/federation-matrix';
+import { Logger } from '@yas chat/logger';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
 
 import { i18n } from '../../lib/i18n';
 import { slashCommands } from '../../lib/utils/slashCommand';

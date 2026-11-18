@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
+import { Box } from '@yas chat/fuselage';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
 import type { ChangeEvent, MouseEvent } from 'react';
 import { useContext, useState } from 'react';
 

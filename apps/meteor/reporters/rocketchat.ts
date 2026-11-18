@@ -21,8 +21,8 @@ class YasChatReporter implements Reporter {
 	}
 
 	async onTestEnd(test: TestCase, result: TestResult) {
-		if (process.env.REPORTER_ROCKETCHAT_REPORT !== 'true') {
-			console.log('REPORTER_ROCKETCHAT_REPORT is not true, skipping', {
+		if (process.env.REPORTER_YasChat_REPORT !== 'true') {
+			console.log('REPORTER_YasChat_REPORT is not true, skipping', {
 				draft: this.draft,
 				branch: this.branch,
 			});

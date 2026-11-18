@@ -1,8 +1,8 @@
-import { FederationMatrix, Message, ClientSafeError, Room } from '@rocket.chat/core-services';
-import { isEditedMessage, isRoomNativeFederated, isUserNativeFederated, isBannedSubscription } from '@rocket.chat/core-typings';
-import type { IRoomNativeFederated, IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { isReservedByExclusiveBridge, validateFederatedUsername } from '@rocket.chat/federation-matrix';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { FederationMatrix, Message, ClientSafeError, Room } from '@yas chat/core-services';
+import { isEditedMessage, isRoomNativeFederated, isUserNativeFederated, isBannedSubscription } from '@yas chat/core-typings';
+import type { IRoomNativeFederated, IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { isReservedByExclusiveBridge, validateFederatedUsername } from '@yas chat/federation-matrix';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { afterBanFromRoomCallback } from '../../../../server/lib/callbacks/afterBanFromRoomCallback';

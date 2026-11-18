@@ -1,4 +1,4 @@
-import { LivechatRooms } from '@rocket.chat/models';
+import { LivechatRooms } from '@yas chat/models';
 
 import { addMigration } from '../../lib/migrations';
 

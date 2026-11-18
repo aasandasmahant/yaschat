@@ -1,4 +1,4 @@
-import { LivechatBusinessHourBehaviors } from '@rocket.chat/core-typings';
+import { LivechatBusinessHourBehaviors } from '@yas chat/core-typings';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { settings } from '../../../../server/settings';

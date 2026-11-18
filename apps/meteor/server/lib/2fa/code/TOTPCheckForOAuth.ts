@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { TwoFactorChallenges } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { TwoFactorChallenges } from '@yas chat/models';
 
 import type { TwoFactorUser } from './ICodeCheck';
 import { TOTPCheck } from './TOTPCheck';

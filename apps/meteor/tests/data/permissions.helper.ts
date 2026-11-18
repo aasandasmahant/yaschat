@@ -1,4 +1,4 @@
-import type { ISetting } from '@rocket.chat/core-typings';
+import type { ISetting } from '@yas chat/core-typings';
 
 import { api, credentials, request } from './api-data';
 import { omnichannelEEPermissions } from '../../ee/server/lib/omnichannel/permissions';

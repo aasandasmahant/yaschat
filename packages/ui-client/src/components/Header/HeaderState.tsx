@@ -1,5 +1,5 @@
-import { Icon, IconButton } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Icon, IconButton } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { AllHTMLAttributes, ComponentPropsWithoutRef, MouseEventHandler } from 'react';
 
 export type HeaderStateProps =

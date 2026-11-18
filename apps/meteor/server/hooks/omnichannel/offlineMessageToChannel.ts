@@ -1,6 +1,6 @@
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatDepartment, Users, Rooms } from '@rocket.chat/models';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatDepartment, Users, Rooms } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import { i18n } from '../../lib/i18n';

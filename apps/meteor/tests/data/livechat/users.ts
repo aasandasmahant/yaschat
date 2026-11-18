@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
-import { UserStatus, type ILivechatAgent, type IUser } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import { UserStatus, type ILivechatAgent, type IUser } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 
 import { api, credentials, request } from '../api-data';
 import { password } from '../user';
@@ -47,7 +47,7 @@ export const createAgentAndReLogin = async (): Promise<{
 	user: IUser & { username: string };
 }> => {
 	const username = `user.test.${Random.id()}`;
-	const email = `${username}@rocket.chat`;
+	const email = `${username}@yas chat`;
 	const { body } = await request.post(api('users.create')).set(credentials).send({ email, name: username, username, password });
 	const agent = body.user;
 	const createdUserCredentials = await login(agent.username, password);
@@ -77,7 +77,7 @@ export const createAnOfflineAgent = async (): Promise<{
 	user: IUser & { username: string };
 }> => {
 	const username = `user.test.${Date.now()}.offline`;
-	const email = `${username}.offline@rocket.chat`;
+	const email = `${username}.offline@yas chat`;
 	const { body } = await request.post(api('users.create')).set(credentials).send({ email, name: username, username, password });
 	const agent = body.user;
 	const createdUserCredentials = await login(agent.username, password);
@@ -95,7 +95,7 @@ export const createAnAwayAgent = async (): Promise<{
 	user: IUser & { username: string };
 }> => {
 	const username = `user.test.${Date.now()}.away`;
-	const email = `${username}.offline@rocket.chat`;
+	const email = `${username}.offline@yas chat`;
 	const { body } = await request.post(api('users.create')).set(credentials).send({ email, name: username, username, password });
 	const agent = body.user;
 	const createdUserCredentials = await login(agent.username, password);

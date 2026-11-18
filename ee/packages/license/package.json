@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/license",
+	"name": "@yas chat/license",
 	"version": "1.2.2",
 	"private": true,
 	"main": "./dist/index.js",
@@ -17,14 +17,14 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/jwt": "workspace:^",
-		"@rocket.chat/logger": "workspace:^",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/jwt": "workspace:^",
+		"@yas chat/logger": "workspace:^",
 		"bcrypt": "^6.0.0"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:*",
 		"@types/bcrypt": "^6.0.0",
 		"@types/ws": "^8.18.2",
 		"jest": "~30.5.2",

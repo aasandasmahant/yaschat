@@ -1,4 +1,4 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 import * as z from 'zod';
 
 import { IYasChatRecordSchema, type IYasChatRecord } from './IYasChatRecord';

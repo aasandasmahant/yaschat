@@ -5,8 +5,8 @@ import type {
 	YasChatRecordDeleted,
 	MessageReport,
 	UserReport,
-} from '@rocket.chat/core-typings';
-import type { FindPaginated, IModerationReportsModel, PaginationParams } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import type { FindPaginated, IModerationReportsModel, PaginationParams } from '@yas chat/model-typings';
 import type { AggregationCursor, Collection, Db, Document, FindCursor, FindOptions, IndexDescription, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

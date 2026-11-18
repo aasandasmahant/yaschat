@@ -1,6 +1,6 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import { Abac } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import { Abac } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
 
 import { isRoomAbacLocked } from '../../../../lib/rooms/isRoomAbacLocked';
 import { getRoomAbacLockContext } from '../../../../server/lib/authorization/getRoomAbacLockContext';

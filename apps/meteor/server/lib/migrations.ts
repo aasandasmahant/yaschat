@@ -1,6 +1,6 @@
-import type { IControl } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Migrations } from '@rocket.chat/models';
+import type { IControl } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Migrations } from '@yas chat/models';
 
 import { showErrorBox } from './logger/showBox';
 import { sleep } from '../../lib/utils/sleep';

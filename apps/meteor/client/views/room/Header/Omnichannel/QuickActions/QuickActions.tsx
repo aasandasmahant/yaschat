@@ -1,4 +1,4 @@
-import { HeaderToolbar, HeaderToolbarAction, HeaderToolbarDivider } from '@rocket.chat/ui-client';
+import { HeaderToolbar, HeaderToolbarAction, HeaderToolbarDivider } from '@yas chat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

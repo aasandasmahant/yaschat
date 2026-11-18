@@ -4,7 +4,7 @@ import ModalContextMock from '../client/stories/contexts/ModalContextMock';
 import RouterContextMock from '../client/stories/contexts/RouterContextMock';
 import ServerContextMock from '../client/stories/contexts/ServerContextMock';
 
-export const RocketChatDecorator: Decorator = (Story, { parameters }) => (
+export const YasChatDecorator: Decorator = (Story, { parameters }) => (
 	<ServerContextMock {...parameters.serverContext}>
 		<ModalContextMock {...parameters.modalContext}>
 			<RouterContextMock {...parameters.routerContext}>

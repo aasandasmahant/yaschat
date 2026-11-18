@@ -1,7 +1,7 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { css } from '@rocket.chat/css-in-js';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Accordion, AccordionItem, Box, Button, ButtonGroup, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Accordion, AccordionItem, Box, Button, ButtonGroup, useStyle } from '@yas chat/fuselage';
 import {
 	FieldDescription,
 	Field,
@@ -12,7 +12,7 @@ import {
 	RadioButton,
 	Select,
 	ToggleSwitch,
-} from '@rocket.chat/fuselage-forms';
+} from '@yas chat/fuselage-forms';
 import {
 	ExternalLink,
 	Page,
@@ -22,8 +22,8 @@ import {
 	getDirtyFields,
 	links,
 	useCreateFontStyleElement,
-} from '@rocket.chat/ui-client';
-import { useLocationHash } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useLocationHash } from '@yas chat/ui-contexts';
 import { useId, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

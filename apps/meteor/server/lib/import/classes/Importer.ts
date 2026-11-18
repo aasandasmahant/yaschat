@@ -1,4 +1,4 @@
-import { api } from '@rocket.chat/core-services';
+import { api } from '@yas chat/core-services';
 import type {
 	IImport,
 	IImportRecord,
@@ -7,9 +7,9 @@ import type {
 	IImportProgress,
 	IImporterShortSelection,
 	IImportContact,
-} from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Settings, ImportData, Imports } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Settings, ImportData, Imports } from '@yas chat/models';
 import AdmZip from 'adm-zip';
 import type { MatchKeysAndValues, MongoServerError } from 'mongodb';
 

@@ -1,4 +1,4 @@
-import { Settings, Users, Rooms } from '@rocket.chat/models';
+import { Settings, Users, Rooms } from '@yas chat/models';
 import { Meteor } from 'meteor/meteor';
 
 import { throttledCounter } from '../../../lib/utils/throttledCounter';

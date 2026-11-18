@@ -1,12 +1,12 @@
-import type { IMessageExtender } from '@rocket.chat/apps-engine/definition/accessors/IMessageExtender';
-import type { IModifyExtender } from '@rocket.chat/apps-engine/definition/accessors/IModifyExtender';
-import type { IRoomExtender } from '@rocket.chat/apps-engine/definition/accessors/IRoomExtender';
-import type { IVideoConferenceExtender } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceExtend';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
-import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
+import type { IMessageExtender } from '@yas chat/apps-engine/definition/accessors/IMessageExtender';
+import type { IModifyExtender } from '@yas chat/apps-engine/definition/accessors/IModifyExtender';
+import type { IRoomExtender } from '@yas chat/apps-engine/definition/accessors/IRoomExtender';
+import type { IVideoConferenceExtender } from '@yas chat/apps-engine/definition/accessors/IVideoConferenceExtend';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
+import type { VideoConference } from '@yas chat/apps-engine/definition/videoConferences/IVideoConference';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

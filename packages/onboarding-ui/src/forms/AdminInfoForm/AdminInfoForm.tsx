@@ -12,8 +12,8 @@ import {
 	FieldRow,
 	FieldError,
 	FieldHint,
-} from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormSubtitle, FormTitle } from '@rocket.chat/layout';
+} from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormSteps, FormSubtitle, FormTitle } from '@yas chat/layout';
 import { useRef, useEffect, useId } from 'react';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 import { useForm, Controller } from 'react-hook-form';

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://www.schemastore.org/package",
-	"name": "@rocket.chat/ui-preview",
+	"name": "@yas chat/ui-preview",
 	"version": "0.1.0",
 	"description": "Runs the web client built for a YasChat pull request against any YasChat server",
 	"repository": {

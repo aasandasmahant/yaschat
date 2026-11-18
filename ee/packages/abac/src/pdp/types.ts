@@ -1,5 +1,5 @@
-import type { AbacActor, AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import type { IAbacAttributeDefinition, IAbacRoomMembershipPreview, IRoom, IUser, AtLeast } from '@rocket.chat/core-typings';
+import type { AbacActor, AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import type { IAbacAttributeDefinition, IAbacRoomMembershipPreview, IRoom, IUser, AtLeast } from '@yas chat/core-typings';
 
 export type IEntityIdentifier = { emailAddress: string } | { id: string };
 

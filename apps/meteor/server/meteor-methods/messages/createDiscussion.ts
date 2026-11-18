@@ -1,8 +1,8 @@
-import { AbacContractError } from '@rocket.chat/abac';
-import { ClientSafeError, Message } from '@rocket.chat/core-services';
-import type { IMessage, IRoom, IUser, MessageAttachmentDefault } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { AbacContractError } from '@yas chat/abac';
+import { ClientSafeError, Message } from '@yas chat/core-services';
+import type { IMessage, IRoom, IUser, MessageAttachmentDefault } from '@yas chat/core-typings';
+import { Messages, Rooms, Subscriptions, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { afterSaveMessageAsync } from '../../hooks/messages/afterSaveMessage';
 import { canSendMessageAsync } from '../../lib/authorization/canSendMessage';

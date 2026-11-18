@@ -1,4 +1,4 @@
-import type { EventID, HomeserverEventSignatures } from '@rocket.chat/federation-sdk';
+import type { EventID, HomeserverEventSignatures } from '@yas chat/federation-sdk';
 import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
 

@@ -3,7 +3,7 @@ import { beforeEach, describe, it } from 'node:test';
 import type {
 	IOutboundEmailMessageProvider,
 	IOutboundPhoneMessageProvider,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication';
+} from '@yas chat/apps-engine/definition/outboundCommunication';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

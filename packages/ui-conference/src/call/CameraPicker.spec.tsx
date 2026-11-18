@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { DeviceSelectionProvider } from '@rocket.chat/ui-media';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { DeviceSelectionProvider } from '@yas chat/ui-media';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

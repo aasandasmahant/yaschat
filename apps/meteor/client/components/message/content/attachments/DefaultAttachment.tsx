@@ -1,5 +1,5 @@
-import type { MarkdownFields, MessageAttachmentDefault } from '@rocket.chat/core-typings';
-import { isActionAttachment } from '@rocket.chat/core-typings';
+import type { MarkdownFields, MessageAttachmentDefault } from '@yas chat/core-typings';
+import { isActionAttachment } from '@yas chat/core-typings';
 import type { ReactNode, ComponentProps } from 'react';
 
 import { ActionAttachment } from './default/ActionAttachtment';

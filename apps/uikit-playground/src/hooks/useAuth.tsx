@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { createContext, useContext, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';

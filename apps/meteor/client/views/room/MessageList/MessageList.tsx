@@ -1,8 +1,8 @@
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { isThreadMessage } from '@rocket.chat/core-typings';
-import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { useSearchParameter, useSetting, useUserPreference } from '@rocket.chat/ui-contexts';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { isThreadMessage } from '@yas chat/core-typings';
+import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
+import { MessageTypes } from '@yas chat/message-types';
+import { useSearchParameter, useSetting, useUserPreference } from '@yas chat/ui-contexts';
 import type { Dispatch, MutableRefObject, RefObject, SetStateAction } from 'react';
 import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

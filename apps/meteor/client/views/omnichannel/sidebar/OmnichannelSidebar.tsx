@@ -1,4 +1,4 @@
-import { useLayout, useCurrentRoutePath } from '@rocket.chat/ui-contexts';
+import { useLayout, useCurrentRoutePath } from '@yas chat/ui-contexts';
 import { memo, useSyncExternalStore } from 'react';
 import { useTranslation } from 'react-i18next';
 

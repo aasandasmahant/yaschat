@@ -1,5 +1,5 @@
-import type { MessageAttachmentAction } from '@rocket.chat/core-typings';
-import { Box, Button, ButtonGroup } from '@rocket.chat/fuselage';
+import type { MessageAttachmentAction } from '@yas chat/core-typings';
+import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
 
 import ActionAttachmentButton from './ActionAttachmentButton';
 import { useExternalLink } from '../../../../../hooks/useExternalLink';

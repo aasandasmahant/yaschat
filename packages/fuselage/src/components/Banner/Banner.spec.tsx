@@ -13,7 +13,7 @@ describe('[Banner Component]', () => {
 	});
 
 	it('renders with link', () => {
-		render(<Banner link='https://rocket.chat' linkText='More info' />);
+		render(<Banner link='https://yas chat' linkText='More info' />);
 		expect(
 			screen.getByRole('link', {
 				name: /more info/i,

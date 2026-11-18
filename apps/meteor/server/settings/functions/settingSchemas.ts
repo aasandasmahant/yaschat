@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { ajv } from '@rocket.chat/rest-typings';
+import type { ISetting } from '@yas chat/core-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 const schemas = new Map<ISetting['_id'], ReturnType<typeof ajv.compile>>();
 

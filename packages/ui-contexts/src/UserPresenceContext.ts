@@ -1,4 +1,4 @@
-import type { UserPresence } from '@rocket.chat/core-typings';
+import type { UserPresence } from '@yas chat/core-typings';
 import { createContext } from 'react';
 
 export type UserPresenceContextValue = {

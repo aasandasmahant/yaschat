@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/release-action",
+	"name": "@yas chat/release-action",
 	"version": "2.2.5",
 	"private": true,
 	"type": "module",

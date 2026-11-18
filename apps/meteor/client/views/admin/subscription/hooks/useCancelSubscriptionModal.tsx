@@ -1,5 +1,5 @@
-import { useLicenseName } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { useLicenseName } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { useRemoveLicense } from './useRemoveLicense';

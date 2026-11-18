@@ -48,7 +48,7 @@ type EventResultVariants<T> =
     };
 ```
 
-`TextObject` is `@rocket.chat/ui-kit`'s `TextObject` (`PlainText | Markdown`); the apps-engine
+`TextObject` is `@yas chat/ui-kit`'s `TextObject` (`PlainText | Markdown`); the apps-engine
 `ITextObject` is deprecated in favor of it. Because ui-kit text renders through the
 app-translation-aware surface renderer (`useStringFromTextObject` → `useAppTranslation`), a rich
 prompt's `title`/`text` can itself be an app i18n key resolved client-side at render time. The
@@ -65,7 +65,7 @@ one instead of restated beside it.
 **`prompt` is specified here, not implemented.** `PromptEventResult`, its payload type and the
 `EventResult.prompt()` factory are absent from `packages/apps-engine`, and `MarkedEventResult` is
 `pass | patch | prevent`. Shipping a variant no event accepts would put a factory in every app
-author's autocomplete that can only ever fail to typecheck, and would pull `@rocket.chat/ui-kit`'s
+author's autocomplete that can only ever fail to typecheck, and would pull `@yas chat/ui-kit`'s
 `Block` and `TextObject` into the definitions for a payload nothing reads. The variant is designed
 in full so the first event that needs it inherits the decisions rather than reopening them; adding
 it later is purely additive, because `isEventResult()` dispatches on `@kind` and the executors
@@ -377,7 +377,7 @@ depends on.
 ## Rollout
 
 1. **Done.** Land the `EventResult` type, the `EventResult.*` factories and the `isEventResult()`
-   guard in `@rocket.chat/apps-engine` (`definition/`). Both packages are in-repo, so no external
+   guard in `@yas chat/apps-engine` (`definition/`). Both packages are in-repo, so no external
    package release is required — only the definitions are published
    (`files: ["definition/**"]`).
 2. **Done.** Implement Strategy A for the media-call event hooks, returning the correct
@@ -522,7 +522,7 @@ in `packages/apps` beside the manager that produces them. The dependency runs on
   dispatched by `packages/apps/src/server/managers/AppListenerManager.ts`.
 - The manager's outcome envelopes — `MediaCallEvent` and `PreMediaCallCreatedOutcome` — live beside
   it in `packages/apps/src/server/mediaCalls/IMediaCallEvent.ts` and are re-exported from
-  `@rocket.chat/apps`. Apps never see them; only the manager and the host read them.
+  `@yas chat/apps`. Apps never see them; only the manager and the host read them.
 - The fail-open backstop for an unknown variant lives in that manager's
   `executePreMediaCallCreated` `default` branch, covered by
   `packages/apps/tests/server/managers/AppListenerManager.mediaCalls.test.ts`. The test hand-builds

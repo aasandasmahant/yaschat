@@ -1,5 +1,5 @@
-import { Box, Label } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
+import { Box, Label } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import type { OmichannelRoutingConfig, Inquiries, ILivechatPriority, Serialized } from '@rocket.chat/core-typings';
+import type { OmichannelRoutingConfig, Inquiries, ILivechatPriority, Serialized } from '@yas chat/core-typings';
 import { createContext } from 'react';
 
 export type OmnichannelContextValue = {

@@ -1,4 +1,4 @@
-import type { PluginParticipant } from '@rocket.chat/ui-conference';
+import type { PluginParticipant } from '@yas chat/ui-conference';
 import { act, renderHook } from '@testing-library/react';
 
 import { useProviderPlugin } from './useProviderPlugin';

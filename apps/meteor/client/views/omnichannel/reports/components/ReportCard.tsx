@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, CardCol, CardRow, CardTitle, Icon, Text } from '@rocket.chat/fuselage';
+import { Box, Card, CardBody, CardCol, CardRow, CardTitle, Icon, Text } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 import { forwardRef } from 'react';
 

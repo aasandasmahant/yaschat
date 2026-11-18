@@ -1,5 +1,5 @@
-import { Message } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
 
 import { livechatLogger } from './logger';
 import { settings } from '../../settings';

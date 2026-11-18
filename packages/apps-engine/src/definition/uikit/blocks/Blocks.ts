@@ -12,7 +12,7 @@ export enum BlockType {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IBlock {
 	type: BlockType;
@@ -21,7 +21,7 @@ export interface IBlock {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface ISectionBlock extends IBlock {
 	type: BlockType.SECTION;
@@ -30,7 +30,7 @@ export interface ISectionBlock extends IBlock {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IImageBlock extends IBlock {
 	type: BlockType.IMAGE;
@@ -40,14 +40,14 @@ export interface IImageBlock extends IBlock {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IDividerBlock extends IBlock {
 	type: BlockType.DIVIDER;
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IActionsBlock extends IBlock {
 	type: BlockType.ACTIONS;
@@ -55,7 +55,7 @@ export interface IActionsBlock extends IBlock {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IContextBlock extends IBlock {
 	type: BlockType.CONTEXT;
@@ -63,7 +63,7 @@ export interface IContextBlock extends IBlock {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IInputBlock extends IBlock {
 	type: BlockType.INPUT;
@@ -73,7 +73,7 @@ export interface IInputBlock extends IBlock {
 }
 
 export enum ConditionalBlockFiltersEngine {
-	ROCKETCHAT = 'rocket.chat',
+	YasChat = 'yas chat',
 	LIVECHAT = 'livechat',
 }
 
@@ -82,7 +82,7 @@ export interface IConditionalBlockFilters {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  *
  * Declares a block that is only visible when a certain
  * condition is met.
@@ -94,9 +94,9 @@ export interface IConditionalBlockFilters {
  * will be shown in every case like other blocks.
  *
  * Currently supported conditions:
- *      `engine: Array<"rocket.chat" | "omnichannel">` specifies what engine should
+ *      `engine: Array<"yas chat" | "omnichannel">` specifies what engine should
  *      render the block:
- *          "rocket.chat" for regular YasChat engine
+ *          "yas chat" for regular YasChat engine
  *          "omnichannel" for the Livechat/Omnichannel widget engine
  *      leave it blank to show the block in both engines
  */

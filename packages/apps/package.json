@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/apps",
+	"name": "@yas chat/apps",
 	"version": "0.11.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -27,11 +27,11 @@
 		"typecheck": "run-s typecheck:default typecheck:base-runtime typecheck:node-runtime typecheck:types"
 	},
 	"dependencies": {
-		"@rocket.chat/apps-engine": "workspace:^",
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/logger": "workspace:^",
-		"@rocket.chat/model-typings": "workspace:^",
-		"@rocket.chat/tools": "workspace:^",
+		"@yas chat/apps-engine": "workspace:^",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/logger": "workspace:^",
+		"@yas chat/model-typings": "workspace:^",
+		"@yas chat/tools": "workspace:^",
 		"acorn": "8.17.0",
 		"acorn-walk": "8.3.5",
 		"adm-zip": "^0.6.1",
@@ -45,7 +45,7 @@
 		"uuid": "~11.1.1"
 	},
 	"devDependencies": {
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/tsconfig": "workspace:*",
 		"@types/debug": "^4.1.13",
 		"@types/lodash.clonedeep": "^4.5.9",
 		"@types/node": "~24.13.6",

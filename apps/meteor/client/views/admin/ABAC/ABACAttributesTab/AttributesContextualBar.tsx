@@ -1,5 +1,5 @@
-import { ContextualbarClose, ContextualbarHeader, ContextualbarTitle } from '@rocket.chat/ui-client';
-import { useEndpoint, useRouteParameter, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { ContextualbarClose, ContextualbarHeader, ContextualbarTitle } from '@yas chat/ui-client';
+import { useEndpoint, useRouteParameter, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

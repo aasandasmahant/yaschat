@@ -1,4 +1,4 @@
-import type { ICustomEmojiDescriptor, IEmojiCustom, YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { ICustomEmojiDescriptor, IEmojiCustom, YasChatRecordDeleted } from '@yas chat/core-typings';
 import type { WithId } from 'mongodb';
 
 import { ajv, ajvQuery } from './Ajv';

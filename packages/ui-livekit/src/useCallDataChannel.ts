@@ -1,6 +1,6 @@
-import type { ActiveReaction } from '@rocket.chat/ui-conference';
-import { playHandRaiseChime } from '@rocket.chat/ui-conference';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { ActiveReaction } from '@yas chat/ui-conference';
+import { playHandRaiseChime } from '@yas chat/ui-conference';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { LocalParticipant, RemoteParticipant, Room } from 'livekit-client';
 import { RoomEvent } from 'livekit-client';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';

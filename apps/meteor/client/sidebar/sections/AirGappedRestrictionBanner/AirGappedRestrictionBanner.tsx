@@ -1,5 +1,5 @@
-import { SidebarBanner } from '@rocket.chat/fuselage';
-import { links } from '@rocket.chat/ui-client';
+import { SidebarBanner } from '@yas chat/fuselage';
+import { links } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import AirGappedRestrictionWarning from './AirGappedRestrictionWarning';

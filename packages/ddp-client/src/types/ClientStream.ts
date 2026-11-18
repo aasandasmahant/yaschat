@@ -1,4 +1,4 @@
-import type { Emitter } from '@rocket.chat/emitter';
+import type { Emitter } from '@yas chat/emitter';
 
 import type { DDPDispatchOptions } from '../MinimalDDPClient';
 import type { Subscription } from './Subscription';

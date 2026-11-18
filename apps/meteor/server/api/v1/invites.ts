@@ -1,4 +1,4 @@
-import type { IInvite, IRoom } from '@rocket.chat/core-typings';
+import type { IInvite, IRoom } from '@yas chat/core-typings';
 import {
 	ajv,
 	isFindOrCreateInviteParams,
@@ -7,7 +7,7 @@ import {
 	isSendInvitationEmailParams,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { findOrCreateInvite } from '../../lib/rooms/invites/findOrCreateInvite';
 import { listInvites } from '../../lib/rooms/invites/listInvites';
@@ -298,7 +298,7 @@ const invites = API.v1
 
 type InvitesEndpoints = ExtractRoutesFromAPI<typeof invites>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends InvitesEndpoints {}
 }

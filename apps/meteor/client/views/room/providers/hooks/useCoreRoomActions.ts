@@ -1,5 +1,5 @@
-import { useStableArray } from '@rocket.chat/fuselage-hooks';
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { useStableArray } from '@yas chat/fuselage-hooks';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 
 import { roomActionHooks } from '../../../../ui';
 

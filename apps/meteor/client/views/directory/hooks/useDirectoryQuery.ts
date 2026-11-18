@@ -1,4 +1,4 @@
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import { useMemo } from 'react';
 
 export function useDirectoryQuery(

@@ -1,4 +1,4 @@
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient, useQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
 

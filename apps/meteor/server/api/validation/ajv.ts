@@ -1,5 +1,5 @@
-import { schemas } from '@rocket.chat/core-typings';
-import { ajv, ajvQuery } from '@rocket.chat/rest-typings';
+import { schemas } from '@yas chat/core-typings';
+import { ajv, ajvQuery } from '@yas chat/rest-typings';
 
 const components = schemas.components?.schemas;
 if (components) {

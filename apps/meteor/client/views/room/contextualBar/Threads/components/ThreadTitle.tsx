@@ -1,5 +1,5 @@
-import type { IThreadMainMessage } from '@rocket.chat/core-typings';
-import { ContextualbarTitle } from '@rocket.chat/ui-client';
+import type { IThreadMainMessage } from '@yas chat/core-typings';
+import { ContextualbarTitle } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 
 import { useNormalizedThreadTitleHtml } from '../hooks/useNormalizedThreadTitleHtml';

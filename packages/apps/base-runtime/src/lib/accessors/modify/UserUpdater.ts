@@ -1,6 +1,6 @@
-import type { IUserUpdater } from '@rocket.chat/apps-engine/definition/accessors/IUserUpdater';
-import type { UserStatusConnection } from '@rocket.chat/apps-engine/definition/users';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
+import type { IUserUpdater } from '@yas chat/apps-engine/definition/accessors/IUserUpdater';
+import type { UserStatusConnection } from '@yas chat/apps-engine/definition/users';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

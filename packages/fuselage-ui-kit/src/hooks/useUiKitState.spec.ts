@@ -1,4 +1,4 @@
-import { BlockContext, type MultiStaticSelectElement } from '@rocket.chat/ui-kit';
+import { BlockContext, type MultiStaticSelectElement } from '@yas chat/ui-kit';
 import { act, renderHook } from '@testing-library/react';
 
 import { useUiKitState } from './useUiKitState';

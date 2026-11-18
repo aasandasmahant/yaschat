@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription, IUser } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
+import type { IRoom, ISubscription, IUser } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -7,7 +7,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	ise2eSetUserPublicAndPrivateKeysParamsPOST,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import ExpiryMap from 'expiry-map';
 
 import { canAccessRoomIdAsync } from '../../lib/authorization/canAccessRoom';
@@ -527,7 +527,7 @@ const e2eEndpoints = API.v1
 
 type E2eEndpoints = ExtractRoutesFromAPI<typeof e2eEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends E2eEndpoints {}
 }

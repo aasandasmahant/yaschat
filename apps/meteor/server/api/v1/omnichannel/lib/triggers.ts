@@ -1,6 +1,6 @@
-import type { ILivechatTrigger } from '@rocket.chat/core-typings';
-import { LivechatTrigger } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import type { ILivechatTrigger } from '@yas chat/core-typings';
+import { LivechatTrigger } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 
 export async function findTriggers({
 	pagination: { offset, count, sort },

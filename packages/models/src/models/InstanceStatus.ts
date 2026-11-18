@@ -1,5 +1,5 @@
-import type { IInstanceStatus } from '@rocket.chat/core-typings';
-import type { IInstanceStatusModel } from '@rocket.chat/model-typings';
+import type { IInstanceStatus } from '@yas chat/core-typings';
+import type { IInstanceStatusModel } from '@yas chat/model-typings';
 import type { Db, UpdateResult, DeleteResult, ChangeStream } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

@@ -1,6 +1,6 @@
-import { Accordion, AccordionItem, Box, Callout, FieldGroup } from '@rocket.chat/fuselage';
-import { ExternalLink, links, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Accordion, AccordionItem, Box, Callout, FieldGroup } from '@yas chat/fuselage';
+import { ExternalLink, links, useHasLicenseModule } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation, Trans } from 'react-i18next';
 
 import AbacEnabledToggle from './AbacEnabledToggle';

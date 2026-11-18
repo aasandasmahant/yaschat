@@ -1,4 +1,4 @@
-import { parameters, decorators } from '@rocket.chat/storybook-config/preview';
+import { parameters, decorators } from '@yas chat/storybook-config/preview';
 import type { Preview } from '@storybook/react';
 
 import '../../../apps/meteor/client/styles/main.css';

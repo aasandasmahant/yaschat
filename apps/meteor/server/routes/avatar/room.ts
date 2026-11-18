@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
-import type { IIncomingMessage, IRoom, IUpload } from '@rocket.chat/core-typings';
-import { Avatars, Rooms } from '@rocket.chat/models';
+import type { IIncomingMessage, IRoom, IUpload } from '@yas chat/core-typings';
+import { Avatars, Rooms } from '@yas chat/models';
 import type { NextFunction } from 'connect';
 import { parseCookie } from 'cookie';
 

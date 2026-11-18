@@ -7,7 +7,7 @@ import type {
 	VideoConferenceLeaveReason,
 	VideoConferenceStatus,
 	IVoIPVideoConference,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type { FindCursor, UpdateOptions, UpdateFilter, UpdateResult, FindOptions } from 'mongodb';
 
 import type { FindPaginated, IBaseModel, InsertionModel } from './IBaseModel';

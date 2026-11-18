@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 
 import ActionInputBase from './ActionInputBase';

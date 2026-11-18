@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import request from 'supertest';
 
 import { OAuth2Server } from './oauth';

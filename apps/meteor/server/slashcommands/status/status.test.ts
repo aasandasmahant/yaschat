@@ -1,7 +1,7 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

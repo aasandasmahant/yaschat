@@ -1,9 +1,9 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import { TeamType } from '@rocket.chat/core-typings';
-import type { AtLeast, IIntegration, IMessage, IRoom, ITeam, IUser } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import { TeamType } from '@yas chat/core-typings';
+import type { AtLeast, IIntegration, IMessage, IRoom, ITeam, IUser } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { assert, expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

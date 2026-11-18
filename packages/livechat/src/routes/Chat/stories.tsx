@@ -21,7 +21,7 @@ const agent = {
 	name: 'Guilherme Gazzo',
 	status: 'online',
 	username: 'guilherme.gazzo',
-	emails: [{ address: 'guilherme.gazzo@rocket.chat' }],
+	emails: [{ address: 'guilherme.gazzo@yas chat' }],
 	phones: [{ number: '+55 99 99999 9999' }],
 };
 

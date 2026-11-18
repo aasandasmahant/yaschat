@@ -1,6 +1,6 @@
-import { isIntelligentSearchErrorCode, type IntelligentSearchErrorCode } from '@rocket.chat/ai-search';
-import { Button, Callout, type CalloutProps } from '@rocket.chat/fuselage';
-import { useRouter, type TranslationKey } from '@rocket.chat/ui-contexts';
+import { isIntelligentSearchErrorCode, type IntelligentSearchErrorCode } from '@yas chat/ai-search';
+import { Button, Callout, type CalloutProps } from '@yas chat/fuselage';
+import { useRouter, type TranslationKey } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 

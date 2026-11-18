@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { MediaSignalingSession } from './Session.js';
 import type { ClientMediaSignal, IWebRTCProcessor } from '../definition/index.js';

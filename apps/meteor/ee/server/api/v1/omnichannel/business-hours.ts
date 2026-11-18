@@ -1,11 +1,11 @@
-import type { ILivechatBusinessHour } from '@rocket.chat/core-typings';
-import type { PaginatedRequest } from '@rocket.chat/rest-typings';
+import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import type { PaginatedRequest } from '@yas chat/rest-typings';
 
 import { API } from '../../../../../server/api';
 import { getPaginationItems } from '../../../../../server/api/lib/getPaginationItems';
 import { findBusinessHours } from '../../../lib/omnichannel/business-hour/lib/business-hour';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/livechat/business-hours': {
 			GET: (params: PaginatedRequest) => {

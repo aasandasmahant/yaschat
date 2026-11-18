@@ -1,12 +1,12 @@
-import type { CallFeature } from '@rocket.chat/media-signaling';
+import type { CallFeature } from '@yas chat/media-signaling';
 import { renderHook } from '@testing-library/react';
 
 import { useAllowedFeatures } from './useAllowedFeatures';
 
 const usePermissionMock = jest.fn();
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	usePermission: (...args: unknown[]) => usePermissionMock(...args),
 }));
 

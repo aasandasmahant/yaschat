@@ -1,4 +1,4 @@
-import type { IAbacAttributeDefinition, IUser } from '@rocket.chat/core-typings';
+import type { IAbacAttributeDefinition, IUser } from '@yas chat/core-typings';
 
 import type { IEntityIdentifier } from '../../pdp/types';
 

@@ -1,4 +1,4 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { ComponentType, ReactElement, ReactNode } from 'react';
 
 export const createSurfaceRenderer = <S extends UiKit.SurfaceRenderer<ReactElement<any>>>(
@@ -9,7 +9,7 @@ export const createSurfaceRenderer = <S extends UiKit.SurfaceRenderer<ReactEleme
 		return (
 			<SurfaceComponent>
 				{surfaceRenderer.render(blocks, {
-					engine: 'rocket.chat',
+					engine: 'yas chat',
 					...conditions,
 				})}
 			</SurfaceComponent>

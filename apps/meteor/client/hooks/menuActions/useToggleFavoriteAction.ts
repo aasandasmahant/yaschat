@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 
 export const useToggleFavoriteAction = ({ rid, isFavorite }: { rid: IRoom['_id']; isFavorite: boolean }) => {
 	const toggleFavorite = useEndpoint('POST', '/v1/rooms.favorite');

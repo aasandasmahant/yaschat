@@ -59,7 +59,7 @@ type PermissionsRequired = string[] | Record<string, string[] | { operation: TOp
 export type OpenAPIDocumentation = {
 	summary?: string;
 	description?: string;
-	/** Defaults to `<method>-<path>`, matching the ids published at developer.rocket.chat. */
+	/** Defaults to `<method>-<path>`, matching the ids published at developer.yas chat. */
 	operationId?: string;
 	deprecated?: boolean;
 	externalDocs?: OpenAPIExternalDocs;

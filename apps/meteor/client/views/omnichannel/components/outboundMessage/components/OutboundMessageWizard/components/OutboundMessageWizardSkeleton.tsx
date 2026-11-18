@@ -1,4 +1,4 @@
-import { Box, Skeleton, Stack } from '@rocket.chat/fuselage';
+import { Box, Skeleton, Stack } from '@yas chat/fuselage';
 
 const OutboubdMessageWizardSkeleton = () => {
 	return (

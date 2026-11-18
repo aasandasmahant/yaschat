@@ -1,4 +1,4 @@
-import { LivechatInquiry, Users, OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
+import { LivechatInquiry, Users, OmnichannelServiceLevelAgreements } from '@yas chat/models';
 
 import { updateRoomSLA } from './sla';
 

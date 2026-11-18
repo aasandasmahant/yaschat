@@ -1,4 +1,4 @@
-import { useUserSubscription } from '@rocket.chat/ui-contexts';
+import { useUserSubscription } from '@yas chat/ui-contexts';
 
 import SidePanelAll from './SidePanelAll';
 import SidePanelChannels from './SidePanelChannels';

@@ -1,4 +1,4 @@
-import { Page, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
+import { Page, PageScrollableContentWithShadow } from '@yas chat/ui-client';
 
 import HomePageHeader from './HomePageHeader';
 import CustomContentCard from './cards/CustomContentCard';

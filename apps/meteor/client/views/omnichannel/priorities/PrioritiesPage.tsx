@@ -1,7 +1,7 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
-import { useEndpoint, useRoute, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { useEndpoint, useRoute, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

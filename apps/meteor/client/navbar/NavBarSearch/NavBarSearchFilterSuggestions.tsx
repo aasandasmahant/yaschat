@@ -1,5 +1,5 @@
-import type { SearchFilterSuggestion } from '@rocket.chat/ai-search';
-import { Box } from '@rocket.chat/fuselage';
+import type { SearchFilterSuggestion } from '@yas chat/ai-search';
+import { Box } from '@yas chat/fuselage';
 import type { ReactElement, SyntheticEvent } from 'react';
 
 import NavBarSearchFilterSuggestionOption from './NavBarSearchFilterSuggestionOption';

@@ -8,9 +8,9 @@ import type {
 	ITeam,
 	IUser,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
-import type { FindPaginated, IRoomsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import type { FindPaginated, IRoomsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	AggregationCursor,
 	Collection,

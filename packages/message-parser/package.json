@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/message-parser",
+	"name": "@yas chat/message-parser",
 	"version": "0.33.0",
 	"description": "YasChat parser for messages",
 	"type": "module",
@@ -21,7 +21,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/messageParser.js",
 	"types": "dist/index.d.ts",
@@ -44,8 +44,8 @@
 		"tldts": "~6.1.86"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/peggy-loader": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/peggy-loader": "workspace:~",
 		"@types/node": "~24.13.6",
 		"fast-check": "^4.6.0",
 		"jest": "~30.5.2",

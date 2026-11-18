@@ -1,6 +1,6 @@
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { applyDepartmentRestrictions } from '@rocket.chat/omni-core';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { applyDepartmentRestrictions } from '@yas chat/omni-core';
 import type { FilterOperators } from 'mongodb';
 
 import { addQueryRestrictionsToDepartmentsModel } from '../units/addRoleBasedRestrictionsToDepartment';

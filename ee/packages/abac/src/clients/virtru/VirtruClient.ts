@@ -1,4 +1,4 @@
-import { serverFetch } from '@rocket.chat/server-fetch';
+import { serverFetch } from '@yas chat/server-fetch';
 
 import { logger } from '../../logger';
 import type { IVirtruPDPConfig, ITokenCache } from '../../pdp/types';

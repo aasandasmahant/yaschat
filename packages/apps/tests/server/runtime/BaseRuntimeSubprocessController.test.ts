@@ -3,7 +3,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { describe, it, afterEach, mock, before, after } from 'node:test';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
 
 import { isSuccessObject, request } from '../../../src/lib/jsonrpc';
 import type { AppManager } from '../../../src/server/AppManager';

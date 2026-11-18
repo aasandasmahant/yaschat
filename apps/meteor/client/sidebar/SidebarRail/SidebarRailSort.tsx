@@ -1,5 +1,5 @@
-import { NavBarItem } from '@rocket.chat/fuselage';
-import { GenericMenu } from '@rocket.chat/ui-client';
+import { NavBarItem } from '@yas chat/fuselage';
+import { GenericMenu } from '@yas chat/ui-client';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

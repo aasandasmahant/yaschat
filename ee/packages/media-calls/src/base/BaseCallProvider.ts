@@ -1,5 +1,5 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import type { ClientMediaSignalBody } from '@rocket.chat/media-signaling';
+import type { IMediaCall } from '@yas chat/core-typings';
+import type { ClientMediaSignalBody } from '@yas chat/media-signaling';
 
 import { logger } from '../logger';
 

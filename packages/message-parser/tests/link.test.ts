@@ -18,106 +18,106 @@ test.each([
 		'[Link](https://domain.com/link?a=%28node_filesystem_avail_bytes%29)',
 		[paragraph([link('https://domain.com/link?a=%28node_filesystem_avail_bytes%29', [plain('Link')])])],
 	],
-	['[](https://rocket.chat)', [paragraph([link('https://rocket.chat')])]],
-	['[ ](https://rocket.chat)', [paragraph([link('https://rocket.chat', [plain(' ')])])]],
+	['[](https://yas chat)', [paragraph([link('https://yas chat')])]],
+	['[ ](https://yas chat)', [paragraph([link('https://yas chat', [plain(' ')])])]],
 
-	['[ test](https://rocket.chat)', [paragraph([link('https://rocket.chat', [plain(' test')])])]],
-	['[ test ](https://rocket.chat)', [paragraph([link('https://rocket.chat', [plain(' test ')])])]],
-	['[title](https://rocket.chat)', [paragraph([link('https://rocket.chat', [plain('title')])])]],
+	['[ test](https://yas chat)', [paragraph([link('https://yas chat', [plain(' test')])])]],
+	['[ test ](https://yas chat)', [paragraph([link('https://yas chat', [plain(' test ')])])]],
+	['[title](https://yas chat)', [paragraph([link('https://yas chat', [plain('title')])])]],
 	['[title](http://localhost)', [paragraph([link('http://localhost', [plain('title')])])]],
 	['[title](http://localhost?testing=true)', [paragraph([link('http://localhost?testing=true', [plain('title')])])]],
-	['[**title**](https://rocket.chat)', [paragraph([link('https://rocket.chat', [bold([plain('title')])])])]],
-	['[~~title~~](https://rocket.chat)', [paragraph([link('https://rocket.chat', [strike([plain('title')])])])]],
-	['[__title__](https://rocket.chat)', [paragraph([link('https://rocket.chat', [italic([plain('title')])])])]],
-	['[__**~~title~~**__](https://rocket.chat)', [paragraph([link('https://rocket.chat', [italic([bold([strike([plain('title')])])])])])]],
+	['[**title**](https://yas chat)', [paragraph([link('https://yas chat', [bold([plain('title')])])])]],
+	['[~~title~~](https://yas chat)', [paragraph([link('https://yas chat', [strike([plain('title')])])])]],
+	['[__title__](https://yas chat)', [paragraph([link('https://yas chat', [italic([plain('title')])])])]],
+	['[__**~~title~~**__](https://yas chat)', [paragraph([link('https://yas chat', [italic([bold([strike([plain('title')])])])])])]],
 	[
-		'https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351',
-		[paragraph([link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351')])],
+		'https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351',
+		[paragraph([link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351')])],
 	],
 	[
-		'<https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351|Test>',
-		[paragraph([link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [plain('Test')])])],
+		'<https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351|Test>',
+		[paragraph([link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [plain('Test')])])],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
-		[paragraph([link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [plain('title')])])],
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		[paragraph([link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [plain('title')])])],
 	],
 	[
-		'[**title**](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[**title**](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [bold([plain('title')])]),
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [bold([plain('title')])]),
 			]),
 		],
 	],
 	[
-		'[~~title~~](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[~~title~~](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [strike([plain('title')])]),
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [strike([plain('title')])]),
 			]),
 		],
 	],
 	[
-		'[__title__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[__title__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [italic([plain('title')])]),
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [italic([plain('title')])]),
 			]),
 		],
 	],
 	[
-		'[__**~~title~~**__](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[__**~~title~~**__](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					italic([bold([strike([plain('title')])])]),
 				]),
 			]),
 		],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34)',
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34', [plain('title')]),
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34', [plain('title')]),
 			]),
 		],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do?query=test12-34#Cases/dv/413244000073043351)',
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do?query=test12-34#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do?query=test12-34#Cases/dv/413244000073043351', [plain('title')]),
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do?query=test12-34#Cases/dv/413244000073043351', [plain('title')]),
 			]),
 		],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abc123)',
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abc123)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abc123', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abc123', [
 					plain('title'),
 				]),
 			]),
 		],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases?query=test12-34&query2=abcd!e/dv/413244000073043351)',
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases?query=test12-34&query2=abcd!e/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases?query=test12-34&query2=abcd!e/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases?query=test12-34&query2=abcd!e/dv/413244000073043351', [
 					plain('title'),
 				]),
 			]),
 		],
 	],
 	[
-		'[title](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abcd!~-._%2B+)',
+		'[title](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abcd!~-._%2B+)',
 		[
 			paragraph([
 				link(
-					'https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abcd!~-._%2B+',
+					'https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351?query=test12-34&query2=abcd!~-._%2B+',
 					[plain('title')],
 				),
 			]),
@@ -125,7 +125,7 @@ test.each([
 	],
 	['google.com', [paragraph([link('//google.com', [plain('google.com')])])]],
 	['www.google.com', [paragraph([link('//www.google.com', [plain('www.google.com')])])]],
-	['rocket.chat:8080', [paragraph([link('rocket.chat:8080')])]],
+	['yas chat:8080', [paragraph([link('yas chat:8080')])]],
 	['ShouldNotBeALink', [paragraph([plain('ShouldNotBeALink')])]],
 	['http:/ google.com', [paragraph([plain('http:/ '), link('//google.com', [plain('google.com')])])]],
 	['[custom](custom://google.com)', [paragraph([link('custom://google.com', [plain('custom')])])]],
@@ -173,8 +173,8 @@ test.each([
 		],
 	],
 	[
-		'[YasChat](https://rocket.chat) Inline Text',
-		[paragraph([link('https://rocket.chat', [plain('YasChat')]), plain(' Inline Text')])],
+		'[YasChat](https://yas chat) Inline Text',
+		[paragraph([link('https://yas chat', [plain('YasChat')]), plain(' Inline Text')])],
 	],
 	[
 		'https://analytics.zoho.com/open-view/123456789 Same Line',
@@ -186,9 +186,9 @@ test.each([
 		],
 	],
 	[
-		`[YasChat](https://rocket.chat)
+		`[YasChat](https://yas chat)
 Text after in a new line after link`,
-		[paragraph([link('https://rocket.chat', [plain('YasChat')])]), paragraph([plain('Text after in a new line after link')])],
+		[paragraph([link('https://yas chat', [plain('YasChat')])]), paragraph([plain('Text after in a new line after link')])],
 	],
 	[
 		`https://analytics.zoho.com/open-view/123456789
@@ -199,21 +199,21 @@ Second line`,
 		],
 	],
 	[
-		`[YasChat](https://rocket.chat)
+		`[YasChat](https://yas chat)
 
 Text after line break`,
-		[paragraph([link('https://rocket.chat', [plain('YasChat')])]), lineBreak(), paragraph([plain('Text after line break')])],
+		[paragraph([link('https://yas chat', [plain('YasChat')])]), lineBreak(), paragraph([plain('Text after line break')])],
 	],
 	[
 		`
-[List Header Link](https://rocket.chat)
+[List Header Link](https://yas chat)
 - First item
 - Second item
 - Third item
 - *Fourth item*
 `.trim(),
 		[
-			paragraph([link('https://rocket.chat', [plain('List Header Link')])]),
+			paragraph([link('https://yas chat', [plain('List Header Link')])]),
 			unorderedList([
 				listItem([plain('First item')]),
 				listItem([plain('Second item')]),
@@ -223,7 +223,7 @@ Text after line break`,
 		],
 	],
 	[
-		`[List Header Link](https://rocket.chat)
+		`[List Header Link](https://yas chat)
 7. First item
 2. Second item
 8. Third item
@@ -231,7 +231,7 @@ Text after line break`,
 15. *Fifteenth item*
 `.trim(),
 		[
-			paragraph([link('https://rocket.chat', [plain('List Header Link')])]),
+			paragraph([link('https://yas chat', [plain('List Header Link')])]),
 			orderedList([
 				listItem([plain('First item')], 7),
 				listItem([plain('Second item')], 2),
@@ -254,10 +254,10 @@ Text after line break`,
 		[paragraph([link('C:/Users/user1/Documents/projects/file.js', [plain('File Path')])])],
 	],
 	[
-		'[Test with **bold** element](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[Test with **bold** element](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					plain('Test with '),
 					bold([plain('bold')]),
 					plain(' element'),
@@ -266,10 +266,10 @@ Text after line break`,
 		],
 	],
 	[
-		'[Test with *bold* element](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[Test with *bold* element](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					plain('Test with '),
 					bold([plain('bold')]),
 					plain(' element'),
@@ -278,10 +278,10 @@ Text after line break`,
 		],
 	],
 	[
-		'[Test with _italic_ element](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[Test with _italic_ element](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					plain('Test with '),
 					italic([plain('italic')]),
 					plain(' element'),
@@ -290,10 +290,10 @@ Text after line break`,
 		],
 	],
 	[
-		'[Test with ~strike~ element](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[Test with ~strike~ element](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					plain('Test with '),
 					strike([plain('strike')]),
 					plain(' element'),
@@ -302,10 +302,10 @@ Text after line break`,
 		],
 	],
 	[
-		'[Test with __**~~title~~**__ element](https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
+		'[Test with __**~~title~~**__ element](https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351)',
 		[
 			paragraph([
-				link('https://desk.rocket.chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
+				link('https://desk.yas chat/support/yaschat/ShowHomePage.do#Cases/dv/413244000073043351', [
 					plain('Test with '),
 					italic([bold([strike([plain('title')])])]),
 					plain(' element'),
@@ -318,31 +318,31 @@ Text after line break`,
 		[paragraph([plain('('), link('https://github.com/YasChat/YasChat/issues/24929', [plain('Github Issue: #24929')]), plain(')')])],
 	],
 	[
-		'the [audio_url and video_url for post message attachments](https://developer.rocket.chat/reference/api/rest-api/endpoints/core-endpoints/chat-endpoints/postmessage)',
+		'the [audio_url and video_url for post message attachments](https://developer.yas chat/reference/api/rest-api/endpoints/core-endpoints/chat-endpoints/postmessage)',
 		[
 			paragraph([
 				plain('the '),
-				link('https://developer.rocket.chat/reference/api/rest-api/endpoints/core-endpoints/chat-endpoints/postmessage', [
+				link('https://developer.yas chat/reference/api/rest-api/endpoints/core-endpoints/chat-endpoints/postmessage', [
 					plain('audio_url and video_url for post message attachments'),
 				]),
 			]),
 		],
 	],
 	[
-		'the [Jira [Task] parentheses not working](rocket.chat)',
-		[paragraph([plain('the '), link('rocket.chat', [plain('Jira [Task] parentheses not working')])])],
+		'the [Jira [Task] parentheses not working](yas chat)',
+		[paragraph([plain('the '), link('yas chat', [plain('Jira [Task] parentheses not working')])])],
 	],
 	[
-		'the [Jira (Task) parentheses not working](rocket.chat)',
-		[paragraph([plain('the '), link('rocket.chat', [plain('Jira (Task) parentheses not working')])])],
+		'the [Jira (Task) parentheses not working](yas chat)',
+		[paragraph([plain('the '), link('yas chat', [plain('Jira (Task) parentheses not working')])])],
 	],
 	[
-		'[Jira [Task] parentheses not working](rocket.chat)',
-		[paragraph([link('rocket.chat', [plain('Jira [Task] parentheses not working')])])],
+		'[Jira [Task] parentheses not working](yas chat)',
+		[paragraph([link('yas chat', [plain('Jira [Task] parentheses not working')])])],
 	],
 	[
-		'[Jira (Task) parentheses not working](rocket.chat)',
-		[paragraph([link('rocket.chat', [plain('Jira (Task) parentheses not working')])])],
+		'[Jira (Task) parentheses not working](yas chat)',
+		[paragraph([link('yas chat', [plain('Jira (Task) parentheses not working')])])],
 	],
 	// Should not parse as link
 	['77.77%', [paragraph([plain('77.77%')])]],
@@ -354,10 +354,10 @@ Text after line break`,
 		[paragraph([link('https://github.com/YasChat/YasChat/releases/tag/6.0.0-rc.3', [plain('here')])])],
 	],
 	[
-		'[ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [test](https://rocket.chat)',
+		'[ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [ ~ [test](https://yas chat)',
 		[
 			paragraph([
-				link('https://rocket.chat', [
+				link('https://yas chat', [
 					plain(' '),
 					strike([plain(' [ ')]),
 					plain(' [ '),
@@ -378,17 +378,17 @@ Text after line break`,
 		],
 	],
 	[
-		'[test **bold** and __italic__](https://rocket.chat)',
-		[paragraph([link('https://rocket.chat', [plain('test '), bold([plain('bold')]), plain(' and '), italic([plain('italic')])])])],
+		'[test **bold** and __italic__](https://yas chat)',
+		[paragraph([link('https://yas chat', [plain('test '), bold([plain('bold')]), plain(' and '), italic([plain('italic')])])])],
 	],
 	[
-		'[test **bold with __italic__**](https://rocket.chat)',
-		[paragraph([link('https://rocket.chat', [plain('test '), bold([plain('bold with '), italic([plain('italic')])])])])],
+		'[test **bold with __italic__**](https://yas chat)',
+		[paragraph([link('https://yas chat', [plain('test '), bold([plain('bold with '), italic([plain('italic')])])])])],
 	],
 	// Test case for issue #31418 - text in brackets between two links should not break markdown
 	[
-		'[YasChat] [New release](https://www.rocket.chat/blog/new-starter-pro-plans)',
-		[paragraph([plain('[YasChat] '), link('https://www.rocket.chat/blog/new-starter-pro-plans', [plain('New release')])])],
+		'[YasChat] [New release](https://www.yas chat/blog/new-starter-pro-plans)',
+		[paragraph([plain('[YasChat] '), link('https://www.yas chat/blog/new-starter-pro-plans', [plain('New release')])])],
 	],
 	// Test case for issue #31766 - multiple links with bracketed text between them
 	[

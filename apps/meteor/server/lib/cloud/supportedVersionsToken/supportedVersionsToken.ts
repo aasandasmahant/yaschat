@@ -1,9 +1,9 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
-import type { SignedSupportedVersions, SupportedVersions } from '@rocket.chat/server-cloud-communication';
-import type { Response } from '@rocket.chat/server-fetch';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { SettingValue } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
+import type { SignedSupportedVersions, SupportedVersions } from '@yas chat/server-cloud-communication';
+import type { Response } from '@yas chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { supportedVersionsChooseLatest } from './supportedVersionsChooseLatest';
 import { supportedVersions as supportedVersionsFromBuild } from '../../../../yaschat-supported-versions.info';
@@ -14,7 +14,7 @@ import { notifyOnSettingChangedById } from '../../notifyListener';
 import { generateWorkspaceBearerHttpHeader } from '../getWorkspaceAccessToken';
 import { buildVersionUpdateMessage } from '../version-check/functions/buildVersionUpdateMessage';
 
-declare module '@rocket.chat/core-typings' {
+declare module '@yas chat/core-typings' {
 	interface ILicenseV3 {
 		supportedVersions?: SignedSupportedVersions;
 	}
@@ -101,7 +101,7 @@ const cacheValueInSettings = <T extends SettingValue>(
 
 const releaseEndpoint = process.env.OVERWRITE_INTERNAL_RELEASE_URL?.trim()
 	? process.env.OVERWRITE_INTERNAL_RELEASE_URL.trim()
-	: 'https://releases.rocket.chat/v2/server/supportedVersions';
+	: 'https://releases.yas chat/v2/server/supportedVersions';
 
 const getSupportedVersionsFromCloud = async () => {
 	if (process.env.CLOUD_SUPPORTED_VERSIONS_TOKEN) {

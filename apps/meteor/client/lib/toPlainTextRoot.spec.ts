@@ -1,4 +1,4 @@
-import { parse } from '@rocket.chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 
 import { toPlainTextRoot } from './toPlainTextRoot';
 

@@ -17,9 +17,9 @@ export const env = (config: Record<string, string> = {}, { configDir }: Options)
 	STORYBOOK_PACKAGE_NAME: JSON.parse(readFileSync(join(configDir, '..', 'package.json'), 'utf8')).name,
 });
 
-const fuselageFontsDir = dirname(require.resolve('@rocket.chat/fuselage/dist/fonts/InterVariable.woff2'));
+const fuselageFontsDir = dirname(require.resolve('@yas chat/fuselage/dist/fonts/InterVariable.woff2'));
 
-const translationsDir = dirname(require.resolve('@rocket.chat/i18n/dist/resources/en.i18n.json'));
+const translationsDir = dirname(require.resolve('@yas chat/i18n/dist/resources/en.i18n.json'));
 
 export const staticDirs = (dirs: { from: string; to: string }[] = []) => [
 	...dirs,

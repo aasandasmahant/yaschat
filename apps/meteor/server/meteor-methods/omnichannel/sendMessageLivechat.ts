@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { LivechatVisitors } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { LivechatVisitors } from '@yas chat/models';
 
 import type { ILivechatMessage } from '../../lib/omnichannel/localTypes';
 import { sendMessage } from '../../lib/omnichannel/messages';

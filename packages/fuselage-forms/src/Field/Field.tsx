@@ -1,4 +1,4 @@
-import { Field as FieldComponent } from '@rocket.chat/fuselage';
+import { Field as FieldComponent } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 import FieldProvider from './FieldProvider';

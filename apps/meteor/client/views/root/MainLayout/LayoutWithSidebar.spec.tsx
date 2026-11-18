@@ -1,11 +1,11 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { useCurrentRoutePath, useRouter } from '@rocket.chat/ui-contexts';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { useCurrentRoutePath, useRouter } from '@yas chat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 
 import LayoutWithSidebar from './LayoutWithSidebar';
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useCurrentRoutePath: jest.fn(),
 	useRouter: jest.fn(),
 }));

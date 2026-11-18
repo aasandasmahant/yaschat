@@ -1,5 +1,5 @@
-import type { App } from '@rocket.chat/core-typings';
-import { Box, CardGroup } from '@rocket.chat/fuselage';
+import type { App } from '@yas chat/core-typings';
+import { Box, CardGroup } from '@yas chat/fuselage';
 
 import AppRow from './AppRow';
 

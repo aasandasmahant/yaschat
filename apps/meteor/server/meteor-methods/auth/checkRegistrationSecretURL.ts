@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { Meteor } from 'meteor/meteor';
 
 import { settings } from '../../settings';

@@ -1,6 +1,6 @@
-import { hashPassword } from '@rocket.chat/account-utils';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/model-typings';
+import { hashPassword } from '@yas chat/account-utils';
+import type { IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/model-typings';
 
 export async function setPasswordUpdater(
 	updater: Updater<IUser>,

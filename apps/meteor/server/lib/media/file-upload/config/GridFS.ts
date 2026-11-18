@@ -3,8 +3,8 @@ import type { TransformCallback, TransformOptions } from 'node:stream';
 import stream from 'node:stream';
 import zlib from 'node:zlib';
 
-import type { IUpload } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
+import type { IUpload } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
 
 import { getContentDisposition } from './helper';
 import { UploadFS } from '../../../../ufs';

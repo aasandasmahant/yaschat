@@ -1,4 +1,4 @@
-import type { YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+import type { YasChatAssociationRecord } from '@yas chat/apps-engine/definition/metadata';
 
 import { PersistenceBridge } from '../../../src/server/bridges';
 

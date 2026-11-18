@@ -1,7 +1,7 @@
-import tokenBorder from '@rocket.chat/fuselage-tokens/dist/border.json';
-import tokenSpacing from '@rocket.chat/fuselage-tokens/dist/spacing.json';
-import tokenTypography from '@rocket.chat/fuselage-tokens/dist/typography.json';
-import { memoize } from '@rocket.chat/memo';
+import tokenBorder from '@yas chat/fuselage-tokens/dist/border.json';
+import tokenSpacing from '@yas chat/fuselage-tokens/dist/spacing.json';
+import tokenTypography from '@yas chat/fuselage-tokens/dist/typography.json';
+import { memoize } from '@yas chat/memo';
 import invariant from 'invariant';
 
 import {

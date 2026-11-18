@@ -1,6 +1,6 @@
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useEndpoint, useRouter, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useEndpoint, useRouter, useToastMessageDispatch } from '@yas chat/ui-contexts';
 
 import { roomCoordinator } from '../../../lib/rooms/roomCoordinator';
 import { Subscriptions } from '../../../stores';

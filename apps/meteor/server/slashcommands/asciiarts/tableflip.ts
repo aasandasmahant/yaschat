@@ -1,4 +1,4 @@
-import type { SlashCommandCallbackParams } from '@rocket.chat/core-typings';
+import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
 
 import { slashCommands } from '../../lib/utils/slashCommand';
 import { executeSendMessage } from '../../meteor-methods/messages/sendMessage';

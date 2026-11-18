@@ -1,5 +1,5 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 import { API } from '../../../server/api/api';
 import type { NonEnterpriseTwoFactorOptions, Options } from '../../../server/api/definition';

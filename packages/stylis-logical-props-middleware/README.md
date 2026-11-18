@@ -1,19 +1,19 @@
-# `@rocket.chat/stylis-logical-props-middleware`
+# `@yas chat/stylis-logical-props-middleware`
 
 > Stylis middleware that rewrites CSS logical properties into physical ones when the browser does not support them.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/stylis-logical-props-middleware?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/stylis-logical-props-middleware) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/stylis-logical-props-middleware?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/stylis-logical-props-middleware)
+[![npm](https://img.shields.io/npm/v/@yas chat/stylis-logical-props-middleware?style=flat-square)](https://www.npmjs.com/package/@yas chat/stylis-logical-props-middleware) [![downloads](https://img.shields.io/npm/dw/@yas chat/stylis-logical-props-middleware?style=flat-square)](https://www.npmjs.com/package/@yas chat/stylis-logical-props-middleware)
 
 Write `margin-inline-start`, `inset-inline` or `float: inline-start` once. If the browser supports them, the declarations pass through unchanged. If not, this [Stylis](https://stylis.js.org/) middleware replaces them with physical properties (`left`, `right`, `top`, `bottom`, `width`...). Inline-axis properties are emitted twice: once under `html:not([dir=rtl])` for left-to-right documents and once under `[dir=rtl]` for right-to-left documents.
 
-Support is detected with [`@rocket.chat/css-supports`](https://www.npmjs.com/package/@rocket.chat/css-supports), so it is checked once per property and value. Where `CSS.supports` is not available (server rendering, tests), every fallback is applied.
+Support is detected with [`@yas chat/css-supports`](https://www.npmjs.com/package/@yas chat/css-supports), so it is checked once per property and value. Where `CSS.supports` is not available (server rendering, tests), every fallback is applied.
 
-It powers the `transpile` function of [`@rocket.chat/css-in-js`](https://www.npmjs.com/package/@rocket.chat/css-in-js).
+It powers the `transpile` function of [`@yas chat/css-in-js`](https://www.npmjs.com/package/@yas chat/css-in-js).
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/stylis-logical-props-middleware stylis@~4.4.0
+npm install @yas chat/stylis-logical-props-middleware stylis@~4.4.0
 ```
 
 `stylis` `~4.4.0` is a peer dependency. The package ships an ES module (`dist/index.js`) and TypeScript types.
@@ -25,7 +25,7 @@ npm install @rocket.chat/stylis-logical-props-middleware stylis@~4.4.0
 The default export is a middleware created with default options. Put it before `stringify`:
 
 ```ts
-import logicalProps from '@rocket.chat/stylis-logical-props-middleware';
+import logicalProps from '@yas chat/stylis-logical-props-middleware';
 import { compile, middleware, prefixer, serialize, stringify } from 'stylis';
 
 const css = serialize(compile('.box{margin-inline:4px 8px;inset-block-start:0;}'), middleware([logicalProps, prefixer, stringify]));
@@ -42,7 +42,7 @@ html:not([dir=rtl]) .box{margin-left:4px;margin-right:8px;}[dir=rtl] .box{margin
 Use `createLogicalPropertiesMiddleware` to decide yourself which properties and values are supported. This is useful to force fallbacks, or to skip them when you know the target browsers.
 
 ```ts
-import { createLogicalPropertiesMiddleware } from '@rocket.chat/stylis-logical-props-middleware';
+import { createLogicalPropertiesMiddleware } from '@yas chat/stylis-logical-props-middleware';
 import { compile, middleware, serialize, stringify } from 'stylis';
 
 const alwaysFallBack = createLogicalPropertiesMiddleware({
@@ -92,10 +92,10 @@ The result of `createLogicalPropertiesMiddleware()`.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/stylis-logical-props-middleware). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/stylis-logical-props-middleware build
-yarn workspace @rocket.chat/stylis-logical-props-middleware testunit
-yarn workspace @rocket.chat/stylis-logical-props-middleware lint
-yarn workspace @rocket.chat/stylis-logical-props-middleware typecheck
+yarn workspace @yas chat/stylis-logical-props-middleware build
+yarn workspace @yas chat/stylis-logical-props-middleware testunit
+yarn workspace @yas chat/stylis-logical-props-middleware lint
+yarn workspace @yas chat/stylis-logical-props-middleware typecheck
 ```
 
 ## License

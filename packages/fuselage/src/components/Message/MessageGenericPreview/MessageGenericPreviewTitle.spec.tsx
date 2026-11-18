@@ -5,9 +5,9 @@ import { render } from '../../../testing';
 
 describe('MessageGenericPreviewTitle', () => {
 	it('shows the title as a link when it has an external url', () => {
-		render(<MessageGenericPreviewTitle externalUrl='https://rocket.chat'>report.pdf</MessageGenericPreviewTitle>);
+		render(<MessageGenericPreviewTitle externalUrl='https://yas chat'>report.pdf</MessageGenericPreviewTitle>);
 
-		expect(screen.getByRole('link', { name: 'report.pdf' })).toHaveAttribute('href', 'https://rocket.chat');
+		expect(screen.getByRole('link', { name: 'report.pdf' })).toHaveAttribute('href', 'https://yas chat');
 	});
 
 	it('shows the title as text when it has no external url', () => {

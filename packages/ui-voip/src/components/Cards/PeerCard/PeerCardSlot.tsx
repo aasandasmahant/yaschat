@@ -1,4 +1,4 @@
-import { Icon } from '@rocket.chat/fuselage';
+import { Icon } from '@yas chat/fuselage';
 
 import CardSlot from '../CardSlot';
 

@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
 import {
 	Box,
 	Button,
@@ -10,7 +10,7 @@ import {
 	ItemRow,
 	ItemTitle,
 	Tag,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { MouseEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

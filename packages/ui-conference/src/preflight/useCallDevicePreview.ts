@@ -1,4 +1,4 @@
-import { stopTracks, useMediaDevices } from '@rocket.chat/ui-media';
+import { stopTracks, useMediaDevices } from '@yas chat/ui-media';
 import { useEffect, useState } from 'react';
 
 import type { CallDevices, CallPreferences } from '../hooks/useCallDevicesInitialState';

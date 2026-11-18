@@ -1,6 +1,6 @@
-import type { UserStatus } from '@rocket.chat/core-typings';
-import type { LivechatRoomEvents } from '@rocket.chat/ddp-client';
-import { Emitter } from '@rocket.chat/emitter';
+import type { UserStatus } from '@yas chat/core-typings';
+import type { LivechatRoomEvents } from '@yas chat/ddp-client';
+import { Emitter } from '@yas chat/emitter';
 
 import { isDefined } from './helpers/isDefined';
 import type { HooksWidgetAPI } from './lib/hooks';

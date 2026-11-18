@@ -1,4 +1,4 @@
-import { Field, FieldLabel, FieldRow, FlexItem, InputBoxSkeleton, Skeleton } from '@rocket.chat/fuselage';
+import { Field, FieldLabel, FieldRow, FlexItem, InputBoxSkeleton, Skeleton } from '@yas chat/fuselage';
 
 const SettingSkeleton = () => (
 	<Field>

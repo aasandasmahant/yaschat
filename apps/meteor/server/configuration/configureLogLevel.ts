@@ -1,5 +1,5 @@
-import { logLevel, type LogLevelSetting } from '@rocket.chat/logger';
-import { Settings } from '@rocket.chat/models';
+import { logLevel, type LogLevelSetting } from '@yas chat/logger';
+import { Settings } from '@yas chat/models';
 
 import type { ICachedSettings } from '../settings/CachedSettings';
 

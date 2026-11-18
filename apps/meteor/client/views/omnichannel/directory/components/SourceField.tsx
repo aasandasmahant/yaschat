@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { OmnichannelRoomIcon } from '../../../../components/RoomIcon/OmnichannelRoomIcon';

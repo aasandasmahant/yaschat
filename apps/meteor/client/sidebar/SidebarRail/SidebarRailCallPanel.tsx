@@ -1,7 +1,7 @@
-import { Box, Sidepanel } from '@rocket.chat/fuselage';
-import { FeaturePreview, FeaturePreviewOn, FeaturePreviewOff } from '@rocket.chat/ui-client';
-import { useLayout } from '@rocket.chat/ui-contexts';
-import { InlineMediaCallWidget } from '@rocket.chat/ui-voip';
+import { Box, Sidepanel } from '@yas chat/fuselage';
+import { FeaturePreview, FeaturePreviewOn, FeaturePreviewOff } from '@yas chat/ui-client';
+import { useLayout } from '@yas chat/ui-contexts';
+import { InlineMediaCallWidget } from '@yas chat/ui-voip';
 import { useTranslation } from 'react-i18next';
 
 import SidebarPortal from '../../portals/SidebarPortal';

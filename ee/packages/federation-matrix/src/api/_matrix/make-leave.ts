@@ -1,6 +1,6 @@
-import { NotAllowedError, federationSDK } from '@rocket.chat/federation-sdk';
-import { Router } from '@rocket.chat/http-router';
-import { ajv } from '@rocket.chat/rest-typings';
+import { NotAllowedError, federationSDK } from '@yas chat/federation-sdk';
+import { Router } from '@yas chat/http-router';
+import { ajv } from '@yas chat/rest-typings';
 
 import { logger } from '../logger';
 import { isAuthenticatedMiddleware } from '../middlewares/isAuthenticated';

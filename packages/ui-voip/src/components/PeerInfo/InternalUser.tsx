@@ -1,5 +1,5 @@
-import type { UserStatus } from '@rocket.chat/core-typings';
-import { Avatar, Box, Icon, StatusBullet } from '@rocket.chat/fuselage';
+import type { UserStatus } from '@yas chat/core-typings';
+import { Avatar, Box, Icon, StatusBullet } from '@yas chat/fuselage';
 
 import type { Slot } from './useInfoSlots';
 

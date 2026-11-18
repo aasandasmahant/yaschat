@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { clientCallbacks, useInvalidateLicense } from '@rocket.chat/ui-client';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { clientCallbacks, useInvalidateLicense } from '@yas chat/ui-client';
 import {
 	useToastMessageDispatch,
 	useSessionDispatch,
@@ -8,7 +8,7 @@ import {
 	useSettingsDispatch,
 	useEndpoint,
 	useRole,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ContextType, ReactNode } from 'react';
 import { useCallback, useMemo, useState } from 'react';

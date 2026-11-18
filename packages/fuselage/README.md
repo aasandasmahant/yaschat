@@ -1,8 +1,8 @@
-# `@rocket.chat/fuselage`
+# `@yas chat/fuselage`
 
 > React component library for Fuselage, YasChat's design system.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage)
+[![npm](https://img.shields.io/npm/v/@yas chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage) [![downloads](https://img.shields.io/npm/dw/@yas chat/fuselage?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage)
 
 Fuselage is the set of React components that the YasChat web client is built with. It covers layout primitives, form inputs, buttons, menus, modals, messages, sidebars, tables and more, all styled with the Fuselage design tokens.
 
@@ -14,15 +14,15 @@ Fuselage is the set of React components that the YasChat web client is built wit
 ## Installation
 
 ```sh
-npm install @rocket.chat/fuselage @rocket.chat/fuselage-hooks @rocket.chat/icons react react-dom react-virtuoso
+npm install @yas chat/fuselage @yas chat/fuselage-hooks @yas chat/icons react react-dom react-virtuoso
 ```
 
-`@rocket.chat/fuselage-hooks`, `@rocket.chat/icons`, `react`, `react-dom` and `react-virtuoso` are peer dependencies. The package is developed against React 19.
+`@yas chat/fuselage-hooks`, `@yas chat/icons`, `react`, `react-dom` and `react-virtuoso` are peer dependencies. The package is developed against React 19.
 
-To write your own styles with `css`, as in the [Themes](#themes) example, also install `@rocket.chat/css-in-js`. Fuselage depends on it but does not re-export it, so strict package managers such as pnpm won't resolve a direct import otherwise:
+To write your own styles with `css`, as in the [Themes](#themes) example, also install `@yas chat/css-in-js`. Fuselage depends on it but does not re-export it, so strict package managers such as pnpm won't resolve a direct import otherwise:
 
 ```sh
-npm install @rocket.chat/css-in-js
+npm install @yas chat/css-in-js
 ```
 
 The package ships a CommonJS bundle (with development and production builds picked by `process.env.NODE_ENV`), TypeScript declarations, and a stylesheet. It is meant to be consumed through a bundler that can import CSS.
@@ -36,8 +36,8 @@ The bundle targets the web only. Components that render with Tamagui carry their
 Import the component stylesheet and the icon font once, at the entry point of your app:
 
 ```ts
-import '@rocket.chat/fuselage/dist/fuselage.css';
-import '@rocket.chat/icons/dist/yaschat.css';
+import '@yas chat/fuselage/dist/fuselage.css';
+import '@yas chat/icons/dist/yaschat.css';
 ```
 
 `fuselage.css` includes the Inter font, a normalize reset and the styles of every component.
@@ -45,7 +45,7 @@ import '@rocket.chat/icons/dist/yaschat.css';
 ### Render components
 
 ```tsx
-import { Box, Button, ButtonGroup, Field, FieldLabel, FieldRow, TextInput } from '@rocket.chat/fuselage';
+import { Box, Button, ButtonGroup, Field, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
 import { useState } from 'react';
 
 export function ProfileForm({ onSave }: { onSave: (name: string) => void }) {
@@ -90,7 +90,7 @@ export function ProfileForm({ onSave }: { onSave: (name: string) => void }) {
 - Border: `borderWidth` and `borderRadius` take token names such as `none`, `default`, `medium` and `large`; `borderRadius` also takes `small` and `full`.
 
 ```tsx
-import { Box, Icon } from '@rocket.chat/fuselage';
+import { Box, Icon } from '@yas chat/fuselage';
 
 <Box display='flex' alignItems='center' paddingInline='x16' paddingBlock='x8' borderRadius='medium' backgroundColor='surface-tint'>
 	<Icon name='info' size='x20' color='font-info' />
@@ -103,7 +103,7 @@ import { Box, Icon } from '@rocket.chat/fuselage';
 Use `Margins` to space a group of children without wrapping each one:
 
 ```tsx
-import { Button, Margins } from '@rocket.chat/fuselage';
+import { Button, Margins } from '@yas chat/fuselage';
 
 <Margins inline='x4'>
 	<Button>Cancel</Button>
@@ -116,18 +116,18 @@ import { Button, Margins } from '@rocket.chat/fuselage';
 Render `PaletteStyleTag` once to set the color palette. It writes the palette as `--rcx-color-*` CSS custom properties on `:root`.
 
 ```tsx
-import { PaletteStyleTag } from '@rocket.chat/fuselage';
+import { PaletteStyleTag } from '@yas chat/fuselage';
 
 <PaletteStyleTag theme='dark' />;
 ```
 
 `theme` accepts `light` (default), `dark` and `high-contrast`. Use `selector` to scope the palette to part of the page, or `palette` to pass your own CSS.
 
-To read palette values in your own styles, use `Palette`. Each entry stringifies to a `var(--rcx-color-…)` reference with a fallback value. This example uses `@rocket.chat/css-in-js`, which you install separately (see [Installation](#installation)):
+To read palette values in your own styles, use `Palette`. Each entry stringifies to a `var(--rcx-color-…)` reference with a fallback value. This example uses `@yas chat/css-in-js`, which you install separately (see [Installation](#installation)):
 
 ```ts
-import { css } from '@rocket.chat/css-in-js';
-import { Palette } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Palette } from '@yas chat/fuselage';
 
 const banner = css`
 	color: ${Palette.text['font-default']};
@@ -169,12 +169,12 @@ Each component's source and stories live in [`src/components`](https://github.co
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/fuselage build
-yarn workspace @rocket.chat/fuselage start
-yarn workspace @rocket.chat/fuselage testunit
-yarn workspace @rocket.chat/fuselage typecheck
-yarn workspace @rocket.chat/fuselage lint
-yarn workspace @rocket.chat/fuselage lint:fix
+yarn workspace @yas chat/fuselage build
+yarn workspace @yas chat/fuselage start
+yarn workspace @yas chat/fuselage testunit
+yarn workspace @yas chat/fuselage typecheck
+yarn workspace @yas chat/fuselage lint
+yarn workspace @yas chat/fuselage lint:fix
 ```
 
 `start` rebuilds the development bundle on every change.
@@ -182,8 +182,8 @@ yarn workspace @rocket.chat/fuselage lint:fix
 Storybook documents every component:
 
 ```sh
-yarn workspace @rocket.chat/fuselage storybook
-yarn workspace @rocket.chat/fuselage build-storybook
+yarn workspace @yas chat/fuselage storybook
+yarn workspace @yas chat/fuselage build-storybook
 ```
 
 With `FUSELAGE_ZERO_RUNTIME=1`, Storybook compiles Fuselage with Tamagui's zero runtime, as the web client does; without it,
@@ -191,8 +191,8 @@ components run on the Tamagui runtime, as npm consumers and Jest run them. To ch
 ways, build both into separate directories and compare them:
 
 ```sh
-yarn workspace @rocket.chat/fuselage build-storybook -o storybook-static/runtime
-FUSELAGE_ZERO_RUNTIME=1 yarn workspace @rocket.chat/fuselage build-storybook -o storybook-static/zero
+yarn workspace @yas chat/fuselage build-storybook -o storybook-static/runtime
+FUSELAGE_ZERO_RUNTIME=1 yarn workspace @yas chat/fuselage build-storybook -o storybook-static/zero
 node packages/fuselage/scripts/verify/story-computed.mjs packages/fuselage/storybook-static/runtime packages/fuselage/storybook-static/zero
 ```
 
@@ -201,8 +201,8 @@ The zero build leaves out the MDX documentation pages (`Box.mdx`, `Flex.mdx`), w
 Visual regression tests compare Storybook screenshots:
 
 ```sh
-yarn workspace @rocket.chat/fuselage visual-regression
-yarn workspace @rocket.chat/fuselage visual-regression-update
+yarn workspace @yas chat/fuselage visual-regression
+yarn workspace @yas chat/fuselage visual-regression-update
 ```
 
 ## License

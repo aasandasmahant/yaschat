@@ -1,40 +1,40 @@
 import * as os from 'node:os';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { HttpStatusCode } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IApi, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import { ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
-import type { IApiEndpointInfo } from '@rocket.chat/apps-engine/definition/api/IApiEndpointInfo';
-import type { IMessage, IMessageAttachment, IMessageRaw } from '@rocket.chat/apps-engine/definition/messages';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IHttp, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { HttpStatusCode } from '@yas chat/apps-engine/definition/accessors';
+import type { IApi, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import { ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
+import type { IApiEndpointInfo } from '@yas chat/apps-engine/definition/api/IApiEndpointInfo';
+import type { IMessage, IMessageAttachment, IMessageRaw } from '@yas chat/apps-engine/definition/messages';
 import type {
 	IOutboundEmailMessageProvider,
 	IOutboundMessage,
 	IOutboundPhoneMessageProvider,
 	ProviderMetadata,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
-import { SettingType } from '@rocket.chat/apps-engine/definition/settings';
+} from '@yas chat/apps-engine/definition/outboundCommunication';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
+import { SettingType } from '@yas chat/apps-engine/definition/settings';
 import type {
 	ISlashCommand,
 	ISlashCommandPreview,
 	ISlashCommandPreviewItem,
 	SlashCommandContext,
-} from '@rocket.chat/apps-engine/definition/slashcommands';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
-import { UserStatusConnection, UserType } from '@rocket.chat/apps-engine/definition/users';
+} from '@yas chat/apps-engine/definition/slashcommands';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
+import { UserStatusConnection, UserType } from '@yas chat/apps-engine/definition/users';
 import type {
 	IVideoConferenceOptions,
 	IVideoConfProvider,
 	VideoConfData,
 	VideoConfDataExtended,
-} from '@rocket.chat/apps-engine/definition/videoConfProviders';
-import type { AppVideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/AppVideoConference';
-import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
-import { VideoConferenceStatus } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
-import type { IVideoConferenceUser } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
+} from '@yas chat/apps-engine/definition/videoConfProviders';
+import type { AppVideoConference } from '@yas chat/apps-engine/definition/videoConferences/AppVideoConference';
+import type { VideoConference } from '@yas chat/apps-engine/definition/videoConferences/IVideoConference';
+import { VideoConferenceStatus } from '@yas chat/apps-engine/definition/videoConferences/IVideoConference';
+import type { IVideoConferenceUser } from '@yas chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
 
 import { TestsAppBridges } from './bridges/appBridges';
 import { TestSourceStorage } from './storage/TestSourceStorage';
@@ -184,7 +184,7 @@ const DEFAULT_ATTACHMENT = {
 		link: 'https://github.com/YasChat',
 		displayDownloadLink: false,
 	},
-	imageUrl: 'https://rocket.chat/images/defaultdata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>',
+	imageUrl: 'https://yas chat/images/defaultdata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>',
 	audioUrl: 'http://www.w3schools.com/tags/horse.mp3',
 	videoUrl: 'http://www.w3schools.com/tags/movie.mp4',
 	fields: [
@@ -514,7 +514,7 @@ export class TestData {
 			appId: `${name}-app-id`,
 			name,
 			supportsTemplates: true,
-			documentationUrl: 'https://rocket.chat',
+			documentationUrl: 'https://yas chat',
 			sendOutboundMessage: async (message): Promise<void> => {
 				console.log('Sending message', message);
 			},
@@ -530,7 +530,7 @@ export class TestData {
 			appId: `${name}-app-id`,
 			name,
 			supportsTemplates: true,
-			documentationUrl: 'https://rocket.chat',
+			documentationUrl: 'https://yas chat',
 			sendOutboundMessage: async (message): Promise<void> => {
 				console.log('Sending message', message);
 			},

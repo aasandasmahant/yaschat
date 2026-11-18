@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { ActionLink } from '@rocket.chat/layout';
+import { Box } from '@yas chat/fuselage';
+import { ActionLink } from '@yas chat/layout';
 import { Trans } from 'react-i18next';
 
 type EmailCodeFallbackProps = {

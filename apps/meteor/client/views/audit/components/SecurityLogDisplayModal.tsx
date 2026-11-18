@@ -1,7 +1,7 @@
-import type { IAuditServerUserActor, IAuditServerSystemActor, IAuditServerAppActor } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { GenericModal } from '@rocket.chat/ui-client';
+import type { IAuditServerUserActor, IAuditServerSystemActor, IAuditServerAppActor } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { GenericModal } from '@yas chat/ui-client';
 import { format } from 'date-fns/format';
 import { useTranslation } from 'react-i18next';
 

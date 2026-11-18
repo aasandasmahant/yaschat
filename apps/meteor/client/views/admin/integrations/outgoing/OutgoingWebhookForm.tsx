@@ -1,5 +1,5 @@
-import type { IOutgoingIntegration } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { IOutgoingIntegration } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldError,
 	AccordionItem,
@@ -16,7 +16,7 @@ import {
 	Select,
 	Accordion,
 	NumberInput,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import DOMPurify from 'dompurify';
 import { useId, useMemo } from 'react';
 import { useFormContext, Controller } from 'react-hook-form';

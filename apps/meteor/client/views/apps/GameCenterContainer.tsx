@@ -1,4 +1,4 @@
-import { Avatar, Box } from '@rocket.chat/fuselage';
+import { Avatar, Box } from '@yas chat/fuselage';
 import {
 	ContextualbarTitle,
 	ContextualbarHeader,
@@ -6,7 +6,7 @@ import {
 	ContextualbarContent,
 	ContextualbarClose,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { IGame } from './GameCenter';

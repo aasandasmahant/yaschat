@@ -1,8 +1,8 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMethodConnection } from '@rocket.chat/core-typings';
-import { TwoFactorChallenges } from '@rocket.chat/models';
-import { isTwoFactorChallengesSendEmailCodeParamsPOST, isTwoFactorChallengesVerifyChallengeParamsPOST } from '@rocket.chat/rest-typings';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMethodConnection } from '@yas chat/core-typings';
+import { TwoFactorChallenges } from '@yas chat/models';
+import { isTwoFactorChallengesSendEmailCodeParamsPOST, isTwoFactorChallengesVerifyChallengeParamsPOST } from '@yas chat/rest-typings';
 
 import { getUserForCheck, rememberAuthorizationByToken } from '../../lib/2fa/code';
 import { issueLoginToken } from '../../lib/auth/issueLoginToken';

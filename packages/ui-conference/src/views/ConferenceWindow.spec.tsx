@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { DeviceSelection } from '@rocket.chat/ui-media';
-import { DeviceSelectionProvider } from '@rocket.chat/ui-media';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { DeviceSelection } from '@yas chat/ui-media';
+import { DeviceSelectionProvider } from '@yas chat/ui-media';
 import { render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 

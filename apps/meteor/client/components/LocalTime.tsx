@@ -1,4 +1,4 @@
-import { useUTCClock } from '@rocket.chat/ui-client';
+import { useUTCClock } from '@yas chat/ui-client';
 import { memo } from 'react';
 
 export type LocalTimeProps = {

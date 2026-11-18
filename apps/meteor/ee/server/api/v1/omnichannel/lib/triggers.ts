@@ -1,4 +1,4 @@
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { settings } from '../../../../../../server/settings';
 

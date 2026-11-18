@@ -1,6 +1,6 @@
-import { ServiceClassInternal, type ILDAPEEService } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { ServiceClassInternal, type ILDAPEEService } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { FindCursor } from 'mongodb';
 
 import { LDAPEEManager } from '../../lib/ldap/EEManager';

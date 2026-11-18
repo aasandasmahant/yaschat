@@ -1,5 +1,5 @@
-import { Button, Stack } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Button, Stack } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import { useState } from 'react';
 
 import { useStringFromTextObject } from '../hooks/useStringFromTextObject';

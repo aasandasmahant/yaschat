@@ -1,5 +1,5 @@
-import type { IMessage, IThreadMainMessage, IThreadMessage } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IMessage, IThreadMainMessage, IThreadMessage } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
@@ -52,12 +52,12 @@ jest.mock('virtua', () => {
 	};
 });
 
-jest.mock('@rocket.chat/fuselage-hooks', () => ({
-	...jest.requireActual('@rocket.chat/fuselage-hooks'),
+jest.mock('@yas chat/fuselage-hooks', () => ({
+	...jest.requireActual('@yas chat/fuselage-hooks'),
 	useDebouncedCallback: (callback: (...args: any[]) => void) => callback,
 }));
 
-jest.mock('@rocket.chat/ui-client', () => ({
+jest.mock('@yas chat/ui-client', () => ({
 	clientCallbacks: {
 		add: jest.fn(),
 		remove: jest.fn(),
@@ -74,7 +74,7 @@ jest.mock('@rocket.chat/ui-client', () => ({
 			</div>
 		);
 	}),
-	useMergedRefsV2: jest.requireActual('@rocket.chat/ui-client').useMergedRefsV2,
+	useMergedRefsV2: jest.requireActual('@yas chat/ui-client').useMergedRefsV2,
 }));
 
 jest.mock('../hooks/useThreadMessagesQuery', () => ({

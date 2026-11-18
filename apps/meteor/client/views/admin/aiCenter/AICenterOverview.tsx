@@ -1,7 +1,7 @@
-import { AI_LICENSE_MODULE } from '@rocket.chat/ai-search';
-import { Box, Button, Callout, CardGrid, Tag } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useRouter, useSetting } from '@rocket.chat/ui-contexts';
+import { AI_LICENSE_MODULE } from '@yas chat/ai-search';
+import { Box, Button, Callout, CardGrid, Tag } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { useRouter, useSetting } from '@yas chat/ui-contexts';
 import type { ReactElement, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

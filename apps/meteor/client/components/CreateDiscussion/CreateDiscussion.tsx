@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Icon, Box } from '@rocket.chat/fuselage';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { Icon, Box } from '@yas chat/fuselage';
 import {
 	Field,
 	FieldGroup,
@@ -10,10 +10,10 @@ import {
 	FieldLabel,
 	FieldRow,
 	FieldError,
-} from '@rocket.chat/fuselage-forms';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage-forms';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericModal } from '@yas chat/ui-client';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';

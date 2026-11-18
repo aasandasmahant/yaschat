@@ -1,9 +1,9 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import { LocalBroker, ServiceClass, api } from '@rocket.chat/core-services';
-import type { IAuthorization } from '@rocket.chat/core-services';
-import type { IRoomsModel } from '@rocket.chat/model-typings';
-import { registerModel } from '@rocket.chat/models';
+import { LocalBroker, ServiceClass, api } from '@yas chat/core-services';
+import type { IAuthorization } from '@yas chat/core-services';
+import type { IRoomsModel } from '@yas chat/model-typings';
+import { registerModel } from '@yas chat/models';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

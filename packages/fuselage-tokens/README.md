@@ -1,17 +1,17 @@
-# `@rocket.chat/fuselage-tokens`
+# `@yas chat/fuselage-tokens`
 
 > Design tokens for Fuselage, YasChat's design system, as JSON and SCSS.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-tokens) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-tokens)
+[![npm](https://img.shields.io/npm/v/@yas chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-tokens) [![downloads](https://img.shields.io/npm/dw/@yas chat/fuselage-tokens?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-tokens)
 
 The colors, typography, breakpoints, border and spacing values that Fuselage and the YasChat clients are styled with. They are defined once and built with [Style Dictionary](https://styledictionary.com/) into JSON files (with TypeScript declarations) and SCSS maps.
 
-Use this package when you need YasChat's design values outside of Fuselage's React components: charts, emails, PDFs, native code, or your own stylesheets. If you use `@rocket.chat/fuselage`, its `Box` props and `Palette` already read from these tokens.
+Use this package when you need YasChat's design values outside of Fuselage's React components: charts, emails, PDFs, native code, or your own stylesheets. If you use `@yas chat/fuselage`, its `Box` props and `Palette` already read from these tokens.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/fuselage-tokens
+npm install @yas chat/fuselage-tokens
 ```
 
 The package has no dependencies and no JavaScript entry point. Import the files under `dist/` directly.
@@ -23,23 +23,23 @@ The package has no dependencies and no JavaScript entry point. Import the files 
 Each token category is a JSON file:
 
 ```ts
-import breakpoints from '@rocket.chat/fuselage-tokens/dist/breakpoints.json';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import typography from '@rocket.chat/fuselage-tokens/dist/typography.json';
+import breakpoints from '@yas chat/fuselage-tokens/dist/breakpoints.json';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import typography from '@yas chat/fuselage-tokens/dist/typography.json';
 
 colors.n900; // '#…', the darkest neutral
 typography.fontScale.h1; // { fontSize: 32, fontWeight: 700, letterSpacing: 0, lineHeight: 40 }
 breakpoints.md.minViewportWidth; // 768
 ```
 
-In Node.js ES modules, add the import attribute: `import colors from '@rocket.chat/fuselage-tokens/dist/colors.json' with { type: 'json' };`.
+In Node.js ES modules, add the import attribute: `import colors from '@yas chat/fuselage-tokens/dist/colors.json' with { type: 'json' };`.
 
 TypeScript resolves the types through `resolveJsonModule`. Each file also has a `<name>.d.json.ts` declaration next to it, which TypeScript uses when `allowArbitraryExtensions` is enabled.
 
 Theme-aware categories have one object per theme:
 
 ```ts
-import surface from '@rocket.chat/fuselage-tokens/dist/surface.json';
+import surface from '@yas chat/fuselage-tokens/dist/surface.json';
 
 const background = surface.dark.room;
 ```
@@ -50,8 +50,8 @@ Each category is also a flat Sass map, with keys made from the token path in keb
 
 ```scss
 @use 'sass:map';
-@use '@rocket.chat/fuselage-tokens/dist/breakpoints.scss';
-@use '@rocket.chat/fuselage-tokens/dist/colors.scss';
+@use '@yas chat/fuselage-tokens/dist/breakpoints.scss';
+@use '@yas chat/fuselage-tokens/dist/colors.scss';
 
 .sidebar {
 	color: map.get(colors.$colors, 'n900');
@@ -93,9 +93,9 @@ In the JSON files, sizes are plain numbers in pixels and colors are hex strings.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-tokens). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-tokens build
-yarn workspace @rocket.chat/fuselage-tokens lint
-yarn workspace @rocket.chat/fuselage-tokens lint:fix
+yarn workspace @yas chat/fuselage-tokens build
+yarn workspace @yas chat/fuselage-tokens lint
+yarn workspace @yas chat/fuselage-tokens lint:fix
 ```
 
 Token sources live in `src/` as Style Dictionary JSON. `build.js` and `config.js` define the transforms and output formats.

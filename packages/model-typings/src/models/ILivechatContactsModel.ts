@@ -4,7 +4,7 @@ import type {
 	ILivechatContactChannel,
 	ILivechatContactVisitorAssociation,
 	ILivechatVisitor,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type { AggregationCursor, Document, FindCursor, FindOneAndUpdateOptions, UpdateFilter, UpdateOptions, UpdateResult } from 'mongodb';
 
 import type { Updater } from '../updater';

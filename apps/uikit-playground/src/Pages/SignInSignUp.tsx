@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { FlexContainer, Box, InputBox, Button } from '@rocket.chat/fuselage';
-import { YasChatLogo } from '@rocket.chat/logo';
+import { css } from '@yas chat/css-in-js';
+import { FlexContainer, Box, InputBox, Button } from '@yas chat/fuselage';
+import { YasChatLogo } from '@yas chat/logo';
 import { useNavigate } from 'react-router-dom';
 
 import routes from '../Routes/Routes';

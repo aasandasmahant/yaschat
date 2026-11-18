@@ -1,4 +1,4 @@
-import { ajvQuery } from '@rocket.chat/rest-typings';
+import { ajvQuery } from '@yas chat/rest-typings';
 import mem from 'mem';
 import moment from 'moment';
 

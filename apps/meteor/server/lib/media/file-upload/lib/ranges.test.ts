@@ -1,7 +1,7 @@
 import type http from 'node:http';
 import { describe, it } from 'node:test';
 
-import type { IUpload } from '@rocket.chat/core-typings';
+import type { IUpload } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getFileRange } from './ranges';

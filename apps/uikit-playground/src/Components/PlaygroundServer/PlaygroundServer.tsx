@@ -1,4 +1,4 @@
-import { ServerContext } from '@rocket.chat/ui-contexts';
+import { ServerContext } from '@yas chat/ui-contexts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { ContextType, ReactNode } from 'react';
 import { useState } from 'react';

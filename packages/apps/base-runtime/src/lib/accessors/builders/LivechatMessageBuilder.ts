@@ -1,13 +1,13 @@
-import type { ILivechatMessageBuilder } from '@rocket.chat/apps-engine/definition/accessors/ILivechatMessageBuilder';
-import type { IMessageBuilder } from '@rocket.chat/apps-engine/definition/accessors/IMessageBuilder';
-import type { ILivechatMessage as EngineLivechatMessage } from '@rocket.chat/apps-engine/definition/livechat/ILivechatMessage';
-import type { IVisitor } from '@rocket.chat/apps-engine/definition/livechat/IVisitor';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import type { IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages/IMessageAttachment';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
+import type { ILivechatMessageBuilder } from '@yas chat/apps-engine/definition/accessors/ILivechatMessageBuilder';
+import type { IMessageBuilder } from '@yas chat/apps-engine/definition/accessors/IMessageBuilder';
+import type { ILivechatMessage as EngineLivechatMessage } from '@yas chat/apps-engine/definition/livechat/ILivechatMessage';
+import type { IVisitor } from '@yas chat/apps-engine/definition/livechat/IVisitor';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import type { IMessageAttachment } from '@yas chat/apps-engine/definition/messages/IMessageAttachment';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms/RoomType';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
 
 import { MessageBuilder } from './MessageBuilder';
 

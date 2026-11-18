@@ -1,6 +1,6 @@
-import type { StreamNames } from '@rocket.chat/ddp-client';
-import { Streamer } from '@rocket.chat/streamer';
-import type { DDPSubscription, Connection, StreamerOptions, TransformMessage } from '@rocket.chat/streamer';
+import type { StreamNames } from '@yas chat/ddp-client';
+import { Streamer } from '@yas chat/streamer';
+import type { DDPSubscription, Connection, StreamerOptions, TransformMessage } from '@yas chat/streamer';
 import WebSocket from 'ws';
 
 import type { Server } from '../Server';

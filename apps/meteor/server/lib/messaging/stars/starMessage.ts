@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
-import { Messages, Subscriptions, Rooms } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IUser } from '@yas chat/core-typings';
+import { Messages, Subscriptions, Rooms } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 import { canAccessRoomAsync, roomAccessAttributes } from '../../authorization';

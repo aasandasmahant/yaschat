@@ -1,4 +1,4 @@
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useSetting } from '@yas chat/ui-contexts';
 
 import { useIsABACAvailable } from '../../admin/ABAC/hooks/useIsABACAvailable';
 

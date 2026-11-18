@@ -2,8 +2,8 @@
 import * as assert from 'node:assert';
 import { after, beforeEach, describe, it, mock } from 'node:test';
 
-import type { IRead, IModify, IHttp, IPersistence } from '@rocket.chat/apps-engine/definition/accessors';
-import type { SlashCommandContext } from '@rocket.chat/apps-engine/definition/slashcommands';
+import type { IRead, IModify, IHttp, IPersistence } from '@yas chat/apps-engine/definition/accessors';
+import type { SlashCommandContext } from '@yas chat/apps-engine/definition/slashcommands';
 
 import { AppObjectRegistry } from '../../../AppObjectRegistry';
 import { AppAccessors } from '../mod';

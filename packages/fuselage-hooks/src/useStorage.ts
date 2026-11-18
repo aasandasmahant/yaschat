@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import type { Dispatch, RefObject, SetStateAction } from 'react';
 import { useRef, useCallback, useSyncExternalStore, useState } from 'react';
 

@@ -1,4 +1,4 @@
-import { Box, TableCell } from '@rocket.chat/fuselage';
+import { Box, TableCell } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { useCallback } from 'react';
 

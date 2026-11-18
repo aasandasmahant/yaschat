@@ -1,7 +1,7 @@
-import { Authorization } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { VideoConference as VideoConferenceModel } from '@rocket.chat/models';
+import { Authorization } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { VideoConference as VideoConferenceModel } from '@yas chat/models';
 
 import { getLiveKitConfig, isLiveKitFullyConfigured, isLiveKitLicensed } from './config';
 import { createLiveKitAccessToken } from './token';

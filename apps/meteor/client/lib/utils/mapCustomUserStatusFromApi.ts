@@ -1,4 +1,4 @@
-import type { ICustomUserStatus, Serialized } from '@rocket.chat/core-typings';
+import type { ICustomUserStatus, Serialized } from '@yas chat/core-typings';
 
 export const mapCustomUserStatusFromApi = ({ _updatedAt, ...status }: Serialized<ICustomUserStatus>): ICustomUserStatus => ({
 	...status,

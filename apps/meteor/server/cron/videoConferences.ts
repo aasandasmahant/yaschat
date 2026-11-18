@@ -1,8 +1,8 @@
-import { VideoConf } from '@rocket.chat/core-services';
-import type { VideoConference } from '@rocket.chat/core-typings';
-import { VideoConferenceStatus } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { VideoConference as VideoConferenceModel } from '@rocket.chat/models';
+import { VideoConf } from '@yas chat/core-services';
+import type { VideoConference } from '@yas chat/core-typings';
+import { VideoConferenceStatus } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { VideoConference as VideoConferenceModel } from '@yas chat/models';
 
 import { isPresenceSweepDue } from '../../lib/videoConference/presence';
 

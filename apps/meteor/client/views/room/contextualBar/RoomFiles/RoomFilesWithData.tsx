@@ -1,5 +1,5 @@
-import { useLocalStorage, useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { useLocalStorage, useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { useRoomToolbox } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useState, useCallback } from 'react';
 

@@ -1,4 +1,4 @@
-import { videoConferenceInfoQueryKey } from '@rocket.chat/ui-video-conf';
+import { videoConferenceInfoQueryKey } from '@yas chat/ui-video-conf';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import type { ReactNode } from 'react';
@@ -7,7 +7,7 @@ import { useLiveKitTransport } from './useLiveKitTransport';
 
 const getCallConfig = jest.fn();
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	useEndpoint: () => getCallConfig,
 }));
 

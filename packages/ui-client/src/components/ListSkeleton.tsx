@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@rocket.chat/fuselage';
+import { Box, Skeleton } from '@yas chat/fuselage';
 import { memo, useMemo } from 'react';
 
 const availablePercentualWidths = [47, 68, 75, 82];

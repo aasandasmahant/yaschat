@@ -1,5 +1,5 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
+import type { SettingValue } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
 
 import * as dataExport from '../lib/dataExport';
 import { settings } from '../settings';

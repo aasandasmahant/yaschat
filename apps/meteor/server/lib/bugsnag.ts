@@ -1,5 +1,5 @@
 import Bugsnag from '@bugsnag/js';
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 import { Meteor } from 'meteor/meteor';
 
 import { Info } from '../../yaschat.info';

@@ -1,5 +1,5 @@
-import { Box, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { Box, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 type NotFoundProps = {

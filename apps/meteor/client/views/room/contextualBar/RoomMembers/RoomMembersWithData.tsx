@@ -1,6 +1,6 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { isRoomFederated, isDirectMessageRoom, isTeamRoom, isRoomNativeFederated } from '@rocket.chat/core-typings';
-import { useStableCallback, useDebouncedValue, useLocalStorage } from '@rocket.chat/fuselage-hooks';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { isRoomFederated, isDirectMessageRoom, isTeamRoom, isRoomNativeFederated } from '@yas chat/core-typings';
+import { useStableCallback, useDebouncedValue, useLocalStorage } from '@yas chat/fuselage-hooks';
 import {
 	useUserRoom,
 	useAtLeastOnePermission,
@@ -8,7 +8,7 @@ import {
 	usePermission,
 	useUserSubscription,
 	useRoomToolbox,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import type { ChangeEvent, MouseEvent } from 'react';
 import { useCallback, useMemo, useState } from 'react';
 

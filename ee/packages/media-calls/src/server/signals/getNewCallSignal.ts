@@ -1,5 +1,5 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import type { CallFlag, CallRole, ServerMediaSignalNewCall } from '@rocket.chat/media-signaling';
+import type { IMediaCall } from '@yas chat/core-typings';
+import type { CallFlag, CallRole, ServerMediaSignalNewCall } from '@yas chat/media-signaling';
 
 import { getNewCallTransferredBy } from './getNewCallTransferredBy';
 import { getMediaCallServer } from '../injection';

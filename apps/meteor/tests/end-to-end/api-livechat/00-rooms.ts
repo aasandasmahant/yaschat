@@ -3,7 +3,7 @@ import { after, afterEach, before, describe, it } from 'node:test';
 import path from 'path';
 
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
+import type { Credentials } from '@yas chat/api-client';
 import type {
 	IOmnichannelRoom,
 	ILivechatVisitor,
@@ -13,8 +13,8 @@ import type {
 	ISubscription,
 	IOmnichannelBusinessUnit,
 	IUser,
-} from '@rocket.chat/core-typings';
-import { LivechatPriorityWeight } from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
+import { LivechatPriorityWeight } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

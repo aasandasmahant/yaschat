@@ -1,4 +1,4 @@
-import type { IRole } from '@rocket.chat/apps-engine/definition/roles';
+import type { IRole } from '@yas chat/apps-engine/definition/roles';
 
 import { RoleBridge } from '../../../src/server/bridges';
 

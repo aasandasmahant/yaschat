@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	useCustomSound,
 	useEndpoint,
@@ -7,7 +7,7 @@ import {
 	useToastMessageDispatch,
 	useUser,
 	useUserPreference,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

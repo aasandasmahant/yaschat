@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import { before, beforeEach, describe, it } from 'node:test';
 
-import type { IExportOperation } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { IExportOperation } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import Sinon from 'sinon';

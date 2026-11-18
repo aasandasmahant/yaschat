@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { usePermission, useSetting } from '@rocket.chat/ui-contexts';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { usePermission, useSetting } from '@yas chat/ui-contexts';
 
 export const useCanManageUserStatus = (): boolean => {
 	const canEditOtherUserInfo = usePermission('edit-other-user-info');

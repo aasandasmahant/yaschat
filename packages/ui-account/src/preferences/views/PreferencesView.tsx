@@ -1,5 +1,5 @@
-import { ButtonGroup, Button, Box, Accordion } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter, getDirtyFields } from '@rocket.chat/ui-client';
+import { ButtonGroup, Button, Box, Accordion } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter, getDirtyFields } from '@yas chat/ui-client';
 import { useId } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

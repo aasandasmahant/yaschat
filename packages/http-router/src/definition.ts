@@ -1,4 +1,4 @@
-import type { LicenseModule } from '@rocket.chat/core-typings';
+import type { LicenseModule } from '@yas chat/core-typings';
 import type { ValidateFunction } from 'ajv';
 
 import type { OpenAPIDocumentation } from './openapi';

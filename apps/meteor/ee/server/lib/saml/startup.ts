@@ -1,4 +1,4 @@
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 
 import { SAMLUtils } from './lib/Utils';
 import { addSettings } from './lib/settings';

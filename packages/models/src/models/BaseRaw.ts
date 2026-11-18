@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	IBaseModel,
 	DefaultFields,
@@ -9,8 +9,8 @@ import type {
 	FindOptionsWithProjection,
 	DocumentWithDriverProjection,
 	FindOneAndUpdateOptionsWithProjection,
-} from '@rocket.chat/model-typings';
-import { traceInstanceMethods } from '@rocket.chat/tracing';
+} from '@yas chat/model-typings';
+import { traceInstanceMethods } from '@yas chat/tracing';
 import { ObjectId } from 'mongodb';
 import type {
 	AnyBulkWriteOperation,

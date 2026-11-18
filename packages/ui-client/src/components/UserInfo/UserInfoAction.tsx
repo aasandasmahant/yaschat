@@ -1,5 +1,5 @@
-import { Button, Icon, IconButton } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Button, Icon, IconButton } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { ComponentProps } from 'react';
 
 export type UserInfoActionProps = {

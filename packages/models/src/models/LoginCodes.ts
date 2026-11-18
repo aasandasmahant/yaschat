@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto';
 
-import type { ILoginCode } from '@rocket.chat/core-typings';
-import type { ILoginCodesModel } from '@rocket.chat/model-typings';
+import type { ILoginCode } from '@yas chat/core-typings';
+import type { ILoginCodesModel } from '@yas chat/model-typings';
 import type { Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

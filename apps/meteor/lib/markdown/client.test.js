@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { escapeHTML } from '@rocket.chat/tools';
+import { escapeHTML } from '@yas chat/tools';
 import { expect } from 'chai';
 
 import { Markdown, original, filtered } from '../../tests/mocks/lib/markdown/client.mocks';
@@ -187,68 +187,68 @@ const quote = {
 
 const link = {
 	'&lt;http://link|Text&gt;': escapeHTML('&lt;http://link|Text&gt;'),
-	'&lt;https://open.rocket.chat/|Open Site For YasChat&gt;': escapeHTML('&lt;https://open.rocket.chat/|Open Site For YasChat&gt;'),
-	'&lt;https://open.rocket.chat/ | Open Site For YasChat&gt;': escapeHTML(
-		'&lt;https://open.rocket.chat/ | Open Site For YasChat&gt;',
+	'&lt;https://open.yas chat/|Open Site For YasChat&gt;': escapeHTML('&lt;https://open.yas chat/|Open Site For YasChat&gt;'),
+	'&lt;https://open.yas chat/ | Open Site For YasChat&gt;': escapeHTML(
+		'&lt;https://open.yas chat/ | Open Site For YasChat&gt;',
 	),
-	'&lt;https://rocket.chat/|YasChat Site&gt;': '&amp;lt;https://rocket.chat/|YasChat Site&amp;gt;',
-	'&lt;https://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;': escapeHTML(
-		'&lt;https://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;',
+	'&lt;https://yas chat/|YasChat Site&gt;': '&amp;lt;https://yas chat/|YasChat Site&amp;gt;',
+	'&lt;https://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;': escapeHTML(
+		'&lt;https://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;',
 	),
 	'&lt;http://linkText&gt;': escapeHTML('&lt;http://linkText&gt;'),
-	'&lt;https:open.rocket.chat/ | Open Site For YasChat&gt;': escapeHTML('&lt;https:open.rocket.chat/ | Open Site For YasChat&gt;'),
-	'https://open.rocket.chat/|Open Site For YasChat': escapeHTML('https://open.rocket.chat/|Open Site For YasChat'),
-	'&lt;www.open.rocket.chat/|Open Site For YasChat&gt;': escapeHTML('&lt;www.open.rocket.chat/|Open Site For YasChat&gt;'),
-	'&lt;htps://rocket.chat/|YasChat Site&gt;': escapeHTML('&lt;htps://rocket.chat/|YasChat Site&gt;'),
-	'&lt;ttps://rocket.chat/|YasChat Site&gt;': escapeHTML('&lt;ttps://rocket.chat/|YasChat Site&gt;'),
-	'&lt;tps://rocket.chat/|YasChat Site&gt;': escapeHTML('&lt;tps://rocket.chat/|YasChat Site&gt;'),
-	'&lt;open.rocket.chat/|Open Site For YasChat&gt;': escapeHTML('&lt;open.rocket.chat/|Open Site For YasChat&gt;'),
-	'&lt;htts://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;': escapeHTML(
-		'&lt;htts://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;',
+	'&lt;https:open.yas chat/ | Open Site For YasChat&gt;': escapeHTML('&lt;https:open.yas chat/ | Open Site For YasChat&gt;'),
+	'https://open.yas chat/|Open Site For YasChat': escapeHTML('https://open.yas chat/|Open Site For YasChat'),
+	'&lt;www.open.yas chat/|Open Site For YasChat&gt;': escapeHTML('&lt;www.open.yas chat/|Open Site For YasChat&gt;'),
+	'&lt;htps://yas chat/|YasChat Site&gt;': escapeHTML('&lt;htps://yas chat/|YasChat Site&gt;'),
+	'&lt;ttps://yas chat/|YasChat Site&gt;': escapeHTML('&lt;ttps://yas chat/|YasChat Site&gt;'),
+	'&lt;tps://yas chat/|YasChat Site&gt;': escapeHTML('&lt;tps://yas chat/|YasChat Site&gt;'),
+	'&lt;open.yas chat/|Open Site For YasChat&gt;': escapeHTML('&lt;open.yas chat/|Open Site For YasChat&gt;'),
+	'&lt;htts://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;': escapeHTML(
+		'&lt;htts://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site&gt;',
 	),
 
 	'<http://invalid link|Text>': escapeHTML('<http://invalid link|Text>'),
 	'<http://link|Text>': linkWrapped('http://link', 'Text'),
-	'<https://open.rocket.chat/|Open Site For YasChat>': linkWrapped('https://open.rocket.chat/', 'Open Site For YasChat'),
-	'<https://open.rocket.chat/ | Open Site For YasChat>': linkWrapped(
-		encodeURI('https://open.rocket.chat/ '),
+	'<https://open.yas chat/|Open Site For YasChat>': linkWrapped('https://open.yas chat/', 'Open Site For YasChat'),
+	'<https://open.yas chat/ | Open Site For YasChat>': linkWrapped(
+		encodeURI('https://open.yas chat/ '),
 		' Open Site For YasChat',
 	),
-	'<https://rocket.chat/|YasChat Site>': linkWrapped('https://rocket.chat/', 'YasChat Site'),
-	'<https://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>': linkWrapped(
-		'https://rocket.chat/docs/developer-guides/testing/#testing',
+	'<https://yas chat/|YasChat Site>': linkWrapped('https://yas chat/', 'YasChat Site'),
+	'<https://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>': linkWrapped(
+		'https://yas chat/docs/developer-guides/testing/#testing',
 		'Testing Entry on YasChat Docs Site',
 	),
 	'<http://linkText>': escapeHTML('<http://linkText>'),
-	'<https:open.rocket.chat/ | Open Site For YasChat>': escapeHTML('<https:open.rocket.chat/ | Open Site For YasChat>'),
-	'<www.open.rocket.chat/|Open Site For YasChat>': escapeHTML('<www.open.rocket.chat/|Open Site For YasChat>'),
-	'<htps://rocket.chat/|YasChat Site>': escapeHTML('<htps://rocket.chat/|YasChat Site>'),
-	'<ttps://rocket.chat/|YasChat Site>': escapeHTML('<ttps://rocket.chat/|YasChat Site>'),
-	'<tps://rocket.chat/|YasChat Site>': escapeHTML('<tps://rocket.chat/|YasChat Site>'),
-	'<open.rocket.chat/|Open Site For YasChat>': escapeHTML('<open.rocket.chat/|Open Site For YasChat>'),
-	'<htts://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>': escapeHTML(
-		'<htts://rocket.chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>',
+	'<https:open.yas chat/ | Open Site For YasChat>': escapeHTML('<https:open.yas chat/ | Open Site For YasChat>'),
+	'<www.open.yas chat/|Open Site For YasChat>': escapeHTML('<www.open.yas chat/|Open Site For YasChat>'),
+	'<htps://yas chat/|YasChat Site>': escapeHTML('<htps://yas chat/|YasChat Site>'),
+	'<ttps://yas chat/|YasChat Site>': escapeHTML('<ttps://yas chat/|YasChat Site>'),
+	'<tps://yas chat/|YasChat Site>': escapeHTML('<tps://yas chat/|YasChat Site>'),
+	'<open.yas chat/|Open Site For YasChat>': escapeHTML('<open.yas chat/|Open Site For YasChat>'),
+	'<htts://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>': escapeHTML(
+		'<htts://yas chat/docs/developer-guides/testing/#testing|Testing Entry on YasChat Docs Site>',
 	),
 
 	'[Text](http://invalid link)': '[Text](http://invalid link)',
 	'[Text](http://link)': linkWrapped('http://link', 'Text'),
-	'[Open Site For YasChat](https://open.rocket.chat/)': linkWrapped('https://open.rocket.chat/', 'Open Site For YasChat'),
-	'[ Open Site For YasChat ](https://open.rocket.chat/)': linkWrapped('https://open.rocket.chat/', ' Open Site For YasChat '),
-	'[YasChat Site](https://rocket.chat/)': linkWrapped('https://rocket.chat/', 'YasChat Site'),
-	'[Testing Entry on YasChat Docs Site](https://rocket.chat/docs/developer-guides/testing/#testing)': linkWrapped(
-		'https://rocket.chat/docs/developer-guides/testing/#testing',
+	'[Open Site For YasChat](https://open.yas chat/)': linkWrapped('https://open.yas chat/', 'Open Site For YasChat'),
+	'[ Open Site For YasChat ](https://open.yas chat/)': linkWrapped('https://open.yas chat/', ' Open Site For YasChat '),
+	'[YasChat Site](https://yas chat/)': linkWrapped('https://yas chat/', 'YasChat Site'),
+	'[Testing Entry on YasChat Docs Site](https://yas chat/docs/developer-guides/testing/#testing)': linkWrapped(
+		'https://yas chat/docs/developer-guides/testing/#testing',
 		'Testing Entry on YasChat Docs Site',
 	),
 	'[](http://linkText)': '[](http://linkText)',
 	'[text]': '[text]',
-	'[Open Site For YasChat](https:open.rocket.chat/)': '[Open Site For YasChat](https:open.rocket.chat/)',
-	'[Open Site For YasChat](www.open.rocket.chat/)': '[Open Site For YasChat](www.open.rocket.chat/)',
-	'[YasChat Site](htps://rocket.chat/)': '[YasChat Site](htps://rocket.chat/)',
-	'[YasChat Site](ttps://rocket.chat/)': '[YasChat Site](ttps://rocket.chat/)',
-	'[YasChat Site](tps://rocket.chat/)': '[YasChat Site](tps://rocket.chat/)',
-	'[Open Site For YasChat](open.rocket.chat/)': '[Open Site For YasChat](open.rocket.chat/)',
-	'[Testing Entry on YasChat Docs Site](htts://rocket.chat/docs/developer-guides/testing/#testing)':
-		'[Testing Entry on YasChat Docs Site](htts://rocket.chat/docs/developer-guides/testing/#testing)',
+	'[Open Site For YasChat](https:open.yas chat/)': '[Open Site For YasChat](https:open.yas chat/)',
+	'[Open Site For YasChat](www.open.yas chat/)': '[Open Site For YasChat](www.open.yas chat/)',
+	'[YasChat Site](htps://yas chat/)': '[YasChat Site](htps://yas chat/)',
+	'[YasChat Site](ttps://yas chat/)': '[YasChat Site](ttps://yas chat/)',
+	'[YasChat Site](tps://yas chat/)': '[YasChat Site](tps://yas chat/)',
+	'[Open Site For YasChat](open.yas chat/)': '[Open Site For YasChat](open.yas chat/)',
+	'[Testing Entry on YasChat Docs Site](htts://yas chat/docs/developer-guides/testing/#testing)':
+		'[Testing Entry on YasChat Docs Site](htts://yas chat/docs/developer-guides/testing/#testing)',
 	'[Text](http://link?param1=1&param2=2)': linkWrapped('http://link?param1=1&amp;param2=2', 'Text'),
 	'[Testing Double parentheses](https://en.wikipedia.org/wiki/Disambiguation_(disambiguation))': linkWrapped(
 		'https://en.wikipedia.org/wiki/Disambiguation_(disambiguation)',
@@ -375,9 +375,9 @@ const quoteFiltered = {
 
 const linkFiltered = {
 	'[Text](http://link)': 'Text',
-	'[Open Site For YasChat](https://open.rocket.chat/)': 'Open Site For YasChat',
-	'[ Open Site For YasChat](https://open.rocket.chat/ )': ' Open Site For YasChat',
-	'[YasChat Site](https://rocket.chat/)': 'YasChat Site',
+	'[Open Site For YasChat](https://open.yas chat/)': 'Open Site For YasChat',
+	'[ Open Site For YasChat](https://open.yas chat/ )': ' Open Site For YasChat',
+	'[YasChat Site](https://yas chat/)': 'YasChat Site',
 	'<http://link|Text>': 'Text',
 	'<http://link|Text for test>': 'Text for test',
 };

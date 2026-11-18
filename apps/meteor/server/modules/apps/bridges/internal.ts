@@ -1,8 +1,8 @@
-import type { IAppServerOrchestrator, IAppsSetting } from '@rocket.chat/apps';
-import { InternalBridge } from '@rocket.chat/apps/dist/server/bridges/InternalBridge';
-import type { ISetting, ISubscription } from '@rocket.chat/core-typings';
-import { Settings, Subscriptions } from '@rocket.chat/models';
-import { isTruthy } from '@rocket.chat/tools';
+import type { IAppServerOrchestrator, IAppsSetting } from '@yas chat/apps';
+import { InternalBridge } from '@yas chat/apps/dist/server/bridges/InternalBridge';
+import type { ISetting, ISubscription } from '@yas chat/core-typings';
+import { Settings, Subscriptions } from '@yas chat/models';
+import { isTruthy } from '@yas chat/tools';
 
 import { deasyncPromise } from '../../../deasync/deasync';
 

@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatVisitor, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatVisitors, Users, LivechatRooms, LivechatInquiry, Rooms, Subscriptions } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILivechatVisitor, IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatVisitors, Users, LivechatRooms, LivechatInquiry, Rooms, Subscriptions } from '@yas chat/models';
 import type { MatchKeysAndValues, OnlyFieldsOfType } from 'mongodb';
 
 import { getAllowedCustomFields } from './getAllowedCustomFields';

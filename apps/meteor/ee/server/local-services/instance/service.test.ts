@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import type { ClusterTransport } from '@rocket.chat/core-services';
+import type { ClusterTransport } from '@yas chat/core-services';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -23,7 +23,7 @@ const LocalBrokerMock = {
 };
 
 const serviceMocks = {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		ServiceClassInternal: class {
 			onEvent = sinon.stub();
 
@@ -31,7 +31,7 @@ const serviceMocks = {
 		},
 		Apps: AppsMock,
 	},
-	'@rocket.chat/instance-status': {
+	'@yas chat/instance-status': {
 		InstanceStatus: { id: () => 'self' },
 		defaultPingInterval: 10,
 		indexExpire: 30,

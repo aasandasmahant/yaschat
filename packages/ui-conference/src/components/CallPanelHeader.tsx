@@ -1,4 +1,4 @@
-import { ContextualbarActions, ContextualbarClose, ContextualbarHeader, ContextualbarTitle } from '@rocket.chat/ui-client';
+import { ContextualbarActions, ContextualbarClose, ContextualbarHeader, ContextualbarTitle } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 
 type CallPanelHeaderProps = {

@@ -1,5 +1,5 @@
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
 import {
 	MessageComposerAction,
 	MessageComposerToolbarActions,
@@ -8,7 +8,7 @@ import {
 	MessageComposerActionsDivider,
 	MessageComposerToolbarSubmit,
 	MessageComposerButton,
-} from '@rocket.chat/ui-composer';
+} from '@yas chat/ui-composer';
 import type { MouseEvent, ReactNode, RefObject } from 'react';
 import { useTranslation } from 'react-i18next';
 

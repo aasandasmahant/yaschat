@@ -1,4 +1,4 @@
-import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@rocket.chat/core-typings';
+import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yas chat/core-typings';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

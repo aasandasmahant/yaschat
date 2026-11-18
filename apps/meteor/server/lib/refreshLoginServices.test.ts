@@ -10,7 +10,7 @@ const updateOAuthServices = sandbox.stub().resolves();
 const updateCasServices = sandbox.stub().resolves();
 
 const { refreshLoginServices } = p.noCallThru().load('./refreshLoginServices.ts', {
-	'@rocket.chat/models': { LoginServiceConfiguration },
+	'@yas chat/models': { LoginServiceConfiguration },
 	'./notifyListener': { notifyOnLoginServiceConfigurationChanged },
 	'./oauth/updateOAuthServices': { updateOAuthServices },
 	'./cas/updateCasService': { updateCasServices },

@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ICreateRoomParams } from '@rocket.chat/core-services';
-import type { IAbacAttributeDefinition, ICreatedRoom, IUser, ITeam } from '@rocket.chat/core-typings';
-import { Team } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ICreateRoomParams } from '@yas chat/core-services';
+import type { IAbacAttributeDefinition, ICreatedRoom, IUser, ITeam } from '@yas chat/core-typings';
+import { Team } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { createRoom } from '../../lib/rooms/createRoom';

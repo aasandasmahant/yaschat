@@ -1,5 +1,5 @@
-import { States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@rocket.chat/fuselage';
-import { useMediaQuery } from '@rocket.chat/fuselage-hooks';
+import { States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
+import { useMediaQuery } from '@yas chat/fuselage-hooks';
 import {
 	GenericModal,
 	GenericTable,
@@ -11,8 +11,8 @@ import {
 	PageHeader,
 	PageContent,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

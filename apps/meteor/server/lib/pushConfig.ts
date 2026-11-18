@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { PushToken } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { PushToken } from '@yas chat/models';
 
 import { i18n } from './i18n';
 import { Push } from './notifications/push';

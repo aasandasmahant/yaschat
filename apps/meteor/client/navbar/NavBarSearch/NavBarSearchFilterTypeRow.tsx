@@ -1,6 +1,6 @@
-import type { DraftSearchFilter } from '@rocket.chat/ai-search';
-import { SEARCH_FILTER_KEYS, getSearchFilterConfig } from '@rocket.chat/ai-search';
-import { Box, Button } from '@rocket.chat/fuselage';
+import type { DraftSearchFilter } from '@yas chat/ai-search';
+import { SEARCH_FILTER_KEYS, getSearchFilterConfig } from '@yas chat/ai-search';
+import { Box, Button } from '@yas chat/fuselage';
 import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 

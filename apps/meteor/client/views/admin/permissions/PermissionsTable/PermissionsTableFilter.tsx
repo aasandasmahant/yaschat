@@ -1,4 +1,4 @@
-import { useStableCallback, useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback, useDebouncedValue } from '@yas chat/fuselage-hooks';
 import type { ChangeEvent } from 'react';
 import { useState, useEffect } from 'react';
 

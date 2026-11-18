@@ -1,4 +1,4 @@
-import { MockedServerContext, MockedUserContext } from '@rocket.chat/mock-providers';
+import { MockedServerContext, MockedUserContext } from '@yas chat/mock-providers';
 import { render } from '@testing-library/react';
 
 import SAMLLoginRoute from './SAMLLoginRoute';
@@ -44,7 +44,7 @@ it('should redirect to /home when userId is null and the stored invite token is 
 	mockUseSamlInviteToken.mockReturnValue([null, () => ({})]);
 	render(
 		<MockedServerContext>
-			<RouterContextMock searchParameters={{ redirectUrl: 'http://rocket.chat' }} navigate={navigateStub}>
+			<RouterContextMock searchParameters={{ redirectUrl: 'http://yas chat' }} navigate={navigateStub}>
 				<SAMLLoginRoute />
 			</RouterContextMock>
 		</MockedServerContext>,

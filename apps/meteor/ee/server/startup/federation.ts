@@ -1,10 +1,10 @@
-import { api, FederationMatrix as FederationMatrixService } from '@rocket.chat/core-services';
-import type { SlashCommandCallbackParams } from '@rocket.chat/core-typings';
-import { FederationMatrix, configureFederationMatrixSettings, setupFederationMatrix } from '@rocket.chat/federation-matrix';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import { api, FederationMatrix as FederationMatrixService } from '@yas chat/core-services';
+import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
+import { FederationMatrix, configureFederationMatrixSettings, setupFederationMatrix } from '@yas chat/federation-matrix';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 
 import { i18n } from '../../../server/lib/i18n';
 import { slashCommands } from '../../../server/lib/utils/slashCommand';

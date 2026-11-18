@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useResizeObserver } from '@rocket.chat/fuselage-hooks';
+import { Box } from '@yas chat/fuselage';
+import { useResizeObserver } from '@yas chat/fuselage-hooks';
 import { useTranslation } from 'react-i18next';
 
 import { AgentsTable, BarChart, ReportCard } from '../components';

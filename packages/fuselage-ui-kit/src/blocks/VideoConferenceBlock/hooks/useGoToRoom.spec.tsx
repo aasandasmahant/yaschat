@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { MockedRouterContext, MockedServerContext } from '@rocket.chat/mock-providers';
-import type { MockedRouterContextProps } from '@rocket.chat/mock-providers';
+import type { IRoom } from '@yas chat/core-typings';
+import { MockedRouterContext, MockedServerContext } from '@yas chat/mock-providers';
+import type { MockedRouterContextProps } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useGoToRoom } from './useGoToRoom';

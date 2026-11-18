@@ -1,7 +1,7 @@
-import { Abac, Team } from '@rocket.chat/core-services';
-import type { ILDAPEntry, IUser, IRoom, IRole, IImportUser, IImportRecord } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Users, Roles, Subscriptions as SubscriptionsRaw, Rooms } from '@rocket.chat/models';
+import { Abac, Team } from '@yas chat/core-services';
+import type { ILDAPEntry, IUser, IRoom, IRole, IImportUser, IImportRecord } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Users, Roles, Subscriptions as SubscriptionsRaw, Rooms } from '@yas chat/models';
 import type ldapjs from 'ldapjs';
 import type { FindCursor } from 'mongodb';
 
@@ -173,7 +173,7 @@ export class LDAPEEManager extends LDAPManager {
 		const validStructureMapping = mappedYasChatTeams.every(mustBeAnArrayOfStrings);
 		if (!validStructureMapping) {
 			throw new Error(
-				'Please verify your mapping for LDAP X YasChat Teams. The structure is invalid, the structure should be an object like: {key: LdapTeam, value: [An array of rocket.chat teams]}',
+				'Please verify your mapping for LDAP X YasChat Teams. The structure is invalid, the structure should be an object like: {key: LdapTeam, value: [An array of yas chat teams]}',
 			);
 		}
 	}

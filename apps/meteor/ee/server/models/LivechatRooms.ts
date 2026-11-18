@@ -1,4 +1,4 @@
-import { registerModel } from '@rocket.chat/models';
+import { registerModel } from '@yas chat/models';
 
 import { LivechatRoomsRawEE } from './raw/LivechatRooms';
 import { trashCollection } from '../../../server/database/trash';

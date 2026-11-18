@@ -7,7 +7,7 @@ import {
 	isLivechatAnalyticsDepartmentsTotalTransferredChatsProps,
 	isLivechatAnalyticsDepartmentsTotalAbandonedChatsProps,
 	isLivechatAnalyticsDepartmentsPercentageAbandonedChatsProps,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../../../../../server/api';
 import { getPaginationItems } from '../../../../../server/api/lib/getPaginationItems';

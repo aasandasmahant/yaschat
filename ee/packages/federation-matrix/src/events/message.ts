@@ -1,7 +1,7 @@
-import { FederationMatrix, Message } from '@rocket.chat/core-services';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Users, Rooms, Messages } from '@rocket.chat/models';
+import { FederationMatrix, Message } from '@yas chat/core-services';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Users, Rooms, Messages } from '@yas chat/models';
 
 import { getThreadMessageId } from '../helpers/getThreadMessageId';
 

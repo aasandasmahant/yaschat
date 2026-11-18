@@ -1,4 +1,4 @@
-import { isQuoteAttachment, type IMessage, type MessageAttachment } from '@rocket.chat/core-typings';
+import { isQuoteAttachment, type IMessage, type MessageAttachment } from '@yas chat/core-typings';
 import {
 	Message as MessageTemplate,
 	MessageLeftContainer,
@@ -15,10 +15,10 @@ import {
 	MessageSystemBody,
 	MessageSystemTimestamp,
 	Bubble,
-} from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useFormatTime, useUserDisplayName } from '@rocket.chat/ui-client';
-import { useUserCard } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useFormatTime, useUserDisplayName } from '@yas chat/ui-client';
+import { useUserCard } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

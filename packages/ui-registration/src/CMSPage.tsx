@@ -1,12 +1,12 @@
-import { Box, IconButton } from '@rocket.chat/fuselage';
+import { Box, IconButton } from '@yas chat/fuselage';
 import {
 	LayoutLogoImage,
 	VerticalWizardLayout,
 	VerticalWizardLayoutFooter,
 	VerticalWizardLayoutForm,
 	VerticalWizardLayoutTitle,
-} from '@rocket.chat/layout';
-import { useSetting, useAssetWithDarkModePath } from '@rocket.chat/ui-contexts';
+} from '@yas chat/layout';
+import { useSetting, useAssetWithDarkModePath } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

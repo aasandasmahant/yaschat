@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { useIsEnterprise } from '@rocket.chat/ui-client';
+import type { IRoom } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { useIsEnterprise } from '@yas chat/ui-client';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -10,7 +10,7 @@ import { useMoveRoomCategory } from '../../../../sidebar/categories/hooks/useMov
 import { useUserIsSubscribed } from '../../contexts/RoomContext';
 import { useToggleFavoriteMutation } from '../../hooks/useToggleFavoriteMutation';
 
-jest.mock('@rocket.chat/ui-client', () => ({ ...jest.requireActual('@rocket.chat/ui-client'), useIsEnterprise: jest.fn() }));
+jest.mock('@yas chat/ui-client', () => ({ ...jest.requireActual('@yas chat/ui-client'), useIsEnterprise: jest.fn() }));
 jest.mock('../../../../sidebar/categories/hooks/useMoveRoomCategory', () => ({ useMoveRoomCategory: jest.fn() }));
 jest.mock('../../../../sidebar/categories/hooks/useCategoryModals', () => ({ useCategoryModals: jest.fn() }));
 jest.mock('../../contexts/RoomContext', () => ({ useUserIsSubscribed: jest.fn() }));

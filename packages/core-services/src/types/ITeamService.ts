@@ -11,7 +11,7 @@ import type {
 	IUser,
 	IRole,
 	AtLeast,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type { Document, Filter, FindOptions } from 'mongodb';
 
 import type { ICreateRoomParams } from './IRoomService';

@@ -1,4 +1,4 @@
-import { CallTimer, type CallTimerProps } from '@rocket.chat/ui-client';
+import { CallTimer, type CallTimerProps } from '@yas chat/ui-client';
 import { useState } from 'react';
 
 export type VoipTimerProps = CallTimerProps;

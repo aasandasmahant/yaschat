@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { ISetting } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 
 export async function findIntegrationSettings(): Promise<{ settings: ISetting[] }> {
 	const settings = await Settings.findByIds([

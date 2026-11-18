@@ -1,4 +1,4 @@
-import { Box, Pagination, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
+import { Box, Pagination, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
 import {
 	GenericNoResults,
 	GenericTable,
@@ -8,8 +8,8 @@ import {
 	GenericTableLoadingTable,
 	usePagination,
 	useResizeInlineBreakpoint,
-} from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

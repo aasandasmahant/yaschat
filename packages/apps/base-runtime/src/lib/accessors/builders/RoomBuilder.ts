@@ -1,8 +1,8 @@
-import type { IRoomBuilder } from '@rocket.chat/apps-engine/definition/accessors/IRoomBuilder';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import type { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
+import type { IRoomBuilder } from '@yas chat/apps-engine/definition/accessors/IRoomBuilder';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import type { RoomType } from '@yas chat/apps-engine/definition/rooms/RoomType';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
 
 export class RoomBuilder implements IRoomBuilder {
 	public kind: YasChatAssociationModel.ROOM | YasChatAssociationModel.DISCUSSION;

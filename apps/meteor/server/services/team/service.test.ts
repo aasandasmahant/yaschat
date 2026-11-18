@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -36,14 +36,14 @@ const addUserToRoom = sinon.stub();
 const filterDefaultChannelsForUser = sinon.stub();
 
 const { TeamService } = proxyquire.noCallThru().load('./service', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		Room,
 		Authorization: {},
 		Message,
 		ServiceClassInternal: class {},
 		api: {},
 	},
-	'@rocket.chat/tools': {
+	'@yas chat/tools': {
 		escapeRegExp: (value: string) => value,
 	},
 	'../../lib/rooms/settings': {

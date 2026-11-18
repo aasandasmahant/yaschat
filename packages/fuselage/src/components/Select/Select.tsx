@@ -1,4 +1,4 @@
-import { useActiveDescendant, useMergedRefs, useResizeObserver, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useActiveDescendant, useMergedRefs, useResizeObserver, useStableCallback } from '@yas chat/fuselage-hooks';
 import type { AllHTMLAttributes, FocusEvent, KeyboardEvent, Key, MouseEvent, PointerEvent, RefAttributes } from 'react';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { useOverlayTriggerState } from 'react-stately';

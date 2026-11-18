@@ -3,7 +3,7 @@ import { PassThrough, Readable } from 'node:stream';
 import { text } from 'node:stream/consumers';
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -28,7 +28,7 @@ const { FileUpload, FileUploadClass } = proxyquire.noCallThru().load('./FileUplo
 	'meteor/meteor': sinon.stub(),
 	'sharp': sinon.stub(),
 	'stream-buffers': sinon.stub(),
-	'@rocket.chat/tools': sinon.stub(),
+	'@yas chat/tools': sinon.stub(),
 	'../../../i18n': sinon.stub(),
 	'../../../logger/system': { SystemLogger: systemLoggerStub },
 	'../../../rooms/roomCoordinator': { roomCoordinator: roomCoordinatorStub },
@@ -43,7 +43,7 @@ const { FileUpload, FileUploadClass } = proxyquire.noCallThru().load('./FileUplo
 	},
 	'../../../utils/restrictions': sinon.stub(),
 	'../../../../api/lib/MultipartUploadHandler': sinon.stub(),
-	'@rocket.chat/account-utils': { hashLoginToken: sinon.stub().callsFake((token) => `hashed_${token}`) },
+	'@yas chat/account-utils': { hashLoginToken: sinon.stub().callsFake((token) => `hashed_${token}`) },
 });
 
 describe('FileUpload', () => {

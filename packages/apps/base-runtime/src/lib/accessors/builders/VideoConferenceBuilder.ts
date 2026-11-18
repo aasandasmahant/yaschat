@@ -1,6 +1,6 @@
-import type { IVideoConferenceBuilder } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceBuilder';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IGroupVideoConference } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
+import type { IVideoConferenceBuilder } from '@yas chat/apps-engine/definition/accessors/IVideoConferenceBuilder';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IGroupVideoConference } from '@yas chat/apps-engine/definition/videoConferences/IVideoConference';
 
 export type AppVideoConference = Pick<IGroupVideoConference, 'rid' | 'providerName' | 'providerData' | 'title' | 'discussionRid'> & {
 	createdBy: IGroupVideoConference['createdBy']['_id'];

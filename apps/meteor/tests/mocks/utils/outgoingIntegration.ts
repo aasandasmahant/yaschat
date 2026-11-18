@@ -1,4 +1,4 @@
-import type { IIntegrationHistory, IMessage, IOutgoingIntegration, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IIntegrationHistory, IMessage, IOutgoingIntegration, IRoom, IUser } from '@yas chat/core-typings';
 
 export const makeIntegration = (overrides: Partial<IOutgoingIntegration> = {}): IOutgoingIntegration =>
 	({

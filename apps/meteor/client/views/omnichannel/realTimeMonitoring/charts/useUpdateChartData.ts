@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import type * as chartjs from 'chart.js';
 import type { TFunction } from 'i18next';
 import type { MutableRefObject } from 'react';

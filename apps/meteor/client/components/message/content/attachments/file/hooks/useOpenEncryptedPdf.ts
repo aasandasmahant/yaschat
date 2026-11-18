@@ -1,4 +1,4 @@
-import { useMediaUrl } from '@rocket.chat/ui-contexts';
+import { useMediaUrl } from '@yas chat/ui-contexts';
 import { useId, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

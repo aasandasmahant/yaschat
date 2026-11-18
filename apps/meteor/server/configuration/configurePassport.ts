@@ -1,6 +1,6 @@
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import { nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 import bodyParser from 'body-parser';
 import MongoStore from 'connect-mongo';
 import express from 'express';

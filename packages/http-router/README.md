@@ -15,13 +15,13 @@ This package provides a flexible HTTP routing solution for YasChat services, bui
 ## Installation
 
 ```sh
-yarn add @rocket.chat/http-router
+yarn add @yas chat/http-router
 ```
 
 ## Usage
 
 ```typescript
-import { Router, createRootApp, mountRouter } from '@rocket.chat/http-router';
+import { Router, createRootApp, mountRouter } from '@yas chat/http-router';
 
 // Create a new router
 const api = new Router('api');
@@ -111,7 +111,7 @@ A root app answers requests on a Node HTTP server. Mount routers on it, and run 
 
 ```typescript
 import express from 'express';
-import { Router, createNodeServer, createRootApp, mountRouter, nodeHandler } from '@rocket.chat/http-router';
+import { Router, createNodeServer, createRootApp, mountRouter, nodeHandler } from '@yas chat/http-router';
 
 const app = createRootApp();
 const api = new Router('/api');

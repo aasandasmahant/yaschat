@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IOAuthApps, IUser } from '@rocket.chat/core-typings';
-import { OAuthApps, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IOAuthApps, IUser } from '@yas chat/core-typings';
+import { OAuthApps, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { parseUriList } from './parseUriList';
 import type { OauthAppsAddParams } from '../../../api/v1/oauthapps';

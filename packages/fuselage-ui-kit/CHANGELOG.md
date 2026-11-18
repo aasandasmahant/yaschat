@@ -157,22 +157,22 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Fixes UiKit users, channels and conversations selects (single and multi) rendering nothing inside `actions` blocks; they were only drawn inside `input` blocks.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, e2f037838f6226f4894faa28613cc86f6d6f8e2d, a838cc5af0652f59d0ab30aa1a488abded0622b1, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b]:</summary>
-  - @rocket.chat/core-typings@9.0.0
-  - @rocket.chat/apps-engine@1.68.0
-  - @rocket.chat/fuselage@1.0.0
-  - @rocket.chat/ui-contexts@36.0.0
-  - @rocket.chat/ui-avatar@32.0.0
-  - @rocket.chat/fuselage-hooks@0.44.0
-  - @rocket.chat/icons@0.52.0
-  - @rocket.chat/gazzodown@36.0.0
-  - @rocket.chat/ui-kit@2.0.0
-  - @rocket.chat/styled@0.34.2
-  - @rocket.chat/ui-video-conf@36.0.0
+  - @yas chat/core-typings@9.0.0
+  - @yas chat/apps-engine@1.68.0
+  - @yas chat/fuselage@1.0.0
+  - @yas chat/ui-contexts@36.0.0
+  - @yas chat/ui-avatar@32.0.0
+  - @yas chat/fuselage-hooks@0.44.0
+  - @yas chat/icons@0.52.0
+  - @yas chat/gazzodown@36.0.0
+  - @yas chat/ui-kit@2.0.0
+  - @yas chat/styled@0.34.2
+  - @yas chat/ui-video-conf@36.0.0
 
   </details>
 
@@ -181,11 +181,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
-  - @rocket.chat/ui-avatar@32.0.0-rc.1
-  - @rocket.chat/fuselage@1.0.0-rc.1
-  - @rocket.chat/gazzodown@36.0.0-rc.1
-  - @rocket.chat/ui-video-conf@36.0.0-rc.1
-  - @rocket.chat/core-typings@9.0.0-rc.3
+  - @yas chat/ui-avatar@32.0.0-rc.1
+  - @yas chat/fuselage@1.0.0-rc.1
+  - @yas chat/gazzodown@36.0.0-rc.1
+  - @yas chat/ui-video-conf@36.0.0-rc.1
+  - @yas chat/core-typings@9.0.0-rc.3
 
   </details>
 
@@ -346,22 +346,22 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Fixes UiKit users, channels and conversations selects (single and multi) rendering nothing inside `actions` blocks; they were only drawn inside `input` blocks.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - <details><summary>Updated dependencies [4f350b4ffb76024d9bf44c02f3322c8f9071f1cf, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 1034e1f85d8e82788ca9590a185370aaf6efc4fb, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 53bf8feb0c2075ee243d90c42ca2934098b93709, 6bb0d3bca9b5da401050697d51bc99e89871bbb7, 6be3614cd2660ab4024635802fdf9cd7dd7b502f, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 766ac93fba3c991c79c9bfcb404f6ec7fd1e30f8, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 588311c49bfce08e7106e7c0bb32741334fa5321, 10b4e00e08951ace8f9c27d83fc0c48be010bdc7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, 5e82e67eaa4c998870d3eb0597f485b30c244f02, a9b2bb76d88e4d2743e0817b15e6447e7c9c46eb, c9aa43916295df79a799e53b8e09c58011991a97, cdd948cb67ecf282f6cc8f411615c3de0db0b9f1, 6b3ec3e667c99015e381a4e8ea43146accb5f7f7, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a11ffff8acb74fd016e9ddb972da6eebda0c3e5e, e2f037838f6226f4894faa28613cc86f6d6f8e2d, a838cc5af0652f59d0ab30aa1a488abded0622b1, f3fa7abd6b9d311f76619d0fe27793ac68f6d208, daa677895dad92d6aab1e84a09f190efd2755ef9, 642d9e528a8572208e2f0bb51f45ea78400bcea3, bd92e8abc5a8f0161f3de5308979a0f88d09f351, 39a6e6e1397e1e89bc631fe4ab1cc10fa93b59e8, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, cd88334c72f7f2310706abc4d481a2712019e373, a39b03fe5c248079365162e31994e1dece63e7c2, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, 982270a515cc061aafccb82a0605a36ce929d56c, 8fddbd4ebf2e4ac77a716b22a676077054506b7b]:</summary>
-  - @rocket.chat/core-typings@9.0.0-rc.0
-  - @rocket.chat/apps-engine@1.68.0-rc.0
-  - @rocket.chat/fuselage@1.0.0-rc.0
-  - @rocket.chat/ui-contexts@36.0.0-rc.0
-  - @rocket.chat/fuselage-hooks@0.44.0-rc.0
-  - @rocket.chat/icons@0.52.0-rc.0
-  - @rocket.chat/gazzodown@36.0.0-rc.0
-  - @rocket.chat/ui-kit@2.0.0-rc.0
-  - @rocket.chat/styled@0.34.2-rc.0
-  - @rocket.chat/ui-avatar@32.0.0-rc.0
-  - @rocket.chat/ui-video-conf@36.0.0-rc.0
+  - @yas chat/core-typings@9.0.0-rc.0
+  - @yas chat/apps-engine@1.68.0-rc.0
+  - @yas chat/fuselage@1.0.0-rc.0
+  - @yas chat/ui-contexts@36.0.0-rc.0
+  - @yas chat/fuselage-hooks@0.44.0-rc.0
+  - @yas chat/icons@0.52.0-rc.0
+  - @yas chat/gazzodown@36.0.0-rc.0
+  - @yas chat/ui-kit@2.0.0-rc.0
+  - @yas chat/styled@0.34.2-rc.0
+  - @yas chat/ui-avatar@32.0.0-rc.0
+  - @yas chat/ui-video-conf@36.0.0-rc.0
 
   </details>
 
@@ -390,13 +390,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 356203b9ef1fe1dec13096d0f012e7a72770be0a, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/core-typings@8.9.0
-  - @rocket.chat/apps-engine@1.67.0
-  - @rocket.chat/ui-kit@1.2.0
-  - @rocket.chat/gazzodown@35.0.0
-  - @rocket.chat/ui-video-conf@35.0.0
-  - @rocket.chat/ui-avatar@31.0.0
-  - @rocket.chat/ui-contexts@35.0.0
+  - @yas chat/core-typings@8.9.0
+  - @yas chat/apps-engine@1.67.0
+  - @yas chat/ui-kit@1.2.0
+  - @yas chat/gazzodown@35.0.0
+  - @yas chat/ui-video-conf@35.0.0
+  - @yas chat/ui-avatar@31.0.0
+  - @yas chat/ui-contexts@35.0.0
 
   </details>
 
@@ -425,13 +425,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [17dfc71b4ad7294655e7fab9043cddbea23cb071, 71add68eca423511c0189f2f541b5a2c46a5e7a0, 53b519cc692587a63beaeb780e28d368ed70e94c, 356203b9ef1fe1dec13096d0f012e7a72770be0a, 7d7a5c403e175df889afe303c34b9154c4ad6d70, bab7af7e18ea2e70e2b3211904a4adfc6ae33e7c, 37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/core-typings@8.9.0-rc.0
-  - @rocket.chat/apps-engine@1.67.0-rc.0
-  - @rocket.chat/ui-kit@1.2.0-rc.0
-  - @rocket.chat/gazzodown@35.0.0-rc.0
-  - @rocket.chat/ui-contexts@35.0.0-rc.0
-  - @rocket.chat/ui-avatar@31.0.0-rc.0
-  - @rocket.chat/ui-video-conf@35.0.0-rc.0
+  - @yas chat/core-typings@8.9.0-rc.0
+  - @yas chat/apps-engine@1.67.0-rc.0
+  - @yas chat/ui-kit@1.2.0-rc.0
+  - @yas chat/gazzodown@35.0.0-rc.0
+  - @yas chat/ui-contexts@35.0.0-rc.0
+  - @yas chat/ui-avatar@31.0.0-rc.0
+  - @yas chat/ui-video-conf@35.0.0-rc.0
 
   </details>
 
@@ -440,12 +440,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
-  - @rocket.chat/apps-engine@1.66.0
-  - @rocket.chat/core-typings@8.8.0
-  - @rocket.chat/gazzodown@34.0.0
-  - @rocket.chat/ui-avatar@30.0.0
-  - @rocket.chat/ui-contexts@34.0.0
-  - @rocket.chat/ui-video-conf@34.0.0
+  - @yas chat/apps-engine@1.66.0
+  - @yas chat/core-typings@8.8.0
+  - @yas chat/gazzodown@34.0.0
+  - @yas chat/ui-avatar@30.0.0
+  - @yas chat/ui-contexts@34.0.0
+  - @yas chat/ui-video-conf@34.0.0
 
   </details>
 
@@ -454,13 +454,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [126e446ca50ee6ae17abf0b31f4f1917c72e5a2f, 4947601bbf042cd1b2385f8f5dda438e608faea7, 0869925e52ca61a440a01a6646935b89af8c7aae, b89a8d411ef65f6931a5fd1cd057740bc00cd9ba]:</summary>
-  - @rocket.chat/apps-engine@1.66.0-rc.0
-  - @rocket.chat/core-typings@8.8.0-rc.0
-  - @rocket.chat/ui-contexts@34.0.0-rc.0
-  - @rocket.chat/gazzodown@34.0.0-rc.0
-  - @rocket.chat/ui-kit@1.1.0
-  - @rocket.chat/ui-video-conf@34.0.0-rc.0
-  - @rocket.chat/ui-avatar@30.0.0-rc.0
+  - @yas chat/apps-engine@1.66.0-rc.0
+  - @yas chat/core-typings@8.8.0-rc.0
+  - @yas chat/ui-contexts@34.0.0-rc.0
+  - @yas chat/gazzodown@34.0.0-rc.0
+  - @yas chat/ui-kit@1.1.0
+  - @yas chat/ui-video-conf@34.0.0-rc.0
+  - @yas chat/ui-avatar@30.0.0-rc.0
 
   </details>
 
@@ -469,12 +469,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4186deb7febee0aa653bb48b27022afa36529b21, 4117a1d3fb07905e8c9488a96f368747b48d528e, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, e5da5d016948c9bb5cfd784a65396e08e61264c4]:</summary>
-  - @rocket.chat/core-typings@8.7.0
-  - @rocket.chat/gazzodown@33.0.0
-  - @rocket.chat/apps-engine@1.65.1
-  - @rocket.chat/ui-avatar@29.0.0
-  - @rocket.chat/ui-contexts@33.0.0
-  - @rocket.chat/ui-video-conf@33.0.0
+  - @yas chat/core-typings@8.7.0
+  - @yas chat/gazzodown@33.0.0
+  - @yas chat/apps-engine@1.65.1
+  - @yas chat/ui-avatar@29.0.0
+  - @yas chat/ui-contexts@33.0.0
+  - @yas chat/ui-video-conf@33.0.0
 
   </details>
 
@@ -483,12 +483,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c7aff48a40a9a78924cbf27fd38930c536ee11e5, 5f92f9a27dca70d506d919351612bd32dc04241a, 70c0ff0967cc50144dba4971fc7c3f3e996264a3, 13b4a7b2dc203959b77b3b0c5f154d3e34fe2058, 4b34bd62f2ac8d51efd2f48caea7092e87f30ce7, 1bf84cbe288df03fc622fbddbc0e434bda291c2f, 8d8cd01d0a4e6872ed543320c966efd52140e884, 3cd7db677a72521439b564dca7a4ca6d6c3a1c07, 4186deb7febee0aa653bb48b27022afa36529b21, 4117a1d3fb07905e8c9488a96f368747b48d528e, 615ae2bf74bba0402e0151d9c0b8e4f8dd04cb17, e5da5d016948c9bb5cfd784a65396e08e61264c4]:</summary>
-  - @rocket.chat/core-typings@8.7.0-rc.0
-  - @rocket.chat/gazzodown@33.0.0-rc.0
-  - @rocket.chat/apps-engine@1.64.1-rc.0
-  - @rocket.chat/ui-contexts@33.0.0-rc.0
-  - @rocket.chat/ui-avatar@29.0.0-rc.0
-  - @rocket.chat/ui-video-conf@33.0.0-rc.0
+  - @yas chat/core-typings@8.7.0-rc.0
+  - @yas chat/gazzodown@33.0.0-rc.0
+  - @yas chat/apps-engine@1.64.1-rc.0
+  - @yas chat/ui-contexts@33.0.0-rc.0
+  - @yas chat/ui-avatar@29.0.0-rc.0
+  - @yas chat/ui-video-conf@33.0.0-rc.0
 
   </details>
 
@@ -497,12 +497,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, 6fa5378a940cbc809800b3c7d7c0639810bb0ab8, f63b965f82b0ddc590c633706f7c31c8c5251b53, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2]:</summary>
-  - @rocket.chat/core-typings@8.6.0
-  - @rocket.chat/apps-engine@1.64.0
-  - @rocket.chat/gazzodown@32.0.0
-  - @rocket.chat/ui-avatar@28.0.0
-  - @rocket.chat/ui-contexts@32.0.0
-  - @rocket.chat/ui-video-conf@32.0.0
+  - @yas chat/core-typings@8.6.0
+  - @yas chat/apps-engine@1.64.0
+  - @yas chat/gazzodown@32.0.0
+  - @yas chat/ui-avatar@28.0.0
+  - @yas chat/ui-contexts@32.0.0
+  - @yas chat/ui-video-conf@32.0.0
 
   </details>
 
@@ -511,12 +511,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7380c44c751eff9ee624d80bf26370411ffed78b, 6bd9182ae1d914a55e70866db43e8d2038f7be28, f63b965f82b0ddc590c633706f7c31c8c5251b53, 9ab1cf6e088cc099f4fc2ba9460ce5dd41bd1dc2]:</summary>
-  - @rocket.chat/core-typings@8.6.0-rc.0
-  - @rocket.chat/apps-engine@1.64.0-rc.0
-  - @rocket.chat/ui-contexts@32.0.0-rc.0
-  - @rocket.chat/gazzodown@32.0.0-rc.0
-  - @rocket.chat/ui-avatar@28.0.0-rc.0
-  - @rocket.chat/ui-video-conf@32.0.0-rc.0
+  - @yas chat/core-typings@8.6.0-rc.0
+  - @yas chat/apps-engine@1.64.0-rc.0
+  - @yas chat/ui-contexts@32.0.0-rc.0
+  - @yas chat/gazzodown@32.0.0-rc.0
+  - @yas chat/ui-avatar@28.0.0-rc.0
+  - @yas chat/ui-video-conf@32.0.0-rc.0
 
   </details>
 
@@ -525,13 +525,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, f392d5cc8d956c199f557dcd6beb52094232499d, 2198d9ea565b06f92e3dec29891890086f62f9df, 12897e25d0dc25b7373f5264d38f38a5a7444257, 0b7a76367d650793c271160e01798ebbb5fe0d26, 90f15e32ae843ed146ccf711ee3201408d1e8731]:</summary>
-  - @rocket.chat/ui-kit@1.1.0
-  - @rocket.chat/apps-engine@1.63.0
-  - @rocket.chat/gazzodown@31.0.0
-  - @rocket.chat/core-typings@8.5.0
-  - @rocket.chat/ui-avatar@27.0.0
-  - @rocket.chat/ui-contexts@31.0.0
-  - @rocket.chat/ui-video-conf@31.0.0
+  - @yas chat/ui-kit@1.1.0
+  - @yas chat/apps-engine@1.63.0
+  - @yas chat/gazzodown@31.0.0
+  - @yas chat/core-typings@8.5.0
+  - @yas chat/ui-avatar@27.0.0
+  - @yas chat/ui-contexts@31.0.0
+  - @yas chat/ui-video-conf@31.0.0
 
   </details>
 
@@ -540,13 +540,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, 2a927fa1362c9d4bb04bb8e26f23a6e3753d9cea, ae9f740d6af20557eac61b4af902c868b4132b49, d427b808c1f79d9d1baa05bb5b5ef805b6ef5f6d, f392d5cc8d956c199f557dcd6beb52094232499d, 2198d9ea565b06f92e3dec29891890086f62f9df, 12897e25d0dc25b7373f5264d38f38a5a7444257, 0b7a76367d650793c271160e01798ebbb5fe0d26, 90f15e32ae843ed146ccf711ee3201408d1e8731]:</summary>
-  - @rocket.chat/ui-kit@1.1.0-rc.0
-  - @rocket.chat/apps-engine@1.63.0-rc.0
-  - @rocket.chat/core-typings@8.5.0-rc.0
-  - @rocket.chat/gazzodown@31.0.0-rc.0
-  - @rocket.chat/ui-contexts@31.0.0-rc.0
-  - @rocket.chat/ui-avatar@27.0.0-rc.0
-  - @rocket.chat/ui-video-conf@31.0.0-rc.0
+  - @yas chat/ui-kit@1.1.0-rc.0
+  - @yas chat/apps-engine@1.63.0-rc.0
+  - @yas chat/core-typings@8.5.0-rc.0
+  - @yas chat/gazzodown@31.0.0-rc.0
+  - @yas chat/ui-contexts@31.0.0-rc.0
+  - @yas chat/ui-avatar@27.0.0-rc.0
+  - @yas chat/ui-video-conf@31.0.0-rc.0
 
   </details>
 
@@ -555,12 +555,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [278b84f78360e53792a2e5d7620615039a0e15e9, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 5cff1f41d388b036c77a8f774f233b1921e9066e, e792aba7f56f1b2ece62951087591819995a1446, c544b805d1c03f8eae9d061cd48838206207a7c9, 8c0e16ca29b393cfa50b425520db48ba5a74f678]:</summary>
-  - @rocket.chat/core-typings@8.4.0
-  - @rocket.chat/apps-engine@1.62.0
-  - @rocket.chat/gazzodown@30.0.0
-  - @rocket.chat/ui-avatar@26.0.0
-  - @rocket.chat/ui-contexts@30.0.0
-  - @rocket.chat/ui-video-conf@30.0.0
+  - @yas chat/core-typings@8.4.0
+  - @yas chat/apps-engine@1.62.0
+  - @yas chat/gazzodown@30.0.0
+  - @yas chat/ui-avatar@26.0.0
+  - @yas chat/ui-contexts@30.0.0
+  - @yas chat/ui-video-conf@30.0.0
 
   </details>
 
@@ -569,11 +569,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.2
-  - @rocket.chat/gazzodown@30.0.0-rc.2
-  - @rocket.chat/ui-avatar@26.0.0-rc.2
-  - @rocket.chat/ui-contexts@30.0.0-rc.2
-  - @rocket.chat/ui-video-conf@30.0.0-rc.2
+  - @yas chat/core-typings@8.4.0-rc.2
+  - @yas chat/gazzodown@30.0.0-rc.2
+  - @yas chat/ui-avatar@26.0.0-rc.2
+  - @yas chat/ui-contexts@30.0.0-rc.2
+  - @yas chat/ui-video-conf@30.0.0-rc.2
 
   </details>
 
@@ -582,11 +582,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@30.0.0-rc.1
-  - @rocket.chat/gazzodown@30.0.0-rc.1
-  - @rocket.chat/ui-avatar@26.0.0-rc.1
-  - @rocket.chat/ui-video-conf@30.0.0-rc.1
-  - @rocket.chat/core-typings@8.4.0-rc.1
+  - @yas chat/ui-contexts@30.0.0-rc.1
+  - @yas chat/gazzodown@30.0.0-rc.1
+  - @yas chat/ui-avatar@26.0.0-rc.1
+  - @yas chat/ui-video-conf@30.0.0-rc.1
+  - @yas chat/core-typings@8.4.0-rc.1
 
   </details>
 
@@ -595,12 +595,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [356a6026dda4821a3e28752def7c8619ac860975]:</summary>
-  - @rocket.chat/apps-engine@1.61.1
-  - @rocket.chat/core-typings@8.3.2
-  - @rocket.chat/gazzodown@29.0.2
-  - @rocket.chat/ui-avatar@25.0.2
-  - @rocket.chat/ui-contexts@29.0.2
-  - @rocket.chat/ui-video-conf@29.0.2
+  - @yas chat/apps-engine@1.61.1
+  - @yas chat/core-typings@8.3.2
+  - @yas chat/gazzodown@29.0.2
+  - @yas chat/ui-avatar@25.0.2
+  - @yas chat/ui-contexts@29.0.2
+  - @yas chat/ui-video-conf@29.0.2
 
   </details>
 
@@ -609,11 +609,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.1
-  - @rocket.chat/gazzodown@29.0.1
-  - @rocket.chat/ui-avatar@25.0.1
-  - @rocket.chat/ui-contexts@29.0.1
-  - @rocket.chat/ui-video-conf@29.0.1
+  - @yas chat/core-typings@8.3.1
+  - @yas chat/gazzodown@29.0.1
+  - @yas chat/ui-avatar@25.0.1
+  - @yas chat/ui-contexts@29.0.1
+  - @yas chat/ui-video-conf@29.0.1
 
   </details>
 
@@ -622,12 +622,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [278b84f78360e53792a2e5d7620615039a0e15e9, 24b3671fe61b8b09c6a1b5dc6401b503b3fb92a0, 5cff1f41d388b036c77a8f774f233b1921e9066e, e792aba7f56f1b2ece62951087591819995a1446, c544b805d1c03f8eae9d061cd48838206207a7c9, 8c0e16ca29b393cfa50b425520db48ba5a74f678]:</summary>
-  - @rocket.chat/core-typings@8.4.0-rc.0
-  - @rocket.chat/apps-engine@1.62.0-rc.0
-  - @rocket.chat/gazzodown@30.0.0-rc.0
-  - @rocket.chat/ui-avatar@26.0.0-rc.0
-  - @rocket.chat/ui-contexts@30.0.0-rc.0
-  - @rocket.chat/ui-video-conf@30.0.0-rc.0
+  - @yas chat/core-typings@8.4.0-rc.0
+  - @yas chat/apps-engine@1.62.0-rc.0
+  - @yas chat/gazzodown@30.0.0-rc.0
+  - @yas chat/ui-avatar@26.0.0-rc.0
+  - @yas chat/ui-contexts@30.0.0-rc.0
+  - @yas chat/ui-video-conf@30.0.0-rc.0
 
   </details>
 
@@ -642,13 +642,13 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/ui-kit@1.0.0
-  - @rocket.chat/apps-engine@1.61.0
-  - @rocket.chat/ui-video-conf@29.0.0
-  - @rocket.chat/core-typings@8.3.0
-  - @rocket.chat/ui-contexts@29.0.0
-  - @rocket.chat/gazzodown@29.0.0
-  - @rocket.chat/ui-avatar@25.0.0
+  - @yas chat/ui-kit@1.0.0
+  - @yas chat/apps-engine@1.61.0
+  - @yas chat/ui-video-conf@29.0.0
+  - @yas chat/core-typings@8.3.0
+  - @yas chat/ui-contexts@29.0.0
+  - @yas chat/gazzodown@29.0.0
+  - @yas chat/ui-avatar@25.0.0
 
   </details>
 
@@ -657,11 +657,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.4
-  - @rocket.chat/gazzodown@29.0.0-rc.4
-  - @rocket.chat/ui-avatar@25.0.0-rc.4
-  - @rocket.chat/ui-contexts@29.0.0-rc.4
-  - @rocket.chat/ui-video-conf@29.0.0-rc.4
+  - @yas chat/core-typings@8.3.0-rc.4
+  - @yas chat/gazzodown@29.0.0-rc.4
+  - @yas chat/ui-avatar@25.0.0-rc.4
+  - @yas chat/ui-contexts@29.0.0-rc.4
+  - @yas chat/ui-video-conf@29.0.0-rc.4
 
   </details>
 
@@ -670,11 +670,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.3
-  - @rocket.chat/gazzodown@29.0.0-rc.3
-  - @rocket.chat/ui-avatar@25.0.0-rc.3
-  - @rocket.chat/ui-contexts@29.0.0-rc.3
-  - @rocket.chat/ui-video-conf@29.0.0-rc.3
+  - @yas chat/core-typings@8.3.0-rc.3
+  - @yas chat/gazzodown@29.0.0-rc.3
+  - @yas chat/ui-avatar@25.0.0-rc.3
+  - @yas chat/ui-contexts@29.0.0-rc.3
+  - @yas chat/ui-video-conf@29.0.0-rc.3
 
   </details>
 
@@ -683,11 +683,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.2
-  - @rocket.chat/gazzodown@29.0.0-rc.2
-  - @rocket.chat/ui-avatar@25.0.0-rc.2
-  - @rocket.chat/ui-contexts@29.0.0-rc.2
-  - @rocket.chat/ui-video-conf@29.0.0-rc.2
+  - @yas chat/core-typings@8.3.0-rc.2
+  - @yas chat/gazzodown@29.0.0-rc.2
+  - @yas chat/ui-avatar@25.0.0-rc.2
+  - @yas chat/ui-contexts@29.0.0-rc.2
+  - @yas chat/ui-video-conf@29.0.0-rc.2
 
   </details>
 
@@ -696,11 +696,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.3.0-rc.1
-  - @rocket.chat/gazzodown@29.0.0-rc.1
-  - @rocket.chat/ui-avatar@25.0.0-rc.1
-  - @rocket.chat/ui-contexts@29.0.0-rc.1
-  - @rocket.chat/ui-video-conf@29.0.0-rc.1
+  - @yas chat/core-typings@8.3.0-rc.1
+  - @yas chat/gazzodown@29.0.0-rc.1
+  - @yas chat/ui-avatar@25.0.0-rc.1
+  - @yas chat/ui-contexts@29.0.0-rc.1
+  - @yas chat/ui-video-conf@29.0.0-rc.1
 
   </details>
 
@@ -715,13 +715,13 @@
 - ([#38989](https://github.com/YasChat/YasChat/pull/38989)) chore(eslint): Upgrades ESLint and its configuration
 
 - <details><summary>Updated dependencies [87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, 78e37dc3deae4ff05f5e33f9134c7094fd6c1330, 43d0cfc6a70e8a31d5f3d24162216dae6b07efdd, d83a1a9753464ee916845b3c88757bbcf76884a5, 722df6f60bc86c51b204e28a39acb3dc8710bdeb, c117492ad90d291a361eedc929506f557495caf7]:</summary>
-  - @rocket.chat/ui-kit@1.0.0-rc.0
-  - @rocket.chat/apps-engine@1.61.0-rc.0
-  - @rocket.chat/ui-video-conf@29.0.0-rc.0
-  - @rocket.chat/core-typings@8.3.0-rc.0
-  - @rocket.chat/ui-contexts@29.0.0-rc.0
-  - @rocket.chat/gazzodown@29.0.0-rc.0
-  - @rocket.chat/ui-avatar@25.0.0-rc.0
+  - @yas chat/ui-kit@1.0.0-rc.0
+  - @yas chat/apps-engine@1.61.0-rc.0
+  - @yas chat/ui-video-conf@29.0.0-rc.0
+  - @yas chat/core-typings@8.3.0-rc.0
+  - @yas chat/ui-contexts@29.0.0-rc.0
+  - @yas chat/gazzodown@29.0.0-rc.0
+  - @yas chat/ui-avatar@25.0.0-rc.0
 
   </details>
 
@@ -730,11 +730,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.1
-  - @rocket.chat/gazzodown@28.0.1
-  - @rocket.chat/ui-avatar@24.0.1
-  - @rocket.chat/ui-contexts@28.0.1
-  - @rocket.chat/ui-video-conf@28.0.1
+  - @yas chat/core-typings@8.2.1
+  - @yas chat/gazzodown@28.0.1
+  - @yas chat/ui-avatar@24.0.1
+  - @yas chat/ui-contexts@28.0.1
+  - @yas chat/ui-video-conf@28.0.1
 
   </details>
 
@@ -743,12 +743,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [bbc14893f10baa6d548274485d1a2470efccfd55, 11821455ea6a8c1cac2a43c433254864b8b2c5f8, d3758a7d57ab602745369ef9d2ccdbf9271cf305, 398fca05554d860a1202c7afd78912f1254257f5, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34]:</summary>
-  - @rocket.chat/apps-engine@1.60.0
-  - @rocket.chat/core-typings@8.2.0
-  - @rocket.chat/gazzodown@28.0.0
-  - @rocket.chat/ui-avatar@24.0.0
-  - @rocket.chat/ui-contexts@28.0.0
-  - @rocket.chat/ui-video-conf@28.0.0
+  - @yas chat/apps-engine@1.60.0
+  - @yas chat/core-typings@8.2.0
+  - @yas chat/gazzodown@28.0.0
+  - @yas chat/ui-avatar@24.0.0
+  - @yas chat/ui-contexts@28.0.0
+  - @yas chat/ui-video-conf@28.0.0
 
   </details>
 
@@ -757,11 +757,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.2
-  - @rocket.chat/gazzodown@28.0.0-rc.2
-  - @rocket.chat/ui-avatar@24.0.0-rc.2
-  - @rocket.chat/ui-contexts@28.0.0-rc.2
-  - @rocket.chat/ui-video-conf@28.0.0-rc.2
+  - @yas chat/core-typings@8.2.0-rc.2
+  - @yas chat/gazzodown@28.0.0-rc.2
+  - @yas chat/ui-avatar@24.0.0-rc.2
+  - @yas chat/ui-contexts@28.0.0-rc.2
+  - @yas chat/ui-video-conf@28.0.0-rc.2
 
   </details>
 
@@ -770,11 +770,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.2.0-rc.1
-  - @rocket.chat/gazzodown@28.0.0-rc.1
-  - @rocket.chat/ui-avatar@24.0.0-rc.1
-  - @rocket.chat/ui-contexts@28.0.0-rc.1
-  - @rocket.chat/ui-video-conf@28.0.0-rc.1
+  - @yas chat/core-typings@8.2.0-rc.1
+  - @yas chat/gazzodown@28.0.0-rc.1
+  - @yas chat/ui-avatar@24.0.0-rc.1
+  - @yas chat/ui-contexts@28.0.0-rc.1
+  - @yas chat/ui-video-conf@28.0.0-rc.1
 
   </details>
 
@@ -783,12 +783,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [bbc14893f10baa6d548274485d1a2470efccfd55, 11821455ea6a8c1cac2a43c433254864b8b2c5f8, d3758a7d57ab602745369ef9d2ccdbf9271cf305, 398fca05554d860a1202c7afd78912f1254257f5, fbc4935dec220495201cf905017170d3cd1e275c, e57f15845e4df048dd2f08f11aa08215780a2c34]:</summary>
-  - @rocket.chat/apps-engine@1.60.0-rc.0
-  - @rocket.chat/core-typings@8.2.0-rc.0
-  - @rocket.chat/gazzodown@28.0.0-rc.0
-  - @rocket.chat/ui-avatar@24.0.0-rc.0
-  - @rocket.chat/ui-contexts@28.0.0-rc.0
-  - @rocket.chat/ui-video-conf@28.0.0-rc.0
+  - @yas chat/apps-engine@1.60.0-rc.0
+  - @yas chat/core-typings@8.2.0-rc.0
+  - @yas chat/gazzodown@28.0.0-rc.0
+  - @yas chat/ui-avatar@24.0.0-rc.0
+  - @yas chat/ui-contexts@28.0.0-rc.0
+  - @yas chat/ui-video-conf@28.0.0-rc.0
 
   </details>
 
@@ -797,11 +797,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.1
-  - @rocket.chat/gazzodown@27.0.1
-  - @rocket.chat/ui-avatar@23.0.1
-  - @rocket.chat/ui-contexts@27.0.1
-  - @rocket.chat/ui-video-conf@27.0.1
+  - @yas chat/core-typings@8.1.1
+  - @yas chat/gazzodown@27.0.1
+  - @yas chat/ui-avatar@23.0.1
+  - @yas chat/ui-contexts@27.0.1
+  - @yas chat/ui-video-conf@27.0.1
 
   </details>
 
@@ -810,12 +810,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e, c547985fbb8e434f2cba0035840c1be21a2a2ddd]:</summary>
-  - @rocket.chat/core-typings@8.1.0
-  - @rocket.chat/apps-engine@1.59.1
-  - @rocket.chat/gazzodown@27.0.0
-  - @rocket.chat/ui-contexts@27.0.0
-  - @rocket.chat/ui-avatar@23.0.0
-  - @rocket.chat/ui-video-conf@27.0.0
+  - @yas chat/core-typings@8.1.0
+  - @yas chat/apps-engine@1.59.1
+  - @yas chat/gazzodown@27.0.0
+  - @yas chat/ui-contexts@27.0.0
+  - @yas chat/ui-avatar@23.0.0
+  - @yas chat/ui-video-conf@27.0.0
 
   </details>
 
@@ -824,11 +824,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.1.0-rc.2
-  - @rocket.chat/gazzodown@27.0.0-rc.2
-  - @rocket.chat/ui-avatar@23.0.0-rc.2
-  - @rocket.chat/ui-contexts@27.0.0-rc.2
-  - @rocket.chat/ui-video-conf@27.0.0-rc.2
+  - @yas chat/core-typings@8.1.0-rc.2
+  - @yas chat/gazzodown@27.0.0-rc.2
+  - @yas chat/ui-avatar@23.0.0-rc.2
+  - @yas chat/ui-contexts@27.0.0-rc.2
+  - @yas chat/ui-video-conf@27.0.0-rc.2
 
   </details>
 
@@ -837,11 +837,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@27.0.0-rc.1
-  - @rocket.chat/gazzodown@27.0.0-rc.1
-  - @rocket.chat/ui-avatar@23.0.0-rc.1
-  - @rocket.chat/ui-video-conf@27.0.0-rc.1
-  - @rocket.chat/core-typings@8.1.0-rc.1
+  - @yas chat/ui-contexts@27.0.0-rc.1
+  - @yas chat/gazzodown@27.0.0-rc.1
+  - @yas chat/ui-avatar@23.0.0-rc.1
+  - @yas chat/ui-video-conf@27.0.0-rc.1
+  - @yas chat/core-typings@8.1.0-rc.1
   </details>
 
 ## 27.0.0-rc.0
@@ -849,12 +849,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [6654c5b481f91bdcb03d68ee0f3a12d58201137e, c547985fbb8e434f2cba0035840c1be21a2a2ddd]:</summary>
-  - @rocket.chat/core-typings@8.1.0-rc.0
-  - @rocket.chat/apps-engine@1.59.1-rc.0
-  - @rocket.chat/gazzodown@27.0.0-rc.0
-  - @rocket.chat/ui-contexts@27.0.0-rc.0
-  - @rocket.chat/ui-avatar@23.0.0-rc.0
-  - @rocket.chat/ui-video-conf@27.0.0-rc.0
+  - @yas chat/core-typings@8.1.0-rc.0
+  - @yas chat/apps-engine@1.59.1-rc.0
+  - @yas chat/gazzodown@27.0.0-rc.0
+  - @yas chat/ui-contexts@27.0.0-rc.0
+  - @yas chat/ui-avatar@23.0.0-rc.0
+  - @yas chat/ui-video-conf@27.0.0-rc.0
 
   </details>
 
@@ -863,11 +863,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@8.0.1
-  - @rocket.chat/gazzodown@26.0.1
-  - @rocket.chat/ui-avatar@22.0.1
-  - @rocket.chat/ui-contexts@26.0.1
-  - @rocket.chat/ui-video-conf@26.0.1
+- @yas chat/core-typings@8.0.1
+  - @yas chat/gazzodown@26.0.1
+  - @yas chat/ui-avatar@22.0.1
+  - @yas chat/ui-contexts@26.0.1
+  - @yas chat/ui-video-conf@26.0.1
   </details>
 
 ## 26.0.0
@@ -881,13 +881,13 @@
 - ([#37768](https://github.com/YasChat/YasChat/pull/37768)) Fixes an issue with the `action` block inside `Info Card` ui-kit element not dispatching actions.
 
 - <details><summary>Updated dependencies [0ccb9692b434bc88b4bc5009d39e024c03f01b86, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 70872896b912004dc016297b6e875d873d81dc3a, ddc935727e9a7275813006d9dcaa7fe866610844, d3538e7045c41f91b8c561d44e5485ff93b93745, 73d9eb2783176954f42aa2cbeda8abf1d49ac260]:</summary>
-  - @rocket.chat/apps-engine@1.59.0
-  - @rocket.chat/core-typings@8.0.0
-  - @rocket.chat/ui-contexts@26.0.0
-  - @rocket.chat/gazzodown@26.0.0
-  - @rocket.chat/ui-kit@0.39.0
-  - @rocket.chat/ui-avatar@22.0.0
-  - @rocket.chat/ui-video-conf@26.0.0
+  - @yas chat/apps-engine@1.59.0
+  - @yas chat/core-typings@8.0.0
+  - @yas chat/ui-contexts@26.0.0
+  - @yas chat/gazzodown@26.0.0
+  - @yas chat/ui-kit@0.39.0
+  - @yas chat/ui-avatar@22.0.0
+  - @yas chat/ui-video-conf@26.0.0
 
   </details>
 
@@ -896,11 +896,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.5
-  - @rocket.chat/gazzodown@26.0.0-rc.5
-  - @rocket.chat/ui-avatar@22.0.0-rc.5
-  - @rocket.chat/ui-contexts@26.0.0-rc.5
-  - @rocket.chat/ui-video-conf@26.0.0-rc.5
+  - @yas chat/core-typings@8.0.0-rc.5
+  - @yas chat/gazzodown@26.0.0-rc.5
+  - @yas chat/ui-avatar@22.0.0-rc.5
+  - @yas chat/ui-contexts@26.0.0-rc.5
+  - @yas chat/ui-video-conf@26.0.0-rc.5
 
   </details>
 
@@ -909,11 +909,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.4
-  - @rocket.chat/gazzodown@26.0.0-rc.4
-  - @rocket.chat/ui-avatar@22.0.0-rc.4
-  - @rocket.chat/ui-contexts@26.0.0-rc.4
-  - @rocket.chat/ui-video-conf@26.0.0-rc.4
+  - @yas chat/core-typings@8.0.0-rc.4
+  - @yas chat/gazzodown@26.0.0-rc.4
+  - @yas chat/ui-avatar@22.0.0-rc.4
+  - @yas chat/ui-contexts@26.0.0-rc.4
+  - @yas chat/ui-video-conf@26.0.0-rc.4
 
   </details>
 
@@ -922,11 +922,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@26.0.0-rc.3
-  - @rocket.chat/gazzodown@26.0.0-rc.3
-  - @rocket.chat/ui-avatar@22.0.0-rc.3
-  - @rocket.chat/ui-video-conf@26.0.0-rc.3
-  - @rocket.chat/core-typings@8.0.0-rc.3
+  - @yas chat/ui-contexts@26.0.0-rc.3
+  - @yas chat/gazzodown@26.0.0-rc.3
+  - @yas chat/ui-avatar@22.0.0-rc.3
+  - @yas chat/ui-video-conf@26.0.0-rc.3
+  - @yas chat/core-typings@8.0.0-rc.3
 
   </details>
 
@@ -935,11 +935,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.2
-  - @rocket.chat/gazzodown@26.0.0-rc.2
-  - @rocket.chat/ui-avatar@22.0.0-rc.2
-  - @rocket.chat/ui-contexts@26.0.0-rc.2
-  - @rocket.chat/ui-video-conf@26.0.0-rc.2
+  - @yas chat/core-typings@8.0.0-rc.2
+  - @yas chat/gazzodown@26.0.0-rc.2
+  - @yas chat/ui-avatar@22.0.0-rc.2
+  - @yas chat/ui-contexts@26.0.0-rc.2
+  - @yas chat/ui-video-conf@26.0.0-rc.2
 
   </details>
 
@@ -948,11 +948,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@8.0.0-rc.1
-  - @rocket.chat/gazzodown@26.0.0-rc.1
-  - @rocket.chat/ui-avatar@22.0.0-rc.1
-  - @rocket.chat/ui-contexts@26.0.0-rc.1
-  - @rocket.chat/ui-video-conf@26.0.0-rc.1
+  - @yas chat/core-typings@8.0.0-rc.1
+  - @yas chat/gazzodown@26.0.0-rc.1
+  - @yas chat/ui-avatar@22.0.0-rc.1
+  - @yas chat/ui-contexts@26.0.0-rc.1
+  - @yas chat/ui-video-conf@26.0.0-rc.1
 
   </details>
 
@@ -967,13 +967,13 @@
 - ([#37768](https://github.com/YasChat/YasChat/pull/37768)) Fixes an issue with the `action` block inside `Info Card` ui-kit element not dispatching actions.
 
 - <details><summary>Updated dependencies [0ccb9692b434bc88b4bc5009d39e024c03f01b86, 176d5eae3fb249d7d20c3e260d9fadc1a56a2fca, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 0c0258604632342f42fc36cabac2d6cfe0e477c4, ac11ea05ffadeca978c794ff38d5199d9acb2c29, 70872896b912004dc016297b6e875d873d81dc3a, ddc935727e9a7275813006d9dcaa7fe866610844, d3538e7045c41f91b8c561d44e5485ff93b93745, 73d9eb2783176954f42aa2cbeda8abf1d49ac260]:</summary>
-  - @rocket.chat/apps-engine@1.59.0-rc.0
-  - @rocket.chat/core-typings@8.0.0-rc.0
-  - @rocket.chat/ui-contexts@26.0.0-rc.0
-  - @rocket.chat/gazzodown@26.0.0-rc.0
-  - @rocket.chat/ui-kit@0.39.0-rc.0
-  - @rocket.chat/ui-avatar@22.0.0-rc.0
-  - @rocket.chat/ui-video-conf@26.0.0-rc.0
+  - @yas chat/apps-engine@1.59.0-rc.0
+  - @yas chat/core-typings@8.0.0-rc.0
+  - @yas chat/ui-contexts@26.0.0-rc.0
+  - @yas chat/gazzodown@26.0.0-rc.0
+  - @yas chat/ui-kit@0.39.0-rc.0
+  - @yas chat/ui-avatar@22.0.0-rc.0
+  - @yas chat/ui-video-conf@26.0.0-rc.0
 
   </details>
 
@@ -982,11 +982,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.2
-  - @rocket.chat/gazzodown@25.0.2
-  - @rocket.chat/ui-avatar@21.0.2
-  - @rocket.chat/ui-contexts@25.0.2
-  - @rocket.chat/ui-video-conf@25.0.2
+  - @yas chat/core-typings@7.13.2
+  - @yas chat/gazzodown@25.0.2
+  - @yas chat/ui-avatar@21.0.2
+  - @yas chat/ui-contexts@25.0.2
+  - @yas chat/ui-video-conf@25.0.2
 
   </details>
 
@@ -995,11 +995,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.1
-  - @rocket.chat/gazzodown@25.0.1
-  - @rocket.chat/ui-avatar@21.0.1
-  - @rocket.chat/ui-contexts@25.0.1
-  - @rocket.chat/ui-video-conf@25.0.1
+  - @yas chat/core-typings@7.13.1
+  - @yas chat/gazzodown@25.0.1
+  - @yas chat/ui-avatar@21.0.1
+  - @yas chat/ui-contexts@25.0.1
+  - @yas chat/ui-video-conf@25.0.1
 
   </details>
 
@@ -1012,13 +1012,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 5f075eabe1ed1292e3eda2bcca58b5323936dd13, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 44ca3b111f13ac1816a82ab0e4720e9886769c34, 99255057f27b9d854a89da815681a03d0776f846, ec22d9c102d48908bac33865b00abde4f4738ced, 64a4e8bbb70f28532d8967de6936e3bbe6603f8b, 65fbcbed9f64004b953dd9d4182b3fccb8147339, cd0f72faa58908349b7968a9288d289185d0c770, a05b8f72ca70dfed2959282c35518f78fbeb65cf, 7a7aad5cb1191c0eca61a22dadd620bd4f6c12a2]:</summary>
-  - @rocket.chat/ui-contexts@25.0.0
-  - @rocket.chat/apps-engine@1.58.0
-  - @rocket.chat/core-typings@7.13.0
-  - @rocket.chat/ui-kit@0.38.0
-  - @rocket.chat/gazzodown@25.0.0
-  - @rocket.chat/ui-avatar@21.0.0
-  - @rocket.chat/ui-video-conf@25.0.0
+  - @yas chat/ui-contexts@25.0.0
+  - @yas chat/apps-engine@1.58.0
+  - @yas chat/core-typings@7.13.0
+  - @yas chat/ui-kit@0.38.0
+  - @yas chat/gazzodown@25.0.0
+  - @yas chat/ui-avatar@21.0.0
+  - @yas chat/ui-video-conf@25.0.0
 
   </details>
 
@@ -1027,11 +1027,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.2
-  - @rocket.chat/gazzodown@25.0.0-rc.2
-  - @rocket.chat/ui-avatar@21.0.0-rc.2
-  - @rocket.chat/ui-contexts@25.0.0-rc.2
-  - @rocket.chat/ui-video-conf@25.0.0-rc.2
+  - @yas chat/core-typings@7.13.0-rc.2
+  - @yas chat/gazzodown@25.0.0-rc.2
+  - @yas chat/ui-avatar@21.0.0-rc.2
+  - @yas chat/ui-contexts@25.0.0-rc.2
+  - @yas chat/ui-video-conf@25.0.0-rc.2
 
   </details>
 
@@ -1040,11 +1040,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.13.0-rc.1
-  - @rocket.chat/gazzodown@25.0.0-rc.1
-  - @rocket.chat/ui-avatar@21.0.0-rc.1
-  - @rocket.chat/ui-contexts@25.0.0-rc.1
-  - @rocket.chat/ui-video-conf@25.0.0-rc.1
+  - @yas chat/core-typings@7.13.0-rc.1
+  - @yas chat/gazzodown@25.0.0-rc.1
+  - @yas chat/ui-avatar@21.0.0-rc.1
+  - @yas chat/ui-contexts@25.0.0-rc.1
+  - @yas chat/ui-video-conf@25.0.0-rc.1
   </details>
 
 ## 25.0.0-rc.0
@@ -1056,24 +1056,24 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [31ab78f0d4648b2ba99513ffce737d52ee34fe7f, 5f075eabe1ed1292e3eda2bcca58b5323936dd13, 7f1b834a55b1240c226afde77713262da47f45dc, 5c7e8ec1de894e7b8eeb6e57b0c8a43bd22d2d46, 44ca3b111f13ac1816a82ab0e4720e9886769c34, 99255057f27b9d854a89da815681a03d0776f846, ec22d9c102d48908bac33865b00abde4f4738ced, 64a4e8bbb70f28532d8967de6936e3bbe6603f8b, 65fbcbed9f64004b953dd9d4182b3fccb8147339, cd0f72faa58908349b7968a9288d289185d0c770, a05b8f72ca70dfed2959282c35518f78fbeb65cf, 7a7aad5cb1191c0eca61a22dadd620bd4f6c12a2]:</summary>
-  - @rocket.chat/ui-contexts@25.0.0-rc.0
-  - @rocket.chat/apps-engine@1.58.0-rc.0
-  - @rocket.chat/core-typings@7.13.0-rc.0
-  - @rocket.chat/ui-kit@0.38.0-rc.0
-  - @rocket.chat/gazzodown@25.0.0-rc.0
-  - @rocket.chat/ui-avatar@21.0.0-rc.0
-  - @rocket.chat/ui-video-conf@25.0.0-rc.0
+  - @yas chat/ui-contexts@25.0.0-rc.0
+  - @yas chat/apps-engine@1.58.0-rc.0
+  - @yas chat/core-typings@7.13.0-rc.0
+  - @yas chat/ui-kit@0.38.0-rc.0
+  - @yas chat/gazzodown@25.0.0-rc.0
+  - @yas chat/ui-avatar@21.0.0-rc.0
+  - @yas chat/ui-video-conf@25.0.0-rc.0
 
 ## 24.0.2
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.2
-  - @rocket.chat/gazzodown@24.0.2
-  - @rocket.chat/ui-avatar@20.0.2
-  - @rocket.chat/ui-contexts@24.0.2
-  - @rocket.chat/ui-video-conf@24.0.2
+  - @yas chat/core-typings@7.12.2
+  - @yas chat/gazzodown@24.0.2
+  - @yas chat/ui-avatar@20.0.2
+  - @yas chat/ui-contexts@24.0.2
+  - @yas chat/ui-video-conf@24.0.2
 
   </details>
 
@@ -1082,12 +1082,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [e6cc073a99e1aaa7936ef9b29e7bfa31dab86aa3]:</summary>
-  - @rocket.chat/apps-engine@1.57.1
-  - @rocket.chat/core-typings@7.12.1
-  - @rocket.chat/gazzodown@24.0.1
-  - @rocket.chat/ui-avatar@20.0.1
-  - @rocket.chat/ui-contexts@24.0.1
-  - @rocket.chat/ui-video-conf@24.0.1
+  - @yas chat/apps-engine@1.57.1
+  - @yas chat/core-typings@7.12.1
+  - @yas chat/gazzodown@24.0.1
+  - @yas chat/ui-avatar@20.0.1
+  - @yas chat/ui-contexts@24.0.1
+  - @yas chat/ui-video-conf@24.0.1
 
   </details>
 
@@ -1096,12 +1096,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c253db3ece80da36fba7b79b3cbe64d705175d6d, f627e675076a49ebd2f7c80cee1c2a3e51cc22fc, a25e88c06cafdbe3baf7a40e3bffe3aed5a81cf6, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/apps-engine@1.57.0
-  - @rocket.chat/ui-contexts@24.0.0
-  - @rocket.chat/core-typings@7.12.0
-  - @rocket.chat/gazzodown@24.0.0
-  - @rocket.chat/ui-avatar@20.0.0
-  - @rocket.chat/ui-video-conf@24.0.0
+  - @yas chat/apps-engine@1.57.0
+  - @yas chat/ui-contexts@24.0.0
+  - @yas chat/core-typings@7.12.0
+  - @yas chat/gazzodown@24.0.0
+  - @yas chat/ui-avatar@20.0.0
+  - @yas chat/ui-video-conf@24.0.0
 
   </details>
 
@@ -1110,11 +1110,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.4
-  - @rocket.chat/gazzodown@24.0.0-rc.4
-  - @rocket.chat/ui-avatar@20.0.0-rc.4
-  - @rocket.chat/ui-contexts@24.0.0-rc.4
-  - @rocket.chat/ui-video-conf@24.0.0-rc.4
+  - @yas chat/core-typings@7.12.0-rc.4
+  - @yas chat/gazzodown@24.0.0-rc.4
+  - @yas chat/ui-avatar@20.0.0-rc.4
+  - @yas chat/ui-contexts@24.0.0-rc.4
+  - @yas chat/ui-video-conf@24.0.0-rc.4
 
   </details>
 
@@ -1123,11 +1123,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.3
-  - @rocket.chat/gazzodown@24.0.0-rc.3
-  - @rocket.chat/ui-avatar@20.0.0-rc.3
-  - @rocket.chat/ui-contexts@24.0.0-rc.3
-  - @rocket.chat/ui-video-conf@24.0.0-rc.3
+  - @yas chat/core-typings@7.12.0-rc.3
+  - @yas chat/gazzodown@24.0.0-rc.3
+  - @yas chat/ui-avatar@20.0.0-rc.3
+  - @yas chat/ui-contexts@24.0.0-rc.3
+  - @yas chat/ui-video-conf@24.0.0-rc.3
 
   </details>
 
@@ -1136,11 +1136,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.2
-  - @rocket.chat/gazzodown@24.0.0-rc.2
-  - @rocket.chat/ui-avatar@20.0.0-rc.2
-  - @rocket.chat/ui-contexts@24.0.0-rc.2
-  - @rocket.chat/ui-video-conf@24.0.0-rc.2
+  - @yas chat/core-typings@7.12.0-rc.2
+  - @yas chat/gazzodown@24.0.0-rc.2
+  - @yas chat/ui-avatar@20.0.0-rc.2
+  - @yas chat/ui-contexts@24.0.0-rc.2
+  - @yas chat/ui-video-conf@24.0.0-rc.2
 
   </details>
 
@@ -1149,11 +1149,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.12.0-rc.1
-  - @rocket.chat/gazzodown@24.0.0-rc.1
-  - @rocket.chat/ui-avatar@20.0.0-rc.1
-  - @rocket.chat/ui-contexts@24.0.0-rc.1
-  - @rocket.chat/ui-video-conf@24.0.0-rc.1
+  - @yas chat/core-typings@7.12.0-rc.1
+  - @yas chat/gazzodown@24.0.0-rc.1
+  - @yas chat/ui-avatar@20.0.0-rc.1
+  - @yas chat/ui-contexts@24.0.0-rc.1
+  - @yas chat/ui-video-conf@24.0.0-rc.1
 
   </details>
 
@@ -1162,12 +1162,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c253db3ece80da36fba7b79b3cbe64d705175d6d, f627e675076a49ebd2f7c80cee1c2a3e51cc22fc, a25e88c06cafdbe3baf7a40e3bffe3aed5a81cf6, d166e2a1ffba4e59361d5f79e8c376fca5cbf12f]:</summary>
-  - @rocket.chat/apps-engine@1.57.0-rc.0
-  - @rocket.chat/ui-contexts@24.0.0-rc.0
-  - @rocket.chat/core-typings@7.12.0-rc.0
-  - @rocket.chat/gazzodown@24.0.0-rc.0
-  - @rocket.chat/ui-avatar@20.0.0-rc.0
-  - @rocket.chat/ui-video-conf@24.0.0-rc.0
+  - @yas chat/apps-engine@1.57.0-rc.0
+  - @yas chat/ui-contexts@24.0.0-rc.0
+  - @yas chat/core-typings@7.12.0-rc.0
+  - @yas chat/gazzodown@24.0.0-rc.0
+  - @yas chat/ui-avatar@20.0.0-rc.0
+  - @yas chat/ui-video-conf@24.0.0-rc.0
 
   </details>
 
@@ -1178,12 +1178,12 @@
 - ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [f139c0d42790f0df076f32b4184f6b846bcdbc26, d76a5578ed0e14fae2a041c0e09d565b28630d76, 3484c1fa14beafa62460f00de5a89cbfa4fa0db5, feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, 72d9474b2f9149d8690d3483237bd2273d6799ac, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
-  - @rocket.chat/apps-engine@1.56.0
-  - @rocket.chat/gazzodown@23.0.0
-  - @rocket.chat/ui-contexts@23.0.0
-  - @rocket.chat/ui-video-conf@23.0.0
-  - @rocket.chat/ui-avatar@19.0.0
-  - @rocket.chat/core-typings@7.11.0
+  - @yas chat/apps-engine@1.56.0
+  - @yas chat/gazzodown@23.0.0
+  - @yas chat/ui-contexts@23.0.0
+  - @yas chat/ui-video-conf@23.0.0
+  - @yas chat/ui-avatar@19.0.0
+  - @yas chat/core-typings@7.11.0
 
   </details>
 
@@ -1192,11 +1192,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.7
-  - @rocket.chat/gazzodown@23.0.0-rc.7
-  - @rocket.chat/ui-avatar@19.0.0-rc.7
-  - @rocket.chat/ui-contexts@23.0.0-rc.7
-  - @rocket.chat/ui-video-conf@23.0.0-rc.7
+  - @yas chat/core-typings@7.11.0-rc.7
+  - @yas chat/gazzodown@23.0.0-rc.7
+  - @yas chat/ui-avatar@19.0.0-rc.7
+  - @yas chat/ui-contexts@23.0.0-rc.7
+  - @yas chat/ui-video-conf@23.0.0-rc.7
 
   </details>
 
@@ -1205,11 +1205,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.6
-  - @rocket.chat/gazzodown@23.0.0-rc.6
-  - @rocket.chat/ui-avatar@19.0.0-rc.6
-  - @rocket.chat/ui-contexts@23.0.0-rc.6
-  - @rocket.chat/ui-video-conf@23.0.0-rc.6
+  - @yas chat/core-typings@7.11.0-rc.6
+  - @yas chat/gazzodown@23.0.0-rc.6
+  - @yas chat/ui-avatar@19.0.0-rc.6
+  - @yas chat/ui-contexts@23.0.0-rc.6
+  - @yas chat/ui-video-conf@23.0.0-rc.6
 
   </details>
 
@@ -1218,11 +1218,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.5
-  - @rocket.chat/gazzodown@23.0.0-rc.5
-  - @rocket.chat/ui-avatar@19.0.0-rc.5
-  - @rocket.chat/ui-contexts@23.0.0-rc.5
-  - @rocket.chat/ui-video-conf@23.0.0-rc.5
+  - @yas chat/core-typings@7.11.0-rc.5
+  - @yas chat/gazzodown@23.0.0-rc.5
+  - @yas chat/ui-avatar@19.0.0-rc.5
+  - @yas chat/ui-contexts@23.0.0-rc.5
+  - @yas chat/ui-video-conf@23.0.0-rc.5
 
   </details>
 
@@ -1231,11 +1231,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.4
-  - @rocket.chat/gazzodown@23.0.0-rc.4
-  - @rocket.chat/ui-avatar@19.0.0-rc.4
-  - @rocket.chat/ui-contexts@23.0.0-rc.4
-  - @rocket.chat/ui-video-conf@23.0.0-rc.4
+  - @yas chat/core-typings@7.11.0-rc.4
+  - @yas chat/gazzodown@23.0.0-rc.4
+  - @yas chat/ui-avatar@19.0.0-rc.4
+  - @yas chat/ui-contexts@23.0.0-rc.4
+  - @yas chat/ui-video-conf@23.0.0-rc.4
 
   </details>
 
@@ -1244,11 +1244,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.3
-  - @rocket.chat/gazzodown@23.0.0-rc.3
-  - @rocket.chat/ui-avatar@19.0.0-rc.3
-  - @rocket.chat/ui-contexts@23.0.0-rc.3
-  - @rocket.chat/ui-video-conf@23.0.0-rc.3
+  - @yas chat/core-typings@7.11.0-rc.3
+  - @yas chat/gazzodown@23.0.0-rc.3
+  - @yas chat/ui-avatar@19.0.0-rc.3
+  - @yas chat/ui-contexts@23.0.0-rc.3
+  - @yas chat/ui-video-conf@23.0.0-rc.3
 
   </details>
 
@@ -1257,11 +1257,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.2
-  - @rocket.chat/gazzodown@23.0.0-rc.2
-  - @rocket.chat/ui-avatar@19.0.0-rc.2
-  - @rocket.chat/ui-contexts@23.0.0-rc.2
-  - @rocket.chat/ui-video-conf@23.0.0-rc.2
+  - @yas chat/core-typings@7.11.0-rc.2
+  - @yas chat/gazzodown@23.0.0-rc.2
+  - @yas chat/ui-avatar@19.0.0-rc.2
+  - @yas chat/ui-contexts@23.0.0-rc.2
+  - @yas chat/ui-video-conf@23.0.0-rc.2
 
   </details>
 
@@ -1270,11 +1270,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.11.0-rc.1
-  - @rocket.chat/gazzodown@23.0.0-rc.1
-  - @rocket.chat/ui-avatar@19.0.0-rc.1
-  - @rocket.chat/ui-contexts@23.0.0-rc.1
-  - @rocket.chat/ui-video-conf@23.0.0-rc.1
+  - @yas chat/core-typings@7.11.0-rc.1
+  - @yas chat/gazzodown@23.0.0-rc.1
+  - @yas chat/ui-avatar@19.0.0-rc.1
+  - @yas chat/ui-contexts@23.0.0-rc.1
+  - @yas chat/ui-video-conf@23.0.0-rc.1
 
   </details>
 
@@ -1285,12 +1285,12 @@
 - ([#36207](https://github.com/YasChat/YasChat/pull/36207)) Introduces the Outbound Message feature to Omnichannel, allowing organizations to initiate proactive communication with contacts through their preferred messaging channel directly from YasChat
 
 - <details><summary>Updated dependencies [f139c0d42790f0df076f32b4184f6b846bcdbc26, d76a5578ed0e14fae2a041c0e09d565b28630d76, 3484c1fa14beafa62460f00de5a89cbfa4fa0db5, feba290fc403de27efb6bb9a571bec43413e976a, b0a4602a4461200b9872b2b073ec56fa55ecb466, 72d9474b2f9149d8690d3483237bd2273d6799ac, c6ef437d9071dbd8c08152984dc39542b1ae7306]:</summary>
-  - @rocket.chat/apps-engine@1.56.0-rc.0
-  - @rocket.chat/gazzodown@23.0.0-rc.0
-  - @rocket.chat/ui-contexts@23.0.0-rc.0
-  - @rocket.chat/ui-video-conf@23.0.0-rc.0
-  - @rocket.chat/ui-avatar@19.0.0-rc.0
-  - @rocket.chat/core-typings@7.11.0-rc.0
+  - @yas chat/apps-engine@1.56.0-rc.0
+  - @yas chat/gazzodown@23.0.0-rc.0
+  - @yas chat/ui-contexts@23.0.0-rc.0
+  - @yas chat/ui-video-conf@23.0.0-rc.0
+  - @yas chat/ui-avatar@19.0.0-rc.0
+  - @yas chat/core-typings@7.11.0-rc.0
 
   </details>
 
@@ -1299,11 +1299,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.2
-  - @rocket.chat/gazzodown@22.0.2
-  - @rocket.chat/ui-avatar@18.0.2
-  - @rocket.chat/ui-contexts@22.0.2
-  - @rocket.chat/ui-video-conf@22.0.2
+  - @yas chat/core-typings@7.10.2
+  - @yas chat/gazzodown@22.0.2
+  - @yas chat/ui-avatar@18.0.2
+  - @yas chat/ui-contexts@22.0.2
+  - @yas chat/ui-video-conf@22.0.2
 
   </details>
 
@@ -1312,11 +1312,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [42cea259937ceea4ba8ec62627e4ca40e7e02320]:</summary>
-  - @rocket.chat/apps-engine@1.55.1
-  - @rocket.chat/core-typings@7.10.1
-  - @rocket.chat/gazzodown@22.0.1
-  - @rocket.chat/ui-avatar@18.0.1
-  - @rocket.chat/ui-contexts@22.0.1
+  - @yas chat/apps-engine@1.55.1
+  - @yas chat/core-typings@7.10.1
+  - @yas chat/gazzodown@22.0.1
+  - @yas chat/ui-avatar@18.0.1
+  - @yas chat/ui-contexts@22.0.1
 
   </details>
 
@@ -1325,12 +1325,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [22498de4e9de4467642f637d00cc8344ba876987, 128b228fcb0b2fda2967c88b07340be4b34a5470, c0c8919723c8d1242973625d15db74c994318460, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, 42979690f3880d3c700582b7892020e37bc82be3, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/apps-engine@1.55.0
-  - @rocket.chat/core-typings@7.10.0
-  - @rocket.chat/ui-contexts@22.0.0
-  - @rocket.chat/gazzodown@22.0.0
-  - @rocket.chat/ui-avatar@18.0.0
-  - @rocket.chat/ui-video-conf@22.0.0
+  - @yas chat/apps-engine@1.55.0
+  - @yas chat/core-typings@7.10.0
+  - @yas chat/ui-contexts@22.0.0
+  - @yas chat/gazzodown@22.0.0
+  - @yas chat/ui-avatar@18.0.0
+  - @yas chat/ui-video-conf@22.0.0
 
   </details>
 
@@ -1339,11 +1339,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.6
-  - @rocket.chat/gazzodown@22.0.0-rc.6
-  - @rocket.chat/ui-avatar@18.0.0-rc.6
-  - @rocket.chat/ui-contexts@22.0.0-rc.6
-  - @rocket.chat/ui-video-conf@22.0.0-rc.6
+  - @yas chat/core-typings@7.10.0-rc.6
+  - @yas chat/gazzodown@22.0.0-rc.6
+  - @yas chat/ui-avatar@18.0.0-rc.6
+  - @yas chat/ui-contexts@22.0.0-rc.6
+  - @yas chat/ui-video-conf@22.0.0-rc.6
 
   </details>
 
@@ -1352,11 +1352,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.5
-  - @rocket.chat/gazzodown@22.0.0-rc.5
-  - @rocket.chat/ui-avatar@18.0.0-rc.5
-  - @rocket.chat/ui-contexts@22.0.0-rc.5
-  - @rocket.chat/ui-video-conf@22.0.0-rc.5
+  - @yas chat/core-typings@7.10.0-rc.5
+  - @yas chat/gazzodown@22.0.0-rc.5
+  - @yas chat/ui-avatar@18.0.0-rc.5
+  - @yas chat/ui-contexts@22.0.0-rc.5
+  - @yas chat/ui-video-conf@22.0.0-rc.5
   </details>
 
 ## 22.0.0-rc.4
@@ -1364,11 +1364,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.4
-  - @rocket.chat/gazzodown@22.0.0-rc.4
-  - @rocket.chat/ui-avatar@18.0.0-rc.4
-  - @rocket.chat/ui-contexts@22.0.0-rc.4
-  - @rocket.chat/ui-video-conf@22.0.0-rc.4
+  - @yas chat/core-typings@7.10.0-rc.4
+  - @yas chat/gazzodown@22.0.0-rc.4
+  - @yas chat/ui-avatar@18.0.0-rc.4
+  - @yas chat/ui-contexts@22.0.0-rc.4
+  - @yas chat/ui-video-conf@22.0.0-rc.4
   </details>
 
 ## 22.0.0-rc.3
@@ -1376,12 +1376,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [128b228fcb0b2fda2967c88b07340be4b34a5470]:</summary>
-  - @rocket.chat/apps-engine@1.55.0-rc.1
-  - @rocket.chat/core-typings@7.10.0-rc.3
-  - @rocket.chat/gazzodown@22.0.0-rc.3
-  - @rocket.chat/ui-avatar@18.0.0-rc.3
-  - @rocket.chat/ui-contexts@22.0.0-rc.3
-  - @rocket.chat/ui-video-conf@22.0.0-rc.3
+  - @yas chat/apps-engine@1.55.0-rc.1
+  - @yas chat/core-typings@7.10.0-rc.3
+  - @yas chat/gazzodown@22.0.0-rc.3
+  - @yas chat/ui-avatar@18.0.0-rc.3
+  - @yas chat/ui-contexts@22.0.0-rc.3
+  - @yas chat/ui-video-conf@22.0.0-rc.3
 
   </details>
 
@@ -1390,11 +1390,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.10.0-rc.2
-  - @rocket.chat/gazzodown@22.0.0-rc.2
-  - @rocket.chat/ui-avatar@18.0.0-rc.2
-  - @rocket.chat/ui-contexts@22.0.0-rc.2
-  - @rocket.chat/ui-video-conf@22.0.0-rc.2
+- @yas chat/core-typings@7.10.0-rc.2
+  - @yas chat/gazzodown@22.0.0-rc.2
+  - @yas chat/ui-avatar@18.0.0-rc.2
+  - @yas chat/ui-contexts@22.0.0-rc.2
+  - @yas chat/ui-video-conf@22.0.0-rc.2
   </details>
 
 ## 22.0.0-rc.1
@@ -1402,11 +1402,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.10.0-rc.1
-  - @rocket.chat/gazzodown@22.0.0-rc.1
-  - @rocket.chat/ui-avatar@18.0.0-rc.1
-  - @rocket.chat/ui-contexts@22.0.0-rc.1
-  - @rocket.chat/ui-video-conf@22.0.0-rc.1
+  - @yas chat/core-typings@7.10.0-rc.1
+  - @yas chat/gazzodown@22.0.0-rc.1
+  - @yas chat/ui-avatar@18.0.0-rc.1
+  - @yas chat/ui-contexts@22.0.0-rc.1
+  - @yas chat/ui-video-conf@22.0.0-rc.1
 
   </details>
 
@@ -1415,12 +1415,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [22498de4e9de4467642f637d00cc8344ba876987, c0c8919723c8d1242973625d15db74c994318460, 17bca96ecbf23ea807aba2e6e8abc95ebd66b0d0, 42979690f3880d3c700582b7892020e37bc82be3, c7db598e9f3c2ad47f6a6be2a9ba7078533c245b]:</summary>
-  - @rocket.chat/apps-engine@1.55.0-rc.0
-  - @rocket.chat/core-typings@7.10.0-rc.0
-  - @rocket.chat/ui-contexts@22.0.0-rc.0
-  - @rocket.chat/gazzodown@22.0.0-rc.0
-  - @rocket.chat/ui-avatar@18.0.0-rc.0
-  - @rocket.chat/ui-video-conf@22.0.0-rc.0
+  - @yas chat/apps-engine@1.55.0-rc.0
+  - @yas chat/core-typings@7.10.0-rc.0
+  - @yas chat/ui-contexts@22.0.0-rc.0
+  - @yas chat/gazzodown@22.0.0-rc.0
+  - @yas chat/ui-avatar@18.0.0-rc.0
+  - @yas chat/ui-video-conf@22.0.0-rc.0
 
   </details>
 
@@ -1429,11 +1429,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.3
-  - @rocket.chat/gazzodown@21.0.3
-  - @rocket.chat/ui-avatar@17.0.3
-  - @rocket.chat/ui-contexts@21.0.3
-  - @rocket.chat/ui-video-conf@21.0.3
+  - @yas chat/core-typings@7.9.3
+  - @yas chat/gazzodown@21.0.3
+  - @yas chat/ui-avatar@17.0.3
+  - @yas chat/ui-contexts@21.0.3
+  - @yas chat/ui-video-conf@21.0.3
   </details>
 
 ## 21.0.2
@@ -1441,11 +1441,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.2
-  - @rocket.chat/gazzodown@21.0.2
-  - @rocket.chat/ui-avatar@17.0.2
-  - @rocket.chat/ui-contexts@21.0.2
-  - @rocket.chat/ui-video-conf@21.0.2
+  - @yas chat/core-typings@7.9.2
+  - @yas chat/gazzodown@21.0.2
+  - @yas chat/ui-avatar@17.0.2
+  - @yas chat/ui-contexts@21.0.2
+  - @yas chat/ui-video-conf@21.0.2
   </details>
 
 ## 21.0.1
@@ -1453,11 +1453,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.1
-  - @rocket.chat/gazzodown@21.0.1
-  - @rocket.chat/ui-avatar@17.0.1
-  - @rocket.chat/ui-contexts@21.0.1
-  - @rocket.chat/ui-video-conf@21.0.1
+  - @yas chat/core-typings@7.9.1
+  - @yas chat/gazzodown@21.0.1
+  - @yas chat/ui-avatar@17.0.1
+  - @yas chat/ui-contexts@21.0.1
+  - @yas chat/ui-video-conf@21.0.1
     </details>
 
 ## 21.0.0
@@ -1465,12 +1465,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ba0cbd32657365abc2a10e50285e02b4e34bf674, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, cfabf2684046e1e336b1f81d548a081c25419677, 9826bc2ed9a3a4232ce6d5d436c3f489f2d4192b]:</summary>
-  - @rocket.chat/gazzodown@21.0.0
-  - @rocket.chat/apps-engine@1.54.0
-  - @rocket.chat/core-typings@7.9.0
-  - @rocket.chat/ui-contexts@21.0.0
-  - @rocket.chat/ui-avatar@17.0.0
-  - @rocket.chat/ui-video-conf@21.0.0
+  - @yas chat/gazzodown@21.0.0
+  - @yas chat/apps-engine@1.54.0
+  - @yas chat/core-typings@7.9.0
+  - @yas chat/ui-contexts@21.0.0
+  - @yas chat/ui-avatar@17.0.0
+  - @yas chat/ui-video-conf@21.0.0
 
   </details>
 
@@ -1479,12 +1479,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [cfabf2684046e1e336b1f81d548a081c25419677]:</summary>
-  - @rocket.chat/apps-engine@1.54.0-rc.1
-  - @rocket.chat/core-typings@7.9.0-rc.2
-  - @rocket.chat/gazzodown@21.0.0-rc.2
-  - @rocket.chat/ui-avatar@17.0.0-rc.2
-  - @rocket.chat/ui-contexts@21.0.0-rc.2
-  - @rocket.chat/ui-video-conf@21.0.0-rc.2
+  - @yas chat/apps-engine@1.54.0-rc.1
+  - @yas chat/core-typings@7.9.0-rc.2
+  - @yas chat/gazzodown@21.0.0-rc.2
+  - @yas chat/ui-avatar@17.0.0-rc.2
+  - @yas chat/ui-contexts@21.0.0-rc.2
+  - @yas chat/ui-video-conf@21.0.0-rc.2
 
   </details>
 
@@ -1493,11 +1493,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.9.0-rc.1
-  - @rocket.chat/gazzodown@21.0.0-rc.1
-  - @rocket.chat/ui-avatar@17.0.0-rc.1
-  - @rocket.chat/ui-contexts@21.0.0-rc.1
-  - @rocket.chat/ui-video-conf@21.0.0-rc.1
+  - @yas chat/core-typings@7.9.0-rc.1
+  - @yas chat/gazzodown@21.0.0-rc.1
+  - @yas chat/ui-avatar@17.0.0-rc.1
+  - @yas chat/ui-contexts@21.0.0-rc.1
+  - @yas chat/ui-video-conf@21.0.0-rc.1
 
   </details>
 
@@ -1506,12 +1506,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ba0cbd32657365abc2a10e50285e02b4e34bf674, 2cec8acd5beddf5ad0c67c29fe632487cb82b026, 6f205101215b4d9890ac62f7acc21257f0cd3cf4, fd478a7d45a4505ad53d2d7aec8b44e9bf8fa41a, 9826bc2ed9a3a4232ce6d5d436c3f489f2d4192b]:</summary>
-  - @rocket.chat/gazzodown@21.0.0-rc.0
-  - @rocket.chat/apps-engine@1.54.0-rc.0
-  - @rocket.chat/core-typings@7.9.0-rc.0
-  - @rocket.chat/ui-contexts@21.0.0-rc.0
-  - @rocket.chat/ui-avatar@17.0.0-rc.0
-  - @rocket.chat/ui-video-conf@21.0.0-rc.0
+  - @yas chat/gazzodown@21.0.0-rc.0
+  - @yas chat/apps-engine@1.54.0-rc.0
+  - @yas chat/core-typings@7.9.0-rc.0
+  - @yas chat/ui-contexts@21.0.0-rc.0
+  - @yas chat/ui-avatar@17.0.0-rc.0
+  - @yas chat/ui-video-conf@21.0.0-rc.0
 
   </details>
 
@@ -1520,12 +1520,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [3c914ca4b4f9ae3246b149409c893b7610ae6570]:</summary>
-  - @rocket.chat/apps-engine@1.53.1
-  - @rocket.chat/core-typings@7.8.3
-  - @rocket.chat/gazzodown@20.0.3
-  - @rocket.chat/ui-contexts@20.0.3
-  - @rocket.chat/ui-avatar@16.0.3
-  - @rocket.chat/ui-video-conf@20.0.3
+  - @yas chat/apps-engine@1.53.1
+  - @yas chat/core-typings@7.8.3
+  - @yas chat/gazzodown@20.0.3
+  - @yas chat/ui-contexts@20.0.3
+  - @yas chat/ui-avatar@16.0.3
+  - @yas chat/ui-video-conf@20.0.3
 
   </details>
 
@@ -1534,11 +1534,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.2
-  - @rocket.chat/gazzodown@20.0.2
-  - @rocket.chat/ui-contexts@20.0.2
-  - @rocket.chat/ui-avatar@16.0.2
-  - @rocket.chat/ui-video-conf@20.0.2
+  - @yas chat/core-typings@7.8.2
+  - @yas chat/gazzodown@20.0.2
+  - @yas chat/ui-contexts@20.0.2
+  - @yas chat/ui-avatar@16.0.2
+  - @yas chat/ui-video-conf@20.0.2
 
   </details>
 
@@ -1547,11 +1547,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.1
-  - @rocket.chat/gazzodown@20.0.1
-  - @rocket.chat/ui-contexts@20.0.1
-  - @rocket.chat/ui-avatar@16.0.1
-  - @rocket.chat/ui-video-conf@20.0.1
+  - @yas chat/core-typings@7.8.1
+  - @yas chat/gazzodown@20.0.1
+  - @yas chat/ui-contexts@20.0.1
+  - @yas chat/ui-avatar@16.0.1
+  - @yas chat/ui-video-conf@20.0.1
 
   </details>
 
@@ -1560,12 +1560,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5ac20e2a84200f8002ce454df693ada2653f3827, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c, de4293a1ca5af138437bf01a78e7c0450f437dc7]:</summary>
-  - @rocket.chat/apps-engine@1.53.0
-  - @rocket.chat/core-typings@7.8.0
-  - @rocket.chat/ui-contexts@20.0.0
-  - @rocket.chat/gazzodown@20.0.0
-  - @rocket.chat/ui-avatar@16.0.0
-  - @rocket.chat/ui-video-conf@20.0.0
+  - @yas chat/apps-engine@1.53.0
+  - @yas chat/core-typings@7.8.0
+  - @yas chat/ui-contexts@20.0.0
+  - @yas chat/gazzodown@20.0.0
+  - @yas chat/ui-avatar@16.0.0
+  - @yas chat/ui-video-conf@20.0.0
 
   </details>
 
@@ -1574,11 +1574,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.9
-  - @rocket.chat/gazzodown@20.0.0-rc.9
-  - @rocket.chat/ui-contexts@20.0.0-rc.9
-  - @rocket.chat/ui-avatar@16.0.0-rc.9
-  - @rocket.chat/ui-video-conf@20.0.0-rc.9
+  - @yas chat/core-typings@7.8.0-rc.9
+  - @yas chat/gazzodown@20.0.0-rc.9
+  - @yas chat/ui-contexts@20.0.0-rc.9
+  - @yas chat/ui-avatar@16.0.0-rc.9
+  - @yas chat/ui-video-conf@20.0.0-rc.9
 
   </details>
 
@@ -1587,12 +1587,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [de4293a1ca5af138437bf01a78e7c0450f437dc7]:</summary>
-  - @rocket.chat/apps-engine@1.53.0-rc.1
-  - @rocket.chat/core-typings@7.8.0-rc.8
-  - @rocket.chat/gazzodown@20.0.0-rc.8
-  - @rocket.chat/ui-contexts@20.0.0-rc.8
-  - @rocket.chat/ui-avatar@16.0.0-rc.8
-  - @rocket.chat/ui-video-conf@20.0.0-rc.8
+  - @yas chat/apps-engine@1.53.0-rc.1
+  - @yas chat/core-typings@7.8.0-rc.8
+  - @yas chat/gazzodown@20.0.0-rc.8
+  - @yas chat/ui-contexts@20.0.0-rc.8
+  - @yas chat/ui-avatar@16.0.0-rc.8
+  - @yas chat/ui-video-conf@20.0.0-rc.8
 
   </details>
 
@@ -1601,11 +1601,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.7
-  - @rocket.chat/gazzodown@20.0.0-rc.7
-  - @rocket.chat/ui-contexts@20.0.0-rc.7
-  - @rocket.chat/ui-avatar@16.0.0-rc.7
-  - @rocket.chat/ui-video-conf@20.0.0-rc.7
+  - @yas chat/core-typings@7.8.0-rc.7
+  - @yas chat/gazzodown@20.0.0-rc.7
+  - @yas chat/ui-contexts@20.0.0-rc.7
+  - @yas chat/ui-avatar@16.0.0-rc.7
+  - @yas chat/ui-video-conf@20.0.0-rc.7
 
   </details>
 
@@ -1614,11 +1614,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.6
-  - @rocket.chat/gazzodown@20.0.0-rc.6
-  - @rocket.chat/ui-contexts@20.0.0-rc.6
-  - @rocket.chat/ui-avatar@16.0.0-rc.6
-  - @rocket.chat/ui-video-conf@20.0.0-rc.6
+  - @yas chat/core-typings@7.8.0-rc.6
+  - @yas chat/gazzodown@20.0.0-rc.6
+  - @yas chat/ui-contexts@20.0.0-rc.6
+  - @yas chat/ui-avatar@16.0.0-rc.6
+  - @yas chat/ui-video-conf@20.0.0-rc.6
 
   </details>
 
@@ -1627,11 +1627,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.5
-  - @rocket.chat/gazzodown@20.0.0-rc.5
-  - @rocket.chat/ui-contexts@20.0.0-rc.5
-  - @rocket.chat/ui-avatar@16.0.0-rc.5
-  - @rocket.chat/ui-video-conf@20.0.0-rc.5
+  - @yas chat/core-typings@7.8.0-rc.5
+  - @yas chat/gazzodown@20.0.0-rc.5
+  - @yas chat/ui-contexts@20.0.0-rc.5
+  - @yas chat/ui-avatar@16.0.0-rc.5
+  - @yas chat/ui-video-conf@20.0.0-rc.5
 
   </details>
 
@@ -1640,11 +1640,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.4
-  - @rocket.chat/gazzodown@20.0.0-rc.4
-  - @rocket.chat/ui-contexts@20.0.0-rc.4
-  - @rocket.chat/ui-avatar@16.0.0-rc.4
-  - @rocket.chat/ui-video-conf@20.0.0-rc.4
+  - @yas chat/core-typings@7.8.0-rc.4
+  - @yas chat/gazzodown@20.0.0-rc.4
+  - @yas chat/ui-contexts@20.0.0-rc.4
+  - @yas chat/ui-avatar@16.0.0-rc.4
+  - @yas chat/ui-video-conf@20.0.0-rc.4
 
   </details>
 
@@ -1653,11 +1653,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@20.0.0-rc.3
-  - @rocket.chat/gazzodown@20.0.0-rc.3
-  - @rocket.chat/ui-avatar@16.0.0-rc.3
-  - @rocket.chat/ui-video-conf@20.0.0-rc.3
-  - @rocket.chat/core-typings@7.8.0-rc.3
+  - @yas chat/ui-contexts@20.0.0-rc.3
+  - @yas chat/gazzodown@20.0.0-rc.3
+  - @yas chat/ui-avatar@16.0.0-rc.3
+  - @yas chat/ui-video-conf@20.0.0-rc.3
+  - @yas chat/core-typings@7.8.0-rc.3
 
   </details>
 
@@ -1666,11 +1666,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.8.0-rc.2
-  - @rocket.chat/gazzodown@20.0.0-rc.2
-  - @rocket.chat/ui-contexts@20.0.0-rc.2
-  - @rocket.chat/ui-avatar@16.0.0-rc.2
-  - @rocket.chat/ui-video-conf@20.0.0-rc.2
+  - @yas chat/core-typings@7.8.0-rc.2
+  - @yas chat/gazzodown@20.0.0-rc.2
+  - @yas chat/ui-contexts@20.0.0-rc.2
+  - @yas chat/ui-avatar@16.0.0-rc.2
+  - @yas chat/ui-video-conf@20.0.0-rc.2
 
   </details>
 
@@ -1679,11 +1679,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.8.0-rc.1
-  - @rocket.chat/gazzodown@20.0.0-rc.1
-  - @rocket.chat/ui-contexts@20.0.0-rc.1
-  - @rocket.chat/ui-avatar@16.0.0-rc.1
-  - @rocket.chat/ui-video-conf@20.0.0-rc.1
+- @yas chat/core-typings@7.8.0-rc.1
+  - @yas chat/gazzodown@20.0.0-rc.1
+  - @yas chat/ui-contexts@20.0.0-rc.1
+  - @yas chat/ui-avatar@16.0.0-rc.1
+  - @yas chat/ui-video-conf@20.0.0-rc.1
   </details>
 
 ## 20.0.0-rc.0
@@ -1691,12 +1691,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5ac20e2a84200f8002ce454df693ada2653f3827, 3d024a900426c8bbf646e7ebedce0e17c9f7c140, 3779de0e8c5787f266bdeda5052b27c023c65f1c]:</summary>
-  - @rocket.chat/apps-engine@1.53.0-rc.0
-  - @rocket.chat/core-typings@7.8.0-rc.0
-  - @rocket.chat/ui-contexts@20.0.0-rc.0
-  - @rocket.chat/gazzodown@20.0.0-rc.0
-  - @rocket.chat/ui-avatar@16.0.0-rc.0
-  - @rocket.chat/ui-video-conf@20.0.0-rc.0
+  - @yas chat/apps-engine@1.53.0-rc.0
+  - @yas chat/core-typings@7.8.0-rc.0
+  - @yas chat/ui-contexts@20.0.0-rc.0
+  - @yas chat/gazzodown@20.0.0-rc.0
+  - @yas chat/ui-avatar@16.0.0-rc.0
+  - @yas chat/ui-video-conf@20.0.0-rc.0
 
   </details>
 
@@ -1705,12 +1705,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [46662d78192b438914b2aedb974faa2367225fa5]:</summary>
-  - @rocket.chat/apps-engine@1.52.1
-  - @rocket.chat/core-typings@7.7.4
-  - @rocket.chat/gazzodown@19.0.4
-  - @rocket.chat/ui-contexts@19.0.4
-  - @rocket.chat/ui-avatar@15.0.4
-  - @rocket.chat/ui-video-conf@19.0.4
+  - @yas chat/apps-engine@1.52.1
+  - @yas chat/core-typings@7.7.4
+  - @yas chat/gazzodown@19.0.4
+  - @yas chat/ui-contexts@19.0.4
+  - @yas chat/ui-avatar@15.0.4
+  - @yas chat/ui-video-conf@19.0.4
 
   </details>
 
@@ -1719,11 +1719,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-- @rocket.chat/core-typings@7.7.3
-  - @rocket.chat/gazzodown@19.0.3
-  - @rocket.chat/ui-contexts@19.0.3
-  - @rocket.chat/ui-avatar@15.0.3
-  - @rocket.chat/ui-video-conf@19.0.3
+- @yas chat/core-typings@7.7.3
+  - @yas chat/gazzodown@19.0.3
+  - @yas chat/ui-contexts@19.0.3
+  - @yas chat/ui-avatar@15.0.3
+  - @yas chat/ui-video-conf@19.0.3
   </details>
 
 ## 19.0.2
@@ -1731,11 +1731,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@19.0.2
-  - @rocket.chat/gazzodown@19.0.2
-  - @rocket.chat/ui-avatar@15.0.2
-  - @rocket.chat/ui-video-conf@19.0.2
-  - @rocket.chat/core-typings@7.7.2
+  - @yas chat/ui-contexts@19.0.2
+  - @yas chat/gazzodown@19.0.2
+  - @yas chat/ui-avatar@15.0.2
+  - @yas chat/ui-video-conf@19.0.2
+  - @yas chat/core-typings@7.7.2
 
   </details>
 
@@ -1744,11 +1744,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@19.0.1
-  - @rocket.chat/gazzodown@19.0.1
-  - @rocket.chat/ui-avatar@15.0.1
-  - @rocket.chat/ui-video-conf@19.0.1
-  - @rocket.chat/core-typings@7.7.1
+  - @yas chat/ui-contexts@19.0.1
+  - @yas chat/gazzodown@19.0.1
+  - @yas chat/ui-avatar@15.0.1
+  - @yas chat/ui-video-conf@19.0.1
+  - @yas chat/core-typings@7.7.1
 
   </details>
 
@@ -1757,12 +1757,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7f9748374a3b04f7880003227cde7058e5ea9a68, 7f9748374a3b04f7880003227cde7058e5ea9a68, 8d907087746dd75bd640c6d51ae0bbb7f3dc43c0, 821cd886891370443117d7caa05c43fc7c3dd0c7]:</summary>
-  - @rocket.chat/apps-engine@1.52.0
-  - @rocket.chat/gazzodown@19.0.0
-  - @rocket.chat/ui-contexts@19.0.0
-  - @rocket.chat/core-typings@7.7.0
-  - @rocket.chat/ui-avatar@15.0.0
-  - @rocket.chat/ui-video-conf@19.0.0
+  - @yas chat/apps-engine@1.52.0
+  - @yas chat/gazzodown@19.0.0
+  - @yas chat/ui-contexts@19.0.0
+  - @yas chat/core-typings@7.7.0
+  - @yas chat/ui-avatar@15.0.0
+  - @yas chat/ui-video-conf@19.0.0
 
   </details>
 
@@ -1771,11 +1771,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.6
-  - @rocket.chat/gazzodown@19.0.0-rc.6
-  - @rocket.chat/ui-contexts@19.0.0-rc.6
-  - @rocket.chat/ui-avatar@15.0.0-rc.6
-  - @rocket.chat/ui-video-conf@19.0.0-rc.6
+  - @yas chat/core-typings@7.7.0-rc.6
+  - @yas chat/gazzodown@19.0.0-rc.6
+  - @yas chat/ui-contexts@19.0.0-rc.6
+  - @yas chat/ui-avatar@15.0.0-rc.6
+  - @yas chat/ui-video-conf@19.0.0-rc.6
 
   </details>
 
@@ -1784,11 +1784,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.5
-  - @rocket.chat/gazzodown@19.0.0-rc.5
-  - @rocket.chat/ui-contexts@19.0.0-rc.5
-  - @rocket.chat/ui-avatar@15.0.0-rc.5
-  - @rocket.chat/ui-video-conf@19.0.0-rc.5
+  - @yas chat/core-typings@7.7.0-rc.5
+  - @yas chat/gazzodown@19.0.0-rc.5
+  - @yas chat/ui-contexts@19.0.0-rc.5
+  - @yas chat/ui-avatar@15.0.0-rc.5
+  - @yas chat/ui-video-conf@19.0.0-rc.5
 
   </details>
 
@@ -1797,11 +1797,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.1-rc.4
-  - @rocket.chat/gazzodown@19.0.0-rc.4
-  - @rocket.chat/ui-contexts@19.0.0-rc.4
-  - @rocket.chat/ui-avatar@15.0.0-rc.4
-  - @rocket.chat/ui-video-conf@19.0.0-rc.4
+  - @yas chat/core-typings@7.7.1-rc.4
+  - @yas chat/gazzodown@19.0.0-rc.4
+  - @yas chat/ui-contexts@19.0.0-rc.4
+  - @yas chat/ui-avatar@15.0.0-rc.4
+  - @yas chat/ui-video-conf@19.0.0-rc.4
 
   </details>
 
@@ -1810,11 +1810,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.7.0-rc.3
-  - @rocket.chat/gazzodown@19.0.0-rc.3
-  - @rocket.chat/ui-contexts@19.0.0-rc.3
-  - @rocket.chat/ui-avatar@15.0.0-rc.3
-  - @rocket.chat/ui-video-conf@19.0.0-rc.3
+  - @yas chat/core-typings@7.7.0-rc.3
+  - @yas chat/gazzodown@19.0.0-rc.3
+  - @yas chat/ui-contexts@19.0.0-rc.3
+  - @yas chat/ui-avatar@15.0.0-rc.3
+  - @yas chat/ui-video-conf@19.0.0-rc.3
   </details>
 
 ## 18.0.2
@@ -1822,11 +1822,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.2
-  - @rocket.chat/gazzodown@18.0.2
-  - @rocket.chat/ui-contexts@18.0.2
-  - @rocket.chat/ui-avatar@14.0.2
-  - @rocket.chat/ui-video-conf@18.0.2
+  - @yas chat/core-typings@7.6.2
+  - @yas chat/gazzodown@18.0.2
+  - @yas chat/ui-contexts@18.0.2
+  - @yas chat/ui-avatar@14.0.2
+  - @yas chat/ui-video-conf@18.0.2
   </details>
 
 ## 18.0.1
@@ -1834,12 +1834,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [587c3cafbd631b4275fd05497d3e463713583cc0]:</summary>
-  - @rocket.chat/apps-engine@1.51.1
-  - @rocket.chat/core-typings@7.6.1
-  - @rocket.chat/gazzodown@18.0.1
-  - @rocket.chat/ui-contexts@18.0.1
-  - @rocket.chat/ui-avatar@14.0.1
-  - @rocket.chat/ui-video-conf@18.0.1
+  - @yas chat/apps-engine@1.51.1
+  - @yas chat/core-typings@7.6.1
+  - @yas chat/gazzodown@18.0.1
+  - @yas chat/ui-contexts@18.0.1
+  - @yas chat/ui-avatar@14.0.1
+  - @yas chat/ui-video-conf@18.0.1
 
   </details>
 
@@ -1848,12 +1848,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d649a761edd71e1325a635b757ef1df2e5a778a4, bbd14f84214b4785f2b58cfeb8e9117bdfbf18e8, 1eeb139158fcd621a2b8d3a7de5bb512e659261d, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4, 4690c55d8e379d0bd5dfa444f3e0a4175e88d8de]:</summary>
-  - @rocket.chat/core-typings@7.6.0
-  - @rocket.chat/apps-engine@1.51.0
-  - @rocket.chat/ui-contexts@18.0.0
-  - @rocket.chat/gazzodown@18.0.0
-  - @rocket.chat/ui-avatar@14.0.0
-  - @rocket.chat/ui-video-conf@18.0.0
+  - @yas chat/core-typings@7.6.0
+  - @yas chat/apps-engine@1.51.0
+  - @yas chat/ui-contexts@18.0.0
+  - @yas chat/gazzodown@18.0.0
+  - @yas chat/ui-avatar@14.0.0
+  - @yas chat/ui-video-conf@18.0.0
 
   </details>
 
@@ -1862,11 +1862,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.8
-  - @rocket.chat/gazzodown@18.0.0-rc.8
-  - @rocket.chat/ui-contexts@18.0.0-rc.8
-  - @rocket.chat/ui-avatar@14.0.0-rc.8
-  - @rocket.chat/ui-video-conf@18.0.0-rc.8
+  - @yas chat/core-typings@7.6.0-rc.8
+  - @yas chat/gazzodown@18.0.0-rc.8
+  - @yas chat/ui-contexts@18.0.0-rc.8
+  - @yas chat/ui-avatar@14.0.0-rc.8
+  - @yas chat/ui-video-conf@18.0.0-rc.8
 
   </details>
 
@@ -1875,11 +1875,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.7
-  - @rocket.chat/gazzodown@18.0.0-rc.7
-  - @rocket.chat/ui-contexts@18.0.0-rc.7
-  - @rocket.chat/ui-avatar@14.0.0-rc.7
-  - @rocket.chat/ui-video-conf@18.0.0-rc.7
+  - @yas chat/core-typings@7.6.0-rc.7
+  - @yas chat/gazzodown@18.0.0-rc.7
+  - @yas chat/ui-contexts@18.0.0-rc.7
+  - @yas chat/ui-avatar@14.0.0-rc.7
+  - @yas chat/ui-video-conf@18.0.0-rc.7
 
   </details>
 
@@ -1888,11 +1888,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.6
-  - @rocket.chat/gazzodown@18.0.0-rc.6
-  - @rocket.chat/ui-contexts@18.0.0-rc.6
-  - @rocket.chat/ui-avatar@14.0.0-rc.6
-  - @rocket.chat/ui-video-conf@18.0.0-rc.6
+  - @yas chat/core-typings@7.6.0-rc.6
+  - @yas chat/gazzodown@18.0.0-rc.6
+  - @yas chat/ui-contexts@18.0.0-rc.6
+  - @yas chat/ui-avatar@14.0.0-rc.6
+  - @yas chat/ui-video-conf@18.0.0-rc.6
 
   </details>
 
@@ -1901,11 +1901,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.5
-  - @rocket.chat/gazzodown@18.0.0-rc.5
-  - @rocket.chat/ui-contexts@18.0.0-rc.5
-  - @rocket.chat/ui-avatar@14.0.0-rc.5
-  - @rocket.chat/ui-video-conf@18.0.0-rc.5
+  - @yas chat/core-typings@7.6.0-rc.5
+  - @yas chat/gazzodown@18.0.0-rc.5
+  - @yas chat/ui-contexts@18.0.0-rc.5
+  - @yas chat/ui-avatar@14.0.0-rc.5
+  - @yas chat/ui-video-conf@18.0.0-rc.5
 
   </details>
 
@@ -1914,11 +1914,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.4
-  - @rocket.chat/gazzodown@18.0.0-rc.4
-  - @rocket.chat/ui-contexts@18.0.0-rc.4
-  - @rocket.chat/ui-avatar@14.0.0-rc.4
-  - @rocket.chat/ui-video-conf@18.0.0-rc.4
+  - @yas chat/core-typings@7.6.0-rc.4
+  - @yas chat/gazzodown@18.0.0-rc.4
+  - @yas chat/ui-contexts@18.0.0-rc.4
+  - @yas chat/ui-avatar@14.0.0-rc.4
+  - @yas chat/ui-video-conf@18.0.0-rc.4
 
   </details>
 
@@ -1927,11 +1927,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.3
-  - @rocket.chat/gazzodown@18.0.0-rc.3
-  - @rocket.chat/ui-contexts@18.0.0-rc.3
-  - @rocket.chat/ui-avatar@14.0.0-rc.3
-  - @rocket.chat/ui-video-conf@18.0.0-rc.3
+  - @yas chat/core-typings@7.6.0-rc.3
+  - @yas chat/gazzodown@18.0.0-rc.3
+  - @yas chat/ui-contexts@18.0.0-rc.3
+  - @yas chat/ui-avatar@14.0.0-rc.3
+  - @yas chat/ui-video-conf@18.0.0-rc.3
 
   </details>
 
@@ -1940,11 +1940,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.2
-  - @rocket.chat/gazzodown@18.0.0-rc.2
-  - @rocket.chat/ui-contexts@18.0.0-rc.2
-  - @rocket.chat/ui-avatar@14.0.0-rc.2
-  - @rocket.chat/ui-video-conf@18.0.0-rc.2
+  - @yas chat/core-typings@7.6.0-rc.2
+  - @yas chat/gazzodown@18.0.0-rc.2
+  - @yas chat/ui-contexts@18.0.0-rc.2
+  - @yas chat/ui-avatar@14.0.0-rc.2
+  - @yas chat/ui-video-conf@18.0.0-rc.2
 
   </details>
 
@@ -1953,11 +1953,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.1
-  - @rocket.chat/gazzodown@18.0.0-rc.1
-  - @rocket.chat/ui-contexts@18.0.0-rc.1
-  - @rocket.chat/ui-avatar@14.0.0-rc.1
-  - @rocket.chat/ui-video-conf@18.0.0-rc.1
+  - @yas chat/core-typings@7.6.0-rc.1
+  - @yas chat/gazzodown@18.0.0-rc.1
+  - @yas chat/ui-contexts@18.0.0-rc.1
+  - @yas chat/ui-avatar@14.0.0-rc.1
+  - @yas chat/ui-video-conf@18.0.0-rc.1
 
   </details>
 
@@ -1966,12 +1966,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [aec9eaa941fe9dad81f38d8d18d1b58edd700eb1, 2c190740d0ff166a4cefe8e833b0b2682a41fab1, d649a761edd71e1325a635b757ef1df2e5a778a4, bbd14f84214b4785f2b58cfeb8e9117bdfbf18e8, 1eeb139158fcd621a2b8d3a7de5bb512e659261d, d8eb824d242cbbeafb11b1c4a806860e4541ba79, bbd0b0d9ed181a156430e2a446d3b56092e3f645, 47ae69912cd90743e7bf836fdee4be481a01bbba, 4b28126ac94cf1d3312b30ad9863ca02673f49d4, 4690c55d8e379d0bd5dfa444f3e0a4175e88d8de]:</summary>
-  - @rocket.chat/core-typings@7.6.0-rc.0
-  - @rocket.chat/apps-engine@1.51.0-rc.0
-  - @rocket.chat/ui-contexts@18.0.0-rc.0
-  - @rocket.chat/gazzodown@18.0.0-rc.0
-  - @rocket.chat/ui-avatar@14.0.0-rc.0
-  - @rocket.chat/ui-video-conf@18.0.0-rc.0
+  - @yas chat/core-typings@7.6.0-rc.0
+  - @yas chat/apps-engine@1.51.0-rc.0
+  - @yas chat/ui-contexts@18.0.0-rc.0
+  - @yas chat/gazzodown@18.0.0-rc.0
+  - @yas chat/ui-avatar@14.0.0-rc.0
+  - @yas chat/ui-video-conf@18.0.0-rc.0
 
   </details>
 
@@ -1980,11 +1980,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.1
-  - @rocket.chat/gazzodown@17.0.1
-  - @rocket.chat/ui-contexts@17.0.1
-  - @rocket.chat/ui-avatar@13.0.1
-  - @rocket.chat/ui-video-conf@17.0.1
+  - @yas chat/core-typings@7.5.1
+  - @yas chat/gazzodown@17.0.1
+  - @yas chat/ui-contexts@17.0.1
+  - @yas chat/ui-avatar@13.0.1
+  - @yas chat/ui-video-conf@17.0.1
 
   </details>
 
@@ -1995,12 +1995,12 @@
 - ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 4e9d3155db516718fdd28be30a53d0051c9144d3, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 38f1c508c9f95cd34744066019927add53470446, c618263e8e5fa9459f48d262e5dd9e20c59c1410, c44331e0d9b0e4e04d1ec64bea74b439a1125aa0, 0d96d633a653f52d07bc9ebeead16dcb90c75e2c, d7ea246e0f7837cd3cc93f99316683b75a2faa43]:</summary>
-  - @rocket.chat/gazzodown@17.0.0
-  - @rocket.chat/ui-avatar@13.0.0
-  - @rocket.chat/ui-contexts@17.0.0
-  - @rocket.chat/ui-video-conf@17.0.0
-  - @rocket.chat/apps-engine@1.50.0
-  - @rocket.chat/core-typings@7.5.0
+  - @yas chat/gazzodown@17.0.0
+  - @yas chat/ui-avatar@13.0.0
+  - @yas chat/ui-contexts@17.0.0
+  - @yas chat/ui-video-conf@17.0.0
+  - @yas chat/apps-engine@1.50.0
+  - @yas chat/core-typings@7.5.0
 
   </details>
 
@@ -2009,11 +2009,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.5
-  - @rocket.chat/gazzodown@17.0.0-rc.5
-  - @rocket.chat/ui-contexts@17.0.0-rc.5
-  - @rocket.chat/ui-avatar@13.0.0-rc.5
-  - @rocket.chat/ui-video-conf@17.0.0-rc.5
+  - @yas chat/core-typings@7.5.0-rc.5
+  - @yas chat/gazzodown@17.0.0-rc.5
+  - @yas chat/ui-contexts@17.0.0-rc.5
+  - @yas chat/ui-avatar@13.0.0-rc.5
+  - @yas chat/ui-video-conf@17.0.0-rc.5
 
   </details>
 
@@ -2022,12 +2022,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [c618263e8e5fa9459f48d262e5dd9e20c59c1410, d7ea246e0f7837cd3cc93f99316683b75a2faa43]:</summary>
-  - @rocket.chat/apps-engine@1.50.0-rc.1
-  - @rocket.chat/core-typings@7.5.0-rc.4
-  - @rocket.chat/gazzodown@17.0.0-rc.4
-  - @rocket.chat/ui-contexts@17.0.0-rc.4
-  - @rocket.chat/ui-avatar@13.0.0-rc.4
-  - @rocket.chat/ui-video-conf@17.0.0-rc.4
+  - @yas chat/apps-engine@1.50.0-rc.1
+  - @yas chat/core-typings@7.5.0-rc.4
+  - @yas chat/gazzodown@17.0.0-rc.4
+  - @yas chat/ui-contexts@17.0.0-rc.4
+  - @yas chat/ui-avatar@13.0.0-rc.4
+  - @yas chat/ui-video-conf@17.0.0-rc.4
 
   </details>
 
@@ -2036,11 +2036,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.3
-  - @rocket.chat/gazzodown@17.0.0-rc.3
-  - @rocket.chat/ui-contexts@17.0.0-rc.3
-  - @rocket.chat/ui-avatar@13.0.0-rc.3
-  - @rocket.chat/ui-video-conf@17.0.0-rc.3
+  - @yas chat/core-typings@7.5.0-rc.3
+  - @yas chat/gazzodown@17.0.0-rc.3
+  - @yas chat/ui-contexts@17.0.0-rc.3
+  - @yas chat/ui-avatar@13.0.0-rc.3
+  - @yas chat/ui-video-conf@17.0.0-rc.3
 
   </details>
 
@@ -2049,11 +2049,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@17.0.0-rc.2
-  - @rocket.chat/gazzodown@17.0.0-rc.2
-  - @rocket.chat/ui-avatar@13.0.0-rc.2
-  - @rocket.chat/ui-video-conf@17.0.0-rc.2
-  - @rocket.chat/core-typings@7.5.0-rc.2
+  - @yas chat/ui-contexts@17.0.0-rc.2
+  - @yas chat/gazzodown@17.0.0-rc.2
+  - @yas chat/ui-avatar@13.0.0-rc.2
+  - @yas chat/ui-video-conf@17.0.0-rc.2
+  - @yas chat/core-typings@7.5.0-rc.2
 
   </details>
 
@@ -2062,11 +2062,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.5.0-rc.1
-  - @rocket.chat/gazzodown@17.0.0-rc.1
-  - @rocket.chat/ui-contexts@17.0.0-rc.1
-  - @rocket.chat/ui-avatar@13.0.0-rc.1
-  - @rocket.chat/ui-video-conf@17.0.0-rc.1
+  - @yas chat/core-typings@7.5.0-rc.1
+  - @yas chat/gazzodown@17.0.0-rc.1
+  - @yas chat/ui-contexts@17.0.0-rc.1
+  - @yas chat/ui-avatar@13.0.0-rc.1
+  - @yas chat/ui-video-conf@17.0.0-rc.1
 
   </details>
 
@@ -2077,12 +2077,12 @@
 - ([#35286](https://github.com/YasChat/YasChat/pull/35286)) Bumps fuselage and related packages versions to use the most recent releases of each package, especially the fix for the missing track of the fuselage slider component
 
 - <details><summary>Updated dependencies [c7b21f1c1e479533a208771f3e15f064f2c7e3ff, 4e9d3155db516718fdd28be30a53d0051c9144d3, 25592391b04a5a9c5e4be57a3878bca7c7db66b2, c904862b1496cab943e97d28b36d3a24deac21c1, 38f1c508c9f95cd34744066019927add53470446, c44331e0d9b0e4e04d1ec64bea74b439a1125aa0, 0d96d633a653f52d07bc9ebeead16dcb90c75e2c]:</summary>
-  - @rocket.chat/gazzodown@17.0.0-rc.0
-  - @rocket.chat/ui-avatar@13.0.0-rc.0
-  - @rocket.chat/ui-contexts@17.0.0-rc.0
-  - @rocket.chat/ui-video-conf@17.0.0-rc.0
-  - @rocket.chat/apps-engine@1.50.0-rc.0
-  - @rocket.chat/core-typings@7.5.0-rc.0
+  - @yas chat/gazzodown@17.0.0-rc.0
+  - @yas chat/ui-avatar@13.0.0-rc.0
+  - @yas chat/ui-contexts@17.0.0-rc.0
+  - @yas chat/ui-video-conf@17.0.0-rc.0
+  - @yas chat/apps-engine@1.50.0-rc.0
+  - @yas chat/core-typings@7.5.0-rc.0
 
   </details>
 
@@ -2091,11 +2091,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.1
-  - @rocket.chat/gazzodown@16.0.1
-  - @rocket.chat/ui-contexts@16.0.1
-  - @rocket.chat/ui-avatar@12.0.1
-  - @rocket.chat/ui-video-conf@16.0.1
+  - @yas chat/core-typings@7.4.1
+  - @yas chat/gazzodown@16.0.1
+  - @yas chat/ui-contexts@16.0.1
+  - @yas chat/ui-avatar@12.0.1
+  - @yas chat/ui-video-conf@16.0.1
 
   </details>
 
@@ -2108,12 +2108,12 @@
 - ([#33141](https://github.com/YasChat/YasChat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, be5031a21bdcda31270d53d319f7d183e77d84d7, 36e90a2eb2f9698f7ba42f6e8429a240114426bf]:</summary>
-  - @rocket.chat/ui-video-conf@16.0.0
-  - @rocket.chat/core-typings@7.4.0
-  - @rocket.chat/apps-engine@1.49.0
-  - @rocket.chat/ui-contexts@16.0.0
-  - @rocket.chat/gazzodown@16.0.0
-  - @rocket.chat/ui-avatar@12.0.0
+  - @yas chat/ui-video-conf@16.0.0
+  - @yas chat/core-typings@7.4.0
+  - @yas chat/apps-engine@1.49.0
+  - @yas chat/ui-contexts@16.0.0
+  - @yas chat/gazzodown@16.0.0
+  - @yas chat/ui-avatar@12.0.0
 
   </details>
 
@@ -2122,11 +2122,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.5
-  - @rocket.chat/gazzodown@16.0.0-rc.5
-  - @rocket.chat/ui-contexts@16.0.0-rc.5
-  - @rocket.chat/ui-avatar@12.0.0-rc.5
-  - @rocket.chat/ui-video-conf@16.0.0-rc.5
+  - @yas chat/core-typings@7.4.0-rc.5
+  - @yas chat/gazzodown@16.0.0-rc.5
+  - @yas chat/ui-contexts@16.0.0-rc.5
+  - @yas chat/ui-avatar@12.0.0-rc.5
+  - @yas chat/ui-video-conf@16.0.0-rc.5
 
   </details>
 
@@ -2135,11 +2135,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.4
-  - @rocket.chat/gazzodown@16.0.0-rc.4
-  - @rocket.chat/ui-contexts@16.0.0-rc.4
-  - @rocket.chat/ui-avatar@12.0.0-rc.4
-  - @rocket.chat/ui-video-conf@16.0.0-rc.4
+  - @yas chat/core-typings@7.4.0-rc.4
+  - @yas chat/gazzodown@16.0.0-rc.4
+  - @yas chat/ui-contexts@16.0.0-rc.4
+  - @yas chat/ui-avatar@12.0.0-rc.4
+  - @yas chat/ui-video-conf@16.0.0-rc.4
 
   </details>
 
@@ -2148,11 +2148,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.3
-  - @rocket.chat/gazzodown@16.0.0-rc.3
-  - @rocket.chat/ui-contexts@16.0.0-rc.3
-  - @rocket.chat/ui-avatar@12.0.0-rc.3
-  - @rocket.chat/ui-video-conf@16.0.0-rc.3
+  - @yas chat/core-typings@7.4.0-rc.3
+  - @yas chat/gazzodown@16.0.0-rc.3
+  - @yas chat/ui-contexts@16.0.0-rc.3
+  - @yas chat/ui-avatar@12.0.0-rc.3
+  - @yas chat/ui-video-conf@16.0.0-rc.3
   </details>
 
 ## 16.0.0-rc.2
@@ -2160,11 +2160,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.2
-  - @rocket.chat/gazzodown@16.0.0-rc.2
-  - @rocket.chat/ui-contexts@16.0.0-rc.2
-  - @rocket.chat/ui-avatar@12.0.0-rc.2
-  - @rocket.chat/ui-video-conf@16.0.0-rc.2
+  - @yas chat/core-typings@7.4.0-rc.2
+  - @yas chat/gazzodown@16.0.0-rc.2
+  - @yas chat/ui-contexts@16.0.0-rc.2
+  - @yas chat/ui-avatar@12.0.0-rc.2
+  - @yas chat/ui-video-conf@16.0.0-rc.2
 
   </details>
 
@@ -2173,11 +2173,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.4.0-rc.1
-  - @rocket.chat/gazzodown@16.0.0-rc.1
-  - @rocket.chat/ui-contexts@16.0.0-rc.1
-  - @rocket.chat/ui-avatar@12.0.0-rc.1
-  - @rocket.chat/ui-video-conf@16.0.0-rc.1
+  - @yas chat/core-typings@7.4.0-rc.1
+  - @yas chat/gazzodown@16.0.0-rc.1
+  - @yas chat/ui-contexts@16.0.0-rc.1
+  - @yas chat/ui-avatar@12.0.0-rc.1
+  - @yas chat/ui-video-conf@16.0.0-rc.1
 
   </details>
 
@@ -2190,12 +2190,12 @@
 - ([#33141](https://github.com/YasChat/YasChat/pull/33141)) Fixes an issue where video conf message block wasn't considering display avatars preference
 
 - <details><summary>Updated dependencies [89964144e042c8d9282b51efd89e1e684077fdd7, 2921a6aa6f7c971a29c8209574cfb66432bc9f47, 083fc49cf718e460dd6e8fcd72b98b42aeb6fc86, f85da08765a9d3f8c5aabd9291fd08be6dfdeb85, 271894fb3942d5d0ce3d669325d07fbbbc4bf112, 697a38d23590ac799f0f3c14a676fb6bea7e86ea, be5031a21bdcda31270d53d319f7d183e77d84d7, 36e90a2eb2f9698f7ba42f6e8429a240114426bf]:</summary>
-  - @rocket.chat/ui-video-conf@16.0.0-rc.0
-  - @rocket.chat/core-typings@7.4.0-rc.0
-  - @rocket.chat/apps-engine@1.49.0-rc.0
-  - @rocket.chat/ui-contexts@16.0.0-rc.0
-  - @rocket.chat/gazzodown@16.0.0-rc.0
-  - @rocket.chat/ui-avatar@12.0.0-rc.0
+  - @yas chat/ui-video-conf@16.0.0-rc.0
+  - @yas chat/core-typings@7.4.0-rc.0
+  - @yas chat/apps-engine@1.49.0-rc.0
+  - @yas chat/ui-contexts@16.0.0-rc.0
+  - @yas chat/gazzodown@16.0.0-rc.0
+  - @yas chat/ui-avatar@12.0.0-rc.0
 
   </details>
 
@@ -2204,11 +2204,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.3
-  - @rocket.chat/gazzodown@15.0.3
-  - @rocket.chat/ui-contexts@15.0.3
-  - @rocket.chat/ui-avatar@11.0.3
-  - @rocket.chat/ui-video-conf@15.0.3
+  - @yas chat/core-typings@7.3.3
+  - @yas chat/gazzodown@15.0.3
+  - @yas chat/ui-contexts@15.0.3
+  - @yas chat/ui-avatar@11.0.3
+  - @yas chat/ui-video-conf@15.0.3
 
   </details>
 
@@ -2217,11 +2217,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.2
-  - @rocket.chat/gazzodown@15.0.2
-  - @rocket.chat/ui-contexts@15.0.2
-  - @rocket.chat/ui-avatar@11.0.2
-  - @rocket.chat/ui-video-conf@15.0.2
+  - @yas chat/core-typings@7.3.2
+  - @yas chat/gazzodown@15.0.2
+  - @yas chat/ui-contexts@15.0.2
+  - @yas chat/ui-avatar@11.0.2
+  - @yas chat/ui-video-conf@15.0.2
 
   </details>
 
@@ -2230,11 +2230,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.1
-  - @rocket.chat/gazzodown@15.0.1
-  - @rocket.chat/ui-contexts@15.0.1
-  - @rocket.chat/ui-avatar@11.0.1
-  - @rocket.chat/ui-video-conf@15.0.1
+  - @yas chat/core-typings@7.3.1
+  - @yas chat/gazzodown@15.0.1
+  - @yas chat/ui-contexts@15.0.1
+  - @yas chat/ui-avatar@11.0.1
+  - @yas chat/ui-video-conf@15.0.1
 
   </details>
 
@@ -2245,12 +2245,12 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944, c0fa1c884cccab47f4e68dd81457c424cf176f11]:</summary>
-  - @rocket.chat/apps-engine@1.48.2
-  - @rocket.chat/ui-contexts@15.0.0
-  - @rocket.chat/core-typings@7.3.0
-  - @rocket.chat/gazzodown@15.0.0
-  - @rocket.chat/ui-avatar@11.0.0
-  - @rocket.chat/ui-video-conf@15.0.0
+  - @yas chat/apps-engine@1.48.2
+  - @yas chat/ui-contexts@15.0.0
+  - @yas chat/core-typings@7.3.0
+  - @yas chat/gazzodown@15.0.0
+  - @yas chat/ui-avatar@11.0.0
+  - @yas chat/ui-video-conf@15.0.0
 
   </details>
 
@@ -2259,11 +2259,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.5
-  - @rocket.chat/gazzodown@15.0.0-rc.5
-  - @rocket.chat/ui-contexts@15.0.0-rc.5
-  - @rocket.chat/ui-avatar@11.0.0-rc.5
-  - @rocket.chat/ui-video-conf@15.0.0-rc.5
+  - @yas chat/core-typings@7.3.0-rc.5
+  - @yas chat/gazzodown@15.0.0-rc.5
+  - @yas chat/ui-contexts@15.0.0-rc.5
+  - @yas chat/ui-avatar@11.0.0-rc.5
+  - @yas chat/ui-video-conf@15.0.0-rc.5
 
   </details>
 
@@ -2272,11 +2272,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.4
-  - @rocket.chat/gazzodown@15.0.0-rc.4
-  - @rocket.chat/ui-contexts@15.0.0-rc.4
-  - @rocket.chat/ui-avatar@11.0.0-rc.4
-  - @rocket.chat/ui-video-conf@15.0.0-rc.4
+  - @yas chat/core-typings@7.3.0-rc.4
+  - @yas chat/gazzodown@15.0.0-rc.4
+  - @yas chat/ui-contexts@15.0.0-rc.4
+  - @yas chat/ui-avatar@11.0.0-rc.4
+  - @yas chat/ui-video-conf@15.0.0-rc.4
 
   </details>
 
@@ -2285,11 +2285,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.3
-  - @rocket.chat/gazzodown@15.0.0-rc.3
-  - @rocket.chat/ui-contexts@15.0.0-rc.3
-  - @rocket.chat/ui-avatar@11.0.0-rc.3
-  - @rocket.chat/ui-video-conf@15.0.0-rc.3
+  - @yas chat/core-typings@7.3.0-rc.3
+  - @yas chat/gazzodown@15.0.0-rc.3
+  - @yas chat/ui-contexts@15.0.0-rc.3
+  - @yas chat/ui-avatar@11.0.0-rc.3
+  - @yas chat/ui-video-conf@15.0.0-rc.3
 
   </details>
 
@@ -2298,11 +2298,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.2
-  - @rocket.chat/gazzodown@15.0.0-rc.2
-  - @rocket.chat/ui-contexts@15.0.0-rc.2
-  - @rocket.chat/ui-avatar@11.0.0-rc.2
-  - @rocket.chat/ui-video-conf@15.0.0-rc.2
+  - @yas chat/core-typings@7.3.0-rc.2
+  - @yas chat/gazzodown@15.0.0-rc.2
+  - @yas chat/ui-contexts@15.0.0-rc.2
+  - @yas chat/ui-avatar@11.0.0-rc.2
+  - @yas chat/ui-video-conf@15.0.0-rc.2
 
   </details>
 
@@ -2311,11 +2311,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.3.0-rc.1
-  - @rocket.chat/gazzodown@15.0.0-rc.1
-  - @rocket.chat/ui-contexts@15.0.0-rc.1
-  - @rocket.chat/ui-avatar@11.0.0-rc.1
-  - @rocket.chat/ui-video-conf@15.0.0-rc.1
+  - @yas chat/core-typings@7.3.0-rc.1
+  - @yas chat/gazzodown@15.0.0-rc.1
+  - @yas chat/ui-contexts@15.0.0-rc.1
+  - @yas chat/ui-avatar@11.0.0-rc.1
+  - @yas chat/ui-video-conf@15.0.0-rc.1
 
   </details>
 
@@ -2326,12 +2326,12 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [5506c406f4a22145ece065ad2b797225e94423ca, 8942b0032af976738a7c602fa389803dda30c0dc, bfa92f4dba1a16973d7da5a9c0f5d0df998bf944]:</summary>
-  - @rocket.chat/apps-engine@1.48.2-rc.0
-  - @rocket.chat/ui-contexts@15.0.0-rc.0
-  - @rocket.chat/core-typings@7.3.0-rc.0
-  - @rocket.chat/gazzodown@15.0.0-rc.0
-  - @rocket.chat/ui-avatar@11.0.0-rc.0
-  - @rocket.chat/ui-video-conf@15.0.0-rc.0
+  - @yas chat/apps-engine@1.48.2-rc.0
+  - @yas chat/ui-contexts@15.0.0-rc.0
+  - @yas chat/core-typings@7.3.0-rc.0
+  - @yas chat/gazzodown@15.0.0-rc.0
+  - @yas chat/ui-avatar@11.0.0-rc.0
+  - @yas chat/ui-video-conf@15.0.0-rc.0
 
   </details>
 
@@ -2340,11 +2340,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.1
-  - @rocket.chat/gazzodown@14.0.1
-  - @rocket.chat/ui-contexts@14.0.1
-  - @rocket.chat/ui-avatar@10.0.1
-  - @rocket.chat/ui-video-conf@14.0.1
+  - @yas chat/core-typings@7.2.1
+  - @yas chat/gazzodown@14.0.1
+  - @yas chat/ui-contexts@14.0.1
+  - @yas chat/ui-avatar@10.0.1
+  - @yas chat/ui-video-conf@14.0.1
 
   </details>
 
@@ -2361,12 +2361,12 @@
 - ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, eb794b7fd6bf3ff5a37a38bccaba247ed36db744, c43220dcd8c1df86a6143d6553964ad2173903b3, f62326080d5e6ba36351cb0b6965a09f23856ac8, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8, f62326080d5e6ba36351cb0b6965a09f23856ac8]:</summary>
-  - @rocket.chat/ui-video-conf@14.0.0
-  - @rocket.chat/core-typings@7.2.0
-  - @rocket.chat/apps-engine@1.48.1
-  - @rocket.chat/ui-contexts@14.0.0
-  - @rocket.chat/gazzodown@14.0.0
-  - @rocket.chat/ui-avatar@10.0.0
+  - @yas chat/ui-video-conf@14.0.0
+  - @yas chat/core-typings@7.2.0
+  - @yas chat/apps-engine@1.48.1
+  - @yas chat/ui-contexts@14.0.0
+  - @yas chat/gazzodown@14.0.0
+  - @yas chat/ui-avatar@10.0.0
 
   </details>
 
@@ -2375,11 +2375,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.3
-  - @rocket.chat/gazzodown@14.0.0-rc.3
-  - @rocket.chat/ui-contexts@14.0.0-rc.3
-  - @rocket.chat/ui-avatar@10.0.0-rc.3
-  - @rocket.chat/ui-video-conf@14.0.0-rc.3
+  - @yas chat/core-typings@7.2.0-rc.3
+  - @yas chat/gazzodown@14.0.0-rc.3
+  - @yas chat/ui-contexts@14.0.0-rc.3
+  - @yas chat/ui-avatar@10.0.0-rc.3
+  - @yas chat/ui-video-conf@14.0.0-rc.3
 
   </details>
 
@@ -2390,12 +2390,12 @@
 - ([#34858](https://github.com/YasChat/YasChat/pull/34858)) Fixes an issue that prevented the apps-engine from reestablishing communications with subprocesses in some cases
 
 - <details><summary>Updated dependencies [c43220dcd8c1df86a6143d6553964ad2173903b3]:</summary>
-  - @rocket.chat/apps-engine@1.48.1-rc.1
-  - @rocket.chat/ui-contexts@14.0.0-rc.2
-  - @rocket.chat/core-typings@7.2.0-rc.2
-  - @rocket.chat/gazzodown@14.0.0-rc.2
-  - @rocket.chat/ui-avatar@10.0.0-rc.2
-  - @rocket.chat/ui-video-conf@14.0.0-rc.2
+  - @yas chat/apps-engine@1.48.1-rc.1
+  - @yas chat/ui-contexts@14.0.0-rc.2
+  - @yas chat/core-typings@7.2.0-rc.2
+  - @yas chat/gazzodown@14.0.0-rc.2
+  - @yas chat/ui-avatar@10.0.0-rc.2
+  - @yas chat/ui-video-conf@14.0.0-rc.2
 
   </details>
 
@@ -2404,11 +2404,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.2.0-rc.1
-  - @rocket.chat/gazzodown@14.0.0-rc.1
-  - @rocket.chat/ui-contexts@14.0.0-rc.1
-  - @rocket.chat/ui-avatar@10.0.0-rc.1
-  - @rocket.chat/ui-video-conf@14.0.0-rc.1
+  - @yas chat/core-typings@7.2.0-rc.1
+  - @yas chat/gazzodown@14.0.0-rc.1
+  - @yas chat/ui-contexts@14.0.0-rc.1
+  - @yas chat/ui-avatar@10.0.0-rc.1
+  - @yas chat/ui-video-conf@14.0.0-rc.1
 
   </details>
 
@@ -2423,12 +2423,12 @@
 - ([#34205](https://github.com/YasChat/YasChat/pull/34205)) Fixes wrong data being reported to total failed apps metrics and statistics
 
 - <details><summary>Updated dependencies [76f6239ff1a9f34f163c03c140c4ceba62563b4e, eb794b7fd6bf3ff5a37a38bccaba247ed36db744, f62326080d5e6ba36351cb0b6965a09f23856ac8, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 475120dc19fb8cc400fd8af21559cd6f3cc17eb8, 2e4af86f6463166ba4d0b37b153b89ab246e112a, 76f6239ff1a9f34f163c03c140c4ceba62563b4e, f62326080d5e6ba36351cb0b6965a09f23856ac8, 75a14b2e013aca7361cac56316f2b7e8c07d9dc8, f62326080d5e6ba36351cb0b6965a09f23856ac8]:</summary>
-  - @rocket.chat/ui-video-conf@14.0.0-rc.0
-  - @rocket.chat/core-typings@7.2.0-rc.0
-  - @rocket.chat/apps-engine@1.48.1-rc.0
-  - @rocket.chat/ui-contexts@14.0.0-rc.0
-  - @rocket.chat/gazzodown@14.0.0-rc.0
-  - @rocket.chat/ui-avatar@10.0.0-rc.0
+  - @yas chat/ui-video-conf@14.0.0-rc.0
+  - @yas chat/core-typings@7.2.0-rc.0
+  - @yas chat/apps-engine@1.48.1-rc.0
+  - @yas chat/ui-contexts@14.0.0-rc.0
+  - @yas chat/gazzodown@14.0.0-rc.0
+  - @yas chat/ui-avatar@10.0.0-rc.0
 
   </details>
 
@@ -2437,12 +2437,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [82767d8fd8a52ac348e8aded1d238e688d36129b, 80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 3569b0a9c48f8b94ebaef2f8b607c52fdb8e570a, b4841cb7206d855d7a1bc7604683a5b4a48b7176, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, ce7024af36fcde97b1da5b2731f6edc4a4c236b8, d398866dba725918017e3609807f9d0ab9b89b72, d398866dba725918017e3609807f9d0ab9b89b72]:</summary>
-  - @rocket.chat/apps-engine@1.48.0
-  - @rocket.chat/core-typings@7.1.0
-  - @rocket.chat/gazzodown@13.0.0
-  - @rocket.chat/ui-contexts@13.0.0
-  - @rocket.chat/ui-avatar@9.0.0
-  - @rocket.chat/ui-video-conf@13.0.0
+  - @yas chat/apps-engine@1.48.0
+  - @yas chat/core-typings@7.1.0
+  - @yas chat/gazzodown@13.0.0
+  - @yas chat/ui-contexts@13.0.0
+  - @yas chat/ui-avatar@9.0.0
+  - @yas chat/ui-video-conf@13.0.0
 
   </details>
 
@@ -2451,11 +2451,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.3
-  - @rocket.chat/gazzodown@13.0.0-rc.3
-  - @rocket.chat/ui-contexts@13.0.0-rc.3
-  - @rocket.chat/ui-avatar@9.0.0-rc.3
-  - @rocket.chat/ui-video-conf@13.0.0-rc.3
+  - @yas chat/core-typings@7.1.0-rc.3
+  - @yas chat/gazzodown@13.0.0-rc.3
+  - @yas chat/ui-contexts@13.0.0-rc.3
+  - @yas chat/ui-avatar@9.0.0-rc.3
+  - @yas chat/ui-video-conf@13.0.0-rc.3
 
   </details>
 
@@ -2464,11 +2464,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.2
-  - @rocket.chat/gazzodown@13.0.0-rc.2
-  - @rocket.chat/ui-contexts@13.0.0-rc.2
-  - @rocket.chat/ui-avatar@9.0.0-rc.2
-  - @rocket.chat/ui-video-conf@13.0.0-rc.2
+  - @yas chat/core-typings@7.1.0-rc.2
+  - @yas chat/gazzodown@13.0.0-rc.2
+  - @yas chat/ui-contexts@13.0.0-rc.2
+  - @yas chat/ui-avatar@9.0.0-rc.2
+  - @yas chat/ui-video-conf@13.0.0-rc.2
 
   </details>
 
@@ -2477,11 +2477,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.1.0-rc.1
-  - @rocket.chat/gazzodown@13.0.0-rc.1
-  - @rocket.chat/ui-contexts@13.0.0-rc.1
-  - @rocket.chat/ui-avatar@9.0.0-rc.1
-  - @rocket.chat/ui-video-conf@13.0.0-rc.1
+  - @yas chat/core-typings@7.1.0-rc.1
+  - @yas chat/gazzodown@13.0.0-rc.1
+  - @yas chat/ui-contexts@13.0.0-rc.1
+  - @yas chat/ui-avatar@9.0.0-rc.1
+  - @yas chat/ui-video-conf@13.0.0-rc.1
 
   </details>
 
@@ -2490,12 +2490,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [82767d8fd8a52ac348e8aded1d238e688d36129b, 80e36bfc3938775eb26aa5576f1b9b98896e1cc4, 3569b0a9c48f8b94ebaef2f8b607c52fdb8e570a, b4841cb7206d855d7a1bc7604683a5b4a48b7176, 32d93a0666fa1cbe857d02889e93d9bbf45bd4f0, ce7024af36fcde97b1da5b2731f6edc4a4c236b8, d398866dba725918017e3609807f9d0ab9b89b72, d398866dba725918017e3609807f9d0ab9b89b72]:</summary>
-  - @rocket.chat/apps-engine@1.48.0-rc.0
-  - @rocket.chat/core-typings@7.1.0-rc.0
-  - @rocket.chat/gazzodown@13.0.0-rc.0
-  - @rocket.chat/ui-contexts@13.0.0-rc.0
-  - @rocket.chat/ui-avatar@9.0.0-rc.0
-  - @rocket.chat/ui-video-conf@13.0.0-rc.0
+  - @yas chat/apps-engine@1.48.0-rc.0
+  - @yas chat/core-typings@7.1.0-rc.0
+  - @yas chat/gazzodown@13.0.0-rc.0
+  - @yas chat/ui-contexts@13.0.0-rc.0
+  - @yas chat/ui-avatar@9.0.0-rc.0
+  - @yas chat/ui-video-conf@13.0.0-rc.0
 
   </details>
 
@@ -2508,13 +2508,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [687f1efd5f, bcacbb1cee, 9274cf4586, b338807d76, 5f9826bed6, debd3ffa22, a5f25e73b5, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/ui-kit@0.37.0
-  - @rocket.chat/core-typings@7.0.0
-  - @rocket.chat/ui-video-conf@12.0.0
-  - @rocket.chat/gazzodown@12.0.0
-  - @rocket.chat/ui-avatar@8.0.0
-  - @rocket.chat/apps-engine@1.47.0
-  - @rocket.chat/ui-contexts@12.0.0
+  - @yas chat/ui-kit@0.37.0
+  - @yas chat/core-typings@7.0.0
+  - @yas chat/ui-video-conf@12.0.0
+  - @yas chat/gazzodown@12.0.0
+  - @yas chat/ui-avatar@8.0.0
+  - @yas chat/apps-engine@1.47.0
+  - @yas chat/ui-contexts@12.0.0
 
   </details>
 
@@ -2523,11 +2523,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.6
-  - @rocket.chat/gazzodown@12.0.0-rc.6
-  - @rocket.chat/ui-contexts@12.0.0-rc.6
-  - @rocket.chat/ui-avatar@8.0.0-rc.6
-  - @rocket.chat/ui-video-conf@12.0.0-rc.6
+  - @yas chat/core-typings@7.0.0-rc.6
+  - @yas chat/gazzodown@12.0.0-rc.6
+  - @yas chat/ui-contexts@12.0.0-rc.6
+  - @yas chat/ui-avatar@8.0.0-rc.6
+  - @yas chat/ui-video-conf@12.0.0-rc.6
 
   </details>
 
@@ -2536,11 +2536,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@12.0.0-rc.5
-  - @rocket.chat/gazzodown@12.0.0-rc.5
-  - @rocket.chat/ui-avatar@8.0.0-rc.5
-  - @rocket.chat/ui-video-conf@12.0.0-rc.5
-  - @rocket.chat/core-typings@7.0.0-rc.5
+  - @yas chat/ui-contexts@12.0.0-rc.5
+  - @yas chat/gazzodown@12.0.0-rc.5
+  - @yas chat/ui-avatar@8.0.0-rc.5
+  - @yas chat/ui-video-conf@12.0.0-rc.5
+  - @yas chat/core-typings@7.0.0-rc.5
 
   </details>
 
@@ -2549,11 +2549,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.4
-  - @rocket.chat/gazzodown@12.0.0-rc.4
-  - @rocket.chat/ui-contexts@12.0.0-rc.4
-  - @rocket.chat/ui-avatar@8.0.0-rc.4
-  - @rocket.chat/ui-video-conf@12.0.0-rc.4
+  - @yas chat/core-typings@7.0.0-rc.4
+  - @yas chat/gazzodown@12.0.0-rc.4
+  - @yas chat/ui-contexts@12.0.0-rc.4
+  - @yas chat/ui-avatar@8.0.0-rc.4
+  - @yas chat/ui-video-conf@12.0.0-rc.4
 
   </details>
 
@@ -2562,11 +2562,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.3
-  - @rocket.chat/gazzodown@12.0.0-rc.3
-  - @rocket.chat/ui-contexts@12.0.0-rc.3
-  - @rocket.chat/ui-avatar@8.0.0-rc.3
-  - @rocket.chat/ui-video-conf@12.0.0-rc.3
+  - @yas chat/core-typings@7.0.0-rc.3
+  - @yas chat/gazzodown@12.0.0-rc.3
+  - @yas chat/ui-contexts@12.0.0-rc.3
+  - @yas chat/ui-avatar@8.0.0-rc.3
+  - @yas chat/ui-video-conf@12.0.0-rc.3
 
   </details>
 
@@ -2575,11 +2575,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.2
-  - @rocket.chat/gazzodown@12.0.0-rc.2
-  - @rocket.chat/ui-contexts@12.0.0-rc.2
-  - @rocket.chat/ui-avatar@8.0.0-rc.2
-  - @rocket.chat/ui-video-conf@12.0.0-rc.2
+  - @yas chat/core-typings@7.0.0-rc.2
+  - @yas chat/gazzodown@12.0.0-rc.2
+  - @yas chat/ui-contexts@12.0.0-rc.2
+  - @yas chat/ui-avatar@8.0.0-rc.2
+  - @yas chat/ui-video-conf@12.0.0-rc.2
 
   </details>
 
@@ -2588,11 +2588,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.1
-  - @rocket.chat/gazzodown@12.0.0-rc.1
-  - @rocket.chat/ui-contexts@12.0.0-rc.1
-  - @rocket.chat/ui-avatar@8.0.0-rc.1
-  - @rocket.chat/ui-video-conf@12.0.0-rc.1
+  - @yas chat/core-typings@7.0.0-rc.1
+  - @yas chat/gazzodown@12.0.0-rc.1
+  - @yas chat/ui-contexts@12.0.0-rc.1
+  - @yas chat/ui-avatar@8.0.0-rc.1
+  - @yas chat/ui-video-conf@12.0.0-rc.1
 
   </details>
 
@@ -2605,13 +2605,13 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7726d68374, 687f1efd5f, bcacbb1cee, 9274cf4586, b338807d76, 5f9826bed6, debd3ffa22, a5f25e73b5, 3ea02d3cc1, e3629e065b, 03d148524b, 81998f3450, 509143d6dd]:</summary>
-  - @rocket.chat/core-typings@7.0.0-rc.0
-  - @rocket.chat/ui-kit@0.37.0-rc.0
-  - @rocket.chat/ui-video-conf@12.0.0-rc.0
-  - @rocket.chat/gazzodown@12.0.0-rc.0
-  - @rocket.chat/ui-avatar@8.0.0-rc.0
-  - @rocket.chat/apps-engine@1.47.0-rc.0
-  - @rocket.chat/ui-contexts@12.0.0-rc.0
+  - @yas chat/core-typings@7.0.0-rc.0
+  - @yas chat/ui-kit@0.37.0-rc.0
+  - @yas chat/ui-video-conf@12.0.0-rc.0
+  - @yas chat/gazzodown@12.0.0-rc.0
+  - @yas chat/ui-avatar@8.0.0-rc.0
+  - @yas chat/apps-engine@1.47.0-rc.0
+  - @yas chat/ui-contexts@12.0.0-rc.0
 
   </details>
 
@@ -2628,11 +2628,11 @@
 - ([#32999](https://github.com/YasChat/YasChat/pull/32999)) Fixes multiple selection for MultiStaticSelectElement in UiKit
 
 - <details><summary>Updated dependencies [274f4f5881, cd0d50016e, 927710d778, 12d6307998]:</summary>
-  - @rocket.chat/core-typings@6.13.0
-  - @rocket.chat/ui-video-conf@11.0.0
-  - @rocket.chat/gazzodown@11.0.0
-  - @rocket.chat/ui-avatar@7.0.0
-  - @rocket.chat/ui-contexts@11.0.0
+  - @yas chat/core-typings@6.13.0
+  - @yas chat/ui-video-conf@11.0.0
+  - @yas chat/gazzodown@11.0.0
+  - @yas chat/ui-avatar@7.0.0
+  - @yas chat/ui-contexts@11.0.0
 
   </details>
 
@@ -2641,11 +2641,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.6
-  - @rocket.chat/gazzodown@11.0.0-rc.6
-  - @rocket.chat/ui-contexts@11.0.0-rc.6
-  - @rocket.chat/ui-avatar@7.0.0-rc.6
-  - @rocket.chat/ui-video-conf@11.0.0-rc.6
+  - @yas chat/core-typings@6.13.0-rc.6
+  - @yas chat/gazzodown@11.0.0-rc.6
+  - @yas chat/ui-contexts@11.0.0-rc.6
+  - @yas chat/ui-avatar@7.0.0-rc.6
+  - @yas chat/ui-video-conf@11.0.0-rc.6
 
   </details>
 
@@ -2654,11 +2654,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.5
-  - @rocket.chat/gazzodown@11.0.0-rc.5
-  - @rocket.chat/ui-contexts@11.0.0-rc.5
-  - @rocket.chat/ui-avatar@7.0.0-rc.5
-  - @rocket.chat/ui-video-conf@11.0.0-rc.5
+  - @yas chat/core-typings@6.13.0-rc.5
+  - @yas chat/gazzodown@11.0.0-rc.5
+  - @yas chat/ui-contexts@11.0.0-rc.5
+  - @yas chat/ui-avatar@7.0.0-rc.5
+  - @yas chat/ui-video-conf@11.0.0-rc.5
 
   </details>
 
@@ -2667,11 +2667,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.4
-  - @rocket.chat/gazzodown@11.0.0-rc.4
-  - @rocket.chat/ui-contexts@11.0.0-rc.4
-  - @rocket.chat/ui-avatar@7.0.0-rc.4
-  - @rocket.chat/ui-video-conf@11.0.0-rc.4
+  - @yas chat/core-typings@6.13.0-rc.4
+  - @yas chat/gazzodown@11.0.0-rc.4
+  - @yas chat/ui-contexts@11.0.0-rc.4
+  - @yas chat/ui-avatar@7.0.0-rc.4
+  - @yas chat/ui-video-conf@11.0.0-rc.4
 
   </details>
 
@@ -2680,11 +2680,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.3
-  - @rocket.chat/gazzodown@11.0.0-rc.3
-  - @rocket.chat/ui-contexts@11.0.0-rc.3
-  - @rocket.chat/ui-avatar@7.0.0-rc.3
-  - @rocket.chat/ui-video-conf@11.0.0-rc.3
+  - @yas chat/core-typings@6.13.0-rc.3
+  - @yas chat/gazzodown@11.0.0-rc.3
+  - @yas chat/ui-contexts@11.0.0-rc.3
+  - @yas chat/ui-avatar@7.0.0-rc.3
+  - @yas chat/ui-video-conf@11.0.0-rc.3
 
   </details>
 
@@ -2693,11 +2693,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.2
-  - @rocket.chat/gazzodown@11.0.0-rc.2
-  - @rocket.chat/ui-contexts@11.0.0-rc.2
-  - @rocket.chat/ui-avatar@7.0.0-rc.2
-  - @rocket.chat/ui-video-conf@11.0.0-rc.2
+  - @yas chat/core-typings@6.13.0-rc.2
+  - @yas chat/gazzodown@11.0.0-rc.2
+  - @yas chat/ui-contexts@11.0.0-rc.2
+  - @yas chat/ui-avatar@7.0.0-rc.2
+  - @yas chat/ui-video-conf@11.0.0-rc.2
 
   </details>
 
@@ -2706,11 +2706,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@11.0.0-rc.1
-  - @rocket.chat/gazzodown@11.0.0-rc.1
-  - @rocket.chat/ui-avatar@7.0.0-rc.1
-  - @rocket.chat/ui-video-conf@11.0.0-rc.1
-  - @rocket.chat/core-typings@6.13.0-rc.1
+  - @yas chat/ui-contexts@11.0.0-rc.1
+  - @yas chat/gazzodown@11.0.0-rc.1
+  - @yas chat/ui-avatar@7.0.0-rc.1
+  - @yas chat/ui-video-conf@11.0.0-rc.1
+  - @yas chat/core-typings@6.13.0-rc.1
 
   </details>
 
@@ -2727,11 +2727,11 @@
 - ([#32999](https://github.com/YasChat/YasChat/pull/32999)) Fixes multiple selection for MultiStaticSelectElement in UiKit
 
 - <details><summary>Updated dependencies [274f4f5881, cd0d50016e, 927710d778, 12d6307998]:</summary>
-  - @rocket.chat/core-typings@6.13.0-rc.0
-  - @rocket.chat/ui-video-conf@11.0.0-rc.0
-  - @rocket.chat/gazzodown@11.0.0-rc.0
-  - @rocket.chat/ui-avatar@7.0.0-rc.0
-  - @rocket.chat/ui-contexts@11.0.0-rc.0
+  - @yas chat/core-typings@6.13.0-rc.0
+  - @yas chat/ui-video-conf@11.0.0-rc.0
+  - @yas chat/gazzodown@11.0.0-rc.0
+  - @yas chat/ui-avatar@7.0.0-rc.0
+  - @yas chat/ui-contexts@11.0.0-rc.0
 
   </details>
 
@@ -2740,11 +2740,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.1
-  - @rocket.chat/gazzodown@10.0.1
-  - @rocket.chat/ui-contexts@10.0.1
-  - @rocket.chat/ui-avatar@6.0.1
-  - @rocket.chat/ui-video-conf@10.0.1
+  - @yas chat/core-typings@6.12.1
+  - @yas chat/gazzodown@10.0.1
+  - @yas chat/ui-contexts@10.0.1
+  - @yas chat/ui-avatar@6.0.1
+  - @yas chat/ui-video-conf@10.0.1
 
   </details>
 
@@ -2752,15 +2752,15 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df, 7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/ui-video-conf@10.0.0
-  - @rocket.chat/gazzodown@10.0.0
-  - @rocket.chat/ui-avatar@6.0.0
-  - @rocket.chat/ui-kit@0.36.1
-  - @rocket.chat/core-typings@6.12.0
-  - @rocket.chat/ui-contexts@10.0.0
+  - @yas chat/ui-video-conf@10.0.0
+  - @yas chat/gazzodown@10.0.0
+  - @yas chat/ui-avatar@6.0.0
+  - @yas chat/ui-kit@0.36.1
+  - @yas chat/core-typings@6.12.0
+  - @yas chat/ui-contexts@10.0.0
 
   </details>
 
@@ -2769,11 +2769,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.6
-  - @rocket.chat/gazzodown@10.0.0-rc.6
-  - @rocket.chat/ui-contexts@10.0.0-rc.6
-  - @rocket.chat/ui-avatar@6.0.0-rc.6
-  - @rocket.chat/ui-video-conf@10.0.0-rc.6
+  - @yas chat/core-typings@6.12.0-rc.6
+  - @yas chat/gazzodown@10.0.0-rc.6
+  - @yas chat/ui-contexts@10.0.0-rc.6
+  - @yas chat/ui-avatar@6.0.0-rc.6
+  - @yas chat/ui-video-conf@10.0.0-rc.6
 
   </details>
 
@@ -2782,11 +2782,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.5
-  - @rocket.chat/gazzodown@10.0.0-rc.5
-  - @rocket.chat/ui-contexts@10.0.0-rc.5
-  - @rocket.chat/ui-avatar@6.0.0-rc.5
-  - @rocket.chat/ui-video-conf@10.0.0-rc.5
+  - @yas chat/core-typings@6.12.0-rc.5
+  - @yas chat/gazzodown@10.0.0-rc.5
+  - @yas chat/ui-contexts@10.0.0-rc.5
+  - @yas chat/ui-avatar@6.0.0-rc.5
+  - @yas chat/ui-video-conf@10.0.0-rc.5
 
   </details>
 
@@ -2795,11 +2795,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.4
-  - @rocket.chat/gazzodown@10.0.0-rc.4
-  - @rocket.chat/ui-contexts@10.0.0-rc.4
-  - @rocket.chat/ui-avatar@6.0.0-rc.4
-  - @rocket.chat/ui-video-conf@10.0.0-rc.4
+  - @yas chat/core-typings@6.12.0-rc.4
+  - @yas chat/gazzodown@10.0.0-rc.4
+  - @yas chat/ui-contexts@10.0.0-rc.4
+  - @yas chat/ui-avatar@6.0.0-rc.4
+  - @yas chat/ui-video-conf@10.0.0-rc.4
 
   </details>
 
@@ -2808,11 +2808,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.3
-  - @rocket.chat/gazzodown@10.0.0-rc.3
-  - @rocket.chat/ui-contexts@10.0.0-rc.3
-  - @rocket.chat/ui-avatar@6.0.0-rc.3
-  - @rocket.chat/ui-video-conf@10.0.0-rc.3
+  - @yas chat/core-typings@6.12.0-rc.3
+  - @yas chat/gazzodown@10.0.0-rc.3
+  - @yas chat/ui-contexts@10.0.0-rc.3
+  - @yas chat/ui-avatar@6.0.0-rc.3
+  - @yas chat/ui-video-conf@10.0.0-rc.3
   </details>
 
 ## 10.0.0-rc.2
@@ -2820,11 +2820,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.2
-  - @rocket.chat/gazzodown@10.0.0-rc.2
-  - @rocket.chat/ui-contexts@10.0.0-rc.2
-  - @rocket.chat/ui-avatar@6.0.0-rc.2
-  - @rocket.chat/ui-video-conf@10.0.0-rc.2
+  - @yas chat/core-typings@6.12.0-rc.2
+  - @yas chat/gazzodown@10.0.0-rc.2
+  - @yas chat/ui-contexts@10.0.0-rc.2
+  - @yas chat/ui-avatar@6.0.0-rc.2
+  - @yas chat/ui-video-conf@10.0.0-rc.2
 
   </details>
 
@@ -2833,11 +2833,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.12.0-rc.1
-  - @rocket.chat/gazzodown@10.0.0-rc.1
-  - @rocket.chat/ui-contexts@10.0.0-rc.1
-  - @rocket.chat/ui-avatar@6.0.0-rc.1
-  - @rocket.chat/ui-video-conf@10.0.0-rc.1
+  - @yas chat/core-typings@6.12.0-rc.1
+  - @yas chat/gazzodown@10.0.0-rc.1
+  - @yas chat/ui-contexts@10.0.0-rc.1
+  - @yas chat/ui-avatar@6.0.0-rc.1
+  - @yas chat/ui-video-conf@10.0.0-rc.1
 
   </details>
 
@@ -2845,15 +2845,15 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
 - <details><summary>Updated dependencies [8ea6517c4e, c11f3722df, 7937ff741a, 58c0efc732, e28be46db7, 58c0efc732]:</summary>
-  - @rocket.chat/ui-video-conf@10.0.0-rc.0
-  - @rocket.chat/gazzodown@10.0.0-rc.0
-  - @rocket.chat/ui-avatar@6.0.0-rc.0
-  - @rocket.chat/ui-kit@0.36.1-rc.0
-  - @rocket.chat/core-typings@6.12.0-rc.0
-  - @rocket.chat/ui-contexts@10.0.0-rc.0
+  - @yas chat/ui-video-conf@10.0.0-rc.0
+  - @yas chat/gazzodown@10.0.0-rc.0
+  - @yas chat/ui-avatar@6.0.0-rc.0
+  - @yas chat/ui-kit@0.36.1-rc.0
+  - @yas chat/core-typings@6.12.0-rc.0
+  - @yas chat/ui-contexts@10.0.0-rc.0
 
   </details>
 
@@ -2862,11 +2862,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.2
-  - @rocket.chat/gazzodown@9.0.2
-  - @rocket.chat/ui-contexts@9.0.2
-  - @rocket.chat/ui-avatar@5.0.2
-  - @rocket.chat/ui-video-conf@9.0.2
+  - @yas chat/core-typings@6.11.2
+  - @yas chat/gazzodown@9.0.2
+  - @yas chat/ui-contexts@9.0.2
+  - @yas chat/ui-avatar@5.0.2
+  - @yas chat/ui-video-conf@9.0.2
 
   </details>
 
@@ -2875,11 +2875,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.1
-  - @rocket.chat/gazzodown@9.0.1
-  - @rocket.chat/ui-contexts@9.0.1
-  - @rocket.chat/ui-avatar@5.0.1
-  - @rocket.chat/ui-video-conf@9.0.1
+  - @yas chat/core-typings@6.11.1
+  - @yas chat/gazzodown@9.0.1
+  - @yas chat/ui-contexts@9.0.1
+  - @yas chat/ui-avatar@5.0.1
+  - @yas chat/ui-video-conf@9.0.1
 
   </details>
 
@@ -2892,12 +2892,12 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, 4e8aa575a6, b8e5887fb9]:</summary>
-  - @rocket.chat/ui-video-conf@9.0.0
-  - @rocket.chat/core-typings@6.11.0
-  - @rocket.chat/ui-contexts@9.0.0
-  - @rocket.chat/ui-kit@0.36.0
-  - @rocket.chat/gazzodown@9.0.0
-  - @rocket.chat/ui-avatar@5.0.0
+  - @yas chat/ui-video-conf@9.0.0
+  - @yas chat/core-typings@6.11.0
+  - @yas chat/ui-contexts@9.0.0
+  - @yas chat/ui-kit@0.36.0
+  - @yas chat/gazzodown@9.0.0
+  - @yas chat/ui-avatar@5.0.0
 
   </details>
 
@@ -2906,11 +2906,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.6
-  - @rocket.chat/gazzodown@9.0.0-rc.6
-  - @rocket.chat/ui-contexts@9.0.0-rc.6
-  - @rocket.chat/ui-avatar@5.0.0-rc.6
-  - @rocket.chat/ui-video-conf@9.0.0-rc.6
+  - @yas chat/core-typings@6.11.0-rc.6
+  - @yas chat/gazzodown@9.0.0-rc.6
+  - @yas chat/ui-contexts@9.0.0-rc.6
+  - @yas chat/ui-avatar@5.0.0-rc.6
+  - @yas chat/ui-video-conf@9.0.0-rc.6
 
   </details>
 
@@ -2919,11 +2919,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.5
-  - @rocket.chat/gazzodown@9.0.0-rc.5
-  - @rocket.chat/ui-contexts@9.0.0-rc.5
-  - @rocket.chat/ui-avatar@5.0.0-rc.5
-  - @rocket.chat/ui-video-conf@9.0.0-rc.5
+  - @yas chat/core-typings@6.11.0-rc.5
+  - @yas chat/gazzodown@9.0.0-rc.5
+  - @yas chat/ui-contexts@9.0.0-rc.5
+  - @yas chat/ui-avatar@5.0.0-rc.5
+  - @yas chat/ui-video-conf@9.0.0-rc.5
 
   </details>
 
@@ -2932,11 +2932,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.4
-  - @rocket.chat/gazzodown@9.0.0-rc.4
-  - @rocket.chat/ui-contexts@9.0.0-rc.4
-  - @rocket.chat/ui-avatar@5.0.0-rc.4
-  - @rocket.chat/ui-video-conf@9.0.0-rc.4
+  - @yas chat/core-typings@6.11.0-rc.4
+  - @yas chat/gazzodown@9.0.0-rc.4
+  - @yas chat/ui-contexts@9.0.0-rc.4
+  - @yas chat/ui-avatar@5.0.0-rc.4
+  - @yas chat/ui-video-conf@9.0.0-rc.4
 
   </details>
 
@@ -2945,11 +2945,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.3
-  - @rocket.chat/gazzodown@9.0.0-rc.3
-  - @rocket.chat/ui-contexts@9.0.0-rc.3
-  - @rocket.chat/ui-avatar@5.0.0-rc.3
-  - @rocket.chat/ui-video-conf@9.0.0-rc.3
+  - @yas chat/core-typings@6.11.0-rc.3
+  - @yas chat/gazzodown@9.0.0-rc.3
+  - @yas chat/ui-contexts@9.0.0-rc.3
+  - @yas chat/ui-avatar@5.0.0-rc.3
+  - @yas chat/ui-video-conf@9.0.0-rc.3
 
   </details>
 
@@ -2958,11 +2958,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.2
-  - @rocket.chat/gazzodown@9.0.0-rc.2
-  - @rocket.chat/ui-contexts@9.0.0-rc.2
-  - @rocket.chat/ui-avatar@5.0.0-rc.2
-  - @rocket.chat/ui-video-conf@9.0.0-rc.2
+  - @yas chat/core-typings@6.11.0-rc.2
+  - @yas chat/gazzodown@9.0.0-rc.2
+  - @yas chat/ui-contexts@9.0.0-rc.2
+  - @yas chat/ui-avatar@5.0.0-rc.2
+  - @yas chat/ui-video-conf@9.0.0-rc.2
 
   </details>
 
@@ -2971,11 +2971,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.11.0-rc.1
-  - @rocket.chat/gazzodown@9.0.0-rc.1
-  - @rocket.chat/ui-contexts@9.0.0-rc.1
-  - @rocket.chat/ui-avatar@5.0.0-rc.1
-  - @rocket.chat/ui-video-conf@9.0.0-rc.1
+  - @yas chat/core-typings@6.11.0-rc.1
+  - @yas chat/gazzodown@9.0.0-rc.1
+  - @yas chat/ui-contexts@9.0.0-rc.1
+  - @yas chat/ui-avatar@5.0.0-rc.1
+  - @yas chat/ui-video-conf@9.0.0-rc.1
 
   </details>
 
@@ -2988,12 +2988,12 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448, 24f7df4894, 4e8aa575a6, b8e5887fb9]:</summary>
-  - @rocket.chat/ui-video-conf@9.0.0-rc.0
-  - @rocket.chat/core-typings@6.11.0-rc.0
-  - @rocket.chat/ui-contexts@9.0.0-rc.0
-  - @rocket.chat/ui-kit@0.36.0-rc.0
-  - @rocket.chat/gazzodown@9.0.0-rc.0
-  - @rocket.chat/ui-avatar@5.0.0-rc.0
+  - @yas chat/ui-video-conf@9.0.0-rc.0
+  - @yas chat/core-typings@6.11.0-rc.0
+  - @yas chat/ui-contexts@9.0.0-rc.0
+  - @yas chat/ui-kit@0.36.0-rc.0
+  - @yas chat/gazzodown@9.0.0-rc.0
+  - @yas chat/ui-avatar@5.0.0-rc.0
 
   </details>
 
@@ -3010,11 +3010,11 @@
 - ([#32935](https://github.com/YasChat/YasChat/pull/32935)) Fixed an issue that caused the video conference button on rooms to not recognize a video conference provider app in some cases
 
 - <details><summary>Updated dependencies [ca6a9d8de8, ca6a9d8de8, ca6a9d8de8, ca6a9d8de8]:</summary>
-  - @rocket.chat/core-typings@6.10.2
-  - @rocket.chat/gazzodown@8.0.2
-  - @rocket.chat/ui-contexts@8.0.2
-  - @rocket.chat/ui-avatar@4.0.2
-  - @rocket.chat/ui-video-conf@8.0.2
+  - @yas chat/core-typings@6.10.2
+  - @yas chat/gazzodown@8.0.2
+  - @yas chat/ui-contexts@8.0.2
+  - @yas chat/ui-avatar@4.0.2
+  - @yas chat/ui-video-conf@8.0.2
 
   </details>
 
@@ -3023,11 +3023,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.1
-  - @rocket.chat/gazzodown@8.0.1
-  - @rocket.chat/ui-contexts@8.0.1
-  - @rocket.chat/ui-avatar@4.0.1
-  - @rocket.chat/ui-video-conf@8.0.1
+  - @yas chat/core-typings@6.10.1
+  - @yas chat/gazzodown@8.0.1
+  - @yas chat/ui-contexts@8.0.1
+  - @yas chat/ui-avatar@4.0.1
+  - @yas chat/ui-video-conf@8.0.1
 
   </details>
 
@@ -3042,12 +3042,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [a565999ae0, 1240c874a5, 59df102d0c, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/ui-kit@0.35.0
-  - @rocket.chat/core-typings@6.10.0
-  - @rocket.chat/gazzodown@8.0.0
-  - @rocket.chat/ui-video-conf@8.0.0
-  - @rocket.chat/ui-contexts@8.0.0
-  - @rocket.chat/ui-avatar@4.0.0
+  - @yas chat/ui-kit@0.35.0
+  - @yas chat/core-typings@6.10.0
+  - @yas chat/gazzodown@8.0.0
+  - @yas chat/ui-video-conf@8.0.0
+  - @yas chat/ui-contexts@8.0.0
+  - @yas chat/ui-avatar@4.0.0
 
   </details>
 
@@ -3056,11 +3056,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.7
-  - @rocket.chat/gazzodown@8.0.0-rc.7
-  - @rocket.chat/ui-contexts@8.0.0-rc.7
-  - @rocket.chat/ui-avatar@4.0.0-rc.7
-  - @rocket.chat/ui-video-conf@8.0.0-rc.7
+  - @yas chat/core-typings@6.10.0-rc.7
+  - @yas chat/gazzodown@8.0.0-rc.7
+  - @yas chat/ui-contexts@8.0.0-rc.7
+  - @yas chat/ui-avatar@4.0.0-rc.7
+  - @yas chat/ui-video-conf@8.0.0-rc.7
 
   </details>
 
@@ -3069,11 +3069,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.6
-  - @rocket.chat/gazzodown@8.0.0-rc.6
-  - @rocket.chat/ui-contexts@8.0.0-rc.6
-  - @rocket.chat/ui-avatar@4.0.0-rc.6
-  - @rocket.chat/ui-video-conf@8.0.0-rc.6
+  - @yas chat/core-typings@6.10.0-rc.6
+  - @yas chat/gazzodown@8.0.0-rc.6
+  - @yas chat/ui-contexts@8.0.0-rc.6
+  - @yas chat/ui-avatar@4.0.0-rc.6
+  - @yas chat/ui-video-conf@8.0.0-rc.6
 
   </details>
 
@@ -3082,11 +3082,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.5
-  - @rocket.chat/gazzodown@8.0.0-rc.5
-  - @rocket.chat/ui-contexts@8.0.0-rc.5
-  - @rocket.chat/ui-avatar@4.0.0-rc.5
-  - @rocket.chat/ui-video-conf@8.0.0-rc.5
+  - @yas chat/core-typings@6.10.0-rc.5
+  - @yas chat/gazzodown@8.0.0-rc.5
+  - @yas chat/ui-contexts@8.0.0-rc.5
+  - @yas chat/ui-avatar@4.0.0-rc.5
+  - @yas chat/ui-video-conf@8.0.0-rc.5
 
   </details>
 
@@ -3095,11 +3095,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.4
-  - @rocket.chat/gazzodown@8.0.0-rc.4
-  - @rocket.chat/ui-contexts@8.0.0-rc.4
-  - @rocket.chat/ui-avatar@4.0.0-rc.4
-  - @rocket.chat/ui-video-conf@8.0.0-rc.4
+  - @yas chat/core-typings@6.10.0-rc.4
+  - @yas chat/gazzodown@8.0.0-rc.4
+  - @yas chat/ui-contexts@8.0.0-rc.4
+  - @yas chat/ui-avatar@4.0.0-rc.4
+  - @yas chat/ui-video-conf@8.0.0-rc.4
 
   </details>
 
@@ -3108,11 +3108,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.3
-  - @rocket.chat/gazzodown@8.0.0-rc.3
-  - @rocket.chat/ui-contexts@8.0.0-rc.3
-  - @rocket.chat/ui-avatar@4.0.0-rc.3
-  - @rocket.chat/ui-video-conf@8.0.0-rc.3
+  - @yas chat/core-typings@6.10.0-rc.3
+  - @yas chat/gazzodown@8.0.0-rc.3
+  - @yas chat/ui-contexts@8.0.0-rc.3
+  - @yas chat/ui-avatar@4.0.0-rc.3
+  - @yas chat/ui-video-conf@8.0.0-rc.3
 
   </details>
 
@@ -3121,11 +3121,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.2
-  - @rocket.chat/gazzodown@8.0.0-rc.2
-  - @rocket.chat/ui-contexts@8.0.0-rc.2
-  - @rocket.chat/ui-avatar@4.0.0-rc.2
-  - @rocket.chat/ui-video-conf@8.0.0-rc.2
+  - @yas chat/core-typings@6.10.0-rc.2
+  - @yas chat/gazzodown@8.0.0-rc.2
+  - @yas chat/ui-contexts@8.0.0-rc.2
+  - @yas chat/ui-avatar@4.0.0-rc.2
+  - @yas chat/ui-video-conf@8.0.0-rc.2
 
   </details>
 
@@ -3134,11 +3134,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.10.0-rc.1
-  - @rocket.chat/gazzodown@8.0.0-rc.1
-  - @rocket.chat/ui-contexts@8.0.0-rc.1
-  - @rocket.chat/ui-avatar@4.0.0-rc.1
-  - @rocket.chat/ui-video-conf@8.0.0-rc.1
+  - @yas chat/core-typings@6.10.0-rc.1
+  - @yas chat/gazzodown@8.0.0-rc.1
+  - @yas chat/ui-contexts@8.0.0-rc.1
+  - @yas chat/ui-avatar@4.0.0-rc.1
+  - @yas chat/ui-video-conf@8.0.0-rc.1
 
   </details>
 
@@ -3153,23 +3153,23 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [a565999ae0, 1240c874a5, 59df102d0c, 5f95c4ec6b, f75a2cb4bb, 4f72d62aa7, dfa49bdbb2]:</summary>
-  - @rocket.chat/ui-kit@0.35.0-rc.0
-  - @rocket.chat/core-typings@6.10.0-rc.0
-  - @rocket.chat/gazzodown@8.0.0-rc.0
-  - @rocket.chat/ui-video-conf@8.0.0-rc.0
-  - @rocket.chat/ui-contexts@8.0.0-rc.0
-  - @rocket.chat/ui-avatar@4.0.0-rc.0
+  - @yas chat/ui-kit@0.35.0-rc.0
+  - @yas chat/core-typings@6.10.0-rc.0
+  - @yas chat/gazzodown@8.0.0-rc.0
+  - @yas chat/ui-video-conf@8.0.0-rc.0
+  - @yas chat/ui-contexts@8.0.0-rc.0
+  - @yas chat/ui-avatar@4.0.0-rc.0
 
 ## 7.0.3
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.3
-  - @rocket.chat/gazzodown@7.0.3
-  - @rocket.chat/ui-contexts@7.0.3
-  - @rocket.chat/ui-avatar@3.0.3
-  - @rocket.chat/ui-video-conf@7.0.3
+  - @yas chat/core-typings@6.9.3
+  - @yas chat/gazzodown@7.0.3
+  - @yas chat/ui-contexts@7.0.3
+  - @yas chat/ui-avatar@3.0.3
+  - @yas chat/ui-video-conf@7.0.3
 
   </details>
 
@@ -3178,11 +3178,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.2
-  - @rocket.chat/gazzodown@7.0.2
-  - @rocket.chat/ui-contexts@7.0.2
-  - @rocket.chat/ui-avatar@3.0.2
-  - @rocket.chat/ui-video-conf@7.0.2
+  - @yas chat/core-typings@6.9.2
+  - @yas chat/gazzodown@7.0.2
+  - @yas chat/ui-contexts@7.0.2
+  - @yas chat/ui-avatar@3.0.2
+  - @yas chat/ui-video-conf@7.0.2
 
   </details>
 
@@ -3191,11 +3191,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.1
-  - @rocket.chat/gazzodown@7.0.1
-  - @rocket.chat/ui-contexts@7.0.1
-  - @rocket.chat/ui-avatar@3.0.1
-  - @rocket.chat/ui-video-conf@7.0.1
+  - @yas chat/core-typings@6.9.1
+  - @yas chat/gazzodown@7.0.1
+  - @yas chat/ui-contexts@7.0.1
+  - @yas chat/ui-avatar@3.0.1
+  - @yas chat/ui-video-conf@7.0.1
 
   </details>
 
@@ -3210,12 +3210,12 @@
 - ([#32327](https://github.com/YasChat/YasChat/pull/32327)) Fix translation param on video conf joined message
 
 - <details><summary>Updated dependencies [ff4e396416, ee5cdfc367, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0
-  - @rocket.chat/ui-kit@0.34.0
-  - @rocket.chat/gazzodown@7.0.0
-  - @rocket.chat/ui-contexts@7.0.0
-  - @rocket.chat/ui-avatar@3.0.0
-  - @rocket.chat/ui-video-conf@7.0.0
+  - @yas chat/core-typings@6.9.0
+  - @yas chat/ui-kit@0.34.0
+  - @yas chat/gazzodown@7.0.0
+  - @yas chat/ui-contexts@7.0.0
+  - @yas chat/ui-avatar@3.0.0
+  - @yas chat/ui-video-conf@7.0.0
 
   </details>
 
@@ -3224,11 +3224,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.2
-  - @rocket.chat/gazzodown@7.0.0-rc.2
-  - @rocket.chat/ui-contexts@7.0.0-rc.2
-  - @rocket.chat/ui-avatar@3.0.0-rc.2
-  - @rocket.chat/ui-video-conf@7.0.0-rc.2
+  - @yas chat/core-typings@6.9.0-rc.2
+  - @yas chat/gazzodown@7.0.0-rc.2
+  - @yas chat/ui-contexts@7.0.0-rc.2
+  - @yas chat/ui-avatar@3.0.0-rc.2
+  - @yas chat/ui-video-conf@7.0.0-rc.2
 
   </details>
 
@@ -3237,11 +3237,11 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.1
-  - @rocket.chat/gazzodown@7.0.0-rc.1
-  - @rocket.chat/ui-contexts@7.0.0-rc.1
-  - @rocket.chat/ui-avatar@3.0.0-rc.1
-  - @rocket.chat/ui-video-conf@7.0.0-rc.1
+  - @yas chat/core-typings@6.9.0-rc.1
+  - @yas chat/gazzodown@7.0.0-rc.1
+  - @yas chat/ui-contexts@7.0.0-rc.1
+  - @yas chat/ui-avatar@3.0.0-rc.1
+  - @yas chat/ui-video-conf@7.0.0-rc.1
 
   </details>
 
@@ -3256,12 +3256,12 @@
 - ([#32327](https://github.com/YasChat/YasChat/pull/32327)) Fix translation param on video conf joined message
 
 - <details><summary>Updated dependencies [ff4e396416, ee5cdfc367, 70ab2a7b7b]:</summary>
-  - @rocket.chat/core-typings@6.9.0-rc.0
-  - @rocket.chat/ui-kit@0.34.0-rc.0
-  - @rocket.chat/gazzodown@7.0.0-rc.0
-  - @rocket.chat/ui-contexts@7.0.0-rc.0
-  - @rocket.chat/ui-avatar@3.0.0-rc.0
-  - @rocket.chat/ui-video-conf@7.0.0-rc.0
+  - @yas chat/core-typings@6.9.0-rc.0
+  - @yas chat/ui-kit@0.34.0-rc.0
+  - @yas chat/gazzodown@7.0.0-rc.0
+  - @yas chat/ui-contexts@7.0.0-rc.0
+  - @yas chat/ui-avatar@3.0.0-rc.0
+  - @yas chat/ui-video-conf@7.0.0-rc.0
 
   </details>
 
@@ -3274,12 +3274,12 @@
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
 - <details><summary>Updated dependencies [b7f5035442, c0d54d742a]:</summary>
-  - @rocket.chat/eslint-config@0.7.0
-  - @rocket.chat/ui-contexts@6.0.0
-  - @rocket.chat/gazzodown@6.0.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@6.0.0
-  - @rocket.chat/ui-avatar@2.0.0
+  - @yas chat/eslint-config@0.7.0
+  - @yas chat/ui-contexts@6.0.0
+  - @yas chat/gazzodown@6.0.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@6.0.0
+  - @yas chat/ui-avatar@2.0.0
 
   </details>
 
@@ -3292,10 +3292,10 @@
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@6.0.0-rc.2
-  - @rocket.chat/ui-contexts@6.0.0-rc.2
-  - @rocket.chat/ui-avatar@2.0.0-rc.2
-  - @rocket.chat/ui-video-conf@6.0.0-rc.2
+  - @yas chat/gazzodown@6.0.0-rc.2
+  - @yas chat/ui-contexts@6.0.0-rc.2
+  - @yas chat/ui-avatar@2.0.0-rc.2
+  - @yas chat/ui-video-conf@6.0.0-rc.2
 
   </details>
 
@@ -3304,10 +3304,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@6.0.0-rc.1
-  - @rocket.chat/ui-contexts@6.0.0-rc.1
-  - @rocket.chat/ui-avatar@2.0.0-rc.1
-  - @rocket.chat/ui-video-conf@6.0.0-rc.1
+  - @yas chat/gazzodown@6.0.0-rc.1
+  - @yas chat/ui-contexts@6.0.0-rc.1
+  - @yas chat/ui-avatar@2.0.0-rc.1
+  - @yas chat/ui-video-conf@6.0.0-rc.1
 
   </details>
 
@@ -3316,22 +3316,22 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [b7f5035442, c0d54d742a]:</summary>
-  - @rocket.chat/eslint-config@0.7.0-rc.0
-  - @rocket.chat/ui-contexts@6.0.0-rc.0
-  - @rocket.chat/gazzodown@6.0.0-rc.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@6.0.0-rc.0
-  - @rocket.chat/ui-avatar@2.0.0-rc.0
+  - @yas chat/eslint-config@0.7.0-rc.0
+  - @yas chat/ui-contexts@6.0.0-rc.0
+  - @yas chat/gazzodown@6.0.0-rc.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@6.0.0-rc.0
+  - @yas chat/ui-avatar@2.0.0-rc.0
 
 ## 5.0.2
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.2
-  - @rocket.chat/ui-contexts@5.0.2
-  - @rocket.chat/ui-avatar@1.0.2
-  - @rocket.chat/ui-video-conf@5.0.2
+  - @yas chat/gazzodown@5.0.2
+  - @yas chat/ui-contexts@5.0.2
+  - @yas chat/ui-avatar@1.0.2
+  - @yas chat/ui-video-conf@5.0.2
   </details>
 
 ## 5.0.1
@@ -3339,10 +3339,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.1
-  - @rocket.chat/ui-contexts@5.0.1
-  - @rocket.chat/ui-avatar@1.0.1
-  - @rocket.chat/ui-video-conf@5.0.1
+  - @yas chat/gazzodown@5.0.1
+  - @yas chat/ui-contexts@5.0.1
+  - @yas chat/ui-avatar@1.0.1
+  - @yas chat/ui-video-conf@5.0.1
 
   </details>
 
@@ -3351,12 +3351,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7ac473df7a]:</summary>
-  - @rocket.chat/eslint-config@0.6.2
-  - @rocket.chat/gazzodown@5.0.0
-  - @rocket.chat/ui-contexts@5.0.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@5.0.0
-  - @rocket.chat/ui-avatar@1.0.0
+  - @yas chat/eslint-config@0.6.2
+  - @yas chat/gazzodown@5.0.0
+  - @yas chat/ui-contexts@5.0.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@5.0.0
+  - @yas chat/ui-avatar@1.0.0
 
   </details>
 
@@ -3365,10 +3365,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.0-rc.4
-  - @rocket.chat/ui-contexts@5.0.0-rc.4
-  - @rocket.chat/ui-avatar@1.0.0-rc.4
-  - @rocket.chat/ui-video-conf@5.0.0-rc.4
+  - @yas chat/gazzodown@5.0.0-rc.4
+  - @yas chat/ui-contexts@5.0.0-rc.4
+  - @yas chat/ui-avatar@1.0.0-rc.4
+  - @yas chat/ui-video-conf@5.0.0-rc.4
 
   </details>
 
@@ -3377,10 +3377,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.0-rc.3
-  - @rocket.chat/ui-contexts@5.0.0-rc.3
-  - @rocket.chat/ui-avatar@1.0.0-rc.3
-  - @rocket.chat/ui-video-conf@5.0.0-rc.3
+  - @yas chat/gazzodown@5.0.0-rc.3
+  - @yas chat/ui-contexts@5.0.0-rc.3
+  - @yas chat/ui-avatar@1.0.0-rc.3
+  - @yas chat/ui-video-conf@5.0.0-rc.3
 
   </details>
 
@@ -3389,10 +3389,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.0-rc.2
-  - @rocket.chat/ui-contexts@5.0.0-rc.2
-  - @rocket.chat/ui-avatar@1.0.0-rc.2
-  - @rocket.chat/ui-video-conf@5.0.0-rc.2
+  - @yas chat/gazzodown@5.0.0-rc.2
+  - @yas chat/ui-contexts@5.0.0-rc.2
+  - @yas chat/ui-avatar@1.0.0-rc.2
+  - @yas chat/ui-video-conf@5.0.0-rc.2
 
   </details>
 
@@ -3401,10 +3401,10 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@5.0.0-rc.1
-  - @rocket.chat/ui-contexts@5.0.0-rc.1
-  - @rocket.chat/ui-avatar@1.0.0-rc.1
-  - @rocket.chat/ui-video-conf@5.0.0-rc.1
+  - @yas chat/gazzodown@5.0.0-rc.1
+  - @yas chat/ui-contexts@5.0.0-rc.1
+  - @yas chat/ui-avatar@1.0.0-rc.1
+  - @yas chat/ui-video-conf@5.0.0-rc.1
 
   </details>
 
@@ -3413,12 +3413,12 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [7ac473df7a]:</summary>
-  - @rocket.chat/eslint-config@0.6.2-rc.0
-  - @rocket.chat/gazzodown@5.0.0-rc.0
-  - @rocket.chat/ui-contexts@5.0.0-rc.0
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@5.0.0-rc.0
-  - @rocket.chat/ui-avatar@1.0.0-rc.0
+  - @yas chat/eslint-config@0.6.2-rc.0
+  - @yas chat/gazzodown@5.0.0-rc.0
+  - @yas chat/ui-contexts@5.0.0-rc.0
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@5.0.0-rc.0
+  - @yas chat/ui-avatar@1.0.0-rc.0
 
   </details>
 
@@ -3427,9 +3427,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.6
-  - @rocket.chat/ui-contexts@4.0.6
-  - @rocket.chat/ui-video-conf@4.0.6
+  - @yas chat/gazzodown@4.0.6
+  - @yas chat/ui-contexts@4.0.6
+  - @yas chat/ui-video-conf@4.0.6
 
   </details>
 
@@ -3438,9 +3438,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@4.0.5
-  - @rocket.chat/gazzodown@4.0.5
-  - @rocket.chat/ui-video-conf@4.0.5
+  - @yas chat/ui-contexts@4.0.5
+  - @yas chat/gazzodown@4.0.5
+  - @yas chat/ui-video-conf@4.0.5
 
   </details>
 
@@ -3449,9 +3449,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.4
-  - @rocket.chat/ui-contexts@4.0.4
-  - @rocket.chat/ui-video-conf@4.0.4
+  - @yas chat/gazzodown@4.0.4
+  - @yas chat/ui-contexts@4.0.4
+  - @yas chat/ui-video-conf@4.0.4
 
   </details>
 
@@ -3460,9 +3460,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.3
-  - @rocket.chat/ui-contexts@4.0.3
-  - @rocket.chat/ui-video-conf@4.0.3
+  - @yas chat/gazzodown@4.0.3
+  - @yas chat/ui-contexts@4.0.3
+  - @yas chat/ui-video-conf@4.0.3
 
   </details>
 
@@ -3471,9 +3471,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-contexts@4.0.2
-  - @rocket.chat/gazzodown@4.0.2
-  - @rocket.chat/ui-video-conf@4.0.2
+  - @yas chat/ui-contexts@4.0.2
+  - @yas chat/gazzodown@4.0.2
+  - @yas chat/ui-video-conf@4.0.2
 
   </details>
 
@@ -3482,9 +3482,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.1
-  - @rocket.chat/ui-contexts@4.0.1
-  - @rocket.chat/ui-video-conf@4.0.1
+  - @yas chat/gazzodown@4.0.1
+  - @yas chat/ui-contexts@4.0.1
+  - @yas chat/ui-video-conf@4.0.1
 
   </details>
 
@@ -3492,14 +3492,14 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - <details><summary>Updated dependencies [642745f289, b223cbde14, b2b0035162, dbb08ef948]:</summary>
-  - @rocket.chat/eslint-config@0.6.1
-  - @rocket.chat/ui-kit@0.33.0
-  - @rocket.chat/ui-video-conf@4.0.0
-  - @rocket.chat/ui-contexts@4.0.0
-  - @rocket.chat/gazzodown@4.0.0
+  - @yas chat/eslint-config@0.6.1
+  - @yas chat/ui-kit@0.33.0
+  - @yas chat/ui-video-conf@4.0.0
+  - @yas chat/ui-contexts@4.0.0
+  - @yas chat/gazzodown@4.0.0
 
   </details>
 
@@ -3508,9 +3508,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.0-rc.7
-  - @rocket.chat/ui-contexts@4.0.0-rc.7
-  - @rocket.chat/ui-video-conf@4.0.0-rc.7
+  - @yas chat/gazzodown@4.0.0-rc.7
+  - @yas chat/ui-contexts@4.0.0-rc.7
+  - @yas chat/ui-video-conf@4.0.0-rc.7
 
   </details>
 
@@ -3519,9 +3519,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.0-rc.6
-  - @rocket.chat/ui-contexts@4.0.0-rc.6
-  - @rocket.chat/ui-video-conf@4.0.0-rc.6
+  - @yas chat/gazzodown@4.0.0-rc.6
+  - @yas chat/ui-contexts@4.0.0-rc.6
+  - @yas chat/ui-video-conf@4.0.0-rc.6
 
   </details>
 
@@ -3530,9 +3530,9 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/gazzodown@4.0.0-rc.5
-  - @rocket.chat/ui-contexts@4.0.0-rc.5
-  - @rocket.chat/ui-video-conf@4.0.0-rc.5
+  - @yas chat/gazzodown@4.0.0-rc.5
+  - @yas chat/ui-contexts@4.0.0-rc.5
+  - @yas chat/ui-video-conf@4.0.0-rc.5
 
   </details>
 
@@ -3540,72 +3540,72 @@
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@4.0.0-rc.4
-- @rocket.chat/ui-contexts@4.0.0-rc.4
-- @rocket.chat/ui-video-conf@4.0.0-rc.4
+- @yas chat/gazzodown@4.0.0-rc.4
+- @yas chat/ui-contexts@4.0.0-rc.4
+- @yas chat/ui-video-conf@4.0.0-rc.4
 
 ## 4.0.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@4.0.0-rc.3
-- @rocket.chat/ui-contexts@4.0.0-rc.3
-- @rocket.chat/ui-video-conf@4.0.0-rc.3
+- @yas chat/gazzodown@4.0.0-rc.3
+- @yas chat/ui-contexts@4.0.0-rc.3
+- @yas chat/ui-video-conf@4.0.0-rc.3
 
 ## 4.0.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@4.0.0-rc.2
-- @rocket.chat/ui-contexts@4.0.0-rc.2
-- @rocket.chat/ui-video-conf@4.0.0-rc.2
+- @yas chat/gazzodown@4.0.0-rc.2
+- @yas chat/ui-contexts@4.0.0-rc.2
+- @yas chat/ui-video-conf@4.0.0-rc.2
 
 ## 4.0.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@4.0.0-rc.1
-- @rocket.chat/ui-contexts@4.0.0-rc.1
-- @rocket.chat/ui-video-conf@4.0.0-rc.1
+- @yas chat/gazzodown@4.0.0-rc.1
+- @yas chat/ui-contexts@4.0.0-rc.1
+- @yas chat/ui-video-conf@4.0.0-rc.1
 
 ## 4.0.0-rc.0
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - Updated dependencies [642745f289]
 - Updated dependencies [b223cbde14]
 - Updated dependencies [b2b0035162]
 - Updated dependencies [dbb08ef948]
-  - @rocket.chat/eslint-config@0.6.1-rc.0
-  - @rocket.chat/ui-kit@0.33.0-rc.0
-  - @rocket.chat/ui-video-conf@4.0.0-rc.0
-  - @rocket.chat/ui-contexts@4.0.0-rc.0
-  - @rocket.chat/gazzodown@4.0.0-rc.0
+  - @yas chat/eslint-config@0.6.1-rc.0
+  - @yas chat/ui-kit@0.33.0-rc.0
+  - @yas chat/ui-video-conf@4.0.0-rc.0
+  - @yas chat/ui-contexts@4.0.0-rc.0
+  - @yas chat/gazzodown@4.0.0-rc.0
 
 ## 3.0.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.3
-- @rocket.chat/ui-contexts@3.0.3
-- @rocket.chat/ui-video-conf@3.0.3
+- @yas chat/gazzodown@3.0.3
+- @yas chat/ui-contexts@3.0.3
+- @yas chat/ui-video-conf@3.0.3
 
 ## 3.0.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.2
-- @rocket.chat/ui-contexts@3.0.2
-- @rocket.chat/ui-video-conf@3.0.2
+- @yas chat/gazzodown@3.0.2
+- @yas chat/ui-contexts@3.0.2
+- @yas chat/ui-video-conf@3.0.2
 
 ## 3.0.1
 
 ### Patch Changes
 
-- @rocket.chat/ui-contexts@3.0.1
-- @rocket.chat/gazzodown@3.0.1
-- @rocket.chat/ui-video-conf@3.0.1
+- @yas chat/ui-contexts@3.0.1
+- @yas chat/gazzodown@3.0.1
+- @yas chat/ui-video-conf@3.0.1
 
 ## 3.0.0
 
@@ -3613,161 +3613,161 @@
 
 - Updated dependencies [7da1edf866]
 - Updated dependencies [c2f337664e]
-  - @rocket.chat/ui-contexts@3.0.0
-  - @rocket.chat/gazzodown@3.0.0
-  - @rocket.chat/ui-video-conf@3.0.0
+  - @yas chat/ui-contexts@3.0.0
+  - @yas chat/gazzodown@3.0.0
+  - @yas chat/ui-video-conf@3.0.0
 
 ## 3.0.0-rc.19
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.19
-- @rocket.chat/ui-contexts@3.0.0-rc.19
-- @rocket.chat/ui-video-conf@3.0.0-rc.19
+- @yas chat/gazzodown@3.0.0-rc.19
+- @yas chat/ui-contexts@3.0.0-rc.19
+- @yas chat/ui-video-conf@3.0.0-rc.19
 
 ## 3.0.0-rc.18
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.18
-- @rocket.chat/ui-contexts@3.0.0-rc.18
-- @rocket.chat/ui-video-conf@3.0.0-rc.18
+- @yas chat/gazzodown@3.0.0-rc.18
+- @yas chat/ui-contexts@3.0.0-rc.18
+- @yas chat/ui-video-conf@3.0.0-rc.18
 
 ## 3.0.0-rc.17
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.17
-- @rocket.chat/ui-contexts@3.0.0-rc.17
-- @rocket.chat/ui-video-conf@3.0.0-rc.17
+- @yas chat/gazzodown@3.0.0-rc.17
+- @yas chat/ui-contexts@3.0.0-rc.17
+- @yas chat/ui-video-conf@3.0.0-rc.17
 
 ## 3.0.0-rc.16
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.16
-- @rocket.chat/ui-contexts@3.0.0-rc.16
-- @rocket.chat/ui-video-conf@3.0.0-rc.16
+- @yas chat/gazzodown@3.0.0-rc.16
+- @yas chat/ui-contexts@3.0.0-rc.16
+- @yas chat/ui-video-conf@3.0.0-rc.16
 
 ## 3.0.0-rc.15
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.15
-- @rocket.chat/ui-contexts@3.0.0-rc.15
-- @rocket.chat/ui-video-conf@3.0.0-rc.15
+- @yas chat/gazzodown@3.0.0-rc.15
+- @yas chat/ui-contexts@3.0.0-rc.15
+- @yas chat/ui-video-conf@3.0.0-rc.15
 
 ## 3.0.0-rc.14
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.14
-- @rocket.chat/ui-contexts@3.0.0-rc.14
-- @rocket.chat/ui-video-conf@3.0.0-rc.14
+- @yas chat/gazzodown@3.0.0-rc.14
+- @yas chat/ui-contexts@3.0.0-rc.14
+- @yas chat/ui-video-conf@3.0.0-rc.14
 
 ## 3.0.0-rc.13
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.13
-- @rocket.chat/ui-contexts@3.0.0-rc.13
-- @rocket.chat/ui-video-conf@3.0.0-rc.13
+- @yas chat/gazzodown@3.0.0-rc.13
+- @yas chat/ui-contexts@3.0.0-rc.13
+- @yas chat/ui-video-conf@3.0.0-rc.13
 
 ## 3.0.0-rc.12
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.12
-- @rocket.chat/ui-contexts@3.0.0-rc.12
-- @rocket.chat/ui-video-conf@3.0.0-rc.12
+- @yas chat/gazzodown@3.0.0-rc.12
+- @yas chat/ui-contexts@3.0.0-rc.12
+- @yas chat/ui-video-conf@3.0.0-rc.12
 
 ## 3.0.0-rc.11
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.11
-- @rocket.chat/ui-contexts@3.0.0-rc.11
-- @rocket.chat/ui-video-conf@3.0.0-rc.11
+- @yas chat/gazzodown@3.0.0-rc.11
+- @yas chat/ui-contexts@3.0.0-rc.11
+- @yas chat/ui-video-conf@3.0.0-rc.11
 
 ## 3.0.0-rc.10
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.10
-- @rocket.chat/ui-contexts@3.0.0-rc.10
-- @rocket.chat/ui-video-conf@3.0.0-rc.10
+- @yas chat/gazzodown@3.0.0-rc.10
+- @yas chat/ui-contexts@3.0.0-rc.10
+- @yas chat/ui-video-conf@3.0.0-rc.10
 
 ## 3.0.0-rc.9
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.9
-- @rocket.chat/ui-contexts@3.0.0-rc.9
-- @rocket.chat/ui-video-conf@3.0.0-rc.9
+- @yas chat/gazzodown@3.0.0-rc.9
+- @yas chat/ui-contexts@3.0.0-rc.9
+- @yas chat/ui-video-conf@3.0.0-rc.9
 
 ## 3.0.0-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.8
-- @rocket.chat/ui-contexts@3.0.0-rc.8
-- @rocket.chat/ui-video-conf@3.0.0-rc.8
+- @yas chat/gazzodown@3.0.0-rc.8
+- @yas chat/ui-contexts@3.0.0-rc.8
+- @yas chat/ui-video-conf@3.0.0-rc.8
 
 ## 3.0.0-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.7
-- @rocket.chat/ui-contexts@3.0.0-rc.7
-- @rocket.chat/ui-video-conf@3.0.0-rc.7
+- @yas chat/gazzodown@3.0.0-rc.7
+- @yas chat/ui-contexts@3.0.0-rc.7
+- @yas chat/ui-video-conf@3.0.0-rc.7
 
 ## 3.0.0-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.6
-- @rocket.chat/ui-contexts@3.0.0-rc.6
-- @rocket.chat/ui-video-conf@3.0.0-rc.6
+- @yas chat/gazzodown@3.0.0-rc.6
+- @yas chat/ui-contexts@3.0.0-rc.6
+- @yas chat/ui-video-conf@3.0.0-rc.6
 
 ## 3.0.0-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.5
-- @rocket.chat/ui-contexts@3.0.0-rc.5
-- @rocket.chat/ui-video-conf@3.0.0-rc.5
+- @yas chat/gazzodown@3.0.0-rc.5
+- @yas chat/ui-contexts@3.0.0-rc.5
+- @yas chat/ui-video-conf@3.0.0-rc.5
 
 ## 3.0.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.4
-- @rocket.chat/ui-contexts@3.0.0-rc.4
-- @rocket.chat/ui-video-conf@3.0.0-rc.4
+- @yas chat/gazzodown@3.0.0-rc.4
+- @yas chat/ui-contexts@3.0.0-rc.4
+- @yas chat/ui-video-conf@3.0.0-rc.4
 
 ## 3.0.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.3
-- @rocket.chat/ui-contexts@3.0.0-rc.3
-- @rocket.chat/ui-video-conf@3.0.0-rc.3
+- @yas chat/gazzodown@3.0.0-rc.3
+- @yas chat/ui-contexts@3.0.0-rc.3
+- @yas chat/ui-video-conf@3.0.0-rc.3
 
 ## 3.0.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.2
-- @rocket.chat/ui-contexts@3.0.0-rc.2
-- @rocket.chat/ui-video-conf@3.0.0-rc.2
+- @yas chat/gazzodown@3.0.0-rc.2
+- @yas chat/ui-contexts@3.0.0-rc.2
+- @yas chat/ui-video-conf@3.0.0-rc.2
 
 ## 3.0.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@3.0.0-rc.1
-- @rocket.chat/ui-contexts@3.0.0-rc.1
-- @rocket.chat/ui-video-conf@3.0.0-rc.1
+- @yas chat/gazzodown@3.0.0-rc.1
+- @yas chat/ui-contexts@3.0.0-rc.1
+- @yas chat/ui-video-conf@3.0.0-rc.1
 
 ## 3.0.0-rc.0
 
@@ -3775,73 +3775,73 @@
 
 - Updated dependencies [7da1edf866]
 - Updated dependencies [c2f337664e]
-  - @rocket.chat/ui-contexts@3.0.0-rc.0
-  - @rocket.chat/gazzodown@3.0.0-rc.0
-  - @rocket.chat/ui-video-conf@3.0.0-rc.0
+  - @yas chat/ui-contexts@3.0.0-rc.0
+  - @yas chat/gazzodown@3.0.0-rc.0
+  - @yas chat/ui-video-conf@3.0.0-rc.0
 
 ## 2.0.8
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.8
-- @rocket.chat/ui-contexts@2.0.8
-- @rocket.chat/ui-video-conf@2.0.8
+- @yas chat/gazzodown@2.0.8
+- @yas chat/ui-contexts@2.0.8
+- @yas chat/ui-video-conf@2.0.8
 
 ## 2.0.7
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.7
-- @rocket.chat/ui-contexts@2.0.7
-- @rocket.chat/ui-video-conf@2.0.7
+- @yas chat/gazzodown@2.0.7
+- @yas chat/ui-contexts@2.0.7
+- @yas chat/ui-video-conf@2.0.7
 
 ## 2.0.6
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.6
-- @rocket.chat/ui-contexts@2.0.6
-- @rocket.chat/ui-video-conf@2.0.6
+- @yas chat/gazzodown@2.0.6
+- @yas chat/ui-contexts@2.0.6
+- @yas chat/ui-video-conf@2.0.6
 
 ## 2.0.5
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.5
-- @rocket.chat/ui-contexts@2.0.5
-- @rocket.chat/ui-video-conf@2.0.5
+- @yas chat/gazzodown@2.0.5
+- @yas chat/ui-contexts@2.0.5
+- @yas chat/ui-video-conf@2.0.5
 
 ## 2.0.4
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.4
-- @rocket.chat/ui-contexts@2.0.4
-- @rocket.chat/ui-video-conf@2.0.4
+- @yas chat/gazzodown@2.0.4
+- @yas chat/ui-contexts@2.0.4
+- @yas chat/ui-video-conf@2.0.4
 
 ## 2.0.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.3
-- @rocket.chat/ui-contexts@2.0.3
-- @rocket.chat/ui-video-conf@2.0.3
+- @yas chat/gazzodown@2.0.3
+- @yas chat/ui-contexts@2.0.3
+- @yas chat/ui-video-conf@2.0.3
 
 ## 2.0.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.2
-- @rocket.chat/ui-contexts@2.0.2
-- @rocket.chat/ui-video-conf@2.0.2
+- @yas chat/gazzodown@2.0.2
+- @yas chat/ui-contexts@2.0.2
+- @yas chat/ui-video-conf@2.0.2
 
 ## 2.0.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.1
-- @rocket.chat/ui-contexts@2.0.1
-- @rocket.chat/ui-video-conf@2.0.1
+- @yas chat/gazzodown@2.0.1
+- @yas chat/ui-contexts@2.0.1
+- @yas chat/ui-video-conf@2.0.1
 
 ## 2.0.0
 
@@ -3857,50 +3857,50 @@
 - Updated dependencies [074db3b419]
 - Updated dependencies [b8f3d5014f]
 - Updated dependencies [0f56aacc4d]
-  - @rocket.chat/ui-contexts@2.0.0
-  - @rocket.chat/eslint-config@0.6.0
-  - @rocket.chat/gazzodown@2.0.0
-  - @rocket.chat/ui-video-conf@2.0.0
+  - @yas chat/ui-contexts@2.0.0
+  - @yas chat/eslint-config@0.6.0
+  - @yas chat/gazzodown@2.0.0
+  - @yas chat/ui-video-conf@2.0.0
 
 ## 2.0.0-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.0-rc.5
-- @rocket.chat/ui-contexts@2.0.0-rc.5
-- @rocket.chat/ui-video-conf@2.0.0-rc.5
+- @yas chat/gazzodown@2.0.0-rc.5
+- @yas chat/ui-contexts@2.0.0-rc.5
+- @yas chat/ui-video-conf@2.0.0-rc.5
 
 ## 2.0.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.0-rc.4
-- @rocket.chat/ui-contexts@2.0.0-rc.4
-- @rocket.chat/ui-video-conf@2.0.0-rc.4
+- @yas chat/gazzodown@2.0.0-rc.4
+- @yas chat/ui-contexts@2.0.0-rc.4
+- @yas chat/ui-video-conf@2.0.0-rc.4
 
 ## 2.0.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.0-rc.3
-- @rocket.chat/ui-contexts@2.0.0-rc.3
-- @rocket.chat/ui-video-conf@2.0.0-rc.3
+- @yas chat/gazzodown@2.0.0-rc.3
+- @yas chat/ui-contexts@2.0.0-rc.3
+- @yas chat/ui-video-conf@2.0.0-rc.3
 
 ## 2.0.0-rc.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.0-rc.2
-- @rocket.chat/ui-contexts@2.0.0-rc.2
-- @rocket.chat/ui-video-conf@2.0.0-rc.2
+- @yas chat/gazzodown@2.0.0-rc.2
+- @yas chat/ui-contexts@2.0.0-rc.2
+- @yas chat/ui-video-conf@2.0.0-rc.2
 
 ## 2.0.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@2.0.0-rc.1
-- @rocket.chat/ui-contexts@2.0.0-rc.1
-- @rocket.chat/ui-video-conf@2.0.0-rc.1
+- @yas chat/gazzodown@2.0.0-rc.1
+- @yas chat/ui-contexts@2.0.0-rc.1
+- @yas chat/ui-video-conf@2.0.0-rc.1
 
 ## 2.0.0-rc.0
 
@@ -3916,74 +3916,74 @@
 - Updated dependencies [074db3b419]
 - Updated dependencies [b8f3d5014f]
 - Updated dependencies [0f56aacc4d]
-  - @rocket.chat/ui-contexts@2.0.0-rc.0
-  - @rocket.chat/eslint-config@0.6.0-rc.0
-  - @rocket.chat/gazzodown@2.0.0-rc.0
-  - @rocket.chat/ui-video-conf@2.0.0-rc.0
+  - @yas chat/ui-contexts@2.0.0-rc.0
+  - @yas chat/eslint-config@0.6.0-rc.0
+  - @yas chat/gazzodown@2.0.0-rc.0
+  - @yas chat/ui-video-conf@2.0.0-rc.0
 
 ## 1.0.8
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.8
-- @rocket.chat/ui-contexts@1.0.8
-- @rocket.chat/ui-video-conf@1.0.8
+- @yas chat/gazzodown@1.0.8
+- @yas chat/ui-contexts@1.0.8
+- @yas chat/ui-video-conf@1.0.8
 
 ## 1.0.7
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.7
-- @rocket.chat/ui-contexts@1.0.7
-- @rocket.chat/ui-video-conf@1.0.7
+- @yas chat/gazzodown@1.0.7
+- @yas chat/ui-contexts@1.0.7
+- @yas chat/ui-video-conf@1.0.7
 
 ## 1.0.6
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.6
-- @rocket.chat/ui-contexts@1.0.6
-- @rocket.chat/ui-video-conf@1.0.6
+- @yas chat/gazzodown@1.0.6
+- @yas chat/ui-contexts@1.0.6
+- @yas chat/ui-video-conf@1.0.6
 
 ## 1.0.5
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.5
-- @rocket.chat/ui-contexts@1.0.5
-- @rocket.chat/ui-video-conf@1.0.5
+- @yas chat/gazzodown@1.0.5
+- @yas chat/ui-contexts@1.0.5
+- @yas chat/ui-video-conf@1.0.5
 
 ## 1.0.4
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.4
-- @rocket.chat/ui-contexts@1.0.4
-- @rocket.chat/ui-video-conf@1.0.4
+- @yas chat/gazzodown@1.0.4
+- @yas chat/ui-contexts@1.0.4
+- @yas chat/ui-video-conf@1.0.4
 
 ## 1.0.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.3
-- @rocket.chat/ui-contexts@1.0.3
-- @rocket.chat/ui-video-conf@1.0.3
+- @yas chat/gazzodown@1.0.3
+- @yas chat/ui-contexts@1.0.3
+- @yas chat/ui-video-conf@1.0.3
 
 ## 1.0.2
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.2
-- @rocket.chat/ui-contexts@1.0.2
-- @rocket.chat/ui-video-conf@1.0.2
+- @yas chat/gazzodown@1.0.2
+- @yas chat/ui-contexts@1.0.2
+- @yas chat/ui-video-conf@1.0.2
 
 ## 1.0.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.1
-- @rocket.chat/ui-contexts@1.0.1
-- @rocket.chat/ui-video-conf@1.0.1
+- @yas chat/gazzodown@1.0.1
+- @yas chat/ui-contexts@1.0.1
+- @yas chat/ui-video-conf@1.0.1
 
 ## 1.0.0
 
@@ -3999,90 +3999,90 @@
 - Updated dependencies [e01bbcca54]
 - Updated dependencies [f76d514341]
 - Updated dependencies [cde2539619]
-  - @rocket.chat/ui-contexts@1.0.0
-  - @rocket.chat/gazzodown@1.0.0
-  - @rocket.chat/ui-video-conf@1.0.0
+  - @yas chat/ui-contexts@1.0.0
+  - @yas chat/gazzodown@1.0.0
+  - @yas chat/ui-video-conf@1.0.0
 
 ## 1.0.0-rc.10
 
 ### Patch Changes
 
-- @rocket.chat/ui-contexts@1.0.0-rc.10
-- @rocket.chat/gazzodown@1.0.0-rc.10
-- @rocket.chat/ui-video-conf@1.0.0-rc.10
+- @yas chat/ui-contexts@1.0.0-rc.10
+- @yas chat/gazzodown@1.0.0-rc.10
+- @yas chat/ui-video-conf@1.0.0-rc.10
 
 ## 1.0.0-rc.9
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.9
-- @rocket.chat/ui-contexts@1.0.0-rc.9
-- @rocket.chat/ui-video-conf@1.0.0-rc.9
+- @yas chat/gazzodown@1.0.0-rc.9
+- @yas chat/ui-contexts@1.0.0-rc.9
+- @yas chat/ui-video-conf@1.0.0-rc.9
 
 ## 1.0.0-rc.8
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.8
-- @rocket.chat/ui-contexts@1.0.0-rc.8
-- @rocket.chat/ui-video-conf@1.0.0-rc.8
+- @yas chat/gazzodown@1.0.0-rc.8
+- @yas chat/ui-contexts@1.0.0-rc.8
+- @yas chat/ui-video-conf@1.0.0-rc.8
 
 ## 1.0.0-rc.7
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.7
-- @rocket.chat/ui-contexts@1.0.0-rc.7
-- @rocket.chat/ui-video-conf@1.0.0-rc.7
+- @yas chat/gazzodown@1.0.0-rc.7
+- @yas chat/ui-contexts@1.0.0-rc.7
+- @yas chat/ui-video-conf@1.0.0-rc.7
 
 ## 1.0.0-rc.6
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.6
-- @rocket.chat/ui-contexts@1.0.0-rc.6
-- @rocket.chat/ui-video-conf@1.0.0-rc.6
+- @yas chat/gazzodown@1.0.0-rc.6
+- @yas chat/ui-contexts@1.0.0-rc.6
+- @yas chat/ui-video-conf@1.0.0-rc.6
 
 ## 1.0.0-rc.5
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.5
-- @rocket.chat/ui-contexts@1.0.0-rc.5
-- @rocket.chat/ui-video-conf@1.0.0-rc.5
+- @yas chat/gazzodown@1.0.0-rc.5
+- @yas chat/ui-contexts@1.0.0-rc.5
+- @yas chat/ui-video-conf@1.0.0-rc.5
 
 ## 1.0.0-rc.4
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.4
-- @rocket.chat/ui-contexts@1.0.0-rc.4
-- @rocket.chat/ui-video-conf@1.0.0-rc.4
+- @yas chat/gazzodown@1.0.0-rc.4
+- @yas chat/ui-contexts@1.0.0-rc.4
+- @yas chat/ui-video-conf@1.0.0-rc.4
 
 ## 1.0.0-rc.3
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.3
-- @rocket.chat/ui-contexts@1.0.0-rc.3
-- @rocket.chat/ui-video-conf@1.0.0-rc.3
+- @yas chat/gazzodown@1.0.0-rc.3
+- @yas chat/ui-contexts@1.0.0-rc.3
+- @yas chat/ui-video-conf@1.0.0-rc.3
 
 ## 1.0.0-rc.2
 
 ### Patch Changes
 
 - Updated dependencies [f76d514341]
-  - @rocket.chat/ui-contexts@1.0.0-rc.2
-  - @rocket.chat/gazzodown@1.0.0-rc.2
-  - @rocket.chat/ui-video-conf@1.0.0-rc.2
+  - @yas chat/ui-contexts@1.0.0-rc.2
+  - @yas chat/gazzodown@1.0.0-rc.2
+  - @yas chat/ui-video-conf@1.0.0-rc.2
 
 ## 1.0.0-rc.1
 
 ### Patch Changes
 
-- @rocket.chat/gazzodown@1.0.0-rc.1
-- @rocket.chat/ui-contexts@1.0.0-rc.1
-- @rocket.chat/ui-video-conf@1.0.0-rc.1
+- @yas chat/gazzodown@1.0.0-rc.1
+- @yas chat/ui-contexts@1.0.0-rc.1
+- @yas chat/ui-video-conf@1.0.0-rc.1
 
 ## 1.0.0-rc.0
 
@@ -4097,9 +4097,9 @@
 - Updated dependencies [9ea8088f06]
 - Updated dependencies [e01bbcca54]
 - Updated dependencies [cde2539619]
-  - @rocket.chat/ui-contexts@1.0.0-rc.0
-  - @rocket.chat/gazzodown@1.0.0-rc.0
-  - @rocket.chat/ui-video-conf@1.0.0-rc.0
+  - @yas chat/ui-contexts@1.0.0-rc.0
+  - @yas chat/gazzodown@1.0.0-rc.0
+  - @yas chat/ui-video-conf@1.0.0-rc.0
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
@@ -4120,7 +4120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.30.1](https://github.com/YasChat/fuselage/compare/v0.30.0...v0.30.1) (2021-10-20)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.30.0](https://github.com/YasChat/fuselage/compare/v0.29.0...v0.30.0) (2021-10-06)
 
@@ -4130,7 +4130,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.29.0](https://github.com/YasChat/fuselage/compare/v0.28.0...v0.29.0) (2021-08-31)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.28.0](https://github.com/YasChat/fuselage/compare/v0.27.0...v0.28.0) (2021-07-30)
 
@@ -4151,11 +4151,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.26.0](https://github.com/YasChat/fuselage/compare/v0.25.0...v0.26.0) (2021-05-28)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.25.0](https://github.com/YasChat/fuselage/compare/v0.24.0...v0.25.0) (2021-05-19)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.24.0](https://github.com/YasChat/fuselage/compare/v0.23.0...v0.24.0) (2021-04-28)
 
@@ -4175,7 +4175,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.22.0](https://github.com/YasChat/fuselage/compare/v0.21.0...v0.22.0) (2021-02-26)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.21.0](https://github.com/YasChat/fuselage/compare/v0.20.3...v0.21.0) (2021-01-31)
 
@@ -4191,23 +4191,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.20.3](https://github.com/YasChat/fuselage/compare/v0.20.2...v0.20.3) (2021-01-29)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.20.2](https://github.com/YasChat/fuselage/compare/v0.20.1...v0.20.2) (2021-01-27)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.20.1](https://github.com/YasChat/fuselage/compare/v0.20.0...v0.20.1) (2020-12-22)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.20.0](https://github.com/YasChat/fuselage/compare/v0.19.0...v0.20.0) (2020-12-21)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.19.0](https://github.com/YasChat/fuselage/compare/v0.18.0...v0.19.0) (2020-11-28)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.18.0](https://github.com/YasChat/fuselage/compare/v0.17.3...v0.18.0) (2020-11-16)
 
@@ -4223,39 +4223,39 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.17.2](https://github.com/YasChat/fuselage/compare/v0.17.1...v0.17.2) (2020-10-28)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.17.1](https://github.com/YasChat/fuselage/compare/v0.17.0...v0.17.1) (2020-10-26)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.17.0](https://github.com/YasChat/fuselage/compare/v0.16.0...v0.17.0) (2020-10-25)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.16.0](https://github.com/YasChat/fuselage/compare/v0.15.1...v0.16.0) (2020-09-30)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.15.1](https://github.com/YasChat/fuselage/compare/v0.15.0...v0.15.1) (2020-09-22)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.15.0](https://github.com/YasChat/fuselage/compare/v0.14.1...v0.15.0) (2020-09-17)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.14.1](https://github.com/YasChat/fuselage/compare/v0.14.0...v0.14.1) (2020-08-22)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.14.0](https://github.com/YasChat/fuselage/compare/v0.13.2...v0.14.0) (2020-08-18)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.13.2](https://github.com/YasChat/fuselage/compare/v0.13.1...v0.13.2) (2020-07-24)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.13.1](https://github.com/YasChat/fuselage/compare/v0.13.0...v0.13.1) (2020-07-17)
 
@@ -4265,15 +4265,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.13.0](https://github.com/YasChat/fuselage/compare/v0.12.0...v0.13.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.12.0](https://github.com/YasChat/fuselage/compare/v0.11.0...v0.12.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.11.0](https://github.com/YasChat/fuselage/compare/v0.10.0...v0.11.0) (2020-07-11)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.10.0](https://github.com/YasChat/fuselage/compare/v0.9.0...v0.10.0) (2020-06-20)
 
@@ -4315,7 +4315,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.2](https://github.com/YasChat/fuselage/compare/v0.6.1...v0.6.2) (2020-03-31)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.6.1](https://github.com/YasChat/fuselage/compare/v0.6.0...v0.6.1) (2020-03-24)
 
@@ -4325,19 +4325,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0](https://github.com/YasChat/fuselage/compare/v0.5.0...v0.6.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.5.0](https://github.com/YasChat/fuselage/compare/v0.4.1...v0.5.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 ## [0.4.1](https://github.com/YasChat/fuselage/compare/v0.4.0...v0.4.1) (2020-03-16)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.4.0](https://github.com/YasChat/fuselage/compare/v0.3.0...v0.4.0) (2020-03-10)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.3.0](https://github.com/YasChat/fuselage/compare/v0.2.0...v0.3.0) (2020-02-17)
 
@@ -4347,7 +4347,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.30...v0.2.0) (2020-02-13)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.30](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.29...v0.2.0-alpha.30) (2020-02-12)
 
@@ -4357,15 +4357,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0-alpha.29](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.28...v0.2.0-alpha.29) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.28](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.27...v0.2.0-alpha.28) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.27](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.26...v0.2.0-alpha.27) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.26](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.25...v0.2.0-alpha.26) (2020-02-10)
 
@@ -4375,11 +4375,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0-alpha.25](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.24...v0.2.0-alpha.25) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.24](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.23...v0.2.0-alpha.24) (2020-02-09)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.23](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.22...v0.2.0-alpha.23) (2020-02-07)
 
@@ -4397,7 +4397,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0-alpha.21](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.20...v0.2.0-alpha.21) (2020-02-05)
 
-**Note:** Version bump only for package @rocket.chat/fuselage-ui-kit
+**Note:** Version bump only for package @yas chat/fuselage-ui-kit
 
 # [0.2.0-alpha.20](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.19...v0.2.0-alpha.20) (2020-02-01)
 

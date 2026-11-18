@@ -1,5 +1,5 @@
-import { FieldGroup, Field, NumberInput, TextInput, Button, FieldLabel, FieldRow, FieldError } from '@rocket.chat/fuselage';
-import { ActionLink, Form, FormContainer, FormFooter } from '@rocket.chat/layout';
+import { FieldGroup, Field, NumberInput, TextInput, Button, FieldLabel, FieldRow, FieldError } from '@yas chat/fuselage';
+import { ActionLink, Form, FormContainer, FormFooter } from '@yas chat/layout';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

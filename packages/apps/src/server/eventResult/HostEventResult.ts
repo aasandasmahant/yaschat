@@ -1,5 +1,5 @@
-import type { MarkedEventResult, PatchPhantomKey } from '@rocket.chat/apps-engine/definition/eventResult';
-import type { DistributiveOmit } from '@rocket.chat/core-typings';
+import type { MarkedEventResult, PatchPhantomKey } from '@yas chat/apps-engine/definition/eventResult';
+import type { DistributiveOmit } from '@yas chat/core-typings';
 
 /**
  * Drops the marker and the patch phantom. The phantom exists to type-check an app

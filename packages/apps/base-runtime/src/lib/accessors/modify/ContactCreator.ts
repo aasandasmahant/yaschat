@@ -1,5 +1,5 @@
-import type { IContactCreator } from '@rocket.chat/apps-engine/definition/accessors/IContactCreator';
-import type { ILivechatContact } from '@rocket.chat/apps-engine/definition/livechat';
+import type { IContactCreator } from '@yas chat/apps-engine/definition/accessors/IContactCreator';
+import type { ILivechatContact } from '@yas chat/apps-engine/definition/livechat';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

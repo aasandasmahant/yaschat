@@ -1,6 +1,6 @@
-import { Box, Icon, Avatar, StatusBullet } from '@rocket.chat/fuselage';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { useUserAvatarPath, useUserPresence, useUserCard } from '@rocket.chat/ui-contexts';
+import { Box, Icon, Avatar, StatusBullet } from '@yas chat/fuselage';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { useUserAvatarPath, useUserPresence, useUserCard } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import type { CallHistoryInternalContact } from '../definitions';

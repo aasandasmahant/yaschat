@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { isNotUndefined } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { isNotUndefined } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 import type { ClientSession } from 'mongodb';
 
 import { notifyOnSubscriptionChangedByRoomId } from '../notifyListener';

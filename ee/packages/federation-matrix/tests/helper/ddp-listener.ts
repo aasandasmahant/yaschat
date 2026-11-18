@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { DDPSDK } from '@rocket.chat/ddp-client';
+import type { IMessage } from '@yas chat/core-typings';
+import { DDPSDK } from '@yas chat/ddp-client';
 
 import type { IRequestConfig } from '../../../../../apps/meteor/tests/data/users.helper';
 

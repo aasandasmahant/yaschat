@@ -1,4 +1,4 @@
-import type { Path } from '@rocket.chat/rest-typings';
+import type { Path } from '@yas chat/rest-typings';
 
 export const APP_URL = 'https://github.com/YasChat/Apps.YasChat.Tester/raw/master/dist/appsyaschattester_0.3.0.zip?raw=true';
 export const APP_NAME = 'Apps.YasChat.Tester';

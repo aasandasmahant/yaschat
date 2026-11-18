@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Button, useStyle } from '@rocket.chat/fuselage';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { css } from '@yas chat/css-in-js';
+import { Button, useStyle } from '@yas chat/fuselage';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const AccessibilityShortcut = () => {

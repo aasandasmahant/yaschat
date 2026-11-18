@@ -1,4 +1,4 @@
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 import { SurfaceOptions } from '../Components/Preview/Display/Surface/constant';
 
@@ -229,7 +229,7 @@ export const templates: templateType[] = [
 									text: 'Click Me',
 									emoji: true,
 								},
-								url: 'https://rocket.chat',
+								url: 'https://yas chat',
 							},
 						],
 					},
@@ -398,7 +398,7 @@ export const templates: templateType[] = [
 								},
 							],
 						},
-						externalUrl: 'https://rocket.chat',
+						externalUrl: 'https://yas chat',
 					},
 					{
 						type: 'image',

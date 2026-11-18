@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Settings } from '@rocket.chat/models';
+import { nodeHandler } from '@yas chat/http-router';
+import { Settings } from '@yas chat/models';
 
 import { settings } from '..';
 import { nodeLoggerMiddleware } from '../../api/v1/middlewares/logger';

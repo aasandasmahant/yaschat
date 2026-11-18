@@ -1,4 +1,4 @@
-import type { PaginatedMultiSelectOption } from '@rocket.chat/fuselage';
+import type { PaginatedMultiSelectOption } from '@yas chat/fuselage';
 import type { RefObject, SetStateAction } from 'react';
 import { createContext, useContext } from 'react';
 

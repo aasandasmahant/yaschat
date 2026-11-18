@@ -1,6 +1,6 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatDepartment } from '@rocket.chat/models';
-import { getUnitsFromUser } from '@rocket.chat/omni-core-ee';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatDepartment } from '@yas chat/models';
+import { getUnitsFromUser } from '@yas chat/omni-core-ee';
 import type { FilterOperators } from 'mongodb';
 
 import { cbLogger } from './logger';

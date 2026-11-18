@@ -1,8 +1,8 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Box, Tabs, TabsItem } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ContextualbarClose, ContextualbarDialog, ContextualbarHeader, ContextualbarTitle } from '@rocket.chat/ui-client';
-import { useRouter, useRouteParameter } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { Box, Tabs, TabsItem } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ContextualbarClose, ContextualbarDialog, ContextualbarHeader, ContextualbarTitle } from '@yas chat/ui-client';
+import { useRouter, useRouteParameter } from '@yas chat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IHttp, IHttpExtend, IHttpRequest, IHttpResponse } from '@rocket.chat/apps-engine/definition/accessors/IHttp';
-import type { IPersistence } from '@rocket.chat/apps-engine/definition/accessors/IPersistence';
-import type { IRead } from '@rocket.chat/apps-engine/definition/accessors/IRead';
+import type { IHttp, IHttpExtend, IHttpRequest, IHttpResponse } from '@yas chat/apps-engine/definition/accessors/IHttp';
+import type { IPersistence } from '@yas chat/apps-engine/definition/accessors/IPersistence';
+import type { IRead } from '@yas chat/apps-engine/definition/accessors/IRead';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { bridgeCall } from '../bridges/bridgeCall';

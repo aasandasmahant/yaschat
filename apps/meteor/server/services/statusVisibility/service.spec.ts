@@ -1,5 +1,5 @@
-import { mockModel } from '@rocket.chat/models/testing';
-import { hiddenIds, isHiddenFor } from '@rocket.chat/streamer';
+import { mockModel } from '@yas chat/models/testing';
+import { hiddenIds, isHiddenFor } from '@yas chat/streamer';
 import EJSON from 'ejson';
 
 import { StatusVisibilityService } from './service';
@@ -11,7 +11,7 @@ const findWithStatusVisibilityConfig = jest.fn();
 const findPresenceDisabledByAdmin = jest.fn();
 const findUsersNotOffline = jest.fn();
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	api: { broadcast: (...args: unknown[]) => broadcast(...args) },
 	Settings: { get: async (key: string) => settingValues[key] },
 	ServiceClassInternal: class {

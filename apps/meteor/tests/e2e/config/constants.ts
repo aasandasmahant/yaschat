@@ -13,7 +13,7 @@ export const URL_MONGODB = process.env.MONGO_URL || 'mongodb://localhost:3001/me
 export const MOCK_SERVER_URL = process.env.MOCK_SERVER_URL || 'http://localhost:4000';
 
 export const ADMIN_CREDENTIALS = {
-	email: 'yaschat.internal.admin.test@rocket.chat',
+	email: 'yaschat.internal.admin.test@yas chat',
 	password: 'yaschat.internal.admin.test',
 	username: 'yaschat.internal.admin.test',
 } as const;

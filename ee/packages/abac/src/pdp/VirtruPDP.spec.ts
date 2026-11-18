@@ -1,5 +1,5 @@
-import type { AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 
 import { OnlyCompliantCanBeAddedToRoomError, PdpHealthCheckError } from '../errors';
 import { PREVIEW_SCAN_LIMIT } from '../helper';
@@ -7,7 +7,7 @@ import { getDeniedSubjects, VIRTRU_PREVIEW_MIN_MATCHES, VirtruPDP } from './Virt
 import type { Decision } from './types';
 
 const serverFetchMock = jest.fn();
-jest.mock('@rocket.chat/server-fetch', () => ({ serverFetch: (...a: unknown[]) => serverFetchMock(...a) }));
+jest.mock('@yas chat/server-fetch', () => ({ serverFetch: (...a: unknown[]) => serverFetchMock(...a) }));
 
 const usersFindOneById = jest.fn();
 const usersFindByUsernames = jest.fn();

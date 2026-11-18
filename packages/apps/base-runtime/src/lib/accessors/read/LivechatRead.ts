@@ -1,8 +1,8 @@
-import type { ILivechatRead } from '@rocket.chat/apps-engine/definition/accessors/ILivechatRead';
-import type { IDepartment } from '@rocket.chat/apps-engine/definition/livechat';
-import type { ILivechatRoom } from '@rocket.chat/apps-engine/definition/livechat/ILivechatRoom';
-import type { IVisitor } from '@rocket.chat/apps-engine/definition/livechat/IVisitor';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
+import type { ILivechatRead } from '@yas chat/apps-engine/definition/accessors/ILivechatRead';
+import type { IDepartment } from '@yas chat/apps-engine/definition/livechat';
+import type { ILivechatRoom } from '@yas chat/apps-engine/definition/livechat/ILivechatRoom';
+import type { IVisitor } from '@yas chat/apps-engine/definition/livechat/IVisitor';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

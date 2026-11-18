@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
-import { SHA256 } from '@rocket.chat/sha256';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
+import { SHA256 } from '@yas chat/sha256';
 
 import { trim } from '../../../lib/utils/stringUtils';
 import { compareUserPassword } from '../../lib/compareUserPassword';

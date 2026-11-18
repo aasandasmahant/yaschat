@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IImportProgress } from '@rocket.chat/core-typings';
-import { Imports } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IImportProgress } from '@yas chat/core-typings';
+import { Imports } from '@yas chat/models';
 
 import { Importers } from '../../lib/import';
 

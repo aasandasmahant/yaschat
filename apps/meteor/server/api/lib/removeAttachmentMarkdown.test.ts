@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 
 const { removeAttachmentMarkdown } = proxyquire.noCallThru().load('./removeAttachmentMarkdown', {
-	'@rocket.chat/tools': { isRecord: (value: unknown) => typeof value === 'object' && value !== null && !Array.isArray(value) },
+	'@yas chat/tools': { isRecord: (value: unknown) => typeof value === 'object' && value !== null && !Array.isArray(value) },
 });
 
 describe('removeAttachmentMarkdown', () => {

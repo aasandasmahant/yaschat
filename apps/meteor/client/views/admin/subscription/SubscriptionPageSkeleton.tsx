@@ -1,4 +1,4 @@
-import { Box, CardGrid, CardGridItem, Skeleton } from '@rocket.chat/fuselage';
+import { Box, CardGrid, CardGridItem, Skeleton } from '@yas chat/fuselage';
 import { memo } from 'react';
 
 const SubscriptionPageSkeleton = () => (

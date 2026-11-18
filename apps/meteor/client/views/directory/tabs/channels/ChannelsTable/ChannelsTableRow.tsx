@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { Box, Avatar } from '@rocket.chat/fuselage';
-import { GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { Box, Avatar } from '@yas chat/fuselage';
+import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
 import type { KeyboardEvent, MouseEvent } from 'react';
 
 import MarkdownText from '../../../../../components/MarkdownText';

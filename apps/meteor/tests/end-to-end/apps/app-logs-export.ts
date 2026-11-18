@@ -1,7 +1,7 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { ILoggerStorageEntry } from '@rocket.chat/apps/dist/server/logging/ILoggerStorageEntry';
-import type { App } from '@rocket.chat/core-typings';
+import type { ILoggerStorageEntry } from '@yas chat/apps/dist/server/logging/ILoggerStorageEntry';
+import type { App } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, request, credentials, getInstanceId } from '../../data/api-data';

@@ -1,7 +1,7 @@
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { GenericError, GenericModal } from '@rocket.chat/ui-client';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { GenericError, GenericModal } from '@yas chat/ui-client';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { memo, useCallback } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

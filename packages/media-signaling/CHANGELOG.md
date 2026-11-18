@@ -1,4 +1,4 @@
-# @rocket.chat/media-signaling
+# @yas chat/media-signaling
 
 ## 1.4.0
 
@@ -11,7 +11,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe]:</summary>
-  - @rocket.chat/emitter@0.33.1
+  - @yas chat/emitter@0.33.1
 
   </details>
 
@@ -26,7 +26,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe]:</summary>
-  - @rocket.chat/emitter@0.33.1-rc.0
+  - @yas chat/emitter@0.33.1-rc.0
 
   </details>
 
@@ -61,7 +61,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/emitter@0.33.0
+  - @yas chat/emitter@0.33.0
 
   </details>
 

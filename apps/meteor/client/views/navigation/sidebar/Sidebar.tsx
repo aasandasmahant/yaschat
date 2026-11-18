@@ -1,4 +1,4 @@
-import { Sidebar as FuselageSidebar } from '@rocket.chat/fuselage';
+import { Sidebar as FuselageSidebar } from '@yas chat/fuselage';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

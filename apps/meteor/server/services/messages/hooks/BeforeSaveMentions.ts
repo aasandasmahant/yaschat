@@ -1,6 +1,6 @@
-import { api, Team, ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IUser, IRoom } from '@rocket.chat/core-typings';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import { api, Team, ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IUser, IRoom } from '@yas chat/core-typings';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
 
 import { i18n } from '../../../lib/i18n';
 import { MentionsServer } from '../../../lib/messaging/mentions/Mentions';

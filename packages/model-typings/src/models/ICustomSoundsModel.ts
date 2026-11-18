@@ -1,4 +1,4 @@
-import type { ICustomSound } from '@rocket.chat/core-typings';
+import type { ICustomSound } from '@yas chat/core-typings';
 import type { FindCursor, InsertOneResult, UpdateResult, WithId, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

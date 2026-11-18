@@ -1,12 +1,12 @@
-# `@rocket.chat/api-client`
+# `@yas chat/api-client`
 
 > A typed `fetch`-based client for the YasChat REST API.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/api-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/api-client) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/api-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/api-client)
+[![npm](https://img.shields.io/npm/v/@yas chat/api-client?style=flat-square)](https://www.npmjs.com/package/@yas chat/api-client) [![downloads](https://img.shields.io/npm/dw/@yas chat/api-client?style=flat-square)](https://www.npmjs.com/package/@yas chat/api-client)
 
-`RestClient` sends requests to a YasChat server's `/api` routes. Endpoint paths, parameters and results are typed by [`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings), so the compiler checks each call against the endpoint it targets. Results are typed as `Serialized<...>` from [`@rocket.chat/core-typings`](https://www.npmjs.com/package/@rocket.chat/core-typings): what actually arrives over JSON, with dates as strings.
+`RestClient` sends requests to a YasChat server's `/api` routes. Endpoint paths, parameters and results are typed by [`@yas chat/rest-typings`](https://www.npmjs.com/package/@yas chat/rest-typings), so the compiler checks each call against the endpoint it targets. Results are typed as `Serialized<...>` from [`@yas chat/core-typings`](https://www.npmjs.com/package/@yas chat/core-typings): what actually arrives over JSON, with dates as strings.
 
-The YasChat web client uses this package, and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) builds its `rest` property on top of it.
+The YasChat web client uses this package, and [`@yas chat/ddp-client`](https://www.npmjs.com/package/@yas chat/ddp-client) builds its `rest` property on top of it.
 
 - Typed `get`, `post`, `put` and `delete` methods.
 - Authentication through `X-User-Id` / `X-Auth-Token` headers.
@@ -17,10 +17,10 @@ The YasChat web client uses this package, and [`@rocket.chat/ddp-client`](https:
 ## Installation
 
 ```sh
-npm install @rocket.chat/api-client
+npm install @yas chat/api-client
 ```
 
-`@rocket.chat/rest-typings` and `@rocket.chat/core-typings` come in as dependencies.
+`@yas chat/rest-typings` and `@yas chat/core-typings` come in as dependencies.
 
 The package is published as CommonJS. It relies on the global `fetch`, `FormData` and `File`, so it runs in browsers and in recent Node.js versions. `upload()` uses `XMLHttpRequest` and only works in browsers.
 
@@ -31,9 +31,9 @@ The package is published as CommonJS. It relies on the global `fetch`, `FormData
 Pass the server URL without the `/api` suffix; the client adds it.
 
 ```ts
-import { RestClient } from '@rocket.chat/api-client';
+import { RestClient } from '@yas chat/api-client';
 
-const client = new RestClient({ baseUrl: 'https://open.rocket.chat' });
+const client = new RestClient({ baseUrl: 'https://open.yas chat' });
 
 const info = await client.get('/info');
 ```
@@ -55,7 +55,7 @@ If you already have a personal access token, pass the credentials to the constru
 
 ```ts
 const client = new RestClient({
-	baseUrl: 'https://open.rocket.chat',
+	baseUrl: 'https://open.yas chat',
 	credentials: { 'X-User-Id': userId, 'X-Auth-Token': authToken },
 });
 ```
@@ -174,10 +174,10 @@ const xhr = client.upload(
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/api-client). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/api-client build
-yarn workspace @rocket.chat/api-client dev
-yarn workspace @rocket.chat/api-client lint
-yarn workspace @rocket.chat/api-client testunit
+yarn workspace @yas chat/api-client build
+yarn workspace @yas chat/api-client dev
+yarn workspace @yas chat/api-client lint
+yarn workspace @yas chat/api-client testunit
 ```
 
 ## License

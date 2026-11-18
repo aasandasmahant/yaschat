@@ -1,9 +1,9 @@
-import { AbacContractError } from '@rocket.chat/abac';
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { Message, Team, Room, ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
-import { isBannedSubscription, isRoomNativeFederated, type IUser } from '@rocket.chat/core-typings';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import { AbacContractError } from '@yas chat/abac';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { Message, Team, Room, ClientSafeError, isClientSafeError } from '@yas chat/core-services';
+import { isBannedSubscription, isRoomNativeFederated, type IUser } from '@yas chat/core-typings';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { callbacks } from '../callbacks';

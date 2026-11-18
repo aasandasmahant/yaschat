@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { type IUser, type RequiredField } from '@rocket.chat/core-typings';
-import { type Logger } from '@rocket.chat/logger';
+import { ClientSafeError } from '@yas chat/core-services';
+import { type IUser, type RequiredField } from '@yas chat/core-typings';
+import { type Logger } from '@yas chat/logger';
 import type { MiddlewareHandler } from 'hono';
 
 import { settings } from '../../../settings';

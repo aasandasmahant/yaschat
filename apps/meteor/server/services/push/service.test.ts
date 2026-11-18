@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -15,7 +15,7 @@ const registerPushTokenStub = sandbox.stub();
 
 const { PushService } = proxyquire.noCallThru().load('./service', {
 	'./tokenManagement/registerPushToken': { registerPushToken: registerPushTokenStub },
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		ServiceClassInternal: class {
 			onEvent = (): void => undefined;
 		},

@@ -1,5 +1,5 @@
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useRouteParameter, useEndpoint, UserContext } from '@rocket.chat/ui-contexts';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useRouteParameter, useEndpoint, UserContext } from '@yas chat/ui-contexts';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
 import { useCallback, useContext } from 'react';
 import { useTranslation } from 'react-i18next';

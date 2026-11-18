@@ -1,6 +1,6 @@
-import { StatusVisibility } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { StatusVisibility } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 
 import { handleBio } from './handleBio';

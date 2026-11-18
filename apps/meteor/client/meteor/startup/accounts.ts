@@ -10,7 +10,7 @@ import { useUserDataSyncReady } from '../../lib/userData';
 
 // Meteor's accounts-password package registers `verifyEmail` server-side; declare
 // it here so the typed `sdk.call` accepts it from client code.
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		verifyEmail(token: string): void;
 	}

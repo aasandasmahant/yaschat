@@ -14,7 +14,7 @@ import {
 	MultiSelect as MultiSelectComponent,
 	MultiSelectFiltered as MultiSelectFilteredComponent,
 	Slider as SliderComponent,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 
 import { withLabelId, withAriaLabelledBy, withAriaLabelledByAndId, withVisuallyHiddenLabel } from './withLabelHelpers';
 
@@ -35,7 +35,7 @@ export const Select = withAriaLabelledBy(SelectComponent);
 // with aria-labelledby + id for aria-controls
 /**
  * @deprecated Use `MultiSelectFiltered` instead, or `SelectFiltered` from
- * `@rocket.chat/fuselage` for single selection.
+ * `@yas chat/fuselage` for single selection.
  */
 export const AutoComplete = withAriaLabelledByAndId(AutoCompleteComponent<any>) as typeof AutoCompleteComponent;
 export const MultiSelect = withAriaLabelledByAndId(MultiSelectComponent);

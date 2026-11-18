@@ -1,5 +1,5 @@
-import { Box, Icon, Button, Divider, Option } from '@rocket.chat/fuselage';
-import { useOutsideClick } from '@rocket.chat/fuselage-hooks';
+import { Box, Icon, Button, Divider, Option } from '@yas chat/fuselage';
+import { useOutsideClick } from '@yas chat/fuselage-hooks';
 import { type ComponentProps, useRef, useState, type ChangeEvent } from 'react';
 
 import { formatDate } from '../../../utils/formatDate';

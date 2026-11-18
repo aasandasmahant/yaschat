@@ -1,4 +1,4 @@
-import type { LicenseLimitKind, LicenseModule, BehaviorWithContext, LicenseBehavior } from '@rocket.chat/core-typings';
+import type { LicenseLimitKind, LicenseModule, BehaviorWithContext, LicenseBehavior } from '@yas chat/core-typings';
 
 import type { LicenseManager } from '../license';
 import { hasModule } from '../modules';

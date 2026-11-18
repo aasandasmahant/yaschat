@@ -1,4 +1,4 @@
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
 
 export const useCompactMode = () => {
 	const breakpoint = useBreakpoints();

@@ -1,13 +1,13 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { CallHistoryBridge } from '@rocket.chat/apps/dist/server/bridges/CallHistoryBridge';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { CallHistoryBridge } from '@yas chat/apps/dist/server/bridges/CallHistoryBridge';
 import type {
 	ICallHistorySearchFilters,
 	ICallHistorySearchPagination,
 	ICallHistorySearchResult,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import type { ICallHistoryItem as IAppsCallHistoryItem } from '@rocket.chat/apps-engine/definition/mediaCalls';
-import { CallHistory as CallHistoryService } from '@rocket.chat/core-services';
-import { CallHistory } from '@rocket.chat/models';
+} from '@yas chat/apps-engine/definition/accessors';
+import type { ICallHistoryItem as IAppsCallHistoryItem } from '@yas chat/apps-engine/definition/mediaCalls';
+import { CallHistory as CallHistoryService } from '@yas chat/core-services';
+import { CallHistory } from '@yas chat/models';
 
 import { toAppCallHistoryItem } from '../converters/callHistory';
 

@@ -1,7 +1,7 @@
-import { api, Message, Team, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms, Users } from '@rocket.chat/models';
+import { api, Message, Team, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { Subscriptions, Rooms, Users } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { beforeChangeRoomRole } from '../../lib/callbacks/beforeChangeRoomRole';

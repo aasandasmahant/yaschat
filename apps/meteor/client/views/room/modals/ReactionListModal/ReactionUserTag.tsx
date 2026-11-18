@@ -1,4 +1,4 @@
-import { Box, Tag } from '@rocket.chat/fuselage';
+import { Box, Tag } from '@yas chat/fuselage';
 
 export type ReactionUserTagProps = { displayName: string };
 

@@ -1,5 +1,5 @@
-import type { ICalendarEvent, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ICalendarEventModel } from '@rocket.chat/model-typings';
+import type { ICalendarEvent, IUser, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ICalendarEventModel } from '@yas chat/model-typings';
 import type { FindCursor, IndexDescription, Collection, Db, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

@@ -1,9 +1,9 @@
 import { before, beforeEach, describe, it } from 'node:test';
 import zlib from 'node:zlib';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
-import { isTruthy } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
+import { isTruthy } from '@yas chat/tools';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -1200,9 +1200,9 @@ describe('SAML', () => {
 
 		const loadSAML = () =>
 			proxyquire.noCallThru().load('./SAML', {
-				'@rocket.chat/core-services': { ClientSafeError },
-				'@rocket.chat/random': { Random: { id: () => '__credentialToken__' } },
-				'@rocket.chat/tools': { escapeRegExp: (s: string) => s, escapeHTML: (s: string) => s },
+				'@yas chat/core-services': { ClientSafeError },
+				'@yas chat/random': { Random: { id: () => '__credentialToken__' } },
+				'@yas chat/tools': { escapeRegExp: (s: string) => s, escapeHTML: (s: string) => s },
 				'meteor/accounts-base': { Accounts: {} },
 				...getURLStubs,
 				'./ServiceProvider': {

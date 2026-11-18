@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Palette, borderRadius } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Palette, borderRadius } from '@yas chat/fuselage';
 
 import type { SpotlightOrientation } from '../lib/stageTiles';
 import { COLUMN_THUMB_WIDTH, STRIP_THUMB_WIDTH } from '../lib/stageTiles';

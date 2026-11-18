@@ -1,5 +1,5 @@
-import type { IEmojiCustom } from '@rocket.chat/core-typings';
-import { EmojiCustom } from '@rocket.chat/models';
+import type { IEmojiCustom } from '@yas chat/core-typings';
+import { EmojiCustom } from '@yas chat/models';
 import type { Filter, FindOptions } from 'mongodb';
 
 export async function findEmojisCustom({

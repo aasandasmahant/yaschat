@@ -1,4 +1,4 @@
-import { RING_RECIPIENTS_LIMIT } from '@rocket.chat/core-typings';
+import { RING_RECIPIENTS_LIMIT } from '@yas chat/core-typings';
 
 export const availabilityErrors = {
 	NOT_CONFIGURED: 'video-conf-provider-not-configured',

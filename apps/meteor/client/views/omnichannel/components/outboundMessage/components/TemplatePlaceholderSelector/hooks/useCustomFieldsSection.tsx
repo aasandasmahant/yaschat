@@ -1,4 +1,4 @@
-import { Text } from '@rocket.chat/fuselage';
+import { Text } from '@yas chat/fuselage';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

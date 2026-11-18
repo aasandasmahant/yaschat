@@ -1,6 +1,6 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IRoom, ISubscription, IUser } from '@rocket.chat/core-typings';
-import type { Endpoints } from '@rocket.chat/rest-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IRoom, ISubscription, IUser } from '@yas chat/core-typings';
+import type { Endpoints } from '@yas chat/rest-typings';
 
 import { api, assertSuccess, credentials, request, RequestFailedError } from './api-data';
 import type { IRequestConfig } from './users.helper';

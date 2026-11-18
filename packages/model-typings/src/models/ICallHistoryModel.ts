@@ -1,4 +1,4 @@
-import type { CallHistoryItem, IRegisterUser, IUser } from '@rocket.chat/core-typings';
+import type { CallHistoryItem, IRegisterUser, IUser } from '@yas chat/core-typings';
 import type { FindCursor, Document } from 'mongodb';
 
 import type { FindPaginated, IBaseModel } from './IBaseModel';

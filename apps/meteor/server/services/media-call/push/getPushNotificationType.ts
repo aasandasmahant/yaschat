@@ -1,5 +1,5 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import type { VoipPushNotificationType } from '@rocket.chat/media-calls';
+import type { IMediaCall } from '@yas chat/core-typings';
+import type { VoipPushNotificationType } from '@yas chat/media-calls';
 
 export function getPushNotificationType(call: IMediaCall): VoipPushNotificationType {
 	if (call.acceptedAt) {

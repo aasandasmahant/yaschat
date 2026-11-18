@@ -3,7 +3,7 @@ import {
 	useVideoConfIncomingCalls,
 	useVideoConfRejectIncomingCall,
 	useVideoConfWindowEnabled,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import { useMemo } from 'react';
 
 export type RingingCallActions = {

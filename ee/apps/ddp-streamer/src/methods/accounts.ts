@@ -1,5 +1,5 @@
-import { Account, ClientSafeError } from '@rocket.chat/core-services';
-import type { SessionAccounts } from '@rocket.chat/ddp-server';
+import { Account, ClientSafeError } from '@yas chat/core-services';
+import type { SessionAccounts } from '@yas chat/ddp-server';
 
 /** Logs sessions in and out through the Account service. */
 export const sessionAccounts: SessionAccounts = {

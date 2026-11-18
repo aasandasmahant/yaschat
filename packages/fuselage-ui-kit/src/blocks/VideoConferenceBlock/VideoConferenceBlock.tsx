@@ -1,6 +1,6 @@
-import { getUserDisplayName, hasJoinedVideoConference, VideoConferenceStatus } from '@rocket.chat/core-typings';
-import { useSetting, useUserId, useUserPreference } from '@rocket.chat/ui-contexts';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { getUserDisplayName, hasJoinedVideoConference, VideoConferenceStatus } from '@yas chat/core-typings';
+import { useSetting, useUserId, useUserPreference } from '@yas chat/ui-contexts';
+import type * as UiKit from '@yas chat/ui-kit';
 import {
 	VideoConfMessageSkeleton,
 	VideoConfMessage,
@@ -15,7 +15,7 @@ import {
 	VideoConfMessageActions,
 	VideoConfMessageAction,
 	VideoConfContext,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import type { MouseEventHandler } from 'react';
 import { useContext, memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

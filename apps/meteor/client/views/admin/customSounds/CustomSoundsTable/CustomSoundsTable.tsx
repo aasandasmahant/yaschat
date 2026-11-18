@@ -1,5 +1,5 @@
-import { Pagination, States, StatesIcon, StatesActions, StatesAction, StatesTitle, type TableColumnWidth } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { Pagination, States, StatesIcon, StatesActions, StatesAction, StatesTitle, type TableColumnWidth } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -10,8 +10,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import type { MutableRefObject } from 'react';
 import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

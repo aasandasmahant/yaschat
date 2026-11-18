@@ -1,5 +1,5 @@
-import { Select, type SelectOption } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { Select, type SelectOption } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { endOfMonth } from 'date-fns/endOfMonth';
 import { format } from 'date-fns/format';
 import { startOfMonth } from 'date-fns/startOfMonth';

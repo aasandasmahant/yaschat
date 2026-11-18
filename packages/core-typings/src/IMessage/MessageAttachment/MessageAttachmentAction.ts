@@ -1,6 +1,6 @@
 // DEPRECATED
 
-import type { Root } from '@rocket.chat/message-parser';
+import type { Root } from '@yas chat/message-parser';
 
 import type { MessageAttachmentBase } from './MessageAttachmentBase';
 

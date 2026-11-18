@@ -1,4 +1,4 @@
-import type { AvatarProps } from '@rocket.chat/fuselage';
+import type { AvatarProps } from '@yas chat/fuselage';
 
 export type ItemMediaSizeName = 'condensed' | 'medium' | 'extended';
 

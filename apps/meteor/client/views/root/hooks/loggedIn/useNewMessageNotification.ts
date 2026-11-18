@@ -1,6 +1,6 @@
-import type { AtLeast, ISubscription } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useCustomSound } from '@rocket.chat/ui-contexts';
+import type { AtLeast, ISubscription } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useCustomSound } from '@yas chat/ui-contexts';
 
 export const useNewMessageNotification = () => {
 	const { notificationSounds } = useCustomSound();

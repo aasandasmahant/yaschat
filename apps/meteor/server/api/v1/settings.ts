@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISetting, ISettingColor, LoginServiceConfiguration, OAuthConfiguration } from '@rocket.chat/core-typings';
-import { isActionSettingWithEndpoint, isSettingAction, isSettingColor } from '@rocket.chat/core-typings';
-import { LoginServiceConfiguration as LoginServiceConfigurationModel, Settings } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISetting, ISettingColor, LoginServiceConfiguration, OAuthConfiguration } from '@yas chat/core-typings';
+import { isActionSettingWithEndpoint, isSettingAction, isSettingColor } from '@yas chat/core-typings';
+import { LoginServiceConfiguration as LoginServiceConfigurationModel, Settings } from '@yas chat/models';
 import {
 	ajv,
 	isSettingsBulkProps,
@@ -14,7 +14,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import { Meteor } from 'meteor/meteor';
 import type { FindOptions } from 'mongodb';
 import _ from 'underscore';

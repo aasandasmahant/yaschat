@@ -1,9 +1,9 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Users } from '@rocket.chat/models';
-import type { Response } from '@rocket.chat/server-fetch';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Users } from '@yas chat/models';
+import type { Response } from '@yas chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 import type { ClientSession } from 'mongodb';
 
 import { isRenderableImageType } from '../../../lib/renderableImageTypes';

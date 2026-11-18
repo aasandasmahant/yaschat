@@ -1,4 +1,4 @@
-import * as UiKit from '@rocket.chat/ui-kit';
+import * as UiKit from '@yas chat/ui-kit';
 
 const textObjectTypes: readonly unknown[] = Object.values(UiKit.TextObjectType);
 

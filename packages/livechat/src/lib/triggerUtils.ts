@@ -1,4 +1,4 @@
-import type { ILivechatAgent, ILivechatTrigger, ILivechatTriggerAction, ILivechatTriggerType, Serialized } from '@rocket.chat/core-typings';
+import type { ILivechatAgent, ILivechatTrigger, ILivechatTriggerAction, ILivechatTriggerType, Serialized } from '@yas chat/core-typings';
 
 import { Livechat } from '../api';
 import { processUnread } from './main';

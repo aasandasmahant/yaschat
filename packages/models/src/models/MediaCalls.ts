@@ -6,8 +6,8 @@ import type {
 	MediaCallContact,
 	IUser,
 	MediaCallActor,
-} from '@rocket.chat/core-typings';
-import type { IMediaCallsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import type { IMediaCallsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { IndexDescription, Collection, Db, UpdateFilter, UpdateOptions, UpdateResult, Document, FindCursor } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

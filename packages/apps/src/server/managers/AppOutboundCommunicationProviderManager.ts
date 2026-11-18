@@ -4,7 +4,7 @@ import type {
 	IOutboundPhoneMessageProvider,
 	ValidOutboundProvider,
 	IOutboundMessage,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication';
+} from '@yas chat/apps-engine/definition/outboundCommunication';
 
 import type { AppManager } from '../AppManager';
 import type { OutboundMessageBridge } from '../bridges';

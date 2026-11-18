@@ -1,4 +1,4 @@
-import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop } from '@yas chat/desktop-api';
 
 declare global {
 	interface Window {

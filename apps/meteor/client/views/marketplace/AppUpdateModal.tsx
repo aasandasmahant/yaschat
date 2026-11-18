@@ -8,7 +8,7 @@ import {
 	ModalHeader,
 	ModalIcon,
 	ModalTitle,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type AppUpdateModalProps = {

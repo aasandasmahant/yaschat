@@ -1,7 +1,7 @@
-import type { IUser, UserPresence } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { EventHandlerOf } from '@rocket.chat/emitter';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IUser, UserPresence } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { EventHandlerOf } from '@yas chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 import { sdk } from './SDKClient';
 import { subscribeRaw } from '../meteor/connection';

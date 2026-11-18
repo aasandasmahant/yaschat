@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useRef } from 'react';
 
 const findMatch = (labels: readonly string[], query: string, start: number) => {

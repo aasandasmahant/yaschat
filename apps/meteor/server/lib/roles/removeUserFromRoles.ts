@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRole, IUser, IRoom } from '@rocket.chat/core-typings';
-import { Users, Subscriptions, Roles } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRole, IUser, IRoom } from '@yas chat/core-typings';
+import { Users, Subscriptions, Roles } from '@yas chat/models';
 
 import { syncRoomRolePriorityForUserAndRoom } from './syncRoomRolePriority';
 import { validateRoleList } from './validateRoleList';

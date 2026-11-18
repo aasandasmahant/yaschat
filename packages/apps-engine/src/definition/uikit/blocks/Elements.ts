@@ -1,7 +1,7 @@
 import type { IOptionObject, ITextObject } from './Objects';
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export enum BlockElementType {
 	BUTTON = 'button',
@@ -13,7 +13,7 @@ export enum BlockElementType {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export enum InputElementDispatchAction {
 	ON_CHARACTER_ENTERED = 'on_character_entered',
@@ -21,14 +21,14 @@ export enum InputElementDispatchAction {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IBlockElement {
 	type: BlockElementType;
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export type AccessoryElements = IButtonElement | IImageElement | IOverflowMenuElement;
 
@@ -49,7 +49,7 @@ export enum ButtonStyle {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IButtonElement extends IInteractiveElement {
 	type: BlockElementType.BUTTON;
@@ -61,7 +61,7 @@ export interface IButtonElement extends IInteractiveElement {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IImageElement extends IBlockElement {
 	type: BlockElementType.IMAGE;
@@ -70,7 +70,7 @@ export interface IImageElement extends IBlockElement {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IOverflowMenuElement extends IInteractiveElement {
 	type: BlockElementType.OVERFLOW_MENU;
@@ -79,7 +79,7 @@ export interface IOverflowMenuElement extends IInteractiveElement {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IPlainTextInputElement extends IInputElement {
 	type: BlockElementType.PLAIN_TEXT_INPUT;
@@ -88,14 +88,14 @@ export interface IPlainTextInputElement extends IInputElement {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface ISelectElement extends IInputElement {
 	type: BlockElementType.STATIC_SELECT | BlockElementType.MULTI_STATIC_SELECT;
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IStaticSelectElement extends ISelectElement {
 	type: BlockElementType.STATIC_SELECT;
@@ -105,7 +105,7 @@ export interface IStaticSelectElement extends ISelectElement {
 }
 
 /**
- * @deprecated please prefer the rocket.chat/ui-kit components
+ * @deprecated please prefer the yas chat/ui-kit components
  */
 export interface IMultiStaticSelectElement extends ISelectElement {
 	type: BlockElementType.MULTI_STATIC_SELECT;

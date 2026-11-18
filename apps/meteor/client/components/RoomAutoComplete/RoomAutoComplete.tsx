@@ -1,10 +1,10 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Option, Box } from '@rocket.chat/fuselage';
-import type { AutoCompleteProps } from '@rocket.chat/fuselage';
-import { AutoComplete } from '@rocket.chat/fuselage-forms';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { ITEM_MEDIA_SIZE, RoomAvatar } from '@rocket.chat/ui-avatar';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { Option, Box } from '@yas chat/fuselage';
+import type { AutoCompleteProps } from '@yas chat/fuselage';
+import { AutoComplete } from '@yas chat/fuselage-forms';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yas chat/ui-avatar';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { forwardRef, memo, useMemo, useState } from 'react';

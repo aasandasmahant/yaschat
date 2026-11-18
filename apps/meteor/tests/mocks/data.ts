@@ -1,14 +1,14 @@
 import { faker } from '@faker-js/faker';
-import type { IExternalComponentRoomInfo } from '@rocket.chat/apps/dist/client/definition/IExternalComponentRoomInfo';
-import type { IExternalComponentUserInfo } from '@rocket.chat/apps/dist/client/definition/IExternalComponentUserInfo';
-import type { ILivechatContact } from '@rocket.chat/apps-engine/definition/livechat';
+import type { IExternalComponentRoomInfo } from '@yas chat/apps/dist/client/definition/IExternalComponentRoomInfo';
+import type { IExternalComponentUserInfo } from '@yas chat/apps/dist/client/definition/IExternalComponentUserInfo';
+import type { ILivechatContact } from '@yas chat/apps-engine/definition/livechat';
 import {
 	AppSubscriptionStatus,
 	ILivechatAgentStatus,
 	LivechatPriorityWeight,
 	OmnichannelSourceType,
 	UserStatus,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type {
 	LicenseInfo,
 	App,
@@ -23,10 +23,10 @@ import type {
 	ILivechatDepartment,
 	ILivechatMonitor,
 	IOmnichannelRoom,
-} from '@rocket.chat/core-typings';
-import { parse } from '@rocket.chat/message-parser';
-import type { ILivechatContactWithManagerData } from '@rocket.chat/rest-typings';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+} from '@yas chat/core-typings';
+import { parse } from '@yas chat/message-parser';
+import type { ILivechatContactWithManagerData } from '@yas chat/rest-typings';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 
 import type { MessageWithMdEnforced } from '../../client/lib/parseMessageTextToAstMarkdown';
 

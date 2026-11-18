@@ -1,6 +1,6 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useEffect, useMemo } from 'react';
 
 import { VideoRecorder } from '../../../../../../lib/videoRecorder';

@@ -1,8 +1,8 @@
-import type { ILivechatDepartment, ILivechatDepartmentAgents } from '@rocket.chat/core-typings';
-import { LivechatDepartment, LivechatDepartmentAgents } from '@rocket.chat/models';
-import { applyDepartmentRestrictions } from '@rocket.chat/omni-core';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { ILivechatDepartment, ILivechatDepartmentAgents } from '@yas chat/core-typings';
+import { LivechatDepartment, LivechatDepartmentAgents } from '@yas chat/models';
+import { applyDepartmentRestrictions } from '@yas chat/omni-core';
+import type { PaginatedResult } from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Document, Filter, FilterOperators, FindOptions } from 'mongodb';
 
 import { hasPermissionAsync } from '../../../../lib/authorization/hasPermission';

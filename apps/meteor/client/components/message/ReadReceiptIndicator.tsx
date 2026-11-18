@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Box, Icon } from '@rocket.chat/fuselage';
+import type { IMessage } from '@yas chat/core-typings';
+import { Box, Icon } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type ReadReceiptIndicatorProps = {

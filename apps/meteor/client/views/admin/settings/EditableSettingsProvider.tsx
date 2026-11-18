@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { useSettings } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { useSettings } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { create } from 'zustand';

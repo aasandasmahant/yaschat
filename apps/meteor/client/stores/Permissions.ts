@@ -1,4 +1,4 @@
-import type { IPermission } from '@rocket.chat/core-typings';
+import type { IPermission } from '@yas chat/core-typings';
 
 import { createDocumentMapStore } from '../lib/cachedStores/DocumentMapStore';
 import { createGlobalStore } from '../lib/cachedStores/createGlobalStore';

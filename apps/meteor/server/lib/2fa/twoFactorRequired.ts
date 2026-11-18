@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 
 import type { ITwoFactorOptions } from './code';
 import { checkCodeForUser } from './code';

@@ -1,8 +1,8 @@
-import { hashPassword } from '@rocket.chat/account-utils';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { UserStatus, type IUser } from '@rocket.chat/core-typings';
-import { Settings, Rooms, Users, Roles } from '@rocket.chat/models';
-import { validateEmail } from '@rocket.chat/tools';
+import { hashPassword } from '@yas chat/account-utils';
+import { ClientSafeError } from '@yas chat/core-services';
+import { UserStatus, type IUser } from '@yas chat/core-typings';
+import { Settings, Rooms, Users, Roles } from '@yas chat/models';
+import { validateEmail } from '@yas chat/tools';
 import colors from 'colors/safe';
 import { Meteor } from 'meteor/meteor';
 
@@ -214,7 +214,7 @@ export const insertInitialData = async (): Promise<void> => {
 			username: 'yaschat.internal.admin.test',
 			emails: [
 				{
-					address: 'yaschat.internal.admin.test@rocket.chat',
+					address: 'yaschat.internal.admin.test@yas chat',
 					verified: true,
 				},
 			],

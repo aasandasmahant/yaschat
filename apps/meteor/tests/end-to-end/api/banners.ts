@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 
@@ -80,7 +80,7 @@ describe('banners', () => {
 									text: 'Banner_Text',
 									textArguments: [],
 									modifiers: [],
-									link: 'https://rocket.chat',
+									link: 'https://yas chat',
 								},
 							},
 						},

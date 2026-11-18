@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IImportProgress, IImporterSelection } from '@rocket.chat/core-typings';
-import { Imports } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IImportProgress, IImporterSelection } from '@yas chat/core-typings';
+import { Imports } from '@yas chat/models';
 
 import { ProgressStep } from '../../../lib/importer/ImporterProgressStep';
 import { Importers } from '../../lib/import';

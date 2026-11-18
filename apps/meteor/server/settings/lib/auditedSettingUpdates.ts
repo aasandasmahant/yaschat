@@ -4,8 +4,8 @@ import type {
 	IAuditServerUserActor,
 	ISetting,
 	SettingValue,
-} from '@rocket.chat/core-typings';
-import { ServerEvents } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { ServerEvents } from '@yas chat/models';
 
 import { settings } from '../cached';
 

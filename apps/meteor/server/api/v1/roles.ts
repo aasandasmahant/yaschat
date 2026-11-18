@@ -1,6 +1,6 @@
-import { api, Authorization, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRole, IUserInRole, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import { Roles, Users } from '@rocket.chat/models';
+import { api, Authorization, ClientSafeError } from '@yas chat/core-services';
+import type { IRole, IUserInRole, YasChatRecordDeleted } from '@yas chat/core-typings';
+import { Roles, Users } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -11,7 +11,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { getUsersInRolePaginated } from '../../lib/authorization/getUsersInRole';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
@@ -363,7 +363,7 @@ const rolesRoutes = API.v1
 
 type RolesEndpoints = ExtractRoutesFromAPI<typeof rolesRoutes>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends RolesEndpoints {}
 }

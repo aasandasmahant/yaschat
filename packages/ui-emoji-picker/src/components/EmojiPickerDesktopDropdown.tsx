@@ -1,5 +1,5 @@
-import { Box, PopoverSurface } from '@rocket.chat/fuselage';
-import { useMergedRefs, usePosition, usePreventScrollOutside } from '@rocket.chat/fuselage-hooks';
+import { Box, PopoverSurface } from '@yas chat/fuselage';
+import { useMergedRefs, usePosition, usePreventScrollOutside } from '@yas chat/fuselage-hooks';
 import type { ReactNode, Ref, RefObject } from 'react';
 import { useMemo, useRef, forwardRef } from 'react';
 

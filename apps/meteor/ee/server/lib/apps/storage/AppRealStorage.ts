@@ -1,11 +1,11 @@
-import type { IMarketplaceInfo } from '@rocket.chat/apps/dist/server/marketplace/IMarketplaceInfo';
-import { AppMetadataStorage } from '@rocket.chat/apps/dist/server/storage/AppMetadataStorage';
-import type { IAppStorageItem } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
-import type { Apps } from '@rocket.chat/models';
-import { removeEmpty } from '@rocket.chat/tools';
+import type { IMarketplaceInfo } from '@yas chat/apps/dist/server/marketplace/IMarketplaceInfo';
+import { AppMetadataStorage } from '@yas chat/apps/dist/server/storage/AppMetadataStorage';
+import type { IAppStorageItem } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
+import type { Apps } from '@yas chat/models';
+import { removeEmpty } from '@yas chat/tools';
 import type { UpdateFilter } from 'mongodb';
 
 export class AppRealStorage extends AppMetadataStorage {

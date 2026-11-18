@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Box } from '@rocket.chat/fuselage';
+import type { IUser } from '@yas chat/core-typings';
+import type { Box } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 import { UserCardUsername } from '../UserCard';

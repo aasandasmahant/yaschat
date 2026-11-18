@@ -1,4 +1,4 @@
-import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@rocket.chat/ui-composer';
+import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yas chat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 import { useResumeChatOnHoldMutation } from './hooks/useResumeChatOnHoldMutation';

@@ -1,6 +1,6 @@
-import { GenericMenu } from '@rocket.chat/ui-client';
-import type { CallHistoryExternalContact, CallHistoryTableRowProps } from '@rocket.chat/ui-voip';
-import { CallHistoryTableRow, getCallHistoryMenuItems, usePeekMediaSessionState, useWidgetExternalControls } from '@rocket.chat/ui-voip';
+import { GenericMenu } from '@yas chat/ui-client';
+import type { CallHistoryExternalContact, CallHistoryTableRowProps } from '@yas chat/ui-voip';
+import { CallHistoryTableRow, getCallHistoryMenuItems, usePeekMediaSessionState, useWidgetExternalControls } from '@yas chat/ui-voip';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

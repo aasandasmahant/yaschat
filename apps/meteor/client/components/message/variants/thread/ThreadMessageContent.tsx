@@ -1,8 +1,8 @@
-import type { IThreadMainMessage, IThreadMessage } from '@rocket.chat/core-typings';
-import { isE2EEMessage, isQuoteAttachment } from '@rocket.chat/core-typings';
-import { MessageBody } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useUserId, useUserPresence } from '@rocket.chat/ui-contexts';
+import type { IThreadMainMessage, IThreadMessage } from '@yas chat/core-typings';
+import { isE2EEMessage, isQuoteAttachment } from '@yas chat/core-typings';
+import { MessageBody } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useUserId, useUserPresence } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

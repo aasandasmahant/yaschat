@@ -1,6 +1,6 @@
-import type { IRoom, IUpload, IUploadWithUser } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Box, Select, Throbber } from '@rocket.chat/fuselage';
+import type { IRoom, IUpload, IUploadWithUser } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Select, Throbber } from '@yas chat/fuselage';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -11,7 +11,7 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarSection,
 	ContextualbarDialog,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import type { ChangeEvent } from 'react';
 import { useId, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

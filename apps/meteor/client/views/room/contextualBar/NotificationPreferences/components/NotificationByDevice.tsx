@@ -1,5 +1,5 @@
-import { Box, AccordionItem, Icon, FieldGroup } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
+import { Box, AccordionItem, Icon, FieldGroup } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

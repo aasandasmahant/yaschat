@@ -1,4 +1,4 @@
-# @rocket.chat/xmpp-server
+# @yas chat/xmpp-server
 
 Native XMPP server-to-server federation. Spec-first: read [docs/README.md](docs/README.md)
 before changing behaviour.
@@ -11,12 +11,12 @@ yarn typecheck && yarn lint         # from this folder; never run the Meteor typ
 yarn test:e2e                       # needs a running YasChat, xmpp-server-service and ejabberd; see docs/operations.md
 yarn test:e2e:stack                 # builds and starts YasChat + Openfire in Docker, then runs test:e2e against them
 node --import tsx --test --test-name-pattern='<name>' tests/end-to-end/<file>.spec.ts
-yarn workspace @rocket.chat/xmpp-server-service ms   # the only process that hosts the service
+yarn workspace @yas chat/xmpp-server-service ms   # the only process that hosts the service
 ```
 
 ## Conventions
 
-- `src/` minus `src/service/` is the protocol core. It imports nothing from `@rocket.chat/*`
+- `src/` minus `src/service/` is the protocol core. It imports nothing from `@yas chat/*`
   except `emitter`. `src/service/` is the only place that knows YasChat.
 - Every capability has a spec in `docs/specs/`. A behaviour change edits the spec in the same
   PR. A new bug becomes a `D<n>` entry plus an `it.skip` test whose comment links the anchor,

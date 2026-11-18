@@ -1,4 +1,4 @@
-import type { ActiveReaction } from '@rocket.chat/ui-conference';
+import type { ActiveReaction } from '@yas chat/ui-conference';
 
 import {
 	REACTION_TTL_MS,

@@ -1,4 +1,4 @@
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import { createContext, useContext } from 'react';
 
 type EmojiPackage = {

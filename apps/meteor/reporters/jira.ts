@@ -138,7 +138,7 @@ class JIRAReporter implements Reporter {
 	}
 
 	private async _onTestEnd(test: TestCase, result: TestResult) {
-		if (process.env.REPORTER_ROCKETCHAT_REPORT !== 'true') {
+		if (process.env.REPORTER_YasChat_REPORT !== 'true') {
 			return;
 		}
 

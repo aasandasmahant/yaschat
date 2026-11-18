@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { isAppLogsExportProps } from '@rocket.chat/rest-typings';
-import { ajv } from '@rocket.chat/rest-typings/src/v1/Ajv';
+import type { IUser } from '@yas chat/core-typings';
+import { isAppLogsExportProps } from '@yas chat/rest-typings';
+import { ajv } from '@yas chat/rest-typings/src/v1/Ajv';
 import { parseCookie } from 'cookie';
 import { json2csv } from 'json-2-csv';
 

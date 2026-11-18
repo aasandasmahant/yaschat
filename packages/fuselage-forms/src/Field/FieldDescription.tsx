@@ -1,4 +1,4 @@
-import { FieldDescription as FieldDescriptionComponent } from '@rocket.chat/fuselage';
+import { FieldDescription as FieldDescriptionComponent } from '@yas chat/fuselage';
 import type { ReactNode, ComponentProps } from 'react';
 
 import { useFieldDescriptorId } from './FieldContext';

@@ -1,6 +1,6 @@
-import type { ClassificationBannerPayload, ClassificationBannerSegment, IAbacAttributeDefinition, IRoom } from '@rocket.chat/core-typings';
-import { isABACManagedRoom, isDiscussion, isOmnichannelRoom, isRoomFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
-import { isTruthy } from '@rocket.chat/tools';
+import type { ClassificationBannerPayload, ClassificationBannerSegment, IAbacAttributeDefinition, IRoom } from '@yas chat/core-typings';
+import { isABACManagedRoom, isDiscussion, isOmnichannelRoom, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
+import { isTruthy } from '@yas chat/tools';
 
 import { readableTextColor } from './colors';
 import type { ClassificationBannerAttribute, ClassificationBannersConfig, ClassificationRoomMatch, ClassificationRoomType } from './types';

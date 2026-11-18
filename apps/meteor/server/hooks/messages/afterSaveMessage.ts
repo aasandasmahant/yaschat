@@ -1,7 +1,7 @@
-import { Message } from '@rocket.chat/core-services';
-import type { IMessage, IUser, IRoom } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Rooms } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import type { IMessage, IUser, IRoom } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Rooms } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import type { SendMessageOptions } from '../../lib/messages/sendMessage';

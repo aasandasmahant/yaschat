@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { Trans } from 'react-i18next';
 
 export type AirGappedRestrictionWarningProps = { isRestricted: boolean; remainingDays: number };

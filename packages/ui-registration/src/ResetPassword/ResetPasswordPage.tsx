@@ -1,9 +1,9 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Button, FieldGroup, Field, FieldLabel, ButtonGroup, PasswordInput, FieldRow, FieldError } from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormSubtitle, FormTitle } from '@rocket.chat/layout';
-import { PasswordVerifier, useValidatePassword } from '@rocket.chat/ui-client';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
-import { useSetting, useRouter, useRouteParameter, useUser, useMethod, useLoginWithToken, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { Button, FieldGroup, Field, FieldLabel, ButtonGroup, PasswordInput, FieldRow, FieldError } from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormSubtitle, FormTitle } from '@yas chat/layout';
+import { PasswordVerifier, useValidatePassword } from '@yas chat/ui-client';
+import type { TranslationKey } from '@yas chat/ui-contexts';
+import { useSetting, useRouter, useRouteParameter, useUser, useMethod, useLoginWithToken, useEndpoint } from '@yas chat/ui-contexts';
 import { useEffect, useId, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import type { IOAuthAuthCode } from '@rocket.chat/core-typings';
+import type { IOAuthAuthCode } from '@yas chat/core-typings';
 import type { DeleteResult, Document, UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

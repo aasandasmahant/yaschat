@@ -1,6 +1,6 @@
 import { View } from '@react-pdf/renderer';
-import typography from '@rocket.chat/fuselage-tokens/dist/typography.json';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import typography from '@yas chat/fuselage-tokens/dist/typography.json';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import InlineElements from '../elements/InlineElements';
 

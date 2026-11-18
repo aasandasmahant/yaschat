@@ -1,5 +1,5 @@
-import type { ISidebarCategory } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { ISidebarCategory } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 export const usePersistCategoriesMutation = () => {

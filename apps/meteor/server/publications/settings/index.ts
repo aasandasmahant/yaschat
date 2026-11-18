@@ -1,6 +1,6 @@
-import type { ISetting, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
-import { Settings } from '@rocket.chat/models';
+import type { ISetting, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
+import { Settings } from '@yas chat/models';
 import { Meteor } from 'meteor/meteor';
 import type { WithId } from 'mongodb';
 
@@ -8,7 +8,7 @@ import { getSettingPermissionId } from '../../../lib/authorization';
 import { hasPermissionAsync, hasAtLeastOnePermissionAsync } from '../../lib/authorization/hasPermission';
 import { SettingsEvents } from '../../settings';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		'public-settings/get'(
 			updatedSince?: Date,

@@ -1,5 +1,5 @@
-import type { IEmailInbox } from '@rocket.chat/core-typings';
-import { EmailInbox, Users } from '@rocket.chat/models';
+import type { IEmailInbox } from '@yas chat/core-typings';
+import { EmailInbox, Users } from '@yas chat/models';
 import {
 	ajv,
 	isEmailInbox,
@@ -10,7 +10,7 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { sendTestEmailToInbox } from '../../features/EmailInbox/EmailInbox_Outgoing';
 import { API } from '../api';

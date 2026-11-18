@@ -1,4 +1,4 @@
-import type { LicenseManager } from '@rocket.chat/license';
+import type { LicenseManager } from '@yas chat/license';
 import type { MiddlewareHandler } from 'hono';
 
 import type { FailureResult, TypedOptions } from '../../../../../server/api/definition';

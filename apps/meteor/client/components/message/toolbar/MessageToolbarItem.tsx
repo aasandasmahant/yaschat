@@ -1,6 +1,6 @@
-import { MessageToolbarItem as FuselageMessageToolbarItem } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import { useLayoutHiddenActions } from '@rocket.chat/ui-contexts';
+import { MessageToolbarItem as FuselageMessageToolbarItem } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
+import { useLayoutHiddenActions } from '@yas chat/ui-contexts';
 import type { MouseEventHandler } from 'react';
 
 export type MessageToolbarItemProps = {

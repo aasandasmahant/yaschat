@@ -1,4 +1,4 @@
-import type { KeyOfEach } from '@rocket.chat/core-typings';
+import type { KeyOfEach } from '@yas chat/core-typings';
 
 import type { AppsEndpoints } from './apps';
 import type { DefaultEndpoints } from './default';

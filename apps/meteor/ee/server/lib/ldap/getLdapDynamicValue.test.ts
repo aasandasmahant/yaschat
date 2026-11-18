@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { ILDAPEntry } from '@rocket.chat/core-typings';
+import type { ILDAPEntry } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getLdapDynamicValue } from './getLdapDynamicValue';

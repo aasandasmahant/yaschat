@@ -1,5 +1,5 @@
-import type { ILivechatCustomField } from '@rocket.chat/core-typings';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import type { ILivechatCustomField } from '@yas chat/core-typings';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useCustomFieldsQuery } from '../../hooks/useCustomFieldsQuery';

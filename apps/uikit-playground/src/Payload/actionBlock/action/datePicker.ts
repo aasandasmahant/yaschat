@@ -1,4 +1,4 @@
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 export const actionWithDatePicker: readonly LayoutBlock[] = [
 	{

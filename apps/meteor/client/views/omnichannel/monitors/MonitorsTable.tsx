@@ -13,8 +13,8 @@ import {
 	StatesAction,
 	Stack,
 	type TableColumnWidth,
-} from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+} from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import {
 	UserAutoComplete,
 	GenericModal,
@@ -30,8 +30,8 @@ import {
 	useSort,
 	GenericNoResults,
 	links,
-} from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { useMutation, hashKey, useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

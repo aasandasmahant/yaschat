@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useWizardContext, WizardActions, WizardBackButton, WizardNextButton } from '@rocket.chat/ui-client';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useWizardContext, WizardActions, WizardBackButton, WizardNextButton } from '@yas chat/ui-client';
 
 import type { RepliesFormData, RepliesFormSubmitPayload } from '../forms/RepliesForm';
 import RepliesForm from '../forms/RepliesForm';

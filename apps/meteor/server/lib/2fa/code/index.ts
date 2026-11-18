@@ -1,8 +1,8 @@
 import crypto from 'node:crypto';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, IMethodConnection } from '@rocket.chat/core-typings';
-import { TwoFactorChallenges, Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser, IMethodConnection } from '@yas chat/core-typings';
+import { TwoFactorChallenges, Users } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 
 import { EmailCheck } from './EmailCheck';

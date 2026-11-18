@@ -1,10 +1,10 @@
 import { Buffer } from 'node:buffer';
 import { readFile } from 'node:fs/promises';
 
-import type { App } from '@rocket.chat/apps-engine/definition/App';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions/AppsEngineException';
-import type { IFileUploadContext } from '@rocket.chat/apps-engine/definition/uploads/IFileUploadContext';
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
+import type { App } from '@yas chat/apps-engine/definition/App';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions/AppsEngineException';
+import type { IFileUploadContext } from '@yas chat/apps-engine/definition/uploads/IFileUploadContext';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 import { AppAccessorsInstance } from '../../lib/accessors/mod';

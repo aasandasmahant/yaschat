@@ -1,11 +1,11 @@
-import type { IAppServerOrchestrator, IAppsMessage, IAppsUser } from '@rocket.chat/apps';
-import type { ITypingDescriptor } from '@rocket.chat/apps/dist/server/bridges/MessageBridge';
-import { MessageBridge } from '@rocket.chat/apps/dist/server/bridges/MessageBridge';
-import type { Reaction } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import { api } from '@rocket.chat/core-services';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Users, Subscriptions } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, IAppsMessage, IAppsUser } from '@yas chat/apps';
+import type { ITypingDescriptor } from '@yas chat/apps/dist/server/bridges/MessageBridge';
+import { MessageBridge } from '@yas chat/apps/dist/server/bridges/MessageBridge';
+import type { Reaction } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import { api } from '@yas chat/core-services';
+import type { IMessage } from '@yas chat/core-typings';
+import { Users, Subscriptions } from '@yas chat/models';
 
 import { deleteMessage } from '../../../lib/messages/deleteMessage';
 import { updateMessage } from '../../../lib/messages/updateMessage';

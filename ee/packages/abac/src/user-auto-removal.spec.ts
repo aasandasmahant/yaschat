@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition, IRoom, IUser } from '@rocket.chat/core-typings';
-import { Subscriptions } from '@rocket.chat/models';
+import type { IAbacAttributeDefinition, IRoom, IUser } from '@yas chat/core-typings';
+import { Subscriptions } from '@yas chat/models';
 import type { Collection, Db } from 'mongodb';
 
 import { Audit } from './audit';
@@ -7,7 +7,7 @@ import { AbacService } from './index';
 import { logger } from './logger';
 import { acquireSharedInMemoryMongo, SHARED_ABAC_TEST_DB, type SharedMongoConnection } from './test-helpers/mongoMemoryServer';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClass: class {
 		onSettingChanged = jest.fn();
 	},

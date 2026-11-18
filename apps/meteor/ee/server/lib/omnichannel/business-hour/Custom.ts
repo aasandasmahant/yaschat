@@ -1,6 +1,6 @@
-import type { ILivechatBusinessHour } from '@rocket.chat/core-typings';
-import { LivechatBusinessHourTypes } from '@rocket.chat/core-typings';
-import { LivechatDepartment, LivechatDepartmentAgents, Users } from '@rocket.chat/models';
+import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
+import { LivechatDepartment, LivechatDepartmentAgents, Users } from '@yas chat/models';
 
 import { businessHourManager } from '../../../../../server/lib/omnichannel/business-hour';
 import type { IBusinessHourType } from '../../../../../server/lib/omnichannel/business-hour/AbstractBusinessHour';

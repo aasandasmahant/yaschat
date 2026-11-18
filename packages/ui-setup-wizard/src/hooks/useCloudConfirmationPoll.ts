@@ -1,4 +1,4 @@
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useCallback, useEffect } from 'react';
 
 import { useSetupWizardContext } from '../contexts/SetupWizardContext';

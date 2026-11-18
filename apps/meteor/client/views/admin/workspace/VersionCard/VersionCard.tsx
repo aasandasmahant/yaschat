@@ -1,10 +1,10 @@
-import type { IWorkspaceInfo } from '@rocket.chat/core-typings';
-import { Card, CardBody, CardCol, CardControls, CardHeader, CardTitle, Icon, Text } from '@rocket.chat/fuselage';
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
-import type { SupportedVersions } from '@rocket.chat/server-cloud-communication';
-import { ExternalLink, links, useLicense, useLicenseName } from '@rocket.chat/ui-client';
-import type { LocationPathname } from '@rocket.chat/ui-contexts';
-import { useSetModal, useMediaUrl } from '@rocket.chat/ui-contexts';
+import type { IWorkspaceInfo } from '@yas chat/core-typings';
+import { Card, CardBody, CardCol, CardControls, CardHeader, CardTitle, Icon, Text } from '@yas chat/fuselage';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import type { SupportedVersions } from '@yas chat/server-cloud-communication';
+import { ExternalLink, links, useLicense, useLicenseName } from '@yas chat/ui-client';
+import type { LocationPathname } from '@yas chat/ui-contexts';
+import { useSetModal, useMediaUrl } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

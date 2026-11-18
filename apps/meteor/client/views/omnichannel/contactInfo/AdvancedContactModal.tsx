@@ -1,5 +1,5 @@
-import { links, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useRole, useEndpoint } from '@rocket.chat/ui-contexts';
+import { links, useHasLicenseModule } from '@yas chat/ui-client';
+import { useRole, useEndpoint } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

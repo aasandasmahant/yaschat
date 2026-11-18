@@ -1,9 +1,9 @@
-import type { IE2EEMessage, IMessage, IRoom, IUser, IUploadWithUser, Serialized, IE2EEPinnedMessage } from '@rocket.chat/core-typings';
-import { isE2EEMessage, isEncryptedMessageContent } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import { isTruthy } from '@rocket.chat/tools';
-import { imperativeModal } from '@rocket.chat/ui-client';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import type { IE2EEMessage, IMessage, IRoom, IUser, IUploadWithUser, Serialized, IE2EEPinnedMessage } from '@yas chat/core-typings';
+import { isE2EEMessage, isEncryptedMessageContent } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import { isTruthy } from '@yas chat/tools';
+import { imperativeModal } from '@yas chat/ui-client';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import sampleSize from 'lodash/sampleSize';
 
 import type { E2EEState } from './E2EEState';
@@ -879,7 +879,7 @@ class E2E extends Emitter {
 
 export const e2e = new E2E();
 
-window.__rocketChatE2E = e2e;
+window.__YasChatE2E = e2e;
 
 getDdpSdk().account.onLogout(() => {
 	void e2e.stopClient();

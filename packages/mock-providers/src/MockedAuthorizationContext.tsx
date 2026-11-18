@@ -1,4 +1,4 @@
-import { AuthorizationContext } from '@rocket.chat/ui-contexts';
+import { AuthorizationContext } from '@yas chat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 
 const dummyRolesMap: ReturnType<ContextType<typeof AuthorizationContext>['getRoles']> = new Map();

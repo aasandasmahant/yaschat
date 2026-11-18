@@ -1,5 +1,5 @@
-import type { IUserDataFile, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IUserDataFilesModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IUserDataFile, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IUserDataFilesModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription, Document } from 'mongodb';
 
 import { BaseUploadModelRaw } from './BaseUploadModel';

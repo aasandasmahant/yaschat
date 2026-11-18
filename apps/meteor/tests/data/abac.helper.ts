@@ -1,4 +1,4 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
 import type { MongoClient } from 'mongodb';
 
 export const addAbacAttributesToUserDirectly = async (

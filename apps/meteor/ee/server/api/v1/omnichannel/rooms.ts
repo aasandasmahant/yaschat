@@ -1,7 +1,7 @@
-import { OmnichannelEEService } from '@rocket.chat/core-services';
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatRooms, Subscriptions } from '@rocket.chat/models';
-import { isLivechatRoomOnHoldProps, isLivechatRoomResumeOnHoldProps, isPOSTLivechatRoomPriorityParams } from '@rocket.chat/rest-typings';
+import { OmnichannelEEService } from '@yas chat/core-services';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatRooms, Subscriptions } from '@yas chat/models';
+import { isLivechatRoomOnHoldProps, isLivechatRoomResumeOnHoldProps, isPOSTLivechatRoomPriorityParams } from '@yas chat/rest-typings';
 
 import { removePriorityFromRoom, updateRoomPriority } from './lib/priorities';
 import { API } from '../../../../../server/api';

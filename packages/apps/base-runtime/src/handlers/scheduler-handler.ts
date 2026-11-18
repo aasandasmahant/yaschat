@@ -1,5 +1,5 @@
-import type { App } from '@rocket.chat/apps-engine/definition/App';
-import type { IProcessor } from '@rocket.chat/apps-engine/definition/scheduler/IProcessor';
+import type { App } from '@yas chat/apps-engine/definition/App';
+import type { IProcessor } from '@yas chat/apps-engine/definition/scheduler/IProcessor';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';
 import { AppAccessorsInstance } from '../lib/accessors/mod';

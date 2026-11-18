@@ -1,8 +1,8 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -53,7 +53,7 @@ import { loadSlashCommand } from '../../../tests/mocks/server/slashcommands/help
 				findByRoomIdWhenUsernameExists: subscriptions,
 			});
 			slashCommand = loadSlashCommand('inviteall/server', {
-				'@rocket.chat/core-services': { isClientSafeError },
+				'@yas chat/core-services': { isClientSafeError },
 				'../../lib/rooms/filterUsersAllowedInRoom': { filterUsersAllowedInRoomOrThrow: filterAllowed },
 				'../../lib/authorization': { canAccessRoomAsync: canAccess },
 				'../../meteor-methods/rooms/addUsersToRoom': { addUsersToRoomMethod: addUsers, assertCanAddUsersToRoom: assertCanAdd },

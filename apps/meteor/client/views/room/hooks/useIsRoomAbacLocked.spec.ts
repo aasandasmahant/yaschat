@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useIsRoomAbacLocked } from './useIsRoomAbacLocked';
@@ -6,8 +6,8 @@ import { createFakeRoom } from '../../../../tests/mocks/data';
 
 const hasLicenseModule = jest.fn(() => true);
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	useHasLicenseModule: () => ({ data: hasLicenseModule() }),
 }));
 

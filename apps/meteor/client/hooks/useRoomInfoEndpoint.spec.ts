@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useRoomInfoEndpoint } from './useRoomInfoEndpoint';

@@ -1,17 +1,17 @@
-# `@rocket.chat/fuselage-hooks`
+# `@yas chat/fuselage-hooks`
 
 > React hooks for Fuselage, YasChat's design system.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-hooks) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-hooks)
+[![npm](https://img.shields.io/npm/v/@yas chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-hooks) [![downloads](https://img.shields.io/npm/dw/@yas chat/fuselage-hooks?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-hooks)
 
-A collection of general-purpose React hooks used by [`@rocket.chat/fuselage`](https://www.npmjs.com/package/@rocket.chat/fuselage) and the YasChat web client. They cover debouncing, stable callbacks and refs, media queries and breakpoints, element size and visibility, web storage, clipboard access and anchored positioning.
+A collection of general-purpose React hooks used by [`@yas chat/fuselage`](https://www.npmjs.com/package/@yas chat/fuselage) and the YasChat web client. They cover debouncing, stable callbacks and refs, media queries and breakpoints, element size and visibility, web storage, clipboard access and anchored positioning.
 
 The hooks do not depend on Fuselage components, so you can use them in any React app.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/fuselage-hooks react
+npm install @yas chat/fuselage-hooks react
 ```
 
 `react` is a peer dependency; the hooks need React 18 or later. The package ships CommonJS and ES module builds with TypeScript declarations.
@@ -21,7 +21,7 @@ npm install @rocket.chat/fuselage-hooks react
 ### Debounce a value
 
 ```tsx
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import { useEffect, useState } from 'react';
 
 function UserSearch({ onSearch }: { onSearch: (text: string) => void }) {
@@ -41,7 +41,7 @@ function UserSearch({ onSearch }: { onSearch: (text: string) => void }) {
 `useStableCallback` returns a function whose identity never changes but which always calls the latest version of `fn`. Use it for handlers that effects or memoized children depend on.
 
 ```tsx
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useEffect } from 'react';
 
 function useEscapeKey(onEscape: () => void) {
@@ -60,7 +60,7 @@ function useEscapeKey(onEscape: () => void) {
 ### Respond to the viewport
 
 ```tsx
-import { useBreakpoints, useMediaQuery, usePrefersReducedMotion } from '@rocket.chat/fuselage-hooks';
+import { useBreakpoints, useMediaQuery, usePrefersReducedMotion } from '@yas chat/fuselage-hooks';
 
 function useLayoutMode() {
 	const breakpoints = useBreakpoints(); // e.g. ['xs', 'sm', 'md']
@@ -75,12 +75,12 @@ function useLayoutMode() {
 }
 ```
 
-`useBreakpoints` reads the breakpoint names and widths from `@rocket.chat/fuselage-tokens` (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`, `xxxl`) and returns the ones that currently match.
+`useBreakpoints` reads the breakpoint names and widths from `@yas chat/fuselage-tokens` (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`, `xxxl`) and returns the ones that currently match.
 
 ### Merge refs
 
 ```tsx
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import { forwardRef, useRef, type ComponentProps } from 'react';
 
 const Input = forwardRef<HTMLInputElement, ComponentProps<'input'>>(function Input(props, ref) {
@@ -96,7 +96,7 @@ On React 19 you can drop `forwardRef` and read `ref` from the props instead.
 ### Persist state in web storage
 
 ```tsx
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
 
 function SidebarToggle() {
 	const [collapsed, setCollapsed] = useLocalStorage('sidebar-collapsed', false);
@@ -110,7 +110,7 @@ Values are stored as JSON under a prefixed key (`fuselage-localStorage-sidebar-c
 ### Copy to the clipboard
 
 ```tsx
-import { useClipboard } from '@rocket.chat/fuselage-hooks';
+import { useClipboard } from '@yas chat/fuselage-hooks';
 
 function CopyLink({ url }: { url: string }) {
 	const { copy, hasCopied } = useClipboard(url);
@@ -176,11 +176,11 @@ The package also exports the types used by these hooks, such as `UseClipboardPar
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-hooks). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-hooks build
-yarn workspace @rocket.chat/fuselage-hooks testunit
-yarn workspace @rocket.chat/fuselage-hooks typecheck
-yarn workspace @rocket.chat/fuselage-hooks lint
-yarn workspace @rocket.chat/fuselage-hooks lint:fix
+yarn workspace @yas chat/fuselage-hooks build
+yarn workspace @yas chat/fuselage-hooks testunit
+yarn workspace @yas chat/fuselage-hooks typecheck
+yarn workspace @yas chat/fuselage-hooks lint
+yarn workspace @yas chat/fuselage-hooks lint:fix
 ```
 
 ## License

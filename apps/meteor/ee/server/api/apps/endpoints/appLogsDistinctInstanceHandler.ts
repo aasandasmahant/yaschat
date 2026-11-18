@@ -1,8 +1,8 @@
-import { ajv } from '@rocket.chat/rest-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { AppsRestApi } from '../rest';
 
-// This might be a good candidate for a default validator function exported by @rocket.chat/rest-typings
+// This might be a good candidate for a default validator function exported by @yas chat/rest-typings
 const errorResponse = ajv.compile<{
 	success: false;
 	error: string;

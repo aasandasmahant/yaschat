@@ -1,4 +1,4 @@
-import type { EmojiPackages } from '@rocket.chat/ui-emoji-picker';
+import type { EmojiPackages } from '@yas chat/ui-emoji-picker';
 
 export const emoji: EmojiPackages = {
 	packages: {

@@ -1,4 +1,4 @@
-import { useToggle } from '@rocket.chat/fuselage-hooks';
+import { useToggle } from '@yas chat/fuselage-hooks';
 import { useId, type KeyboardEventHandler, type MouseEvent } from 'react';
 
 const hasPropExpanded = (expanded: boolean | undefined) => expanded !== undefined;

@@ -1,6 +1,6 @@
-import { LDAPEnterprise } from '@rocket.chat/core-services';
-import { License } from '@rocket.chat/license';
-import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@rocket.chat/rest-typings';
+import { LDAPEnterprise } from '@yas chat/core-services';
+import { License } from '@yas chat/license';
+import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api/api';
 import { hasPermissionAsync } from '../../../server/lib/authorization/hasPermission';

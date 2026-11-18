@@ -1,7 +1,7 @@
-import type { AbacMembershipGroup, AbacPreviewCursor, AbacRoomPreviewMember, IAbacRoomMembershipPreview } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { Contextualbar, ModalProviderWithRegion, TooltipProvider } from '@rocket.chat/ui-client';
+import type { AbacMembershipGroup, AbacPreviewCursor, AbacRoomPreviewMember, IAbacRoomMembershipPreview } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { Contextualbar, ModalProviderWithRegion, TooltipProvider } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

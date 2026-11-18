@@ -1,4 +1,4 @@
-import type { ILivechatBusinessHour, LivechatBusinessHourTypes } from '@rocket.chat/core-typings';
+import type { ILivechatBusinessHour, LivechatBusinessHourTypes } from '@yas chat/core-typings';
 import type { Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

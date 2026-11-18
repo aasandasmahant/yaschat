@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageSystemBlock } from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageSystemBlock } from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 import Attachments from '../../content/Attachments';
 import MessageActions from '../../content/MessageActions';

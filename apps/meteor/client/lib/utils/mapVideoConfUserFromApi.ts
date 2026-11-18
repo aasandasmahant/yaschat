@@ -1,4 +1,4 @@
-import type { IVideoConferenceUser, Serialized } from '@rocket.chat/core-typings';
+import type { IVideoConferenceUser, Serialized } from '@yas chat/core-typings';
 
 /**
  * Revives the dates on a conference member. Membership carries several optional timestamps and each one

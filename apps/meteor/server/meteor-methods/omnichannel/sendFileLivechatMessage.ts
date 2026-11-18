@@ -1,14 +1,14 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import type {
 	FileAttachmentProps,
 	ImageAttachmentProps,
 	AudioAttachmentProps,
 	VideoAttachmentProps,
 	IUpload,
-} from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatRooms } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { ajv } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatRooms } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { ajv } from '@yas chat/rest-typings';
 
 import { sendMessageLivechat } from './sendMessageLivechat';
 import { FileUpload } from '../../lib/media/file-upload';

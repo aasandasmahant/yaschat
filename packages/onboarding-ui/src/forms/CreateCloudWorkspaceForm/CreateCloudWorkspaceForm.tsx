@@ -1,4 +1,4 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldLabel,
 	FieldRow,
@@ -14,8 +14,8 @@ import {
 	Select,
 	CheckBox,
 	Grid,
-} from '@rocket.chat/fuselage';
-import { Form, FormFooter, FormHeader, FormTitle } from '@rocket.chat/layout';
+} from '@yas chat/fuselage';
+import { Form, FormFooter, FormHeader, FormTitle } from '@yas chat/layout';
 import type { FocusEvent } from 'react';
 import { useId } from 'react';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
@@ -199,11 +199,11 @@ export const CreateCloudWorkspaceForm = ({
 							<Box is='label' htmlFor='agreement' withRichContent fontScale='c1'>
 								<Trans i18nKey='component.form.termsAndConditions'>
 									I agree with
-									<a href='https://rocket.chat/terms' target='_blank' rel='noopener noreferrer'>
+									<a href='https://yas chat/terms' target='_blank' rel='noopener noreferrer'>
 										Terms and Conditions
 									</a>
 									and
-									<a href='https://rocket.chat/privacy' target='_blank' rel='noopener noreferrer'>
+									<a href='https://yas chat/privacy' target='_blank' rel='noopener noreferrer'>
 										Privacy Policy
 									</a>
 								</Trans>

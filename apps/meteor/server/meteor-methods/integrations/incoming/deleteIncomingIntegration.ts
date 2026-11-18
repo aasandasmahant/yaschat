@@ -1,10 +1,10 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Integrations } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Integrations } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../../lib/authorization/hasPermission';
 import { notifyOnIntegrationChanged } from '../../../lib/notifyListener';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		deleteIncomingIntegration(integrationId: string): Promise<boolean>;
 	}

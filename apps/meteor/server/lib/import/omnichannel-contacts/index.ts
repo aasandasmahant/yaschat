@@ -1,4 +1,4 @@
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 import { Importers } from '..';
 import { ContactImporter } from './ContactImporter';

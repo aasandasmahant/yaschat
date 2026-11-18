@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { SettingsContext } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import { SettingsContext } from '@yas chat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 
 const settingContextValue: ContextType<typeof SettingsContext> = {

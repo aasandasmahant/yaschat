@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Subscriptions } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoom } from '@yas chat/core-typings';
+import { Subscriptions } from '@yas chat/models';
 
 import { notifyOnSubscriptionChangedByRoomIdAndUserId } from '../../lib/notifyListener';
 

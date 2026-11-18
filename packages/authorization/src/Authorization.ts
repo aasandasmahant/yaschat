@@ -1,7 +1,7 @@
-import type { IAuthorization, RoomAccessValidator, UserWithRoles } from '@rocket.chat/core-services';
-import { License, ServiceClass } from '@rocket.chat/core-services';
-import type { IUser, IRole, IRoom, ISubscription, VideoConference } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms, Users, Roles, Permissions } from '@rocket.chat/models';
+import type { IAuthorization, RoomAccessValidator, UserWithRoles } from '@yas chat/core-services';
+import { License, ServiceClass } from '@yas chat/core-services';
+import type { IUser, IRole, IRoom, ISubscription, VideoConference } from '@yas chat/core-typings';
+import { Subscriptions, Rooms, Users, Roles, Permissions } from '@yas chat/models';
 import mem from 'mem';
 
 import { AuthorizationUtils } from './AuthorizationUtils';

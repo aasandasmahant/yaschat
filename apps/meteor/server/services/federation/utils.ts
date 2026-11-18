@@ -1,4 +1,4 @@
-import { normalizeDomain } from '@rocket.chat/xmpp-server';
+import { normalizeDomain } from '@yas chat/xmpp-server';
 
 import { settings } from '../../settings';
 

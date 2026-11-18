@@ -1,6 +1,6 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { Authorization } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { Authorization } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
 import type { Request, Response, NextFunction } from 'express';
 
 import { oAuth2ServerAuth } from '../../../lib/auth/oauth2-server/oauth2-server';

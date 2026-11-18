@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserCard, UserStatus } from '@rocket.chat/ui-client';
-import { useRolesDescription, useSetting } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { UserCard, UserStatus } from '@yas chat/ui-client';
+import { useRolesDescription, useSetting } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

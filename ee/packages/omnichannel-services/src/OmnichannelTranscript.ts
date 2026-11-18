@@ -6,17 +6,17 @@ import {
 	Message as messageService,
 	Room as roomService,
 	Settings as settingsService,
-} from '@rocket.chat/core-services';
-import type { IOmnichannelTranscriptService } from '@rocket.chat/core-services';
-import type { IMessage, IUpload, ILivechatAgent, AtLeast, IOmnichannelRoom, IUser, ILivechatVisitor } from '@rocket.chat/core-typings';
-import { isQuoteAttachment, isFileAttachment, isFileImageAttachment } from '@rocket.chat/core-typings';
-import type { Logger } from '@rocket.chat/logger';
-import { parse } from '@rocket.chat/message-parser';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { LivechatRooms, Messages, Uploads, Users, LivechatVisitors } from '@rocket.chat/models';
-import { PdfWorker } from '@rocket.chat/pdf-worker';
-import type { MessageData, Quote, WorkerData } from '@rocket.chat/pdf-worker';
-import { guessTimezone, guessTimezoneFromOffset, streamToBuffer } from '@rocket.chat/tools';
+} from '@yas chat/core-services';
+import type { IOmnichannelTranscriptService } from '@yas chat/core-services';
+import type { IMessage, IUpload, ILivechatAgent, AtLeast, IOmnichannelRoom, IUser, ILivechatVisitor } from '@yas chat/core-typings';
+import { isQuoteAttachment, isFileAttachment, isFileImageAttachment } from '@yas chat/core-typings';
+import type { Logger } from '@yas chat/logger';
+import { parse } from '@yas chat/message-parser';
+import { MessageTypes } from '@yas chat/message-types';
+import { LivechatRooms, Messages, Uploads, Users, LivechatVisitors } from '@yas chat/models';
+import { PdfWorker } from '@yas chat/pdf-worker';
+import type { MessageData, Quote, WorkerData } from '@yas chat/pdf-worker';
+import { guessTimezone, guessTimezoneFromOffset, streamToBuffer } from '@yas chat/tools';
 import type { TFunction, i18n } from 'i18next';
 
 import type { WorkDetailsWithSource } from './localTypes';

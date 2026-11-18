@@ -21,7 +21,7 @@ const settingValues: Record<string, unknown> = {
 	IRC_Protocol: 'RFC2813',
 	IRC_Host: 'irc.example.com',
 	IRC_Port: 6667,
-	IRC_Name: 'irc.rocket.chat',
+	IRC_Name: 'irc.yas chat',
 	IRC_Description: 'YasChat IRC bridge',
 	IRC_Local_Password: 'local-password',
 	IRC_Peer_Password: 'peer-password',
@@ -44,7 +44,7 @@ describe('startIrcBridge', () => {
 				protocol: 'RFC2813',
 				host: 'irc.example.com',
 				port: 6667,
-				name: 'irc.rocket.chat',
+				name: 'irc.yas chat',
 				description: 'YasChat IRC bridge',
 			},
 			passwords: {

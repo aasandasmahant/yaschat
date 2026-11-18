@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -25,8 +25,8 @@ let filterUsers: Patched;
 let filterUsersOrThrow: Patched;
 
 p.noCallThru().load('./filterUsersAllowedInRoom.ts', {
-	'@rocket.chat/core-services': { Abac: abacMock },
-	'@rocket.chat/license': { License: licenseMock },
+	'@yas chat/core-services': { Abac: abacMock },
+	'@yas chat/license': { License: licenseMock },
 	'../../../../server/lib/authorization/getRoomAbacLockContext': { getRoomAbacLockContext: getRoomAbacLockContextMock },
 	'../../../../server/lib/rooms/filterUsersAllowedInRoom': {
 		filterUsersAllowedInRoom: {

@@ -1,4 +1,4 @@
-import { Badge } from '@rocket.chat/fuselage';
+import { Badge } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type UnreadBadgeProps = {

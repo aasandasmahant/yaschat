@@ -1,4 +1,4 @@
-import { Box, FramedIcon } from '@rocket.chat/fuselage';
+import { Box, FramedIcon } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const CallHistoryUnknownUser = () => {

@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useSetting, usePermission, useSetModal, useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useSetting, usePermission, useSetModal, useUserSubscription } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import CreateDiscussion from '../../../../../../components/CreateDiscussion';

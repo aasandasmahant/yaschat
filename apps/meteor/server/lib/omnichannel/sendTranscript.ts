@@ -1,4 +1,4 @@
-import { Message, Omnichannel, ClientSafeError } from '@rocket.chat/core-services';
+import { Message, Omnichannel, ClientSafeError } from '@yas chat/core-services';
 import {
 	type IUser,
 	type MessageTypesValues,
@@ -8,11 +8,11 @@ import {
 	isFileAttachment,
 	isFileImageAttachment,
 	type AtLeast,
-} from '@rocket.chat/core-typings';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import { Logger } from '@rocket.chat/logger';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { LivechatRooms, Messages, Uploads, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import { Logger } from '@yas chat/logger';
+import { MessageTypes } from '@yas chat/message-types';
+import { LivechatRooms, Messages, Uploads, Users } from '@yas chat/models';
 import createDOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
 import moment from 'moment-timezone';

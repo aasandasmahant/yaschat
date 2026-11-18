@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import AddMatrixUsersModal from './AddMatrixUsersModal';

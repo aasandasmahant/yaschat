@@ -1,6 +1,6 @@
 import { StringDecoder } from 'node:string_decoder';
 
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 import Element from 'ltx/lib/Element';
 import SaxLtx from 'ltx/lib/parsers/ltx';
 

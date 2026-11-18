@@ -1,5 +1,5 @@
 {
-	"name": "Rocket.Chat Gitpod",
+	"name": "Yas chat Gitpod",
 	"build": {
         "context": "..",
         "dockerfile": "./Dockerfile"

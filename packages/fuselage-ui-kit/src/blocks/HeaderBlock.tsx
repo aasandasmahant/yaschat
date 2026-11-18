@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { Box } from '@yas chat/fuselage';
+import * as UiKit from '@yas chat/ui-kit';
 import { memo } from 'react';
 
 import type { BlockProps } from '../utils/BlockProps';

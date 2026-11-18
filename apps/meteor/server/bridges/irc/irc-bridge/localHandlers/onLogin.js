@@ -1,4 +1,4 @@
-import { Rooms, Users } from '@rocket.chat/models';
+import { Rooms, Users } from '@yas chat/models';
 
 export default async function handleOnLogin(login) {
 	if (login.user === null) {
@@ -20,7 +20,7 @@ export default async function handleOnLogin(login) {
 				'profile.irc.fromIRC': false,
 				'profile.irc.username': `${login.user.username}-rkt`,
 				'profile.irc.nick': `${login.user.username}-rkt`,
-				'profile.irc.hostname': 'rocket.chat',
+				'profile.irc.hostname': 'yas chat',
 			},
 		},
 	);

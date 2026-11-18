@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 
 import { i18n } from '../../../../server/lib/i18n';
 

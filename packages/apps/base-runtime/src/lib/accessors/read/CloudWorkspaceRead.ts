@@ -1,5 +1,5 @@
-import type { ICloudWorkspaceRead } from '@rocket.chat/apps-engine/definition/accessors/ICloudWorkspaceRead';
-import type { IWorkspaceToken } from '@rocket.chat/apps-engine/definition/cloud/IWorkspaceToken';
+import type { ICloudWorkspaceRead } from '@yas chat/apps-engine/definition/accessors/ICloudWorkspaceRead';
+import type { IWorkspaceToken } from '@yas chat/apps-engine/definition/cloud/IWorkspaceToken';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

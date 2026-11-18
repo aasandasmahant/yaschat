@@ -1,4 +1,4 @@
-import { DeviceSelectionProvider } from '@rocket.chat/ui-media';
+import { DeviceSelectionProvider } from '@yas chat/ui-media';
 import type { Decorator } from '@storybook/react';
 
 import { buildDeviceSelection, buildNoiseSuppression, buildVideoQuality, fakeDevices } from './callFixtures';

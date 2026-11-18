@@ -1,4 +1,4 @@
-import { Box, Icon, FramedIcon } from '@rocket.chat/fuselage';
+import { Box, Icon, FramedIcon } from '@yas chat/fuselage';
 
 import type { CallHistoryExternalContact } from '../definitions';
 

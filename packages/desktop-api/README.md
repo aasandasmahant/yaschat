@@ -1,8 +1,8 @@
-# `@rocket.chat/desktop-api`
+# `@yas chat/desktop-api`
 
 > TypeScript types for the bridge the YasChat Desktop app exposes to the web client it loads.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/desktop-api) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/desktop-api)
+[![npm](https://img.shields.io/npm/v/@yas chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@yas chat/desktop-api) [![downloads](https://img.shields.io/npm/dw/@yas chat/desktop-api?style=flat-square)](https://www.npmjs.com/package/@yas chat/desktop-api)
 
 The [YasChat Desktop app](https://github.com/YasChat/YasChat.Electron) loads a workspace's web client and injects a `window.YasChatDesktop` object into it. The web client calls that object to update the app's badge, title and favicon, show native notifications, report the user's presence, open the video call window, and more.
 
@@ -11,7 +11,7 @@ This package is the contract between the two sides. It contains types only: `IYa
 ## Installation
 
 ```sh
-npm install --save-dev @rocket.chat/desktop-api
+npm install --save-dev @yas chat/desktop-api
 ```
 
 The package has no runtime code and no dependencies. It is published as an ES module.
@@ -23,7 +23,7 @@ The package has no runtime code and no dependencies. It is published as an ES mo
 The package does not declare `window.YasChatDesktop` itself. Add the declaration to your project:
 
 ```ts
-import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop } from '@yas chat/desktop-api';
 
 declare global {
 	interface Window {
@@ -151,9 +151,9 @@ The returned promise rejects when the server refuses the change.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/desktop-api). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/desktop-api build
-yarn workspace @rocket.chat/desktop-api lint
-yarn workspace @rocket.chat/desktop-api typecheck
+yarn workspace @yas chat/desktop-api build
+yarn workspace @yas chat/desktop-api lint
+yarn workspace @yas chat/desktop-api typecheck
 ```
 
 Changes to these types change the contract with the desktop app.

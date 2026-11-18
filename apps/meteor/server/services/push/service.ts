@@ -1,7 +1,7 @@
-import type { IPushService } from '@rocket.chat/core-services';
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IPushToken, RegisterPushTokenInput } from '@rocket.chat/core-typings';
-import { PushToken } from '@rocket.chat/models';
+import type { IPushService } from '@yas chat/core-services';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { IPushToken, RegisterPushTokenInput } from '@yas chat/core-typings';
+import { PushToken } from '@yas chat/models';
 
 import { logger } from './logger';
 import { registerPushToken } from './tokenManagement/registerPushToken';

@@ -1,4 +1,4 @@
-import { Box, Option, PopoverSurface, RadioButton } from '@rocket.chat/fuselage';
+import { Box, Option, PopoverSurface, RadioButton } from '@yas chat/fuselage';
 
 import type { RadioDropDownProps } from '../definitions/RadioDropDownDefinitions';
 

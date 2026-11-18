@@ -1,4 +1,4 @@
-import { useMethod } from '@rocket.chat/ui-contexts';
+import { useMethod } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 export const useCheckRegistrationSecret = (hash?: string) => {

@@ -1,6 +1,6 @@
-import { FormSkeleton } from '@rocket.chat/layout';
-import { useDocumentTitle } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { FormSkeleton } from '@yas chat/layout';
+import { useDocumentTitle } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import RegisterForm from './RegisterForm';

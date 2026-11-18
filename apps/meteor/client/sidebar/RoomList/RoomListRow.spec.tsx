@@ -1,4 +1,4 @@
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import { render } from '@testing-library/react';
 import type { TFunction } from 'i18next';
 

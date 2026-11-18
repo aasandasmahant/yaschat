@@ -76,11 +76,11 @@ touches all three.
 
 | Layer | Location | Contents |
 |---|---|---|
-| **SDK / definitions** (published `@rocket.chat/apps-engine`) | `packages/apps-engine/src/definition/` | `AppInterface`, `AppMethod`, handler interfaces, accessor interfaces, context/permission/association types. `package.json` ships only `definition/**` (`packages/apps-engine/package.json:37-39`). |
-| **Engine runtime** (published `@rocket.chat/apps`) | `packages/apps/src/` + `packages/apps/base-runtime/src/` | `src/server/managers/` (`AppListenerManager`, `AppVideoConfProviderManager`), abstract `src/server/bridges/`, `src/server/{AppManager,ProxiedApp}.ts`, `src/converters/`. The **concrete accessors are not here** — they live in `base-runtime/src/lib/accessors/` (`read/`, `modify/`, builders, extenders) and are assembled in `accessors/mod.ts`; there is no `AppAccessorManager` — see [ADR 0001](./0001-app-accessor-logic-in-base-runtime.md). |
+| **SDK / definitions** (published `@yas chat/apps-engine`) | `packages/apps-engine/src/definition/` | `AppInterface`, `AppMethod`, handler interfaces, accessor interfaces, context/permission/association types. `package.json` ships only `definition/**` (`packages/apps-engine/package.json:37-39`). |
+| **Engine runtime** (published `@yas chat/apps`) | `packages/apps/src/` + `packages/apps/base-runtime/src/` | `src/server/managers/` (`AppListenerManager`, `AppVideoConfProviderManager`), abstract `src/server/bridges/`, `src/server/{AppManager,ProxiedApp}.ts`, `src/converters/`. The **concrete accessors are not here** — they live in `base-runtime/src/lib/accessors/` (`read/`, `modify/`, builders, extenders) and are assembled in `accessors/mod.ts`; there is no `AppAccessorManager` — see [ADR 0001](./0001-app-accessor-logic-in-base-runtime.md). |
 | **Host (real YasChat)** | `apps/meteor/app/apps/server/` + `apps/meteor/ee/server/apps/` | Concrete bridge subclasses, converters, orchestrator (`ee/server/apps/orchestrator.ts`). |
 
-The host imports the engine from `@rocket.chat/apps/dist/...`, so **the `packages/apps` build must
+The host imports the engine from `@yas chat/apps/dist/...`, so **the `packages/apps` build must
 be regenerated** for host changes to see new engine code
 (`apps/meteor/app/apps/server/bridges/bridges.js:1`).
 
@@ -479,7 +479,7 @@ family and are not touched again.
    `IListenerExecutor` entry's `result` union.
 5. Host trigger site — `apps/meteor/server/services/media-call/appEvents.ts`, plus the emitter or
    hook subscription in `service.ts`.
-6. Rebuild `@rocket.chat/apps`.
+6. Rebuild `@yas chat/apps`.
 
 `apps/meteor/app/apps/server/bridges/listeners.ts` needs no edit — its single
 `AppInterface.IMediaCallHandler` case already carries the envelope, and payloads arrive app-shaped
@@ -635,7 +635,7 @@ outcomes are written as system messages via `saveCallToHistory` / `sendHistoryMe
 - **EE gating.** Media calls are enterprise plus module `teams-voip`
   (`apps/meteor/ee/server/settings/voip.ts:7-8`). Host trigger sites must be safe when the feature
   or module is disabled.
-- **Build coupling.** The host imports the engine from `@rocket.chat/apps/dist` — rebuild
+- **Build coupling.** The host imports the engine from `@yas chat/apps/dist` — rebuild
   `packages/apps` after engine edits.
 
 ## Implementation record
@@ -645,7 +645,7 @@ outcomes are written as system messages via `saveCallToHistory` / `sendHistoryMe
   `MediaCallCreateEventResult`, `MediaCallHangupReason` and the `isMissedCall` / `isRejectedCall` /
   `isAnsweredCall` helpers.
 - Host-side envelopes: `packages/apps/src/server/mediaCalls/IMediaCallEvent.ts` — `MediaCallEvent`
-  and `PreMediaCallCreatedOutcome`, re-exported from `@rocket.chat/apps`. Apps never see either, so
+  and `PreMediaCallCreatedOutcome`, re-exported from `@yas chat/apps`. Apps never see either, so
   neither belongs in the package an app imports. See [ADR 0007's implementation
   record](./0007-unified-event-result-for-pre-events.md#implementation-record).
   `PreMediaCallCreatedOutcome` is `HostEventResult<MediaCallCreateEventResult>`, so the host reads

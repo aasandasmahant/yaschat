@@ -1,5 +1,5 @@
-import type { Logger } from '@rocket.chat/logger';
-import { Random } from '@rocket.chat/random';
+import type { Logger } from '@yas chat/logger';
+import { Random } from '@yas chat/random';
 
 import { compareByRanking } from '../../../lib/utils/comparisons';
 

@@ -6,7 +6,7 @@ const setForceLogout = jest.fn();
 const wipeLocalAuth = jest.fn();
 let forceLogoutListener: (sessionId?: string) => void = () => undefined;
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	useStream: () => (_key: string, callback: (sessionId?: string) => void) => {
 		forceLogoutListener = callback;
 		return () => undefined;

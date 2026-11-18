@@ -1,4 +1,4 @@
-import type { NavBarSearchFormValues } from '@rocket.chat/ai-search';
+import type { NavBarSearchFormValues } from '@yas chat/ai-search';
 import { FormProvider, useForm } from 'react-hook-form';
 
 import NavBarAISearchInput from './NavBarAISearchInput';

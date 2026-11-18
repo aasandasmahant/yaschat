@@ -11,9 +11,9 @@ import {
 	ModalIcon,
 	ModalTagline,
 	ModalTitle,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { Keys as IconName } from '@rocket.chat/icons';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { Keys as IconName } from '@yas chat/icons';
 import type { ReactElement, ReactNode, ComponentPropsWithoutRef } from 'react';
 import { useId, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

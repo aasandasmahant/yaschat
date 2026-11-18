@@ -16,7 +16,7 @@ class VersionCompiler {
 
 				const type = currentVersion.includes('-rc.') ? 'candidate' : currentVersion.includes('-develop') ? 'develop' : 'stable';
 
-				const url = `https://releases.rocket.chat/v2/server/supportedVersions?includeDraftType=${type}&includeDraftTag=${currentVersion}`;
+				const url = `https://releases.yas chat/v2/server/supportedVersions?includeDraftType=${type}&includeDraftTag=${currentVersion}`;
 
 				function handleError(err) {
 					console.error('Error getting supported versions', err);
@@ -48,7 +48,7 @@ class VersionCompiler {
 							}
 
 							for await (const version of supportedVersions.versions) {
-								// check if expiration is after the first rocket.chat release
+								// check if expiration is after the first yas chat release
 								if (new Date(version.expiration) < new Date('2019-04-01T00:00:00.000Z')) {
 									return handleError(new Error(`Invalid supportedVersions expiration:\n  URL: ${url} \n  RESULT: ${data}`));
 								}
@@ -82,7 +82,7 @@ class VersionCompiler {
 				cpus: os.cpus().length,
 			};
 
-			output.marketplaceApiVersion = require('@rocket.chat/apps-engine/package.json').version.replace(/^[^0-9]/g, '');
+			output.marketplaceApiVersion = require('@yas chat/apps-engine/package.json').version.replace(/^[^0-9]/g, '');
 			const minimumClientVersions =
 				JSON.parse(fs.readFileSync(path.resolve(process.cwd(), './package.json'), { encoding: 'utf8' }))?.yaschat
 					?.minimumClientVersions || {};

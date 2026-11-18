@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
-import { RoomToolboxContext } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { RoomToolboxContext } from '@yas chat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ReactNode } from 'react';

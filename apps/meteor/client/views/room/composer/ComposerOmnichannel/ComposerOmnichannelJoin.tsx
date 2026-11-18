@@ -1,5 +1,5 @@
-import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@rocket.chat/ui-composer';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yas chat/ui-composer';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useOmnichannelRoom } from '../../contexts/RoomContext';

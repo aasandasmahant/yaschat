@@ -1,4 +1,4 @@
-import { Rooms } from '@rocket.chat/models';
+import { Rooms } from '@yas chat/models';
 
 import type { SubscribedRoomsForUserWithDetails } from '../rooms/getRoomsWithSingleOwner';
 

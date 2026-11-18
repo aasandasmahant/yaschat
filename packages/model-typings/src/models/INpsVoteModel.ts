@@ -1,4 +1,4 @@
-import type { INpsVote, INpsVoteStatus } from '@rocket.chat/core-typings';
+import type { INpsVote, INpsVoteStatus } from '@yas chat/core-typings';
 import type { Document, FindCursor, UpdateResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

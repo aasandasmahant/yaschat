@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { YasChatLogo } from '@rocket.chat/logo';
+import { Box } from '@yas chat/fuselage';
+import { YasChatLogo } from '@yas chat/logo';
 
 import { useDarkMode } from '../../DarkModeProvider';
 import { useLayoutContext } from '../../contexts/LayoutContext';

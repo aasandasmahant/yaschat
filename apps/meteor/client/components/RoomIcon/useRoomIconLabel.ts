@@ -1,7 +1,7 @@
-import type { UserStatus } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom, isOmnichannelRoom, isRoomFederated } from '@rocket.chat/core-typings';
-import type { SubscriptionWithRoom, TranslationKey } from '@rocket.chat/ui-contexts';
-import { useUserPresence } from '@rocket.chat/ui-contexts';
+import type { UserStatus } from '@yas chat/core-typings';
+import { isDirectMessageRoom, isOmnichannelRoom, isRoomFederated } from '@yas chat/core-typings';
+import type { SubscriptionWithRoom, TranslationKey } from '@yas chat/ui-contexts';
+import { useUserPresence } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const statusLabels: Record<`${UserStatus}`, TranslationKey> = {

@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -17,7 +17,7 @@ const getRoomAbacLockContextMock = sinon.stub();
 let guard: Guard;
 
 p.noCallThru().load('./beforeRemoveRoomAbacAttributes.ts', {
-	'@rocket.chat/license': { License: licenseMock },
+	'@yas chat/license': { License: licenseMock },
 	'../../../../server/hooks/rooms/beforeRemoveRoomAbacAttributes': {
 		beforeRemoveRoomAbacAttributes: {
 			patch: (fn: Guard) => {

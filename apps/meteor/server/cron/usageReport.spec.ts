@@ -1,9 +1,9 @@
-import { AirGappedRestriction } from '@rocket.chat/license';
-import { mockModel } from '@rocket.chat/models/testing';
+import { AirGappedRestriction } from '@yas chat/license';
+import { mockModel } from '@yas chat/models/testing';
 
 import { sendUsageReportAndComputeRestriction } from './usageReport';
 
-jest.mock('@rocket.chat/license', () => ({
+jest.mock('@yas chat/license', () => ({
 	AirGappedRestriction: {
 		computeRestriction: jest.fn(),
 	},

@@ -1,9 +1,9 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ICreateRoomParams } from '@rocket.chat/core-services';
-import type { ICreatedRoom, IUser } from '@rocket.chat/core-typings';
-import { validateFederatedUsername } from '@rocket.chat/federation-matrix';
-import { Rooms, Users } from '@rocket.chat/models';
-import { normalizeBareJid } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ICreateRoomParams } from '@yas chat/core-services';
+import type { ICreatedRoom, IUser } from '@yas chat/core-typings';
+import { validateFederatedUsername } from '@yas chat/federation-matrix';
+import { Rooms, Users } from '@yas chat/models';
+import { normalizeBareJid } from '@yas chat/tools';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { callbacks } from '../../lib/callbacks';

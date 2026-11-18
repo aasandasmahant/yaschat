@@ -1,5 +1,5 @@
-import type { ILivechatBusinessHour } from '@rocket.chat/core-typings';
-import { LivechatBusinessHourTypes } from '@rocket.chat/core-typings';
+import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
 import moment from 'moment-timezone';
 
 import type { IBusinessHourType } from './AbstractBusinessHour';

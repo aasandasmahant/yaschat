@@ -1,6 +1,6 @@
-import { Box, Button, ButtonGroup, Scrollable } from '@rocket.chat/fuselage';
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
-import { FormContainer, FormFooter } from '@rocket.chat/layout';
+import { Box, Button, ButtonGroup, Scrollable } from '@yas chat/fuselage';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { FormContainer, FormFooter } from '@yas chat/layout';
 import { useFormContext } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -24,7 +24,7 @@ const PasteStep = ({ setStep }: PasteStepProps) => {
 			<FormContainer>
 				<Box marginBlockEnd='24px' fontScale='p2'>
 					<Trans key='form.registerOfflineForm.pasteStep.description'>
-						1. In <strong>cloud.rocket.chat</strong> get the generated text and paste below to complete your registration process
+						1. In <strong>cloud.yas chat</strong> get the generated text and paste below to complete your registration process
 					</Trans>
 				</Box>
 				<Box display='flex' flexDirection='column' alignItems='stretch' padding={16} flexGrow={1} backgroundColor='dark'>

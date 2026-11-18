@@ -1,9 +1,9 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoomService } from '@rocket.chat/core-services';
-import type { ISubscription, IUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoomService } from '@yas chat/core-services';
+import type { ISubscription, IUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -52,7 +52,7 @@ const roleMethods = {
 };
 
 const { RoomService } = proxyquire.noCallThru().load('./service', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		ServiceClassInternal: class {},
 		Authorization,
 		Message,

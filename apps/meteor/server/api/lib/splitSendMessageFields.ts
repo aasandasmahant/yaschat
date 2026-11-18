@@ -1,4 +1,4 @@
-import { chatSendMessageFieldNames } from '@rocket.chat/rest-typings';
+import { chatSendMessageFieldNames } from '@yas chat/rest-typings';
 
 const supportedFields = new Set(chatSendMessageFieldNames);
 

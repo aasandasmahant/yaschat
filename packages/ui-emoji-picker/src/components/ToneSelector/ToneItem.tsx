@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 
 const TONE_EMOJIS: Record<number, string> = {
 	1: '✋🏻',

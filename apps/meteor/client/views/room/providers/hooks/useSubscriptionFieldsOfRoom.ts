@@ -1,4 +1,4 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
+import type { ISubscription } from '@yas chat/core-typings';
 import { useRef } from 'react';
 
 import { omit } from '../../../../../lib/utils/omit';

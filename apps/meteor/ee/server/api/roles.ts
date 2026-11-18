@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRole } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Roles } from '@rocket.chat/models';
-import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRole } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Roles } from '@yas chat/models';
+import { ajv, validateBadRequestErrorResponse, validateUnauthorizedErrorResponse } from '@yas chat/rest-typings';
 
 import { API } from '../../../server/api/api';
 import { hasPermissionAsync } from '../../../server/lib/authorization/hasPermission';
@@ -72,7 +72,7 @@ const roleUpdatePropsSchema = {
 
 export const isRoleUpdateProps = ajv.compile<RoleUpdateProps>(roleUpdatePropsSchema);
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/roles.create': {
 			POST: (params: RoleCreateProps) => {

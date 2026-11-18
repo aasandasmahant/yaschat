@@ -1,4 +1,4 @@
-import { useSafeRefCallback } from '@rocket.chat/fuselage-hooks';
+import { useSafeRefCallback } from '@yas chat/fuselage-hooks';
 import type { ReactNode, RefCallback } from 'react';
 import { createContext, useCallback, useContext, useEffect, useMemo } from 'react';
 

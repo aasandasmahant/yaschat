@@ -1,13 +1,13 @@
 import { before, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
 
 const { auditGetMessagesMethod, auditGetOmnichannelMessagesMethod } = proxyquire.noCallThru().load('./functions', {
-	'@rocket.chat/core-services': { ClientSafeError },
+	'@yas chat/core-services': { ClientSafeError },
 	'../../../../server/lib/authorization/hasPermission': { hasPermissionAsync: sinon.stub().resolves(true) },
 	'../../../../server/lib/callbacks': { callbacks: { run: sinon.stub() } },
 	'../../../../server/lib/i18n': { i18n: { t: (key: string) => key } },

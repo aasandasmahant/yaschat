@@ -1,5 +1,5 @@
-import { SidepanelList } from '@rocket.chat/fuselage';
-import { useMergedRefsV2 } from '@rocket.chat/ui-client';
+import { SidepanelList } from '@yas chat/fuselage';
+import { useMergedRefsV2 } from '@yas chat/ui-client';
 import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Components } from 'react-virtuoso';

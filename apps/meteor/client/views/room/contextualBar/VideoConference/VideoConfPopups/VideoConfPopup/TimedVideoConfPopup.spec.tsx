@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -10,8 +10,8 @@ const startCall = jest.fn();
 const dismissOutgoing = jest.fn();
 const setPreferences = jest.fn();
 
-jest.mock('@rocket.chat/ui-video-conf', () => ({
-	...jest.requireActual('@rocket.chat/ui-video-conf'),
+jest.mock('@yas chat/ui-video-conf', () => ({
+	...jest.requireActual('@yas chat/ui-video-conf'),
 	useVideoConfStartCall: () => startCall,
 	useVideoConfDismissOutgoing: () => dismissOutgoing,
 	useVideoConfSetPreferences: () => setPreferences,

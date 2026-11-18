@@ -1,4 +1,4 @@
-import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@rocket.chat/ui-client';
+import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 
 import SidebarPortalV1 from './SidebarPortal';

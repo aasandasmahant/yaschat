@@ -1,4 +1,4 @@
-import type { ILivechatInquiryRecord } from '@rocket.chat/core-typings';
+import type { ILivechatInquiryRecord } from '@yas chat/core-typings';
 import moment from 'moment';
 
 import { afterInquiryQueued } from '../../../../server/lib/omnichannel/hooks';

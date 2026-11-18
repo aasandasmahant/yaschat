@@ -1,8 +1,8 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
-import { Wizard, useWizard, WizardContent, WizardTabs, useHasLicenseModule, GenericError } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
+import { Wizard, useWizard, WizardContent, WizardTabs, useHasLicenseModule, GenericError } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,11 +1,11 @@
 import crypto from 'crypto';
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IRoom, ISubscription, ITeam, IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
-import type { IGetRoomRoles, PaginatedResult, DefaultUserInfo } from '@rocket.chat/rest-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IRoom, ISubscription, ITeam, IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
+import type { IGetRoomRoles, PaginatedResult, DefaultUserInfo } from '@yas chat/rest-typings';
 import { assert, expect } from 'chai';
 import { MongoClient } from 'mongodb';
 import speakeasy from 'speakeasy';
@@ -165,7 +165,7 @@ const registerUser = async (
 	overrideCredentials: Credentials | null = credentials,
 ) => {
 	const username = userData.username || `user.test.${Date.now()}`;
-	const email = userData.email || `${username}@rocket.chat`;
+	const email = userData.email || `${username}@yas chat`;
 
 	const req = request.post(api('users.register'));
 
@@ -619,7 +619,7 @@ describe('[Users]', () => {
 					.post(api('users.create'))
 					.set(credentials)
 					.send({
-						email: 'success_extension_user@rocket.chat',
+						email: 'success_extension_user@yas chat',
 						name: 'success_extension_user',
 						username: 'success_extension_user',
 						password,
@@ -649,7 +649,7 @@ describe('[Users]', () => {
 					.post(api('users.create'))
 					.set(credentials)
 					.send({
-						email: 'fail_extension_in_use@rocket.chat',
+						email: 'fail_extension_in_use@yas chat',
 						name: 'fail_extension_in_use',
 						username: 'fail_extension_in_use',
 						password,
@@ -675,7 +675,7 @@ describe('[Users]', () => {
 					.post(api('users.create'))
 					.set(credentials)
 					.send({
-						email: 'fail_voip_disabled@rocket.chat',
+						email: 'fail_voip_disabled@yas chat',
 						name: 'fail_voip_disabled',
 						username: 'fail_voip_disabled',
 						password,
@@ -710,7 +710,7 @@ describe('[Users]', () => {
 			});
 
 			const dummyUser = {
-				email: 'email2fa_auto_opt_in@rocket.chat',
+				email: 'email2fa_auto_opt_in@yas chat',
 				name: 'email2fa_auto_opt_in',
 				username: 'email2fa_auto_opt_in',
 				password,
@@ -1085,7 +1085,7 @@ describe('[Users]', () => {
 				await updateSetting('Accounts_RegistrationForm', 'Disabled');
 
 				const username = `disabledRegistration_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1132,7 +1132,7 @@ describe('[Users]', () => {
 
 			it('should reject registration without a secret when registration is limited to a secret URL', async () => {
 				const username = `missingSecret_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1155,7 +1155,7 @@ describe('[Users]', () => {
 
 			it('should reject registration with an invalid secret when registration is limited to a secret URL', async () => {
 				const username = `invalidSecret_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1179,7 +1179,7 @@ describe('[Users]', () => {
 
 			it('should register a user with a valid secret when registration is limited to a secret URL', async () => {
 				const username = `validSecret_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1215,7 +1215,7 @@ describe('[Users]', () => {
 				await updateSetting('Accounts_ManuallyApproveNewUsers', true);
 
 				const username = `manualApproval_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 				const reason = 'I need access to the workspace';
 
 				await request
@@ -1253,7 +1253,7 @@ describe('[Users]', () => {
 			});
 
 			it('should reject registration when the email domain is not allowed', async () => {
-				await updateSetting('Accounts_AllowedDomainsList', 'rocket.chat');
+				await updateSetting('Accounts_AllowedDomainsList', 'yas chat');
 
 				const username = `invalidDomain_${Date.now()}`;
 				const email = `${username}@example.com`;
@@ -1278,10 +1278,10 @@ describe('[Users]', () => {
 			});
 
 			it('should register a user when the email domain is allowed', async () => {
-				await updateSetting('Accounts_AllowedDomainsList', 'rocket.chat');
+				await updateSetting('Accounts_AllowedDomainsList', 'yas chat');
 
 				const username = `validDomain_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1315,7 +1315,7 @@ describe('[Users]', () => {
 
 			it('should reject registration when a required custom field is empty', async () => {
 				const username = `missingCustomField_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1343,7 +1343,7 @@ describe('[Users]', () => {
 
 			it('should save valid custom fields when registering a user', async () => {
 				const username = `validCustomField_${Date.now()}`;
-				const email = `${username}@rocket.chat`;
+				const email = `${username}@yas chat`;
 
 				await request
 					.post(api('users.register'))
@@ -1482,7 +1482,7 @@ describe('[Users]', () => {
 
 		it('should return phones information for a user with multiple phone numbers', async () => {
 			const username = `phones_info_${Date.now()}`;
-			const email = `${username}@rocket.chat`;
+			const email = `${username}@yas chat`;
 
 			const createResponse = await request
 				.post(api('users.create'))
@@ -7055,7 +7055,7 @@ describe('[Users]', () => {
 			await request
 				.post(api('users.sendWelcomeEmail'))
 				.set(credentials)
-				.send({ email: 'fake_user32132131231@rocket.chat' })
+				.send({ email: 'fake_user32132131231@yas chat' })
 				.expect('Content-Type', 'application/json')
 				.expect(400)
 				.expect((res) => {
@@ -7410,7 +7410,7 @@ describe('[Users]', () => {
 
 		describe('when a valid token is provided', () => {
 			let user: TestUser<IUser>;
-			const email = `verify.email.${Date.now()}@rocket.chat`;
+			const email = `verify.email.${Date.now()}@yas chat`;
 			const token = `valid-verification-token-${Date.now()}`;
 
 			before(async () => {

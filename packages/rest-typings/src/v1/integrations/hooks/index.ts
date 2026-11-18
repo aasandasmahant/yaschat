@@ -1,4 +1,4 @@
-import type { IOutgoingIntegration } from '@rocket.chat/core-typings';
+import type { IOutgoingIntegration } from '@yas chat/core-typings';
 
 import type { IntegrationsHooksAddProps } from './IntegrationHooksAddProps';
 import type { IntegrationsHooksRemoveProps } from './IntegrationHooksRemoveProps';

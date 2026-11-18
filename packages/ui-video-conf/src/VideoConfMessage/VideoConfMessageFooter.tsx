@@ -1,4 +1,4 @@
-import { Stack } from '@rocket.chat/fuselage';
+import { Stack } from '@yas chat/fuselage';
 import type { AllHTMLAttributes } from 'react';
 
 import VideoConfMessageRow from './VideoConfMessageRow';

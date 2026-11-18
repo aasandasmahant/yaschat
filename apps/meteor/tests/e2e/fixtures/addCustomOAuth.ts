@@ -13,7 +13,7 @@ export default async function addCustomOAuth(): Promise<void> {
 
 	await api.post(`${BASE_API_URL}/settings.addCustomOAuth`, { data: { name: 'Test' }, headers });
 	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test`, { data: { value: false }, headers });
-	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test-url`, { data: { value: 'https://rocket.chat' }, headers });
+	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test-url`, { data: { value: 'https://yas chat' }, headers });
 	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test-login_style`, { data: { value: 'redirect' }, headers });
 	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test-id`, { data: { value: 'abc' }, headers });
 	await api.post(`${BASE_API_URL}/settings/Accounts_OAuth_Custom-Test-secret`, { data: { value: 'def' }, headers });

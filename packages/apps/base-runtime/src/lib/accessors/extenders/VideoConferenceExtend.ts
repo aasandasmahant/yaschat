@@ -1,7 +1,7 @@
-import type { IVideoConferenceExtender } from '@rocket.chat/apps-engine/definition/accessors/IVideoConferenceExtend';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { VideoConference, VideoConferenceMember } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConference';
-import type { IVideoConferenceUser } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
+import type { IVideoConferenceExtender } from '@yas chat/apps-engine/definition/accessors/IVideoConferenceExtend';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { VideoConference, VideoConferenceMember } from '@yas chat/apps-engine/definition/videoConferences/IVideoConference';
+import type { IVideoConferenceUser } from '@yas chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
 
 export class VideoConferenceExtender implements IVideoConferenceExtender {
 	public kind: YasChatAssociationModel.VIDEO_CONFERENCE;

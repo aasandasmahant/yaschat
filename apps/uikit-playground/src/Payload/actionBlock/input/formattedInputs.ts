@@ -1,4 +1,4 @@
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 const ids = { appId: 'app-id', blockId: 'block-id', actionId: 'action-id' } as const;
 

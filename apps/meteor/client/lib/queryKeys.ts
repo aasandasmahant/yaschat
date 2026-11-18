@@ -8,9 +8,9 @@ import type {
 	ILivechatAgent,
 	IOutboundProvider,
 	RoomType,
-} from '@rocket.chat/core-typings';
-import type { PaginatedRequest, UsersListStatusParamsGET } from '@rocket.chat/rest-typings';
-import { videoConferenceInfoQueryKey } from '@rocket.chat/ui-video-conf';
+} from '@yas chat/core-typings';
+import type { PaginatedRequest, UsersListStatusParamsGET } from '@yas chat/rest-typings';
+import { videoConferenceInfoQueryKey } from '@yas chat/ui-video-conf';
 
 export const roomsQueryKeys = {
 	all: ['rooms'] as const,

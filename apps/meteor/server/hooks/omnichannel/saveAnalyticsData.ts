@@ -1,6 +1,6 @@
-import { isEditedMessage, isMessageFromVisitor, isSystemMessage } from '@rocket.chat/core-typings';
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatRooms } from '@rocket.chat/models';
+import { isEditedMessage, isMessageFromVisitor, isSystemMessage } from '@yas chat/core-typings';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatRooms } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import { isMessageFromBot } from '../../lib/omnichannel/isMessageFromBot';

@@ -1,6 +1,6 @@
-import { IconButton } from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { IconButton } from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

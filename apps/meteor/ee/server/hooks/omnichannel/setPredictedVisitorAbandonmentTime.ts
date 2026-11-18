@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { isEditedMessage, isMessageFromVisitor } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
+import { isEditedMessage, isMessageFromVisitor } from '@yas chat/core-typings';
 import moment from 'moment';
 
 import { markRoomResponded } from '../../../../server/hooks/omnichannel/markRoomResponded';

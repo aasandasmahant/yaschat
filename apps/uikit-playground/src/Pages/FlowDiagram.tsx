@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { ReactFlowProvider } from 'reactflow';
 
 import FlowContainer from '../Components/FlowContainer/FlowContainer';

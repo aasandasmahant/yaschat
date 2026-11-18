@@ -1,5 +1,5 @@
-import { Box, Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { ActionButton, StreamVideo, ToggleButton } from '@rocket.chat/ui-media';
+import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
+import { ActionButton, StreamVideo, ToggleButton } from '@yas chat/ui-media';
 import { useTranslation } from 'react-i18next';
 
 import Dialpad from './Dialpad';

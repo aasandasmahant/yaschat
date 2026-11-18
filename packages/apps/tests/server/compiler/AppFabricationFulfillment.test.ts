@@ -1,9 +1,9 @@
 import * as assert from 'node:assert';
 import { describe, it } from 'node:test';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { AppInterface } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { AppInterface } from '@yas chat/apps-engine/definition/metadata';
 
 import type { AppManager } from '../../../src/server/AppManager';
 import { ProxiedApp } from '../../../src/server/ProxiedApp';

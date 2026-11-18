@@ -1,4 +1,4 @@
-import { CustomSounds } from '@rocket.chat/models';
+import { CustomSounds } from '@yas chat/models';
 import { WebApp } from 'meteor/webapp';
 
 import { settings } from '../../../../settings';

@@ -1,6 +1,6 @@
-import { Box, Tag } from '@rocket.chat/fuselage';
-import { isTruthy } from '@rocket.chat/tools';
-import { useLicense } from '@rocket.chat/ui-client';
+import { Box, Tag } from '@yas chat/fuselage';
+import { isTruthy } from '@yas chat/tools';
+import { useLicense } from '@yas chat/ui-client';
 
 const developmentTag = process.env.NODE_ENV === 'development' ? 'Development' : null;
 function PlanTag() {

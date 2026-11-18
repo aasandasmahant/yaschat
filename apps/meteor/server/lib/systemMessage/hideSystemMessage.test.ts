@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { MessageTypesValues } from '@rocket.chat/core-typings';
+import type { MessageTypesValues } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { isMutedUnmuted, shouldHideSystemMessage } from './hideSystemMessage';

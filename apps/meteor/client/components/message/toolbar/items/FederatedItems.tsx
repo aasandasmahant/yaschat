@@ -1,4 +1,4 @@
-import type { IRoom, ISubscription, IMessage } from '@rocket.chat/core-typings';
+import type { IRoom, ISubscription, IMessage } from '@yas chat/core-typings';
 
 import QuoteMessageAction from './actions/QuoteMessageAction';
 import ReactionMessageAction from './actions/ReactionMessageAction';

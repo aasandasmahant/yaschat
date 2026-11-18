@@ -1,5 +1,5 @@
-import { buildRoomClassificationBanner, parseClassificationBannersConfig } from '@rocket.chat/abac';
-import { License } from '@rocket.chat/license';
+import { buildRoomClassificationBanner, parseClassificationBannersConfig } from '@yas chat/abac';
+import { License } from '@yas chat/license';
 
 import { getRoomClassificationBanner } from '../../../../server/api/lib/getRoomClassificationBanner';
 import { settings } from '../../../../server/settings';

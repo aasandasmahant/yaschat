@@ -1,5 +1,5 @@
-import type { OutgoingIntegrationEvent } from '@rocket.chat/core-typings';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { OutgoingIntegrationEvent } from '@yas chat/core-typings';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 export const outgoingEvents: Record<
 	OutgoingIntegrationEvent,

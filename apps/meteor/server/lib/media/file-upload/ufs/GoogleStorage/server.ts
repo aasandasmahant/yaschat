@@ -1,7 +1,7 @@
 import type { GetSignedUrlConfig } from '@google-cloud/storage';
 import { Storage } from '@google-cloud/storage';
-import type { IUpload } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { IUpload } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 
 import { UploadFS } from '../../../../../ufs';
 import type { StoreOptions } from '../../../../../ufs/ufs-store';

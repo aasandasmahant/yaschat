@@ -1,5 +1,5 @@
-import { Box, Icon } from '@rocket.chat/fuselage';
-import type { Keys as IconNames } from '@rocket.chat/icons';
+import { Box, Icon } from '@yas chat/fuselage';
+import type { Keys as IconNames } from '@yas chat/icons';
 
 type Slot = {
 	text: string;

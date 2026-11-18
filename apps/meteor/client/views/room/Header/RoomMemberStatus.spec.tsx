@@ -1,6 +1,6 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { UserStatus } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 
 import RoomMemberStatus from './RoomMemberStatus';

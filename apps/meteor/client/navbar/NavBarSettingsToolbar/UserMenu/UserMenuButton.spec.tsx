@@ -1,6 +1,6 @@
-import { UserStatus, type IUser } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
-import { UserContext } from '@rocket.chat/ui-contexts';
+import { UserStatus, type IUser } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
+import { UserContext } from '@yas chat/ui-contexts';
 import { render, screen, waitFor } from '@testing-library/react';
 import { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

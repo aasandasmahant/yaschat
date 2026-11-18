@@ -1,5 +1,5 @@
-import type { ISetting, LicenseModule } from '@rocket.chat/core-typings';
-import { useLicenseBase } from '@rocket.chat/ui-client';
+import type { ISetting, LicenseModule } from '@yas chat/core-typings';
+import { useLicenseBase } from '@yas chat/ui-client';
 import { useMemo } from 'react';
 
 export const useHasSettingModule = (setting?: ISetting) => {

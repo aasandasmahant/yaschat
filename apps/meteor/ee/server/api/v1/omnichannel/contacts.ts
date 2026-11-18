@@ -1,5 +1,5 @@
-import type { ILivechatContactVisitorAssociation } from '@rocket.chat/core-typings';
-import { ContactVisitorAssociationSchema, ajv } from '@rocket.chat/rest-typings';
+import type { ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
+import { ContactVisitorAssociationSchema, ajv } from '@yas chat/rest-typings';
 
 import { changeContactBlockStatus, closeBlockedRoom, ensureSingleContactLicense } from './lib/contacts';
 import { API } from '../../../../../server/api';
@@ -20,7 +20,7 @@ const blockContactSchema = {
 
 const isBlockContactProps = ajv.compile<blockContactProps>(blockContactSchema);
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/omnichannel/contacts.block': {
 			POST: (params: blockContactProps) => void;

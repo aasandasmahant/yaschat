@@ -1,7 +1,7 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import { TeamType, type IIntegration, type IMessage, type IRoom, type ITeam, type IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import { TeamType, type IIntegration, type IMessage, type IRoom, type ITeam, type IUser } from '@yas chat/core-typings';
 import { assert, expect } from 'chai';
 
 import { getCredentials, api, request, credentials, apiPrivateChannelName } from '../../data/api-data';

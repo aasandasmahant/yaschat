@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomXMPPFederated, isDirectMessageRoom } from '@rocket.chat/core-typings';
-import type { Icon } from '@rocket.chat/fuselage';
+import type { IRoom } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomXMPPFederated, isDirectMessageRoom } from '@yas chat/core-typings';
+import type { Icon } from '@yas chat/fuselage';
 import type { ComponentProps, ReactElement } from 'react';
 
 import { ReactiveUserStatus } from '../components/UserStatus';

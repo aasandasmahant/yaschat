@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { CredentialTokens, Users } from '@rocket.chat/models';
-import { getObjectKeys, wrapExceptions } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import { CredentialTokens, Users } from '@yas chat/models';
+import { getObjectKeys, wrapExceptions } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 
 import { createNewUser } from './createNewUser';

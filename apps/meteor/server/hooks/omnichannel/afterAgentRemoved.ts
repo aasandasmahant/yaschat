@@ -1,4 +1,4 @@
-import { LivechatDepartment, Users, LivechatDepartmentAgents, LivechatVisitors } from '@rocket.chat/models';
+import { LivechatDepartment, Users, LivechatDepartmentAgents, LivechatVisitors } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 import { notifyOnLivechatDepartmentAgentChanged, notifyOnUserChange } from '../../lib/notifyListener';

@@ -1,5 +1,5 @@
-import type { IVideoConferenceUser } from '@rocket.chat/core-typings';
-import { hasJoinedVideoConference, isInVideoConference, isRingingVideoConferenceMember } from '@rocket.chat/core-typings';
+import type { IVideoConferenceUser } from '@yas chat/core-typings';
+import { hasJoinedVideoConference, isInVideoConference, isRingingVideoConferenceMember } from '@yas chat/core-typings';
 
 type MemberState = Pick<IVideoConferenceUser, 'joined' | 'declined' | 'declinedAt' | 'leftAt' | 'ringingAt'>;
 

@@ -1,4 +1,4 @@
-import { StreamVideo } from '@rocket.chat/ui-media';
+import { StreamVideo } from '@yas chat/ui-media';
 import { useState } from 'react';
 
 import { CardListContainer, CardListSection, PeerCard, StreamCard } from '../components';

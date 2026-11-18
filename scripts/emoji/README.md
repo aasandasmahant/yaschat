@@ -1,6 +1,6 @@
 # emoji
 
-Generates the emoji test fixture used by `@rocket.chat/message-parser`'s coverage test.
+Generates the emoji test fixture used by `@yas chat/message-parser`'s coverage test.
 
 ## `generateEmojiFixture.mjs`
 

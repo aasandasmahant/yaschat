@@ -1,5 +1,5 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { Badge, SidebarCollapseGroup } from '@rocket.chat/fuselage';
+import type { ISubscription } from '@yas chat/core-typings';
+import { Badge, SidebarCollapseGroup } from '@yas chat/fuselage';
 import type { HTMLAttributes, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

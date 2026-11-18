@@ -1,5 +1,5 @@
-import { MessageBody, Skeleton } from '@rocket.chat/fuselage';
-import { Markup } from '@rocket.chat/gazzodown';
+import { MessageBody, Skeleton } from '@yas chat/fuselage';
+import { Markup } from '@yas chat/gazzodown';
 import type { ComponentProps } from 'react';
 import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';

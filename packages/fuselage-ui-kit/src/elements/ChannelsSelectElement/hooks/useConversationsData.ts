@@ -1,5 +1,5 @@
-import { useEndpoint } from '@rocket.chat/ui-contexts';
-import type { ConversationsSelectFilter } from '@rocket.chat/ui-kit';
+import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ConversationsSelectFilter } from '@yas chat/ui-kit';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

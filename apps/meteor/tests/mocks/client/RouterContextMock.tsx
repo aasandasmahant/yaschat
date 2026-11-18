@@ -1,5 +1,5 @@
-import type { To, SearchParameters, LocationPathname, LocationSearch } from '@rocket.chat/ui-contexts';
-import { RouterContext } from '@rocket.chat/ui-contexts';
+import type { To, SearchParameters, LocationPathname, LocationSearch } from '@yas chat/ui-contexts';
+import { RouterContext } from '@yas chat/ui-contexts';
 import { compile } from 'path-to-regexp';
 import { useRef, useMemo } from 'react';
 import type { MutableRefObject, ReactNode } from 'react';

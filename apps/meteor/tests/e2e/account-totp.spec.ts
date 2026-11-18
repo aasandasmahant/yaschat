@@ -73,7 +73,7 @@ test.describe('account-totp REST method bridge preserves the totp-required error
 		// `error: 'totp-required'` frame must survive for the TOTP modal to open.
 		await page.evaluate((method) => {
 			(window as any).__totpCallResult = (window as any)
-				.__rocketChatCallMethod(method)
+				.__YasChatCallMethod(method)
 				.then((value: unknown) => ({ ok: true, value }))
 				.catch((err: unknown) => ({ ok: false, error: String((err as Error)?.message ?? err) }));
 		}, METHOD_NAME);

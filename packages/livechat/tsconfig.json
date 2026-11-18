@@ -1,5 +1,5 @@
 {
-	"extends": "@rocket.chat/tsconfig/client.json",
+	"extends": "@yas chat/tsconfig/client.json",
 	"compilerOptions": {
 		"module": "preserve",
 		"types": ["node", "jest", "vite/client"],

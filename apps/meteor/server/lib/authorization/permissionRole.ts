@@ -1,6 +1,6 @@
-import { AuthorizationUtils } from '@rocket.chat/authorization/dist/AuthorizationUtils';
-import { License, ClientSafeError } from '@rocket.chat/core-services';
-import { Permissions, Roles } from '@rocket.chat/models';
+import { AuthorizationUtils } from '@yas chat/authorization/dist/AuthorizationUtils';
+import { License, ClientSafeError } from '@yas chat/core-services';
+import { Permissions, Roles } from '@yas chat/models';
 
 import { hasPermissionAsync } from './hasPermission';
 import { CONSTANTS } from '../../../lib/authorization';

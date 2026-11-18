@@ -1,6 +1,6 @@
-import type { ILivechatContact, ILivechatContactChannel, ILivechatContactVisitorAssociation } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { LivechatContacts, LivechatRooms, Settings } from '@rocket.chat/models';
+import type { ILivechatContact, ILivechatContactChannel, ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { LivechatContacts, LivechatRooms, Settings } from '@yas chat/models';
 import type { ClientSession } from 'mongodb';
 
 import { isSameChannel } from '../../../lib/livechat/isSameChannel';

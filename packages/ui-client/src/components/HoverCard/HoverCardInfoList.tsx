@@ -1,4 +1,4 @@
-import { ItemGroup } from '@rocket.chat/fuselage';
+import { ItemGroup } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type HoverCardInfoListProps = { children: ReactNode };

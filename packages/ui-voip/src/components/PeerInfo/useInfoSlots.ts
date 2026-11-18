@@ -1,4 +1,4 @@
-import type { Keys as IconNames } from '@rocket.chat/icons';
+import type { Keys as IconNames } from '@yas chat/icons';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

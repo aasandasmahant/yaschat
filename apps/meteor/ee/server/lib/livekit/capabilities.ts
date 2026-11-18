@@ -1,4 +1,4 @@
-import type { VideoConferenceCapabilities } from '@rocket.chat/core-typings';
+import type { VideoConferenceCapabilities } from '@yas chat/core-typings';
 
 /**
  * What the LiveKit provider tells the rest of YasChat it can do. A capability left out does not fail anywhere:

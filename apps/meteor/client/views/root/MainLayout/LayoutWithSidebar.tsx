@@ -1,7 +1,7 @@
-import { Box } from '@rocket.chat/fuselage';
-import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@rocket.chat/ui-client';
-import type { IRouterPaths } from '@rocket.chat/ui-contexts';
-import { useLayout, useSetting, useCurrentRoutePath, useRouter } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@yas chat/ui-client';
+import type { IRouterPaths } from '@yas chat/ui-contexts';
+import { useLayout, useSetting, useCurrentRoutePath, useRouter } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useRef } from 'react';
 

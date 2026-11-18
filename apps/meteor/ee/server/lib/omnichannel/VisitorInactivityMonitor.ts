@@ -1,8 +1,8 @@
-import { OmnichannelEEService } from '@rocket.chat/core-services';
-import type { ILivechatVisitor, IOmnichannelRoom, IUser, ILivechatDepartment } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import type { MainLogger } from '@rocket.chat/logger';
-import { LivechatVisitors, LivechatRooms, LivechatDepartment, Users } from '@rocket.chat/models';
+import { OmnichannelEEService } from '@yas chat/core-services';
+import type { ILivechatVisitor, IOmnichannelRoom, IUser, ILivechatDepartment } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import type { MainLogger } from '@yas chat/logger';
+import { LivechatVisitors, LivechatRooms, LivechatDepartment, Users } from '@yas chat/models';
 
 import { schedulerLogger } from './logger';
 import { callbacks } from '../../../../server/lib/callbacks';

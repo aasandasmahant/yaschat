@@ -1,4 +1,4 @@
-import type { IApiEndpoint } from '@rocket.chat/apps-engine/definition/api/IApiEndpoint';
+import type { IApiEndpoint } from '@yas chat/apps-engine/definition/api/IApiEndpoint';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';
 import { AppAccessorsInstance } from '../lib/accessors/mod';

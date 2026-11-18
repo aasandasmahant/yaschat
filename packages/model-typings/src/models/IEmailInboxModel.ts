@@ -1,4 +1,4 @@
-import type { IEmailInbox } from '@rocket.chat/core-typings';
+import type { IEmailInbox } from '@yas chat/core-typings';
 import type { FindCursor, InsertOneResult, WithId, UpdateFilter } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

@@ -1,6 +1,6 @@
-import { PaletteStyleTag } from '@rocket.chat/fuselage';
-import { useDarkMode } from '@rocket.chat/fuselage-hooks';
-import { useThemeMode } from '@rocket.chat/ui-client';
+import { PaletteStyleTag } from '@yas chat/fuselage';
+import { useDarkMode } from '@yas chat/fuselage-hooks';
+import { useThemeMode } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';

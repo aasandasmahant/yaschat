@@ -8,8 +8,8 @@ import {
 	Box,
 	Button,
 	type TableColumnWidth,
-} from '@rocket.chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@rocket.chat/fuselage-hooks';
+} from '@yas chat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -20,7 +20,7 @@ import {
 	useSort,
 	GenericNoResults,
 	links,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { hashKey } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

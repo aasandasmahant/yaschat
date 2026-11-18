@@ -1,4 +1,4 @@
-import { LivechatContacts, Statistics, Users } from '@rocket.chat/models';
+import { LivechatContacts, Statistics, Users } from '@yas chat/models';
 import moment from 'moment';
 
 import { LICENSE_VERSION } from './license';

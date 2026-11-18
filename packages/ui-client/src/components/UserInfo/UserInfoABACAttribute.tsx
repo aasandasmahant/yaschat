@@ -1,4 +1,4 @@
-import { Tag } from '@rocket.chat/fuselage';
+import { Tag } from '@yas chat/fuselage';
 
 export type UserInfoABACAttributeProps = {
 	attribute: string;

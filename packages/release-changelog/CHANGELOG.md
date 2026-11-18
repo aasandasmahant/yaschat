@@ -1,4 +1,4 @@
-# @rocket.chat/release-changelog
+# @yas chat/release-changelog
 
 ## 0.1.1
 

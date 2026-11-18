@@ -1,4 +1,4 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
 
 const toComparable = (rows: IAbacAttributeDefinition[] = []) =>
 	JSON.stringify(

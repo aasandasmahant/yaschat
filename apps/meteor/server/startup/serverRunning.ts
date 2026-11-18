@@ -2,8 +2,8 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { License } from '@rocket.chat/license';
-// import { Users } from '@rocket.chat/models';
+import { License } from '@yas chat/license';
+// import { Users } from '@yas chat/models';
 import semver from 'semver';
 
 import { Info } from '../../yaschat.info';
@@ -80,7 +80,7 @@ export const reportServerRunning = async (): Promise<void> => {
 		const mongoSemver = semver.coerce(mongoVersion);
 
 		if (!mongoSemver || semver.satisfies(mongoSemver, '<7.0.0')) {
-			msg += ['', '', 'YOUR CURRENT MONGODB VERSION IS NOT SUPPORTED BY ROCKET.CHAT,', 'PLEASE UPGRADE TO VERSION 8.0 OR LATER'].join('\n');
+			msg += ['', '', 'YOUR CURRENT MONGODB VERSION IS NOT SUPPORTED BY Yas chat,', 'PLEASE UPGRADE TO VERSION 8.0 OR LATER'].join('\n');
 			showErrorBox('SERVER ERROR', msg);
 
 			exitIfNotBypassed(process.env.BYPASS_MONGO_VALIDATION);
@@ -92,7 +92,7 @@ export const reportServerRunning = async (): Promise<void> => {
 		if (!skipMongoDbDeprecationCheck && semver.satisfies(semver.coerce(mongoVersion)!, '<8.0.0')) {
 			msg = [
 				`DEPRECATED: MONGODB VERSION ${mongoVersion}.`,
-				'SUPPORT FOR MONGODB <8.0 WILL BE REMOVED IN ROCKET.CHAT 9.0.0',
+				'SUPPORT FOR MONGODB <8.0 WILL BE REMOVED IN Yas chat 9.0.0',
 				'PLEASE UPGRADE MONGODB TO VERSION 8.0 OR GREATER',
 			].join('\n');
 			showWarningBox('DEPRECATION', msg);
@@ -100,7 +100,7 @@ export const reportServerRunning = async (): Promise<void> => {
 			// const id = `mongodbDeprecation_${mongoVersion.replace(/[^0-9]/g, '_')}`;
 			// const title = 'MongoDB_Deprecated';
 			// const text = 'MongoDB_version_s_is_deprecated_please_upgrade_your_installation';
-			// const link = 'https://go.rocket.chat/i/mongodb-deprecated';
+			// const link = 'https://go.yas chat/i/mongodb-deprecated';
 
 			// if (!(await Users.bannerExistsById(id))) {
 			// 	if (skipMongoDbDeprecationBanner || process.env.TEST_MODE) {

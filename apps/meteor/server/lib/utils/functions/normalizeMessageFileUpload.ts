@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Uploads } from '@rocket.chat/models';
+import type { IMessage } from '@yas chat/core-typings';
+import { Uploads } from '@yas chat/models';
 
 import { FileUpload } from '../../media/file-upload';
 import { getURL } from '../getURL';

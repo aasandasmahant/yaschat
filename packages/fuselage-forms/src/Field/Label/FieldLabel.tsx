@@ -1,4 +1,4 @@
-import type { FieldLabel as FieldLabelComponent } from '@rocket.chat/fuselage';
+import type { FieldLabel as FieldLabelComponent } from '@yas chat/fuselage';
 import { type ComponentPropsWithoutRef } from 'react';
 
 import { useFieldFieldType } from '../FieldContext';

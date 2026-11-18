@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { isE2EEMessage } from '@rocket.chat/core-typings';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
+import type { IMessage } from '@yas chat/core-typings';
+import { isE2EEMessage } from '@yas chat/core-typings';
+import { useSafely } from '@yas chat/fuselage-hooks';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

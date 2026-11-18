@@ -1,9 +1,9 @@
-import type { ILivechatDepartment, YasChatRecordDeleted, LivechatDepartmentDTO } from '@rocket.chat/core-typings';
-import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { LivechatDepartmentRaw } from '@rocket.chat/models';
+import type { ILivechatDepartment, YasChatRecordDeleted, LivechatDepartmentDTO } from '@yas chat/core-typings';
+import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { LivechatDepartmentRaw } from '@yas chat/models';
 import type { Collection, Document, FindCursor, FindOptions, UpdateResult, Db, AggregationCursor } from 'mongodb';
 
-declare module '@rocket.chat/model-typings' {
+declare module '@yas chat/model-typings' {
 	interface ILivechatDepartmentModel {
 		removeDepartmentFromForwardListById(departmentId: string): Promise<void>;
 		removeParentAndAncestorById(id: string): Promise<UpdateResult | Document>;

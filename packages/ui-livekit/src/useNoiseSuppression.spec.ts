@@ -1,4 +1,4 @@
-import type { NoiseMethod } from '@rocket.chat/ui-conference';
+import type { NoiseMethod } from '@yas chat/ui-conference';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import type { LocalAudioTrack, Room } from 'livekit-client';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ const persisted = jest.fn();
 let remembered: NoiseMethod = 'browser';
 let rnnoiseSupported = true;
 
-jest.mock('@rocket.chat/ui-conference', () => ({
+jest.mock('@yas chat/ui-conference', () => ({
 	supportsRnnoise: () => rnnoiseSupported,
 	useNoiseSuppressionPreference: () => {
 		const [noiseMethod, setNoiseMethod] = useState<NoiseMethod>(remembered);

@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/api-client",
+	"name": "@yas chat/api-client",
 	"version": "0.2.57",
 	"repository": {
 		"type": "git",
@@ -21,16 +21,16 @@
 		"testunit": "jest"
 	},
 	"dependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/rest-typings": "workspace:^",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/rest-typings": "workspace:^",
 		"filter-obj": "^3.0.0",
 		"query-string": "^7.1.3",
 		"split-on-first": "^3.0.0",
 		"strict-uri-encode": "^2.0.0"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:*",
 		"@types/strict-uri-encode": "^2.0.2",
 		"jest": "~30.5.2",
 		"jest-fetch-mock": "~4.2.0",

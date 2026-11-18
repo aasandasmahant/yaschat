@@ -1,6 +1,6 @@
 import { EventEmitter } from 'node:events';
 
-import type { Logger } from '@rocket.chat/logger';
+import type { Logger } from '@yas chat/logger';
 import type { Request, Response } from 'express';
 
 import { nodeLoggerMiddleware } from './logger';
@@ -17,7 +17,7 @@ const createRequest = (originalUrl: string): Request =>
 		originalUrl,
 		url: originalUrl,
 		headers: {
-			'host': 'open.rocket.chat',
+			'host': 'open.yas chat',
 			'user-agent': 'curl/8',
 			'x-user-id': 'user-id',
 		},
@@ -42,7 +42,7 @@ describe('nodeLoggerMiddleware', () => {
 			userId: 'user-id',
 			userAgent: 'curl/8',
 			length: undefined,
-			host: 'open.rocket.chat',
+			host: 'open.yas chat',
 			referer: undefined,
 			remoteIP: '10.0.0.1',
 		});
@@ -104,12 +104,12 @@ describe('nodeLoggerMiddleware', () => {
 	it('censors the referer like the URL', () => {
 		const { logger, child } = createLogger();
 		const req = createRequest('/api/apps/private/app-id/hash/style.css');
-		req.headers.referer = 'https://open.rocket.chat/api/apps/private/app-id/hash/page?code=secret';
+		req.headers.referer = 'https://open.yas chat/api/apps/private/app-id/hash/page?code=secret';
 
 		nodeLoggerMiddleware(logger, { censor: (url) => url.replace('hash', '*Redacted*') })(req, createResponse(), jest.fn());
 
 		expect(child).toHaveBeenCalledWith(
-			expect.objectContaining({ referer: 'https://open.rocket.chat/api/apps/private/app-id/*Redacted*/page?code=*Redacted*' }),
+			expect.objectContaining({ referer: 'https://open.yas chat/api/apps/private/app-id/*Redacted*/page?code=*Redacted*' }),
 		);
 	});
 });

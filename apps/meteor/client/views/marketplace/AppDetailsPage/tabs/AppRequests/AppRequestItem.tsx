@@ -1,7 +1,7 @@
-import { Badge, Box, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { Badge, Box, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 
 export type AppRequestItemProps = {
 	seen: boolean;

@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IMessage } from '@yas chat/core-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 /**
  * Checks if a message contains a user highlight

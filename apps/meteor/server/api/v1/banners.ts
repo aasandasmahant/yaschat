@@ -1,5 +1,5 @@
-import { Banner } from '@rocket.chat/core-services';
-import type { IBanner } from '@rocket.chat/core-typings';
+import { Banner } from '@yas chat/core-services';
+import type { IBanner } from '@yas chat/core-typings';
 import {
 	ajv,
 	isBannerIdParams,
@@ -7,7 +7,7 @@ import {
 	isBannersProps,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { API } from '../api';
 

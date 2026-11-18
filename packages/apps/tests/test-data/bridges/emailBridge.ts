@@ -1,4 +1,4 @@
-import type { IEmail } from '@rocket.chat/apps-engine/definition/email';
+import type { IEmail } from '@yas chat/apps-engine/definition/email';
 
 import { EmailBridge } from '../../../src/server/bridges/EmailBridge';
 

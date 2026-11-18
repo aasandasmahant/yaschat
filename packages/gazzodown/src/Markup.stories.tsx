@@ -1,8 +1,8 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, MessageBody, MessageContainer } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
-import type { Options } from '@rocket.chat/message-parser';
-import { parse } from '@rocket.chat/message-parser';
+import { css } from '@yas chat/css-in-js';
+import { Box, MessageBody, MessageContainer } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import type { Options } from '@yas chat/message-parser';
+import { parse } from '@yas chat/message-parser';
 import type { Meta, StoryObj } from '@storybook/react';
 import outdent from 'outdent';
 import { Suspense } from 'react';
@@ -271,7 +271,7 @@ export const Table: StoryObj<typeof Markup> = {
 		| :--- | :----: | ----: |
 		| Alice | **done** | 9.5 |
 		| Bob | :smile: | 7 |
-		| Carol | [profile](https://rocket.chat) | 12 |
+		| Carol | [profile](https://yas chat) | 12 |
 	`),
 	},
 };

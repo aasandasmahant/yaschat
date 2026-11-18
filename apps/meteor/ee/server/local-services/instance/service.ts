@@ -1,10 +1,10 @@
 import os from 'node:os';
 
-import type { AppStatusReport, ClusterTransport, EventSignatures, LocalBroker } from '@rocket.chat/core-services';
-import { Apps, License, ServiceClassInternal, Settings } from '@rocket.chat/core-services';
-import type { IInstanceStatus } from '@rocket.chat/core-typings';
-import { InstanceStatus, defaultPingInterval, indexExpire } from '@rocket.chat/instance-status';
-import { InstanceStatus as InstanceStatusRaw } from '@rocket.chat/models';
+import type { AppStatusReport, ClusterTransport, EventSignatures, LocalBroker } from '@yas chat/core-services';
+import { Apps, License, ServiceClassInternal, Settings } from '@yas chat/core-services';
+import type { IInstanceStatus } from '@yas chat/core-typings';
+import { InstanceStatus, defaultPingInterval, indexExpire } from '@yas chat/instance-status';
+import { InstanceStatus as InstanceStatusRaw } from '@yas chat/models';
 import EJSON from 'ejson';
 import type { BrokerNode } from 'moleculer';
 import { ServiceBroker, Transporters, Serializers } from 'moleculer';
@@ -181,7 +181,7 @@ export class InstanceService extends ServiceClassInternal implements IInstanceSe
 			nodeVersion: process.version,
 		};
 
-		await InstanceStatus.registerInstance('rocket.chat', instance);
+		await InstanceStatus.registerInstance('yas chat', instance);
 
 		try {
 			const hasLicense = await License.hasModule('scalability');

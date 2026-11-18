@@ -1,6 +1,6 @@
-import { api } from '@rocket.chat/core-services';
-import type { IRoom, SlashCommandCallbackParams } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { IRoom, SlashCommandCallbackParams } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { i18n } from '../../lib/i18n';
 import { slashCommands } from '../../lib/utils/slashCommand';

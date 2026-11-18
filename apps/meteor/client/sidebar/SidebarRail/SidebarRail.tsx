@@ -1,5 +1,5 @@
-import { Box, NavBarGroup } from '@rocket.chat/fuselage';
-import { usePermission, useUser } from '@rocket.chat/ui-contexts';
+import { Box, NavBarGroup } from '@yas chat/fuselage';
+import { usePermission, useUser } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

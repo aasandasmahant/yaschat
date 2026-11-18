@@ -14,7 +14,7 @@ The limit is compared against `msg.length`, so the unit is UTF-16 code units (ch
 
 ## Why the default is 10000
 
-Until 9.0.0 the default was `0`. It was changed after benchmarking `@rocket.chat/message-parser` (production bundle, full options: colors, emoticons, KaTeX) against payloads from 1K to 2M characters. Each payload ran in a fresh Node 24 process on an Apple M3 Pro, and the median of 3–5 runs was recorded.
+Until 9.0.0 the default was `0`. It was changed after benchmarking `@yas chat/message-parser` (production bundle, full options: colors, emoticons, KaTeX) against payloads from 1K to 2M characters. Each payload ran in a fresh Node 24 process on an Apple M3 Pro, and the median of 3–5 runs was recorded.
 
 Parsing is synchronous, so the parse time is how long the event loop is blocked for every other user on that instance.
 

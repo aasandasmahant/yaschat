@@ -1,5 +1,5 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { UserStatus } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor, act } from '@testing-library/react';
 
 import type { PeerInfo } from './definitions';
@@ -7,8 +7,8 @@ import type { PeerAutocompleteOptions } from '../components';
 import { usePeerAutocomplete, isFirstPeerAutocompleteOption } from './usePeerAutocomplete';
 import MockedInstanceProvider from '../providers/MockedInstanceProvider';
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useUserPresence: jest.fn(() => ({ _id: 'user1', status: 'online' as const })),
 }));
 
@@ -247,7 +247,7 @@ describe('hook', () => {
 
 	describe('user presence updates', () => {
 		it('should update peer status when user presence changes', async () => {
-			const { useUserPresence } = await import('@rocket.chat/ui-contexts');
+			const { useUserPresence } = await import('@yas chat/ui-contexts');
 			const mockUseUserPresence = useUserPresence as jest.MockedFunction<typeof useUserPresence>;
 
 			mockGetAutocompleteOptions.mockResolvedValue([]);
@@ -268,7 +268,7 @@ describe('hook', () => {
 		});
 
 		it('should not update peer status when status has not changed', async () => {
-			const { useUserPresence } = await import('@rocket.chat/ui-contexts');
+			const { useUserPresence } = await import('@yas chat/ui-contexts');
 			const mockUseUserPresence = useUserPresence as jest.MockedFunction<typeof useUserPresence>;
 
 			mockGetAutocompleteOptions.mockResolvedValue([]);
@@ -286,7 +286,7 @@ describe('hook', () => {
 		});
 
 		it('should not update when peerInfo is undefined', async () => {
-			const { useUserPresence } = await import('@rocket.chat/ui-contexts');
+			const { useUserPresence } = await import('@yas chat/ui-contexts');
 			const mockUseUserPresence = useUserPresence as jest.MockedFunction<typeof useUserPresence>;
 
 			mockGetAutocompleteOptions.mockResolvedValue([]);
@@ -302,7 +302,7 @@ describe('hook', () => {
 		});
 
 		it('should not update when peerInfo has no status property', async () => {
-			const { useUserPresence } = await import('@rocket.chat/ui-contexts');
+			const { useUserPresence } = await import('@yas chat/ui-contexts');
 			const mockUseUserPresence = useUserPresence as jest.MockedFunction<typeof useUserPresence>;
 
 			mockGetAutocompleteOptions.mockResolvedValue([]);
@@ -320,7 +320,7 @@ describe('hook', () => {
 		});
 
 		it('should not update when useUserPresence returns no status', async () => {
-			const { useUserPresence } = await import('@rocket.chat/ui-contexts');
+			const { useUserPresence } = await import('@yas chat/ui-contexts');
 			const mockUseUserPresence = useUserPresence as jest.MockedFunction<typeof useUserPresence>;
 
 			mockGetAutocompleteOptions.mockResolvedValue([]);

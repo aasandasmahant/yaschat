@@ -1,5 +1,5 @@
-import type { INewIncomingIntegration } from '@rocket.chat/core-typings';
-import { useAbsoluteUrl } from '@rocket.chat/ui-contexts';
+import type { INewIncomingIntegration } from '@yas chat/core-typings';
+import { useAbsoluteUrl } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 type UseExampleDataParams = {
@@ -19,7 +19,7 @@ export function useExampleData({
 			attachments: [
 				{
 					title: 'YasChat',
-					title_link: 'https://rocket.chat',
+					title_link: 'https://yas chat',
 					text: 'YasChat, the best open source chat',
 					image_url: imageUrl,
 					color: '#764FA5',

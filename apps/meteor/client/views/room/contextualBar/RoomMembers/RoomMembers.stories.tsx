@@ -1,6 +1,6 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { Contextualbar } from '@rocket.chat/ui-client';
+import { UserStatus } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { Contextualbar } from '@yas chat/ui-client';
 import type { Meta } from '@storybook/react';
 import { action } from 'storybook/actions';
 

@@ -188,7 +188,7 @@ export const Compact: Story = {
 export const AsLink: Story = {
 	args: {
 		is: 'a',
-		href: 'https://rocket.chat',
+		href: 'https://yas chat',
 		external: true,
 		children: 'Button',
 	},

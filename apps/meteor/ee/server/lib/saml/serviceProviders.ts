@@ -1,4 +1,4 @@
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 import debounce from 'lodash.debounce';
 
 import { SAMLUtils } from './lib/Utils';

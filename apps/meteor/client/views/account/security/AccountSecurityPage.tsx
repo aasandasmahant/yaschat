@@ -1,6 +1,6 @@
-import { Accordion, AccordionItem, ButtonGroup, Button, Callout, Stack } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@rocket.chat/ui-client';
-import { useSetting, useUser } from '@rocket.chat/ui-contexts';
+import { Accordion, AccordionItem, ButtonGroup, Button, Callout, Stack } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
+import { useSetting, useUser } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

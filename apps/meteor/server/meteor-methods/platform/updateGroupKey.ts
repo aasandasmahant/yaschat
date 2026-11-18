@@ -1,4 +1,4 @@
-import { Subscriptions, Rooms } from '@rocket.chat/models';
+import { Subscriptions, Rooms } from '@yas chat/models';
 
 import { notifyOnSubscriptionChangedById, notifyOnSubscriptionChanged, notifyOnRoomChangedById } from '../../lib/notifyListener';
 

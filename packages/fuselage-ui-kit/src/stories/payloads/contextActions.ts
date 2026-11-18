@@ -1,4 +1,4 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 
 export const contextActions: readonly UiKit.LayoutBlock[] = [
 	{
@@ -24,7 +24,7 @@ export const contextActions: readonly UiKit.LayoutBlock[] = [
 				actionId: 'open-run',
 				icon: { type: 'icon', icon: 'arrow-forward', variant: 'default' },
 				label: 'Open the run',
-				url: 'https://rocket.chat',
+				url: 'https://yas chat',
 			},
 		],
 	},

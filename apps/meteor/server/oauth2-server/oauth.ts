@@ -1,6 +1,6 @@
 import OAuthServer, { OAuthError, UnauthorizedRequestError } from '@node-oauth/oauth2-server';
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { OAuthApps, Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { OAuthApps, Users } from '@yas chat/models';
 import express from 'express';
 import type { Express, NextFunction, Request, Response } from 'express';
 

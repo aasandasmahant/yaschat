@@ -1,7 +1,7 @@
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import type { IUser, IInviteSubscription } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { links } from '@rocket.chat/ui-client';
+import { isRoomFederated } from '@yas chat/core-typings';
+import type { IUser, IInviteSubscription } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { links } from '@yas chat/ui-client';
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, type ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';

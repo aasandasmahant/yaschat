@@ -1,7 +1,7 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IAbacAttributeDefinition, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { IAbacAttributeDefinition, IRoom, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 
@@ -4035,7 +4035,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 			let room: IRoom;
 			let user: IUser;
 			const username = `abac-sync-deny-${Date.now()}`;
-			const email = `${username}@rocket.chat`;
+			const email = `${username}@yas chat`;
 
 			before(
 				async () => {
@@ -4097,7 +4097,7 @@ import { IS_EE, URL_MONGODB } from '../../e2e/config/constants';
 			let room: IRoom;
 			let user: IUser;
 			const username = `abac-sync-permit-${Date.now()}`;
-			const email = `${username}@rocket.chat`;
+			const email = `${username}@yas chat`;
 
 			before(
 				async () => {

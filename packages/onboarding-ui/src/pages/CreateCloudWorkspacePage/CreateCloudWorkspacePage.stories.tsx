@@ -18,9 +18,9 @@ export default {
 			['en', 'English'],
 			['pt', 'Português'],
 		],
-		domain: 'rocket.chat',
+		domain: 'yas chat',
 		validateUrl: async (url) => (url === 'rocket' ? 'invalid url' : true),
-		validateEmail: async (email) => (email === 'rocket@rocket.chat' ? 'invalid email' : true),
+		validateEmail: async (email) => (email === 'rocket@yas chat' ? 'invalid email' : true),
 	},
 } satisfies Meta<typeof CreateCloudWorkspacePage>;
 

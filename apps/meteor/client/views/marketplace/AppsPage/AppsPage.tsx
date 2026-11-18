@@ -1,4 +1,4 @@
-import { Page } from '@rocket.chat/ui-client';
+import { Page } from '@yas chat/ui-client';
 
 import AppsPageContent from './AppsPageContent';
 

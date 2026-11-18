@@ -1,8 +1,8 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { UiKitContext } from '@rocket.chat/fuselage-ui-kit';
-import { MarkupInteractionContext } from '@rocket.chat/gazzodown';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { UiKitContext } from '@yas chat/fuselage-ui-kit';
+import { MarkupInteractionContext } from '@yas chat/gazzodown';
+import { useUserPreference } from '@yas chat/ui-contexts';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { FormEvent } from 'react';
 
 import ModalBlock from './ModalBlock';

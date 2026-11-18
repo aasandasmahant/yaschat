@@ -1,9 +1,9 @@
-import { Room, Upload } from '@rocket.chat/core-services';
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import type { IRoomNativeFederated, IRoom, IUser, RoomType } from '@rocket.chat/core-typings';
-import { federationSDK, type HomeserverEventSignatures, type PduForType } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { Room, Upload } from '@yas chat/core-services';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import type { IRoomNativeFederated, IRoom, IUser, RoomType } from '@yas chat/core-typings';
+import { federationSDK, type HomeserverEventSignatures, type PduForType } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 import debounce from 'lodash.debounce';
 import mem from 'mem';
 

@@ -1,6 +1,6 @@
-import { Room, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser, RoomType } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { Room, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser, RoomType } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { isObject } from '../../../lib/utils/isObject';
 import { createDirectMessage } from '../../meteor-methods/messages/createDirectMessage';

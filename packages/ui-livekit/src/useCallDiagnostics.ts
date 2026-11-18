@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { CallDiagnosticsData, ParticipantTrackStats } from '@rocket.chat/ui-conference';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { CallDiagnosticsData, ParticipantTrackStats } from '@yas chat/ui-conference';
 import type { LocalAudioTrack, LocalVideoTrack, Participant, LocalTrack, RemoteTrack } from 'livekit-client';
 import { Track } from 'livekit-client';
 import { useEffect, useRef, useState } from 'react';

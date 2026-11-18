@@ -1,13 +1,13 @@
 import crypto from 'crypto';
 
-import { MeteorService, ServiceClass } from '@rocket.chat/core-services';
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
-import type { ClientVersion, ConnectionLifecycle, ConnectionRegistry, MeteorCollection, Server } from '@rocket.chat/ddp-server';
-import { Session, applyLoginServiceConfigurationChange, encodeAdded, setClientVersion, trackPresence } from '@rocket.chat/ddp-server';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { Users } from '@rocket.chat/models';
-import type { NotificationsModule, SettingsReader } from '@rocket.chat/streamer';
-import { ListenersModule, invalidatePublicationUserCache } from '@rocket.chat/streamer';
+import { MeteorService, ServiceClass } from '@yas chat/core-services';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
+import type { ClientVersion, ConnectionLifecycle, ConnectionRegistry, MeteorCollection, Server } from '@yas chat/ddp-server';
+import { Session, applyLoginServiceConfigurationChange, encodeAdded, setClientVersion, trackPresence } from '@yas chat/ddp-server';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { Users } from '@yas chat/models';
+import type { NotificationsModule, SettingsReader } from '@yas chat/streamer';
+import { ListenersModule, invalidatePublicationUserCache } from '@yas chat/streamer';
 import polka from 'polka';
 import { throttle } from 'underscore';
 import WebSocket from 'ws';

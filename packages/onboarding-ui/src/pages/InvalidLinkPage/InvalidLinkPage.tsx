@@ -1,5 +1,5 @@
-import { Box, Button } from '@rocket.chat/fuselage';
-import { BackgroundLayer, LayoutLogo } from '@rocket.chat/layout';
+import { Box, Button } from '@yas chat/fuselage';
+import { BackgroundLayer, LayoutLogo } from '@yas chat/layout';
 import { useTranslation } from 'react-i18next';
 
 export type InvalidLinkPageProps = {

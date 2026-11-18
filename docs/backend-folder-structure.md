@@ -22,7 +22,7 @@ Practical consequence: when you look for code, ask "what kind of thing is it?" b
 | `app/`      | **Legacy remnant, do not add server code here.** What's left is genuinely shared client+server code (`app/*/lib/`), and client-only feature code (`app/*/client/`). |
 | `lib/`      | Small utilities shared between client and server (isomorphic, no Meteor/server imports). |
 | `imports/`  | Legacy Meteor-style feature folders (`personal-access-tokens`, message-read-receipt client parts). Avoid adding to it. |
-| `packages/` (repo root) | Workspace packages (`@rocket.chat/*`). Cross-app logic, typings (`core-typings`, `rest-typings`), and services SDK (`core-services`) live here — prefer a package when code must be shared beyond `apps/meteor`. |
+| `packages/` (repo root) | Workspace packages (`@yas chat/*`). Cross-app logic, typings (`core-typings`, `rest-typings`), and services SDK (`core-services`) live here — prefer a package when code must be shared beyond `apps/meteor`. |
 | `tests/`    | Test suites — see [Tests](#tests). |
 
 ## Inside `server/`
@@ -31,14 +31,14 @@ Practical consequence: when you look for code, ask "what kind of thing is it?" b
 
 - `main.ts` — the server entry point. Import order here matters (models → settings definitions → startup → `importPackages` → methods → publications).
 - `importPackages.ts` — the big list of side-effect imports that load every feature at startup. If you create a module that must run at boot and nothing imports it, register it here (or in the closer aggregator: `meteor-methods/index.ts`, `startup/index.ts`).
-- `models.ts` — registers the MongoDB model classes from `@rocket.chat/models`.
+- `models.ts` — registers the MongoDB model classes from `@yas chat/models`.
 
 ### Responsibility folders
 
 | Folder | Responsibility | Domain layout |
 | ------ | -------------- | ------------- |
 | `api/` | REST API. `ApiClass.ts`/`router.ts` are the Hono-based framework, `v1/` holds one file per endpoint group (`users.ts`, `chat.ts`, …), `v1/omnichannel/` the livechat endpoints, `v1/middlewares/` auth/cors/metrics, `lib/` request helpers, `validation/` the ajv setup, `webhooks.ts` the `/hooks/*` incoming-webhook API. Endpoint payload types live in `packages/rest-typings`. |
-| `services/` | Internal services registered on the `@rocket.chat/core-services` broker (one folder per service: `room/`, `team/`, `omnichannel/`, `federation/`, …). Callable cross-process in microservices deployments. **Preferred home for new business logic** — see the decision guide. |
+| `services/` | Internal services registered on the `@yas chat/core-services` broker (one folder per service: `room/`, `team/`, `omnichannel/`, `federation/`, …). Callable cross-process in microservices deployments. **Preferred home for new business logic** — see the decision guide. |
 | `lib/` | Everything that is a plain function/class library: domain functions and shared server utilities. See [`server/lib/` domains](#serverlib-domains). |
 | `hooks/` | Event handlers registered on the `callbacks` system (`callbacks.add('afterSaveMessage', …)`). Domain subfolders: `messages/`, `rooms/`, `auth/`, `omnichannel/`; a few cross-cutting ones sit flat (`afterUserActions.ts`, `sauMonitorHooks.ts`). A hook file only registers listeners — real logic should live in `lib/` or `services/` and be called from the hook. |
 | `meteor-methods/` | **Deprecated.** Meteor DDP RPC handlers, kept only for backward compatibility with existing clients. Domain subfolders (`users/`, `rooms/`, `messages/`, `auth/`, `omnichannel/`, `settings/`, `platform/`, `media/`, `import/`, `integrations/`). Registration happens via side-effect import from `meteor-methods/index.ts` — a method file that nobody imports **silently stops existing** (lint/tsc/tests all stay green), so never remove an import without removing the method. Do not add new methods; add a REST endpoint instead. |
@@ -95,7 +95,7 @@ Practical consequence: when you look for code, ask "what kind of thing is it?" b
 ## Where do I put new code?
 
 1. **A REST endpoint** → `server/api/v1/<group>.ts` (omnichannel ones in `v1/omnichannel/`), payload schemas in `packages/rest-typings`. This is the default way to expose anything to clients.
-2. **Business logic** → prefer a **service** in `server/services/` (registered via `@rocket.chat/core-services`) when the logic has a clear service boundary or must be callable cross-process. Plain **domain functions** in `server/lib/<domain>/` are fine for logic tied to one domain that services and endpoints compose. Long-term direction: business logic trends toward `services/`; `lib/<domain>/` is the pragmatic middle ground.
+2. **Business logic** → prefer a **service** in `server/services/` (registered via `@yas chat/core-services`) when the logic has a clear service boundary or must be callable cross-process. Plain **domain functions** in `server/lib/<domain>/` are fine for logic tied to one domain that services and endpoints compose. Long-term direction: business logic trends toward `services/`; `lib/<domain>/` is the pragmatic middle ground.
 3. **Reacting to an event** ("when a message is saved…", "after a user logs in…") → `server/hooks/<domain>/`. Keep the hook file thin; put the logic in `lib/`/`services/`.
 4. **A Meteor method or publication** → don't. Both are deprecated; expose a REST endpoint (+ streamer event if clients need pushes). If you must touch an existing method, it lives in `server/meteor-methods/<domain>/` and must stay imported by `meteor-methods/index.ts`.
 5. **A setting** → the matching definitions file under `server/settings/`.
@@ -122,11 +122,11 @@ Anti-patterns to avoid:
 - For unit tests, during the migration from Jest to `node:test`, the file name selects the runner. `*.test.ts` runs on `node:test` and `*.spec.ts` runs on Jest. Both runners find their files with globs.
 - The `node:test` scripts use `--experimental-test-isolation=none`, not `--test-isolation=none`. We support Node 22, and Node 22 knows only the old name of this flag. Node 24 accepts both names.
 - `proxyquire`/`jest.mock` keys are **string literals matched against the loaded module's import specifiers** — lint and tsc cannot validate them. If you move a module, every mock key referencing it (or referencing its dependencies' specifiers) must be updated, and the affected suites actually run. A stale key silently loads the real dependency; if that dependency reaches `server/settings/index.ts`, the file fails to load with a top-level-await transform error — that error is the signature of a stale settings mock.
-- Specs must not depend on suite execution order (e.g. on another spec having installed a mocked core-services broker) — mock `@rocket.chat/core-services` locally.
-- A spec never replaces `@rocket.chat/models` with `proxyquire` or `jest.mock`. It registers a mock for each model that the code under test reads, with `mockModel` from `@rocket.chat/models/testing`: `mockModel('Users', { findOneById })`. The mock has only the methods that the code calls, and TypeScript checks their names.
+- Specs must not depend on suite execution order (e.g. on another spec having installed a mocked core-services broker) — mock `@yas chat/core-services` locally.
+- A spec never replaces `@yas chat/models` with `proxyquire` or `jest.mock`. It registers a mock for each model that the code under test reads, with `mockModel` from `@yas chat/models/testing`: `mockModel('Users', { findOneById })`. The mock has only the methods that the code calls, and TypeScript checks their names.
 - Call `mockModel` in a `before` hook (`beforeAll` in Jest) of the `describe` that needs the mock. Use `beforeEach` when each test makes new mocks. Do not call it at the top level of the file, in a `describe` body or in a root-level hook. The `node:test` suite loads all files before it runs a test, and all files share one model registry. A model reads the last mock that a file registered. If a file registers at load time, its tests read the mock of the next file that registers the same model. A root-level hook runs for the tests of every file. Jest gives each file its own registry, but Jest specs follow the same rule, so that they keep working on `node:test`.
 - The registry never removes a mock, so a forgotten registration silently reads the mock of another file. Run each new or changed `node:test` file alone once.
-- Do not set `'@global': true` on a `proxyquire` stub when the loaded code reads a model. The flag clears the require cache, so the module under test gets a new copy of `@rocket.chat/models` with an empty registry.
+- Do not set `'@global': true` on a `proxyquire` stub when the loaded code reads a model. The flag clears the require cache, so the module under test gets a new copy of `@yas chat/models` with an empty registry.
 
 ## History
 

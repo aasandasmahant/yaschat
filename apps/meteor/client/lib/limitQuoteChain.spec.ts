@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { isQuoteAttachment } from '@rocket.chat/core-typings';
-import type { AtLeast, IMessage, MessageAttachment, MessageQuoteAttachment } from '@rocket.chat/core-typings';
+import { isQuoteAttachment } from '@yas chat/core-typings';
+import type { AtLeast, IMessage, MessageAttachment, MessageQuoteAttachment } from '@yas chat/core-typings';
 
 import { limitQuoteChain } from './limitQuoteChain';
 

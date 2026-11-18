@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 
 type AbacRoomPreviewGroupHeaderProps = {
 	title: string;

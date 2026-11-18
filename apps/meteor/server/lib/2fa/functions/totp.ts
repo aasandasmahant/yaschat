@@ -1,6 +1,6 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Users } from '@yas chat/models';
 
 import { notifyOnUserChange, notifyOnUserChangeAsync } from '../../notifyListener';
 import { TOTP } from '../lib/totp';

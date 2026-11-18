@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, Box } from '@rocket.chat/fuselage';
-import { useSessionDispatch } from '@rocket.chat/ui-contexts';
+import { Button, ButtonGroup, Box } from '@yas chat/fuselage';
+import { useSessionDispatch } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const ComposerAnonymous = () => {

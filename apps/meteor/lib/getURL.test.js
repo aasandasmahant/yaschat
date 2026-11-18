@@ -11,7 +11,7 @@ const testPaths = (o, _processPath) => {
 		processPath = (path) => _processPath(o._root_url_path_prefix + path);
 	}
 
-	const cloudDeepLinkUrl = 'https://go.rocket.chat';
+	const cloudDeepLinkUrl = 'https://go.yas chat';
 
 	expect(_getURL('', o, cloudDeepLinkUrl)).to.be.equal(processPath(''));
 	expect(_getURL('/', o, cloudDeepLinkUrl)).to.be.equal(processPath(''));
@@ -28,7 +28,7 @@ const testPaths = (o, _processPath) => {
 
 const getCloudUrl = (_site_url, path) => {
 	path = ltrim(path, '/');
-	const url = `https://go.rocket.chat/?host=${encodeURIComponent(_site_url.replace(/https?:\/\//, ''))}&path=${encodeURIComponent(path)}`;
+	const url = `https://go.yas chat/?host=${encodeURIComponent(_site_url.replace(/https?:\/\//, ''))}&path=${encodeURIComponent(path)}`;
 	if (_site_url.includes('http://')) {
 		return `${url}&secure=no`;
 	}
@@ -157,8 +157,8 @@ describe('getURL as a workspace URL builder (full: true, cdn: false)', () => {
 		_getURL(path, { full: true, cdn: false, _cdn_prefix: 'https://cdn.com', _site_url, _root_url_path_prefix });
 
 	for (const [description, siteUrl, prefix, root] of [
-		['without a path prefix', 'https://open.rocket.chat/', '', 'https://open.rocket.chat'],
-		['with a path prefix', 'https://open.rocket.chat/chat/', '/chat', 'https://open.rocket.chat/chat'],
+		['without a path prefix', 'https://open.yas chat/', '', 'https://open.yas chat'],
+		['with a path prefix', 'https://open.yas chat/chat/', '/chat', 'https://open.yas chat/chat'],
 	]) {
 		describe(description, () => {
 			it('should return the site root without a trailing slash and ignore the CDN', () => {

@@ -1,5 +1,5 @@
-import type { Card } from '@rocket.chat/fuselage';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import type { Card } from '@yas chat/fuselage';
+import { useSetModal } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

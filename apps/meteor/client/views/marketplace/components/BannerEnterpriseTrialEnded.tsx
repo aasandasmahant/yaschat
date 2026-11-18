@@ -1,6 +1,6 @@
-import { Banner, Icon } from '@rocket.chat/fuselage';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { usePermission, useSetting } from '@rocket.chat/ui-contexts';
+import { Banner, Icon } from '@yas chat/fuselage';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { usePermission, useSetting } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const BannerEnterpriseTrialEnded = () => {

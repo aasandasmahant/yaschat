@@ -1,4 +1,4 @@
-import type { IRoom, IUpload } from '@rocket.chat/core-typings';
+import type { IRoom, IUpload } from '@yas chat/core-typings';
 import type { FindCursor, WithId, Filter, FindOptions, UpdateResult, Document } from 'mongodb';
 
 import type { FindPaginated } from './IBaseModel';

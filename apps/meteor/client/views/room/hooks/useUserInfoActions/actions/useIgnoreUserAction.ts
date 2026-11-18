@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	useTranslation,
 	useUserSubscription,
@@ -7,7 +7,7 @@ import {
 	useUserId,
 	useToastMessageDispatch,
 	useEndpoint,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { getRoomDirectives } from '../../../lib/getRoomDirectives';

@@ -1,6 +1,6 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { isOmnichannelRoom, isRoomFederated, isRoomNativeFederated } from '@rocket.chat/core-typings';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import type { ISubscription } from '@yas chat/core-typings';
+import { isOmnichannelRoom, isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
+import { usePermission } from '@yas chat/ui-contexts';
 
 import { useMessageComposerIsAnonymous } from './useMessageComposerIsAnonymous';
 import { useMessageComposerIsArchived } from './useMessageComposerIsArchived';

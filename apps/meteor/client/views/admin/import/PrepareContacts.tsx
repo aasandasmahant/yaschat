@@ -1,6 +1,6 @@
-import type { IImporterSelectionContact } from '@rocket.chat/core-typings';
-import { CheckBox, Table, Pagination, TableHead, TableRow, TableCell, TableBody } from '@rocket.chat/fuselage';
-import { usePagination } from '@rocket.chat/ui-client';
+import type { IImporterSelectionContact } from '@yas chat/core-typings';
+import { CheckBox, Table, Pagination, TableHead, TableRow, TableCell, TableBody } from '@yas chat/fuselage';
+import { usePagination } from '@yas chat/ui-client';
 import type { Dispatch, SetStateAction, ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

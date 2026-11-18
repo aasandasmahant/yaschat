@@ -1,5 +1,5 @@
-import type { cssFn } from '@rocket.chat/css-in-js';
-import { createClassName, escapeName, transpile, attachRules } from '@rocket.chat/css-in-js';
+import type { cssFn } from '@yas chat/css-in-js';
+import { createClassName, escapeName, transpile, attachRules } from '@yas chat/css-in-js';
 import { useDebugValue, useInsertionEffect, useMemo } from 'react';
 
 import { useOwnerDocument } from '../contexts';

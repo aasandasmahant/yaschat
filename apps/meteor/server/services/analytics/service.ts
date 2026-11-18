@@ -1,7 +1,7 @@
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IAnalyticsService } from '@rocket.chat/core-services';
-import type { IAnalyticsSeatRequest } from '@rocket.chat/core-typings';
-import { Analytics } from '@rocket.chat/models';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { IAnalyticsService } from '@yas chat/core-services';
+import type { IAnalyticsSeatRequest } from '@yas chat/core-typings';
+import { Analytics } from '@yas chat/models';
 
 export class AnalyticsService extends ServiceClassInternal implements IAnalyticsService {
 	protected name = 'analytics';

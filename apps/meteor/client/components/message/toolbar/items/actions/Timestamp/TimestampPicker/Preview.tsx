@@ -1,6 +1,6 @@
-import { Box, Field, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
-import { Markup } from '@rocket.chat/gazzodown';
-import { parse } from '@rocket.chat/message-parser';
+import { Box, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import { Markup } from '@yas chat/gazzodown';
+import { parse } from '@yas chat/message-parser';
 import { useTranslation } from 'react-i18next';
 
 import { dateToISOString, generateTimestampMarkup } from '../../../../../../../lib/utils/timestamp/conversion';

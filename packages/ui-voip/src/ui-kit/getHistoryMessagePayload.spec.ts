@@ -1,4 +1,4 @@
-import type { CallPreventionRecord } from '@rocket.chat/core-typings';
+import type { CallPreventionRecord } from '@yas chat/core-typings';
 
 import {
 	callStateToTranslationKey,

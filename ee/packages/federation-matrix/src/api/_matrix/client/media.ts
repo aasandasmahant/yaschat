@@ -1,7 +1,7 @@
 import { Readable } from 'node:stream';
 
-import { Upload } from '@rocket.chat/core-services';
-import { ajv, ajvQuery } from '@rocket.chat/rest-typings';
+import { Upload } from '@yas chat/core-services';
+import { ajv, ajvQuery } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import { internalError, isMatrixErrorProps, license, tags } from './_shared';

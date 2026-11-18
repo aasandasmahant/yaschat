@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { Random } from '@rocket.chat/random';
-import { GenericModal } from '@rocket.chat/ui-client';
+import type { IUser } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { Random } from '@yas chat/random';
+import { GenericModal } from '@yas chat/ui-client';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { INotificationDesktop } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { PreferencesPage } from '@rocket.chat/ui-account';
+import type { INotificationDesktop } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { PreferencesPage } from '@yas chat/ui-account';
 import { useTranslation } from 'react-i18next';
 
 import { useNotification } from '../../../hooks/notification/useNotification';

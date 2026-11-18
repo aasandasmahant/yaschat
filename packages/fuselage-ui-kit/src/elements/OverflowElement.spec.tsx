@@ -1,6 +1,6 @@
-import { MockedServerContext } from '@rocket.chat/mock-providers';
-import type * as UiKit from '@rocket.chat/ui-kit';
-import { BlockContext } from '@rocket.chat/ui-kit';
+import { MockedServerContext } from '@yas chat/mock-providers';
+import type * as UiKit from '@yas chat/ui-kit';
+import { BlockContext } from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -42,9 +42,9 @@ afterEach(() => {
 });
 
 it('opens a safe url without an opener', async () => {
-	await selectOption('https://rocket.chat');
+	await selectOption('https://yas chat');
 
-	expect(window.open).toHaveBeenCalledWith('https://rocket.chat', '_blank', 'noopener');
+	expect(window.open).toHaveBeenCalledWith('https://yas chat', '_blank', 'noopener');
 });
 
 it('ignores an unsafe url', async () => {

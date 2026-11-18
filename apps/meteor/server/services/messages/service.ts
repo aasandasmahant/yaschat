@@ -1,9 +1,9 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import type { IMessageService } from '@rocket.chat/core-services';
-import { Authorization, ServiceClassInternal } from '@rocket.chat/core-services';
-import { isEditedMessage } from '@rocket.chat/core-typings';
-import type { MessageUrl, IMessage, MessageTypesValues, IUser, IRoom, AtLeast } from '@rocket.chat/core-typings';
-import { Messages, Rooms } from '@rocket.chat/models';
+import { AppEvents, Apps } from '@yas chat/apps';
+import type { IMessageService } from '@yas chat/core-services';
+import { Authorization, ServiceClassInternal } from '@yas chat/core-services';
+import { isEditedMessage } from '@yas chat/core-typings';
+import type { MessageUrl, IMessage, MessageTypesValues, IUser, IRoom, AtLeast } from '@yas chat/core-typings';
+import { Messages, Rooms } from '@yas chat/models';
 
 import { OEmbed } from './hooks/AfterSaveOEmbed';
 import { BeforeSaveCannedResponse } from '../../../ee/server/hooks/messages/BeforeSaveCannedResponse';

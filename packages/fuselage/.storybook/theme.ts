@@ -1,10 +1,10 @@
 // Keep in step with ../../storybook-config/src/theme.ts, which Fuselage can't import: storybook-config depends on Fuselage.
-import border from '@rocket.chat/fuselage-tokens/dist/border.json';
-import button from '@rocket.chat/fuselage-tokens/dist/button.json';
-import font from '@rocket.chat/fuselage-tokens/dist/font.json';
-import stroke from '@rocket.chat/fuselage-tokens/dist/stroke.json';
-import surface from '@rocket.chat/fuselage-tokens/dist/surface.json';
-import typography from '@rocket.chat/fuselage-tokens/dist/typography.json';
+import border from '@yas chat/fuselage-tokens/dist/border.json';
+import button from '@yas chat/fuselage-tokens/dist/button.json';
+import font from '@yas chat/fuselage-tokens/dist/font.json';
+import stroke from '@yas chat/fuselage-tokens/dist/stroke.json';
+import surface from '@yas chat/fuselage-tokens/dist/surface.json';
+import typography from '@yas chat/fuselage-tokens/dist/typography.json';
 import { GLOBALS_UPDATED, SET_GLOBALS } from 'storybook/internal/core-events';
 import type { ThemeVars } from 'storybook/theming';
 import { create } from 'storybook/theming';
@@ -62,7 +62,7 @@ export const themes: Record<ThemeMode, ThemeVars> = {
 /** Brands the sidebar header with the logo and the name of the package the Storybook documents. */
 export const createBrandTitle = (mode: ThemeMode, { logo, name }: { logo: string; name?: string }): string => `
 	<span style="display: flex; flex-direction: column; gap: 4px;">
-		<img src="${logo.replaceAll('"', '%22')}" alt="Rocket.Chat" style="display: block; width: 128px; height: auto;" />
+		<img src="${logo.replaceAll('"', '%22')}" alt="Yas chat" style="display: block; width: 128px; height: auto;" />
 		${name ? `<span style="font-size: 12px; font-weight: 700; line-height: 16px; color: ${font[mode].hint};">${name}</span>` : ''}
 	</span>
 `;

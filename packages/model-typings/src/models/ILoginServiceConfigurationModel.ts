@@ -1,4 +1,4 @@
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
 import type { Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

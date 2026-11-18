@@ -8,7 +8,7 @@ import {
 	ContextualbarFooter,
 	ContextualbarHeader,
 	ContextualbarTitle,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import { Scrollbars } from 'rc-scrollbars';
 import type { ReactNode } from 'react';
 

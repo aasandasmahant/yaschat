@@ -1,5 +1,5 @@
-import type { IPushToken, Optional } from '@rocket.chat/core-typings';
-import { PushToken } from '@rocket.chat/models';
+import type { IPushToken, Optional } from '@yas chat/core-typings';
+import { PushToken } from '@yas chat/models';
 
 import { findDocumentToUpdate } from './findDocumentToUpdate';
 import { logger } from '../logger';

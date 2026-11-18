@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription } from '@rocket.chat/core-typings';
-import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@rocket.chat/ui-client';
+import type { IMessage, ISubscription } from '@yas chat/core-typings';
+import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { memo, useMemo, useSyncExternalStore } from 'react';
 

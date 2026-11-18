@@ -1,7 +1,7 @@
 /* oxlint-disable complexity */
-import type { IRoomWithRetentionPolicy } from '@rocket.chat/core-typings';
-import { isPrivateRoom, isPublicRoom, isRoomFederated } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { IRoomWithRetentionPolicy } from '@yas chat/core-typings';
+import { isPrivateRoom, isPublicRoom, isRoomFederated } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldError,
 	Field,
@@ -22,8 +22,8 @@ import {
 	TextAreaInput,
 	AccordionItem,
 	Text,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarBack,
@@ -36,8 +36,8 @@ import {
 	GenericModal,
 	getDirtyFields,
 	links,
-} from '@rocket.chat/ui-client';
-import { useSetting, useToastMessageDispatch, useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useSetting, useToastMessageDispatch, useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ChangeEvent } from 'react';
 import { useId, useMemo } from 'react';

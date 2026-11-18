@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 import type { APIResponse } from '@playwright/test';
-import type { UsersUpdateOwnBasicInfoParamsPOST } from '@rocket.chat/rest-typings';
+import type { UsersUpdateOwnBasicInfoParamsPOST } from '@yas chat/rest-typings';
 
 import type { BaseTest } from './test';
 

@@ -1,5 +1,5 @@
-import type { IMessage, MessageAttachment, IProviderMetadata, ITranslationResult, ISupportedLanguage } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { IMessage, MessageAttachment, IProviderMetadata, ITranslationResult, ISupportedLanguage } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { TranslationProviderRegistry, AutoTranslate } from './autotranslate';
 import { libreLogger } from './logger';

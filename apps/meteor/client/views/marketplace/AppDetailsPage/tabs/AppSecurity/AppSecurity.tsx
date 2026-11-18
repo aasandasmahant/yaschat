@@ -1,5 +1,5 @@
-import type { AppPermission } from '@rocket.chat/core-typings';
-import { Box, Margins } from '@rocket.chat/fuselage';
+import type { AppPermission } from '@yas chat/core-typings';
+import { Box, Margins } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import AppSecurityLabel from './AppSecurityLabel';

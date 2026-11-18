@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -43,7 +43,7 @@ const mockLogger = class {
 const mockSettingValues: Record<string, any> = {
 	Livechat_show_agent_info: true,
 	Language: 'en',
-	From_Email: 'test@rocket.chat',
+	From_Email: 'test@yas chat',
 };
 
 const settingsMock = function (key: string) {
@@ -60,12 +60,12 @@ const tStub = sinon.stub();
 
 const { sendTranscript } = p.noCallThru().load('./sendTranscript', {
 	// mocked so the spec doesn't depend on whichever broker a previously-run spec installed
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		Message: { saveSystemMessage: sinon.stub().resolves() },
 		Omnichannel: { isWithinMACLimit: sinon.stub().resolves(true) },
 		ClientSafeError,
 	},
-	'@rocket.chat/logger': { Logger: mockLogger },
+	'@yas chat/logger': { Logger: mockLogger },
 	'../callbacks': {
 		callbacks: {
 			run: sinon.stub(),
@@ -201,9 +201,9 @@ describe('Send transcript', () => {
 		expect(
 			mailerMock.calledWith({
 				to: 'email',
-				from: 'test@rocket.chat',
+				from: 'test@yas chat',
 				subject: 'Conversation Transcript',
-				replyTo: 'test@rocket.chat',
+				replyTo: 'test@yas chat',
 				html: '<div> <hr></div>',
 			}),
 		).to.be.true;
@@ -226,9 +226,9 @@ describe('Send transcript', () => {
 		expect(
 			mailerMock.calledWith({
 				to: 'email',
-				from: 'test@rocket.chat',
+				from: 'test@yas chat',
 				subject: 'A custom subject',
-				replyTo: 'test@rocket.chat',
+				replyTo: 'test@yas chat',
 				html: '<div> <hr></div>',
 			}),
 		).to.be.true;
@@ -251,9 +251,9 @@ describe('Send transcript', () => {
 		expect(
 			mailerMock.calledWith({
 				to: 'email',
-				from: 'test@rocket.chat',
+				from: 'test@yas chat',
 				subject: 'A custom subject obtained from setting.get',
-				replyTo: 'test@rocket.chat',
+				replyTo: 'test@yas chat',
 				html: '<div> <hr></div>',
 			}),
 		).to.be.true;
@@ -312,9 +312,9 @@ describe('Send transcript', () => {
 		expect(
 			mailerMock.calledWith({
 				to: 'email',
-				from: 'test@rocket.chat',
+				from: 'test@yas chat',
 				subject: 'Conversation Transcript',
-				replyTo: 'test@rocket.chat',
+				replyTo: 'test@yas chat',
 				html: '<div> <hr></div>',
 			}),
 		).to.be.true;

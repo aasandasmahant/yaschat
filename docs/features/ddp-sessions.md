@@ -1,7 +1,7 @@
 # DDP sessions
 
 Clients that speak DDP (the web client, mobile, desktop and bots) connect over a WebSocket. In the monolith that
-WebSocket is served in process by `@rocket.chat/ddp-server`, the DDP server ddp-streamer also runs
+WebSocket is served in process by `@yas chat/ddp-server`, the DDP server ddp-streamer also runs
 ([ADR 0008](../adr/0008-ddp-server-package-in-ce.md)), not by Meteor's DDP server. This page explains what a session
 can do, what still runs through Meteor, and who reacts to a session's life. The decision is recorded in
 [ADR 0010](../adr/0010-own-http-server-in-front-of-meteor.md); the HTTP side is in [HTTP server](http-server.md).

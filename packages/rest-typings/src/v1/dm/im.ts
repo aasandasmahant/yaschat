@@ -1,4 +1,4 @@
-import type { IMessage, IRoom, ISubscription, IUploadWithUser, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IRoom, ISubscription, IUploadWithUser, IUser } from '@yas chat/core-typings';
 
 import type { DmBlockUserProps } from './DmBlockUserProps';
 import type { DmCreateProps } from './DmCreateProps';

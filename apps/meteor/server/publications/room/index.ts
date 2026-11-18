@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IOmnichannelRoom, IRoom, RoomType } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
-import { Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IOmnichannelRoom, IRoom, RoomType } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
+import { Rooms } from '@yas chat/models';
 import { Meteor } from 'meteor/meteor';
 import _ from 'underscore';
 
@@ -14,7 +14,7 @@ import { settings } from '../../settings';
 type PublicRoomField = keyof typeof roomFields;
 type PublicRoom = Pick<IRoom, PublicRoomField & keyof IRoom> & Pick<IOmnichannelRoom, PublicRoomField & keyof IOmnichannelRoom>;
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		'rooms/get'(updatedAt?: Date): IRoom[] | { update: IRoom[]; remove: IRoom[] };
 		'getRoomByTypeAndName': (type: RoomType, name: string) => PublicRoom;

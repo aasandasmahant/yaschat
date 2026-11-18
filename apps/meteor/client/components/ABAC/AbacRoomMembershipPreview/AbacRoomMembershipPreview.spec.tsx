@@ -1,5 +1,5 @@
-import type { AbacMembershipGroup, AbacPreviewCursor, AbacRoomPreviewMember, IAbacRoomMembershipPreview } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { AbacMembershipGroup, AbacPreviewCursor, AbacRoomPreviewMember, IAbacRoomMembershipPreview } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';

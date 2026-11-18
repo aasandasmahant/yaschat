@@ -1,5 +1,5 @@
-import type { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, IMethodConnection } from '@rocket.chat/core-typings';
+import type { ClientSafeError } from '@yas chat/core-services';
+import type { IUser, IMethodConnection } from '@yas chat/core-typings';
 
 interface IMethodArgument {
 	user?: { username: string };

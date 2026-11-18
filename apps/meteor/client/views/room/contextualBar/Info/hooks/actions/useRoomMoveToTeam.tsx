@@ -1,7 +1,7 @@
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import { isRoomFederated } from '@yas chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ChannelToTeamModal from '../../ChannelToTeamModal';

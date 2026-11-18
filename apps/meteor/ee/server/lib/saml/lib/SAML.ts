@@ -1,10 +1,10 @@
 import type { ServerResponse } from 'node:http';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser, IIncomingMessage, IRole } from '@rocket.chat/core-typings';
-import { CredentialTokens, Rooms, Users, Roles, SamlUsedAssertions } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
-import { escapeRegExp, escapeHTML } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser, IIncomingMessage, IRole } from '@yas chat/core-typings';
+import { CredentialTokens, Rooms, Users, Roles, SamlUsedAssertions } from '@yas chat/models';
+import { Random } from '@yas chat/random';
+import { escapeRegExp, escapeHTML } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 
 import { SAMLServiceProvider } from './ServiceProvider';

@@ -1,6 +1,6 @@
-import type { AppliedFilter, NavBarSearchFormValues, SearchFilterKey, SearchFilterSuggestion } from '@rocket.chat/ai-search';
-import { createAppliedFilter, mergeAppliedFilters, parseSearchInput, removeAppliedFilter, removeDraftFilter } from '@rocket.chat/ai-search';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { AppliedFilter, NavBarSearchFormValues, SearchFilterKey, SearchFilterSuggestion } from '@yas chat/ai-search';
+import { createAppliedFilter, mergeAppliedFilters, parseSearchInput, removeAppliedFilter, removeDraftFilter } from '@yas chat/ai-search';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useFormContext, useWatch } from 'react-hook-form';
 
 export const useSearchFilters = ({ aiSearchActive = false }: { aiSearchActive?: boolean } = {}) => {

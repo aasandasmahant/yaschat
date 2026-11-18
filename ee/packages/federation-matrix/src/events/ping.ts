@@ -1,4 +1,4 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
 
 export const ping = async () => {
 	federationSDK.eventEmitterService.on('homeserver.ping', async (data) => {

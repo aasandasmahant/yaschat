@@ -1,6 +1,6 @@
 import { useFocusManager } from '@react-aria/focus';
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useUserRoom } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useUserRoom } from '@yas chat/ui-contexts';
 import {
 	useVideoConfAbortCall,
 	useVideoConfAcceptCall,
@@ -9,7 +9,7 @@ import {
 	useVideoConfRejectIncomingCall,
 	useVideoConfStartCall,
 	useVideoConfWindowEnabled,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import { useEffect, useState } from 'react';
 
 import IncomingPopup from './IncomingPopup';

@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { EmailBridge } from '@rocket.chat/apps/dist/server/bridges/EmailBridge';
-import type { IEmail } from '@rocket.chat/apps-engine/definition/email';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { EmailBridge } from '@yas chat/apps/dist/server/bridges/EmailBridge';
+import type { IEmail } from '@yas chat/apps-engine/definition/email';
 
 import * as Mailer from '../../../lib/notifications/email/api';
 import { settings } from '../../../settings';

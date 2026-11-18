@@ -1,5 +1,5 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
+import type { PresenceScope } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
 
 export const NOTHING_HIDDEN: PresenceScope = { hideAll: false };
 

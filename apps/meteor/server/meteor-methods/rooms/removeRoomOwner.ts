@@ -1,6 +1,6 @@
-import { api, Message, Team, ClientSafeError } from '@rocket.chat/core-services';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms, Users, Roles } from '@rocket.chat/models';
+import { api, Message, Team, ClientSafeError } from '@yas chat/core-services';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { Subscriptions, Rooms, Users, Roles } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
 import { beforeChangeRoomRole } from '../../lib/callbacks/beforeChangeRoomRole';

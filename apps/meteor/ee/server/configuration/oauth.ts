@@ -1,8 +1,8 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Roles } from '@rocket.chat/models';
-import { capitalize } from '@rocket.chat/tools';
+import type { IUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Roles } from '@yas chat/models';
+import { capitalize } from '@yas chat/tools';
 
 import { callbacks } from '../../../server/lib/callbacks';
 import { settings } from '../../../server/settings';

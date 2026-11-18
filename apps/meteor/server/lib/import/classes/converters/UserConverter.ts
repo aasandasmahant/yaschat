@@ -1,7 +1,7 @@
-import { hashPassword } from '@rocket.chat/account-utils';
-import type { IImportUser, IImportUserRecord, IUser, IUserEmail } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { hashPassword } from '@yas chat/account-utils';
+import type { IImportUser, IImportUserRecord, IUser, IUserEmail } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import { Accounts } from 'meteor/accounts-base';
 
 import { RecordConverter, type RecordConverterOptions } from './RecordConverter';

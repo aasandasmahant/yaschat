@@ -1,5 +1,5 @@
-import type { CallHistoryItemState, CallPreventionRecord, IMessage } from '@rocket.chat/core-typings';
-import type { IconButtonElement, FrameableIconElement, InfoCardBlock, PlainText, TextObject } from '@rocket.chat/ui-kit';
+import type { CallHistoryItemState, CallPreventionRecord, IMessage } from '@yas chat/core-typings';
+import type { IconButtonElement, FrameableIconElement, InfoCardBlock, PlainText, TextObject } from '@yas chat/ui-kit';
 import { intervalToDuration } from 'date-fns/intervalToDuration';
 import { secondsToMilliseconds } from 'date-fns/secondsToMilliseconds';
 

@@ -1,4 +1,4 @@
-import { Router } from '@rocket.chat/http-router';
+import { Router } from '@yas chat/http-router';
 
 import { addAccountRoutes } from './account';
 import { addDirectoryRoutes } from './directory';

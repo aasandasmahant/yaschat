@@ -1,8 +1,8 @@
-import { RING_RECIPIENTS_LIMIT } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { CheckBox, Field, FieldError, FieldGroup, FieldLabel, FieldRow } from '@rocket.chat/fuselage-forms';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { RING_RECIPIENTS_LIMIT } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { CheckBox, Field, FieldError, FieldGroup, FieldLabel, FieldRow } from '@yas chat/fuselage-forms';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

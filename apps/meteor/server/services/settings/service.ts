@@ -1,7 +1,7 @@
-import type { ISettingsService } from '@rocket.chat/core-services';
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { SettingValue } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { ISettingsService } from '@yas chat/core-services';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { SettingValue } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 
 import { notifyOnSettingChangedById } from '../../lib/notifyListener';
 import { settings } from '../../settings';

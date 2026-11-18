@@ -1,5 +1,5 @@
 import { useToolbar } from '@react-aria/toolbar';
-import { ButtonGroup, type ButtonGroupProps } from '@rocket.chat/fuselage';
+import { ButtonGroup, type ButtonGroupProps } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useRef } from 'react';
 

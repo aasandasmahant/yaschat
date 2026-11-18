@@ -1,4 +1,4 @@
-import type { LicenseLimitKind, LicenseBehavior, LicenseValidationOptions } from '@rocket.chat/core-typings';
+import type { LicenseLimitKind, LicenseBehavior, LicenseValidationOptions } from '@yas chat/core-typings';
 
 const isItemAllowed = <T>(item: T, allowList?: T[]): boolean => {
 	return !allowList || allowList.includes(item);

@@ -1,4 +1,4 @@
-import server from '@rocket.chat/jest-presets/server';
+import server from '@yas chat/jest-presets/server';
 import type { Config } from 'jest';
 
 export default {

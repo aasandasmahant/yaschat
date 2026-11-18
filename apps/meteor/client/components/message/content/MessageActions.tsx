@@ -1,8 +1,8 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Box, ButtonGroup } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { Box, ButtonGroup } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { Keys as IconName } from '@yas chat/icons';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 import MessageAction from './actions/MessageAction';
 import { actionLinks } from '../../../lib/actionLinks';

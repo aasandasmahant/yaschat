@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type AuditModalFieldProps = ComponentPropsWithoutRef<typeof Box>;

@@ -315,13 +315,13 @@
 <summary>🔍 Minor changes</summary>
 
 
-- Bump @rocket.chat/emitter from 0.31.4 to 0.31.9 in /ee/server/services ([#25021](https://github.com/YasChat/YasChat/pull/25021) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/emitter from 0.31.4 to 0.31.9 in /ee/server/services ([#25021](https://github.com/YasChat/YasChat/pull/25021) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
-- Bump @rocket.chat/message-parser from 0.31.4 to 0.31.9 in /ee/server/services ([#25019](https://github.com/YasChat/YasChat/pull/25019) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/message-parser from 0.31.4 to 0.31.9 in /ee/server/services ([#25019](https://github.com/YasChat/YasChat/pull/25019) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
-- Bump @rocket.chat/string-helpers from 0.31.4 to 0.31.9 in /ee/server/services ([#25018](https://github.com/YasChat/YasChat/pull/25018) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/string-helpers from 0.31.4 to 0.31.9 in /ee/server/services ([#25018](https://github.com/YasChat/YasChat/pull/25018) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
-- Bump @rocket.chat/ui-kit from 0.31.4 to 0.31.9 in /ee/server/services ([#25020](https://github.com/YasChat/YasChat/pull/25020) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/ui-kit from 0.31.4 to 0.31.9 in /ee/server/services ([#25020](https://github.com/YasChat/YasChat/pull/25020) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
 - Bump @types/clipboard from 2.0.1 to 2.0.7 ([#24832](https://github.com/YasChat/YasChat/pull/24832) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
@@ -1465,7 +1465,7 @@
 
   It:  
   - Adds `Firefox ESR` to `browserslist`;  
-  - Upgrades `@rocket.chat/fuselage-hooks` to overcome a bug related to Firefox implementation of `ResizeObserver` API.
+  - Upgrades `@yas chat/fuselage-hooks` to overcome a bug related to Firefox implementation of `ResizeObserver` API.
 
 - Enter not working on modal's multi-line input ([#23981](https://github.com/YasChat/YasChat/pull/23981))
 
@@ -1687,7 +1687,7 @@
 ### 🐛 Bug fixes
 
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 <details>
 <summary>🔍 Minor changes</summary>
@@ -1729,7 +1729,7 @@
 
 - Integration section crashing opening in My Account ([#24068](https://github.com/YasChat/YasChat/pull/24068))
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 <details>
 <summary>🔍 Minor changes</summary>
@@ -1779,7 +1779,7 @@
 
   It:  
   - Adds `Firefox ESR` to `browserslist`;  
-  - Upgrades `@rocket.chat/fuselage-hooks` to overcome a bug related to Firefox implementation of `ResizeObserver` API.
+  - Upgrades `@yas chat/fuselage-hooks` to overcome a bug related to Firefox implementation of `ResizeObserver` API.
 
 - Enter not working on modal's multi-line input ([#23981](https://github.com/YasChat/YasChat/pull/23981))
 
@@ -1980,7 +1980,7 @@
 <summary>🔍 Minor changes</summary>
 
 
-- Bump @rocket.chat/string-helpers from 0.29.0 to 0.30.1 in /ee/server/services ([#23526](https://github.com/YasChat/YasChat/pull/23526) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/string-helpers from 0.29.0 to 0.30.1 in /ee/server/services ([#23526](https://github.com/YasChat/YasChat/pull/23526) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
 - Bump cookie-parser from 1.4.5 to 1.4.6 in /ee/server/services ([#23921](https://github.com/YasChat/YasChat/pull/23921) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
@@ -2456,7 +2456,7 @@
 
   - Fix "When is the chat busier" (Hours) and "Users by time of day" charts, which weren't displaying any data;
 
-- Regression: Add @rocket.chat/emitter to EE services ([#23802](https://github.com/YasChat/YasChat/pull/23802))
+- Regression: Add @yas chat/emitter to EE services ([#23802](https://github.com/YasChat/YasChat/pull/23802))
 
 - Regression: Add trash to raw models ([#23774](https://github.com/YasChat/YasChat/pull/23774))
 
@@ -2558,7 +2558,7 @@
 
 - LDAP users not being re-activated on login ([#23627](https://github.com/YasChat/YasChat/pull/23627))
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 ### 👩‍💻👨‍💻 Core Team 🤓
 
@@ -3269,7 +3269,7 @@
 <summary>🔍 Minor changes</summary>
 
 
-- Bump @rocket.chat/string-helpers from 0.27.0 to 0.29.0 in /ee/server/services ([#23138](https://github.com/YasChat/YasChat/pull/23138) by [@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @yas chat/string-helpers from 0.27.0 to 0.29.0 in /ee/server/services ([#23138](https://github.com/YasChat/YasChat/pull/23138) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
 - Bump @storybook/react from 6.3.6 to 6.3.8 ([#23165](https://github.com/YasChat/YasChat/pull/23165) by [@dependabot[bot]](https://github.com/dependabot[bot]))
 
@@ -3468,7 +3468,7 @@
 ### 🐛 Bug fixes
 
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - Update visitor info on email reception based on current inbox settings ([#23280](https://github.com/YasChat/YasChat/pull/23280))
 
@@ -3625,7 +3625,7 @@
 
 - Production-environment dependencies ([#22868](https://github.com/YasChat/YasChat/pull/22868))
 
-  `@rocket.chat/icons` was incorrectly referred as development dependency.
+  `@yas chat/icons` was incorrectly referred as development dependency.
 
 - QuickActions for mobile screen ([#23016](https://github.com/YasChat/YasChat/pull/23016))
 
@@ -4339,7 +4339,7 @@
 ### 🐛 Bug fixes
 
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 ### 👩‍💻👨‍💻 Contributors 😍
 
@@ -4529,7 +4529,7 @@
   ![image](https://user-images.githubusercontent.com/2493803/119059416-9f1b2c80-b9a6-11eb-933a-4efa1ac0552a.png)
 
   ### After
-  ![Rocket Chat (2)](https://user-images.githubusercontent.com/2493803/119172517-72b1ef80-ba3c-11eb-9178-04a12176f312.gif)
+  ![Yas chat (2)](https://user-images.githubusercontent.com/2493803/119172517-72b1ef80-ba3c-11eb-9178-04a12176f312.gif)
 
 - **ENTERPRISE:** Omnichannel enterprise permissions being added back to its default roles ([#22322](https://github.com/YasChat/YasChat/pull/22322))
 
@@ -5361,9 +5361,9 @@
 
 - Chore: Storybook organization and errors ([#21923](https://github.com/YasChat/YasChat/pull/21923))
 
-- Chore: Update Docker container references to use registry.rocket.chat endpoint ([#22080](https://github.com/YasChat/YasChat/pull/22080) by [@aviaviavi](https://github.com/aviaviavi))
+- Chore: Update Docker container references to use registry.yas chat endpoint ([#22080](https://github.com/YasChat/YasChat/pull/22080) by [@aviaviavi](https://github.com/aviaviavi))
 
-  This change updates the Docker installation instructions to use the new registry.rocket.chat endpoint to pull the yaschat/rocket.chat container. This is part of the rollout described here: https://rocket.chat/blog/product/docker-images-change/
+  This change updates the Docker installation instructions to use the new registry.yas chat endpoint to pull the yaschat/yas chat container. This is part of the rollout described here: https://yas chat/blog/product/docker-images-change/
 
 - Chore: update fuselage && icons ([#22092](https://github.com/YasChat/YasChat/pull/22092))
 
@@ -5455,7 +5455,7 @@
 
 - String helpers ([#21988](https://github.com/YasChat/YasChat/pull/21988))
 
-  It uses string helpers from a external package (`@rocket.chat/string-helpers`).
+  It uses string helpers from a external package (`@yas chat/string-helpers`).
 
 - Update Apps-Engine version ([#22176](https://github.com/YasChat/YasChat/pull/22176))
 
@@ -5542,7 +5542,7 @@
 
 - Discussion names showing a random value ([#22172](https://github.com/YasChat/YasChat/pull/22172))
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 <details>
 <summary>🔍 Minor changes</summary>
@@ -5597,7 +5597,7 @@
 ### 🐛 Bug fixes
 
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 <details>
 <summary>🔍 Minor changes</summary>
@@ -5985,10 +5985,10 @@
 <summary>🔍 Minor changes</summary>
 
 
--  Doc: Corrected links to documentation of rocket.chat README.md  ([#20478](https://github.com/YasChat/YasChat/pull/20478) by [@joshi008](https://github.com/joshi008))
+-  Doc: Corrected links to documentation of yas chat README.md  ([#20478](https://github.com/YasChat/YasChat/pull/20478) by [@joshi008](https://github.com/joshi008))
 
-  The link for documentation in the readme was previously https://rocket.chat/docs/ while that was not working and according to the website it was https://docs.rocket.chat/
-  The link for deployment methods in readme was corrected from https://rocket.chat/docs/installation/paas-deployments/ to https://docs.rocket.chat/installation/paas-deployments
+  The link for documentation in the readme was previously https://yas chat/docs/ while that was not working and according to the website it was https://docs.yas chat/
+  The link for deployment methods in readme was corrected from https://yas chat/docs/installation/paas-deployments/ to https://docs.yas chat/installation/paas-deployments
   Some more links to the documentations were giving 404 error which hence updated.
 
 - [Improve] Remove useless tabbar options from Omnichannel rooms ([#21561](https://github.com/YasChat/YasChat/pull/21561) by [@rafaelblink](https://github.com/rafaelblink))
@@ -6194,7 +6194,7 @@
 ### 🐛 Bug fixes
 
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 <details>
 <summary>🔍 Minor changes</summary>
@@ -6898,7 +6898,7 @@
 
 - Bump Livechat widget
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 ### 👩‍💻👨‍💻 Contributors 😍
 
@@ -7080,7 +7080,7 @@
 - Added check for view admin permission page ([#20403](https://github.com/YasChat/YasChat/pull/20403))
 
   Admin Permission page was visible to all, if you add admin/permissions after the base url. This should not be visible to all user, only people with certain permissions should be able to see this page.
-  I am also able to see permissions page for open workspace of Rocket chat.
+  I am also able to see permissions page for open workspace of Yas chat.
   ![image](https://user-images.githubusercontent.com/58601732/105829728-bfd00880-5fea-11eb-9121-6c53a752f140.png)
 
 - Adding the accidentally deleted tag template, used by other templates ([#20772](https://github.com/YasChat/YasChat/pull/20772))
@@ -7307,7 +7307,7 @@
 
 - Save user password and email from My Account ([#20737](https://github.com/YasChat/YasChat/pull/20737))
 
-- Security Hotfix (https://docs.rocket.chat/guides/security/security-updates)
+- Security Hotfix (https://docs.yas chat/guides/security/security-updates)
 
 - Selected hide system messages would now be viewed in vertical bar. ([#20358](https://github.com/YasChat/YasChat/pull/20358) by [@Darshilp326](https://github.com/Darshilp326))
 
@@ -7785,7 +7785,7 @@
 
 - Omnichannel - Contact Center form is not validating custom fields properly ([#20196](https://github.com/YasChat/YasChat/pull/20196) by [@rafaelblink](https://github.com/rafaelblink))
 
-  The contact form is accepting undefined values in required custom fields when creating or editing contacts, and, the errror message isn't following Rocket.chat design system.
+  The contact form is accepting undefined values in required custom fields when creating or editing contacts, and, the errror message isn't following Yas chat design system.
 
   ### Before
   ![image](https://user-images.githubusercontent.com/2493803/104522668-31688980-55dd-11eb-92c5-83f96073edc4.png)
@@ -10969,7 +10969,7 @@
 
 - Deprecate compatibility cordova setting ([#17586](https://github.com/YasChat/YasChat/pull/17586))
 
-- DPlatform is deprecated and the replacement does not support rocket.chat ([#17040](https://github.com/YasChat/YasChat/pull/17040) by [@ryjones](https://github.com/ryjones))
+- DPlatform is deprecated and the replacement does not support yas chat ([#17040](https://github.com/YasChat/YasChat/pull/17040) by [@ryjones](https://github.com/ryjones))
 
 - Fix typo "You aren't part of any channel yet" ([#17498](https://github.com/YasChat/YasChat/pull/17498) by [@huzaifahj](https://github.com/huzaifahj))
 
@@ -13572,7 +13572,7 @@
 
 - Chore: Add Client Setup Information to Issue Template ([#15625](https://github.com/YasChat/YasChat/pull/15625))
 
-- docs: remove rocket chat launcher link ([#15477](https://github.com/YasChat/YasChat/pull/15477) by [@RafaelGSS](https://github.com/RafaelGSS))
+- docs: remove Yas chat launcher link ([#15477](https://github.com/YasChat/YasChat/pull/15477) by [@RafaelGSS](https://github.com/RafaelGSS))
 
 - LingoHub based on develop ([#15487](https://github.com/YasChat/YasChat/pull/15487))
 
@@ -16359,7 +16359,7 @@
 
 - Remove incorrect pt-BR translation ([#13074](https://github.com/YasChat/YasChat/pull/13074))
 
-- Rocketchat mailer ([#13036](https://github.com/YasChat/YasChat/pull/13036))
+- YasChat mailer ([#13036](https://github.com/YasChat/YasChat/pull/13036))
 
 - Test only MongoDB with oplog versions 3.2 and 4.0 for PRs ([#13119](https://github.com/YasChat/YasChat/pull/13119))
 
@@ -18758,7 +18758,7 @@
 
 - Set Document Domain property in IFrame ([#9751](https://github.com/YasChat/YasChat/pull/9751) by [@kb0304](https://github.com/kb0304))
 
-- Support for dynamic slack and rocket.chat channels ([#10205](https://github.com/YasChat/YasChat/pull/10205) by [@Hudell](https://github.com/Hudell) & [@kable-wilmoth](https://github.com/kable-wilmoth))
+- Support for dynamic slack and yas chat channels ([#10205](https://github.com/YasChat/YasChat/pull/10205) by [@Hudell](https://github.com/Hudell) & [@kable-wilmoth](https://github.com/kable-wilmoth))
 
 - Update katex to v0.9.0 ([#8402](https://github.com/YasChat/YasChat/pull/8402) by [@pitamar](https://github.com/pitamar))
 
@@ -19847,7 +19847,7 @@
 
 - Fix: inputs for yaschat apps ([#10274](https://github.com/YasChat/YasChat/pull/10274))
 
-- Fix: possible errors on rocket.chat side of the apps ([#10252](https://github.com/YasChat/YasChat/pull/10252))
+- Fix: possible errors on yas chat side of the apps ([#10252](https://github.com/YasChat/YasChat/pull/10252))
 
 - Fix: Reaction endpoint/api only working with regular emojis ([#10323](https://github.com/YasChat/YasChat/pull/10323))
 
@@ -20054,7 +20054,7 @@
 
 - Custom emoji was cropping sometimes ([#9676](https://github.com/YasChat/YasChat/pull/9676) by [@anu-007](https://github.com/anu-007))
 
-- DeprecationWarning: prom-client ... when starting Rocket Chat server ([#9747](https://github.com/YasChat/YasChat/pull/9747) by [@jgtoriginal](https://github.com/jgtoriginal))
+- DeprecationWarning: prom-client ... when starting Yas chat server ([#9747](https://github.com/YasChat/YasChat/pull/9747) by [@jgtoriginal](https://github.com/jgtoriginal))
 
 - Desktop notification not showing when avatar came from external storage service ([#9639](https://github.com/YasChat/YasChat/pull/9639))
 
@@ -20765,7 +20765,7 @@
 
 - Change the unread messages style ([#8883](https://github.com/YasChat/YasChat/pull/8883) by [@karlprieb](https://github.com/karlprieb))
 
-- Changed all rocket.chat/docs/ to docs.rocket.chat/ ([#8588](https://github.com/YasChat/YasChat/pull/8588) by [@RekkyRek](https://github.com/RekkyRek))
+- Changed all yas chat/docs/ to docs.yas chat/ ([#8588](https://github.com/YasChat/YasChat/pull/8588) by [@RekkyRek](https://github.com/RekkyRek))
 
 - Changed oembedUrlWidget to prefer og:image and twitter:image over msapplication-TileImage ([#9012](https://github.com/YasChat/YasChat/pull/9012) by [@wferris722](https://github.com/wferris722))
 
@@ -22589,9 +22589,9 @@
 
 - Remove Useless Jasmine Tests  ([#7062](https://github.com/YasChat/YasChat/pull/7062))
 
-- Rocketchat ui message ([#6914](https://github.com/YasChat/YasChat/pull/6914))
+- YasChat ui message ([#6914](https://github.com/YasChat/YasChat/pull/6914))
 
-- Rocketchat ui3 ([#7006](https://github.com/YasChat/YasChat/pull/7006))
+- YasChat ui3 ([#7006](https://github.com/YasChat/YasChat/pull/7006))
 
 - yaschat-importer-slack coffee to js ([#6987](https://github.com/YasChat/YasChat/pull/6987))
 
@@ -22749,7 +22749,7 @@
 
 - Missing useful fields in admin user list #5110 ([#6804](https://github.com/YasChat/YasChat/pull/6804) by [@vlogic](https://github.com/vlogic))
 
-- Rocketchat lib2 ([#6593](https://github.com/YasChat/YasChat/pull/6593))
+- YasChat lib2 ([#6593](https://github.com/YasChat/YasChat/pull/6593))
 
 </details>
 
@@ -22818,7 +22818,7 @@
 
 - Add shield.svg api route to generate custom shields/badges ([#6565](https://github.com/YasChat/YasChat/pull/6565) by [@alexbrazier](https://github.com/alexbrazier))
 
-- Drupal oAuth Integration for Rocketchat ([#6632](https://github.com/YasChat/YasChat/pull/6632) by [@Lawri-van-Buel](https://github.com/Lawri-van-Buel))
+- Drupal oAuth Integration for YasChat ([#6632](https://github.com/YasChat/YasChat/pull/6632) by [@Lawri-van-Buel](https://github.com/Lawri-van-Buel))
 
 - Expose Livechat to Incoming Integrations and allow response ([#6681](https://github.com/YasChat/YasChat/pull/6681))
 
@@ -22953,7 +22953,7 @@
 
 - converted meteor-accounts-saml coffee to js ([#6450](https://github.com/YasChat/YasChat/pull/6450))
 
-- converted Rocketchat logger coffee to js ([#6495](https://github.com/YasChat/YasChat/pull/6495))
+- converted YasChat logger coffee to js ([#6495](https://github.com/YasChat/YasChat/pull/6495))
 
 - converted yaschat-integrations coffee to js ([#6502](https://github.com/YasChat/YasChat/pull/6502))
 

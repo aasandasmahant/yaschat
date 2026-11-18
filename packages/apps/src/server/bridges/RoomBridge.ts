@@ -1,8 +1,8 @@
-import type { IMessage, IMessageRaw } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom, IRoomRaw } from '@rocket.chat/apps-engine/definition/rooms';
-import { GetMessagesSortableFields } from '@rocket.chat/apps-engine/definition/rooms/IGetMessagesOptions';
-import type { GetMessagesOptions, GetRoomsFilters, GetRoomsOptions } from '@rocket.chat/apps-engine/definition/rooms/IGetMessagesOptions';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import type { IMessage, IMessageRaw } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom, IRoomRaw } from '@yas chat/apps-engine/definition/rooms';
+import { GetMessagesSortableFields } from '@yas chat/apps-engine/definition/rooms/IGetMessagesOptions';
+import type { GetMessagesOptions, GetRoomsFilters, GetRoomsOptions } from '@yas chat/apps-engine/definition/rooms/IGetMessagesOptions';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 
 import { BaseBridge } from './BaseBridge';
 import { PermissionDeniedError } from '../errors/PermissionDeniedError';

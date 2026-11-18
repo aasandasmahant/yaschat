@@ -1,11 +1,11 @@
-import { Authorization, Settings } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { Authorization, Settings } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { canAccessRoom } from './canAccessRoom';
 import { canAccessRoomLivechat } from './canAccessRoomLivechat';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	Authorization: {
 		hasPermission: jest.fn(),
 		canAccessRoom: jest.fn(),

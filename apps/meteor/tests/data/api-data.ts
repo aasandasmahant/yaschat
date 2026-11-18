@@ -1,5 +1,5 @@
-import type { Credentials } from '@rocket.chat/api-client';
-import type { Path } from '@rocket.chat/rest-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { Path } from '@yas chat/rest-typings';
 import type { CallbackHandler, Response } from 'supertest';
 import supertest from 'supertest';
 
@@ -17,7 +17,7 @@ export function wait(cb: () => void, time: number) {
 const privateChannelName = `private-channel-test-${Date.now()}` as const;
 
 const username = 'user.test';
-const email = `${username}@rocket.chat`;
+const email = `${username}@yas chat`;
 
 export const apiUsername = `api${username}-${Date.now()}` as const;
 export const apiEmail = `api${email}-${Date.now()}` as const;

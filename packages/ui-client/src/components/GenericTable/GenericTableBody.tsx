@@ -1,4 +1,4 @@
-import { TableBody } from '@rocket.chat/fuselage';
+import { TableBody } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type GenericTableBodyProps = ComponentPropsWithoutRef<typeof TableBody>;

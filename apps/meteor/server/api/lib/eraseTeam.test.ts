@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquireRaw from 'proxyquire';
 import * as sinon from 'sinon';
@@ -34,7 +34,7 @@ describe('eraseTeam (TypeScript) module', () => {
 					error: sandbox.stub(),
 				},
 			},
-			'@rocket.chat/apps': {
+			'@yas chat/apps': {
 				AppEvents: {
 					IPreRoomDeletePrevent: 'IPreRoomDeletePrevent',
 					IPostRoomDeleted: 'IPostRoomDeleted',
@@ -46,7 +46,7 @@ describe('eraseTeam (TypeScript) module', () => {
 					},
 				},
 			},
-			'@rocket.chat/core-services': {
+			'@yas chat/core-services': {
 				ClientSafeError: (function () {
 					class ClientSafeError extends Error {
 						public error: string | undefined;
@@ -67,12 +67,12 @@ describe('eraseTeam (TypeScript) module', () => {
 		mockModel('Rooms', stubs.Rooms);
 
 		subject = proxyquire('./eraseTeam', {
-			'@rocket.chat/apps': stubs['@rocket.chat/apps'],
+			'@yas chat/apps': stubs['@yas chat/apps'],
 			'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 			'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 			'../../lib/logger/system': stubs['../../lib/logger/system'],
-			'@rocket.chat/core-services': {
-				ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+			'@yas chat/core-services': {
+				ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 				Team: stubs.Team,
 			},
 		});
@@ -153,12 +153,12 @@ describe('eraseTeam (TypeScript) module', () => {
 			stubs.deleteRoomStub.withArgs('r2').rejects(new Error('boom'));
 
 			const base = proxyquire('./eraseTeam', {
-				'@rocket.chat/apps': stubs['@rocket.chat/apps'],
+				'@yas chat/apps': stubs['@yas chat/apps'],
 				'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 				'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 				'../../lib/logger/system': stubs['../../lib/logger/system'],
-				'@rocket.chat/core-services': {
-					ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+				'@yas chat/core-services': {
+					ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 					Team: stubs.Team,
 				},
 			});
@@ -173,12 +173,12 @@ describe('eraseTeam (TypeScript) module', () => {
 
 		beforeEach(() => {
 			baseModule = proxyquire('./eraseTeam', {
-				'@rocket.chat/apps': stubs['@rocket.chat/apps'],
+				'@yas chat/apps': stubs['@yas chat/apps'],
 				'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 				'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 				'../../lib/logger/system': stubs['../../lib/logger/system'],
-				'@rocket.chat/core-services': {
-					ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+				'@yas chat/core-services': {
+					ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 					Team: stubs.Team,
 				},
 			});
@@ -199,7 +199,7 @@ describe('eraseTeam (TypeScript) module', () => {
 		it('returns false when app pre-delete prevents deletion', async () => {
 			const listenerStub = sandbox.stub().resolves(true);
 			const AppsStub = {
-				AppEvents: stubs['@rocket.chat/apps'].AppEvents,
+				AppEvents: stubs['@yas chat/apps'].AppEvents,
 				Apps: {
 					self: {
 						isLoaded: () => true,
@@ -209,12 +209,12 @@ describe('eraseTeam (TypeScript) module', () => {
 			};
 
 			const m = proxyquire('./eraseTeam', {
-				'@rocket.chat/apps': AppsStub,
+				'@yas chat/apps': AppsStub,
 				'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 				'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 				'../../lib/logger/system': stubs['../../lib/logger/system'],
-				'@rocket.chat/core-services': {
-					ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+				'@yas chat/core-services': {
+					ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 					Team: stubs.Team,
 				},
 			});
@@ -231,12 +231,12 @@ describe('eraseTeam (TypeScript) module', () => {
 			stubs.deleteRoomStub.rejects(new Error('boom'));
 
 			const m = proxyquire('./eraseTeam', {
-				'@rocket.chat/apps': stubs['@rocket.chat/apps'],
+				'@yas chat/apps': stubs['@yas chat/apps'],
 				'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 				'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 				'../../lib/logger/system': stubs['../../lib/logger/system'],
-				'@rocket.chat/core-services': {
-					ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+				'@yas chat/core-services': {
+					ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 					Team: stubs.Team,
 				},
 			});
@@ -249,7 +249,7 @@ describe('eraseTeam (TypeScript) module', () => {
 		it('calls post-deleted event and returns true on success', async () => {
 			const roomEventStub = sandbox.stub().onFirstCall().resolves(false).onSecondCall().resolves();
 			const AppsStub = {
-				AppEvents: stubs['@rocket.chat/apps'].AppEvents,
+				AppEvents: stubs['@yas chat/apps'].AppEvents,
 				Apps: {
 					self: {
 						isLoaded: () => true,
@@ -260,12 +260,12 @@ describe('eraseTeam (TypeScript) module', () => {
 
 			stubs.deleteRoomStub.resolves();
 			const m = proxyquire('./eraseTeam', {
-				'@rocket.chat/apps': AppsStub,
+				'@yas chat/apps': AppsStub,
 				'../../lib/eraseRoom': { __esModule: true, eraseRoom: stubs.eraseRoomStub },
 				'../../lib/rooms/deleteRoom': { __esModule: true, deleteRoom: stubs.deleteRoomStub },
 				'../../lib/logger/system': stubs['../../lib/logger/system'],
-				'@rocket.chat/core-services': {
-					ClientSafeError: stubs['@rocket.chat/core-services'].ClientSafeError,
+				'@yas chat/core-services': {
+					ClientSafeError: stubs['@yas chat/core-services'].ClientSafeError,
 					Team: stubs.Team,
 				},
 			});

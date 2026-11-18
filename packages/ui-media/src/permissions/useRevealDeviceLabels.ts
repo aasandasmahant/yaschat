@@ -1,4 +1,4 @@
-import { useSelectedDevices } from '@rocket.chat/ui-contexts';
+import { useSelectedDevices } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { stopTracks, useDevicePermissionPrompt2 } from './useDevicePermissionPrompt';

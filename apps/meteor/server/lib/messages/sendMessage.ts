@@ -1,8 +1,8 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { Message } from '@rocket.chat/core-services';
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
-import { isAbsoluteURL, isRecord } from '@rocket.chat/tools';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { Message } from '@yas chat/core-services';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
+import { isAbsoluteURL, isRecord } from '@yas chat/tools';
 
 import { isRelativeURL } from '../../../lib/utils/isRelativeURL';
 import { afterSaveMessage } from '../../hooks/messages/afterSaveMessage';

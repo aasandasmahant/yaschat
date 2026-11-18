@@ -1,6 +1,6 @@
-import { Presence } from '@rocket.chat/core-services';
-import { trackPresence } from '@rocket.chat/ddp-server';
-import { InstanceStatus } from '@rocket.chat/instance-status';
+import { Presence } from '@yas chat/core-services';
+import { trackPresence } from '@yas chat/ddp-server';
+import { InstanceStatus } from '@yas chat/instance-status';
 import { throttle } from 'underscore';
 
 import { lifecycle, sessions } from '../../../server/lib/realtime/sessions';

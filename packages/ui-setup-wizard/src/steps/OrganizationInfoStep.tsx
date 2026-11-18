@@ -1,4 +1,4 @@
-import { OrganizationInfoPage } from '@rocket.chat/onboarding-ui';
+import { OrganizationInfoPage } from '@yas chat/onboarding-ui';
 import type { ComponentProps } from 'react';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 

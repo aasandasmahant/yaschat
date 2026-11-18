@@ -1,4 +1,4 @@
-import { Text } from '@rocket.chat/fuselage';
+import { Text } from '@yas chat/fuselage';
 
 export type WorkspaceCardSectionTitleProps = {
 	variant?: 'p2b' | 'h4';

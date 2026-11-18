@@ -1,4 +1,4 @@
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 
 import { Rooms, Subscriptions, Messages } from '../../../stores';
 import { sdk } from '../../SDKClient';

@@ -4,7 +4,7 @@ Status: proposed, not implemented.
 
 ## Context
 
-The server owns its HTTP server and serves DDP with `@rocket.chat/ddp-server`
+The server owns its HTTP server and serves DDP with `@yas chat/ddp-server`
 ([ADR 0010](../adr/0010-own-http-server-in-front-of-meteor.md)). Meteor's `webapp` still answers every request the
 root app does not route, and Meteor's DDP code still runs the methods and accounts behind the DDP server
 ([features/http-server.md](../features/http-server.md), [features/ddp-sessions.md](../features/ddp-sessions.md)).

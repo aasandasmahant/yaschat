@@ -1,4 +1,4 @@
-import { AvatarUrlContext } from '@rocket.chat/ui-contexts';
+import { AvatarUrlContext } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

@@ -1,4 +1,4 @@
-import { States, StatesIcon, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
+import { States, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import Layout from './Layout';

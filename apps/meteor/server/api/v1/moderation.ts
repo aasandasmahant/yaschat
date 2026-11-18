@@ -1,5 +1,5 @@
-import type { IModerationAudit, IModerationReport, IUser, IUserEmail, UserReport } from '@rocket.chat/core-typings';
-import { ModerationReports, Users } from '@rocket.chat/models';
+import type { IModerationAudit, IModerationReport, IUser, IUserEmail, UserReport } from '@yas chat/core-typings';
+import { ModerationReports, Users } from '@yas chat/models';
 import {
 	ajv,
 	isArchiveReportProps,
@@ -13,8 +13,8 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { deleteReportedMessages } from '../../lib/moderation/deleteReportedMessages';
 import { API } from '../api';

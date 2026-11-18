@@ -1,4 +1,4 @@
-import { ContextualbarTitle as FuselageContextualbarTitle } from '@rocket.chat/fuselage';
+import { ContextualbarTitle as FuselageContextualbarTitle } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 const ContextualbarTitle = (props: ComponentProps<typeof FuselageContextualbarTitle>) => (

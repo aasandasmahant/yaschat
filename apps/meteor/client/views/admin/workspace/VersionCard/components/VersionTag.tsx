@@ -1,4 +1,4 @@
-import { Tag } from '@rocket.chat/fuselage';
+import { Tag } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type VersionStatus = 'outdated' | 'latest' | 'available_version' | undefined;

@@ -1,6 +1,6 @@
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { sleep } from '../../../lib/utils/sleep';

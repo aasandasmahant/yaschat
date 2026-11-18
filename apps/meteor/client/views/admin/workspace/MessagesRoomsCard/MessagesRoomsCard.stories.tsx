@@ -1,4 +1,4 @@
-import type { IStats } from '@rocket.chat/core-typings';
+import type { IStats } from '@yas chat/core-typings';
 import type { Meta } from '@storybook/react';
 
 import MessagesRoomsCard from './MessagesRoomsCard';

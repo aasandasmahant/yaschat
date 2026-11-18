@@ -1,4 +1,4 @@
-import { Settings } from '@rocket.chat/models';
+import { Settings } from '@yas chat/models';
 
 export async function ensureCloudWorkspaceRegistered(): Promise<void> {
 	const cloudWorkspaceClientId = await Settings.getValueById('Cloud_Workspace_Client_Id');

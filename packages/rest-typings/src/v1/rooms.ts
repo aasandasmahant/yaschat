@@ -11,7 +11,7 @@ import type {
 	ISubscription,
 	RequiredField,
 	MessageTypesValues,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 import { paginationQueryProperties } from './pagination';

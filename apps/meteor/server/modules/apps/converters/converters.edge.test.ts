@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 
-import type { IAppsUser } from '@rocket.chat/apps';
-import type { ISetting, IUser } from '@rocket.chat/core-typings';
+import type { IAppsUser } from '@yas chat/apps';
+import type { ISetting, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { AppSettingsConverter } from './settings';

@@ -1,4 +1,4 @@
-import { CoreModules, type LicenseModule } from '@rocket.chat/core-typings';
+import { CoreModules, type LicenseModule } from '@yas chat/core-typings';
 
 interface IBundle {
 	[key: string]: readonly LicenseModule[];

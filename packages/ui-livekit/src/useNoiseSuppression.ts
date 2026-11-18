@@ -1,6 +1,6 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { NoiseMethod, NoiseSuppressionSelection } from '@rocket.chat/ui-conference';
-import { supportsRnnoise, useNoiseSuppressionPreference } from '@rocket.chat/ui-conference';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { NoiseMethod, NoiseSuppressionSelection } from '@yas chat/ui-conference';
+import { supportsRnnoise, useNoiseSuppressionPreference } from '@yas chat/ui-conference';
 import type { AudioCaptureOptions, LocalAudioTrack, Room } from 'livekit-client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 

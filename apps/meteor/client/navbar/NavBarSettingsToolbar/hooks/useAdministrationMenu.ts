@@ -1,5 +1,5 @@
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useAtLeastOnePermission, usePermission, useRouter } from '@rocket.chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useAtLeastOnePermission, usePermission, useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const ADMIN_PERMISSIONS = [

@@ -1,5 +1,5 @@
-import type { EmojiPickerItem, CategoriesIndexes, LoadMoreItem, RowItem } from '@rocket.chat/ui-emoji-picker';
-import { CUSTOM_CATEGORY, getCategoriesList, removeFromRecent } from '@rocket.chat/ui-emoji-picker';
+import type { EmojiPickerItem, CategoriesIndexes, LoadMoreItem, RowItem } from '@yas chat/ui-emoji-picker';
+import { CUSTOM_CATEGORY, getCategoriesList, removeFromRecent } from '@yas chat/ui-emoji-picker';
 
 import { emoji, emojiEmitter } from './lib';
 

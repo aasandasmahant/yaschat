@@ -1,6 +1,6 @@
-import { isInVideoConference } from '@rocket.chat/core-typings';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import type { CallPreferences, ConferenceChatAccess } from '@rocket.chat/ui-conference';
+import { isInVideoConference } from '@yas chat/core-typings';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import type { CallPreferences, ConferenceChatAccess } from '@yas chat/ui-conference';
 import {
 	useConnectionStatus,
 	useEndpoint,
@@ -9,8 +9,8 @@ import {
 	useToastMessageDispatch,
 	useUser,
 	useUserId,
-} from '@rocket.chat/ui-contexts';
-import { useVideoConfWindowEnabled, useVideoConferenceInfo } from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-contexts';
+import { useVideoConfWindowEnabled, useVideoConferenceInfo } from '@yas chat/ui-video-conf';
 import { skipToken, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, useState } from 'react';
 

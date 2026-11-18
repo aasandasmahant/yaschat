@@ -1,5 +1,5 @@
-import { FieldLabel as FieldLabelComponent } from '@rocket.chat/fuselage';
-import { useMergedRefs } from '@rocket.chat/fuselage-hooks';
+import { FieldLabel as FieldLabelComponent } from '@yas chat/fuselage';
+import { useMergedRefs } from '@yas chat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 
 import { useFieldLabel } from '../FieldContext';

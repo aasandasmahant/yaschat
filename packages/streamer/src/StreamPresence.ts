@@ -1,9 +1,9 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import { StatusVisibility } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { USER_STATUS_TO_PRESENCE_CODE, UserStatus } from '@rocket.chat/core-typings';
-import type { StreamerEvents } from '@rocket.chat/ddp-client';
-import { Emitter } from '@rocket.chat/emitter';
+import type { PresenceScope } from '@yas chat/core-services';
+import { StatusVisibility } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { USER_STATUS_TO_PRESENCE_CODE, UserStatus } from '@yas chat/core-typings';
+import type { StreamerEvents } from '@yas chat/ddp-client';
+import { Emitter } from '@yas chat/emitter';
 
 import { statusVisibilityGate } from './StatusVisibilityGate';
 import { NOTHING_HIDDEN, isHiddenFor } from './presenceScope';

@@ -1,9 +1,9 @@
-import { Room } from '@rocket.chat/core-services';
-import type { IRoomNativeFederated } from '@rocket.chat/core-typings';
-import type { RoomID, UserID } from '@rocket.chat/federation-sdk';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Rooms, Users } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
+import { Room } from '@yas chat/core-services';
+import type { IRoomNativeFederated } from '@yas chat/core-typings';
+import type { RoomID, UserID } from '@yas chat/federation-sdk';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Rooms, Users } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import {
@@ -184,7 +184,7 @@ export const addRoomsLifecycleRoutes = (router: ClientRouter) => {
 						joinRule,
 					});
 
-					// TODO after creating the federated room we must create the room for rocket.chat as well
+					// TODO after creating the federated room we must create the room for yas chat as well
 					const room = await Rooms.findOne({ 'federation.mrid': result.room_id });
 					if (!room) {
 						// Derive the RC name (slug) from the Matrix room id rather than the supplied

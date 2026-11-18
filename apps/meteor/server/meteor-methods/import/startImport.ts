@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Imports } from '@rocket.chat/models';
-import { type StartImportParamsPOST } from '@rocket.chat/rest-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Imports } from '@yas chat/models';
+import { type StartImportParamsPOST } from '@yas chat/rest-typings';
 
 import { Importers } from '../../lib/import';
 

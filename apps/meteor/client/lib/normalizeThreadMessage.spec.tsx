@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { parse } from '@rocket.chat/message-parser';
+import type { IMessage } from '@yas chat/core-typings';
+import { parse } from '@yas chat/message-parser';
 import { render, screen } from '@testing-library/react';
 import type { TFunction } from 'i18next';
 
@@ -9,7 +9,7 @@ import { filterMarkdown } from '../../lib/markdown/parser/filtered/filtered';
 
 jest.mock('./getMarkdownParserLimit');
 jest.mock('../../lib/markdown/parser/filtered/filtered');
-jest.mock('@rocket.chat/message-parser');
+jest.mock('@yas chat/message-parser');
 jest.mock('../../yaschat.info', () => ({}));
 
 const mockedGetMarkdownParserLimit = jest.mocked(getMarkdownParserLimit);

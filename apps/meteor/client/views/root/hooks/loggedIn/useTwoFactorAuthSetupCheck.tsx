@@ -1,4 +1,4 @@
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { useRequire2faSetup } from '../../../hooks/useRequire2faSetup';

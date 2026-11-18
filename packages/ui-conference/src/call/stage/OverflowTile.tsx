@@ -1,4 +1,4 @@
-import { Avatar, Box, Icon } from '@rocket.chat/fuselage';
+import { Avatar, Box, Icon } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { overflowTileStyles } from './stageStyles';

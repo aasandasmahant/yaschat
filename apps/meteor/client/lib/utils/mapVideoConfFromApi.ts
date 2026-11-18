@@ -1,4 +1,4 @@
-import type { Serialized, VideoConference } from '@rocket.chat/core-typings';
+import type { Serialized, VideoConference } from '@yas chat/core-typings';
 
 import { mapVideoConfUserFromApi } from './mapVideoConfUserFromApi';
 

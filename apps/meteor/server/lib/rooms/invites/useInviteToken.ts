@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import { Invites, Subscriptions, Users } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import { Invites, Subscriptions, Users } from '@yas chat/models';
 
 import { validateInviteToken } from './validateInviteToken';
 import { RoomMemberActions } from '../../../../definition/IRoomTypeConfig';

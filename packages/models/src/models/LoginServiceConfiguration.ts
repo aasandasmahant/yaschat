@@ -1,5 +1,5 @@
-import type { LoginServiceConfiguration, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ILoginServiceConfigurationModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { LoginServiceConfiguration, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ILoginServiceConfigurationModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, Db, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

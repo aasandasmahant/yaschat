@@ -1,7 +1,7 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { Message, Team, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser, AtLeast } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { Message, Team, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser, AtLeast } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { hasPermissionAsync } from './authorization/hasPermission';
 import { deleteRoom } from './rooms/deleteRoom';

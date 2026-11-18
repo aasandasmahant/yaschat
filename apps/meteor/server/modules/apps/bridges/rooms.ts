@@ -1,11 +1,11 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import type { GetMessagesOptions, GetRoomsFilters, GetRoomsOptions } from '@rocket.chat/apps/dist/server/bridges/RoomBridge';
-import { RoomBridge, suppliesAbacAttributes } from '@rocket.chat/apps/dist/server/bridges/RoomBridge';
-import type { IMessage, IMessageRaw } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom, IRoomRaw } from '@rocket.chat/apps-engine/definition/rooms';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import type { GetMessagesOptions, GetRoomsFilters, GetRoomsOptions } from '@yas chat/apps/dist/server/bridges/RoomBridge';
+import { RoomBridge, suppliesAbacAttributes } from '@yas chat/apps/dist/server/bridges/RoomBridge';
+import type { IMessage, IMessageRaw } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom, IRoomRaw } from '@yas chat/apps-engine/definition/rooms';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
 import type {
 	IAbacAttributeDefinition,
 	ISubscription,
@@ -13,9 +13,9 @@ import type {
 	IRoom as ICoreRoom,
 	IMessage as ICoreMessage,
 	MinimalApp,
-} from '@rocket.chat/core-typings';
-import { Subscriptions, Users, Rooms, Messages } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import { Subscriptions, Users, Rooms, Messages } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
 import type { FindOptions, Sort } from 'mongodb';
 
 import { addUserToRoom } from '../../../lib/rooms/addUserToRoom';

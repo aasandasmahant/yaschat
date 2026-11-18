@@ -1,6 +1,6 @@
 {
 	"$schema": "https://www.schemastore.org/package",
-	"name": "@rocket.chat/desktop-api",
+	"name": "@yas chat/desktop-api",
 	"version": "1.5.0",
 	"repository": {
 		"type": "git",

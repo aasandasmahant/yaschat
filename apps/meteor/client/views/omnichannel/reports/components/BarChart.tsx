@@ -1,6 +1,6 @@
 import type { BarCustomLayerProps, BarDatum } from '@nivo/bar';
 import { ResponsiveBar } from '@nivo/bar';
-import { Box, Palette, Tooltip } from '@rocket.chat/fuselage';
+import { Box, Palette, Tooltip } from '@yas chat/fuselage';
 import type { ComponentProps, ReactNode, JSX } from 'react';
 import { useMemo } from 'react';
 

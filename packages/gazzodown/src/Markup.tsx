@@ -1,5 +1,5 @@
-import { Divider } from '@rocket.chat/fuselage';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import { Divider } from '@yas chat/fuselage';
+import type * as MessageParser from '@yas chat/message-parser';
 import { lazy, memo } from 'react';
 
 import HeadingBlock from './blocks/HeadingBlock';

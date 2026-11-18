@@ -1,5 +1,5 @@
-import type { IOutboundProviderMetadata } from '@rocket.chat/core-typings';
-import { Select } from '@rocket.chat/fuselage';
+import type { IOutboundProviderMetadata } from '@yas chat/core-typings';
+import { Select } from '@yas chat/fuselage';
 import { useMemo, type ComponentProps } from 'react';
 
 import { formatPhoneNumber } from '../../../../../lib/formatPhoneNumber';

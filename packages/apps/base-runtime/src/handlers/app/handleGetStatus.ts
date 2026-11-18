@@ -1,5 +1,5 @@
-import type { App } from '@rocket.chat/apps-engine/definition/App';
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
+import type { App } from '@yas chat/apps-engine/definition/App';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
 
 import { AppObjectRegistry } from '../../AppObjectRegistry';
 

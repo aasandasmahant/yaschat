@@ -1,5 +1,5 @@
-import type { IImporterShortSelection } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IImporterShortSelection } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import { Importer, ProgressStep } from '..';
 import { setAvatarFromServiceWithValidation } from '../../users/setUserAvatar';

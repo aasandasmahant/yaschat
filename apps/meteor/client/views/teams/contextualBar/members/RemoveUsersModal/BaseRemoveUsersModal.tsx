@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { usePermission } from '@rocket.chat/ui-contexts';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { usePermission } from '@yas chat/ui-contexts';
 import { useState, useCallback } from 'react';
 
 import RemoveUsersFirstStep from './RemoveUsersFirstStep';

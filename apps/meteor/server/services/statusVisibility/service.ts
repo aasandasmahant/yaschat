@@ -1,8 +1,8 @@
-import type { IStatusVisibilityService, PresenceScope } from '@rocket.chat/core-services';
-import { api, ServiceClassInternal, Settings } from '@rocket.chat/core-services';
-import type { IUser, UserPresence } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import type { IStatusVisibilityService, PresenceScope } from '@yas chat/core-services';
+import { api, ServiceClassInternal, Settings } from '@yas chat/core-services';
+import type { IUser, UserPresence } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 
 const logger = new Logger('StatusVisibility');
 

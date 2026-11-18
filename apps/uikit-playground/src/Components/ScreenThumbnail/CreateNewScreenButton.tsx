@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Icon, Box, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Icon, Box, useStyle } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 const CreateNewScreenButton = ({

@@ -1,4 +1,4 @@
-import { useStream } from '@rocket.chat/ui-contexts';
+import { useStream } from '@yas chat/ui-contexts';
 import { useEffect } from 'preact/hooks';
 
 import { onUserActivity } from '../lib/room';

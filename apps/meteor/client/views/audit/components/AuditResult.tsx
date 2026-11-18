@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { GenericNoResults } from '@rocket.chat/ui-client';
+import type { IMessage } from '@yas chat/core-typings';
+import { GenericNoResults } from '@yas chat/ui-client';
 import { memo } from 'react';
 
 import AuditMessageList from './AuditMessageList';

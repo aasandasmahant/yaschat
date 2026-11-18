@@ -1,6 +1,6 @@
-import type { IModifyDeleter } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IUser, UserType } from '@rocket.chat/apps-engine/definition/users';
+import type { IModifyDeleter } from '@yas chat/apps-engine/definition/accessors';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IUser, UserType } from '@yas chat/apps-engine/definition/users';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

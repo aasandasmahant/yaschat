@@ -3,10 +3,10 @@ import {
 	isIntelligentSearchErrorCode,
 	MAX_INTELLIGENT_SEARCH_RESULTS,
 	MAX_SEARCH_FILTER_VALUES,
-} from '@rocket.chat/ai-search';
-import { AISearch, ClientSafeError } from '@rocket.chat/core-services';
-import { isBannedSubscription, type IRoom } from '@rocket.chat/core-typings';
-import { Messages, Rooms, Subscriptions } from '@rocket.chat/models';
+} from '@yas chat/ai-search';
+import { AISearch, ClientSafeError } from '@yas chat/core-services';
+import { isBannedSubscription, type IRoom } from '@yas chat/core-typings';
+import { Messages, Rooms, Subscriptions } from '@yas chat/models';
 import {
 	ajv,
 	isSearchAnswerProps,
@@ -14,8 +14,8 @@ import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import type { AISearchResult, SearchAnswer } from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
+import type { AISearchResult, SearchAnswer } from '@yas chat/rest-typings';
 
 import { getSettingPermissionId } from '../../../lib/authorization';
 import { hasAllPermissionAsync, hasAtLeastOnePermissionAsync } from '../../lib/authorization/hasPermission';

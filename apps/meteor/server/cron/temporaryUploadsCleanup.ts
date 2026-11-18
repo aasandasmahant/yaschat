@@ -1,5 +1,5 @@
-import { cronJobs } from '@rocket.chat/cron';
-import { Uploads } from '@rocket.chat/models';
+import { cronJobs } from '@yas chat/cron';
+import { Uploads } from '@yas chat/models';
 
 import { FileUpload } from '../lib/media/file-upload';
 

@@ -1,4 +1,4 @@
-import { Logger } from '@rocket.chat/logger';
+import { Logger } from '@yas chat/logger';
 
 export const callbackLogger = new Logger('[Omnichannel] Callback');
 export const businessHourLogger = new Logger('Business Hour');

@@ -1,4 +1,4 @@
-# @rocket.chat/pdf-worker
+# @yas chat/pdf-worker
 
 This package is a PDF worker for YasChat. It allows for the rendering of PDFs within the YasChat application. `@react-pdf/renderer` is used as the PDF renderer, as it provides a React-based solution for rendering PDFs, making it easy to integrate into the existing React codebase of YasChat.
 
@@ -7,7 +7,7 @@ This package is a PDF worker for YasChat. It allows for the rendering of PDFs wi
 To install this package, you can use yarn:
 
 ```
-yarn add @rocket.chat/pdf-worker
+yarn add @yas chat/pdf-worker
 
 yarn install
 ```
@@ -17,7 +17,7 @@ yarn install
 To use this package, you will need to import it in your project and use the provided PDF renderer.
 
 ```
-import { PdfWorker } from '@rocket.chat/pdf-worker';
+import { PdfWorker } from '@yas chat/pdf-worker';
 
 const PdfWorker = new PdfWorker();
 PdfWorker.render('template-mode');
@@ -53,4 +53,4 @@ This will start a development server and allow you to see the different componen
 
 ## Additional Note
 
-Please refer to the [official documentation](https://docs.rocket.chat/) of @rocket.chat/pdf-worker for more information about this package.
+Please refer to the [official documentation](https://docs.yas chat/) of @yas chat/pdf-worker for more information about this package.

@@ -1,4 +1,4 @@
-import { Skeleton, Stack } from '@rocket.chat/fuselage';
+import { Skeleton, Stack } from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 
 import VideoConfPopup from './VideoConfPopup';

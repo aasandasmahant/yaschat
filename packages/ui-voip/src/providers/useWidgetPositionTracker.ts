@@ -1,4 +1,4 @@
-import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
+import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
 import { useState } from 'react';
 
 export type LastKnownPosition = {

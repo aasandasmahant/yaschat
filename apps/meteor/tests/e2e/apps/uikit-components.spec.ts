@@ -96,7 +96,7 @@ test.describe.serial('Apps > UIKit components', () => {
 		await test.step('fill the number, email, URL and date-time inputs', async () => {
 			await surface.getByLabel('Number input').fill('7');
 			await surface.getByLabel('Email input').fill('user3@email.com');
-			await surface.getByLabel('URL input').fill('https://rocket.chat');
+			await surface.getByLabel('URL input').fill('https://yas chat');
 			await surface.getByLabel('Date and time').fill('2026-03-15T10:30');
 		});
 
@@ -112,7 +112,7 @@ test.describe.serial('Apps > UIKit components', () => {
 			conversations: { conversations_select: 'GENERAL' },
 			number: { number_input: '7' },
 			email: { email_text_input: 'user3@email.com' },
-			url: { url_text_input: 'https://rocket.chat' },
+			url: { url_text_input: 'https://yas chat' },
 			datetime: { datetimepicker: Date.UTC(2026, 2, 15, 10, 30) / 1000 },
 		});
 	});

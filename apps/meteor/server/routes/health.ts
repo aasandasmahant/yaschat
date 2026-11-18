@@ -1,7 +1,7 @@
 import { monitorEventLoopDelay } from 'node:perf_hooks';
 import { getHeapStatistics } from 'node:v8';
 
-import { nodeHandler } from '@rocket.chat/http-router';
+import { nodeHandler } from '@yas chat/http-router';
 import type { Context } from 'hono';
 import type { ContentfulStatusCode } from 'hono/utils/http-status';
 

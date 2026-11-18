@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/random",
+	"name": "@yas chat/random",
 	"version": "1.2.4",
 	"private": true,
 	"description": "Random number generator and utilities; Fork of Meteor's Random package",
@@ -24,8 +24,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:*",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

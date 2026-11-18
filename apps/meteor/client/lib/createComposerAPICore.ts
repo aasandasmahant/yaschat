@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IMessage } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import type { RefObject } from 'react';
 
 import type { ComposerAPI } from './chats/ChatAPI';

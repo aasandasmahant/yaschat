@@ -1,5 +1,5 @@
-import { useSessionStorage } from '@rocket.chat/fuselage-hooks';
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+import { useSessionStorage } from '@yas chat/fuselage-hooks';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 
 const KEY = 'saml_invite_token';
 

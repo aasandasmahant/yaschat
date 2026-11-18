@@ -1,4 +1,4 @@
-# @rocket.chat/ui-composer
+# @yas chat/ui-composer
 
 ## 7.0.0
 
@@ -108,9 +108,9 @@
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 588311c49bfce08e7106e7c0bb32741334fa5321, c637a035450ca2241bb04692f276921592e513f6, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, a838cc5af0652f59d0ab30aa1a488abded0622b1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 05e9b38a001919252360351f0bc3e46cc990a6ac, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d]:</summary>
-  - @rocket.chat/fuselage@1.0.0
-  - @rocket.chat/ui-client@36.0.0
-  - @rocket.chat/icons@0.52.0
+  - @yas chat/fuselage@1.0.0
+  - @yas chat/ui-client@36.0.0
+  - @yas chat/icons@0.52.0
 
   </details>
 
@@ -119,8 +119,8 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.1
-  - @rocket.chat/ui-client@36.0.0-rc.1
+  - @yas chat/fuselage@1.0.0-rc.1
+  - @yas chat/ui-client@36.0.0-rc.1
 
   </details>
 
@@ -232,9 +232,9 @@
   - The login language switch buttons are spaced with an 8px gap instead of a trailing margin, so they are centred in the footer.
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 588311c49bfce08e7106e7c0bb32741334fa5321, c637a035450ca2241bb04692f276921592e513f6, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, c12e5836df7fc5a4c9ee7a760c6101cb0ee8474a, 2d3331be63dde3449245963c33444dcb15fa8869, f5e483d062fed3e13b07ffd200ba5f04a88a4370, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, a838cc5af0652f59d0ab30aa1a488abded0622b1, 52fdf8ea1b17b08482cf8cb21156f1be7b80844c, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 05e9b38a001919252360351f0bc3e46cc990a6ac, 8fddbd4ebf2e4ac77a716b22a676077054506b7b, 5e7e4a8aa389be0d3d4ace0861c646069151674d, 5e7e4a8aa389be0d3d4ace0861c646069151674d]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.0
-  - @rocket.chat/ui-client@36.0.0-rc.0
-  - @rocket.chat/icons@0.52.0-rc.0
+  - @yas chat/fuselage@1.0.0-rc.0
+  - @yas chat/ui-client@36.0.0-rc.0
+  - @yas chat/icons@0.52.0-rc.0
 
   </details>
 
@@ -247,7 +247,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [eeca122b913518d2231f9d9568a10873705845ee, 4be043d9356fd50d2e3e1b585008368f90e95505, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, 37faaa89ad1b4b721d6054e40a91327bd8140525, e61b41d340e2722037de67551982fd70773d0617]:</summary>
-  - @rocket.chat/ui-client@35.0.0
+  - @yas chat/ui-client@35.0.0
 
   </details>
 
@@ -260,7 +260,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [eeca122b913518d2231f9d9568a10873705845ee, 4be043d9356fd50d2e3e1b585008368f90e95505, 71cb69992cf9f6a85fff7278dbf5481b64b5c735, 6843a962e18a7c37986bc08e8a7cc9bbd8072b77, 37faaa89ad1b4b721d6054e40a91327bd8140525, e61b41d340e2722037de67551982fd70773d0617]:</summary>
-  - @rocket.chat/ui-client@35.0.0-rc.0
+  - @yas chat/ui-client@35.0.0-rc.0
 
   </details>
 
@@ -269,7 +269,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/ui-client@34.0.0
+  - @yas chat/ui-client@34.0.0
 
   </details>
 
@@ -278,7 +278,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [4947601bbf042cd1b2385f8f5dda438e608faea7, 742009a09148e33d141f50691cdec0f7e9818535]:</summary>
-  - @rocket.chat/ui-client@34.0.0-rc.0
+  - @yas chat/ui-client@34.0.0-rc.0
 
   </details>
 
@@ -287,7 +287,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [4b57346a59b5c9433c25845c886be11af1bf71d4]:</summary>
-  - @rocket.chat/ui-client@33.0.0
+  - @yas chat/ui-client@33.0.0
 
   </details>
 
@@ -296,7 +296,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [4b57346a59b5c9433c25845c886be11af1bf71d4]:</summary>
-  - @rocket.chat/ui-client@33.0.0-rc.0
+  - @yas chat/ui-client@33.0.0-rc.0
 
   </details>
 
@@ -305,7 +305,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-client@32.0.0
+  - @yas chat/ui-client@32.0.0
 
   </details>
 
@@ -314,7 +314,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-client@32.0.0-rc.0
+  - @yas chat/ui-client@32.0.0-rc.0
 
   </details>
 
@@ -323,7 +323,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [fac64728505b312d5da786e92d3134450ce4a7c1]:</summary>
-  - @rocket.chat/ui-client@31.0.0
+  - @yas chat/ui-client@31.0.0
 
   </details>
 
@@ -332,7 +332,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [fac64728505b312d5da786e92d3134450ce4a7c1]:</summary>
-  - @rocket.chat/ui-client@31.0.0-rc.0
+  - @yas chat/ui-client@31.0.0-rc.0
 
   </details>
 
@@ -345,7 +345,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [543b6c8cbde0d084a3a923acf4845b68db80206a]:</summary>
-  - @rocket.chat/ui-client@30.0.0
+  - @yas chat/ui-client@30.0.0
 
   </details>
 
@@ -354,7 +354,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-client@30.0.0-rc.2
+  - @yas chat/ui-client@30.0.0-rc.2
 
   </details>
 
@@ -363,7 +363,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/ui-client@30.0.0-rc.1
+  - @yas chat/ui-client@30.0.0-rc.1
 
   </details>
 
@@ -376,7 +376,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [543b6c8cbde0d084a3a923acf4845b68db80206a]:</summary>
-  - @rocket.chat/ui-client@30.0.0-rc.0
+  - @yas chat/ui-client@30.0.0-rc.0
 
   </details>
 
@@ -504,13 +504,13 @@
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
 ## 0.2.1-rc.0
 
 ### Patch Changes
 
-- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @rocket.chat/fuselage that fixes the Menu onPointerUp event behavior
+- ([#32968](https://github.com/YasChat/YasChat/pull/32968)) Bumped @yas chat/fuselage that fixes the Menu onPointerUp event behavior
 
 ## 0.2.0
 
@@ -536,7 +536,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.1.0-rc.0
 
@@ -550,4 +550,4 @@
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo

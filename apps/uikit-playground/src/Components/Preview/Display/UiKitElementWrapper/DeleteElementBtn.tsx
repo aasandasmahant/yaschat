@@ -1,5 +1,5 @@
 import './UiKitElementWrapper.scss';
-import { Icon } from '@rocket.chat/fuselage';
+import { Icon } from '@yas chat/fuselage';
 import { useContext } from 'react';
 
 import { context, updatePayloadAction } from '../../../../Context';

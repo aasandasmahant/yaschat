@@ -4,8 +4,8 @@ import type {
 	IImportUserRecord,
 	IImportContactRecord,
 	YasChatRecordDeleted,
-} from '@rocket.chat/core-typings';
-import type { IImportDataModel } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import type { IImportDataModel } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

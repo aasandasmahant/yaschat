@@ -1,6 +1,6 @@
 import { before, describe, it } from 'node:test';
 
-import { api, ClientSafeError } from '@rocket.chat/core-services';
+import { api, ClientSafeError } from '@yas chat/core-services';
 import { expect } from 'chai';
 
 import { BeforeSaveCheckMAC } from './BeforeSaveCheckMAC';

@@ -1,6 +1,6 @@
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms';
-import { SettingType } from '@rocket.chat/apps-engine/definition/settings';
-import { UserStatusConnection, UserType } from '@rocket.chat/apps-engine/definition/users';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms';
+import { SettingType } from '@yas chat/apps-engine/definition/settings';
+import { UserStatusConnection, UserType } from '@yas chat/apps-engine/definition/users';
 import * as z from 'zod';
 
 /**

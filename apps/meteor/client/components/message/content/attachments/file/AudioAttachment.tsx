@@ -1,6 +1,6 @@
-import type { AudioAttachmentProps } from '@rocket.chat/core-typings';
-import { AudioPlayerControls, Box } from '@rocket.chat/fuselage';
-import { useMediaUrl } from '@rocket.chat/ui-contexts';
+import type { AudioAttachmentProps } from '@yas chat/core-typings';
+import { AudioPlayerControls, Box } from '@yas chat/fuselage';
+import { useMediaUrl } from '@yas chat/ui-contexts';
 import { useMemo, useState } from 'react';
 
 import { useMediaPlayer } from '../../../../../providers/MediaPlayerProvider';

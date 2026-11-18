@@ -1,8 +1,8 @@
 // Keep in step with ../../storybook-config/src/status.ts, which Fuselage can't import: storybook-config depends on Fuselage.
-import border from '@rocket.chat/fuselage-tokens/dist/border.json';
-import button from '@rocket.chat/fuselage-tokens/dist/button.json';
-import status from '@rocket.chat/fuselage-tokens/dist/status.json';
-import surface from '@rocket.chat/fuselage-tokens/dist/surface.json';
+import border from '@yas chat/fuselage-tokens/dist/border.json';
+import button from '@yas chat/fuselage-tokens/dist/button.json';
+import status from '@yas chat/fuselage-tokens/dist/status.json';
+import surface from '@yas chat/fuselage-tokens/dist/surface.json';
 import type { CSSProperties } from 'react';
 
 type Mode = keyof typeof status;

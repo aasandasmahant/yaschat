@@ -1,4 +1,4 @@
-import { Messages, Rooms, Subscriptions } from '@rocket.chat/models';
+import { Messages, Rooms, Subscriptions } from '@yas chat/models';
 
 import { callbacks } from '../callbacks';
 import { FileUpload } from '../media/file-upload';

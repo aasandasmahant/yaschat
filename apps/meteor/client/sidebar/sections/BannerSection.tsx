@@ -1,5 +1,5 @@
-import { useSessionStorage } from '@rocket.chat/fuselage-hooks';
-import { useRole, useSetting } from '@rocket.chat/ui-contexts';
+import { useSessionStorage } from '@yas chat/fuselage-hooks';
+import { useRole, useSetting } from '@yas chat/ui-contexts';
 
 import AirGappedRestrictionBanner from './AirGappedRestrictionBanner/AirGappedRestrictionBanner';
 import StatusDisabledBanner from './StatusDisabledBanner';

@@ -1,7 +1,7 @@
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IImportService } from '@rocket.chat/core-services';
-import type { IImportUser, IImport, ImportStatus } from '@rocket.chat/core-typings';
-import { Imports, ImportData } from '@rocket.chat/models';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import type { IImportService } from '@yas chat/core-services';
+import type { IImportUser, IImport, ImportStatus } from '@yas chat/core-typings';
+import { Imports, ImportData } from '@yas chat/models';
 import { ObjectId } from 'mongodb';
 
 import { Importers } from '../../lib/import';

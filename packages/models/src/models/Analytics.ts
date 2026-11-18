@@ -1,6 +1,6 @@
-import type { IAnalytics, IRoom } from '@rocket.chat/core-typings';
-import type { IAnalyticsModel, IChannelsWithNumberOfMessagesBetweenDate } from '@rocket.chat/model-typings';
-import { Random } from '@rocket.chat/random';
+import type { IAnalytics, IRoom } from '@yas chat/core-typings';
+import type { IAnalyticsModel, IChannelsWithNumberOfMessagesBetweenDate } from '@yas chat/model-typings';
+import { Random } from '@yas chat/random';
 import type { AggregationCursor, Db, IndexDescription, FindOptions, UpdateResult, Document, Collection } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

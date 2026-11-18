@@ -1,9 +1,9 @@
-import border from '@rocket.chat/fuselage-tokens/dist/border.json';
-import button from '@rocket.chat/fuselage-tokens/dist/button.json';
-import font from '@rocket.chat/fuselage-tokens/dist/font.json';
-import stroke from '@rocket.chat/fuselage-tokens/dist/stroke.json';
-import surface from '@rocket.chat/fuselage-tokens/dist/surface.json';
-import typography from '@rocket.chat/fuselage-tokens/dist/typography.json';
+import border from '@yas chat/fuselage-tokens/dist/border.json';
+import button from '@yas chat/fuselage-tokens/dist/button.json';
+import font from '@yas chat/fuselage-tokens/dist/font.json';
+import stroke from '@yas chat/fuselage-tokens/dist/stroke.json';
+import surface from '@yas chat/fuselage-tokens/dist/surface.json';
+import typography from '@yas chat/fuselage-tokens/dist/typography.json';
 import { GLOBALS_UPDATED, SET_GLOBALS } from 'storybook/internal/core-events';
 import type { ThemeVars } from 'storybook/theming';
 import { create } from 'storybook/theming';

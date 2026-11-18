@@ -11,7 +11,7 @@ const { getLiveKitConfig, isLiveKitFullyConfigured, isLiveKitLicensed } = proxyq
 	.noCallThru()
 	.noPreserveCache()
 	.load('./config', {
-		'@rocket.chat/license': { License: { hasModule: (module: string) => modules.includes(module) } },
+		'@yas chat/license': { License: { hasModule: (module: string) => modules.includes(module) } },
 		'../../../../server/settings': { settings: { get: (key: string) => values[key] } },
 	});
 

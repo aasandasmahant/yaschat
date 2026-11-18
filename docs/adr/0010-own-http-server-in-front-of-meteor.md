@@ -19,7 +19,7 @@ These moved in the first step:
   `.well-known` metadata are Hono routes. The Express apps (passport, the Apps-Engine HTTP API, UiKit) run as
   middlewares under the paths they serve. Force_SSL and the global headers are base middlewares that apply to every
   response, Meteor's included.
-- **The WebSocket:** the DDP endpoints are served in process by `@rocket.chat/ddp-server`
+- **The WebSocket:** the DDP endpoints are served in process by `@yas chat/ddp-server`
   ([features/ddp-sessions.md](../features/ddp-sessions.md)). Methods it does not implement still run through Meteor's
   method registry, and `login`/`logout` through Meteor's accounts.
 
@@ -45,7 +45,7 @@ Rejected alternatives:
   the idle timeout to Meteor's 5 seconds after every response and overrode `HTTP_SOCKET_TIMEOUT_MS`. Unrouted requests
   go to Meteor's Express app instead.
 - **Register Hono's Node adapter or routers from app code.** Meteor's bundler cannot load ESM-only packages or
-  `exports` subpaths, so the plumbing lives in `@rocket.chat/http-router`, which loads through Node.
+  `exports` subpaths, so the plumbing lives in `@yas chat/http-router`, which loads through Node.
 
 ## Consequences
 

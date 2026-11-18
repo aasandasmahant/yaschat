@@ -3,7 +3,7 @@ import { use, useLayoutEffect, useMemo } from 'react';
 
 import { FALLBACK_LANGUAGE, isRightToLeft, loadTranslations } from './language.js';
 
-/** The part of the mocked app root builder from `@rocket.chat/mock-providers` that the decorator drives. */
+/** The part of the mocked app root builder from `@yas chat/mock-providers` that the decorator drives. */
 export type AppRootBuilder<TBuilder> = {
 	withTranslations(language: string, namespace: string, resources: Record<string, string>): TBuilder;
 	withDefaultLanguage(language: string): TBuilder;

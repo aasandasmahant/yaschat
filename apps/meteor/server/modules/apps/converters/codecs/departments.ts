@@ -1,5 +1,5 @@
-import type { IAppsDepartment } from '@rocket.chat/apps';
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
+import type { IAppsDepartment } from '@yas chat/apps';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { mappedDecode } from './mappedData';

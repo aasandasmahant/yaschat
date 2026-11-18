@@ -1,11 +1,11 @@
-import type { IIntegration, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { IIntegration, IUser, YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	IBaseModel,
 	IIntegrationsModel,
 	IntegrationsStatistics,
 	DocumentWithProjection,
 	FindOptionsWithProjection,
-} from '@rocket.chat/model-typings';
+} from '@yas chat/model-typings';
 import type { AggregateOptions, Collection, Db, FindCursor, IndexDescription, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

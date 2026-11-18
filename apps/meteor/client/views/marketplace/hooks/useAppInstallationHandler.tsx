@@ -1,5 +1,5 @@
-import type { App } from '@rocket.chat/core-typings';
-import { useEndpoint, useRouteParameter, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { useEndpoint, useRouteParameter, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { isMarketplaceRouteContext, useAppsCountQuery } from './useAppsCountQuery';

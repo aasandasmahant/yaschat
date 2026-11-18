@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, Serialized } from '@rocket.chat/core-typings';
+import type { ILivechatDepartment, Serialized } from '@yas chat/core-typings';
 import {
 	Box,
 	Button,
@@ -22,9 +22,9 @@ import {
 	Stack,
 	Text,
 	TextInput,
-} from '@rocket.chat/fuselage';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useSetting, useUserPreference, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { GenericModal } from '@yas chat/ui-client';
+import { useSetting, useUserPreference, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useCallback, useEffect, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

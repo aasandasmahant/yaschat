@@ -1,7 +1,7 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
-import type { IActionManager } from '@rocket.chat/ui-contexts';
-import { useUserId } from '@rocket.chat/ui-contexts';
-import { useEmojiPicker } from '@rocket.chat/ui-emoji-picker';
+import type { ISubscription } from '@yas chat/core-typings';
+import type { IActionManager } from '@yas chat/ui-contexts';
+import { useUserId } from '@yas chat/ui-contexts';
+import { useEmojiPicker } from '@yas chat/ui-emoji-picker';
 import { renderHook } from '@testing-library/react';
 
 import { useChatMessagesInstance } from './useChatMessagesInstance';
@@ -11,7 +11,7 @@ import type { E2ERoomState } from '../../../../lib/e2ee/E2ERoomState';
 import { useRoomSubscription } from '../../contexts/RoomContext';
 import { useE2EERoomState } from '../../hooks/useE2EERoomState';
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	useUserId: jest.fn(),
 }));
 jest.mock('../../contexts/RoomContext', () => ({
@@ -23,8 +23,8 @@ jest.mock('../../../../hooks/uikit/useUiKitActionManager', () => ({
 jest.mock('../../hooks/useE2EERoomState', () => ({
 	useE2EERoomState: jest.fn(),
 }));
-jest.mock('@rocket.chat/ui-emoji-picker', () => ({
-	...jest.requireActual('@rocket.chat/ui-emoji-picker'),
+jest.mock('@yas chat/ui-emoji-picker', () => ({
+	...jest.requireActual('@yas chat/ui-emoji-picker'),
 	useEmojiPicker: jest.fn(),
 }));
 

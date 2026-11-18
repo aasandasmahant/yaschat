@@ -1,4 +1,4 @@
-import { useBreakpoints } from '@rocket.chat/fuselage-hooks';
+import { useBreakpoints } from '@yas chat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { useRef } from 'react';
 import type { AriaPopoverProps } from 'react-aria';

@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, Margins } from '@rocket.chat/fuselage';
-import { usePermission, useRouter } from '@rocket.chat/ui-contexts';
+import { Button, ButtonGroup, Margins } from '@yas chat/fuselage';
+import { usePermission, useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import SeatsCapUsage from './SeatsCapUsage';

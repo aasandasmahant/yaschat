@@ -1,9 +1,9 @@
 import dns from 'node:dns';
 import * as util from 'node:util';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatVisitor, AtLeast, IMessage, IUser, IOmnichannelRoomInfo, SelectedAgent } from '@rocket.chat/core-typings';
-import { LivechatDepartment, Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILivechatVisitor, AtLeast, IMessage, IUser, IOmnichannelRoomInfo, SelectedAgent } from '@yas chat/core-typings';
+import { LivechatDepartment, Messages } from '@yas chat/models';
 
 import type { ILivechatMessage } from './localTypes';
 import { getRoom } from './rooms';

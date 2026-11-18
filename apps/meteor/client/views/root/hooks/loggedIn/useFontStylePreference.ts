@@ -1,6 +1,6 @@
-import type { FontSize } from '@rocket.chat/rest-typings';
-import { useCreateFontStyleElement } from '@rocket.chat/ui-client';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import type { FontSize } from '@yas chat/rest-typings';
+import { useCreateFontStyleElement } from '@yas chat/ui-client';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { useLayoutEffect } from 'react';
 
 export const useFontStylePreference = () => {

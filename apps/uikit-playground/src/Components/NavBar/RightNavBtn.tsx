@@ -1,4 +1,4 @@
-import { Box, Button } from '@rocket.chat/fuselage';
+import { Box, Button } from '@yas chat/fuselage';
 import { useContext } from 'react';
 
 import BurgerIcon from './BurgerIcon';

@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Settings, Users } from '@rocket.chat/models';
+import type { ISetting } from '@yas chat/core-typings';
+import { Settings, Users } from '@yas chat/models';
 import type { UpdateFilter } from 'mongodb';
 
 import { addMigration } from '../../lib/migrations';

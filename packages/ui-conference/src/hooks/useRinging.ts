@@ -1,5 +1,5 @@
-import type { IVideoConferenceUser } from '@rocket.chat/core-typings';
-import { isRingingVideoConferenceMember, VIDEO_CONF_RINGING_WINDOW_MS } from '@rocket.chat/core-typings';
+import type { IVideoConferenceUser } from '@yas chat/core-typings';
+import { isRingingVideoConferenceMember, VIDEO_CONF_RINGING_WINDOW_MS } from '@yas chat/core-typings';
 import { useEffect, useState } from 'react';
 
 /** Anything that can be ringing: a conference member, or a call in a list. */

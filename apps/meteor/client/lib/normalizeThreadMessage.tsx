@@ -1,8 +1,8 @@
-import { type IMessage } from '@rocket.chat/core-typings';
-import { Markup } from '@rocket.chat/gazzodown';
-import { parse } from '@rocket.chat/message-parser';
-import type { Root } from '@rocket.chat/message-parser';
-import { MessageTypes } from '@rocket.chat/message-types';
+import { type IMessage } from '@yas chat/core-typings';
+import { Markup } from '@yas chat/gazzodown';
+import { parse } from '@yas chat/message-parser';
+import type { Root } from '@yas chat/message-parser';
+import { MessageTypes } from '@yas chat/message-types';
 import type { TFunction } from 'i18next';
 
 import { getMarkdownParserLimit } from './getMarkdownParserLimit';

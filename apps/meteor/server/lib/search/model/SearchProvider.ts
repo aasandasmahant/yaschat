@@ -1,5 +1,5 @@
-import type { IMessageSearchSuggestion, IRoom, IUser } from '@rocket.chat/core-typings';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { IMessageSearchSuggestion, IRoom, IUser } from '@yas chat/core-typings';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 import type { IRawSearchResult } from './ISearchResult';
 import { Settings } from './Settings';

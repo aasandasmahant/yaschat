@@ -1,4 +1,4 @@
-import { ajv } from '@rocket.chat/rest-typings';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import { isMatrixErrorProps, isUserIdParamsProps, license, tags } from './_shared';

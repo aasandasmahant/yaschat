@@ -1,4 +1,4 @@
-import { Permissions } from '@rocket.chat/models';
+import { Permissions } from '@yas chat/models';
 
 export const createPermissions = async (): Promise<void> => {
 	await Permissions.create('view-canned-responses', ['livechat-agent', 'livechat-monitor', 'livechat-manager', 'admin']);

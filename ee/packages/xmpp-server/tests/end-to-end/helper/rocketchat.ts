@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import { setTimeout as sleep } from 'node:timers/promises';
 
-import type { IMessage, IRoom } from '@rocket.chat/core-typings';
+import type { IMessage, IRoom } from '@yas chat/core-typings';
 
 import type { Cleanup } from './cleanup';
 import { DUPLICATE_SETTLE_MS, config, federationPolling, uniqueSuffix } from './config';

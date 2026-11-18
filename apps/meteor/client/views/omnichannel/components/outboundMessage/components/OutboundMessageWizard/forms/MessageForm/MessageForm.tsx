@@ -1,7 +1,7 @@
-import type { IOutboundProviderTemplate, Serialized, ILivechatContact } from '@rocket.chat/core-typings';
-import { Box, Button, FieldGroup, Scrollable } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
+import type { IOutboundProviderTemplate, Serialized, ILivechatContact } from '@yas chat/core-typings';
+import { Box, Button, FieldGroup, Scrollable } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
 import type { ReactNode } from 'react';
 import { useId, useMemo } from 'react';
 import { useForm, useWatch } from 'react-hook-form';

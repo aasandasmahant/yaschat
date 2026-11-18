@@ -1,6 +1,6 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageMetricsItem, MessageMetricsFollowing } from '@rocket.chat/fuselage';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageMetricsItem, MessageMetricsFollowing } from '@yas chat/fuselage';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
-import type { IRole, IUser } from '@rocket.chat/core-typings';
-import type { FindPaginated } from '@rocket.chat/model-typings';
-import { Roles, Subscriptions, Users } from '@rocket.chat/models';
+import type { IRole, IUser } from '@yas chat/core-typings';
+import type { FindPaginated } from '@yas chat/model-typings';
+import { Roles, Subscriptions, Users } from '@yas chat/models';
 import { compact } from 'lodash';
 import type { Document, FindCursor, FindOptions } from 'mongodb';
 

@@ -1,4 +1,4 @@
-import { License } from '@rocket.chat/core-services';
+import { License } from '@yas chat/core-services';
 import type { MiddlewareHandler } from 'hono';
 import { createMiddleware } from 'hono/factory';
 

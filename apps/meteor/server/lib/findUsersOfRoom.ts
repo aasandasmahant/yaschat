@@ -1,9 +1,9 @@
-import type { PresenceScope } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { FindPaginated } from '@rocket.chat/model-typings';
-import { Users } from '@rocket.chat/models';
-import { hiddenIds, scopeHidesAnyone } from '@rocket.chat/streamer';
+import type { PresenceScope } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { FindPaginated } from '@yas chat/model-typings';
+import { Users } from '@yas chat/models';
+import { hiddenIds, scopeHidesAnyone } from '@yas chat/streamer';
 import type { FindCursor, FindOptions } from 'mongodb';
 
 import { settings } from '../settings';

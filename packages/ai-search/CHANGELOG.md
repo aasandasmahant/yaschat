@@ -1,4 +1,4 @@
-# @rocket.chat/ai-search
+# @yas chat/ai-search
 
 ## 0.4.0
 

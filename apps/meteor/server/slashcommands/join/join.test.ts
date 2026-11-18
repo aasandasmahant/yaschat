@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -24,7 +24,7 @@ describe('/join', () => {
 		mockModel('Subscriptions', { findOneByRoomIdAndUserId: findSubscription });
 		mockModel('Users', { findOneById: findUser });
 		slashCommand = loadSlashCommand('join/server', {
-			'@rocket.chat/core-services': { Room: { join } },
+			'@yas chat/core-services': { Room: { join } },
 		});
 	});
 

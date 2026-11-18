@@ -1,5 +1,5 @@
-import type { IRole, ITeamMember, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { FindPaginated, ITeamMemberModel } from '@rocket.chat/model-typings';
+import type { IRole, ITeamMember, IUser, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { FindPaginated, ITeamMemberModel } from '@yas chat/model-typings';
 import type {
 	Collection,
 	FindCursor,

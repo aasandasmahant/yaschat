@@ -1,9 +1,9 @@
-import { Authorization, ClientSafeError, User } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
+import { Authorization, ClientSafeError, User } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
 
 import { issueLoginToken } from '../../lib/auth/issueLoginToken';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		createToken(userId: string): { userId: string; authToken: string };
 	}

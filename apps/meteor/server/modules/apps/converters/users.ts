@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator, IAppUsersConverter, IAppsUser } from '@rocket.chat/apps';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, IAppUsersConverter, IAppsUser } from '@yas chat/apps';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import * as z from 'zod';
 
 import { UserCodec } from './codecs';

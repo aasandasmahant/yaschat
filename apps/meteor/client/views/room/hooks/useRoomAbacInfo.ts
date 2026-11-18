@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import type { OperationResult } from '@rocket.chat/rest-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import type { OperationResult } from '@yas chat/rest-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { roomsQueryKeys } from '../../../lib/queryKeys';

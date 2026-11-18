@@ -1,5 +1,5 @@
-import { LivechatRooms } from '@rocket.chat/models';
-import { isGETLivechatRoomsParams } from '@rocket.chat/rest-typings';
+import { LivechatRooms } from '@yas chat/models';
+import { isGETLivechatRoomsParams } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { findRooms } from './lib/rooms';

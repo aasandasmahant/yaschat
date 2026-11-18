@@ -1,5 +1,5 @@
-import type { YasChatRecordDeleted, IAuditLog } from '@rocket.chat/core-typings';
-import { BaseRaw } from '@rocket.chat/models';
+import type { YasChatRecordDeleted, IAuditLog } from '@yas chat/core-typings';
+import { BaseRaw } from '@yas chat/models';
 import type { Collection, Db } from 'mongodb';
 
 export class AuditLogRaw extends BaseRaw<IAuditLog> {

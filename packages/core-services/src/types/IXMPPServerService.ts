@@ -1,4 +1,4 @@
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
 
 export interface IXMPPServerService {
 	/** Relays a message saved in an XMPP-federated room to its remote recipients. */

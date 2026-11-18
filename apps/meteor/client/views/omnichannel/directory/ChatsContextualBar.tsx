@@ -1,4 +1,4 @@
-import { useRouteParameter, useRouter } from '@rocket.chat/ui-contexts';
+import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
 
 import ChatsFiltersContextualBar from './chats/ChatsFiltersContextualBar';
 import { useOmnichannelDirectoryRouter } from './hooks/useOmnichannelDirectoryRouter';

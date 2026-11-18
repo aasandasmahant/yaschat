@@ -1,9 +1,9 @@
 import type { OverlayTriggerAria } from '@react-aria/overlays';
 import type { OverlayTriggerState } from '@react-stately/overlays';
-import type { NavBarSearchFormValues } from '@rocket.chat/ai-search';
-import { Box, ToggleSwitch, Divider, Icon, Stack, PopoverSurface } from '@rocket.chat/fuselage';
-import { useOutsideClick, useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { CustomScrollbars } from '@rocket.chat/ui-client';
+import type { NavBarSearchFormValues } from '@yas chat/ai-search';
+import { Box, ToggleSwitch, Divider, Icon, Stack, PopoverSurface } from '@yas chat/fuselage';
+import { useOutsideClick, useStableCallback } from '@yas chat/fuselage-hooks';
+import { CustomScrollbars } from '@yas chat/ui-client';
 import { useId, useMemo, useRef } from 'react';
 import { useFormContext, useWatch } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

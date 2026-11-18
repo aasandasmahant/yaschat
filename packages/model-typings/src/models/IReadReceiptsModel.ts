@@ -1,4 +1,4 @@
-import type { IReadReceipt } from '@rocket.chat/core-typings';
+import type { IReadReceipt } from '@yas chat/core-typings';
 import type { FindCursor, DeleteResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

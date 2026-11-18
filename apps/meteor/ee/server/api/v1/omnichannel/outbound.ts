@@ -1,9 +1,9 @@
-import { canSendOutboundMessage } from '@rocket.chat/omni-core-ee';
+import { canSendOutboundMessage } from '@yas chat/omni-core-ee';
 import {
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { outboundMessageProvider } from './lib/outbound';
 import { API } from '../../../../../server/api';

@@ -1,4 +1,4 @@
-import { CannedResponse } from '@rocket.chat/models';
+import { CannedResponse } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import notifications from '../../../../server/lib/notifications/core/lib/Notifications';

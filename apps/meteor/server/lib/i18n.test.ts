@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import ptBR from '@rocket.chat/i18n/dist/resources/pt-BR.i18n.json';
+import ptBR from '@yas chat/i18n/dist/resources/pt-BR.i18n.json';
 import { expect } from 'chai';
 
 import { getLanguageResourceJSON } from './i18n';

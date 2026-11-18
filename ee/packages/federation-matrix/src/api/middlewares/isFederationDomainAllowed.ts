@@ -1,4 +1,4 @@
-import { Settings } from '@rocket.chat/core-services';
+import { Settings } from '@yas chat/core-services';
 import type { MiddlewareHandler } from 'hono';
 import { createMiddleware } from 'hono/factory';
 import mem from 'mem';

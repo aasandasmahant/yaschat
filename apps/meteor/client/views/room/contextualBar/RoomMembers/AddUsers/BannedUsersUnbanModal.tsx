@@ -13,7 +13,7 @@ import {
 	ModalFooterAnnotation,
 	ModalFooterControllers,
 	Stack,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import { useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

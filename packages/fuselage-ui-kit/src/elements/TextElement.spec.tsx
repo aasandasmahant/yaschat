@@ -1,4 +1,4 @@
-import type { TextObject } from '@rocket.chat/ui-kit';
+import type { TextObject } from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 import * as i18next from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';

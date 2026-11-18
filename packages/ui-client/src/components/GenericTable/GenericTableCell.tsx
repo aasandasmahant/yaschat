@@ -1,4 +1,4 @@
-import { TableCell } from '@rocket.chat/fuselage';
+import { TableCell } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type GenericTableCellProps = ComponentPropsWithoutRef<typeof TableCell>;

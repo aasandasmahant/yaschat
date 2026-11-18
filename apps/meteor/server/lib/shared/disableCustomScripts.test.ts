@@ -16,7 +16,7 @@ describe('disableCustomScripts', () => {
 		};
 
 		disableCustomScripts = proxyquire('./disableCustomScripts.ts', {
-			'@rocket.chat/license': { License: mockLicense },
+			'@yas chat/license': { License: mockLicense },
 		}).disableCustomScripts;
 	});
 

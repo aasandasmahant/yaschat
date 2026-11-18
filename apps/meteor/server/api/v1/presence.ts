@@ -1,5 +1,5 @@
-import { Presence } from '@rocket.chat/core-services';
-import { ajv, validateUnauthorizedErrorResponse, validateForbiddenErrorResponse } from '@rocket.chat/rest-typings';
+import { Presence } from '@yas chat/core-services';
+import { ajv, validateUnauthorizedErrorResponse, validateForbiddenErrorResponse } from '@yas chat/rest-typings';
 
 import { API } from '../api';
 

@@ -1,6 +1,6 @@
-import { isInviteSubscription } from '@rocket.chat/core-typings';
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { useLayout, useSetting } from '@rocket.chat/ui-contexts';
+import { isInviteSubscription } from '@yas chat/core-typings';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
+import { useLayout, useSetting } from '@yas chat/ui-contexts';
 import { lazy, memo } from 'react';
 
 const RoomInviteHeader = lazy(() => import('./RoomInviteHeader'));

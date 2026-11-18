@@ -1,5 +1,5 @@
 // The client's method and subscription transport: DDPSDK and the REST method bridge, with no Meteor connection.
-import { Random } from '@rocket.chat/random';
+import { Random } from '@yas chat/random';
 
 import { process2faAsyncReturn } from '../lib/2fa/process2faReturn';
 import { APIClient } from '../lib/RestApiClient';
@@ -107,4 +107,4 @@ export const subscribeRaw = (name: string, ...args: unknown[]) => getDdpSdk().cl
 /** The server's id for the connection this client is logged in on, which session-targeted events name. */
 export const getConnectionSessionId = (): string | undefined => getDdpSdk().connection.session;
 
-window.__rocketChatCallMethod = callMethod;
+window.__YasChatCallMethod = callMethod;

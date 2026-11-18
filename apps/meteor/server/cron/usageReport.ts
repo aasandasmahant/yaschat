@@ -1,7 +1,7 @@
-import { cronJobs } from '@rocket.chat/cron';
-import { AirGappedRestriction } from '@rocket.chat/license';
-import type { Logger } from '@rocket.chat/logger';
-import { Statistics } from '@rocket.chat/models';
+import { cronJobs } from '@yas chat/cron';
+import { AirGappedRestriction } from '@yas chat/license';
+import type { Logger } from '@yas chat/logger';
+import { Statistics } from '@yas chat/models';
 
 import { sendUsageReport } from '../lib/statistics/functions/sendUsageReport';
 

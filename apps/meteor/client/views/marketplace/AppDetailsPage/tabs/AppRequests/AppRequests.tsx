@@ -1,6 +1,6 @@
-import type { App } from '@rocket.chat/core-typings';
-import { Box, Pagination, States, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { App } from '@yas chat/core-typings';
+import { Box, Pagination, States, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { SetStateAction } from 'react';
 import { useState, useEffect } from 'react';

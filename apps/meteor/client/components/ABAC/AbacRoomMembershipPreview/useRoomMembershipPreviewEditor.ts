@@ -1,4 +1,4 @@
-import type { AbacMembershipVerdict } from '@rocket.chat/core-typings';
+import type { AbacMembershipVerdict } from '@yas chat/core-typings';
 
 import { useRoomMembershipPreviewPages } from './useRoomMembershipPreviewPages';
 

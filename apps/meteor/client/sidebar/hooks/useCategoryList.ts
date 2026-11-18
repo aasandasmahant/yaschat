@@ -1,6 +1,6 @@
-import { useIsEnterprise } from '@rocket.chat/ui-client';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { useSetting, useUserPreference } from '@rocket.chat/ui-contexts';
+import { useIsEnterprise } from '@yas chat/ui-client';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { useSetting, useUserPreference } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useSidebarSectionsOrder } from './useSidebarSectionsOrder';

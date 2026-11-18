@@ -1,6 +1,6 @@
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { usePagination } from '@rocket.chat/ui-client';
-import { useRouteParameter, useRouter } from '@rocket.chat/ui-contexts';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { usePagination } from '@yas chat/ui-client';
+import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

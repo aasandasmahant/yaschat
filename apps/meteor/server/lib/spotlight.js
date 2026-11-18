@@ -1,6 +1,6 @@
-import { Team } from '@rocket.chat/core-services';
-import { Users, Subscriptions as SubscriptionsRaw, Rooms } from '@rocket.chat/models';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { Team } from '@yas chat/core-services';
+import { Users, Subscriptions as SubscriptionsRaw, Rooms } from '@yas chat/models';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { canAccessRoomAsync, roomAccessAttributes } from './authorization';
 import { settings } from '../settings';

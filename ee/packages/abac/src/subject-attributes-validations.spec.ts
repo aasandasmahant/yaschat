@@ -1,11 +1,11 @@
-import type { ILDAPEntry, IUser, IAbacAttributeDefinition } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { ILDAPEntry, IUser, IAbacAttributeDefinition } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import type { Collection, Db } from 'mongodb';
 
 import { AbacService } from './index';
 import { acquireSharedInMemoryMongo, SHARED_ABAC_TEST_DB, type SharedMongoConnection } from './test-helpers/mongoMemoryServer';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClass: class {
 		onSettingChanged = jest.fn();
 	},
@@ -348,7 +348,7 @@ describe('Subject Attributes validation', () => {
 	});
 
 	describe('AbacService.addSubjectAttributes (room removals)', () => {
-		const originalCoreServices = jest.requireMock('@rocket.chat/core-services');
+		const originalCoreServices = jest.requireMock('@yas chat/core-services');
 		originalCoreServices.Room.removeUserFromRoom = async (rid: string, user: IUser) => {
 			await usersCol.updateOne({ _id: user._id }, { $pull: { __rooms: rid } });
 		};

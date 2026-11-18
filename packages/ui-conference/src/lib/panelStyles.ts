@@ -1,4 +1,4 @@
-import { css } from '@rocket.chat/css-in-js';
+import { css } from '@yas chat/css-in-js';
 
 export const PANEL_INLINE_PADDING = 12;
 

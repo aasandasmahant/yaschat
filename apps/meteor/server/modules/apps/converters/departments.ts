@@ -1,6 +1,6 @@
-import type { IAppDepartmentsConverter, IAppServerOrchestrator, IAppsDepartment } from '@rocket.chat/apps';
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { LivechatDepartment } from '@rocket.chat/models';
+import type { IAppDepartmentsConverter, IAppServerOrchestrator, IAppsDepartment } from '@yas chat/apps';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { LivechatDepartment } from '@yas chat/models';
 import * as z from 'zod';
 
 import { DepartmentCodec } from './codecs';

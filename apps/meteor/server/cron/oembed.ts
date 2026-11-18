@@ -1,4 +1,4 @@
-import { cronJobs } from '@rocket.chat/cron';
+import { cronJobs } from '@yas chat/cron';
 
 import { executeClearOEmbedCache } from '../meteor-methods/platform/OEmbedCacheCleanup';
 

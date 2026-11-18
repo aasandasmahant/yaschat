@@ -1,4 +1,4 @@
-import { isClientSafeError, ClientSafeError } from '@rocket.chat/core-services';
+import { isClientSafeError, ClientSafeError } from '@yas chat/core-services';
 import EJSON from 'ejson';
 import type Moleculer from 'moleculer';
 import { Errors, Serializers, ServiceBroker } from 'moleculer';

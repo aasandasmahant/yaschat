@@ -1,10 +1,10 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { ApiBridge } from '@rocket.chat/apps/dist/server/bridges/ApiBridge';
-import type { AppApi } from '@rocket.chat/apps/dist/server/managers/AppApi';
-import type { RequestMethod } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IApiRequest, IApiEndpoint, IApi } from '@rocket.chat/apps-engine/definition/api';
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { ApiBridge } from '@yas chat/apps/dist/server/bridges/ApiBridge';
+import type { AppApi } from '@yas chat/apps/dist/server/managers/AppApi';
+import type { RequestMethod } from '@yas chat/apps-engine/definition/accessors';
+import type { IApiRequest, IApiEndpoint, IApi } from '@yas chat/apps-engine/definition/api';
+import { nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
 import type { Response, Request, IRouter, RequestHandler } from 'express';
 import express from 'express';
 import { Meteor } from 'meteor/meteor';

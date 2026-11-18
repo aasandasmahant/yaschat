@@ -1,5 +1,5 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { UserStatus } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { createOrUpdateFederatedUser } from './createOrUpdateFederatedUser';
 

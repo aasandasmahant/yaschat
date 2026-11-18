@@ -1,5 +1,5 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Box, Field, FieldLabel, FieldRow, Select } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Field, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { useId } from 'react';
 

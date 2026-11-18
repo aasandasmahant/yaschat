@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
-import type { ICannedResponseModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { BaseRaw } from '@rocket.chat/models';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
+import type { ICannedResponseModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { BaseRaw } from '@yas chat/models';
 import type { Db, DeleteResult, FindCursor, IndexDescription, UpdateFilter, Document } from 'mongodb';
 
 // TODO need to define type for CannedResponse object

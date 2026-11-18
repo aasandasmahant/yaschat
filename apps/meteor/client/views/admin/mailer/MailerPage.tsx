@@ -11,10 +11,10 @@ import {
 	Button,
 	ButtonGroup,
 	Box,
-} from '@rocket.chat/fuselage';
-import { validateEmail } from '@rocket.chat/tools';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@rocket.chat/ui-client';
-import { useEndpoint, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { validateEmail } from '@yas chat/tools';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
+import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import type { ImageGalleryComponentProps } from '@rocket.chat/ui-client';
+import type { ImageGalleryComponentProps } from '@yas chat/ui-client';
 import { Suspense, lazy } from 'react';
 
 // Loaded on demand: the gallery pulls in swiper, which is only needed once an image is opened.

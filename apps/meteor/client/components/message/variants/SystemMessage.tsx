@@ -1,4 +1,4 @@
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 import {
 	MessageSystem,
 	MessageSystemContainer,
@@ -9,11 +9,11 @@ import {
 	CheckBox,
 	MessageNameContainer,
 	MessageUsername,
-} from '@rocket.chat/fuselage';
-import { useButtonPattern } from '@rocket.chat/fuselage-hooks';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { useUserPresence, useUserCard } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useButtonPattern } from '@yas chat/fuselage-hooks';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { useUserPresence, useUserCard } from '@yas chat/ui-contexts';
 import type { ComponentProps, KeyboardEvent, MouseEvent } from 'react';
 import { memo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';

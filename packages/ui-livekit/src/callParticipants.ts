@@ -1,4 +1,4 @@
-import type { CallConnectionState, RemoteParticipantInfo } from '@rocket.chat/ui-conference';
+import type { CallConnectionState, RemoteParticipantInfo } from '@yas chat/ui-conference';
 import type { Participant } from 'livekit-client';
 import { ConnectionState, ParticipantKind, Track } from 'livekit-client';
 

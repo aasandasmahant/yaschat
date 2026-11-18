@@ -1,12 +1,12 @@
-import type { IOAuthApps } from '@rocket.chat/core-typings';
-import { OAuthApps } from '@rocket.chat/models';
+import type { IOAuthApps } from '@yas chat/core-typings';
+import { OAuthApps } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
 	validateUnauthorizedErrorResponse,
 	validateBadRequestErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { addOAuthApp } from '../../lib/auth/oauth2-server/addOAuthApp';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';
@@ -290,7 +290,7 @@ const oauthAppsEndpoints = API.v1
 
 export type OauthAppsEndpoints = ExtractRoutesFromAPI<typeof oauthAppsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends OauthAppsEndpoints {}
 }

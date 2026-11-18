@@ -10,7 +10,7 @@ const notifyOnLoginServiceConfigurationChanged = sandbox.stub();
 const notifyOnLoginServiceConfigurationChangedByService = sandbox.stub();
 
 const { updateCasServices } = p.noCallThru().load('./updateCasService.ts', {
-	'@rocket.chat/models': { LoginServiceConfiguration },
+	'@yas chat/models': { LoginServiceConfiguration },
 	'./logger': { logger: { info: sandbox.stub() } },
 	'../../settings/cached': { settings: { get: (id: string) => settingValues.get(id) } },
 	'../notifyListener': { notifyOnLoginServiceConfigurationChanged, notifyOnLoginServiceConfigurationChangedByService },

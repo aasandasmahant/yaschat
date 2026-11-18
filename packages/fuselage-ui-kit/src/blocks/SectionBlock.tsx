@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Box } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import { memo, useMemo } from 'react';
 
 import Fields from './SectionBlock.Fields';

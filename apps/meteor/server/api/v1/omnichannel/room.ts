@@ -1,4 +1,4 @@
-import { Omnichannel, isClientSafeError } from '@rocket.chat/core-services';
+import { Omnichannel, isClientSafeError } from '@yas chat/core-services';
 import type {
 	ILivechatAgent,
 	IOmnichannelInquiryExtraData,
@@ -7,9 +7,9 @@ import type {
 	SelectedAgent,
 	TransferByData,
 	TransferData,
-} from '@rocket.chat/core-typings';
-import { isOmnichannelRoom, OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { LivechatVisitors, Users, LivechatRooms } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { isOmnichannelRoom, OmnichannelSourceType } from '@yas chat/core-typings';
+import { LivechatVisitors, Users, LivechatRooms } from '@yas chat/models';
 import {
 	isLiveChatRoomForwardProps,
 	isPOSTLivechatRoomCloseParams,
@@ -25,8 +25,8 @@ import {
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	ajv,
-} from '@rocket.chat/rest-typings';
-import { isGETLivechatRoomParams, isPOSTLivechatVisitorDepartmentTransferParams } from '@rocket.chat/rest-typings/src/v1/omnichannel';
+} from '@yas chat/rest-typings';
+import { isGETLivechatRoomParams, isPOSTLivechatVisitorDepartmentTransferParams } from '@yas chat/rest-typings/src/v1/omnichannel';
 
 import { API } from '../..';
 import { findGuest, findRoom, settings, findAgent } from './lib/livechat';
@@ -384,7 +384,7 @@ const livechatVisitorDepartmentTransfer = API.v1.post(
 );
 
 type LivechatAnalyticsEndpoints = ExtractRoutesFromAPI<typeof livechatVisitorDepartmentTransfer>;
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatAnalyticsEndpoints {}
 }
@@ -525,7 +525,7 @@ const livechatRoomsEndpoints = API.v1
 
 type LivechatRoomsEndpoints = ExtractRoutesFromAPI<typeof livechatRoomsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends LivechatRoomsEndpoints {}
 }

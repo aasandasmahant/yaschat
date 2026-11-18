@@ -1,5 +1,5 @@
-import type { IImport } from '@rocket.chat/core-typings';
-import type { IImportsModel } from '@rocket.chat/model-typings';
+import type { IImport } from '@yas chat/core-typings';
+import type { IImportsModel } from '@yas chat/model-typings';
 import type { Db, Document, UpdateResult, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

@@ -1,8 +1,8 @@
-# `@rocket.chat/ddp-client`
+# `@yas chat/ddp-client`
 
 > A WebSocket (DDP) client SDK for YasChat: connection, login, method calls, realtime streams and a typed REST client.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ddp-client) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/ddp-client)
+[![npm](https://img.shields.io/npm/v/@yas chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@yas chat/ddp-client) [![downloads](https://img.shields.io/npm/dw/@yas chat/ddp-client?style=flat-square)](https://www.npmjs.com/package/@yas chat/ddp-client)
 
 YasChat sends realtime data over [DDP](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md), Meteor's WebSocket protocol. This package speaks DDP without Meteor. `DDPSDK` bundles everything a client needs:
 
@@ -11,16 +11,16 @@ YasChat sends realtime data over [DDP](https://github.com/meteor/meteor/blob/dev
 - **ClientStream**: calls server methods and manages subscriptions.
 - **Streams**: listens to YasChat's realtime streams (`room-messages`, `notify-room`, `notify-user`, ...).
 - **TimeoutControl**: sends heartbeat pings and drops a socket that stops answering, so it can reconnect.
-- **REST**: a [`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) `RestClient` that reuses the DDP login.
+- **REST**: a [`@yas chat/api-client`](https://www.npmjs.com/package/@yas chat/api-client) `RestClient` that reuses the DDP login.
 
 The package also exports `LivechatClientImpl`, the client the Omnichannel Livechat widget uses, and the types that describe YasChat's streams and server methods.
 
 ## Installation
 
-`@rocket.chat/emitter` is a peer dependency and must be installed too:
+`@yas chat/emitter` is a peer dependency and must be installed too:
 
 ```sh
-npm install @rocket.chat/ddp-client @rocket.chat/emitter
+npm install @yas chat/ddp-client @yas chat/emitter
 ```
 
 The package is published as CommonJS with TypeScript declarations.
@@ -32,9 +32,9 @@ It uses the global `WebSocket` and `fetch`. Browsers and Node.js 22 or later pro
 ### Connecting
 
 ```ts
-import { DDPSDK } from '@rocket.chat/ddp-client';
+import { DDPSDK } from '@yas chat/ddp-client';
 
-const sdk = DDPSDK.create('https://open.rocket.chat');
+const sdk = DDPSDK.create('https://open.yas chat');
 
 await sdk.connection.connect();
 
@@ -46,7 +46,7 @@ Pass the server URL with an `http(s)` or `ws(s)` scheme and no path. The SDK con
 `createAndConnect` does both steps:
 
 ```ts
-const sdk = await DDPSDK.createAndConnect('https://open.rocket.chat');
+const sdk = await DDPSDK.createAndConnect('https://open.yas chat');
 ```
 
 Both take optional retry settings: `{ retryCount, retryTime }`. By default `DDPSDK` keeps trying to reconnect: the first attempt waits about `retryTime` (1000 ms), and each failed attempt doubles the wait, up to 30 seconds, with random jitter. `LivechatClientImpl` defaults to 3 retries, starting at 10 seconds.
@@ -150,7 +150,7 @@ const subscriptions = await sdk.call('subscriptions/get');
 
 ### Calling the REST API
 
-`sdk.rest` is a `RestClient` that sends the DDP session's credentials. Paths and parameters are typed by [`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings).
+`sdk.rest` is a `RestClient` that sends the DDP session's credentials. Paths and parameters are typed by [`@yas chat/rest-typings`](https://www.npmjs.com/package/@yas chat/rest-typings).
 
 ```ts
 await sdk.rest.post('/v1/chat.sendMessage', { message: { rid: roomId, msg: 'Hello!' } });
@@ -163,7 +163,7 @@ A failed REST call rejects with the `Response`. Call `error.json()` to read the 
 `ServerMethods` is an interface you can extend through declaration merging. Its helpers `ServerMethodName`, `ServerMethodParameters` and `ServerMethodReturn` then cover your methods too.
 
 ```ts
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		'myapp:getGreeting'(name: string): string;
 	}
@@ -175,9 +175,9 @@ declare module '@rocket.chat/ddp-client' {
 `LivechatClientImpl` extends `DDPSDK` with the visitor-side Livechat endpoints (`config`, `room`, `sendMessage`, `closeChat`, `uploadFile`, ...) and room listeners (`onRoomMessage`, `onAgentChange`, `onQueuePositionChange`, ...).
 
 ```ts
-import { LivechatClientImpl } from '@rocket.chat/ddp-client';
+import { LivechatClientImpl } from '@yas chat/ddp-client';
 
-const livechat = LivechatClientImpl.create('wss://open.rocket.chat');
+const livechat = LivechatClientImpl.create('wss://open.yas chat');
 await livechat.connection.connect();
 ```
 
@@ -193,7 +193,7 @@ await livechat.connection.connect();
 | `account`                                | `Account`: `loginWithPassword`, `loginWithToken`, `logout`, `setCredentials`, `clearCredentials`, `onLogin`, `onLogout`.                           |
 | `client`                                 | `ClientStream`: `callAsync`, `callAsyncWithOptions`, `subscribe`, `unsubscribe`, `onCollection`, `subscriptions`.                                  |
 | `timeoutControl`                         | `TimeoutControl`: heartbeat and timeout timers.                                                                                                    |
-| `rest`                                   | `RestClient` from `@rocket.chat/api-client`, authenticated with the DDP session.                                                                   |
+| `rest`                                   | `RestClient` from `@yas chat/api-client`, authenticated with the DDP session.                                                                   |
 | `call(method, ...params)`                | Calls a server method and resolves with its result.                                                                                                |
 | `stream(name, key, callback)`            | Subscribes to `stream-<name>` for `key`. Returns a subscription with `ready()`, `onStop()` and `stop()`.                                           |
 | `publish(name, key, ...args)`            | Emits an event on `stream-<name>` for `key`.                                                                                                       |
@@ -203,7 +203,7 @@ await livechat.connection.connect();
 ### Other exports
 
 - `LivechatClientImpl`: the Livechat visitor client. Its interfaces `LivechatStream`, `LivechatEndpoints` and the `LivechatRoomEvents` type are exported too.
-- `RocketchatSdkLegacyImpl`: a compatibility layer that mirrors the method names of the older YasChat JS SDK (`login`, `joinRoom`, `sendMessage`, `subscribeRoom`, `onMessage`, ...).
+- `YasChatSdkLegacyImpl`: a compatibility layer that mirrors the method names of the older YasChat JS SDK (`login`, `joinRoom`, `sendMessage`, `subscribeRoom`, `onMessage`, ...).
 - `ConnectionLostError`: the rejection of a method call whose connection dropped before the result arrived.
 - Types: `SDK`, `DDPSDKOptions`, `ClientStream`, `ConnectionStatus`, `StreamerEvents`, `StreamNames`, `StreamKeys`, `StreamerConfigs`, `StreamerConfig`, `StreamerCallbackArgs`, `StreamerCallback`, `ServerMethods`, `ServerMethodName`, `ServerMethodParameters`, `ServerMethodReturn`.
 
@@ -212,11 +212,11 @@ await livechat.connection.connect();
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/ddp-client). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/ddp-client build
-yarn workspace @rocket.chat/ddp-client dev
-yarn workspace @rocket.chat/ddp-client lint
-yarn workspace @rocket.chat/ddp-client typecheck
-yarn workspace @rocket.chat/ddp-client testunit
+yarn workspace @yas chat/ddp-client build
+yarn workspace @yas chat/ddp-client dev
+yarn workspace @yas chat/ddp-client lint
+yarn workspace @yas chat/ddp-client typecheck
+yarn workspace @yas chat/ddp-client testunit
 ```
 
 A runnable example lives in [`__examples__/simple.ts`](https://github.com/YasChat/YasChat/tree/develop/packages/ddp-client/__examples__/simple.ts).

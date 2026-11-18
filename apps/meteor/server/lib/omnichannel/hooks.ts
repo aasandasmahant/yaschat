@@ -1,4 +1,4 @@
-import { ILivechatAgentStatus } from '@rocket.chat/core-typings';
+import { ILivechatAgentStatus } from '@yas chat/core-typings';
 import type {
 	AtLeast,
 	ILivechatDepartment,
@@ -10,9 +10,9 @@ import type {
 	SelectedAgent,
 	InquiryWithAgentInfo,
 	ILivechatInquiryRecord,
-} from '@rocket.chat/core-typings';
-import { LivechatContacts, LivechatDepartmentAgents, LivechatVisitors, Users } from '@rocket.chat/models';
-import { makeFunction } from '@rocket.chat/patch-injection';
+} from '@yas chat/core-typings';
+import { LivechatContacts, LivechatDepartmentAgents, LivechatVisitors, Users } from '@yas chat/models';
+import { makeFunction } from '@yas chat/patch-injection';
 
 import { setUserStatusLivechat } from './utils';
 import { sendToCRM } from '../../hooks/omnichannel/sendToCRM';

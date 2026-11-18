@@ -1,5 +1,5 @@
-import type { IUser, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatDepartmentAgents, LivechatInquiry, LivechatRooms, LivechatDepartment } from '@rocket.chat/models';
+import type { IUser, IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatDepartmentAgents, LivechatInquiry, LivechatRooms, LivechatDepartment } from '@yas chat/models';
 
 import { RoutingManager } from './RoutingManager';
 import { hasPermissionAsync } from '../authorization/hasPermission';

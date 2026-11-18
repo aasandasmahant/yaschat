@@ -2,8 +2,8 @@ import { useDialog } from '@react-aria/dialog';
 import type { AriaDialogProps } from '@react-aria/dialog';
 import { FocusScope } from '@react-aria/focus';
 import { useOverlay } from '@react-aria/overlays';
-import { Contextualbar } from '@rocket.chat/fuselage';
-import { useLayoutSizes, useLayoutContextualBarPosition, useRoomToolbox } from '@rocket.chat/ui-contexts';
+import { Contextualbar } from '@yas chat/fuselage';
+import { useLayoutSizes, useLayoutContextualBarPosition, useRoomToolbox } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useRef } from 'react';
 

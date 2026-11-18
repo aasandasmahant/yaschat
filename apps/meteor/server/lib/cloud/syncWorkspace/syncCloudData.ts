@@ -1,5 +1,5 @@
-import { DuplicatedLicenseError } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
+import { DuplicatedLicenseError } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
 
 import { fetchWorkspaceSyncPayload } from './fetchWorkspaceSyncPayload';
 import { CloudWorkspaceAccessError } from '../../../../lib/errors/CloudWorkspaceAccessError';

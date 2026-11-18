@@ -5,12 +5,12 @@ import type {
 	IAppUsersConverter,
 	IAppsMessage,
 	IAppsUser,
-} from '@rocket.chat/apps';
-import type { IMessage as AppsEngineMessage, IMessageAttachment } from '@rocket.chat/apps-engine/definition/messages';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import { isEditedMessage, isFileAttachment } from '@rocket.chat/core-typings';
-import type { IUser, IMessage } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+} from '@yas chat/apps';
+import type { IMessage as AppsEngineMessage, IMessageAttachment } from '@yas chat/apps-engine/definition/messages';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
+import { isEditedMessage, isFileAttachment } from '@yas chat/core-typings';
+import type { IUser, IMessage } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 
 import { cachedFunction } from './cachedFunction';
 import { mappedDecodeAsync, type AsyncFieldMap } from './codecs/mappedData';

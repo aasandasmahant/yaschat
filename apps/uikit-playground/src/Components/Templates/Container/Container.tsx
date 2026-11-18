@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 
 import Section from './Section';
 import type { templateType } from '../../../utils/templates';

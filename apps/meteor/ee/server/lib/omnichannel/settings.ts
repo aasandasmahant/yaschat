@@ -1,5 +1,5 @@
-import { OmnichannelSortingMechanismSettingType } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import { OmnichannelSortingMechanismSettingType } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 
 import { settingsRegistry } from '../../../../server/settings';
 

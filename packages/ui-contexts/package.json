@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/ui-contexts",
+	"name": "@yas chat/ui-contexts",
 	"version": "36.0.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -17,20 +17,20 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/password-policies": "workspace:^"
+		"@yas chat/password-policies": "workspace:^"
 	},
 	"devDependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/ddp-client": "workspace:~",
-		"@rocket.chat/emitter": "workspace:~",
-		"@rocket.chat/fuselage": "workspace:~",
-		"@rocket.chat/fuselage-hooks": "workspace:^",
-		"@rocket.chat/fuselage-tokens": "workspace:^",
-		"@rocket.chat/i18n": "workspace:~",
-		"@rocket.chat/icons": "workspace:~",
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/rest-typings": "workspace:^",
-		"@rocket.chat/tools": "workspace:~",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/ddp-client": "workspace:~",
+		"@yas chat/emitter": "workspace:~",
+		"@yas chat/fuselage": "workspace:~",
+		"@yas chat/fuselage-hooks": "workspace:^",
+		"@yas chat/fuselage-tokens": "workspace:^",
+		"@yas chat/i18n": "workspace:~",
+		"@yas chat/icons": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/rest-typings": "workspace:^",
+		"@yas chat/tools": "workspace:~",
 		"@types/react": "~19.2.18",
 		"@types/react-dom": "~19.2.7",
 		"i18next": "~26.4.2",
@@ -42,12 +42,12 @@
 		"typescript": "~7.0.2"
 	},
 	"peerDependencies": {
-		"@rocket.chat/core-typings": "workspace:^",
-		"@rocket.chat/ddp-client": "workspace:^",
-		"@rocket.chat/emitter": "workspace:~",
-		"@rocket.chat/fuselage-hooks": "0.44.0",
-		"@rocket.chat/i18n": "workspace:~",
-		"@rocket.chat/rest-typings": "workspace:^",
+		"@yas chat/core-typings": "workspace:^",
+		"@yas chat/ddp-client": "workspace:^",
+		"@yas chat/emitter": "workspace:~",
+		"@yas chat/fuselage-hooks": "0.44.0",
+		"@yas chat/i18n": "workspace:~",
+		"@yas chat/rest-typings": "workspace:^",
 		"react": "*"
 	},
 	"volta": {

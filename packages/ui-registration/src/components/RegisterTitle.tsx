@@ -1,4 +1,4 @@
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useSetting } from '@yas chat/ui-contexts';
 import { Trans } from 'react-i18next';
 
 export const RegisterTitle = () => {

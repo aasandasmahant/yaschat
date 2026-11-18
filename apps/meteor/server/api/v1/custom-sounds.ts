@@ -1,7 +1,7 @@
-import { isClientSafeError } from '@rocket.chat/core-services';
-import type { ICustomSound } from '@rocket.chat/core-typings';
-import { CustomSounds } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import { isClientSafeError } from '@yas chat/core-services';
+import type { ICustomSound } from '@yas chat/core-typings';
+import { CustomSounds } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 import {
 	ajv,
 	isCustomSoundsCreateProps,
@@ -15,8 +15,8 @@ import {
 	validateInternalErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { MAX_CUSTOM_SOUND_SIZE_BYTES, CUSTOM_SOUND_ALLOWED_MIME_TYPES } from '../../../lib/constants';
 import { getExtension, getMimeTypeFromFileName } from '../../../lib/mimeTypes';
@@ -322,7 +322,7 @@ const customSoundsEndpoints = API.v1
 
 export type CustomSoundEndpoints = ExtractRoutesFromAPI<typeof customSoundsEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends CustomSoundEndpoints {}
 }

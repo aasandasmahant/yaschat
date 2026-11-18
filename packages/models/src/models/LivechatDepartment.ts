@@ -1,6 +1,6 @@
-import type { ILivechatDepartment, LivechatDepartmentDTO, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { ILivechatDepartment, LivechatDepartmentDTO, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { ILivechatDepartmentModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type { Collection, FindCursor, Db, Filter, FindOptions, UpdateResult, Document, IndexDescription, AggregationCursor } from 'mongodb';
 
 import { LivechatDepartmentAgents, LivechatUnitMonitors } from '../index';

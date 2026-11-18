@@ -1,5 +1,5 @@
-import type { IOAuthAuthCode, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IOAuthAuthCodesModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IOAuthAuthCode, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IOAuthAuthCodesModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Db, Collection, DeleteResult, IndexDescription, Document, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

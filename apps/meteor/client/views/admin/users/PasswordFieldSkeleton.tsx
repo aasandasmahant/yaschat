@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@rocket.chat/fuselage';
+import { Box, Skeleton } from '@yas chat/fuselage';
 
 const PasswordFieldSkeleton = () => (
 	<>

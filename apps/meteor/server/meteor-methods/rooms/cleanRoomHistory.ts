@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 
 import { findRoomByIdOrName } from '../../api/v1/rooms';
 import { canAccessRoomAsync } from '../../lib/authorization';

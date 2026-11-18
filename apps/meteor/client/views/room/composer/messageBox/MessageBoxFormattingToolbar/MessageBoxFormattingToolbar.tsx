@@ -1,4 +1,4 @@
-import { MessageComposerAction } from '@rocket.chat/ui-composer';
+import { MessageComposerAction } from '@yas chat/ui-composer';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
-import type { ICalendarEvent, Serialized } from '@rocket.chat/core-typings';
-import { Button, Item, ItemActions, ItemContent, ItemDescription, ItemLink, ItemTitle } from '@rocket.chat/fuselage';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { useSetModal } from '@rocket.chat/ui-contexts';
+import type { ICalendarEvent, Serialized } from '@yas chat/core-typings';
+import { Button, Item, ItemActions, ItemContent, ItemDescription, ItemLink, ItemTitle } from '@yas chat/fuselage';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
+import { useSetModal } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import OutlookCalendarEventModal from '../OutlookCalendarEventModal';

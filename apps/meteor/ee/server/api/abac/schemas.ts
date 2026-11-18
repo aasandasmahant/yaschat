@@ -9,15 +9,15 @@ import type {
 	IRoom,
 	IRoomAbacRedaction,
 	IServerEvents,
-} from '@rocket.chat/core-typings';
-import type { PaginatedResult, PaginatedRequest } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import type { PaginatedResult, PaginatedRequest } from '@yas chat/rest-typings';
 import {
 	abacCreationAttributesSchema,
 	ajv,
 	ajvQuery,
 	paginatedResponseProperties,
 	paginationQueryProperties,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 const ATTRIBUTE_KEY_PATTERN = '^[A-Za-z0-9_-]+$';
 const MAX_ROOM_ATTRIBUTE_VALUES = 10;

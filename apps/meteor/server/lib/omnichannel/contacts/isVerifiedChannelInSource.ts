@@ -1,4 +1,4 @@
-import type { ILivechatContactChannel, ILivechatVisitor, IOmnichannelSource } from '@rocket.chat/core-typings';
+import type { ILivechatContactChannel, ILivechatVisitor, IOmnichannelSource } from '@yas chat/core-typings';
 
 export const isVerifiedChannelInSource = (
 	channel: ILivechatContactChannel,

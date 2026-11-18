@@ -21,7 +21,7 @@ The integration test script builds YasChat locally, starts federation services (
 ### Available Flags
 
 - **No flags (default)**: Builds local code and runs tests
-- `--image [IMAGE]`: Uses a pre-built Docker image instead of building locally (defaults to `yaschat/rocket.chat:latest` if no image specified)
+- `--image [IMAGE]`: Uses a pre-built Docker image instead of building locally (defaults to `yaschat/yas chat:latest` if no image specified)
 - `--keep-running`: Keeps containers running after tests complete for manual validation
 - `--element`: Includes Element web client in the test environment
 - `--no-test`: Starts containers and skips running tests (useful for manual testing or debugging)
@@ -40,7 +40,7 @@ yarn test:integration --image
 
 **Test with specific pre-built image:**
 ```bash
-yarn test:integration --image yaschat/rocket.chat:latest
+yarn test:integration --image yaschat/yas chat:latest
 ```
 
 **Keep services running for manual inspection:**
@@ -65,7 +65,7 @@ yarn test:integration --keep-running --element --no-test
 
 **Combine flags:**
 ```bash
-yarn test:integration --image yaschat/rocket.chat:latest --keep-running --element
+yarn test:integration --image yaschat/yas chat:latest --keep-running --element
 ```
 
 ### Service URLs (when using --keep-running or --no-test)

@@ -1,4 +1,4 @@
-import type { CloudRegistrationIntentData, CloudConfirmationPollData, CloudRegistrationStatus } from '@rocket.chat/core-typings';
+import type { CloudRegistrationIntentData, CloudConfirmationPollData, CloudRegistrationStatus } from '@yas chat/core-typings';
 import {
 	isCloudConfirmationPollProps,
 	isCloudConnectWorkspaceProps,
@@ -8,7 +8,7 @@ import {
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	validateBadRequestErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { CloudWorkspaceRegistrationError } from '../../../lib/errors/CloudWorkspaceRegistrationError';
 import { buildWorkspaceRegistrationData } from '../../lib/cloud/buildRegistrationData';
@@ -306,7 +306,7 @@ API.v1.post(
 /**
  * Declaring endpoint here because we don't want this available to the sdk client
  */
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/cloud.checkoutUrl': {
 			GET: () => { url: string };

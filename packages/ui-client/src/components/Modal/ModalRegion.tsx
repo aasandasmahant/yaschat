@@ -1,5 +1,5 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useCurrentModal, useModal } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useCurrentModal, useModal } from '@yas chat/ui-contexts';
 import { lazy, Suspense } from 'react';
 
 import ModalBackdrop from './ModalBackdrop';

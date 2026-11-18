@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { useUserSubscription } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import ParentDiscussion from './ParentDiscussion';

@@ -1,6 +1,6 @@
-import { Button, ButtonGroup, Pagination } from '@rocket.chat/fuselage';
-import { CustomScrollbars, usePagination, Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useRouteParameter, useEndpoint, useRouter } from '@rocket.chat/ui-contexts';
+import { Button, ButtonGroup, Pagination } from '@yas chat/fuselage';
+import { CustomScrollbars, usePagination, Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useRouteParameter, useEndpoint, useRouter } from '@yas chat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { useMemo, useState, useEffect } from 'react';

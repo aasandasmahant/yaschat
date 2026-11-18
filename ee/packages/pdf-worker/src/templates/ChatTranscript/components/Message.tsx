@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
-import typography from '@rocket.chat/fuselage-tokens/dist/typography.json';
+import typography from '@yas chat/fuselage-tokens/dist/typography.json';
 
 import type { PDFMessage } from '../../../types/ChatTranscriptData';
 import { Markup } from '../markup';

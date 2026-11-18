@@ -1,4 +1,4 @@
-import { escapeRegExp } from '@rocket.chat/tools';
+import { escapeRegExp } from '@yas chat/tools';
 import DOMPurify from 'dompurify';
 
 export function truncate(str: string, length: number): string {

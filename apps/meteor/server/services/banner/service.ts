@@ -1,9 +1,9 @@
 import { randomUUID } from 'node:crypto';
 
-import { api, ServiceClassInternal } from '@rocket.chat/core-services';
-import type { IBannerService } from '@rocket.chat/core-services';
-import type { BannerPlatform, IBanner, IBannerDismiss, Optional, IUser } from '@rocket.chat/core-typings';
-import { Banners, BannersDismiss, Users } from '@rocket.chat/models';
+import { api, ServiceClassInternal } from '@yas chat/core-services';
+import type { IBannerService } from '@yas chat/core-services';
+import type { BannerPlatform, IBanner, IBannerDismiss, Optional, IUser } from '@yas chat/core-typings';
+import { Banners, BannersDismiss, Users } from '@yas chat/models';
 
 import { notifyOnUserChange } from '../../lib/notifyListener';
 

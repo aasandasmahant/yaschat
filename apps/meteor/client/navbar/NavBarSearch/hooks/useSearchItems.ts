@@ -1,7 +1,7 @@
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { escapeRegExp } from '@rocket.chat/tools';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
-import { useEndpoint, useUserSubscriptions } from '@rocket.chat/ui-contexts';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { escapeRegExp } from '@yas chat/tools';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { useEndpoint, useUserSubscriptions } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

@@ -1,6 +1,6 @@
 import { after, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -36,7 +36,7 @@ const avatarStore = {
 };
 
 const { insertAdminUserFromEnv, insertInitialData } = proxyquire.noCallThru().load('./initialData', {
-	'@rocket.chat/account-utils': {
+	'@yas chat/account-utils': {
 		hashPassword: async (password: string) => `hashed=${password}`,
 	},
 	'meteor/meteor': {
@@ -55,7 +55,7 @@ const { insertAdminUserFromEnv, insertInitialData } = proxyquire.noCallThru().lo
 	'../settings': {
 		settings: { get: settingsGet },
 	},
-	'@rocket.chat/tools': {
+	'@yas chat/tools': {
 		validateEmail,
 	},
 	'../lib/roles/addUserRoles': {

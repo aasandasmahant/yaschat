@@ -5,12 +5,12 @@ import type {
 	OEmbedMeta,
 	IMessage,
 	OEmbedUrlContent,
-} from '@rocket.chat/core-typings';
-import { isOEmbedUrlWithMetadata } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { OEmbedCache, Messages } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import { isAbsoluteURL } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { isOEmbedUrlWithMetadata } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { OEmbedCache, Messages } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import { isAbsoluteURL } from '@yas chat/tools';
 import he from 'he';
 import iconv from 'iconv-lite';
 import ipRangeCheck from 'ip-range-check';

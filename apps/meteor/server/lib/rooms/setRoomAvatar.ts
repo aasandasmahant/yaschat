@@ -1,7 +1,7 @@
-import { api, Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { isRegisterUser } from '@rocket.chat/core-typings';
-import { Avatars, Rooms } from '@rocket.chat/models';
+import { api, Message, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { isRegisterUser } from '@yas chat/core-typings';
+import { Avatars, Rooms } from '@yas chat/models';
 
 import { YasChatFile } from '../media/file';
 import { FileUpload } from '../media/file-upload';

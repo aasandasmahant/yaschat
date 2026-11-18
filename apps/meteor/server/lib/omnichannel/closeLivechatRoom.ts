@@ -1,5 +1,5 @@
-import type { IUser, IRoom, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatRooms, Subscriptions } from '@rocket.chat/models';
+import type { IUser, IRoom, IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatRooms, Subscriptions } from '@yas chat/models';
 
 import { closeRoom } from './closeRoom';
 import type { CloseRoomParams } from './localTypes';

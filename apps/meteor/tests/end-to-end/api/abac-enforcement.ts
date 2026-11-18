@@ -1,9 +1,9 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { TeamType } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { Credentials } from '@yas chat/api-client';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { TeamType } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 

@@ -1,5 +1,5 @@
-import type { IVideoConferenceUser } from '@rocket.chat/core-typings';
-import { isInVideoConference } from '@rocket.chat/core-typings';
+import type { IVideoConferenceUser } from '@yas chat/core-typings';
+import { isInVideoConference } from '@yas chat/core-typings';
 
 export type ConferenceMemberStatus = 'joined' | 'left' | 'declined' | 'invited';
 

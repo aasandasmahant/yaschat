@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IOmnichannelRoomInfo, IOmnichannelRoomExtraData, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IOmnichannelRoomInfo, IOmnichannelRoomExtraData, IOmnichannelRoom } from '@yas chat/core-typings';
+import { OmnichannelServiceLevelAgreements } from '@yas chat/models';
 
 import { isPlainObject } from '../../../../lib/utils/isPlainObject';
 import { beforeNewRoom } from '../../../../server/lib/omnichannel/hooks';

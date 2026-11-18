@@ -118,7 +118,7 @@ calls from the hooks resolve to nothing and the feature is inactive
 
 ```sh
 # Meteor started with TRANSPORTER=TCP (or a NATS URL), then:
-yarn workspace @rocket.chat/xmpp-server-service ms
+yarn workspace @yas chat/xmpp-server-service ms
 ```
 
 `ms` defaults `TRANSPORTER` to `TCP` and `MONGO_URL` to `mongodb://localhost:3001/meteor`
@@ -285,7 +285,7 @@ What the servers need:
 
 ```sh
 NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem" XMPP_E2E_XMPP_DOMAIN=xmpp.host \
-yarn workspace @rocket.chat/xmpp-server test:e2e
+yarn workspace @yas chat/xmpp-server test:e2e
 ```
 
 One file, or a single case by name, from `ee/packages/xmpp-server`:
@@ -312,7 +312,7 @@ starts the stack, runs the suite against it and tears it down:
 
 ```sh
 echo 'ENTERPRISE_LICENSE=<license with the federation module>' > ee/packages/xmpp-server/.env
-yarn workspace @rocket.chat/xmpp-server test:e2e:stack
+yarn workspace @yas chat/xmpp-server test:e2e:stack
 ```
 
 | Option | Effect |

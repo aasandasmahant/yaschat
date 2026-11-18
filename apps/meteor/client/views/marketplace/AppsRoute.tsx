@@ -1,5 +1,5 @@
-import { PageSkeleton } from '@rocket.chat/ui-client';
-import { useRouteParameter, useRoute, usePermission } from '@rocket.chat/ui-contexts';
+import { PageSkeleton } from '@yas chat/ui-client';
+import { useRouteParameter, useRoute, usePermission } from '@yas chat/ui-contexts';
 import { useState, useEffect } from 'react';
 
 import AppDetailsPage from './AppDetailsPage';

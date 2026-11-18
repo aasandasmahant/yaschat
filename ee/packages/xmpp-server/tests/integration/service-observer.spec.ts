@@ -1,6 +1,6 @@
 import net from 'node:net';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 
 import { XMPPServer } from '../../src/XMPPServer';
 import type { Logger } from '../../src/logger';
@@ -10,7 +10,7 @@ import { XMPPServerService } from '../../src/service/XMPPServerService';
 const settings = new Map<string, unknown>();
 const findOneByUsername = jest.fn();
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClass: class {
 		onEvent = jest.fn();
 	},
@@ -21,7 +21,7 @@ jest.mock('@rocket.chat/core-services', () => ({
 	Room: {},
 }));
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: class {
 		debug = jest.fn();
 

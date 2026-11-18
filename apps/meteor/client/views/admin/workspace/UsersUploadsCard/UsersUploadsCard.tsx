@@ -1,8 +1,8 @@
-import type { IStats } from '@rocket.chat/core-typings';
-import { Button, Card, CardBody, CardControls } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { IStats } from '@yas chat/core-typings';
+import { Button, Card, CardBody, CardControls } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

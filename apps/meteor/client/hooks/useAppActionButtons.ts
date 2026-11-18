@@ -1,6 +1,6 @@
-import type { IUIActionButton, UIActionButtonContext } from '@rocket.chat/apps-engine/definition/ui';
-import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
-import { useConnectionStatus, useEndpoint, useStream, useUserId } from '@rocket.chat/ui-contexts';
+import type { IUIActionButton, UIActionButtonContext } from '@yas chat/apps-engine/definition/ui';
+import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
+import { useConnectionStatus, useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

@@ -1,6 +1,6 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useHasLicenseModule, useLicense } from '@rocket.chat/ui-client';
-import { useRole, useSetModal } from '@rocket.chat/ui-contexts';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useHasLicenseModule, useLicense } from '@yas chat/ui-client';
+import { useRole, useSetModal } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import OutboundMessageUpsellModal from './OutboundMessageUpsellModal';

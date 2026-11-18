@@ -1,5 +1,5 @@
 import type { OverlayTriggerState } from '@react-stately/overlays';
-import { useActiveDescendant, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useActiveDescendant, useStableCallback } from '@yas chat/fuselage-hooks';
 import type { KeyboardEvent } from 'react';
 import { createContext, useContext, useEffect, useMemo, useRef } from 'react';
 

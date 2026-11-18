@@ -1,4 +1,4 @@
-import { DeviceMenu, DeviceMenuButton, useAudioLevel, useDeviceSelection, useRevealDeviceLabels } from '@rocket.chat/ui-media';
+import { DeviceMenu, DeviceMenuButton, useAudioLevel, useDeviceSelection, useRevealDeviceLabels } from '@yas chat/ui-media';
 import { useTranslation } from 'react-i18next';
 
 import VoiceActivity from './VoiceActivity';

@@ -1,7 +1,7 @@
-import type { UsersListStatusParamsGET } from '@rocket.chat/rest-typings';
-import type { useSort } from '@rocket.chat/ui-client';
-import { usePaginatedQuery, usePagination } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { UsersListStatusParamsGET } from '@yas chat/rest-typings';
+import type { useSort } from '@yas chat/ui-client';
+import { usePaginatedQuery, usePagination } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import { usersQueryKeys } from '../../../../lib/queryKeys';

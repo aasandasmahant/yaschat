@@ -1,8 +1,8 @@
-import type { IUserStatus } from '@rocket.chat/core-typings';
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { FieldGroup, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, FieldError, Select, Box } from '@rocket.chat/fuselage';
-import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@rocket.chat/ui-client';
-import { useSetModal, useRoute, useToastMessageDispatch, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IUserStatus } from '@yas chat/core-typings';
+import type { SelectOption } from '@yas chat/fuselage';
+import { FieldGroup, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, FieldError, Select, Box } from '@yas chat/fuselage';
+import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
+import { useSetModal, useRoute, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
 import { useId, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
-import type { ILivechatUnitMonitor, IOmnichannelBusinessUnit, OmnichannelBusinessUnitPayload } from '@rocket.chat/core-typings';
-import { ajv } from '@rocket.chat/rest-typings';
-import type { PaginatedResult, PaginatedRequest } from '@rocket.chat/rest-typings';
+import type { ILivechatUnitMonitor, IOmnichannelBusinessUnit, OmnichannelBusinessUnitPayload } from '@yas chat/core-typings';
+import { ajv } from '@yas chat/rest-typings';
+import type { PaginatedResult, PaginatedRequest } from '@yas chat/rest-typings';
 
 import { findUnits, findUnitById, findUnitMonitors, findUnitsOfUser } from './lib/units';
 import { API } from '../../../../../server/api';
@@ -9,7 +9,7 @@ import { hasPermissionAsync } from '../../../../../server/lib/authorization/hasP
 import { findAllDepartmentsAvailable, findAllDepartmentsByUnit } from '../../../lib/omnichannel/Department';
 import { LivechatEnterprise } from '../../../lib/omnichannel/LivechatEnterprise';
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	interface Endpoints {
 		'/v1/livechat/units/:unitId/monitors': {
 			GET: (params: { unitId: string }) => { monitors: ILivechatUnitMonitor[] };

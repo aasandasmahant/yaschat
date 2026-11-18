@@ -1,15 +1,15 @@
-import { Banner } from '@rocket.chat/core-services';
+import { Banner } from '@yas chat/core-services';
 import type {
 	IUiKitCoreApp,
 	UiKitCoreAppBlockActionPayload,
 	UiKitCoreAppViewClosedPayload,
 	UiKitCoreAppViewSubmitPayload,
-} from '@rocket.chat/core-services';
-import type { Cloud, IUser } from '@rocket.chat/core-typings';
-import { Banners } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import { isTruthy } from '@rocket.chat/tools';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/core-services';
+import type { Cloud, IUser } from '@yas chat/core-typings';
+import { Banners } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import { isTruthy } from '@yas chat/tools';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { CloudWorkspaceConnectionError } from '../../../lib/errors/CloudWorkspaceConnectionError';
 import { InvalidCloudAnnouncementInteractionError } from '../../../lib/errors/InvalidCloudAnnouncementInteractionError';

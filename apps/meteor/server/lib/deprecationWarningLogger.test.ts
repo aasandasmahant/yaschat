@@ -31,7 +31,7 @@ const loadLogger = (env: Env = {}) => {
 	setEnv(env);
 	try {
 		const module = proxyquire.noCallThru().load('./deprecationWarningLogger', {
-			'@rocket.chat/logger': {
+			'@yas chat/logger': {
 				Logger: class {
 					section(name: string) {
 						warn[name] = sinon.stub();

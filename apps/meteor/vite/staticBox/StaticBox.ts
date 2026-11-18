@@ -1,4 +1,4 @@
-import { Box, extractStylingProps, useBoxTransform } from '@rocket.chat/fuselage';
+import { Box, extractStylingProps, useBoxTransform } from '@yas chat/fuselage';
 import type { ElementType } from 'react';
 import { createElement } from 'react';
 

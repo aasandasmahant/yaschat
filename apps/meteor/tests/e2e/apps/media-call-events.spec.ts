@@ -1,7 +1,7 @@
 import type { APIRequestContext, Page } from '@playwright/test';
-import type { ICallHistorySearchFilters, ICallHistorySearchPagination } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IInternalCallHistoryItem } from '@rocket.chat/apps-engine/definition/mediaCalls';
-import type { CallPreventionRecord, IInternalMediaCallHistoryItem, IMediaCall } from '@rocket.chat/core-typings';
+import type { ICallHistorySearchFilters, ICallHistorySearchPagination } from '@yas chat/apps-engine/definition/accessors';
+import type { IInternalCallHistoryItem } from '@yas chat/apps-engine/definition/mediaCalls';
+import type { CallPreventionRecord, IInternalMediaCallHistoryItem, IMediaCall } from '@yas chat/core-typings';
 import type { Filter } from 'mongodb';
 import { MongoClient } from 'mongodb';
 

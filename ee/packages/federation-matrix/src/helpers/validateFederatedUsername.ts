@@ -1,6 +1,6 @@
 import { isIPv4, isIPv6 } from 'node:net';
 
-import type { UserID } from '@rocket.chat/federation-sdk';
+import type { UserID } from '@yas chat/federation-sdk';
 
 /** helper to validate the username format */
 export function validateFederatedUsername(mxid: string): mxid is UserID {

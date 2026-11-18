@@ -1,4 +1,4 @@
-import { useEndpoint, useUserPreference } from '@rocket.chat/ui-contexts';
+import { useEndpoint, useUserPreference } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import type { DontAskAgainList } from './useDontAskAgain';

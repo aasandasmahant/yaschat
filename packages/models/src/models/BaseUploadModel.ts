@@ -1,5 +1,5 @@
-import type { EncryptedContent, IUpload } from '@rocket.chat/core-typings';
-import type { IBaseUploadsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { EncryptedContent, IUpload } from '@yas chat/core-typings';
+import type { IBaseUploadsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type {
 	DeleteResult,
 	IndexDescription,

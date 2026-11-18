@@ -2,10 +2,10 @@ import { log } from 'console';
 import crypto from 'node:crypto';
 import os from 'node:os';
 
-import { Analytics, Team, VideoConf, Presence } from '@rocket.chat/core-services';
-import type { IStats, ISetting } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import { Analytics, Team, VideoConf, Presence } from '@yas chat/core-services';
+import type { IStats, ISetting } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 import {
 	NotificationQueue,
 	Rooms,
@@ -28,7 +28,7 @@ import {
 	Users,
 	LivechatRooms,
 	AbacAttributes,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 import moment from 'moment';
 
 import { getAppsStatistics } from './getAppsStatistics';

@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { IUser } from '@yas chat/core-typings';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 import { ServiceConfiguration } from 'meteor/service-configuration';
 
 import { settings } from '../../settings';

@@ -49,7 +49,7 @@ describe('configureSMTP', () => {
 		sendMail.resetHistory();
 		applySettings(smtpSettings);
 
-		const mail = { to: 'someone@example.com', from: 'rocket.chat@example.com', subject: 'Reset your password', html: '<p>link</p>' };
+		const mail = { to: 'someone@example.com', from: 'yas chat@example.com', subject: 'Reset your password', html: '<p>link</p>' };
 		await Email.customTransport?.({ packageSettings: {}, ...mail });
 
 		expect(sendMail.calledOnceWithExactly(mail)).to.be.true;

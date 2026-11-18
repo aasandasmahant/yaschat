@@ -8,11 +8,11 @@
 
 The package is two layers in one workspace. Everything under `src/` except `src/service/` is
 the protocol core: it imports Node (`net`, `tls`, `dns`, `crypto`), `ltx`, `@xmpp/jid`, `pino`
-and `@rocket.chat/emitter`, and nothing else from the monorepo. It knows XMPP and nothing about
+and `@yas chat/emitter`, and nothing else from the monorepo. It knows XMPP and nothing about
 rooms, users, settings or the database.
 
 `src/service/` is the integration layer. It is the only place that imports
-`@rocket.chat/core-services`, `@rocket.chat/core-typings` and `@rocket.chat/models`. It
+`@yas chat/core-services`, `@yas chat/core-typings` and `@yas chat/models`. It
 consumes the core through the `XMPPServer` facade: a typed event map for everything inbound,
 imperative methods for everything outbound, and one request/response delegate
 (`authorizeMucJoin`) because join authorization cannot be fire-and-forget.
@@ -48,5 +48,5 @@ testing without YasChat in the loop.
   Everything durable is the service's problem.
 - Adding a capability usually touches both layers: a parser or state machine in the core, a
   handler in the service. Specs describe both halves.
-- Nothing in the core may log through `@rocket.chat/logger`; the service adapts its logger to
+- Nothing in the core may log through `@yas chat/logger`; the service adapts its logger to
   the pino-style interface the core expects.

@@ -1,5 +1,5 @@
-import { useUser } from '@rocket.chat/ui-contexts';
-import { useVideoConfWindowEnabled } from '@rocket.chat/ui-video-conf';
+import { useUser } from '@yas chat/ui-contexts';
+import { useVideoConfWindowEnabled } from '@yas chat/ui-video-conf';
 
 import NavBarControls from './NavBarControls';
 import OngoingCallsProvider from '../../views/conference/providers/OngoingCallsProvider';

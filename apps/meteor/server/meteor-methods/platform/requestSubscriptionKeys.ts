@@ -1,5 +1,5 @@
-import { api } from '@rocket.chat/core-services';
-import { Subscriptions, Rooms } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import { Subscriptions, Rooms } from '@yas chat/models';
 
 export const requestSubscriptionKeysMethod = async (userId: string): Promise<void> => {
 	// Get all encrypted rooms that the user is subscribed to and has no E2E key yet

@@ -1,5 +1,5 @@
-import { Table, TableBody, TableCell, TableHead, TableRow } from '@rocket.chat/fuselage';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@yas chat/fuselage';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useMemo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

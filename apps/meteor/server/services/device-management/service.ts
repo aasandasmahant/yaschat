@@ -1,6 +1,6 @@
-import type { IDeviceManagementService } from '@rocket.chat/core-services';
-import { ServiceClassInternal } from '@rocket.chat/core-services';
-import { getHeader } from '@rocket.chat/tools';
+import type { IDeviceManagementService } from '@yas chat/core-services';
+import { ServiceClassInternal } from '@yas chat/core-services';
+import { getHeader } from '@yas chat/tools';
 
 import { deviceManagementEvents } from './events';
 

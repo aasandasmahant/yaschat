@@ -1,6 +1,6 @@
 import { after, afterEach, before, describe, it } from 'node:test';
 
-import type { ILivechatVisitor } from '@rocket.chat/core-typings';
+import type { ILivechatVisitor } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import moment from 'moment';
 

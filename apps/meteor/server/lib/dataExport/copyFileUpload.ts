@@ -1,5 +1,5 @@
-import type { FileProp } from '@rocket.chat/core-typings';
-import { Uploads } from '@rocket.chat/models';
+import type { FileProp } from '@yas chat/core-typings';
+import { Uploads } from '@yas chat/models';
 
 import { joinPath } from '../fileUtils';
 import { FileUpload } from '../media/file-upload';

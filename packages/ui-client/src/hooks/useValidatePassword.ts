@@ -1,4 +1,4 @@
-import { useVerifyPassword } from '@rocket.chat/ui-contexts';
+import { useVerifyPassword } from '@yas chat/ui-contexts';
 
 export const useValidatePassword = (password: string): boolean => {
 	const passwordVerifications = useVerifyPassword(password);

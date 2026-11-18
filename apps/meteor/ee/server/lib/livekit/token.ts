@@ -1,4 +1,4 @@
-import { signHS256 } from '@rocket.chat/jwt';
+import { signHS256 } from '@yas chat/jwt';
 
 import { getLiveKitConfig } from './config';
 

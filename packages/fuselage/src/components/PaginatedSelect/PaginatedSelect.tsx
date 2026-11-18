@@ -1,4 +1,4 @@
-import { useStableCallback, useResizeObserver } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback, useResizeObserver } from '@yas chat/fuselage-hooks';
 import { type ElementType, useState, useRef } from 'react';
 
 import type { OptionType, SelectOption, SelectProps } from '..';

@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { escapeHTML } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { escapeHTML } from '@yas chat/tools';
 import EJSON from 'ejson';
 import type { Filter } from 'mongodb';
 

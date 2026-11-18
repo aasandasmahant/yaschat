@@ -1,5 +1,5 @@
-import { Logger } from '@rocket.chat/logger';
-import { Settings } from '@rocket.chat/models';
+import { Logger } from '@yas chat/logger';
+import { Settings } from '@yas chat/models';
 import moment from 'moment';
 import Queue from 'queue-fifo';
 

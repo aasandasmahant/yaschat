@@ -1,11 +1,11 @@
-import type { ICalendarService } from '@rocket.chat/core-services';
-import { Presence, ServiceClassInternal, api } from '@rocket.chat/core-services';
-import type { IUser, ICalendarEvent } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { Logger } from '@rocket.chat/logger';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { CalendarEvent, Users } from '@rocket.chat/models';
+import type { ICalendarService } from '@yas chat/core-services';
+import { Presence, ServiceClassInternal, api } from '@yas chat/core-services';
+import type { IUser, ICalendarEvent } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { Logger } from '@yas chat/logger';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { CalendarEvent, Users } from '@yas chat/models';
 import type { UpdateResult, DeleteResult } from 'mongodb';
 
 import { getShiftedTime } from './utils/getShiftedTime';

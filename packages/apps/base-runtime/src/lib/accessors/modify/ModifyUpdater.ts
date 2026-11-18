@@ -1,14 +1,14 @@
-import type { ILivechatUpdater } from '@rocket.chat/apps-engine/definition/accessors/ILivechatUpdater';
-import type { IMessageBuilder } from '@rocket.chat/apps-engine/definition/accessors/IMessageBuilder';
-import type { IMessageUpdater } from '@rocket.chat/apps-engine/definition/accessors/IMessageUpdater';
-import type { IModifyUpdater } from '@rocket.chat/apps-engine/definition/accessors/IModifyUpdater';
-import type { IRoomBuilder } from '@rocket.chat/apps-engine/definition/accessors/IRoomBuilder';
-import type { IUserUpdater } from '@rocket.chat/apps-engine/definition/accessors/IUserUpdater';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages/IMessage';
-import { YasChatAssociationModel } from '@rocket.chat/apps-engine/definition/metadata/YasChatAssociations';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms/IRoom';
-import { RoomType } from '@rocket.chat/apps-engine/definition/rooms/RoomType.js';
-import type { IUser } from '@rocket.chat/apps-engine/definition/users/IUser';
+import type { ILivechatUpdater } from '@yas chat/apps-engine/definition/accessors/ILivechatUpdater';
+import type { IMessageBuilder } from '@yas chat/apps-engine/definition/accessors/IMessageBuilder';
+import type { IMessageUpdater } from '@yas chat/apps-engine/definition/accessors/IMessageUpdater';
+import type { IModifyUpdater } from '@yas chat/apps-engine/definition/accessors/IModifyUpdater';
+import type { IRoomBuilder } from '@yas chat/apps-engine/definition/accessors/IRoomBuilder';
+import type { IUserUpdater } from '@yas chat/apps-engine/definition/accessors/IUserUpdater';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages/IMessage';
+import { YasChatAssociationModel } from '@yas chat/apps-engine/definition/metadata/YasChatAssociations';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms/IRoom';
+import { RoomType } from '@yas chat/apps-engine/definition/rooms/RoomType.js';
+import type { IUser } from '@yas chat/apps-engine/definition/users/IUser';
 
 import { LivechatUpdater } from './LivechatUpdater';
 import { MessageUpdater } from './MessageUpdater';

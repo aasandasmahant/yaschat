@@ -11,8 +11,8 @@ import {
 	ItemTitle,
 	PopoverSurface,
 	SearchInput,
-} from '@rocket.chat/fuselage';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { Fragment, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

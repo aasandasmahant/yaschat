@@ -1,5 +1,5 @@
-import { Icon, FramedIcon, type IconColor } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Icon, FramedIcon, type IconColor } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { ComponentProps } from 'react';
 
 import type { BlockProps } from '../utils/BlockProps';

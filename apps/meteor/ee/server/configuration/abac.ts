@@ -1,7 +1,7 @@
-import { Abac, LDAPEnterprise } from '@rocket.chat/core-services';
-import { cronJobs } from '@rocket.chat/cron';
-import { License } from '@rocket.chat/license';
-import { Users } from '@rocket.chat/models';
+import { Abac, LDAPEnterprise } from '@yas chat/core-services';
+import { cronJobs } from '@yas chat/cron';
+import { License } from '@yas chat/license';
+import { Users } from '@yas chat/models';
 import { isValidCron } from 'cron-validator';
 
 import { settings } from '../../../server/settings';

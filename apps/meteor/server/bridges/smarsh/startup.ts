@@ -1,4 +1,4 @@
-import { cronJobs } from '@rocket.chat/cron';
+import { cronJobs } from '@yas chat/cron';
 
 import { generateEml } from './functions/generateEml';
 import { settings } from '../../settings';

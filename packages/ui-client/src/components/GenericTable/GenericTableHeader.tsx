@@ -1,4 +1,4 @@
-import { TableHead } from '@rocket.chat/fuselage';
+import { TableHead } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 import { GenericTableRow } from './GenericTableRow';

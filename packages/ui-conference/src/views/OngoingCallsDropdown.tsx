@@ -1,6 +1,6 @@
 import { FocusScope } from '@react-aria/focus';
-import { Badge, Box, Dropdown, IconButton, type IconButtonProps } from '@rocket.chat/fuselage';
-import { useDropdownVisibility } from '@rocket.chat/ui-client';
+import { Badge, Box, Dropdown, IconButton, type IconButtonProps } from '@yas chat/fuselage';
+import { useDropdownVisibility } from '@yas chat/ui-client';
 import { useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

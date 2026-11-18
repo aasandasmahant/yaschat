@@ -1,4 +1,4 @@
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
 
 export enum AbacErrorCode {
 	InvalidAttributeValues = 'error-invalid-attribute-values',

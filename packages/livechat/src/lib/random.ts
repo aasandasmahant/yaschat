@@ -1,4 +1,4 @@
-import { Random } from '@rocket.chat/random';
+import { Random } from '@yas chat/random';
 
 export const chooseElement = Random.choice;
 

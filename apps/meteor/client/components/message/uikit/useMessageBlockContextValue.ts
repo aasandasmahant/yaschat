@@ -1,7 +1,7 @@
-import type { IRoom, IMessage } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import type { UiKitContext } from '@rocket.chat/fuselage-ui-kit';
-import { useRoomToolbox } from '@rocket.chat/ui-contexts';
+import type { IRoom, IMessage } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { UiKitContext } from '@yas chat/fuselage-ui-kit';
+import { useRoomToolbox } from '@yas chat/ui-contexts';
 import {
 	useVideoConfDispatchOutgoing,
 	useVideoConfIsCalling,
@@ -11,7 +11,7 @@ import {
 	useVideoConfSetPreferences,
 	useVideoConfStartCall,
 	useVideoConfWindowEnabled,
-} from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-video-conf';
 import type { ContextType } from 'react';
 
 import { useUiKitActionManager } from '../../../hooks/uikit/useUiKitActionManager';

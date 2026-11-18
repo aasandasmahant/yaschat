@@ -1,4 +1,4 @@
-import { NavBarItem } from '@rocket.chat/fuselage';
+import { NavBarItem } from '@yas chat/fuselage';
 import type { HTMLAttributes } from 'react';
 
 import { useOmnichannelLivechatToggle } from './hooks/useOmnichannelLivechatToggle';

@@ -6,8 +6,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateSamlParseMetadataSuccessResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { FetchError, serverFetch as fetch } from '@rocket.chat/server-fetch';
+} from '@yas chat/rest-typings';
+import { FetchError, serverFetch as fetch } from '@yas chat/server-fetch';
 
 import type { ExtractRoutesFromAPI } from '../../../server/api/ApiClass';
 import { API } from '../../../server/api/api';
@@ -79,7 +79,7 @@ const samlEndpoints = API.v1.post(
 
 export type SAMLEndpoints = ExtractRoutesFromAPI<typeof samlEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/no-empty-object-type
 	interface Endpoints extends SAMLEndpoints {}
 }

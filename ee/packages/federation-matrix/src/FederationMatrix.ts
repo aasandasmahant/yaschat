@@ -6,7 +6,7 @@ import {
 	Room,
 	ServiceClass,
 	Settings,
-} from '@rocket.chat/core-services';
+} from '@yas chat/core-services';
 import {
 	isDeletedMessage,
 	isMessageFromMatrixFederation,
@@ -14,12 +14,12 @@ import {
 	isRoomNativeFederated,
 	isUserNativeFederated,
 	UserStatus,
-} from '@rocket.chat/core-typings';
-import type { MessageQuoteAttachment, IMessage, IRoom, IUser, IRoomNativeFederated, ISubscription } from '@rocket.chat/core-typings';
-import { eventIdSchema, roomIdSchema, userIdSchema, federationSDK, FederationRequestError } from '@rocket.chat/federation-sdk';
-import type { EventID, FileMessageType, PduForType, PresenceState } from '@rocket.chat/federation-sdk';
-import { Logger } from '@rocket.chat/logger';
-import { Users, Subscriptions, Messages, Rooms } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import type { MessageQuoteAttachment, IMessage, IRoom, IUser, IRoomNativeFederated, ISubscription } from '@yas chat/core-typings';
+import { eventIdSchema, roomIdSchema, userIdSchema, federationSDK, FederationRequestError } from '@yas chat/federation-sdk';
+import type { EventID, FileMessageType, PduForType, PresenceState } from '@yas chat/federation-sdk';
+import { Logger } from '@yas chat/logger';
+import { Users, Subscriptions, Messages, Rooms } from '@yas chat/models';
 
 import { createOrUpdateFederatedUser } from './helpers/createOrUpdateFederatedUser';
 import { extractDomainFromMatrixUserId } from './helpers/extractDomainFromMatrixUserId';

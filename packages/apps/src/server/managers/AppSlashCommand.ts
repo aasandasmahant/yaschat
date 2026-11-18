@@ -1,10 +1,10 @@
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 import type {
 	ISlashCommand,
 	ISlashCommandPreview,
 	ISlashCommandPreviewItem,
 	SlashCommandContext,
-} from '@rocket.chat/apps-engine/definition/slashcommands';
+} from '@yas chat/apps-engine/definition/slashcommands';
 
 import type { ProxiedApp } from '../ProxiedApp';
 import type { AppLogStorage } from '../storage';

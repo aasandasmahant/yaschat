@@ -1,4 +1,4 @@
-import { clientCallbacks } from '@rocket.chat/ui-client';
+import { clientCallbacks } from '@yas chat/ui-client';
 
 import { createFakeRoom } from '../../../tests/mocks/data';
 import { sdk } from '../../lib/SDKClient';
@@ -9,7 +9,7 @@ import { Rooms } from '../../stores';
 
 import './topic';
 
-jest.mock('@rocket.chat/ui-client', () => ({
+jest.mock('@yas chat/ui-client', () => ({
 	clientCallbacks: {
 		run: jest.fn(),
 	},

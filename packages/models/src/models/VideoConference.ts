@@ -7,9 +7,9 @@ import type {
 	YasChatRecordDeleted,
 	IVoIPVideoConference,
 	VideoConferenceLeaveReason,
-} from '@rocket.chat/core-typings';
-import { VideoConferenceStatus } from '@rocket.chat/core-typings';
-import type { FindPaginated, InsertionModel, IVideoConferenceModel } from '@rocket.chat/model-typings';
+} from '@yas chat/core-typings';
+import { VideoConferenceStatus } from '@yas chat/core-typings';
+import type { FindPaginated, InsertionModel, IVideoConferenceModel } from '@yas chat/model-typings';
 import type {
 	FindCursor,
 	UpdateOptions,

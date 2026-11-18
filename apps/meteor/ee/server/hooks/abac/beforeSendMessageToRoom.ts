@@ -1,4 +1,4 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
 
 import { isRoomAbacLocked } from '../../../../lib/rooms/isRoomAbacLocked';
 import { beforeSendMessageToRoom } from '../../../../server/hooks/rooms/beforeSendMessageToRoom';

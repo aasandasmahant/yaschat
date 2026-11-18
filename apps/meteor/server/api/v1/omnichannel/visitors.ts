@@ -1,4 +1,4 @@
-import { Messages, LivechatRooms } from '@rocket.chat/models';
+import { Messages, LivechatRooms } from '@yas chat/models';
 import {
 	isLivechatVisitorsInfoProps,
 	isGETLivechatVisitorsPagesVisitedRoomIdParams,
@@ -7,8 +7,8 @@ import {
 	isGETLivechatVisitorsAutocompleteParams,
 	isLivechatRidMessagesProps,
 	isGETLivechatVisitorsSearch,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { API } from '../..';
 import {

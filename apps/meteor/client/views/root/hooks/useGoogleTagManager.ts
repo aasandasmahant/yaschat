@@ -1,4 +1,4 @@
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 export const useGoogleTagManager = () => {

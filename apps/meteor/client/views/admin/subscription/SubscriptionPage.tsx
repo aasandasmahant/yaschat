@@ -1,5 +1,5 @@
-import { Accordion, AccordionItem, Box, Button, ButtonGroup, Callout, CardGrid, CardGridItem } from '@rocket.chat/fuselage';
-import { useDebouncedValue, useSessionStorage } from '@rocket.chat/fuselage-hooks';
+import { Accordion, AccordionItem, Box, Button, ButtonGroup, Callout, CardGrid, CardGridItem } from '@yas chat/fuselage';
+import { useDebouncedValue, useSessionStorage } from '@yas chat/fuselage-hooks';
 import {
 	Page,
 	PageScrollableContentWithShadow,
@@ -8,8 +8,8 @@ import {
 	useInvalidateLicense,
 	useLicenseWithCloudAnnouncement,
 	useIsEnterprise,
-} from '@rocket.chat/ui-client';
-import { useSearchParameter, useRouter } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useSearchParameter, useRouter } from '@yas chat/ui-contexts';
 import { t } from 'i18next';
 import { memo, useCallback, useEffect } from 'react';
 import tinykeys from 'tinykeys';

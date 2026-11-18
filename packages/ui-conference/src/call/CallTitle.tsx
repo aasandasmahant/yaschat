@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, Palette } from '@rocket.chat/fuselage';
-import { CallTimer } from '@rocket.chat/ui-client';
+import { css } from '@yas chat/css-in-js';
+import { Box, Palette } from '@yas chat/fuselage';
+import { CallTimer } from '@yas chat/ui-client';
 
 const callHeaderStyles = css`
 	display: inline-flex;

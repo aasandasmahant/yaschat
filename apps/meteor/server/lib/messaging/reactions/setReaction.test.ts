@@ -1,7 +1,7 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { ClientSafeError } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -33,7 +33,7 @@ const i18nMock = { t: sinon.stub() };
 const callbacksRunMock = sinon.stub();
 
 const { removeUserReaction, executeSetReaction, setReaction } = p.noCallThru().load('./setReaction.ts', {
-	'@rocket.chat/core-services': { Message: { beforeReacted: sinon.stub() }, ClientSafeError },
+	'@yas chat/core-services': { Message: { beforeReacted: sinon.stub() }, ClientSafeError },
 	'../../callbacks': { callbacks: { run: callbacksRunMock } },
 	'../../i18n': { i18n: i18nMock },
 	'../../authorization': { canAccessRoomAsync: canAccessRoomAsyncMock },

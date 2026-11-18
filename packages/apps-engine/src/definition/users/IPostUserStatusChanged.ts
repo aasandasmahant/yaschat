@@ -8,7 +8,7 @@ import type { IUserStatusContext } from './IUserStatusContext';
  * event
  *
  * This event is triggered *after* the
- * user changes his status on Rocket.chat
+ * user changes his status on Yas chat
  * for online, away, busy or offline.
  * Does **not** trigger when the custom status is changed
  */

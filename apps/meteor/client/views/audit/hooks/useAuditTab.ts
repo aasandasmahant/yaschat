@@ -1,6 +1,6 @@
-import type { IAuditLog } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useRoute, useRouteParameter } from '@rocket.chat/ui-contexts';
+import type { IAuditLog } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useRoute, useRouteParameter } from '@yas chat/ui-contexts';
 import type { SetStateAction } from 'react';
 import { useMemo } from 'react';
 

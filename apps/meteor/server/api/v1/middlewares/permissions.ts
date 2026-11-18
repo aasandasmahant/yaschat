@@ -1,5 +1,5 @@
-import { Logger } from '@rocket.chat/logger';
-import type { Method } from '@rocket.chat/rest-typings';
+import { Logger } from '@yas chat/logger';
+import type { Method } from '@yas chat/rest-typings';
 import type { MiddlewareHandler } from 'hono';
 
 import { API } from '../../api';

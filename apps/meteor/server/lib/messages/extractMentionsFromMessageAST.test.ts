@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { Root } from '@rocket.chat/message-parser';
+import type { Root } from '@yas chat/message-parser';
 import { expect } from 'chai';
 
 import { extractMentionsFromMessageAST } from './extractMentionsFromMessageAST';

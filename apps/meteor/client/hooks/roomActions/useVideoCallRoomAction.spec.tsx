@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { act, renderHook } from '@testing-library/react';
 
 import { useVideoCallRoomAction } from './useVideoCallRoomAction';
@@ -13,8 +13,8 @@ jest.mock('../../views/room/contextualBar/VideoConference/hooks/useVideoConfWarn
 	useVideoConfWarning: () => dispatchWarning,
 }));
 
-jest.mock('@rocket.chat/ui-video-conf', () => ({
-	...jest.requireActual('@rocket.chat/ui-video-conf'),
+jest.mock('@yas chat/ui-video-conf', () => ({
+	...jest.requireActual('@yas chat/ui-video-conf'),
 	useVideoConfStartCall: () => startCall,
 	useVideoConfDispatchOutgoing: () => dispatchOutgoing,
 	useVideoConfLoadCapabilities: () => loadCapabilities,

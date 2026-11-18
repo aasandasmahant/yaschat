@@ -1,11 +1,11 @@
-import { useUser } from '@rocket.chat/ui-contexts';
+import { useUser } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { lazy } from 'react';
 
 import TwoFactorAuthSetupCheck from './TwoFactorAuthSetupCheck';
 
 const ResetPasswordPage = lazy(() =>
-	import('@rocket.chat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
+	import('@yas chat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
 );
 
 export type PasswordChangeCheckProps = { children: ReactNode };

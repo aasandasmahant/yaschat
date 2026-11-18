@@ -39,7 +39,7 @@ Read the doc that matches the task instead of scanning `docs/` wholesale.
   - [list-keyboard-navigation.md](docs/frontend/list-keyboard-navigation.md) — the three keyboard models for lists (combobox, menu, composite list), the implementation of each, and how to test them
   - [dom-hooks.md](docs/frontend/dom-hooks.md) — hooks that attach listeners or observers return a callback ref instead of taking a `RefObject`
   - [i18n.md](docs/frontend/i18n.md) — client side only: `useTranslation`, `Trans`, runtime keys, escaping (shared rules in [docs/i18n.md](docs/i18n.md))
-  - [adding-icons.md](docs/frontend/adding-icons.md) — adding an icon to `@rocket.chat/icons`: SVG cleanup, shape-based naming, directional icons, glyph mapping, changeset
+  - [adding-icons.md](docs/frontend/adding-icons.md) — adding an icon to `@yas chat/icons`: SVG cleanup, shape-based naming, directional icons, glyph mapping, changeset
 - [docs/form-validation.md](docs/form-validation.md) — standardized form validation patterns
 - [docs/anchor-navigation.md](docs/anchor-navigation.md) — deep-linking to a field via URL hash fragments
 - [docs/bundle-optimization-react-aria.md](docs/bundle-optimization-react-aria.md) — barrel-import patches; Meteor's bundler does not tree-shake
@@ -48,10 +48,10 @@ Read the doc that matches the task instead of scanning `docs/` wholesale.
 
 - [docs/backend-folder-structure.md](docs/backend-folder-structure.md) — how `apps/meteor/` server code is organized and where new code goes
 - [docs/features/http-server.md](docs/features/http-server.md) — the server's own HTTP server: base middlewares, routes on the root app, the Meteor fallback, where to add a route
-- [docs/features/ddp-sessions.md](docs/features/ddp-sessions.md) — DDP over the WebSocket with `@rocket.chat/ddp-server`: endpoints, what runs through Meteor, login, who follows a session
+- [docs/features/ddp-sessions.md](docs/features/ddp-sessions.md) — DDP over the WebSocket with `@yas chat/ddp-server`: endpoints, what runs through Meteor, login, who follows a session
 - [docs/database-access.md](docs/database-access.md) — every query and write is a named model method; what callers may still pass, how to add a method, why models never call other models or validate input
 - [docs/api-endpoint-migration.md](docs/api-endpoint-migration.md) — migrating `API.v1.addRoute()` to the validated `API.v1.get()`/`.post()`/… pattern
-- [docs/ajv-instances.md](docs/ajv-instances.md) — when to use `ajv` vs `ajvQuery` in `@rocket.chat/rest-typings`
+- [docs/ajv-instances.md](docs/ajv-instances.md) — when to use `ajv` vs `ajvQuery` in `@yas chat/rest-typings`
 - [docs/apps-engine-migration.md](docs/apps-engine-migration.md) — phased extraction of apps execution into a microservice
 - [docs/service-brokers.md](docs/service-brokers.md) — how services reach each other: the local and Moleculer brokers, how events and stream relays reach other instances in each deployment, and the calls that only work because both ends share a process
 

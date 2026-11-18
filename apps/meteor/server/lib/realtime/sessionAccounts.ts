@@ -1,5 +1,5 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import type { LoginResult, SessionAccounts } from '@rocket.chat/ddp-server';
+import { hashLoginToken } from '@yas chat/account-utils';
+import type { LoginResult, SessionAccounts } from '@yas chat/ddp-server';
 
 import { callMeteorMethod } from './meteorMethods';
 

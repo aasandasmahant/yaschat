@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 
 import { trim } from '../../../lib/utils/stringUtils';
 import { settings } from '../../settings';

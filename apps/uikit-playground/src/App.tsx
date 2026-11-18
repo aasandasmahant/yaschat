@@ -1,6 +1,6 @@
-import { Box } from '@rocket.chat/fuselage';
-import { useMediaQueries } from '@rocket.chat/fuselage-hooks';
-import { ToastBarProvider } from '@rocket.chat/fuselage-toastbar';
+import { Box } from '@yas chat/fuselage';
+import { useMediaQueries } from '@yas chat/fuselage-hooks';
+import { ToastBarProvider } from '@yas chat/fuselage-toastbar';
 import { useContext, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 

@@ -1,17 +1,17 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { mockModel } from '@rocket.chat/models/testing';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { mockModel } from '@yas chat/models/testing';
 
 import { createOrUpdateFederatedUser } from './createOrUpdateFederatedUser';
 import { getOrCreateFederatedUser } from './getOrCreateFederatedUser';
 
-jest.mock('@rocket.chat/federation-sdk', () => ({
+jest.mock('@yas chat/federation-sdk', () => ({
 	federationSDK: {
 		getConfig: jest.fn(),
 		getAppServiceForUser: jest.fn(),
 	},
 }));
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockImplementation(() => ({
 		error: jest.fn(),
 		warn: jest.fn(),

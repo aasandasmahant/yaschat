@@ -1,4 +1,4 @@
-import type { ILivechatCustomField } from '@rocket.chat/core-typings';
+import type { ILivechatCustomField } from '@yas chat/core-typings';
 
 import type { BaseTest } from '../test';
 

@@ -44,7 +44,7 @@ import { FocusScope } from '@react-aria/focus';
 import { useOverlayTriggerState } from '@react-stately/overlays';
 ```
 
-This is the correct long-term fix, but alone it was not enough because `@rocket.chat/fuselage` (published npm package) still uses `require("react-aria")` internally via its UMD build. The yarn patch covers that case.
+This is the correct long-term fix, but alone it was not enough because `@yas chat/fuselage` (published npm package) still uses `require("react-aria")` internally via its UMD build. The yarn patch covers that case.
 
 ## Results (react-aria + react-stately)
 
@@ -118,7 +118,7 @@ If you need to use a react-aria hook or component that is **not** in the slim ba
    import { useCalendar } from '@react-aria/calendar';
    ```
 
-2. **Or update the yarn patch** if the import comes from a dependency you don't control (like `@rocket.chat/fuselage`):
+2. **Or update the yarn patch** if the import comes from a dependency you don't control (like `@yas chat/fuselage`):
    ```bash
    yarn patch react-aria@npm:3.37.0
    # Add the missing export to dist/import.mjs, dist/module.js, and dist/main.js
@@ -136,20 +136,20 @@ When upgrading these packages, the yarn patches must be re-created for the new v
 5. Run `yarn patch react-stately@npm:<new-version>` and re-apply the slim barrel
 6. Verify no new exports are needed by running the app and checking for runtime errors
 
-### Upgrading @rocket.chat/fuselage
+### Upgrading @yas chat/fuselage
 
 When the fuselage package is updated, check if it uses any new react-aria exports. You can verify with:
 
 ```bash
-grep -oE 'react_aria_1\.[a-zA-Z]+' node_modules/@rocket.chat/fuselage/dist/fuselage.development.js | sort -u
-grep -oE 'react_stately_1\.[a-zA-Z]+' node_modules/@rocket.chat/fuselage/dist/fuselage.development.js | sort -u
+grep -oE 'react_aria_1\.[a-zA-Z]+' node_modules/@yas chat/fuselage/dist/fuselage.development.js | sort -u
+grep -oE 'react_stately_1\.[a-zA-Z]+' node_modules/@yas chat/fuselage/dist/fuselage.development.js | sort -u
 ```
 
 If there are new exports, add them to the yarn patch.
 
 ### The long-term fix
 
-The react-aria/react-stately yarn patches are a workaround. The proper fix is for `@rocket.chat/fuselage` to import from sub-packages directly instead of the barrel, which eliminates the need for those patches entirely. Once that is done, only the direct sub-package imports in source code are needed.
+The react-aria/react-stately yarn patches are a workaround. The proper fix is for `@yas chat/fuselage` to import from sub-packages directly instead of the barrel, which eliminates the need for those patches entirely. Once that is done, only the direct sub-package imports in source code are needed.
 
 The zod patch is a workaround for a design choice in zod v4 (`export * as locales` in the main barrel). This may be addressed upstream — track https://github.com/colinhacks/zod for changes to the locale export strategy.
 

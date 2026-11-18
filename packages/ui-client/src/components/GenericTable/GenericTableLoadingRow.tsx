@@ -1,4 +1,4 @@
-import { Box, Skeleton, TableRow, TableCell } from '@rocket.chat/fuselage';
+import { Box, Skeleton, TableRow, TableCell } from '@yas chat/fuselage';
 
 export type GenericTableLoadingRowProps = { cols: number };
 

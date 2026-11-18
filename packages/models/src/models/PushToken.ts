@@ -1,5 +1,5 @@
-import type { IPushToken, IUser, AtLeast } from '@rocket.chat/core-typings';
-import type { IPushTokenModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IPushToken, IUser, AtLeast } from '@yas chat/core-typings';
+import type { IPushTokenModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Db, DeleteResult, IndexDescription, InsertOneResult, UpdateResult, FindCursor, Document } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

@@ -1,5 +1,5 @@
-import { Box, ProgressBar } from '@rocket.chat/fuselage';
-import { BackgroundLayer, LayoutLogo } from '@rocket.chat/layout';
+import { Box, ProgressBar } from '@yas chat/fuselage';
+import { BackgroundLayer, LayoutLogo } from '@yas chat/layout';
 import { useEffect, useState } from 'react';
 
 export type LoaderPageProps = {

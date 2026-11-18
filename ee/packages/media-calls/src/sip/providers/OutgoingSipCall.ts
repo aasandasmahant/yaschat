@@ -1,6 +1,6 @@
-import type { IMediaCall, MediaCallSignedContact } from '@rocket.chat/core-typings';
-import { isBusyState, type ClientMediaSignalBody, type CallHangupReason } from '@rocket.chat/media-signaling';
-import { MediaCallNegotiations, MediaCalls } from '@rocket.chat/models';
+import type { IMediaCall, MediaCallSignedContact } from '@yas chat/core-typings';
+import { isBusyState, type ClientMediaSignalBody, type CallHangupReason } from '@yas chat/media-signaling';
+import { MediaCallNegotiations, MediaCalls } from '@yas chat/models';
 import type { SrfRequest } from 'drachtio-srf';
 
 import { BaseSipCall } from './BaseSipCall';

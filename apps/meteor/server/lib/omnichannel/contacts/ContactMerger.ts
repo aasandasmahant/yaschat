@@ -6,8 +6,8 @@ import type {
 	IUser,
 	DeepWritable,
 	IOmnichannelSource,
-} from '@rocket.chat/core-typings';
-import { LivechatContacts } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { LivechatContacts } from '@yas chat/models';
 import type { ClientSession, UpdateFilter } from 'mongodb';
 
 import { getContactManagerIdByUsername } from './getContactManagerIdByUsername';

@@ -1,5 +1,5 @@
-import type { ITypingOptions } from '@rocket.chat/apps-engine/definition/accessors/INotifier';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
+import type { ITypingOptions } from '@yas chat/apps-engine/definition/accessors/INotifier';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
 
 import { BaseBridge } from './BaseBridge';
 import { PermissionDeniedError } from '../errors/PermissionDeniedError';

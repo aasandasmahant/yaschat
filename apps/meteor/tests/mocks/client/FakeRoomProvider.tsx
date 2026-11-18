@@ -1,4 +1,4 @@
-import type { IRoom, ISubscription } from '@rocket.chat/core-typings';
+import type { IRoom, ISubscription } from '@yas chat/core-typings';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

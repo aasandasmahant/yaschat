@@ -4,8 +4,8 @@ import type { Stream, Transform } from 'node:stream';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Random } from '@rocket.chat/random';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Random } from '@yas chat/random';
 import busboy, { type BusboyConfig } from 'busboy';
 import ExifTransformer from 'exif-be-gone';
 

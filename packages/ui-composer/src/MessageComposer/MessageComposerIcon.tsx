@@ -1,5 +1,5 @@
-import { Icon } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
+import { Icon } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
 import type { HTMLAttributes } from 'react';
 
 export type MessageComposerIconProps = { name: Keys } & Omit<HTMLAttributes<HTMLElement>, 'is' | 'color'>;

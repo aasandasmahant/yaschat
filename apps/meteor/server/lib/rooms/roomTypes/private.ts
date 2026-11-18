@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated, isRoomXMPPFederated } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomNativeFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
 
 import { RoomSettingsEnum, RoomMemberActions } from '../../../../definition/IRoomTypeConfig';
 import { getPrivateRoomType } from '../../../../lib/rooms/roomTypes/private';

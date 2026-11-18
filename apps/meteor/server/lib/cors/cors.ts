@@ -1,8 +1,8 @@
 import type http from 'node:http';
 import url from 'node:url';
 
-import type { RootMiddleware } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
+import type { RootMiddleware } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
 import type { StaticFiles } from 'meteor/webapp';
 import { WebApp, WebAppInternals } from 'meteor/webapp';
 

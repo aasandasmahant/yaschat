@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 
 const mocks = {
-	'@rocket.chat/tools': {
+	'@yas chat/tools': {
 		escapeHTML: (str: string) => str,
 	},
 	'../../callbacks': {

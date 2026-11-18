@@ -1,4 +1,4 @@
-import { Subscriptions, Users } from '@rocket.chat/models';
+import { Subscriptions, Users } from '@yas chat/models';
 
 import { SystemLogger } from '../../../../lib/logger/system';
 

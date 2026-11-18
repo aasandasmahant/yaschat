@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
-import { useConfirmAction } from '@rocket.chat/ui-client';
-import { useRouter, useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
+import { useConfirmAction } from '@yas chat/ui-client';
+import { useRouter, useEndpoint } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

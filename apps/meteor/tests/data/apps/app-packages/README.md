@@ -27,7 +27,7 @@ Every package here is pre-built, and its source is in a `<details>` block below.
 source into a scratch app directory, edit it, and package it again:
 
 ```sh
-rc-apps package                      # @rocket.chat/apps-cli
+rc-apps package                      # @yas chat/apps-cli
 cp dist/<app-name>_<version>.zip <path to this folder>
 ```
 
@@ -35,10 +35,10 @@ Copy the new source back into the `<details>` block, and delete the scratch dire
 
 Three things to know:
 
-- The scratch dir **must** be inside this repo. `@rocket.chat/apps-engine` is not installed there; it resolves
+- The scratch dir **must** be inside this repo. `@yas chat/apps-engine` is not installed there; it resolves
   upward to the monorepo root `node_modules`, which is a symlink to `packages/apps-engine`. This is what lets
   a fixture typecheck against unreleased engine APIs with no install step.
-- `@rocket.chat/apps-engine/*` is left **external** in the bundle (see `external:` in
+- `@yas chat/apps-engine/*` is left **external** in the bundle (see `external:` in
   `packages/apps/src/server/runtime/base/bundler.ts`), and the Deno runtime maps it back to
   `packages/apps-engine/` (`packages/apps/deno-runtime/deno.jsonc`). So a packaged app runs against the
   *server's* engine, not a frozen copy of it — an app can call engine APIs that did not exist when it was
@@ -58,11 +58,11 @@ An app that handles the `IPreFileUpload` event. If the file name starts with `"t
 <summary>App source code</summary>
 
 ```typescript
-import { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { FileUploadNotAllowedException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { IPreFileUpload } from '@rocket.chat/apps-engine/definition/uploads';
-import { IFileUploadContext } from '@rocket.chat/apps-engine/definition/uploads/IFileUploadContext';
+import { IHttp, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { FileUploadNotAllowedException } from '@yas chat/apps-engine/definition/exceptions';
+import { IPreFileUpload } from '@yas chat/apps-engine/definition/uploads';
+import { IFileUploadContext } from '@yas chat/apps-engine/definition/uploads/IFileUploadContext';
 
 export class TestIPreFileUpload extends App implements IPreFileUpload {
 	public async executePreFileUpload(
@@ -101,10 +101,10 @@ An app that provides a public API endpoint with URL parameters. The endpoint pat
 **APIParameterTestApp.ts**
 
 ```typescript
-import { IAppAccessors, IConfigurationExtend, IEnvironmentRead, ILogger } from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+import { IAppAccessors, IConfigurationExtend, IEnvironmentRead, ILogger } from '@yas chat/apps-engine/definition/accessors';
+import { ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 import { TestEndpoint } from './TestEndpoint';
 
 export class APIParameterTestApp extends App {
@@ -125,8 +125,8 @@ export class APIParameterTestApp extends App {
 **TestEndpoint.ts**
 
 ```typescript
-import { HttpStatusCode, IModify, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
+import { HttpStatusCode, IModify, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
 
 export class TestEndpoint extends ApiEndpoint {
 	public path = 'api/:param1/:param2/test';
@@ -185,10 +185,10 @@ import {
 	IAppAccessors,
 	IConfigurationExtend,
 	ILogger,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
+} from '@yas chat/apps-engine/definition/accessors';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
 import { ResolveVisitorEndpoint } from './ResolveVisitorEndpoint';
 import { UpdateExternalIdEndpoint } from './UpdateExternalIdEndpoint';
 
@@ -215,8 +215,8 @@ import {
 	IModify,
 	IPersistence,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
+} from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
 
 export class ResolveVisitorEndpoint extends ApiEndpoint {
 	public override path = 'resolve-visitor';
@@ -257,8 +257,8 @@ import {
 	IModify,
 	IPersistence,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
+} from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
 
 export class UpdateExternalIdEndpoint extends ApiEndpoint {
 	public override path = 'update-external-id';
@@ -370,10 +370,10 @@ import {
     IAppAccessors,
     IConfigurationExtend,
     ILogger,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/accessors';
+import { ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 import { UpdateStatusEndpoint } from './endpoints/UpdateStatusEndpoint';
 import { UpdateStatusTextEndpoint } from './endpoints/UpdateStatusTextEndpoint';
 
@@ -397,9 +397,9 @@ export class UpdateStatusTestApp extends App {
 
 **endpoints/UpdateStatusEndpoint.ts**
 ```typescript
-import { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import { IUser } from '@rocket.chat/apps-engine/definition/users';
+import { IHttp, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import { IUser } from '@yas chat/apps-engine/definition/users';
 
 export class UpdateStatusEndpoint extends ApiEndpoint {
     public path = 'update-status';
@@ -430,9 +430,9 @@ export class UpdateStatusEndpoint extends ApiEndpoint {
 
 **endpoints/UpdateStatusTextEndpoint.ts**
 ```typescript
-import { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import { IUser } from '@rocket.chat/apps-engine/definition/users';
+import { IHttp, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import { IUser } from '@yas chat/apps-engine/definition/users';
 
 export class UpdateStatusTextEndpoint extends ApiEndpoint {
     public path = 'update-status-text';
@@ -534,18 +534,18 @@ import {
 	IModify,
 	IPersistence,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/accessors';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 import {
 	IUIKitInteractionHandler,
 	IUIKitResponse,
 	UIKitBlockInteractionContext,
 	UIKitViewCloseInteractionContext,
 	UIKitViewSubmitInteractionContext,
-} from '@rocket.chat/apps-engine/definition/uikit';
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
-import { UIKitSurfaceType } from '@rocket.chat/apps-engine/definition/uikit';
+} from '@yas chat/apps-engine/definition/uikit';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
+import { UIKitSurfaceType } from '@yas chat/apps-engine/definition/uikit';
 
 export class UiKitRoomTestApp extends App implements IUIKitInteractionHandler {
 	constructor(info: IAppInfo, logger: ILogger, accessors: IAppAccessors) {
@@ -716,7 +716,7 @@ Each input block has a fixed `blockId` and `actionId`, so a test can read a valu
 - `executeViewSubmitHandler`: `view_submit_id`, and `view_submit_state` (the view state, as JSON)
 - `executeBlockActionHandler`: `block_action_actionId`, `block_action_value` (as JSON), `block_action_room`, `block_action_container`, and `block_action_view` (the container id)
 
-The block literals are cast to `LayoutBlock[]` through `unknown`, because the `@rocket.chat/ui-kit` element types require the `appId` and `blockId` that the engine fills in.
+The block literals are cast to `LayoutBlock[]` through `unknown`, because the `@yas chat/ui-kit` element types require the `appId` and `blockId` that the engine fills in.
 
 <details>
 <summary>App source code</summary>
@@ -731,17 +731,17 @@ import {
 	IModify,
 	IPersistence,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import { AppMethod, IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/accessors';
+import { App } from '@yas chat/apps-engine/definition/App';
+import { AppMethod, IAppInfo } from '@yas chat/apps-engine/definition/metadata';
 import {
 	IUIKitInteractionHandler,
 	IUIKitResponse,
 	UIKitBlockInteractionContext,
 	UIKitSurfaceType,
 	UIKitViewSubmitInteractionContext,
-} from '@rocket.chat/apps-engine/definition/uikit';
-import type { ButtonElement, LayoutBlock } from '@rocket.chat/ui-kit';
+} from '@yas chat/apps-engine/definition/uikit';
+import type { ButtonElement, LayoutBlock } from '@yas chat/ui-kit';
 
 // 2026-01-01T00:00:00Z
 const initialDateTime = 1767225600;
@@ -1064,7 +1064,7 @@ everything the app uses. `media-call.history` is not a default permission, and t
 <summary>App source code</summary>
 
 ```typescript
-import { App } from '@rocket.chat/apps-engine/definition/App';
+import { App } from '@yas chat/apps-engine/definition/App';
 import type {
 	IAppAccessors,
 	ICallHistorySearchFilters,
@@ -1076,12 +1076,12 @@ import type {
 	IPersistence,
 	IPersistenceRead,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { HttpStatusCode } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import { ApiEndpoint, ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
-import { EventResult } from '@rocket.chat/apps-engine/definition/eventResult';
-import { isAnsweredCall, isKnownMediaCallHangupReason, isMissedCall, isRejectedCall } from '@rocket.chat/apps-engine/definition/mediaCalls';
+} from '@yas chat/apps-engine/definition/accessors';
+import { HttpStatusCode } from '@yas chat/apps-engine/definition/accessors';
+import type { IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import { ApiEndpoint, ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
+import { EventResult } from '@yas chat/apps-engine/definition/eventResult';
+import { isAnsweredCall, isKnownMediaCallHangupReason, isMissedCall, isRejectedCall } from '@yas chat/apps-engine/definition/mediaCalls';
 import type {
 	IMediaCallContact,
 	IMediaCallEndedContext,
@@ -1090,9 +1090,9 @@ import type {
 	IMediaCallStartedContext,
 	IPreMediaCallCreatedContext,
 	MediaCallCreateEventResult,
-} from '@rocket.chat/apps-engine/definition/mediaCalls';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { AppMethod, YasChatAssociationModel, YasChatAssociationRecord } from '@rocket.chat/apps-engine/definition/metadata';
+} from '@yas chat/apps-engine/definition/mediaCalls';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { AppMethod, YasChatAssociationModel, YasChatAssociationRecord } from '@yas chat/apps-engine/definition/metadata';
 
 /**
  * How the app should answer the next `executePreMediaCallCreated`. Tests set this
@@ -1326,13 +1326,13 @@ An app that creates a room through `IModifyCreator.finish()`, passing `abacAttri
 <summary>App source code</summary>
 
 ```typescript
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import type { IAppAccessors, IConfigurationExtend, IHttp, ILogger, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import { HttpStatusCode } from '@rocket.chat/apps-engine/definition/accessors';
-import { ApiEndpoint, ApiSecurity, ApiVisibility } from '@rocket.chat/apps-engine/definition/api';
-import type { IApiEndpointInfo, IApiRequest, IApiResponse } from '@rocket.chat/apps-engine/definition/api';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IRoom } from '@rocket.chat/apps-engine/definition/rooms';
+import { App } from '@yas chat/apps-engine/definition/App';
+import type { IAppAccessors, IConfigurationExtend, IHttp, ILogger, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import { HttpStatusCode } from '@yas chat/apps-engine/definition/accessors';
+import { ApiEndpoint, ApiSecurity, ApiVisibility } from '@yas chat/apps-engine/definition/api';
+import type { IApiEndpointInfo, IApiRequest, IApiResponse } from '@yas chat/apps-engine/definition/api';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import type { IRoom } from '@yas chat/apps-engine/definition/rooms';
 
 class CreateRoomEndpoint extends ApiEndpoint {
 	public path = 'create-room';

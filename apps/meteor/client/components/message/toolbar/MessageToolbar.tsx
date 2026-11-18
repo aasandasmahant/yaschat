@@ -1,7 +1,7 @@
 import { useToolbar } from '@react-aria/toolbar';
-import type { IMessage, IRoom, ISubscription, ITranslatedMessage } from '@rocket.chat/core-typings';
-import { isThreadMessage, isRoomFederated, isVideoConfMessage } from '@rocket.chat/core-typings';
-import { MessageToolbar as FuselageMessageToolbar } from '@rocket.chat/fuselage';
+import type { IMessage, IRoom, ISubscription, ITranslatedMessage } from '@yas chat/core-typings';
+import { isThreadMessage, isRoomFederated, isVideoConfMessage } from '@yas chat/core-typings';
+import { MessageToolbar as FuselageMessageToolbar } from '@yas chat/fuselage';
 import type { ComponentProps, ElementType } from 'react';
 import { memo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

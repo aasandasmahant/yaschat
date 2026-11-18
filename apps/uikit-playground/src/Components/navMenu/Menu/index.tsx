@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
 import { useContext } from 'react';
 
 import MenuItem from './MenuItem';

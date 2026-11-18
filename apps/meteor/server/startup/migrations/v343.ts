@@ -1,4 +1,4 @@
-import { LivechatVisitors, Sessions, Subscriptions, ModerationReports, getCollectionName } from '@rocket.chat/models';
+import { LivechatVisitors, Sessions, Subscriptions, ModerationReports, getCollectionName } from '@yas chat/models';
 
 import { db } from '../../database/utils';
 import { addMigration } from '../../lib/migrations';

@@ -1,12 +1,12 @@
-import { Apps } from '@rocket.chat/apps';
+import { Apps } from '@yas chat/apps';
 import type {
 	IOutboundProvider,
 	ValidOutboundProvider,
 	IOutboundMessageProviderService,
 	IOutboundProviderMetadata,
 	IOutboundMessage,
-} from '@rocket.chat/core-typings';
-import { ValidOutboundProviderList } from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
+import { ValidOutboundProviderList } from '@yas chat/core-typings';
 
 import { OutboundMessageProvider } from '../../../../../../server/lib/OutboundMessageProvider';
 import { getOutboundService } from '../../../../../../server/lib/omnichannel/outboundcommunication';

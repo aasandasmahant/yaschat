@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import Item from './Item';

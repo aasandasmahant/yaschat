@@ -6,7 +6,7 @@ import './maxRoomsPerGuest';
 import './services';
 import './readReceiptsArchive';
 import './mcp';
-import { api } from '@rocket.chat/core-services';
+import { api } from '@yas chat/core-services';
 
 import { isRunningMs } from '../../../server/lib/isRunningMs';
 import { SystemLogger } from '../../../server/lib/logger/system';
@@ -20,7 +20,7 @@ export const registerEEBroker = async (): Promise<void> => {
 			SystemLogger.warn(encryptionWarning);
 		}
 
-		const { startBroker } = await import('@rocket.chat/network-broker');
+		const { startBroker } = await import('@yas chat/network-broker');
 
 		api.setBroker(startBroker());
 		await api.start();

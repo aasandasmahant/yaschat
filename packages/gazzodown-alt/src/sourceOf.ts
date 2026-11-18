@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 export type SourceNode = MessageParser.Inlines | MessageParser.Blocks | MessageParser.BigEmoji;
 

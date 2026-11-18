@@ -1,4 +1,4 @@
-import type { ISetting, ISettingColor, LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { ISetting, ISettingColor, LoginServiceConfiguration } from '@yas chat/core-typings';
 
 import { ajv, ajvQuery } from './Ajv';
 import { paginationQueryProperties } from './pagination';

@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Button, ButtonGroup } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import MediaCallWidget from './MediaCallWidget';

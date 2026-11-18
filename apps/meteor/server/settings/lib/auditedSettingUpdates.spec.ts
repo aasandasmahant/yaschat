@@ -1,5 +1,5 @@
-import type { ISetting, SettingValue } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { ISetting, SettingValue } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { updateAuditedByUser, updateAuditedBySystem, updateAuditedByApp, resetAuditedSettingByUser } from './auditedSettingUpdates';
 

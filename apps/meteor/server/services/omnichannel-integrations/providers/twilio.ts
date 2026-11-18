@@ -1,6 +1,6 @@
-import { api } from '@rocket.chat/core-services';
-import type { ISMSProvider, ServiceData, SMSProviderResponse, SMSProviderResult } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { ISMSProvider, ServiceData, SMSProviderResponse, SMSProviderResult } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 import filesize from 'filesize';
 import twilio from 'twilio';
 

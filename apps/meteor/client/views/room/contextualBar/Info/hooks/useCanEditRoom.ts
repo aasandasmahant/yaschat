@@ -1,6 +1,6 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { usePermission, useUser } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { usePermission, useUser } from '@yas chat/ui-contexts';
 
 import * as Federation from '../../../../../lib/federation/Federation';
 import { useRoomSubscription } from '../../../contexts/RoomContext';

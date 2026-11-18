@@ -1,4 +1,4 @@
-import type { BannerPlatform, IBanner, Optional } from '@rocket.chat/core-typings';
+import type { BannerPlatform, IBanner, Optional } from '@yas chat/core-typings';
 import type { Document, FindCursor, UpdateResult, InsertOneResult } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

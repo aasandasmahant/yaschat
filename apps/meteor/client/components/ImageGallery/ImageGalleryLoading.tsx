@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, IconButton, ModalBackdrop, Throbber, useStyle } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, IconButton, ModalBackdrop, Throbber, useStyle } from '@yas chat/fuselage';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 

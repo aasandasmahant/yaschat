@@ -1,10 +1,10 @@
 import { describe, it } from 'node:test';
 
-import type { IMarketplaceInfo } from '@rocket.chat/apps/dist/server/marketplace/IMarketplaceInfo';
-import { AppInstallationSource, type IAppStorageItem } from '@rocket.chat/apps/dist/server/storage/IAppStorageItem';
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { Apps } from '@rocket.chat/core-services';
-import type { LicenseImp } from '@rocket.chat/license';
+import type { IMarketplaceInfo } from '@yas chat/apps/dist/server/marketplace/IMarketplaceInfo';
+import { AppInstallationSource, type IAppStorageItem } from '@yas chat/apps/dist/server/storage/IAppStorageItem';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { Apps } from '@yas chat/core-services';
+import type { LicenseImp } from '@yas chat/license';
 import { expect } from 'chai';
 
 import { _canEnableApp } from './canEnableApp';

@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { ISetting } from '@rocket.chat/core-typings';
+import type { ISetting } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import sharp from 'sharp';
 import type { Response } from 'supertest';

@@ -1,4 +1,4 @@
-import { License } from '@rocket.chat/license';
+import { License } from '@yas chat/license';
 
 License.onToggledFeature('engagement-dashboard', {
 	up: async () => {

@@ -1,9 +1,9 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { AI_LICENSE_MODULE } from '@rocket.chat/ai-search';
-import type { IUser } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Logger } from '@rocket.chat/logger';
-import { Users } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { AI_LICENSE_MODULE } from '@yas chat/ai-search';
+import type { IUser } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Logger } from '@yas chat/logger';
+import { Users } from '@yas chat/models';
 import type { MiddlewareHandler } from 'hono';
 import type { StatusCode } from 'hono/utils/http-status';
 

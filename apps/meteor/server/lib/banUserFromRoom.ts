@@ -1,5 +1,5 @@
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users, Roles } from '@rocket.chat/models';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users, Roles } from '@yas chat/models';
 
 import { canAccessRoomAsync } from './authorization';
 import { hasPermissionAsync } from './authorization/hasPermission';

@@ -1,5 +1,5 @@
-import type { IRole, IRoom, IUser, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IRolesModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IRole, IRoom, IUser, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IRolesModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, Filter, FindOptions, Document, CountDocumentsOptions } from 'mongodb';
 
 import { Subscriptions, Users } from '../index';

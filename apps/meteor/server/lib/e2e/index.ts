@@ -1,4 +1,4 @@
-import { api } from '@rocket.chat/core-services';
+import { api } from '@yas chat/core-services';
 
 import { callbacks } from '../callbacks';
 

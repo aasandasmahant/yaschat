@@ -1,7 +1,7 @@
 import http from 'node:http';
 
-import { Statistics } from '@rocket.chat/models';
-import { tracerSpan } from '@rocket.chat/tracing';
+import { Statistics } from '@yas chat/models';
+import { tracerSpan } from '@yas chat/tracing';
 import connect from 'connect';
 import { Facts } from 'meteor/facts-base';
 import client from 'prom-client';

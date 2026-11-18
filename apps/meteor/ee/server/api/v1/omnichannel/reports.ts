@@ -1,4 +1,4 @@
-import { isGETDashboardConversationsByType } from '@rocket.chat/rest-typings';
+import { isGETDashboardConversationsByType } from '@yas chat/rest-typings';
 import type { Moment } from 'moment';
 import moment from 'moment';
 

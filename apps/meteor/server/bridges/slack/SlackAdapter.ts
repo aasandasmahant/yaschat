@@ -7,8 +7,8 @@ import http from 'node:http';
 import https from 'node:https';
 import url from 'node:url';
 
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import { Messages, Rooms, Users } from '@rocket.chat/models';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import { Messages, Rooms, Users } from '@yas chat/models';
 import { App as SlackApp } from '@slack/bolt';
 import { RTMClient } from '@slack/rtm-api';
 
@@ -906,8 +906,8 @@ export default class SlackAdapter {
 		if (rocketCh != null) {
 			this.addSlackChannel(rocketCh._id, event.channel);
 			if (context?.botUserId !== event?.user) {
-				const rocketChatUser = await this.rocket.getUser(event.user);
-				await addUserToRoom(rocketCh._id, rocketChatUser);
+				const YasChatUser = await this.rocket.getUser(event.user);
+				await addUserToRoom(rocketCh._id, YasChatUser);
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 /**
  * As a workaround for a chrome bug, we use a delay to ignore any 'mute' events that are immediately followed by an 'unmute' event.
@@ -25,7 +25,7 @@ export class MediaStreamTrackWrapper {
 	}
 
 	/**
-	 * enabled is a flag that determines if the rocket.chat client wants this track to be enabled
+	 * enabled is a flag that determines if the yas chat client wants this track to be enabled
 	 * */
 	public get enabled(): boolean {
 		return this.track.enabled;

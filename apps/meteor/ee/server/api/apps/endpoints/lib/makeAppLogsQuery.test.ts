@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { AppLogsProps } from '@rocket.chat/rest-typings';
+import type { AppLogsProps } from '@yas chat/rest-typings';
 import { expect } from 'chai';
 
 import { makeAppLogsQuery } from './makeAppLogsQuery';

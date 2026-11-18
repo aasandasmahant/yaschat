@@ -1,4 +1,4 @@
-import { useBorderBoxSize, useButtonPattern } from '@rocket.chat/fuselage-hooks';
+import { useBorderBoxSize, useButtonPattern } from '@yas chat/fuselage-hooks';
 import type { ReactNode, AllHTMLAttributes, HTMLAttributeAnchorTarget, MouseEvent } from 'react';
 import { useRef, useCallback, useMemo } from 'react';
 

@@ -1,4 +1,4 @@
-import { type FileAttachmentProps, isFileAudioAttachment, isFileImageAttachment, isFileVideoAttachment } from '@rocket.chat/core-typings';
+import { type FileAttachmentProps, isFileAudioAttachment, isFileImageAttachment, isFileVideoAttachment } from '@yas chat/core-typings';
 
 import AudioAttachment from './file/AudioAttachment';
 import type { AudioAttachmentSource } from './file/AudioAttachment';

@@ -1,23 +1,23 @@
 /* oxlint-disable @typescript-eslint/no-this-alias */
 
-import type { IMessage, Serialized } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
-import type { OperationParams, OperationResult } from '@rocket.chat/rest-typings';
+import type { IMessage, Serialized } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
+import type { OperationParams, OperationResult } from '@yas chat/rest-typings';
 
 import { DDPSDK } from '../DDPSDK';
 import type { Subscription } from '../types/Subscription';
 import type {
 	APILegacy,
 	DPPLegacy,
-	RocketchatSdkLegacyEvents,
-	RocketchatSdkLegacyEventsKeys,
-	RocketchatSdkLegacyEventsValues,
+	YasChatSdkLegacyEvents,
+	YasChatSdkLegacyEventsKeys,
+	YasChatSdkLegacyEventsValues,
 } from './types/SDKLegacy';
 
-interface RocketchatSDKLegacy extends APILegacy, DPPLegacy {}
+interface YasChatSDKLegacy extends APILegacy, DPPLegacy {}
 
-export class RocketchatSdkLegacyImpl extends DDPSDK implements RocketchatSDKLegacy {
-	private ev = new Emitter<RocketchatSdkLegacyEvents>();
+export class YasChatSdkLegacyImpl extends DDPSDK implements YasChatSDKLegacy {
+	private ev = new Emitter<YasChatSdkLegacyEvents>();
 
 	get url(): string {
 		return this.connection.url;
@@ -192,7 +192,7 @@ export class RocketchatSdkLegacyImpl extends DDPSDK implements RocketchatSDKLega
 		]);
 	};
 
-	onStreamData<E extends RocketchatSdkLegacyEventsKeys>(event: E, cb: (...data: RocketchatSdkLegacyEventsValues<E>) => void): () => void {
+	onStreamData<E extends YasChatSdkLegacyEventsKeys>(event: E, cb: (...data: YasChatSdkLegacyEventsValues<E>) => void): () => void {
 		return this.ev.on(event, cb as any);
 	}
 

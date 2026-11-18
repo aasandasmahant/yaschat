@@ -1,6 +1,6 @@
-import { cronJobs } from '@rocket.chat/cron';
-import { Logger } from '@rocket.chat/logger';
-import { ReadReceipts, ReadReceiptsArchive, Messages } from '@rocket.chat/models';
+import { cronJobs } from '@yas chat/cron';
+import { Logger } from '@yas chat/logger';
+import { ReadReceipts, ReadReceiptsArchive, Messages } from '@yas chat/models';
 
 import { sleep } from '../../../lib/utils/sleep';
 import { settings } from '../../../server/settings';

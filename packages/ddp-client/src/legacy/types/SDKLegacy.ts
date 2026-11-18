@@ -1,5 +1,5 @@
-import type { IMessage, Serialized } from '@rocket.chat/core-typings';
-import type { OperationParams, OperationResult } from '@rocket.chat/rest-typings';
+import type { IMessage, Serialized } from '@yas chat/core-typings';
+import type { OperationParams, OperationResult } from '@yas chat/rest-typings';
 
 import type { Subscription } from '../../types/Subscription';
 import type { StreamerCallbackArgs } from '../../types/streams';
@@ -58,7 +58,7 @@ export interface DPPLegacy {
 
 	disconnect(): Promise<unknown>;
 
-	onStreamData<E extends RocketchatSdkLegacyEventsKeys>(event: E, cb: (...data: RocketchatSdkLegacyEventsValues<E>) => void): () => void;
+	onStreamData<E extends YasChatSdkLegacyEventsKeys>(event: E, cb: (...data: YasChatSdkLegacyEventsValues<E>) => void): () => void;
 
 	subscribe(topic: string, ...args: any[]): Promise<unknown>;
 	unsubscribe(subscription: unknown): Promise<unknown>;
@@ -75,7 +75,7 @@ export interface DPPLegacy {
 	methodCall(method: string, ...args: any[]): Promise<unknown>;
 }
 
-export type RocketchatSdkLegacyEvents = {
+export type YasChatSdkLegacyEvents = {
 	'message': StreamerCallbackArgs<'room-messages', string>;
 	'typing': StreamerCallbackArgs<'notify-room', `${string}/typing`>;
 	'deleteMessage': StreamerCallbackArgs<'notify-room', `${string}/deleteMessage`>;
@@ -94,6 +94,6 @@ export type RocketchatSdkLegacyEvents = {
 	'uiInteraction': StreamerCallbackArgs<'notify-user', `${string}/uiInteraction`>;
 };
 
-export type RocketchatSdkLegacyEventsKeys = keyof RocketchatSdkLegacyEvents;
+export type YasChatSdkLegacyEventsKeys = keyof YasChatSdkLegacyEvents;
 
-export type RocketchatSdkLegacyEventsValues<E extends RocketchatSdkLegacyEventsKeys> = RocketchatSdkLegacyEvents[E];
+export type YasChatSdkLegacyEventsValues<E extends YasChatSdkLegacyEventsKeys> = YasChatSdkLegacyEvents[E];

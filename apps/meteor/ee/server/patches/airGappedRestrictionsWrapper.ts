@@ -1,4 +1,4 @@
-import { AirGappedRestriction } from '@rocket.chat/license';
+import { AirGappedRestriction } from '@yas chat/license';
 
 import { applyAirGappedRestrictionsValidation } from '../../../server/lib/cloud/license/airGappedRestrictionsWrapper';
 

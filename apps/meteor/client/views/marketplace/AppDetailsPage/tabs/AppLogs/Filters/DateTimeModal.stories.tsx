@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Box } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryFn } from '@storybook/react';
 import type { ComponentProps } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';

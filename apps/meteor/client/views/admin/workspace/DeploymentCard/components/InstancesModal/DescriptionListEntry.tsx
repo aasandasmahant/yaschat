@@ -1,4 +1,4 @@
-import { TableCell, TableRow, Text } from '@rocket.chat/fuselage';
+import { TableCell, TableRow, Text } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

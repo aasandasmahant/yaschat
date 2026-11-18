@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 
 import MainTile from './MainTile';
 import OverflowTile from './OverflowTile';

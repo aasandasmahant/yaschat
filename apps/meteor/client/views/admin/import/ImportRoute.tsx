@@ -1,4 +1,4 @@
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { usePermission } from '@yas chat/ui-contexts';
 
 import ImportHistoryPage from './ImportHistoryPage';
 import ImportProgressPage from './ImportProgressPage';

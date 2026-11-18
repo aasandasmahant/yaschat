@@ -1,6 +1,6 @@
-import { AbacContractError, AbacErrorCode } from '@rocket.chat/abac';
-import { Abac } from '@rocket.chat/core-services';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
+import { AbacContractError, AbacErrorCode } from '@yas chat/abac';
+import { Abac } from '@yas chat/core-services';
+import type { IRoom, IUser } from '@yas chat/core-typings';
 import {
 	isDiscussion,
 	isOmnichannelRoom,
@@ -8,8 +8,8 @@ import {
 	isRoomFederated,
 	isRoomXMPPFederated,
 	isPrivateRoom,
-} from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+} from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 
 import { isRoomAbacLocked } from '../../../../lib/rooms/isRoomAbacLocked';
 import { getRoomAbacLockContext } from '../../../../server/lib/authorization/getRoomAbacLockContext';

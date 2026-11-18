@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IMessage } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import { settings } from '../../../settings';
 import { keepPublicAuthorFields } from '../../messages/keepPublicAuthorFields';

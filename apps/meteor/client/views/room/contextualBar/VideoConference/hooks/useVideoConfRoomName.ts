@@ -1,7 +1,7 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom } from '@rocket.chat/core-typings';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { isDirectMessageRoom } from '@yas chat/core-typings';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { useUserSubscription } from '@yas chat/ui-contexts';
 
 /**
  * The room is optional because conference membership grants no room access: a member added from outside the

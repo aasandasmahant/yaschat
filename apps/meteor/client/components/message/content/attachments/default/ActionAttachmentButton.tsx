@@ -1,6 +1,6 @@
-import type { IMessage, MessageAttachmentAction } from '@rocket.chat/core-typings';
-import { Button } from '@rocket.chat/fuselage';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { IMessage, MessageAttachmentAction } from '@yas chat/core-typings';
+import { Button } from '@yas chat/fuselage';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import { usePerformActionMutation } from './hooks/usePerformActionMutation';

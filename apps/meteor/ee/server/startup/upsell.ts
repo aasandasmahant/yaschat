@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
+import { License } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
 
 import { notifyOnSettingChangedById } from '../../../server/lib/notifyListener';
 import { updateAuditedBySystem } from '../../../server/settings/lib/auditedSettingUpdates';

@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import WebSocket from 'ws';
 
 import { Server } from '../Server';
@@ -8,7 +8,7 @@ import { ConnectionLifecycle } from '../lifecycle';
 import { registerAccountMethods } from './accounts';
 import type { SessionAccounts } from './accounts';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

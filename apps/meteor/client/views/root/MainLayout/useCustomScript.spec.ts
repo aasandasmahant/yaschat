@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useCustomScript } from './useCustomScript';
@@ -11,8 +11,8 @@ jest.mock('../../../lib/utils/fireGlobalEvent', () => ({
 let mockUserId: string | undefined;
 let mockIsLoggingIn = false;
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useUserId: () => mockUserId,
 	useIsLoggingIn: () => mockIsLoggingIn,
 }));

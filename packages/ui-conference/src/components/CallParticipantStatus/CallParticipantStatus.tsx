@@ -1,5 +1,5 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { Box, Icon } from '@rocket.chat/fuselage';
+import { Box, Icon } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import type { PluginParticipant } from '../../lib/providerPlugin';

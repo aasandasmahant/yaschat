@@ -5,7 +5,7 @@ in [specs/](specs/); the decisions behind this shape are in [adr/](adr/).
 
 ## High-level shape
 
-One workspace package, `ee/packages/xmpp-server` (`@rocket.chat/xmpp-server`), in two strictly
+One workspace package, `ee/packages/xmpp-server` (`@yas chat/xmpp-server`), in two strictly
 separated layers. The package runs only in the `ee/apps/xmpp-server-service` microservice.
 `apps/meteor` holds just the outgoing hooks and the setting definitions:
 
@@ -25,7 +25,7 @@ separated layers. The package runs only in the `ee/apps/xmpp-server-service` mic
 │  ────────────────────────────────────────────────────────   │
 │  src/ (rest)    Protocol core                               │
 │    - knows only XMPP: no YasChat imports at all         │
-│    - deps: ltx, @xmpp/jid, @rocket.chat/emitter, pino       │
+│    - deps: ltx, @xmpp/jid, @yas chat/emitter, pino       │
 │    - talks to the world over net/tls sockets                │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -47,7 +47,7 @@ Exports only the deliberate API:
 - `escapeLocalpart`/`unescapeLocalpart` (XEP-0106) and `normalizeDomain`, needed by the
   Meteor hooks for the username to JID mapping.
 
-Events use `@rocket.chat/emitter` (`on()` returns an unsubscribe function). The map in
+Events use `@yas chat/emitter` (`on()` returns an unsubscribe function). The map in
 `src/events.ts` covers transport (`server.*`, `connection.*`, `error`), 1:1 traffic
 (`message.received`, `message.error`, `presence.*`), hosted MUC (`muc.occupantJoined/Left`,
 `muc.messageReceived`, `muc.subjectChanged`, `muc.inviteReceived`) and remote MUC
@@ -240,14 +240,14 @@ Deliberately minimal:
   restrictions behind `isRoomFederated` alone (blocked actions, the composer, room settings)
   do not apply.
 - ABAC exempts every XMPP room wherever it exempts a Matrix federated one: `isRoomAbacLocked`,
-  the ABAC `beforeCreateRoom` guard, `assertRoomAcceptsAttributes` in `@rocket.chat/abac`,
+  the ABAC `beforeCreateRoom` guard, `assertRoomAcceptsAttributes` in `@yas chat/abac`,
   the room's ABAC hooks and the create-channel modal. The XMPP `beforeCreateRoom` callback
   runs ahead of the ABAC guard so the guard already sees `xmppFederation`.
 - Everything else renders as ordinary rooms and users.
 
 ## Testing layout
 
-- **Unit** (jest, `@rocket.chat/jest-presets/server`, colocated `*.spec.ts`): dialback key
+- **Unit** (jest, `@yas chat/jest-presets/server`, colocated `*.spec.ts`): dialback key
   vectors, JID escaping, `StanzaParser` hardening, `MucRoom` and `RemoteMucSession` state
   machines, the router, disco, the mapping helpers.
 - **Package integration** (`tests/integration/`): two in-memory `XMPPServer` instances on

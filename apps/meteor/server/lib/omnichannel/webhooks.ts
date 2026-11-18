@@ -1,5 +1,5 @@
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import type { Response } from '@rocket.chat/server-fetch';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import type { Response } from '@yas chat/server-fetch';
 
 import { webhooksLogger } from './logger';
 import { settings } from '../../settings';

@@ -1,4 +1,4 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import { useMemo, useState } from 'react';
 
 import type { WizardAPI } from './WizardContext';

@@ -1,9 +1,9 @@
-import type { ISettingsService, IStatusVisibilityService } from '@rocket.chat/core-services';
-import { LocalBroker, ClientSafeError, ServiceClass, api } from '@rocket.chat/core-services';
-import type { IUser, SettingValue } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { cronJobs } from '@rocket.chat/cron';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { ISettingsService, IStatusVisibilityService } from '@yas chat/core-services';
+import { LocalBroker, ClientSafeError, ServiceClass, api } from '@yas chat/core-services';
+import type { IUser, SettingValue } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { cronJobs } from '@yas chat/cron';
+import { mockModel } from '@yas chat/models/testing';
 
 import { Presence } from './Presence';
 

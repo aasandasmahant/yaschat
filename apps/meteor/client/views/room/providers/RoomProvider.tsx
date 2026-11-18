@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { LayoutContext, useLayout, useSearchParameter } from '@rocket.chat/ui-contexts';
+import type { IRoom } from '@yas chat/core-typings';
+import { LayoutContext, useLayout, useSearchParameter } from '@yas chat/ui-contexts';
 import type { ReactNode, ContextType } from 'react';
 import { useMemo, memo, useEffect } from 'react';
 

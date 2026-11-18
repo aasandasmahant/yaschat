@@ -1,4 +1,4 @@
-import type { AtLeast, IPushToken, IUser } from '@rocket.chat/core-typings';
+import type { AtLeast, IPushToken, IUser } from '@yas chat/core-typings';
 import type { DeleteResult, InsertOneResult, UpdateResult, FindCursor, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

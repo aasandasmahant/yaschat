@@ -1,31 +1,31 @@
-import type { IApiExtend } from '@rocket.chat/apps-engine/definition/accessors/IApiExtend';
-import type { IAppAccessors } from '@rocket.chat/apps-engine/definition/accessors/IAppAccessors';
-import type { IConfigurationExtend } from '@rocket.chat/apps-engine/definition/accessors/IConfigurationExtend';
-import type { IConfigurationModify } from '@rocket.chat/apps-engine/definition/accessors/IConfigurationModify';
-import type { IEnvironmentRead } from '@rocket.chat/apps-engine/definition/accessors/IEnvironmentRead';
-import type { IEnvironmentWrite } from '@rocket.chat/apps-engine/definition/accessors/IEnvironmentWrite';
-import type { IExternalComponentsExtend } from '@rocket.chat/apps-engine/definition/accessors/IExternalComponentsExtend';
-import type { IHttp, IHttpExtend } from '@rocket.chat/apps-engine/definition/accessors/IHttp';
-import type { IModify } from '@rocket.chat/apps-engine/definition/accessors/IModify';
-import type { INotifier } from '@rocket.chat/apps-engine/definition/accessors/INotifier';
-import type { IOutboundCommunicationProviderExtend } from '@rocket.chat/apps-engine/definition/accessors/IOutboundCommunicationProviderExtend';
-import type { IPersistence } from '@rocket.chat/apps-engine/definition/accessors/IPersistence';
-import type { IRead } from '@rocket.chat/apps-engine/definition/accessors/IRead';
-import type { ISchedulerExtend } from '@rocket.chat/apps-engine/definition/accessors/ISchedulerExtend';
-import type { ISettingsExtend } from '@rocket.chat/apps-engine/definition/accessors/ISettingsExtend';
-import type { ISlashCommandsExtend } from '@rocket.chat/apps-engine/definition/accessors/ISlashCommandsExtend';
-import type { ISlashCommandsModify } from '@rocket.chat/apps-engine/definition/accessors/ISlashCommandsModify';
-import type { IUIExtend } from '@rocket.chat/apps-engine/definition/accessors/IUIExtend';
-import type { IVideoConfProvidersExtend } from '@rocket.chat/apps-engine/definition/accessors/IVideoConfProvidersExtend';
-import type { IApi } from '@rocket.chat/apps-engine/definition/api/IApi';
-import type { IApiEndpointMetadata } from '@rocket.chat/apps-engine/definition/api/IApiEndpointMetadata';
+import type { IApiExtend } from '@yas chat/apps-engine/definition/accessors/IApiExtend';
+import type { IAppAccessors } from '@yas chat/apps-engine/definition/accessors/IAppAccessors';
+import type { IConfigurationExtend } from '@yas chat/apps-engine/definition/accessors/IConfigurationExtend';
+import type { IConfigurationModify } from '@yas chat/apps-engine/definition/accessors/IConfigurationModify';
+import type { IEnvironmentRead } from '@yas chat/apps-engine/definition/accessors/IEnvironmentRead';
+import type { IEnvironmentWrite } from '@yas chat/apps-engine/definition/accessors/IEnvironmentWrite';
+import type { IExternalComponentsExtend } from '@yas chat/apps-engine/definition/accessors/IExternalComponentsExtend';
+import type { IHttp, IHttpExtend } from '@yas chat/apps-engine/definition/accessors/IHttp';
+import type { IModify } from '@yas chat/apps-engine/definition/accessors/IModify';
+import type { INotifier } from '@yas chat/apps-engine/definition/accessors/INotifier';
+import type { IOutboundCommunicationProviderExtend } from '@yas chat/apps-engine/definition/accessors/IOutboundCommunicationProviderExtend';
+import type { IPersistence } from '@yas chat/apps-engine/definition/accessors/IPersistence';
+import type { IRead } from '@yas chat/apps-engine/definition/accessors/IRead';
+import type { ISchedulerExtend } from '@yas chat/apps-engine/definition/accessors/ISchedulerExtend';
+import type { ISettingsExtend } from '@yas chat/apps-engine/definition/accessors/ISettingsExtend';
+import type { ISlashCommandsExtend } from '@yas chat/apps-engine/definition/accessors/ISlashCommandsExtend';
+import type { ISlashCommandsModify } from '@yas chat/apps-engine/definition/accessors/ISlashCommandsModify';
+import type { IUIExtend } from '@yas chat/apps-engine/definition/accessors/IUIExtend';
+import type { IVideoConfProvidersExtend } from '@yas chat/apps-engine/definition/accessors/IVideoConfProvidersExtend';
+import type { IApi } from '@yas chat/apps-engine/definition/api/IApi';
+import type { IApiEndpointMetadata } from '@yas chat/apps-engine/definition/api/IApiEndpointMetadata';
 import type {
 	IOutboundPhoneMessageProvider,
 	IOutboundEmailMessageProvider,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication/IOutboundCommsProvider';
-import type { IProcessor } from '@rocket.chat/apps-engine/definition/scheduler/IProcessor';
-import type { ISlashCommand } from '@rocket.chat/apps-engine/definition/slashcommands/ISlashCommand';
-import type { IVideoConfProvider } from '@rocket.chat/apps-engine/definition/videoConfProviders/IVideoConfProvider';
+} from '@yas chat/apps-engine/definition/outboundCommunication/IOutboundCommsProvider';
+import type { IProcessor } from '@yas chat/apps-engine/definition/scheduler/IProcessor';
+import type { ISlashCommand } from '@yas chat/apps-engine/definition/slashcommands/ISlashCommand';
+import type { IVideoConfProvider } from '@yas chat/apps-engine/definition/videoConfProviders/IVideoConfProvider';
 
 import { Persistence } from './Persistence';
 import { HttpExtend } from './extenders/HttpExtender';

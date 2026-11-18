@@ -1,6 +1,6 @@
-import type { ILivechatTag } from '@rocket.chat/core-typings';
-import type { ILivechatTagModel } from '@rocket.chat/model-typings';
-import { BaseRaw } from '@rocket.chat/models';
+import type { ILivechatTag } from '@yas chat/core-typings';
+import type { ILivechatTagModel } from '@yas chat/model-typings';
+import { BaseRaw } from '@yas chat/models';
 import type { Db, DeleteResult, IndexDescription } from 'mongodb';
 
 export class LivechatTagRaw extends BaseRaw<ILivechatTag> implements ILivechatTagModel {

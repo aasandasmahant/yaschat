@@ -1,4 +1,4 @@
-import { useActiveDescendant, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useActiveDescendant, useStableCallback } from '@yas chat/fuselage-hooks';
 import type { UseQueryResult } from '@tanstack/react-query';
 import type { MutableRefObject, RefCallback } from 'react';
 import { useEffect, useCallback, useId, useState, useRef } from 'react';

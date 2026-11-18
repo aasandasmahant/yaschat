@@ -1,4 +1,4 @@
-import { Permissions, Roles, Settings, Users } from '@rocket.chat/models';
+import { Permissions, Roles, Settings, Users } from '@yas chat/models';
 import type { UpdateResult } from 'mongodb';
 
 import { gateCustomOAuthSettings } from '../../../ee/server/lib/oauth/gateCustomOAuthSettings';

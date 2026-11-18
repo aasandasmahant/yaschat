@@ -1,4 +1,4 @@
-import { Badge, Icon, IconButton } from '@rocket.chat/fuselage';
+import { Badge, Icon, IconButton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import type { ConferencePanel } from '../context/ConferenceContext';

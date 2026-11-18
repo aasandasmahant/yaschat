@@ -1,5 +1,5 @@
-import type { IUserPhoneNumber } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
+import type { IUserPhoneNumber } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
 
 import UserInfoPhoneNumberItem from './UserInfoPhoneNumberItem';
 

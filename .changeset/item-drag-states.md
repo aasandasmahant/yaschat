@@ -1,5 +1,5 @@
 ---
-'@rocket.chat/fuselage': minor
+'@yas chat/fuselage': minor
 ---
 
 Adds drag-and-drop states to the `Item` components:

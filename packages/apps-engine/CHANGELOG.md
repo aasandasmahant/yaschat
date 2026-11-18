@@ -1,4 +1,4 @@
-# @rocket.chat/apps-engine
+# @yas chat/apps-engine
 
 ## 1.68.0
 
@@ -116,7 +116,7 @@
 
 ### Patch Changes
 
-- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#39883](https://github.com/YasChat/YasChat/pull/39883)) Fixes the issue of the lacking MessageUpdater not being available to apps during runtime
 
@@ -124,7 +124,7 @@
 
 ### Patch Changes
 
-- ([#40130](https://github.com/YasChat/YasChat/pull/40130) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40130](https://github.com/YasChat/YasChat/pull/40130) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 1.62.0-rc.0
 
@@ -136,7 +136,7 @@
 
 ### Patch Changes
 
-- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40125](https://github.com/YasChat/YasChat/pull/40125)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#39883](https://github.com/YasChat/YasChat/pull/39883)) Fixes the issue of the lacking MessageUpdater not being available to apps during runtime
 

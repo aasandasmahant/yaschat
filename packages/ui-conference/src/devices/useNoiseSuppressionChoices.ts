@@ -1,4 +1,4 @@
-import type { DeviceMenuChoices } from '@rocket.chat/ui-media';
+import type { DeviceMenuChoices } from '@yas chat/ui-media';
 import { useTranslation } from 'react-i18next';
 
 import { useNoiseSuppressionSelection } from './NoiseSuppressionContext';

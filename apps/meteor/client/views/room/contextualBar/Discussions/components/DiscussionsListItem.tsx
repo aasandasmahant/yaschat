@@ -1,4 +1,4 @@
-import type { IDiscussionMessage } from '@rocket.chat/core-typings';
+import type { IDiscussionMessage } from '@yas chat/core-typings';
 import {
 	Box,
 	Message,
@@ -13,8 +13,8 @@ import {
 	MessageMetricsItem,
 	MessageMetricsItemLabel,
 	MessageMetricsItemIcon,
-} from '@rocket.chat/fuselage';
-import { MessageAvatar } from '@rocket.chat/ui-avatar';
+} from '@yas chat/fuselage';
+import { MessageAvatar } from '@yas chat/ui-avatar';
 import type { ComponentProps, ReactNode } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

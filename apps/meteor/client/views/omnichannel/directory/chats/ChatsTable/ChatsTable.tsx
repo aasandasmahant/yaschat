@@ -1,5 +1,5 @@
-import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
+import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -10,8 +10,8 @@ import {
 	useSort,
 	GenericNoResults,
 	links,
-} from '@rocket.chat/ui-client';
-import { usePermission } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { usePermission } from '@yas chat/ui-contexts';
 import { hashKey } from '@tanstack/react-query';
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

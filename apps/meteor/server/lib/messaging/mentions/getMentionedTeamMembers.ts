@@ -1,5 +1,5 @@
-import { Team } from '@rocket.chat/core-services';
-import type { MessageMention } from '@rocket.chat/core-typings';
+import { Team } from '@yas chat/core-services';
+import type { MessageMention } from '@yas chat/core-typings';
 
 import { settings } from '../../../settings';
 import { callbacks } from '../../callbacks';

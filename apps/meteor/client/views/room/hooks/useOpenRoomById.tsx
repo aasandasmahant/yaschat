@@ -1,6 +1,6 @@
-import { isPublicRoom, type IRoom } from '@rocket.chat/core-typings';
-import { getObjectKeys } from '@rocket.chat/tools';
-import { useEndpoint, usePermission, useUser } from '@rocket.chat/ui-contexts';
+import { isPublicRoom, type IRoom } from '@yas chat/core-typings';
+import { getObjectKeys } from '@yas chat/tools';
+import { useEndpoint, usePermission, useUser } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
 

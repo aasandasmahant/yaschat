@@ -12,8 +12,8 @@ import type {
 	LicenseValidationOptions,
 	LimitContext,
 	LicenseModule,
-} from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+} from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 
 import { getLicenseLimit } from './deprecated';
 import type { getAppsConfig, getMaxActiveUsers, getUnmodifiedLicenseAndModules } from './deprecated';

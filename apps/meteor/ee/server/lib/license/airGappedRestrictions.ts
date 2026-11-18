@@ -1,5 +1,5 @@
-import { AirGappedRestriction, License } from '@rocket.chat/license';
-import { Settings, Statistics } from '@rocket.chat/models';
+import { AirGappedRestriction, License } from '@yas chat/license';
+import { Settings, Statistics } from '@yas chat/models';
 
 import { i18n } from '../../../../server/lib/i18n';
 import { notifyOnSettingChangedById } from '../../../../server/lib/notifyListener';

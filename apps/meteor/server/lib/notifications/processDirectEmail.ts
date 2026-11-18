@@ -1,5 +1,5 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { Messages, Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import type { IMessage } from '@yas chat/core-typings';
+import { Messages, Subscriptions, Users, Rooms } from '@yas chat/models';
 import type { ParsedMail } from 'mailparser';
 import moment from 'moment';
 

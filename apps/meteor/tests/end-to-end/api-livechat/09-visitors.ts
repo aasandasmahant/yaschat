@@ -1,7 +1,7 @@
 import { after, before, describe, it } from 'node:test';
 
 import { faker } from '@faker-js/faker';
-import type { ILivechatVisitor, IOmnichannelRoom } from '@rocket.chat/core-typings';
+import type { ILivechatVisitor, IOmnichannelRoom } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import type { Response } from 'supertest';
 

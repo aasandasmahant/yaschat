@@ -1,4 +1,4 @@
-import type { AvatarObject, IUser, IUserPhoneNumber } from '@rocket.chat/core-typings';
+import type { AvatarObject, IUser, IUserPhoneNumber } from '@yas chat/core-typings';
 
 import { getUserEmailAddress } from '../../../../lib/getUserEmailAddress';
 import { getInitialPhones } from '../../../components/PhoneNumberFieldList';

@@ -1,8 +1,8 @@
-# `@rocket.chat/emitter`
+# `@yas chat/emitter`
 
 > Tiny, typed event emitter that runs anywhere JavaScript does.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/emitter?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/emitter) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/emitter?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/emitter)
+[![npm](https://img.shields.io/npm/v/@yas chat/emitter?style=flat-square)](https://www.npmjs.com/package/@yas chat/emitter) [![downloads](https://img.shields.io/npm/dw/@yas chat/emitter?style=flat-square)](https://www.npmjs.com/package/@yas chat/emitter)
 
 `Emitter` is a minimal publish/subscribe class. You describe your events with an event map type, and TypeScript checks event names and payloads on `on`, `once`, `off` and `emit`. Subscribing returns an unsubscribe function, so you do not need to keep a reference to the handler.
 
@@ -11,7 +11,7 @@ It has no dependencies and does not rely on Node.js or DOM APIs. YasChat uses it
 ## Installation
 
 ```sh
-npm install @rocket.chat/emitter
+npm install @yas chat/emitter
 ```
 
 There are no dependencies. The package ships CommonJS (`dist/index.js`), an ES module build (`dist/index.module.js`) and TypeScript types.
@@ -21,7 +21,7 @@ There are no dependencies. The package ships CommonJS (`dist/index.js`), an ES m
 ### Typed events
 
 ```ts
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 type Events = {
 	message: { id: string; text: string };
@@ -66,7 +66,7 @@ emitter.off('message', handler);
 ### Extend it
 
 ```ts
-import { Emitter } from '@rocket.chat/emitter';
+import { Emitter } from '@yas chat/emitter';
 
 class Connection extends Emitter<{ status: 'online' | 'offline' }> {
 	goOnline() {
@@ -113,10 +113,10 @@ Handlers added or removed while an event is being emitted do not change the list
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/emitter). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/emitter build
-yarn workspace @rocket.chat/emitter testunit
-yarn workspace @rocket.chat/emitter lint
-yarn workspace @rocket.chat/emitter typecheck
+yarn workspace @yas chat/emitter build
+yarn workspace @yas chat/emitter testunit
+yarn workspace @yas chat/emitter lint
+yarn workspace @yas chat/emitter typecheck
 ```
 
 ## License

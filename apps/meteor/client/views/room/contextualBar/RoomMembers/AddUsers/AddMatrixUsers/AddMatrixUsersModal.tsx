@@ -14,7 +14,7 @@ import {
 	ModalFooterAnnotation,
 	ModalFooterControllers,
 	Stack,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { ComponentProps } from 'react';
 import { useId, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -53,7 +53,7 @@ const AddMatrixUsersModal = ({ onClose, matrixIdVerifiedStatus, onSave, complete
 	const usersToInvite = completeUserList.filter(
 		(user) => !(matrixIdVerifiedStatus.has(user) && matrixIdVerifiedStatus.get(user) === 'UNVERIFIED'),
 	);
-	const rocketChatUsers = usersToInvite.filter((user) => !matrixIdVerifiedStatus.has(user));
+	const YasChatUsers = usersToInvite.filter((user) => !matrixIdVerifiedStatus.has(user));
 
 	const { handleSubmit } = useForm<FormValues>({
 		defaultValues: {
@@ -94,7 +94,7 @@ const AddMatrixUsersModal = ({ onClose, matrixIdVerifiedStatus, onSave, complete
 							{_matrixId} <Icon name={verificationStatusAsIcon(_verificationStatus)} title={t(_verificationStatus)} size='x20' />
 						</Box>
 					))}
-					{rocketChatUsers.map((_user) => (
+					{YasChatUsers.map((_user) => (
 						<Box is='li' key={`rocket-chat-${_user}`}>
 							{_user}
 						</Box>

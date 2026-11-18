@@ -4,8 +4,8 @@ import {
 	registerAccountMethods,
 	registerAutoupdatePublication,
 	registerLoginServiceConfigurationPublication,
-} from '@rocket.chat/ddp-server';
-import { Users } from '@rocket.chat/models';
+} from '@yas chat/ddp-server';
+import { Users } from '@yas chat/models';
 
 import { announceConnection } from './meteorConnection';
 import { callMeteorMethod } from './meteorMethods';

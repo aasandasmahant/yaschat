@@ -1,6 +1,6 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -31,7 +31,7 @@ const livechatMock = { closeRoom: sinon.stub() };
 const settingsMock = { settings: { get: sinon.stub() } };
 
 const { OmnichannelQueueInactivityMonitorClass } = proxyquire.noCallThru().load('./QueueInactivityMonitor', {
-	'@rocket.chat/agenda': {
+	'@yas chat/agenda': {
 		Agenda: sinon.stub().returns(AgendaStub),
 	},
 	'../../../../server/database/utils': databaseUtilsMock,

@@ -1,7 +1,7 @@
-import { type Job, Agenda } from '@rocket.chat/agenda';
-import { Logger } from '@rocket.chat/logger';
-import { CronHistory } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { type Job, Agenda } from '@yas chat/agenda';
+import { Logger } from '@yas chat/logger';
+import { CronHistory } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import type { Db } from 'mongodb';
 
 const logger = new Logger('Cron');

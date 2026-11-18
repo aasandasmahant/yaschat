@@ -4,7 +4,7 @@ import { useAutoLowerHand } from './useAutoLowerHand';
 import { AUTO_LOWER_AFTER_MS, SPEAKING_GAP_TOLERANCE_MS } from '../lib/autoLowerHand';
 
 let mockLevel = 0;
-jest.mock('@rocket.chat/ui-media', () => ({ useAudioLevel: () => mockLevel }));
+jest.mock('@yas chat/ui-media', () => ({ useAudioLevel: () => mockLevel }));
 
 const LOUD = 0.5;
 const QUIET = 0;

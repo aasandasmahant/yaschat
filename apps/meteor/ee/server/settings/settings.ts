@@ -1,7 +1,7 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import type { ISetting, SettingValue, LicenseModule } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
+import type { ISetting, SettingValue, LicenseModule } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
 
 import { settings, SettingsEvents } from '../../../server/settings';
 import { use } from '../../../server/settings/Middleware';

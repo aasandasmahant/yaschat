@@ -1,4 +1,4 @@
-import type { YasChatRecordDeleted } from '@rocket.chat/core-typings';
+import type { YasChatRecordDeleted } from '@yas chat/core-typings';
 import type {
 	DefaultFields,
 	DocumentWithProjection,
@@ -8,7 +8,7 @@ import type {
 	InsertionModel,
 	DocumentWithDriverProjection,
 	FindOneAndUpdateOptionsWithProjection,
-} from '@rocket.chat/model-typings';
+} from '@yas chat/model-typings';
 import type {
 	BulkWriteOptions,
 	ChangeStream,

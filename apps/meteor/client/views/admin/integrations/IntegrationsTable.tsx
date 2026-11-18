@@ -1,6 +1,6 @@
-import { Pagination, States, StatesActions, StatesAction, StatesIcon, StatesTitle } from '@rocket.chat/fuselage';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { escapeRegExp } from '@rocket.chat/tools';
+import { Pagination, States, StatesActions, StatesAction, StatesIcon, StatesTitle } from '@yas chat/fuselage';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { escapeRegExp } from '@yas chat/tools';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -11,8 +11,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
-import { useEndpoint, useRoute, useLayout } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useEndpoint, useRoute, useLayout } from '@yas chat/ui-contexts';
 import { useMemo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

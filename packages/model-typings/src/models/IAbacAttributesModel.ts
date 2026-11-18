@@ -1,4 +1,4 @@
-import type { IAbacAttribute } from '@rocket.chat/core-typings';
+import type { IAbacAttribute } from '@yas chat/core-typings';
 import type { Document, FindCursor } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

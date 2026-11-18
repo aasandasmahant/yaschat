@@ -1,19 +1,19 @@
-# `@rocket.chat/core-typings`
+# `@yas chat/core-typings`
 
 > TypeScript types for YasChat's data model: users, rooms, messages, subscriptions, settings, Omnichannel and more.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/core-typings) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/core-typings)
+[![npm](https://img.shields.io/npm/v/@yas chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@yas chat/core-typings) [![downloads](https://img.shields.io/npm/dw/@yas chat/core-typings?style=flat-square)](https://www.npmjs.com/package/@yas chat/core-typings)
 
 This package defines the shapes of the records YasChat stores and sends: `IUser`, `IRoom`, `IMessage`, `ISubscription`, `ISetting`, `ILivechatVisitor`, `IOmnichannelRoom`, and many others. The server, the web client and the other YasChat packages share these types.
 
-[`@rocket.chat/rest-typings`](https://www.npmjs.com/package/@rocket.chat/rest-typings) and [`@rocket.chat/ddp-client`](https://www.npmjs.com/package/@rocket.chat/ddp-client) build on it to type REST results and realtime events. Use it directly when your code handles YasChat objects, for example in a bot, an integration or a custom client.
+[`@yas chat/rest-typings`](https://www.npmjs.com/package/@yas chat/rest-typings) and [`@yas chat/ddp-client`](https://www.npmjs.com/package/@yas chat/ddp-client) build on it to type REST results and realtime events. Use it directly when your code handles YasChat objects, for example in a bot, an integration or a custom client.
 
 Besides types, it exports a few runtime helpers: type guards such as `isThreadMessage` and `isDirectMessageRoom`, enums such as `UserStatus`, and JSON Schemas generated from the types.
 
 ## Installation
 
 ```sh
-npm install @rocket.chat/core-typings
+npm install @yas chat/core-typings
 ```
 
 The package is published as CommonJS with TypeScript declarations.
@@ -23,7 +23,7 @@ The package is published as CommonJS with TypeScript declarations.
 ### Typing YasChat objects
 
 ```ts
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
 
 const describe = (message: IMessage, room: IRoom, author: IUser) => `${author.username} in ${room.name ?? room._id}: ${message.msg}`;
 ```
@@ -33,20 +33,20 @@ const describe = (message: IMessage, room: IRoom, author: IUser) => `${author.us
 The types describe objects as the server holds them, with `Date` fields. Objects received over JSON have strings instead. `Serialized<T>` maps a type to its JSON form:
 
 ```ts
-import type { IMessage, Serialized } from '@rocket.chat/core-typings';
+import type { IMessage, Serialized } from '@yas chat/core-typings';
 
-const response = await fetch(`https://open.rocket.chat/api/v1/chat.getMessage?msgId=${messageId}`, { headers });
+const response = await fetch(`https://open.yas chat/api/v1/chat.getMessage?msgId=${messageId}`, { headers });
 const { message }: { message: Serialized<IMessage> } = await response.json();
 
 const sentAt = new Date(message.ts); // message.ts is a string here
 ```
 
-[`@rocket.chat/api-client`](https://www.npmjs.com/package/@rocket.chat/api-client) applies `Serialized` to every result for you.
+[`@yas chat/api-client`](https://www.npmjs.com/package/@yas chat/api-client) applies `Serialized` to every result for you.
 
 ### Narrowing with type guards
 
 ```ts
-import { isDirectMessageRoom, isOmnichannelRoom, isThreadMessage } from '@rocket.chat/core-typings';
+import { isDirectMessageRoom, isOmnichannelRoom, isThreadMessage } from '@yas chat/core-typings';
 
 if (isThreadMessage(message)) {
 	console.log('reply in thread', message.tmid);
@@ -62,8 +62,8 @@ if (isOmnichannelRoom(room)) {
 ### Comparing enum values
 
 ```ts
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { IUser } from '@rocket.chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 
 const isAvailable = (user: IUser) => user.status === UserStatus.ONLINE;
 ```
@@ -109,10 +109,10 @@ The package re-exports a large number of types. The main groups are:
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/core-typings). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/core-typings build
-yarn workspace @rocket.chat/core-typings dev
-yarn workspace @rocket.chat/core-typings lint
-yarn workspace @rocket.chat/core-typings typecheck
+yarn workspace @yas chat/core-typings build
+yarn workspace @yas chat/core-typings dev
+yarn workspace @yas chat/core-typings lint
+yarn workspace @yas chat/core-typings typecheck
 ```
 
 `schemas` is generated at compile time by [typia](https://typia.io/). The `build` script patches the TypeScript compiler with `ts-patch` and `typia patch` before compiling, so build with the script rather than plain `tsc`.

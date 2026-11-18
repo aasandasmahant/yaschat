@@ -1,5 +1,5 @@
-import { applyLicense } from '@rocket.chat/license';
-import { Settings } from '@rocket.chat/models';
+import { applyLicense } from '@yas chat/license';
+import { Settings } from '@yas chat/models';
 
 import { settings } from '../../settings';
 import { syncCloudData } from './syncWorkspace/syncCloudData';

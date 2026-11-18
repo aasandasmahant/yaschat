@@ -1,11 +1,11 @@
-import { Authorization } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { Authorization } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 
 import { getUnitsFromUser } from './getUnitsFromUser';
 import { defaultLogger } from '../utils/logger';
 
 // Mock the dependencies
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	Authorization: {
 		hasAnyRole: jest.fn(),
 	},

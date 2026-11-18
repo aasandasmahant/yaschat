@@ -1,8 +1,8 @@
 import { after, before, describe, it } from 'node:test';
 import path from 'path';
 
-import type { Credentials } from '@rocket.chat/api-client';
-import type { ImageAttachmentProps, IRoom, IUser, SettingValue } from '@rocket.chat/core-typings';
+import type { Credentials } from '@yas chat/api-client';
+import type { ImageAttachmentProps, IRoom, IUser, SettingValue } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import sharp from 'sharp';
 

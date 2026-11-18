@@ -1,4 +1,4 @@
-import type { IUser } from '@rocket.chat/core-typings';
+import type { IUser } from '@yas chat/core-typings';
 
 /** The user fields the 2FA checks read; `getUserForCheck` projects exactly these. */
 export type TwoFactorUser = Pick<IUser, '_id' | 'username' | 'emails' | 'language' | 'createdAt' | 'services'>;

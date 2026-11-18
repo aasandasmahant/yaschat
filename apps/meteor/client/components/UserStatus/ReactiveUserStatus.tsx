@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/ui-client';
-import { useUserPresence } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/ui-client';
+import { useUserPresence } from '@yas chat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { memo } from 'react';
 

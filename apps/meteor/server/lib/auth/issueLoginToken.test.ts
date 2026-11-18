@@ -1,7 +1,7 @@
 import { before, describe, it } from 'node:test';
 
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { mockModel } from '@rocket.chat/models/testing';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

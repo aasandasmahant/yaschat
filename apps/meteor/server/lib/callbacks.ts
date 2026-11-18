@@ -1,4 +1,4 @@
-import type { ICreateRoomOptions } from '@rocket.chat/core-services';
+import type { ICreateRoomOptions } from '@yas chat/core-services';
 import type {
 	IMessage,
 	IRoom,
@@ -18,8 +18,8 @@ import type {
 	ILivechatDepartment,
 	MessageMention,
 	IOmnichannelInquiryExtraData,
-} from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
 import type { FilterOperators } from 'mongodb';
 
 import type { ILoginAttempt } from './auth/ILoginAttempt';

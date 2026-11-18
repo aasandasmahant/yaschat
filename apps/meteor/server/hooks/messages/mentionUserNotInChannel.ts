@@ -1,9 +1,9 @@
-import { api } from '@rocket.chat/core-services';
-import type { IMessage } from '@rocket.chat/core-typings';
-import { isDirectMessageRoom, isEditedMessage, isOmnichannelRoom, isRoomFederated, getUserDisplayName } from '@rocket.chat/core-typings';
-import { Subscriptions, Users } from '@rocket.chat/models';
-import { isTruthy } from '@rocket.chat/tools';
-import type { ActionsBlock } from '@rocket.chat/ui-kit';
+import { api } from '@yas chat/core-services';
+import type { IMessage } from '@yas chat/core-typings';
+import { isDirectMessageRoom, isEditedMessage, isOmnichannelRoom, isRoomFederated, getUserDisplayName } from '@yas chat/core-typings';
+import { Subscriptions, Users } from '@yas chat/models';
+import { isTruthy } from '@yas chat/tools';
+import type { ActionsBlock } from '@yas chat/ui-kit';
 import moment from 'moment';
 
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

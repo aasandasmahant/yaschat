@@ -21,8 +21,8 @@ const { registerEEBroker } = proxyquire
 		'./readReceiptsArchive': stub('readReceiptsArchive'),
 		'./mcp': stub('mcp'),
 		'./presence': stub('presence'),
-		'@rocket.chat/core-services': { api: { setBroker: sinon.stub(), start: sinon.stub().resolves() } },
-		'@rocket.chat/network-broker': { startBroker: sinon.stub() },
+		'@yas chat/core-services': { api: { setBroker: sinon.stub(), start: sinon.stub().resolves() } },
+		'@yas chat/network-broker': { startBroker: sinon.stub() },
 		'../../../server/lib/logger/system': { SystemLogger: { warn } },
 	}) as { registerEEBroker: () => Promise<void> };
 

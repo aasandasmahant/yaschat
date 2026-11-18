@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IReadReceiptWithUser, IMessage } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { Messages } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IReadReceiptWithUser, IMessage } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { Messages } from '@yas chat/models';
 
 import { canAccessRoomIdAsync } from '../../../server/lib/authorization/canAccessRoom';
 import { ReadReceipt } from '../lib/message-read-receipt/ReadReceipt';

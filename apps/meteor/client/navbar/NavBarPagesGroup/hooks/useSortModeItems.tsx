@@ -1,6 +1,6 @@
-import { RadioButton } from '@rocket.chat/fuselage';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useEndpoint, useUserPreference } from '@rocket.chat/ui-contexts';
+import { RadioButton } from '@yas chat/fuselage';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useEndpoint, useUserPreference } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

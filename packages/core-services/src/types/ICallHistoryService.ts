@@ -1,4 +1,4 @@
-import type { CallHistoryItem, IUser } from '@rocket.chat/core-typings';
+import type { CallHistoryItem, IUser } from '@yas chat/core-typings';
 
 export interface ICallHistoryService {
 	search(

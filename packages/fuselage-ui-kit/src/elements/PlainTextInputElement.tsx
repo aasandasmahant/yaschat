@@ -1,5 +1,5 @@
-import { TextAreaInput, TextInput } from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { TextAreaInput, TextInput } from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import { memo } from 'react';
 
 import { useStringFromTextObject } from '../hooks/useStringFromTextObject';

@@ -1,10 +1,10 @@
-import type { YasChatRecordDeleted, IUser, AvailableAgentsAggregation } from '@rocket.chat/core-typings';
-import { queryStatusAgentOnline, UsersRaw } from '@rocket.chat/models';
+import type { YasChatRecordDeleted, IUser, AvailableAgentsAggregation } from '@yas chat/core-typings';
+import { queryStatusAgentOnline, UsersRaw } from '@yas chat/models';
 import type { Db, Collection, Filter } from 'mongodb';
 
 import { readSecondaryPreferred } from '../../../../server/database/readSecondaryPreferred';
 
-declare module '@rocket.chat/model-typings' {
+declare module '@yas chat/model-typings' {
 	interface IUsersModel {
 		getUnavailableAgents(
 			departmentId: string,

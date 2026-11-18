@@ -1,4 +1,4 @@
-import { InfoPanelLabel, InfoPanelText, useHasLicenseModule } from '@rocket.chat/ui-client';
+import { InfoPanelLabel, InfoPanelText, useHasLicenseModule } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const MaxChatsPerAgentDisplay = ({ maxNumberSimultaneousChat = 0 }) => {

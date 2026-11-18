@@ -1,6 +1,6 @@
-import { isInviteSubscription } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import type { SubscriptionWithRoom } from '@rocket.chat/ui-contexts';
+import { isInviteSubscription } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
 
 import UnreadBadge from './UnreadBadge';
 import InvitationBadge from '../../../../components/InvitationBadge';

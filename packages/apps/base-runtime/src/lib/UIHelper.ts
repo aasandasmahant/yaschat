@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 
-import type { IBlock } from '@rocket.chat/apps-engine/definition/uikit';
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { IBlock } from '@yas chat/apps-engine/definition/uikit';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 /**
  * Duplicated from `packages/apps/src/server/misc/UIHelper.ts` so the base-runtime

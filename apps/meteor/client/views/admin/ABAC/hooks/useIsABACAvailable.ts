@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 
 export const useIsABACAvailable = () => {
 	const { data: hasABAC = false } = useHasLicenseModule('abac');

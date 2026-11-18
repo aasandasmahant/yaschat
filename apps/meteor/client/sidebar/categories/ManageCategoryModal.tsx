@@ -1,8 +1,8 @@
-import type { ISidebarCategory } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
-import { Field, FieldError, FieldGroup, FieldLabel, FieldRow, TextInput } from '@rocket.chat/fuselage-forms';
-import { GenericModal } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import type { ISidebarCategory } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
+import { Field, FieldError, FieldGroup, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage-forms';
+import { GenericModal } from '@yas chat/ui-client';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useEffect, useRef } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

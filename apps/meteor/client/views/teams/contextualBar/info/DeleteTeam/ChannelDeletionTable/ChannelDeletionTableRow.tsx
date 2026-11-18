@@ -1,7 +1,7 @@
-import type { IRoom, Serialized } from '@rocket.chat/core-typings';
-import { CheckBox, Margins } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
+import type { IRoom, Serialized } from '@yas chat/core-typings';
+import { CheckBox, Margins } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
 
 import { RoomIcon } from '../../../../../../components/RoomIcon';
 

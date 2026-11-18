@@ -1,10 +1,10 @@
-import { Account, ClientSafeError } from '@rocket.chat/core-services';
+import { Account, ClientSafeError } from '@yas chat/core-services';
 
 import { sessionAccounts } from './accounts';
 import { makeSession } from '../__tests__/helpers';
 
-jest.mock('@rocket.chat/core-services', () => ({
-	...jest.requireActual('@rocket.chat/core-services'),
+jest.mock('@yas chat/core-services', () => ({
+	...jest.requireActual('@yas chat/core-services'),
 	Account: {
 		login: jest.fn(),
 		logout: jest.fn().mockResolvedValue(undefined),

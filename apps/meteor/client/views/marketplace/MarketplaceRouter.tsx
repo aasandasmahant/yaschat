@@ -1,5 +1,5 @@
-import { PageSkeleton } from '@rocket.chat/ui-client';
-import { useAtLeastOnePermission, useRoute, useRouteParameter } from '@rocket.chat/ui-contexts';
+import { PageSkeleton } from '@yas chat/ui-client';
+import { useAtLeastOnePermission, useRoute, useRouteParameter } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { Suspense, useEffect } from 'react';
 

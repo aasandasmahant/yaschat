@@ -1,4 +1,4 @@
-import { Avatar, Icon } from '@rocket.chat/fuselage';
+import { Avatar, Icon } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

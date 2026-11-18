@@ -1,5 +1,5 @@
-import type { TableColumnWidth } from '@rocket.chat/fuselage';
-import { GenericTable, GenericTableHeaderCell, GenericTableHeader, GenericTableBody, GenericTableCell } from '@rocket.chat/ui-client';
+import type { TableColumnWidth } from '@yas chat/fuselage';
+import { GenericTable, GenericTableHeaderCell, GenericTableHeader, GenericTableBody, GenericTableCell } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

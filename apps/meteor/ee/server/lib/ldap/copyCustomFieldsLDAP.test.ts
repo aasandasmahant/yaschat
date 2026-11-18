@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 
-import type { IImportUser, ILDAPEntry } from '@rocket.chat/core-typings';
-import type { Logger } from '@rocket.chat/logger';
+import type { IImportUser, ILDAPEntry } from '@yas chat/core-typings';
+import type { Logger } from '@yas chat/logger';
 import { expect, spy } from 'chai';
 
 import { copyCustomFieldsLDAP } from './copyCustomFieldsLDAP';

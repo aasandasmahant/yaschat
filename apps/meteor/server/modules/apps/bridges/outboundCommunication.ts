@@ -1,10 +1,10 @@
-import type { IAppServerOrchestrator } from '@rocket.chat/apps';
-import { OutboundMessageBridge } from '@rocket.chat/apps/dist/server/bridges/OutboundMessagesBridge';
+import type { IAppServerOrchestrator } from '@yas chat/apps';
+import { OutboundMessageBridge } from '@yas chat/apps/dist/server/bridges/OutboundMessagesBridge';
 import type {
 	IOutboundEmailMessageProvider,
 	IOutboundMessageProviders,
 	IOutboundPhoneMessageProvider,
-} from '@rocket.chat/apps-engine/definition/outboundCommunication';
+} from '@yas chat/apps-engine/definition/outboundCommunication';
 
 import { getOutboundService } from '../../../lib/omnichannel/outboundcommunication';
 

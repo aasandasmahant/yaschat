@@ -1,6 +1,6 @@
-import type { App, AppPermission } from '@rocket.chat/core-typings';
-import { useIsEnterprise } from '@rocket.chat/ui-client';
-import { useRouter, useSetModal, useUpload } from '@rocket.chat/ui-contexts';
+import type { App, AppPermission } from '@yas chat/core-typings';
+import { useIsEnterprise } from '@yas chat/ui-client';
+import { useRouter, useSetModal, useUpload } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useCallback, useState } from 'react';
 

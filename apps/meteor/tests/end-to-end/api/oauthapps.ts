@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { IOAuthApps } from '@rocket.chat/core-typings';
+import type { IOAuthApps } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

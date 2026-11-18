@@ -1,7 +1,7 @@
 /* oxlint-disable new-cap */
 import { describe, it } from 'node:test';
 
-import type { ILivechatRoomsModel } from '@rocket.chat/model-typings';
+import type { ILivechatRoomsModel } from '@yas chat/model-typings';
 import { expect } from 'chai';
 import moment from 'moment-timezone';
 import sinon from 'sinon';

@@ -1,7 +1,7 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { MessageDivider } from '@rocket.chat/fuselage';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { MessageDivider } from '@yas chat/fuselage';
+import { MessageTypes } from '@yas chat/message-types';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { Fragment, memo } from 'react';
 
 import RoomMessage from '../../../components/message/variants/RoomMessage';

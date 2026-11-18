@@ -1,5 +1,5 @@
-import type { AudioPlayerControls } from '@rocket.chat/fuselage';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { AudioPlayerControls } from '@yas chat/fuselage';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ComponentProps } from 'react';
@@ -23,13 +23,13 @@ jest.mock('../../../../../providers/MediaPlayerProvider', () => ({
 	}),
 }));
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useMediaUrl: () => (url: string) => url,
 }));
 
-jest.mock('@rocket.chat/fuselage', () => ({
-	...jest.requireActual('@rocket.chat/fuselage'),
+jest.mock('@yas chat/fuselage', () => ({
+	...jest.requireActual('@yas chat/fuselage'),
 	AudioPlayerControls: ({
 		currentTime,
 		onSeek,

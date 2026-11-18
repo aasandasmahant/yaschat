@@ -1,4 +1,4 @@
-import type { LicenseLimitKind, BehaviorWithContext, LicenseLimit, LicensePeriod } from '@rocket.chat/core-typings';
+import type { LicenseLimitKind, BehaviorWithContext, LicenseLimit, LicensePeriod } from '@yas chat/core-typings';
 
 export const getResultingBehavior = (
 	data: LicenseLimit | LicensePeriod | Partial<Omit<BehaviorWithContext, 'reason'>>,

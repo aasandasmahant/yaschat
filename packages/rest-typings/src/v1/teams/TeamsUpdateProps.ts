@@ -1,4 +1,4 @@
-import { TeamType } from '@rocket.chat/core-typings';
+import { TeamType } from '@yas chat/core-typings';
 
 import { ajv } from '../Ajv';
 

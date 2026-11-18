@@ -13,11 +13,11 @@ The call is mounted by the conference window's composition root, around the wind
 - The window looks up the component registered for the call's `providerName` (`embeddedCallProviders`, filled at
   client startup) and wraps itself in it. Core code never names LiveKit; the registration line does.
 - The LiveKit component connects once the window has joined, and provides the call contexts from
-  `@rocket.chat/ui-conference` (call state, call actions, devices, diagnostics). The window's
+  `@yas chat/ui-conference` (call state, call actions, devices, diagnostics). The window's
   header, stage and controls read those contexts directly: no portal, no state pushed back up to a parent.
 - The tree is the same before and after the join, so connecting never remounts the window.
 
-The LiveKit client is its own package, `@rocket.chat/ui-livekit`, loaded lazily so the SDK stays out of the bundle for
+The LiveKit client is its own package, `@yas chat/ui-livekit`, loaded lazily so the SDK stays out of the bundle for
 every other provider.
 
 Because the call only renders in the window, the server registers the provider only when LiveKit is fully configured

@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
-import { Box } from '@rocket.chat/fuselage';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
+import { Box } from '@yas chat/fuselage';
 
 import UserInfoABACAttribute from './UserInfoABACAttribute';
 

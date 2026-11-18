@@ -1,4 +1,4 @@
-import { Button } from '@rocket.chat/fuselage';
+import { Button } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import CardSlotContainer from '../CardSlot';

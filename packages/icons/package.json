@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/icons",
+	"name": "@yas chat/icons",
 	"version": "0.52.0",
 	"description": "YasChat's Icons",
 	"type": "module",
@@ -22,7 +22,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

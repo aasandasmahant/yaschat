@@ -1,6 +1,6 @@
-import type { ILogEntry } from '@rocket.chat/apps-engine/definition/accessors/ILogEntry';
-import type { ILogger } from '@rocket.chat/apps-engine/definition/accessors/ILogger';
-import type { AppMethod } from '@rocket.chat/apps-engine/definition/metadata/AppMethod';
+import type { ILogEntry } from '@yas chat/apps-engine/definition/accessors/ILogEntry';
+import type { ILogger } from '@yas chat/apps-engine/definition/accessors/ILogger';
+import type { AppMethod } from '@yas chat/apps-engine/definition/metadata/AppMethod';
 import stackTrace from 'stack-trace';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';

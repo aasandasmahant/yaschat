@@ -4,8 +4,8 @@ import type {
 	MediaCallNegotiationStream,
 	MediaCallSignedActor,
 	MediaCallSignedContact,
-} from '@rocket.chat/core-typings';
-import { isPendingState, isBusyState } from '@rocket.chat/media-signaling';
+} from '@yas chat/core-typings';
+import { isPendingState, isBusyState } from '@yas chat/media-signaling';
 import type {
 	ClientMediaSignalTransfer,
 	CallHangupReason,
@@ -16,8 +16,8 @@ import type {
 	ServerMediaSignal,
 	ClientMediaSignalAnswer,
 	CallFeature,
-} from '@rocket.chat/media-signaling';
-import { MediaCallNegotiations, MediaCalls } from '@rocket.chat/models';
+} from '@yas chat/media-signaling';
+import { MediaCallNegotiations, MediaCalls } from '@yas chat/models';
 
 import { DEFAULT_CALL_FEATURES } from '../../constants';
 import type { IMediaCallAgent } from '../../definition/IMediaCallAgent';

@@ -1,5 +1,5 @@
-import type { IWorkspaceInfo } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import type { IWorkspaceInfo } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 
 import { getTrimmedServerVersion } from './getTrimmedServerVersion';
 import { Info, minimumClientVersions } from '../../../yaschat.info';

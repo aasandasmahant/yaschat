@@ -1,9 +1,9 @@
 import { inspect } from 'node:util';
 
-import { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import type { IAppAuthorInfo, IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { AppMethod } from '@rocket.chat/apps-engine/definition/metadata';
+import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import type { IAppAuthorInfo, IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { AppMethod } from '@yas chat/apps-engine/definition/metadata';
 import mem from 'mem';
 
 import type { AppManager } from './AppManager';
@@ -79,7 +79,7 @@ export class ProxiedApp {
 			// and since the server is not prepared to handle those we might crash it if we throw
 			// Range of JSON-RPC error codes: https://www.jsonrpc.org/specification#error_object
 			if (e.code >= -32999 || e.code <= -32000) {
-				// we really need to receive a logger from rocket.chat
+				// we really need to receive a logger from yas chat
 				console.error('JSON-RPC error received: ', inspect(e, { depth: 10 }));
 			}
 		}

@@ -1,5 +1,5 @@
-import type { InquiryWithAgentInfo, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatVisitors } from '@rocket.chat/models';
+import type { InquiryWithAgentInfo, IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatVisitors } from '@yas chat/models';
 
 import { RoutingManager } from '../../../../server/lib/omnichannel/RoutingManager';
 import { afterTakeInquiry } from '../../../../server/lib/omnichannel/hooks';

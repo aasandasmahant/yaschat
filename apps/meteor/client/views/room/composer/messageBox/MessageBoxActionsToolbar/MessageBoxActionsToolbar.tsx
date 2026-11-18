@@ -1,8 +1,8 @@
-import type { IRoom, IMessage } from '@rocket.chat/core-typings';
-import { isTruthy } from '@rocket.chat/tools';
-import { GenericMenu, type GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { MessageComposerAction, MessageComposerActionsDivider } from '@rocket.chat/ui-composer';
-import { useLayoutHiddenActions } from '@rocket.chat/ui-contexts';
+import type { IRoom, IMessage } from '@yas chat/core-typings';
+import { isTruthy } from '@yas chat/tools';
+import { GenericMenu, type GenericMenuItemProps } from '@yas chat/ui-client';
+import { MessageComposerAction, MessageComposerActionsDivider } from '@yas chat/ui-composer';
+import { useLayoutHiddenActions } from '@yas chat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

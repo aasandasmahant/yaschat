@@ -1,8 +1,8 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISetting, ISettingColor } from '@rocket.chat/core-typings';
-import { isSettingCode, isSettingColor } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
-import { isRecord } from '@rocket.chat/tools';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISetting, ISettingColor } from '@yas chat/core-typings';
+import { isSettingCode, isSettingColor } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
+import { isRecord } from '@yas chat/tools';
 
 import { settings } from '..';
 import { updateAuditedByUser } from './auditedSettingUpdates';

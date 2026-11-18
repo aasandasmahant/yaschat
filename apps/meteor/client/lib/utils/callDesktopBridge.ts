@@ -1,4 +1,4 @@
-import type { IYasChatDesktop } from '@rocket.chat/desktop-api';
+import type { IYasChatDesktop } from '@yas chat/desktop-api';
 
 /**
  * Calls the desktop app bridge (`window.YasChatDesktop`) when it is present, and returns the result of the call.

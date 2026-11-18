@@ -8,8 +8,8 @@ import {
 	FieldDescription,
 	FieldRow,
 	FieldError,
-} from '@rocket.chat/fuselage';
-import { Form, FormContainer, FormFooter } from '@rocket.chat/layout';
+} from '@yas chat/fuselage';
+import { Form, FormContainer, FormFooter } from '@yas chat/layout';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

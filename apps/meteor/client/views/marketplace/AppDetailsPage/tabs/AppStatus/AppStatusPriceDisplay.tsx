@@ -1,5 +1,5 @@
-import type { AppPricingPlan, PurchaseType } from '@rocket.chat/core-typings';
-import { Box, Tag, Text } from '@rocket.chat/fuselage';
+import type { AppPricingPlan, PurchaseType } from '@yas chat/core-typings';
+import { Box, Tag, Text } from '@yas chat/fuselage';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

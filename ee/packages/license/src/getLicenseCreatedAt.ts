@@ -1,4 +1,4 @@
-import type { ILicenseV3 } from '@rocket.chat/core-typings';
+import type { ILicenseV3 } from '@yas chat/core-typings';
 
 import { decrypt } from './token';
 

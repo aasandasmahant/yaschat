@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/mongo-adapter",
+	"name": "@yas chat/mongo-adapter",
 	"version": "0.0.3",
 	"private": true,
 	"type": "module",
@@ -23,7 +23,7 @@
 		"testunit": "jest"
 	},
 	"devDependencies": {
-		"@rocket.chat/jest-presets": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
 		"jest": "~30.5.2",
 		"mongodb": "6.16.0",
 		"typescript": "~7.0.2"

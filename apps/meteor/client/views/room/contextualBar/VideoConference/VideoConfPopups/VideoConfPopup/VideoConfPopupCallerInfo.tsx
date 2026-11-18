@@ -1,7 +1,7 @@
-import type { VideoConference } from '@rocket.chat/core-typings';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import { VideoConfPopupInfo } from '@rocket.chat/ui-video-conf';
+import type { VideoConference } from '@yas chat/core-typings';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import { VideoConfPopupInfo } from '@yas chat/ui-video-conf';
 
 import ReactiveUserStatus from '../../../../../../components/UserStatus/ReactiveUserStatus';
 

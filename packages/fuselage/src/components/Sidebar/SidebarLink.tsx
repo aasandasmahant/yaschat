@@ -1,4 +1,4 @@
-import type { Keys as Icons } from '@rocket.chat/icons';
+import type { Keys as Icons } from '@yas chat/icons';
 import type { AnchorHTMLAttributes, ReactNode } from 'react';
 
 import { appendClassName } from '../../helpers/appendClassName';

@@ -1,5 +1,5 @@
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { useStream, useUserId } from '@rocket.chat/ui-contexts';
+import type { ISubscription } from '@yas chat/core-typings';
+import { useStream, useUserId } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { useRoomSubscriptionQuery } from './useRoomSubscriptionQuery';

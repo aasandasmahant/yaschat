@@ -1,5 +1,5 @@
-import { AccordionItem, Box, Text } from '@rocket.chat/fuselage';
-import { useTimeAgo } from '@rocket.chat/ui-client';
+import { AccordionItem, Box, Text } from '@yas chat/fuselage';
+import { useTimeAgo } from '@yas chat/ui-client';
 import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Users } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Users } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import {

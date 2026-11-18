@@ -1,5 +1,5 @@
-import type { ILivechatContact } from '@rocket.chat/core-typings';
-import { ContextualbarScrollableContent } from '@rocket.chat/ui-client';
+import type { ILivechatContact } from '@yas chat/core-typings';
+import { ContextualbarScrollableContent } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import ContactInfoDetailsEntry from './ContactInfoDetailsEntry';

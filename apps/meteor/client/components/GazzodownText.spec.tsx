@@ -1,14 +1,14 @@
-import { Markup } from '@rocket.chat/gazzodown';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Markup } from '@yas chat/gazzodown';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import GazzodownText from './GazzodownText';
 import { useMessageListHighlights } from './message/list/MessageListContext';
 
-jest.mock('@rocket.chat/ui-client', () => ({
+jest.mock('@yas chat/ui-client', () => ({
 	useFeaturePreview: () => false,
 }));
-jest.mock('@rocket.chat/fuselage-hooks', () => ({
+jest.mock('@yas chat/fuselage-hooks', () => ({
 	useLocalStorage: () => ['en', jest.fn()],
 }));
 jest.mock('./message/list/MessageListContext', () => ({

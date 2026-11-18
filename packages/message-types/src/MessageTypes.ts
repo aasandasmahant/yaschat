@@ -1,4 +1,4 @@
-import type { MessageTypesValues, IMessage } from '@rocket.chat/core-typings';
+import type { MessageTypesValues, IMessage } from '@yas chat/core-typings';
 import type { TFunction } from 'i18next';
 
 type MessageTypeTextOptions = {

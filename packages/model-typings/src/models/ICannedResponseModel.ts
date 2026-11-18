@@ -1,4 +1,4 @@
-import type { IOmnichannelCannedResponse } from '@rocket.chat/core-typings';
+import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
 import type { FindCursor, DeleteResult, UpdateResult, Document } from 'mongodb';
 
 import type { IBaseModel } from './IBaseModel';

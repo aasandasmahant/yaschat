@@ -1,5 +1,5 @@
-import type { VideoConferenceCapabilities } from '@rocket.chat/core-typings';
-import { createRequiredContext } from '@rocket.chat/ui-media';
+import type { VideoConferenceCapabilities } from '@yas chat/core-typings';
+import { createRequiredContext } from '@yas chat/ui-media';
 
 import type { useCallDevicePreview } from './useCallDevicePreview';
 

@@ -1,12 +1,12 @@
-import type { IMessageSearchProvider, IRoom, IUser } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import type { IMessageSearchProvider, IRoom, IUser } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { Meteor } from 'meteor/meteor';
 
 import { SearchLogger } from '../../lib/search/logger/logger';
 import type { IRawSearchResult, ISearchResult } from '../../lib/search/model/ISearchResult';
 import { searchProviderService, validationService } from '../../lib/search/service';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		'yaschatSearch.getProvider'(): IMessageSearchProvider | undefined;
 		'yaschatSearch.search'(text: string, context: { uid?: IUser['_id']; rid: IRoom['_id'] }, payload: unknown): Promise<ISearchResult>;

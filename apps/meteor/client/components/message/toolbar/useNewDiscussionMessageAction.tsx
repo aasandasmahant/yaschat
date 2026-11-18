@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, ISubscription } from '@rocket.chat/core-typings';
-import { isRoomFederated } from '@rocket.chat/core-typings';
-import { usePermission, useSetModal, useSetting, useUser, useUserSubscription } from '@rocket.chat/ui-contexts';
+import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
+import { isRoomFederated } from '@yas chat/core-typings';
+import { usePermission, useSetModal, useSetting, useUser, useUserSubscription } from '@yas chat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import { roomCoordinator } from '../../../lib/rooms/roomCoordinator';

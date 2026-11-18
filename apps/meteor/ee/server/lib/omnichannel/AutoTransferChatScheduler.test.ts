@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import chai, { expect } from 'chai';
 import chaiDateTime from 'chai-datetime';
 import moment from 'moment';
@@ -60,7 +60,7 @@ const routingConfigMock = sinon.stub();
 const getNextAgent = sinon.stub();
 
 const mocks = {
-	'@rocket.chat/agenda': { Agenda: MockAgendaClass },
+	'@yas chat/agenda': { Agenda: MockAgendaClass },
 	'../../../../server/database/utils': { client: { db: sinon.stub() } },
 	'../../../../server/lib/omnichannel/RoutingManager': { RoutingManager: { getConfig: routingConfigMock, getNextAgent } },
 	'../../../../server/lib/omnichannel/Helper': { forwardRoomToAgent },

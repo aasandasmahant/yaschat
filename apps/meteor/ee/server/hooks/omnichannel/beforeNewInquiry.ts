@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ILivechatInquiryRecord, ILivechatPriority, IOmnichannelServiceLevelAgreements } from '@rocket.chat/core-typings';
-import { LivechatPriority, OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ILivechatInquiryRecord, ILivechatPriority, IOmnichannelServiceLevelAgreements } from '@yas chat/core-typings';
+import { LivechatPriority, OmnichannelServiceLevelAgreements } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 

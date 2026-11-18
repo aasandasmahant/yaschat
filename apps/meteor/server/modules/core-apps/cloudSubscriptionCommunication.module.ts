@@ -1,5 +1,5 @@
-import type { UiKitCoreAppViewClosedPayload } from '@rocket.chat/core-services';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type { UiKitCoreAppViewClosedPayload } from '@yas chat/core-services';
+import type * as UiKit from '@yas chat/ui-kit';
 
 import { CloudAnnouncementsModule } from './cloudAnnouncements.module';
 

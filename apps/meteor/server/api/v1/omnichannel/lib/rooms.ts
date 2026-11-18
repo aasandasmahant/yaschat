@@ -1,6 +1,6 @@
-import type { ILivechatDepartment, IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { LivechatRooms, LivechatDepartment } from '@rocket.chat/models';
-import type { PaginatedResult } from '@rocket.chat/rest-typings';
+import type { ILivechatDepartment, IOmnichannelRoom } from '@yas chat/core-typings';
+import { LivechatRooms, LivechatDepartment } from '@yas chat/models';
+import type { PaginatedResult } from '@yas chat/rest-typings';
 
 import { callbacks } from '../../../../lib/callbacks';
 

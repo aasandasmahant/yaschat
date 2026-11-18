@@ -1,6 +1,6 @@
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { usePermission, useRouter } from '@rocket.chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { usePermission, useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export const useAuditMenu = () => {

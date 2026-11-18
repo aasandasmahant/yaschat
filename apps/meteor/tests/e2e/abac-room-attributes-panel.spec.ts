@@ -1,6 +1,6 @@
 import type { APIRequestContext } from '@playwright/test';
 import { request } from '@playwright/test';
-import type { IRoom, ITeam } from '@rocket.chat/core-typings';
+import type { IRoom, ITeam } from '@yas chat/core-typings';
 
 import { BASE_URL, IS_EE } from './config/constants';
 import { Users } from './fixtures/userStates';

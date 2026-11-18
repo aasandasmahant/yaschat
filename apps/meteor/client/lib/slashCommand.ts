@@ -5,7 +5,7 @@ import type {
 	RequiredField,
 	SlashCommandPreviewItem,
 	SlashCommandPreviews,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import { InvalidCommandUsage, InvalidPreview } from './errors';
 
@@ -129,7 +129,7 @@ export const slashCommands = {
 	},
 };
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		slashCommand(params: { cmd: string; params: string; msg: IMessage; triggerId: string }): unknown;
 	}

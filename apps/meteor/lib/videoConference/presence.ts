@@ -1,5 +1,5 @@
-import type { IUser, IVideoConferenceUser, VideoConferenceLeaveReason } from '@rocket.chat/core-typings';
-import { isInVideoConference } from '@rocket.chat/core-typings';
+import type { IUser, IVideoConferenceUser, VideoConferenceLeaveReason } from '@yas chat/core-typings';
+import { isInVideoConference } from '@yas chat/core-typings';
 
 /** Browser constraint: a hidden tab has its timers throttled to roughly one tick a minute. */
 export const PRESENCE_THROTTLED_HEARTBEAT_MS = 60_000;

@@ -1,4 +1,4 @@
-import { AccordionItem, FieldGroup } from '@rocket.chat/fuselage';
+import { AccordionItem, FieldGroup } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 import Setting from '../settings/Setting';

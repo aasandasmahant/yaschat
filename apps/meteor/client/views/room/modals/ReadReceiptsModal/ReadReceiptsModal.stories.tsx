@@ -1,5 +1,5 @@
-import type { IReadReceiptWithUser, Serialized } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IReadReceiptWithUser, Serialized } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { StoryObj, Meta } from '@storybook/react';
 import { action } from 'storybook/actions';
 

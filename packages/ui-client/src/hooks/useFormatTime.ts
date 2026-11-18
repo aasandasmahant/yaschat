@@ -1,4 +1,4 @@
-import { useUserPreference, useSetting } from '@rocket.chat/ui-contexts';
+import { useUserPreference, useSetting } from '@yas chat/ui-contexts';
 import { useCallback } from 'react';
 
 import { formatDate } from '../lib/dateFormat';

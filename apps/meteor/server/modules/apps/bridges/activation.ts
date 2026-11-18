@@ -1,8 +1,8 @@
-import type { IAppServerOrchestrator, AppStatus } from '@rocket.chat/apps';
-import type { ProxiedApp } from '@rocket.chat/apps/dist/server/ProxiedApp';
-import { AppActivationBridge as ActivationBridge } from '@rocket.chat/apps/dist/server/bridges/AppActivationBridge';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, AppStatus } from '@yas chat/apps';
+import type { ProxiedApp } from '@yas chat/apps/dist/server/ProxiedApp';
+import { AppActivationBridge as ActivationBridge } from '@yas chat/apps/dist/server/bridges/AppActivationBridge';
+import { UserStatus } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 export class AppActivationBridge extends ActivationBridge {
 	constructor(private readonly orch: IAppServerOrchestrator) {

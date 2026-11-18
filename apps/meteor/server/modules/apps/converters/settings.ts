@@ -1,6 +1,6 @@
-import type { IAppServerOrchestrator, IAppSettingsConverter, IAppsSetting } from '@rocket.chat/apps';
-import type { ISetting } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { IAppServerOrchestrator, IAppSettingsConverter, IAppsSetting } from '@yas chat/apps';
+import type { ISetting } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 import * as z from 'zod';
 
 import { SettingCodec } from './codecs';

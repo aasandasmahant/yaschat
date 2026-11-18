@@ -1,4 +1,4 @@
-import { DDPSDK } from '@rocket.chat/ddp-client';
+import { DDPSDK } from '@yas chat/ddp-client';
 import EJSON from 'ejson';
 
 import { createMeteorBackedStorage } from './meteorBackedSdk';
@@ -174,13 +174,13 @@ const teardownAuthenticatedConnection = (): void => {
 
 declare global {
 	interface Window {
-		__rocketChatSdk?: DDPSDK;
+		__YasChatSdk?: DDPSDK;
 	}
 }
 
 if (typeof window !== 'undefined') {
 	const sdk = getDdpSdk();
-	window.__rocketChatSdk = sdk;
+	window.__YasChatSdk = sdk;
 
 	// DDPSDK auto-fires loginWithToken on every `connected` event using the
 	// in-memory account.user.token (DDPSDK.create line 115-122). When the

@@ -1,5 +1,5 @@
-import { Box, Icon, Text } from '@rocket.chat/fuselage';
-import type { Keys } from '@rocket.chat/icons';
+import { Box, Icon, Text } from '@yas chat/fuselage';
+import type { Keys } from '@yas chat/icons';
 import type { ReactNode } from 'react';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';

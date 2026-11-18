@@ -4,7 +4,7 @@
 // 	subject: 'YasChat, 17 Users, 24 Messages, 1 File, 799504 Minutes, in #random',
 //  files: ['i3nc9l3mn']
 // }
-import { Uploads } from '@rocket.chat/models';
+import { Uploads } from '@yas chat/models';
 
 import * as Mailer from '../../../lib/notifications/email/api';
 import { settings } from '../../../settings';

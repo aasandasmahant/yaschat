@@ -1,7 +1,7 @@
-import type { ILivechatDepartment } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRoute, useSetModal, useSetting } from '@rocket.chat/ui-contexts';
+import type { ILivechatDepartment } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { GenericMenu } from '@yas chat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRoute, useSetModal, useSetting } from '@yas chat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

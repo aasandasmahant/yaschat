@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Box, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@rocket.chat/fuselage';
+import type { IRoom } from '@yas chat/core-typings';
+import { Box, States, StatesAction, StatesActions, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { useJoinRoom } from './hooks/useJoinRoom';

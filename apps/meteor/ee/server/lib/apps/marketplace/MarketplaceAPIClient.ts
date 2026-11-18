@@ -1,5 +1,5 @@
-import { License } from '@rocket.chat/license';
-import { type ExtendedFetchOptions, Response, serverFetch } from '@rocket.chat/server-fetch';
+import { License } from '@yas chat/license';
+import { type ExtendedFetchOptions, Response, serverFetch } from '@yas chat/server-fetch';
 
 import { isTesting } from './isTesting';
 import { CloudOfflineLicenseError } from '../../../../../lib/errors/CloudOfflineLicenseError';
@@ -13,7 +13,7 @@ export class MarketplaceAPIClient {
 		if (typeof process.env.OVERWRITE_INTERNAL_MARKETPLACE_URL === 'string' && process.env.OVERWRITE_INTERNAL_MARKETPLACE_URL !== '') {
 			this.#marketplaceUrl = process.env.OVERWRITE_INTERNAL_MARKETPLACE_URL;
 		} else {
-			this.#marketplaceUrl = 'https://marketplace.rocket.chat';
+			this.#marketplaceUrl = 'https://marketplace.yas chat';
 		}
 
 		if (isTesting()) {

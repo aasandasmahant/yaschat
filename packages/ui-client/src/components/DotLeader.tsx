@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import type { BorderWidth } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
+import type { BorderWidth } from '@yas chat/fuselage';
 import type { CSSProperties } from 'react';
 
 export type DotLeaderProps = {

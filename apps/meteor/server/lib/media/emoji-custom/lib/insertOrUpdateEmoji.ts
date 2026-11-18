@@ -1,5 +1,5 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { EmojiCustom } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { EmojiCustom } from '@yas chat/models';
 import limax from 'limax';
 
 import { trim } from '../../../../../lib/utils/stringUtils';

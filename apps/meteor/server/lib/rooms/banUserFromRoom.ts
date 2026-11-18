@@ -1,7 +1,7 @@
-import { Message, Team } from '@rocket.chat/core-services';
-import { isBannedSubscription } from '@rocket.chat/core-typings';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { Message, Team } from '@yas chat/core-services';
+import { isBannedSubscription } from '@yas chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { afterBanFromRoomCallback } from '../callbacks/afterBanFromRoomCallback';
 import { notifyOnRoomChangedById, notifyOnSubscriptionChanged } from '../notifyListener';

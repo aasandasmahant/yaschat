@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@rocket.chat/fuselage';
+import { Box, Skeleton } from '@yas chat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import BusinessHoursMultiple from './BusinessHoursMultiple';

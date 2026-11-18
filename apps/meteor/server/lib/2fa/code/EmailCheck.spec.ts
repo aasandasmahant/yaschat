@@ -1,5 +1,5 @@
-import type { SettingValue } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { SettingValue } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import bcrypt from 'bcrypt';
 
 import { EmailCheck } from './EmailCheck';

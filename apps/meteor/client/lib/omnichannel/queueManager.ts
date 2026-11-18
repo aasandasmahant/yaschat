@@ -4,7 +4,7 @@ import {
 	type ILivechatInquiryRecord,
 	type IOmnichannelAgent,
 	type Serialized,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import { useLivechatInquiryStore } from '../../hooks/useLivechatInquiryStore';
 import { sdk } from '../SDKClient';

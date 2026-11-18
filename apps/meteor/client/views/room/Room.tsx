@@ -1,8 +1,8 @@
 import { FocusScope } from '@react-aria/focus';
-import { isInviteSubscription } from '@rocket.chat/core-typings';
-import { ContextualbarSkeleton, GenericError } from '@rocket.chat/ui-client';
-import { useSetting, useRoomToolbox, useUserId } from '@rocket.chat/ui-contexts';
-import { useMediaCallOpenRoomTracker } from '@rocket.chat/ui-voip';
+import { isInviteSubscription } from '@yas chat/core-typings';
+import { ContextualbarSkeleton, GenericError } from '@yas chat/ui-client';
+import { useSetting, useRoomToolbox, useUserId } from '@yas chat/ui-contexts';
+import { useMediaCallOpenRoomTracker } from '@yas chat/ui-voip';
 import { createElement, lazy, memo, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 

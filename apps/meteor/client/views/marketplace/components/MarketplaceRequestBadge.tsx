@@ -1,4 +1,4 @@
-import { Badge, Skeleton } from '@rocket.chat/fuselage';
+import { Badge, Skeleton } from '@yas chat/fuselage';
 
 import { useAppRequestStats } from '../hooks/useAppRequestStats';
 

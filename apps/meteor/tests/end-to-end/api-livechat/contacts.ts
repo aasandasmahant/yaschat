@@ -1,14 +1,14 @@
 import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
 
 import { faker } from '@faker-js/faker';
-import type { Credentials } from '@rocket.chat/api-client';
+import type { Credentials } from '@yas chat/api-client';
 import type {
 	ILivechatAgent,
 	ILivechatVisitor,
 	IOmnichannelRoom,
 	IUser,
 	ILivechatContactVisitorAssociation,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getCredentials, api, request, credentials } from '../../data/api-data';

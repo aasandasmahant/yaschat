@@ -1,5 +1,5 @@
-import type { AtLeast, ILivechatAgent, ILivechatDepartment } from '@rocket.chat/core-typings';
-import { LivechatDepartment, LivechatUnit } from '@rocket.chat/models';
+import type { AtLeast, ILivechatAgent, ILivechatDepartment } from '@yas chat/core-typings';
+import { LivechatDepartment, LivechatUnit } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { cbLogger } from '../../lib/omnichannel/logger';

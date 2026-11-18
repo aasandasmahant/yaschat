@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoutingMethod, RoutingMethodConfig, SelectedAgent } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoutingMethod, RoutingMethodConfig, SelectedAgent } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 
 import { settings } from '../../../settings';
 import { SystemLogger } from '../../logger/system';

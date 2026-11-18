@@ -1,7 +1,7 @@
-import { Box, IconButton, Text } from '@rocket.chat/fuselage';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { GenericTableRow, GenericTableCell } from '@rocket.chat/ui-client';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import { Box, IconButton, Text } from '@yas chat/fuselage';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useRemoveAgent } from '../hooks/useRemoveAgent';

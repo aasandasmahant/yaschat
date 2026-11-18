@@ -1,4 +1,4 @@
-import { useEndpoint, useRouter, useSearchParameter, useLoginWithToken } from '@rocket.chat/ui-contexts';
+import { useEndpoint, useRouter, useSearchParameter, useLoginWithToken } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

@@ -1,6 +1,6 @@
-import type { App } from '@rocket.chat/core-typings';
-import { MenuItem, MenuItemContent, MenuSection, Menu, Skeleton } from '@rocket.chat/fuselage';
-import { useHandleMenuAction } from '@rocket.chat/ui-client';
+import type { App } from '@yas chat/core-typings';
+import { MenuItem, MenuItemContent, MenuSection, Menu, Skeleton } from '@yas chat/fuselage';
+import { useHandleMenuAction } from '@yas chat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

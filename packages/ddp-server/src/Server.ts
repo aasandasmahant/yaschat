@@ -1,6 +1,6 @@
-import type { IServiceMetrics } from '@rocket.chat/core-services';
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Logger } from '@rocket.chat/logger';
+import type { IServiceMetrics } from '@yas chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Logger } from '@yas chat/logger';
 import { v1 as uuidv1 } from 'uuid';
 import WebSocket from 'ws';
 

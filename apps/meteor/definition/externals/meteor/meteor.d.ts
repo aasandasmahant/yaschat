@@ -1,6 +1,6 @@
 import 'meteor/meteor';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import type { IUser } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import type { DDPCommon, IStreamerConstructor, IStreamer } from 'meteor/ddp-common';
 
 type StringifyBuffers<T extends unknown[]> = {

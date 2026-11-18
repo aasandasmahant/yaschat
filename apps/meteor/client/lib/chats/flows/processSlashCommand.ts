@@ -1,6 +1,6 @@
-import type { IMessage, SlashCommand } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
-import { escapeHTML } from '@rocket.chat/tools';
+import type { IMessage, SlashCommand } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
+import { escapeHTML } from '@yas chat/tools';
 
 import { t } from '../../../../lib/i18n';
 import { sdk } from '../../SDKClient';

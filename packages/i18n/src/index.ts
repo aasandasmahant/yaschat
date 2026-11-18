@@ -1,14 +1,14 @@
-import { isObject } from '@rocket.chat/tools';
+import { isObject } from '@yas chat/tools';
 import type { i18n, TFunction, TOptions } from 'i18next';
 
-import type { RocketchatI18nKeys } from './resources.ts';
+import type { YasChatI18nKeys } from './resources.ts';
 
-export type { RocketchatI18nKeys };
+export type { YasChatI18nKeys };
 
 declare module 'i18next' {
 	interface TFunction {
-		(key: RocketchatI18nKeys): string;
-		(key: RocketchatI18nKeys, options: TOptions): string;
+		(key: YasChatI18nKeys): string;
+		(key: YasChatI18nKeys, options: TOptions): string;
 	}
 }
 
@@ -111,7 +111,7 @@ export const extractTranslationKeys = (source: Record<string, string>, namespace
 };
 
 export type TranslationNamespace =
-	| (Extract<RocketchatI18nKeys, `${string}.${string}`> extends `${infer T}.${string}` ? (T extends Lowercase<T> ? T : never) : never)
+	| (Extract<YasChatI18nKeys, `${string}.${string}`> extends `${infer T}.${string}` ? (T extends Lowercase<T> ? T : never) : never)
 	| 'core';
 
 const namespacesMap: Record<TranslationNamespace, true> = {

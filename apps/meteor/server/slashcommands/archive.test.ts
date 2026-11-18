@@ -1,7 +1,7 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import { isRegisterUser } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { isRegisterUser } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -31,7 +31,7 @@ import { loadSlashCommand } from '../../tests/mocks/server/slashcommands/helpers
 			mockModel('Rooms', { findOneById: findCurrentRoom, findOneByName: findRoom });
 			mockModel('Users', { findOneById: findUser });
 			slashCommand = loadSlashCommand(`${command === 'archive' ? 'archiveroom' : 'unarchiveroom'}/server`, {
-				'@rocket.chat/core-typings': { isRegisterUser },
+				'@yas chat/core-typings': { isRegisterUser },
 				'../../lib/rooms/roomCoordinator': { roomCoordinator: { getRoomDirectives: () => ({ allowMemberAction }) } },
 				'../../lib/authorization/hasPermission': { hasPermissionAsync: hasPermission },
 				[`../../lib/rooms/${command}Room`]: { [`${command}Room`]: changeRoom },

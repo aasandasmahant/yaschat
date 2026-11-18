@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import type { MessageTypesValues, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { MessageTypesValues, IRoom, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 
 import { getHiddenSystemMessages } from './getHiddenSystemMessages';

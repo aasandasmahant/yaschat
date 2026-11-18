@@ -1,6 +1,6 @@
-import { api } from '@rocket.chat/core-services';
-import type { RequiredField } from '@rocket.chat/core-typings';
-import { CustomSounds } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { RequiredField } from '@yas chat/core-typings';
+import { CustomSounds } from '@yas chat/models';
 
 import type { ICustomSoundData } from './insertOrUpdateSound';
 import { YasChatFile } from '../../file';

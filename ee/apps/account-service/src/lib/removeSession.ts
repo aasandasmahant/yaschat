@@ -1,4 +1,4 @@
-import { Users } from '@rocket.chat/models';
+import { Users } from '@yas chat/models';
 
 export async function removeSession(uid: string, loginToken: string): Promise<void> {
 	await Users.updateOne(

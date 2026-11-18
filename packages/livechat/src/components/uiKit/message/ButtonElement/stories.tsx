@@ -1,4 +1,4 @@
-import { BlockContext } from '@rocket.chat/ui-kit';
+import { BlockContext } from '@yas chat/ui-kit';
 import type { Meta, StoryFn } from '@storybook/preact';
 import type { ComponentProps } from 'preact';
 import { action } from 'storybook/actions';

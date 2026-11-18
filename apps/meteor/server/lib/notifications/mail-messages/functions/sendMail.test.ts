@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -8,7 +8,7 @@ import sinon from 'sinon';
 const user = {
 	_id: 'user1',
 	name: 'User One',
-	emails: [{ address: 'user1@rocket.chat' }],
+	emails: [{ address: 'user1@yas chat' }],
 	createdAt: new Date(1700000000000),
 };
 
@@ -24,16 +24,16 @@ const mocks = {
 };
 
 const { sendMail } = proxyquire.noCallThru().load('./sendMail', {
-	'@rocket.chat/core-services': { ClientSafeError: Error },
+	'@yas chat/core-services': { ClientSafeError: Error },
 	'../../../logger/system': { SystemLogger: { debug: sinon.stub() } },
-	'../../../utils/getURL': { getWorkspaceURL: (path: string) => `https://open.rocket.chat/${path}` },
+	'../../../utils/getURL': { getWorkspaceURL: (path: string) => `https://open.yas chat/${path}` },
 	'../../../utils/placeholders': {
 		placeholders: { replace: (body: string, data: { unsubscribe: string }) => body.replace('[unsubscribe]', data.unsubscribe) },
 	},
 	'../../email/api': mocks.Mailer,
 });
 
-const unsubscribeUrl = `https://open.rocket.chat/mailer/unsubscribe/user1/${user.createdAt.getTime()}`;
+const unsubscribeUrl = `https://open.yas chat/mailer/unsubscribe/user1/${user.createdAt.getTime()}`;
 
 describe('sendMail', () => {
 	before(() => {
@@ -47,13 +47,13 @@ describe('sendMail', () => {
 	});
 
 	it('should send an absolute unsubscribe link to every user', async () => {
-		await sendMail({ from: 'admin@rocket.chat', subject: 'News', body: 'Bye: [unsubscribe]' });
+		await sendMail({ from: 'admin@yas chat', subject: 'News', body: 'Bye: [unsubscribe]' });
 
 		expect(mocks.Mailer.send.firstCall.args[0].html).to.equal(`Bye: ${unsubscribeUrl}`);
 	});
 
 	it('should send an absolute unsubscribe link on a dry run', async () => {
-		await sendMail({ from: 'admin@rocket.chat', subject: 'News', body: 'Bye: [unsubscribe]', dryrun: true });
+		await sendMail({ from: 'admin@yas chat', subject: 'News', body: 'Bye: [unsubscribe]', dryrun: true });
 
 		expect(mocks.Mailer.send.firstCall.args[0].html).to.equal(`Bye: ${unsubscribeUrl}`);
 	});

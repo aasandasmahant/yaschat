@@ -1,4 +1,4 @@
-import { Users, Rooms } from '@rocket.chat/models';
+import { Users, Rooms } from '@yas chat/models';
 
 import { sendMessage } from '../../../../lib/messages/sendMessage';
 import { createDirectRoom } from '../../../../lib/rooms/createDirectRoom';

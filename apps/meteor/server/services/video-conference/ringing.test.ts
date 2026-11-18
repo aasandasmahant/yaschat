@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, it } from 'node:test';
 
-import type { IDirectVideoConference, IVideoConferenceUser, VideoConference } from '@rocket.chat/core-typings';
-import { isInVideoConference, VideoConferenceStatus, VIDEO_CONF_RINGING_WINDOW_MS } from '@rocket.chat/core-typings';
+import type { IDirectVideoConference, IVideoConferenceUser, VideoConference } from '@yas chat/core-typings';
+import { isInVideoConference, VideoConferenceStatus, VIDEO_CONF_RINGING_WINDOW_MS } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

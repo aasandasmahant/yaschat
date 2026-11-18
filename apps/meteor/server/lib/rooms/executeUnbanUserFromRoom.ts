@@ -1,6 +1,6 @@
-import { Message } from '@rocket.chat/core-services';
-import { isBannedSubscription, isInviteSubscription, type IUser } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
+import { Message } from '@yas chat/core-services';
+import { isBannedSubscription, isInviteSubscription, type IUser } from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
 
 import { afterUnbanFromRoomCallback } from '../callbacks/afterUnbanFromRoomCallback';
 import { notifyOnRoomChangedById, notifyOnSubscriptionChanged } from '../notifyListener';

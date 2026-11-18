@@ -1,4 +1,4 @@
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
 import type { HTMLAttributes } from 'react';
 
 import YasChatLogo from '../YasChatLogo';

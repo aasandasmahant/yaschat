@@ -1,7 +1,7 @@
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { isRegisterUser } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions } from '@rocket.chat/models';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { isRegisterUser } from '@yas chat/core-typings';
+import { Rooms, Subscriptions } from '@yas chat/models';
 import type { UpdateResult } from 'mongodb';
 
 import { notifyOnSubscriptionChangedByRoomId } from '../../notifyListener';

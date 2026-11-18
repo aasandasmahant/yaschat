@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box, IconButton } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { Box, IconButton } from '@yas chat/fuselage';
 import { useState, forwardRef } from 'react';
 import type { ChangeEvent, ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import { Box } from '@rocket.chat/fuselage';
-import type { PasswordPolicyValidation } from '@rocket.chat/ui-contexts';
+import { Box } from '@yas chat/fuselage';
+import type { PasswordPolicyValidation } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,9 +1,9 @@
-import type { IStats } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import type { Logger } from '@rocket.chat/logger';
-import { Statistics } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
-import { tracerSpan } from '@rocket.chat/tracing';
+import type { IStats } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import type { Logger } from '@yas chat/logger';
+import { Statistics } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
+import { tracerSpan } from '@yas chat/tracing';
 
 import { Info } from '../../../../yaschat.info';
 import { shouldReportStatistics } from '../../../cron/usageReport';
@@ -16,7 +16,7 @@ async function sendStats(logger: Logger, cronStatistics: IStats): Promise<string
 		const token = await getWorkspaceAccessToken();
 		const headers = { ...(token && { Authorization: `Bearer ${token}` }) };
 
-		const response = await fetch('https://collector.rocket.chat/', {
+		const response = await fetch('https://collector.yas chat/', {
 			method: 'POST',
 			body: {
 				...cronStatistics,

@@ -26,7 +26,7 @@ import {
 	type IntelligentSearchPipelineConfig,
 	type OpenAICompatibleProviderConfig,
 	type SearchAnswerMessage,
-} from '@rocket.chat/ai-search';
+} from '@yas chat/ai-search';
 import type {
 	AISearchAnswerMessage,
 	AISearchAnswerResult,
@@ -35,12 +35,12 @@ import type {
 	AISearchResult,
 	AISearchStatus,
 	IAISearchService,
-} from '@rocket.chat/core-services';
-import { License, ServiceClass } from '@rocket.chat/core-services';
-import { isBannedSubscription, type IMessage, type IRoom, type ISubscription, type IUser } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Messages, Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { serverFetch, type ExtendedFetchOptions } from '@rocket.chat/server-fetch';
+} from '@yas chat/core-services';
+import { License, ServiceClass } from '@yas chat/core-services';
+import { isBannedSubscription, type IMessage, type IRoom, type ISubscription, type IUser } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Messages, Rooms, Subscriptions, Users } from '@yas chat/models';
+import { serverFetch, type ExtendedFetchOptions } from '@yas chat/server-fetch';
 
 import { settings } from '../../settings';
 

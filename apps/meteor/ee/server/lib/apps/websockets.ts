@@ -1,7 +1,7 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { ISetting as AppsSetting } from '@rocket.chat/apps-engine/definition/settings';
-import { api } from '@rocket.chat/core-services';
-import { InstanceStatus } from '@rocket.chat/instance-status';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { ISetting as AppsSetting } from '@yas chat/apps-engine/definition/settings';
+import { api } from '@yas chat/core-services';
+import { InstanceStatus } from '@yas chat/instance-status';
 
 export class AppServerNotifier {
 	async appAdded(appId: string): Promise<void> {

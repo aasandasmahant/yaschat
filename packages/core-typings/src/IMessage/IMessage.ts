@@ -1,8 +1,8 @@
 import type { UrlWithStringQuery } from 'node:url';
 
-import type Icons from '@rocket.chat/icons';
-import type { Root } from '@rocket.chat/message-parser';
-import type { MessageSurfaceLayout } from '@rocket.chat/ui-kit';
+import type Icons from '@yas chat/icons';
+import type { Root } from '@yas chat/message-parser';
+import type { MessageSurfaceLayout } from '@yas chat/ui-kit';
 
 import type { ILivechatPriority } from '../ILivechatPriority';
 import type { ILivechatVisitor } from '../ILivechatVisitor';
@@ -402,7 +402,7 @@ export type IMessageWithPendingFileImport = IMessage & {
 		external: boolean;
 		source: 'slack' | 'hipchat-enterprise';
 		original: Record<string, any>;
-		rocketChatUrl?: string;
+		YasChatUrl?: string;
 		downloaded?: boolean;
 	};
 };

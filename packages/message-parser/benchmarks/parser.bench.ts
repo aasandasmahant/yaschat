@@ -1,5 +1,5 @@
 /**
- * Benchmark suite for @rocket.chat/message-parser
+ * Benchmark suite for @yas chat/message-parser
  *
  * Measures parsing performance (ops/sec) across various message categories.
  * Run with: `yarn bench` from packages/message-parser/
@@ -66,10 +66,10 @@ const categories: BenchCategory[] = [
 	{
 		name: 'URLs & Links',
 		fixtures: [
-			{ name: 'single', input: 'Check out https://rocket.chat for more info' },
-			{ name: 'multiple', input: 'Visit https://rocket.chat or https://github.com/YasChat/YasChat or https://open.rocket.chat' },
-			{ name: 'markdown link', input: '[YasChat](https://rocket.chat)' },
-			{ name: 'autolinked domain', input: 'Visit rocket.chat for more info' },
+			{ name: 'single', input: 'Check out https://yas chat for more info' },
+			{ name: 'multiple', input: 'Visit https://yas chat or https://github.com/YasChat/YasChat or https://open.yas chat' },
+			{ name: 'markdown link', input: '[YasChat](https://yas chat)' },
+			{ name: 'autolinked domain', input: 'Visit yas chat for more info' },
 			{ name: 'with path', input: 'See https://github.com/YasChat/YasChat/tree/develop/packages/message-parser for details' },
 		],
 	},
@@ -160,7 +160,7 @@ const categories: BenchCategory[] = [
 			{
 				name: 'complex',
 				input:
-					'**Release Notes v7.0**\n- [x] Fix #12345\n- [ ] Update docs\n\n> Important: check https://docs.rocket.chat\n\ncc @admin @devlead #releases :rocket:',
+					'**Release Notes v7.0**\n- [x] Fix #12345\n- [ ] Update docs\n\n> Important: check https://docs.yas chat\n\ncc @admin @devlead #releases :rocket:',
 				options: fullOptions,
 			},
 			{
@@ -194,7 +194,7 @@ function formatResults(tasks: Task[]) {
 
 async function run() {
 	console.log('='.repeat(72));
-	console.log('  @rocket.chat/message-parser — Performance Benchmark Suite');
+	console.log('  @yas chat/message-parser — Performance Benchmark Suite');
 	console.log('='.repeat(72));
 	console.log();
 

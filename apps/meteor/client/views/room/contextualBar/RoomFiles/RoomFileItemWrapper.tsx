@@ -1,4 +1,4 @@
-import type { IUploadWithUser } from '@rocket.chat/core-typings';
+import type { IUploadWithUser } from '@yas chat/core-typings';
 import type { HTMLAttributes, Ref } from 'react';
 import { forwardRef } from 'react';
 

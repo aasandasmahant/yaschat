@@ -1,4 +1,4 @@
-import { Settings } from '@rocket.chat/models';
+import { Settings } from '@yas chat/models';
 
 import { notifyOnSettingChanged } from '../../notifyListener';
 import telemetryEvent from '../lib/telemetryEvents';

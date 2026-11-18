@@ -1,6 +1,6 @@
-import { isEncryptedMessageContent, type IEditedMessage, type IMessage, type IRoom, type ISubscription } from '@rocket.chat/core-typings';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { Random } from '@rocket.chat/random';
+import { isEncryptedMessageContent, type IEditedMessage, type IMessage, type IRoom, type ISubscription } from '@yas chat/core-typings';
+import { MessageTypes } from '@yas chat/message-types';
+import { Random } from '@yas chat/random';
 import { differenceInMinutes } from 'date-fns/differenceInMinutes';
 
 import type { DataAPI } from './ChatAPI';

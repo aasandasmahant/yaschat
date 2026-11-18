@@ -1,4 +1,4 @@
-import { api } from '@rocket.chat/core-services';
+import { api } from '@yas chat/core-services';
 import type {
 	IYasChatRecord,
 	IRoom,
@@ -21,7 +21,7 @@ import type {
 	SettingValue,
 	MessageTypesValues,
 	ILivechatContact,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import {
 	Rooms,
 	LivechatRooms,
@@ -36,7 +36,7 @@ import {
 	LivechatDepartmentAgents,
 	Users,
 	Messages,
-} from '@rocket.chat/models';
+} from '@yas chat/models';
 import mem from 'mem';
 
 import { keepPublicAuthorFields } from './messages/keepPublicAuthorFields';

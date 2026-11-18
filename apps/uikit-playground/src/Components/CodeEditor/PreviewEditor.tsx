@@ -1,5 +1,5 @@
 import type { Extension } from '@codemirror/state';
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import { useEffect, useContext } from 'react';
 
 import { context } from '../../Context';

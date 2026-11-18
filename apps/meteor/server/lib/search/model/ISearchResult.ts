@@ -1,4 +1,4 @@
-import type { IMessage, IRoom, IUser, RoomType } from '@rocket.chat/core-typings';
+import type { IMessage, IRoom, IUser, RoomType } from '@yas chat/core-typings';
 
 export type IRawSearchResult = {
 	message?: { docs: IMessage[] };

@@ -15,12 +15,12 @@ describe('extractUrlsFromMessageAST', () => {
 						value: {
 							src: {
 								type: 'PLAIN_TEXT',
-								value: 'https://rocket.chat',
+								value: 'https://yas chat',
 							},
 							label: [
 								{
 									type: 'PLAIN_TEXT',
-									value: 'rocket.chat',
+									value: 'yas chat',
 								},
 							],
 						},
@@ -30,7 +30,7 @@ describe('extractUrlsFromMessageAST', () => {
 		];
 
 		const urls = extractUrlsFromMessageAST(md as any);
-		expect(urls).to.deep.equal(['https://rocket.chat']);
+		expect(urls).to.deep.equal(['https://yas chat']);
 	});
 
 	// TODO: this spec was never wired to a test runner; these two expectations predate the
@@ -73,12 +73,12 @@ describe('extractUrlsFromMessageAST', () => {
 						value: {
 							src: {
 								type: 'PLAIN_TEXT',
-								value: 'https://rocket.chat',
+								value: 'https://yas chat',
 							},
 							label: [
 								{
 									type: 'PLAIN_TEXT',
-									value: 'rocket.chat',
+									value: 'yas chat',
 								},
 							],
 						},
@@ -107,7 +107,7 @@ describe('extractUrlsFromMessageAST', () => {
 		];
 
 		const urls = extractUrlsFromMessageAST(md as any);
-		expect(urls).to.deep.equal(['https://rocket.chat', 'https://github.com/YasChat']);
+		expect(urls).to.deep.equal(['https://yas chat', 'https://github.com/YasChat']);
 	});
 
 	it('should return empty array for undefined or non-array input', () => {

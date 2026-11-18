@@ -1,11 +1,11 @@
-import type { LoginServiceConfiguration } from '@rocket.chat/core-typings';
+import type { LoginServiceConfiguration } from '@yas chat/core-typings';
 
 import { applyLoginServiceConfigurationChange, registerLoginServiceConfigurationPublication } from './loginServiceConfiguration';
 import { Server } from '../Server';
 import { makeSession, makeSubscription, sentPackets } from '../__tests__/helpers';
 import { MeteorCollection } from '../lib/MeteorCollection';
 
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockReturnValue({
 		error: jest.fn(),
 	}),

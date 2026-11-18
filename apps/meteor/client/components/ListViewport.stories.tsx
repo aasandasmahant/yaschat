@@ -1,5 +1,5 @@
-import { Contextualbar, ContextualbarContent, ContextualbarHeader, ContextualbarTitle } from '@rocket.chat/fuselage';
-import { VirtualizedScrollbars } from '@rocket.chat/ui-client';
+import { Contextualbar, ContextualbarContent, ContextualbarHeader, ContextualbarTitle } from '@yas chat/fuselage';
+import { VirtualizedScrollbars } from '@yas chat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Virtuoso } from 'react-virtuoso';
 

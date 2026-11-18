@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import type { IRoom } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 export async function getDefaultChannels(): Promise<IRoom[]> {
 	const defaultRooms = await Rooms.findByDefaultAndTypes(true, ['c', 'p'], {

@@ -1,7 +1,7 @@
-import type { IMessage } from '@rocket.chat/core-typings';
-import { isThreadMainMessage, isRoomFederated } from '@rocket.chat/core-typings';
-import { useFormatTime, useFormatDateAndTime } from '@rocket.chat/ui-client';
-import { useLayout, useUser, useUserPreference, useSetting, useEndpoint, useSearchParameter } from '@rocket.chat/ui-contexts';
+import type { IMessage } from '@yas chat/core-typings';
+import { isThreadMainMessage, isRoomFederated } from '@yas chat/core-typings';
+import { useFormatTime, useFormatDateAndTime } from '@yas chat/ui-client';
+import { useLayout, useUser, useUserPreference, useSetting, useEndpoint, useSearchParameter } from '@yas chat/ui-contexts';
 import type { KeyboardEvent, MouseEvent, ReactNode } from 'react';
 import { useMemo, memo } from 'react';
 

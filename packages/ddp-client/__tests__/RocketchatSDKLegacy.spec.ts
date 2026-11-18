@@ -1,7 +1,7 @@
 import WS from 'jest-websocket-mock';
 
 import { handleConnection } from './helpers';
-import { RocketchatSdkLegacyImpl } from '../src/legacy/RocketchatSDKLegacy';
+import { YasChatSdkLegacyImpl } from '../src/legacy/YasChatSDKLegacy';
 
 let server: WS;
 
@@ -18,7 +18,7 @@ afterEach(() => {
 const nextFrame = async () => JSON.parse((await server.nextMessage) as string);
 
 it('should restore subscriptions after a reconnection', async () => {
-	const sdk = RocketchatSdkLegacyImpl.create('ws://localhost:1234');
+	const sdk = YasChatSdkLegacyImpl.create('ws://localhost:1234');
 	await handleConnection(server, sdk.connection.connect());
 
 	const subscription = sdk.client.subscribe('publication');
@@ -38,7 +38,7 @@ it('should restore subscriptions after a reconnection', async () => {
 });
 
 it('should unsubscribe from every subscription', async () => {
-	const sdk = RocketchatSdkLegacyImpl.create('ws://localhost:1234');
+	const sdk = YasChatSdkLegacyImpl.create('ws://localhost:1234');
 	await handleConnection(server, sdk.connection.connect());
 
 	const first = sdk.client.subscribe('first');

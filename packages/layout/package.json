@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/layout",
+	"name": "@yas chat/layout",
 	"version": "1.0.0",
 	"description": "Shared Application Layout Components",
 	"homepage": "https://github.com/YasChat/YasChat#readme",
@@ -14,7 +14,7 @@
 	"license": "MIT",
 	"author": {
 		"name": "YasChat",
-		"url": "https://rocket.chat/"
+		"url": "https://yas chat/"
 	},
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
@@ -33,16 +33,16 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@rocket.chat/fuselage-hooks": "workspace:^",
-		"@rocket.chat/fuselage-tokens": "workspace:^",
-		"@rocket.chat/logo": "workspace:~",
-		"@rocket.chat/styled": "workspace:~"
+		"@yas chat/fuselage-hooks": "workspace:^",
+		"@yas chat/fuselage-tokens": "workspace:^",
+		"@yas chat/logo": "workspace:~",
+		"@yas chat/styled": "workspace:~"
 	},
 	"devDependencies": {
-		"@rocket.chat/fuselage": "workspace:~",
-		"@rocket.chat/jest-presets": "workspace:~",
-		"@rocket.chat/storybook-config": "workspace:~",
-		"@rocket.chat/tsconfig": "workspace:~",
+		"@yas chat/fuselage": "workspace:~",
+		"@yas chat/jest-presets": "workspace:~",
+		"@yas chat/storybook-config": "workspace:~",
+		"@yas chat/tsconfig": "workspace:~",
 		"@testing-library/dom": "~10.4.2",
 		"@testing-library/react": "~16.3.3",
 		"@types/react": "~19.2.18",
@@ -56,7 +56,7 @@
 		"typescript": "~7.0.2"
 	},
 	"peerDependencies": {
-		"@rocket.chat/fuselage": "1.0.0",
+		"@yas chat/fuselage": "1.0.0",
 		"react": ">=19",
 		"react-dom": ">=19",
 		"react-i18next": "*"

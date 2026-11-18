@@ -1,7 +1,7 @@
-import type { Button } from '@rocket.chat/fuselage';
-import { Box } from '@rocket.chat/fuselage';
-import { useButtonPattern, useOutsideClick, useToggle } from '@rocket.chat/fuselage-hooks';
-import type { Keys as IconNames } from '@rocket.chat/icons';
+import type { Button } from '@yas chat/fuselage';
+import { Box } from '@yas chat/fuselage';
+import { useButtonPattern, useOutsideClick, useToggle } from '@yas chat/fuselage-hooks';
+import type { Keys as IconNames } from '@yas chat/icons';
 import type { ChangeEvent, ComponentPropsWithoutRef, RefObject } from 'react';
 import { useCallback, useRef } from 'react';
 

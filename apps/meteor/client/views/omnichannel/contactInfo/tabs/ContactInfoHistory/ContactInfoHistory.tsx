@@ -1,9 +1,9 @@
-import type { ILivechatContact, Serialized } from '@rocket.chat/core-typings';
-import { OmnichannelSourceType } from '@rocket.chat/core-typings';
-import { Box, Select, States, StatesIcon, StatesTitle, Text, Throbber } from '@rocket.chat/fuselage';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
-import { VirtualizedScrollbars, ContextualbarContent, ContextualbarEmptyContent, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal } from '@rocket.chat/ui-contexts';
+import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
+import { OmnichannelSourceType } from '@yas chat/core-typings';
+import { Box, Select, States, StatesIcon, StatesTitle, Text, Throbber } from '@yas chat/fuselage';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { VirtualizedScrollbars, ContextualbarContent, ContextualbarEmptyContent, useHasLicenseModule } from '@yas chat/ui-client';
+import { useEndpoint, useSetModal } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { Key } from 'react';
 import { useMemo } from 'react';

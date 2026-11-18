@@ -1,8 +1,8 @@
 import { setInterval } from 'node:timers';
 
-import type { IUserSession } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { UsersSessions } from '@rocket.chat/models';
+import type { IUserSession } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { UsersSessions } from '@yas chat/models';
 import type { AnyBulkWriteOperation } from 'mongodb';
 
 const logger = new Logger('PresenceReaper');

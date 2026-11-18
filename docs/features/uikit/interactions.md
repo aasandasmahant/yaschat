@@ -69,4 +69,4 @@ The Livechat widget sends `blockAction` for message blocks to the same endpoint,
 
 ## Validation
 
-Neither the endpoint nor the push path validates payloads. User interactions, app responses and app-pushed views reach the other side as sent; the endpoint ends with a `TODO: validate payloads per type`. `@rocket.chat/ui-kit` exports typia guards for every view and interaction (`isModalView`, `isServerInteraction`, ...), but no host code calls them.
+Neither the endpoint nor the push path validates payloads. User interactions, app responses and app-pushed views reach the other side as sent; the endpoint ends with a `TODO: validate payloads per type`. `@yas chat/ui-kit` exports typia guards for every view and interaction (`isModalView`, `isServerInteraction`, ...), but no host code calls them.

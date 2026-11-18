@@ -90,7 +90,7 @@ export const WithPlaceholder: Story = {
 export const WithValue: Story = {
 	args: {
 		'aria-label': 'url',
-		'defaultValue': 'https://rocket.chat',
+		'defaultValue': 'https://yas chat',
 	},
 };
 
@@ -104,10 +104,10 @@ export const States: Story = {
 				xAxis={{
 					'default': {},
 					'with placeholder': { placeholder: 'Placeholder' },
-					'with value': { value: 'https://rocket.chat' },
+					'with value': { value: 'https://yas chat' },
 					'with icon': {
 						endAddon: <Icon name='discover' size='x20' />,
-						value: 'https://rocket.chat',
+						value: 'https://yas chat',
 					},
 				}}
 				yAxis={{
@@ -132,10 +132,10 @@ export const States: Story = {
 				xAxis={{
 					'small': {},
 					'with placeholder': { placeholder: 'Placeholder' },
-					'with value': { value: 'https://rocket.chat' },
+					'with value': { value: 'https://yas chat' },
 					'with icon': {
 						endAddon: <Icon name='discover' size='x20' />,
-						value: 'https://rocket.chat',
+						value: 'https://yas chat',
 					},
 				}}
 				yAxis={{

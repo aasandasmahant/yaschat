@@ -1,6 +1,6 @@
-import { isOmnichannelRoom } from '@rocket.chat/core-typings';
-import type { ISubscription, IMessage, IRoom } from '@rocket.chat/core-typings';
-import { useRouter, useUser } from '@rocket.chat/ui-contexts';
+import { isOmnichannelRoom } from '@yas chat/core-typings';
+import type { ISubscription, IMessage, IRoom } from '@yas chat/core-typings';
+import { useRouter, useUser } from '@yas chat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import { useMarkAsUnreadMutation } from '../hooks/useMarkAsUnreadMutation';

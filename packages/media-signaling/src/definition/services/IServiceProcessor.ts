@@ -1,4 +1,4 @@
-import type { Emitter } from '@rocket.chat/emitter';
+import type { Emitter } from '@yas chat/emitter';
 
 export type DefaultServiceStateMap = Record<string, unknown>;
 

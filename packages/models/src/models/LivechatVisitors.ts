@@ -1,6 +1,6 @@
-import type { DeepWritable, IVisitorExternalIdentifier, ILivechatVisitor, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { FindPaginated, ILivechatVisitorsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { DeepWritable, IVisitorExternalIdentifier, ILivechatVisitor, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { FindPaginated, ILivechatVisitorsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
+import { escapeRegExp } from '@yas chat/tools';
 import type {
 	AggregationCursor,
 	Collection,

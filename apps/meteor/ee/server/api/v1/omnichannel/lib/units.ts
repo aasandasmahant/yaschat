@@ -1,7 +1,7 @@
-import type { IOmnichannelBusinessUnit, ILivechatUnitMonitor } from '@rocket.chat/core-typings';
-import { LivechatUnitMonitors, LivechatUnit } from '@rocket.chat/models';
-import { getUnitsFromUser } from '@rocket.chat/omni-core-ee';
-import { escapeRegExp } from '@rocket.chat/tools';
+import type { IOmnichannelBusinessUnit, ILivechatUnitMonitor } from '@yas chat/core-typings';
+import { LivechatUnitMonitors, LivechatUnit } from '@yas chat/models';
+import { getUnitsFromUser } from '@yas chat/omni-core-ee';
+import { escapeRegExp } from '@yas chat/tools';
 import type { FindOptions } from 'mongodb';
 
 export async function findUnitsOfUser({

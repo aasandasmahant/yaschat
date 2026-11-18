@@ -1,5 +1,5 @@
-import type { IAppServerOrchestrator, IAppsUpload } from '@rocket.chat/apps';
-import type { IUpload } from '@rocket.chat/core-typings';
+import type { IAppServerOrchestrator, IAppsUpload } from '@yas chat/apps';
+import type { IUpload } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { mappedDecodeAsync } from './mappedData';

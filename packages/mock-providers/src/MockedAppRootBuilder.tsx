@@ -8,7 +8,7 @@ import type {
 	ProviderCapabilities,
 	Serialized,
 	SettingValue,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type {
 	ServerMethodName,
 	ServerMethodParameters,
@@ -18,11 +18,11 @@ import type {
 	StreamerEvents,
 	StreamKeys,
 	StreamNames,
-} from '@rocket.chat/ddp-client';
-import { Emitter } from '@rocket.chat/emitter';
-import languages from '@rocket.chat/i18n/dist/languages';
-import { createPredicateFromFilter } from '@rocket.chat/mongo-adapter';
-import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@rocket.chat/rest-typings';
+} from '@yas chat/ddp-client';
+import { Emitter } from '@yas chat/emitter';
+import languages from '@yas chat/i18n/dist/languages';
+import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@yas chat/rest-typings';
 import type {
 	ConnectionStatusContextValue,
 	Device,
@@ -34,7 +34,7 @@ import type {
 	SubscriptionWithRoom,
 	ToastMessagesContextValue,
 	TranslationKey,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import {
 	AuthorizationContext,
 	ConnectionStatusContext,
@@ -48,9 +48,9 @@ import {
 	UserPresenceContext,
 	AuthenticationContext,
 	ToastMessagesContext,
-} from '@rocket.chat/ui-contexts';
-import type { VideoConfPopupPayload } from '@rocket.chat/ui-video-conf';
-import { VideoConfContext } from '@rocket.chat/ui-video-conf';
+} from '@yas chat/ui-contexts';
+import type { VideoConfPopupPayload } from '@yas chat/ui-video-conf';
+import { VideoConfContext } from '@yas chat/ui-video-conf';
 import type { Decorator } from '@storybook/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createInstance } from 'i18next';

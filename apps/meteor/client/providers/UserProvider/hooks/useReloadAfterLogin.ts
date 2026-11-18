@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { useRouter } from '@rocket.chat/ui-contexts';
+import type { IUser } from '@yas chat/core-typings';
+import { useRouter } from '@yas chat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { LegacyRoomManager } from '../../../lib/LegacyRoomManager';

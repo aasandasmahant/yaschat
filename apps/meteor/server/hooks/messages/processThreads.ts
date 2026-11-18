@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { isEditedMessage } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { isEditedMessage } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 
 import { updateThreadUsersSubscriptions, getMentions } from './notifyUsersOnMessage';
 import { sendMessageNotifications } from './sendNotificationsOnMessage';

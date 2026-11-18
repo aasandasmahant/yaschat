@@ -1,5 +1,5 @@
-import { FormSkeleton } from '@rocket.chat/layout';
-import { useRouteParameter } from '@rocket.chat/ui-contexts';
+import { FormSkeleton } from '@yas chat/layout';
+import { useRouteParameter } from '@yas chat/ui-contexts';
 
 import RegisterForm from './RegisterForm';
 import SecretRegisterInvalidForm from './SecretRegisterInvalidForm';

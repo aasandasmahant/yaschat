@@ -1,7 +1,7 @@
-import { Button } from '@rocket.chat/fuselage';
-import { extractTranslationNamespaces } from '@rocket.chat/i18n';
-import en from '@rocket.chat/i18n/dist/resources/en.i18n.json';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { Button } from '@yas chat/fuselage';
+import { extractTranslationNamespaces } from '@yas chat/i18n';
+import en from '@yas chat/i18n/dist/resources/en.i18n.json';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ContextType, ReactNode } from 'react';
 import { useMemo, useState } from 'react';

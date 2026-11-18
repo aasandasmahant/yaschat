@@ -1,4 +1,4 @@
-import { ContextualbarAction, type ContextualbarActionProps } from '@rocket.chat/fuselage';
+import { ContextualbarAction, type ContextualbarActionProps } from '@yas chat/fuselage';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -6,7 +6,7 @@ import type {
 	MessageTypesValues,
 	MessageAttachment,
 	IMessageWithPendingFileImport,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 import type {
 	AggregationCursor,
 	CountDocumentsOptions,
@@ -153,7 +153,7 @@ export interface IMessagesModel extends IBaseModel<IMessage> {
 	addAttachmentTranslations(messageId: string, attachmentIndex: string, translations: Record<string, string>): Promise<UpdateResult>;
 	setImportFileYasChatAttachment(
 		importFileId: string,
-		rocketChatUrl: string,
+		YasChatUrl: string,
 		attachment: MessageAttachment,
 	): Promise<UpdateResult | Document>;
 	countVisibleByRoomIdBetweenTimestampsInclusive(roomId: string, afterTimestamp: Date, beforeTimestamp: Date): Promise<number>;

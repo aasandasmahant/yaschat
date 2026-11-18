@@ -1,7 +1,7 @@
-import { AI_LICENSE_MODULE } from '@rocket.chat/ai-search';
-import { License } from '@rocket.chat/license';
-import { OAuthApps } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { AI_LICENSE_MODULE } from '@yas chat/ai-search';
+import { License } from '@yas chat/license';
+import { OAuthApps } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { settings } from '../../../settings/cached';
 

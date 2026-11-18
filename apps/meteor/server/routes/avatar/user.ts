@@ -1,9 +1,9 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
-import type { IUser } from '@rocket.chat/apps-engine/definition/users';
-import type { IIncomingMessage } from '@rocket.chat/core-typings';
-import { Avatars, Users } from '@rocket.chat/models';
-import { serverFetch as fetch } from '@rocket.chat/server-fetch';
+import type { IUser } from '@yas chat/apps-engine/definition/users';
+import type { IIncomingMessage } from '@yas chat/core-typings';
+import { Avatars, Users } from '@yas chat/models';
+import { serverFetch as fetch } from '@yas chat/server-fetch';
 import type { NextFunction } from 'connect';
 
 import { serveSvgAvatarInRequestedFormat, wasFallbackModified, setCacheAndDispositionHeaders, serveAvatarFile } from './utils';

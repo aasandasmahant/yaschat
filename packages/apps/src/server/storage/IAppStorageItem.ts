@@ -1,7 +1,7 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IPermission } from '@rocket.chat/apps-engine/definition/permissions/IPermission';
-import type { ISetting } from '@rocket.chat/apps-engine/definition/settings';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
+import type { ISetting } from '@yas chat/apps-engine/definition/settings';
 
 import type { IMarketplaceInfo } from '../marketplace';
 

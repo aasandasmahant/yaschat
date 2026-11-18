@@ -2,10 +2,10 @@ import { registerHooks } from 'node:module';
 import path from 'node:path';
 
 // This file compiles to dist/lib/loader-hook.js.
-// Three levels up from dist/lib/ lands on packages/apps/ — the @rocket.chat/apps package root.
+// Three levels up from dist/lib/ lands on packages/apps/ — the @yas chat/apps package root.
 const appsPackageDir = path.resolve(__dirname, '../../..');
 
-const PACKAGE_PREFIX = '@rocket.chat/apps';
+const PACKAGE_PREFIX = '@yas chat/apps';
 
 registerHooks({
 	resolve(specifier, context, nextResolve) {

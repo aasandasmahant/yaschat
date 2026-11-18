@@ -1,4 +1,4 @@
-import { FormPageLayout } from '@rocket.chat/layout';
+import { FormPageLayout } from '@yas chat/layout';
 import { Trans } from 'react-i18next';
 
 const TitleCreateFirstMemberPage = () => (

@@ -1,4 +1,4 @@
-import { api, Presence, ServiceClassInternal, type IMediaCallService, Authorization } from '@rocket.chat/core-services';
+import { api, Presence, ServiceClassInternal, type IMediaCallService, Authorization } from '@yas chat/core-services';
 import type {
 	IMediaCall,
 	IUser,
@@ -6,21 +6,21 @@ import type {
 	IInternalMediaCallHistoryItem,
 	CallHistoryItemState,
 	IExternalMediaCallHistoryItem,
-} from '@rocket.chat/core-typings';
-import { UserStatus } from '@rocket.chat/core-typings';
-import { callServer, type IceServerConfig, type IMediaCallServerSettings, getSignalsForExistingCall } from '@rocket.chat/media-calls';
+} from '@yas chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
+import { callServer, type IceServerConfig, type IMediaCallServerSettings, getSignalsForExistingCall } from '@yas chat/media-calls';
 import type {
 	CallFeature,
 	ClientMediaSignal,
 	ServerMediaSignal,
 	ServerMediaCallSignal,
 	ClientMediaSignalAnswer,
-} from '@rocket.chat/media-signaling';
-import { isClientMediaSignal } from '@rocket.chat/media-signaling';
-import type { InsertionModel } from '@rocket.chat/model-typings';
-import { CallHistory, MediaCalls, Rooms, Users } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
-import { callStateToTranslationKey, getHistoryMessagePayload } from '@rocket.chat/ui-voip/dist/ui-kit/getHistoryMessagePayload';
+} from '@yas chat/media-signaling';
+import { isClientMediaSignal } from '@yas chat/media-signaling';
+import type { InsertionModel } from '@yas chat/model-typings';
+import { CallHistory, MediaCalls, Rooms, Users } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
+import { callStateToTranslationKey, getHistoryMessagePayload } from '@yas chat/ui-voip/dist/ui-kit/getHistoryMessagePayload';
 
 import {
 	notifyAppsOfMediaCallEnded,

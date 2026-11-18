@@ -1,4 +1,4 @@
-import type { IOmnichannelAgent } from '@rocket.chat/core-typings';
+import type { IOmnichannelAgent } from '@yas chat/core-typings';
 
 export type TriggerMessage = {
 	msg?: string;

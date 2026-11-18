@@ -1,7 +1,7 @@
-import { api } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import type { Updater } from '@rocket.chat/models';
-import { Users } from '@rocket.chat/models';
+import { api } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import type { Updater } from '@yas chat/models';
+import { Users } from '@yas chat/models';
 import type { ClientSession } from 'mongodb';
 
 import { onceTransactionCommitedSuccessfully } from '../../database/utils';

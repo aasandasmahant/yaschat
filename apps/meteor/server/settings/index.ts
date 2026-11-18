@@ -1,5 +1,5 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import { Settings } from '@rocket.chat/models';
+import { Settings } from '@yas chat/models';
 
 import { use } from './Middleware';
 import { SettingsRegistry } from './SettingsRegistry';

@@ -1,7 +1,7 @@
-import type { IMessage, ITranslatedMessage } from '@rocket.chat/core-typings';
-import { isEditedMessage, isE2EEMessage, isE2EEPinnedMessage } from '@rocket.chat/core-typings';
-import { MessageStatusIndicator, MessageStatusIndicatorItem } from '@rocket.chat/fuselage';
-import { useUserId } from '@rocket.chat/ui-contexts';
+import type { IMessage, ITranslatedMessage } from '@yas chat/core-typings';
+import { isEditedMessage, isE2EEMessage, isE2EEPinnedMessage } from '@yas chat/core-typings';
+import { MessageStatusIndicator, MessageStatusIndicatorItem } from '@yas chat/fuselage';
+import { useUserId } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useMessageDateFormatter, useShowStarred, useShowTranslated, useShowFollowing } from './list/MessageListContext';

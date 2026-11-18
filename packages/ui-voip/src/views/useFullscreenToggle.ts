@@ -1,5 +1,5 @@
-import { useOwnerDocument } from '@rocket.chat/fuselage';
-import { useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { useOwnerDocument } from '@yas chat/fuselage';
+import { useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

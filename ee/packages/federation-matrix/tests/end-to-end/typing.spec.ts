@@ -1,4 +1,4 @@
-import type { IRoomNativeFederated } from '@rocket.chat/core-typings';
+import type { IRoomNativeFederated } from '@yas chat/core-typings';
 
 import { api } from '../../../../../apps/meteor/tests/data/api-data';
 import { retry } from '../../../../../apps/meteor/tests/data/retry';
@@ -111,7 +111,7 @@ const namesake = {
 
 		for await (const user of [localUser, namesake]) {
 			const created = await createUser(
-				{ username: user.username, password: user.password, email: `${user.username}@rocket.chat`, name: user.name },
+				{ username: user.username, password: user.password, email: `${user.username}@yas chat`, name: user.name },
 				rc1AdminRequestConfig,
 			);
 			createdUserIds.push((created as unknown as { _id: string })._id);

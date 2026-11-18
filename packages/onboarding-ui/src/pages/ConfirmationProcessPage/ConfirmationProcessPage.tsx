@@ -1,5 +1,5 @@
-import { Throbber } from '@rocket.chat/fuselage';
-import { HeroLayout, HeroLayoutTitle } from '@rocket.chat/layout';
+import { Throbber } from '@yas chat/fuselage';
+import { HeroLayout, HeroLayoutTitle } from '@yas chat/layout';
 import { useTranslation } from 'react-i18next';
 
 const ConfirmationProcessPage = () => {

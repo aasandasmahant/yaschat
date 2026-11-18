@@ -1,16 +1,16 @@
-import { UserStatus } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
-import { validateEmail } from '@rocket.chat/tools';
+import { UserStatus } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
+import { validateEmail } from '@yas chat/tools';
 
 import { registerGuest } from './create';
 
 // Mock the validateEmail function
-jest.mock('@rocket.chat/tools', () => ({
+jest.mock('@yas chat/tools', () => ({
 	validateEmail: jest.fn(),
 }));
 
 // Mock the Logger
-jest.mock('@rocket.chat/logger', () => ({
+jest.mock('@yas chat/logger', () => ({
 	Logger: jest.fn().mockImplementation(() => ({
 		debug: jest.fn(),
 	})),

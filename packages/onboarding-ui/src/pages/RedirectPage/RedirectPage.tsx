@@ -1,5 +1,5 @@
-import { Box, Margins } from '@rocket.chat/fuselage';
-import { ActionLink, LayoutLogo, BackgroundLayer } from '@rocket.chat/layout';
+import { Box, Margins } from '@yas chat/fuselage';
+import { ActionLink, LayoutLogo, BackgroundLayer } from '@yas chat/layout';
 import { useEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { Emitter } from '@rocket.chat/emitter';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import type * as UiKit from '@rocket.chat/ui-kit';
+import { Emitter } from '@yas chat/emitter';
+import type { Keys as IconName } from '@yas chat/icons';
+import type * as UiKit from '@yas chat/ui-kit';
 
 export type LegacyBannerPayload = {
 	id: string;

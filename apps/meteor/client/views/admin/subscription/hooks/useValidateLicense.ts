@@ -1,5 +1,5 @@
-import type { BehaviorWithContext } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { BehaviorWithContext } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 // Real licenses are well over this length; shorter input is still being typed.

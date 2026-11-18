@@ -1,7 +1,7 @@
-import { Message, Room, ClientSafeError } from '@rocket.chat/core-services';
-import type { IUser } from '@rocket.chat/core-typings';
-import { isRoomNativeFederated } from '@rocket.chat/core-typings';
-import { Integrations, Rooms, Subscriptions } from '@rocket.chat/models';
+import { Message, Room, ClientSafeError } from '@yas chat/core-services';
+import type { IUser } from '@yas chat/core-typings';
+import { isRoomNativeFederated } from '@yas chat/core-typings';
+import { Integrations, Rooms, Subscriptions } from '@yas chat/models';
 import type { Document, UpdateResult } from 'mongodb';
 
 import { callbacks } from '../../callbacks';

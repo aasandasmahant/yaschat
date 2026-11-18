@@ -1,4 +1,4 @@
-import type { MessageTypesValues, IRoom } from '@rocket.chat/core-typings';
+import type { MessageTypesValues, IRoom } from '@yas chat/core-typings';
 
 import { expandSystemMessageOptions } from '../systemMessage/hideSystemMessage';
 

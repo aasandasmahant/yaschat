@@ -1,5 +1,5 @@
-import type { IMediaCall } from '@rocket.chat/core-typings';
-import { MediaCalls } from '@rocket.chat/models';
+import type { IMediaCall } from '@yas chat/core-typings';
+import { MediaCalls } from '@yas chat/models';
 
 import { BaseCallProvider } from '../base/BaseCallProvider';
 import { CallRejectedError, type InternalCallParams } from '../definition/common';

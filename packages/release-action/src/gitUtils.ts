@@ -2,7 +2,7 @@ import { exec, getExecOutput } from '@actions/exec';
 
 export async function setupGitUser() {
 	await exec('git', ['config', 'user.name', '"yaschat-github-ci"']);
-	await exec('git', ['config', 'user.email', '"buildmaster@rocket.chat"']);
+	await exec('git', ['config', 'user.email', '"buildmaster@yas chat"']);
 }
 
 export async function createBranch(newBranch: string) {

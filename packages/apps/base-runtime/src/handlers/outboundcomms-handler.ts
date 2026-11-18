@@ -1,4 +1,4 @@
-import type { IOutboundMessageProviders } from '@rocket.chat/apps-engine/definition/outboundCommunication/IOutboundCommsProvider';
+import type { IOutboundMessageProviders } from '@yas chat/apps-engine/definition/outboundCommunication/IOutboundCommsProvider';
 
 import { AppObjectRegistry } from '../AppObjectRegistry';
 import { AppAccessorsInstance } from '../lib/accessors/mod';

@@ -1,5 +1,5 @@
-import type { IconProps } from '@rocket.chat/fuselage';
-import { Box, Icon, Tag } from '@rocket.chat/fuselage';
+import type { IconProps } from '@yas chat/fuselage';
+import { Box, Icon, Tag } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type MessageComposerHintProps = {

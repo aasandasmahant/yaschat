@@ -1,10 +1,10 @@
-import { Settings } from '@rocket.chat/core-services';
+import { Settings } from '@yas chat/core-services';
 import { Hono } from 'hono';
 
 import { isFederationDomainAllowedMiddleware } from './isFederationDomainAllowed';
 import { logger } from '../logger';
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	Settings: { get: jest.fn() },
 }));
 
@@ -26,20 +26,20 @@ describe('isFederationDomainAllowedMiddleware', () => {
 	});
 
 	it('passes a request whose quoted origin is on the allow list', async () => {
-		const res = await requestWith('X-Matrix origin="allowed.example",destination="rocket.chat",key="ed25519:a",sig="s"');
+		const res = await requestWith('X-Matrix origin="allowed.example",destination="yas chat",key="ed25519:a",sig="s"');
 
 		expect(res.status).toBe(200);
 	});
 
 	it('passes a request whose unquoted origin is on the allow list', async () => {
-		const res = await requestWith('X-Matrix origin=allowed.example,destination=rocket.chat,key="ed25519:a",sig="s"');
+		const res = await requestWith('X-Matrix origin=allowed.example,destination=yas chat,key="ed25519:a",sig="s"');
 
 		expect(res.status).toBe(200);
 		expect(logger.warn).not.toHaveBeenCalled();
 	});
 
 	it('reads parameter names case-insensitively', async () => {
-		const res = await requestWith('X-Matrix Origin=allowed.example,DESTINATION=rocket.chat,Key="ed25519:a",sig="s"');
+		const res = await requestWith('X-Matrix Origin=allowed.example,DESTINATION=yas chat,Key="ed25519:a",sig="s"');
 
 		expect(res.status).toBe(200);
 		expect(logger.warn).not.toHaveBeenCalled();

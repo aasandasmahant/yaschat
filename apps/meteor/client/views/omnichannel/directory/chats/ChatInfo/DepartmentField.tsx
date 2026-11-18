@@ -1,4 +1,4 @@
-import { Skeleton, Text } from '@rocket.chat/fuselage';
+import { Skeleton, Text } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import Field from '../../../components/Field';

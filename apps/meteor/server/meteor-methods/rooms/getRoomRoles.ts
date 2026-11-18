@@ -1,13 +1,13 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { Rooms } from '@yas chat/models';
 
 import { canAccessRoomAsync } from '../../lib/authorization';
 import type { RoomRoles } from '../../lib/roles/getRoomRoles';
 import { getRoomRoles } from '../../lib/roles/getRoomRoles';
 import { settings } from '../../settings';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		getRoomRoles(rid: IRoom['_id']): RoomRoles[];
 	}

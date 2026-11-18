@@ -1,5 +1,5 @@
 {
-  "name": "@rocket.chat/onboarding-ui",
+  "name": "@yas chat/onboarding-ui",
   "version": "1.0.0",
   "description": "Set of components and functions for the onboarding experience on YasChat",
   "keywords": [
@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": {
     "name": "YasChat",
-    "url": "https://rocket.chat/"
+    "url": "https://yas chat/"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -40,17 +40,17 @@
     "react-hook-form": "~7.54.2"
   },
   "devDependencies": {
-    "@rocket.chat/fuselage": "workspace:~",
-    "@rocket.chat/fuselage-hooks": "workspace:^",
-    "@rocket.chat/fuselage-tokens": "workspace:^",
-    "@rocket.chat/icons": "workspace:~",
-    "@rocket.chat/jest-presets": "workspace:~",
-    "@rocket.chat/layout": "workspace:~",
-    "@rocket.chat/logo": "workspace:~",
-    "@rocket.chat/mock-providers": "workspace:~",
-    "@rocket.chat/storybook-config": "workspace:~",
-    "@rocket.chat/styled": "workspace:~",
-    "@rocket.chat/tsconfig": "workspace:~",
+    "@yas chat/fuselage": "workspace:~",
+    "@yas chat/fuselage-hooks": "workspace:^",
+    "@yas chat/fuselage-tokens": "workspace:^",
+    "@yas chat/icons": "workspace:~",
+    "@yas chat/jest-presets": "workspace:~",
+    "@yas chat/layout": "workspace:~",
+    "@yas chat/logo": "workspace:~",
+    "@yas chat/mock-providers": "workspace:~",
+    "@yas chat/storybook-config": "workspace:~",
+    "@yas chat/styled": "workspace:~",
+    "@yas chat/tsconfig": "workspace:~",
     "@testing-library/dom": "~10.4.2",
     "@testing-library/react": "~16.3.3",
     "@types/react": "~19.2.18",
@@ -64,12 +64,12 @@
     "typescript": "~7.0.2"
   },
   "peerDependencies": {
-    "@rocket.chat/fuselage": "1.0.0",
-    "@rocket.chat/fuselage-hooks": "0.44.0",
-    "@rocket.chat/icons": "0.52.0",
-    "@rocket.chat/layout": "1.0.0",
-    "@rocket.chat/logo": "0.33.3",
-    "@rocket.chat/styled": "0.34.2",
+    "@yas chat/fuselage": "1.0.0",
+    "@yas chat/fuselage-hooks": "0.44.0",
+    "@yas chat/icons": "0.52.0",
+    "@yas chat/layout": "1.0.0",
+    "@yas chat/logo": "0.33.3",
+    "@yas chat/styled": "0.34.2",
     "react": "*",
     "react-dom": "*",
     "react-i18next": "*"

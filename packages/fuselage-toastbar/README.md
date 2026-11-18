@@ -1,10 +1,10 @@
-# `@rocket.chat/fuselage-toastbar`
+# `@yas chat/fuselage-toastbar`
 
 > A toast notification queue for React apps built with Fuselage.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/fuselage-toastbar?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-toastbar) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/fuselage-toastbar?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/fuselage-toastbar)
+[![npm](https://img.shields.io/npm/v/@yas chat/fuselage-toastbar?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-toastbar) [![downloads](https://img.shields.io/npm/dw/@yas chat/fuselage-toastbar?style=flat-square)](https://www.npmjs.com/package/@yas chat/fuselage-toastbar)
 
-`@rocket.chat/fuselage` provides the `ToastBar` component; this package manages a list of them. Wrap your app in `ToastBarProvider`, then call `useToastBarDispatch()` from any component to show a toast.
+`@yas chat/fuselage` provides the `ToastBar` component; this package manages a list of them. Wrap your app in `ToastBarProvider`, then call `useToastBarDispatch()` from any component to show a toast.
 
 - Toasts render in a portal attached to `document.body`, in one of four corners.
 - Timed toasts have a close button, close themselves after a few seconds, and pause while the pointer is over them.
@@ -14,10 +14,10 @@
 ## Installation
 
 ```sh
-npm install @rocket.chat/fuselage-toastbar @rocket.chat/fuselage @rocket.chat/styled react react-dom
+npm install @yas chat/fuselage-toastbar @yas chat/fuselage @yas chat/styled react react-dom
 ```
 
-`@rocket.chat/fuselage`, `@rocket.chat/styled`, `react` and `react-dom` are peer dependencies. `@rocket.chat/fuselage` has its own peer dependencies and stylesheet; see its README.
+`@yas chat/fuselage`, `@yas chat/styled`, `react` and `react-dom` are peer dependencies. `@yas chat/fuselage` has its own peer dependencies and stylesheet; see its README.
 
 The package ships CommonJS and ES module builds with TypeScript declarations.
 
@@ -26,7 +26,7 @@ The package ships CommonJS and ES module builds with TypeScript declarations.
 Render `ToastBarProvider` once, near the root of your app:
 
 ```tsx
-import { ToastBarProvider } from '@rocket.chat/fuselage-toastbar';
+import { ToastBarProvider } from '@yas chat/fuselage-toastbar';
 import type { ReactNode } from 'react';
 
 export function AppProviders({ children }: { children: ReactNode }) {
@@ -37,8 +37,8 @@ export function AppProviders({ children }: { children: ReactNode }) {
 Then dispatch toasts from any component inside it:
 
 ```tsx
-import { Button } from '@rocket.chat/fuselage';
-import { useToastBarDispatch } from '@rocket.chat/fuselage-toastbar';
+import { Button } from '@yas chat/fuselage';
+import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
 
 function SaveButton({ save }: { save: () => Promise<void> }) {
 	const dispatchToastMessage = useToastBarDispatch();
@@ -93,7 +93,7 @@ Returns `dismiss(id)`, which removes the toast with that `id`. Timed toasts call
 
 ### Other exports
 
-- `ToastBar` and `ToastBarProps` — re-exported from `@rocket.chat/fuselage`.
+- `ToastBar` and `ToastBarProps` — re-exported from `@yas chat/fuselage`.
 - `ToastBarPortal` — the portal the provider renders into. It adds a `#toastBarRoot` element to `document.body` and removes it when the last portal unmounts.
 - `ToastBarContext`, and the types `ToastBarPayload`, `ToastBarContextValue`, `ToastBarProviderProps` and `ToastBarPortalProps` — for custom providers and tests.
 
@@ -102,18 +102,18 @@ Returns `dismiss(id)`, which removes the toast with that `id`. Timed toasts call
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/fuselage-toastbar). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-toastbar build
-yarn workspace @rocket.chat/fuselage-toastbar testunit
-yarn workspace @rocket.chat/fuselage-toastbar typecheck
-yarn workspace @rocket.chat/fuselage-toastbar lint
-yarn workspace @rocket.chat/fuselage-toastbar lint:fix
+yarn workspace @yas chat/fuselage-toastbar build
+yarn workspace @yas chat/fuselage-toastbar testunit
+yarn workspace @yas chat/fuselage-toastbar typecheck
+yarn workspace @yas chat/fuselage-toastbar lint
+yarn workspace @yas chat/fuselage-toastbar lint:fix
 ```
 
 Run Storybook to try the toasts interactively:
 
 ```sh
-yarn workspace @rocket.chat/fuselage-toastbar storybook
-yarn workspace @rocket.chat/fuselage-toastbar build-storybook
+yarn workspace @yas chat/fuselage-toastbar storybook
+yarn workspace @yas chat/fuselage-toastbar build-storybook
 ```
 
 ## License

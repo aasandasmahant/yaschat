@@ -1,4 +1,4 @@
-import type { PurchaseType } from '@rocket.chat/core-typings';
+import type { PurchaseType } from '@yas chat/core-typings';
 
 import { filterAppsByFree } from './filterAppsByFree';
 

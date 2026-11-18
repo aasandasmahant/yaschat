@@ -1,6 +1,6 @@
-import type { IImportChannel, IImportChannelRecord, IRoom } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms, Users } from '@rocket.chat/models';
-import { removeEmpty } from '@rocket.chat/tools';
+import type { IImportChannel, IImportChannelRecord, IRoom } from '@yas chat/core-typings';
+import { Subscriptions, Rooms, Users } from '@yas chat/models';
+import { removeEmpty } from '@yas chat/tools';
 import limax from 'limax';
 
 import { RecordConverter } from './RecordConverter';

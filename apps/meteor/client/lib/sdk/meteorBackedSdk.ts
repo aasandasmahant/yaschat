@@ -9,7 +9,7 @@ declare global {
 	}
 }
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface DDPSDK {
 		storage: {
 			changeStorageBackend: () => void;

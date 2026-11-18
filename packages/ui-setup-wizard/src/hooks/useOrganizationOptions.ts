@@ -1,5 +1,5 @@
-import type { ISetting } from '@rocket.chat/core-typings';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { ISetting } from '@yas chat/core-typings';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 import type { TFunction } from 'i18next';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

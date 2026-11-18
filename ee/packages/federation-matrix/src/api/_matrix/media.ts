@@ -1,9 +1,9 @@
 import crypto from 'node:crypto';
 
-import type { IUpload } from '@rocket.chat/core-typings';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Router } from '@rocket.chat/http-router';
-import { ajv } from '@rocket.chat/rest-typings/dist/v1/Ajv';
+import type { IUpload } from '@yas chat/core-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Router } from '@yas chat/http-router';
+import { ajv } from '@yas chat/rest-typings/dist/v1/Ajv';
 
 import { MatrixMediaService } from '../../services/MatrixMediaService';
 import { canAccessResourceMiddleware } from '../middlewares/canAccessResource';

@@ -1,4 +1,4 @@
-import { BackgroundLayer } from '@rocket.chat/layout';
+import { BackgroundLayer } from '@yas chat/layout';
 
 import TitleCreateFirstMemberPage from './TitleCreateFirstMemberPage';
 import type { FormPageLayoutStyleProps } from '../../Types';

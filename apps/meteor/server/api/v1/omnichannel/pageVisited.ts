@@ -1,5 +1,5 @@
-import type { IOmnichannelSystemMessage } from '@rocket.chat/core-typings';
-import { isPOSTLivechatPageVisitedParams } from '@rocket.chat/rest-typings';
+import type { IOmnichannelSystemMessage } from '@yas chat/core-typings';
+import { isPOSTLivechatPageVisitedParams } from '@yas chat/rest-typings';
 
 import { API } from '../..';
 import { savePageHistory } from '../../../lib/omnichannel/tracking';

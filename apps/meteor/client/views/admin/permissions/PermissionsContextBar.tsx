@@ -1,12 +1,12 @@
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarTitle,
 	ContextualbarClose,
 	ContextualbarDialog,
 	useHasLicenseModule,
-} from '@rocket.chat/ui-client';
-import { useRouteParameter, useRoute, useSetModal } from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-client';
+import { useRouteParameter, useRoute, useSetModal } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

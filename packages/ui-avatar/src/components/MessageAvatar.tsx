@@ -1,5 +1,5 @@
-import { css } from '@rocket.chat/css-in-js';
-import { AvatarContainer, Box } from '@rocket.chat/fuselage';
+import { css } from '@yas chat/css-in-js';
+import { AvatarContainer, Box } from '@yas chat/fuselage';
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react';
 
 import UserAvatar from './UserAvatar';

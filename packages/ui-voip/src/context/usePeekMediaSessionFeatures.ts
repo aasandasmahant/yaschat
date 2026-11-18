@@ -1,4 +1,4 @@
-import type { CallFeature } from '@rocket.chat/media-signaling';
+import type { CallFeature } from '@yas chat/media-signaling';
 
 import { useMediaCallInstance } from './MediaCallInstanceContext';
 import { useInstanceSnapshot } from './useInstanceSnapshot';

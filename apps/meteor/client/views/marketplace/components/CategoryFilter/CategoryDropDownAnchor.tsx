@@ -1,6 +1,6 @@
-import type { Button } from '@rocket.chat/fuselage';
-import { Box, Icon } from '@rocket.chat/fuselage';
-import colorTokens from '@rocket.chat/fuselage-tokens/dist/colors.json';
+import type { Button } from '@yas chat/fuselage';
+import { Box, Icon } from '@yas chat/fuselage';
+import colorTokens from '@yas chat/fuselage-tokens/dist/colors.json';
 import type { ComponentProps, MouseEventHandler } from 'react';
 import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';

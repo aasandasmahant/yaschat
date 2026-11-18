@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
-import type { Logger } from '@rocket.chat/logger';
-import { censorUrl } from '@rocket.chat/tools';
+import type { Logger } from '@yas chat/logger';
+import { censorUrl } from '@yas chat/tools';
 import type { MiddlewareHandler } from 'hono';
 
 import { getRemoteAddress } from './remoteAddressMiddleware';

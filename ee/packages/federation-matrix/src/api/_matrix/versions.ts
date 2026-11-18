@@ -1,5 +1,5 @@
-import { Router } from '@rocket.chat/http-router';
-import { ajv } from '@rocket.chat/rest-typings/dist/v1/Ajv';
+import { Router } from '@yas chat/http-router';
+import { ajv } from '@yas chat/rest-typings/dist/v1/Ajv';
 
 const GetVersionsResponseSchema = {
 	type: 'object',

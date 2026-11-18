@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, RequiredField, SlashCommandPreviewItem } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, RequiredField, SlashCommandPreviewItem } from '@yas chat/core-typings';
 
 import { slashCommands } from '../../lib/utils/slashCommand';
 

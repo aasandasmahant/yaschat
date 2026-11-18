@@ -1,6 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar';
-import { Box, FlexContainer, FlexItem, Skeleton, Tooltip } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
+import { Box, FlexContainer, FlexItem, Skeleton, Tooltip } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
 import { addDays } from 'date-fns/addDays';
 import { differenceInDays } from 'date-fns/differenceInDays';
 import { format } from 'date-fns/format';

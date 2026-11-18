@@ -1,4 +1,4 @@
-import type { IDirectoryChannelResult, IDirectoryUserResult } from '@rocket.chat/core-typings';
+import type { IDirectoryChannelResult, IDirectoryUserResult } from '@yas chat/core-typings';
 
 import { ajv } from './Ajv';
 import { paginationQueryProperties } from './pagination';

@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
-import { Settings } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ServerMethods } from '@yas chat/ddp-client';
+import { Settings } from '@yas chat/models';
 import { Meteor } from 'meteor/meteor';
 
 import { hasPermissionAsync } from '../../../lib/authorization/hasPermission';
@@ -9,7 +9,7 @@ import { settings } from '../../../settings';
 import { updateAuditedByUser } from '../../../settings/lib/auditedSettingUpdates';
 import { startIrcBridge } from '../startIrcBridge';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		resetIrcConnection(): { message: string; params: unknown[] };
 	}

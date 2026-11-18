@@ -1,6 +1,6 @@
-import { Button } from '@rocket.chat/fuselage';
-import { PageHeader } from '@rocket.chat/ui-client';
-import { useSetting, useAllPermissions, useRoute } from '@rocket.chat/ui-contexts';
+import { Button } from '@yas chat/fuselage';
+import { PageHeader } from '@yas chat/ui-client';
+import { useSetting, useAllPermissions, useRoute } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const EDIT_LAYOUT_PERMISSIONS = ['view-privileged-setting', 'edit-privileged-setting', 'manage-selected-settings'];

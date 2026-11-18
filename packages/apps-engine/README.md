@@ -1,8 +1,8 @@
-# `@rocket.chat/apps-engine`
+# `@yas chat/apps-engine`
 
 > The public API and TypeScript definitions for building YasChat Apps.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/apps-engine) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/apps-engine)
+[![npm](https://img.shields.io/npm/v/@yas chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@yas chat/apps-engine) [![downloads](https://img.shields.io/npm/dw/@yas chat/apps-engine?style=flat-square)](https://www.npmjs.com/package/@yas chat/apps-engine)
 
 The Apps-Engine is YasChat's plugin framework. This package holds the surface an App is written against: the `App` base class, the event handler interfaces, the accessors an App uses to read and change the workspace, and the related types and enums. The YasChat server loads your App, calls its handlers and hands it implementations of these accessors.
 
@@ -18,20 +18,20 @@ The package only ships definitions. The code that installs and runs Apps lives i
 ## Installation
 
 ```sh
-npm install @rocket.chat/apps-engine
+npm install @yas chat/apps-engine
 ```
 
-Everything is published under the `definition/` directory, as CommonJS with TypeScript declarations. There is no root entry point: import from the module that declares what you need, for example `@rocket.chat/apps-engine/definition/App` or `@rocket.chat/apps-engine/definition/accessors`.
+Everything is published under the `definition/` directory, as CommonJS with TypeScript declarations. There is no root entry point: import from the module that declares what you need, for example `@yas chat/apps-engine/definition/App` or `@yas chat/apps-engine/definition/accessors`.
 
-Some message and UiKit types refer to `@rocket.chat/ui-kit`. If you use those types, install it too:
+Some message and UiKit types refer to `@yas chat/ui-kit`. If you use those types, install it too:
 
 ```sh
-npm install @rocket.chat/apps-engine @rocket.chat/ui-kit
+npm install @yas chat/apps-engine @yas chat/ui-kit
 ```
 
 ## Usage
 
-An App is a class that extends `App`, plus an `app.json` manifest that points to it. Apps are usually scaffolded, packaged and deployed with the YasChat Apps CLI (`rc-apps`), which sets up this package for you. See the [YasChat developer documentation](https://developer.rocket.chat/) for the full workflow.
+An App is a class that extends `App`, plus an `app.json` manifest that points to it. Apps are usually scaffolded, packaged and deployed with the YasChat Apps CLI (`rc-apps`), which sets up this package for you. See the [YasChat developer documentation](https://developer.yas chat/) for the full workflow.
 
 ### The App class
 
@@ -45,11 +45,11 @@ import type {
 	IModify,
 	IPersistence,
 	IRead,
-} from '@rocket.chat/apps-engine/definition/accessors';
-import { App } from '@rocket.chat/apps-engine/definition/App';
-import type { IMessage, IPostMessageSent } from '@rocket.chat/apps-engine/definition/messages';
-import type { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
-import { SettingType } from '@rocket.chat/apps-engine/definition/settings';
+} from '@yas chat/apps-engine/definition/accessors';
+import { App } from '@yas chat/apps-engine/definition/App';
+import type { IMessage, IPostMessageSent } from '@yas chat/apps-engine/definition/messages';
+import type { IAppInfo } from '@yas chat/apps-engine/definition/metadata';
+import { SettingType } from '@yas chat/apps-engine/definition/settings';
 
 import { HelloCommand } from './HelloCommand';
 
@@ -95,8 +95,8 @@ Override the lifecycle methods you need. Two have defaults that matter if you ov
 ### Slash commands
 
 ```ts
-import type { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { ISlashCommand, SlashCommandContext } from '@rocket.chat/apps-engine/definition/slashcommands';
+import type { IHttp, IModify, IPersistence, IRead } from '@yas chat/apps-engine/definition/accessors';
+import type { ISlashCommand, SlashCommandContext } from '@yas chat/apps-engine/definition/slashcommands';
 
 export class HelloCommand implements ISlashCommand {
 	public command = 'hello';
@@ -162,7 +162,7 @@ Some handlers also declare an optional `check<Handler>` method (for example `che
 
 ### UiKit
 
-Messages and UiKit surfaces take blocks from [`@rocket.chat/ui-kit`](https://www.npmjs.com/package/@rocket.chat/ui-kit). To handle clicks and form submissions, implement `IUIKitInteractionHandler` (`executeBlockActionHandler`, `executeViewSubmitHandler`, `executeViewClosedHandler`, `executeActionButtonHandler`) from `definition/uikit`.
+Messages and UiKit surfaces take blocks from [`@yas chat/ui-kit`](https://www.npmjs.com/package/@yas chat/ui-kit). To handle clicks and form submissions, implement `IUIKitInteractionHandler` (`executeBlockActionHandler`, `executeViewSubmitHandler`, `executeViewClosedHandler`, `executeActionButtonHandler`) from `definition/uikit`.
 
 `BlockBuilder` and the `I*Block` interfaces in `definition/uikit/blocks` are deprecated; pass `LayoutBlock` objects instead.
 
@@ -196,11 +196,11 @@ The other directories (`uploads`, `email`, `videoConferences`, `videoConfProvide
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/apps-engine). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/apps-engine build
-yarn workspace @rocket.chat/apps-engine dev
-yarn workspace @rocket.chat/apps-engine lint
-yarn workspace @rocket.chat/apps-engine typecheck
-yarn workspace @rocket.chat/apps-engine gen-doc
+yarn workspace @yas chat/apps-engine build
+yarn workspace @yas chat/apps-engine dev
+yarn workspace @yas chat/apps-engine lint
+yarn workspace @yas chat/apps-engine typecheck
+yarn workspace @yas chat/apps-engine gen-doc
 ```
 
 `build` compiles `src/` into `definition/` at the package root, which is what gets published. `dev` does the same in watch mode. `typecheck` also checks the type tests in `tests/`. `gen-doc` generates API documentation with TypeDoc into `docs/`.
@@ -211,7 +211,7 @@ The YasChat app in `apps/meteor` depends on this package through the workspace, 
 
 ### Scope of this package
 
-Only the public surface that Apps use belongs here. Server-side App management lives in the private `@rocket.chat/apps` package. See [docs/apps-engine-migration.md](https://github.com/YasChat/YasChat/blob/develop/docs/apps-engine-migration.md) for the background.
+Only the public surface that Apps use belongs here. Server-side App management lives in the private `@yas chat/apps` package. See [docs/apps-engine-migration.md](https://github.com/YasChat/YasChat/blob/develop/docs/apps-engine-migration.md) for the background.
 
 ## License
 

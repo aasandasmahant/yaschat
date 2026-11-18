@@ -3,7 +3,7 @@ name: xmpp-intent
 description: >
   Write an intent for a capability the XMPP server package lacks: an intents/<slug>.md
   that says what is wanted and why, never how. Use whenever someone describes something an
-  XMPP user or a Rocket.Chat user cannot do over federation, names a XEP or RFC the
+  XMPP user or a Yas chat user cannot do over federation, names a XEP or RFC the
   compliance matrix lists as missing or not-planned, asks for a "new feature" in
   ee/packages/xmpp-server, or says "intent". Use it even when they jump straight to a
   design: the intent comes first.

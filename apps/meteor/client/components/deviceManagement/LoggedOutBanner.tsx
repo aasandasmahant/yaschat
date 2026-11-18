@@ -1,4 +1,4 @@
-import { Banner, Box, Icon } from '@rocket.chat/fuselage';
+import { Banner, Box, Icon } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const LoggedOutBanner = () => {

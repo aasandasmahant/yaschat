@@ -1,6 +1,6 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
-import { Box, Select, Field, FieldLabel, FieldRow, Option } from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@rocket.chat/ui-client';
+import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Select, Field, FieldLabel, FieldRow, Option } from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
 import { useId, useMemo, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

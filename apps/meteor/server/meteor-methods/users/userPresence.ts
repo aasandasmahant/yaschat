@@ -1,9 +1,9 @@
-import { Presence } from '@rocket.chat/core-services';
-import { UserStatus } from '@rocket.chat/core-typings';
-import type { ServerMethods } from '@rocket.chat/ddp-client';
+import { Presence } from '@yas chat/core-services';
+import { UserStatus } from '@yas chat/core-typings';
+import type { ServerMethods } from '@yas chat/ddp-client';
 import { Meteor } from 'meteor/meteor';
 
-declare module '@rocket.chat/ddp-client' {
+declare module '@yas chat/ddp-client' {
 	interface ServerMethods {
 		'UserPresence:online'(): boolean | undefined;
 		'UserPresence:away'(): boolean | undefined;

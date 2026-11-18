@@ -1,6 +1,6 @@
-import type { IMediaCall, IUser, MediaCallContact, MediaCallActorType } from '@rocket.chat/core-typings';
-import type { VoipPushNotificationEventType } from '@rocket.chat/media-calls';
-import { MediaCalls, Users } from '@rocket.chat/models';
+import type { IMediaCall, IUser, MediaCallContact, MediaCallActorType } from '@yas chat/core-typings';
+import type { VoipPushNotificationEventType } from '@yas chat/media-calls';
+import { MediaCalls, Users } from '@yas chat/models';
 
 import { getPushNotificationType } from './getPushNotificationType';
 import { metrics } from '../../../lib/metrics/lib/metrics';

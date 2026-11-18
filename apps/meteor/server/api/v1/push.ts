@@ -1,8 +1,8 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { Push, ClientSafeError } from '@rocket.chat/core-services';
-import { pushTokenTypes } from '@rocket.chat/core-typings';
-import type { IMessage, IPushNotificationConfig, IPushToken, IPushTokenTypes, PushTokenTarget } from '@rocket.chat/core-typings';
-import { Messages, PushToken, Users, Rooms, Settings } from '@rocket.chat/models';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { Push, ClientSafeError } from '@yas chat/core-services';
+import { pushTokenTypes } from '@yas chat/core-typings';
+import type { IMessage, IPushNotificationConfig, IPushToken, IPushTokenTypes, PushTokenTarget } from '@yas chat/core-typings';
+import { Messages, PushToken, Users, Rooms, Settings } from '@yas chat/models';
 import {
 	ajv,
 	isPushGetProps,
@@ -10,7 +10,7 @@ import {
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 import type { JSONSchemaType } from 'ajv';
 
 import { canAccessRoomAsync } from '../../lib/authorization/canAccessRoom';
@@ -386,7 +386,7 @@ type PushGetInfoEndpoints = ExtractRoutesFromAPI<typeof pushGetInfoEndpoints>;
 
 type PushEndpoints = PushTestEndpoints & PushTokenEndpoints & PushGetInfoEndpoints;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends PushEndpoints {}
 }

@@ -6,10 +6,10 @@ import type {
 	IIncomingIntegration,
 	IIntegration,
 	IIntegrationHistory,
-} from '@rocket.chat/core-typings';
-import type { Logger } from '@rocket.chat/logger';
-import type { serverFetch } from '@rocket.chat/server-fetch';
-import { wrapExceptions } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import type { Logger } from '@yas chat/logger';
+import type { serverFetch } from '@yas chat/server-fetch';
+import { wrapExceptions } from '@yas chat/tools';
 
 import { incomingLogger, outgoingLogger } from '../logger';
 import type { IScriptClass, CompiledScript } from './definition';

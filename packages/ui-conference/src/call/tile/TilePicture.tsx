@@ -1,7 +1,7 @@
 /* oxlint-disable no-nested-ternary */
-import { css } from '@rocket.chat/css-in-js';
-import { Avatar, Box, Icon } from '@rocket.chat/fuselage';
-import { StreamVideo } from '@rocket.chat/ui-media';
+import { css } from '@yas chat/css-in-js';
+import { Avatar, Box, Icon } from '@yas chat/fuselage';
+import { StreamVideo } from '@yas chat/ui-media';
 
 import { useStreamHasLiveVideo } from '../hooks/useStreamHasLiveVideo';
 import { backdropTint } from '../lib/speakingRing';

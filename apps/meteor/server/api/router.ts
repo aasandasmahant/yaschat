@@ -1,9 +1,9 @@
 import type { IncomingMessage } from 'node:http';
 
-import type { IUser } from '@rocket.chat/core-typings';
-import type { ResponseSchema } from '@rocket.chat/http-router';
-import { Router } from '@rocket.chat/http-router';
-import { type Logger } from '@rocket.chat/logger';
+import type { IUser } from '@yas chat/core-typings';
+import type { ResponseSchema } from '@yas chat/http-router';
+import { Router } from '@yas chat/http-router';
+import { type Logger } from '@yas chat/logger';
 import type { Context } from 'hono';
 
 import type { TypedOptions } from './definition';

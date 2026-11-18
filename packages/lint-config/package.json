@@ -1,5 +1,5 @@
 {
-	"name": "@rocket.chat/lint-config",
+	"name": "@yas chat/lint-config",
 	"version": "0.1.0",
 	"description": "YasChat's JS/TS oxlint config",
 	"repository": {

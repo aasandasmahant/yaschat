@@ -1,4 +1,4 @@
-import type { IMessage, MessageTypesValues } from '@rocket.chat/core-typings';
+import type { IMessage, MessageTypesValues } from '@yas chat/core-typings';
 
 import { MessageTypes } from './MessageTypes.js';
 

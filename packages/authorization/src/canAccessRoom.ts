@@ -1,8 +1,8 @@
-import { Authorization, License, Abac, Settings } from '@rocket.chat/core-services';
-import type { RoomAccessValidator } from '@rocket.chat/core-services';
-import { TeamType, AbacAccessOperation, AbacObjectType } from '@rocket.chat/core-typings';
-import type { IUser, ITeam, IRoom } from '@rocket.chat/core-typings';
-import { Subscriptions, Rooms, TeamMember, Team, Users } from '@rocket.chat/models';
+import { Authorization, License, Abac, Settings } from '@yas chat/core-services';
+import type { RoomAccessValidator } from '@yas chat/core-services';
+import { TeamType, AbacAccessOperation, AbacObjectType } from '@yas chat/core-typings';
+import type { IUser, ITeam, IRoom } from '@yas chat/core-typings';
+import { Subscriptions, Rooms, TeamMember, Team, Users } from '@yas chat/models';
 
 import { canAccessRoomLivechat } from './canAccessRoomLivechat';
 

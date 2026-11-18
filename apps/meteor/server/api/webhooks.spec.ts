@@ -1,5 +1,5 @@
-import { createNodeServer } from '@rocket.chat/http-router';
-import { mockModel } from '@rocket.chat/models/testing';
+import { createNodeServer } from '@yas chat/http-router';
+import { mockModel } from '@yas chat/models/testing';
 import request from 'supertest';
 
 import { httpApp } from '../lib/http/httpServer';
@@ -54,7 +54,7 @@ class MockRateLimiter {
 }
 
 jest.mock('meteor/meteor', () => ({ Meteor: {} }), { virtual: true });
-jest.mock('../lib/http/httpServer', () => ({ httpApp: jest.requireActual('@rocket.chat/http-router').createRootApp() }));
+jest.mock('../lib/http/httpServer', () => ({ httpApp: jest.requireActual('@yas chat/http-router').createRootApp() }));
 jest.mock('meteor/rate-limit', () => ({ RateLimiter: MockRateLimiter }), { virtual: true });
 jest.mock('meteor/accounts-base', () => ({ Accounts: { _accountData: {} as Record<string, unknown> } }), { virtual: true });
 jest.mock('meteor/ddp', () => ({ DDP: {} }), { virtual: true });
@@ -106,7 +106,7 @@ const LEGACY_HOOK_URL = '/hooks/integration-id/legacy-user-id/the-token';
 jest.requireActual('./api');
 jest.requireActual('./webhooks');
 
-const { ClientSafeError } = jest.requireActual<typeof import('@rocket.chat/core-services')>('@rocket.chat/core-services');
+const { ClientSafeError } = jest.requireActual<typeof import('@yas chat/core-services')>('@yas chat/core-services');
 
 const app = createNodeServer(httpApp).listen(0);
 

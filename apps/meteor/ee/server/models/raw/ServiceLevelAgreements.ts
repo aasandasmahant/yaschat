@@ -1,6 +1,6 @@
-import type { IOmnichannelServiceLevelAgreements } from '@rocket.chat/core-typings';
-import type { IOmnichannelServiceLevelAgreementsModel } from '@rocket.chat/model-typings';
-import { BaseRaw } from '@rocket.chat/models';
+import type { IOmnichannelServiceLevelAgreements } from '@yas chat/core-typings';
+import type { IOmnichannelServiceLevelAgreementsModel } from '@yas chat/model-typings';
+import { BaseRaw } from '@yas chat/models';
 import type { Db, IndexDescription } from 'mongodb';
 
 export class ServiceLevelAgreements extends BaseRaw<IOmnichannelServiceLevelAgreements> implements IOmnichannelServiceLevelAgreementsModel {

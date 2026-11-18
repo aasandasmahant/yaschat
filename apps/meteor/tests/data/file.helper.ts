@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage } from '@yas chat/core-typings';
 
 import { api } from './api-data';
 import type { IRequestConfig } from './users.helper';

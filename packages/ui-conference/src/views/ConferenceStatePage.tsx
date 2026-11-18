@@ -1,6 +1,6 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@rocket.chat/fuselage';
-import type { Keys as IconName } from '@rocket.chat/icons';
-import { Page, PageHeader, PageContent } from '@rocket.chat/ui-client';
+import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yas chat/fuselage';
+import type { Keys as IconName } from '@yas chat/icons';
+import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

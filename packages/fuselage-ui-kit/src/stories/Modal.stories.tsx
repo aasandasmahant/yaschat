@@ -10,8 +10,8 @@ import {
 	ModalTitle,
 	ModalFooter,
 	ModalClose,
-} from '@rocket.chat/fuselage';
-import type * as UiKit from '@rocket.chat/ui-kit';
+} from '@yas chat/fuselage';
+import type * as UiKit from '@yas chat/ui-kit';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ReactNode } from 'react';
 import { action } from 'storybook/actions';

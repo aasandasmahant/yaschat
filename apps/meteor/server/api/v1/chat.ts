@@ -1,7 +1,7 @@
-import { Message, ClientSafeError } from '@rocket.chat/core-services';
-import type { IMessage, IThreadMainMessage, MessageUrl } from '@rocket.chat/core-typings';
-import { MessageTypes } from '@rocket.chat/message-types';
-import { Messages, Users, Rooms, Subscriptions } from '@rocket.chat/models';
+import { Message, ClientSafeError } from '@yas chat/core-services';
+import type { IMessage, IThreadMainMessage, MessageUrl } from '@yas chat/core-typings';
+import { MessageTypes } from '@yas chat/message-types';
+import { Messages, Users, Rooms, Subscriptions } from '@yas chat/models';
 import {
 	ajv,
 	isChatDeleteProps,
@@ -30,8 +30,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { escapeRegExp } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { escapeRegExp } from '@yas chat/tools';
 
 import { roomAccessAttributes } from '../../lib/authorization';
 import { canAccessRoomAsync, canAccessRoomIdAsync, canAccessRoomIdsAsync } from '../../lib/authorization/canAccessRoom';
@@ -1554,7 +1554,7 @@ const chatEndpoints = API.v1
 
 export type ChatEndpoints = ExtractRoutesFromAPI<typeof chatEndpoints>;
 
-declare module '@rocket.chat/rest-typings' {
+declare module '@yas chat/rest-typings' {
 	// oxlint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Endpoints extends ChatEndpoints {}
 }

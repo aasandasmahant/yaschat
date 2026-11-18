@@ -1,11 +1,11 @@
-# @rocket.chat/logger
+# @yas chat/logger
 
 ## 1.0.2
 
 ### Patch Changes
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe]:</summary>
-  - @rocket.chat/emitter@0.33.1
+  - @yas chat/emitter@0.33.1
 
   </details>
 
@@ -14,7 +14,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [dd082311778ac467d36a72589bc675f1ab2b2cbe]:</summary>
-  - @rocket.chat/emitter@0.33.1-rc.0
+  - @yas chat/emitter@0.33.1-rc.0
 
   </details>
 
@@ -46,10 +46,10 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.0.2-rc.0
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo

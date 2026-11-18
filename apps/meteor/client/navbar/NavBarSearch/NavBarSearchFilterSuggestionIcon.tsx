@@ -1,6 +1,6 @@
-import type { SearchFilterSuggestion } from '@rocket.chat/ai-search';
-import { Icon } from '@rocket.chat/fuselage';
-import { useUserRoom } from '@rocket.chat/ui-contexts';
+import type { SearchFilterSuggestion } from '@yas chat/ai-search';
+import { Icon } from '@yas chat/fuselage';
+import { useUserRoom } from '@yas chat/ui-contexts';
 import type { ReactElement } from 'react';
 
 import { RoomIcon } from '../../components/RoomIcon';

@@ -4,8 +4,8 @@
 // @ts-nocheck
 import util from 'node:util';
 
-import { Messages, Rooms, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { Messages, Rooms, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import { Accounts } from 'meteor/accounts-base';
 import _ from 'underscore';
 

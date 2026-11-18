@@ -1,5 +1,5 @@
-import { OmnichannelServiceLevelAgreements } from '@rocket.chat/models';
-import { isLivechatPrioritiesProps, isCreateOrUpdateLivechatSlaProps } from '@rocket.chat/rest-typings';
+import { OmnichannelServiceLevelAgreements } from '@yas chat/models';
+import { isLivechatPrioritiesProps, isCreateOrUpdateLivechatSlaProps } from '@yas chat/rest-typings';
 
 import { findSLA } from './lib/sla';
 import { API } from '../../../../../server/api';

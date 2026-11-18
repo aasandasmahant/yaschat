@@ -1,4 +1,4 @@
-import { Team, Room, ClientSafeError } from '@rocket.chat/core-services';
+import { Team, Room, ClientSafeError } from '@yas chat/core-services';
 import {
 	TeamType,
 	type IIntegration,
@@ -10,8 +10,8 @@ import {
 	type IUser,
 	type RoomType,
 	type UserStatus,
-} from '@rocket.chat/core-typings';
-import { Integrations, Messages, Rooms, Subscriptions, Uploads, Users } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { Integrations, Messages, Rooms, Subscriptions, Uploads, Users } from '@yas chat/models';
 import {
 	ajv,
 	ajvQuery,
@@ -41,8 +41,8 @@ import {
 	validateForbiddenErrorResponse,
 	validateNotFoundErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
-import { isTruthy } from '@rocket.chat/tools';
+} from '@yas chat/rest-typings';
+import { isTruthy } from '@yas chat/tools';
 import type { Filter } from 'mongodb';
 
 import { canAccessRoomAsync } from '../../lib/authorization';

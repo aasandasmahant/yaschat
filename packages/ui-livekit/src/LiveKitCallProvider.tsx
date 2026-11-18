@@ -6,9 +6,9 @@ import {
 	useParticipants,
 	useTracks,
 } from '@livekit/components-react';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useUserDisplayName } from '@rocket.chat/ui-client';
-import type { CallActions, CallSelf, CallState, RemoteParticipantInfo } from '@rocket.chat/ui-conference';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useUserDisplayName } from '@yas chat/ui-client';
+import type { CallActions, CallSelf, CallState, RemoteParticipantInfo } from '@yas chat/ui-conference';
 import {
 	CallActionsProvider,
 	CallDiagnosticsProvider,
@@ -18,9 +18,9 @@ import {
 	playJoinChime,
 	playMutedReminder,
 	useUpdateCallPreferences,
-} from '@rocket.chat/ui-conference';
-import { useToastMessageDispatch, useUser, useUserAvatarPath } from '@rocket.chat/ui-contexts';
-import { DeviceSelectionProvider } from '@rocket.chat/ui-media';
+} from '@yas chat/ui-conference';
+import { useToastMessageDispatch, useUser, useUserAvatarPath } from '@yas chat/ui-contexts';
+import { DeviceSelectionProvider } from '@yas chat/ui-media';
 import type { RemoteParticipant } from 'livekit-client';
 import { ConnectionState, Room, RoomEvent, Track } from 'livekit-client';
 import type { ReactNode } from 'react';

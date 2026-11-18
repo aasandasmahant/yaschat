@@ -1,5 +1,5 @@
-import type { IUser, Serialized } from '@rocket.chat/core-typings';
-import { Box, Tag } from '@rocket.chat/fuselage';
+import type { IUser, Serialized } from '@yas chat/core-typings';
+import { Box, Tag } from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 import { memo, useContext, useId } from 'react';
 import { useTranslation } from 'react-i18next';

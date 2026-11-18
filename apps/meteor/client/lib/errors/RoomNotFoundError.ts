@@ -1,4 +1,4 @@
-import type { IRoom, RoomType } from '@rocket.chat/core-typings';
+import type { IRoom, RoomType } from '@yas chat/core-typings';
 
 import { YasChatError } from './YasChatError';
 

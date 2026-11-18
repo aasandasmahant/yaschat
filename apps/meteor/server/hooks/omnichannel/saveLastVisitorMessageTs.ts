@@ -1,5 +1,5 @@
-import { isMessageFromVisitor } from '@rocket.chat/core-typings';
-import { LivechatRooms } from '@rocket.chat/models';
+import { isMessageFromVisitor } from '@yas chat/core-typings';
+import { LivechatRooms } from '@yas chat/models';
 
 import { callbacks } from '../../lib/callbacks';
 

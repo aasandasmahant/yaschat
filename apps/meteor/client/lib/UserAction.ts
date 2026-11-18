@@ -1,5 +1,5 @@
-import type { IExtras, IRoomActivity, IUser } from '@rocket.chat/core-typings';
-import { Emitter } from '@rocket.chat/emitter';
+import type { IExtras, IRoomActivity, IUser } from '@yas chat/core-typings';
+import { Emitter } from '@yas chat/emitter';
 import { debounce } from 'lodash';
 
 import { sdk } from './SDKClient';

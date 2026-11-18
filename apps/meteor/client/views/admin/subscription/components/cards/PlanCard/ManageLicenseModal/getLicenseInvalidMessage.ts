@@ -1,5 +1,5 @@
-import type { BehaviorWithContext, LicenseBehavior } from '@rocket.chat/core-typings';
-import type { TranslationKey } from '@rocket.chat/ui-contexts';
+import type { BehaviorWithContext, LicenseBehavior } from '@yas chat/core-typings';
+import type { TranslationKey } from '@yas chat/ui-contexts';
 
 export const getLicenseInvalidMessage = (reasons: BehaviorWithContext[]): TranslationKey => {
 	const hasErrorReason = (behavior: LicenseBehavior, reason: string) => reasons.some((r) => r.behavior === behavior && r.reason === reason);

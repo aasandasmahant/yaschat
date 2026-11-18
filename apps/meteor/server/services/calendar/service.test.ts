@@ -1,7 +1,7 @@
 import { afterEach, before, beforeEach, describe, it } from 'node:test';
 
-import { api } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import { api } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import type { DeleteResult, UpdateResult } from 'mongodb';
 import proxyquire from 'proxyquire';
@@ -40,12 +40,12 @@ const getUserPreferenceMock = sinon.stub();
 
 const serviceMocks = {
 	'../../settings': { settings: settingsMock },
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		api,
 		ServiceClassInternal: class {},
 		Presence: PresenceMock,
 	},
-	'@rocket.chat/cron': { cronJobs: cronJobsMock },
+	'@yas chat/cron': { cronJobs: cronJobsMock },
 	'../../lib/utils/lib/getUserPreference': { getUserPreference: getUserPreferenceMock },
 	'../../lib/i18n': { i18n: { t: sinon.stub().returns('Outlook: In a meeting') } },
 };

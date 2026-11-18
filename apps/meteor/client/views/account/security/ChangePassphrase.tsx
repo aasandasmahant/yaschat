@@ -11,9 +11,9 @@ import {
 	PasswordInput,
 	Stack,
 	Text,
-} from '@rocket.chat/fuselage';
-import { PasswordVerifierList } from '@rocket.chat/ui-client';
-import { useToastMessageDispatch, usePasswordPolicy } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { PasswordVerifierList } from '@yas chat/ui-client';
+import { useToastMessageDispatch, usePasswordPolicy } from '@yas chat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect, useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

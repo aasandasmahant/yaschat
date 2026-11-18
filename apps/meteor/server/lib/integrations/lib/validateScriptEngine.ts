@@ -1,5 +1,5 @@
-import type { IntegrationScriptEngine } from '@rocket.chat/core-typings';
-import { wrapExceptions } from '@rocket.chat/tools';
+import type { IntegrationScriptEngine } from '@yas chat/core-typings';
+import { wrapExceptions } from '@yas chat/tools';
 
 const FREEZE_INTEGRATION_SCRIPTS_VALUE = String(process.env.FREEZE_INTEGRATION_SCRIPTS).toLowerCase();
 const FREEZE_INTEGRATION_SCRIPTS = ['yes', 'true'].includes(FREEZE_INTEGRATION_SCRIPTS_VALUE);

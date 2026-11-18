@@ -1,7 +1,7 @@
-import type { IAppRolesConverter } from '@rocket.chat/apps';
-import type { IRole as AppsEngineRole } from '@rocket.chat/apps-engine/definition/roles';
-import type { IRole } from '@rocket.chat/core-typings';
-import { Roles } from '@rocket.chat/models';
+import type { IAppRolesConverter } from '@yas chat/apps';
+import type { IRole as AppsEngineRole } from '@yas chat/apps-engine/definition/roles';
+import type { IRole } from '@yas chat/core-typings';
+import { Roles } from '@yas chat/models';
 import * as z from 'zod';
 
 import { RoleCodec } from './codecs';

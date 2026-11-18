@@ -1,7 +1,7 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { nodeHandler } from '@rocket.chat/http-router';
-import { Logger } from '@rocket.chat/logger';
-import { OAuthAccessTokens, Users } from '@rocket.chat/models';
+import type { IUser } from '@yas chat/core-typings';
+import { nodeHandler } from '@yas chat/http-router';
+import { Logger } from '@yas chat/logger';
+import { OAuthAccessTokens, Users } from '@yas chat/models';
 import type { NextFunction, Request, Response } from 'express';
 import type express from 'express';
 import rateLimit from 'express-rate-limit';

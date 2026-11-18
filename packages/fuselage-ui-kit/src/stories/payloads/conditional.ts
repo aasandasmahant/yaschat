@@ -1,10 +1,10 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 
 export const conditional: readonly UiKit.LayoutBlock[] = [
 	{
 		type: 'conditional',
 		when: {
-			engine: ['rocket.chat'],
+			engine: ['yas chat'],
 		},
 		render: [
 			{

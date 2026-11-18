@@ -1,7 +1,7 @@
-import type { IOmnichannelRoom } from '@rocket.chat/core-typings';
-import { UserAvatar } from '@rocket.chat/ui-avatar';
-import { FormSkeleton } from '@rocket.chat/ui-client';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import { UserAvatar } from '@yas chat/ui-avatar';
+import { FormSkeleton } from '@yas chat/ui-client';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

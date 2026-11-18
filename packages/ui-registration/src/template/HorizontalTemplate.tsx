@@ -5,8 +5,8 @@ import {
 	HorizontalWizardLayoutTitle,
 	HorizontalWizardLayoutFooter,
 	LayoutLogoImage,
-} from '@rocket.chat/layout';
-import { useSetting, useAssetWithDarkModePath } from '@rocket.chat/ui-contexts';
+} from '@yas chat/layout';
+import { useSetting, useAssetWithDarkModePath } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import LoginPoweredBy from '../components/LoginPoweredBy';

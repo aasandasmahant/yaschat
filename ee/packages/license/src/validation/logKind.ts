@@ -1,4 +1,4 @@
-import type { LicenseBehavior } from '@rocket.chat/core-typings';
+import type { LicenseBehavior } from '@yas chat/core-typings';
 
 export const logKind = (behavior: LicenseBehavior) => {
 	switch (behavior) {

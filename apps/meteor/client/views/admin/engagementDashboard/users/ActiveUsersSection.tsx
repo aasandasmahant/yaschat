@@ -1,6 +1,6 @@
 import { ResponsiveLine } from '@nivo/line';
-import { Box, FlexContainer, FlexItem, Skeleton, Text, Tile } from '@rocket.chat/fuselage';
-import colors from '@rocket.chat/fuselage-tokens/dist/colors.json';
+import { Box, FlexContainer, FlexItem, Skeleton, Text, Tile } from '@yas chat/fuselage';
+import colors from '@yas chat/fuselage-tokens/dist/colors.json';
 import { addDays } from 'date-fns/addDays';
 import { differenceInDays } from 'date-fns/differenceInDays';
 import { endOfDay } from 'date-fns/endOfDay';

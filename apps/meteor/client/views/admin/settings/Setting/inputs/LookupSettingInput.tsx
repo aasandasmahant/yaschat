@@ -1,4 +1,4 @@
-import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@rocket.chat/fuselage';
+import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
 
 import ResetSettingButton from '../ResetSettingButton';
 import type { SettingInputProps } from './types';

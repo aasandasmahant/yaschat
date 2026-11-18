@@ -1,8 +1,8 @@
-# `@rocket.chat/media-signaling`
+# `@yas chat/media-signaling`
 
 > The client side of YasChat media calls: it exchanges call signals with the server and drives the WebRTC connection.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/media-signaling) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/media-signaling)
+[![npm](https://img.shields.io/npm/v/@yas chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@yas chat/media-signaling) [![downloads](https://img.shields.io/npm/dw/@yas chat/media-signaling?style=flat-square)](https://www.npmjs.com/package/@yas chat/media-signaling)
 
 A `MediaSignalingSession` represents one client (a browser tab, a desktop app, a mobile device) of one user. It registers with the server, places and receives calls, and keeps each call's state in sync with the server. Calls between YasChat users and calls to SIP extensions both go through it.
 
@@ -13,7 +13,7 @@ It also exports the signal types and their JSON schemas, which the server uses t
 ## Installation
 
 ```sh
-npm install @rocket.chat/media-signaling
+npm install @yas chat/media-signaling
 ```
 
 There are no peer dependencies. The package needs browser media APIs (`RTCPeerConnection`, `MediaStream`) to place calls. The build in `dist/` uses ES module syntax and ships TypeScript declarations, so it is meant to be consumed through a bundler.
@@ -23,8 +23,8 @@ There are no peer dependencies. The package needs browser media APIs (`RTCPeerCo
 ### Creating a session
 
 ```ts
-import { MediaCallWebRTCProcessor, MediaSignalingSession } from '@rocket.chat/media-signaling';
-import type { ClientMediaSignal, ServerMediaSignal } from '@rocket.chat/media-signaling';
+import { MediaCallWebRTCProcessor, MediaSignalingSession } from '@yas chat/media-signaling';
+import type { ClientMediaSignal, ServerMediaSignal } from '@yas chat/media-signaling';
 
 const session = new MediaSignalingSession({
 	userId: 'my-user-id',
@@ -134,7 +134,7 @@ session.on('newCall', ({ call }) => {
 | `micless`                                              | Set to `true` when a placeholder stream is used because no microphone is available. |
 | `endSession()`                                         | Stops the session and ignores all its calls.                                        |
 
-The session is an `Emitter` from [`@rocket.chat/emitter`](https://www.npmjs.com/package/@rocket.chat/emitter). Events: `sessionStateChange`, `newCall`, `acceptedCall`, `endedCall`, `droppedCall`, `hiddenCall`, `registered` and `outOfSync`.
+The session is an `Emitter` from [`@yas chat/emitter`](https://www.npmjs.com/package/@yas chat/emitter). Events: `sessionStateChange`, `newCall`, `acceptedCall`, `endedCall`, `droppedCall`, `hiddenCall`, `registered` and `outOfSync`.
 
 ### `IClientMediaCall`
 
@@ -158,11 +158,11 @@ The call objects the session hands out. Main members:
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/media-signaling). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/media-signaling build
-yarn workspace @rocket.chat/media-signaling dev        # rebuild on change
-yarn workspace @rocket.chat/media-signaling testunit
-yarn workspace @rocket.chat/media-signaling lint
-yarn workspace @rocket.chat/media-signaling typecheck
+yarn workspace @yas chat/media-signaling build
+yarn workspace @yas chat/media-signaling dev        # rebuild on change
+yarn workspace @yas chat/media-signaling testunit
+yarn workspace @yas chat/media-signaling lint
+yarn workspace @yas chat/media-signaling typecheck
 ```
 
 Other scripts: `test` (same as `testunit`), `lint:fix` and `build-preview`.

@@ -9,7 +9,7 @@ import type {
 	ListItem,
 	NestedList,
 	BigEmoji,
-} from '@rocket.chat/message-parser';
+} from '@yas chat/message-parser';
 
 type ExtractedMentions = {
 	mentions: string[];

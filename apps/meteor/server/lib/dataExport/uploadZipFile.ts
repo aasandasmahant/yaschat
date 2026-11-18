@@ -1,9 +1,9 @@
 import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
 
-import type { IUser } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import type { IUser } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 
 import { FileUpload } from '../media/file-upload';
 

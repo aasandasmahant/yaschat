@@ -1,4 +1,4 @@
-# @rocket.chat/jest-presets
+# @yas chat/jest-presets
 
 ## 0.0.4
 

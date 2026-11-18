@@ -1,5 +1,5 @@
-import type { IUploadRead } from '@rocket.chat/apps-engine/definition/accessors';
-import type { IUpload } from '@rocket.chat/apps-engine/definition/uploads';
+import type { IUploadRead } from '@yas chat/apps-engine/definition/accessors';
+import type { IUpload } from '@yas chat/apps-engine/definition/uploads';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

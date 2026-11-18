@@ -1,4 +1,4 @@
-import { Messages } from '@rocket.chat/models';
+import { Messages } from '@yas chat/models';
 
 import { SystemLogger } from '../lib/logger/system';
 

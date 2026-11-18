@@ -1,5 +1,5 @@
-import type { LivechatPriorityWeight } from '@rocket.chat/core-typings';
-import { Icon, type IconProps } from '@rocket.chat/fuselage';
+import type { LivechatPriorityWeight } from '@yas chat/core-typings';
+import { Icon, type IconProps } from '@yas chat/fuselage';
 
 import { useOmnichannelPrioritiesConfig } from '../hooks/useOmnichannelPrioritiesConfig';
 

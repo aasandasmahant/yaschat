@@ -1,12 +1,12 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
-import type { ISetting as AppsSetting } from '@rocket.chat/apps-engine/definition/settings';
-import type { IServiceClass } from '@rocket.chat/core-services';
-import { EnterpriseSettings, StatusVisibility } from '@rocket.chat/core-services';
-import { isSettingColor, isSettingEnterprise, UserStatus } from '@rocket.chat/core-typings';
-import type { IUser, IRoom, IRole, VideoConference, ISetting, PresenceStatusCode, SettingValue } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import type { ServerMediaSignal } from '@rocket.chat/media-signaling';
-import { parse } from '@rocket.chat/message-parser';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { ISetting as AppsSetting } from '@yas chat/apps-engine/definition/settings';
+import type { IServiceClass } from '@yas chat/core-services';
+import { EnterpriseSettings, StatusVisibility } from '@yas chat/core-services';
+import { isSettingColor, isSettingEnterprise, UserStatus } from '@yas chat/core-typings';
+import type { IUser, IRoom, IRole, VideoConference, ISetting, PresenceStatusCode, SettingValue } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import type { ServerMediaSignal } from '@yas chat/media-signaling';
+import { parse } from '@yas chat/message-parser';
 
 import { statusVisibilityGate } from './StatusVisibilityGate';
 import { refreshVisibility } from './StreamPresence';

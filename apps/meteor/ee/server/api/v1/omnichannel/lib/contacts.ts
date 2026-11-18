@@ -1,6 +1,6 @@
-import type { IUser, ILivechatContactVisitorAssociation } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { LivechatContacts, LivechatRooms, LivechatVisitors } from '@rocket.chat/models';
+import type { IUser, ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { LivechatContacts, LivechatRooms, LivechatVisitors } from '@yas chat/models';
 
 import { i18n } from '../../../../../../server/lib/i18n';
 import { closeRoom } from '../../../../../../server/lib/omnichannel/closeRoom';

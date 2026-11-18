@@ -1,6 +1,6 @@
 import { after, before, describe, it } from 'node:test';
 
-import type { App, ILivechatVisitor } from '@rocket.chat/core-typings';
+import type { App, ILivechatVisitor } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import { MongoClient } from 'mongodb';
 

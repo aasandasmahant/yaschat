@@ -1,5 +1,5 @@
-import { LocalBroker, ServiceClass, api } from '@rocket.chat/core-services';
-import type { IAuthorization } from '@rocket.chat/core-services';
+import { LocalBroker, ServiceClass, api } from '@yas chat/core-services';
+import type { IAuthorization } from '@yas chat/core-services';
 import { Hono } from 'hono';
 
 import { permissionsMiddleware } from './permissions';

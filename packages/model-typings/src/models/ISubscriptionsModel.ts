@@ -1,4 +1,4 @@
-import type { ISubscription, IRole, IUser, IRoom, IMessage, SpotlightUser, AtLeast } from '@rocket.chat/core-typings';
+import type { ISubscription, IRole, IUser, IRoom, IMessage, SpotlightUser, AtLeast } from '@yas chat/core-typings';
 import type {
 	FindOptions,
 	FindCursor,

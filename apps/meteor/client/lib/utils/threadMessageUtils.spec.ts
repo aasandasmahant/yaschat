@@ -1,4 +1,4 @@
-import type { IThreadMessage } from '@rocket.chat/core-typings';
+import type { IThreadMessage } from '@yas chat/core-typings';
 import { QueryClient } from '@tanstack/react-query';
 
 import { mutateThreadMessagesInfiniteData, upsertThreadMessageInCache, type ThreadMessagesInfiniteData } from './threadMessageUtils';

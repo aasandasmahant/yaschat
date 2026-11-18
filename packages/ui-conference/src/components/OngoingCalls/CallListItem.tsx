@@ -1,6 +1,6 @@
-import type { JoinableVideoConference } from '@rocket.chat/core-typings';
-import { isRingingVideoConferenceMember } from '@rocket.chat/core-typings';
-import { Box, Icon, IconButton } from '@rocket.chat/fuselage';
+import type { JoinableVideoConference } from '@yas chat/core-typings';
+import { isRingingVideoConferenceMember } from '@yas chat/core-typings';
+import { Box, Icon, IconButton } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import OngoingCallItem from './OngoingCallItem';

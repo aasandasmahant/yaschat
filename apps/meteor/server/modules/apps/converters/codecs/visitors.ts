@@ -1,5 +1,5 @@
-import type { IAppsVisitor } from '@rocket.chat/apps';
-import type { ILivechatVisitor } from '@rocket.chat/core-typings';
+import type { IAppsVisitor } from '@yas chat/apps';
+import type { ILivechatVisitor } from '@yas chat/core-typings';
 import * as z from 'zod';
 
 import { mappedDecode } from './mappedData';

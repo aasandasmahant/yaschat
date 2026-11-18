@@ -1,5 +1,5 @@
-import type { IAvatar, YasChatRecordDeleted, IUser } from '@rocket.chat/core-typings';
-import type { IAvatarsModel } from '@rocket.chat/model-typings';
+import type { IAvatar, YasChatRecordDeleted, IUser } from '@yas chat/core-typings';
+import type { IAvatarsModel } from '@yas chat/model-typings';
 import type { Collection, Db, IndexDescription, FindOptions } from 'mongodb';
 
 import { BaseUploadModelRaw } from './BaseUploadModel';

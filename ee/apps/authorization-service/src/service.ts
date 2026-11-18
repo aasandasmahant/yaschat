@@ -1,8 +1,8 @@
-import { AbacService } from '@rocket.chat/abac';
-import { api, getConnection, getTrashCollection } from '@rocket.chat/core-services';
-import { registerServiceModels } from '@rocket.chat/models';
-import { startBroker } from '@rocket.chat/network-broker';
-import { startTracing } from '@rocket.chat/tracing';
+import { AbacService } from '@yas chat/abac';
+import { api, getConnection, getTrashCollection } from '@yas chat/core-services';
+import { registerServiceModels } from '@yas chat/models';
+import { startBroker } from '@yas chat/network-broker';
+import { startTracing } from '@yas chat/tracing';
 import polka from 'polka';
 
 const PORT = process.env.PORT || 3034;
@@ -17,7 +17,7 @@ void (async () => {
 	api.setBroker(startBroker());
 
 	// need to import service after models are registered
-	const { Authorization } = await import('@rocket.chat/authorization');
+	const { Authorization } = await import('@yas chat/authorization');
 
 	api.registerService(new Authorization());
 

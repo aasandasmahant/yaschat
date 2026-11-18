@@ -1,4 +1,4 @@
-import type * as UiKit from '@rocket.chat/ui-kit';
+import type * as UiKit from '@yas chat/ui-kit';
 
 export const actionsWithAllSelects: readonly UiKit.LayoutBlock[] = [
 	{
@@ -178,7 +178,7 @@ export const actionsWithButtonAsLink: readonly UiKit.LayoutBlock[] = [
 					text: 'Click Me',
 					emoji: true,
 				},
-				url: 'https://rocket.chat',
+				url: 'https://yas chat',
 				value: 'click_me_123',
 			},
 		],

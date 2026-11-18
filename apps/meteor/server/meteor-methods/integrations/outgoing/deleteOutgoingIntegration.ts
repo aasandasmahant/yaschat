@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Integrations, IntegrationHistory } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Integrations, IntegrationHistory } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../../lib/authorization/hasPermission';
 import { notifyOnIntegrationChanged } from '../../../lib/notifyListener';

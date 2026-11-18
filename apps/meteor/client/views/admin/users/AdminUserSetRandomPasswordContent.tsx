@@ -1,6 +1,6 @@
-import { Box, FieldError, FieldLabel, FieldRow, PasswordInput, ToggleSwitch } from '@rocket.chat/fuselage';
-import { PasswordVerifier, useValidatePassword } from '@rocket.chat/ui-client';
-import { useSetting } from '@rocket.chat/ui-contexts';
+import { Box, FieldError, FieldLabel, FieldRow, PasswordInput, ToggleSwitch } from '@yas chat/fuselage';
+import { PasswordVerifier, useValidatePassword } from '@yas chat/ui-client';
+import { useSetting } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import type { Control, FieldErrors } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

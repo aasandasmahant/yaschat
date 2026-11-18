@@ -1,4 +1,4 @@
-import type { IRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
 import { renderHook } from '@testing-library/react';
 
 import { useCanManageRoomAbacAttributes } from './useCanManageRoomAbacAttributes';
@@ -9,7 +9,7 @@ const isLocked = jest.fn(() => false);
 const usePermission = jest.fn((_permission: string, _scope?: string) => false);
 const useAllPermissions = jest.fn((_permissions: string[]) => false);
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	usePermission: (permission: string, scope?: string) => usePermission(permission, scope),
 	useAllPermissions: (permissions: string[]) => useAllPermissions(permissions),
 }));

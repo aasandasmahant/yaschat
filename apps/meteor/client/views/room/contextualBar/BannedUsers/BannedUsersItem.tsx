@@ -1,7 +1,7 @@
-import { Icon, Item, ItemActions, ItemContent, ItemDescription, ItemIcon, ItemMedia, ItemTitle, Text } from '@rocket.chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@rocket.chat/ui-avatar';
-import { GenericMenu } from '@rocket.chat/ui-client';
-import { useUserPresence } from '@rocket.chat/ui-contexts';
+import { Icon, Item, ItemActions, ItemContent, ItemDescription, ItemIcon, ItemMedia, ItemTitle, Text } from '@yas chat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
+import { GenericMenu } from '@yas chat/ui-client';
+import { useUserPresence } from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

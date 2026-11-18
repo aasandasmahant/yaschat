@@ -1,4 +1,4 @@
-import { Settings, WorkspaceCredentials } from '@rocket.chat/models';
+import { Settings, WorkspaceCredentials } from '@yas chat/models';
 
 import { retrieveRegistrationStatus } from './retrieveRegistrationStatus';
 import { updateAuditedBySystem } from '../../settings/lib/auditedSettingUpdates';

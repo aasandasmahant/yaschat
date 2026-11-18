@@ -1,4 +1,4 @@
-import type { IUserDataFile } from '@rocket.chat/core-typings';
+import type { IUserDataFile } from '@yas chat/core-typings';
 import type { Document } from 'mongodb';
 
 import type { IBaseUploadsModel } from './IBaseUploadsModel';

@@ -1,8 +1,8 @@
-import type { IMessage as IAppsMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { AppInterface } from '@rocket.chat/apps-engine/definition/metadata';
-import type { IRoom as IAppsRoom } from '@rocket.chat/apps-engine/definition/rooms';
-import type { UIKitIncomingInteraction } from '@rocket.chat/apps-engine/definition/uikit';
-import type { ILivechatDepartment, ILivechatVisitor, IMessage, IOmnichannelRoom, IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IMessage as IAppsMessage } from '@yas chat/apps-engine/definition/messages';
+import type { AppInterface } from '@yas chat/apps-engine/definition/metadata';
+import type { IRoom as IAppsRoom } from '@yas chat/apps-engine/definition/rooms';
+import type { UIKitIncomingInteraction } from '@yas chat/apps-engine/definition/uikit';
+import type { ILivechatDepartment, ILivechatVisitor, IMessage, IOmnichannelRoom, IRoom, IUser } from '@yas chat/core-typings';
 
 import type { AppEvents } from '../../AppsEngine';
 

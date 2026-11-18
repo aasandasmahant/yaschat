@@ -1,5 +1,5 @@
-import type { IRoom, IRoomAbacRedaction, RoomAdminFieldsType } from '@rocket.chat/core-typings';
-import { isPrivateRoom, isPublicRoom, isRoomFederated } from '@rocket.chat/core-typings';
+import type { IRoom, IRoomAbacRedaction, RoomAdminFieldsType } from '@yas chat/core-typings';
+import { isPrivateRoom, isPublicRoom, isRoomFederated } from '@yas chat/core-typings';
 import {
 	Box,
 	Button,
@@ -12,10 +12,10 @@ import {
 	ToggleSwitch,
 	TextAreaInput,
 	FieldError,
-} from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { ContextualbarScrollableContent, ContextualbarFooter, GenericModal, getDirtyFields } from '@rocket.chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { ContextualbarScrollableContent, ContextualbarFooter, GenericModal, getDirtyFields } from '@yas chat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

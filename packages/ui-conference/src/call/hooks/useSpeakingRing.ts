@@ -1,4 +1,4 @@
-import { useAudioLevel } from '@rocket.chat/ui-media';
+import { useAudioLevel } from '@yas chat/ui-media';
 import { useEffect, useRef, useState } from 'react';
 
 import { speakingRingLevel } from '../lib/speakingRing';

@@ -1,4 +1,4 @@
-import { ListSkeleton } from '@rocket.chat/ui-client';
+import { ListSkeleton } from '@yas chat/ui-client';
 
 import RoomComposerSkeleton from '../../room/composer/RoomComposer/RoomComposerSkeleton';
 import RoomLayout from '../../room/layout/RoomLayout';

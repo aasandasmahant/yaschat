@@ -8,7 +8,7 @@ const workOnPdfStub = sinon.stub();
 const queueWorkStub = sinon.stub();
 
 const { requestPdfTranscript } = proxyquire.noCallThru().load('./requestPdfTranscript.ts', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		OmnichannelTranscript: {
 			workOnPdf: workOnPdfStub,
 		},

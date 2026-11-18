@@ -1,5 +1,5 @@
-import type { IUser, SelectedAgent } from '@rocket.chat/core-typings';
-import { LivechatVisitors, LivechatContacts, LivechatInquiry, LivechatRooms, Users } from '@rocket.chat/models';
+import type { IUser, SelectedAgent } from '@yas chat/core-typings';
+import { LivechatVisitors, LivechatContacts, LivechatInquiry, LivechatRooms, Users } from '@yas chat/models';
 
 import { callbacks } from '../../../../server/lib/callbacks';
 import { notifyOnLivechatInquiryChanged } from '../../../../server/lib/notifyListener';

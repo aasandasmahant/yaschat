@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'node:test';
 
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
+import type { IRoom, IUser } from '@yas chat/core-typings';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -17,8 +17,8 @@ const validateCreationAttributesMock = sinon.stub();
 let guard: Guard;
 
 p.noCallThru().load('./beforeCreateRoom.ts', {
-	'@rocket.chat/core-services': { Abac: { validateCreationAttributes: validateCreationAttributesMock } },
-	'@rocket.chat/license': { License: licenseMock },
+	'@yas chat/core-services': { Abac: { validateCreationAttributes: validateCreationAttributesMock } },
+	'@yas chat/license': { License: licenseMock },
 	'../../../../server/lib/authorization/getRoomAbacLockContext': { getRoomAbacLockContext: getRoomAbacLockContextMock },
 	'../../../../server/lib/authorization/hasPermission': { hasPermissionAsync: hasPermissionAsyncMock },
 	'../../../../server/lib/callbacks': { callbacks: { priority: { HIGH: 1 } } },

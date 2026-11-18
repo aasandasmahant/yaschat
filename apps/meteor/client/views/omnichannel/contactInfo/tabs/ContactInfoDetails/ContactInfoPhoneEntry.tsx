@@ -1,6 +1,6 @@
-import type { ILivechatContact } from '@rocket.chat/core-typings';
-import { IconButton } from '@rocket.chat/fuselage';
-import { useClipboardWithToast } from '@rocket.chat/ui-client';
+import type { ILivechatContact } from '@yas chat/core-typings';
+import { IconButton } from '@yas chat/fuselage';
+import { useClipboardWithToast } from '@yas chat/ui-client';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

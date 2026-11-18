@@ -1,4 +1,4 @@
-import type { AbacActor } from '@rocket.chat/core-services';
+import type { AbacActor } from '@yas chat/core-services';
 import type {
 	ExtractDataToParams,
 	IAbacAttributeDefinition,
@@ -13,8 +13,8 @@ import type {
 	MinimalRoom,
 	MinimalUser,
 	AbacActionPerformed,
-} from '@rocket.chat/core-typings';
-import { ServerEvents } from '@rocket.chat/models';
+} from '@yas chat/core-typings';
+import { ServerEvents } from '@yas chat/models';
 
 import { logger } from './logger';
 

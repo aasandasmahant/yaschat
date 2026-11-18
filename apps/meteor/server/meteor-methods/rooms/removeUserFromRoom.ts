@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { Message, Team, Room, ClientSafeError } from '@rocket.chat/core-services';
-import { Subscriptions, Rooms, Users, Roles } from '@rocket.chat/models';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { Message, Team, Room, ClientSafeError } from '@yas chat/core-services';
+import { Subscriptions, Rooms, Users, Roles } from '@yas chat/models';
 
 import { RoomMemberActions } from '../../../definition/IRoomTypeConfig';
 import { canAccessRoomAsync } from '../../lib/authorization';

@@ -1,4 +1,4 @@
-import type { IOnetimeSchedule, IProcessor, IRecurringSchedule } from '@rocket.chat/apps-engine/definition/scheduler';
+import type { IOnetimeSchedule, IProcessor, IRecurringSchedule } from '@yas chat/apps-engine/definition/scheduler';
 
 import { SchedulerBridge } from '../../../src/server/bridges';
 

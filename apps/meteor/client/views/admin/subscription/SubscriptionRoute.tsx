@@ -1,4 +1,4 @@
-import { usePermission } from '@rocket.chat/ui-contexts';
+import { usePermission } from '@yas chat/ui-contexts';
 import { memo } from 'react';
 
 import SubscriptionPage from './SubscriptionPage';

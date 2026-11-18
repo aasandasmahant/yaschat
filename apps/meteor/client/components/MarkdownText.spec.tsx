@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import dompurify from 'dompurify';
 
@@ -13,10 +13,10 @@ const getMarkdownParserLimitMock = jest.mocked(getMarkdownParserLimit);
 
 const MOCKED_BASE_URI = 'http://localhost/';
 
-// Mock getBaseURI from @rocket.chat/ui-client to ensure consistent behavior in tests
+// Mock getBaseURI from @yas chat/ui-client to ensure consistent behavior in tests
 // This will affect the isExternal function imported above.
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'), // Import and retain default behavior for other exports
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'), // Import and retain default behavior for other exports
 	getBaseURI: jest.fn(() => MOCKED_BASE_URI), // Mock getBaseURI for consistent test behavior
 }));
 
@@ -107,8 +107,8 @@ const markdownText = `
   3. List Item 3
   4. List Item 4
   **Links:**
-  [YasChat](rocket.chat)
-  gabriel.engel@rocket.chat
+  [YasChat](yas chat)
+  gabriel.engel@yas chat
   +55991999999
   \`Inline code\`
   \`\`\`typescript
@@ -145,9 +145,9 @@ it('should render html elements as expected using default parser', async () => {
 	expect(normalizedHtml).toContain('target="_blank"');
 	expect(normalizedHtml).toContain('>YasChat</a>');
 
-	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@rocket.chat"');
-	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@rocket.chat"');
-	expect(normalizedHtml).toContain('gabriel.engel@rocket.chat');
+	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@yas chat"');
+	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@yas chat"');
+	expect(normalizedHtml).toContain('gabriel.engel@yas chat');
 
 	expect(normalizedHtml).toContain('+55991999999');
 	expect(normalizedHtml).toContain('<code>Inline code</code>');
@@ -183,8 +183,8 @@ it('should render html elements as expected using inline parser', async () => {
 	expect(normalizedHtml).toContain('target="_blank"');
 	expect(normalizedHtml).toContain('>YasChat</a>');
 
-	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@rocket.chat"');
-	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@rocket.chat"');
+	expect(normalizedHtml).toContain('href="mailto:gabriel.engel@yas chat"');
+	expect(normalizedHtml).toContain('title="mailto:gabriel.engel@yas chat"');
 	expect(normalizedHtml).toContain('rel="nofollow noopener noreferrer"');
 	expect(normalizedHtml).toContain('target="_blank"');
 

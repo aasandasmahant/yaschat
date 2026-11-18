@@ -1,4 +1,4 @@
-import { UserStatus } from '@rocket.chat/core-typings';
+import { UserStatus } from '@yas chat/core-typings';
 import type { Db } from 'mongodb';
 
 import { UsersRaw } from './Users';

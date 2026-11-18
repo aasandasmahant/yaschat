@@ -1,4 +1,4 @@
-import type { ISetting, IUser } from '@rocket.chat/core-typings';
+import type { ISetting, IUser } from '@yas chat/core-typings';
 import { MongoClient } from 'mongodb';
 
 import * as constants from '../config/constants';

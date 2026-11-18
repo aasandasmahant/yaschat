@@ -1,7 +1,7 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Box } from '@rocket.chat/fuselage';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
+import { css } from '@yas chat/css-in-js';
+import { Box } from '@yas chat/fuselage';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
 import type { DragEvent, ReactNode } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

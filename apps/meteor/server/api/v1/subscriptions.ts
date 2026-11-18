@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { ISubscription } from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { ISubscription } from '@yas chat/core-typings';
+import { Rooms, Subscriptions } from '@yas chat/models';
 import {
 	ajv,
 	isSubscriptionsGetProps,
@@ -9,7 +9,7 @@ import {
 	isSubscriptionsUnreadProps,
 	validateBadRequestErrorResponse,
 	validateUnauthorizedErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { unreadMessages } from '../../lib/messaging/unread/unreadMessages';
 import { readMessages } from '../../lib/readMessages';

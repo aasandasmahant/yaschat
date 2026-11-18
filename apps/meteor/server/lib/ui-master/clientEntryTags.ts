@@ -1,4 +1,4 @@
-import { escapeHTML } from '@rocket.chat/tools';
+import { escapeHTML } from '@yas chat/tools';
 
 export type ViteManifestChunk = {
 	file: string;

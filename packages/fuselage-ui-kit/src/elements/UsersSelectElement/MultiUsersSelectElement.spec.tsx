@@ -1,6 +1,6 @@
-import { MockedServerContext } from '@rocket.chat/mock-providers';
-import type { MultiUsersSelectElement as MultiUsersSelectElementType } from '@rocket.chat/ui-kit';
-import { BlockContext } from '@rocket.chat/ui-kit';
+import { MockedServerContext } from '@yas chat/mock-providers';
+import type { MultiUsersSelectElement as MultiUsersSelectElementType } from '@yas chat/ui-kit';
+import { BlockContext } from '@yas chat/ui-kit';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

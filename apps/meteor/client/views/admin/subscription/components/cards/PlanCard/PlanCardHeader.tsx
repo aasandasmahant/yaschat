@@ -1,4 +1,4 @@
-import { CardTitle, CardHeader, Icon } from '@rocket.chat/fuselage';
+import { CardTitle, CardHeader, Icon } from '@yas chat/fuselage';
 
 export type PlanCardHeaderProps = { name: string };
 

@@ -1,6 +1,6 @@
-import { hashLoginToken } from '@rocket.chat/account-utils';
-import { InstanceStatus } from '@rocket.chat/instance-status';
-import { getHeader } from '@rocket.chat/tools';
+import { hashLoginToken } from '@yas chat/account-utils';
+import { InstanceStatus } from '@yas chat/instance-status';
+import { getHeader } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
 

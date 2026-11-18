@@ -1,6 +1,6 @@
-import type { IMessage, IMessageAttachment, IMessageFile, IMessageReactions } from '@rocket.chat/apps-engine/definition/messages';
-import type { IUser, IUserLookup } from '@rocket.chat/apps-engine/definition/users';
-import type { LayoutBlock } from '@rocket.chat/ui-kit';
+import type { IMessage, IMessageAttachment, IMessageFile, IMessageReactions } from '@yas chat/apps-engine/definition/messages';
+import type { IUser, IUserLookup } from '@yas chat/apps-engine/definition/users';
+import type { LayoutBlock } from '@yas chat/ui-kit';
 
 import type { AppManager } from '../AppManager';
 import { Room } from '../rooms/Room';

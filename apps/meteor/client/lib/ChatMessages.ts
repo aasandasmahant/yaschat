@@ -1,6 +1,6 @@
-import type { DeepWritable, IMessage, IRoom, IUser } from '@rocket.chat/core-typings';
-import { isVideoConfMessage } from '@rocket.chat/core-typings';
-import type { IActionManager } from '@rocket.chat/ui-contexts';
+import type { DeepWritable, IMessage, IRoom, IUser } from '@yas chat/core-typings';
+import { isVideoConfMessage } from '@yas chat/core-typings';
+import type { IActionManager } from '@yas chat/ui-contexts';
 
 import { CurrentEditingMessage } from './CurrentEditingMessage';
 import { UserAction } from './UserAction';

@@ -1,4 +1,4 @@
-import type { ICustomSound } from '@rocket.chat/core-typings';
+import type { ICustomSound } from '@yas chat/core-typings';
 import { createContext } from 'react';
 
 /** Stops the sound it was returned for; absent when there was nothing to play. */

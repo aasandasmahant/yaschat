@@ -1,10 +1,10 @@
 import { createHash } from 'node:crypto';
 
-import type { INPSService, NPSVotePayload, NPSCreatePayload } from '@rocket.chat/core-services';
-import { ServiceClassInternal, Banner, NPS, Settings } from '@rocket.chat/core-services';
-import type { INpsVote, INps } from '@rocket.chat/core-typings';
-import { NPSStatus, INpsVoteStatus } from '@rocket.chat/core-typings';
-import { Nps, NpsVote } from '@rocket.chat/models';
+import type { INPSService, NPSVotePayload, NPSCreatePayload } from '@yas chat/core-services';
+import { ServiceClassInternal, Banner, NPS, Settings } from '@yas chat/core-services';
+import type { INpsVote, INps } from '@yas chat/core-typings';
+import { NPSStatus, INpsVoteStatus } from '@yas chat/core-typings';
+import { Nps, NpsVote } from '@yas chat/models';
 
 import { getBannerForAdmins, notifyAdmins } from './notification';
 import { sendNpsResults } from './sendNpsResults';

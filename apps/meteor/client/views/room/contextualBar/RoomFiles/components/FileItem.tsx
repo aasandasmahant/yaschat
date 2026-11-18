@@ -1,4 +1,4 @@
-import type { IRoom, IUpload, IUploadWithUser } from '@rocket.chat/core-typings';
+import type { IRoom, IUpload, IUploadWithUser } from '@yas chat/core-typings';
 import {
 	Icon,
 	Item,
@@ -10,8 +10,8 @@ import {
 	ItemMeta,
 	ItemRow,
 	ItemTitle,
-} from '@rocket.chat/fuselage';
-import { useFormatDateAndTime } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import { useFormatDateAndTime } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import FileItemMenu from './FileItemMenu';

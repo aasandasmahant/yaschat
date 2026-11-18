@@ -17,19 +17,19 @@ test.each([
 	['https://pt.wikipedia.org/with-hyphen', [paragraph([link('https://pt.wikipedia.org/with-hyphen')])]],
 	['https://pt.wikipedia.org/with_underscore', [paragraph([link('https://pt.wikipedia.org/with_underscore')])]],
 	[
-		'https://www.npmjs.com/package/@rocket.chat/message-parser',
-		[paragraph([link('https://www.npmjs.com/package/@rocket.chat/message-parser')])],
+		'https://www.npmjs.com/package/@yas chat/message-parser',
+		[paragraph([link('https://www.npmjs.com/package/@yas chat/message-parser')])],
 	],
-	['http:/rocket.chat/teste', [paragraph([plain('http:/rocket.chat/teste')])]],
-	['https:/rocket.chat/', [paragraph([plain('https:/rocket.chat/')])]],
+	['http:/yas chat/teste', [paragraph([plain('http:/yas chat/teste')])]],
+	['https:/yas chat/', [paragraph([plain('https:/yas chat/')])]],
 	['https://test', [paragraph([plain('https://test')])]],
-	['httpsss://rocket.chat/test', [paragraph([link('httpsss://rocket.chat/test')])]],
-	['https://rocket.chat:3000/test', [paragraph([link('https://rocket.chat:3000/test')])]],
-	['https://rocket.chat:99999', [paragraph([link('https://rocket.chat:99999')])]],
-	['https://rocket.chat:99999/test', [paragraph([link('https://rocket.chat:99999/test')])]],
-	['https://rocket.chat/test?search', [paragraph([link('https://rocket.chat/test?search')])]],
-	['https://rocket.chat/test?search=test', [paragraph([link('https://rocket.chat/test?search=test')])]],
-	['https://rocket.chat', [paragraph([link('https://rocket.chat')])]],
+	['httpsss://yas chat/test', [paragraph([link('httpsss://yas chat/test')])]],
+	['https://yas chat:3000/test', [paragraph([link('https://yas chat:3000/test')])]],
+	['https://yas chat:99999', [paragraph([link('https://yas chat:99999')])]],
+	['https://yas chat:99999/test', [paragraph([link('https://yas chat:99999/test')])]],
+	['https://yas chat/test?search', [paragraph([link('https://yas chat/test?search')])]],
+	['https://yas chat/test?search=test', [paragraph([link('https://yas chat/test?search=test')])]],
+	['https://yas chat', [paragraph([link('https://yas chat')])]],
 	['http://127.0.0.1:3000/images/logodata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>', [paragraph([link('http://127.0.0.1:3000/images/logodata:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='32' height='32'><style>@keyframes jump{0%,100%{transform:translateY(2px) rotate(-10deg)}50%{transform:translateY(-4px) rotate(12deg)}}.fish{animation:jump 1.5s infinite ease-in-out;transform-origin:center}</style><g class='fish' fill='#00b4d8'><path d='M52 24c-6-8-18-10-28-4-5 3-9 8-12 12-4-3-8-5-10-4 2 4 2 8 0 12 2 1 6-1 10-4 3 4 7 9 12 12 10 6 22 4 28-4 4-5 4-15 0-20z'/><circle cx='44' cy='30' r='2.5' fill='#ffffff'/><path d='M28 18c2-5 6-8 10-8-1 4-1 7 0 10z' fill='#0077b6'/></g></svg>')])]],
 	['https://localhost', [paragraph([link('https://localhost')])]],
 	['https://localhost:3000', [paragraph([link('https://localhost:3000')])]],
@@ -44,49 +44,49 @@ test.each([
 	['https://www.thingiverse.com/thing:5451684', [paragraph([link('https://www.thingiverse.com/thing:5451684')])]],
 	['http://📙.la/❤️', [paragraph([link('http://📙.la/❤️')])]],
 	[
-		'https://developer.rocket.chat/reference/api/rest-api#production-security-concerns look at this',
-		[paragraph([link('https://developer.rocket.chat/reference/api/rest-api#production-security-concerns'), plain(' look at this')])],
+		'https://developer.yas chat/reference/api/rest-api#production-security-concerns look at this',
+		[paragraph([link('https://developer.yas chat/reference/api/rest-api#production-security-concerns'), plain(' look at this')])],
 	],
 	[
-		'https://developer.rocket.chat/reference/api/rest-api look at this',
-		[paragraph([link('https://developer.rocket.chat/reference/api/rest-api'), plain(' look at this')])],
+		'https://developer.yas chat/reference/api/rest-api look at this',
+		[paragraph([link('https://developer.yas chat/reference/api/rest-api'), plain(' look at this')])],
 	],
 
 	[
-		'https://developer.rocket.chat/reference/api/rest-api#fragment?query=query look at this',
-		[paragraph([link('https://developer.rocket.chat/reference/api/rest-api#fragment?query=query'), plain(' look at this')])],
+		'https://developer.yas chat/reference/api/rest-api#fragment?query=query look at this',
+		[paragraph([link('https://developer.yas chat/reference/api/rest-api#fragment?query=query'), plain(' look at this')])],
 	],
-	['https://developer.rocket.chat look at this', [paragraph([link('https://developer.rocket.chat'), plain(' look at this')])]],
+	['https://developer.yas chat look at this', [paragraph([link('https://developer.yas chat'), plain(' look at this')])]],
 	[
-		'https://developer.rocket.chat?query=query look at this',
-		[paragraph([link('https://developer.rocket.chat?query=query'), plain(' look at this')])],
-	],
-	[
-		'https://developer.rocket.chat?query=query\nline break',
-		[paragraph([link('https://developer.rocket.chat?query=query')]), paragraph([plain('line break')])],
+		'https://developer.yas chat?query=query look at this',
+		[paragraph([link('https://developer.yas chat?query=query'), plain(' look at this')])],
 	],
 	[
-		'https://developer.rocket.chat?query=query\n\nline break',
-		[paragraph([link('https://developer.rocket.chat?query=query')]), lineBreak(), paragraph([plain('line break')])],
+		'https://developer.yas chat?query=query\nline break',
+		[paragraph([link('https://developer.yas chat?query=query')]), paragraph([plain('line break')])],
 	],
 	[
-		'https://developer.rocket.chat?query=query_with_underscore look at this',
-		[paragraph([link('https://developer.rocket.chat?query=query_with_underscore'), plain(' look at this')])],
+		'https://developer.yas chat?query=query\n\nline break',
+		[paragraph([link('https://developer.yas chat?query=query')]), lineBreak(), paragraph([plain('line break')])],
 	],
 	[
-		'https://developer.rocket.chat/path_with_underscore look at this',
-		[paragraph([link('https://developer.rocket.chat/path_with_underscore'), plain(' look at this')])],
+		'https://developer.yas chat?query=query_with_underscore look at this',
+		[paragraph([link('https://developer.yas chat?query=query_with_underscore'), plain(' look at this')])],
 	],
 	[
-		'https://developer.rocket.chat#fragment_with_underscore look at this',
-		[paragraph([link('https://developer.rocket.chat#fragment_with_underscore'), plain(' look at this')])],
+		'https://developer.yas chat/path_with_underscore look at this',
+		[paragraph([link('https://developer.yas chat/path_with_underscore'), plain(' look at this')])],
 	],
-	['https://developer.rocket.chat followed by text', [paragraph([link('https://developer.rocket.chat'), plain(' followed by text')])]],
 	[
-		'two urls https://developer.rocket.chat , https://rocket.chat',
-		[paragraph([plain('two urls '), link('https://developer.rocket.chat'), plain(' , '), link('https://rocket.chat')])],
+		'https://developer.yas chat#fragment_with_underscore look at this',
+		[paragraph([link('https://developer.yas chat#fragment_with_underscore'), plain(' look at this')])],
 	],
-	['https://1developer.rocket.chat', [paragraph([link('https://1developer.rocket.chat')])]],
+	['https://developer.yas chat followed by text', [paragraph([link('https://developer.yas chat'), plain(' followed by text')])]],
+	[
+		'two urls https://developer.yas chat , https://yas chat',
+		[paragraph([plain('two urls '), link('https://developer.yas chat'), plain(' , '), link('https://yas chat')])],
+	],
+	['https://1developer.yas chat', [paragraph([link('https://1developer.yas chat')])]],
 	['https://en.m.wikipedia.org/wiki/Main_Page', [paragraph([link('https://en.m.wikipedia.org/wiki/Main_Page')])]],
 	['test.1test.com', [paragraph([link('//test.1test.com', [plain('test.1test.com')])])]],
 	['http://test.e-xample.com', [paragraph([link('http://test.e-xample.com')])]],
@@ -98,13 +98,13 @@ test.each([
 	['http://te_st.com', [paragraph([link('http://te_st.com', [plain('http://te_st.com')])])]],
 	['www.te_st.com', [paragraph([link('//www.te_st.com', [plain('www.te_st.com')])])]],
 	['[google_search](http://google.com)', [paragraph([link('http://google.com', [plain('google_search')])])]],
-	['app...https://rocket.chat https://rocket.chat', [paragraph([plain('app...https://rocket.chat '), link('https://rocket.chat')])]],
+	['app...https://yas chat https://yas chat', [paragraph([plain('app...https://yas chat '), link('https://yas chat')])]],
 	[
-		'Hey check it out the best communication platform https://rocket.chat! There is not discussion about it.',
+		'Hey check it out the best communication platform https://yas chat! There is not discussion about it.',
 		[
 			paragraph([
 				plain('Hey check it out the best communication platform '),
-				link('https://rocket.chat'),
+				link('https://yas chat'),
 				plain('! There is not discussion about it.'),
 			]),
 		],
@@ -115,8 +115,8 @@ test.each([
 		[paragraph([link('https://github.com/YasChat/YasChat/releases/tag/6.0.0-rc.3')])],
 	],
 	[
-		'https://www.rocket.chat/(W(601))/Main?ScreenId=GI000027',
-		[paragraph([link('https://www.rocket.chat/(W(601))/Main?ScreenId=GI000027')])],
+		'https://www.yas chat/(W(601))/Main?ScreenId=GI000027',
+		[paragraph([link('https://www.yas chat/(W(601))/Main?ScreenId=GI000027')])],
 	],
 	[
 		'https://yaschat.atlassian.net/browse/OC-718?filter=10078&jql=%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20%22Defect%20from%5BVersion%20Picker%20(multiple%20versions)%5D%22%20%3D%206.0.0%20AND%20created%20%3E%3D%20-48h%20ORDER%20BY%20cf%5B10070%5D%20ASC%2C%20status%20ASC%2C%20created%20DESC',
@@ -154,26 +154,26 @@ describe('autoLink WITHOUT custom hosts settings comming from YasChat', () => {
 
 describe('autoLink helper function', () => {
 	it('should preserve the original protocol if the protocol is http or https', () => {
-		expect(autoLink('https://rocket.chat/test')).toEqual(link('https://rocket.chat/test'));
+		expect(autoLink('https://yas chat/test')).toEqual(link('https://yas chat/test'));
 
-		expect(autoLink('http://rocket.chat/test')).toEqual(link('http://rocket.chat/test'));
+		expect(autoLink('http://yas chat/test')).toEqual(link('http://yas chat/test'));
 	});
 
 	it('should preserve the original protocol for invalid absolute URLs', () => {
-		expect(autoLink('https://rocket.chat:99999')).toMatchObject(link('https://rocket.chat:99999'));
-		expect(autoLink('https://rocket.chat:65536')).toMatchObject(link('https://rocket.chat:65536'));
+		expect(autoLink('https://yas chat:99999')).toMatchObject(link('https://yas chat:99999'));
+		expect(autoLink('https://yas chat:65536')).toMatchObject(link('https://yas chat:65536'));
 	});
 
 	it('should preserve the original protocol even if for custom protocols', () => {
-		expect(autoLink('custom://rocket.chat/test')).toEqual(link('custom://rocket.chat/test'));
+		expect(autoLink('custom://yas chat/test')).toEqual(link('custom://yas chat/test'));
 	});
 
 	it('should return // as the protocol if // is the protocol specified', () => {
-		expect(autoLink('//rocket.chat/test')).toEqual(link('//rocket.chat/test'));
+		expect(autoLink('//yas chat/test')).toEqual(link('//yas chat/test'));
 	});
 
 	it("should return an url concatenated '//' if the url has no protocol", () => {
-		expect(autoLink('rocket.chat/test')).toEqual(link('//rocket.chat/test', [plain('rocket.chat/test')]));
+		expect(autoLink('yas chat/test')).toEqual(link('//yas chat/test', [plain('yas chat/test')]));
 	});
 
 	it("should return an url concatenated '//' if the url has no protocol and has sub-domain", () => {
@@ -183,6 +183,6 @@ describe('autoLink helper function', () => {
 	});
 
 	it("should return an plain text url due to invalid TLD that's validate with the external library TLDTS", () => {
-		expect(autoLink('rocket.chattt/url_path')).toEqual(plain('rocket.chattt/url_path'));
+		expect(autoLink('yas chattt/url_path')).toEqual(plain('yas chattt/url_path'));
 	});
 });

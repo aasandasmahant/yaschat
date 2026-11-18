@@ -1,4 +1,4 @@
-import { Callout } from '@rocket.chat/fuselage';
+import { Callout } from '@yas chat/fuselage';
 
 import InviteUsersWrapper from './InviteUsersWrapper';
 

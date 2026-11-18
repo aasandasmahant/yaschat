@@ -1,5 +1,5 @@
-import { parse } from '@rocket.chat/message-parser';
-import type { Root } from '@rocket.chat/message-parser';
+import { parse } from '@yas chat/message-parser';
+import type { Root } from '@yas chat/message-parser';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import ComposerInlineElements from './ComposerInlineElements.js';

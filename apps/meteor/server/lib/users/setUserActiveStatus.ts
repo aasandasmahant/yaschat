@@ -1,7 +1,7 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUserEmail } from '@rocket.chat/core-typings';
-import { isUserFederated, isDirectMessageRoom } from '@rocket.chat/core-typings';
-import { Rooms, Users, Subscriptions, OAuthAccessTokens, OAuthRefreshTokens, OAuthAuthCodes } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUserEmail } from '@yas chat/core-typings';
+import { isUserFederated, isDirectMessageRoom } from '@yas chat/core-typings';
+import { Rooms, Users, Subscriptions, OAuthAccessTokens, OAuthRefreshTokens, OAuthAuthCodes } from '@yas chat/models';
 import { Accounts } from 'meteor/accounts-base';
 
 import { getUserSingleOwnedRooms } from './getUserSingleOwnedRooms';

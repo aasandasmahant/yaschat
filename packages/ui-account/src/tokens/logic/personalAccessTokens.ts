@@ -1,4 +1,4 @@
-import type { IPersonalAccessToken, Serialized } from '@rocket.chat/core-typings';
+import type { IPersonalAccessToken, Serialized } from '@yas chat/core-typings';
 
 export type PersonalAccessToken = Serialized<Pick<IPersonalAccessToken, 'name' | 'createdAt' | 'lastTokenPart' | 'bypassTwoFactor'>>;
 

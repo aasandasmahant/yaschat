@@ -1,7 +1,7 @@
-import type { ILicense } from '@rocket.chat/core-services';
-import { api, ServiceClassInternal } from '@rocket.chat/core-services';
-import type { LicenseModule } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
+import type { ILicense } from '@yas chat/core-services';
+import { api, ServiceClassInternal } from '@yas chat/core-services';
+import type { LicenseModule } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
 
 import { guestPermissions } from '../authorization/guestPermissions';
 import { resetEnterprisePermissions } from '../authorization/resetEnterprisePermissions';

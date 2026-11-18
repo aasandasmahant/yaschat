@@ -1,9 +1,9 @@
 import crypto from 'node:crypto';
 import type { ServerResponse, IncomingMessage } from 'node:http';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IYasChatAssets, IYasChatAsset, ISetting } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IYasChatAssets, IYasChatAsset, ISetting } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 import type { NextHandleFunction } from 'connect';
 import { WebApp, WebAppInternals } from 'meteor/webapp';
 import sharp from 'sharp';

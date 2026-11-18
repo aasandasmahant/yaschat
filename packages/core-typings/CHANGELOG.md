@@ -1,4 +1,4 @@
-# @rocket.chat/core-typings
+# @yas chat/core-typings
 
 ## 9.0.0
 
@@ -18,7 +18,7 @@
 
 - ([#41992](https://github.com/YasChat/YasChat/pull/41992)) Removes the built-in Drupal, Facebook, GitHub Enterprise, LinkedIn, Meteor, Twitter, WordPress and Dolphin OAuth login providers. Apple, GitHub, GitLab, Google, Nextcloud, custom OAuth, SAML, CAS and LDAP remain available. Workspaces relying on a removed provider can recreate it as a custom OAuth service where the provider supports standard OAuth2. Users who signed up through a removed provider keep their accounts and can regain access through another authentication method.
 
-- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@rocket.chat/core-typings`.
+- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@yas chat/core-typings`.
 
 - ([#42568](https://github.com/YasChat/YasChat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
 
@@ -55,10 +55,10 @@
 - ([#41638](https://github.com/YasChat/YasChat/pull/41638)) Serves the OpenAPI document as 3.1, the version whose schemas are the JSON Schema dialect the endpoints already validate against
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a838cc5af0652f59d0ab30aa1a488abded0622b1, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74]:</summary>
-  - @rocket.chat/fuselage@1.0.0
-  - @rocket.chat/icons@0.52.0
-  - @rocket.chat/message-parser@0.33.0
-  - @rocket.chat/ui-kit@2.0.0
+  - @yas chat/fuselage@1.0.0
+  - @yas chat/icons@0.52.0
+  - @yas chat/message-parser@0.33.0
+  - @yas chat/ui-kit@2.0.0
 
   </details>
 
@@ -77,7 +77,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [5f3c7c2426a29a0f8237a1ec0d72192b2ef1f0a4]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.1
+  - @yas chat/fuselage@1.0.0-rc.1
 
   </details>
 
@@ -103,7 +103,7 @@
 
 - ([#41992](https://github.com/YasChat/YasChat/pull/41992)) Removes the built-in Drupal, Facebook, GitHub Enterprise, LinkedIn, Meteor, Twitter, WordPress and Dolphin OAuth login providers. Apple, GitHub, GitLab, Google, Nextcloud, custom OAuth, SAML, CAS and LDAP remain available. Workspaces relying on a removed provider can recreate it as a custom OAuth service where the provider supports standard OAuth2. Users who signed up through a removed provider keep their accounts and can regain access through another authentication method.
 
-- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@rocket.chat/core-typings`.
+- ([#42496](https://github.com/YasChat/YasChat/pull/42496)) Removes the stale `Drafts` sidebar group left on workspaces upgraded from 8.5–8.7: a migration drops it from the `Accounts_Default_User_Preferences_sidebarSectionsOrder` setting and from every user's `sidebarCategories` preference, replacing the client-side read-time filter. Removes the `isStaleSidebarCategory`, `isSidebarSystemGroupKey` and `SidebarSystemGroupKey` exports from `@yas chat/core-typings`.
 
 - ([#42568](https://github.com/YasChat/YasChat/pull/42568)) Renames the user `freeSwitchExtension` attribute to `sipExtension`, since the VoIP extension is no longer tied to FreeSWITCH and works with any SIP router. Existing users are migrated automatically on upgrade. REST API integrations must switch to the new name: the `users.create` and `users.update` parameters, the `users.info` query parameter, and the `sipExtension` field returned on user objects.
 
@@ -140,10 +140,10 @@
 - ([#41638](https://github.com/YasChat/YasChat/pull/41638)) Serves the OpenAPI document as 3.1, the version whose schemas are the JSON Schema dialect the endpoints already validate against
 
 - <details><summary>Updated dependencies [80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 5c7b25f68d677d8bdbde3ed4c56ad0bba60ce71d, 4c379a0d016fcf010bab86ddd94a22ff2401606e, ad08045f56e3921e88ed021aa2945c9ba670e5f5, cea4d4428a0d86c6fc868542d4fb00a36ffaa27d, 7fbb5676fe0d2c034f4c52586ab858b3796e5dc6, 4c379a0d016fcf010bab86ddd94a22ff2401606e, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 05e9b38a001919252360351f0bc3e46cc990a6ac, 25fd477c2c38f71e9a16b7e2896d39efd43bfc61, 2184b09b0bdacdb0bced60dc054a818a92c98131, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 0285f08c086dae6beb0f1365a85f522fb4818435, 6b86dffd3a05f65fff000bb697fbb40350664629, 5e6b6bd25ea82b9c884d49871870f71dc532a061, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, e1b509fbca35eba10e21e4aa3bc15c56f44a2845, 2d3331be63dde3449245963c33444dcb15fa8869, c9aa43916295df79a799e53b8e09c58011991a97, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 80dceecf12fd1216dc3fdb9a4f42e51afbf23a75, 9e401e55fbd71b95dc7c4b273024219ce2564856, a838cc5af0652f59d0ab30aa1a488abded0622b1, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, 87667dcb84de0ce97f4ace88c900801254fa6535, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, bb586dc723b3dccdf725d28f530b28cfa857020a, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, ec12f66a28435f99fbce9cbb00ef49193f5b0d34, 23698f9d08d34d3c145f116b5303b542e8342f9e, 9dfedc72439d12f5d2985b9dd54daccd97e11e74, e1070288debfecc5e49e118c3dc535f95936281f, 9dfedc72439d12f5d2985b9dd54daccd97e11e74]:</summary>
-  - @rocket.chat/fuselage@1.0.0-rc.0
-  - @rocket.chat/icons@0.52.0-rc.0
-  - @rocket.chat/message-parser@0.33.0-rc.0
-  - @rocket.chat/ui-kit@2.0.0-rc.0
+  - @yas chat/fuselage@1.0.0-rc.0
+  - @yas chat/icons@0.52.0-rc.0
+  - @yas chat/message-parser@0.33.0-rc.0
+  - @yas chat/ui-kit@2.0.0-rc.0
 
   </details>
 
@@ -184,7 +184,7 @@
 - ([#42090](https://github.com/YasChat/YasChat/pull/42090)) Fixes the removed `Drafts` sidebar group reappearing as an empty category on workspaces upgraded from a build that shipped it
 
 - <details><summary>Updated dependencies [37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/ui-kit@1.2.0
+  - @yas chat/ui-kit@1.2.0
 
   </details>
 
@@ -233,7 +233,7 @@
 - ([#42090](https://github.com/YasChat/YasChat/pull/42090)) Fixes the removed `Drafts` sidebar group reappearing as an empty category on workspaces upgraded from a build that shipped it
 
 - <details><summary>Updated dependencies [37faaa89ad1b4b721d6054e40a91327bd8140525]:</summary>
-  - @rocket.chat/ui-kit@1.2.0-rc.0
+  - @yas chat/ui-kit@1.2.0-rc.0
 
   </details>
 
@@ -266,8 +266,8 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/message-parser@0.32.0
-  - @rocket.chat/ui-kit@1.1.0
+  - @yas chat/message-parser@0.32.0
+  - @yas chat/ui-kit@1.1.0
 
   </details>
 
@@ -305,12 +305,12 @@
 
 - ([#41173](https://github.com/YasChat/YasChat/pull/41173)) Fixes the password policy allowing a maximum length lower than the minimum length to be saved — a combination that made it impossible to set any valid password. The server now rejects such configurations when password policy settings are saved and shows an error explaining the constraint.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41112](https://github.com/YasChat/YasChat/pull/41112)) Returns `custom fields` on admin rooms detail view
 
 - <details><summary>Updated dependencies [eec6083bb88f0caa1bd0de28b93b926a11c17507, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 4117a1d3fb07905e8c9488a96f368747b48d528e, e5da5d016948c9bb5cfd784a65396e08e61264c4, 70c0ff0967cc50144dba4971fc7c3f3e996264a3]:</summary>
-  - @rocket.chat/message-parser@0.32.0
+  - @yas chat/message-parser@0.32.0
 
   </details>
 
@@ -358,12 +358,12 @@
 
 - ([#41173](https://github.com/YasChat/YasChat/pull/41173)) Fixes the password policy allowing a maximum length lower than the minimum length to be saved — a combination that made it impossible to set any valid password. The server now rejects such configurations when password policy settings are saved and shows an error explaining the constraint.
 
-- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41069](https://github.com/YasChat/YasChat/pull/41069)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - ([#41112](https://github.com/YasChat/YasChat/pull/41112)) Returns `custom fields` on admin rooms detail view
 
 - <details><summary>Updated dependencies [eec6083bb88f0caa1bd0de28b93b926a11c17507, adc15707128bc3fbe1ccd1cd57e9d30a702fa6ca, 4117a1d3fb07905e8c9488a96f368747b48d528e, e5da5d016948c9bb5cfd784a65396e08e61264c4, 70c0ff0967cc50144dba4971fc7c3f3e996264a3]:</summary>
-  - @rocket.chat/message-parser@0.32.0-rc.0
+  - @yas chat/message-parser@0.32.0-rc.0
 
   </details>
 
@@ -371,7 +371,7 @@
 
 ### Patch Changes
 
-- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#41243](https://github.com/YasChat/YasChat/pull/41243) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 8.6.0
 
@@ -415,10 +415,10 @@
 
 ### Patch Changes
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, 90f15e32ae843ed146ccf711ee3201408d1e8731]:</summary>
-  - @rocket.chat/ui-kit@1.1.0
+  - @yas chat/ui-kit@1.1.0
 
   </details>
 
@@ -454,10 +454,10 @@
 
 ### Patch Changes
 
-- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40405](https://github.com/YasChat/YasChat/pull/40405)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 - <details><summary>Updated dependencies [90f15e32ae843ed146ccf711ee3201408d1e8731, 90f15e32ae843ed146ccf711ee3201408d1e8731]:</summary>
-  - @rocket.chat/ui-kit@1.1.0-rc.0
+  - @yas chat/ui-kit@1.1.0-rc.0
 
   </details>
 
@@ -469,7 +469,7 @@
 
 ### Patch Changes
 
-- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.rocket.chat/docs/security-fixes-and-updates)
+- ([#40410](https://github.com/YasChat/YasChat/pull/40410) by [@dionisio-bot](https://github.com/dionisio-bot)) Security Hotfix (https://docs.yas chat/docs/security-fixes-and-updates)
 
 ## 8.4.0
 
@@ -484,7 +484,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951]:</summary>
-  - @rocket.chat/message-parser@0.31.36
+  - @yas chat/message-parser@0.31.36
 
   </details>
 
@@ -509,7 +509,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951, 53e32c7df1bf40598d65d170fd50c55f752f2951]:</summary>
-  - @rocket.chat/message-parser@0.31.36-rc.0
+  - @yas chat/message-parser@0.31.36-rc.0
 
   </details>
 
@@ -530,8 +530,8 @@
 - ([#36953](https://github.com/YasChat/YasChat/pull/36953) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) Add OpenAPI support for the YasChat commands.get API endpoints by migrating to a modern chained route definition syntax and utilizing shared AJV schemas for validation to enhance API documentation and ensure type safety through response validation.
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae]:</summary>
-  - @rocket.chat/message-parser@0.31.35
-  - @rocket.chat/ui-kit@1.0.0
+  - @yas chat/message-parser@0.31.35
+  - @yas chat/ui-kit@1.0.0
 
   </details>
 
@@ -560,8 +560,8 @@
 - ([#36953](https://github.com/YasChat/YasChat/pull/36953) by [@ahmed-n-abdeltwab](https://github.com/ahmed-n-abdeltwab)) Add OpenAPI support for the YasChat commands.get API endpoints by migrating to a modern chained route definition syntax and utilizing shared AJV schemas for validation to enhance API documentation and ensure type safety through response validation.
 
 - <details><summary>Updated dependencies [d1bf2cc675e80403659d388a1fbbdc6f73889dad, 02b1e6e6a184850d21e335077ca30382a1c7a66b, 9a70095296dbf516b0113a9a65e09f25137b2eaf, 87f9262af4a543d52642a54e1ef546d509a79e23, 539659af22bc19880eda047dfc0b152472ccb65c, b1b1d6ccd81c90d231a7e594f834965c6e5f4fae]:</summary>
-  - @rocket.chat/message-parser@0.31.35-rc.0
-  - @rocket.chat/ui-kit@1.0.0-rc.0
+  - @yas chat/message-parser@0.31.35-rc.0
+  - @yas chat/ui-kit@1.0.0-rc.0
 
   </details>
 
@@ -580,7 +580,7 @@
 - ([#38379](https://github.com/YasChat/YasChat/pull/38379)) Fixes association of encrypted messages and encrypted files, so that if one of them is removed, the other gets removed as well.
 
 - <details><summary>Updated dependencies [098f0a7467332f10a7bea5d435ae2ca3b5431fc9, 562d5ce6ad8afc67bef61e91939f8c21c4501610]:</summary>
-  - @rocket.chat/message-parser@0.31.34
+  - @yas chat/message-parser@0.31.34
 
   </details>
 
@@ -601,7 +601,7 @@
 - ([#38379](https://github.com/YasChat/YasChat/pull/38379)) Fixes association of encrypted messages and encrypted files, so that if one of them is removed, the other gets removed as well.
 
 - <details><summary>Updated dependencies [098f0a7467332f10a7bea5d435ae2ca3b5431fc9, 562d5ce6ad8afc67bef61e91939f8c21c4501610]:</summary>
-  - @rocket.chat/message-parser@0.31.34-rc.0
+  - @yas chat/message-parser@0.31.34-rc.0
 
   </details>
 
@@ -614,7 +614,7 @@
 - ([#37950](https://github.com/YasChat/YasChat/pull/37950)) Fixes premium capability popup showing despite active enterprise license.
 
 - <details><summary>Updated dependencies [bed615ef323d4018f779cda013255ac9147e4cde]:</summary>
-  - @rocket.chat/message-parser@0.31.33
+  - @yas chat/message-parser@0.31.33
 
   </details>
 
@@ -623,7 +623,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [bed615ef323d4018f779cda013255ac9147e4cde]:</summary>
-  - @rocket.chat/message-parser@0.31.33-rc.0
+  - @yas chat/message-parser@0.31.33-rc.0
 
   </details>
 
@@ -656,7 +656,7 @@
 - ([#37612](https://github.com/YasChat/YasChat/pull/37612)) Adds invitation request support to rooms
 
 - <details><summary>Updated dependencies [d3538e7045c41f91b8c561d44e5485ff93b93745]:</summary>
-  - @rocket.chat/ui-kit@0.39.0
+  - @yas chat/ui-kit@0.39.0
 
   </details>
 
@@ -689,7 +689,7 @@
 - ([#37612](https://github.com/YasChat/YasChat/pull/37612)) Adds invitation request support to rooms
 
 - <details><summary>Updated dependencies [d3538e7045c41f91b8c561d44e5485ff93b93745]:</summary>
-  - @rocket.chat/ui-kit@0.39.0-rc.0
+  - @yas chat/ui-kit@0.39.0-rc.0
 
   </details>
 
@@ -710,7 +710,7 @@
 - ([#37270](https://github.com/YasChat/YasChat/pull/37270)) Fixes editing of encrypted message attachment description.
 
 - <details><summary>Updated dependencies [44ca3b111f13ac1816a82ab0e4720e9886769c34]:</summary>
-  - @rocket.chat/ui-kit@0.38.0
+  - @yas chat/ui-kit@0.38.0
 
   </details>
 
@@ -731,7 +731,7 @@
 - ([#37270](https://github.com/YasChat/YasChat/pull/37270)) Fixes editing of encrypted message attachment description.
 
 - <details><summary>Updated dependencies [44ca3b111f13ac1816a82ab0e4720e9886769c34]:</summary>
-  - @rocket.chat/ui-kit@0.38.0-rc.0
+  - @yas chat/ui-kit@0.38.0-rc.0
 
   </details>
 
@@ -986,7 +986,7 @@
 - ([#35369](https://github.com/YasChat/YasChat/pull/35369)) Fixes an issue where recursively quoting messages multiple times (up to the configured chained quote limit) caused the inner attachment to appear empty.
 
 - <details><summary>Updated dependencies [335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
-  - @rocket.chat/message-parser@0.31.32
+  - @yas chat/message-parser@0.31.32
 
   </details>
 
@@ -1011,7 +1011,7 @@
 - ([#35369](https://github.com/YasChat/YasChat/pull/35369)) Fixes an issue where recursively quoting messages multiple times (up to the configured chained quote limit) caused the inner attachment to appear empty.
 
 - <details><summary>Updated dependencies [335f19f5d08b7348263b574e4133ecf93145a79c]:</summary>
-  - @rocket.chat/message-parser@0.31.32-rc.0
+  - @yas chat/message-parser@0.31.32-rc.0
 
   </details>
 
@@ -1220,7 +1220,7 @@
 - ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [687f1efd5f, debd3ffa22]:</summary>
-  - @rocket.chat/ui-kit@0.37.0
+  - @yas chat/ui-kit@0.37.0
 
   </details>
 
@@ -1261,7 +1261,7 @@
 - ([#33328](https://github.com/YasChat/YasChat/pull/33328)) Allows authorized users to reset the encryption key for end-to-end encrypted rooms. This aims to prevent situations where all users of a room have lost the encryption key, and as such, the access to the room.
 
 - <details><summary>Updated dependencies [687f1efd5f, debd3ffa22]:</summary>
-  - @rocket.chat/ui-kit@0.37.0-rc.0
+  - @yas chat/ui-kit@0.37.0-rc.0
 
   </details>
 
@@ -1278,7 +1278,7 @@
 - ([#32510](https://github.com/YasChat/YasChat/pull/32510)) Added a new setting to enable mentions in end to end encrypted channels
 
 - <details><summary>Updated dependencies [79c16d315a]:</summary>
-  - @rocket.chat/message-parser@0.31.31
+  - @yas chat/message-parser@0.31.31
 
   </details>
 
@@ -1307,7 +1307,7 @@
 - ([#32510](https://github.com/YasChat/YasChat/pull/32510)) Added a new setting to enable mentions in end to end encrypted channels
 
 - <details><summary>Updated dependencies [79c16d315a]:</summary>
-  - @rocket.chat/message-parser@0.31.30-rc.0
+  - @yas chat/message-parser@0.31.30-rc.0
 
   </details>
 
@@ -1316,7 +1316,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [3cbb9f6252]:</summary>
-  - @rocket.chat/message-parser@0.31.30
+  - @yas chat/message-parser@0.31.30
 
   </details>
 
@@ -1343,7 +1343,7 @@
 - ([#32846](https://github.com/YasChat/YasChat/pull/32846)) Fixed issue with system messages being counted as agents' first responses in livechat rooms (which caused the "best first response time" and "average first response time" metrics to be unreliable for all agents)
 
 - <details><summary>Updated dependencies [c11f3722df]:</summary>
-  - @rocket.chat/ui-kit@0.36.1
+  - @yas chat/ui-kit@0.36.1
 
   </details>
 
@@ -1382,7 +1382,7 @@
 - ([#32846](https://github.com/YasChat/YasChat/pull/32846)) Fixed issue with system messages being counted as agents' first responses in livechat rooms (which caused the "best first response time" and "average first response time" metrics to be unreliable for all agents)
 
 - <details><summary>Updated dependencies [c11f3722df]:</summary>
-  - @rocket.chat/ui-kit@0.36.1-rc.0
+  - @yas chat/ui-kit@0.36.1-rc.0
 
   </details>
 
@@ -1404,7 +1404,7 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448]:</summary>
-  - @rocket.chat/ui-kit@0.36.0
+  - @yas chat/ui-kit@0.36.0
 
   </details>
 
@@ -1434,7 +1434,7 @@
 - ([#32719](https://github.com/YasChat/YasChat/pull/32719)) Added the `user` param to apps-engine update method call, allowing apps' new `onUpdate` hook to know who triggered the update.
 
 - <details><summary>Updated dependencies [2d89a0c448]:</summary>
-  - @rocket.chat/ui-kit@0.36.0-rc.0
+  - @yas chat/ui-kit@0.36.0-rc.0
 
   </details>
 
@@ -1470,7 +1470,7 @@
   Additionally, added a "Pending Action" column to aid administrators in identifying necessary actions for each user. Incorporated a "Reason for Joining" field
   into the user info contextual bar, along with a callout for exceeding the seats cap in the users page header. Finally, introduced a new logic to disable user creation buttons upon surpassing the seats cap.
 - <details><summary>Updated dependencies [a565999ae0, 4f72d62aa7]:</summary>
-  - @rocket.chat/ui-kit@0.35.0
+  - @yas chat/ui-kit@0.35.0
 
   </details>
 
@@ -1506,7 +1506,7 @@
   Additionally, added a "Pending Action" column to aid administrators in identifying necessary actions for each user. Incorporated a "Reason for Joining" field
   into the user info contextual bar, along with a callout for exceeding the seats cap in the users page header. Finally, introduced a new logic to disable user creation buttons upon surpassing the seats cap.
 - <details><summary>Updated dependencies [a565999ae0, 4f72d62aa7]:</summary>
-  - @rocket.chat/ui-kit@0.35.0-rc.0
+  - @yas chat/ui-kit@0.35.0-rc.0
 
   </details>
 
@@ -1527,7 +1527,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ee5cdfc367]:</summary>
-  - @rocket.chat/ui-kit@0.34.0
+  - @yas chat/ui-kit@0.34.0
 
   </details>
 
@@ -1546,7 +1546,7 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies [ee5cdfc367]:</summary>
-  - @rocket.chat/ui-kit@0.34.0-rc.0
+  - @yas chat/ui-kit@0.34.0-rc.0
 
   </details>
 
@@ -1566,8 +1566,8 @@
   This returned an empty response to the UI, which ignored the response and continued to show the view.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/ui-kit@0.33.0
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/ui-kit@0.33.0
 
   </details>
 
@@ -1593,8 +1593,8 @@
 ### Patch Changes
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/ui-kit@0.33.0
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/ui-kit@0.33.0
 
   </details>
 
@@ -1620,8 +1620,8 @@
 - ([#31663](https://github.com/YasChat/YasChat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
 
 - <details><summary>Updated dependencies [5ad65ff3da]:</summary>
-  - @rocket.chat/message-parser@0.31.29
-  - @rocket.chat/ui-kit@0.33.0
+  - @yas chat/message-parser@0.31.29
+  - @yas chat/ui-kit@0.33.0
 
   </details>
 
@@ -1651,8 +1651,8 @@
 - ([#31663](https://github.com/YasChat/YasChat/pull/31663)) Fixes issue causing the setDepartment Livechat API overriding some triggers conditions
 
 - <details><summary>Updated dependencies [5ad65ff3da]:</summary>
-  - @rocket.chat/message-parser@0.31.29-rc.0
-  - @rocket.chat/ui-kit@0.33.0
+  - @yas chat/message-parser@0.31.29-rc.0
+  - @yas chat/ui-kit@0.33.0
 
   </details>
 
@@ -1672,7 +1672,7 @@
 
 ### Patch Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 - ([#31349](https://github.com/YasChat/YasChat/pull/31349) by [@Subhojit-Dey1234](https://github.com/Subhojit-Dey1234)) feat: Implemented InlineCode handling in Bold, Italic and Strike
 
@@ -1681,7 +1681,7 @@
 - ([#31328](https://github.com/YasChat/YasChat/pull/31328)) Fixed an issue caused by the `Fallback Forward Department` feature. Feature could be configured by admins in a way that mimis a loop, causing a chat to be forwarded "infinitely" between those departments. System will now prevent Self & 1-level deep circular references from being saved, and a new setting is added to control the maximum number of hops that the system will do between fallback departments before considering a transfer failure.
 
 - <details><summary>Updated dependencies [b223cbde14]:</summary>
-  - @rocket.chat/ui-kit@0.33.0
+  - @yas chat/ui-kit@0.33.0
 
   </details>
 
@@ -1703,12 +1703,12 @@
 
 ### Patch Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 - dbb08ef948: feat: Implemented InlineCode handling in Bold, Italic and Strike
 - fdd9852079: Added `chat.getURLPreview` endpoint to enable users to retrieve previews for URL (ready to be provided in message send/update)
 - b4b2cd20a8: Fixed an issue caused by the `Fallback Forward Department` feature. Feature could be configured by admins in a way that mimis a loop, causing a chat to be forwarded "infinitely" between those departments. System will now prevent Self & 1-level deep circular references from being saved, and a new setting is added to control the maximum number of hops that the system will do between fallback departments before considering a transfer failure.
 - Updated dependencies [b223cbde14]
-  - @rocket.chat/ui-kit@0.33.0-rc.0
+  - @yas chat/ui-kit@0.33.0-rc.0
 
 ## 6.5.3
 

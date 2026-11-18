@@ -1,6 +1,6 @@
-import { Room } from '@rocket.chat/core-services';
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { Rooms, Users } from '@rocket.chat/models';
+import { Room } from '@yas chat/core-services';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { Rooms, Users } from '@yas chat/models';
 
 import { getUsernameServername } from '../helpers/getUsernameServername';
 

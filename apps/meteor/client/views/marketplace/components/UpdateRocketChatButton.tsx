@@ -1,5 +1,5 @@
-import { Button } from '@rocket.chat/fuselage';
-import { links } from '@rocket.chat/ui-client';
+import { Button } from '@yas chat/fuselage';
+import { links } from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const UpdateYasChatButton = () => {

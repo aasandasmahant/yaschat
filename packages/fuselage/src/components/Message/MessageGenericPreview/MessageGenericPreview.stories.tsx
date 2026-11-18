@@ -113,7 +113,7 @@ export const LinkPreview: Story = {
 		<MessageGenericPreview style={{ maxWidth: 368, width: '100%' }}>
 			<MessageGenericPreviewCoverImage height={192} width={368} url={imgUrl} />
 			<MessageGenericPreviewContent>
-				<MessageGenericPreviewTitle externalUrl='https://rocket.chat'>Title</MessageGenericPreviewTitle>
+				<MessageGenericPreviewTitle externalUrl='https://yas chat'>Title</MessageGenericPreviewTitle>
 				<MessageGenericPreviewDescription>
 					From Gmail to YouTube, everything at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything
 					at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything at Google runs in containers. We’ve
@@ -143,7 +143,7 @@ export const NoPreviewTitleLink: Story = {
 	render: () => (
 		<MessageGenericPreview>
 			<MessageGenericPreviewContent>
-				<MessageGenericPreviewTitle externalUrl='https://rocket.chat'>Title</MessageGenericPreviewTitle>
+				<MessageGenericPreviewTitle externalUrl='https://yas chat'>Title</MessageGenericPreviewTitle>
 				<MessageGenericPreviewDescription>
 					From Gmail to YouTube, everything at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything
 					at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything at Google runs in containers. We’ve
@@ -164,7 +164,7 @@ export const Thumb: Story = {
 					</MessageGenericPreviewThumb>
 				}
 			>
-				<MessageGenericPreviewTitle externalUrl='https://rocket.chat'>Title</MessageGenericPreviewTitle>
+				<MessageGenericPreviewTitle externalUrl='https://yas chat'>Title</MessageGenericPreviewTitle>
 				<MessageGenericPreviewDescription>
 					From Gmail to YouTube, everything at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything
 					at Google runs in containers. We’ve packaged this experience From Gmail to YouTube, everything at Google runs in containers. We’ve
@@ -179,7 +179,7 @@ export const FileAttachment: Story = {
 	render: () => (
 		<MessageGenericPreview style={{ maxWidth: 368, width: '100%' }}>
 			<MessageGenericPreviewContent thumb={<MessageGenericPreviewIcon name='attachment-file' type='PDF' />}>
-				<MessageGenericPreviewTitle externalUrl='https://rocket.chat'>
+				<MessageGenericPreviewTitle externalUrl='https://yas chat'>
 					Flexbox In a Nutshell - Cheat Sheet - Lorem ipsum dolor sit amet consectetur
 				</MessageGenericPreviewTitle>
 				<MessageGenericPreviewDescription>9 MB - PDF</MessageGenericPreviewDescription>

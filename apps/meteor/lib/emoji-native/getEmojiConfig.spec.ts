@@ -1,4 +1,4 @@
-import type { EmojiPackages } from '@rocket.chat/ui-emoji-picker';
+import type { EmojiPackages } from '@yas chat/ui-emoji-picker';
 
 import { getEmojiConfig } from './getEmojiConfig';
 
@@ -38,14 +38,14 @@ describe('native emoji render', () => {
 	it('does not convert ascii sequences inside words or URLs', () => {
 		const { render } = getEmojiConfig(buildEmojiPackages(true));
 
-		expect(render('https://rocket.chat')).toBe('https://rocket.chat');
+		expect(render('https://yas chat')).toBe('https://yas chat');
 		expect(render('hello:)')).toBe('hello:)');
 	});
 
 	it('does not convert ascii sequences inside HTML tags', () => {
 		const { render } = getEmojiConfig(buildEmojiPackages(true));
 
-		expect(render('<a href="https://rocket.chat">rocket</a>')).toBe('<a href="https://rocket.chat">rocket</a>');
+		expect(render('<a href="https://yas chat">rocket</a>')).toBe('<a href="https://yas chat">rocket</a>');
 	});
 
 	it('still renders shortcodes when the ascii flag is enabled', () => {

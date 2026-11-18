@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import type * as http from 'node:http';
 import type stream from 'node:stream';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUpload } from '@rocket.chat/core-typings';
-import type { IBaseUploadsModel } from '@rocket.chat/model-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUpload } from '@yas chat/core-typings';
+import type { IBaseUploadsModel } from '@yas chat/model-typings';
 import type createServer from 'connect';
 import type { ClientSession, OptionalId } from 'mongodb';
 

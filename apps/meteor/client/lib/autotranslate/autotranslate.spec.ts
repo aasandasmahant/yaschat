@@ -1,4 +1,4 @@
-import type { IMessage, ISupportedLanguage, ITranslatedMessage, MessageAttachmentDefault } from '@rocket.chat/core-typings';
+import type { IMessage, ISupportedLanguage, ITranslatedMessage, MessageAttachmentDefault } from '@yas chat/core-typings';
 import mem from 'mem';
 
 import { AutoTranslate, createAutoTranslateMessageStreamHandler } from './autotranslate';

@@ -1,4 +1,4 @@
-import { Box } from '@rocket.chat/fuselage';
+import { Box } from '@yas chat/fuselage';
 import type { FormHTMLAttributes, ReactNode, RefAttributes } from 'react';
 
 export type FormHeaderProps = Omit<FormHTMLAttributes<HTMLElement>, 'is'> &

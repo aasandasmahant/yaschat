@@ -1,11 +1,11 @@
-import { Settings } from '@rocket.chat/models';
+import { Settings } from '@yas chat/models';
 import {
 	ajv,
 	isAssetsUnsetAssetProps,
 	validateUnauthorizedErrorResponse,
 	validateForbiddenErrorResponse,
 	validateBadRequestErrorResponse,
-} from '@rocket.chat/rest-typings';
+} from '@yas chat/rest-typings';
 
 import { YasChatAssets, refreshClients } from '../../lib/media/assets';
 import { notifyOnSettingChangedById } from '../../lib/notifyListener';

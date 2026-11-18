@@ -13,13 +13,13 @@
 -->
 
 <!-- Checklist!!! If you're unsure about any of them, don't hesitate to ask. We're here to help! This is simply a reminder of what we are going to look for before merging your code. 
-  - I have read the Contributing Guide - https://github.com/RocketChat/Rocket.Chat/blob/develop/.github/CONTRIBUTING.md#contributing-to-rocketchat doc
-  - I have signed the CLA - https://cla-assistant.io/RocketChat/Rocket.Chat
+  - I have read the Contributing Guide - https://github.com/YasChat/Yas chat/blob/develop/.github/CONTRIBUTING.md#contributing-to-YasChat doc
+  - I have signed the CLA - https://cla-assistant.io/YasChat/Yas chat
   - Lint and unit tests pass locally with my changes
   - I have added tests that prove my fix is effective or that my feature works (if applicable)
   - I have added necessary documentation (if applicable)
-  - Comments state intent, not mechanism, and none explains code in another file - https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/code-comments.md
-  - This pull request carries one concern and can be reverted on its own - https://github.com/RocketChat/Rocket.Chat/blob/develop/docs/change-organization.md
+  - Comments state intent, not mechanism, and none explains code in another file - https://github.com/YasChat/Yas chat/blob/develop/docs/code-comments.md
+  - This pull request carries one concern and can be reverted on its own - https://github.com/YasChat/Yas chat/blob/develop/docs/change-organization.md
   - Any dependent changes have been merged and published in downstream modules
 -->
 
@@ -28,7 +28,7 @@
   Describe the big picture of your changes here to communicate to the maintainers why we should accept this pull request.
   If it fixes a bug or resolves a feature request, be sure to link to that issue below.
   This description won't be displayed to our end users in the release notes, so feel free to add as much technical context as needed.
-  If the changes introduced in this pull request must be presented in the release notes, make sure to add a changeset file. Check our guidelines for adding a changeset to your pull request: https://developer.rocket.chat/contribute-to-rocket.chat/modes-of-contribution/participate-in-rocket.chat-development/development-workflow#4.-adding-changeset-to-your-pull-request 
+  If the changes introduced in this pull request must be presented in the release notes, make sure to add a changeset file. Check our guidelines for adding a changeset to your pull request: https://developer.yas chat/contribute-to-yas chat/modes-of-contribution/participate-in-yas chat-development/development-workflow#4.-adding-changeset-to-your-pull-request 
 -->
 
 ## Issue(s)

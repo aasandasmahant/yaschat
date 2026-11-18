@@ -1,5 +1,5 @@
-import type { Popover } from '@rocket.chat/fuselage';
-import { useDebouncedCallback, useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { Popover } from '@yas chat/fuselage';
+import { useDebouncedCallback, useStableCallback } from '@yas chat/fuselage-hooks';
 import type { ComponentProps, RefObject, UIEvent } from 'react';
 import { useEffect, useRef, useState } from 'react';
 

@@ -1,7 +1,7 @@
-import { Team, ClientSafeError } from '@rocket.chat/core-services';
-import type { IRoom, IRoomWithRetentionPolicy, IUser, MessageTypesValues, ITeam, RequiredField } from '@rocket.chat/core-typings';
-import { TeamType } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
+import { Team, ClientSafeError } from '@yas chat/core-services';
+import type { IRoom, IRoomWithRetentionPolicy, IUser, MessageTypesValues, ITeam, RequiredField } from '@yas chat/core-typings';
+import { TeamType } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
 
 import { RoomSettingsEnum } from '../../../definition/IRoomTypeConfig';
 import { hasPermissionAsync } from '../../lib/authorization/hasPermission';

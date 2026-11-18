@@ -1,4 +1,4 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle } from '@rocket.chat/fuselage';
+import { States, StatesIcon, StatesTitle, StatesSubtitle } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const PrivateEmptyStateDefault = () => {

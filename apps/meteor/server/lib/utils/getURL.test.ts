@@ -4,8 +4,8 @@ import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 
 const settingsValues: Record<string, string> = {
-	Site_Url: 'https://open.rocket.chat/chat/',
-	CDN_PREFIX: 'https://cdn.rocket.chat',
+	Site_Url: 'https://open.yas chat/chat/',
+	CDN_PREFIX: 'https://cdn.yas chat',
 };
 
 const { getWorkspaceURL } = proxyquire.noCallThru().load('./getURL', {
@@ -27,10 +27,10 @@ describe('getWorkspaceURL', () => {
 	});
 
 	it('should return the site URL without a trailing slash', () => {
-		expect(getWorkspaceURL()).to.equal('https://open.rocket.chat/chat');
+		expect(getWorkspaceURL()).to.equal('https://open.yas chat/chat');
 	});
 
 	it('should build an absolute URL under the site URL, ignoring the CDN', () => {
-		expect(getWorkspaceURL('reset-password/abc')).to.equal('https://open.rocket.chat/chat/reset-password/abc');
+		expect(getWorkspaceURL('reset-password/abc')).to.equal('https://open.yas chat/chat/reset-password/abc');
 	});
 });

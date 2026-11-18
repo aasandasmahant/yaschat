@@ -1,5 +1,5 @@
-import type { IUpload, YasChatRecordDeleted, IRoom } from '@rocket.chat/core-typings';
-import type { FindPaginated, IUploadsModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { IUpload, YasChatRecordDeleted, IRoom } from '@yas chat/core-typings';
+import type { FindPaginated, IUploadsModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, IndexDescription, WithId, Filter, FindOptions, UpdateResult, Document } from 'mongodb';
 
 import { BaseUploadModelRaw } from './BaseUploadModel';

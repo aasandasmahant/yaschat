@@ -1,5 +1,5 @@
-import type { AbacRoomAttributesGrant, AbacRoomMembershipPreviewPage } from '@rocket.chat/core-services';
-import { mockModel } from '@rocket.chat/models/testing';
+import type { AbacRoomAttributesGrant, AbacRoomMembershipPreviewPage } from '@yas chat/core-services';
+import { mockModel } from '@yas chat/models/testing';
 
 import { Audit } from './audit';
 import { VirtruClient } from './clients/virtru/VirtruClient';
@@ -82,9 +82,9 @@ const mockUsersFindUsersByIdentifiers = jest.fn();
 const mockLdapSyncByIds = jest.fn();
 const mockSubscriptionsFindByRoomIdAndUserIds = jest.fn();
 
-// Partial mock for @rocket.chat/core-services: keep real ClientSafeError, override ServiceClass and Room
-jest.mock('@rocket.chat/core-services', () => {
-	const actual = jest.requireActual('@rocket.chat/core-services');
+// Partial mock for @yas chat/core-services: keep real ClientSafeError, override ServiceClass and Room
+jest.mock('@yas chat/core-services', () => {
+	const actual = jest.requireActual('@yas chat/core-services');
 	return {
 		...actual,
 		ServiceClass: class {

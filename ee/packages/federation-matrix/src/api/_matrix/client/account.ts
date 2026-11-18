@@ -1,5 +1,5 @@
-import { federationSDK } from '@rocket.chat/federation-sdk';
-import { ajv } from '@rocket.chat/rest-typings';
+import { federationSDK } from '@yas chat/federation-sdk';
+import { ajv } from '@yas chat/rest-typings';
 
 import type { ClientRouter } from './_shared';
 import { isMatrixErrorProps, license, tags } from './_shared';

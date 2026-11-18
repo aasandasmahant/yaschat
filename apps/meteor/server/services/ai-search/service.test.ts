@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -34,7 +34,7 @@ const Users = {
 const serverFetch = sinon.stub();
 
 const { AISearchService } = proxyquire.noCallThru().load('./service', {
-	'@rocket.chat/core-services': {
+	'@yas chat/core-services': {
 		License,
 		ServiceClass: class {
 			protected name = '';
@@ -43,14 +43,14 @@ const { AISearchService } = proxyquire.noCallThru().load('./service', {
 	'../../settings': {
 		settings: cachedSettings,
 	},
-	'@rocket.chat/logger': {
+	'@yas chat/logger': {
 		Logger: class {
 			debug = sinon.stub();
 
 			warn = sinon.stub();
 		},
 	},
-	'@rocket.chat/server-fetch': {
+	'@yas chat/server-fetch': {
 		serverFetch,
 	},
 });

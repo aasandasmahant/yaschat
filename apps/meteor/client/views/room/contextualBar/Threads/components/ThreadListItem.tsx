@@ -1,5 +1,5 @@
-import type { IThreadMainMessage } from '@rocket.chat/core-typings';
-import { useSetting, useUserId } from '@rocket.chat/ui-contexts';
+import type { IThreadMainMessage } from '@yas chat/core-typings';
+import { useSetting, useUserId } from '@yas chat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useCallback, memo } from 'react';
 import { useTranslation } from 'react-i18next';

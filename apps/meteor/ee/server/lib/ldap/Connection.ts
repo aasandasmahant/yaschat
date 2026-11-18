@@ -5,8 +5,8 @@ import type {
 	ILDAPEntry,
 	ILDAPCallback,
 	ILDAPPageCallback,
-} from '@rocket.chat/core-typings';
-import { wrapExceptions } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { wrapExceptions } from '@yas chat/tools';
 import ldapjs from 'ldapjs';
 
 import { logger, connLogger, searchLogger, authLogger, bindLogger, mapLogger } from './Logger';

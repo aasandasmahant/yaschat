@@ -1,4 +1,4 @@
-import { Box, Button, Divider } from '@rocket.chat/fuselage';
+import { Box, Button, Divider } from '@yas chat/fuselage';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

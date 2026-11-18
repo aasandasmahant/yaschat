@@ -1,6 +1,6 @@
-import type { IUser, MediaCallActor, MediaCallActorType, MediaCallContact, MediaCallContactInformation } from '@rocket.chat/core-typings';
-import type { CallRole } from '@rocket.chat/media-signaling';
-import { Users } from '@rocket.chat/models';
+import type { IUser, MediaCallActor, MediaCallActorType, MediaCallContact, MediaCallContactInformation } from '@yas chat/core-typings';
+import type { CallRole } from '@yas chat/media-signaling';
+import { Users } from '@yas chat/models';
 
 import type { IMediaCallAgent } from '../definition/IMediaCallAgent';
 import type { IMediaCallCastDirector } from '../definition/IMediaCallCastDirector';

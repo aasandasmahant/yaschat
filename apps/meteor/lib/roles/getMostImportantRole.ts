@@ -1,4 +1,4 @@
-import type { IRole } from '@rocket.chat/core-typings';
+import type { IRole } from '@yas chat/core-typings';
 
 type PriorityRoleName =
 	'custom-role' | 'admin' | 'livechat-manager' | 'livechat-monitor' | 'livechat-agent' | 'user' | 'app' | 'bot' | 'guest';

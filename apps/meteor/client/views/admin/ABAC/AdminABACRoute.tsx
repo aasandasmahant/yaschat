@@ -1,5 +1,5 @@
-import { PageSkeleton, useHasLicenseModule } from '@rocket.chat/ui-client';
-import { usePermission, useSetModal, useCurrentModal, useRouter, useRouteParameter, useSettingStructure } from '@rocket.chat/ui-contexts';
+import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { usePermission, useSetModal, useCurrentModal, useRouter, useRouteParameter, useSettingStructure } from '@yas chat/ui-contexts';
 import { memo, useEffect, useLayoutEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

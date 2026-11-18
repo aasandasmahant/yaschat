@@ -1,15 +1,15 @@
-import { useIsEnterprise } from '@rocket.chat/ui-client';
-import { useUserPreference } from '@rocket.chat/ui-contexts';
+import { useIsEnterprise } from '@yas chat/ui-client';
+import { useUserPreference } from '@yas chat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useUserSidebarCategories } from './useUserSidebarCategories';
 
-jest.mock('@rocket.chat/ui-contexts', () => ({
+jest.mock('@yas chat/ui-contexts', () => ({
 	useUserPreference: jest.fn(),
 }));
 
-jest.mock('@rocket.chat/ui-client', () => ({
-	...jest.requireActual('@rocket.chat/ui-client'),
+jest.mock('@yas chat/ui-client', () => ({
+	...jest.requireActual('@yas chat/ui-client'),
 	useIsEnterprise: jest.fn(),
 }));
 

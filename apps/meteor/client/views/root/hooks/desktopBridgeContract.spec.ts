@@ -1,5 +1,5 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { IUser } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useDesktopUnreadAlert } from './loggedIn/useDesktopUnreadAlert';
@@ -16,8 +16,8 @@ let mockUser: Pick<IUser, '_id' | 'settings'> | null = null;
 // `null` keeps the user id of the `mockAppRoot` wrapper.
 let mockUserId: string | undefined | null = null;
 
-jest.mock('@rocket.chat/ui-contexts', () => {
-	const actual = jest.requireActual('@rocket.chat/ui-contexts');
+jest.mock('@yas chat/ui-contexts', () => {
+	const actual = jest.requireActual('@yas chat/ui-contexts');
 	return {
 		...actual,
 		useLoginToken: () => 'login-token',

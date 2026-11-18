@@ -12,7 +12,7 @@ import {
 	MessageToolbar,
 	MessageToolbarItem,
 	Avatar,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { ReactNode } from 'react';
 
 export type MessageSurfaceProps = { children: ReactNode };

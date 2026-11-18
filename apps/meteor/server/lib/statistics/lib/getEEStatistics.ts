@@ -1,9 +1,9 @@
 import { log } from 'console';
 
-import { Analytics } from '@rocket.chat/core-services';
-import type { IStats } from '@rocket.chat/core-typings';
-import { License } from '@rocket.chat/license';
-import { CannedResponse, OmnichannelServiceLevelAgreements, LivechatRooms, LivechatTag, LivechatUnit, Users } from '@rocket.chat/models';
+import { Analytics } from '@yas chat/core-services';
+import type { IStats } from '@yas chat/core-typings';
+import { License } from '@yas chat/license';
+import { CannedResponse, OmnichannelServiceLevelAgreements, LivechatRooms, LivechatTag, LivechatUnit, Users } from '@yas chat/models';
 
 type ENTERPRISE_STATISTICS = IStats['enterprise'];
 

@@ -1,4 +1,4 @@
-import { ModalContext } from '@rocket.chat/ui-contexts';
+import { ModalContext } from '@yas chat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 import { useMemo } from 'react';
 

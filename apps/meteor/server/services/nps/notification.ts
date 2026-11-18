@@ -1,6 +1,6 @@
-import type { IBanner } from '@rocket.chat/core-typings';
-import { BannerPlatform } from '@rocket.chat/core-typings';
-import { Random } from '@rocket.chat/random';
+import type { IBanner } from '@yas chat/core-typings';
+import { BannerPlatform } from '@yas chat/core-typings';
+import { Random } from '@yas chat/random';
 import moment from 'moment';
 
 import { i18n } from '../../lib/i18n';

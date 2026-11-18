@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 
 const { splitSendMessageFields } = proxyquire.noCallThru().load('./splitSendMessageFields', {
-	'@rocket.chat/rest-typings': { chatSendMessageFieldNames: ['rid', 'msg', 'tmid', 'location', 'parseUrls', 't', 'content'] },
+	'@yas chat/rest-typings': { chatSendMessageFieldNames: ['rid', 'msg', 'tmid', 'location', 'parseUrls', 't', 'content'] },
 });
 
 describe('splitSendMessageFields', () => {
@@ -65,7 +65,7 @@ describe('splitSendMessageFields', () => {
 
 describe('the fields chat.sendMessage accepts', () => {
 	it('should include every field that real callers send', async () => {
-		const { chatSendMessageFieldNames } = await import('@rocket.chat/rest-typings');
+		const { chatSendMessageFieldNames } = await import('@yas chat/rest-typings');
 
 		expect(chatSendMessageFieldNames).to.include.members([
 			'_id',
@@ -90,7 +90,7 @@ describe('the fields chat.sendMessage accepts', () => {
 	});
 
 	it('should leave out the fields the server owns', async () => {
-		const { chatSendMessageFieldNames } = await import('@rocket.chat/rest-typings');
+		const { chatSendMessageFieldNames } = await import('@yas chat/rest-typings');
 
 		expect(chatSendMessageFieldNames).to.not.include.members([
 			'md',

@@ -11,7 +11,7 @@ describe('isRelativeURL', () => {
 		['test/test', true],
 		['.', false], // TODO: should be true?
 		['./test', true],
-		['https://rocket.chat', false],
+		['https://yas chat', false],
 		['data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', true], // TODO: should be false?
 	] as const;
 

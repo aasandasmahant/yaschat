@@ -8,9 +8,9 @@ import {
 	SidebarItemRow,
 	SidebarItemTimestamp,
 	SidebarItemTitle,
-} from '@rocket.chat/fuselage';
-import { useShortTimeAgo } from '@rocket.chat/ui-client';
-import { useLayout } from '@rocket.chat/ui-contexts';
+} from '@yas chat/fuselage';
+import { useShortTimeAgo } from '@yas chat/ui-client';
+import { useLayout } from '@yas chat/ui-contexts';
 import type { ReactNode } from 'react';
 import { memo, useState } from 'react';
 

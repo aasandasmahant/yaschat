@@ -57,11 +57,11 @@ There is **no `useEffect`**. The listener is registered when the node is assigne
 
 Keep the callback's dependencies stable, since each new identity re-runs the teardown and binds again. Wrap incoming callbacks in `useStableCallback` rather than listing them as dependencies.
 
-`useSafeRefCallback` from `@rocket.chat/fuselage-hooks` predates this and emulates it by storing the cleanup and running it on `null`. Do not use it for new code.
+`useSafeRefCallback` from `@yas chat/fuselage-hooks` predates this and emulates it by storing the cleanup and running it on `null`. Do not use it for new code.
 
 ## Combining refs at the call site
 
-When several hooks need the same element, or the element is also needed as an object ref, merge at the call site with `useMergedRefsV2` from `@rocket.chat/ui-client`:
+When several hooks need the same element, or the element is also needed as an object ref, merge at the call site with `useMergedRefsV2` from `@yas chat/ui-client`:
 
 ```tsx
 const preventDefaultRef = usePreventDefault();
@@ -71,7 +71,7 @@ const ref = useMergedRefsV2(resizeObserverRef, preventDefaultRef, shortcutOpenMe
 return <Box ref={ref} />;
 ```
 
-**Do not merge these refs with `useMergedRefs` from `@rocket.chat/fuselage-hooks`.** It discards the value each ref returns and calls every ref with `null` instead, so a ref written in the shape above never tears down and receives a `null` node it does not expect. `useMergedRefsV2` forwards each cleanup to React, and also tears down when it is itself called with `null` — which is what happens when the merged ref reaches a Fuselage component that merges refs internally, such as `TextInput` (through `InputBox`), `CheckBox`, `AutoComplete`, `MultiSelect` or the selects.
+**Do not merge these refs with `useMergedRefs` from `@yas chat/fuselage-hooks`.** It discards the value each ref returns and calls every ref with `null` instead, so a ref written in the shape above never tears down and receives a `null` node it does not expect. `useMergedRefsV2` forwards each cleanup to React, and also tears down when it is itself called with `null` — which is what happens when the merged ref reaches a Fuselage component that merges refs internally, such as `TextInput` (through `InputBox`), `CheckBox`, `AutoComplete`, `MultiSelect` or the selects.
 
 The same applies to a component that forwards a ref to a node it only knows later and attaches it by hand: call the ref, and keep what it returns as the cleanup, as `CustomVirtuaScrollbars` does.
 
@@ -79,7 +79,7 @@ A hook must not accept a ref just to write the node into it — that is the call
 
 ## Reference implementation
 
-`useIsVisible` in `@rocket.chat/ui-client` is the canonical example: it takes no argument, returns `[ref, isVisible]` as a tuple, creates its `IntersectionObserver` inside the callback and disconnects it in the cleanup it returns, and states its return type without a cast.
+`useIsVisible` in `@yas chat/ui-client` is the canonical example: it takes no argument, returns `[ref, isVisible]` as a tuple, creates its `IntersectionObserver` inside the callback and disconnects it in the cleanup it returns, and states its return type without a cast.
 
 ## When this does not apply
 

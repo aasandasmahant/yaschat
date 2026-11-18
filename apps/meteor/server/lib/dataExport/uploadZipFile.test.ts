@@ -1,6 +1,6 @@
 import { before, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
@@ -16,7 +16,7 @@ const stubs = {
 };
 
 const { uploadZipFile } = proxyquire.noCallThru().load('./uploadZipFile.ts', {
-	'@rocket.chat/random': {
+	'@yas chat/random': {
 		Random: {
 			id: stubs.randomId,
 		},

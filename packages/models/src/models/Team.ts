@@ -1,5 +1,5 @@
-import type { ITeam, YasChatRecordDeleted, TeamType } from '@rocket.chat/core-typings';
-import type { FindPaginated, ITeamModel, DocumentWithProjection, FindOptionsWithProjection } from '@rocket.chat/model-typings';
+import type { ITeam, YasChatRecordDeleted, TeamType } from '@yas chat/core-typings';
+import type { FindPaginated, ITeamModel, DocumentWithProjection, FindOptionsWithProjection } from '@yas chat/model-typings';
 import type { Collection, FindCursor, Db, DeleteResult, Document, Filter, IndexDescription, UpdateResult, FindOptions } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

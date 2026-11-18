@@ -1,6 +1,6 @@
-import { Badge, Skeleton } from '@rocket.chat/fuselage';
-import type { GenericMenuItemProps } from '@rocket.chat/ui-client';
-import { usePermission, useRouter } from '@rocket.chat/ui-contexts';
+import { Badge, Skeleton } from '@yas chat/fuselage';
+import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { usePermission, useRouter } from '@yas chat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useAppRequestStats } from '../../../views/marketplace/hooks/useAppRequestStats';

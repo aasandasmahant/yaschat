@@ -1,5 +1,5 @@
-import { RING_RECIPIENTS_LIMIT } from '@rocket.chat/core-typings';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import { RING_RECIPIENTS_LIMIT } from '@yas chat/core-typings';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { composeStories } from '@storybook/react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -16,8 +16,8 @@ import { callPreferencesStorageKey } from '../../hooks/useCallDevicesInitialStat
 // The mocked app root leaves its toast provider commented out, so what the modal reports has to be observed
 // at the dispatch instead of in the DOM.
 const dispatchToastMessage = jest.fn();
-jest.mock('@rocket.chat/ui-contexts', () => ({
-	...jest.requireActual('@rocket.chat/ui-contexts'),
+jest.mock('@yas chat/ui-contexts', () => ({
+	...jest.requireActual('@yas chat/ui-contexts'),
 	useToastMessageDispatch: () => dispatchToastMessage,
 }));
 

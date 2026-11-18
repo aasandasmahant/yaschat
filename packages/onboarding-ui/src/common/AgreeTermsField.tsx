@@ -1,4 +1,4 @@
-import { Box, CheckBox, Field, FieldError, FieldLabel, FieldRow } from '@rocket.chat/fuselage';
+import { Box, CheckBox, Field, FieldError, FieldLabel, FieldRow } from '@yas chat/fuselage';
 import { Controller } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 

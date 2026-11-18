@@ -1,6 +1,6 @@
-import type { IUser } from '@rocket.chat/core-typings';
-import { Rooms, Users } from '@rocket.chat/models';
-import { pick } from '@rocket.chat/tools';
+import type { IUser } from '@yas chat/core-typings';
+import { Rooms, Users } from '@yas chat/models';
+import { pick } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 
 import { logger } from './logger';

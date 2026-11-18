@@ -1,5 +1,5 @@
-import { Base64 } from '@rocket.chat/base64';
-import type { EncryptedContent } from '@rocket.chat/core-typings';
+import { Base64 } from '@yas chat/base64';
+import type { EncryptedContent } from '@yas chat/core-typings';
 
 type DecodedContent = {
 	kid: string;

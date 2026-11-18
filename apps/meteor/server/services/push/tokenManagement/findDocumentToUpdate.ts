@@ -1,5 +1,5 @@
-import type { IPushToken } from '@rocket.chat/core-typings';
-import { PushToken } from '@rocket.chat/models';
+import type { IPushToken } from '@yas chat/core-typings';
+import { PushToken } from '@yas chat/models';
 
 export async function findDocumentToUpdate(data: Partial<IPushToken>): Promise<IPushToken | null> {
 	if (data._id) {

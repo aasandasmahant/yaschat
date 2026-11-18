@@ -1,5 +1,5 @@
-import { useStableCallback, useSafely } from '@rocket.chat/fuselage-hooks';
-import * as UiKit from '@rocket.chat/ui-kit';
+import { useStableCallback, useSafely } from '@yas chat/fuselage-hooks';
+import * as UiKit from '@yas chat/ui-kit';
 import { useContext, useMemo, useState } from 'react';
 
 import { UiKitContext } from '../contexts/UiKitContext';

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
-import type { IImport, IImportUser } from '@rocket.chat/core-typings';
-import { Settings } from '@rocket.chat/models';
+import type { IImport, IImportUser } from '@yas chat/core-typings';
+import { Settings } from '@yas chat/models';
 import { parse } from 'csv-parse/lib/sync';
 
 import { Importer, ProgressStep } from '..';

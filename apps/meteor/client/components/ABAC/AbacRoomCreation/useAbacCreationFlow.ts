@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition } from '@rocket.chat/core-typings';
-import { useEndpoint } from '@rocket.chat/ui-contexts';
+import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
+import { useEndpoint } from '@yas chat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { findMissingRequiredKeys, toAttributeMap } from './AbacAttributesStep';

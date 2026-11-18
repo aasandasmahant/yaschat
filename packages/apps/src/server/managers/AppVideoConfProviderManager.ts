@@ -1,12 +1,12 @@
-import type { IBlock } from '@rocket.chat/apps-engine/definition/uikit';
+import type { IBlock } from '@yas chat/apps-engine/definition/uikit';
 import type {
 	IVideoConferenceOptions,
 	IVideoConfProvider,
 	VideoConfData,
 	VideoConfDataExtended,
-} from '@rocket.chat/apps-engine/definition/videoConfProviders';
-import type { VideoConference } from '@rocket.chat/apps-engine/definition/videoConferences';
-import type { IVideoConferenceUser } from '@rocket.chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
+} from '@yas chat/apps-engine/definition/videoConfProviders';
+import type { VideoConference } from '@yas chat/apps-engine/definition/videoConferences';
+import type { IVideoConferenceUser } from '@yas chat/apps-engine/definition/videoConferences/IVideoConferenceUser';
 
 import type { AppManager } from '../AppManager';
 import type { VideoConferenceBridge } from '../bridges';

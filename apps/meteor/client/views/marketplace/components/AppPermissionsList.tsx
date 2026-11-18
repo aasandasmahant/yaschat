@@ -1,5 +1,5 @@
-import type { AppPermission } from '@rocket.chat/core-typings';
-import { Text } from '@rocket.chat/fuselage';
+import type { AppPermission } from '@yas chat/core-typings';
+import { Text } from '@yas chat/fuselage';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 

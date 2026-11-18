@@ -1,5 +1,5 @@
-// import * as UiKit from '@rocket.chat/ui-kit';
-import type { PreviewBlock } from '@rocket.chat/ui-kit';
+// import * as UiKit from '@yas chat/ui-kit';
+import type { PreviewBlock } from '@yas chat/ui-kit';
 
 import img from './img';
 

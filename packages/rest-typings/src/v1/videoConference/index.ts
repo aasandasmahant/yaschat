@@ -4,7 +4,7 @@ import type {
 	VideoConference,
 	VideoConferenceCapabilities,
 	VideoConferenceChatAccess,
-} from '@rocket.chat/core-typings';
+} from '@yas chat/core-typings';
 
 import type { VideoConfAddParticipantsProps } from './VideoConfAddParticipantsProps';
 import type { VideoConfCallIdProps } from './VideoConfCallIdProps';

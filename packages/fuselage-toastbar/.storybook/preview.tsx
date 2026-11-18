@@ -1,4 +1,4 @@
-import { parameters as baseParameters, decorators as baseDecorators } from '@rocket.chat/storybook-config/preview';
+import { parameters as baseParameters, decorators as baseDecorators } from '@yas chat/storybook-config/preview';
 import type { Preview } from '@storybook/react-webpack5';
 
 import ToastBarProvider from '../src/ToastBarProvider';

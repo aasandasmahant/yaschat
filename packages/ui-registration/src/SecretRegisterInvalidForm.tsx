@@ -1,4 +1,4 @@
-import { Callout } from '@rocket.chat/fuselage';
+import { Callout } from '@yas chat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import VerticalTemplate from './template/VerticalTemplate';

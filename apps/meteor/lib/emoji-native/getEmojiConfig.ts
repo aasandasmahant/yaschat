@@ -1,6 +1,6 @@
-import { asciiList } from '@rocket.chat/message-parser';
-import { escapeHTML, escapeRegExp, unescapeHTML } from '@rocket.chat/tools';
-import type { EmojiPackages } from '@rocket.chat/ui-emoji-picker';
+import { asciiList } from '@yas chat/message-parser';
+import { escapeHTML, escapeRegExp, unescapeHTML } from '@yas chat/tools';
+import type { EmojiPackages } from '@yas chat/ui-emoji-picker';
 
 import type { EmojiEntry } from './generateEmojiData';
 import { getEmojiData } from './generateEmojiData';

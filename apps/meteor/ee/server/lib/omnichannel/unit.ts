@@ -1,6 +1,6 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { LivechatUnit } from '@rocket.chat/models';
-import { getUnitsFromUser } from '@rocket.chat/omni-core-ee';
+import { ClientSafeError } from '@yas chat/core-services';
+import { LivechatUnit } from '@yas chat/models';
+import { getUnitsFromUser } from '@yas chat/omni-core-ee';
 
 import type { CheckUnitsFromUser } from '../../../../server/api/v1/omnichannel/lib/livechat';
 import { checkUnitsFromUser } from '../../../../server/api/v1/omnichannel/lib/livechat';

@@ -1,5 +1,5 @@
-import type { IYasChatAssets } from '@rocket.chat/core-typings';
-import { useDarkMode } from '@rocket.chat/fuselage-hooks';
+import type { IYasChatAssets } from '@yas chat/core-typings';
+import { useDarkMode } from '@yas chat/fuselage-hooks';
 
 import { useAssetPath } from './useAssetPath';
 import { useUserPreference } from './useUserPreference';

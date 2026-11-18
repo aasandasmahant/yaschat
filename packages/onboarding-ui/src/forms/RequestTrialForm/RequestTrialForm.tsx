@@ -1,4 +1,4 @@
-import type { SelectOption } from '@rocket.chat/fuselage';
+import type { SelectOption } from '@yas chat/fuselage';
 import {
 	FieldDescription,
 	FieldError,
@@ -13,8 +13,8 @@ import {
 	EmailInput,
 	Select,
 	SelectFiltered,
-} from '@rocket.chat/fuselage';
-import { Form, FormFooter } from '@rocket.chat/layout';
+} from '@yas chat/fuselage';
+import { Form, FormFooter } from '@yas chat/layout';
 import { useId } from 'react';
 import type { FieldPathValue, SubmitHandler, Validate } from 'react-hook-form';
 import { useForm, Controller } from 'react-hook-form';
@@ -46,8 +46,8 @@ export const RequestTrialForm = ({
 	countryOptions,
 	onSubmit,
 	validateEmail,
-	termsHref = 'https://rocket.chat/terms',
-	policyHref = 'https://rocket.chat/privacy',
+	termsHref = 'https://yas chat/terms',
+	policyHref = 'https://yas chat/privacy',
 }: RequestTrialFormProps) => {
 	const { t } = useTranslation();
 	const organizationSizeField = useId();

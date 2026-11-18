@@ -1,5 +1,5 @@
-import type { SearchFilterSuggestion } from '@rocket.chat/ai-search';
-import { ItemMeta, SidebarItem, SidebarItemIcon, SidebarItemTitle } from '@rocket.chat/fuselage';
+import type { SearchFilterSuggestion } from '@yas chat/ai-search';
+import { ItemMeta, SidebarItem, SidebarItemIcon, SidebarItemTitle } from '@yas chat/fuselage';
 import type { SyntheticEvent } from 'react';
 
 import NavBarSearchFilterSuggestionIcon from './NavBarSearchFilterSuggestionIcon';

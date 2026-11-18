@@ -1,4 +1,4 @@
-import { AnchorPortal } from '@rocket.chat/ui-client';
+import { AnchorPortal } from '@yas chat/ui-client';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

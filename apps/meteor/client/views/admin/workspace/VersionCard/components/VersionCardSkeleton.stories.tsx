@@ -1,4 +1,4 @@
-import { Card } from '@rocket.chat/fuselage';
+import { Card } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { VersionCardSkeleton } from './VersionCardSkeleton';

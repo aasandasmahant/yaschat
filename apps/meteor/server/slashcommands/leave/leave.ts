@@ -1,6 +1,6 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import type { SlashCommandCallbackParams } from '@rocket.chat/core-typings';
-import { Users } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
+import { Users } from '@yas chat/models';
 
 import { i18n } from '../../lib/i18n';
 import { slashCommands } from '../../lib/utils/slashCommand';

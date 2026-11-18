@@ -1,6 +1,6 @@
-import { css } from '@rocket.chat/css-in-js';
-import { Palette, Box } from '@rocket.chat/fuselage';
-import { useLocalStorage } from '@rocket.chat/fuselage-hooks';
+import { css } from '@yas chat/css-in-js';
+import { Palette, Box } from '@yas chat/fuselage';
+import { useLocalStorage } from '@yas chat/fuselage-hooks';
 import { Resizable } from 're-resizable';
 import type { ComponentProps } from 'react';
 

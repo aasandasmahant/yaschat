@@ -1,4 +1,4 @@
-import type * as MessageParser from '@rocket.chat/message-parser';
+import type * as MessageParser from '@yas chat/message-parser';
 
 import { mountInline } from './testUtils.js';
 
@@ -87,15 +87,15 @@ describe('links', () => {
 	});
 
 	it('keeps the typed markup as the anchor text and only adds the href', () => {
-		const input = mountInline([link('https://rocket.chat/docs', plain('the docs'))]);
+		const input = mountInline([link('https://yas chat/docs', plain('the docs'))]);
 		const anchor = input.querySelector('a');
 
-		expect(anchor?.textContent).toBe('[the docs](https://rocket.chat/docs)');
-		expect(anchor?.getAttribute('href')).toBe('https://rocket.chat/docs');
+		expect(anchor?.textContent).toBe('[the docs](https://yas chat/docs)');
+		expect(anchor?.getAttribute('href')).toBe('https://yas chat/docs');
 	});
 
 	it('opens external targets safely', () => {
-		const input = mountInline([link('https://rocket.chat', plain('https://rocket.chat'))]);
+		const input = mountInline([link('https://yas chat', plain('https://yas chat'))]);
 
 		expect(input.querySelector('a')?.getAttribute('rel')).toBe('noopener noreferrer');
 	});
@@ -121,11 +121,11 @@ describe('nodes routed through the source fallback', () => {
 	it('prints an image as the markup it was parsed from, never as an image element', () => {
 		const node: MessageParser.Image = {
 			type: 'IMAGE',
-			value: { src: plain('https://rocket.chat/a.png'), label: plain('alt') },
+			value: { src: plain('https://yas chat/a.png'), label: plain('alt') },
 		};
 		const input = mountInline([node]);
 
-		expect(input.textContent).toBe('![alt](https://rocket.chat/a.png)');
+		expect(input.textContent).toBe('![alt](https://yas chat/a.png)');
 		expect(input.querySelector('img')).toBeNull();
 	});
 

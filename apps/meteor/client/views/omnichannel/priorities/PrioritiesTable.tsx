@@ -1,5 +1,5 @@
-import type { ILivechatPriority, Serialized } from '@rocket.chat/core-typings';
-import type { TableColumnWidth } from '@rocket.chat/fuselage';
+import type { ILivechatPriority, Serialized } from '@yas chat/core-typings';
+import type { TableColumnWidth } from '@yas chat/fuselage';
 import {
 	GenericTable,
 	GenericTableHeaderCell,
@@ -7,7 +7,7 @@ import {
 	GenericTableBody,
 	GenericTableLoadingTable,
 	GenericNoResults,
-} from '@rocket.chat/ui-client';
+} from '@yas chat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import PrioritiesTableRow from './PrioritiesTableRow';

@@ -32,11 +32,11 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Adds initial selections to the UiKit users, channels and conversations selects: `initial_user`/`initial_users` (usernames), `initial_channel`/`initial_channels` and `initial_conversation`/`initial_conversations` (room ids). Selected entries now keep their chips even when the current search does not return them.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
 - ([#42854](https://github.com/YasChat/YasChat/pull/42854)) Adds the UiKit `table` block: rows of plain or formatted cells, with a header row and per-column alignment and wrapping, in messages, modals and contextual bars.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - ([#42854](https://github.com/YasChat/YasChat/pull/42854)) Adds the UiKit `video` block: a video shown as its thumbnail with a title, description and provider, which plays in place from an `https` embeddable page once clicked, in messages, modals and contextual bars.
 
@@ -47,7 +47,7 @@
 - ([#42558](https://github.com/YasChat/YasChat/pull/42558)) Fixes apps not being able to close a UiKit modal with a `modal.close` response; the client now closes the modal named by the response's `view.id` or `viewId`.
 
 - <details><summary>Updated dependencies [0285f08c086dae6beb0f1365a85f522fb4818435, a838cc5af0652f59d0ab30aa1a488abded0622b1]:</summary>
-  - @rocket.chat/icons@0.52.0
+  - @yas chat/icons@0.52.0
 
   </details>
 
@@ -83,11 +83,11 @@
 
 - ([#42562](https://github.com/YasChat/YasChat/pull/42562)) Adds initial selections to the UiKit users, channels and conversations selects: `initial_user`/`initial_users` (usernames), `initial_channel`/`initial_channels` and `initial_conversation`/`initial_conversations` (room ids). Selected entries now keep their chips even when the current search does not return them.
 
-- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@rocket.chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
+- ([#42564](https://github.com/YasChat/YasChat/pull/42564)) Fixes UiKit `callout` blocks not rendering in banners and in messages. Each UiKit surface now has a single list of accepted layout blocks, exported by `@yas chat/ui-kit` (`messageSurfaceLayoutBlockTypes`, `modalSurfaceLayoutBlockTypes`, `bannerSurfaceLayoutBlockTypes`, `contextualBarSurfaceLayoutBlockTypes`, `attachmentSurfaceLayoutBlockTypes`) and shared by the surface types, the `UiKitParser*` classes and the Fuselage renderers. The surface types now also include every block the web client already rendered: `input` and `info_card` in messages, `preview` in modals, `preview` and `info_card` in banners, and `callout`, `preview` and `tab_navigation` in the contextual bar.
 
 - ([#42854](https://github.com/YasChat/YasChat/pull/42854)) Adds the UiKit `table` block: rows of plain or formatted cells, with a header row and per-column alignment and wrapping, in messages, modals and contextual bars.
 
-- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@rocket.chat/ui-kit` exports the check as `isSafeUrl`.
+- ([#42560](https://github.com/YasChat/YasChat/pull/42560)) Fixes UiKit buttons, icon buttons and overflow options opening `javascript:`, `data:` and `vbscript:` URLs sent by apps. Those URLs are now ignored; every other URL, including app deep links and relative URLs, still opens. Overflow options in the web client, which never opened their URL, now open it in a new tab without access to the opener. `@yas chat/ui-kit` exports the check as `isSafeUrl`.
 
 - ([#42854](https://github.com/YasChat/YasChat/pull/42854)) Adds the UiKit `video` block: a video shown as its thumbnail with a title, description and provider, which plays in place from an `https` embeddable page once clicked, in messages, modals and contextual bars.
 
@@ -98,7 +98,7 @@
 - ([#42558](https://github.com/YasChat/YasChat/pull/42558)) Fixes apps not being able to close a UiKit modal with a `modal.close` response; the client now closes the modal named by the response's `view.id` or `viewId`.
 
 - <details><summary>Updated dependencies [0285f08c086dae6beb0f1365a85f522fb4818435, a838cc5af0652f59d0ab30aa1a488abded0622b1]:</summary>
-  - @rocket.chat/icons@0.52.0-rc.0
+  - @yas chat/icons@0.52.0-rc.0
 
   </details>
 
@@ -230,13 +230,13 @@
 
 ### Patch Changes
 
-- ([#33000](https://github.com/YasChat/YasChat/pull/33000)) fix UiKit error message: Failed to resolve module: @rocket.chat/icons
+- ([#33000](https://github.com/YasChat/YasChat/pull/33000)) fix UiKit error message: Failed to resolve module: @yas chat/icons
 
 ## 0.36.1-rc.0
 
 ### Patch Changes
 
-- ([#33000](https://github.com/YasChat/YasChat/pull/33000)) fix UiKit error message: Failed to resolve module: @rocket.chat/icons
+- ([#33000](https://github.com/YasChat/YasChat/pull/33000)) fix UiKit error message: Failed to resolve module: @yas chat/icons
 
 ## 0.36.0
 
@@ -284,13 +284,13 @@
 
 ### Minor Changes
 
-- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- ([#31138](https://github.com/YasChat/YasChat/pull/31138)) feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.33.0-rc.0
 
 ### Minor Changes
 
-- b223cbde14: feat(uikit): Move `@rocket.chat/ui-kit` package to the main monorepo
+- b223cbde14: feat(uikit): Move `@yas chat/ui-kit` package to the main monorepo
 
 ## 0.32.1
 
@@ -334,7 +334,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.29.0](https://github.com/YasChat/fuselage/compare/v0.28.0...v0.29.0) (2021-08-31)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.28.0](https://github.com/YasChat/fuselage/compare/v0.27.0...v0.28.0) (2021-07-30)
 
@@ -356,7 +356,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.26.0](https://github.com/YasChat/fuselage/compare/v0.25.0...v0.26.0) (2021-05-28)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.25.0](https://github.com/YasChat/fuselage/compare/v0.24.0...v0.25.0) (2021-05-19)
 
@@ -378,7 +378,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.22.0](https://github.com/YasChat/fuselage/compare/v0.21.0...v0.22.0) (2021-02-26)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.21.0](https://github.com/YasChat/fuselage/compare/v0.20.3...v0.21.0) (2021-01-31)
 
@@ -389,15 +389,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.20.1](https://github.com/YasChat/fuselage/compare/v0.20.0...v0.20.1) (2020-12-22)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.20.0](https://github.com/YasChat/fuselage/compare/v0.19.0...v0.20.0) (2020-12-21)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.19.0](https://github.com/YasChat/fuselage/compare/v0.18.0...v0.19.0) (2020-11-28)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.18.0](https://github.com/YasChat/fuselage/compare/v0.17.3...v0.18.0) (2020-11-16)
 
@@ -413,27 +413,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.17.2](https://github.com/YasChat/fuselage/compare/v0.17.1...v0.17.2) (2020-10-28)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.17.1](https://github.com/YasChat/fuselage/compare/v0.17.0...v0.17.1) (2020-10-26)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.17.0](https://github.com/YasChat/fuselage/compare/v0.16.0...v0.17.0) (2020-10-25)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.16.0](https://github.com/YasChat/fuselage/compare/v0.15.1...v0.16.0) (2020-09-30)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.15.1](https://github.com/YasChat/fuselage/compare/v0.15.0...v0.15.1) (2020-09-22)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.15.0](https://github.com/YasChat/fuselage/compare/v0.14.1...v0.15.0) (2020-09-17)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.14.1](https://github.com/YasChat/fuselage/compare/v0.14.0...v0.14.1) (2020-08-22)
 
@@ -455,91 +455,91 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.13.0](https://github.com/YasChat/fuselage/compare/v0.12.0...v0.13.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.12.0](https://github.com/YasChat/fuselage/compare/v0.11.0...v0.12.0) (2020-07-14)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.11.0](https://github.com/YasChat/fuselage/compare/v0.10.0...v0.11.0) (2020-07-11)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.10.0](https://github.com/YasChat/fuselage/compare/v0.9.0...v0.10.0) (2020-06-20)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.9.0](https://github.com/YasChat/fuselage/compare/v0.8.0...v0.9.0) (2020-05-21)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.8.0](https://github.com/YasChat/fuselage/compare/v0.7.1...v0.8.0) (2020-04-22)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.7.1](https://github.com/YasChat/fuselage/compare/v0.7.0...v0.7.1) (2020-04-01)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.7.0](https://github.com/YasChat/fuselage/compare/v0.6.2...v0.7.0) (2020-04-01)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.6.2](https://github.com/YasChat/fuselage/compare/v0.6.1...v0.6.2) (2020-03-31)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.6.1](https://github.com/YasChat/fuselage/compare/v0.6.0...v0.6.1) (2020-03-24)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.6.0](https://github.com/YasChat/fuselage/compare/v0.5.0...v0.6.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.5.0](https://github.com/YasChat/fuselage/compare/v0.4.1...v0.5.0) (2020-03-20)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 ## [0.4.1](https://github.com/YasChat/fuselage/compare/v0.4.0...v0.4.1) (2020-03-16)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.4.0](https://github.com/YasChat/fuselage/compare/v0.3.0...v0.4.0) (2020-03-10)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.3.0](https://github.com/YasChat/fuselage/compare/v0.2.0...v0.3.0) (2020-02-17)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.30...v0.2.0) (2020-02-13)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.29](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.28...v0.2.0-alpha.29) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.28](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.27...v0.2.0-alpha.28) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.26](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.25...v0.2.0-alpha.26) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.25](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.24...v0.2.0-alpha.25) (2020-02-10)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.24](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.23...v0.2.0-alpha.24) (2020-02-09)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.23](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.22...v0.2.0-alpha.23) (2020-02-07)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.22](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.21...v0.2.0-alpha.22) (2020-02-07)
 
@@ -549,11 +549,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0-alpha.21](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.20...v0.2.0-alpha.21) (2020-02-05)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.20](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.19...v0.2.0-alpha.20) (2020-02-01)
 
-**Note:** Version bump only for package @rocket.chat/ui-kit
+**Note:** Version bump only for package @yas chat/ui-kit
 
 # [0.2.0-alpha.19](https://github.com/YasChat/fuselage/compare/v0.2.0-alpha.18...v0.2.0-alpha.19) (2020-01-13)
 

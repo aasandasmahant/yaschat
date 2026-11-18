@@ -1,5 +1,5 @@
-import { useSetting, usePermission } from '@rocket.chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@rocket.chat/ui-contexts';
+import { useSetting, usePermission } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 const AutoTranslate = lazy(() => import('../../views/room/contextualBar/AutoTranslate'));

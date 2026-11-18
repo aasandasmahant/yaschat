@@ -4,10 +4,10 @@
 
 ### Patch Changes
 
-- ([#42732](https://github.com/YasChat/YasChat/pull/42732)) Moved `@rocket.chat/styled` into the YasChat monorepo, continuing from the frozen Fuselage 0.34.1 release. The exported API is unchanged.
+- ([#42732](https://github.com/YasChat/YasChat/pull/42732)) Moved `@yas chat/styled` into the YasChat monorepo, continuing from the frozen Fuselage 0.34.1 release. The exported API is unchanged.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/css-in-js@0.33.3
+  - @yas chat/css-in-js@0.33.3
 
   </details>
 
@@ -15,10 +15,10 @@
 
 ### Patch Changes
 
-- ([#42732](https://github.com/YasChat/YasChat/pull/42732)) Moved `@rocket.chat/styled` into the YasChat monorepo, continuing from the frozen Fuselage 0.34.1 release. The exported API is unchanged.
+- ([#42732](https://github.com/YasChat/YasChat/pull/42732)) Moved `@yas chat/styled` into the YasChat monorepo, continuing from the frozen Fuselage 0.34.1 release. The exported API is unchanged.
 
 - <details><summary>Updated dependencies []:</summary>
-  - @rocket.chat/css-in-js@0.33.3-rc.0
+  - @yas chat/css-in-js@0.33.3-rc.0
 
   </details>
 
@@ -29,7 +29,7 @@
 - [#2060](https://github.com/YasChat/fuselage/pull/2060) [`ee381bb`](https://github.com/YasChat/fuselage/commit/ee381bb32982d0f4ed9ef26385b5016e0a2e4023) Thanks [@tassoevan](https://github.com/tassoevan)! - feat: Remove deprecations and keep documentation comments
 
 - Updated dependencies [[`ee381bb`](https://github.com/YasChat/fuselage/commit/ee381bb32982d0f4ed9ef26385b5016e0a2e4023), [`46e9cc3`](https://github.com/YasChat/fuselage/commit/46e9cc36b03bcdd8668f6146dd6e326857416a39)]:
-  - @rocket.chat/css-in-js@0.33.0
+  - @yas chat/css-in-js@0.33.0
 
 ## 0.34.0
 
@@ -48,7 +48,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`00052dc`](https://github.com/YasChat/fuselage/commit/00052dc976bbe72664ec2d3b97f9ba2ba2d4f3c7)]:
-  - @rocket.chat/css-in-js@0.32.0
+  - @yas chat/css-in-js@0.32.0
 
 ## 0.32.0
 
@@ -75,7 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.29.0](https://github.com/YasChat/fuselage/compare/v0.28.0...v0.29.0) (2021-08-31)
 
-**Note:** Version bump only for package @rocket.chat/styled
+**Note:** Version bump only for package @yas chat/styled
 
 # [0.28.0](https://github.com/YasChat/fuselage/compare/v0.27.0...v0.28.0) (2021-07-30)
 

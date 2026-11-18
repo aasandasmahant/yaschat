@@ -1,5 +1,5 @@
-import { api, ClientSafeError } from '@rocket.chat/core-services';
-import { Subscriptions, Users, Rooms } from '@rocket.chat/models';
+import { api, ClientSafeError } from '@yas chat/core-services';
+import { Subscriptions, Users, Rooms } from '@yas chat/models';
 
 import { i18n } from './i18n';
 import { isUserIdFederated } from './isUserIdFederated';

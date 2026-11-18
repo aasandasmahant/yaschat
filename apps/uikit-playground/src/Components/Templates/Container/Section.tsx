@@ -1,4 +1,4 @@
-import { Box, Label } from '@rocket.chat/fuselage';
+import { Box, Label } from '@yas chat/fuselage';
 
 import Payload from './Payload';
 import type { templateType } from '../../../utils/templates';

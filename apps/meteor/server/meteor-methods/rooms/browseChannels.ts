@@ -1,7 +1,7 @@
-import { Team } from '@rocket.chat/core-services';
-import type { IUser, AtLeast } from '@rocket.chat/core-typings';
-import { Rooms, Users, Subscriptions } from '@rocket.chat/models';
-import { escapeRegExp, isTruthy } from '@rocket.chat/tools';
+import { Team } from '@yas chat/core-services';
+import type { IUser, AtLeast } from '@yas chat/core-typings';
+import { Rooms, Users, Subscriptions } from '@yas chat/models';
+import { escapeRegExp, isTruthy } from '@yas chat/tools';
 import mem from 'mem';
 import { DDPRateLimiter } from 'meteor/ddp-rate-limiter';
 import type { FindOptions, SortDirection } from 'mongodb';

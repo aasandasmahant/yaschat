@@ -1,5 +1,5 @@
-import { escapeRegExp, validateEmail } from '@rocket.chat/tools';
-import { useSetting, usePasswordPolicy, usePasswordPolicyOptions, useVerifyPassword } from '@rocket.chat/ui-contexts';
+import { escapeRegExp, validateEmail } from '@yas chat/tools';
+import { useSetting, usePasswordPolicy, usePasswordPolicyOptions, useVerifyPassword } from '@yas chat/ui-contexts';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

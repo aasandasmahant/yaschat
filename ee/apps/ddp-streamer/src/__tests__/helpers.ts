@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import type { IPacket, Publication, Session } from '@rocket.chat/ddp-server';
+import type { IPacket, Publication, Session } from '@yas chat/ddp-server';
 import ejson from 'ejson';
 import WebSocket from 'ws';
 

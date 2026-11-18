@@ -1,4 +1,4 @@
-import type { BehaviorWithContext, LicenseBehavior, LicenseModule } from '@rocket.chat/core-typings';
+import type { BehaviorWithContext, LicenseBehavior, LicenseModule } from '@yas chat/core-typings';
 
 const filterValidationResult = (result: BehaviorWithContext[], expectedBehavior: LicenseBehavior) =>
 	result.filter(({ behavior }) => behavior === expectedBehavior);

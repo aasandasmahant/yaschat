@@ -1,5 +1,5 @@
-import type { IMessage as AppsEngineMessage } from '@rocket.chat/apps-engine/definition/messages';
-import type { IMessage } from '@rocket.chat/core-typings';
+import type { IMessage as AppsEngineMessage } from '@yas chat/apps-engine/definition/messages';
+import type { IMessage } from '@yas chat/core-typings';
 
 export async function convertMessageFiles(
 	files: IMessage['files'],

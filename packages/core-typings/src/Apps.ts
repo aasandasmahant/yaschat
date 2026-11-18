@@ -1,4 +1,4 @@
-import type { AppStatus } from '@rocket.chat/apps-engine/definition/AppStatus';
+import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
 
 import type { ExternalModuleName } from './license';
 

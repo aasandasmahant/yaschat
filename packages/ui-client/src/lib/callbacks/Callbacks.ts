@@ -1,4 +1,4 @@
-import { Random } from '@rocket.chat/random';
+import { Random } from '@yas chat/random';
 
 const compareByRanking =
 	<T>(rank: (x: T) => number) =>

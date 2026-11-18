@@ -1,4 +1,4 @@
-import { TextInput, Box, Icon } from '@rocket.chat/fuselage';
+import { TextInput, Box, Icon } from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {

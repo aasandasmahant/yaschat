@@ -1,6 +1,6 @@
-import type { IRoom, IUser } from '@rocket.chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
+import type { IRoom, IUser } from '@yas chat/core-typings';
+import { isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
 import {
 	useTranslation,
 	useUser,
@@ -9,7 +9,7 @@ import {
 	useToastMessageDispatch,
 	useAtLeastOnePermission,
 	useEndpoint,
-} from '@rocket.chat/ui-contexts';
+} from '@yas chat/ui-contexts';
 import { useMemo } from 'react';
 
 import * as Federation from '../../../../../lib/federation/Federation';

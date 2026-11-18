@@ -1,14 +1,14 @@
 import fs from 'node:fs';
 import type Stream from 'node:stream';
 
-import type { IUploadDetails } from '@rocket.chat/apps-engine/definition/uploads/IUploadDetails';
-import { api, ServiceClassInternal } from '@rocket.chat/core-services';
-import type { ISendFileLivechatMessageParams, ISendFileMessageParams, IUploadFileParams, IUploadService } from '@rocket.chat/core-services';
-import type { IUpload, IUser, FilesAndAttachments, IMessage, AtLeast } from '@rocket.chat/core-typings';
-import { isFileAttachment } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Uploads, Users } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import type { IUploadDetails } from '@yas chat/apps-engine/definition/uploads/IUploadDetails';
+import { api, ServiceClassInternal } from '@yas chat/core-services';
+import type { ISendFileLivechatMessageParams, ISendFileMessageParams, IUploadFileParams, IUploadService } from '@yas chat/core-services';
+import type { IUpload, IUser, FilesAndAttachments, IMessage, AtLeast } from '@yas chat/core-typings';
+import { isFileAttachment } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Uploads, Users } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import sharp from 'sharp';
 
 import { NOTIFICATION_ATTACHMENT_COLOR } from '../../../lib/constants';

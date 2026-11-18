@@ -1,5 +1,5 @@
-import { Box, Button, IconButton, Label } from '@rocket.chat/fuselage';
-import { useRouter, useSetModal } from '@rocket.chat/ui-contexts';
+import { Box, Button, IconButton, Label } from '@yas chat/fuselage';
+import { useRouter, useSetModal } from '@yas chat/ui-contexts';
 import { useId } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,8 +1,8 @@
-# `@rocket.chat/css-supports`
+# `@yas chat/css-supports`
 
 > Memoized, SSR-safe wrapper around the browser's `CSS.supports` API.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/css-supports?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/css-supports) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/css-supports?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/css-supports)
+[![npm](https://img.shields.io/npm/v/@yas chat/css-supports?style=flat-square)](https://www.npmjs.com/package/@yas chat/css-supports) [![downloads](https://img.shields.io/npm/dw/@yas chat/css-supports?style=flat-square)](https://www.npmjs.com/package/@yas chat/css-supports)
 
 `cssSupports` tells you whether the current browser supports a CSS declaration. Results are cached per input string, so repeated checks are cheap. When there is no `window` or no `CSS.supports` (server rendering, test environments, old browsers), it returns `false` instead of throwing.
 
@@ -11,7 +11,7 @@ YasChat's styling packages use it to decide when CSS logical properties need fal
 ## Installation
 
 ```sh
-npm install @rocket.chat/css-supports
+npm install @yas chat/css-supports
 ```
 
 There are no peer dependencies. The package ships an ES module (`dist/index.js`) and TypeScript types.
@@ -21,7 +21,7 @@ There are no peer dependencies. The package ships an ES module (`dist/index.js`)
 Pass a single `property:value` declaration, the same string you would give to the one-argument form of `CSS.supports`.
 
 ```ts
-import { cssSupports } from '@rocket.chat/css-supports';
+import { cssSupports } from '@yas chat/css-supports';
 
 if (cssSupports('display:grid')) {
 	// use a grid layout
@@ -47,10 +47,10 @@ Returns `CSS.supports(value)`, memoized by `value`. Returns `false` when `window
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/css-supports). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/css-supports build
-yarn workspace @rocket.chat/css-supports testunit
-yarn workspace @rocket.chat/css-supports lint
-yarn workspace @rocket.chat/css-supports typecheck
+yarn workspace @yas chat/css-supports build
+yarn workspace @yas chat/css-supports testunit
+yarn workspace @yas chat/css-supports lint
+yarn workspace @yas chat/css-supports typecheck
 ```
 
 ## License

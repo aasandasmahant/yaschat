@@ -1,9 +1,9 @@
-import { css } from '@rocket.chat/css-in-js';
-import { backgroundColor, Box, Button, ButtonGroup, strokeColor, Text, useStyle } from '@rocket.chat/fuselage';
-import { FieldLabel, Field, FieldRow, TextAreaInput } from '@rocket.chat/fuselage-forms';
-import { useDebouncedValue } from '@rocket.chat/fuselage-hooks';
-import { GenericModal, useInvalidateLicense } from '@rocket.chat/ui-client';
-import { useSettingSetValue, useToastMessageDispatch } from '@rocket.chat/ui-contexts';
+import { css } from '@yas chat/css-in-js';
+import { backgroundColor, Box, Button, ButtonGroup, strokeColor, Text, useStyle } from '@yas chat/fuselage';
+import { FieldLabel, Field, FieldRow, TextAreaInput } from '@yas chat/fuselage-forms';
+import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { GenericModal, useInvalidateLicense } from '@yas chat/ui-client';
+import { useSettingSetValue, useToastMessageDispatch } from '@yas chat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -10,8 +10,8 @@
  * If this spec fails because of an intended change, keep the old event firing
  * as well, and coordinate the change with the desktop app.
  */
-import type { DesktopWindowEvent } from '@rocket.chat/desktop-api';
-import { mockAppRoot } from '@rocket.chat/mock-providers';
+import type { DesktopWindowEvent } from '@yas chat/desktop-api';
+import { mockAppRoot } from '@yas chat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useCustomScript } from './MainLayout/useCustomScript';

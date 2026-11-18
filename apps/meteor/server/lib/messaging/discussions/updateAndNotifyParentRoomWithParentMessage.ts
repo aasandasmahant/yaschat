@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, MessageTypesValues } from '@rocket.chat/core-typings';
-import { Messages } from '@rocket.chat/models';
+import type { IMessage, IRoom, MessageTypesValues } from '@yas chat/core-typings';
+import { Messages } from '@yas chat/models';
 
 import { settings } from '../../../settings/cached';
 import { notifyOnMessageChange } from '../../notifyListener';

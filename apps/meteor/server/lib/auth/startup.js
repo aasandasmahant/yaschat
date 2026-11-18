@@ -1,7 +1,7 @@
-import { Apps, AppEvents } from '@rocket.chat/apps';
-import { User, ClientSafeError } from '@rocket.chat/core-services';
-import { Roles, Settings, Users } from '@rocket.chat/models';
-import { escapeRegExp, escapeHTML, getLoginExpirationInDays, removeEmpty } from '@rocket.chat/tools';
+import { Apps, AppEvents } from '@yas chat/apps';
+import { User, ClientSafeError } from '@yas chat/core-services';
+import { Roles, Settings, Users } from '@yas chat/models';
+import { escapeRegExp, escapeHTML, getLoginExpirationInDays, removeEmpty } from '@yas chat/tools';
 import { Accounts } from 'meteor/accounts-base';
 import _ from 'underscore';
 
@@ -422,7 +422,7 @@ const validateLoginAttemptAsync = async function (login) {
 
 	/**
 	 * Trigger the event only when the
-	 * user does login in Rocket.chat
+	 * user does login in Yas chat
 	 */
 	if (login.type !== 'resume') {
 		// App IPostUserLoggedIn event hook

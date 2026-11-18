@@ -1,7 +1,7 @@
-import type { IServerEvent } from '@rocket.chat/core-typings';
-import { ServerEventType } from '@rocket.chat/core-typings';
-import { Logger } from '@rocket.chat/logger';
-import { Rooms, ServerEvents, Users } from '@rocket.chat/models';
+import type { IServerEvent } from '@yas chat/core-typings';
+import { ServerEventType } from '@yas chat/core-typings';
+import { Logger } from '@yas chat/logger';
+import { Rooms, ServerEvents, Users } from '@yas chat/models';
 
 import { addMinutesToADate } from '../../../lib/utils/addMinutesToADate';
 import { settings } from '../../settings';

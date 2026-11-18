@@ -14,8 +14,8 @@ import {
 	FieldRow,
 	FieldHint,
 	Callout,
-} from '@rocket.chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter, useFeaturePreviewEnableQuery } from '@rocket.chat/ui-client';
+} from '@yas chat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter, useFeaturePreviewEnableQuery } from '@yas chat/ui-client';
 import type { ChangeEvent } from 'react';
 import { Fragment } from 'react';
 import { useForm } from 'react-hook-form';

@@ -1,5 +1,5 @@
-import type { IPermission, IRole, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IPermissionsModel } from '@rocket.chat/model-typings';
+import type { IPermission, IRole, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IPermissionsModel } from '@yas chat/model-typings';
 import type { Collection, Db, FindCursor, IndexDescription } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

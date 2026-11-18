@@ -1,4 +1,4 @@
-import * as UiKit from '@rocket.chat/ui-kit';
+import * as UiKit from '@yas chat/ui-kit';
 import type { ReactNode } from 'react';
 
 import { FuselageSurfaceRenderer, renderTextObject } from './FuselageSurfaceRenderer';

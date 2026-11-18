@@ -1,5 +1,5 @@
-import { AbacAccessOperation, AbacObjectType } from '@rocket.chat/core-typings';
-import { mockModel } from '@rocket.chat/models/testing';
+import { AbacAccessOperation, AbacObjectType } from '@yas chat/core-typings';
+import { mockModel } from '@yas chat/models/testing';
 
 import { AbacService } from './index';
 
@@ -10,7 +10,7 @@ const mockUsersFindOne = jest.fn();
 const mockUsersFindOneById = jest.fn();
 const mockRoomRemoveUserFromRoom = jest.fn().mockResolvedValue(undefined);
 
-jest.mock('@rocket.chat/core-services', () => ({
+jest.mock('@yas chat/core-services', () => ({
 	ServiceClass: class {
 		onSettingChanged = jest.fn();
 	},

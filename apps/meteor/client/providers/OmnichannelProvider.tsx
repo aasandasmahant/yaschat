@@ -3,11 +3,11 @@ import {
 	type OmichannelRoutingConfig,
 	OmnichannelSortingMechanismSettingType,
 	LivechatInquiryStatus,
-} from '@rocket.chat/core-typings';
-import { useSafely } from '@rocket.chat/fuselage-hooks';
-import { createComparatorFromSort } from '@rocket.chat/mongo-adapter';
-import { useHasLicenseModule } from '@rocket.chat/ui-client';
-import { useUser, useSetting, usePermission, useEndpoint, useStream, useCustomSound } from '@rocket.chat/ui-contexts';
+} from '@yas chat/core-typings';
+import { useSafely } from '@yas chat/fuselage-hooks';
+import { createComparatorFromSort } from '@yas chat/mongo-adapter';
+import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useUser, useSetting, usePermission, useEndpoint, useStream, useCustomSound } from '@yas chat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useState, useEffect, useMemo, memo, useRef } from 'react';

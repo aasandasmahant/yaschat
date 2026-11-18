@@ -1,6 +1,6 @@
-import { api, Media, ClientSafeError } from '@rocket.chat/core-services';
-import { EmojiCustom } from '@rocket.chat/models';
-import { Random } from '@rocket.chat/random';
+import { api, Media, ClientSafeError } from '@yas chat/core-services';
+import { EmojiCustom } from '@yas chat/models';
+import { Random } from '@yas chat/random';
 import limax from 'limax';
 import sharp from 'sharp';
 

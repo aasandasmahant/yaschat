@@ -1,4 +1,4 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import type {
 	MessageAttachment,
 	FileAttachmentProps,
@@ -8,9 +8,9 @@ import type {
 	FilesAndAttachments,
 	IMessage,
 	FileProp,
-} from '@rocket.chat/core-typings';
-import { Rooms, Uploads, Users } from '@rocket.chat/models';
-import { ajv } from '@rocket.chat/rest-typings';
+} from '@yas chat/core-typings';
+import { Rooms, Uploads, Users } from '@yas chat/models';
+import { ajv } from '@yas chat/rest-typings';
 
 import { executeSendMessage } from './sendMessage';
 import { getFileExtension } from '../../../lib/utils/getFileExtension';

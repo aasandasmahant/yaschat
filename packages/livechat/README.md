@@ -1,8 +1,8 @@
-# `@rocket.chat/livechat`
+# `@yas chat/livechat`
 
 > The YasChat Livechat widget: a chat window that website visitors use to talk to Omnichannel agents.
 
-[![npm](https://img.shields.io/npm/v/@rocket.chat/livechat?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/livechat) [![downloads](https://img.shields.io/npm/dw/@rocket.chat/livechat?style=flat-square)](https://www.npmjs.com/package/@rocket.chat/livechat)
+[![npm](https://img.shields.io/npm/v/@yas chat/livechat?style=flat-square)](https://www.npmjs.com/package/@yas chat/livechat) [![downloads](https://img.shields.io/npm/dw/@yas chat/livechat?style=flat-square)](https://www.npmjs.com/package/@yas chat/livechat)
 
 Livechat is a small [Preact](https://preactjs.com) application for business-to-customer conversations between Omnichannel agents and the visitors of a website. Every YasChat server builds and serves it under `/livechat`.
 
@@ -142,11 +142,11 @@ Each method takes a function that runs when the event happens.
 This package lives in the [YasChat monorepo](https://github.com/YasChat/YasChat/tree/develop/packages/livechat). From the repository root:
 
 ```sh
-yarn workspace @rocket.chat/livechat build       # production build into dist/
-yarn workspace @rocket.chat/livechat start       # dev server with hot reload at http://localhost:8080
-yarn workspace @rocket.chat/livechat lint        # eslint + stylelint
-yarn workspace @rocket.chat/livechat typecheck
-yarn workspace @rocket.chat/livechat storybook   # Storybook at http://localhost:6006
+yarn workspace @yas chat/livechat build       # production build into dist/
+yarn workspace @yas chat/livechat start       # dev server with hot reload at http://localhost:8080
+yarn workspace @yas chat/livechat lint        # eslint + stylelint
+yarn workspace @yas chat/livechat typecheck
+yarn workspace @yas chat/livechat storybook   # Storybook at http://localhost:6006
 ```
 
 Other scripts: `dev` (same as `build`), `clean`, `eslint`, `stylelint` and `build-storybook`.
@@ -156,8 +156,8 @@ When YasChat itself is built, it copies `dist/` into the server, which serves it
 ### Running the widget locally
 
 1. Run a YasChat server at `http://localhost:3000`.
-2. Build once, so `dist/yaschat-livechat.min.js` exists: `yarn workspace @rocket.chat/livechat build`.
-3. Start the dev server: `yarn workspace @rocket.chat/livechat start`.
+2. Build once, so `dist/yaschat-livechat.min.js` exists: `yarn workspace @yas chat/livechat build`.
+3. Start the dev server: `yarn workspace @yas chat/livechat start`.
 4. Open `packages/livechat/widget-demo.html` in a browser. It loads the loader script from `dist/` and the widget from `http://localhost:8080`. Serving the file over HTTP (for example with [http-server](https://github.com/http-party/http-server)) makes it load faster.
 
 ### Using a different server

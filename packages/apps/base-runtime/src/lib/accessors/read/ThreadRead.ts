@@ -1,5 +1,5 @@
-import type { IThreadRead } from '@rocket.chat/apps-engine/definition/accessors/IThreadRead';
-import type { IMessage } from '@rocket.chat/apps-engine/definition/messages';
+import type { IThreadRead } from '@yas chat/apps-engine/definition/accessors/IThreadRead';
+import type { IMessage } from '@yas chat/apps-engine/definition/messages';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

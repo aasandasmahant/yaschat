@@ -1,7 +1,7 @@
-import { api } from '@rocket.chat/core-services';
-import type { UserStatus, IUser } from '@rocket.chat/core-typings';
-import { LivechatDepartment, LivechatDepartmentAgents, LivechatRooms, Users } from '@rocket.chat/models';
-import { removeEmpty } from '@rocket.chat/tools';
+import { api } from '@yas chat/core-services';
+import type { UserStatus, IUser } from '@yas chat/core-typings';
+import { LivechatDepartment, LivechatDepartmentAgents, LivechatRooms, Users } from '@yas chat/models';
+import { removeEmpty } from '@yas chat/tools';
 
 import { updateDepartmentAgents } from './Helper';
 import { afterAgentAdded, afterRemoveAgent } from './hooks';

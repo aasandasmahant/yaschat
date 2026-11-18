@@ -1,4 +1,4 @@
-import { OmnichannelSortingMechanismSettingType } from '@rocket.chat/core-typings';
+import { OmnichannelSortingMechanismSettingType } from '@yas chat/core-typings';
 
 type SortOrder = 1 | -1;
 

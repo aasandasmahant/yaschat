@@ -1,5 +1,5 @@
-import type { IRoom } from '@rocket.chat/core-typings';
-import { isABACManagedRoom } from '@rocket.chat/core-typings';
+import type { IRoom } from '@yas chat/core-typings';
+import { isABACManagedRoom } from '@yas chat/core-typings';
 
 import { useIsABACAvailable } from './useIsABACAvailable';
 

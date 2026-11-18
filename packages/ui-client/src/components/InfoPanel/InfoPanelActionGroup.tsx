@@ -1,4 +1,4 @@
-import { ButtonGroup } from '@rocket.chat/fuselage';
+import { ButtonGroup } from '@yas chat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 import Section from './InfoPanelSection';

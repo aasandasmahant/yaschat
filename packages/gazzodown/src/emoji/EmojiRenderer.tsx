@@ -1,5 +1,5 @@
-import { MessageEmoji, ThreadMessageEmoji } from '@rocket.chat/fuselage';
-import type * as MessageParser from '@rocket.chat/message-parser';
+import { MessageEmoji, ThreadMessageEmoji } from '@yas chat/fuselage';
+import type * as MessageParser from '@yas chat/message-parser';
 import { useContext, memo } from 'react';
 
 import { MarkupInteractionContext } from '../MarkupInteractionContext';

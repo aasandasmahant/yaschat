@@ -1,5 +1,5 @@
-import type { IInvite, YasChatRecordDeleted } from '@rocket.chat/core-typings';
-import type { IInvitesModel } from '@rocket.chat/model-typings';
+import type { IInvite, YasChatRecordDeleted } from '@yas chat/core-typings';
+import type { IInvitesModel } from '@yas chat/model-typings';
 import type { Collection, Db, UpdateResult } from 'mongodb';
 
 import { BaseRaw } from './BaseRaw';

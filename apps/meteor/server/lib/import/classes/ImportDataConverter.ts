@@ -1,7 +1,7 @@
-import type { IImportRecord, IImportUser, IImportMessage, IImportChannel, IImportContact } from '@rocket.chat/core-typings';
-import type { Logger } from '@rocket.chat/logger';
-import { ImportData } from '@rocket.chat/models';
-import { pick } from '@rocket.chat/tools';
+import type { IImportRecord, IImportUser, IImportMessage, IImportChannel, IImportContact } from '@yas chat/core-typings';
+import type { Logger } from '@yas chat/logger';
+import { ImportData } from '@yas chat/models';
+import { pick } from '@yas chat/tools';
 
 import type { IConversionCallbacks } from '../definitions/IConversionCallbacks';
 import { ContactConverter } from './converters/ContactConverter';

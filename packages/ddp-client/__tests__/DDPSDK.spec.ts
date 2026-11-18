@@ -314,10 +314,10 @@ it('should reconnect after a heartbeat timeout', async () => {
 });
 
 it.each([
-	['https://open.rocket.chat', 'https://open.rocket.chat'],
-	['wss://open.rocket.chat', 'https://open.rocket.chat'],
+	['https://open.yas chat', 'https://open.yas chat'],
+	['wss://open.yas chat', 'https://open.yas chat'],
 	['ws://localhost:3000/', 'http://localhost:3000'],
-	['wss://open.rocket.chat/websocket', 'https://open.rocket.chat'],
+	['wss://open.yas chat/websocket', 'https://open.yas chat'],
 ])('should derive the REST URL %s -> %s', (url, expected) => {
 	expect(toRestUrl(url)).toBe(expected);
 });

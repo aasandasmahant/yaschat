@@ -1,4 +1,4 @@
-import { ClientSafeError, isClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError, isClientSafeError } from '@yas chat/core-services';
 import { ServiceBroker } from 'moleculer';
 
 import { CustomRegenerator } from './moleculer';

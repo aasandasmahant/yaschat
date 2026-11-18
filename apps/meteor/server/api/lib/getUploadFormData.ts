@@ -1,7 +1,7 @@
 import { Readable } from 'node:stream';
 import { ReadableStream } from 'node:stream/web';
 
-import { ClientSafeError } from '@rocket.chat/core-services';
+import { ClientSafeError } from '@yas chat/core-services';
 import type { ValidateFunction } from 'ajv';
 import busboy from 'busboy';
 

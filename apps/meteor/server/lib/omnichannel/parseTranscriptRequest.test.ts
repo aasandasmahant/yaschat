@@ -1,6 +1,6 @@
 import { before, beforeEach, describe, it } from 'node:test';
 
-import { mockModel } from '@rocket.chat/models/testing';
+import { mockModel } from '@yas chat/models/testing';
 import { expect } from 'chai';
 import p from 'proxyquire';
 import sinon from 'sinon';
@@ -78,7 +78,7 @@ describe('parseTranscriptRequest', () => {
 		settingsGetMock.get.withArgs('Livechat_enable_transcript').returns(false);
 		settingsGetMock.get.withArgs('Livechat_transcript_send_always').returns(true);
 		modelsMock.Users.findOneById.resolves(null);
-		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@rocket.chat' }] } as any);
+		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@yas chat' }] } as any);
 
 		const options = await parseTranscriptRequest({ v: { _id: '123' } } as any, {} as any);
 		expect(options).to.be.deep.equal({});
@@ -87,13 +87,13 @@ describe('parseTranscriptRequest', () => {
 	it('should return `options` param with `transcriptRequest` key attached when user is passed', async () => {
 		settingsGetMock.get.withArgs('Livechat_enable_transcript').returns(false);
 		settingsGetMock.get.withArgs('Livechat_transcript_send_always').returns(true);
-		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@rocket.chat' }] } as any);
+		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@yas chat' }] } as any);
 
 		const options = await parseTranscriptRequest({ v: { _id: '123' } } as any, {} as any, undefined, { _id: '123' } as any);
 
 		expect(modelsMock.LivechatVisitors.findOneById.getCall(0).firstArg).to.be.equal('123');
 		expect(options).to.have.property('emailTranscript').that.is.an('object');
-		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@rocket.chat');
+		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@yas chat');
 		expect(options.emailTranscript.requestData).to.have.property('subject', '');
 		expect(options.emailTranscript.requestData.requestedBy).to.be.deep.equal({ _id: '123' });
 	});
@@ -102,13 +102,13 @@ describe('parseTranscriptRequest', () => {
 		settingsGetMock.get.withArgs('Livechat_enable_transcript').returns(false);
 		settingsGetMock.get.withArgs('Livechat_transcript_send_always').returns(true);
 		modelsMock.Users.findOneById.resolves({ _id: '123', username: 'kevsxxx', name: 'Kev' } as any);
-		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@rocket.chat' }] } as any);
+		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@yas chat' }] } as any);
 
 		const options = await parseTranscriptRequest({ v: { _id: '123' }, servedBy: { _id: '123' } } as any, {} as any);
 
 		expect(modelsMock.Users.findOneById.getCall(0).firstArg).to.be.equal('123');
 		expect(options).to.have.property('emailTranscript').that.is.an('object');
-		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@rocket.chat');
+		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@yas chat');
 		expect(options.emailTranscript.requestData).to.have.property('subject', '');
 		expect(options.emailTranscript.requestData.requestedBy).to.be.deep.equal({ _id: '123', username: 'kevsxxx', name: 'Kev' });
 	});
@@ -117,13 +117,13 @@ describe('parseTranscriptRequest', () => {
 		settingsGetMock.get.withArgs('Livechat_enable_transcript').returns(false);
 		settingsGetMock.get.withArgs('Livechat_transcript_send_always').returns(true);
 		modelsMock.Users.findOneById.resolves({ _id: 'rocket.cat', username: 'rocket.cat', name: 'Rocket Cat' } as any);
-		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@rocket.chat' }] } as any);
+		modelsMock.LivechatVisitors.findOneById.resolves({ visitorEmails: [{ address: 'abc@yas chat' }] } as any);
 
 		const options = await parseTranscriptRequest({ v: { _id: '123' } } as any, {} as any);
 
 		expect(modelsMock.Users.findOneById.getCall(0).firstArg).to.be.equal('rocket.cat');
 		expect(options).to.have.property('emailTranscript').that.is.an('object');
-		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@rocket.chat');
+		expect(options.emailTranscript.requestData).to.have.property('email', 'abc@yas chat');
 		expect(options.emailTranscript.requestData).to.have.property('subject', '');
 		expect(options.emailTranscript.requestData.requestedBy).to.be.deep.equal({
 			_id: 'rocket.cat',

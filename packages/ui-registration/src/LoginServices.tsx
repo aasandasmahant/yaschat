@@ -1,5 +1,5 @@
-import { Box, Button, ButtonGroup, Divider } from '@rocket.chat/fuselage';
-import { useLoginServices, useSetting } from '@rocket.chat/ui-contexts';
+import { Box, Button, ButtonGroup, Divider } from '@yas chat/fuselage';
+import { useLoginServices, useSetting } from '@yas chat/ui-contexts';
 import { useMemo, type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import type { IEnvironmentalVariableRead } from '@rocket.chat/apps-engine/definition/accessors';
+import type { IEnvironmentalVariableRead } from '@yas chat/apps-engine/definition/accessors';
 
 import { bridgeCall } from '../../bridges/bridgeCall';
 import type * as Messenger from '../../messenger';

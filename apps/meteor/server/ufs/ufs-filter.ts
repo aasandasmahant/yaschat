@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import type { IUpload } from '@rocket.chat/core-typings';
+import { ClientSafeError } from '@yas chat/core-services';
+import type { IUpload } from '@yas chat/core-typings';
 import type { OptionalId } from 'mongodb';
 
 type IFilterOptions = {

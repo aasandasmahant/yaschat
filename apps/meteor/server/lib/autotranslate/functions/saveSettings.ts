@@ -1,5 +1,5 @@
-import { ClientSafeError } from '@rocket.chat/core-services';
-import { Subscriptions, Rooms } from '@rocket.chat/models';
+import { ClientSafeError } from '@yas chat/core-services';
+import { Subscriptions, Rooms } from '@yas chat/models';
 
 import { hasPermissionAsync } from '../../authorization/hasPermission';
 import { notifyOnSubscriptionChangedById } from '../../notifyListener';

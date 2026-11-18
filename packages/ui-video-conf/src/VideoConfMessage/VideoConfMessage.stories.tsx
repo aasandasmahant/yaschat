@@ -11,7 +11,7 @@ import {
 	MessageBody,
 	Avatar,
 	Box,
-} from '@rocket.chat/fuselage';
+} from '@yas chat/fuselage';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { VideoConfMessage, VideoConfMessageIcon, VideoConfMessageRow, VideoConfMessageText } from '.';

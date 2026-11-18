@@ -1,4 +1,4 @@
-import type { MarkedEventResult } from '@rocket.chat/apps-engine/definition/eventResult';
+import type { MarkedEventResult } from '@yas chat/apps-engine/definition/eventResult';
 
 import type { ProxiedApp } from '../ProxiedApp';
 import type { EventResultMeta, HostEventResult } from './HostEventResult';

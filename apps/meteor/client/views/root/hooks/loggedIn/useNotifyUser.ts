@@ -1,7 +1,7 @@
-import type { AtLeast, INotificationDesktop, ISubscription, IUser } from '@rocket.chat/core-typings';
-import { useStableCallback } from '@rocket.chat/fuselage-hooks';
-import { useEmbeddedLayout } from '@rocket.chat/ui-client';
-import { useCustomSound, useRouter, useStream, useUserPreference } from '@rocket.chat/ui-contexts';
+import type { AtLeast, INotificationDesktop, ISubscription, IUser } from '@yas chat/core-typings';
+import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useEmbeddedLayout } from '@yas chat/ui-client';
+import { useCustomSound, useRouter, useStream, useUserPreference } from '@yas chat/ui-contexts';
 import { useEffect } from 'react';
 
 import { useDesktopNotification } from './useDesktopNotification';

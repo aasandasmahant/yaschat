@@ -1,7 +1,7 @@
-import { AppEvents, Apps } from '@rocket.chat/apps';
-import { AppsEngineException } from '@rocket.chat/apps-engine/definition/exceptions';
-import { FederationMatrix, Message, Room, Team, ClientSafeError, XMPPServer } from '@rocket.chat/core-services';
-import type { ICreateRoomParams, ISubscriptionExtraData } from '@rocket.chat/core-services';
+import { AppEvents, Apps } from '@yas chat/apps';
+import { AppsEngineException } from '@yas chat/apps-engine/definition/exceptions';
+import { FederationMatrix, Message, Room, Team, ClientSafeError, XMPPServer } from '@yas chat/core-services';
+import type { ICreateRoomParams, ISubscriptionExtraData } from '@yas chat/core-services';
 import {
 	type ICreatedRoom,
 	type IUser,
@@ -9,9 +9,9 @@ import {
 	type RoomType,
 	isRoomXMPPHostedMuc,
 	isUserNativeFederated,
-} from '@rocket.chat/core-typings';
-import { Rooms, Subscriptions, Users } from '@rocket.chat/models';
-import { isBareJid, normalizeBareJid } from '@rocket.chat/tools';
+} from '@yas chat/core-typings';
+import { Rooms, Subscriptions, Users } from '@yas chat/models';
+import { isBareJid, normalizeBareJid } from '@yas chat/tools';
 
 import { createDirectRoom } from './createDirectRoom';
 import { filterUsersAllowedInRoom } from './filterUsersAllowedInRoom';
