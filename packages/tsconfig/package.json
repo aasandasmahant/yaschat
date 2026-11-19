@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/tsconfig",
+	"name": "@rocket.chat/tsconfig",
 	"version": "0.0.0",
 	"private": true,
 	"volta": {

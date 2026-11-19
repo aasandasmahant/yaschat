@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/css-supports",
+	"name": "@rocket.chat/css-supports",
 	"version": "0.31.27",
 	"description": "Memoized and SSR-compatible facade of CSS.supports API",
 	"type": "module",
@@ -36,11 +36,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/memo": "workspace:~"
+		"@rocket.chat/memo": "workspace:~"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

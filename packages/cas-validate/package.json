@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/cas-validate",
+	"name": "@rocket.chat/cas-validate",
 	"version": "0.0.4",
 	"private": true,
 	"description": "Fork of https://github.com/kcbanner/node-cas",

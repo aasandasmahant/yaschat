@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/presence",
+	"name": "@rocket.chat/presence",
 	"version": "0.4.0",
 	"private": true,
 	"main": "./dist/Presence.js",
@@ -16,16 +16,16 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/core-services": "workspace:^",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/cron": "workspace:^",
-		"@yas chat/logger": "workspace:^",
-		"@yas chat/models": "workspace:^",
+		"@rocket.chat/core-services": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/cron": "workspace:^",
+		"@rocket.chat/logger": "workspace:^",
+		"@rocket.chat/models": "workspace:^",
 		"mongodb": "6.16.0"
 	},
 	"devDependencies": {
-		"@yas chat/apps-engine": "workspace:^",
-		"@yas chat/rest-typings": "workspace:^",
+		"@rocket.chat/apps-engine": "workspace:^",
+		"@rocket.chat/rest-typings": "workspace:^",
 		"@types/node": "~24.13.6",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"

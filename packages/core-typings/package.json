@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/package",
-	"name": "@yas chat/core-typings",
+	"name": "@rocket.chat/core-typings",
 	"version": "9.1.0-develop",
 	"repository": {
 		"type": "git",
@@ -24,15 +24,15 @@
 		"typecheck": "tsc --noEmit --module preserve"
 	},
 	"dependencies": {
-		"@yas chat/fuselage": "workspace:^",
-		"@yas chat/icons": "workspace:~",
-		"@yas chat/message-parser": "workspace:^",
-		"@yas chat/ui-kit": "workspace:~",
+		"@rocket.chat/fuselage": "workspace:^",
+		"@rocket.chat/icons": "workspace:~",
+		"@rocket.chat/message-parser": "workspace:^",
+		"@rocket.chat/ui-kit": "workspace:~",
 		"typia": "13.0.2",
 		"zod": "~4.3.6"
 	},
 	"devDependencies": {
-		"@yas chat/apps-engine": "workspace:^",
+		"@rocket.chat/apps-engine": "workspace:^",
 		"@types/express": "^4.17.25",
 		"@typescript/native-preview": "7.0.0-dev.20260707.2",
 		"mongodb": "6.16.0",

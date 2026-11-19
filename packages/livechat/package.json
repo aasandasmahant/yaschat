@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/livechat",
+	"name": "@rocket.chat/livechat",
 	"version": "3.0.0",
 	"homepage": "https://yas chat",
 	"repository": {
@@ -27,11 +27,11 @@
 		"Firefox ESR"
 	],
 	"dependencies": {
-		"@yas chat/emitter": "workspace:~",
-		"@yas chat/gazzodown": "workspace:^",
-		"@yas chat/message-parser": "workspace:^",
-		"@yas chat/random": "workspace:~",
-		"@yas chat/ui-kit": "workspace:~",
+		"@rocket.chat/emitter": "workspace:~",
+		"@rocket.chat/gazzodown": "workspace:^",
+		"@rocket.chat/message-parser": "workspace:^",
+		"@rocket.chat/random": "workspace:~",
+		"@rocket.chat/ui-kit": "workspace:~",
 		"ajv": "^8.20.0",
 		"ajv-formats": "^3.0.1",
 		"css-vars-ponyfill": "^2.4.9",
@@ -55,13 +55,13 @@
 		"@babel/preset-env": "~7.29.7",
 		"@babel/preset-react": "~7.28.5",
 		"@babel/preset-typescript": "~7.28.5",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/ddp-client": "workspace:^",
-		"@yas chat/fuselage-hooks": "workspace:^",
-		"@yas chat/fuselage-tokens": "workspace:^",
-		"@yas chat/logo": "workspace:~",
-		"@yas chat/storybook-config": "workspace:~",
-		"@yas chat/ui-contexts": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/ddp-client": "workspace:^",
+		"@rocket.chat/fuselage-hooks": "workspace:^",
+		"@rocket.chat/fuselage-tokens": "workspace:^",
+		"@rocket.chat/logo": "workspace:~",
+		"@rocket.chat/storybook-config": "workspace:~",
+		"@rocket.chat/ui-contexts": "workspace:^",
 		"@storybook/addon-docs": "~10.6.5",
 		"@storybook/preact": "~10.6.5",
 		"@storybook/preact-vite": "~10.6.5",
@@ -96,8 +96,8 @@
 		"webpack": "~5.104.1"
 	},
 	"peerDependencies": {
-		"@yas chat/fuselage-tokens": "0.36.0",
-		"@yas chat/logo": "0.33.3"
+		"@rocket.chat/fuselage-tokens": "0.36.0",
+		"@rocket.chat/logo": "0.33.3"
 	},
 	"volta": {
 		"extends": "../../package.json"

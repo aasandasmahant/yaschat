@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/server-cloud-communication",
+	"name": "@rocket.chat/server-cloud-communication",
 	"version": "0.0.3",
 	"private": true,
 	"main": "./src/index.ts",
@@ -14,7 +14,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/license": "workspace:^",
+		"@rocket.chat/license": "workspace:^",
 		"typescript": "~7.0.2"
 	},
 	"volta": {

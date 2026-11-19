@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/mock-providers",
+	"name": "@rocket.chat/mock-providers",
 	"version": "0.6.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -16,18 +16,18 @@
 		"testunit": "jest"
 	},
 	"dependencies": {
-		"@yas chat/emitter": "workspace:~",
-		"@yas chat/i18n": "workspace:~",
-		"@yas chat/ui-contexts": "workspace:^",
+		"@rocket.chat/emitter": "workspace:~",
+		"@rocket.chat/i18n": "workspace:~",
+		"@rocket.chat/ui-contexts": "workspace:^",
 		"i18next": "~26.4.2",
 		"react-i18next": "~17.0.16"
 	},
 	"devDependencies": {
 		"@faker-js/faker": "~10.5.0",
-		"@yas chat/ddp-client": "workspace:~",
-		"@yas chat/mongo-adapter": "workspace:~",
-		"@yas chat/tools": "workspace:~",
-		"@yas chat/ui-video-conf": "workspace:*",
+		"@rocket.chat/ddp-client": "workspace:~",
+		"@rocket.chat/mongo-adapter": "workspace:~",
+		"@rocket.chat/tools": "workspace:~",
+		"@rocket.chat/ui-video-conf": "workspace:*",
 		"@storybook/react": "~10.6.5",
 		"@tanstack/react-query": "~5.65.1",
 		"@testing-library/dom": "~10.4.2",

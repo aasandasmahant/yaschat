@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/i18n",
+	"name": "@rocket.chat/i18n",
 	"version": "5.0.0",
 	"private": true,
 	"type": "module",
@@ -34,15 +34,15 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tools": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tools": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"i18next": "~26.4.2",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},
 	"peerDependencies": {
-		"@yas chat/tools": "workspace:~",
+		"@rocket.chat/tools": "workspace:~",
 		"i18next": "*"
 	},
 	"volta": {

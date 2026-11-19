@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/account-utils",
+	"name": "@rocket.chat/account-utils",
 	"version": "0.0.3",
 	"private": true,
 	"type": "module",
@@ -22,8 +22,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/random": "workspace:^",
-		"@yas chat/sha256": "workspace:^",
+		"@rocket.chat/random": "workspace:^",
+		"@rocket.chat/sha256": "workspace:^",
 		"bcrypt": "^6.0.0"
 	},
 	"devDependencies": {

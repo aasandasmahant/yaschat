@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/pdf-worker",
+	"name": "@rocket.chat/pdf-worker",
 	"version": "0.3.37",
 	"private": true,
 	"main": "./dist/index.js",
@@ -19,8 +19,8 @@
 	},
 	"dependencies": {
 		"@react-pdf/renderer": "~4.5.1",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/fuselage-tokens": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/fuselage-tokens": "workspace:^",
 		"emojibase-data": "^17.0.0",
 		"moment": "^2.31.0",
 		"moment-timezone": "^0.5.48",
@@ -28,10 +28,10 @@
 		"react-i18next": "~17.0.16"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/message-parser": "workspace:~",
-		"@yas chat/storybook-config": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/message-parser": "workspace:~",
+		"@rocket.chat/storybook-config": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"@storybook/react": "~10.6.5",
 		"@storybook/react-webpack5": "~10.6.5",
 		"@testing-library/dom": "~10.4.2",

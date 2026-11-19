@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/patch-injection",
+	"name": "@rocket.chat/patch-injection",
 	"version": "0.0.2",
 	"private": true,
 	"main": "./dist/index.js",
@@ -17,8 +17,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

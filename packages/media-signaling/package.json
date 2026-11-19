@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/media-signaling",
+	"name": "@rocket.chat/media-signaling",
 	"description": "YasChat signaling client for media calls",
 	"type": "module",
 	"exports": {
@@ -35,12 +35,12 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/emitter": "workspace:~",
+		"@rocket.chat/emitter": "workspace:~",
 		"ajv": "^8.20.0"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	}

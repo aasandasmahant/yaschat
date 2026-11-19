@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/poplib",
+	"name": "@rocket.chat/poplib",
 	"version": "0.0.3",
 	"private": true,
 	"type": "module",

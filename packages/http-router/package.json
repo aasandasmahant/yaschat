@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/http-router",
+	"name": "@rocket.chat/http-router",
 	"version": "7.9.25",
 	"private": true,
 	"main": "./dist/index.js",
@@ -18,16 +18,16 @@
 	},
 	"dependencies": {
 		"@hono/node-server": "2.1.5",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/logger": "workspace:^",
-		"@yas chat/rest-typings": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/logger": "workspace:^",
+		"@rocket.chat/rest-typings": "workspace:^",
 		"ajv": "^8.20.0",
 		"hono": "4.13.13",
 		"qs": "^6.15.3"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:^",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:^",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"@types/supertest": "~6.0.3",
 		"jest": "~30.5.2",
 		"supertest": "~7.1.4",

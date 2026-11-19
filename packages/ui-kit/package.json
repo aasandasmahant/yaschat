@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/ui-kit",
+	"name": "@rocket.chat/ui-kit",
 	"version": "2.0.0",
 	"description": "Interactive UI elements for YasChat Apps",
 	"type": "module",
@@ -41,9 +41,9 @@
 		"typia": "13.0.2"
 	},
 	"devDependencies": {
-		"@yas chat/icons": "workspace:~",
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/icons": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"@typescript/native-preview": "7.0.0-dev.20260707.2",
 		"jest": "~30.5.2",
 		"npm-run-all": "~4.1.5",
@@ -52,7 +52,7 @@
 		"typescript": "~5.9.3"
 	},
 	"peerDependencies": {
-		"@yas chat/icons": "0.52.0"
+		"@rocket.chat/icons": "0.52.0"
 	},
 	"volta": {
 		"extends": "../../package.json"

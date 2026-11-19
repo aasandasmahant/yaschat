@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/password-policies",
+	"name": "@rocket.chat/password-policies",
 	"version": "0.1.1",
 	"private": true,
 	"type": "module",
@@ -24,8 +24,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

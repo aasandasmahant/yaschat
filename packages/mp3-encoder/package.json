@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/mp3-encoder",
+	"name": "@rocket.chat/mp3-encoder",
 	"version": "0.31.27",
 	"description": "A LAME encoder to be used in web workers",
 	"type": "module",
@@ -36,8 +36,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"@rollup/plugin-commonjs": "~29.0.3",
 		"@rollup/plugin-node-resolve": "~16.0.3",
 		"@rollup/plugin-typescript": "~12.3.0",

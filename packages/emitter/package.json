@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/emitter",
+	"name": "@rocket.chat/emitter",
 	"version": "0.33.1",
 	"description": "Event Emitter by YasChat",
 	"type": "module",
@@ -40,8 +40,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"@rollup/plugin-terser": "~1.0.0",
 		"@rollup/plugin-typescript": "~12.3.0",
 		"jest": "~30.5.2",

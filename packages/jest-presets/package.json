@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/jest-presets",
+	"name": "@rocket.chat/jest-presets",
 	"version": "0.0.4",
 	"private": true,
 	"type": "module",

@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/css-in-js",
+	"name": "@rocket.chat/css-in-js",
 	"version": "0.33.3",
 	"description": "Toolset to transpile and use CSS on runtime",
 	"keywords": [
@@ -42,14 +42,14 @@
 	},
 	"dependencies": {
 		"@emotion/hash": "^0.9.2",
-		"@yas chat/css-supports": "workspace:~",
-		"@yas chat/memo": "workspace:~",
-		"@yas chat/stylis-logical-props-middleware": "workspace:~",
+		"@rocket.chat/css-supports": "workspace:~",
+		"@rocket.chat/memo": "workspace:~",
+		"@rocket.chat/stylis-logical-props-middleware": "workspace:~",
 		"stylis": "~4.4.0"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"@rollup/plugin-commonjs": "~29.0.3",
 		"@rollup/plugin-json": "~6.1.0",
 		"@rollup/plugin-node-resolve": "~16.0.3",

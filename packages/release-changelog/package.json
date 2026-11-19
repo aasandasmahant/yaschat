@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/release-changelog",
+	"name": "@rocket.chat/release-changelog",
 	"version": "0.1.1",
 	"private": true,
 	"type": "module",

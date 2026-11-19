@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/cron",
+	"name": "@rocket.chat/cron",
 	"version": "0.1.62",
 	"private": true,
 	"main": "./dist/index.js",
@@ -15,15 +15,15 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/agenda": "workspace:^",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/logger": "workspace:^",
-		"@yas chat/models": "workspace:^",
-		"@yas chat/random": "workspace:^",
+		"@rocket.chat/agenda": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/logger": "workspace:^",
+		"@rocket.chat/models": "workspace:^",
+		"@rocket.chat/random": "workspace:^",
 		"mongodb": "6.16.0"
 	},
 	"devDependencies": {
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"typescript": "~7.0.2"
 	},
 	"volta": {

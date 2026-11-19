@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/styled",
+	"name": "@rocket.chat/styled",
 	"version": "0.34.2",
 	"description": "A simple styled API for React components",
 	"keywords": [
@@ -44,11 +44,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/css-in-js": "workspace:~"
+		"@rocket.chat/css-in-js": "workspace:~"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"@rollup/plugin-commonjs": "~29.0.3",
 		"@rollup/plugin-json": "~6.1.0",
 		"@rollup/plugin-node-resolve": "~16.0.3",

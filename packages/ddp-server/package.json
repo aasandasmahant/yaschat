@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/ddp-server",
+	"name": "@rocket.chat/ddp-server",
 	"version": "0.0.1",
 	"private": true,
 	"description": "Meteor-free DDP server: protocol codec, sessions, method and publication dispatch, and the Streamer adapter",
@@ -21,19 +21,19 @@
 		"typecheck": "tsc --noEmit -p tsconfig.json"
 	},
 	"dependencies": {
-		"@yas chat/core-services": "workspace:^",
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/ddp-client": "workspace:~",
-		"@yas chat/emitter": "workspace:~",
-		"@yas chat/logger": "workspace:^",
-		"@yas chat/streamer": "workspace:^",
+		"@rocket.chat/core-services": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/ddp-client": "workspace:~",
+		"@rocket.chat/emitter": "workspace:~",
+		"@rocket.chat/logger": "workspace:^",
+		"@rocket.chat/streamer": "workspace:^",
 		"ejson": "^2.2.3",
 		"underscore": "^1.13.8",
 		"uuid": "^11.1.1",
 		"ws": "~8.21.3"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
 		"@types/ejson": "^2.2.2",
 		"@types/node": "~24.13.6",
 		"@types/underscore": "^1.13.0",

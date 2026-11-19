@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/core-services",
+	"name": "@rocket.chat/core-services",
 	"version": "1.0.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -17,21 +17,21 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/core-typings": "workspace:^",
-		"@yas chat/federation-sdk": "0.9.1",
-		"@yas chat/http-router": "workspace:^",
-		"@yas chat/icons": "workspace:~",
-		"@yas chat/media-signaling": "workspace:^",
-		"@yas chat/message-parser": "workspace:^",
-		"@yas chat/models": "workspace:^",
-		"@yas chat/rest-typings": "workspace:^",
-		"@yas chat/tracing": "workspace:^",
-		"@yas chat/ui-kit": "workspace:~"
+		"@rocket.chat/core-typings": "workspace:^",
+		"@rocket.chat/federation-sdk": "0.9.1",
+		"@rocket.chat/http-router": "workspace:^",
+		"@rocket.chat/icons": "workspace:~",
+		"@rocket.chat/media-signaling": "workspace:^",
+		"@rocket.chat/message-parser": "workspace:^",
+		"@rocket.chat/models": "workspace:^",
+		"@rocket.chat/rest-typings": "workspace:^",
+		"@rocket.chat/tracing": "workspace:^",
+		"@rocket.chat/ui-kit": "workspace:~"
 	},
 	"devDependencies": {
-		"@yas chat/apps": "workspace:^",
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/apps": "workspace:^",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"mongodb": "6.16.0",
 		"typescript": "~7.0.2"

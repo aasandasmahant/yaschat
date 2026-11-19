@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/omni-core",
+	"name": "@rocket.chat/omni-core",
 	"version": "0.1.6",
 	"private": true,
 	"main": "./dist/index.js",
@@ -17,14 +17,14 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/models": "workspace:^",
-		"@yas chat/patch-injection": "workspace:^",
+		"@rocket.chat/models": "workspace:^",
+		"@rocket.chat/patch-injection": "workspace:^",
 		"mongodb": "6.16.0"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tools": "workspace:*",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tools": "workspace:*",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"jest": "~30.5.2",
 		"typescript": "~7.0.2"
 	},

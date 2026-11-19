@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/fuselage-tokens",
+	"name": "@rocket.chat/fuselage-tokens",
 	"version": "0.36.0",
 	"description": "Design tokens for Fuselage, YasChat's design system",
 	"keywords": [

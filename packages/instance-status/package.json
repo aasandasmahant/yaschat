@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/instance-status",
+	"name": "@rocket.chat/instance-status",
 	"version": "0.1.62",
 	"private": true,
 	"type": "module",
@@ -22,11 +22,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/models": "workspace:^",
-		"@yas chat/tracing": "workspace:^"
+		"@rocket.chat/models": "workspace:^",
+		"@rocket.chat/tracing": "workspace:^"
 	},
 	"devDependencies": {
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"mongodb": "6.16.0",
 		"typescript": "~7.0.2"
 	},

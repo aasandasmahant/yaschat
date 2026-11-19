@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/logo",
+	"name": "@rocket.chat/logo",
 	"version": "0.33.3",
 	"description": "YasChat logo package",
 	"keywords": [
@@ -35,12 +35,12 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/fuselage-tokens": "workspace:^",
-		"@yas chat/styled": "workspace:~"
+		"@rocket.chat/fuselage-tokens": "workspace:^",
+		"@rocket.chat/styled": "workspace:~"
 	},
 	"devDependencies": {
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:~",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:~",
 		"@testing-library/dom": "~10.4.2",
 		"@testing-library/react": "~16.3.3",
 		"@types/react": "~19.2.18",

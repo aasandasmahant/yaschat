@@ -1,5 +1,5 @@
 {
-	"name": "@yas chat/ddp-client",
+	"name": "@rocket.chat/ddp-client",
 	"version": "2.0.0",
 	"repository": {
 		"type": "git",
@@ -22,16 +22,16 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@yas chat/api-client": "workspace:^",
-		"@yas chat/core-typings": "workspace:~",
-		"@yas chat/media-signaling": "workspace:^",
-		"@yas chat/rest-typings": "workspace:^",
-		"@yas chat/ui-kit": "workspace:~"
+		"@rocket.chat/api-client": "workspace:^",
+		"@rocket.chat/core-typings": "workspace:~",
+		"@rocket.chat/media-signaling": "workspace:^",
+		"@rocket.chat/rest-typings": "workspace:^",
+		"@rocket.chat/ui-kit": "workspace:~"
 	},
 	"devDependencies": {
-		"@yas chat/apps-engine": "workspace:^",
-		"@yas chat/jest-presets": "workspace:~",
-		"@yas chat/tsconfig": "workspace:*",
+		"@rocket.chat/apps-engine": "workspace:^",
+		"@rocket.chat/jest-presets": "workspace:~",
+		"@rocket.chat/tsconfig": "workspace:*",
 		"@types/ws": "^8.18.2",
 		"jest": "~30.5.2",
 		"jest-websocket-mock": "~2.5.0",
@@ -39,7 +39,7 @@
 		"ws": "~8.21.3"
 	},
 	"peerDependencies": {
-		"@yas chat/emitter": "workspace:~"
+		"@rocket.chat/emitter": "workspace:~"
 	},
 	"volta": {
 		"extends": "../../package.json"
