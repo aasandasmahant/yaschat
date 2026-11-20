@@ -1,3 +1,4 @@
+import YasChatNavBar from './YasChatNavBar';
 import { useSetting } from '@yaschat/ui-contexts';
 
 import CustomHomePage from './CustomHomePage';
@@ -10,7 +11,12 @@ const HomePage = () => {
 		return <CustomHomePage />;
 	}
 
-	return <DefaultHomePage />;
+	return (
+    <>
+      <YasChatNavBar />
+      <DefaultHomePage />
+    </>
+  );
 };
 
 export default HomePage;
