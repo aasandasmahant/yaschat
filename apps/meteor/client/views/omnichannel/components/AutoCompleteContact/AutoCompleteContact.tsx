@@ -1,7 +1,7 @@
-import type { Serialized } from '@yas chat/core-typings';
-import { Box, PaginatedSelectFiltered } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import type { ILivechatContactWithManagerData } from '@yas chat/rest-typings';
+import type { Serialized } from '@yaschat/core-typings';
+import { Box, PaginatedSelectFiltered } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import type { ILivechatContactWithManagerData } from '@yaschat/rest-typings';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

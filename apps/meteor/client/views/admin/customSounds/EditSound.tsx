@@ -1,6 +1,6 @@
-import { Box, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, IconButton } from '@yas chat/fuselage';
-import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, IconButton } from '@yaschat/fuselage';
+import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import fileSize from 'filesize';
 import type { ChangeEvent } from 'react';
 import { useCallback, useState, useMemo, useEffect } from 'react';

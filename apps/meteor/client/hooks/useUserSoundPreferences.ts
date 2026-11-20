@@ -1,4 +1,4 @@
-import { useUserPreference } from '@yas chat/ui-contexts';
+import { useUserPreference } from '@yaschat/ui-contexts';
 
 const relativeVolume = (volume: number, masterVolume: number) => (volume * masterVolume) / 100;
 

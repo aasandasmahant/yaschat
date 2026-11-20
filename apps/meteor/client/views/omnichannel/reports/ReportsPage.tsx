@@ -1,6 +1,6 @@
-import { Box, Grid, GridItem } from '@yas chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { Box, Grid, GridItem } from '@yaschat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { AgentsSection, ChannelsSection, DepartmentsSection, StatusSection, TagsSection } from './sections';

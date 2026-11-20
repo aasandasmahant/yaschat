@@ -1,4 +1,4 @@
-import type { ILivechatDepartmentAgents } from '@yas chat/core-typings';
+import type { ILivechatDepartmentAgents } from '@yaschat/core-typings';
 
 export type IDepartmentAgent = Pick<ILivechatDepartmentAgents, 'agentId' | 'username' | 'count' | 'order'> & {
 	_id?: string;

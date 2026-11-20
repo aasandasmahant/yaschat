@@ -1,6 +1,6 @@
-import type { IUIActionButton } from '@yas chat/apps-engine/definition/ui';
-import { RoomTypeFilter } from '@yas chat/apps-engine/definition/ui';
-import type { IRoom } from '@yas chat/core-typings';
+import type { IUIActionButton } from '@yaschat/apps-engine/definition/ui';
+import { RoomTypeFilter } from '@yaschat/apps-engine/definition/ui';
+import type { IRoom } from '@yaschat/core-typings';
 import {
 	isDirectMessageRoom,
 	isMultipleDirectMessageRoom,
@@ -9,8 +9,8 @@ import {
 	isPrivateTeamRoom,
 	isPublicDiscussion,
 	isPublicTeamRoom,
-} from '@yas chat/core-typings';
-import { AuthorizationContext, useRoleIdResolver, useUserId } from '@yas chat/ui-contexts';
+} from '@yaschat/core-typings';
+import { AuthorizationContext, useRoleIdResolver, useUserId } from '@yaschat/ui-contexts';
 import { useCallback, useContext } from 'react';
 
 import { useRoom } from '../views/room/contexts/RoomContext';

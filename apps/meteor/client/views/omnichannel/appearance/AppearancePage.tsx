@@ -1,8 +1,8 @@
-import type { ISetting, Serialized } from '@yas chat/core-typings';
-import { ButtonGroup, Button } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import type { ISetting, Serialized } from '@yaschat/core-typings';
+import { ButtonGroup, Button } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
 import type { MutableRefObject } from 'react';
 import type { VirtualizerHandle } from 'virtua';
 

@@ -1,6 +1,6 @@
-import { Button, Stack, Text } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
+import { Button, Stack, Text } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import DeviceIcon from '../../../../components/deviceManagement/DeviceIcon';

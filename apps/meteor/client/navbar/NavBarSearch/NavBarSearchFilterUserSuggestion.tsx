@@ -1,7 +1,7 @@
-import type { SearchUserSuggestionSource } from '@yas chat/ai-search';
-import { Box, SidebarItemIcon } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { SearchUserSuggestionSource } from '@yaschat/ai-search';
+import { Box, SidebarItemIcon } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useUserDisplayName } from '@yaschat/ui-client';
 import type { ComponentProps, ReactElement } from 'react';
 import { memo } from 'react';
 

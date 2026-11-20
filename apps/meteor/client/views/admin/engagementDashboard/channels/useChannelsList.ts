@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 import type { Period } from '../../../../components/dashboards/periods';

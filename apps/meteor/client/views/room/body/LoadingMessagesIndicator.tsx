@@ -1,4 +1,4 @@
-import { Text, Throbber } from '@yas chat/fuselage';
+import { Text, Throbber } from '@yaschat/fuselage';
 
 const LoadingMessagesIndicator = () => (
 	<Text color='default'>

@@ -1,8 +1,8 @@
-import type { IRole, IRoom } from '@yas chat/core-typings';
-import { Box, Field, FieldLabel, FieldRow, ButtonGroup, Button, Callout, FieldError, Stack } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { usePaginatedQuery, usePagination, Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter } from '@yas chat/ui-contexts';
+import type { IRole, IRoom } from '@yaschat/core-typings';
+import { Box, Field, FieldLabel, FieldRow, ButtonGroup, Button, Callout, FieldError, Stack } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { usePaginatedQuery, usePagination, Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';

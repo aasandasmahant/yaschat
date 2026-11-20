@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom } from '@yas chat/core-typings';
-import { useEndpoint, useRouter, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IOmnichannelRoom } from '@yaschat/core-typings';
+import { useEndpoint, useRouter, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, Button } from '@yas chat/fuselage';
-import { links } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, Button } from '@yaschat/fuselage';
+import { links } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import UpdateYasChatButton from '../components/UpdateYasChatButton';

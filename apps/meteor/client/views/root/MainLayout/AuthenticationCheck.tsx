@@ -1,5 +1,5 @@
-import { useConnectionStatus, useSession, useUser, useSetting } from '@yas chat/ui-contexts';
-import RegistrationRoute from '@yas chat/ui-registration';
+import { useConnectionStatus, useSession, useUser, useSetting } from '@yaschat/ui-contexts';
+import RegistrationRoute from '@yaschat/ui-registration';
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 

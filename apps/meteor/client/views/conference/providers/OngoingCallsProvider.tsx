@@ -1,8 +1,8 @@
-import { useShortTimeAgo } from '@yas chat/ui-client';
-import type { OngoingCallsContextValue } from '@yas chat/ui-conference';
-import { OngoingCallsContext, useRinging } from '@yas chat/ui-conference';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
-import { useVideoConfDismissCall, useVideoConfIncomingCalls } from '@yas chat/ui-video-conf';
+import { useShortTimeAgo } from '@yaschat/ui-client';
+import type { OngoingCallsContextValue } from '@yaschat/ui-conference';
+import { OngoingCallsContext, useRinging } from '@yaschat/ui-conference';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
+import { useVideoConfDismissCall, useVideoConfIncomingCalls } from '@yaschat/ui-video-conf';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useCallback, useMemo, useState } from 'react';

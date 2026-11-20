@@ -1,5 +1,5 @@
-import type { Method, PathPattern } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { Method, PathPattern } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 
 import type { ActionInputBaseProps } from './ActionInputBase';
 import ActionInputBase from './ActionInputBase';

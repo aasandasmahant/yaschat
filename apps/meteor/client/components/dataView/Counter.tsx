@@ -1,4 +1,4 @@
-import { Box, FlexContainer, Margins } from '@yas chat/fuselage';
+import { Box, FlexContainer, Margins } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 import Growth from './Growth';

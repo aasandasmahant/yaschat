@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { useUserId, useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { useUserId, useRoomToolbox } from '@yaschat/ui-contexts';
 
 import { useRoom } from './contexts/RoomContext';
 import RoomMembers from './contextualBar/RoomMembers';

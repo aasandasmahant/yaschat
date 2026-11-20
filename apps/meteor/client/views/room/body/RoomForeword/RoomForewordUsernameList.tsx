@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useRouter } from '@yaschat/ui-contexts';
 
 import RoomForewordUsernameListItem from './RoomForewordUsernameListItem';
 

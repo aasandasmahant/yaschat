@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Throbber, Icon } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { MessageComposerAction } from '@yas chat/ui-composer';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Throbber, Icon } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { MessageComposerAction } from '@yaschat/ui-composer';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

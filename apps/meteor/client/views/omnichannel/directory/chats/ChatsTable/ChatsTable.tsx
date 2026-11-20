@@ -1,5 +1,5 @@
-import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -10,8 +10,8 @@ import {
 	useSort,
 	GenericNoResults,
 	links,
-} from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { hashKey } from '@tanstack/react-query';
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

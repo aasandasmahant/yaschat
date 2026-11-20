@@ -1,5 +1,5 @@
-import { Field, FieldLabel, FieldRow, Stack, ToggleSwitch } from '@yas chat/fuselage';
-import { useToastMessageDispatch, useUser } from '@yas chat/ui-contexts';
+import { Field, FieldLabel, FieldRow, Stack, ToggleSwitch } from '@yaschat/fuselage';
+import { useToastMessageDispatch, useUser } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useCallback, useId } from 'react';
 import { useTranslation } from 'react-i18next';

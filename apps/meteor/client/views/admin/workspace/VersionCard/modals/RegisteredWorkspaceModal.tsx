@@ -8,9 +8,9 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@yas chat/fuselage';
-import { useSafely } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useSafely } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

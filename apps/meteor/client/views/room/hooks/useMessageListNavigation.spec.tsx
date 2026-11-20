@@ -1,6 +1,6 @@
 import { FocusScope } from '@react-aria/focus';
 import { useToolbar } from '@react-aria/toolbar';
-import { Message, MessageSystem } from '@yas chat/fuselage';
+import { Message, MessageSystem } from '@yaschat/fuselage';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ReactNode } from 'react';

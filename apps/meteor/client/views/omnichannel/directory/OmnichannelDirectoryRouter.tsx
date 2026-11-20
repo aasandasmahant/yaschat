@@ -1,4 +1,4 @@
-import { usePermission } from '@yas chat/ui-contexts';
+import { usePermission } from '@yaschat/ui-contexts';
 
 import OmnichannelDirectoryPage from './OmnichannelDirectoryPage';
 import NotAuthorizedPage from '../../notAuthorized/NotAuthorizedPage';

@@ -1,4 +1,4 @@
-import { Text } from '@yas chat/fuselage';
+import { Text } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 import WorkspaceCardSectionTitle from './WorkspaceCardSectionTitle';

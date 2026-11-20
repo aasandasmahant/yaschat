@@ -1,7 +1,7 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, ModalBackdrop, Skeleton, useStyle } from '@yas chat/fuselage';
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import type { IMessage } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, ModalBackdrop, Skeleton, useStyle } from '@yaschat/fuselage';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarAction,
@@ -10,14 +10,14 @@ import {
 	ContextualbarBack,
 	ContextualbarInnerContent,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import {
 	useLayoutContextualBarExpanded,
 	useToastMessageDispatch,
 	useTranslation,
 	useUserId,
 	useRoomToolbox,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { createPortal } from 'react-dom';
 
 import ThreadChat from './components/ThreadChat';

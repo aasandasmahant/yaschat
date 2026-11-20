@@ -1,5 +1,5 @@
-import { Box, Field, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
-import { useStableCallback, useLocalStorage } from '@yas chat/fuselage-hooks';
+import { Box, Field, FieldLabel, FieldRow, Select } from '@yaschat/fuselage';
+import { useStableCallback, useLocalStorage } from '@yaschat/fuselage-hooks';
 import type { Dispatch, FormEvent, Key, SetStateAction } from 'react';
 import { useEffect, useId } from 'react';
 import { useTranslation } from 'react-i18next';

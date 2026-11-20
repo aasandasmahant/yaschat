@@ -1,5 +1,5 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Bubble } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import { Box, Bubble } from '@yaschat/fuselage';
 import type { Ref } from 'react';
 import { forwardRef } from 'react';
 

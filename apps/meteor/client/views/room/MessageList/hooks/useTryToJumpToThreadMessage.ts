@@ -1,5 +1,5 @@
-import { isThreadMainMessage, isThreadMessage } from '@yas chat/core-typings';
-import { useEndpoint, useRouteParameter, useSearchParameter } from '@yas chat/ui-contexts';
+import { isThreadMainMessage, isThreadMessage } from '@yaschat/core-typings';
+import { useEndpoint, useRouteParameter, useSearchParameter } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

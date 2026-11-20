@@ -1,6 +1,6 @@
-import { isEncryptedMessageContent, type IEditedMessage, type IMessage, type IRoom, type ISubscription } from '@yas chat/core-typings';
-import { MessageTypes } from '@yas chat/message-types';
-import { Random } from '@yas chat/random';
+import { isEncryptedMessageContent, type IEditedMessage, type IMessage, type IRoom, type ISubscription } from '@yaschat/core-typings';
+import { MessageTypes } from '@yaschat/message-types';
+import { Random } from '@yaschat/random';
 import { differenceInMinutes } from 'date-fns/differenceInMinutes';
 
 import type { DataAPI } from './ChatAPI';

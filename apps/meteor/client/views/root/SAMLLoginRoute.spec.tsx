@@ -1,4 +1,4 @@
-import { MockedServerContext, MockedUserContext } from '@yas chat/mock-providers';
+import { MockedServerContext, MockedUserContext } from '@yaschat/mock-providers';
 import { render } from '@testing-library/react';
 
 import SAMLLoginRoute from './SAMLLoginRoute';

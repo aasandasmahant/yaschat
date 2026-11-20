@@ -1,8 +1,8 @@
-import type { IUserInRole, Serialized } from '@yas chat/core-typings';
-import { Box, IconButton, Text } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import type { IUserInRole, Serialized } from '@yaschat/core-typings';
+import { Box, IconButton, Text } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
+import { States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
 import {
 	GenericModal,
 	GenericTable,
@@ -11,8 +11,8 @@ import {
 	PageHeader,
 	PageContent,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import type { IOmnichannelRoom } from '@yas chat/core-typings';
+import type { IOmnichannelRoom } from '@yaschat/core-typings';
 
 import SidePanelPriorityTag from './SidePanelPriorityTag';
 import RoomActivityIcon from '../../../../omnichannel/components/RoomActivityIcon';

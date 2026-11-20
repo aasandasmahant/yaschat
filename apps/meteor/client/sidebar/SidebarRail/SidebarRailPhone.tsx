@@ -1,7 +1,7 @@
-import { NavBarItem } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useCurrentRoutePath, useRouter } from '@yas chat/ui-contexts';
-import { useMediaCallAction } from '@yas chat/ui-voip';
+import { NavBarItem } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useCurrentRoutePath, useRouter } from '@yaschat/ui-contexts';
+import { useMediaCallAction } from '@yaschat/ui-voip';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

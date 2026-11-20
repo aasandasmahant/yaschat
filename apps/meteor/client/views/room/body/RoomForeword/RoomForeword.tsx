@@ -1,7 +1,7 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { isDirectMessageRoom } from '@yas chat/core-typings';
-import { FlexItem, Box } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { isDirectMessageRoom } from '@yaschat/core-typings';
+import { FlexItem, Box } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import { useTranslation } from 'react-i18next';
 
 import RoomForewordUsernameList from './RoomForewordUsernameList';

@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { usePermission, useSetting, useUser } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { usePermission, useSetting, useUser } from '@yaschat/ui-contexts';
 import type { DragEvent, ReactNode } from 'react';
 import { useMemo, useSyncExternalStore } from 'react';
 import { useTranslation } from 'react-i18next';

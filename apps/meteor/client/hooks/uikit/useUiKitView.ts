@@ -1,6 +1,6 @@
-import { useSafely } from '@yas chat/fuselage-hooks';
-import { extractInitialStateFromLayout } from '@yas chat/fuselage-ui-kit';
-import type * as UiKit from '@yas chat/ui-kit';
+import { useSafely } from '@yaschat/fuselage-hooks';
+import { extractInitialStateFromLayout } from '@yaschat/fuselage-ui-kit';
+import type * as UiKit from '@yaschat/ui-kit';
 import type { Dispatch } from 'react';
 import { useEffect, useMemo, useReducer, useState } from 'react';
 

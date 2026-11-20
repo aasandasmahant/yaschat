@@ -1,5 +1,5 @@
-import type { RouteParameters } from '@yas chat/ui-contexts';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { RouteParameters } from '@yaschat/ui-contexts';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useCallback, useEffect } from 'react';
 
 export const useContactRoute = () => {

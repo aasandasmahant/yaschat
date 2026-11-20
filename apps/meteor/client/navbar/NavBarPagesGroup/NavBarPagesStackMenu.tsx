@@ -1,8 +1,8 @@
-import { NavBarItem } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericMenu } from '@yas chat/ui-client';
-import { useCurrentRoutePath, useLayout, useRouter, useSetting } from '@yas chat/ui-contexts';
+import { NavBarItem } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericMenu } from '@yaschat/ui-client';
+import { useCurrentRoutePath, useLayout, useRouter, useSetting } from '@yaschat/ui-contexts';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

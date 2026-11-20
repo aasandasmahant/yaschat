@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import { memo, useSyncExternalStore } from 'react';
 
 import MessageBoxReply from './MessageBoxReply';

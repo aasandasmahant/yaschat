@@ -1,6 +1,6 @@
-import type { ISidebarCategory } from '@yas chat/core-typings';
-import { Random } from '@yas chat/random';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { ISidebarCategory } from '@yaschat/core-typings';
+import { Random } from '@yaschat/random';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

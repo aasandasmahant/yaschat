@@ -1,4 +1,4 @@
-import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { PageSkeleton, useHasLicenseModule } from '@yaschat/ui-client';
 import {
 	useIsPrivilegedSettingsContext,
 	usePermission,
@@ -6,7 +6,7 @@ import {
 	useRouter,
 	useSetting,
 	useSettings,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { memo, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import { STATUS_SETTING_IDS } from './SettingsTab';

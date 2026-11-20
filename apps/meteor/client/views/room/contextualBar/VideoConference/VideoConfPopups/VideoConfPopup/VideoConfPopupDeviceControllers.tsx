@@ -1,4 +1,4 @@
-import { VideoConfController, VideoConfPopupControllers } from '@yas chat/ui-video-conf';
+import { VideoConfController, VideoConfPopupControllers } from '@yaschat/ui-video-conf';
 import { useTranslation } from 'react-i18next';
 
 type VideoConfPopupDeviceControllersProps = {

@@ -1,7 +1,7 @@
-import { isE2EEMessage, type IMessage, type IRoom, type ISubscription } from '@yas chat/core-typings';
-import { isTruthy } from '@yas chat/tools';
-import { GenericMenu, type GenericMenuItemProps } from '@yas chat/ui-client';
-import { useLayoutHiddenActions } from '@yas chat/ui-contexts';
+import { isE2EEMessage, type IMessage, type IRoom, type ISubscription } from '@yaschat/core-typings';
+import { isTruthy } from '@yaschat/tools';
+import { GenericMenu, type GenericMenuItemProps } from '@yaschat/ui-client';
+import { useLayoutHiddenActions } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

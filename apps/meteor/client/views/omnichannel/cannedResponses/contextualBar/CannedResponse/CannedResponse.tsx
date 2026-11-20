@@ -1,5 +1,5 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup, Tag, Text } from '@yas chat/fuselage';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup, Tag, Text } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarTitle,
@@ -8,7 +8,7 @@ import {
 	ContextualbarFooter,
 	ContextualbarDialog,
 	ContextualbarClose,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import type { MouseEventHandler } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

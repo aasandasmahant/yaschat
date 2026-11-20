@@ -1,6 +1,6 @@
-import type { IUser } from '@yas chat/core-typings';
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetModal, usePermission, useSetting, useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetModal, usePermission, useSetting, useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

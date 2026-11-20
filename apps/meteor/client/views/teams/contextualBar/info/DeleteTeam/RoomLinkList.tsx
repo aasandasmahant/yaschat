@@ -1,4 +1,4 @@
-import type { Serialized, IRoom } from '@yas chat/core-typings';
+import type { Serialized, IRoom } from '@yaschat/core-typings';
 import { Fragment } from 'react';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';

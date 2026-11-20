@@ -1,5 +1,5 @@
-import type { ILivechatCustomField } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { ILivechatCustomField } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useValidCustomFields } from './useValidCustomFields';

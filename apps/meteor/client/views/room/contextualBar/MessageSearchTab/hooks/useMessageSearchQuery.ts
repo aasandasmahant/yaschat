@@ -1,4 +1,4 @@
-import { useMethod, useUserId } from '@yas chat/ui-contexts';
+import { useMethod, useUserId } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { Field, FieldGroup, TextInput, FieldLabel, FieldRow, Box, FieldError } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import { Field, FieldGroup, TextInput, FieldLabel, FieldRow, Box, FieldError } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { useEffect, useId } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

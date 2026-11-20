@@ -1,5 +1,5 @@
-import { Box, PaginatedSelectFiltered } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { Box, PaginatedSelectFiltered } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { memo, useState } from 'react';
 

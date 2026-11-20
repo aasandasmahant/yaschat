@@ -1,4 +1,4 @@
-import { Input } from '@yas chat/fuselage';
+import { Input } from '@yaschat/fuselage';
 
 export type RoomFormAutocompleteDummyProps = {
 	roomInfo: { rid: string; name: string };

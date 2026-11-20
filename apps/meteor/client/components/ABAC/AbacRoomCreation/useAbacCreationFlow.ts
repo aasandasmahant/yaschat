@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IAbacAttributeDefinition } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { findMissingRequiredKeys, toAttributeMap } from './AbacAttributesStep';

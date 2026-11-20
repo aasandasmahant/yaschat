@@ -1,4 +1,4 @@
-import styled from '@yas chat/styled';
+import styled from '@yaschat/styled';
 
 import { getEmojiClassNameAndDataTitle } from '../lib/utils/renderEmoji';
 

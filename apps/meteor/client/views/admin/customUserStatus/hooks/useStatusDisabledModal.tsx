@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRole, useRoute, useSetModal } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRole, useRoute, useSetModal } from '@yaschat/ui-contexts';
 
 import CustomUserStatusDisabledModal from '../CustomUserStatusDisabledModal';
 

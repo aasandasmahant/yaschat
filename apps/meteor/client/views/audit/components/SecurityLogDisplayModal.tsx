@@ -1,7 +1,7 @@
-import type { IAuditServerUserActor, IAuditServerSystemActor, IAuditServerAppActor } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IAuditServerUserActor, IAuditServerSystemActor, IAuditServerAppActor } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { GenericModal } from '@yaschat/ui-client';
 import { format } from 'date-fns/format';
 import { useTranslation } from 'react-i18next';
 

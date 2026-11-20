@@ -1,5 +1,5 @@
-import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission, useRouter, useSetModal, useCurrentModal } from '@yas chat/ui-contexts';
+import { PageSkeleton, useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission, useRouter, useSetModal, useCurrentModal } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

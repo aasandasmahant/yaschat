@@ -2,7 +2,7 @@ import { lazy } from 'react';
 
 import { createRouteGroup } from '../../lib/createRouteGroup';
 
-declare module '@yas chat/ui-contexts' {
+declare module '@yaschat/ui-contexts' {
 	interface IRouterPaths {
 		'omnichannel-index': {
 			pattern: '/omnichannel';

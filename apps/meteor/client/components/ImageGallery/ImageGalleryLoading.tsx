@@ -1,5 +1,5 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, IconButton, ModalBackdrop, Throbber, useStyle } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import { Box, IconButton, ModalBackdrop, Throbber, useStyle } from '@yaschat/fuselage';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 

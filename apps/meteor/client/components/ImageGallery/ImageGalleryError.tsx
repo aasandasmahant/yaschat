@@ -1,6 +1,6 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, IconButton, ModalBackdrop, useStyle } from '@yas chat/fuselage';
-import { GenericError } from '@yas chat/ui-client';
+import { css } from '@yaschat/css-in-js';
+import { Box, IconButton, ModalBackdrop, useStyle } from '@yaschat/fuselage';
+import { GenericError } from '@yaschat/ui-client';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 

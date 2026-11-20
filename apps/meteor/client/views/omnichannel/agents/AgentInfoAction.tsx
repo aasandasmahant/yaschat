@@ -1,5 +1,5 @@
-import { Button } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
+import { Button } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
 import type { HTMLAttributes } from 'react';
 
 export type AgentInfoActionProps = {

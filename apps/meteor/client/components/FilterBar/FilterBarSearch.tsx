@@ -1,5 +1,5 @@
-import { Box, Icon, TextInput } from '@yas chat/fuselage';
-import { useAutoFocus, useMergedRefs } from '@yas chat/fuselage-hooks';
+import { Box, Icon, TextInput } from '@yaschat/fuselage';
+import { useAutoFocus, useMergedRefs } from '@yaschat/fuselage-hooks';
 import type { ChangeEvent, ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

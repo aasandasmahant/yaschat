@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import type { Keys as IconName } from '@yas chat/icons';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import type { Keys as IconName } from '@yaschat/icons';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 
 import type { ChatAPI } from './chats/ChatAPI';
 

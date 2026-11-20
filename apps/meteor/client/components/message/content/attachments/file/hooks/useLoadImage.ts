@@ -1,4 +1,4 @@
-import { useAttachmentAutoLoadEmbedMedia } from '@yas chat/ui-contexts';
+import { useAttachmentAutoLoadEmbedMedia } from '@yaschat/ui-contexts';
 import { useCallback, useState } from 'react';
 
 export const useLoadImage = (): [boolean, () => void] => {

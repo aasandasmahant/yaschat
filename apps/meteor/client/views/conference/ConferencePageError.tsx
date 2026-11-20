@@ -1,6 +1,6 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useUser, useRoute } from '@yas chat/ui-contexts';
+import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useUser, useRoute } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const ConferencePageError = () => {

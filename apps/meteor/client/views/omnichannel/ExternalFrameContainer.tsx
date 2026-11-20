@@ -1,4 +1,4 @@
-import { useSetting, useUserId } from '@yas chat/ui-contexts';
+import { useSetting, useUserId } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

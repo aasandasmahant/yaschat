@@ -1,6 +1,6 @@
-import { AppsEngineUIHost } from '@yas chat/apps/dist/client/AppsEngineUIHost';
-import type { IExternalComponentRoomInfo } from '@yas chat/apps/dist/client/definition/IExternalComponentRoomInfo';
-import type { IExternalComponentUserInfo } from '@yas chat/apps/dist/client/definition/IExternalComponentUserInfo';
+import { AppsEngineUIHost } from '@yaschat/apps/dist/client/AppsEngineUIHost';
+import type { IExternalComponentRoomInfo } from '@yaschat/apps/dist/client/definition/IExternalComponentRoomInfo';
+import type { IExternalComponentUserInfo } from '@yaschat/apps/dist/client/definition/IExternalComponentUserInfo';
 
 import { Rooms } from '../../stores';
 import { RoomManager } from '../RoomManager';

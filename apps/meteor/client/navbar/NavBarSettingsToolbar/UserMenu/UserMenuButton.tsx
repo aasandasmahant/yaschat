@@ -1,7 +1,7 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { Box, IconButton } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useSetting, useUser } from '@yas chat/ui-contexts';
+import { Box, IconButton } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useSetting, useUser } from '@yaschat/ui-contexts';
 import type { ComponentPropsWithoutRef, ForwardedRef } from 'react';
 import { forwardRef, useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

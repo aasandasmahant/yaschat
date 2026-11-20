@@ -1,4 +1,4 @@
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 const TeamsChannels = lazy(() => import('../../views/teams/contextualBar/channels'));

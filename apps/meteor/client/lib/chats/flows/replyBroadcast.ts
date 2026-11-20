@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 
 import { router } from '../../../providers/RouterProvider';
 import { roomCoordinator } from '../../rooms/roomCoordinator';

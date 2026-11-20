@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@yas chat/fuselage';
+import { Box, Skeleton } from '@yaschat/fuselage';
 
 const SKELETON_ITEMS = 3;
 

@@ -1,7 +1,7 @@
-import type { IIncomingIntegration, Serialized } from '@yas chat/core-typings';
-import { Button, ButtonGroup, Tabs, TabsItem } from '@yas chat/fuselage';
-import { GenericModal, Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
-import { useSetModal, useRouter, useRouteParameter } from '@yas chat/ui-contexts';
+import type { IIncomingIntegration, Serialized } from '@yaschat/core-typings';
+import { Button, ButtonGroup, Tabs, TabsItem } from '@yaschat/fuselage';
+import { GenericModal, Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yaschat/ui-client';
+import { useSetModal, useRouter, useRouteParameter } from '@yaschat/ui-contexts';
 import { useId, useCallback } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import type { SettingValue } from '@yas chat/core-typings';
+import type { SettingValue } from '@yaschat/core-typings';
 
 import { PublicSettings } from '../../stores';
 

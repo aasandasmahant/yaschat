@@ -1,7 +1,7 @@
-import type { AtLeast, INotificationDesktop, ISubscription, IUser } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { useCustomSound, useRouter, useStream, useUserPreference } from '@yas chat/ui-contexts';
+import type { AtLeast, INotificationDesktop, ISubscription, IUser } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { useCustomSound, useRouter, useStream, useUserPreference } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { useDesktopNotification } from './useDesktopNotification';

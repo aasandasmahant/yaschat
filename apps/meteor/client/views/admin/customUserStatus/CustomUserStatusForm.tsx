@@ -1,8 +1,8 @@
-import type { IUserStatus } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
-import { FieldGroup, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, FieldError, Select, Box } from '@yas chat/fuselage';
-import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
-import { useSetModal, useRoute, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import type { IUserStatus } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
+import { FieldGroup, Button, ButtonGroup, TextInput, Field, FieldLabel, FieldRow, FieldError, Select, Box } from '@yaschat/fuselage';
+import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yaschat/ui-client';
+import { useSetModal, useRoute, useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useId, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

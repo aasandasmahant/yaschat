@@ -1,6 +1,6 @@
-import { Box, Tag } from '@yas chat/fuselage';
-import { isTruthy } from '@yas chat/tools';
-import { useLicense } from '@yas chat/ui-client';
+import { Box, Tag } from '@yaschat/fuselage';
+import { isTruthy } from '@yaschat/tools';
+import { useLicense } from '@yaschat/ui-client';
 
 const developmentTag = process.env.NODE_ENV === 'development' ? 'Development' : null;
 function PlanTag() {

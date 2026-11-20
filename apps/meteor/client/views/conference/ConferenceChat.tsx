@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isInVideoConference } from '@yas chat/core-typings';
-import { Box, Icon, IconButton } from '@yas chat/fuselage';
+import type { IRoom } from '@yaschat/core-typings';
+import { isInVideoConference } from '@yaschat/core-typings';
+import { Box, Icon, IconButton } from '@yaschat/fuselage';
 import {
 	CallPanelHeader,
 	ChatAccessModal,
@@ -9,8 +9,8 @@ import {
 	hasConferenceChatAccess,
 	useConference,
 	useConferenceChatPanel,
-} from '@yas chat/ui-conference';
-import { useSetModal, useUserId } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-conference';
+import { useSetModal, useUserId } from '@yaschat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import ConferenceRoomPanel from './ConferenceRoomPanel';

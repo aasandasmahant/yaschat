@@ -1,7 +1,7 @@
-import type { IWorkspaceInfo, IStats } from '@yas chat/core-typings';
-import { Button, ButtonGroup, Callout, CardGrid, Stack } from '@yas chat/fuselage';
-import type { IInstance } from '@yas chat/rest-typings';
-import { Page, PageHeader, PageScrollableContentWithShadow, useIsEnterprise } from '@yas chat/ui-client';
+import type { IWorkspaceInfo, IStats } from '@yaschat/core-typings';
+import { Button, ButtonGroup, Callout, CardGrid, Stack } from '@yaschat/fuselage';
+import type { IInstance } from '@yaschat/rest-typings';
+import { Page, PageHeader, PageScrollableContentWithShadow, useIsEnterprise } from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { GenericMenu, useIsEnterprise } from '@yas chat/ui-client';
+import type { RoomType } from '@yaschat/core-typings';
+import { GenericMenu, useIsEnterprise } from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

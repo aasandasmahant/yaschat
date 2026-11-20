@@ -1,6 +1,6 @@
-import type { IEmoji } from '@yas chat/core-typings';
-import { escapeRegExp } from '@yas chat/tools';
-import { removeFromRecent } from '@yas chat/ui-emoji-picker';
+import type { IEmoji } from '@yaschat/core-typings';
+import { escapeRegExp } from '@yaschat/tools';
+import { removeFromRecent } from '@yaschat/ui-emoji-picker';
 
 import { emoji, replaceEmojiInRecent } from './emoji';
 import { getURL } from './getURL';

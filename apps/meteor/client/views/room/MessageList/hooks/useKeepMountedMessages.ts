@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 
 export const useKeepMountedMessages = (messages: IMessage[], canPreview: boolean = false): number[] => {
 	const offset = canPreview ? 1 : 0;

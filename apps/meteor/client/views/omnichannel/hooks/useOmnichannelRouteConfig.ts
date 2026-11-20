@@ -1,4 +1,4 @@
-import type { OmichannelRoutingConfig } from '@yas chat/core-typings';
+import type { OmichannelRoutingConfig } from '@yaschat/core-typings';
 
 import { useOmnichannel } from './useOmnichannel';
 

@@ -1,8 +1,8 @@
-import type { IStats } from '@yas chat/core-typings';
-import { Button, Card, CardBody, CardControls } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { IStats } from '@yaschat/core-typings';
+import { Button, Card, CardBody, CardControls } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { FieldGroup, IconButton, Margins } from '@yas chat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
+import { FieldGroup, IconButton, Margins } from '@yaschat/fuselage';
 import { useFormContext, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

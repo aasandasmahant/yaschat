@@ -1,13 +1,13 @@
-import type { Serialized, DeviceManagementPopulatedSession } from '@yas chat/core-typings';
-import { Box, States, StatesIcon, StatesTitle, StatesSubtitle } from '@yas chat/fuselage';
+import type { Serialized, DeviceManagementPopulatedSession } from '@yaschat/core-typings';
+import { Box, States, StatesIcon, StatesTitle, StatesSubtitle } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarClose,
 	ContextualbarContent,
 	ContextualbarTitle,
 	ContextualbarSkeletonBody,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

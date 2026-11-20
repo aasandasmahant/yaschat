@@ -1,6 +1,6 @@
-import type { IPermission, IRole } from '@yas chat/core-typings';
-import { Margins } from '@yas chat/fuselage';
-import { PageContent } from '@yas chat/ui-client';
+import type { IPermission, IRole } from '@yaschat/core-typings';
+import { Margins } from '@yaschat/fuselage';
+import { PageContent } from '@yaschat/ui-client';
 import type { Meta } from '@storybook/react';
 
 import PermissionsTable from './PermissionsTable';

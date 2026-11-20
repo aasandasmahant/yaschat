@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { useSetting, useToastMessageDispatch, useUser } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { useSetting, useToastMessageDispatch, useUser } from '@yaschat/ui-contexts';
 
 import { t } from '../../../../lib/i18n';
 import type { MessageActionContext, MessageActionConfig } from '../../../lib/MessageAction';

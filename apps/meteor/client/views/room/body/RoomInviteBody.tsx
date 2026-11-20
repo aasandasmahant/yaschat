@@ -1,6 +1,6 @@
-import type { IInviteSubscription } from '@yas chat/core-typings';
-import { Box, Button, Chip, States, StatesActions, StatesIcon, StatesLink, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import type { IInviteSubscription } from '@yaschat/core-typings';
+import { Box, Button, Chip, States, StatesActions, StatesIcon, StatesLink, StatesSubtitle, StatesTitle } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import { useTranslation } from 'react-i18next';
 
 export type RoomInviteBodyProps = {

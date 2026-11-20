@@ -1,5 +1,5 @@
-import { FieldError, Field, FieldHint, FieldLabel, FieldRow, NumberInput, TextAreaInput, FieldGroup } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import { FieldError, Field, FieldHint, FieldLabel, FieldRow, NumberInput, TextAreaInput, FieldGroup } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import { useId, type ComponentProps, type FocusEvent } from 'react';
 import type { Control, UseFormTrigger } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

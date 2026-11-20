@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { ExternalLink } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { ExternalLink } from '@yaschat/ui-client';
 import { Trans } from 'react-i18next';
 
 const NewBot = () => (

@@ -1,4 +1,4 @@
-import { ItemContent, ItemDescription, ItemTitle } from '@yas chat/fuselage';
+import { ItemContent, ItemDescription, ItemTitle } from '@yaschat/fuselage';
 
 export type ComposerBoxPopupCannedResponseProps = {
 	_id: string;

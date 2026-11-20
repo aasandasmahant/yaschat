@@ -1,6 +1,6 @@
-import type { IRoom, ISubscription } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useRouter, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useRouter, useToastMessageDispatch } from '@yaschat/ui-contexts';
 
 import { roomCoordinator } from '../../../lib/rooms/roomCoordinator';
 import { Subscriptions } from '../../../stores';

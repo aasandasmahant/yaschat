@@ -1,7 +1,7 @@
-import { IconButton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { IconButton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericTableCell, GenericTableRow } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useRemoveUnit } from './useRemoveUnit';

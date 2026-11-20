@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 
 import ActionInputBase from './ActionInputBase';

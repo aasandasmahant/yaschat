@@ -1,5 +1,5 @@
-import type { IMessage, MessageAttachment } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IMessage, MessageAttachment } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook } from '@testing-library/react';
 import { createElement } from 'react';
 

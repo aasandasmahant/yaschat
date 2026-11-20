@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 import {
 	VideoConfPopup,
 	VideoConfPopupContent,
@@ -10,7 +10,7 @@ import {
 	VideoConfPopupHeader,
 	useVideoConfCapabilities,
 	useVideoConfPreferences,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useTranslation } from 'react-i18next';
 
 import VideoConfPopupDeviceControllers from './VideoConfPopupDeviceControllers';

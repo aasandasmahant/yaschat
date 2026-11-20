@@ -1,4 +1,4 @@
-import { MessageGenericPreview } from '@yas chat/fuselage';
+import { MessageGenericPreview } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { Trans, useTranslation } from 'react-i18next';
 

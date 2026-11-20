@@ -1,5 +1,5 @@
-import type { Card } from '@yas chat/fuselage';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { Card } from '@yaschat/fuselage';
+import { useRouter } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

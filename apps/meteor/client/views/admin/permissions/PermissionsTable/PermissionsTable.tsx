@@ -1,9 +1,9 @@
-import type { IPermission, IRole } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Pagination, Palette, useStyle } from '@yas chat/fuselage';
-import type { usePagination } from '@yas chat/ui-client';
-import { GenericTable, GenericTableHeader, GenericTableHeaderCell, GenericTableBody, GenericNoResults } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IPermission, IRole } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Pagination, Palette, useStyle } from '@yaschat/fuselage';
+import type { usePagination } from '@yaschat/ui-client';
+import { GenericTable, GenericTableHeader, GenericTableHeaderCell, GenericTableBody, GenericNoResults } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

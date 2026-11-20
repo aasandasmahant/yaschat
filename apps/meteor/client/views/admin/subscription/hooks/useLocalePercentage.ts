@@ -1,4 +1,4 @@
-import { useLanguage } from '@yas chat/ui-contexts';
+import { useLanguage } from '@yaschat/ui-contexts';
 
 import { getLocalePercentage } from '../../../../lib/getLocalePercentage';
 

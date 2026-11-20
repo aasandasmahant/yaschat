@@ -1,4 +1,4 @@
-import { Field, FieldLabel, FieldRow, ButtonGroup, Button, CheckBox, Callout } from '@yas chat/fuselage';
+import { Field, FieldLabel, FieldRow, ButtonGroup, Button, CheckBox, Callout } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -7,7 +7,7 @@ import {
 	ContextualbarFooter,
 	ContextualbarClose,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useId } from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

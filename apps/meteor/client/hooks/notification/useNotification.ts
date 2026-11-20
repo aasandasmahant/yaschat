@@ -1,8 +1,8 @@
-import type { INotificationDesktop } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Random } from '@yas chat/random';
-import { useRouter, useUserPreference } from '@yas chat/ui-contexts';
-import { useVideoConfJoinCall } from '@yas chat/ui-video-conf';
+import type { INotificationDesktop } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Random } from '@yaschat/random';
+import { useRouter, useUserPreference } from '@yaschat/ui-contexts';
+import { useVideoConfJoinCall } from '@yaschat/ui-video-conf';
 
 import { useNotificationAllowed } from './useNotificationAllowed';
 import { stripTags } from '../../../lib/utils/stringUtils';

@@ -1,4 +1,4 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 
 import AutoCompleteAgent from '../components/AutoCompleteAgent';
 

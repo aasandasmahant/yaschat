@@ -1,4 +1,4 @@
-import { useUserPreference } from '@yas chat/ui-contexts';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { callDesktopBridge } from '../../../../lib/utils/callDesktopBridge';

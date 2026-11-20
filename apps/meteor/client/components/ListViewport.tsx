@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { AriaRole, ReactNode, Ref } from 'react';
 
 export type ListViewportProps = {

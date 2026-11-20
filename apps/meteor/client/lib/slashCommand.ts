@@ -5,7 +5,7 @@ import type {
 	RequiredField,
 	SlashCommandPreviewItem,
 	SlashCommandPreviews,
-} from '@yas chat/core-typings';
+} from '@yaschat/core-typings';
 
 import { InvalidCommandUsage, InvalidPreview } from './errors';
 
@@ -129,7 +129,7 @@ export const slashCommands = {
 	},
 };
 
-declare module '@yas chat/ddp-client' {
+declare module '@yaschat/ddp-client' {
 	interface ServerMethods {
 		slashCommand(params: { cmd: string; params: string; msg: IMessage; triggerId: string }): unknown;
 	}

@@ -1,5 +1,5 @@
-import { PaginatedSelectFiltered } from '@yas chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
+import { PaginatedSelectFiltered } from '@yaschat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yaschat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

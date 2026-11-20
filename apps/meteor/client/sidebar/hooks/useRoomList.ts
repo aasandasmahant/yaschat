@@ -1,10 +1,10 @@
-import type { ILivechatInquiryRecord, ISidebarCategory } from '@yas chat/core-typings';
-import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yas chat/core-typings';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { useIsEnterprise } from '@yas chat/ui-client';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useUserSubscriptions } from '@yas chat/ui-contexts';
-import { useVideoConfIncomingCalls, useVideoConfWindowEnabled } from '@yas chat/ui-video-conf';
+import type { ILivechatInquiryRecord, ISidebarCategory } from '@yaschat/core-typings';
+import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yaschat/core-typings';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useUserSubscriptions } from '@yaschat/ui-contexts';
+import { useVideoConfIncomingCalls, useVideoConfWindowEnabled } from '@yaschat/ui-video-conf';
 import { useMemo } from 'react';
 
 import { filterGroupVisibility, getRoomCategory, useCategoryList } from './useCategoryList';

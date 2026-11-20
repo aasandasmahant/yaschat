@@ -1,6 +1,6 @@
-import { UserStatus } from '@yas chat/core-typings';
-import type { DesktopCustomUserStatus, DesktopUserPresence, DesktopUserStatus } from '@yas chat/desktop-api';
-import { useConnectionStatus, useIsLoggingIn, useSetting, useUser, useUserId } from '@yas chat/ui-contexts';
+import { UserStatus } from '@yaschat/core-typings';
+import type { DesktopCustomUserStatus, DesktopUserPresence, DesktopUserStatus } from '@yaschat/desktop-api';
+import { useConnectionStatus, useIsLoggingIn, useSetting, useUser, useUserId } from '@yaschat/ui-contexts';
 import { useEffect, useMemo } from 'react';
 
 import { useSetUserStatus } from '../../../hooks/useSetUserStatus';

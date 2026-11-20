@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 import { createContext, useContext } from 'react';
 
 type MessageHighlightContextValue = {

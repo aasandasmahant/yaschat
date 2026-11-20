@@ -1,8 +1,8 @@
-import { type IMessage } from '@yas chat/core-typings';
-import { Markup } from '@yas chat/gazzodown';
-import { parse } from '@yas chat/message-parser';
-import type { Root } from '@yas chat/message-parser';
-import { MessageTypes } from '@yas chat/message-types';
+import { type IMessage } from '@yaschat/core-typings';
+import { Markup } from '@yaschat/gazzodown';
+import { parse } from '@yaschat/message-parser';
+import type { Root } from '@yaschat/message-parser';
+import { MessageTypes } from '@yaschat/message-types';
 import type { TFunction } from 'i18next';
 
 import { getMarkdownParserLimit } from './getMarkdownParserLimit';

@@ -1,5 +1,5 @@
-import type { RouteParameters, SearchParameters } from '@yas chat/ui-contexts';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { RouteParameters, SearchParameters } from '@yaschat/ui-contexts';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 export const useOmnichannelDirectoryRouter = () => {

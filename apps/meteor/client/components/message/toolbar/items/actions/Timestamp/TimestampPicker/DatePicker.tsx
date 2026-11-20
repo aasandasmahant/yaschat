@@ -1,4 +1,4 @@
-import { Box, Field, FieldLabel, FieldRow, InputBox } from '@yas chat/fuselage';
+import { Box, Field, FieldLabel, FieldRow, InputBox } from '@yaschat/fuselage';
 import { format } from 'date-fns/format';
 import type { ChangeEvent } from 'react';
 import { useId } from 'react';

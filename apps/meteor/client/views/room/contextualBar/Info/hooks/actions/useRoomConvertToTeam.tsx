@@ -1,9 +1,9 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import type { IRoom } from '@yas chat/core-typings';
-import { Stack } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint, usePermission } from '@yas chat/ui-contexts';
+import { isRoomFederated } from '@yaschat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
+import { Stack } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint, usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import AbacAttributesRemovalWarning from '../../../../../../components/ABAC/AbacAttributesRemovalWarning';

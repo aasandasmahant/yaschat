@@ -1,4 +1,4 @@
-import { GenericModal } from '@yas chat/ui-client';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export type ReturnChatQueueModalProps = {

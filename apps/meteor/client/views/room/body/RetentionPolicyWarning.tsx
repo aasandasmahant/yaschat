@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Bubble } from '@yas chat/fuselage';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Bubble } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { withErrorBoundary } from '../../../components/withErrorBoundary';

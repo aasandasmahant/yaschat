@@ -1,4 +1,4 @@
-import { useIsPrivilegedSettingsContext } from '@yas chat/ui-contexts';
+import { useIsPrivilegedSettingsContext } from '@yaschat/ui-contexts';
 
 import { useEditableSettingsGroupSections } from '../../admin/EditableSettingsContext';
 import GenericGroupPage from '../../admin/settings/groups/GenericGroupPage';

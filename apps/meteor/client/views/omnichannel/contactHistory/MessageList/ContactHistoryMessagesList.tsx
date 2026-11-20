@@ -9,8 +9,8 @@ import {
 	StatesTitle,
 	TextInput,
 	Throbber,
-} from '@yas chat/fuselage';
-import { useDebouncedValue, useResizeObserver } from '@yas chat/fuselage-hooks';
+} from '@yaschat/fuselage';
+import { useDebouncedValue, useResizeObserver } from '@yaschat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -21,8 +21,8 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarDialog,
 	ContextualbarFooter,
-} from '@yas chat/ui-client';
-import { useSetting, useUserPreference } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useSetting, useUserPreference } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

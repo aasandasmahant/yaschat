@@ -1,5 +1,5 @@
-import { Skeleton } from '@yas chat/fuselage';
-import { Header, HeaderContent, HeaderContentRow } from '@yas chat/ui-client';
+import { Skeleton } from '@yaschat/fuselage';
+import { Header, HeaderContent, HeaderContentRow } from '@yaschat/ui-client';
 
 const HeaderSkeleton = () => {
 	return (

@@ -1,4 +1,4 @@
-import type { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
+import type { AppStatus } from '@yaschat/apps-engine/definition/AppStatus';
 
 import { appErroredStatuses } from './appErroredStatuses';
 import { t } from '../../../../lib/i18n';

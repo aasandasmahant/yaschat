@@ -1,4 +1,4 @@
-import { Divider } from '@yas chat/fuselage';
+import { Divider } from '@yaschat/fuselage';
 import { Fragment, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

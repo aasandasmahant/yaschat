@@ -1,8 +1,8 @@
-import type { Serialized, ILivechatDepartment, ILivechatDepartmentAgents } from '@yas chat/core-typings';
-import { Box, Button, FieldGroup, Scrollable } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
-import { useEndpoint, usePermission, useUser } from '@yas chat/ui-contexts';
+import type { Serialized, ILivechatDepartment, ILivechatDepartmentAgents } from '@yaschat/core-typings';
+import { Box, Button, FieldGroup, Scrollable } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useToastBarDispatch } from '@yaschat/fuselage-toastbar';
+import { useEndpoint, usePermission, useUser } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useEffect, useId, useMemo } from 'react';

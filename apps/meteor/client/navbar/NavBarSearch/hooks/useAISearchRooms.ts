@@ -1,7 +1,7 @@
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { escapeRegExp, isTruthy } from '@yas chat/tools';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useEndpoint, useUserSubscriptions } from '@yas chat/ui-contexts';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { escapeRegExp, isTruthy } from '@yaschat/tools';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useEndpoint, useUserSubscriptions } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

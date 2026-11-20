@@ -1,4 +1,4 @@
-import { BaseAvatar } from '@yas chat/ui-avatar';
+import { BaseAvatar } from '@yaschat/ui-avatar';
 
 export type AttachmentAuthorAvatarProps = { url: string };
 

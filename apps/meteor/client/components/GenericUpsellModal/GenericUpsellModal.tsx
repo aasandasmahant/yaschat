@@ -1,5 +1,5 @@
-import { Box, ModalHeroImage } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import { Box, ModalHeroImage } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import type { ComponentProps, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { CheckBox } from '@yas chat/fuselage';
-import { GenericMenu } from '@yas chat/ui-client';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import type { IRoom } from '@yaschat/core-typings';
+import { CheckBox } from '@yaschat/fuselage';
+import { GenericMenu } from '@yaschat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useRemoveRoomFromTeam } from './hooks/useRemoveRoomFromTeam';

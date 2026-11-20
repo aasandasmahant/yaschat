@@ -1,8 +1,8 @@
-import type { ILivechatTrigger } from '@yas chat/core-typings';
-import { IconButton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal, GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatTrigger } from '@yaschat/core-typings';
+import { IconButton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal, GenericTableCell, GenericTableRow } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

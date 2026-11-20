@@ -1,7 +1,7 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { Device, DeviceContextValue } from '@yas chat/ui-contexts';
-import { DeviceContext } from '@yas chat/ui-contexts';
-import { useMediaDevices } from '@yas chat/ui-media';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { Device, DeviceContextValue } from '@yaschat/ui-contexts';
+import { DeviceContext } from '@yaschat/ui-contexts';
+import { useMediaDevices } from '@yaschat/ui-media';
 import { useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useState, useMemo } from 'react';

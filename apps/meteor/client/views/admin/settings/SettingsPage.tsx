@@ -1,7 +1,7 @@
-import { Icon, SearchInput, CardGrid } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageBlockWithBorder, GenericNoResults } from '@yas chat/ui-client';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import { Icon, SearchInput, CardGrid } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageBlockWithBorder, GenericNoResults } from '@yaschat/ui-client';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

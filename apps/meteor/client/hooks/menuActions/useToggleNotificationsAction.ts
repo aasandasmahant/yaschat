@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 type useToggleNotificationActionProps = {

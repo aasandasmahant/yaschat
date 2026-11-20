@@ -1,7 +1,7 @@
-import { isPublicRoom, type IRoom, type RoomType } from '@yas chat/core-typings';
-import { getObjectKeys } from '@yas chat/tools';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { useEndpoint, useMethod, usePermission, useRoute, useSetting, useUser } from '@yas chat/ui-contexts';
+import { isPublicRoom, type IRoom, type RoomType } from '@yaschat/core-typings';
+import { getObjectKeys } from '@yaschat/tools';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { useEndpoint, useMethod, usePermission, useRoute, useSetting, useUser } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useCallback, useEffect } from 'react';
 

@@ -1,6 +1,6 @@
-import { type IMessage, type ISubscription, type IRoom, isE2EEMessage } from '@yas chat/core-typings';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { usePermission, useRouter, useUser } from '@yas chat/ui-contexts';
+import { type IMessage, type ISubscription, type IRoom, isE2EEMessage } from '@yaschat/core-typings';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { usePermission, useRouter, useUser } from '@yaschat/ui-contexts';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useShallow } from 'zustand/shallow';

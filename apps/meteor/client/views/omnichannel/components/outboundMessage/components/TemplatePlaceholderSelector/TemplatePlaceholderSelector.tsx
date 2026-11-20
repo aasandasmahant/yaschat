@@ -1,5 +1,5 @@
-import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
-import { GenericMenu } from '@yas chat/ui-client';
+import type { ILivechatContact, Serialized } from '@yaschat/core-typings';
+import { GenericMenu } from '@yaschat/ui-client';
 import type { ComponentProps } from 'react';
 
 import PlaceholderButton from './TemplatePlaceholderButton';

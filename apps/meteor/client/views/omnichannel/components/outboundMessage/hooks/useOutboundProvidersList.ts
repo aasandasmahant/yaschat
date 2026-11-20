@@ -1,7 +1,7 @@
-import type { IOutboundProvider, Serialized } from '@yas chat/core-typings';
-import type { OperationResult } from '@yas chat/rest-typings';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useEndpoint, usePermission } from '@yas chat/ui-contexts';
+import type { IOutboundProvider, Serialized } from '@yaschat/core-typings';
+import type { OperationResult } from '@yaschat/rest-typings';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useEndpoint, usePermission } from '@yaschat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

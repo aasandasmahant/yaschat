@@ -1,6 +1,6 @@
-import { Callout } from '@yas chat/fuselage';
-import { FormSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Callout } from '@yaschat/fuselage';
+import { FormSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

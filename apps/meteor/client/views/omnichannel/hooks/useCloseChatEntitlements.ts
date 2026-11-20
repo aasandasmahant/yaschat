@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission, useSetting } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission, useSetting } from '@yaschat/ui-contexts';
 
 import type { CloseChatEntitlements } from '../lib/closeChat';
 import { getCloseChatEntitlements } from '../lib/closeChat';

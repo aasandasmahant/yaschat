@@ -1,4 +1,4 @@
-import { useSession } from '@yas chat/ui-contexts';
+import { useSession } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export const useUnreadMessages = (): string | undefined => {

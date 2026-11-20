@@ -1,4 +1,4 @@
-import { useUserSubscriptions } from '@yas chat/ui-contexts';
+import { useUserSubscriptions } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 export const useCategoryRoomIds = (categoryId: string): string[] => {

@@ -1,4 +1,4 @@
-import { FormSkeleton } from '@yas chat/ui-client';
+import { FormSkeleton } from '@yaschat/ui-client';
 
 import type { PriorityEditFormProps } from './PriorityEditForm';
 import PriorityEditForm from './PriorityEditForm';

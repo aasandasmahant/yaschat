@@ -10,9 +10,9 @@ import {
 	FieldRow,
 	FieldError,
 	IconButton,
-} from '@yas chat/fuselage';
-import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
-import { useSetModal, useAbsoluteUrl, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { GenericModal, ContextualbarScrollableContent, ContextualbarFooter } from '@yaschat/ui-client';
+import { useSetModal, useAbsoluteUrl, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ChangeEvent } from 'react';
 import { useCallback, useId, useState, useMemo, useEffect } from 'react';

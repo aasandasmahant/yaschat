@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useLoginWithIframe, useLoginWithToken, useSetting } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useLoginWithIframe, useLoginWithToken, useSetting } from '@yaschat/ui-contexts';
 import { useCallback, useEffect, useState } from 'react';
 
 type CallbackError = Error & { error?: string | number; reason?: string; details?: unknown };

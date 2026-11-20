@@ -1,6 +1,6 @@
-import type { IIntegration, Serialized } from '@yas chat/core-typings';
-import { Text } from '@yas chat/fuselage';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
+import type { IIntegration, Serialized } from '@yaschat/core-typings';
+import { Text } from '@yaschat/fuselage';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yaschat/ui-client';
 
 export type IntegrationRowProps = {
 	integration: Serialized<IIntegration>;

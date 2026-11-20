@@ -1,5 +1,5 @@
-import type { UsersInfoParamsGet } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { UsersInfoParamsGet } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 type UserInfoQueryOptions = {

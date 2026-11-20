@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 
 export const useErrorHandler = () => {
 	const dispatchToastMessage = useToastMessageDispatch();

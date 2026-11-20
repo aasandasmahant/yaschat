@@ -1,5 +1,5 @@
-import type { Box } from '@yas chat/fuselage';
-import { Skeleton } from '@yas chat/fuselage';
+import type { Box } from '@yaschat/fuselage';
+import { Skeleton } from '@yaschat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
-import type { IMessage, ITranslatedMessage } from '@yas chat/core-typings';
-import { isEditedMessage, isE2EEMessage, isE2EEPinnedMessage } from '@yas chat/core-typings';
-import { MessageStatusIndicator, MessageStatusIndicatorItem } from '@yas chat/fuselage';
-import { useUserId } from '@yas chat/ui-contexts';
+import type { IMessage, ITranslatedMessage } from '@yaschat/core-typings';
+import { isEditedMessage, isE2EEMessage, isE2EEPinnedMessage } from '@yaschat/core-typings';
+import { MessageStatusIndicator, MessageStatusIndicatorItem } from '@yaschat/fuselage';
+import { useUserId } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useMessageDateFormatter, useShowStarred, useShowTranslated, useShowFollowing } from './list/MessageListContext';

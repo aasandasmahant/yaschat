@@ -1,8 +1,8 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDirectMessageRoom, isMultipleDirectMessageRoom } from '@yas chat/core-typings';
-import { RoomAvatar } from '@yas chat/ui-avatar';
-import { useUser } from '@yas chat/ui-contexts';
-import { VideoConfPopupInfo } from '@yas chat/ui-video-conf';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDirectMessageRoom, isMultipleDirectMessageRoom } from '@yaschat/core-typings';
+import { RoomAvatar } from '@yaschat/ui-avatar';
+import { useUser } from '@yaschat/ui-contexts';
+import { VideoConfPopupInfo } from '@yaschat/ui-video-conf';
 
 import { RoomIcon } from '../../../../../../components/RoomIcon';
 import ReactiveUserStatus from '../../../../../../components/UserStatus/ReactiveUserStatus';

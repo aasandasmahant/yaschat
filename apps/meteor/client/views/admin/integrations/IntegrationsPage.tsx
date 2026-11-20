@@ -1,6 +1,6 @@
-import { Button, ButtonGroup } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
+import { Button, ButtonGroup } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useRouteParameter, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import IntegrationsTable from './IntegrationsTable';

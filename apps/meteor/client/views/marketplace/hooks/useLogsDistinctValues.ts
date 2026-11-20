@@ -1,5 +1,5 @@
-import type { OperationResult } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { OperationResult } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

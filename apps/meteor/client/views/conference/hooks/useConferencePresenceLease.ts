@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { PRESENCE_HEARTBEAT_MS } from '../../../../lib/videoConference/presence';

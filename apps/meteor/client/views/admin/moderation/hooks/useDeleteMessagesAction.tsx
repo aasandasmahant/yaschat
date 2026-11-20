@@ -1,6 +1,6 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericModal } from '@yas chat/ui-client';
-import { useEndpoint, useRouteParameter, useRouter, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericModal } from '@yaschat/ui-client';
+import { useEndpoint, useRouteParameter, useRouter, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

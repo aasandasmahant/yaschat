@@ -1,7 +1,7 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { MessageDivider } from '@yas chat/fuselage';
-import { MessageTypes } from '@yas chat/message-types';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { MessageDivider } from '@yaschat/fuselage';
+import { MessageTypes } from '@yaschat/message-types';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { Fragment, memo } from 'react';
 
 import RoomMessage from '../../../components/message/variants/RoomMessage';

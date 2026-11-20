@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
 
 import type { Period } from './periods';
 

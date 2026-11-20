@@ -1,7 +1,7 @@
-import { type IThreadMainMessage } from '@yas chat/core-typings';
-import { MessageTypes } from '@yas chat/message-types';
-import { escapeHTML } from '@yas chat/tools';
-import { useUser, useSetting } from '@yas chat/ui-contexts';
+import { type IThreadMainMessage } from '@yaschat/core-typings';
+import { MessageTypes } from '@yaschat/message-types';
+import { escapeHTML } from '@yaschat/tools';
+import { useUser, useSetting } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

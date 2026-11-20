@@ -1,4 +1,4 @@
-import { useRoomToolbox, useRouteParameter } from '@yas chat/ui-contexts';
+import { useRoomToolbox, useRouteParameter } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import MediaCallHistoryContextualbar from './MediaCallHistoryContextualbar';

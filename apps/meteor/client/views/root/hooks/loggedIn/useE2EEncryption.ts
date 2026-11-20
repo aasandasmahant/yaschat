@@ -1,5 +1,5 @@
-import { isE2EEPinnedMessage, type IRoom, type IMessage } from '@yas chat/core-typings';
-import { useUserId, useSetting, useRouter, useLayout, useUser } from '@yas chat/ui-contexts';
+import { isE2EEPinnedMessage, type IRoom, type IMessage } from '@yaschat/core-typings';
+import { useUserId, useSetting, useRouter, useLayout, useUser } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { MentionsParser } from '../../../../../lib/MentionsParser';

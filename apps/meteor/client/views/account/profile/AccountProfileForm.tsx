@@ -1,11 +1,11 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import type { AvatarObject } from '@yas chat/core-typings';
-import { UserStatus } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
-import { Button, Divider, Icon, Stack } from '@yas chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, TextAreaInput } from '@yas chat/fuselage-forms';
-import { validateEmail } from '@yas chat/tools';
-import { CustomFieldsForm } from '@yas chat/ui-client';
+import type { AvatarObject } from '@yaschat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Button, Divider, Icon, Stack } from '@yaschat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, TextAreaInput } from '@yaschat/fuselage-forms';
+import { validateEmail } from '@yaschat/tools';
+import { CustomFieldsForm } from '@yaschat/ui-client';
 import {
 	useAccountsCustomFields,
 	useToastMessageDispatch,
@@ -14,7 +14,7 @@ import {
 	useUser,
 	useLayout,
 	useSetting,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { AllHTMLAttributes } from 'react';
 import { useCallback, useEffect, useMemo } from 'react';

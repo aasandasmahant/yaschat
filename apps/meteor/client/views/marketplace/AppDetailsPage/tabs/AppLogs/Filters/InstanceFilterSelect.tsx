@@ -1,5 +1,5 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { InputBoxSkeleton, Select } from '@yas chat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
+import { InputBoxSkeleton, Select } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

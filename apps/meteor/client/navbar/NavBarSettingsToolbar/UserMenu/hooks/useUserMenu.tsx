@@ -1,7 +1,7 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useLogout } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useLogout } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import UserMenuHeader from '../UserMenuHeader';

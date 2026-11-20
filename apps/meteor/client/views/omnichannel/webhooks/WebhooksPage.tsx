@@ -1,5 +1,5 @@
-import type { SettingValue } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
+import type { SettingValue } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
 import {
 	Box,
 	FieldGroup,
@@ -11,10 +11,10 @@ import {
 	ButtonGroup,
 	NumberInput,
 	FieldLabel,
-} from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { ExternalLink, links, Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { ExternalLink, links, Page, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';

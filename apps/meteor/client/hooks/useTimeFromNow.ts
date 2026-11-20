@@ -1,4 +1,4 @@
-import { formatFromNow } from '@yas chat/ui-client';
+import { formatFromNow } from '@yaschat/ui-client';
 import { useCallback } from 'react';
 
 export const useTimeFromNow = (withSuffix: boolean) =>

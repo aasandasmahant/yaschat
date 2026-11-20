@@ -1,4 +1,4 @@
-import { Box, IconButton } from '@yas chat/fuselage';
+import { Box, IconButton } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

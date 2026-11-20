@@ -1,4 +1,4 @@
-import { Text } from '@yas chat/fuselage';
+import { Text } from '@yaschat/fuselage';
 
 export type WorkspaceCardSectionTitleProps = {
 	variant?: 'p2b' | 'h4';

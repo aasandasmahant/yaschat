@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import Reactions from './Reactions';

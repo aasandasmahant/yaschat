@@ -1,8 +1,8 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { ButtonGroup, Button, Icon, InputBox, Callout } from '@yas chat/fuselage';
-import { FieldError, Field, FieldLabel, FieldRow, TextAreaInput, FieldGroup, Select, TextInput } from '@yas chat/fuselage-forms';
-import { useAutoFocus } from '@yas chat/fuselage-hooks';
-import { validateEmail } from '@yas chat/tools';
+import type { SelectOption } from '@yaschat/fuselage';
+import { ButtonGroup, Button, Icon, InputBox, Callout } from '@yaschat/fuselage';
+import { FieldError, Field, FieldLabel, FieldRow, TextAreaInput, FieldGroup, Select, TextInput } from '@yaschat/fuselage-forms';
+import { useAutoFocus } from '@yaschat/fuselage-hooks';
+import { validateEmail } from '@yaschat/tools';
 import {
 	ContextualbarHeader,
 	ContextualbarScrollableContent,
@@ -11,8 +11,8 @@ import {
 	ContextualbarClose,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { usePermission, useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { usePermission, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useContext, useEffect, useId, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,9 +1,9 @@
-import { imperativeModal } from '@yas chat/ui-client';
+import { imperativeModal } from '@yaschat/ui-client';
 import { waitFor } from '@testing-library/react';
 
 import { process2faAsyncReturn, process2faReturn } from './process2faReturn';
 
-jest.mock('@yas chat/ui-client', () => ({ imperativeModal: { open: jest.fn() } }));
+jest.mock('@yaschat/ui-client', () => ({ imperativeModal: { open: jest.fn() } }));
 
 const totpRequired = (details: Record<string, unknown>) =>
 	Object.assign(new Error('TOTP Required'), { error: 'totp-required', details: { method: 'email', ...details } });

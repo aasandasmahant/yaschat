@@ -1,12 +1,12 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { act, renderHook, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { useCancelSubscriptionModal } from './useCancelSubscriptionModal';
 import createDeferredMockFn from '../../../../../tests/mocks/utils/createDeferredMockFn';
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	useLicenseName: () => ({ data: 'Starter' }),
 }));
 

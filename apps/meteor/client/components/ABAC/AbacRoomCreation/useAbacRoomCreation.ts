@@ -1,7 +1,7 @@
-import type { Serialized } from '@yas chat/core-typings';
-import type { OperationResult } from '@yas chat/rest-typings';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useEndpoint, usePermission, useSetting } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import type { OperationResult } from '@yaschat/rest-typings';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useEndpoint, usePermission, useSetting } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { ABACQueryKeys } from '../../../lib/queryKeys';

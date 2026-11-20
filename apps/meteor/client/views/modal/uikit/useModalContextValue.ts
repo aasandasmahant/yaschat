@@ -1,6 +1,6 @@
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import type { UiKitContext } from '@yas chat/fuselage-ui-kit';
-import type * as UiKit from '@yas chat/ui-kit';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import type { UiKitContext } from '@yaschat/fuselage-ui-kit';
+import type * as UiKit from '@yaschat/ui-kit';
 import { useMemo } from 'react';
 import type { Dispatch, ContextType } from 'react';
 

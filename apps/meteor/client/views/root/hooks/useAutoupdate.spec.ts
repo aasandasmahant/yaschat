@@ -1,9 +1,9 @@
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useAutoupdate } from './useAutoupdate';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useToastMessageDispatch: jest.fn(() => jest.fn()),
 }));
 

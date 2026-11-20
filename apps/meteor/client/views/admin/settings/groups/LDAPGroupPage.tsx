@@ -1,8 +1,8 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { Button, Box, TextInput, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal, links } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useSetting, useEndpoint } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { Button, Box, TextInput, Field, FieldLabel, FieldRow } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal, links } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useSetting, useEndpoint } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

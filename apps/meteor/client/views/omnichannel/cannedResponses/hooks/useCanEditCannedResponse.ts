@@ -1,5 +1,5 @@
-import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { usePermission } from '@yas chat/ui-contexts';
+import type { IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { usePermission } from '@yaschat/ui-contexts';
 
 export const useCanEditCannedResponse = (cannedItem: IOmnichannelCannedResponse): boolean => {
 	const canViewAllCannedResponses = usePermission('view-all-canned-responses');

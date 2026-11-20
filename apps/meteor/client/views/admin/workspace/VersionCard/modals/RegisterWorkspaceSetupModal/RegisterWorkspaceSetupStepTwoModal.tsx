@@ -14,8 +14,8 @@ import {
 	Stack,
 	Text,
 	TextInput,
-} from '@yas chat/fuselage';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback, useEffect } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 

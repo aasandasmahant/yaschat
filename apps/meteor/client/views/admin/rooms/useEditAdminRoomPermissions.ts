@@ -1,4 +1,4 @@
-import type { IRoom, RoomAdminFieldsType } from '@yas chat/core-typings';
+import type { IRoom, RoomAdminFieldsType } from '@yaschat/core-typings';
 import { useMemo } from 'react';
 
 import { RoomSettingsEnum } from '../../../../definition/IRoomTypeConfig';

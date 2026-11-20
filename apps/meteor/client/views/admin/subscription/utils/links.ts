@@ -1,4 +1,4 @@
-import { links } from '@yas chat/ui-client';
+import { links } from '@yaschat/ui-client';
 
 export const CONTACT_SALES_LINK = links.go.contactSalesProduct;
 export const PRICING_LINK = links.go.pricingProduct;

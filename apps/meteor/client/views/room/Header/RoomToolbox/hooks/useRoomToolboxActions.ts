@@ -1,7 +1,7 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useFeaturePreview } from '@yas chat/ui-client';
-import { useLayout, useSetting } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig, RoomToolboxContextValue } from '@yas chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useFeaturePreview } from '@yaschat/ui-client';
+import { useLayout, useSetting } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig, RoomToolboxContextValue } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

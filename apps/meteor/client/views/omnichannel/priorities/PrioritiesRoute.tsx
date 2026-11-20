@@ -1,4 +1,4 @@
-import { usePermission, useRouteParameter } from '@yas chat/ui-contexts';
+import { usePermission, useRouteParameter } from '@yaschat/ui-contexts';
 
 import { PrioritiesPage } from './PrioritiesPage';
 import NotAuthorizedPage from '../../notAuthorized/NotAuthorizedPage';

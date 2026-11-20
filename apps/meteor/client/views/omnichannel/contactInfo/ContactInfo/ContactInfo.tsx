@@ -1,15 +1,15 @@
-import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, Button, ButtonGroup, Callout, IconButton, Tabs, TabsItem, Text, useStyle } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import type { ILivechatContact, Serialized } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, Button, ButtonGroup, Callout, IconButton, Tabs, TabsItem, Text, useStyle } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
 	ContextualbarTitle,
 	ContextualbarClose,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { usePermission, useRouteParameter, useSetModal } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { usePermission, useRouteParameter, useSetModal } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ReviewContactModal from './ReviewContactModal';

@@ -5,8 +5,8 @@ import {
 	isOmnichannelRoom,
 	isRoomFederated,
 	isRoomNativeFederated,
-} from '@yas chat/core-typings';
-import { useRouter, useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/core-typings';
+import { useRouter, useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import MessageToolbarItem from '../../MessageToolbarItem';

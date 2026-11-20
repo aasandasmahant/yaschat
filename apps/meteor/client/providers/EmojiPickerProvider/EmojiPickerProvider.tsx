@@ -1,6 +1,6 @@
-import { useDebouncedState, useStableCallback, useLocalStorage } from '@yas chat/fuselage-hooks';
-import { useRoute } from '@yas chat/ui-contexts';
-import { EmojiPicker, EmojiPickerContext, EmojiRegistryContext } from '@yas chat/ui-emoji-picker';
+import { useDebouncedState, useStableCallback, useLocalStorage } from '@yaschat/fuselage-hooks';
+import { useRoute } from '@yaschat/ui-contexts';
+import { EmojiPicker, EmojiPickerContext, EmojiRegistryContext } from '@yaschat/ui-emoji-picker';
 import type { ReactNode, ContextType } from 'react';
 import { Suspense, useState, useCallback, useMemo, useRef, useSyncExternalStore } from 'react';
 

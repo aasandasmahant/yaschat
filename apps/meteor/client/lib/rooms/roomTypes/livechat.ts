@@ -1,4 +1,4 @@
-import type { AtLeast, ValueOf } from '@yas chat/core-typings';
+import type { AtLeast, ValueOf } from '@yaschat/core-typings';
 
 import type { IRoomTypeClientDirectives } from '../../../../definition/IRoomTypeConfig';
 import { RoomSettingsEnum, RoomMemberActions, UiTextContext } from '../../../../definition/IRoomTypeConfig';

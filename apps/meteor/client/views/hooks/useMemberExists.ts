@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 type UseMemberExistsProps = { roomId: string; username: string };

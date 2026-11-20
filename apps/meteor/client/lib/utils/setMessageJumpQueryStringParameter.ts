@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import type { LocationPathname } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import type { LocationPathname } from '@yaschat/ui-contexts';
 
 import { router } from '../../providers/RouterProvider';
 

@@ -1,7 +1,7 @@
-import type { IUser, UserPresence } from '@yas chat/core-typings';
-import { UserStatus } from '@yas chat/core-typings';
-import type { EventHandlerOf } from '@yas chat/emitter';
-import { Emitter } from '@yas chat/emitter';
+import type { IUser, UserPresence } from '@yaschat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
+import type { EventHandlerOf } from '@yaschat/emitter';
+import { Emitter } from '@yaschat/emitter';
 
 import { sdk } from './SDKClient';
 import { subscribeRaw } from '../meteor/connection';

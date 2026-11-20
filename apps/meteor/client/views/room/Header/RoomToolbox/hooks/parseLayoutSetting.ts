@@ -1,5 +1,5 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { isRecord } from '@yas chat/tools';
+import type { RoomType } from '@yaschat/core-typings';
+import { isRecord } from '@yaschat/tools';
 
 import type { RoomToolboxLayoutConfig } from './processRoomActions';
 

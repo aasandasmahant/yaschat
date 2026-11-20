@@ -1,7 +1,7 @@
-import { isDirectMessageRoom } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { formatDate, GenericModal } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint, useRoomToolbox } from '@yas chat/ui-contexts';
+import { isDirectMessageRoom } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { formatDate, GenericModal } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useCallback, useMemo, useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

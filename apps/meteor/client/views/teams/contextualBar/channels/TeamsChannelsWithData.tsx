@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useLocalStorage, useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetModal, usePermission, useAtLeastOnePermission, useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useLocalStorage, useDebouncedValue, useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetModal, usePermission, useAtLeastOnePermission, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useCallback, useState } from 'react';
 

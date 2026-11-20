@@ -1,5 +1,5 @@
-import { ConferenceThreadModal } from '@yas chat/ui-conference';
-import { useCurrentModal, useSetModal } from '@yas chat/ui-contexts';
+import { ConferenceThreadModal } from '@yaschat/ui-conference';
+import { useCurrentModal, useSetModal } from '@yaschat/ui-contexts';
 import { lazy, useEffect, useRef } from 'react';
 
 import ConferenceThreadChat from './ConferenceThreadChat';

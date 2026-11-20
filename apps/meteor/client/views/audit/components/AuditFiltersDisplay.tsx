@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useFormatDate } from '../../../hooks/useFormatDate';

@@ -1,7 +1,7 @@
-import type { IRoom, IMessage, MessageTypesValues } from '@yas chat/core-typings';
-import { useStableArray } from '@yas chat/fuselage-hooks';
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
-import { useSetting, useUserPreference } from '@yas chat/ui-contexts';
+import type { IRoom, IMessage, MessageTypesValues } from '@yaschat/core-typings';
+import { useStableArray } from '@yaschat/fuselage-hooks';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
+import { useSetting, useUserPreference } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useShallow } from 'zustand/shallow';
 

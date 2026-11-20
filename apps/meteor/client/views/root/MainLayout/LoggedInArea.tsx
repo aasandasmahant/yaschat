@@ -1,4 +1,4 @@
-import { useUser } from '@yas chat/ui-contexts';
+import { useUser } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import MediaPlayerProvider from '../../../providers/MediaPlayerProvider';

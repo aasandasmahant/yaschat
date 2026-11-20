@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

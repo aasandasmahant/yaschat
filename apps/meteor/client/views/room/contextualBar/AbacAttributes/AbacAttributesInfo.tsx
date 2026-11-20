@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup, Tag, Text } from '@yas chat/fuselage';
+import type { IAbacAttributeDefinition } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup, Tag, Text } from '@yaschat/fuselage';
 import {
 	ContextualbarClose,
 	ContextualbarEmptyContent,
@@ -8,7 +8,7 @@ import {
 	ContextualbarIcon,
 	ContextualbarScrollableContent,
 	ContextualbarTitle,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export const getAttributeRows = (attributes: IAbacAttributeDefinition[], requiredKeys: string[]): IAbacAttributeDefinition[] => {

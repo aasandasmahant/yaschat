@@ -1,6 +1,6 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import type { ISubscription, IRoom, IMessage } from '@yas chat/core-typings';
-import { useUser } from '@yas chat/ui-contexts';
+import { isRoomFederated } from '@yaschat/core-typings';
+import type { ISubscription, IRoom, IMessage } from '@yaschat/core-typings';
+import { useUser } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';

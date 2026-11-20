@@ -1,8 +1,8 @@
-import type { IUser, AvatarObject } from '@yas chat/core-typings';
-import { Box, Button, Avatar, IconButton } from '@yas chat/fuselage';
-import { Field, FieldLabel, FieldRow, FieldError, TextInput } from '@yas chat/fuselage-forms';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useToastMessageDispatch, useSetting } from '@yas chat/ui-contexts';
+import type { IUser, AvatarObject } from '@yaschat/core-typings';
+import { Box, Button, Avatar, IconButton } from '@yaschat/fuselage';
+import { Field, FieldLabel, FieldRow, FieldError, TextInput } from '@yaschat/fuselage-forms';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useToastMessageDispatch, useSetting } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

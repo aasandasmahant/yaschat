@@ -1,5 +1,5 @@
-import { Icon, Tag } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import { Icon, Tag } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export type OmnichannelVerificationTagProps = {

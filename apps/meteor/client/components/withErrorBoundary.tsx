@@ -1,4 +1,4 @@
-import { GenericError } from '@yas chat/ui-client';
+import { GenericError } from '@yaschat/ui-client';
 import type { ComponentType, ReactNode, ComponentProps } from 'react';
 
 import ReportableErrorBoundary from './ErrorReport/ReportableErrorBoundary';

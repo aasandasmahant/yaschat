@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { ItemSkeleton } from '@yas chat/fuselage';
-import { ITEM_MEDIA_SIZE } from '@yas chat/ui-avatar';
+import type { IRoom } from '@yaschat/core-typings';
+import { ItemSkeleton } from '@yaschat/fuselage';
+import { ITEM_MEDIA_SIZE } from '@yaschat/ui-avatar';
 import type { MouseEvent } from 'react';
 import { memo } from 'react';
 

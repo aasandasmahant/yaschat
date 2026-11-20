@@ -1,4 +1,4 @@
-import { formatDurationMs } from '@yas chat/ui-client';
+import { formatDurationMs } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 
 export const useFormattedRelativeTime = (timeMs: number): string => useMemo(() => formatDurationMs(timeMs), [timeMs]);

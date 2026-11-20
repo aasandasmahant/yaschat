@@ -1,7 +1,7 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import type { IUser } from '@yas chat/core-typings';
-import { UserStatus } from '@yas chat/core-typings';
-import { useConnectionStatus, useIsLoggingIn, useMethod, useUser, useUserPreference } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
+import { useConnectionStatus, useIsLoggingIn, useMethod, useUser, useUserPreference } from '@yaschat/ui-contexts';
 import { useEffect, useState } from 'react';
 
 import { withDebouncing } from '../../lib/utils/highOrderFunctions';

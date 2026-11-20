@@ -1,8 +1,8 @@
-import { UserStatus as Status } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericMenu, GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import { UserStatus as Status } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericMenu, GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 import type { KeyboardEvent, SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

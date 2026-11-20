@@ -1,6 +1,6 @@
-import { AudioPlayerControls, Box, IconButton } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import { AudioPlayerControls, Box, IconButton } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useUserDisplayName } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import SidebarCard from './SidebarCard';

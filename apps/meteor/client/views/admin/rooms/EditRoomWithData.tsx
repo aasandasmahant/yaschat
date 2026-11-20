@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { ContextualbarHeader, ContextualbarTitle, ContextualbarClose, ContextualbarSkeletonBody } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { ContextualbarHeader, ContextualbarTitle, ContextualbarClose, ContextualbarSkeletonBody } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -5,7 +5,7 @@ import {
 	ContextualbarClose,
 	ContextualbarEmptyContent,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const ContactInfoError = ({ onClose }: { onClose: () => void }) => {

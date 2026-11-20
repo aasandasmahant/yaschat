@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRouter, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRouter, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import LeaveTeam from './LeaveTeam';

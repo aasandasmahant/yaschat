@@ -1,6 +1,6 @@
-import type { Keys as IconName } from '@yas chat/icons';
-import { GO_ROCKET_CHAT_PREFIX } from '@yas chat/ui-client';
-import type { LocationPathname } from '@yas chat/ui-contexts';
+import type { Keys as IconName } from '@yaschat/icons';
+import { GO_ROCKET_CHAT_PREFIX } from '@yaschat/ui-client';
+import type { LocationPathname } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 export type Item = {

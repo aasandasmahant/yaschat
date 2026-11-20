@@ -1,4 +1,4 @@
-import { getTimezoneNames } from '@yas chat/tools';
+import { getTimezoneNames } from '@yaschat/tools';
 import { useMemo } from 'react';
 
 export const useTimezoneNameList = (): string[] =>

@@ -1,6 +1,6 @@
-import type { IMessage, IThreadMainMessage } from '@yas chat/core-typings';
-import { Box, Select, Callout, Throbber } from '@yas chat/fuselage';
-import { useResizeObserver, useAutoFocus, useLocalStorage, useDebouncedValue } from '@yas chat/fuselage-hooks';
+import type { IMessage, IThreadMainMessage } from '@yaschat/core-typings';
+import { Box, Select, Callout, Throbber } from '@yaschat/fuselage';
+import { useResizeObserver, useAutoFocus, useLocalStorage, useDebouncedValue } from '@yaschat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarClose,
@@ -11,8 +11,8 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarSection,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useUserId, useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useUserId, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useMemo, useState, useCallback, useId } from 'react';
 import { useTranslation } from 'react-i18next';

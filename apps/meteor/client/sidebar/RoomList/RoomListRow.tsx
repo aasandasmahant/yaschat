@@ -1,4 +1,4 @@
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import type { TFunction } from 'i18next';
 import { memo } from 'react';
 

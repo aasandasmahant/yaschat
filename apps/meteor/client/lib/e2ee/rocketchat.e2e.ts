@@ -1,9 +1,9 @@
-import type { IE2EEMessage, IMessage, IRoom, IUser, IUploadWithUser, Serialized, IE2EEPinnedMessage } from '@yas chat/core-typings';
-import { isE2EEMessage, isEncryptedMessageContent } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
-import { isTruthy } from '@yas chat/tools';
-import { imperativeModal } from '@yas chat/ui-client';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { IE2EEMessage, IMessage, IRoom, IUser, IUploadWithUser, Serialized, IE2EEPinnedMessage } from '@yaschat/core-typings';
+import { isE2EEMessage, isEncryptedMessageContent } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
+import { isTruthy } from '@yaschat/tools';
+import { imperativeModal } from '@yaschat/ui-client';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import sampleSize from 'lodash/sampleSize';
 
 import type { E2EEState } from './E2EEState';

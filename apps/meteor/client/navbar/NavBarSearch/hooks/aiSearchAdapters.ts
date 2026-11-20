@@ -1,4 +1,4 @@
-import { buildRoomSearchQuery } from '@yas chat/ai-search';
+import { buildRoomSearchQuery } from '@yaschat/ai-search';
 
 export const emptySubscriptionQuery = { _id: '__ai_search_no_room_filter__' };
 

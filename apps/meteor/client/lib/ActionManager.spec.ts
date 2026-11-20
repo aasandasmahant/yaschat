@@ -1,12 +1,12 @@
-import { imperativeModal } from '@yas chat/ui-client';
-import type { RouterContext } from '@yas chat/ui-contexts';
-import type * as UiKit from '@yas chat/ui-kit';
+import { imperativeModal } from '@yaschat/ui-client';
+import type { RouterContext } from '@yaschat/ui-contexts';
+import type * as UiKit from '@yaschat/ui-kit';
 import type { ContextType } from 'react';
 
 import { ActionManager } from './ActionManager';
 import { sdk } from './SDKClient';
 
-jest.mock('@yas chat/ui-client', () => ({ imperativeModal: { open: jest.fn() } }));
+jest.mock('@yaschat/ui-client', () => ({ imperativeModal: { open: jest.fn() } }));
 jest.mock('./SDKClient', () => ({ sdk: { rest: { post: jest.fn() } } }));
 jest.mock('./banners', () => ({ open: jest.fn(), closeById: jest.fn() }));
 jest.mock('./toast', () => ({ dispatchToastMessage: jest.fn() }));

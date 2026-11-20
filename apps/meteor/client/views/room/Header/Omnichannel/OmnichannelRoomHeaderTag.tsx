@@ -1,5 +1,5 @@
-import { Text } from '@yas chat/fuselage';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { Text } from '@yaschat/fuselage';
+import { useSetModal } from '@yaschat/ui-contexts';
 
 import OmnichannelVerificationTag from '../../../omnichannel/components/OmnichannelVerificationTag';
 import AdvancedContactModal from '../../../omnichannel/contactInfo/AdvancedContactModal';

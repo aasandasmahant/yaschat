@@ -1,7 +1,7 @@
-import type { IUser } from '@yas chat/core-typings';
-import type { IconProps } from '@yas chat/fuselage';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { usePermission, useRoute } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import type { IconProps } from '@yaschat/fuselage';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { usePermission, useRoute } from '@yaschat/ui-contexts';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

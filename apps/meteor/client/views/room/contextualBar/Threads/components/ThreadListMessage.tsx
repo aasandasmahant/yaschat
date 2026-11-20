@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 import {
 	Message,
 	MessageLeftContainer,
@@ -10,9 +10,9 @@ import {
 	MessageContainerFixed,
 	MessageStatusIndicatorItem,
 	Box,
-} from '@yas chat/fuselage';
-import { MessageAvatar } from '@yas chat/ui-avatar';
-import { useTimeAgo } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { MessageAvatar } from '@yaschat/ui-avatar';
+import { useTimeAgo } from '@yaschat/ui-client';
 import type { ComponentProps, ReactNode } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

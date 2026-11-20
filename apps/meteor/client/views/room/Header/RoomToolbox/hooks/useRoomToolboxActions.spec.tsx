@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { LayoutContext } from '@yas chat/ui-contexts';
-import type { LayoutContextValue, RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { LayoutContext } from '@yaschat/ui-contexts';
+import type { LayoutContextValue, RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 

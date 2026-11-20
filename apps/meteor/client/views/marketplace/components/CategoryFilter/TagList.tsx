@@ -1,4 +1,4 @@
-import { Chip, ButtonGroup } from '@yas chat/fuselage';
+import { Chip, ButtonGroup } from '@yaschat/fuselage';
 
 import type { CategoryDropdownItem, CategoryDropDownListProps } from '../../definitions/CategoryDropdownDefinitions';
 

@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericMenu, HeaderToolbarAction, HeaderToolbarDivider } from '@yas chat/ui-client';
-import { useRoomToolbox, type RenderToolboxItemParams, type RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericMenu, HeaderToolbarAction, HeaderToolbarDivider } from '@yaschat/ui-client';
+import { useRoomToolbox, type RenderToolboxItemParams, type RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

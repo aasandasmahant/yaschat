@@ -1,4 +1,4 @@
-import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { PageSkeleton, useHasLicenseModule } from '@yaschat/ui-client';
 import {
 	usePermission,
 	useRouter,
@@ -7,7 +7,7 @@ import {
 	useTranslation,
 	useRouteParameter,
 	useEndpoint,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import EngagementDashboardPage from './EngagementDashboardPage';

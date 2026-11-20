@@ -1,8 +1,8 @@
-import type { IMessage, IThreadMainMessage } from '@yas chat/core-typings';
-import { isEditedMessage, isThreadMainMessage } from '@yas chat/core-typings';
-import { Box, CheckBox, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
-import { clientCallbacks, ContextualbarContent } from '@yas chat/ui-client';
-import { useEndpoint, useUserPreference, useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IMessage, IThreadMainMessage } from '@yaschat/core-typings';
+import { isEditedMessage, isThreadMainMessage } from '@yaschat/core-typings';
+import { Box, CheckBox, Field, FieldLabel, FieldRow } from '@yaschat/fuselage';
+import { clientCallbacks, ContextualbarContent } from '@yaschat/ui-client';
+import { useEndpoint, useUserPreference, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useState, useEffect, useCallback, useId } from 'react';
 import { useTranslation } from 'react-i18next';

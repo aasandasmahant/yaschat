@@ -1,9 +1,9 @@
-import type { ISetting, ISettingColor } from '@yas chat/core-typings';
-import { Accordion, Box, Button, ButtonGroup, Text } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
-import type { TranslationKey } from '@yas chat/ui-contexts';
-import { useToastMessageDispatch, useSettingsDispatch, useSettings } from '@yas chat/ui-contexts';
+import type { ISetting, ISettingColor } from '@yaschat/core-typings';
+import { Accordion, Box, Button, ButtonGroup, Text } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yaschat/ui-client';
+import type { TranslationKey } from '@yaschat/ui-contexts';
+import { useToastMessageDispatch, useSettingsDispatch, useSettings } from '@yaschat/ui-contexts';
 import type { ReactNode, MouseEvent, SubmitEvent } from 'react';
 import { useMemo, memo } from 'react';
 import { useTranslation } from 'react-i18next';

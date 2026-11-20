@@ -1,4 +1,4 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -6,7 +6,7 @@ import {
 	GenericTableHeader,
 	GenericTableHeaderCell,
 	GenericTableRow,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

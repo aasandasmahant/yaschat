@@ -1,5 +1,5 @@
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useRouteParameter, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useRouteParameter, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

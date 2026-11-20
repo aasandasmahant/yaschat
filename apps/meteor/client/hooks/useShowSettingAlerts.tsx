@@ -1,7 +1,7 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { Box, Callout } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { Box, Callout } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

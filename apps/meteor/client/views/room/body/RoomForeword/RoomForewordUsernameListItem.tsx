@@ -1,6 +1,6 @@
-import type { IUser } from '@yas chat/core-typings';
-import { Icon, Tag, Skeleton } from '@yas chat/fuselage';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { IUser } from '@yaschat/core-typings';
+import { Icon, Tag, Skeleton } from '@yaschat/fuselage';
+import { useUserDisplayName } from '@yaschat/ui-client';
 
 import { useUserInfoQuery } from '../../../../hooks/useUserInfoQuery';
 

@@ -1,5 +1,5 @@
-import { Box, Select } from '@yas chat/fuselage';
-import { PageScrollableContent, Page, PageHeader } from '@yas chat/ui-client';
+import { Box, Select } from '@yaschat/fuselage';
+import { PageScrollableContent, Page, PageHeader } from '@yaschat/ui-client';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

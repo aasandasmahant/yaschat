@@ -1,4 +1,4 @@
-import { SidebarBanner } from '@yas chat/fuselage';
+import { SidebarBanner } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useStatusDisabledModal } from '../../views/admin/customUserStatus/hooks/useStatusDisabledModal';

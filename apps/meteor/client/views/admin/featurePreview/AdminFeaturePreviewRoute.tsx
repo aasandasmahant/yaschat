@@ -1,4 +1,4 @@
-import { usePermission } from '@yas chat/ui-contexts';
+import { usePermission } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import AdminFeaturePreviewPage from './AdminFeaturePreviewPage';

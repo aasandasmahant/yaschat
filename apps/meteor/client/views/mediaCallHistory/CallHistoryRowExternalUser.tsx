@@ -1,6 +1,6 @@
-import { GenericMenu } from '@yas chat/ui-client';
-import type { CallHistoryExternalContact, CallHistoryTableRowProps } from '@yas chat/ui-voip';
-import { CallHistoryTableRow, getCallHistoryMenuItems, usePeekMediaSessionState, useWidgetExternalControls } from '@yas chat/ui-voip';
+import { GenericMenu } from '@yaschat/ui-client';
+import type { CallHistoryExternalContact, CallHistoryTableRowProps } from '@yaschat/ui-voip';
+import { CallHistoryTableRow, getCallHistoryMenuItems, usePeekMediaSessionState, useWidgetExternalControls } from '@yaschat/ui-voip';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

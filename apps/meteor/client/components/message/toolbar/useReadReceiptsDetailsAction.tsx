@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { useSetModal } from '@yaschat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import ReadReceiptsModal from '../../../views/room/modals/ReadReceiptsModal';

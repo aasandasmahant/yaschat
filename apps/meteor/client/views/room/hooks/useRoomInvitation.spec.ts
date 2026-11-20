@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook, act, waitFor } from '@testing-library/react';
 
 import { useRoomInvitation } from './useRoomInvitation';
@@ -16,8 +16,8 @@ jest.mock('./useRoomRejectInvitationModal', () => ({
 const mockInviteEndpoint = jest.fn();
 
 const mockedNavigate = jest.fn();
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useRouter: jest.fn(() => ({
 		navigate: mockedNavigate,
 	})),

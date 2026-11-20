@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook, act, waitFor } from '@testing-library/react';
 
 import { useOpenEncryptedPdf } from './useOpenEncryptedPdf';
@@ -9,8 +9,8 @@ jest.mock('../../../../../../hooks/useDownloadFromServiceWorker', () => ({
 	registerDownloadForUid: jest.fn(),
 }));
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useMediaUrl: () => (url: string) => url,
 }));
 

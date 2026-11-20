@@ -1,4 +1,4 @@
-import { ModalContext } from '@yas chat/ui-contexts';
+import { ModalContext } from '@yaschat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 import { useContext, useMemo } from 'react';
 import { action } from 'storybook/actions';

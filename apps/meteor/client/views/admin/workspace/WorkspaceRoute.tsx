@@ -1,6 +1,6 @@
-import { Callout, ButtonGroup, Button } from '@yas chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { Callout, ButtonGroup, Button } from '@yaschat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

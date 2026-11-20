@@ -1,6 +1,6 @@
-import type { DeviceManagementPopulatedSession } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup, StatusBullet, Text } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import type { DeviceManagementPopulatedSession } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup, StatusBullet, Text } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import {
 	ContextualbarHeader,
 	ContextualbarClose,
@@ -12,8 +12,8 @@ import {
 	InfoPanelLabel,
 	InfoPanelText,
 	useFormatDateAndTime,
-} from '@yas chat/ui-client';
-import { useRoute, useUserPresence } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRoute, useUserPresence } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

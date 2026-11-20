@@ -1,5 +1,5 @@
-import type { IMessage, IThreadMessage, MessageAttachment } from '@yas chat/core-typings';
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import type { IMessage, IThreadMessage, MessageAttachment } from '@yaschat/core-typings';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
 import type { InfiniteData, QueryClient } from '@tanstack/react-query';
 import type { Condition, Filter } from 'mongodb';
 

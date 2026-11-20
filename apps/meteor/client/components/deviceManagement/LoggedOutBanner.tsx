@@ -1,4 +1,4 @@
-import { Banner, Box, Icon } from '@yas chat/fuselage';
+import { Banner, Box, Icon } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const LoggedOutBanner = () => {

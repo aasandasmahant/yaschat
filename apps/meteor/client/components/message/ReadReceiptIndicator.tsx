@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { Box, Icon } from '@yas chat/fuselage';
+import type { IMessage } from '@yaschat/core-typings';
+import { Box, Icon } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type ReadReceiptIndicatorProps = {

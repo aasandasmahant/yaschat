@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { MessageBlock, MessageMetrics, MessageMetricsReply } from '@yas chat/fuselage';
+import type { IMessage } from '@yaschat/core-typings';
+import { MessageBlock, MessageMetrics, MessageMetricsReply } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useChat } from '../../../views/room/contexts/ChatContext';

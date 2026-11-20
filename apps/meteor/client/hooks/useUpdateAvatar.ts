@@ -1,5 +1,5 @@
-import type { AvatarObject, AvatarServiceObject, AvatarReset, AvatarUrlObj, IUser } from '@yas chat/core-typings';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { AvatarObject, AvatarServiceObject, AvatarReset, AvatarUrlObj, IUser } from '@yaschat/core-typings';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

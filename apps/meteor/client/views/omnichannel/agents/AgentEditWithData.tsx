@@ -1,7 +1,7 @@
-import type { ILivechatAgent } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatAgent } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { ContextualbarSkeletonBody } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

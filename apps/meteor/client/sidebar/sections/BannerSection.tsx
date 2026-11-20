@@ -1,5 +1,5 @@
-import { useSessionStorage } from '@yas chat/fuselage-hooks';
-import { useRole, useSetting } from '@yas chat/ui-contexts';
+import { useSessionStorage } from '@yaschat/fuselage-hooks';
+import { useRole, useSetting } from '@yaschat/ui-contexts';
 
 import AirGappedRestrictionBanner from './AirGappedRestrictionBanner/AirGappedRestrictionBanner';
 import StatusDisabledBanner from './StatusDisabledBanner';

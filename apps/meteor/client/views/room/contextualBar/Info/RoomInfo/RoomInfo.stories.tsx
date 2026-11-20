@@ -1,7 +1,7 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { Contextualbar } from '@yas chat/ui-client';
+import type { RoomType } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { Contextualbar } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import RoomInfo from './RoomInfo';

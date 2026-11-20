@@ -9,8 +9,8 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@yas chat/fuselage';
-import { links } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { links } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import MarkdownText from '../../../../components/MarkdownText';

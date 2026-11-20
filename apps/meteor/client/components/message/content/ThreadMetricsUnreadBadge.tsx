@@ -1,5 +1,5 @@
-import { Badge } from '@yas chat/fuselage';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import { Badge } from '@yaschat/fuselage';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

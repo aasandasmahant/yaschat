@@ -1,5 +1,5 @@
-import type { RoomType, RoomRouteData } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
+import type { RoomType, RoomRouteData } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
 import type {
 	LocationHash,
 	LocationPathname,
@@ -10,7 +10,7 @@ import type {
 	RouterContextValue,
 	SearchParameters,
 	To,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 
 import { Context, Page } from './page';
 import { appLayout } from '../lib/appLayout';

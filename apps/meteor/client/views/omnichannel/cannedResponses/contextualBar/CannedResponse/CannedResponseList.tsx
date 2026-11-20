@@ -1,6 +1,6 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { Button, ButtonGroup, ContextualbarSection, Select } from '@yas chat/fuselage';
-import { useAutoFocus, useResizeObserver } from '@yas chat/fuselage-hooks';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { Button, ButtonGroup, ContextualbarSection, Select } from '@yaschat/fuselage';
+import { useAutoFocus, useResizeObserver } from '@yaschat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -10,8 +10,8 @@ import {
 	ContextualbarEmptyContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import type { Dispatch, ChangeEventHandler, MouseEvent, SetStateAction } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

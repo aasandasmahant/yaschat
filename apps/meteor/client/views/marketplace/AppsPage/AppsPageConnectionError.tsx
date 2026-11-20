@@ -1,4 +1,4 @@
-import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yas chat/fuselage';
+import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const AppsPageContentError = ({ onButtonClick }: { onButtonClick: () => void }) => {

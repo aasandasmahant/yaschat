@@ -1,6 +1,6 @@
-import type { ISetting } from '@yas chat/apps-engine/definition/settings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { useSettingStructure } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/apps-engine/definition/settings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { useSettingStructure } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 describe('useSettingStructure', () => {

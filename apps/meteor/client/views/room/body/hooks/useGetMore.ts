@@ -1,4 +1,4 @@
-import { useSearchParameter } from '@yas chat/ui-contexts';
+import { useSearchParameter } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { flushSync } from 'react-dom';
 

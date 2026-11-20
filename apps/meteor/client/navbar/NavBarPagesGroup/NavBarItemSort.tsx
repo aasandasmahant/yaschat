@@ -1,5 +1,5 @@
-import { SidebarAction } from '@yas chat/fuselage';
-import { GenericMenu } from '@yas chat/ui-client';
+import { SidebarAction } from '@yaschat/fuselage';
+import { GenericMenu } from '@yaschat/ui-client';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

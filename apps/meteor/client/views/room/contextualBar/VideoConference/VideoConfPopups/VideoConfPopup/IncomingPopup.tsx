@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Skeleton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { IRoom } from '@yaschat/core-typings';
+import { Skeleton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useUserDisplayName } from '@yaschat/ui-client';
 import {
 	VideoConfButton,
 	VideoConfController,
@@ -15,7 +15,7 @@ import {
 	useVideoConfSetPreferences,
 	useVideoConfWindowEnabled,
 	useVideoConferenceInfo,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useTranslation } from 'react-i18next';
 
 import VideoConfPopupCallerInfo from './VideoConfPopupCallerInfo';

@@ -1,6 +1,6 @@
-import { createAppliedFilter, type AppliedFilter, type NavBarSearchFormValues } from '@yas chat/ai-search';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { RouterContextValue } from '@yas chat/ui-contexts';
+import { createAppliedFilter, type AppliedFilter, type NavBarSearchFormValues } from '@yaschat/ai-search';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { RouterContextValue } from '@yaschat/ui-contexts';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ReactNode } from 'react';

@@ -1,7 +1,7 @@
-import { Icon, Item, ItemActions, ItemContent, ItemDescription, ItemIcon, ItemMedia, ItemTitle, Text } from '@yas chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
-import { GenericMenu } from '@yas chat/ui-client';
-import { useUserPresence } from '@yas chat/ui-contexts';
+import { Icon, Item, ItemActions, ItemContent, ItemDescription, ItemIcon, ItemMedia, ItemTitle, Text } from '@yaschat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yaschat/ui-avatar';
+import { GenericMenu } from '@yaschat/ui-client';
+import { useUserPresence } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

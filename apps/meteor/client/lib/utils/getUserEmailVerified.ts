@@ -1,4 +1,4 @@
-import type { IUser } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
 
 export const getUserEmailVerified = (user: Pick<IUser, 'emails'>): boolean | undefined =>
 	Array.isArray(user.emails) ? user.emails.find(({ verified }) => !!verified)?.verified : undefined;

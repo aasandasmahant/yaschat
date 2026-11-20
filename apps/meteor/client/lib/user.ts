@@ -1,4 +1,4 @@
-import type { IUser } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
 import { create } from 'zustand';
 
 import { Users } from '../stores';

@@ -1,5 +1,5 @@
-import { usePermission } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { usePermission } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 import { useRoom } from '../../views/room/contexts/RoomContext';

@@ -1,5 +1,5 @@
-import type { AppliedFilter } from '@yas chat/ai-search';
-import { useUserSubscriptions } from '@yas chat/ui-contexts';
+import type { AppliedFilter } from '@yaschat/ai-search';
+import { useUserSubscriptions } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 export const useDiscussionFilterLabels = (filters: AppliedFilter[]): AppliedFilter[] => {

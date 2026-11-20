@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse, Serialized } from '@yas chat/core-typings';
-import { FormSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IOmnichannelCannedResponse, Serialized } from '@yaschat/core-typings';
+import { FormSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

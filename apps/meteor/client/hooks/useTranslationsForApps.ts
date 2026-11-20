@@ -1,5 +1,5 @@
-import { normalizeLanguage } from '@yas chat/tools';
-import { useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
+import { normalizeLanguage } from '@yaschat/tools';
+import { useEndpoint, useStream, useUserId } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

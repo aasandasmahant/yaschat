@@ -1,7 +1,7 @@
-import type { IUIActionButton, IUActionButtonWhen } from '@yas chat/apps-engine/definition/ui/IUIActionButtonDescriptor';
-import type { UserStatus } from '@yas chat/core-typings';
-import type { Keys as IconName } from '@yas chat/icons';
-import type { TranslationKey, LocationPathname } from '@yas chat/ui-contexts';
+import type { IUIActionButton, IUActionButtonWhen } from '@yaschat/apps-engine/definition/ui/IUIActionButtonDescriptor';
+import type { UserStatus } from '@yaschat/core-typings';
+import type { Keys as IconName } from '@yaschat/icons';
+import type { TranslationKey, LocationPathname } from '@yaschat/ui-contexts';
 
 import { sdk } from './SDKClient';
 

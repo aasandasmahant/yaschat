@@ -1,7 +1,7 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useGoToDirectMessage } from '@yas chat/ui-client';
-import { useRouter, useUserAvatarPath } from '@yas chat/ui-contexts';
-import { useWidgetExternalControls, usePeekMediaSessionState, type CallHistoryInternalContact } from '@yas chat/ui-voip';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useGoToDirectMessage } from '@yaschat/ui-client';
+import { useRouter, useUserAvatarPath } from '@yaschat/ui-contexts';
+import { useWidgetExternalControls, usePeekMediaSessionState, type CallHistoryInternalContact } from '@yaschat/ui-voip';
 import { useMemo } from 'react';
 
 type UseMediaCallInternalHistoryActionsBaseOptions = {

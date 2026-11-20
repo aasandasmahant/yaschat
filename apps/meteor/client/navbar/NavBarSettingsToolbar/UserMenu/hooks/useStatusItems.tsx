@@ -1,8 +1,8 @@
-import type { IUser } from '@yas chat/core-typings';
-import { UserStatus as UserStatusEnum } from '@yas chat/core-typings';
-import { Box, Icon, RadioButton } from '@yas chat/fuselage';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { UserStatus as UserStatusEnum } from '@yaschat/core-typings';
+import { Box, Icon, RadioButton } from '@yaschat/fuselage';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

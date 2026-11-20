@@ -1,6 +1,6 @@
-import { PasswordInput } from '@yas chat/fuselage';
-import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yas chat/ui-composer';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { PasswordInput } from '@yaschat/fuselage';
+import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yaschat/ui-composer';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

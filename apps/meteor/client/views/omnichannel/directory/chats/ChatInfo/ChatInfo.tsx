@@ -1,6 +1,6 @@
-import type { IOmnichannelRoom, IVisitor } from '@yas chat/core-typings';
-import { Box, Margins, Tag, Button, ButtonGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IOmnichannelRoom, IVisitor } from '@yaschat/core-typings';
+import { Box, Margins, Tag, Button, ButtonGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
@@ -8,9 +8,9 @@ import {
 	InfoPanelLabel,
 	InfoPanelText,
 	useFormatDateAndTime,
-} from '@yas chat/ui-client';
-import type { IRouterPaths } from '@yas chat/ui-contexts';
-import { useToastMessageDispatch, useRoute, useUserSubscription, usePermission, useUserId } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import type { IRouterPaths } from '@yaschat/ui-contexts';
+import { useToastMessageDispatch, useRoute, useUserSubscription, usePermission, useUserId } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

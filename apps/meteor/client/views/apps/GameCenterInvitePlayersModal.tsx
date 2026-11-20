@@ -1,7 +1,7 @@
-import type { IUser } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { Random } from '@yas chat/random';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IUser } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { Random } from '@yaschat/random';
+import { GenericModal } from '@yaschat/ui-client';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

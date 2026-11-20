@@ -1,4 +1,4 @@
-import { Box, Skeleton, Callout } from '@yas chat/fuselage';
+import { Box, Skeleton, Callout } from '@yaschat/fuselage';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

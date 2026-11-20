@@ -1,4 +1,4 @@
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 
 import VideoConfList from './VideoConfList';
 import { useVideoConfList } from './useVideoConfList';

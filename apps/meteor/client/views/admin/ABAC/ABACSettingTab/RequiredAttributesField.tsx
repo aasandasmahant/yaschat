@@ -1,5 +1,5 @@
-import type { SettingValue } from '@yas chat/core-typings';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { SettingValue } from '@yaschat/core-typings';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import RequiredAttributesRemovalModal from './RequiredAttributesRemovalModal';

@@ -1,11 +1,11 @@
-import { usePreviewEmoji } from '@yas chat/ui-emoji-picker';
+import { usePreviewEmoji } from '@yaschat/ui-emoji-picker';
 import { renderHook, act } from '@testing-library/react';
 import { useState, type ReactNode } from 'react';
 
 import EmojiPickerProvider from './EmojiPickerProvider';
 
-jest.mock('@yas chat/fuselage-hooks', () => {
-	const originalModule = jest.requireActual('@yas chat/fuselage-hooks');
+jest.mock('@yaschat/fuselage-hooks', () => {
+	const originalModule = jest.requireActual('@yaschat/fuselage-hooks');
 
 	return {
 		...originalModule,
@@ -24,8 +24,8 @@ jest.mock('../../lib/emoji', () => ({
 	}),
 }));
 
-jest.mock('@yas chat/ui-emoji-picker', () => ({
-	...jest.requireActual('@yas chat/ui-emoji-picker'),
+jest.mock('@yaschat/ui-emoji-picker', () => ({
+	...jest.requireActual('@yaschat/ui-emoji-picker'),
 	EmojiPicker: () => null,
 }));
 jest.mock('./useUpdateCustomEmoji', () => ({ useUpdateCustomEmoji: () => undefined }));

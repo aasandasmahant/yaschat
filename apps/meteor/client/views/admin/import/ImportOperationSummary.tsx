@@ -1,7 +1,7 @@
-import type { Serialized } from '@yas chat/core-typings';
-import { TableRow, TableCell } from '@yas chat/fuselage';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import { TableRow, TableCell } from '@yaschat/fuselage';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

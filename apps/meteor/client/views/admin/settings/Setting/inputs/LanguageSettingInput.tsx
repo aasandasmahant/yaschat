@@ -1,5 +1,5 @@
-import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
-import { useLanguages } from '@yas chat/ui-contexts';
+import { Field, FieldHint, FieldLabel, FieldRow, Select } from '@yaschat/fuselage';
+import { useLanguages } from '@yaschat/ui-contexts';
 
 import ResetSettingButton from '../ResetSettingButton';
 import type { SettingInputProps } from './types';

@@ -1,5 +1,5 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { Button, ButtonGroup } from '@yas chat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Button, ButtonGroup } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -8,7 +8,7 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

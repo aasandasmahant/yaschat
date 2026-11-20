@@ -1,4 +1,4 @@
-import { ExternalLink } from '@yas chat/ui-client';
+import { ExternalLink } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export type MapViewImageProps = {

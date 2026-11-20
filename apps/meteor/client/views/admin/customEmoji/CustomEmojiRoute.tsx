@@ -1,4 +1,4 @@
-import { Button } from '@yas chat/fuselage';
+import { Button } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarClose,
@@ -7,8 +7,8 @@ import {
 	Page,
 	PageHeader,
 	PageContent,
-} from '@yas chat/ui-client';
-import { useRoute, useRouteParameter, usePermission } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRoute, useRouteParameter, usePermission } from '@yaschat/ui-contexts';
 import { useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IUser } from '@yas chat/core-typings';
-import { GenericMenu, useHandleMenuAction } from '@yas chat/ui-client';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import type { IUser } from '@yaschat/core-typings';
+import { GenericMenu, useHandleMenuAction } from '@yaschat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
 import type { ComponentProps } from 'react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

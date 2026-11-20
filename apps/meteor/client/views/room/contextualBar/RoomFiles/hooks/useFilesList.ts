@@ -1,6 +1,6 @@
-import { Base64 } from '@yas chat/base64';
-import type { IUpload } from '@yas chat/core-typings';
-import { useUserRoom, useEndpoint } from '@yas chat/ui-contexts';
+import { Base64 } from '@yaschat/base64';
+import type { IUpload } from '@yaschat/core-typings';
+import { useUserRoom, useEndpoint } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { e2e } from '../../../../../lib/e2ee/yaschat.e2e';

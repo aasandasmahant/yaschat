@@ -1,6 +1,6 @@
-import type { ILivechatContactVisitorAssociation } from '@yas chat/core-typings';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { ILivechatContactVisitorAssociation } from '@yaschat/core-typings';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

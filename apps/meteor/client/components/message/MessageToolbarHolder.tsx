@@ -1,6 +1,6 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { MessageToolbarWrapper } from '@yas chat/fuselage';
-import { useIsVisible } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import { MessageToolbarWrapper } from '@yaschat/fuselage';
+import { useIsVisible } from '@yaschat/ui-client';
 import { useQuery } from '@tanstack/react-query';
 import { Suspense, lazy, memo, useState } from 'react';
 

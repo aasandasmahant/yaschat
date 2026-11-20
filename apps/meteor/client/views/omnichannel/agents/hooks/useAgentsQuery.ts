@@ -1,6 +1,6 @@
-import type { PaginatedRequest } from '@yas chat/rest-typings';
-import { usePaginatedQuery } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { PaginatedRequest } from '@yaschat/rest-typings';
+import { usePaginatedQuery } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 
 import { omnichannelQueryKeys } from '../../../../lib/queryKeys';
 

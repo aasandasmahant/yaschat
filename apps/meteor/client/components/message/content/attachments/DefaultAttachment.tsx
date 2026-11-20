@@ -1,5 +1,5 @@
-import type { MarkdownFields, MessageAttachmentDefault } from '@yas chat/core-typings';
-import { isActionAttachment } from '@yas chat/core-typings';
+import type { MarkdownFields, MessageAttachmentDefault } from '@yaschat/core-typings';
+import { isActionAttachment } from '@yaschat/core-typings';
 import type { ReactNode, ComponentProps } from 'react';
 
 import { ActionAttachment } from './default/ActionAttachtment';

@@ -1,5 +1,5 @@
-import { Skeleton } from '@yas chat/fuselage';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Skeleton } from '@yaschat/fuselage';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

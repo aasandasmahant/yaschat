@@ -1,7 +1,7 @@
 import { FocusScope } from '@react-aria/focus';
-import type { IUpload } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, ButtonGroup, IconButton, Palette, PaletteStyleTag, Throbber, spacing } from '@yas chat/fuselage';
+import type { IUpload } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, ButtonGroup, IconButton, Palette, PaletteStyleTag, Throbber, spacing } from '@yaschat/fuselage';
 import { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';

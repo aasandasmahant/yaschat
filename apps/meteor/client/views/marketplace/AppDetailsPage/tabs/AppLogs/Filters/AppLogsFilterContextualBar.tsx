@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Label } from '@yas chat/fuselage';
+import { Box, Button, ButtonGroup, Label } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -7,7 +7,7 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarDialog,
 	ContextualbarFooter,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

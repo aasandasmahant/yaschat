@@ -1,4 +1,4 @@
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 
 import { isJSON } from '../../../lib/utils/isJSON';
 

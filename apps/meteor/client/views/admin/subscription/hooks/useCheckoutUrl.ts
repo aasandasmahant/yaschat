@@ -1,4 +1,4 @@
-import { useAbsoluteUrl } from '@yas chat/ui-contexts';
+import { useAbsoluteUrl } from '@yaschat/ui-contexts';
 
 export const useCheckoutUrl = () => {
 	const absoluteUrl = useAbsoluteUrl()('/links/manage-subscription');

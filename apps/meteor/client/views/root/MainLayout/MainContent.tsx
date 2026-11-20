@@ -1,5 +1,5 @@
-import { css } from '@yas chat/css-in-js';
-import { Box } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import { Box } from '@yaschat/fuselage';
 import type { AllHTMLAttributes } from 'react';
 
 const MainContent = ({ className, ...props }: Omit<AllHTMLAttributes<HTMLDivElement>, 'is'>) => {

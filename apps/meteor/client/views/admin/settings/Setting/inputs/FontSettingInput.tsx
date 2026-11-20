@@ -1,4 +1,4 @@
-import { Field, FieldHint, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
+import { Field, FieldHint, FieldLabel, FieldRow, TextInput } from '@yaschat/fuselage';
 import type { ChangeEventHandler } from 'react';
 
 import ResetSettingButton from '../ResetSettingButton';

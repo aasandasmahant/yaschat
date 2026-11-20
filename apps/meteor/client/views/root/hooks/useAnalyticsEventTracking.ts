@@ -1,5 +1,5 @@
-import { clientCallbacks } from '@yas chat/ui-client';
-import { useRouter, useSetting, useUserId } from '@yas chat/ui-contexts';
+import { clientCallbacks } from '@yaschat/ui-client';
+import { useRouter, useSetting, useUserId } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 function trackEvent(category: string, action: string, label?: unknown) {

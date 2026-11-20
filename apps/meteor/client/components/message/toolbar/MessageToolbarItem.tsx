@@ -1,6 +1,6 @@
-import { MessageToolbarItem as FuselageMessageToolbarItem } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
-import { useLayoutHiddenActions } from '@yas chat/ui-contexts';
+import { MessageToolbarItem as FuselageMessageToolbarItem } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
+import { useLayoutHiddenActions } from '@yaschat/ui-contexts';
 import type { MouseEventHandler } from 'react';
 
 export type MessageToolbarItemProps = {

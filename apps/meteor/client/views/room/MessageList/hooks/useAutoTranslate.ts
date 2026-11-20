@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription, ITranslatedMessage } from '@yas chat/core-typings';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IMessage, ISubscription, ITranslatedMessage } from '@yaschat/core-typings';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useCallback, useMemo } from 'react';
 
 import { AutoTranslate } from '../../../../lib/autotranslate';

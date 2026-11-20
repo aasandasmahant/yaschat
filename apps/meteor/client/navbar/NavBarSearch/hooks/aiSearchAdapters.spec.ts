@@ -1,4 +1,4 @@
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
 
 import { getRoomLookupQuery } from './aiSearchAdapters';
 import { createFakeSubscription } from '../../../../tests/mocks/data';

@@ -1,4 +1,4 @@
-import { Box, CardBody } from '@yas chat/fuselage';
+import { Box, CardBody } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 export type FeatureUsageCardBodyProps = { justifyContent?: 'flex-start' | 'center'; children: ReactNode };

@@ -1,10 +1,10 @@
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import {
 	useVideoConfAcceptCall,
 	useVideoConfIncomingCalls,
 	useVideoConfRejectIncomingCall,
 	useVideoConfWindowEnabled,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import type { TFunction } from 'i18next';
 import { memo, useMemo } from 'react';
 

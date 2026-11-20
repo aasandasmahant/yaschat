@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@yas chat/fuselage';
-import { MessageFooterCallout, MessageFooterCalloutContent } from '@yas chat/ui-composer';
+import { Button, ButtonGroup } from '@yaschat/fuselage';
+import { MessageFooterCallout, MessageFooterCalloutContent } from '@yaschat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 import type { ComposerMessageProps } from './ComposerMessage';

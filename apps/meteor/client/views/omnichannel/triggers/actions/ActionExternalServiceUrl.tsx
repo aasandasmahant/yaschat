@@ -1,7 +1,7 @@
-import { Box, Button, Field, FieldError, FieldHint, FieldLabel, FieldRow, Icon, TextInput } from '@yas chat/fuselage';
-import { useSafely } from '@yas chat/fuselage-hooks';
-import type { TranslationKey } from '@yas chat/ui-contexts';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Button, Field, FieldError, FieldHint, FieldLabel, FieldRow, Icon, TextInput } from '@yaschat/fuselage';
+import { useSafely } from '@yaschat/fuselage-hooks';
+import type { TranslationKey } from '@yaschat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { useId, useState } from 'react';

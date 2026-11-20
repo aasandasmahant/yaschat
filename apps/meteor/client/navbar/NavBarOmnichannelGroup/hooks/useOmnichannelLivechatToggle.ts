@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { Keys } from '@yas chat/icons';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { Keys } from '@yaschat/icons';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useOmnichannelAgentAvailable } from '../../../views/omnichannel/hooks/useOmnichannelAgentAvailable';

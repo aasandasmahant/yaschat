@@ -1,6 +1,6 @@
-import type { LicenseInfo } from '@yas chat/core-typings';
-import { Box, Callout } from '@yas chat/fuselage';
-import { ExternalLink } from '@yas chat/ui-client';
+import type { LicenseInfo } from '@yaschat/core-typings';
+import { Box, Callout } from '@yaschat/fuselage';
+import { ExternalLink } from '@yaschat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { useCheckoutUrl } from './hooks/useCheckoutUrl';

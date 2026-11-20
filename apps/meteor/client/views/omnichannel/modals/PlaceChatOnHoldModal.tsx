@@ -8,7 +8,7 @@ import {
 	ModalHeader,
 	ModalIcon,
 	ModalTitle,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type PlaceChatOnHoldModalProps = {

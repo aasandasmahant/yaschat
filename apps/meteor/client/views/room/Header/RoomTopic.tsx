@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isPrivateRoom, isPublicRoom, isTeamRoom } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isPrivateRoom, isPublicRoom, isTeamRoom } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import MarkdownText from '../../../components/MarkdownText';

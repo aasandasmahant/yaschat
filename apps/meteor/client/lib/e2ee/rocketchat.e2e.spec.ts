@@ -1,11 +1,11 @@
-import { imperativeModal } from '@yas chat/ui-client';
+import { imperativeModal } from '@yaschat/ui-client';
 
 import * as banners from '../banners';
 import { e2e } from './yaschat.e2e';
 import { dispatchToastMessage } from '../toast';
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	imperativeModal: {
 		open: jest.fn(),
 		close: jest.fn(),

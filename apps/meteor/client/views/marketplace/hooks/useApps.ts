@@ -1,6 +1,6 @@
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import { useInvalidateLicense, useIsEnterprise } from '@yas chat/ui-client';
-import { usePermission, useStream } from '@yas chat/ui-contexts';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import { useInvalidateLicense, useIsEnterprise } from '@yaschat/ui-client';
+import { usePermission, useStream } from '@yaschat/ui-contexts';
 import type { UseQueryOptions, UseQueryResult } from '@tanstack/react-query';
 import { keepPreviousData, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useContext, useEffect } from 'react';

@@ -1,4 +1,4 @@
-import { mockAppRoot as _mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot as _mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useEditableSettingVisibilityQuery } from './EditableSettingsContext';

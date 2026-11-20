@@ -1,5 +1,5 @@
-import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
-import { Box, Callout } from '@yas chat/fuselage';
+import type { IOutboundProviderTemplate } from '@yaschat/core-typings';
+import { Box, Callout } from '@yaschat/fuselage';
 import { useId, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

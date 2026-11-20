@@ -1,5 +1,5 @@
-import { Badge, Box, Icon, IconButton, SidebarItemActions } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { Badge, Box, Icon, IconButton, SidebarItemActions } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import RoomListItem from './RoomListItem';

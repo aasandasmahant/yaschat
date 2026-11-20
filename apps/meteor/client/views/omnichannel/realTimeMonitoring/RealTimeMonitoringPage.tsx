@@ -1,7 +1,7 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { Box, Field, FieldLabel, FieldRow, Select, Margins, Option } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Box, Field, FieldLabel, FieldRow, Select, Margins, Option } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
 import { useQueryClient } from '@tanstack/react-query';
 import type { Key } from 'react';
 import { useId, useState, useMemo, useEffect } from 'react';

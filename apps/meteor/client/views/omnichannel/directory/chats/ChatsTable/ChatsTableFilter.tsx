@@ -1,7 +1,7 @@
-import { Box, Button, Chip } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericMenu, GenericModal } from '@yas chat/ui-client';
-import { useEndpoint, usePermission, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { Box, Button, Chip } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericMenu, GenericModal } from '@yaschat/ui-client';
+import { useEndpoint, usePermission, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { RefObject } from 'react';
 import { useTranslation } from 'react-i18next';

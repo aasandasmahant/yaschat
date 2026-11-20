@@ -1,6 +1,6 @@
-import { isSetting, isSettingColor } from '@yas chat/core-typings';
-import { AccordionItem, Button, ButtonGroup, FieldGroup, Stack, Text } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { isSetting, isSettingColor } from '@yaschat/core-typings';
+import { AccordionItem, Button, ButtonGroup, FieldGroup, Stack, Text } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

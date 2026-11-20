@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { ConferenceErrorState } from '@yas chat/ui-conference';
+import { Box } from '@yaschat/fuselage';
+import { ConferenceErrorState } from '@yaschat/ui-conference';
 import { useEffect } from 'react';
 
 import ThreadChat from '../room/contextualBar/Threads/components/ThreadChat';

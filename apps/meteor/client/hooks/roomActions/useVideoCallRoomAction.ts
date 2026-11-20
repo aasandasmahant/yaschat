@@ -1,7 +1,7 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import { useStableCallback, useStableArray } from '@yas chat/fuselage-hooks';
-import { usePermission, useSetting, useUser } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { useStableCallback, useStableArray } from '@yaschat/fuselage-hooks';
+import { usePermission, useSetting, useUser } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import {
 	useVideoConfDispatchOutgoing,
 	useVideoConfIsCalling,
@@ -9,7 +9,7 @@ import {
 	useVideoConfLoadCapabilities,
 	useVideoConfStartCall,
 	useVideoConfWindowEnabled,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

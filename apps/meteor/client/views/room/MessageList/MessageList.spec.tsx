@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, IUser } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IMessage, IRoom, IUser } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import type { ReactNode } from 'react';
@@ -67,7 +67,7 @@ jest.mock('virtua', () => {
 	};
 });
 
-jest.mock('@yas chat/fuselage-hooks', () => ({
+jest.mock('@yaschat/fuselage-hooks', () => ({
 	useDebouncedCallback: (callback: (...args: any[]) => void) => callback,
 }));
 

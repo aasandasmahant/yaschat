@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { FormSkeleton } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { FormSkeleton } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import RoomEdit from './RoomEdit';

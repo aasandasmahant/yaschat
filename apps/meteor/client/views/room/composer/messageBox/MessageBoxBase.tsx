@@ -1,5 +1,5 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
 import {
 	MessageComposerAction,
 	MessageComposerToolbarActions,
@@ -8,7 +8,7 @@ import {
 	MessageComposerActionsDivider,
 	MessageComposerToolbarSubmit,
 	MessageComposerButton,
-} from '@yas chat/ui-composer';
+} from '@yaschat/ui-composer';
 import type { MouseEvent, ReactNode, RefObject } from 'react';
 import { useTranslation } from 'react-i18next';
 

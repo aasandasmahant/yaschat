@@ -1,5 +1,5 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { useSetModal } from '@yaschat/ui-contexts';
 import type { MouseEvent, MouseEventHandler } from 'react';
 import { memo } from 'react';
 

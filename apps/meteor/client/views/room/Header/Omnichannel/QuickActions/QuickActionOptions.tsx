@@ -1,7 +1,7 @@
-import type { IOmnichannelRoom } from '@yas chat/core-typings';
-import { Box, Dropdown, Option } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
-import { HeaderToolbarAction, useDropdownVisibility } from '@yas chat/ui-client';
+import type { IOmnichannelRoom } from '@yaschat/core-typings';
+import { Box, Dropdown, Option } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
+import { HeaderToolbarAction, useDropdownVisibility } from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

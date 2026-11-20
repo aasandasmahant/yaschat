@@ -1,8 +1,8 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Button, Box, Card, CardTitle, CardBody, CardControls } from '@yas chat/fuselage';
-import type { TranslationKey } from '@yas chat/ui-contexts';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Button, Box, Card, CardTitle, CardBody, CardControls } from '@yaschat/fuselage';
+import type { TranslationKey } from '@yaschat/ui-contexts';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

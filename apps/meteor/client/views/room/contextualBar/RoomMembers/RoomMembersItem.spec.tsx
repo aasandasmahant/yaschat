@@ -5,8 +5,8 @@ import { axe } from 'jest-axe';
 
 import RoomMembersItem from './RoomMembersItem';
 
-jest.mock('@yas chat/ui-avatar', () => ({
-	...jest.requireActual('@yas chat/ui-avatar'),
+jest.mock('@yaschat/ui-avatar', () => ({
+	...jest.requireActual('@yaschat/ui-avatar'),
 	UserAvatar: () => null,
 }));
 

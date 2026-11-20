@@ -1,6 +1,6 @@
-import type { IModerationReport } from '@yas chat/core-typings';
-import { Box, Message } from '@yas chat/fuselage';
-import { useEndpoint, useSetting } from '@yas chat/ui-contexts';
+import type { IModerationReport } from '@yaschat/core-typings';
+import { Box, Message } from '@yaschat/fuselage';
+import { useEndpoint, useSetting } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

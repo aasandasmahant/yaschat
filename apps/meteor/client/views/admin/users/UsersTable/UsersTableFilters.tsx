@@ -1,7 +1,7 @@
-import type { IRole, Serialized } from '@yas chat/core-typings';
-import { Select } from '@yas chat/fuselage';
-import type { OptionProp } from '@yas chat/ui-client';
-import { MultiSelectCustom } from '@yas chat/ui-client';
+import type { IRole, Serialized } from '@yaschat/core-typings';
+import { Select } from '@yaschat/fuselage';
+import type { OptionProp } from '@yaschat/ui-client';
+import { MultiSelectCustom } from '@yaschat/ui-client';
 import type { ChangeEvent, Dispatch, Key, SetStateAction } from 'react';
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

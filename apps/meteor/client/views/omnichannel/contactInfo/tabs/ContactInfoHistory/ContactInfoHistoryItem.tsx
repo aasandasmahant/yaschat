@@ -1,4 +1,4 @@
-import type { Serialized } from '@yas chat/core-typings';
+import type { Serialized } from '@yaschat/core-typings';
 import {
 	IconButton,
 	Item,
@@ -15,10 +15,10 @@ import {
 	MessageGenericPreviewDescription,
 	MessageGenericPreviewTitle,
 	Icon,
-} from '@yas chat/fuselage';
-import type { ContactSearchChatsResult } from '@yas chat/rest-typings';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import type { ContactSearchChatsResult } from '@yaschat/rest-typings';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { OmnichannelRoomIcon } from '../../../../../components/RoomIcon/OmnichannelRoomIcon';

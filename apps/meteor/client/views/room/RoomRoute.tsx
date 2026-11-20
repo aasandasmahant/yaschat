@@ -1,6 +1,6 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { RoomType } from '@yaschat/core-typings';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useLayoutEffect, useState } from 'react';
 
 import RoomOpener from './RoomOpener';

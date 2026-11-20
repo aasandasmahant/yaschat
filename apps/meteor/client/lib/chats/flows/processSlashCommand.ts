@@ -1,6 +1,6 @@
-import type { IMessage, SlashCommand } from '@yas chat/core-typings';
-import { Random } from '@yas chat/random';
-import { escapeHTML } from '@yas chat/tools';
+import type { IMessage, SlashCommand } from '@yaschat/core-typings';
+import { Random } from '@yaschat/random';
+import { escapeHTML } from '@yaschat/tools';
 
 import { t } from '../../../../lib/i18n';
 import { sdk } from '../../SDKClient';

@@ -1,4 +1,4 @@
-import { Tag } from '@yas chat/fuselage';
+import { Tag } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type VersionStatus = 'outdated' | 'latest' | 'available_version' | undefined;

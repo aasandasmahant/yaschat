@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render } from '@testing-library/react';
 
 import ConferencePage from './ConferencePage';

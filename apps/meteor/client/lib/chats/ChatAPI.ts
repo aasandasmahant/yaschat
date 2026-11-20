@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, ISubscription, IE2EEMessage, IUpload } from '@yas chat/core-typings';
-import type { IActionManager } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom, ISubscription, IE2EEMessage, IUpload } from '@yaschat/core-typings';
+import type { IActionManager } from '@yaschat/ui-contexts';
 import type { RefObject } from 'react';
 
 import type { Upload, EncryptedFile } from './Upload';

@@ -1,6 +1,6 @@
-import { Button } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import { Button } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const resolveLegacyIcon = (legacyIcon: IconName | `icon-${IconName | 'videocam'}`): IconName => {

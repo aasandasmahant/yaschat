@@ -1,7 +1,7 @@
-import { AutoComplete, Option, Chip, Box, Skeleton } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yas chat/ui-avatar';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { AutoComplete, Option, Chip, Box, Skeleton } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { ITEM_MEDIA_SIZE, RoomAvatar } from '@yaschat/ui-avatar';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { memo, useMemo, useState } from 'react';

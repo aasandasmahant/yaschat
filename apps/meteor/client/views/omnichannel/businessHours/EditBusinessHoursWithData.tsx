@@ -1,7 +1,7 @@
-import type { ILivechatBusinessHour, LivechatBusinessHourTypes } from '@yas chat/core-typings';
-import { Button, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent, PageSkeleton } from '@yas chat/ui-client';
-import { useEndpoint, useRouter } from '@yas chat/ui-contexts';
+import type { ILivechatBusinessHour, LivechatBusinessHourTypes } from '@yaschat/core-typings';
+import { Button, States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent, PageSkeleton } from '@yaschat/ui-client';
+import { useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

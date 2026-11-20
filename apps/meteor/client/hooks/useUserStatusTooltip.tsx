@@ -1,5 +1,5 @@
-import { Skeleton } from '@yas chat/fuselage';
-import { UserPresenceContext, useTooltipClose, useTooltipOpen, useUserPresence } from '@yas chat/ui-contexts';
+import { Skeleton } from '@yaschat/fuselage';
+import { UserPresenceContext, useTooltipClose, useTooltipOpen, useUserPresence } from '@yaschat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useCallback, useContext, useMemo } from 'react';
 

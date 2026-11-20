@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type WarningModalProps = {

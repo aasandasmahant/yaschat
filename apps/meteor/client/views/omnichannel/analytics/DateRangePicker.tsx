@@ -1,6 +1,6 @@
-import { Box, InputBox, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericMenu } from '@yas chat/ui-client';
+import { Box, InputBox, Field, FieldLabel, FieldRow } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericMenu } from '@yaschat/ui-client';
 import { endOfMonth } from 'date-fns/endOfMonth';
 import { format } from 'date-fns/format';
 import { startOfMonth } from 'date-fns/startOfMonth';

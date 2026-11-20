@@ -1,7 +1,7 @@
-import type { App } from '@yas chat/core-typings';
-import { Badge, Card, CardBody, CardCol, CardControls, CardHeader, CardRow, CardTitle } from '@yas chat/fuselage';
-import { AppAvatar } from '@yas chat/ui-avatar';
-import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
+import type { App } from '@yaschat/core-typings';
+import { Badge, Card, CardBody, CardCol, CardControls, CardHeader, CardRow, CardTitle } from '@yaschat/fuselage';
+import { AppAvatar } from '@yaschat/ui-avatar';
+import { useRouteParameter, useRouter } from '@yaschat/ui-contexts';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { memo } from 'react';
 import semver from 'semver';

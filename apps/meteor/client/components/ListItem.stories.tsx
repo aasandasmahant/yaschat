@@ -1,4 +1,4 @@
-import { Tile, OptionTitle, Box } from '@yas chat/fuselage';
+import { Tile, OptionTitle, Box } from '@yaschat/fuselage';
 import type { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import ListItem from './Sidebar/ListItem';

@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { GenericNoResults } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import { GenericNoResults } from '@yaschat/ui-client';
 import { memo } from 'react';
 
 import AuditMessageList from './AuditMessageList';

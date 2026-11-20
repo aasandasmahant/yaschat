@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
-import { useAllPermissions, usePermission } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@yaschat/core-typings';
+import { useAllPermissions, usePermission } from '@yaschat/ui-contexts';
 
 import { useIsRoomAbacLocked } from './useIsRoomAbacLocked';
 import { useIsABACAvailable } from '../../admin/ABAC/hooks/useIsABACAvailable';

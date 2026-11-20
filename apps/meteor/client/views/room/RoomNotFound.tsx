@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { NotFoundState } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { NotFoundState } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import RoomLayout from './layout/RoomLayout';

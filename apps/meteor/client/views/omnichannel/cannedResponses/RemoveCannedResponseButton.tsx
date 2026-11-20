@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { IconButton } from '@yas chat/fuselage';
-import { GenericTableCell } from '@yas chat/ui-client';
+import type { IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { IconButton } from '@yaschat/fuselage';
+import { GenericTableCell } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useRemoveCannedResponse } from './modals/useRemoveCannedResponse';

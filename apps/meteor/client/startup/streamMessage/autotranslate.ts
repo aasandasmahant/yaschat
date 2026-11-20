@@ -1,4 +1,4 @@
-import { clientCallbacks } from '@yas chat/ui-client';
+import { clientCallbacks } from '@yaschat/ui-client';
 
 import { PermissionsCachedStore } from '../../cachedStores';
 import { hasPermission } from '../../lib/authorization';

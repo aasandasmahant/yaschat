@@ -1,7 +1,7 @@
-import type { IRole, IUser, Serialized } from '@yas chat/core-typings';
-import { Box, Callout } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { FormSkeleton } from '@yas chat/ui-client';
+import type { IRole, IUser, Serialized } from '@yaschat/core-typings';
+import { Box, Callout } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { FormSkeleton } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import AdminUserForm from './AdminUserForm';

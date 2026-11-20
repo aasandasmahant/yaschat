@@ -1,6 +1,6 @@
-import type { App } from '@yas chat/core-typings';
-import { Box, Pagination } from '@yas chat/fuselage';
-import type { PaginatedResult } from '@yas chat/rest-typings';
+import type { App } from '@yaschat/core-typings';
+import { Box, Pagination } from '@yaschat/fuselage';
+import type { PaginatedResult } from '@yaschat/rest-typings';
 import type { Dispatch, SetStateAction } from 'react';
 import { useId, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

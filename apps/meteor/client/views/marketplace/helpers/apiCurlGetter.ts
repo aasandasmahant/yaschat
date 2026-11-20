@@ -1,4 +1,4 @@
-import type { IApiEndpointMetadata } from '@yas chat/apps-engine/definition/api';
+import type { IApiEndpointMetadata } from '@yaschat/apps-engine/definition/api';
 
 import { Utilities } from '../../../../ee/lib/misc/Utilities';
 

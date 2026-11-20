@@ -1,5 +1,5 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle } from '@yas chat/fuselage';
-import type { Keys } from '@yas chat/icons';
+import { States, StatesIcon, StatesTitle, StatesSubtitle } from '@yaschat/fuselage';
+import type { Keys } from '@yaschat/icons';
 import { useTranslation } from 'react-i18next';
 
 type CardEmpryStateProps = {

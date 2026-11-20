@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { Box, CheckBox } from '@yas chat/fuselage';
-import { GenericTable, GenericTableHeaderCell, GenericTableHeader, GenericTableBody, useSort } from '@yas chat/ui-client';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { Box, CheckBox } from '@yaschat/fuselage';
+import { GenericTable, GenericTableHeaderCell, GenericTableHeader, GenericTableBody, useSort } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { isInviteSubscription, isOmnichannelRoom } from '@yas chat/core-typings';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { isInviteSubscription, isOmnichannelRoom } from '@yaschat/core-typings';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 
 import InvitationBadge from '../../../../components/InvitationBadge';
 import UnreadBadge from '../../sidebar/badges/UnreadBadge';

@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 export type FieldProps = { children?: ReactNode };

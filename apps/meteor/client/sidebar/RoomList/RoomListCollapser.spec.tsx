@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
@@ -7,8 +7,8 @@ import type { ReactNode } from 'react';
 import RoomListCollapser from './RoomListCollapser';
 import type { SidebarRoomListGroup } from '../hooks/useRoomList';
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	useIsEnterprise: () => ({ data: { isEnterprise: true } }),
 }));
 

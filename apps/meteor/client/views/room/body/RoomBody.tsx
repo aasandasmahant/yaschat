@@ -1,7 +1,7 @@
-import { Box } from '@yas chat/fuselage';
-import { isTruthy } from '@yas chat/tools';
-import { CustomVirtuaScrollbars, useEmbeddedLayout, useMergedRefsV2 } from '@yas chat/ui-client';
-import { useRole, useUser, useUserPreference, useRoomToolbox } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { isTruthy } from '@yaschat/tools';
+import { CustomVirtuaScrollbars, useEmbeddedLayout, useMergedRefsV2 } from '@yaschat/ui-client';
+import { useRole, useUser, useUserPreference, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

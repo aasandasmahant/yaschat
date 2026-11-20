@@ -1,7 +1,7 @@
-import type { ILivechatCustomField } from '@yas chat/core-typings';
-import { Callout } from '@yas chat/fuselage';
-import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatCustomField } from '@yaschat/core-typings';
+import { Callout } from '@yaschat/fuselage';
+import { ContextualbarSkeletonBody } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

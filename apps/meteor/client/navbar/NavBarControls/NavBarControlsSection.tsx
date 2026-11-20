@@ -1,5 +1,5 @@
-import { useUser } from '@yas chat/ui-contexts';
-import { useVideoConfWindowEnabled } from '@yas chat/ui-video-conf';
+import { useUser } from '@yaschat/ui-contexts';
+import { useVideoConfWindowEnabled } from '@yaschat/ui-video-conf';
 
 import NavBarControls from './NavBarControls';
 import OngoingCallsProvider from '../../views/conference/providers/OngoingCallsProvider';

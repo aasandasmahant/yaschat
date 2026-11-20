@@ -1,4 +1,4 @@
-import type { IUser } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
 
 import { getUserAvatarURL } from '../getUserAvatarURL';
 

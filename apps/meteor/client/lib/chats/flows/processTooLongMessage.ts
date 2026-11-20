@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { GenericModal, imperativeModal } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import { GenericModal, imperativeModal } from '@yaschat/ui-client';
 
 import { t } from '../../../../lib/i18n';
 import { settings } from '../../settings';

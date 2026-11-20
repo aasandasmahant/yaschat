@@ -1,15 +1,15 @@
-import { useIsEnterprise } from '@yas chat/ui-client';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useUserSidebarCategories } from './useUserSidebarCategories';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useUserPreference: jest.fn(),
 }));
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	useIsEnterprise: jest.fn(),
 }));
 

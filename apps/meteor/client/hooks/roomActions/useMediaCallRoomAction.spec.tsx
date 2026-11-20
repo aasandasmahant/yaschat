@@ -1,19 +1,19 @@
-import type { IUser, IRoom } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useMediaCallAction } from '@yas chat/ui-voip';
+import type { IUser, IRoom } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useMediaCallAction } from '@yaschat/ui-voip';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useMediaCallRoomAction } from './useMediaCallRoomAction';
 import FakeRoomProvider from '../../../tests/mocks/client/FakeRoomProvider';
 import { createFakeRoom, createFakeSubscription, createFakeUser } from '../../../tests/mocks/data';
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useUserAvatarPath: jest.fn(() => (_args: any) => 'avatar-url'),
 }));
 
-jest.mock('@yas chat/ui-voip', () => ({
+jest.mock('@yaschat/ui-voip', () => ({
 	useMediaCallAction: jest.fn(),
 }));
 

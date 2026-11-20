@@ -1,4 +1,4 @@
-import { useRouteParameter, useAtLeastOnePermission } from '@yas chat/ui-contexts';
+import { useRouteParameter, useAtLeastOnePermission } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import EditIntegrationsPage from './EditIntegrationsPage';

@@ -1,5 +1,5 @@
-import type { MessageAttachmentBase } from '@yas chat/core-typings';
-import { isFileAttachment, isQuoteAttachment } from '@yas chat/core-typings';
+import type { MessageAttachmentBase } from '@yaschat/core-typings';
+import { isFileAttachment, isQuoteAttachment } from '@yaschat/core-typings';
 import { memo } from 'react';
 
 import DefaultAttachment from './DefaultAttachment';

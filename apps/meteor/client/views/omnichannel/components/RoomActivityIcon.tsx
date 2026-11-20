@@ -1,5 +1,5 @@
-import type { IOmnichannelRoom } from '@yas chat/core-typings';
-import { Icon } from '@yas chat/fuselage';
+import type { IOmnichannelRoom } from '@yaschat/core-typings';
+import { Icon } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useIsRoomOverMacLimit } from '../hooks/useIsRoomOverMacLimit';

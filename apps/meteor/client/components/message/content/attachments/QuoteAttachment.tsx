@@ -1,8 +1,8 @@
-import type { MessageQuoteAttachment } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Palette } from '@yas chat/fuselage';
-import { useTimeAgo } from '@yas chat/ui-client';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import type { MessageQuoteAttachment } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Palette } from '@yaschat/fuselage';
+import { useTimeAgo } from '@yaschat/ui-client';
+import { useUserPreference } from '@yaschat/ui-contexts';
 
 import MessageContentBody from '../../MessageContentBody';
 import Attachments from '../Attachments';

@@ -1,5 +1,5 @@
-import { links, useIsEnterprise } from '@yas chat/ui-client';
-import { useSetModal, useSetting } from '@yas chat/ui-contexts';
+import { links, useIsEnterprise } from '@yaschat/ui-client';
+import { useSetModal, useSetting } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

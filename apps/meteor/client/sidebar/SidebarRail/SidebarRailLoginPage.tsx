@@ -1,5 +1,5 @@
-import { NavBarItem } from '@yas chat/fuselage';
-import { useSessionDispatch } from '@yas chat/ui-contexts';
+import { NavBarItem } from '@yaschat/fuselage';
+import { useSessionDispatch } from '@yaschat/ui-contexts';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

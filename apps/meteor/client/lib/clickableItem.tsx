@@ -1,6 +1,6 @@
-import { css } from '@yas chat/css-in-js';
-import type { Box } from '@yas chat/fuselage';
-import { Palette } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import type { Box } from '@yaschat/fuselage';
+import { Palette } from '@yaschat/fuselage';
 import type { ComponentPropsWithoutRef, ComponentType, KeyboardEvent } from 'react';
 
 const activateWithKeyboard = (event: KeyboardEvent<HTMLElement>) => {

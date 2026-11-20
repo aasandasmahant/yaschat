@@ -1,4 +1,4 @@
-import type { IMessage, ITranslatedMessage, MessageAttachment } from '@yas chat/core-typings';
+import type { IMessage, ITranslatedMessage, MessageAttachment } from '@yaschat/core-typings';
 import {
 	isFileAttachment,
 	isE2EEMessage,
@@ -6,9 +6,9 @@ import {
 	isTranslatedAttachment,
 	isTranslatedMessage,
 	isEncryptedMessageAttachment,
-} from '@yas chat/core-typings';
-import type { Options, Root } from '@yas chat/message-parser';
-import { parse } from '@yas chat/message-parser';
+} from '@yaschat/core-typings';
+import type { Options, Root } from '@yaschat/message-parser';
+import { parse } from '@yaschat/message-parser';
 
 import { getMarkdownParserLimit } from './getMarkdownParserLimit';
 import { toPlainTextRoot } from './toPlainTextRoot';

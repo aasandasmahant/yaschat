@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@yas chat/fuselage';
+import { Box, Skeleton } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useActiveConnections } from '../../../../hooks/useActiveConnections';

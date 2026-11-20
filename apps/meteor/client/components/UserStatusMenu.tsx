@@ -1,7 +1,7 @@
-import { UserStatus as UserStatusType } from '@yas chat/core-typings';
-import type { OptionType } from '@yas chat/fuselage';
-import { Button, PositionAnimated, Options, useCursor, Box } from '@yas chat/fuselage';
-import { useSetting } from '@yas chat/ui-contexts';
+import { UserStatus as UserStatusType } from '@yaschat/core-typings';
+import type { OptionType } from '@yaschat/fuselage';
+import { Button, PositionAnimated, Options, useCursor, Box } from '@yaschat/fuselage';
+import { useSetting } from '@yaschat/ui-contexts';
 import type { ComponentProps, ReactNode } from 'react';
 import { useRef, useCallback, useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

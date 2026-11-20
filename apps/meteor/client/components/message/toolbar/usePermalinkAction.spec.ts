@@ -1,6 +1,6 @@
-import type { MessageActionContext } from '@yas chat/apps-engine/definition/ui';
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { MessageActionContext } from '@yaschat/apps-engine/definition/ui';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { usePermalinkAction } from './usePermalinkAction';

@@ -1,4 +1,4 @@
-import type { IUpload } from '@yas chat/core-typings';
+import type { IUpload } from '@yaschat/core-typings';
 
 export type NonEncryptedUpload = {
 	readonly id: string;

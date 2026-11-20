@@ -1,4 +1,4 @@
-import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
+import type { SlashCommandCallbackParams } from '@yaschat/core-typings';
 
 import { queryClient } from '../../lib/queryClient';
 import { roomsQueryKeys } from '../../lib/queryKeys';

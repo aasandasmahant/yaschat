@@ -1,5 +1,5 @@
-import type { ImageAttachmentProps } from '@yas chat/core-typings';
-import { useMediaUrl } from '@yas chat/ui-contexts';
+import type { ImageAttachmentProps } from '@yaschat/core-typings';
+import { useMediaUrl } from '@yaschat/ui-contexts';
 
 import { useLoadImage } from './hooks/useLoadImage';
 import MarkdownText from '../../../../MarkdownText';

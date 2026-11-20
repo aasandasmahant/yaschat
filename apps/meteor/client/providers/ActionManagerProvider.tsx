@@ -1,4 +1,4 @@
-import { ActionManagerContext, useRouter } from '@yas chat/ui-contexts';
+import { ActionManagerContext, useRouter } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import { useAppActionButtons } from '../hooks/useAppActionButtons';

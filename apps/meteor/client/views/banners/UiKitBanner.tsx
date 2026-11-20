@@ -1,8 +1,8 @@
-import { Banner, Icon } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { UiKitContext, bannerParser, UiKitBanner as UiKitBannerSurfaceRender, UiKitComponent } from '@yas chat/fuselage-ui-kit';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
-import type * as UiKit from '@yas chat/ui-kit';
+import { Banner, Icon } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { UiKitContext, bannerParser, UiKitBanner as UiKitBannerSurfaceRender, UiKitComponent } from '@yaschat/fuselage-ui-kit';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
+import type * as UiKit from '@yaschat/ui-kit';
 import { useMemo } from 'react';
 
 import { useBannerContextValue } from './hooks/useBannerContextValue';

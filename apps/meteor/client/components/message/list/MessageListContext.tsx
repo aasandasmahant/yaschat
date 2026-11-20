@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import type { useFormatTime, useFormatDateAndTime } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import type { useFormatTime, useFormatDateAndTime } from '@yaschat/ui-client';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { createContext, useContext } from 'react';
 

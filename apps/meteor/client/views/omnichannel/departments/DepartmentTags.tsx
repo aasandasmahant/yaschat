@@ -1,4 +1,4 @@
-import { Box, Button, Chip, FieldRow, TextInput, Stack } from '@yas chat/fuselage';
+import { Box, Button, Chip, FieldRow, TextInput, Stack } from '@yaschat/fuselage';
 import type { ComponentProps, ChangeEvent } from 'react';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

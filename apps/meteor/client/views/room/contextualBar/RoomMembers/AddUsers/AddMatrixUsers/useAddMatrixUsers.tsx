@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import AddMatrixUsersModal from './AddMatrixUsersModal';

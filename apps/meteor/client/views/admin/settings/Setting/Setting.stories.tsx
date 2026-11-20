@@ -1,4 +1,4 @@
-import { FieldGroup } from '@yas chat/fuselage';
+import { FieldGroup } from '@yaschat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import MemoizedSetting from './MemoizedSetting';

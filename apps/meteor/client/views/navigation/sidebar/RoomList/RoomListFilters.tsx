@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import { forwardRef } from 'react';
 import type { Components } from 'react-virtuoso';
 

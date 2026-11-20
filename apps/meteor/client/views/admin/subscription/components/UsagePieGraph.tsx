@@ -1,6 +1,6 @@
 import type { DatumId } from '@nivo/pie';
 import { Pie } from '@nivo/pie';
-import { Box, Palette, Text } from '@yas chat/fuselage';
+import { Box, Palette, Text } from '@yaschat/fuselage';
 import type { CSSProperties, ReactNode } from 'react';
 import { useMemo, useCallback, memo } from 'react';
 import { useTranslation } from 'react-i18next';

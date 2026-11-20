@@ -1,8 +1,8 @@
-import type { IUserPhoneNumber } from '@yas chat/core-typings';
-import { Box, IconButton } from '@yas chat/fuselage';
-import { useClipboardWithToast } from '@yas chat/ui-client';
-import { usePermission, useSetting } from '@yas chat/ui-contexts';
-import { usePeekMediaSessionState, useWidgetExternalControls } from '@yas chat/ui-voip';
+import type { IUserPhoneNumber } from '@yaschat/core-typings';
+import { Box, IconButton } from '@yaschat/fuselage';
+import { useClipboardWithToast } from '@yaschat/ui-client';
+import { usePermission, useSetting } from '@yaschat/ui-contexts';
+import { usePeekMediaSessionState, useWidgetExternalControls } from '@yaschat/ui-voip';
 import { useTranslation } from 'react-i18next';
 
 import { formatPhoneNumber } from '../../lib/formatPhoneNumber';

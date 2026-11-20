@@ -1,5 +1,5 @@
-import { Box, IconButton, Stack } from '@yas chat/fuselage';
-import { Field, FieldLabel, FieldError, FieldHint, FieldRow, TextInput } from '@yas chat/fuselage-forms';
+import { Box, IconButton, Stack } from '@yaschat/fuselage';
+import { Field, FieldLabel, FieldError, FieldHint, FieldRow, TextInput } from '@yaschat/fuselage-forms';
 import { useId } from 'react';
 import type { Control } from 'react-hook-form';
 import { Controller, useWatch } from 'react-hook-form';

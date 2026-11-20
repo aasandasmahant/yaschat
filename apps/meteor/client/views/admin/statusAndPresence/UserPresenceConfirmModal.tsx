@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { GenericModalProps } from '@yas chat/ui-client';
-import { GenericModal } from '@yas chat/ui-client';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { GenericModalProps } from '@yaschat/ui-client';
+import { GenericModal } from '@yaschat/ui-client';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 

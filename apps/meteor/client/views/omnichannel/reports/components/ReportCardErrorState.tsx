@@ -1,4 +1,4 @@
-import { States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yas chat/fuselage';
+import { States, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type ReportCardErrorStateProps = {

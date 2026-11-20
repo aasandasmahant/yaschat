@@ -1,7 +1,7 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Item, ItemContent, ItemGroupHeader, ItemGroupTitle, ItemTitle, PopoverSurface, Skeleton } from '@yas chat/fuselage';
-import { Random } from '@yas chat/random';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box, Item, ItemContent, ItemGroupHeader, ItemGroupTitle, ItemTitle, PopoverSurface, Skeleton } from '@yaschat/fuselage';
+import { Random } from '@yaschat/random';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { ForwardedRef, ReactNode } from 'react';
 import { forwardRef, useEffect, useId, useImperativeHandle } from 'react';
 import { useTranslation } from 'react-i18next';

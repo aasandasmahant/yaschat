@@ -1,7 +1,7 @@
-import { Text } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { Text } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useDeleteRoomModal } from './useDeleteRoomModal';

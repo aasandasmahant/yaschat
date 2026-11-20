@@ -1,4 +1,4 @@
-import { useEndpoint, useSessionDispatch, useSetting, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useEndpoint, useSessionDispatch, useSetting, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

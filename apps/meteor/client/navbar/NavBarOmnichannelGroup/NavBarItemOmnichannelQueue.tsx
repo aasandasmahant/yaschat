@@ -1,4 +1,4 @@
-import { NavBarItem } from '@yas chat/fuselage';
+import { NavBarItem } from '@yaschat/fuselage';
 import type { HTMLAttributes } from 'react';
 
 import { useOmnichannelQueueAction } from './hooks/useOmnichannelQueueAction';

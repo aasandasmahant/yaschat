@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { Box } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta } from '@storybook/react';
 import { FormProvider } from 'react-hook-form';
 import { action } from 'storybook/actions';

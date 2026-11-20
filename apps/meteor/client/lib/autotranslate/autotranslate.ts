@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription, ISupportedLanguage, ITranslatedMessage, MessageAttachmentDefault } from '@yas chat/core-typings';
-import { isTranslatedMessageAttachment } from '@yas chat/core-typings';
+import type { IRoom, ISubscription, ISupportedLanguage, ITranslatedMessage, MessageAttachmentDefault } from '@yaschat/core-typings';
+import { isTranslatedMessageAttachment } from '@yaschat/core-typings';
 import mem from 'mem';
 
 import { PermissionsCachedStore } from '../../cachedStores';

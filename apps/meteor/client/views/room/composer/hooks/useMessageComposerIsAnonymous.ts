@@ -1,4 +1,4 @@
-import { useSetting, useUserId } from '@yas chat/ui-contexts';
+import { useSetting, useUserId } from '@yaschat/ui-contexts';
 
 export const useMessageComposerIsAnonymous = (): boolean => {
 	const isAnonymousReadEnabled = useSetting('Accounts_AllowAnonymousRead');

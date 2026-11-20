@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { HeaderToolbarAction } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { HeaderToolbarAction } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export type BackButtonProps = { routeName?: string };

@@ -1,6 +1,6 @@
-import type { IDirectoryUserResult, IUser, Serialized } from '@yas chat/core-typings';
-import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
+import type { IDirectoryUserResult, IUser, Serialized } from '@yaschat/core-typings';
+import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -11,8 +11,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { usePermission, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { usePermission, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import type { KeyboardEvent, MouseEvent } from 'react';
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

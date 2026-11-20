@@ -1,4 +1,4 @@
-import type { SupportedVersions } from '@yas chat/server-cloud-communication';
+import type { SupportedVersions } from '@yaschat/server-cloud-communication';
 import semver from 'semver';
 
 import type { VersionStatus } from './components/VersionTag';

@@ -1,5 +1,5 @@
-import type { ISubscription } from '@yas chat/core-typings';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { ISubscription } from '@yaschat/core-typings';
+import { useUserDisplayName } from '@yaschat/ui-client';
 
 import { useUnreadOnlyToggle } from '../../contexts/RoomsNavigationContext';
 import SidePanel from '../SidePanel';

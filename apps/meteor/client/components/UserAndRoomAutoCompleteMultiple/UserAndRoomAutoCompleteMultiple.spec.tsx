@@ -1,5 +1,5 @@
-import { MockedAppRootBuilder } from '@yas chat/mock-providers/dist/MockedAppRootBuilder';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { MockedAppRootBuilder } from '@yaschat/mock-providers/dist/MockedAppRootBuilder';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

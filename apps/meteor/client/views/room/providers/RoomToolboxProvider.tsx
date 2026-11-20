@@ -1,4 +1,4 @@
-import { useStableCallback, useStableArray } from '@yas chat/fuselage-hooks';
+import { useStableCallback, useStableArray } from '@yaschat/fuselage-hooks';
 import {
 	useUserId,
 	useSetting,
@@ -7,7 +7,7 @@ import {
 	useLayoutHiddenActions,
 	RoomToolboxContext,
 	type RoomToolboxContextValue,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

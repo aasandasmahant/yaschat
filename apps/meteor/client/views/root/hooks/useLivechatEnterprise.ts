@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { MultipleBusinessHoursBehavior } from '../../../lib/omnichannel/businessHours/MultipleBusinessHoursBehavior';

@@ -1,4 +1,4 @@
-import { Field, FieldError, FieldLabel, FieldRow, TextAreaInput } from '@yas chat/fuselage';
+import { Field, FieldError, FieldLabel, FieldRow, TextAreaInput } from '@yaschat/fuselage';
 import { useId, type ComponentProps } from 'react';
 import type { Control } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

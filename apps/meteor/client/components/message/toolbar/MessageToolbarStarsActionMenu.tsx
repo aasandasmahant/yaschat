@@ -1,5 +1,5 @@
-import { isE2EEMessage, type IMessage } from '@yas chat/core-typings';
-import { GenericMenu, type GenericMenuItemProps } from '@yas chat/ui-client';
+import { isE2EEMessage, type IMessage } from '@yaschat/core-typings';
+import { GenericMenu, type GenericMenuItemProps } from '@yaschat/ui-client';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

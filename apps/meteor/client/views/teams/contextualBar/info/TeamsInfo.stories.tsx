@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { Contextualbar } from '@yas chat/ui-client';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { Contextualbar } from '@yaschat/ui-client';
 import type { Meta } from '@storybook/react';
 
 import TeamsInfo from './TeamsInfo';

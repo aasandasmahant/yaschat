@@ -1,6 +1,6 @@
-import { Box, CodeSnippet, Stack } from '@yas chat/fuselage';
-import { useClipboard } from '@yas chat/fuselage-hooks';
-import { ExternalLink, GenericModal, links } from '@yas chat/ui-client';
+import { Box, CodeSnippet, Stack } from '@yaschat/fuselage';
+import { useClipboard } from '@yaschat/fuselage-hooks';
+import { ExternalLink, GenericModal, links } from '@yaschat/ui-client';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

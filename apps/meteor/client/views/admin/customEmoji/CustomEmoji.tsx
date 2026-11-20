@@ -7,8 +7,8 @@ import {
 	StatesTitle,
 	type TableColumnWidth,
 	Text,
-} from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+} from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -21,8 +21,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { MutableRefObject } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

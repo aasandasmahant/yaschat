@@ -1,7 +1,7 @@
-import { IconButton } from '@yas chat/fuselage';
-import { useButtonPattern } from '@yas chat/fuselage-hooks';
-import { MessageComposerFile, MessageComposerFileError, MessageComposerFileLoader } from '@yas chat/ui-composer';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { IconButton } from '@yaschat/fuselage';
+import { useButtonPattern } from '@yaschat/fuselage-hooks';
+import { MessageComposerFile, MessageComposerFileError, MessageComposerFileLoader } from '@yaschat/ui-composer';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

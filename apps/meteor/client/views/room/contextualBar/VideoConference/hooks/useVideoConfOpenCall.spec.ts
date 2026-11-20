@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { screen, act, renderHook } from '@testing-library/react';
 
 import { useVideoConfOpenCall } from './useVideoConfOpenCall';
@@ -351,7 +351,7 @@ describe('with the call window, from a page that never held a handle on it', () 
 		jest.isolateModules(() => {
 			/* oxlint-disable @typescript-eslint/no-require-imports */
 			const testingLibrary = require('@testing-library/react/pure') as typeof import('@testing-library/react/pure');
-			const providers = require('@yas chat/mock-providers') as typeof import('@yas chat/mock-providers');
+			const providers = require('@yaschat/mock-providers') as typeof import('@yaschat/mock-providers');
 			const hook = require('./useVideoConfOpenCall') as typeof import('./useVideoConfOpenCall');
 			/* oxlint-enable @typescript-eslint/no-require-imports */
 

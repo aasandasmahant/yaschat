@@ -1,6 +1,6 @@
-import { Box, Button, Card, CardBody, CardControls, CardHeader, Icon, Tag } from '@yas chat/fuselage';
-import { useIsEnterprise } from '@yas chat/ui-client';
-import { useRole, useSettingSetValue, useSetting, useToastMessageDispatch, useRouter } from '@yas chat/ui-contexts';
+import { Box, Button, Card, CardBody, CardControls, CardHeader, Icon, Tag } from '@yaschat/fuselage';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import { useRole, useSettingSetValue, useSetting, useToastMessageDispatch, useRouter } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

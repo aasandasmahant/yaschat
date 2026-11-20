@@ -5,8 +5,8 @@ import type {
 	PluginSelf,
 	ProviderPluginActions,
 	ProviderPluginControls,
-} from '@yas chat/ui-conference';
-import { PLUGIN_FEATURES } from '@yas chat/ui-conference';
+} from '@yaschat/ui-conference';
+import { PLUGIN_FEATURES } from '@yaschat/ui-conference';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 /**

@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDirectMessageRoom } from '@yas chat/core-typings';
-import { useUserDisplayName } from '@yas chat/ui-client';
-import { useUserSubscription } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDirectMessageRoom } from '@yaschat/core-typings';
+import { useUserDisplayName } from '@yaschat/ui-client';
+import { useUserSubscription } from '@yaschat/ui-contexts';
 
 /**
  *

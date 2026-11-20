@@ -1,5 +1,5 @@
-import { RouterContext } from '@yas chat/ui-contexts';
-import type { RouterContextValue } from '@yas chat/ui-contexts';
+import { RouterContext } from '@yaschat/ui-contexts';
+import type { RouterContextValue } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import { useRouterScrollToHash } from '../hooks/useRouterScrollToHash';

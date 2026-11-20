@@ -1,8 +1,8 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { useUserDisplayName } from '@yas chat/ui-client';
-import { useUserAvatarPath, useUserId, useUserSubscription, useUserCard, useUserRoom } from '@yas chat/ui-contexts';
-import { usePeekMediaSessionState, useWidgetExternalControls } from '@yas chat/ui-voip';
+import { isRoomFederated } from '@yaschat/core-typings';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { useUserDisplayName } from '@yaschat/ui-client';
+import { useUserAvatarPath, useUserId, useUserSubscription, useUserCard, useUserRoom } from '@yaschat/ui-contexts';
+import { usePeekMediaSessionState, useWidgetExternalControls } from '@yaschat/ui-voip';
 import { useTranslation } from 'react-i18next';
 
 import type { UserInfoAction } from '../useUserInfoActions';

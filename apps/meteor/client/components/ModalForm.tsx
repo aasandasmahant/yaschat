@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { ComponentProps, FormEventHandler } from 'react';
 
 export type ModalFormProps = Pick<ComponentProps<typeof Box>, 'elevation' | 'className' | 'children'> & {

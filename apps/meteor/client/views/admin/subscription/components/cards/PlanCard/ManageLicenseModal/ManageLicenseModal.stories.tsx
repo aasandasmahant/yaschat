@@ -1,5 +1,5 @@
-import type { BehaviorWithContext } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { BehaviorWithContext } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 import { screen, userEvent, expect } from 'storybook/test';

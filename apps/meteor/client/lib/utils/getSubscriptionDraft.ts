@@ -1,4 +1,4 @@
-import type { ISubscription } from '@yas chat/core-typings';
+import type { ISubscription } from '@yaschat/core-typings';
 
 export const getSubscriptionDraft = (subscription: Pick<ISubscription, 'draft' | 'threadDrafts'>): string | undefined => {
 	if (subscription.draft) {

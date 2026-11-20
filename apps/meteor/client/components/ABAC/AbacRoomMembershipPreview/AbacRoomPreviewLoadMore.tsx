@@ -1,4 +1,4 @@
-import { Box, Button } from '@yas chat/fuselage';
+import { Box, Button } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type AbacRoomPreviewLoadMoreContext = {

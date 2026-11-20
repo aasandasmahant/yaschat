@@ -1,4 +1,4 @@
-import type { Root } from '@yas chat/message-parser';
+import type { Root } from '@yaschat/message-parser';
 
 /**
  * Builds a `Root` that renders `text` verbatim.

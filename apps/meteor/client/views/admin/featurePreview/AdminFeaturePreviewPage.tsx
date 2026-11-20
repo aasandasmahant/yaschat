@@ -12,7 +12,7 @@ import {
 	FieldRow,
 	Text,
 	ToggleSwitch,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import {
 	useDefaultSettingFeaturePreviewList,
 	Page,
@@ -20,8 +20,8 @@ import {
 	PageScrollableContentWithShadow,
 	PageFooter,
 	useFeaturePreviewEnableQuery,
-} from '@yas chat/ui-client';
-import { useToastMessageDispatch, useSettingsDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useToastMessageDispatch, useSettingsDispatch } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { Fragment } from 'react';
 import { useForm } from 'react-hook-form';

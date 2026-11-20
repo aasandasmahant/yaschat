@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { ItemContent, ItemIcon, ItemTitle } from '@yas chat/fuselage';
+import type { IRoom } from '@yaschat/core-typings';
+import { ItemContent, ItemIcon, ItemTitle } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { RoomIcon } from '../../../components/RoomIcon';

@@ -1,6 +1,6 @@
-import type { IOmnichannelBusinessUnit } from '@yas chat/core-typings';
-import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IOmnichannelBusinessUnit } from '@yaschat/core-typings';
+import { ContextualbarSkeletonBody } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import UnitEdit from './UnitEdit';

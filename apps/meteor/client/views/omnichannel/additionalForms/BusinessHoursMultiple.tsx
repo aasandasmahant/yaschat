@@ -1,5 +1,5 @@
-import { Field, FieldLabel, FieldRow, FieldError, TextInput, ToggleSwitch } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import { Field, FieldLabel, FieldRow, FieldError, TextInput, ToggleSwitch } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import { useId } from 'react';
 import type { ComponentProps } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';

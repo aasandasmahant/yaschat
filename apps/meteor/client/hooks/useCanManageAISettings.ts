@@ -1,4 +1,4 @@
-import { useAtLeastOnePermission, usePermission } from '@yas chat/ui-contexts';
+import { useAtLeastOnePermission, usePermission } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { getSettingPermissionId } from '../../lib/authorization';

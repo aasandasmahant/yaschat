@@ -1,4 +1,4 @@
-import { Sidebar as FuselageSidebar } from '@yas chat/fuselage';
+import { Sidebar as FuselageSidebar } from '@yaschat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type SidebarProps = ComponentPropsWithoutRef<typeof FuselageSidebar>;

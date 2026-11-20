@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 
 import { createDocumentMapStore } from '../lib/cachedStores/DocumentMapStore';
 import { createGlobalStore } from '../lib/cachedStores/createGlobalStore';

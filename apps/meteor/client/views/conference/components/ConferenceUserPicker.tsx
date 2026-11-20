@@ -1,6 +1,6 @@
-import { isDirectMessageRoom, isPrivateRoom, isPublicRoom } from '@yas chat/core-typings';
-import type { UserPickerProps } from '@yas chat/ui-conference';
-import { useEndpoint, useUserRoom } from '@yas chat/ui-contexts';
+import { isDirectMessageRoom, isPrivateRoom, isPublicRoom } from '@yaschat/core-typings';
+import type { UserPickerProps } from '@yaschat/ui-conference';
+import { useEndpoint, useUserRoom } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

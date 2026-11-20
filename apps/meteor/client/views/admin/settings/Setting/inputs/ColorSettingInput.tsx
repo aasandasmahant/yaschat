@@ -1,6 +1,6 @@
-import type { SettingEditor } from '@yas chat/core-typings';
-import { Box, FieldLabel, FieldRow, FieldHint, FlexItem, InputBox, TextInput, Select, Field } from '@yas chat/fuselage';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { SettingEditor } from '@yaschat/core-typings';
+import { Box, FieldLabel, FieldRow, FieldHint, FlexItem, InputBox, TextInput, Select, Field } from '@yaschat/fuselage';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import type { ChangeEvent, Key } from 'react';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

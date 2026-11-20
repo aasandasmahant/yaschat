@@ -1,4 +1,4 @@
-import type { App, AppPermission } from '@yas chat/core-typings';
+import type { App, AppPermission } from '@yaschat/core-typings';
 import { useMutation } from '@tanstack/react-query';
 
 import { useAppsOrchestration } from './useAppsOrchestration';

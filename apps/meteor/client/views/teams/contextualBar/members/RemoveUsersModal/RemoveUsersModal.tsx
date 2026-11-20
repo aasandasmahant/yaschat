@@ -1,6 +1,6 @@
-import type { Serialized, IRoom } from '@yas chat/core-typings';
-import { GenericModalSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { Serialized, IRoom } from '@yaschat/core-typings';
+import { GenericModalSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import BaseRemoveUsersModal from './BaseRemoveUsersModal';

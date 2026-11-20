@@ -1,6 +1,6 @@
-import type { INotificationDesktop } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useUser } from '@yas chat/ui-contexts';
+import type { INotificationDesktop } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useUser } from '@yaschat/ui-contexts';
 
 import { useNotification } from '../../../../hooks/notification/useNotification';
 import { RoomManager } from '../../../../lib/RoomManager';

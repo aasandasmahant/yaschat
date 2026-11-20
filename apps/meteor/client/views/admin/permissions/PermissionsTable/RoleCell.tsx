@@ -1,9 +1,9 @@
-import { AuthorizationUtils } from '@yas chat/authorization/dist/AuthorizationUtils';
-import type { IRole } from '@yas chat/core-typings';
-import { Box, CheckBox, Throbber } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal, GenericTableCell } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { AuthorizationUtils } from '@yaschat/authorization/dist/AuthorizationUtils';
+import type { IRole } from '@yaschat/core-typings';
+import { Box, CheckBox, Throbber } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal, GenericTableCell } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { MessageTypes } from '@yas chat/message-types';
+import type { IMessage } from '@yaschat/core-typings';
+import { MessageTypes } from '@yaschat/message-types';
 
 import { dispatchToastMessage } from '../../toast';
 import type { ChatAPI } from '../ChatAPI';

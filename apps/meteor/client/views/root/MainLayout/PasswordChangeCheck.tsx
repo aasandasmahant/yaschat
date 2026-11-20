@@ -1,11 +1,11 @@
-import { useUser } from '@yas chat/ui-contexts';
+import { useUser } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { lazy } from 'react';
 
 import TwoFactorAuthSetupCheck from './TwoFactorAuthSetupCheck';
 
 const ResetPasswordPage = lazy(() =>
-	import('@yas chat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
+	import('@yaschat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
 );
 
 export type PasswordChangeCheckProps = { children: ReactNode };

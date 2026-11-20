@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { WizardContext, StepsLinkedList } from '@yas chat/ui-client';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { WizardContext, StepsLinkedList } from '@yaschat/ui-client';
 import { composeStories } from '@storybook/react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

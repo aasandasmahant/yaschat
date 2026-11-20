@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { CustomVirtuaScrollbars, useMergedRefsV2 } from '@yas chat/ui-client';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { CustomVirtuaScrollbars, useMergedRefsV2 } from '@yaschat/ui-client';
 import type { Key, ReactNode, Ref } from 'react';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Virtualizer } from 'virtua';

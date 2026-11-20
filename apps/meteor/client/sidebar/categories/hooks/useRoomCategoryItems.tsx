@@ -1,6 +1,6 @@
-import { Icon } from '@yas chat/fuselage';
-import { useIsEnterprise } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Icon } from '@yaschat/fuselage';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

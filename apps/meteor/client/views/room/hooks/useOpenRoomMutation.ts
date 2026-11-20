@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import { updateSubscription } from '../../../lib/mutationEffects/updateSubscription';

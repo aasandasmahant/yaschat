@@ -1,7 +1,7 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { MessageBlock } from '@yas chat/fuselage';
-import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@yas chat/fuselage-ui-kit';
-import type { MessageSurfaceLayout } from '@yas chat/ui-kit';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { MessageBlock } from '@yaschat/fuselage';
+import { UiKitComponent, UiKitMessage as UiKitMessageSurfaceRender, UiKitContext } from '@yaschat/fuselage-ui-kit';
+import type { MessageSurfaceLayout } from '@yaschat/ui-kit';
 
 import { useMessageBlockContextValue } from './useMessageBlockContextValue';
 import GazzodownText from '../../GazzodownText';

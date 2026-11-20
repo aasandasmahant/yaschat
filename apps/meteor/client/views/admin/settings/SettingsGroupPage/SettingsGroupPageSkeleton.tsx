@@ -1,5 +1,5 @@
-import { Accordion, Box, Skeleton, Text } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { Accordion, Box, Skeleton, Text } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 
 import SettingsSectionSkeleton from '../SettingsSection/SettingsSectionSkeleton';

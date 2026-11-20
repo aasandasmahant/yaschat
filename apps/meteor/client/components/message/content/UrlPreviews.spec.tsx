@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IMessage } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import UrlPreviews from './UrlPreviews';

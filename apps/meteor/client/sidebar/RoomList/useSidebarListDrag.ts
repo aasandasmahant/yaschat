@@ -1,5 +1,5 @@
-import { useIsEnterprise } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { getRoomDropTarget } from './getRoomDropTarget';

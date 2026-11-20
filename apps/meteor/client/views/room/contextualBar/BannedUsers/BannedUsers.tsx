@@ -1,5 +1,5 @@
-import { Box, Throbber } from '@yas chat/fuselage';
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
+import { Box, Throbber } from '@yaschat/fuselage';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
 import {
 	ContextualbarClose,
 	ContextualbarContent,
@@ -9,7 +9,7 @@ import {
 	ContextualbarIcon,
 	ContextualbarTitle,
 	VirtualizedScrollbars,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';
 

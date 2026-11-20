@@ -1,6 +1,6 @@
-import type { IIncomingIntegration } from '@yas chat/core-typings';
-import { Box, Skeleton, Stack } from '@yas chat/fuselage';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IIncomingIntegration } from '@yaschat/core-typings';
+import { Box, Skeleton, Stack } from '@yaschat/fuselage';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

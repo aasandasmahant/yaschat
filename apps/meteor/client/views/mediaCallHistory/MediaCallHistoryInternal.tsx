@@ -1,5 +1,5 @@
-import type { CallHistoryItem, IInternalMediaCallHistoryItem, IMediaCall, Serialized } from '@yas chat/core-typings';
-import { CallHistoryContextualBar, type CallHistoryInternalContact } from '@yas chat/ui-voip';
+import type { CallHistoryItem, IInternalMediaCallHistoryItem, IMediaCall, Serialized } from '@yaschat/core-typings';
+import { CallHistoryContextualBar, type CallHistoryInternalContact } from '@yaschat/ui-voip';
 import { useMemo } from 'react';
 
 import { useMediaCallInternalHistoryActions } from './useMediaCallInternalHistoryActions';

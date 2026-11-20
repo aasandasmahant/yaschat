@@ -1,7 +1,7 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { escapeHTML } from '@yas chat/tools';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { escapeHTML } from '@yaschat/tools';
+import { GenericModal } from '@yaschat/ui-client';
 import {
 	useAllPermissions,
 	usePermission,
@@ -12,7 +12,7 @@ import {
 	useUserRoom,
 	useUserSubscription,
 	useEndpoint,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';

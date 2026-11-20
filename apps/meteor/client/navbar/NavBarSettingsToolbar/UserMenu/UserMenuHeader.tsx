@@ -1,7 +1,7 @@
-import type { IUser } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { IUser } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useUserDisplayName } from '@yaschat/ui-client';
 
 export type UserMenuHeaderProps = { user: IUser };
 

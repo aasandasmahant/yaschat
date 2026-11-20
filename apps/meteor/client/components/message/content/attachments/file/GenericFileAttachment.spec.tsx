@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -22,8 +22,8 @@ jest.mock('../../../../../hooks/useDownloadFromServiceWorker', () => ({
 	registerDownloadForUid: (...args: unknown[]) => mockRegisterDownloadForUid(...args),
 }));
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useMediaUrl: () => (url: string) => url,
 	useToastMessageDispatch: () => mockDispatchToastMessage,
 }));

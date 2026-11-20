@@ -1,5 +1,5 @@
-import type { RouterContextValue, To } from '@yas chat/ui-contexts';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { RouterContextValue, To } from '@yaschat/ui-contexts';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { _relativeToSiteRootUrl } from '../../../lib/absoluteUrl';

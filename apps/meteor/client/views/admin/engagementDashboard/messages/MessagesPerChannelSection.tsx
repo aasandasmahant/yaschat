@@ -15,7 +15,7 @@ import {
 	Text,
 	Tile,
 	Tooltip,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

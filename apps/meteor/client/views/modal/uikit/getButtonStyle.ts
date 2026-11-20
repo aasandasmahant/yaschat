@@ -1,4 +1,4 @@
-import type { ButtonElement } from '@yas chat/ui-kit';
+import type { ButtonElement } from '@yaschat/ui-kit';
 
 // TODO: Move to fuselage-ui-kit
 export const getButtonStyle = (buttonElement: ButtonElement): { variant: 'danger' | 'primary' } => {

@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { links } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { links } from '@yaschat/ui-client';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import InviteUsers from './InviteUsers';

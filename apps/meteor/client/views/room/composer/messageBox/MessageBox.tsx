@@ -1,9 +1,9 @@
 /* oxlint-disable complexity */
-import { isRoomFederated, isRoomNativeFederated, type IMessage, type ISubscription } from '@yas chat/core-typings';
-import { useContentBoxSize, useStableCallback, useMediaQuery } from '@yas chat/fuselage-hooks';
-import { useFormatDateAndTime, useMergedRefsV2 } from '@yas chat/ui-client';
-import { MessageComposerInputExpandable } from '@yas chat/ui-composer';
-import { useUserPreference, useLayout, useSetting } from '@yas chat/ui-contexts';
+import { isRoomFederated, isRoomNativeFederated, type IMessage, type ISubscription } from '@yaschat/core-typings';
+import { useContentBoxSize, useStableCallback, useMediaQuery } from '@yaschat/fuselage-hooks';
+import { useFormatDateAndTime, useMergedRefsV2 } from '@yaschat/ui-client';
+import { MessageComposerInputExpandable } from '@yaschat/ui-composer';
+import { useUserPreference, useLayout, useSetting } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import type { MouseEvent, ClipboardEvent, ChangeEvent } from 'react';
 import { memo, useRef, useReducer, useCallback, useSyncExternalStore } from 'react';

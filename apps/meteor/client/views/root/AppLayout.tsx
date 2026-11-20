@@ -1,4 +1,4 @@
-import { useRedirectToSetupWizard } from '@yas chat/ui-setup-wizard';
+import { useRedirectToSetupWizard } from '@yaschat/ui-setup-wizard';
 import { useEffect, Suspense, useSyncExternalStore } from 'react';
 
 import DocumentTitleWrapper from './DocumentTitleWrapper';

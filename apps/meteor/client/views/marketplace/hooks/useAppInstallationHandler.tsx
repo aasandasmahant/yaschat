@@ -1,5 +1,5 @@
-import type { App } from '@yas chat/core-typings';
-import { useEndpoint, useRouteParameter, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { App } from '@yaschat/core-typings';
+import { useEndpoint, useRouteParameter, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { isMarketplaceRouteContext, useAppsCountQuery } from './useAppsCountQuery';

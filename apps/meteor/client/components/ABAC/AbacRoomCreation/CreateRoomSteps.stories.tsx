@@ -1,5 +1,5 @@
-import { Field, FieldGroup, FieldLabel, FieldRow, Modal, ModalHeader, ModalTitle, TextInput } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { Field, FieldGroup, FieldLabel, FieldRow, Modal, ModalHeader, ModalTitle, TextInput } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 import { userEvent, within } from 'storybook/test';

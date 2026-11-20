@@ -1,5 +1,5 @@
-import { Box, Field, FieldLabel, FieldRow, UrlInput, Icon, Button, InputBoxSkeleton } from '@yas chat/fuselage';
-import { useClipboardWithToast } from '@yas chat/ui-client';
+import { Box, Field, FieldLabel, FieldRow, UrlInput, Icon, Button, InputBoxSkeleton } from '@yaschat/fuselage';
+import { useClipboardWithToast } from '@yaschat/ui-client';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

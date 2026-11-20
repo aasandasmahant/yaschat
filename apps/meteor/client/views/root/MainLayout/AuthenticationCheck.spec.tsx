@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { AuthenticationContextValue, SessionContextValue } from '@yas chat/ui-contexts';
-import { AuthenticationContext, SessionContext, UserContext } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { AuthenticationContextValue, SessionContextValue } from '@yaschat/ui-contexts';
+import { AuthenticationContext, SessionContext, UserContext } from '@yaschat/ui-contexts';
 import { act, render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { useContext } from 'react';

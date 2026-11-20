@@ -1,7 +1,7 @@
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { IconButton, SidebarItemActions } from '@yas chat/fuselage';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useUserId } from '@yas chat/ui-contexts';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { IconButton, SidebarItemActions } from '@yaschat/fuselage';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useUserId } from '@yaschat/ui-contexts';
 import type { TFunction } from 'i18next';
 import type { AllHTMLAttributes } from 'react';
 import { memo, useMemo } from 'react';

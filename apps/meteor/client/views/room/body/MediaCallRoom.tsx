@@ -1,12 +1,12 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDirectMessageRoom } from '@yas chat/core-typings';
-import type { PeerInfo } from '@yas chat/ui-voip';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDirectMessageRoom } from '@yaschat/core-typings';
+import type { PeerInfo } from '@yaschat/ui-voip';
 import {
 	MediaCallRoomActivity,
 	usePeekMediaSessionState,
 	usePeekMediaSessionPeerInfo,
 	usePeekMediaSessionHidden,
-} from '@yas chat/ui-voip';
+} from '@yaschat/ui-voip';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

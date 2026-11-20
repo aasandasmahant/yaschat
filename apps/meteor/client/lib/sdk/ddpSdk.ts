@@ -1,4 +1,4 @@
-import { DDPSDK } from '@yas chat/ddp-client';
+import { DDPSDK } from '@yaschat/ddp-client';
 import EJSON from 'ejson';
 
 import { createMeteorBackedStorage } from './meteorBackedSdk';

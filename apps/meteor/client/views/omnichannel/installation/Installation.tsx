@@ -1,7 +1,7 @@
-import { Box, CodeSnippet } from '@yas chat/fuselage';
-import { useClipboard } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useAbsoluteUrl, useSetting } from '@yas chat/ui-contexts';
+import { Box, CodeSnippet } from '@yaschat/fuselage';
+import { useClipboard } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useAbsoluteUrl, useSetting } from '@yaschat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 const Installation = () => {

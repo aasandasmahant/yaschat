@@ -1,4 +1,4 @@
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 export const useDismissUserBannerMutation = () => {

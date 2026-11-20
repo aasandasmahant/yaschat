@@ -1,6 +1,6 @@
-import { Box, Icon } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Box, Icon } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

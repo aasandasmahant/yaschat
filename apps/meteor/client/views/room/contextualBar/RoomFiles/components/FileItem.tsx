@@ -1,4 +1,4 @@
-import type { IRoom, IUpload, IUploadWithUser } from '@yas chat/core-typings';
+import type { IRoom, IUpload, IUploadWithUser } from '@yaschat/core-typings';
 import {
 	Icon,
 	Item,
@@ -10,8 +10,8 @@ import {
 	ItemMeta,
 	ItemRow,
 	ItemTitle,
-} from '@yas chat/fuselage';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import FileItemMenu from './FileItemMenu';

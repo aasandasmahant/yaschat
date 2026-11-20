@@ -1,5 +1,5 @@
-import type { SettingValueRoomPick } from '@yas chat/core-typings';
-import { Field, FieldHint, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import type { SettingValueRoomPick } from '@yaschat/core-typings';
+import { Field, FieldHint, FieldLabel, FieldRow } from '@yaschat/fuselage';
 
 import RoomAutoCompleteMultiple from '../../../../../components/RoomAutoCompleteMultiple';
 import ResetSettingButton from '../ResetSettingButton';

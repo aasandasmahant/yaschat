@@ -1,5 +1,5 @@
-import { GenericMenu } from '@yas chat/ui-client';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import { GenericMenu } from '@yaschat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { ComposerAPI } from '../../../../../lib/chats/ChatAPI';

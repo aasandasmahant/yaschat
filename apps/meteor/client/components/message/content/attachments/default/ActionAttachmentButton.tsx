@@ -1,6 +1,6 @@
-import type { IMessage, MessageAttachmentAction } from '@yas chat/core-typings';
-import { Button } from '@yas chat/fuselage';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage, MessageAttachmentAction } from '@yaschat/core-typings';
+import { Button } from '@yaschat/fuselage';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 import { usePerformActionMutation } from './hooks/usePerformActionMutation';

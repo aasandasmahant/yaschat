@@ -1,6 +1,6 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Bubble } from '@yas chat/fuselage';
-import { isTruthy } from '@yas chat/tools';
+import { css } from '@yaschat/css-in-js';
+import { Box, Bubble } from '@yaschat/fuselage';
+import { isTruthy } from '@yaschat/tools';
 
 export type JumpToRecentMessageButtonProps = {
 	visible: boolean;

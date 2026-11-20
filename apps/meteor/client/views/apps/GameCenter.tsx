@@ -1,6 +1,6 @@
-import type { IExternalComponent } from '@yas chat/apps-engine/definition/externalComponent';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IExternalComponent } from '@yaschat/apps-engine/definition/externalComponent';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import { useState } from 'react';
 import type { MouseEvent } from 'react';
 

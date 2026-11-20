@@ -1,4 +1,4 @@
-import type { ILivechatAgent, ILivechatVisitor, IRoom, IUser } from '@yas chat/core-typings';
+import type { ILivechatAgent, ILivechatVisitor, IRoom, IUser } from '@yaschat/core-typings';
 import { useForm } from 'react-hook-form';
 
 import { createEndOfToday, createStartOfToday } from '../utils/dateRange';

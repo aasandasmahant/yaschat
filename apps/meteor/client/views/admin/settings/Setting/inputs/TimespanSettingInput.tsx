@@ -1,4 +1,4 @@
-import { Field, FieldHint, FieldLabel, FieldRow, InputBox, Select } from '@yas chat/fuselage';
+import { Field, FieldHint, FieldLabel, FieldRow, InputBox, Select } from '@yaschat/fuselage';
 import type { ChangeEventHandler, Key } from 'react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Box, Tag } from '@yas chat/fuselage';
+import { Box, Tag } from '@yaschat/fuselage';
 
 export type ReactionUserTagProps = { displayName: string };
 

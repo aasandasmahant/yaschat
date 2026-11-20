@@ -1,6 +1,6 @@
-import { Callout } from '@yas chat/fuselage';
-import { PageSkeleton } from '@yas chat/ui-client';
-import { useEndpoint, useSetModal } from '@yas chat/ui-contexts';
+import { Callout } from '@yaschat/fuselage';
+import { PageSkeleton } from '@yaschat/ui-client';
+import { useEndpoint, useSetModal } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { MessageComposerHint } from '@yas chat/ui-composer';
+import { MessageComposerHint } from '@yaschat/ui-composer';
 import { memo } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 

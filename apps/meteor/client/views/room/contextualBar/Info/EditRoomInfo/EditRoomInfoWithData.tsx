@@ -1,5 +1,5 @@
-import type { IRoomWithRetentionPolicy } from '@yas chat/core-typings';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoomWithRetentionPolicy } from '@yaschat/core-typings';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 
 import EditRoomInfo from './EditRoomInfo';
 import { useRoom } from '../../../contexts/RoomContext';

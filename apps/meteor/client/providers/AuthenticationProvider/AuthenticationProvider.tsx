@@ -1,6 +1,6 @@
-import type { LoginServiceConfiguration } from '@yas chat/core-typings';
-import { capitalize } from '@yas chat/tools';
-import { AuthenticationContext, useSetting } from '@yas chat/ui-contexts';
+import type { LoginServiceConfiguration } from '@yaschat/core-typings';
+import { capitalize } from '@yaschat/tools';
+import { AuthenticationContext, useSetting } from '@yaschat/ui-contexts';
 import type { Meteor } from 'meteor/meteor';
 import type { ContextType, ReactNode } from 'react';
 import { useMemo, useSyncExternalStore } from 'react';

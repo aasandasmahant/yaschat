@@ -1,4 +1,4 @@
-import type { Inquiries } from '@yas chat/core-typings';
+import type { Inquiries } from '@yaschat/core-typings';
 
 import { useOmnichannel } from './useOmnichannel';
 

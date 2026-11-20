@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { isRoomFederated } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
+import { isRoomFederated } from '@yaschat/core-typings';
 import {
 	useTranslation,
 	useUserRoom,
@@ -9,7 +9,7 @@ import {
 	usePermission,
 	useUserCard,
 	useEndpoint,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import {
 	useVideoConfDispatchOutgoing,
 	useVideoConfIsCalling,
@@ -17,7 +17,7 @@ import {
 	useVideoConfLoadCapabilities,
 	useVideoConfStartCall,
 	useVideoConfWindowEnabled,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useMemo } from 'react';
 
 import { useVideoConfWarning } from '../../../contextualBar/VideoConference/hooks/useVideoConfWarning';

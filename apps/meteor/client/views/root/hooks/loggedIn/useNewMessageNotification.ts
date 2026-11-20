@@ -1,6 +1,6 @@
-import type { AtLeast, ISubscription } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useCustomSound } from '@yas chat/ui-contexts';
+import type { AtLeast, ISubscription } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useCustomSound } from '@yaschat/ui-contexts';
 
 export const useNewMessageNotification = () => {
 	const { notificationSounds } = useCustomSound();

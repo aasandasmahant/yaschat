@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { composeStories } from '@storybook/react';
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -10,8 +10,8 @@ const { Default } = composeStories(stories);
 
 const testCases = Object.values(composeStories(stories)).map((Story) => [Story.storyName || 'Story', Story]);
 
-jest.mock('@yas chat/fuselage-hooks', () => {
-	const originalModule = jest.requireActual('@yas chat/fuselage-hooks');
+jest.mock('@yaschat/fuselage-hooks', () => {
+	const originalModule = jest.requireActual('@yaschat/fuselage-hooks');
 	return {
 		...originalModule,
 		useBreakpoints: () => ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],

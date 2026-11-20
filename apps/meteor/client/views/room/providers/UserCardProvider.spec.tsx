@@ -1,5 +1,5 @@
-import type { UserCardContextValue } from '@yas chat/ui-contexts';
-import { useUserCard } from '@yas chat/ui-contexts';
+import type { UserCardContextValue } from '@yaschat/ui-contexts';
+import { useUserCard } from '@yaschat/ui-contexts';
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import { useEffect, useRef, type ReactNode, type UIEvent } from 'react';
 
@@ -12,8 +12,8 @@ jest.mock('../contexts/RoomContext', () => ({
 const mockOpenTab = jest.fn();
 let mockActions: { id: string }[] = [];
 
-jest.mock('@yas chat/ui-contexts', () => {
-	const actual = jest.requireActual('@yas chat/ui-contexts');
+jest.mock('@yaschat/ui-contexts', () => {
+	const actual = jest.requireActual('@yaschat/ui-contexts');
 	return { ...actual, useRoomToolbox: () => ({ openTab: mockOpenTab, actions: mockActions }) };
 });
 

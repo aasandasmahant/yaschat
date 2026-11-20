@@ -1,7 +1,7 @@
-import type { IDirectoryUserResult, IUser, Serialized } from '@yas chat/core-typings';
-import { Box, FlexContainer, FlexItem, Text } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import type { IDirectoryUserResult, IUser, Serialized } from '@yaschat/core-typings';
+import { Box, FlexContainer, FlexItem, Text } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 import type { KeyboardEvent, MouseEvent } from 'react';
 
 import MarkdownText from '../../../../../components/MarkdownText';

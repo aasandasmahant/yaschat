@@ -1,5 +1,5 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, NumberInput, Select, TextInput } from '@yas chat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, NumberInput, Select, TextInput } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { useId, useMemo } from 'react';
 import type { Control } from 'react-hook-form';

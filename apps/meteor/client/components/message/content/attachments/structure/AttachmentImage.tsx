@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { useAttachmentDimensions } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useAttachmentDimensions } from '@yaschat/ui-contexts';
 import { memo, useState, useMemo } from 'react';
 
 import ImageBox from './image/ImageBox';

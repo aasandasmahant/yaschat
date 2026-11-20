@@ -1,7 +1,7 @@
-import { Box, Callout, Message, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { ContextualbarFooter, GenericNoResults } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Callout, Message, StatesAction, StatesActions, StatesIcon, StatesTitle } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { ContextualbarFooter, GenericNoResults } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';

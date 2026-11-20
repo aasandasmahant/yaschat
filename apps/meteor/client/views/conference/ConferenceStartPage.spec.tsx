@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -17,8 +17,8 @@ const navigate = jest.fn();
  */
 let router: { navigate: typeof navigate; buildRoutePath: () => string };
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useRouter: () => router,
 }));
 

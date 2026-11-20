@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 export const useSendTelemetryMutation = () => {

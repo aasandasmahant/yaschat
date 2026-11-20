@@ -1,5 +1,5 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen } from '@testing-library/react';
 
 import ChannelsTableRow from './ChannelsTableRow';

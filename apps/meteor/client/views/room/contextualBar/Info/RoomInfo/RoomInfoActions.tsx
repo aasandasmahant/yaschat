@@ -1,5 +1,5 @@
-import type { Keys as IconKeys } from '@yas chat/icons';
-import { InfoPanelAction } from '@yas chat/ui-client';
+import type { Keys as IconKeys } from '@yaschat/icons';
+import { InfoPanelAction } from '@yaschat/ui-client';
 
 type Action = {
 	id: string;

@@ -1,6 +1,6 @@
-import type { Serialized, IRoom } from '@yas chat/core-typings';
-import { ModalIcon } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import type { Serialized, IRoom } from '@yaschat/core-typings';
+import { ModalIcon } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export type RemoveUsersSecondStepProps = {

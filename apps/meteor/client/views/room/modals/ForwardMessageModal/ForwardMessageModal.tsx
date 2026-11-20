@@ -1,4 +1,4 @@
-import type { IMessage, MessageQuoteAttachment } from '@yas chat/core-typings';
+import type { IMessage, MessageQuoteAttachment } from '@yaschat/core-typings';
 import {
 	Modal,
 	Field,
@@ -13,10 +13,10 @@ import {
 	ModalClose,
 	ModalContent,
 	ModalFooter,
-} from '@yas chat/fuselage';
-import { useClipboard } from '@yas chat/fuselage-hooks';
-import { useUserDisplayName } from '@yas chat/ui-client';
-import { useEndpoint, useToastMessageDispatch, useUserAvatarPath } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useClipboard } from '@yaschat/fuselage-hooks';
+import { useUserDisplayName } from '@yaschat/ui-client';
+import { useEndpoint, useToastMessageDispatch, useUserAvatarPath } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { memo, useId } from 'react';
 import { useForm, Controller } from 'react-hook-form';

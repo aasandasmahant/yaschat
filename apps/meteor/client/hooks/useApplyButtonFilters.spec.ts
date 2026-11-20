@@ -1,7 +1,7 @@
-import type { IUIActionButton } from '@yas chat/apps-engine/definition/ui';
-import { UIActionButtonContext } from '@yas chat/apps-engine/definition/ui';
-import type { IRoom } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IUIActionButton } from '@yaschat/apps-engine/definition/ui';
+import { UIActionButtonContext } from '@yaschat/apps-engine/definition/ui';
+import type { IRoom } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { createElement } from 'react';

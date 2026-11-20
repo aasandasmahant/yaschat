@@ -1,8 +1,8 @@
-import { Box, Text } from '@yas chat/fuselage';
-import { useMediaQuery, useStableCallback } from '@yas chat/fuselage-hooks';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericMenu, GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yas chat/ui-client';
-import { useRoute } from '@yas chat/ui-contexts';
+import { Box, Text } from '@yaschat/fuselage';
+import { useMediaQuery, useStableCallback } from '@yaschat/fuselage-hooks';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericMenu, GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yaschat/ui-client';
+import { useRoute } from '@yaschat/ui-contexts';
 import type { KeyboardEvent } from 'react';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

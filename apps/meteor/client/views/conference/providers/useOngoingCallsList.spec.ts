@@ -1,6 +1,6 @@
-import type { JoinableVideoConference } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { buildJoinableCall } from '@yas chat/ui-conference';
+import type { JoinableVideoConference } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { buildJoinableCall } from '@yaschat/ui-conference';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useOngoingCallsList } from './OngoingCallsProvider';

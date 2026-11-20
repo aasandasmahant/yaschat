@@ -1,6 +1,6 @@
-import type { ISetting } from '@yas chat/core-typings';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { UserContext, SettingsContext } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { UserContext, SettingsContext } from '@yaschat/ui-contexts';
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ObjectId } from 'mongodb';
 import type { ContextType } from 'react';

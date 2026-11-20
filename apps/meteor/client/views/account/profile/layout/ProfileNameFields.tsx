@@ -1,4 +1,4 @@
-import { Box, Stack } from '@yas chat/fuselage';
+import { Box, Stack } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 type ProfileNameFieldsProps = {

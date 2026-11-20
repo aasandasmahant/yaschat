@@ -1,7 +1,7 @@
-import type { ISubscription, RoomType } from '@yas chat/core-typings';
-import { Box, States, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
-import { Header } from '@yas chat/ui-client';
-import { useStream, useUserId } from '@yas chat/ui-contexts';
+import type { ISubscription, RoomType } from '@yaschat/core-typings';
+import { Box, States, StatesIcon, StatesSubtitle, StatesTitle } from '@yaschat/fuselage';
+import { Header } from '@yaschat/ui-client';
+import { useStream, useUserId } from '@yaschat/ui-contexts';
 import { lazy, Suspense, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

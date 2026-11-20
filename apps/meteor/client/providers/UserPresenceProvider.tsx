@@ -1,5 +1,5 @@
-import type { UserPresenceContextValue } from '@yas chat/ui-contexts';
-import { useConnectionStatus, useSetting, UserPresenceContext } from '@yas chat/ui-contexts';
+import type { UserPresenceContextValue } from '@yaschat/ui-contexts';
+import { useConnectionStatus, useSetting, UserPresenceContext } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo, useEffect } from 'react';
 

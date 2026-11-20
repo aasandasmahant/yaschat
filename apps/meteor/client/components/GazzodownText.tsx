@@ -1,9 +1,9 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
-import type { ChannelMention, UserMention } from '@yas chat/gazzodown';
-import { MarkupInteractionContext } from '@yas chat/gazzodown';
-import { escapeRegExp } from '@yas chat/tools';
-import { useLayout, useRouter, useUserPreference, useUserId, useUserCard } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
+import type { ChannelMention, UserMention } from '@yaschat/gazzodown';
+import { MarkupInteractionContext } from '@yaschat/gazzodown';
+import { escapeRegExp } from '@yaschat/tools';
+import { useLayout, useRouter, useUserPreference, useUserId, useUserCard } from '@yaschat/ui-contexts';
 import type { UIEvent, ReactNode } from 'react';
 import { useCallback, memo, useMemo } from 'react';
 

@@ -1,6 +1,6 @@
-import type { ICustomSound } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { CustomSoundContext, useEndpoint, useStream, useUserPreference } from '@yas chat/ui-contexts';
+import type { ICustomSound } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { CustomSoundContext, useEndpoint, useStream, useUserPreference } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 

@@ -1,5 +1,5 @@
-import { Button, Pagination, type TableColumnWidth } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
+import { Button, Pagination, type TableColumnWidth } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -9,7 +9,7 @@ import {
 	usePagination,
 	GenericNoResults,
 	GenericError,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

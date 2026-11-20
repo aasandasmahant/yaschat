@@ -1,5 +1,5 @@
-import type { IThreadMainMessage } from '@yas chat/core-typings';
-import { ContextualbarTitle } from '@yas chat/ui-client';
+import type { IThreadMainMessage } from '@yaschat/core-typings';
+import { ContextualbarTitle } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 
 import { useNormalizedThreadTitleHtml } from '../hooks/useNormalizedThreadTitleHtml';

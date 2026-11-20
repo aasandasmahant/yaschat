@@ -1,4 +1,4 @@
-import type { IUser } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
 
 import type { IDocumentMapStoreHooks } from '../lib/cachedStores/DocumentMapStore';
 import { createDocumentMapStore } from '../lib/cachedStores/DocumentMapStore';

@@ -1,10 +1,10 @@
-import type { DistributiveOmit } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
-import { Random } from '@yas chat/random';
-import { imperativeModal } from '@yas chat/ui-client';
-import type { RouterContext, IActionManager } from '@yas chat/ui-contexts';
-import { isValidAppId } from '@yas chat/ui-kit';
-import type * as UiKit from '@yas chat/ui-kit';
+import type { DistributiveOmit } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
+import { Random } from '@yaschat/random';
+import { imperativeModal } from '@yaschat/ui-client';
+import type { RouterContext, IActionManager } from '@yaschat/ui-contexts';
+import { isValidAppId } from '@yaschat/ui-kit';
+import type * as UiKit from '@yaschat/ui-kit';
 import { t } from 'i18next';
 import type { ContextType } from 'react';
 import { lazy } from 'react';

@@ -1,4 +1,4 @@
-import { useAbsoluteUrl, useAssetPath } from '@yas chat/ui-contexts';
+import { useAbsoluteUrl, useAssetPath } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { callDesktopBridge } from '../../../lib/utils/callDesktopBridge';

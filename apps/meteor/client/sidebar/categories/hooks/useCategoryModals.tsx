@@ -1,6 +1,6 @@
-import type { ISidebarCategory } from '@yas chat/core-typings';
-import { useIsEnterprise } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { ISidebarCategory } from '@yaschat/core-typings';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import type { MovableRoom } from './useUserSidebarCategories';

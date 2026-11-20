@@ -1,5 +1,5 @@
-import type { RoomType, IRoom } from '@yas chat/core-typings';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import type { RoomType, IRoom } from '@yaschat/core-typings';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 
 const groupsDict = {
 	l: 'live',

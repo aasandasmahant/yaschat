@@ -1,4 +1,4 @@
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 
 import ChatsContextualBar from './ChatsContextualBar';
 import ContactContextualBar from './ContactContextualBar';

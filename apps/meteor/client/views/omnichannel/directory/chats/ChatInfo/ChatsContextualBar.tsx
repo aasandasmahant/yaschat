@@ -4,8 +4,8 @@ import {
 	ContextualbarTitle,
 	ContextualbarClose,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useRoute, useRouteParameter, useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRoute, useRouteParameter, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, Serialized, ILivechatDepartmentAgents } from '@yas chat/core-typings';
+import type { ILivechatDepartment, Serialized, ILivechatDepartmentAgents } from '@yaschat/core-typings';
 
 import type { EditDepartmentProps } from '../EditDepartment';
 

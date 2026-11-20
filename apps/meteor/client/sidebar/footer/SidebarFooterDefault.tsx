@@ -1,7 +1,7 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, SidebarDivider, Palette, SidebarFooter as Footer } from '@yas chat/fuselage';
-import { useThemeMode } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box, SidebarDivider, Palette, SidebarFooter as Footer } from '@yaschat/fuselage';
+import { useThemeMode } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 

@@ -1,6 +1,6 @@
-import { Emitter } from '@yas chat/emitter';
-import type { Keys as IconName } from '@yas chat/icons';
-import type * as UiKit from '@yas chat/ui-kit';
+import { Emitter } from '@yaschat/emitter';
+import type { Keys as IconName } from '@yaschat/icons';
+import type * as UiKit from '@yaschat/ui-kit';
 
 export type LegacyBannerPayload = {
 	id: string;

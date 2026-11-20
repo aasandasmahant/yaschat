@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Callout, States, StatesIcon, StatesSubtitle, StatesTitle, Text } from '@yas chat/fuselage';
-import { ListSkeleton, Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Callout, States, StatesIcon, StatesSubtitle, StatesTitle, Text } from '@yaschat/fuselage';
+import { ListSkeleton, Page, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

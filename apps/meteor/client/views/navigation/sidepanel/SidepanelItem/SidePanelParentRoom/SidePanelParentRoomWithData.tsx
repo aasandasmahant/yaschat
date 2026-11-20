@@ -1,4 +1,4 @@
-import { useUserSubscription } from '@yas chat/ui-contexts';
+import { useUserSubscription } from '@yaschat/ui-contexts';
 
 import SidePanelParentRoom from './SidePanelParentRoom';
 

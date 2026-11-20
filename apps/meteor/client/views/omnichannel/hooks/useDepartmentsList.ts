@@ -1,5 +1,5 @@
-import type { ILivechatDepartment, Serialized } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatDepartment, Serialized } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

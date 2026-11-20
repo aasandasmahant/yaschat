@@ -1,6 +1,6 @@
-import type { IThreadMainMessage, IMessage, ISubscription } from '@yas chat/core-typings';
-import { escapeRegExp } from '@yas chat/tools';
-import { useEndpoint, useUserId } from '@yas chat/ui-contexts';
+import type { IThreadMainMessage, IMessage, ISubscription } from '@yaschat/core-typings';
+import { escapeRegExp } from '@yaschat/tools';
+import { useEndpoint, useUserId } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { useInfiniteMessageQueryUpdates } from '../../../../../hooks/useInfiniteMessageQueryUpdates';

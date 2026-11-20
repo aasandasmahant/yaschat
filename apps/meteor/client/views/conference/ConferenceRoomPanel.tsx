@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { ModalProviderWithRegion } from '@yas chat/ui-client';
-import { ConferenceChatNotShared, narrowRoomStyle } from '@yas chat/ui-conference';
+import { Box } from '@yaschat/fuselage';
+import { ModalProviderWithRegion } from '@yaschat/ui-client';
+import { ConferenceChatNotShared, narrowRoomStyle } from '@yaschat/ui-conference';
 import { lazy, Suspense } from 'react';
 
 import ConferenceThreadChat from './ConferenceThreadChat';

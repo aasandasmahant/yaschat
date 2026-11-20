@@ -1,6 +1,6 @@
-import { Field, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { GenericModal } from '@yas chat/ui-client';
+import { Field, FieldLabel, FieldRow, TextInput } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { GenericModal } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 

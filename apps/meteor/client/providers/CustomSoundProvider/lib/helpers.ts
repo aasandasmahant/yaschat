@@ -1,4 +1,4 @@
-import type { ICustomSound } from '@yas chat/core-typings';
+import type { ICustomSound } from '@yaschat/core-typings';
 
 import { getURL } from '../../../lib/getURL';
 

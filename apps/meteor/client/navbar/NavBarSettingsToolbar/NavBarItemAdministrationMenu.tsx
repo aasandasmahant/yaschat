@@ -1,6 +1,6 @@
-import { NavBarItem } from '@yas chat/fuselage';
-import { GenericMenu } from '@yas chat/ui-client';
-import { useCurrentRoutePath } from '@yas chat/ui-contexts';
+import { NavBarItem } from '@yaschat/fuselage';
+import { GenericMenu } from '@yaschat/ui-client';
+import { useCurrentRoutePath } from '@yaschat/ui-contexts';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

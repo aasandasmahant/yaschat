@@ -1,6 +1,6 @@
-import { Box, CardGroup } from '@yas chat/fuselage';
-import { PageScrollableContent, Page } from '@yas chat/ui-client';
-import { useAtLeastOnePermission, useSetting, useRole, usePermission } from '@yas chat/ui-contexts';
+import { Box, CardGroup } from '@yaschat/fuselage';
+import { PageScrollableContent, Page } from '@yaschat/ui-client';
+import { useAtLeastOnePermission, useSetting, useRole, usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import HomePageHeader from './HomePageHeader';

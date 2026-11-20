@@ -1,4 +1,4 @@
-import type { MessageAttachmentBase } from '@yas chat/core-typings';
+import type { MessageAttachmentBase } from '@yaschat/core-typings';
 
 import AttachmentsItem from './attachments/AttachmentsItem';
 import type { AudioAttachmentSource } from './attachments/file/AudioAttachment';

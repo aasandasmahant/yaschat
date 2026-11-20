@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
-import { isRoomFederated } from '@yas chat/core-typings';
-import { usePermission, useSetModal, useSetting, useUser, useUserSubscription } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom, ISubscription } from '@yaschat/core-typings';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { usePermission, useSetModal, useSetting, useUser, useUserSubscription } from '@yaschat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import { roomCoordinator } from '../../../lib/rooms/roomCoordinator';

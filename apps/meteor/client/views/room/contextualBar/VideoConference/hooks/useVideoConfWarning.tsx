@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetModal, useRoute, useRole } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetModal, useRoute, useRole } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import VideoConfConfigModal from '../VideoConfConfigModal';

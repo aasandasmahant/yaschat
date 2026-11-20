@@ -1,9 +1,9 @@
-import type { ISidebarCategory } from '@yas chat/core-typings';
-import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger, ToggleSwitch } from '@yas chat/fuselage';
-import { useToggle } from '@yas chat/fuselage-hooks';
-import { GenericMenuItem, useHandleMenuAction } from '@yas chat/ui-client';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import type { ISidebarCategory } from '@yaschat/core-typings';
+import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger, ToggleSwitch } from '@yaschat/fuselage';
+import { useToggle } from '@yaschat/fuselage-hooks';
+import { GenericMenuItem, useHandleMenuAction } from '@yaschat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

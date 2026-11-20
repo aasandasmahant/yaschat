@@ -1,6 +1,6 @@
-import type { SelectOption } from '@yas chat/fuselage';
-import { Select } from '@yas chat/fuselage';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Select } from '@yaschat/fuselage';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { endOfDay } from 'date-fns/endOfDay';
 import { endOfWeek } from 'date-fns/endOfWeek';
 import { format } from 'date-fns/format';

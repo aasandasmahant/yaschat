@@ -1,6 +1,6 @@
-import type { AppliedFilter } from '@yas chat/ai-search';
-import { formatAppliedFilter, getSearchFilterConfig } from '@yas chat/ai-search';
-import { Box, Chip, Icon } from '@yas chat/fuselage';
+import type { AppliedFilter } from '@yaschat/ai-search';
+import { formatAppliedFilter, getSearchFilterConfig } from '@yaschat/ai-search';
+import { Box, Chip, Icon } from '@yaschat/fuselage';
 import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 

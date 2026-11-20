@@ -1,6 +1,6 @@
-import { AutoComplete, Option, Box } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { AutoComplete, Option, Box } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import type { ComponentProps } from 'react';
 import { memo, useState } from 'react';

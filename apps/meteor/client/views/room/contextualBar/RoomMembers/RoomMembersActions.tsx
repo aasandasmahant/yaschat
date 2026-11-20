@@ -1,5 +1,5 @@
-import type { IUser, IRoom } from '@yas chat/core-typings';
-import { GenericMenu } from '@yas chat/ui-client';
+import type { IUser, IRoom } from '@yaschat/core-typings';
+import { GenericMenu } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useUserInfoActions } from '../../hooks/useUserInfoActions';

@@ -1,4 +1,4 @@
-import { ModalBackdrop } from '@yas chat/fuselage';
+import { ModalBackdrop } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type BackdropProps = ComponentProps<typeof ModalBackdrop>;

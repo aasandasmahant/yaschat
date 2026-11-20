@@ -1,6 +1,6 @@
-import type { FontSize } from '@yas chat/rest-typings';
-import { useCreateFontStyleElement } from '@yas chat/ui-client';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import type { FontSize } from '@yaschat/rest-typings';
+import { useCreateFontStyleElement } from '@yaschat/ui-client';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { useLayoutEffect } from 'react';
 
 export const useFontStylePreference = () => {

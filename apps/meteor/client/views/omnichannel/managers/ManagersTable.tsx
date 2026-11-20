@@ -1,6 +1,6 @@
-import { Box, Pagination, type TableColumnWidth, Text } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import { Box, Pagination, type TableColumnWidth, Text } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -15,8 +15,8 @@ import {
 	GenericNoResults,
 	links,
 	GenericError,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { hashKey } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

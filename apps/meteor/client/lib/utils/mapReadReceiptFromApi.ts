@@ -1,4 +1,4 @@
-import type { IReadReceiptWithUser, Serialized } from '@yas chat/core-typings';
+import type { IReadReceiptWithUser, Serialized } from '@yaschat/core-typings';
 
 export const mapReadReceiptFromApi = ({ ts, _updatedAt, ...receipt }: Serialized<IReadReceiptWithUser>): IReadReceiptWithUser => ({
 	...receipt,

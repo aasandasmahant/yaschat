@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { WizardContext, StepsLinkedList } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { WizardContext, StepsLinkedList } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 import { userEvent } from 'storybook/test';

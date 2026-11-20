@@ -1,7 +1,7 @@
-import type { IOmnichannelGenericRoom, IVisitor } from '@yas chat/core-typings';
-import { Avatar, Box } from '@yas chat/fuselage';
-import { FormSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IOmnichannelGenericRoom, IVisitor } from '@yaschat/core-typings';
+import { Avatar, Box } from '@yaschat/fuselage';
+import { FormSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

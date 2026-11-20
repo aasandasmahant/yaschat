@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 
 import UnitsPage from './UnitsPage';
 import NotAuthorizedPage from '../../notAuthorized/NotAuthorizedPage';

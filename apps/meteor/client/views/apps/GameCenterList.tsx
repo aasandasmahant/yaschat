@@ -1,4 +1,4 @@
-import { Avatar, Icon, Table, TableBody, TableCell, TableHead, TableRow } from '@yas chat/fuselage';
+import { Avatar, Icon, Table, TableBody, TableCell, TableHead, TableRow } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarTitle,
@@ -6,8 +6,8 @@ import {
 	ContextualbarContent,
 	ContextualbarDialog,
 	ContextualbarSkeleton,
-} from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

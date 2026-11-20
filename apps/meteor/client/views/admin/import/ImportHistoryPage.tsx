@@ -1,7 +1,7 @@
-import { Button, ButtonGroup, Table, TableHead, TableCell, TableRow, TableBody } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter } from '@yas chat/ui-contexts';
+import { Button, ButtonGroup, Table, TableHead, TableCell, TableRow, TableBody } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

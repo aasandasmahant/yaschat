@@ -1,5 +1,5 @@
-import { Box, FlexItem } from '@yas chat/fuselage';
-import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { Box, FlexItem } from '@yaschat/fuselage';
+import { useBreakpoints } from '@yaschat/fuselage-hooks';
 import { useTranslation } from 'react-i18next';
 
 import EngagementDashboardCard from '../EngagementDashboardCard';

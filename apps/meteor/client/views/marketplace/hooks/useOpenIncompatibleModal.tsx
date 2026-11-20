@@ -1,5 +1,5 @@
-import type { App } from '@yas chat/core-typings';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { App } from '@yaschat/core-typings';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import IframeModal from '../IframeModal';

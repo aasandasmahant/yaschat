@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useSetting } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 

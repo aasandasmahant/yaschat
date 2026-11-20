@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta } from '@storybook/react';
 
 import InvitationBadge from './InvitationBadge';

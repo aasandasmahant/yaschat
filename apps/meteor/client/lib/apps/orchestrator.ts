@@ -1,8 +1,8 @@
-import { AppClientManager } from '@yas chat/apps/dist/client/AppClientManager';
-import type { AppsEngineUIHost } from '@yas chat/apps/dist/client/AppsEngineUIHost';
-import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
-import type { ISetting } from '@yas chat/apps-engine/definition/settings';
-import type { Serialized } from '@yas chat/core-typings';
+import { AppClientManager } from '@yaschat/apps/dist/client/AppClientManager';
+import type { AppsEngineUIHost } from '@yaschat/apps/dist/client/AppsEngineUIHost';
+import type { IPermission } from '@yaschat/apps-engine/definition/permissions/IPermission';
+import type { ISetting } from '@yaschat/apps-engine/definition/settings';
+import type { Serialized } from '@yaschat/core-typings';
 
 import { RealAppsEngineUIHost } from './RealAppsEngineUIHost';
 import type { IAppExternalURL } from '../../definitions/IAppExternalURL';

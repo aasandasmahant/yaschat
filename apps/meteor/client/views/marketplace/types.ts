@@ -1,3 +1,3 @@
-import type { App } from '@yas chat/core-typings';
+import type { App } from '@yaschat/core-typings';
 
 export type { App };

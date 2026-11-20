@@ -1,5 +1,5 @@
-import type { RouteName } from '@yas chat/ui-contexts';
-import { useRouter, useUser, useUserId } from '@yas chat/ui-contexts';
+import type { RouteName } from '@yaschat/ui-contexts';
+import { useRouter, useUser, useUserId } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import PageLoading from './PageLoading';

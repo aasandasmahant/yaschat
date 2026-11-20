@@ -1,10 +1,10 @@
-import { UserStatus as UserStatusType } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
-import { InputBox, Box } from '@yas chat/fuselage';
-import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, Select } from '@yas chat/fuselage-forms';
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useSetting, useEndpoint, useUser } from '@yas chat/ui-contexts';
+import { UserStatus as UserStatusType } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
+import { InputBox, Box } from '@yaschat/fuselage';
+import { Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint, TextInput, Select } from '@yaschat/fuselage-forms';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useSetting, useEndpoint, useUser } from '@yaschat/ui-contexts';
 import type { ChangeEvent, ComponentProps } from 'react';
 import { useEffect, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';

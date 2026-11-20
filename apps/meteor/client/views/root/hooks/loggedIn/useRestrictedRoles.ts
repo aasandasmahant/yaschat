@@ -1,5 +1,5 @@
-import { AuthorizationUtils } from '@yas chat/authorization/dist/AuthorizationUtils';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { AuthorizationUtils } from '@yaschat/authorization/dist/AuthorizationUtils';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

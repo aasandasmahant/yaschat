@@ -1,5 +1,5 @@
-import { Sidebar as FuselageSidebar } from '@yas chat/fuselage';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import { Sidebar as FuselageSidebar } from '@yaschat/fuselage';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

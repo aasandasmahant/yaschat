@@ -1,4 +1,4 @@
-import { Box, Tabs, TabsItem } from '@yas chat/fuselage';
+import { Box, Tabs, TabsItem } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 export type PageTabsItem<TId extends string> = {

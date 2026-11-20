@@ -1,4 +1,4 @@
-import { Skeleton, Box, Stack } from '@yas chat/fuselage';
+import { Skeleton, Box, Stack } from '@yaschat/fuselage';
 
 const AppsPageContentSkeleton = () => {
 	const loadingSection = (

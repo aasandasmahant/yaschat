@@ -1,4 +1,4 @@
-import { useUnstoreLoginToken } from '@yas chat/ui-contexts';
+import { useUnstoreLoginToken } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { useIframe } from './useIframe';

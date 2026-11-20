@@ -1,8 +1,8 @@
 import type { OverlayTriggerState } from '@react-stately/overlays';
-import { AI_LICENSE_MODULE, getAISearchButtonTooltip } from '@yas chat/ai-search';
-import type { NavBarSearchFormValues } from '@yas chat/ai-search';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { AI_LICENSE_MODULE, getAISearchButtonTooltip } from '@yaschat/ai-search';
+import type { NavBarSearchFormValues } from '@yaschat/ai-search';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useCallback, useEffect, useState } from 'react';
 import type { UseFormSetFocus } from 'react-hook-form';
 import type { useTranslation } from 'react-i18next';

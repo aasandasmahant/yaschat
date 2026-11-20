@@ -1,5 +1,5 @@
-import { Avatar, ItemContent, ItemDescription, ItemLink, ItemMedia, ItemMeta, ItemRow, ItemTitle } from '@yas chat/fuselage';
-import { ITEM_MEDIA_SIZE } from '@yas chat/ui-avatar';
+import { Avatar, ItemContent, ItemDescription, ItemLink, ItemMedia, ItemMeta, ItemRow, ItemTitle } from '@yaschat/fuselage';
+import { ITEM_MEDIA_SIZE } from '@yaschat/ui-avatar';
 
 export type ImageItemProps = {
 	id: string;

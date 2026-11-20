@@ -1,4 +1,4 @@
-import type { ILivechatInquiryRecord, IRoom } from '@yas chat/core-typings';
+import type { ILivechatInquiryRecord, IRoom } from '@yaschat/core-typings';
 import { create } from 'zustand';
 
 export type LivechatInquiryLocalRecord = ILivechatInquiryRecord & { alert?: boolean };

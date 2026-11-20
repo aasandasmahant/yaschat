@@ -8,7 +8,7 @@ import {
 	ModalHeader,
 	ModalHeaderText,
 	ModalTitle,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useExternalLink } from '../../../hooks/useExternalLink';

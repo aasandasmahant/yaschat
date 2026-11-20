@@ -1,10 +1,10 @@
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useAppsContextualBar } from './useAppsContextualBar';
 import { useUiKitActionManager } from '../../../hooks/uikit/useUiKitActionManager';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useRouteParameter: jest.fn((param: string) => {
 		if (param === 'context') return 'test-context';
 		if (param === 'tab') return 'app';

@@ -1,5 +1,5 @@
-import { Box, Button, ButtonGroup, FieldError } from '@yas chat/fuselage';
-import { useToggle } from '@yas chat/fuselage-hooks';
+import { Box, Button, ButtonGroup, FieldError } from '@yaschat/fuselage';
+import { useToggle } from '@yaschat/fuselage-hooks';
 import { useId, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';

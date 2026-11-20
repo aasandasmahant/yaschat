@@ -1,6 +1,6 @@
-import type { ISubscription } from '@yas chat/core-typings';
-import { isOmnichannelRoom, isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
-import { usePermission } from '@yas chat/ui-contexts';
+import type { ISubscription } from '@yaschat/core-typings';
+import { isOmnichannelRoom, isRoomFederated, isRoomNativeFederated } from '@yaschat/core-typings';
+import { usePermission } from '@yaschat/ui-contexts';
 
 import { useMessageComposerIsAnonymous } from './useMessageComposerIsAnonymous';
 import { useMessageComposerIsArchived } from './useMessageComposerIsArchived';

@@ -1,6 +1,6 @@
-import { NavBarGroup, NavBarItem } from '@yas chat/fuselage';
-import { useRouter } from '@yas chat/ui-contexts';
-import { useMediaCallAction } from '@yas chat/ui-voip';
+import { NavBarGroup, NavBarItem } from '@yaschat/fuselage';
+import { useRouter } from '@yaschat/ui-contexts';
+import { useMediaCallAction } from '@yaschat/ui-voip';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

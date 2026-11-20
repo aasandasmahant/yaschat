@@ -1,4 +1,4 @@
-import { defaultFeaturesPreview } from '@yas chat/ui-client';
+import { defaultFeaturesPreview } from '@yaschat/ui-client';
 
 import { hasPermission, hasAtLeastOnePermission, hasAllPermission } from '../../lib/authorization';
 import { createSidebarItems } from '../../lib/createSidebarItems';

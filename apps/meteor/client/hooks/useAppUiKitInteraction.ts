@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useStream, useUserId } from '@yas chat/ui-contexts';
-import type * as UiKit from '@yas chat/ui-kit';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useStream, useUserId } from '@yaschat/ui-contexts';
+import type * as UiKit from '@yaschat/ui-kit';
 import { useEffect } from 'react';
 
 export const useAppUiKitInteraction = (handleServerInteraction: (interaction: UiKit.ServerInteraction) => void) => {

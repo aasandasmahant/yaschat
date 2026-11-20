@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { HeaderState } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { HeaderState } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

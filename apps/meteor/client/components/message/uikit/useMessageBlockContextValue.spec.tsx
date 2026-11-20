@@ -1,7 +1,7 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { ActionManagerContext, ModalContext, RoomToolboxContext } from '@yas chat/ui-contexts';
-import { VideoConfContext } from '@yas chat/ui-video-conf';
-import type { VideoConfContextValue } from '@yas chat/ui-video-conf';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { ActionManagerContext, ModalContext, RoomToolboxContext } from '@yaschat/ui-contexts';
+import { VideoConfContext } from '@yaschat/ui-video-conf';
+import type { VideoConfContextValue } from '@yaschat/ui-video-conf';
 import { act, renderHook } from '@testing-library/react';
 import type { ContextType } from 'react';
 

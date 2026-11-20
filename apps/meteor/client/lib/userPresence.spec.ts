@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { UserStatus } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
 import { renderHook } from '@testing-library/react';
 
 import { UserPresence } from './userPresence';
@@ -19,7 +19,7 @@ const goOnline = jest.fn(async (): Promise<boolean | undefined> => true);
 const goAway = jest.fn(async (): Promise<boolean | undefined> => true);
 const storeUser = jest.fn();
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useUser: () => state.user,
 	useConnectionStatus: () => ({ connected: state.connected }),
 	useIsLoggingIn: () => state.isLoggingIn,

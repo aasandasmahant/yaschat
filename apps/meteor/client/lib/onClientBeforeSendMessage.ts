@@ -1,4 +1,4 @@
-import type { AtLeast, IMessage } from '@yas chat/core-typings';
+import type { AtLeast, IMessage } from '@yaschat/core-typings';
 
 import { createAsyncTransformChain } from './transforms';
 

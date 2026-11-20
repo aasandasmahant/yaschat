@@ -1,5 +1,5 @@
-import { Box, Card, CardBody, CardControls, CardTitle, FramedIcon } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
+import { Box, Card, CardBody, CardControls, CardTitle, FramedIcon } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
 import { useTranslation } from 'react-i18next';
 
 import { PRICING_LINK } from '../../utils/links';

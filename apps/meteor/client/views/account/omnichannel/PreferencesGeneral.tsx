@@ -1,4 +1,4 @@
-import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@yas chat/fuselage-forms';
+import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow, ToggleSwitch } from '@yaschat/fuselage-forms';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

@@ -12,8 +12,8 @@ import {
 	Select,
 	MultiSelect,
 	FieldHint,
-} from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import { useId, type ChangeEvent } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

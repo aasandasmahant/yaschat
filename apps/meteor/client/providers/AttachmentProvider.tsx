@@ -1,6 +1,6 @@
-import { usePrefersReducedData } from '@yas chat/fuselage-hooks';
-import type { AttachmentContextValue } from '@yas chat/ui-contexts';
-import { AttachmentContext, useLayout, useUserPreference } from '@yas chat/ui-contexts';
+import { usePrefersReducedData } from '@yaschat/fuselage-hooks';
+import type { AttachmentContextValue } from '@yaschat/ui-contexts';
+import { AttachmentContext, useLayout, useUserPreference } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 

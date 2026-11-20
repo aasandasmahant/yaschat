@@ -1,7 +1,7 @@
-import { AI_LICENSE_MODULE, MAX_SEARCH_ANSWER_MESSAGES } from '@yas chat/ai-search';
-import { Box, Button, Callout, Skeleton } from '@yas chat/fuselage';
-import { Page, PageScrollableContentWithShadow, useDocumentTitle, useFeaturePreview, useHasLicenseModule } from '@yas chat/ui-client';
-import { useSearchParameter, useSetting } from '@yas chat/ui-contexts';
+import { AI_LICENSE_MODULE, MAX_SEARCH_ANSWER_MESSAGES } from '@yaschat/ai-search';
+import { Box, Button, Callout, Skeleton } from '@yaschat/fuselage';
+import { Page, PageScrollableContentWithShadow, useDocumentTitle, useFeaturePreview, useHasLicenseModule } from '@yaschat/ui-client';
+import { useSearchParameter, useSetting } from '@yaschat/ui-contexts';
 import type { ReactElement } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

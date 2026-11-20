@@ -1,4 +1,4 @@
-import { Field } from '@yas chat/fuselage';
+import { Field } from '@yaschat/fuselage';
 import type { Meta } from '@storybook/react';
 
 import PasswordSettingInput from './PasswordSettingInput';

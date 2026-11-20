@@ -3,11 +3,11 @@ import {
 	type OmichannelRoutingConfig,
 	OmnichannelSortingMechanismSettingType,
 	LivechatInquiryStatus,
-} from '@yas chat/core-typings';
-import { useSafely } from '@yas chat/fuselage-hooks';
-import { createComparatorFromSort } from '@yas chat/mongo-adapter';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useUser, useSetting, usePermission, useEndpoint, useStream, useCustomSound } from '@yas chat/ui-contexts';
+} from '@yaschat/core-typings';
+import { useSafely } from '@yaschat/fuselage-hooks';
+import { createComparatorFromSort } from '@yaschat/mongo-adapter';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useUser, useSetting, usePermission, useEndpoint, useStream, useCustomSound } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useState, useEffect, useMemo, memo, useRef } from 'react';

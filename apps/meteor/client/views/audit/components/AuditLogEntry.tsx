@@ -1,8 +1,8 @@
-import type { IAuditLog } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yas chat/ui-client';
+import type { IAuditLog } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { GenericTableRow, GenericTableCell, useFormatDateAndTime } from '@yaschat/ui-client';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

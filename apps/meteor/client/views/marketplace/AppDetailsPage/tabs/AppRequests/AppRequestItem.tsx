@@ -1,7 +1,7 @@
-import { Badge, Box, Text } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { Badge, Box, Text } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 
 export type AppRequestItemProps = {
 	seen: boolean;

@@ -1,6 +1,6 @@
-import { Box, NavBar as NavBarComponent, NavBarSection } from '@yas chat/fuselage';
-import { useUser } from '@yas chat/ui-contexts';
-import { useVideoConfWindowEnabled } from '@yas chat/ui-video-conf';
+import { Box, NavBar as NavBarComponent, NavBarSection } from '@yaschat/fuselage';
+import { useUser } from '@yaschat/ui-contexts';
+import { useVideoConfWindowEnabled } from '@yaschat/ui-video-conf';
 import { useTranslation } from 'react-i18next';
 
 import NavBarItemOngoingCalls from '../../navbar/NavBarItemOngoingCalls';

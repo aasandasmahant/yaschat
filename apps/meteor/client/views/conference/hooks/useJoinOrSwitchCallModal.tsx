@@ -1,7 +1,7 @@
-import type { JoinableVideoConference } from '@yas chat/core-typings';
-import { SwitchCallModal } from '@yas chat/ui-conference';
-import { useEndpoint, useSetModal } from '@yas chat/ui-contexts';
-import { useVideoConfJoinCall } from '@yas chat/ui-video-conf';
+import type { JoinableVideoConference } from '@yaschat/core-typings';
+import { SwitchCallModal } from '@yaschat/ui-conference';
+import { useEndpoint, useSetModal } from '@yaschat/ui-contexts';
+import { useVideoConfJoinCall } from '@yaschat/ui-video-conf';
 import { useCallback, useRef } from 'react';
 
 /**

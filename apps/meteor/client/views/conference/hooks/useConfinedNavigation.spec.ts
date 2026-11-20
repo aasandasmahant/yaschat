@@ -10,8 +10,8 @@ const mockRouter: {
 	buildRoutePath: jest.fn((to) => (typeof to === 'string' ? to : (to?.pathname ?? '/'))),
 };
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useRouter: jest.fn(() => mockRouter),
 }));
 

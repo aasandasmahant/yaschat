@@ -1,4 +1,4 @@
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useCallback, useEffect, useRef } from 'react';
 
 export const useDraft = (rid: string, serverDraft?: string, tmid?: string, threadExists = true) => {

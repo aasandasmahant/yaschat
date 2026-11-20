@@ -1,4 +1,4 @@
-import { FieldLabel, FieldHint, FieldRow, Field } from '@yas chat/fuselage';
+import { FieldLabel, FieldHint, FieldRow, Field } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { getCodeSettingError } from '../../../../../lib/utils/getCodeSettingError';

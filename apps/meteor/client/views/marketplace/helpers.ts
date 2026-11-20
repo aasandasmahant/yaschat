@@ -1,5 +1,5 @@
-import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
-import type { App } from '@yas chat/core-typings';
+import { AppStatus } from '@yaschat/apps-engine/definition/AppStatus';
+import type { App } from '@yaschat/core-typings';
 import semver from 'semver';
 
 import { appErroredStatuses } from './helpers/appErroredStatuses';

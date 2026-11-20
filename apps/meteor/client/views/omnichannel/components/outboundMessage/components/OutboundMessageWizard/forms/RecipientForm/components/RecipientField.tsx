@@ -1,5 +1,5 @@
-import type { Serialized, ILivechatContact } from '@yas chat/core-typings';
-import { Field, FieldError, FieldLabel, FieldRow } from '@yas chat/fuselage';
+import type { Serialized, ILivechatContact } from '@yaschat/core-typings';
+import { Field, FieldError, FieldLabel, FieldRow } from '@yaschat/fuselage';
 import { useId } from 'react';
 import type { ComponentProps } from 'react';
 import { useController, type Control } from 'react-hook-form';

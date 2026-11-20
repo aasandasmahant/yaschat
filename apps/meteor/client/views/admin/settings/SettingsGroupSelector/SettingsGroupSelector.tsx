@@ -1,5 +1,5 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { useSettingStructure } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { useSettingStructure } from '@yaschat/ui-contexts';
 
 import SettingsGroupPageSkeleton from '../SettingsGroupPage/SettingsGroupPageSkeleton';
 import BaseGroupPage from '../groups/BaseGroupPage';

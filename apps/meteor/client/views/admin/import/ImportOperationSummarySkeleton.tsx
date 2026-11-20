@@ -1,4 +1,4 @@
-import { Skeleton, TableRow, TableCell } from '@yas chat/fuselage';
+import { Skeleton, TableRow, TableCell } from '@yaschat/fuselage';
 
 export type ImportOperationSummarySkeletonProps = {
 	small?: boolean;

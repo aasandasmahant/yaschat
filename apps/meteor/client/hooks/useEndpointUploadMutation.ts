@@ -1,5 +1,5 @@
-import type { PathFor, PathPattern } from '@yas chat/rest-typings';
-import { useToastMessageDispatch, useUpload, type UploadResult } from '@yas chat/ui-contexts';
+import type { PathFor, PathPattern } from '@yaschat/rest-typings';
+import { useToastMessageDispatch, useUpload, type UploadResult } from '@yaschat/ui-contexts';
 import { useMutation, type UseMutationOptions } from '@tanstack/react-query';
 import { t } from 'i18next';
 

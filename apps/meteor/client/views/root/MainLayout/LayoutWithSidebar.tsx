@@ -1,7 +1,7 @@
-import { Box } from '@yas chat/fuselage';
-import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@yas chat/ui-client';
-import type { IRouterPaths } from '@yas chat/ui-contexts';
-import { useLayout, useSetting, useCurrentRoutePath, useRouter } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { FeaturePreview, FeaturePreviewOff, FeaturePreviewOn } from '@yaschat/ui-client';
+import type { IRouterPaths } from '@yaschat/ui-contexts';
+import { useLayout, useSetting, useCurrentRoutePath, useRouter } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useRef } from 'react';
 

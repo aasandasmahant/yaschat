@@ -1,6 +1,6 @@
-import { Box, Button, ButtonGroup, Margins, TextInput, Field, FieldLabel, FieldRow, FieldError, IconButton } from '@yas chat/fuselage';
-import { ContextualbarScrollableContent, ContextualbarFooter } from '@yas chat/ui-client';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { Box, Button, ButtonGroup, Margins, TextInput, Field, FieldLabel, FieldRow, FieldError, IconButton } from '@yaschat/fuselage';
+import { ContextualbarScrollableContent, ContextualbarFooter } from '@yaschat/ui-client';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ChangeEvent } from 'react';
 import { useCallback, useId, useState } from 'react';

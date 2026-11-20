@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { useLayout, useSession } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { useLayout, useSession } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import SidebarTogglerButton from './SidebarTogglerButton';

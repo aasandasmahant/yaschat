@@ -1,10 +1,10 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import type { IRoom, RoomAdminFieldsType } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { RoomAvatar } from '@yas chat/ui-avatar';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { isRoomFederated } from '@yaschat/core-typings';
+import type { IRoom, RoomAdminFieldsType } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, Button, ButtonGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { RoomAvatar } from '@yaschat/ui-avatar';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { useUserId } from '@yas chat/ui-contexts';
-import { useEmojiPicker } from '@yas chat/ui-emoji-picker';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { useUserId } from '@yaschat/ui-contexts';
+import { useEmojiPicker } from '@yaschat/ui-emoji-picker';
 import { useEffect } from 'react';
 
 import { useInstance } from './useInstance';

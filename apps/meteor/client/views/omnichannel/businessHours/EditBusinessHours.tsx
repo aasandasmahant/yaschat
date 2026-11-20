@@ -1,9 +1,9 @@
-import type { ILivechatBusinessHour, LivechatBusinessHourTypes, Serialized } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { canonicalizeTimezone } from '@yas chat/tools';
-import { Page, PageFooter, PageHeader, PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useRouter, useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatBusinessHour, LivechatBusinessHourTypes, Serialized } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { canonicalizeTimezone } from '@yaschat/tools';
+import { Page, PageFooter, PageHeader, PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useRouter, useEndpoint } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

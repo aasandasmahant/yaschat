@@ -1,4 +1,4 @@
-import { PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
+import { PageSkeleton, useHasLicenseModule } from '@yaschat/ui-client';
 
 import MonitorsPage from './MonitorsPage';
 import NotAuthorizedPage from '../../notAuthorized/NotAuthorizedPage';

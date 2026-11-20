@@ -1,4 +1,4 @@
-import { Box, Margins, ButtonGroup } from '@yas chat/fuselage';
+import { Box, Margins, ButtonGroup } from '@yaschat/fuselage';
 import {
 	ContextualbarClose,
 	ContextualbarHeader,
@@ -9,8 +9,8 @@ import {
 	InfoPanelText,
 	UserInfoAvatar,
 	UserInfoUsername,
-} from '@yas chat/ui-client';
-import { useEndpoint, useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';

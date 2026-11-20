@@ -1,5 +1,5 @@
-import type { ISettingBase, SettingEditor, SettingValue } from '@yas chat/core-typings';
-import { Box, Callout } from '@yas chat/fuselage';
+import type { ISettingBase, SettingEditor, SettingValue } from '@yaschat/core-typings';
+import { Box, Callout } from '@yaschat/fuselage';
 import type { ElementType, ReactNode } from 'react';
 import { memo } from 'react';
 

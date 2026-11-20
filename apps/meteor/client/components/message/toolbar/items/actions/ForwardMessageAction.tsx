@@ -1,6 +1,6 @@
-import { isE2EEMessage } from '@yas chat/core-typings';
-import type { IRoom, IMessage } from '@yas chat/core-typings';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { isE2EEMessage } from '@yaschat/core-typings';
+import type { IRoom, IMessage } from '@yaschat/core-typings';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

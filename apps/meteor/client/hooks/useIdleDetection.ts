@@ -1,4 +1,4 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import { useEffect, useRef } from 'react';
 
 const events = ['mousemove', 'mousedown', 'touchend', 'touchstart', 'keypress'];

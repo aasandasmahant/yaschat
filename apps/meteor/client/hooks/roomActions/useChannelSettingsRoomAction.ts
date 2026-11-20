@@ -1,4 +1,4 @@
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 const Info = lazy(() => import('../../views/room/contextualBar/Info'));

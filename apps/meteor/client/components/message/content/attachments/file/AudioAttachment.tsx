@@ -1,6 +1,6 @@
-import type { AudioAttachmentProps } from '@yas chat/core-typings';
-import { AudioPlayerControls, Box } from '@yas chat/fuselage';
-import { useMediaUrl } from '@yas chat/ui-contexts';
+import type { AudioAttachmentProps } from '@yaschat/core-typings';
+import { AudioPlayerControls, Box } from '@yaschat/fuselage';
+import { useMediaUrl } from '@yaschat/ui-contexts';
 import { useMemo, useState } from 'react';
 
 import { useMediaPlayer } from '../../../../../providers/MediaPlayerProvider';

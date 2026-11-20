@@ -1,4 +1,4 @@
-import type { IUser } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
 import {
 	Box,
 	Modal,
@@ -9,9 +9,9 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@yas chat/fuselage';
-import { FieldGroup, Field, FieldLabel, FieldRow, FieldError, FieldHint } from '@yas chat/fuselage-forms';
-import { useEndpoint, useToastMessageDispatch, useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { FieldGroup, Field, FieldLabel, FieldRow, FieldError, FieldHint } from '@yaschat/fuselage-forms';
+import { useEndpoint, useToastMessageDispatch, useSetting } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useId, memo } from 'react';
 import { useForm, Controller } from 'react-hook-form';

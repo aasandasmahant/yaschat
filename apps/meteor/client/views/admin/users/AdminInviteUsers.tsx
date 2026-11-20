@@ -1,8 +1,8 @@
-import { Button, ButtonGroup, States, StatesAction, StatesActions, StatesSubtitle, Stack, StatesTitle, Text } from '@yas chat/fuselage';
-import { Field, FieldError, FieldHint, FieldLabel, FieldRow, TextAreaInput } from '@yas chat/fuselage-forms';
-import { validateEmail } from '@yas chat/tools';
-import { ContextualbarScrollableContent, ContextualbarFooter, ContextualbarContent, FormSkeleton } from '@yas chat/ui-client';
-import { useRoute } from '@yas chat/ui-contexts';
+import { Button, ButtonGroup, States, StatesAction, StatesActions, StatesSubtitle, Stack, StatesTitle, Text } from '@yaschat/fuselage';
+import { Field, FieldError, FieldHint, FieldLabel, FieldRow, TextAreaInput } from '@yaschat/fuselage-forms';
+import { validateEmail } from '@yaschat/tools';
+import { ContextualbarScrollableContent, ContextualbarFooter, ContextualbarContent, FormSkeleton } from '@yaschat/ui-client';
+import { useRoute } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import type { IconProps } from '@yas chat/fuselage';
-import { Box, ButtonGroup, Icon } from '@yas chat/fuselage';
+import type { IconProps } from '@yaschat/fuselage';
+import { Box, ButtonGroup, Icon } from '@yaschat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 export type ContactInfoDetailsEntryProps = Pick<ComponentProps<typeof Box>, 'is' | 'aria-labelledby'> & {

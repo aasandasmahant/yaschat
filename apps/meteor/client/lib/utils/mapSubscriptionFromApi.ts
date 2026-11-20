@@ -1,4 +1,4 @@
-import type { ISubscription, Serialized } from '@yas chat/core-typings';
+import type { ISubscription, Serialized } from '@yaschat/core-typings';
 
 export const mapSubscriptionFromApi = ({
 	ts,

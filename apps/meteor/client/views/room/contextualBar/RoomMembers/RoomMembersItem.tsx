@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 import {
 	Icon,
 	IconButton,
@@ -10,9 +10,9 @@ import {
 	ItemLink,
 	ItemMedia,
 	ItemTitle,
-} from '@yas chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
-import { useDeferredMenuMount } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yaschat/ui-avatar';
+import { useDeferredMenuMount } from '@yaschat/ui-client';
 import type { MouseEvent } from 'react';
 
 import UserActions from './RoomMembersActions';

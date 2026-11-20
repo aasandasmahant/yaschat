@@ -1,4 +1,4 @@
-import { CardTitle, CardHeader, Icon } from '@yas chat/fuselage';
+import { CardTitle, CardHeader, Icon } from '@yaschat/fuselage';
 
 export type PlanCardHeaderProps = { name: string };
 

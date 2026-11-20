@@ -1,4 +1,4 @@
-import { MessageFooterCallout } from '@yas chat/ui-composer';
+import { MessageFooterCallout } from '@yaschat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 const ComposerFederationJoinRoomDisabled = () => {

@@ -15,8 +15,8 @@ import {
 	ModalFooter,
 	Stack,
 	Text,
-} from '@yas chat/fuselage';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';

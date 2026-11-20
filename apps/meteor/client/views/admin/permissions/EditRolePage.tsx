@@ -1,8 +1,8 @@
-import type { IRole } from '@yas chat/core-typings';
-import { Box, ButtonGroup, Button, Margins } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal, ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+import type { IRole } from '@yaschat/core-typings';
+import { Box, ButtonGroup, Button, Margins } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal, ContextualbarFooter, ContextualbarScrollableContent } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

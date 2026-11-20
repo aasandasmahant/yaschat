@@ -1,4 +1,4 @@
-import { Box, Icon, MessageBody } from '@yas chat/fuselage';
+import { Box, Icon, MessageBody } from '@yaschat/fuselage';
 import type { SyntheticEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

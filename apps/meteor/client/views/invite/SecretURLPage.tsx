@@ -1,5 +1,5 @@
-import { useUserId, useRouter } from '@yas chat/ui-contexts';
-import RegistrationPageRouter from '@yas chat/ui-registration';
+import { useUserId, useRouter } from '@yaschat/ui-contexts';
+import RegistrationPageRouter from '@yaschat/ui-registration';
 import { useEffect } from 'react';
 
 const SecretURLPage = () => {

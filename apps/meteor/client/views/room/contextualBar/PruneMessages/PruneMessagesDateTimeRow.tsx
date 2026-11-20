@@ -1,4 +1,4 @@
-import { Field, FieldLabel, InputBox, Stack } from '@yas chat/fuselage';
+import { Field, FieldLabel, InputBox, Stack } from '@yaschat/fuselage';
 import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

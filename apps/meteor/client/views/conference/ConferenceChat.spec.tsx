@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { ConferenceChatAccess, ConferenceContextValue } from '@yas chat/ui-conference';
-import { ConferenceContext, buildChatAccess, defaultConferenceContextValue } from '@yas chat/ui-conference';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { ConferenceChatAccess, ConferenceContextValue } from '@yaschat/ui-conference';
+import { ConferenceContext, buildChatAccess, defaultConferenceContextValue } from '@yaschat/ui-conference';
 import { render } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import type { ReactNode } from 'react';

@@ -1,6 +1,6 @@
-import { useIsEnterprise } from '@yas chat/ui-client';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useSetting, useUserPreference } from '@yas chat/ui-contexts';
+import { useIsEnterprise } from '@yaschat/ui-client';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useSetting, useUserPreference } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useSidebarSectionsOrder } from './useSidebarSectionsOrder';

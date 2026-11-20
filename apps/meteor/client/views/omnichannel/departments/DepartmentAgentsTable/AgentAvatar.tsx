@@ -1,6 +1,6 @@
-import { Box, Text } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { UserAvatar } from '@yas chat/ui-avatar';
+import { Box, Text } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { UserAvatar } from '@yaschat/ui-avatar';
 import { memo } from 'react';
 
 export type AgentAvatarProps = { name: string; username: string; eTag?: string };

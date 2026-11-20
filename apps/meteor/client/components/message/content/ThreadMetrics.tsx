@@ -5,9 +5,9 @@ import {
 	MessageMetricsReply,
 	MessageMetricsItemIcon,
 	MessageMetricsItemLabel,
-} from '@yas chat/fuselage';
-import { useResizeObserver } from '@yas chat/fuselage-hooks';
-import { useTimeAgo } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { useResizeObserver } from '@yaschat/fuselage-hooks';
+import { useTimeAgo } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import ThreadMetricsFollow from './ThreadMetricsFollow';

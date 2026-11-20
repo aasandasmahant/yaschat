@@ -1,5 +1,5 @@
-import { Box, Icon, SidebarItemIcon } from '@yas chat/fuselage';
-import type { AISearchResult } from '@yas chat/rest-typings';
+import { Box, Icon, SidebarItemIcon } from '@yaschat/fuselage';
+import type { AISearchResult } from '@yaschat/rest-typings';
 import type { ReactElement } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

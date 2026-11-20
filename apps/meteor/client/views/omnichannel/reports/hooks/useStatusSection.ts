@@ -1,5 +1,5 @@
-import type { TranslationKey } from '@yas chat/ui-contexts';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { TranslationKey } from '@yaschat/ui-contexts';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { TFunction } from 'i18next';
 import { useMemo } from 'react';

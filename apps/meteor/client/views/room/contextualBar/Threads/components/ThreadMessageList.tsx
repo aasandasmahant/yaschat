@@ -1,10 +1,10 @@
-import type { IMessage, IThreadMainMessage } from '@yas chat/core-typings';
-import { isEditedMessage } from '@yas chat/core-typings';
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import { MessageTypes } from '@yas chat/message-types';
-import { isTruthy } from '@yas chat/tools';
-import { clientCallbacks, CustomVirtuaScrollbars, useMergedRefsV2 } from '@yas chat/ui-client';
-import { useSearchParameter, useSetting, useUserId, useUserPreference } from '@yas chat/ui-contexts';
+import type { IMessage, IThreadMainMessage } from '@yaschat/core-typings';
+import { isEditedMessage } from '@yaschat/core-typings';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import { MessageTypes } from '@yaschat/message-types';
+import { isTruthy } from '@yaschat/tools';
+import { clientCallbacks, CustomVirtuaScrollbars, useMergedRefsV2 } from '@yaschat/ui-client';
+import { useSearchParameter, useSetting, useUserId, useUserPreference } from '@yaschat/ui-contexts';
 import { differenceInSeconds } from 'date-fns/differenceInSeconds';
 import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

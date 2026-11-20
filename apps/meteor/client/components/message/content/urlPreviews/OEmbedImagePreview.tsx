@@ -1,4 +1,4 @@
-import { MessageGenericPreviewCoverImage } from '@yas chat/fuselage';
+import { MessageGenericPreviewCoverImage } from '@yaschat/fuselage';
 
 import OEmbedCollapsible from './OEmbedCollapsible';
 import type { OEmbedPreviewMetadata } from './OEmbedPreviewMetadata';

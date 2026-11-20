@@ -1,4 +1,4 @@
-import type { IMessage, MessageAttachment, FileAttachmentProps, MessageQuoteAttachment } from '@yas chat/core-typings';
+import type { IMessage, MessageAttachment, FileAttachmentProps, MessageQuoteAttachment } from '@yaschat/core-typings';
 
 import { modifyMessageOnFilesDelete } from './modifyMessageOnFilesDelete';
 

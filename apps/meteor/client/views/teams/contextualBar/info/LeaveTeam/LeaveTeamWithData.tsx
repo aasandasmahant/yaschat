@@ -1,6 +1,6 @@
-import type { ITeam } from '@yas chat/core-typings';
-import { GenericModalSkeleton } from '@yas chat/ui-client';
-import { useUserId, useEndpoint } from '@yas chat/ui-contexts';
+import type { ITeam } from '@yaschat/core-typings';
+import { GenericModalSkeleton } from '@yaschat/ui-client';
+import { useUserId, useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import LeaveTeamModal from './LeaveTeamModal/LeaveTeamModal';

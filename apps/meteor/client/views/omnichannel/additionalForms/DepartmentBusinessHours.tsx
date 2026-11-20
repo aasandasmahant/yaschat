@@ -1,6 +1,6 @@
-import { Field, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Field, FieldLabel, FieldRow, TextInput } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

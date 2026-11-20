@@ -1,9 +1,9 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { isSettingCode } from '@yas chat/core-typings';
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
-import { isTruthy } from '@yas chat/tools';
-import type { SettingsContextQuery, SettingsContextValue } from '@yas chat/ui-contexts';
-import { SettingsContext, useAtLeastOnePermission, useEndpoint } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { isSettingCode } from '@yaschat/core-typings';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
+import { isTruthy } from '@yaschat/tools';
+import type { SettingsContextQuery, SettingsContextValue } from '@yaschat/ui-contexts';
+import { SettingsContext, useAtLeastOnePermission, useEndpoint } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useCallback, useEffect, useMemo } from 'react';

@@ -1,6 +1,6 @@
-import type { IAuditLog } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRoute, useRouteParameter } from '@yas chat/ui-contexts';
+import type { IAuditLog } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRoute, useRouteParameter } from '@yaschat/ui-contexts';
 import type { SetStateAction } from 'react';
 import { useMemo } from 'react';
 

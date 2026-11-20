@@ -1,5 +1,5 @@
-import type { IUserStatus } from '@yas chat/core-typings';
-import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import type { IUserStatus } from '@yaschat/core-typings';
+import { GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 

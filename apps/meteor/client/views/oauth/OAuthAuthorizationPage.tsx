@@ -1,5 +1,5 @@
-import { useSearchParameter, useUser } from '@yas chat/ui-contexts';
-import RegistrationPageRouter from '@yas chat/ui-registration';
+import { useSearchParameter, useUser } from '@yaschat/ui-contexts';
+import RegistrationPageRouter from '@yaschat/ui-registration';
 
 import { getErrorMessage } from '../../lib/errorHandling';
 import PageLoading from '../root/PageLoading';

@@ -1,6 +1,6 @@
-import { Box, IconButton, Sidepanel, SidepanelHeader, SidepanelHeaderTitle, SidepanelListItem, ToggleSwitch } from '@yas chat/fuselage';
-import { VirtualizedScrollbars } from '@yas chat/ui-client';
-import { useLayout } from '@yas chat/ui-contexts';
+import { Box, IconButton, Sidepanel, SidepanelHeader, SidepanelHeaderTitle, SidepanelListItem, ToggleSwitch } from '@yaschat/fuselage';
+import { VirtualizedScrollbars } from '@yaschat/ui-client';
+import { useLayout } from '@yaschat/ui-contexts';
 import { useId, type ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';

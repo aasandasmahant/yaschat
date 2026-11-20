@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen } from '@testing-library/react';
 import dompurify from 'dompurify';
 
@@ -13,10 +13,10 @@ const getMarkdownParserLimitMock = jest.mocked(getMarkdownParserLimit);
 
 const MOCKED_BASE_URI = 'http://localhost/';
 
-// Mock getBaseURI from @yas chat/ui-client to ensure consistent behavior in tests
+// Mock getBaseURI from @yaschat/ui-client to ensure consistent behavior in tests
 // This will affect the isExternal function imported above.
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'), // Import and retain default behavior for other exports
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'), // Import and retain default behavior for other exports
 	getBaseURI: jest.fn(() => MOCKED_BASE_URI), // Mock getBaseURI for consistent test behavior
 }));
 

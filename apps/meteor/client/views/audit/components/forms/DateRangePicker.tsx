@@ -1,6 +1,6 @@
-import { Box, InputBox } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericMenu } from '@yas chat/ui-client';
+import { Box, InputBox } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericMenu } from '@yaschat/ui-client';
 import { endOfDay } from 'date-fns/endOfDay';
 import { endOfMonth } from 'date-fns/endOfMonth';
 import { endOfWeek } from 'date-fns/endOfWeek';

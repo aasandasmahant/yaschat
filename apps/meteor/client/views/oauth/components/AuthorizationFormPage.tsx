@@ -1,7 +1,7 @@
-import type { IOAuthApps, IUser } from '@yas chat/core-typings';
-import { Button, ButtonGroup } from '@yas chat/fuselage';
-import { Form, FormContainer, FormFooter, FormHeader, FormTitle } from '@yas chat/layout';
-import { useLoginToken, useLogout, useRoute } from '@yas chat/ui-contexts';
+import type { IOAuthApps, IUser } from '@yaschat/core-typings';
+import { Button, ButtonGroup } from '@yaschat/fuselage';
+import { Form, FormContainer, FormFooter, FormHeader, FormTitle } from '@yaschat/layout';
+import { useLoginToken, useLogout, useRoute } from '@yaschat/ui-contexts';
 import { useEffect, useId, useRef } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

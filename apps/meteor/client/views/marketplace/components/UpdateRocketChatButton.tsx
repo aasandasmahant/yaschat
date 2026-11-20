@@ -1,5 +1,5 @@
-import { Button } from '@yas chat/fuselage';
-import { links } from '@yas chat/ui-client';
+import { Button } from '@yaschat/fuselage';
+import { links } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const UpdateYasChatButton = () => {

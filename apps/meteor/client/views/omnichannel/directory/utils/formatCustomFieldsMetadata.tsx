@@ -1,4 +1,4 @@
-import type { ILivechatCustomField, CustomFieldMetadata } from '@yas chat/core-typings';
+import type { ILivechatCustomField, CustomFieldMetadata } from '@yaschat/core-typings';
 
 export const formatCustomFieldsMetadata = (
 	customFields: ILivechatCustomField[] | undefined,

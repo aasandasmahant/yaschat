@@ -1,6 +1,6 @@
-import { Box, Button, ButtonGroup, Field, FieldGroup, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
-import { PageScrollableContent, Page, PageHeader } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { Box, Button, ButtonGroup, Field, FieldGroup, FieldLabel, FieldRow, TextInput } from '@yaschat/fuselage';
+import { PageScrollableContent, Page, PageHeader } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useCallback, useId } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

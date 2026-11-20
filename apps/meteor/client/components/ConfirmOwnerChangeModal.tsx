@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
 import type { ComponentPropsWithoutRef } from 'react';
 import { Trans } from 'react-i18next';
 

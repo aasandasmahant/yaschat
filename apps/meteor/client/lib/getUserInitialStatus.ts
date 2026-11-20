@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { UserStatus as UserStatusType } from '@yas chat/core-typings';
+import type { IUser } from '@yaschat/core-typings';
+import { UserStatus as UserStatusType } from '@yaschat/core-typings';
 
 export type UserStatusInitialValues = {
 	statusText: string;

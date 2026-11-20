@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook } from '@testing-library/react';
 
 import { useDesktopFavicon } from './useDesktopFavicon';

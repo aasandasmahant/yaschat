@@ -1,5 +1,5 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import RoomLinkList from './RoomLinkList';

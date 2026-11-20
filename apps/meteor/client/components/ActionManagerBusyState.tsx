@@ -1,5 +1,5 @@
-import { css } from '@yas chat/css-in-js';
-import { Box } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import { Box } from '@yaschat/fuselage';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

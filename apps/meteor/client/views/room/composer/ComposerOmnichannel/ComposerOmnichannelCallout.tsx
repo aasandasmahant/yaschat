@@ -1,6 +1,6 @@
-import { Button, ButtonGroup, Callout, IconButton } from '@yas chat/fuselage';
-import { useSessionStorage } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useRouter } from '@yas chat/ui-contexts';
+import { Button, ButtonGroup, Callout, IconButton } from '@yaschat/fuselage';
+import { useSessionStorage } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { hasJoinedVideoConference, type VideoConference } from '@yas chat/core-typings';
+import { hasJoinedVideoConference, type VideoConference } from '@yaschat/core-typings';
 import {
 	Button,
 	Message,
@@ -13,11 +13,11 @@ import {
 	IconButton,
 	ButtonGroup,
 	AvatarStack,
-} from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useTimeAgo, useUserDisplayName } from '@yas chat/ui-client';
-import { useVideoConfJoinCall } from '@yas chat/ui-video-conf';
+} from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useTimeAgo, useUserDisplayName } from '@yaschat/ui-client';
+import { useVideoConfJoinCall } from '@yaschat/ui-video-conf';
 import { useTranslation } from 'react-i18next';
 
 import { VIDEOCONF_STACK_MAX_USERS } from '../../../../../lib/constants';

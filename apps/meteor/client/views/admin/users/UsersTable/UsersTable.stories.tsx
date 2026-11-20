@@ -1,4 +1,4 @@
-import { UserStatus } from '@yas chat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
 import type { Meta } from '@storybook/react';
 
 import UsersTable from './UsersTable';

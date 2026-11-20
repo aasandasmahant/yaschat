@@ -1,5 +1,5 @@
-import { Accordion, AccordionItem, Box, Button } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import { Accordion, AccordionItem, Box, Button } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type DisableE2EEModalProps = {

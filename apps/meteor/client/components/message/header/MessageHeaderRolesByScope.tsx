@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 
 import MessageRoles from './MessageRoles';
 import { useUserRolesByScope } from '../../../hooks/useUserRolesByScope';

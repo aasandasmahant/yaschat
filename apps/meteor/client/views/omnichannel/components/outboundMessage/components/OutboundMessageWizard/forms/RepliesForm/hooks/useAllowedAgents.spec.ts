@@ -1,4 +1,4 @@
-import type { ILivechatDepartmentAgents, IUser, Serialized } from '@yas chat/core-typings';
+import type { ILivechatDepartmentAgents, IUser, Serialized } from '@yaschat/core-typings';
 import { renderHook } from '@testing-library/react';
 
 import { useAllowedAgents } from './useAllowedAgents';

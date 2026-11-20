@@ -1,7 +1,7 @@
-import type { IUser, Serialized } from '@yas chat/core-typings';
-import type { OperationResult } from '@yas chat/rest-typings';
-import { usePaginatedQuery } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IUser, Serialized } from '@yaschat/core-typings';
+import type { OperationResult } from '@yaschat/rest-typings';
+import { usePaginatedQuery } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import { managedPresenceQueryKeys } from '../../../lib/queryKeys';

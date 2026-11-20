@@ -1,5 +1,5 @@
-import type { IRoom, IRoomWithRetentionPolicy } from '@yas chat/core-typings';
-import { usePermission, useAtLeastOnePermission, useRole } from '@yas chat/ui-contexts';
+import type { IRoom, IRoomWithRetentionPolicy } from '@yaschat/core-typings';
+import { usePermission, useAtLeastOnePermission, useRole } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { RoomSettingsEnum } from '../../../../../../definition/IRoomTypeConfig';

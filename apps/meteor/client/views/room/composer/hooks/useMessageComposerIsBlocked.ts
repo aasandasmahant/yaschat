@@ -1,5 +1,5 @@
-import type { ISubscription } from '@yas chat/core-typings';
-import { isDirectMessageRoom } from '@yas chat/core-typings';
+import type { ISubscription } from '@yaschat/core-typings';
+import { isDirectMessageRoom } from '@yaschat/core-typings';
 
 import { useRoom } from '../../contexts/RoomContext';
 

@@ -1,6 +1,6 @@
-import { isThreadMessage, type IMessage } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, Bubble, MessageDivider } from '@yas chat/fuselage';
+import { isThreadMessage, type IMessage } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, Bubble, MessageDivider } from '@yaschat/fuselage';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

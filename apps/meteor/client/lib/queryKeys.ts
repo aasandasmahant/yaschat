@@ -8,9 +8,9 @@ import type {
 	ILivechatAgent,
 	IOutboundProvider,
 	RoomType,
-} from '@yas chat/core-typings';
-import type { PaginatedRequest, UsersListStatusParamsGET } from '@yas chat/rest-typings';
-import { videoConferenceInfoQueryKey } from '@yas chat/ui-video-conf';
+} from '@yaschat/core-typings';
+import type { PaginatedRequest, UsersListStatusParamsGET } from '@yaschat/rest-typings';
+import { videoConferenceInfoQueryKey } from '@yaschat/ui-video-conf';
 
 export const roomsQueryKeys = {
 	all: ['rooms'] as const,

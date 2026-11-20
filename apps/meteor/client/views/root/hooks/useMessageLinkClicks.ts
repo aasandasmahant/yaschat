@@ -1,4 +1,4 @@
-import { useAbsoluteUrl, useLayout } from '@yas chat/ui-contexts';
+import { useAbsoluteUrl, useLayout } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { fireGlobalEvent } from '../../../lib/utils/fireGlobalEvent';

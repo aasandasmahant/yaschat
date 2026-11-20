@@ -1,7 +1,7 @@
-import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
-import { Box, Icon, Modal, Callout, ModalHeader, ModalTitle, ModalClose } from '@yas chat/fuselage';
-import { TextInput, ToggleSwitch, Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint } from '@yas chat/fuselage-forms';
-import type { TeamsCreateProps } from '@yas chat/rest-typings';
+import type { IAbacAttributeDefinition } from '@yaschat/core-typings';
+import { Box, Icon, Modal, Callout, ModalHeader, ModalTitle, ModalClose } from '@yaschat/fuselage';
+import { TextInput, ToggleSwitch, Field, FieldGroup, FieldLabel, FieldRow, FieldError, FieldHint } from '@yaschat/fuselage-forms';
+import type { TeamsCreateProps } from '@yaschat/rest-typings';
 import {
 	useEndpoint,
 	usePermission,
@@ -9,7 +9,7 @@ import {
 	useSetting,
 	useToastMessageDispatch,
 	useTranslation,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useId, memo, useEffect, useMemo } from 'react';
 import { Controller, FormProvider, useForm } from 'react-hook-form';

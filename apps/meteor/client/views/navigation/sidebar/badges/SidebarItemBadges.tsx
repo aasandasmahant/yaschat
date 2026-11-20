@@ -1,6 +1,6 @@
-import { isInviteSubscription } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { isInviteSubscription } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 
 import UnreadBadge from './UnreadBadge';
 import InvitationBadge from '../../../../components/InvitationBadge';

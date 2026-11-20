@@ -1,5 +1,5 @@
-import { ExternalLink, links } from '@yas chat/ui-client';
-import { MessageFooterCallout, MessageFooterCalloutContent } from '@yas chat/ui-composer';
+import { ExternalLink, links } from '@yaschat/ui-client';
+import { MessageFooterCallout, MessageFooterCalloutContent } from '@yaschat/ui-composer';
 import { Trans } from 'react-i18next';
 
 const ComposerFederationInvalidVersion = () => {

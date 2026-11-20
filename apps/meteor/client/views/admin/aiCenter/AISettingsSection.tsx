@@ -1,4 +1,4 @@
-import { useRouter } from '@yas chat/ui-contexts';
+import { useRouter } from '@yaschat/ui-contexts';
 import type { ReactElement } from 'react';
 
 import EditableSettingsProvider from '../settings/EditableSettingsProvider';

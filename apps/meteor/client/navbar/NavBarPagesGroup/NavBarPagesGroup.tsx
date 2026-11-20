@@ -1,5 +1,5 @@
-import { NavBarGroup } from '@yas chat/fuselage';
-import { useLayout, usePermission } from '@yas chat/ui-contexts';
+import { NavBarGroup } from '@yaschat/fuselage';
+import { useLayout, usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import NavBarItemCreateNew from './NavBarItemCreateNew';

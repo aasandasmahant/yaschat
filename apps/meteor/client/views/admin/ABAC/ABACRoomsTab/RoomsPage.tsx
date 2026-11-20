@@ -1,5 +1,5 @@
-import { Box, Button, Margins, Pagination, Select, type TableColumnWidth } from '@yas chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
+import { Box, Button, Margins, Pagination, Select, type TableColumnWidth } from '@yaschat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -10,8 +10,8 @@ import {
 	usePaginatedQuery,
 	usePagination,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useEndpoint, useRouter, useSearchParameter } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint, useRouter, useSearchParameter } from '@yaschat/ui-contexts';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
 import { useCallback } from 'react';
 
 export const useCollapsedGroups = () => {

@@ -1,4 +1,4 @@
-import { SetupWizardRoute } from '@yas chat/ui-setup-wizard';
+import { SetupWizardRoute } from '@yaschat/ui-setup-wizard';
 import { createElement, lazy, useEffect } from 'react';
 
 import { appLayout } from '../lib/appLayout';
@@ -13,7 +13,7 @@ const HomePage = preloadedLazy(() => import('../views/home/HomePage'));
 const DirectoryPage = lazy(() => import('../views/directory'));
 const OmnichannelDirectoryRouter = lazy(() => import('../views/omnichannel/directory/OmnichannelDirectoryRouter'));
 const OmnichannelQueueList = lazy(() => import('../views/omnichannel/queueList'));
-const CMSPage = lazy(() => import('@yas chat/ui-registration').then(({ CMSPage }) => ({ default: CMSPage })));
+const CMSPage = lazy(() => import('@yaschat/ui-registration').then(({ CMSPage }) => ({ default: CMSPage })));
 const SecretURLPage = lazy(() => import('../views/invite/SecretURLPage'));
 const InvitePage = lazy(() => import('../views/invite/InvitePage'));
 const ConferenceRoute = lazy(() => import('../views/conference/ConferenceRoute'));
@@ -21,7 +21,7 @@ const MailerUnsubscriptionPage = lazy(() => import('../views/mailer/MailerUnsubs
 const LoginTokenRoute = lazy(() => import('../views/root/LoginTokenRoute'));
 const SAMLLoginRoute = lazy(() => import('../views/root/SAMLLoginRoute'));
 const ResetPasswordPage = lazy(() =>
-	import('@yas chat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
+	import('@yaschat/ui-registration').then(({ ResetPasswordPage }) => ({ default: ResetPasswordPage })),
 );
 const OAuthAuthorizationPage = lazy(() => import('../views/oauth/OAuthAuthorizationPage'));
 const OAuthErrorPage = lazy(() => import('../views/oauth/OAuthErrorPage'));
@@ -30,7 +30,7 @@ const CallHistoryPage = lazy(() => import('../views/mediaCallHistory/CallHistory
 const SidebarRailCallPanel = lazy(() => import('../sidebar/SidebarRail/SidebarRailCallPanel'));
 const SearchPage = lazy(() => import('../views/search/SearchPage'));
 
-declare module '@yas chat/ui-contexts' {
+declare module '@yaschat/ui-contexts' {
 	interface IRouterPaths {
 		'index': {
 			pathname: '/';

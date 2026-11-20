@@ -13,7 +13,7 @@ export type EmbeddedCallProviderProps = {
 
 /**
  * Runs a video conference provider's call inside the conference window: it wraps the window and provides the
- * `@yas chat/ui-conference` call contexts the window's call parts read.
+ * `@yaschat/ui-conference` call contexts the window's call parts read.
  */
 export type EmbeddedCallProvider = ComponentType<EmbeddedCallProviderProps>;
 

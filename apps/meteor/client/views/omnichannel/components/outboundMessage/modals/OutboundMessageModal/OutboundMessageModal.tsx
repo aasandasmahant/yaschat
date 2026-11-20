@@ -1,6 +1,6 @@
-import { Modal, ModalBackdrop, ModalClose, ModalContent, ModalHeader, ModalTitle } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRouter } from '@yas chat/ui-contexts';
+import { Modal, ModalBackdrop, ModalClose, ModalContent, ModalHeader, ModalTitle } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useEffect, useId, useState } from 'react';
 import type { KeyboardEvent, ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';

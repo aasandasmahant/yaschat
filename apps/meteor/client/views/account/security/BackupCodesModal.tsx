@@ -1,6 +1,6 @@
-import { CodeSnippet, Stack, Text } from '@yas chat/fuselage';
-import { useClipboard } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
+import { CodeSnippet, Stack, Text } from '@yaschat/fuselage';
+import { useClipboard } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

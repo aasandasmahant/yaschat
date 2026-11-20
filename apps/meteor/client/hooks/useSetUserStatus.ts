@@ -1,5 +1,5 @@
-import { clientCallbacks } from '@yas chat/ui-client';
-import { useEndpoint, useSetting } from '@yas chat/ui-contexts';
+import { clientCallbacks } from '@yaschat/ui-client';
+import { useEndpoint, useSetting } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import { useFireGlobalEvent } from './useFireGlobalEvent';

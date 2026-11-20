@@ -1,5 +1,5 @@
-import { PageSkeleton, useIsEnterprise } from '@yas chat/ui-client';
-import { useRouteParameter, usePermission } from '@yas chat/ui-contexts';
+import { PageSkeleton, useIsEnterprise } from '@yaschat/ui-client';
+import { useRouteParameter, usePermission } from '@yaschat/ui-contexts';
 
 import PermissionsPage from './PermissionsPage';
 import UsersInRole from './UsersInRole';

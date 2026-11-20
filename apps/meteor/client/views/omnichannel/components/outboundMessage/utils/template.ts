@@ -1,5 +1,5 @@
-import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
-import { capitalize } from '@yas chat/tools';
+import type { IOutboundProviderTemplate } from '@yaschat/core-typings';
+import { capitalize } from '@yaschat/tools';
 
 import type { ComponentType, TemplateParameterMetadata, TemplateParameter } from '../types/template';
 

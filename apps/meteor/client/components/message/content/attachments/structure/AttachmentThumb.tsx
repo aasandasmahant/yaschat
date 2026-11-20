@@ -1,4 +1,4 @@
-import { Box, Avatar } from '@yas chat/fuselage';
+import { Box, Avatar } from '@yaschat/fuselage';
 import { memo } from 'react';
 
 export type AttachmentThumbProps = { url: string };

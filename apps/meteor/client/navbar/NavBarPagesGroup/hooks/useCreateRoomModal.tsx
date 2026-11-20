@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetModal } from '@yaschat/ui-contexts';
 import type { ElementType } from 'react';
 
 export const useCreateRoomModal = (

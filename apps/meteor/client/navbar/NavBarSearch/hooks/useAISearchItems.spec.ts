@@ -1,8 +1,8 @@
-import type { AppliedFilter, SearchFilterKey } from '@yas chat/ai-search';
-import { AI_SEARCH_FILTER_SUGGESTION_LIMIT, AI_SEARCH_PAGE_SIZE, createAppliedFilter } from '@yas chat/ai-search';
-import { UserStatus } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { AISearchResult } from '@yas chat/rest-typings';
+import type { AppliedFilter, SearchFilterKey } from '@yaschat/ai-search';
+import { AI_SEARCH_FILTER_SUGGESTION_LIMIT, AI_SEARCH_PAGE_SIZE, createAppliedFilter } from '@yaschat/ai-search';
+import { UserStatus } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { AISearchResult } from '@yaschat/rest-typings';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useAISearchItems } from './useAISearchItems';
@@ -10,8 +10,8 @@ import { createFakeSubscription } from '../../../../tests/mocks/data';
 
 let mockDebounce: (value: unknown) => unknown = (value) => value;
 
-jest.mock('@yas chat/fuselage-hooks', () => ({
-	...jest.requireActual('@yas chat/fuselage-hooks'),
+jest.mock('@yaschat/fuselage-hooks', () => ({
+	...jest.requireActual('@yaschat/fuselage-hooks'),
 	useDebouncedValue: (value: unknown) => mockDebounce(value),
 }));
 

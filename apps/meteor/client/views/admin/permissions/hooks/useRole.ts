@@ -1,4 +1,4 @@
-import type { IRole } from '@yas chat/core-typings';
+import type { IRole } from '@yaschat/core-typings';
 
 import { Roles } from '../../../../stores';
 

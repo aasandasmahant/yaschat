@@ -1,5 +1,5 @@
-import type { ExperimentalEndpoints } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ExperimentalEndpoints } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 
 type ExperimentalParams<
 	TPath extends keyof ExperimentalEndpoints,

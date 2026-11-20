@@ -1,4 +1,4 @@
-import { Box, Skeleton } from '@yas chat/fuselage';
+import { Box, Skeleton } from '@yaschat/fuselage';
 import type { ComponentPropsWithoutRef } from 'react';
 
 export type FormSkeletonProps = ComponentPropsWithoutRef<typeof Box>;

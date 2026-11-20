@@ -1,4 +1,4 @@
-import { Box, FlexItem, InputBoxSkeleton } from '@yas chat/fuselage';
+import { Box, FlexItem, InputBoxSkeleton } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 export type EngagementDashboardCardFilterProps = {

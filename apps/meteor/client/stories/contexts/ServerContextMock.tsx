@@ -1,8 +1,8 @@
-import type { Serialized } from '@yas chat/core-typings';
-import type { ServerMethodName, ServerMethodParameters, ServerMethodReturn } from '@yas chat/ddp-client';
-import type { Method, OperationParams, OperationResult, PathFor, PathPattern } from '@yas chat/rest-typings';
-import type { UploadResult } from '@yas chat/ui-contexts';
-import { ServerContext } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import type { ServerMethodName, ServerMethodParameters, ServerMethodReturn } from '@yaschat/ddp-client';
+import type { Method, OperationParams, OperationResult, PathFor, PathPattern } from '@yaschat/rest-typings';
+import type { UploadResult } from '@yaschat/ui-contexts';
+import { ServerContext } from '@yaschat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 import { useContext, useMemo } from 'react';
 import { action } from 'storybook/actions';

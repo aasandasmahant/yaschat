@@ -1,6 +1,6 @@
-import type { Serialized } from '@yas chat/core-typings';
-import type { DefaultUserInfo, UsersListStatusParamsGET } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import type { DefaultUserInfo, UsersListStatusParamsGET } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 const usePendingUsersCount = (users: Serialized<DefaultUserInfo[]> | undefined) => {

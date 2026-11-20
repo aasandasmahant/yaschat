@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDiscussion, isPublicRoom } from '@yas chat/core-typings';
-import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yas chat/ui-composer';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDiscussion, isPublicRoom } from '@yaschat/core-typings';
+import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yaschat/ui-composer';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { ABAC_ATTRIBUTES_MANAGE_CONTEXT, ABAC_ATTRIBUTES_TAB } from '../../../lib/constants';

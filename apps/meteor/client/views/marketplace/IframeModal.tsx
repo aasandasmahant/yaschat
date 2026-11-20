@@ -1,4 +1,4 @@
-import { Box, Modal } from '@yas chat/fuselage';
+import { Box, Modal } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

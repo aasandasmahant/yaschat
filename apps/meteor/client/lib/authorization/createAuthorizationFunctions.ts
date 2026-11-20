@@ -1,5 +1,5 @@
-import { AuthorizationUtils } from '@yas chat/authorization/dist/AuthorizationUtils';
-import type { IPermission, IRole, IUser } from '@yas chat/core-typings';
+import { AuthorizationUtils } from '@yaschat/authorization/dist/AuthorizationUtils';
+import type { IPermission, IRole, IUser } from '@yaschat/core-typings';
 
 export type AuthorizationDeps = {
 	/** The currently logged-in user id, or undefined. */

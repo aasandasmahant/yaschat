@@ -1,5 +1,5 @@
-import { Button, Modal, ModalContent, ModalFooter, ModalFooterControllers, ModalHeader, ModalTitle } from '@yas chat/fuselage';
-import { useSetModal } from '@yas chat/ui-contexts';
+import { Button, Modal, ModalContent, ModalFooter, ModalFooterControllers, ModalHeader, ModalTitle } from '@yaschat/fuselage';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

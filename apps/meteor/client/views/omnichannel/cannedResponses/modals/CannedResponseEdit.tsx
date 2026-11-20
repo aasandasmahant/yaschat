@@ -1,7 +1,7 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse, Serialized } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter } from '@yas chat/ui-contexts';
+import type { ILivechatDepartment, IOmnichannelCannedResponse, Serialized } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup } from '@yaschat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageFooter } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, memo, useCallback } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';

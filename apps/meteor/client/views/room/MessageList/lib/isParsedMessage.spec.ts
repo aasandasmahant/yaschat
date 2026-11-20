@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import type { Root } from '@yas chat/message-parser';
+import type { IMessage } from '@yaschat/core-typings';
+import type { Root } from '@yaschat/message-parser';
 
 import { isParsedMessage } from './isParsedMessage';
 

@@ -1,5 +1,5 @@
-import type { Button } from '@yas chat/fuselage';
-import { Box, Icon } from '@yas chat/fuselage';
+import type { Button } from '@yaschat/fuselage';
+import { Box, Icon } from '@yaschat/fuselage';
 import type { ComponentProps, MouseEvent } from 'react';
 import { forwardRef } from 'react';
 

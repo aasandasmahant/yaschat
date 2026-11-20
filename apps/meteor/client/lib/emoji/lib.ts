@@ -1,5 +1,5 @@
-import { Emitter } from '@yas chat/emitter';
-import type { EmojiPackages } from '@yas chat/ui-emoji-picker';
+import { Emitter } from '@yaschat/emitter';
+import type { EmojiPackages } from '@yaschat/ui-emoji-picker';
 
 export const emojiEmitter = new Emitter<{ updated: void }>();
 

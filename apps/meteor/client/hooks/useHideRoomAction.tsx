@@ -1,7 +1,7 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModalDoNotAskAgain, useDontAskAgain } from '@yas chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch, useRouter, useUserId } from '@yas chat/ui-contexts';
+import type { RoomType } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModalDoNotAskAgain, useDontAskAgain } from '@yaschat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch, useRouter, useUserId } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -14,7 +14,7 @@ import {
 	ModalFooterAnnotation,
 	ModalFooterControllers,
 	Stack,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { useId, useState } from 'react';
 import { useForm } from 'react-hook-form';

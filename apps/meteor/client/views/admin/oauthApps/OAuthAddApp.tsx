@@ -10,9 +10,9 @@ import {
 	TextAreaInput,
 	ToggleSwitch,
 	FieldGroup,
-} from '@yas chat/fuselage';
-import { ContextualbarScrollableContent } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { ContextualbarScrollableContent } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import { useCallback, useId } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, Controller } from 'react-hook-form';

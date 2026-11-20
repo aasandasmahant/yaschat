@@ -1,4 +1,4 @@
-import type { IMessage } from '@yas chat/core-typings';
+import type { IMessage } from '@yaschat/core-typings';
 import {
 	MessageHeader as FuselageMessageHeader,
 	MessageName,
@@ -6,10 +6,10 @@ import {
 	MessageUsername,
 	MessageStatusPrivateIndicator,
 	MessageNameContainer,
-} from '@yas chat/fuselage';
-import { useButtonPattern } from '@yas chat/fuselage-hooks';
-import { useUserDisplayName } from '@yas chat/ui-client';
-import { useUserPresence, useUserCard } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useButtonPattern } from '@yaschat/fuselage-hooks';
+import { useUserDisplayName } from '@yaschat/ui-client';
+import { useUserPresence, useUserCard } from '@yaschat/ui-contexts';
 import { memo, type MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

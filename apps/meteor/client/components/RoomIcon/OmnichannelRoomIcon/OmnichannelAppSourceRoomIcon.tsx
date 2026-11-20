@@ -1,5 +1,5 @@
-import type { IOmnichannelSourceFromApp } from '@yas chat/core-typings';
-import { Box, Icon, type IconColor, type IconProps } from '@yas chat/fuselage';
+import type { IOmnichannelSourceFromApp } from '@yaschat/core-typings';
+import { Box, Icon, type IconColor, type IconProps } from '@yaschat/fuselage';
 
 import { useOmnichannelRoomIcon } from './context/OmnichannelRoomIconContext';
 

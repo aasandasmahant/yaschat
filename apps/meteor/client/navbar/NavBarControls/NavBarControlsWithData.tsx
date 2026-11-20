@@ -1,6 +1,6 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
-import { useMediaCallAction } from '@yas chat/ui-voip';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
+import { useMediaCallAction } from '@yaschat/ui-voip';
 import { useCallback, type HTMLAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 

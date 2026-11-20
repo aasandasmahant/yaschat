@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useStream } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useStream } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { RoomHistoryManager } from '../../../lib/RoomHistoryManager';

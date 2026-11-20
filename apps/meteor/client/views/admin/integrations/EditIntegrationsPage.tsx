@@ -1,4 +1,4 @@
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 
 import EditIncomingWebhook from './incoming/EditIncomingWebhook';
 import EditOutgoingWebhook from './outgoing/EditOutgoingWebhook';

@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 
 export type OutboundMessageFormProps = ComponentProps<typeof Box> & {

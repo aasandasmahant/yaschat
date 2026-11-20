@@ -1,5 +1,5 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useFeaturePreview } from '@yas chat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useFeaturePreview } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useGroupingListItems } from './useGroupingListItems';

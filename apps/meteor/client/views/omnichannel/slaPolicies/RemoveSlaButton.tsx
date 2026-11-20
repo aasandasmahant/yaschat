@@ -1,7 +1,7 @@
-import { IconButton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal, GenericTableCell } from '@yas chat/ui-client';
-import { useRoute, useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { IconButton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal, GenericTableCell } from '@yaschat/ui-client';
+import { useRoute, useEndpoint, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

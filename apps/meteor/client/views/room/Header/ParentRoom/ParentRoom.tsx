@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 
 import ParentDiscussion from './ParentDiscussion';
 import ParentTeam from './ParentTeam';

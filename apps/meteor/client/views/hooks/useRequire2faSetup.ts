@@ -1,4 +1,4 @@
-import { useSetting, useUser } from '@yas chat/ui-contexts';
+import { useSetting, useUser } from '@yaschat/ui-contexts';
 
 import { Roles } from '../../stores';
 

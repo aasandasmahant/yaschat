@@ -1,4 +1,4 @@
-import { Box, Margins } from '@yas chat/fuselage';
+import { Box, Margins } from '@yaschat/fuselage';
 import type { CSSProperties } from 'react';
 
 export type LegendSymbolProps = {

@@ -1,4 +1,4 @@
-import { Box, Divider } from '@yas chat/fuselage';
+import { Box, Divider } from '@yaschat/fuselage';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { Fragment } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';

@@ -1,8 +1,8 @@
-import type { IRole, IUser, Serialized } from '@yas chat/core-typings';
-import { Pagination, type TableColumnWidth } from '@yas chat/fuselage';
-import { useStableCallback, useBreakpoints } from '@yas chat/fuselage-hooks';
-import type { DefaultUserInfo } from '@yas chat/rest-typings';
-import type { usePagination, useSort } from '@yas chat/ui-client';
+import type { IRole, IUser, Serialized } from '@yaschat/core-typings';
+import { Pagination, type TableColumnWidth } from '@yaschat/fuselage';
+import { useStableCallback, useBreakpoints } from '@yaschat/fuselage-hooks';
+import type { DefaultUserInfo } from '@yaschat/rest-typings';
+import type { usePagination, useSort } from '@yaschat/ui-client';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -10,8 +10,8 @@ import {
 	GenericTableBody,
 	GenericTableLoadingTable,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import type { Dispatch, SetStateAction, MouseEvent, KeyboardEvent } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

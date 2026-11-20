@@ -1,5 +1,5 @@
-import type { IPermission } from '@yas chat/core-typings';
-import { escapeRegExp } from '@yas chat/tools';
+import type { IPermission } from '@yaschat/core-typings';
+import { escapeRegExp } from '@yaschat/tools';
 import type { TFunction } from 'i18next';
 
 export const mapPermissionKeys = ({ t, permissions }: { t: TFunction; permissions: IPermission[] }) =>

@@ -1,5 +1,5 @@
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ManagersTable from './ManagersTable';

@@ -1,5 +1,5 @@
-import { usePrefersReducedMotion } from '@yas chat/fuselage-hooks';
-import type { RouterContextValue } from '@yas chat/ui-contexts';
+import { usePrefersReducedMotion } from '@yaschat/fuselage-hooks';
+import type { RouterContextValue } from '@yaschat/ui-contexts';
 import { useEffect, useRef, useSyncExternalStore } from 'react';
 
 /**

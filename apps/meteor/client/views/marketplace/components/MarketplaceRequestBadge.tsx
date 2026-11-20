@@ -1,4 +1,4 @@
-import { Badge, Skeleton } from '@yas chat/fuselage';
+import { Badge, Skeleton } from '@yaschat/fuselage';
 
 import { useAppRequestStats } from '../hooks/useAppRequestStats';
 

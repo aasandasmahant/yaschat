@@ -1,4 +1,4 @@
-import { Callout } from '@yas chat/fuselage';
+import { Callout } from '@yaschat/fuselage';
 
 import InviteUsersWrapper from './InviteUsersWrapper';
 

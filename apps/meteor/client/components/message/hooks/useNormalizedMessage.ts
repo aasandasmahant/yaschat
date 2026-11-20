@@ -1,13 +1,13 @@
-import { Base64 } from '@yas chat/base64';
-import type { IMessage, MessageAttachment } from '@yas chat/core-typings';
+import { Base64 } from '@yaschat/base64';
+import type { IMessage, MessageAttachment } from '@yaschat/core-typings';
 import {
 	isFileImageAttachment,
 	isFileAttachment,
 	isFileAudioAttachment,
 	isFileVideoAttachment,
 	isQuoteAttachment,
-} from '@yas chat/core-typings';
-import type { Options } from '@yas chat/message-parser';
+} from '@yaschat/core-typings';
+import type { Options } from '@yaschat/message-parser';
 import { useMemo } from 'react';
 
 import type { MessageWithMdEnforced } from '../../../lib/parseMessageTextToAstMarkdown';

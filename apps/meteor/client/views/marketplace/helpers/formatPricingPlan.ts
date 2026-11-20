@@ -1,4 +1,4 @@
-import type { AppPricingPlan } from '@yas chat/core-typings';
+import type { AppPricingPlan } from '@yaschat/core-typings';
 
 import { formatPrice } from './formatPrice';
 import { t } from '../../../../lib/i18n';

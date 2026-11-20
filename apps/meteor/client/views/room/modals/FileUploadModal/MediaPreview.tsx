@@ -1,4 +1,4 @@
-import { AudioPlayer, Box, Icon } from '@yas chat/fuselage';
+import { AudioPlayer, Box, Icon } from '@yaschat/fuselage';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

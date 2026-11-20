@@ -1,4 +1,4 @@
-import type { App } from '@yas chat/core-typings';
+import type { App } from '@yaschat/core-typings';
 import { useTranslation } from 'react-i18next';
 
 import AppsList from '../AppsList';

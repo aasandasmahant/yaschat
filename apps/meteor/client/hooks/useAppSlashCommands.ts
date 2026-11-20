@@ -1,6 +1,6 @@
-import type { SlashCommand } from '@yas chat/core-typings';
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
+import type { SlashCommand } from '@yaschat/core-typings';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useStream, useUserId } from '@yaschat/ui-contexts';
 import { useQueryClient, useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

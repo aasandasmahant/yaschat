@@ -1,4 +1,4 @@
-import { Box, Icon } from '@yas chat/fuselage';
+import { Box, Icon } from '@yaschat/fuselage';
 
 import { formatBytes } from '../../../../lib/utils/formatBytes';
 

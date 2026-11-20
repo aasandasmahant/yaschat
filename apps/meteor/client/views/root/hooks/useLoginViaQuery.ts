@@ -1,4 +1,4 @@
-import { useRouter, useLoginWithToken } from '@yas chat/ui-contexts';
+import { useRouter, useLoginWithToken } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 export const useLoginViaQuery = () => {

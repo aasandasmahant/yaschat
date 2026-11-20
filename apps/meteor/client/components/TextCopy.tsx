@@ -1,5 +1,5 @@
-import { Box, Button, Scrollable } from '@yas chat/fuselage';
-import { useClipboardWithToast } from '@yas chat/ui-client';
+import { Box, Button, Scrollable } from '@yaschat/fuselage';
+import { useClipboardWithToast } from '@yaschat/ui-client';
 import type { ComponentProps, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import type { UIEvent } from 'react';
 
 export const usePreventPropagation = (fn?: (e: UIEvent) => void): ((e: UIEvent) => void) => {

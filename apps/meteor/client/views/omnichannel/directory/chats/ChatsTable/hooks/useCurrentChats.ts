@@ -1,6 +1,6 @@
-import type { GETLivechatRoomsParams, OperationResult } from '@yas chat/rest-typings';
-import { usePaginatedQuery } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { GETLivechatRoomsParams, OperationResult } from '@yaschat/rest-typings';
+import { usePaginatedQuery } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 
 type CurrentChatsResult = OperationResult<'GET', '/v1/livechat/rooms'>;
 

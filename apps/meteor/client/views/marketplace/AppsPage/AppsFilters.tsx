@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { FilterBar, FilterBarFilters, FilterBarSearch } from '../../../components/FilterBar';

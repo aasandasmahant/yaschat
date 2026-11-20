@@ -1,6 +1,6 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction, StatesLink, Box } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent, links } from '@yas chat/ui-client';
-import { useRole, useRouter } from '@yas chat/ui-contexts';
+import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction, StatesLink, Box } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent, links } from '@yaschat/ui-client';
+import { useRole, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const BusinessHoursDisabledPage = () => {

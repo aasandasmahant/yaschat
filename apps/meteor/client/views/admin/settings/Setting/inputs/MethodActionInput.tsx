@@ -1,5 +1,5 @@
-import type { ServerMethods } from '@yas chat/ddp-client';
-import { useMethod } from '@yas chat/ui-contexts';
+import type { ServerMethods } from '@yaschat/ddp-client';
+import { useMethod } from '@yaschat/ui-contexts';
 
 import type { ActionInputBaseProps } from './ActionInputBase';
 import ActionInputBase from './ActionInputBase';

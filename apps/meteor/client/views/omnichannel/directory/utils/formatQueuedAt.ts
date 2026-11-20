@@ -1,4 +1,4 @@
-import type { IOmnichannelRoom, Serialized } from '@yas chat/core-typings';
+import type { IOmnichannelRoom, Serialized } from '@yaschat/core-typings';
 import { formatDistance } from 'date-fns/formatDistance';
 
 export const formatQueuedAt = (room: Serialized<IOmnichannelRoom> | undefined) => {

@@ -25,13 +25,13 @@ Every day, tens of millions of users in over 150 countries and in organizations 
 
 YasChat provides endless possibilities. Here’s an overview of the features you benefit from:
 
-- [**Deployment and workspace management**](https://docs.yas chat/docs/deploy-yaschat): Flexible and reliable self-hosted, cloud, and air-gapped deployment options with scalable architecture and performance monitoring.
+- [**Deployment and workspace management**](https://yaschat.example.com/docs/docs/deploy-yaschat): Flexible and reliable self-hosted, cloud, and air-gapped deployment options with scalable architecture and performance monitoring.
 
-- [**Security and sovereignty**](https://docs.yas chat/docs/secure-yaschat): YasChat is secure by design, with features such as identity management, end-to-end encryption, and role and attribute-based access control.
+- [**Security and sovereignty**](https://yaschat.example.com/docs/docs/secure-yaschat): YasChat is secure by design, with features such as identity management, end-to-end encryption, and role and attribute-based access control.
 
-- [**Team collaboration**](https://docs.yas chat/docs/collaborate-using-yaschat): Unified collaboration experience for asynchronous and real-time communication with seamless messaging options, voice calls, and federation.
+- [**Team collaboration**](https://yaschat.example.com/docs/docs/collaborate-using-yaschat): Unified collaboration experience for asynchronous and real-time communication with seamless messaging options, voice calls, and federation.
 
-- [**Extend and integrate**](https://docs.yas chat/docs/extend-and-integrate-yaschat-capabilities): Install public apps from the YasChat Marketplace, build your own apps with Apps-Engine, and integrate with external systems.
+- [**Extend and integrate**](https://yaschat.example.com/docs/docs/extend-and-integrate-yaschat-capabilities): Install public apps from the YasChat Marketplace, build your own apps with Apps-Engine, and integrate with external systems.
 
 <img src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp" data-canonical-src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp"  />
 
@@ -39,13 +39,13 @@ YasChat provides endless possibilities. Here’s an overview of the features you
 
 We support different methods of deployment for different needs. Choose your method:
 
-- Are you deploying YasChat on your own servers? You can deploy using one of the recommended methods: Docker, Podman, or Kubernetes. Refer to the [Deployment Guide](https://docs.yas chat/docs/deploy-yaschat) for details. Before you deploy, make sure to check the [system requirements](https://docs.yas chat/docs/system-requirements) to deploy a workspace successfully. Alternatively, deploy YasChat using [Launchpad](https://docs.yas chat/docs/deploy-with-launchpad) for a quick and straightforward Kubernetes setup where you don't have to manage each dependency.
+- Are you deploying YasChat on your own servers? You can deploy using one of the recommended methods: Docker, Podman, or Kubernetes. Refer to the [Deployment Guide](https://yaschat.example.com/docs/docs/deploy-yaschat) for details. Before you deploy, make sure to check the [system requirements](https://yaschat.example.com/docs/docs/system-requirements) to deploy a workspace successfully. Alternatively, deploy YasChat using [Launchpad](https://yaschat.example.com/docs/docs/deploy-with-launchpad) for a quick and straightforward Kubernetes setup where you don't have to manage each dependency.
 
-- Do you need to run the workspace on an isolated network? Set up an [air-gapped workspace](https://docs.yas chat/docs/yaschat-air-gapped-deployment) to use YasChat without internet access, suitable for high-security or regulated environments.
+- Do you need to run the workspace on an isolated network? Set up an [air-gapped workspace](https://yaschat.example.com/docs/docs/yaschat-air-gapped-deployment) to use YasChat without internet access, suitable for high-security or regulated environments.
 
-- Looking for a custom cloud-hosted solution without handling infrastructure? Check out our premium, dedicated [cloud hosting options](https://docs.yas chat/docs/yaschat-cloud-hosting-service-level-agreement-sla) that adapt to your needs.
+- Looking for a custom cloud-hosted solution without handling infrastructure? Check out our premium, dedicated [cloud hosting options](https://yaschat.example.com/docs/docs/yaschat-cloud-hosting-service-level-agreement-sla) that adapt to your needs.
 
-- Interested in decentralized communication? Enable [federation](https://docs.yas chat/docs/yaschat-native-federation) to securely communicate and share resources across a federated network.
+- Interested in decentralized communication? Enable [federation](https://yaschat.example.com/docs/docs/yaschat-native-federation) to securely communicate and share resources across a federated network.
 
 # 📱 Desktop and mobile apps
 
@@ -58,12 +58,12 @@ Download the desktop app:
 - [Install from the Windows Store](https://apps.microsoft.com/detail/9nblggh52jv6?hl=en-us&gl=NG&ocid=pdpshare)
 - [Get from Snapcraft for Linux](https://snapcraft.io/yaschat-desktop) or use the command `sudo snap install yaschat-desktop`
 
-Refer to the [Installation guide](https://docs.yas chat/docs/desktop-mobile-apps) for further details.
+Refer to the [Installation guide](https://yaschat.example.com/docs/docs/desktop-mobile-apps) for further details.
 
 # 📖 YasChat documentation
 
-- [User documentation](https://docs.yas chat/docs/yaschat)
-- [Administrator's guide](https://docs.yas chat/docs/administrators-guide)
+- [User documentation](https://yaschat.example.com/docs/docs/yaschat)
+- [Administrator's guide](https://yaschat.example.com/docs/docs/administrators-guide)
 - [Developer documentation](https://developer.yas chat/docs/yaschat-developer)
 - [API documentation](https://developer.yas chat/apidocs)
 - [YouTube YasChat Learning Center](https://www.youtube.com/playlist?list=PLee3gqXJQrFVXnNs5GiuoTMy269ydvcOB)
@@ -74,7 +74,7 @@ The architecture of YasChat is designed to protect sensitive data, enforce rigor
 
 - **[Trust Center](https://trust.yas chat/)**: The Trust Center provides a comprehensive view of how we protect data and maintain transparency. You will find details on our security practices, privacy commitments, compliance certifications, and governance policies.
 
-- **[Compliance Center](https://docs.yas chat/docs/compliance-center)**: Explore the Compliance Center for additional information on how we commit to providing modern collaboration while protecting sensitive data.
+- **[Compliance Center](https://yaschat.example.com/docs/docs/compliance-center)**: Explore the Compliance Center for additional information on how we commit to providing modern collaboration while protecting sensitive data.
 
 # 🛠️ Additional resources for developers
 

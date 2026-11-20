@@ -1,5 +1,5 @@
-import { ContextualbarSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { ContextualbarSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import ContactInfoError from './ContactInfoError';

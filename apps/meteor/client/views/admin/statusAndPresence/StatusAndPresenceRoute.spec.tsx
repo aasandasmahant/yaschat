@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { RouterContextValue } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { RouterContextValue } from '@yaschat/ui-contexts';
 import { act, render, waitFor } from '@testing-library/react';
 
 import { STATUS_SETTING_IDS } from './SettingsTab';

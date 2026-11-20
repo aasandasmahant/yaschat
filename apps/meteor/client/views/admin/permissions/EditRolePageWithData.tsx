@@ -1,7 +1,7 @@
-import type { IRole } from '@yas chat/core-typings';
-import { Callout } from '@yas chat/fuselage';
-import { GenericError, PageSkeleton, useHasLicenseModule } from '@yas chat/ui-client';
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import type { IRole } from '@yaschat/core-typings';
+import { Callout } from '@yaschat/fuselage';
+import { GenericError, PageSkeleton, useHasLicenseModule } from '@yaschat/ui-client';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import EditRolePage from './EditRolePage';

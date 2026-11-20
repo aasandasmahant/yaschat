@@ -1,5 +1,5 @@
-import { LivechatPriorityWeight } from '@yas chat/core-typings';
-import type { Keys } from '@yas chat/icons';
+import { LivechatPriorityWeight } from '@yaschat/core-typings';
+import type { Keys } from '@yaschat/icons';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

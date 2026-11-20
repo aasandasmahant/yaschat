@@ -1,5 +1,5 @@
-import type { IAbacAttributeDefinition, IAbacRoomMembershipPreview, IRoom } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
+import type { IAbacAttributeDefinition, IAbacRoomMembershipPreview, IRoom } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup } from '@yaschat/fuselage';
 import {
 	ContextualbarBack,
 	ContextualbarClose,
@@ -7,8 +7,8 @@ import {
 	ContextualbarHeader,
 	ContextualbarScrollableContent,
 	ContextualbarTitle,
-} from '@yas chat/ui-client';
-import { useEndpoint, useRouter, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint, useRouter, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { InfiniteData } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useId, useState } from 'react';

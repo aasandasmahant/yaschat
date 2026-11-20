@@ -1,7 +1,7 @@
 import { FocusScope } from '@react-aria/focus';
-import { css } from '@yas chat/css-in-js';
-import { Box } from '@yas chat/fuselage';
-import { useLayout, useLayoutSizes } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box } from '@yaschat/fuselage';
+import { useLayout, useLayoutSizes } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import Sidebar from './sidebar';

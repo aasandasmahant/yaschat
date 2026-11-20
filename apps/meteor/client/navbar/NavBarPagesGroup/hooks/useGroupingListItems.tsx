@@ -1,6 +1,6 @@
-import { CheckBox } from '@yas chat/fuselage';
-import { useFeaturePreview, type GenericMenuItemProps } from '@yas chat/ui-client';
-import { useEndpoint, useUserPreference } from '@yas chat/ui-contexts';
+import { CheckBox } from '@yaschat/fuselage';
+import { useFeaturePreview, type GenericMenuItemProps } from '@yaschat/ui-client';
+import { useEndpoint, useUserPreference } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

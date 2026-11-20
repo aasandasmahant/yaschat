@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useMergedRefsV2 } from '@yas chat/ui-client';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useMergedRefsV2 } from '@yaschat/ui-client';
 import type { ReactNode } from 'react';
 import { useCallback, useMemo, useRef, useState } from 'react';
 

@@ -1,5 +1,5 @@
-import { GenericModal } from '@yas chat/ui-client';
-import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { GenericModal } from '@yaschat/ui-client';
+import { useEndpoint, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

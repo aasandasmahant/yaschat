@@ -1,8 +1,8 @@
-import { isDirectMessageRoom, isDiscussion, isOmnichannelRoom, isPrivateRoom, isPublicRoom, isTeamRoom } from '@yas chat/core-typings';
-import type { ILivechatInquiryRecord, IRoom } from '@yas chat/core-typings';
-import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
-import type { SubscriptionWithRoom, TranslationKey } from '@yas chat/ui-contexts';
-import { useSetting, useUserPreference, useUserSubscriptions, useLayout } from '@yas chat/ui-contexts';
+import { isDirectMessageRoom, isDiscussion, isOmnichannelRoom, isPrivateRoom, isPublicRoom, isTeamRoom } from '@yaschat/core-typings';
+import type { ILivechatInquiryRecord, IRoom } from '@yaschat/core-typings';
+import { useDebouncedValue, useStableCallback } from '@yaschat/fuselage-hooks';
+import type { SubscriptionWithRoom, TranslationKey } from '@yaschat/ui-contexts';
+import { useSetting, useUserPreference, useUserSubscriptions, useLayout } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useEffect, useMemo } from 'react';
 

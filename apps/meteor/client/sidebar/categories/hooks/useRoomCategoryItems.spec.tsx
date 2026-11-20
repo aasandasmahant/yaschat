@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { useIsEnterprise } from '@yas chat/ui-client';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { useIsEnterprise } from '@yaschat/ui-client';
 import { renderHook } from '@testing-library/react';
 
 import { useCategoryModals } from './useCategoryModals';
@@ -10,7 +10,7 @@ import { useUserSidebarCategories } from './useUserSidebarCategories';
 jest.mock('./useUserSidebarCategories', () => ({ useUserSidebarCategories: jest.fn(), FAVORITES_TARGET: 'favorites' }));
 jest.mock('./useMoveRoomCategory', () => ({ useMoveRoomCategory: jest.fn() }));
 jest.mock('./useCategoryModals', () => ({ useCategoryModals: jest.fn() }));
-jest.mock('@yas chat/ui-client', () => ({ ...jest.requireActual('@yas chat/ui-client'), useIsEnterprise: jest.fn() }));
+jest.mock('@yaschat/ui-client', () => ({ ...jest.requireActual('@yaschat/ui-client'), useIsEnterprise: jest.fn() }));
 
 const mockedUseCustomCategories = jest.mocked(useUserSidebarCategories);
 const mockedUseMoveRoomCategory = jest.mocked(useMoveRoomCategory);

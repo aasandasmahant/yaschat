@@ -1,7 +1,7 @@
-import type { ILivechatAgent, ILivechatAgentStatus, ILivechatDepartmentAgents } from '@yas chat/core-typings';
-import { Field, FieldLabel, FieldGroup, FieldRow, TextInput, Button, Box, Icon, Select, ButtonGroup } from '@yas chat/fuselage';
-import type { SelectOption } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { ILivechatAgent, ILivechatAgentStatus, ILivechatDepartmentAgents } from '@yaschat/core-typings';
+import { Field, FieldLabel, FieldGroup, FieldRow, TextInput, Button, Box, Icon, Select, ButtonGroup } from '@yaschat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	ContextualbarClose,
 	ContextualbarFooter,
@@ -9,8 +9,8 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarTitle,
 	UserInfoAvatar,
-} from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint, useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint, useRouter } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { useForm, Controller, FormProvider } from 'react-hook-form';

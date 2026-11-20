@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { useVideoConfStartCall } from '@yas chat/ui-video-conf';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { useVideoConfStartCall } from '@yaschat/ui-video-conf';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -13,8 +13,8 @@ jest.mock('../views/room/contextualBar/VideoConference/hooks/useVideoConfOpenCal
 }));
 
 // The mocked router builds no paths, and the path is what this is about: which window the click opens.
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useRouter: () => ({
 		buildRoutePath: ({ params, search }: { params: { id: string }; search: { rid: string } }) =>
 			`/conference/${params.id}?rid=${search.rid}`,

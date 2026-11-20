@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { MutableRefObject } from 'react';
 
 export type ChartProps = { canvasRef: MutableRefObject<HTMLCanvasElement | null> };

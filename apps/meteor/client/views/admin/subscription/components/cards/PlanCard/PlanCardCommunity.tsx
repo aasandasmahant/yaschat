@@ -1,4 +1,4 @@
-import { Card, CardBody, Icon, Stack } from '@yas chat/fuselage';
+import { Card, CardBody, Icon, Stack } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import PlanCardHeader from './PlanCardHeader';

@@ -1,5 +1,5 @@
-import { createSurfaceRenderer, Surface, FuselageSurfaceRenderer, renderTextObject } from '@yas chat/fuselage-ui-kit';
-import type { CalloutBlock, ContextBlock, DividerBlock, ImageBlock, SectionBlock } from '@yas chat/ui-kit';
+import { createSurfaceRenderer, Surface, FuselageSurfaceRenderer, renderTextObject } from '@yaschat/fuselage-ui-kit';
+import type { CalloutBlock, ContextBlock, DividerBlock, ImageBlock, SectionBlock } from '@yaschat/ui-kit';
 import type { ReactNode } from 'react';
 
 export type SubscriptionLicenseSurfaceProps = {

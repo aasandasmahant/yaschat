@@ -1,4 +1,4 @@
-import { ButtonGroup, Button } from '@yas chat/fuselage';
+import { ButtonGroup, Button } from '@yaschat/fuselage';
 import {
 	ContextualbarHeader,
 	ContextualbarIcon,
@@ -7,8 +7,8 @@ import {
 	ContextualbarContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useUserPreference, useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useUserPreference, useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

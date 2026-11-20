@@ -1,6 +1,6 @@
-import { Accordion, AccordionItem, Box, Callout, FieldGroup } from '@yas chat/fuselage';
-import { ExternalLink, links, useHasLicenseModule } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Accordion, AccordionItem, Box, Callout, FieldGroup } from '@yaschat/fuselage';
+import { ExternalLink, links, useHasLicenseModule } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useTranslation, Trans } from 'react-i18next';
 
 import AbacEnabledToggle from './AbacEnabledToggle';

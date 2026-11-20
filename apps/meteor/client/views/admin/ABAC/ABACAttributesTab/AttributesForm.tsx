@@ -1,7 +1,7 @@
-import { Box, Button, ButtonGroup, Field, FieldError, FieldLabel, FieldRow, IconButton, TextInput, Stack } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Button, ButtonGroup, Field, FieldError, FieldLabel, FieldRow, IconButton, TextInput, Stack } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { ContextualbarFooter, ContextualbarScrollableContent } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useCallback, useId, useMemo, Fragment, useState } from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';

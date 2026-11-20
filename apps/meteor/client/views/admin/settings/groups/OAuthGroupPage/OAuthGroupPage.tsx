@@ -1,8 +1,8 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { Button } from '@yas chat/fuselage';
-import { capitalize } from '@yas chat/tools';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useAbsoluteUrl, useEndpoint, useSetModal } from '@yas chat/ui-contexts';
+import type { ISetting } from '@yaschat/core-typings';
+import { Button } from '@yaschat/fuselage';
+import { capitalize } from '@yaschat/tools';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useAbsoluteUrl, useEndpoint, useSetModal } from '@yaschat/ui-contexts';
 import { memo, useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

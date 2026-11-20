@@ -1,5 +1,5 @@
-import type { Keys } from '@yas chat/icons';
-import { useCurrentRoutePath, useRouter } from '@yas chat/ui-contexts';
+import type { Keys } from '@yaschat/icons';
+import { useCurrentRoutePath, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useOmnichannelShowQueueLink } from '../../../views/omnichannel/hooks/useOmnichannelShowQueueLink';

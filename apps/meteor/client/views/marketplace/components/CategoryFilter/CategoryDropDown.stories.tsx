@@ -1,4 +1,4 @@
-import { Box, ButtonGroup } from '@yas chat/fuselage';
+import { Box, ButtonGroup } from '@yaschat/fuselage';
 import type { StoryFn } from '@storybook/react';
 import { useState } from 'react';
 

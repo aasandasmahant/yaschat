@@ -1,7 +1,7 @@
-import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger } from '@yas chat/fuselage';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericMenuItem, useHandleMenuAction } from '@yas chat/ui-client';
-import { useUserSubscription } from '@yas chat/ui-contexts';
+import { Menu, MenuItem, MenuSection, MenuSubmenuTrigger } from '@yaschat/fuselage';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericMenuItem, useHandleMenuAction } from '@yaschat/ui-client';
+import { useUserSubscription } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

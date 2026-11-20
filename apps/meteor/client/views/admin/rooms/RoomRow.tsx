@@ -1,10 +1,10 @@
-import { isDiscussion } from '@yas chat/core-typings';
-import type { IRoom, RoomAdminFieldsType, Serialized } from '@yas chat/core-typings';
-import { Box, Icon, Text } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { RoomAvatar } from '@yas chat/ui-avatar';
-import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { isDiscussion } from '@yaschat/core-typings';
+import type { IRoom, RoomAdminFieldsType, Serialized } from '@yaschat/core-typings';
+import { Box, Icon, Text } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { RoomAvatar } from '@yaschat/ui-avatar';
+import { GenericTableCell, GenericTableRow } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

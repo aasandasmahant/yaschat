@@ -1,5 +1,5 @@
-import type { Serialized, ILivechatMonitor } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { Serialized, ILivechatMonitor } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 type MonitorsListOptions = {

@@ -1,4 +1,4 @@
-import { FieldLabel, MultiSelectFiltered, Field, FieldRow, FieldHint } from '@yas chat/fuselage';
+import { FieldLabel, MultiSelectFiltered, Field, FieldRow, FieldHint } from '@yaschat/fuselage';
 
 import ResetSettingButton from '../ResetSettingButton';
 import type { SettingInputProps } from './types';

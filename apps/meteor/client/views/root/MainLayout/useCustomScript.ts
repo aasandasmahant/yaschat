@@ -1,4 +1,4 @@
-import { useIsLoggingIn, useUserId } from '@yas chat/ui-contexts';
+import { useIsLoggingIn, useUserId } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { fireGlobalEvent } from '../../../lib/utils/fireGlobalEvent';

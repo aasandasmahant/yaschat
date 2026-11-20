@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { Meta } from '@storybook/react';
 
 import PositiveGrowthSymbol from './PositiveGrowthSymbol';

@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { millisecondsToMinutes } from 'date-fns/millisecondsToMinutes';
 

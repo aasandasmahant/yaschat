@@ -1,4 +1,4 @@
-import { Option, OptionColumn, OptionContent, OptionIcon, OptionInput } from '@yas chat/fuselage';
+import { Option, OptionColumn, OptionContent, OptionIcon, OptionInput } from '@yaschat/fuselage';
 import type { ComponentProps, ReactNode } from 'react';
 
 type ListItemCommonProps = {

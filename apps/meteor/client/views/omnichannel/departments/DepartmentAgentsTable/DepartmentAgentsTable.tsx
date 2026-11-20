@@ -1,5 +1,5 @@
-import { Pagination, type TableColumnWidth } from '@yas chat/fuselage';
-import { GenericTable, GenericTableBody, GenericTableHeader, GenericTableHeaderCell, usePagination } from '@yas chat/ui-client';
+import { Pagination, type TableColumnWidth } from '@yaschat/fuselage';
+import { GenericTable, GenericTableBody, GenericTableHeader, GenericTableHeaderCell, usePagination } from '@yaschat/ui-client';
 import type { AriaAttributes } from 'react';
 import { useMemo } from 'react';
 import type { Control, UseFormRegister } from 'react-hook-form';

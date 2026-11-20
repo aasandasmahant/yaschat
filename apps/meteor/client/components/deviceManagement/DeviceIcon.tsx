@@ -1,5 +1,5 @@
-import { Box, Icon } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
+import { Box, Icon } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
 
 const iconMap: Record<string, IconName> = {
 	'browser': 'desktop',

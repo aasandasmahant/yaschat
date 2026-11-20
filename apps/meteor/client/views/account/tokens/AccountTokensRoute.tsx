@@ -1,5 +1,5 @@
-import { PersonalAccessTokensPage } from '@yas chat/ui-account';
-import { usePermission } from '@yas chat/ui-contexts';
+import { PersonalAccessTokensPage } from '@yaschat/ui-account';
+import { usePermission } from '@yaschat/ui-contexts';
 
 import NotAuthorizedPage from '../../notAuthorized/NotAuthorizedPage';
 

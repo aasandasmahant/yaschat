@@ -8,8 +8,8 @@ import {
 	GenericTableLoadingRow,
 	GenericNoResults,
 	useFormatDateAndTime,
-} from '@yas chat/ui-client';
-import { useEndpoint, useRoute, useUserId } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint, useRoute, useUserId } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

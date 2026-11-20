@@ -1,5 +1,5 @@
-import { useConfirmAction } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { useConfirmAction } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

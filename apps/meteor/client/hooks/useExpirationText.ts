@@ -1,5 +1,5 @@
-import { useFormatTime } from '@yas chat/ui-client';
-import { useLanguage } from '@yas chat/ui-contexts';
+import { useFormatTime } from '@yaschat/ui-client';
+import { useLanguage } from '@yaschat/ui-contexts';
 import { isSameDay } from 'date-fns/isSameDay';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import type { IAbacAttributeDefinition } from '@yas chat/core-typings';
+import type { IAbacAttributeDefinition } from '@yaschat/core-typings';
 
 const toComparable = (rows: IAbacAttributeDefinition[] = []) =>
 	JSON.stringify(

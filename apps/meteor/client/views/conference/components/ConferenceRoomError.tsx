@@ -1,4 +1,4 @@
-import { ConferenceErrorState } from '@yas chat/ui-conference';
+import { ConferenceErrorState } from '@yaschat/ui-conference';
 
 import RoomLayout from '../../room/layout/RoomLayout';
 

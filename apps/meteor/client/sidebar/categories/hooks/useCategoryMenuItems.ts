@@ -1,4 +1,4 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
 
 import { useRoomCategoryItems } from './useRoomCategoryItems';
 

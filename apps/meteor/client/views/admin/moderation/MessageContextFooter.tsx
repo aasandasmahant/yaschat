@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, Box } from '@yas chat/fuselage';
-import { GenericMenu } from '@yas chat/ui-client';
+import { Button, ButtonGroup, Box } from '@yaschat/fuselage';
+import { GenericMenu } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import useDeactivateUserAction from './hooks/useDeactivateUserAction';

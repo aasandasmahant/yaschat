@@ -1,4 +1,4 @@
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import SidePanelParentRoom from './SidePanelParentRoom';

@@ -1,4 +1,4 @@
-import { ajv } from '@yas chat/rest-typings';
+import { ajv } from '@yaschat/rest-typings';
 
 import { resolveLayoutForRoomType } from './parseLayoutSetting';
 import type { RoomToolboxLayoutSetting } from './parseLayoutSetting';

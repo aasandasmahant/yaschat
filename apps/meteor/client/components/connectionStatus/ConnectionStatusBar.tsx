@@ -1,6 +1,6 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Button, Icon, Palette } from '@yas chat/fuselage';
-import { useConnectionStatus } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box, Button, Icon, Palette } from '@yaschat/fuselage';
+import { useConnectionStatus } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { useReconnectCountdown } from './useReconnectCountdown';

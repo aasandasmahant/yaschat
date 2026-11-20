@@ -1,9 +1,9 @@
-import type { IOmnichannelRoomWithDepartment } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, Tag, Text, useStyle } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import type { IOmnichannelRoomWithDepartment } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, Tag, Text, useStyle } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericTableCell, GenericTableRow } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import RemoveChatButton from './RemoveChatButton';

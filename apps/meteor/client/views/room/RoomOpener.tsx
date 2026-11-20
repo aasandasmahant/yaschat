@@ -1,6 +1,6 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { Box, States, StatesIcon, StatesSubtitle, StatesTitle } from '@yas chat/fuselage';
-import { Header } from '@yas chat/ui-client';
+import type { RoomType } from '@yaschat/core-typings';
+import { Box, States, StatesIcon, StatesSubtitle, StatesTitle } from '@yaschat/fuselage';
+import { Header } from '@yaschat/ui-client';
 import { lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 

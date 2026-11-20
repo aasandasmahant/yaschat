@@ -1,5 +1,5 @@
-import { BannerPlatform } from '@yas chat/core-typings';
-import { useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
+import { BannerPlatform } from '@yaschat/core-typings';
+import { useEndpoint, useStream, useUserId } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

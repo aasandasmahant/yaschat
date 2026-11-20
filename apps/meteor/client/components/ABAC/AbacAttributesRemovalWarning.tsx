@@ -1,4 +1,4 @@
-import { Callout } from '@yas chat/fuselage';
+import { Callout } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useIsAbacEnforcementOn } from '../../views/room/hooks/useIsAbacEnforcementOn';

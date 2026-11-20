@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { ExternalLink, GenericModal, links } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { ExternalLink, GenericModal, links } from '@yaschat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 export type FingerprintChangeModalProps = {

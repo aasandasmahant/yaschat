@@ -1,5 +1,5 @@
-import { Badge, IconButton, SidebarCollapseGroup, SidebarCollapseGroupMenu } from '@yas chat/fuselage';
-import { useDeferredMenuMount, useIsEnterprise } from '@yas chat/ui-client';
+import { Badge, IconButton, SidebarCollapseGroup, SidebarCollapseGroupMenu } from '@yaschat/fuselage';
+import { useDeferredMenuMount, useIsEnterprise } from '@yaschat/ui-client';
 import type { HTMLAttributes, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

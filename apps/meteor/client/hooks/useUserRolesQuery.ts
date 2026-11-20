@@ -1,5 +1,5 @@
-import type { IRole, IUser } from '@yas chat/core-typings';
-import { useStream, useUserId, useEndpoint } from '@yas chat/ui-contexts';
+import type { IRole, IUser } from '@yaschat/core-typings';
+import { useStream, useUserId, useEndpoint } from '@yaschat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';

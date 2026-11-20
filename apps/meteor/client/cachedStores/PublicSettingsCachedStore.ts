@@ -1,4 +1,4 @@
-import type { ISetting } from '@yas chat/core-typings';
+import type { ISetting } from '@yaschat/core-typings';
 
 import { PublicCachedStore } from '../lib/cachedStores/CachedStore';
 import { PublicSettings } from '../stores';

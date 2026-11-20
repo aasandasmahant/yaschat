@@ -1,7 +1,7 @@
-import type { AppClientManager } from '@yas chat/apps/dist/client/AppClientManager';
-import type { IPermission } from '@yas chat/apps-engine/definition/permissions/IPermission';
-import type { ISetting } from '@yas chat/apps-engine/definition/settings';
-import type { Serialized } from '@yas chat/core-typings';
+import type { AppClientManager } from '@yaschat/apps/dist/client/AppClientManager';
+import type { IPermission } from '@yaschat/apps-engine/definition/permissions/IPermission';
+import type { ISetting } from '@yaschat/apps-engine/definition/settings';
+import type { Serialized } from '@yaschat/core-typings';
 import { createContext } from 'react';
 
 import type { IAppExternalURL } from '../definitions/IAppExternalURL';

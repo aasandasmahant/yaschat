@@ -1,6 +1,6 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useConnectionStatus, useSetting } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useConnectionStatus, useSetting } from '@yaschat/ui-contexts';
 
 import { useIdleActiveEvents } from './useIdleActiveEvents';
 

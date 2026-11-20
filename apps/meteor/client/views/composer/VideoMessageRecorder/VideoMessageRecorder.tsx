@@ -1,8 +1,8 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, ButtonGroup, Button, Icon, PositionAnimated } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, ButtonGroup, Button, Icon, PositionAnimated } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { AllHTMLAttributes, RefObject } from 'react';
 import { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

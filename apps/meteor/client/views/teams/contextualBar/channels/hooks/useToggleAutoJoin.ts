@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useEndpoint, usePermission, useSetting, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useEndpoint, usePermission, useSetting, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { t } from 'i18next';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';

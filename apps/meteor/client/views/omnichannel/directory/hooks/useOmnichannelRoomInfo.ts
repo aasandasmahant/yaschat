@@ -1,4 +1,4 @@
-import type { IOmnichannelRoom, IRoom, Serialized } from '@yas chat/core-typings';
+import type { IOmnichannelRoom, IRoom, Serialized } from '@yaschat/core-typings';
 
 import { useRoomInfoEndpoint } from '../../../../hooks/useRoomInfoEndpoint';
 

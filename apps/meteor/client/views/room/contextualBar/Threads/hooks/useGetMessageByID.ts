@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { onClientMessageReceived } from '../../../../../lib/onClientMessageReceived';

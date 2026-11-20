@@ -1,6 +1,6 @@
-import type { OAuthConfiguration, UserStatus } from '@yas chat/core-typings';
-import { escapeRegExp } from '@yas chat/tools';
-import { type LocationPathname, UserContext, useLoginWithToken, useSetting, useUserId } from '@yas chat/ui-contexts';
+import type { OAuthConfiguration, UserStatus } from '@yaschat/core-typings';
+import { escapeRegExp } from '@yaschat/tools';
+import { type LocationPathname, UserContext, useLoginWithToken, useSetting, useUserId } from '@yaschat/ui-contexts';
 import { useContext, useEffect, useRef } from 'react';
 
 import { ltrim, rtrim } from '../../../../lib/utils/stringUtils';

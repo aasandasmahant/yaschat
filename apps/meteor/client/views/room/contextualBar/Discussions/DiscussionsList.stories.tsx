@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { Contextualbar } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { Contextualbar } from '@yaschat/ui-client';
 import type { Meta } from '@storybook/react';
 import type { UseInfiniteQueryResult } from '@tanstack/react-query';
 import { action } from 'storybook/actions';

@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useSearchItems } from './useSearchItems';

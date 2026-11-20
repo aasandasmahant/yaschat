@@ -1,4 +1,4 @@
-import { useLayout, useCurrentRoutePath } from '@yas chat/ui-contexts';
+import { useLayout, useCurrentRoutePath } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

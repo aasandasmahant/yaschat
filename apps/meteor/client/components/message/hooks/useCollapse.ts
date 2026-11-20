@@ -1,5 +1,5 @@
-import { useToggle } from '@yas chat/fuselage-hooks';
-import { useAttachmentIsCollapsedByDefault } from '@yas chat/ui-contexts';
+import { useToggle } from '@yaschat/fuselage-hooks';
+import { useAttachmentIsCollapsedByDefault } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { useIsCollapsibleToggled } from './useIsCollapsibleToggled';

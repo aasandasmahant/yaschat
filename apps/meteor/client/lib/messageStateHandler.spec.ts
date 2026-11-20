@@ -1,9 +1,9 @@
-import { renderComposerMarkup } from '@yas chat/gazzodown-alt';
+import { renderComposerMarkup } from '@yaschat/gazzodown-alt';
 
 import { createComposerRenderer, renderComposerContent, resolveComposerBox } from './messageStateHandler';
 
-jest.mock('@yas chat/gazzodown-alt', () => ({
-	...jest.requireActual('@yas chat/gazzodown-alt'),
+jest.mock('@yaschat/gazzodown-alt', () => ({
+	...jest.requireActual('@yaschat/gazzodown-alt'),
 	renderComposerMarkup: jest.fn(),
 }));
 

@@ -1,6 +1,6 @@
-import type { IRole, IPermission } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import type { IRole, IPermission } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 import type { TFunction } from 'i18next';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

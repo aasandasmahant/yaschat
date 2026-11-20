@@ -1,6 +1,6 @@
-import { Icon, ItemContent, ItemIcon, ItemTitle, SidebarItem } from '@yas chat/fuselage';
-import { useButtonPattern } from '@yas chat/fuselage-hooks';
-import type { Keys as IconName } from '@yas chat/icons';
+import { Icon, ItemContent, ItemIcon, ItemTitle, SidebarItem } from '@yaschat/fuselage';
+import { useButtonPattern } from '@yaschat/fuselage-hooks';
+import type { Keys as IconName } from '@yaschat/icons';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

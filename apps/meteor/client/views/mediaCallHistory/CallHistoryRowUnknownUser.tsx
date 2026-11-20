@@ -1,6 +1,6 @@
-import { GenericMenu } from '@yas chat/ui-client';
-import { CallHistoryTableRow } from '@yas chat/ui-voip';
-import type { CallHistoryTableRowProps, CallHistoryUnknownContact } from '@yas chat/ui-voip';
+import { GenericMenu } from '@yaschat/ui-client';
+import { CallHistoryTableRow } from '@yaschat/ui-voip';
+import type { CallHistoryTableRowProps, CallHistoryUnknownContact } from '@yaschat/ui-voip';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

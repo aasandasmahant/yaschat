@@ -1,5 +1,5 @@
-import { TextAreaInput, Field, FieldLabel, FieldRow } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import { TextAreaInput, Field, FieldLabel, FieldRow } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import type { ComponentProps } from 'react';
 
 export type EeTextAreaInputProps = { label: string } & ComponentProps<typeof TextAreaInput>;

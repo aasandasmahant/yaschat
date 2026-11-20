@@ -1,7 +1,7 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { CheckBox, Margins } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericTableRow, GenericTableCell } from '@yas chat/ui-client';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { CheckBox, Margins } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericTableRow, GenericTableCell } from '@yaschat/ui-client';
 
 import { RoomIcon } from '../../../../../../components/RoomIcon';
 

@@ -1,4 +1,4 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ReactNode } from 'react';
@@ -11,8 +11,8 @@ jest.mock('../hooks/useAppInfo', () => ({
 	useAppInfo: jest.fn(),
 }));
 
-jest.mock('@yas chat/ui-contexts', () => {
-	const originalModule = jest.requireActual('@yas chat/ui-contexts');
+jest.mock('@yaschat/ui-contexts', () => {
+	const originalModule = jest.requireActual('@yaschat/ui-contexts');
 	return {
 		...originalModule,
 		useRouter: () => ({ navigate: jest.fn() }),
@@ -22,8 +22,8 @@ jest.mock('@yas chat/ui-contexts', () => {
 	};
 });
 
-jest.mock('@yas chat/ui-client', () => {
-	const originalModule = jest.requireActual('@yas chat/ui-client');
+jest.mock('@yaschat/ui-client', () => {
+	const originalModule = jest.requireActual('@yaschat/ui-client');
 	return {
 		...originalModule,
 		PageHeader: ({ children }: { children: ReactNode }) => <div>{children}</div>,

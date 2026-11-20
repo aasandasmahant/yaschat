@@ -1,6 +1,6 @@
-import type { VideoConference } from '@yas chat/core-typings';
-import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, Throbber } from '@yas chat/fuselage';
-import { useResizeObserver } from '@yas chat/fuselage-hooks';
+import type { VideoConference } from '@yaschat/core-typings';
+import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, Throbber } from '@yaschat/fuselage';
+import { useResizeObserver } from '@yaschat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -10,7 +10,7 @@ import {
 	ContextualbarContent,
 	ContextualbarEmptyContent,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';
 

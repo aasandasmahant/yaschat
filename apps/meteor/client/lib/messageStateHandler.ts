@@ -1,6 +1,6 @@
-import { renderComposerMarkup } from '@yas chat/gazzodown-alt';
-import { parse, type Options } from '@yas chat/message-parser';
-import { escapeHTML } from '@yas chat/tools';
+import { renderComposerMarkup } from '@yaschat/gazzodown-alt';
+import { parse, type Options } from '@yaschat/message-parser';
+import { escapeHTML } from '@yaschat/tools';
 
 import { getSelectionRange, setSelectionRange } from './selectionRange';
 

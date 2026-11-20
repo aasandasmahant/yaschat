@@ -1,4 +1,4 @@
-import { SHA256 } from '@yas chat/sha256';
+import { SHA256 } from '@yaschat/sha256';
 
 import { overrideLoginMethod, type LoginCallback } from '../../lib/2fa/overrideLoginMethod';
 import type { MeteorErrorLike } from '../../lib/2fa/types';

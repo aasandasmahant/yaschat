@@ -1,5 +1,5 @@
-import { RoomAvatar } from '@yas chat/ui-avatar';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { RoomAvatar } from '@yaschat/ui-avatar';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import NavBarSearchItemWithData from './NavBarSearchItemWithData';

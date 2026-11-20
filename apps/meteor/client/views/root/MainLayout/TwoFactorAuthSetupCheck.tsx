@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { useLayout } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useLayout } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { lazy } from 'react';
 

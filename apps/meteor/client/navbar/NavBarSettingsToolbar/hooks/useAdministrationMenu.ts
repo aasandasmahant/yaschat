@@ -1,5 +1,5 @@
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useAtLeastOnePermission, usePermission, useRouter } from '@yas chat/ui-contexts';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useAtLeastOnePermission, usePermission, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const ADMIN_PERMISSIONS = [

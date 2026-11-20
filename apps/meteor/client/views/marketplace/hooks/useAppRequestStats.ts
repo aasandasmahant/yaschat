@@ -1,4 +1,4 @@
-import { useEndpoint, usePermission } from '@yas chat/ui-contexts';
+import { useEndpoint, usePermission } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 export const useAppRequestStats = () => {

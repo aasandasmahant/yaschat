@@ -1,4 +1,4 @@
-import { ExternalLink, GenericModal } from '@yas chat/ui-client';
+import { ExternalLink, GenericModal } from '@yaschat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { DOWNGRADE_LINK } from '../utils/links';

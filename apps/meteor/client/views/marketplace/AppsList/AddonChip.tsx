@@ -1,5 +1,5 @@
-import type { App } from '@yas chat/core-typings';
-import { Tag } from '@yas chat/fuselage';
+import type { App } from '@yaschat/core-typings';
+import { Tag } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type AddonChipProps = {

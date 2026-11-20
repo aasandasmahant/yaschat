@@ -1,4 +1,4 @@
-import { Emitter } from '@yas chat/emitter';
+import { Emitter } from '@yaschat/emitter';
 
 class NotificationPermissionEmitter extends Emitter {
 	allowed: boolean;

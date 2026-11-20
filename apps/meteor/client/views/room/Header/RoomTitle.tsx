@@ -1,7 +1,7 @@
-import { isTeamRoom, type IRoom } from '@yas chat/core-typings';
-import { useButtonPattern, useStableCallback } from '@yas chat/fuselage-hooks';
-import { useDocumentTitle, HeaderTitle, HeaderTitleButton } from '@yas chat/ui-client';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import { isTeamRoom, type IRoom } from '@yaschat/core-typings';
+import { useButtonPattern, useStableCallback } from '@yaschat/fuselage-hooks';
+import { useDocumentTitle, HeaderTitle, HeaderTitleButton } from '@yaschat/ui-client';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import HeaderIconWithRoom from './HeaderIconWithRoom';

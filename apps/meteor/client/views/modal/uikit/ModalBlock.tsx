@@ -11,9 +11,9 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@yas chat/fuselage';
-import { UiKitComponent, UiKitModal, modalParser } from '@yas chat/fuselage-ui-kit';
-import type * as UiKit from '@yas chat/ui-kit';
+} from '@yaschat/fuselage';
+import { UiKitComponent, UiKitModal, modalParser } from '@yaschat/fuselage-ui-kit';
+import type * as UiKit from '@yaschat/ui-kit';
 import type { FormEvent, FormEventHandler } from 'react';
 import { useId, useCallback, useEffect, useMemo, useRef } from 'react';
 

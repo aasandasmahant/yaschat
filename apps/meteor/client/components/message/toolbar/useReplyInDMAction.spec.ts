@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { LayoutContext } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { LayoutContext } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 import type { ContextType } from 'react';
 import { createElement } from 'react';

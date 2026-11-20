@@ -1,4 +1,4 @@
-import { FieldGroup, Box } from '@yas chat/fuselage';
+import { FieldGroup, Box } from '@yaschat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import EditTrigger from './EditTrigger';

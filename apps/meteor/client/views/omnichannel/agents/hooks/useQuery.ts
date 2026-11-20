@@ -1,5 +1,5 @@
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import type { PaginatedRequest } from '@yas chat/rest-typings';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import type { PaginatedRequest } from '@yaschat/rest-typings';
 import { useMemo } from 'react';
 
 const sortDir = (sortDir: 'asc' | 'desc'): 1 | -1 => (sortDir === 'asc' ? 1 : -1);

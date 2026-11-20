@@ -1,4 +1,4 @@
-import { Box, Button, PopoverSurface, PositionAnimated } from '@yas chat/fuselage';
+import { Box, Button, PopoverSurface, PositionAnimated } from '@yaschat/fuselage';
 import {
 	MessageComposerAction,
 	MessageComposerToolbarActions,
@@ -6,9 +6,9 @@ import {
 	MessageComposerInput,
 	MessageComposerToolbar,
 	MessageComposerActionsDivider,
-} from '@yas chat/ui-composer';
-import { useUserPreference } from '@yas chat/ui-contexts';
-import { useEmojiPicker } from '@yas chat/ui-emoji-picker';
+} from '@yaschat/ui-composer';
+import { useUserPreference } from '@yaschat/ui-contexts';
+import { useEmojiPicker } from '@yaschat/ui-emoji-picker';
 import type { ComponentProps, ChangeEvent } from 'react';
 import { memo, useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

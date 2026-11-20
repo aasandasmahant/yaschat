@@ -1,7 +1,7 @@
-import type { IMessage, MessageQuoteAttachment } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { IconButton, Box, Margins } from '@yas chat/fuselage';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import type { IMessage, MessageQuoteAttachment } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { IconButton, Box, Margins } from '@yaschat/fuselage';
+import { useUserDisplayName } from '@yaschat/ui-client';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

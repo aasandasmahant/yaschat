@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
+import type { IRoom, ISubscription } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
 
 import { useOmnichannelPriorities } from '../../hooks/useOmnichannelPriorities';
 import { PriorityIcon } from '../../priorities/PriorityIcon';

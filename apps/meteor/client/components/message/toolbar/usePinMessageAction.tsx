@@ -1,6 +1,6 @@
-import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { useSetting, useSetModal, usePermission } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom, ISubscription } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { useSetting, useSetModal, usePermission } from '@yaschat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import PinMessageModal from '../../../views/room/modals/PinMessageModal';

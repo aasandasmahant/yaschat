@@ -1,6 +1,6 @@
-import { Button, ButtonGroup, Margins } from '@yas chat/fuselage';
-import { PageHeader } from '@yas chat/ui-client';
-import { usePermission, useRoute, useRouteParameter, useSetModal } from '@yas chat/ui-contexts';
+import { Button, ButtonGroup, Margins } from '@yaschat/fuselage';
+import { PageHeader } from '@yaschat/ui-client';
+import { usePermission, useRoute, useRouteParameter, useSetModal } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { GenericResourceUsageSkeleton } from '../../../components/GenericResourceUsage';

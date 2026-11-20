@@ -1,6 +1,6 @@
-import type { ISidebarCategory } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import type { ISidebarCategory } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useCategoryRoomIds } from './hooks/useCategoryRoomIds';

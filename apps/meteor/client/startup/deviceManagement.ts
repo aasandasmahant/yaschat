@@ -3,7 +3,7 @@ import { lazy } from 'react';
 import { onToggledFeature } from '../lib/onToggledFeature';
 import { registerAccountRoute, registerAccountSidebarItem, unregisterSidebarItem } from '../views/account';
 
-declare module '@yas chat/ui-contexts' {
+declare module '@yaschat/ui-contexts' {
 	interface IRouterPaths {
 		'manage-devices': {
 			pathname: '/account/manage-devices';

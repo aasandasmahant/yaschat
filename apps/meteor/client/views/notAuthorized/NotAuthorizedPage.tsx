@@ -1,5 +1,5 @@
-import { Text } from '@yas chat/fuselage';
-import { Page, PageContent } from '@yas chat/ui-client';
+import { Text } from '@yaschat/fuselage';
+import { Page, PageContent } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const NotAuthorizedPage = () => {

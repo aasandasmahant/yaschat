@@ -1,5 +1,5 @@
-import type { ICustomUserStatus } from '@yas chat/core-typings';
-import { useEndpoint, useStream } from '@yas chat/ui-contexts';
+import type { ICustomUserStatus } from '@yaschat/core-typings';
+import { useEndpoint, useStream } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useCallback, useEffect } from 'react';
 

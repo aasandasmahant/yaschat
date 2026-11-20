@@ -1,8 +1,8 @@
-import type { IInvite } from '@yas chat/core-typings';
-import { IconButton, Text } from '@yas chat/fuselage';
-import { useMediaQuery } from '@yas chat/fuselage-hooks';
-import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IInvite } from '@yaschat/core-typings';
+import { IconButton, Text } from '@yaschat/fuselage';
+import { useMediaQuery } from '@yaschat/fuselage-hooks';
+import { GenericTableCell, GenericTableRow, useFormatDateAndTime } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { AppScreenshot } from '@yas chat/core-typings';
-import { css } from '@yas chat/css-in-js';
-import { Box, Icon, Text } from '@yas chat/fuselage';
+import type { AppScreenshot } from '@yaschat/core-typings';
+import { css } from '@yaschat/css-in-js';
+import { Box, Icon, Text } from '@yaschat/fuselage';
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 

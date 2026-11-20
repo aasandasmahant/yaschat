@@ -1,5 +1,5 @@
-import type { IOAuthApps } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IOAuthApps } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

@@ -1,8 +1,8 @@
-import type { IRole } from '@yas chat/core-typings';
-import { Box, Button } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericTableHeaderCell } from '@yas chat/ui-client';
-import { useRoute } from '@yas chat/ui-contexts';
+import type { IRole } from '@yaschat/core-typings';
+import { Box, Button } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericTableHeaderCell } from '@yaschat/ui-client';
+import { useRoute } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 export type RoleHeaderProps = {

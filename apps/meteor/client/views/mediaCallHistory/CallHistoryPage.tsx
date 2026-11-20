@@ -1,10 +1,10 @@
-import type { CallHistoryItem, Serialized } from '@yas chat/core-typings';
-import { Pagination } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { useSort, usePagination, usePaginatedQuery, GenericTableLoadingRow, GenericNoResults } from '@yas chat/ui-client';
-import { useEndpoint, useRouteParameter, useRouter } from '@yas chat/ui-contexts';
-import { MediaCallHistoryTable, isCallHistoryUnknownContact, isCallHistoryInternalContact } from '@yas chat/ui-voip';
-import type { CallHistoryContact } from '@yas chat/ui-voip';
+import type { CallHistoryItem, Serialized } from '@yaschat/core-typings';
+import { Pagination } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { useSort, usePagination, usePaginatedQuery, GenericTableLoadingRow, GenericNoResults } from '@yaschat/ui-client';
+import { useEndpoint, useRouteParameter, useRouter } from '@yaschat/ui-contexts';
+import { MediaCallHistoryTable, isCallHistoryUnknownContact, isCallHistoryInternalContact } from '@yaschat/ui-voip';
+import type { CallHistoryContact } from '@yaschat/ui-voip';
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

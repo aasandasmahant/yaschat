@@ -1,10 +1,10 @@
-import type { IWorkspaceInfo } from '@yas chat/core-typings';
-import { Card, CardBody, CardCol, CardControls, CardHeader, CardTitle, Icon, Text } from '@yas chat/fuselage';
-import { useBreakpoints } from '@yas chat/fuselage-hooks';
-import type { SupportedVersions } from '@yas chat/server-cloud-communication';
-import { ExternalLink, links, useLicense, useLicenseName } from '@yas chat/ui-client';
-import type { LocationPathname } from '@yas chat/ui-contexts';
-import { useSetModal, useMediaUrl } from '@yas chat/ui-contexts';
+import type { IWorkspaceInfo } from '@yaschat/core-typings';
+import { Card, CardBody, CardCol, CardControls, CardHeader, CardTitle, Icon, Text } from '@yaschat/fuselage';
+import { useBreakpoints } from '@yaschat/fuselage-hooks';
+import type { SupportedVersions } from '@yaschat/server-cloud-communication';
+import { ExternalLink, links, useLicense, useLicenseName } from '@yaschat/ui-client';
+import type { LocationPathname } from '@yaschat/ui-contexts';
+import { useSetModal, useMediaUrl } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

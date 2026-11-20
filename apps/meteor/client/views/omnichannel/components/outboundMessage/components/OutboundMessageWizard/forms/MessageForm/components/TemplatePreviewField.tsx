@@ -1,4 +1,4 @@
-import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
+import type { IOutboundProviderTemplate } from '@yaschat/core-typings';
 import type { Control } from 'react-hook-form';
 import { useWatch } from 'react-hook-form';
 

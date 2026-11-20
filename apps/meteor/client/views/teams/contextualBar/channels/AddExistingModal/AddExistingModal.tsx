@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 import {
 	Box,
 	Button,
@@ -11,9 +11,9 @@ import {
 	ModalFooterControllers,
 	ModalHeader,
 	ModalTitle,
-} from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { memo, useCallback, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

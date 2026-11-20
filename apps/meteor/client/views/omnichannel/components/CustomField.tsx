@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { FormSkeleton, InfoPanelField, InfoPanelLabel, InfoPanelText } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { FormSkeleton, InfoPanelField, InfoPanelLabel, InfoPanelText } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

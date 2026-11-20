@@ -1,6 +1,6 @@
-import { css } from '@yas chat/css-in-js';
-import { Box } from '@yas chat/fuselage';
-import { useLayout } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box } from '@yaschat/fuselage';
+import { useLayout } from '@yaschat/ui-contexts';
 import type { AllHTMLAttributes } from 'react';
 
 const customStyle = css`

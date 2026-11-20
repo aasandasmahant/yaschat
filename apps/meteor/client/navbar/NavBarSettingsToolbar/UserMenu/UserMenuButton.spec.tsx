@@ -1,6 +1,6 @@
-import { UserStatus, type IUser } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { UserContext } from '@yas chat/ui-contexts';
+import { UserStatus, type IUser } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { UserContext } from '@yaschat/ui-contexts';
 import { render, screen, waitFor } from '@testing-library/react';
 import { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

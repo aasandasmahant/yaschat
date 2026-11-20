@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isRoomFederated } from '@yas chat/core-typings';
-import { Header, HeaderContent, HeaderContentRow, HeaderToolbar } from '@yas chat/ui-client';
+import type { IRoom } from '@yaschat/core-typings';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { Header, HeaderContent, HeaderContentRow, HeaderToolbar } from '@yaschat/ui-client';
 import type { ReactNode } from 'react';
 import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';

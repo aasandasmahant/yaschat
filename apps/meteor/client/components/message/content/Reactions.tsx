@@ -1,7 +1,7 @@
 import { useToolbar } from '@react-aria/toolbar';
-import type { IMessage } from '@yas chat/core-typings';
-import { MessageReactions, MessageReactionAction } from '@yas chat/fuselage';
-import { useButtonPattern } from '@yas chat/fuselage-hooks';
+import type { IMessage } from '@yaschat/core-typings';
+import { MessageReactions, MessageReactionAction } from '@yaschat/fuselage';
+import { useButtonPattern } from '@yaschat/fuselage-hooks';
 import type { HTMLAttributes } from 'react';
 import { useContext, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

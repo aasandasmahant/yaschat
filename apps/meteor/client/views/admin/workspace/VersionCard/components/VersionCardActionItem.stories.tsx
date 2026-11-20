@@ -1,4 +1,4 @@
-import { ExternalLink } from '@yas chat/ui-client';
+import { ExternalLink } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import VersionCardActionItem from './VersionCardActionItem';

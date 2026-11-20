@@ -1,4 +1,4 @@
-import type { IStats } from '@yas chat/core-typings';
+import type { IStats } from '@yaschat/core-typings';
 import type { Meta } from '@storybook/react';
 
 import DeploymentCard from './DeploymentCard';

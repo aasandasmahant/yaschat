@@ -11,9 +11,9 @@ import {
 	ModalHeroImage,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@yas chat/fuselage';
-import { useOutsideClick } from '@yas chat/fuselage-hooks';
-import { useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useOutsideClick } from '@yaschat/fuselage-hooks';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import { UserStatus } from '@yas chat/core-typings';
-import { Box, Icon } from '@yas chat/fuselage';
-import { isTruthy } from '@yas chat/tools';
+import { UserStatus } from '@yaschat/core-typings';
+import { Box, Icon } from '@yaschat/fuselage';
+import { isTruthy } from '@yaschat/tools';
 import { useTranslation } from 'react-i18next';
 
 import { useExpirationText } from '../../hooks/useExpirationText';

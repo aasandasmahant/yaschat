@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription } from '@yas chat/core-typings';
-import { usePermission, useSetting } from '@yas chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yaschat/core-typings';
+import { usePermission, useSetting } from '@yaschat/ui-contexts';
 
 import { canPreviewRoom } from '../lib/canPreviewRoom';
 

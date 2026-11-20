@@ -1,5 +1,5 @@
-import { Field } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { Field } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { action } from 'storybook/actions';

@@ -1,6 +1,6 @@
-import type { JoinableVideoConference } from '@yas chat/core-typings';
-import { useEndpoint, useStream, useUserId } from '@yas chat/ui-contexts';
-import { useVideoConfIncomingCalls, useVideoConfWindowEnabled } from '@yas chat/ui-video-conf';
+import type { JoinableVideoConference } from '@yaschat/core-typings';
+import { useEndpoint, useStream, useUserId } from '@yaschat/ui-contexts';
+import { useVideoConfIncomingCalls, useVideoConfWindowEnabled } from '@yaschat/ui-video-conf';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

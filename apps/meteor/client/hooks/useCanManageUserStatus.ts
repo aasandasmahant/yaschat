@@ -1,5 +1,5 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission, useSetting } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission, useSetting } from '@yaschat/ui-contexts';
 
 export const useCanManageUserStatus = (): boolean => {
 	const canEditOtherUserInfo = usePermission('edit-other-user-info');

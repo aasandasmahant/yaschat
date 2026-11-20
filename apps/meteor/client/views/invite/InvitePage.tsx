@@ -1,5 +1,5 @@
-import { HeroLayout, HeroLayoutTitle } from '@yas chat/layout';
-import { useRouteParameter, useUserId } from '@yas chat/ui-contexts';
+import { HeroLayout, HeroLayoutTitle } from '@yaschat/layout';
+import { useRouteParameter, useUserId } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

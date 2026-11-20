@@ -1,5 +1,5 @@
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetModal, useUserSubscription } from '@yas chat/ui-contexts';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetModal, useUserSubscription } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

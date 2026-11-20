@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isRoomFederated } from '@yas chat/core-typings';
-import { usePermission, useUser } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { usePermission, useUser } from '@yaschat/ui-contexts';
 
 import * as Federation from '../../../../../lib/federation/Federation';
 import { useRoomSubscription } from '../../../contexts/RoomContext';

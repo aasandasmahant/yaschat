@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useStableCallback, useLocalStorage } from '@yas chat/fuselage-hooks';
+import type { IRoom } from '@yaschat/core-typings';
+import { useStableCallback, useLocalStorage } from '@yaschat/fuselage-hooks';
 
 import { collapsibleFilters, type AllGroupsKeys } from '../contexts/RoomsNavigationContext';
 

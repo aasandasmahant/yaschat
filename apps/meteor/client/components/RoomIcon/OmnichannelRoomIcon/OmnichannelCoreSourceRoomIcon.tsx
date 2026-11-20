@@ -1,5 +1,5 @@
-import type { IOmnichannelSource } from '@yas chat/core-typings';
-import { Icon, type IconColor, type IconProps } from '@yas chat/fuselage';
+import type { IOmnichannelSource } from '@yaschat/core-typings';
+import { Icon, type IconColor, type IconProps } from '@yaschat/fuselage';
 
 const iconMap = {
 	widget: 'livechat',

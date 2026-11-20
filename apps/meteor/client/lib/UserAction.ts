@@ -1,5 +1,5 @@
-import type { IExtras, IRoomActivity, IUser } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
+import type { IExtras, IRoomActivity, IUser } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
 import { debounce } from 'lodash';
 
 import { sdk } from './SDKClient';

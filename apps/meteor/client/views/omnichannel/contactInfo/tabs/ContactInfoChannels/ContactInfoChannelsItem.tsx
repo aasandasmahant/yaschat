@@ -1,7 +1,7 @@
-import type { ILivechatContact, ILivechatContactChannel, Serialized } from '@yas chat/core-typings';
-import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemMeta, ItemRow, ItemTitle } from '@yas chat/fuselage';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { GenericMenu } from '@yas chat/ui-client';
+import type { ILivechatContact, ILivechatContactChannel, Serialized } from '@yaschat/core-typings';
+import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemMeta, ItemRow, ItemTitle } from '@yaschat/fuselage';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { GenericMenu } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

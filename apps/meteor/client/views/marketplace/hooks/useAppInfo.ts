@@ -1,5 +1,5 @@
-import type { App } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { App } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useState, useEffect } from 'react';
 
 import { useApps } from './useApps';

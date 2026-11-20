@@ -1,4 +1,4 @@
-import { Divider } from '@yas chat/fuselage';
+import { Divider } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 
 type HorizontalDividerProps = Omit<ComponentProps<typeof Divider>, 'vertical'>;

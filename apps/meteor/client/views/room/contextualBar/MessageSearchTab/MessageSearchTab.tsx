@@ -1,5 +1,5 @@
-import { Callout, Box, MessageDivider, Throbber } from '@yas chat/fuselage';
-import { MessageTypes } from '@yas chat/message-types';
+import { Callout, Box, MessageDivider, Throbber } from '@yaschat/fuselage';
+import { MessageTypes } from '@yaschat/message-types';
 import {
 	ContextualbarClose,
 	ContextualbarContent,
@@ -10,8 +10,8 @@ import {
 	ContextualbarDialog,
 	VirtualizedScrollbars,
 	ContextualbarEmptyContent,
-} from '@yas chat/ui-client';
-import { useRoomToolbox, useUserPreference, useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRoomToolbox, useUserPreference, useSetting } from '@yaschat/ui-contexts';
 import { useState, memo, Fragment, useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';

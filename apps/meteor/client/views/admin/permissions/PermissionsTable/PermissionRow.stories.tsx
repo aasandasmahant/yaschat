@@ -1,7 +1,7 @@
-import type { IPermission, IRole } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { GenericTable, GenericTableBody } from '@yas chat/ui-client';
+import type { IPermission, IRole } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { GenericTable, GenericTableBody } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import PermissionRow from './PermissionRow';

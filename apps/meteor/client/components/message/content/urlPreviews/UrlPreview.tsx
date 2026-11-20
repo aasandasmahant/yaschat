@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { useAttachmentAutoLoadEmbedMedia } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useAttachmentAutoLoadEmbedMedia } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import type { UrlPreviewMetadata } from './UrlPreviewMetadata';

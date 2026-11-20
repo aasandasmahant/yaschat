@@ -1,5 +1,5 @@
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -4,7 +4,7 @@ import {
 	type ISubscription,
 	isRoomFederated,
 	isRoomNativeFederated,
-} from '@yas chat/core-typings';
+} from '@yaschat/core-typings';
 import { useTranslation } from 'react-i18next';
 
 import { useChat } from '../../../../../views/room/contexts/ChatContext';

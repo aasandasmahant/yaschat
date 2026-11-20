@@ -1,4 +1,4 @@
-import type { IRole, IPermission } from '@yas chat/core-typings';
+import type { IRole, IPermission } from '@yaschat/core-typings';
 import { useCallback } from 'react';
 import { useShallow } from 'zustand/shallow';
 

@@ -1,7 +1,7 @@
-import { Box, Divider, IconButton, Text } from '@yas chat/fuselage';
-import { ActionLink } from '@yas chat/layout';
-import { useClipboardWithToast } from '@yas chat/ui-client';
-import { usePermission, useSetModal, useSetting } from '@yas chat/ui-contexts';
+import { Box, Divider, IconButton, Text } from '@yaschat/fuselage';
+import { ActionLink } from '@yaschat/layout';
+import { useClipboardWithToast } from '@yaschat/ui-client';
+import { usePermission, useSetModal, useSetting } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

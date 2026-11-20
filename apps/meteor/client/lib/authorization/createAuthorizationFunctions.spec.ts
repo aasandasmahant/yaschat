@@ -1,5 +1,5 @@
-import { AuthorizationUtils } from '@yas chat/authorization/dist/AuthorizationUtils';
-import type { IPermission, IRole } from '@yas chat/core-typings';
+import { AuthorizationUtils } from '@yaschat/authorization/dist/AuthorizationUtils';
+import type { IPermission, IRole } from '@yaschat/core-typings';
 
 import type { AuthorizationDeps } from './createAuthorizationFunctions';
 import { createAuthorizationFunctions } from './createAuthorizationFunctions';

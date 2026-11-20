@@ -1,8 +1,8 @@
 import { useFocusManager } from '@react-aria/focus';
 import { useOverlayTrigger } from '@react-aria/overlays';
 import { useOverlayTriggerState } from '@react-stately/overlays';
-import { Box, Icon, IconButton, TextInput } from '@yas chat/fuselage';
-import { useStableCallback, useMergedRefs } from '@yas chat/fuselage-hooks';
+import { Box, Icon, IconButton, TextInput } from '@yaschat/fuselage';
+import { useStableCallback, useMergedRefs } from '@yaschat/fuselage-hooks';
 import { useCallback, useEffect, useRef } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
-import type { IDiscussionMessage } from '@yas chat/core-typings';
-import { useTimeAgo } from '@yas chat/ui-client';
+import type { IDiscussionMessage } from '@yaschat/core-typings';
+import { useTimeAgo } from '@yaschat/ui-client';
 import type { MouseEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

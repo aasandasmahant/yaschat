@@ -1,7 +1,7 @@
-import { Box } from '@yas chat/fuselage';
-import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow } from '@yas chat/fuselage-forms';
-import { GenericModal } from '@yas chat/ui-client';
-import { useEndpoint, useToastMessageDispatch, useUser } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { Field, FieldGroup, FieldHint, FieldLabel, FieldRow } from '@yaschat/fuselage-forms';
+import { GenericModal } from '@yaschat/ui-client';
+import { useEndpoint, useToastMessageDispatch, useUser } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

@@ -5,9 +5,9 @@ import {
 	type IMessage,
 	type IRoom,
 	type ISubscription,
-} from '@yas chat/core-typings';
-import { useUser, useEndpoint, usePermission } from '@yas chat/ui-contexts';
-import { EmojiElement, useEmojiPickerData } from '@yas chat/ui-emoji-picker';
+} from '@yaschat/core-typings';
+import { useUser, useEndpoint, usePermission } from '@yaschat/ui-contexts';
+import { EmojiElement, useEmojiPickerData } from '@yaschat/ui-emoji-picker';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,8 +1,8 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import { useSetting, useUserAvatarPath, useUserId } from '@yas chat/ui-contexts';
-import type { TranslationKey, RoomToolboxActionConfig } from '@yas chat/ui-contexts';
-import type { PeerInfo } from '@yas chat/ui-voip';
-import { useMediaCallAction } from '@yas chat/ui-voip';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { useSetting, useUserAvatarPath, useUserId } from '@yaschat/ui-contexts';
+import type { TranslationKey, RoomToolboxActionConfig } from '@yaschat/ui-contexts';
+import type { PeerInfo } from '@yaschat/ui-voip';
+import { useMediaCallAction } from '@yaschat/ui-voip';
 import { useMemo } from 'react';
 
 import { useRoom, useRoomSubscription } from '../../views/room/contexts/RoomContext';

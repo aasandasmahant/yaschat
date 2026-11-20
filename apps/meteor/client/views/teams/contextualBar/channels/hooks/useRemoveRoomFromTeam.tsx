@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { GenericModal } from '@yas chat/ui-client';
-import { useEndpoint, usePermission, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { GenericModal } from '@yaschat/ui-client';
+import { useEndpoint, usePermission, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { roomCoordinator } from '../../../../../lib/rooms/roomCoordinator';

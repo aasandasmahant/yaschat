@@ -1,4 +1,4 @@
-import type { AppliedFilter, DraftSearchFilter, SearchFilterSuggestion } from '@yas chat/ai-search';
+import type { AppliedFilter, DraftSearchFilter, SearchFilterSuggestion } from '@yaschat/ai-search';
 import {
 	AI_SEARCH_PAGE_SIZE,
 	AI_SEARCH_ROOM_LOOKUP_LIMIT,
@@ -9,10 +9,10 @@ import {
 	parseSearchInput,
 	removeDraftFilter,
 	toAISearchParams,
-} from '@yas chat/ai-search';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import type { AISearchResult } from '@yas chat/rest-typings';
-import { useEndpoint, useUserSubscriptions } from '@yas chat/ui-contexts';
+} from '@yaschat/ai-search';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import type { AISearchResult } from '@yaschat/rest-typings';
+import { useEndpoint, useUserSubscriptions } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

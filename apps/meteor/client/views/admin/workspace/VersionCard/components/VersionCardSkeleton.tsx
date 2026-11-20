@@ -1,4 +1,4 @@
-import { Skeleton } from '@yas chat/fuselage';
+import { Skeleton } from '@yaschat/fuselage';
 
 import VersionCardSkeletonRow from '../layout/VersionCardSkeletonRow';
 

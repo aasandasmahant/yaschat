@@ -1,5 +1,5 @@
-import { Box, Button, Callout, Chip, Margins, Text } from '@yas chat/fuselage';
-import { ExternalLink, useHasLicenseModule } from '@yas chat/ui-client';
+import { Box, Button, Callout, Chip, Margins, Text } from '@yaschat/fuselage';
+import { ExternalLink, useHasLicenseModule } from '@yaschat/ui-client';
 import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 

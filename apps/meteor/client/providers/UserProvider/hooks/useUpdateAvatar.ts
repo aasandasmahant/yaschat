@@ -1,4 +1,4 @@
-import { useUserId, useStream } from '@yas chat/ui-contexts';
+import { useUserId, useStream } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { Users } from '../../../stores';

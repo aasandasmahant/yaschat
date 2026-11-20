@@ -1,4 +1,4 @@
-import { usePermission } from '@yas chat/ui-contexts';
+import { usePermission } from '@yaschat/ui-contexts';
 
 export const useCanCreateCannedResponse = () => {
 	const saveCannedResponsesPermission = usePermission('save-canned-responses');

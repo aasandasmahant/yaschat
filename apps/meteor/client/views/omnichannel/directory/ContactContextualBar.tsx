@@ -1,4 +1,4 @@
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 
 import ContactInfo from '../contactInfo/ContactInfo';
 import ContactInfoError from '../contactInfo/ContactInfoError';

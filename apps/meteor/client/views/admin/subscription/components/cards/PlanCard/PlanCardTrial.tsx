@@ -1,6 +1,6 @@
-import type { ILicenseV3 } from '@yas chat/core-typings';
-import { Box, Card, CardBody, CardControls, CardRow, Tag } from '@yas chat/fuselage';
-import { ExternalLink, useLicenseName } from '@yas chat/ui-client';
+import type { ILicenseV3 } from '@yaschat/core-typings';
+import { Box, Card, CardBody, CardControls, CardRow, Tag } from '@yaschat/fuselage';
+import { ExternalLink, useLicenseName } from '@yaschat/ui-client';
 import { differenceInDays } from 'date-fns/differenceInDays';
 import { Trans, useTranslation } from 'react-i18next';
 

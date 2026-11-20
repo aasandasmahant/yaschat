@@ -1,5 +1,5 @@
-import type { IUserPhoneNumber } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
+import type { IUserPhoneNumber } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
 
 import UserInfoPhoneNumberItem from './UserInfoPhoneNumberItem';
 

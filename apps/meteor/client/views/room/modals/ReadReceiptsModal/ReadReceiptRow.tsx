@@ -1,7 +1,7 @@
-import type { IReadReceiptWithUser } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useUserDisplayName, useFormatDateAndTime } from '@yas chat/ui-client';
+import type { IReadReceiptWithUser } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useUserDisplayName, useFormatDateAndTime } from '@yaschat/ui-client';
 
 const ReadReceiptRow = ({ user, ts }: IReadReceiptWithUser) => {
 	const displayName = useUserDisplayName(user || {});

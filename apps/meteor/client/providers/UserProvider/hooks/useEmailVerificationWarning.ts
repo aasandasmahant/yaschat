@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useSetting, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useSetting, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

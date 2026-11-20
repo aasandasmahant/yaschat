@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { useEndpoint, useToastMessageDispatch, useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { useEndpoint, useToastMessageDispatch, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { MessageComposerFileGroup } from '@yas chat/ui-composer';
+import { MessageComposerFileGroup } from '@yaschat/ui-composer';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

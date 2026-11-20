@@ -1,7 +1,7 @@
-import type { IOmnichannelServiceLevelAgreements, Serialized } from '@yas chat/core-typings';
-import { Field, FieldLabel, FieldRow, FieldError, TextInput, Button, NumberInput, ButtonGroup } from '@yas chat/fuselage';
-import { ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+import type { IOmnichannelServiceLevelAgreements, Serialized } from '@yaschat/core-typings';
+import { Field, FieldLabel, FieldRow, FieldError, TextInput, Button, NumberInput, ButtonGroup } from '@yaschat/fuselage';
+import { ContextualbarFooter, ContextualbarScrollableContent } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { useController, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

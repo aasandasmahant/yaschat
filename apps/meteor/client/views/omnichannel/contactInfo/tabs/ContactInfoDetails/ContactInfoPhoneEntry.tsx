@@ -1,6 +1,6 @@
-import type { ILivechatContact } from '@yas chat/core-typings';
-import { IconButton } from '@yas chat/fuselage';
-import { useClipboardWithToast } from '@yas chat/ui-client';
+import type { ILivechatContact } from '@yaschat/core-typings';
+import { IconButton } from '@yaschat/fuselage';
+import { useClipboardWithToast } from '@yaschat/ui-client';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

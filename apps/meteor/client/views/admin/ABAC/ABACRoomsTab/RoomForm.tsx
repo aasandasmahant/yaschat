@@ -1,5 +1,5 @@
-import { Box, Callout, Field, FieldLabel, FieldRow, FieldError, ButtonGroup, Button } from '@yas chat/fuselage';
-import { ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
+import { Box, Callout, Field, FieldLabel, FieldRow, FieldError, ButtonGroup, Button } from '@yaschat/fuselage';
+import { ContextualbarFooter, ContextualbarScrollableContent } from '@yaschat/ui-client';
 import type { Dispatch, SetStateAction } from 'react';
 import { useId } from 'react';
 import { Controller, useFieldArray, useFormContext } from 'react-hook-form';

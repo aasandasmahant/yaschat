@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription } from '@yas chat/core-typings';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yaschat/core-typings';
+import { useRouter } from '@yaschat/ui-contexts';
 import type { Dispatch, SetStateAction } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 

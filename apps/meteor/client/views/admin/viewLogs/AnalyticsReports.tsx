@@ -1,5 +1,5 @@
-import { Box, Callout, Icon, Scrollable, Skeleton, Text } from '@yas chat/fuselage';
-import { links } from '@yas chat/ui-client';
+import { Box, Callout, Icon, Scrollable, Skeleton, Text } from '@yaschat/fuselage';
+import { links } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import MarkdownText from '../../../components/MarkdownText';

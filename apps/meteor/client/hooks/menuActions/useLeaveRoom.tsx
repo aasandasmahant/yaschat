@@ -1,6 +1,6 @@
-import type { RoomType } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useRouter, useSetModal, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { RoomType } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useRouter, useSetModal, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { UiTextContext } from '../../../definition/IRoomTypeConfig';

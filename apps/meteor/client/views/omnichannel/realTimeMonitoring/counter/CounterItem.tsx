@@ -1,4 +1,4 @@
-import { Box, Text } from '@yas chat/fuselage';
+import { Box, Text } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 const CounterItem = ({

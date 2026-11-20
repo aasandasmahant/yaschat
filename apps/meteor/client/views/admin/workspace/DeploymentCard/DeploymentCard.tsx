@@ -1,9 +1,9 @@
-import type { IWorkspaceInfo, IStats } from '@yas chat/core-typings';
-import { Button, Card, CardBody, CardControls, Text } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { IInstance } from '@yas chat/rest-typings';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+import type { IWorkspaceInfo, IStats } from '@yaschat/core-typings';
+import { Button, Card, CardBody, CardControls, Text } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { IInstance } from '@yaschat/rest-typings';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

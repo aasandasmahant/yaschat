@@ -1,7 +1,7 @@
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { Icon, SidebarItemIcon } from '@yas chat/fuselage';
-import { RoomAvatar } from '@yas chat/ui-avatar';
-import { useUserId, type SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { Icon, SidebarItemIcon } from '@yaschat/fuselage';
+import { RoomAvatar } from '@yaschat/ui-avatar';
+import { useUserId, type SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

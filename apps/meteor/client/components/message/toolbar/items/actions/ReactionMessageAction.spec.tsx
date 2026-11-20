@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { EmojiPickerContext } from '@yas chat/ui-emoji-picker';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { EmojiPickerContext } from '@yaschat/ui-emoji-picker';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { ComponentProps, ContextType } from 'react';

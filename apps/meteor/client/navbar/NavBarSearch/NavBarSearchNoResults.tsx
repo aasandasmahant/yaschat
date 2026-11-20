@@ -1,4 +1,4 @@
-import { GenericNoResults } from '@yas chat/ui-client';
+import { GenericNoResults } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 const NavBarSearchNoResults = () => {

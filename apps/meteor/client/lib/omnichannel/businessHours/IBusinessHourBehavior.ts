@@ -1,4 +1,4 @@
-import type { ILivechatBusinessHour } from '@yas chat/core-typings';
+import type { ILivechatBusinessHour } from '@yaschat/core-typings';
 
 export interface IBusinessHourBehavior {
 	getView(): string;

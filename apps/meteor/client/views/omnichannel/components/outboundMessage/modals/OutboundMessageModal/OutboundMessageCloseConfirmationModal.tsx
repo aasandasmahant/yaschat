@@ -8,7 +8,7 @@ import {
 	ModalFooterControllers,
 	ModalHeader,
 	ModalTitle,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 

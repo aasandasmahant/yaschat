@@ -1,4 +1,4 @@
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import { endOfDay } from 'date-fns/endOfDay';
 import { startOfDay } from 'date-fns/startOfDay';
 import { startOfMonth } from 'date-fns/startOfMonth';

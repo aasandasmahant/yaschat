@@ -1,4 +1,4 @@
-import { useResizeObserver } from '@yas chat/fuselage-hooks';
+import { useResizeObserver } from '@yaschat/fuselage-hooks';
 
 import { BarChart, ReportCard } from '../components';
 import { useTagsSection } from '../hooks';

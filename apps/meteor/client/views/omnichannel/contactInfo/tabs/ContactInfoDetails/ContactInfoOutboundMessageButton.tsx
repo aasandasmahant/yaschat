@@ -1,4 +1,4 @@
-import { IconButton } from '@yas chat/fuselage';
+import { IconButton } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import { useOutboundMessageAccess } from '../../../components/outboundMessage/hooks';

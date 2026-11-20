@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useLanguage, useToastMessageDispatch, useRoomToolbox } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useLanguage, useToastMessageDispatch, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { ChangeEvent } from 'react';
 import { useEffect, useState, memo } from 'react';

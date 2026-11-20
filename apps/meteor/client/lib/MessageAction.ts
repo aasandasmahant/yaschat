@@ -1,5 +1,5 @@
-import type { Keys as IconName } from '@yas chat/icons';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { Keys as IconName } from '@yaschat/icons';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 
 type MessageActionGroup = 'menu';
 

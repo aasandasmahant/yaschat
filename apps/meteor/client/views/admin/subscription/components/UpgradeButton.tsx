@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@yas chat/fuselage';
+import { Button, type ButtonProps } from '@yaschat/fuselage';
 import { memo } from 'react';
 
 import { useExternalLink } from '../../../../hooks/useExternalLink';

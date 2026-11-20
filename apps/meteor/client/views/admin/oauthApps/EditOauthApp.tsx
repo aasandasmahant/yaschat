@@ -1,4 +1,4 @@
-import type { IOAuthApps, Serialized } from '@yas chat/core-typings';
+import type { IOAuthApps, Serialized } from '@yaschat/core-typings';
 import {
 	Button,
 	ButtonGroup,
@@ -12,9 +12,9 @@ import {
 	TextAreaInput,
 	ToggleSwitch,
 	FieldGroup,
-} from '@yas chat/fuselage';
-import { GenericModal, ContextualbarScrollableContent } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useAbsoluteUrl, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { GenericModal, ContextualbarScrollableContent } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useAbsoluteUrl, useEndpoint } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useCallback, useId, useMemo } from 'react';
 import type { SubmitHandler } from 'react-hook-form';

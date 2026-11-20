@@ -1,4 +1,4 @@
-import { ItemSkeleton } from '@yas chat/fuselage';
+import { ItemSkeleton } from '@yaschat/fuselage';
 
 // Placeholder row shown while the server spotlight results are still loading.
 // Decorative only: it has no `role='option'`, so keyboard navigation skips it

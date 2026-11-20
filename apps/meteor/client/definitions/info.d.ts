@@ -29,7 +29,7 @@ declare module '*.info' {
 		mobile: string;
 	};
 
-	import type { SignedSupportedVersions } from '@yas chat/server-cloud-communication';
+	import type { SignedSupportedVersions } from '@yaschat/server-cloud-communication';
 
 	export const supportedVersions: SignedSupportedVersions;
 }

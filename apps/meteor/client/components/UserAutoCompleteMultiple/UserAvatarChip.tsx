@@ -1,6 +1,6 @@
-import { Box, Chip, Icon } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useUserDisplayName } from '@yas chat/ui-client';
+import { Box, Chip, Icon } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useUserDisplayName } from '@yaschat/ui-client';
 import type { ComponentProps } from 'react';
 
 export type UserAvatarChipProps = ComponentProps<typeof Chip> & {

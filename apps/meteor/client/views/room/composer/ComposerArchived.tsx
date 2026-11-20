@@ -1,4 +1,4 @@
-import { MessageFooterCallout, MessageFooterCalloutContent } from '@yas chat/ui-composer';
+import { MessageFooterCallout, MessageFooterCalloutContent } from '@yaschat/ui-composer';
 import { useTranslation } from 'react-i18next';
 
 const ComposerReadOnly = () => {

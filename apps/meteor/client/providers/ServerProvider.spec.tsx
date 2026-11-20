@@ -1,4 +1,4 @@
-import { useConnectionStatus, useEndpoint, useStream } from '@yas chat/ui-contexts';
+import { useConnectionStatus, useEndpoint, useStream } from '@yaschat/ui-contexts';
 import { act, render } from '@testing-library/react';
 
 import ConnectionStatusProvider from './ConnectionStatusProvider';

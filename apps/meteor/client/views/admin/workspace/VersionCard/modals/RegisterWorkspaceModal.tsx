@@ -9,9 +9,9 @@ import {
 	ModalHeaderText,
 	ModalTitle,
 	Text,
-} from '@yas chat/fuselage';
-import { ExternalLink, links } from '@yas chat/ui-client';
-import { useSetModal } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { ExternalLink, links } from '@yaschat/ui-client';
+import { useSetModal } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import RegisterWorkspaceSetupModal from './RegisterWorkspaceSetupModal';

@@ -1,7 +1,7 @@
-import type { AbacMembershipVerdict, AbacRoomPreviewMember } from '@yas chat/core-typings';
-import { Box, Icon, Tag } from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { AbacMembershipVerdict, AbacRoomPreviewMember } from '@yaschat/core-typings';
+import { Box, Icon, Tag } from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

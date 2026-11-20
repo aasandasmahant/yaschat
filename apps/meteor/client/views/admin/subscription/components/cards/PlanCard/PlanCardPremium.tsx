@@ -1,6 +1,6 @@
-import type { ILicenseV3 } from '@yas chat/core-typings';
-import { Card, CardBody, Icon, Skeleton, Stack } from '@yas chat/fuselage';
-import { ExternalLink, useLicenseName } from '@yas chat/ui-client';
+import type { ILicenseV3 } from '@yaschat/core-typings';
+import { Card, CardBody, Icon, Skeleton, Stack } from '@yaschat/fuselage';
+import { ExternalLink, useLicenseName } from '@yaschat/ui-client';
 import { Trans, useTranslation } from 'react-i18next';
 
 import PlanCardHeader from './PlanCardHeader';

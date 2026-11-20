@@ -1,4 +1,4 @@
-import { useEndpoint, useSetting } from '@yas chat/ui-contexts';
+import { useEndpoint, useSetting } from '@yaschat/ui-contexts';
 import { useCallback, useEffect, useRef } from 'react';
 
 /** How often to look at the call window. Cheap, and a second's delay in ending a call nobody is in is nothing. */

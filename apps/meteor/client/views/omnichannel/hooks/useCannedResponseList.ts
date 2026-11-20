@@ -1,5 +1,5 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { cannedResponsesQueryKeys } from '../../../lib/queryKeys';

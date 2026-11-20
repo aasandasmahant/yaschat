@@ -1,5 +1,5 @@
-import type { IMessage, IRoom, ISubscription } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
+import type { IMessage, IRoom, ISubscription } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
 
 import { withDebouncing } from '../../../lib/utils/highOrderFunctions';
 import { Messages } from '../../stores';

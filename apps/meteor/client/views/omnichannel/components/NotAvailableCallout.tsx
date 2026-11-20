@@ -1,4 +1,4 @@
-import { Box, Callout } from '@yas chat/fuselage';
+import { Box, Callout } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 const NotAvailableCallout = () => {

@@ -1,4 +1,4 @@
-import { Box, Card, CardTitle, CardBody } from '@yas chat/fuselage';
+import { Box, Card, CardTitle, CardBody } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 import EngagementDashboardCardErrorBoundary from './EngagementDashboardCardErrorBoundary';

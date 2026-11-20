@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
+import type { IRoom } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
 import { useMemo, useSyncExternalStore } from 'react';
 import type { CacheSnapshot } from 'virtua';
 

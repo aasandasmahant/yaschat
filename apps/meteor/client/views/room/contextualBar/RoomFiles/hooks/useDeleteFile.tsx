@@ -1,7 +1,7 @@
-import type { IUpload } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import type { IUpload } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 export const useDeleteFile = (reload: () => void) => {

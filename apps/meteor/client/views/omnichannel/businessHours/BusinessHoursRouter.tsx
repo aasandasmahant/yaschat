@@ -1,5 +1,5 @@
-import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
-import { useRouteParameter, useRouter, useSetting } from '@yas chat/ui-contexts';
+import { LivechatBusinessHourTypes } from '@yaschat/core-typings';
+import { useRouteParameter, useRouter, useSetting } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import BusinessHoursDisabledPage from './BusinessHoursDisabledPage';

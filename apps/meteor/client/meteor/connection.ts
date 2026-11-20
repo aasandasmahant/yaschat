@@ -1,5 +1,5 @@
 // The client's method and subscription transport: DDPSDK and the REST method bridge, with no Meteor connection.
-import { Random } from '@yas chat/random';
+import { Random } from '@yaschat/random';
 
 import { process2faAsyncReturn } from '../lib/2fa/process2faReturn';
 import { APIClient } from '../lib/RestApiClient';

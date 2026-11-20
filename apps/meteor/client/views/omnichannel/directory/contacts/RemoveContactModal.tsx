@@ -1,7 +1,7 @@
-import { Box, Input } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Input } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { ChangeEvent, SubmitEvent } from 'react';
 import { useState, useId } from 'react';

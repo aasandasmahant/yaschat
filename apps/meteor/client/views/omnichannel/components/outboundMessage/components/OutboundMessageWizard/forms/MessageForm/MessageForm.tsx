@@ -1,7 +1,7 @@
-import type { IOutboundProviderTemplate, Serialized, ILivechatContact } from '@yas chat/core-typings';
-import { Box, Button, FieldGroup, Scrollable } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useToastBarDispatch } from '@yas chat/fuselage-toastbar';
+import type { IOutboundProviderTemplate, Serialized, ILivechatContact } from '@yaschat/core-typings';
+import { Box, Button, FieldGroup, Scrollable } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useToastBarDispatch } from '@yaschat/fuselage-toastbar';
 import type { ReactNode } from 'react';
 import { useId, useMemo } from 'react';
 import { useForm, useWatch } from 'react-hook-form';

@@ -1,6 +1,6 @@
-import { useSession } from '@yas chat/ui-contexts';
-import type { LoginRoutes } from '@yas chat/ui-registration';
-import RegistrationRoute from '@yas chat/ui-registration';
+import { useSession } from '@yaschat/ui-contexts';
+import type { LoginRoutes } from '@yaschat/ui-registration';
+import RegistrationRoute from '@yaschat/ui-registration';
 import type { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

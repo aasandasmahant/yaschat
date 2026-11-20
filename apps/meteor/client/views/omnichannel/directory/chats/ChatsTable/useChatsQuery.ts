@@ -1,4 +1,4 @@
-import { usePermission, useUserId } from '@yas chat/ui-contexts';
+import { usePermission, useUserId } from '@yaschat/ui-contexts';
 import { endOfDay } from 'date-fns/endOfDay';
 import { parse } from 'date-fns/parse';
 import { startOfDay } from 'date-fns/startOfDay';

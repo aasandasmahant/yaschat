@@ -1,6 +1,6 @@
-import type { Serialized } from '@yas chat/core-typings';
-import type { ILivechatContactWithManagerData } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import type { ILivechatContactWithManagerData } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { omnichannelQueryKeys } from '../../../../lib/queryKeys';

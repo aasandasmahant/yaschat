@@ -1,6 +1,6 @@
-import { SidebarItemIcon } from '@yas chat/fuselage';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useSetting } from '@yas chat/ui-contexts';
+import { SidebarItemIcon } from '@yaschat/fuselage';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useSetting } from '@yaschat/ui-contexts';
 import type { ComponentProps, ReactNode } from 'react';
 import { memo } from 'react';
 

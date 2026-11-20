@@ -1,6 +1,6 @@
-import { Button } from '@yas chat/fuselage';
-import { MessageFooterCallout, MessageFooterCalloutContent } from '@yas chat/ui-composer';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { Button } from '@yaschat/fuselage';
+import { MessageFooterCallout, MessageFooterCalloutContent } from '@yaschat/ui-composer';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

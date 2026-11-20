@@ -1,5 +1,5 @@
-import type { IAuditLog, IMessage } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IAuditLog, IMessage } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import type { AuditFields } from './useAuditForm';

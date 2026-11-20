@@ -1,5 +1,5 @@
-import { Emitter } from '@yas chat/emitter';
-import { SessionContext } from '@yas chat/ui-contexts';
+import { Emitter } from '@yaschat/emitter';
+import { SessionContext } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 
 const store = new Map<string, unknown>();

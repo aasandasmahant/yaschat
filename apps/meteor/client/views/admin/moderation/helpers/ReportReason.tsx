@@ -1,4 +1,4 @@
-import { Box, Tag } from '@yas chat/fuselage';
+import { Box, Tag } from '@yaschat/fuselage';
 
 import { useFormatDate } from '../../../../hooks/useFormatDate';
 

@@ -1,5 +1,5 @@
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { useEndpoint, useToastMessageDispatch, useUserId } from '@yas chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { useEndpoint, useToastMessageDispatch, useUserId } from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

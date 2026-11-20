@@ -1,4 +1,4 @@
-import { usePermission, useRouter } from '@yas chat/ui-contexts';
+import { usePermission, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { PageTabs } from '../../../components/PageTabs';

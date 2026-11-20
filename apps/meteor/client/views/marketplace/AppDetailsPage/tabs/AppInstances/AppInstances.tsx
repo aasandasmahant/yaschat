@@ -1,6 +1,6 @@
-import type { AppStatus } from '@yas chat/apps';
-import { AppStatusUtils } from '@yas chat/apps-engine/definition/AppStatus';
-import { Box, Tag, type TableColumnWidth } from '@yas chat/fuselage';
+import type { AppStatus } from '@yaschat/apps';
+import { AppStatusUtils } from '@yaschat/apps-engine/definition/AppStatus';
+import { Box, Tag, type TableColumnWidth } from '@yaschat/fuselage';
 import {
 	GenericMenu,
 	CustomScrollbars,
@@ -11,8 +11,8 @@ import {
 	GenericTableHeaderCell,
 	GenericTableRow,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import AccordionLoading from '../../../components/AccordionLoading';

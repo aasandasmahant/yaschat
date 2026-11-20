@@ -1,4 +1,4 @@
-import { useSetModal, useSetting } from '@yas chat/ui-contexts';
+import { useSetModal, useSetting } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { asCallUrl } from '../../../../../lib/utils/asCallUrl';

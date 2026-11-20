@@ -1,5 +1,5 @@
-import type { IAuditLog } from '@yas chat/core-typings';
-import { Field, FieldLabel, FieldRow, type TableColumnWidth } from '@yas chat/fuselage';
+import type { IAuditLog } from '@yaschat/core-typings';
+import { Field, FieldLabel, FieldRow, type TableColumnWidth } from '@yaschat/fuselage';
 import {
 	GenericTable,
 	GenericTableHeaderCell,
@@ -7,8 +7,8 @@ import {
 	GenericTableLoadingRow,
 	GenericTableHeader,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

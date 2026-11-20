@@ -1,6 +1,6 @@
-import type { IOutboundProviderTemplate, Serialized } from '@yas chat/core-typings';
-import { Field, FieldError, FieldHint, FieldLabel, FieldRow } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IOutboundProviderTemplate, Serialized } from '@yaschat/core-typings';
+import { Field, FieldError, FieldHint, FieldLabel, FieldRow } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 import { useId } from 'react';
 import type { Control } from 'react-hook-form';

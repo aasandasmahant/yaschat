@@ -1,7 +1,7 @@
-import type { ISetting, Serialized, SettingValue } from '@yas chat/core-typings';
-import { Callout } from '@yas chat/fuselage';
-import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@yas chat/ui-client';
-import { useEndpoint, usePermission } from '@yas chat/ui-contexts';
+import type { ISetting, Serialized, SettingValue } from '@yaschat/core-typings';
+import { Callout } from '@yaschat/fuselage';
+import { Page, PageHeader, PageScrollableContentWithShadow, PageSkeleton } from '@yaschat/ui-client';
+import { useEndpoint, usePermission } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

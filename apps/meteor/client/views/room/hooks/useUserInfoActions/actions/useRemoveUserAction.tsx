@@ -1,8 +1,8 @@
-import type { IRoom, IUser, Serialized } from '@yas chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { escapeHTML } from '@yas chat/tools';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IRoom, IUser, Serialized } from '@yaschat/core-typings';
+import { isRoomFederated, isRoomNativeFederated } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { escapeHTML } from '@yaschat/tools';
+import { GenericModal } from '@yaschat/ui-client';
 import {
 	usePermission,
 	useSetModal,
@@ -12,7 +12,7 @@ import {
 	useUserId,
 	useUserRoom,
 	useUserSubscription,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMemo } from 'react';
 

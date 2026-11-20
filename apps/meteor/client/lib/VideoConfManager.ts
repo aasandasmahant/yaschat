@@ -1,5 +1,5 @@
-import type { CallPreferences, DirectCallData, DirectCallParams, IRoom, IUser, ProviderCapabilities } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
+import type { CallPreferences, DirectCallData, DirectCallParams, IRoom, IUser, ProviderCapabilities } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
 
 import { sdk } from './SDKClient';
 import { getConfig } from './utils/getConfig';

@@ -1,5 +1,5 @@
-import type { IRole } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IRole } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useUserRolesByScope } from './useUserRolesByScope';

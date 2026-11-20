@@ -1,5 +1,5 @@
-import { useInvalidateLicense } from '@yas chat/ui-client';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useInvalidateLicense } from '@yaschat/ui-client';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

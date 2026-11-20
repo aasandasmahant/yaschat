@@ -1,5 +1,5 @@
-import type { ITeam, Serialized } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ITeam, Serialized } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 

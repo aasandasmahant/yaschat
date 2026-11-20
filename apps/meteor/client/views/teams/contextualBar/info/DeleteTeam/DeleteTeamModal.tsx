@@ -1,5 +1,5 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import { useState } from 'react';
 
 import DeleteTeamChannels from './DeleteTeamChannels';

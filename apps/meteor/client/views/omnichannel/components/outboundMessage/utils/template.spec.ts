@@ -1,5 +1,5 @@
-import type { IOutboundProviderTemplate } from '@yas chat/apps-engine/definition/outboundCommunication';
-import { capitalize } from '@yas chat/tools';
+import type { IOutboundProviderTemplate } from '@yaschat/apps-engine/definition/outboundCommunication';
+import { capitalize } from '@yaschat/tools';
 
 import { extractParameterMetadata, processTemplatePreviewText } from './template';
 import type { TemplateMediaParameter, TemplateComponent, TemplateParameterMetadata } from '../types/template';

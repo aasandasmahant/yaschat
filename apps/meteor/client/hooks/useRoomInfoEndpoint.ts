@@ -1,5 +1,5 @@
-import type { IRoom, ITeam, Serialized } from '@yas chat/core-typings';
-import { useEndpoint, useUserId } from '@yas chat/ui-contexts';
+import type { IRoom, ITeam, Serialized } from '@yaschat/core-typings';
+import { useEndpoint, useUserId } from '@yaschat/ui-contexts';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 import { minutesToMilliseconds } from 'date-fns/minutesToMilliseconds';

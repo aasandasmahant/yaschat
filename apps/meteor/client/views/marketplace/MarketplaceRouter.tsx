@@ -1,5 +1,5 @@
-import { PageSkeleton } from '@yas chat/ui-client';
-import { useAtLeastOnePermission, useRoute, useRouteParameter } from '@yas chat/ui-contexts';
+import { PageSkeleton } from '@yaschat/ui-client';
+import { useAtLeastOnePermission, useRoute, useRouteParameter } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { Suspense, useEffect } from 'react';
 

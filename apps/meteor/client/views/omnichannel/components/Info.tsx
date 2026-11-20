@@ -1,6 +1,6 @@
-import type { cssFn } from '@yas chat/css-in-js';
-import { css } from '@yas chat/css-in-js';
-import { UserCardInfo } from '@yas chat/ui-client';
+import type { cssFn } from '@yaschat/css-in-js';
+import { css } from '@yaschat/css-in-js';
+import { UserCardInfo } from '@yaschat/ui-client';
 import type { ComponentProps, CSSProperties, ReactNode } from 'react';
 
 const wordBreak = css`

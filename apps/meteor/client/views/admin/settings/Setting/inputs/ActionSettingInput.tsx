@@ -1,7 +1,7 @@
-import { isActionSettingWithEndpoint } from '@yas chat/core-typings';
-import type { ServerMethods } from '@yas chat/ddp-client';
-import type { PathPattern, Method } from '@yas chat/rest-typings';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import { isActionSettingWithEndpoint } from '@yaschat/core-typings';
+import type { ServerMethods } from '@yaschat/ddp-client';
+import type { PathPattern, Method } from '@yaschat/rest-typings';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 
 import EndpointActionInput from './EndpointActionInput';
 import MethodActionInput from './MethodActionInput';

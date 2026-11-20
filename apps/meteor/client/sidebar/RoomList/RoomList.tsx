@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { useMergedRefsV2, useShortTimeAgo } from '@yas chat/ui-client';
-import { useUserPreference, useUserId } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useMergedRefsV2, useShortTimeAgo } from '@yaschat/ui-client';
+import { useUserPreference, useUserId } from '@yaschat/ui-contexts';
 import { useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { VirtualizerHandle } from 'virtua';

@@ -1,8 +1,8 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { UiKitContext } from '@yas chat/fuselage-ui-kit';
-import { MarkupInteractionContext } from '@yas chat/gazzodown';
-import { useUserPreference } from '@yas chat/ui-contexts';
-import type * as UiKit from '@yas chat/ui-kit';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { UiKitContext } from '@yaschat/fuselage-ui-kit';
+import { MarkupInteractionContext } from '@yaschat/gazzodown';
+import { useUserPreference } from '@yaschat/ui-contexts';
+import type * as UiKit from '@yaschat/ui-kit';
 import type { FormEvent } from 'react';
 
 import ModalBlock from './ModalBlock';

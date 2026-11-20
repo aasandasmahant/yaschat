@@ -1,5 +1,5 @@
-import { PaletteStyleTag } from '@yas chat/fuselage';
-import { useThemeMode } from '@yas chat/ui-client';
+import { PaletteStyleTag } from '@yaschat/fuselage';
+import { useThemeMode } from '@yaschat/ui-client';
 
 import { codeBlock } from '../lib/codeBlockStyles';
 

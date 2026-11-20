@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useOutsideClick, useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IRoom } from '@yaschat/core-typings';
+import { useOutsideClick, useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	VideoConfButton,
 	VideoConfPopup,
@@ -13,7 +13,7 @@ import {
 	useVideoConfPreferences,
 	useVideoConfSetPreferences,
 	useVideoConfWindowEnabled,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

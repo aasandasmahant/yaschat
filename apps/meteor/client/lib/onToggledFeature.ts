@@ -1,4 +1,4 @@
-import type { LicenseModule } from '@yas chat/core-typings';
+import type { LicenseModule } from '@yaschat/core-typings';
 import { QueryObserver } from '@tanstack/react-query';
 
 import { fetchFeatures } from './fetchFeatures';

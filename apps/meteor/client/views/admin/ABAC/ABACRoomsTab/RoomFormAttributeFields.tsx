@@ -1,4 +1,4 @@
-import { Box, Field, FieldLabel, InputBoxSkeleton } from '@yas chat/fuselage';
+import { Box, Field, FieldLabel, InputBoxSkeleton } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import RoomFormAttributeField from './RoomFormAttributeField';

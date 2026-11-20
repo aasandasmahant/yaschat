@@ -1,4 +1,4 @@
-import type { DeviceManagementSession, DeviceManagementPopulatedSession, Serialized } from '@yas chat/core-typings';
+import type { DeviceManagementSession, DeviceManagementPopulatedSession, Serialized } from '@yaschat/core-typings';
 import {
 	Box,
 	Pagination,
@@ -9,9 +9,9 @@ import {
 	StatesSubtitle,
 	StatesTitle,
 	type TableColumnWidth,
-} from '@yas chat/fuselage';
-import type { PaginatedResult } from '@yas chat/rest-typings';
-import { GenericTable, GenericTableHeader, GenericTableBody, GenericTableLoadingTable, GenericNoResults } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import type { PaginatedResult } from '@yaschat/rest-typings';
+import { GenericTable, GenericTableHeader, GenericTableBody, GenericTableLoadingTable, GenericNoResults } from '@yaschat/ui-client';
 import type { UseQueryResult } from '@tanstack/react-query';
 import type { ComponentProps, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';

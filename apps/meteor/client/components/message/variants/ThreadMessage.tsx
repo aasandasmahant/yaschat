@@ -1,8 +1,8 @@
-import { type IThreadMessage, type IThreadMainMessage, isVideoConfMessage } from '@yas chat/core-typings';
-import { Message, MessageLeftContainer, MessageContainer } from '@yas chat/fuselage';
-import { useToggle } from '@yas chat/fuselage-hooks';
-import { MessageAvatar } from '@yas chat/ui-avatar';
-import { useUserId, useUserCard } from '@yas chat/ui-contexts';
+import { type IThreadMessage, type IThreadMainMessage, isVideoConfMessage } from '@yaschat/core-typings';
+import { Message, MessageLeftContainer, MessageContainer } from '@yaschat/fuselage';
+import { useToggle } from '@yaschat/fuselage-hooks';
+import { MessageAvatar } from '@yaschat/ui-avatar';
+import { useUserId, useUserCard } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useTranslation } from 'react-i18next';

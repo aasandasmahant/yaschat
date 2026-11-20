@@ -1,5 +1,5 @@
-import type { OptionProp } from '@yas chat/ui-client';
-import { MultiSelectCustom } from '@yas chat/ui-client';
+import type { OptionProp } from '@yaschat/ui-client';
+import { MultiSelectCustom } from '@yaschat/ui-client';
 import { useCallback, useMemo, useState } from 'react';
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';

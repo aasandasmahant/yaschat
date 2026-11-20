@@ -1,4 +1,4 @@
-import { Base64 } from '@yas chat/base64';
+import { Base64 } from '@yaschat/base64';
 
 import { Binary } from './binary';
 import type { ICodec } from './codec';

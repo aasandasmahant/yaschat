@@ -1,4 +1,4 @@
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import type { QueryKey } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';

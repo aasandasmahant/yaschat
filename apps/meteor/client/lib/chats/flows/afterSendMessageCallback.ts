@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { clientCallbacks } from '@yas chat/ui-client';
+import type { IMessage } from '@yaschat/core-typings';
+import { clientCallbacks } from '@yaschat/ui-client';
 
 import { Rooms } from '../../../stores';
 import { getUser } from '../../user';

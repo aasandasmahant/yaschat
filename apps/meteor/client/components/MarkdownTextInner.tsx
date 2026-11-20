@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { isExternal, getBaseURI } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { isExternal, getBaseURI } from '@yaschat/ui-client';
 import dompurify from 'dompurify';
 import { marked } from 'marked';
 import type { ComponentProps } from 'react';

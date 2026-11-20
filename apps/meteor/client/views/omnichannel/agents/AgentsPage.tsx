@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { ContextualbarDialog, Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { usePermission, useRouteParameter, useRouter } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { ContextualbarDialog, Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { usePermission, useRouteParameter, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import AgentEditWithData from './AgentEditWithData';

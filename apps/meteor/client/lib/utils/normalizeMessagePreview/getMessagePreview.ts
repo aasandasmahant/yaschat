@@ -1,7 +1,7 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { isDirectMessageRoom, isE2EEMessage, isMultipleDirectMessageRoom, isVideoConfMessage } from '@yas chat/core-typings';
-import { escapeHTML } from '@yas chat/tools';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { isDirectMessageRoom, isE2EEMessage, isMultipleDirectMessageRoom, isVideoConfMessage } from '@yaschat/core-typings';
+import { escapeHTML } from '@yaschat/tools';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 import type { TFunction } from 'i18next';
 
 import { normalizeMessagePreview } from './normalizeMessagePreview';

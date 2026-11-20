@@ -1,6 +1,6 @@
-import type { AtLeast } from '@yas chat/core-typings';
-import { isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { AtLeast } from '@yaschat/core-typings';
+import { isRoomFederated, isRoomXMPPFederated } from '@yaschat/core-typings';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 
 import type { IRoomTypeClientDirectives } from '../../../../definition/IRoomTypeConfig';
 import { RoomSettingsEnum, RoomMemberActions, UiTextContext } from '../../../../definition/IRoomTypeConfig';

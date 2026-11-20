@@ -1,7 +1,7 @@
-import { Button } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useRoute, useRouteParameter } from '@yas chat/ui-contexts';
+import { Button } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useRoute, useRouteParameter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import DepartmentsTable from './DepartmentsTable';

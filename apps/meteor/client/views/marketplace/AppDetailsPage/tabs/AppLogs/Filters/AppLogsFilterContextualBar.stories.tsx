@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { Contextualbar } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { Contextualbar } from '@yaschat/ui-client';
 import type { Meta } from '@storybook/react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { action } from 'storybook/actions';

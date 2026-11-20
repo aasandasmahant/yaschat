@@ -1,8 +1,8 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { Box, ButtonGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { Keys as IconName } from '@yas chat/icons';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { Box, ButtonGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { Keys as IconName } from '@yaschat/icons';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 
 import MessageAction from './actions/MessageAction';
 import { actionLinks } from '../../../lib/actionLinks';

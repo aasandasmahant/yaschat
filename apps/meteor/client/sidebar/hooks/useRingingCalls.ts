@@ -3,7 +3,7 @@ import {
 	useVideoConfIncomingCalls,
 	useVideoConfRejectIncomingCall,
 	useVideoConfWindowEnabled,
-} from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-video-conf';
 import { useMemo } from 'react';
 
 export type RingingCallActions = {

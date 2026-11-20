@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
 import { useState } from 'react';
 
 import EditRoomInfoWithData from './EditRoomInfo';

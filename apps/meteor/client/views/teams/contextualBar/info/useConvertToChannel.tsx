@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { usePermission, useSetModal, useToastMessageDispatch, useUserId } from '@yas chat/ui-contexts';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { usePermission, useSetModal, useToastMessageDispatch, useUserId } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ConvertToChannelModal from './ConvertToChannelModal';

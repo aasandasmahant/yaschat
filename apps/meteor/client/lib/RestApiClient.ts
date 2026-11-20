@@ -1,5 +1,5 @@
 /* oxlint-disable react-hooks/rules-of-hooks */
-import { RestClient } from '@yas chat/api-client';
+import { RestClient } from '@yaschat/api-client';
 
 import { invokeTwoFactorModal } from './2fa/process2faReturn';
 import { baseURI } from './baseURI';

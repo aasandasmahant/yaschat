@@ -1,7 +1,7 @@
-import { AppStatus } from '@yas chat/apps-engine/definition/AppStatus';
-import type { App, AppPermission } from '@yas chat/core-typings';
-import { Box, Icon } from '@yas chat/fuselage';
-import { useHasLicenseModule, useIsEnterprise } from '@yas chat/ui-client';
+import { AppStatus } from '@yaschat/apps-engine/definition/AppStatus';
+import type { App, AppPermission } from '@yaschat/core-typings';
+import { Box, Icon } from '@yaschat/fuselage';
+import { useHasLicenseModule, useIsEnterprise } from '@yaschat/ui-client';
 import {
 	useSetModal,
 	useEndpoint,
@@ -10,7 +10,7 @@ import {
 	useToastMessageDispatch,
 	usePermission,
 	useRouter,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import type { ComponentProps, MouseEvent, ReactNode } from 'react';
 import { useMemo, useCallback, useState } from 'react';
 import semver from 'semver';

@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Button, Callout, IconButton } from '@yas chat/fuselage';
-import { RoomAvatar } from '@yas chat/ui-avatar';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Button, Callout, IconButton } from '@yaschat/fuselage';
+import { RoomAvatar } from '@yaschat/ui-avatar';
 import {
 	GenericMenu,
 	ContextualbarHeader,
@@ -18,7 +18,7 @@ import {
 	InfoPanelSection,
 	InfoPanelText,
 	InfoPanelTitle,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useTeamActions } from './useTeamActions';

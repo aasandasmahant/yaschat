@@ -1,12 +1,12 @@
-import type { RestClientInterface } from '@yas chat/api-client';
-import type { SDK, ClientStream, StreamKeys, StreamNames, StreamerCallbackArgs, ServerMethods } from '@yas chat/ddp-client';
-import { Emitter } from '@yas chat/emitter';
+import type { RestClientInterface } from '@yaschat/api-client';
+import type { SDK, ClientStream, StreamKeys, StreamNames, StreamerCallbackArgs, ServerMethods } from '@yaschat/ddp-client';
+import { Emitter } from '@yaschat/emitter';
 
 import { APIClient } from './RestApiClient';
 import { ensureConnectedAndAuthenticated, getDdpSdk } from './sdk/ddpSdk';
 import { callMethod } from '../meteor/connection';
 
-declare module '@yas chat/ddp-client' {
+declare module '@yaschat/ddp-client' {
 	interface SDK {
 		stream<N extends StreamNames, K extends StreamKeys<N>>(
 			streamName: N,

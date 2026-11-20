@@ -1,6 +1,6 @@
-import { Banner, Icon } from '@yas chat/fuselage';
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
-import { usePermission, useSetting } from '@yas chat/ui-contexts';
+import { Banner, Icon } from '@yaschat/fuselage';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
+import { usePermission, useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const BannerEnterpriseTrialEnded = () => {

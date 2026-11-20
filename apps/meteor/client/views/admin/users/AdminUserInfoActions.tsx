@@ -1,5 +1,5 @@
-import { ButtonGroup, IconButton } from '@yas chat/fuselage';
-import { GenericMenu, UserInfoAction } from '@yas chat/ui-client';
+import { ButtonGroup, IconButton } from '@yaschat/fuselage';
+import { GenericMenu, UserInfoAction } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

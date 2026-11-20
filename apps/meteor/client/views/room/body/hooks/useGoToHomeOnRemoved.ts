@@ -1,5 +1,5 @@
-import { isOmnichannelRoom, type IRoom } from '@yas chat/core-typings';
-import { useRouter, useStream, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { isOmnichannelRoom, type IRoom } from '@yaschat/core-typings';
+import { useRouter, useStream, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

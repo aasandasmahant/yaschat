@@ -1,5 +1,5 @@
-import type { IOutboundProviderMetadata } from '@yas chat/core-typings';
-import { Select } from '@yas chat/fuselage';
+import type { IOutboundProviderMetadata } from '@yaschat/core-typings';
+import { Select } from '@yaschat/fuselage';
 import { useMemo, type ComponentProps } from 'react';
 
 import { formatPhoneNumber } from '../../../../../lib/formatPhoneNumber';

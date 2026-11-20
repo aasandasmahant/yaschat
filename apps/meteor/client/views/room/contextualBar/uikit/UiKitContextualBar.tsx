@@ -1,11 +1,11 @@
-import { Avatar, Box, Button, ButtonGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { Avatar, Box, Button, ButtonGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	UiKitComponent,
 	UiKitContextualBar as UiKitContextualBarSurfaceRender,
 	contextualBarParser,
 	UiKitContext,
-} from '@yas chat/fuselage-ui-kit';
+} from '@yaschat/fuselage-ui-kit';
 import {
 	ContextualbarHeader,
 	ContextualbarTitle,
@@ -13,9 +13,9 @@ import {
 	ContextualbarDialog,
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
-} from '@yas chat/ui-client';
-import { useRoomToolbox } from '@yas chat/ui-contexts';
-import type * as UiKit from '@yas chat/ui-kit';
+} from '@yaschat/ui-client';
+import { useRoomToolbox } from '@yaschat/ui-contexts';
+import type * as UiKit from '@yaschat/ui-kit';
 import type { FormEvent, UIEvent } from 'react';
 import { memo } from 'react';
 

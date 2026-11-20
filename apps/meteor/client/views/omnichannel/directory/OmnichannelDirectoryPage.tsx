@@ -1,6 +1,6 @@
-import { Box, Callout } from '@yas chat/fuselage';
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import { Box, Callout } from '@yaschat/fuselage';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

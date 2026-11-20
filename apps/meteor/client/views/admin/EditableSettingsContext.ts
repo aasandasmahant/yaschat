@@ -1,5 +1,5 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
+import type { ISetting } from '@yaschat/core-typings';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
 import { createContext, useContext } from 'react';
 import { create, type StoreApi, type UseBoundStore } from 'zustand';
 import { useShallow } from 'zustand/shallow';

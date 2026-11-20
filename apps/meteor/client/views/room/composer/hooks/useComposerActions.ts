@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useChat } from '../../contexts/ChatContext';

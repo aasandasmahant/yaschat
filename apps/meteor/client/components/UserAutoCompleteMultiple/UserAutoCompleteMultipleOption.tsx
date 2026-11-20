@@ -1,6 +1,6 @@
-import { Option, OptionDescription } from '@yas chat/fuselage';
-import { ITEM_MEDIA_SIZE, UserAvatar } from '@yas chat/ui-avatar';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Option, OptionDescription } from '@yaschat/fuselage';
+import { ITEM_MEDIA_SIZE, UserAvatar } from '@yaschat/ui-avatar';
+import { useSetting } from '@yaschat/ui-contexts';
 import type { MouseEventHandler } from 'react';
 import { useTranslation } from 'react-i18next';
 

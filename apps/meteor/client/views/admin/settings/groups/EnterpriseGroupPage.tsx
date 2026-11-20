@@ -1,6 +1,6 @@
-import { Accordion, Box } from '@yas chat/fuselage';
-import { PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+import { Accordion, Box } from '@yaschat/fuselage';
+import { PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 import type { MouseEvent } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

@@ -1,9 +1,9 @@
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { Badge } from '@yas chat/fuselage';
-import type { BadgeProps } from '@yas chat/fuselage';
-import { HeaderToolbarAction } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { Badge } from '@yaschat/fuselage';
+import type { BadgeProps } from '@yaschat/fuselage';
+import { HeaderToolbarAction } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { Fragment, lazy, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

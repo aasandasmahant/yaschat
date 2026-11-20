@@ -1,6 +1,6 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
-import { MediaCallProvider as MediaCallProviderBase } from '@yas chat/ui-voip';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
+import { MediaCallProvider as MediaCallProviderBase } from '@yaschat/ui-voip';
 import type { ReactNode } from 'react';
 
 export type MediaCallProviderProps = { children: ReactNode };

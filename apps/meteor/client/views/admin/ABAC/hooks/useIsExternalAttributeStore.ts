@@ -1,4 +1,4 @@
-import { useSetting } from '@yas chat/ui-contexts';
+import { useSetting } from '@yaschat/ui-contexts';
 
 export const useIsExternalAttributeStore = (): boolean => {
 	const pdpType = useSetting('ABAC_PDP_Type', 'local');

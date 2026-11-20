@@ -1,4 +1,4 @@
-import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
+import type { IOutboundProviderTemplate } from '@yaschat/core-typings';
 
 export type ComponentType = IOutboundProviderTemplate['components'][0]['type'];
 

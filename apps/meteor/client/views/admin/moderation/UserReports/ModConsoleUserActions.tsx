@@ -1,4 +1,4 @@
-import { GenericMenu } from '@yas chat/ui-client';
+import { GenericMenu } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import type { ModConsoleUserRowProps } from './ModConsoleUserTableRow';

@@ -1,6 +1,6 @@
-import type { IRoom, IMessage, IThreadMainMessage, IThreadMessage, Serialized } from '@yas chat/core-typings';
-import { isThreadMessage } from '@yas chat/core-typings';
-import { useEndpoint, useStream } from '@yas chat/ui-contexts';
+import type { IRoom, IMessage, IThreadMainMessage, IThreadMessage, Serialized } from '@yaschat/core-typings';
+import { isThreadMessage } from '@yaschat/core-typings';
+import { useEndpoint, useStream } from '@yaschat/ui-contexts';
 import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
 import { useCallback, useEffect, useRef } from 'react';
 

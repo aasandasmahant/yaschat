@@ -1,4 +1,4 @@
-import type { IRoom } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
 import { useState } from 'react';
 
 import ChannelToTeamConfirmation from './ChannelToTeamConfirmation';

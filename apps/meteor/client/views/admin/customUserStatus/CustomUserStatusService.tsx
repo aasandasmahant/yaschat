@@ -10,9 +10,9 @@ import {
 	StatesSubtitle,
 	Text,
 	ToggleSwitch,
-} from '@yas chat/fuselage';
-import { ContextualbarContent, ContextualbarFooter, links, useIsEnterprise } from '@yas chat/ui-client';
-import { useEndpoint, useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { ContextualbarContent, ContextualbarFooter, links, useIsEnterprise } from '@yaschat/ui-client';
+import { useEndpoint, useSetting } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { Trans, useTranslation } from 'react-i18next';
 

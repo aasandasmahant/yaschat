@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { AuthorizationContext, useUserId } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { AuthorizationContext, useUserId } from '@yaschat/ui-contexts';
 import type { ContextType, ReactNode } from 'react';
 import { useEffect, useMemo, useSyncExternalStore } from 'react';
 

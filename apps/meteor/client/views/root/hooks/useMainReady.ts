@@ -1,4 +1,4 @@
-import { useUserId } from '@yas chat/ui-contexts';
+import { useUserId } from '@yaschat/ui-contexts';
 
 import { PublicSettingsCachedStore, SubscriptionsCachedStore } from '../../../cachedStores';
 import { useUserDataSyncReady } from '../../../lib/userData';

@@ -1,7 +1,7 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Button, Field, FieldHint, FieldLabel, FieldRow, Icon, Palette } from '@yas chat/fuselage';
-import { Random } from '@yas chat/random';
-import { useToastMessageDispatch, useEndpoint, useUpload } from '@yas chat/ui-contexts';
+import { css } from '@yaschat/css-in-js';
+import { Box, Button, Field, FieldHint, FieldLabel, FieldRow, Icon, Palette } from '@yaschat/fuselage';
+import { Random } from '@yaschat/random';
+import { useToastMessageDispatch, useEndpoint, useUpload } from '@yaschat/ui-contexts';
 import type { DragEvent } from 'react';
 import { useId, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

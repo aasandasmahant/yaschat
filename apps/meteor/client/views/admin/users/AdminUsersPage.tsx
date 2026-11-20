@@ -1,8 +1,8 @@
-import type { LicenseInfo } from '@yas chat/core-typings';
-import { Box, Callout, Skeleton } from '@yas chat/fuselage';
-import { useDebouncedValue, useStableCallback } from '@yas chat/fuselage-hooks';
-import type { UsersListStatusParamsGET } from '@yas chat/rest-typings';
-import type { OptionProp } from '@yas chat/ui-client';
+import type { LicenseInfo } from '@yaschat/core-typings';
+import { Box, Callout, Skeleton } from '@yaschat/fuselage';
+import { useDebouncedValue, useStableCallback } from '@yaschat/fuselage-hooks';
+import type { UsersListStatusParamsGET } from '@yaschat/rest-typings';
+import type { OptionProp } from '@yaschat/ui-client';
 import {
 	ExternalLink,
 	ContextualbarHeader,
@@ -14,8 +14,8 @@ import {
 	Page,
 	PageHeader,
 	PageContent,
-} from '@yas chat/ui-client';
-import { useRouteParameter, useRouter, useEndpoint, useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useRouteParameter, useRouter, useEndpoint, useSetting } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

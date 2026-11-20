@@ -1,4 +1,4 @@
-import type { ILivechatDepartmentAgents, Serialized, IUser } from '@yas chat/core-typings';
+import type { ILivechatDepartmentAgents, Serialized, IUser } from '@yaschat/core-typings';
 
 const isOmnichannelAgent = (user: IUser | null): user is IUser => (user ? user.roles.includes('livechat-agent') : false);
 

@@ -1,4 +1,4 @@
-import { useRouter, useSearchParameter } from '@yas chat/ui-contexts';
+import { useRouter, useSearchParameter } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { buildDeepLinkURL } from '../../../lib/buildAuthDeeplinkURL';

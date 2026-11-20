@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { useConnectionStatus } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { useConnectionStatus } from '@yaschat/ui-contexts';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useLoadMissedMessages } from './useLoadMissedMessages';
@@ -8,7 +8,7 @@ import { sdk } from '../../../lib/SDKClient';
 import { Messages } from '../../../stores/Messages';
 import { Subscriptions } from '../../../stores/Subscriptions';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useConnectionStatus: jest.fn(),
 }));
 

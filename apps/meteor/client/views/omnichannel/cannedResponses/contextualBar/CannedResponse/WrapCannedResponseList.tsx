@@ -1,6 +1,6 @@
-import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@yas chat/core-typings';
-import { useDebouncedValue, useLocalStorage, useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetModal, useRouter, useRoomToolbox } from '@yas chat/ui-contexts';
+import type { IOmnichannelCannedResponse, ILivechatDepartment } from '@yaschat/core-typings';
+import { useDebouncedValue, useLocalStorage, useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetModal, useRouter, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { ChangeEvent, MouseEvent } from 'react';
 import { memo, useCallback, useState } from 'react';
 

@@ -1,6 +1,6 @@
-import { useCurrentRoutePath, useRouter, useToastMessageDispatch, useSetting } from '@yas chat/ui-contexts';
-import type { VideoConfPopupPayload, VideoConfContextValue } from '@yas chat/ui-video-conf';
-import { VideoConfContext } from '@yas chat/ui-video-conf';
+import { useCurrentRoutePath, useRouter, useToastMessageDispatch, useSetting } from '@yaschat/ui-contexts';
+import type { VideoConfPopupPayload, VideoConfContextValue } from '@yaschat/ui-video-conf';
+import { VideoConfContext } from '@yaschat/ui-video-conf';
 import type { ReactNode } from 'react';
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

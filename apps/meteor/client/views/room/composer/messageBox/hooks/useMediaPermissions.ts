@@ -1,4 +1,4 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 type MediaDevices = 'camera' | 'microphone';

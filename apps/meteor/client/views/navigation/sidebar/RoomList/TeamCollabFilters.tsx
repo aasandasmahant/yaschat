@@ -1,5 +1,5 @@
-import { Divider, Box } from '@yas chat/fuselage';
-import { useSetting } from '@yas chat/ui-contexts';
+import { Divider, Box } from '@yaschat/fuselage';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import RoomListFiltersItem from './RoomListFiltersItem';

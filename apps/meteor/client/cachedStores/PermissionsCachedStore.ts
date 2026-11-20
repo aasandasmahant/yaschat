@@ -1,4 +1,4 @@
-import type { IPermission } from '@yas chat/core-typings';
+import type { IPermission } from '@yaschat/core-typings';
 
 import { PrivateCachedStore } from '../lib/cachedStores/CachedStore';
 import { Permissions } from '../stores';

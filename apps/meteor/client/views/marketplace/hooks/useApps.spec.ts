@@ -1,4 +1,4 @@
-import type { App } from '@yas chat/core-typings';
+import type { App } from '@yaschat/core-typings';
 import type { UseQueryResult } from '@tanstack/react-query';
 
 import { storeQueryFunction } from './useApps';

@@ -1,5 +1,5 @@
-import type { IThreadMainMessage, IThreadMessage } from '@yas chat/core-typings';
-import { Box, Bubble, MessageDivider } from '@yas chat/fuselage';
+import type { IThreadMainMessage, IThreadMessage } from '@yaschat/core-typings';
+import { Box, Bubble, MessageDivider } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import SystemMessage from '../../../../../components/message/variants/SystemMessage';

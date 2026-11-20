@@ -1,6 +1,6 @@
-import type { ITeam } from '@yas chat/core-typings';
-import { TeamType } from '@yas chat/core-typings';
-import { useUserId } from '@yas chat/ui-contexts';
+import type { ITeam } from '@yaschat/core-typings';
+import { TeamType } from '@yaschat/core-typings';
+import { useUserId } from '@yaschat/ui-contexts';
 
 import { useTeamInfoQuery } from '../../../../hooks/useTeamInfoQuery';
 import { isForbiddenError } from '../../../../lib/utils/isForbiddenError';

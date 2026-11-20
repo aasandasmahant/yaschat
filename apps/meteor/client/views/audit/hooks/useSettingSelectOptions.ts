@@ -1,4 +1,4 @@
-import { useSettings } from '@yas chat/ui-contexts';
+import { useSettings } from '@yaschat/ui-contexts';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
 

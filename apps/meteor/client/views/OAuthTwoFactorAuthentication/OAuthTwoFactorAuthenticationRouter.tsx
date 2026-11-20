@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { Page } from '@yas chat/ui-client';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { Page } from '@yaschat/ui-client';
 import {
 	useEndpoint,
 	useLoginWithToken,
@@ -7,7 +7,7 @@ import {
 	useRouter,
 	useSetModal,
 	useToastMessageDispatch,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

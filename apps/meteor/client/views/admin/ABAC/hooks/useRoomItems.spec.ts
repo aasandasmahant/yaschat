@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useRoomItems } from './useRoomItems';
@@ -14,8 +14,8 @@ jest.mock('./useIsABACAvailable', () => ({
 jest.mock('./useDeleteRoomModal', () => ({
 	useDeleteRoomModal: () => setDeleteRoomModalMock,
 }));
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useRouter: () => ({
 		navigate: navigateMock,
 	}),

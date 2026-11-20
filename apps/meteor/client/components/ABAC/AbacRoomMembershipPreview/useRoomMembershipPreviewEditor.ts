@@ -1,4 +1,4 @@
-import type { AbacMembershipVerdict } from '@yas chat/core-typings';
+import type { AbacMembershipVerdict } from '@yaschat/core-typings';
 
 import { useRoomMembershipPreviewPages } from './useRoomMembershipPreviewPages';
 

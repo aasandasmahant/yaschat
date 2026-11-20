@@ -1,5 +1,5 @@
-import type { IStats } from '@yas chat/core-typings';
-import { Card } from '@yas chat/fuselage';
+import type { IStats } from '@yaschat/core-typings';
+import { Card } from '@yaschat/fuselage';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

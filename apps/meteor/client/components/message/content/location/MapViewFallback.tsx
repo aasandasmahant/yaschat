@@ -1,5 +1,5 @@
-import { Box, Icon } from '@yas chat/fuselage';
-import { ExternalLink } from '@yas chat/ui-client';
+import { Box, Icon } from '@yaschat/fuselage';
+import { ExternalLink } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export type MapViewFallbackProps = {

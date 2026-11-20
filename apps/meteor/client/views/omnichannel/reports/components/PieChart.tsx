@@ -1,6 +1,6 @@
 import { Pie } from '@nivo/pie';
-import { Tooltip } from '@yas chat/fuselage';
-import { useBreakpoints } from '@yas chat/fuselage-hooks';
+import { Tooltip } from '@yaschat/fuselage';
+import { useBreakpoints } from '@yaschat/fuselage-hooks';
 import type { ComponentProps } from 'react';
 
 import { REPORTS_CHARTS_THEME } from './constants';

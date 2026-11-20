@@ -1,5 +1,5 @@
-import type { SlashCommand } from '@yas chat/core-typings';
-import { mockAppRoot, type StreamControllerRef } from '@yas chat/mock-providers';
+import type { SlashCommand } from '@yaschat/core-typings';
+import { mockAppRoot, type StreamControllerRef } from '@yaschat/mock-providers';
 import { QueryClient } from '@tanstack/react-query';
 import { renderHook, waitFor } from '@testing-library/react';
 

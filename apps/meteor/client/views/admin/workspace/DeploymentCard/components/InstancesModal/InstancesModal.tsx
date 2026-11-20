@@ -1,6 +1,6 @@
-import { Accordion, AccordionItem } from '@yas chat/fuselage';
-import type { IInstance } from '@yas chat/rest-typings';
-import { GenericModal, useFormatDateAndTime } from '@yas chat/ui-client';
+import { Accordion, AccordionItem } from '@yaschat/fuselage';
+import type { IInstance } from '@yaschat/rest-typings';
+import { GenericModal, useFormatDateAndTime } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import DescriptionList from './DescriptionList';

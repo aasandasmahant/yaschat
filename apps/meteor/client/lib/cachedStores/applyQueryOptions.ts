@@ -1,4 +1,4 @@
-import type { FindOptions } from '@yas chat/ui-contexts';
+import type { FindOptions } from '@yaschat/ui-contexts';
 
 import { pipe } from './pipe';
 

@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useSafely } from '@yas chat/fuselage-hooks';
-import type { TranslationKey } from '@yas chat/ui-contexts';
-import { useSetting, useLanguage } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useSafely } from '@yaschat/fuselage-hooks';
+import type { TranslationKey } from '@yaschat/ui-contexts';
+import { useSetting, useLanguage } from '@yaschat/ui-contexts';
 import { intlFormat } from 'date-fns/intlFormat';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

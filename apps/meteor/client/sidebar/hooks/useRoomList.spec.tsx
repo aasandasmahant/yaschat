@@ -1,6 +1,6 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { VideoConfContext } from '@yas chat/ui-video-conf';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { VideoConfContext } from '@yaschat/ui-video-conf';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useRoomList } from './useRoomList';

@@ -1,4 +1,4 @@
-import { Page, PageHeader, PageContent } from '@yas chat/ui-client';
+import { Page, PageHeader, PageContent } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import SecurityLogsTable from './components/SecurityLogsTable';

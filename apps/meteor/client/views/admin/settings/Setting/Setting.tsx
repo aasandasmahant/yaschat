@@ -1,9 +1,9 @@
-import type { ISettingColor, SettingEditor, SettingValue } from '@yas chat/core-typings';
-import { isSettingColor, isSetting, isSettingCode } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup, Tag } from '@yas chat/fuselage';
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import { links } from '@yas chat/ui-client';
-import { useSettingStructure } from '@yas chat/ui-contexts';
+import type { ISettingColor, SettingEditor, SettingValue } from '@yaschat/core-typings';
+import { isSettingColor, isSetting, isSettingCode } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup, Tag } from '@yaschat/fuselage';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import { links } from '@yaschat/ui-client';
+import { useSettingStructure } from '@yaschat/ui-contexts';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

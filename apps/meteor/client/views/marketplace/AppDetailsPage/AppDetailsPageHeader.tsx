@@ -1,6 +1,6 @@
-import type { App } from '@yas chat/core-typings';
-import { Box, Tag } from '@yas chat/fuselage';
-import { AppAvatar } from '@yas chat/ui-avatar';
+import type { App } from '@yaschat/core-typings';
+import { Box, Tag } from '@yaschat/fuselage';
+import { AppAvatar } from '@yaschat/ui-avatar';
 import { formatDistanceToNow } from 'date-fns/formatDistanceToNow';
 import { useTranslation } from 'react-i18next';
 

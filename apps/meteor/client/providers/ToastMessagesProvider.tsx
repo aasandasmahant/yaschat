@@ -1,5 +1,5 @@
-import { ToastBarProvider, useToastBarDispatch } from '@yas chat/fuselage-toastbar';
-import { ToastMessagesContext } from '@yas chat/ui-contexts';
+import { ToastBarProvider, useToastBarDispatch } from '@yaschat/fuselage-toastbar';
+import { ToastMessagesContext } from '@yaschat/ui-contexts';
 import type { DefaultError, Query } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 import type { ReactNode } from 'react';

@@ -1,6 +1,6 @@
-import type { App } from '@yas chat/core-typings';
-import { Accordion } from '@yas chat/fuselage';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { App } from '@yaschat/core-typings';
+import { Accordion } from '@yaschat/fuselage';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { useIsLoggingIn, useLoginToken } from '@yas chat/ui-contexts';
+import { useIsLoggingIn, useLoginToken } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 export const useStoreCookiesOnLogin = (userId: string) => {

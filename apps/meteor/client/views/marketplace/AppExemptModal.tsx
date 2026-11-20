@@ -1,5 +1,5 @@
-import { Box, ModalFooterAnnotation } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import { Box, ModalFooterAnnotation } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import { useExternalLink } from '../../hooks/useExternalLink';

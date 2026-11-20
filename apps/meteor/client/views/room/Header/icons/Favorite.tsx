@@ -1,7 +1,7 @@
-import type { IRoom, ISubscription } from '@yas chat/core-typings';
-import { Icon, IconButton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IRoom, ISubscription } from '@yaschat/core-typings';
+import { Icon, IconButton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useSetting } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

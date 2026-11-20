@@ -1,5 +1,5 @@
-import type { IMessage, ISubscription } from '@yas chat/core-typings';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage, ISubscription } from '@yaschat/core-typings';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 
 import { LegacyRoomManager } from '../../../lib/LegacyRoomManager';

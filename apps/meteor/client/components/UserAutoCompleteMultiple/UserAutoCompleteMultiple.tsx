@@ -1,7 +1,7 @@
-import { MultiSelectFiltered } from '@yas chat/fuselage-forms';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { isBareJid } from '@yas chat/tools';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { MultiSelectFiltered } from '@yaschat/fuselage-forms';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { isBareJid } from '@yaschat/tools';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import type { AllHTMLAttributes } from 'react';
 import { memo, useState, useCallback, useMemo, forwardRef } from 'react';

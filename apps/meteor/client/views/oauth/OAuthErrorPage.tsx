@@ -1,4 +1,4 @@
-import { useRouteParameter } from '@yas chat/ui-contexts';
+import { useRouteParameter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ErrorPage from './components/ErrorPage';

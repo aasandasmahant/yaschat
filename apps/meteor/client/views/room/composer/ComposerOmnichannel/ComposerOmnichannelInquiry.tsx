@@ -1,5 +1,5 @@
-import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yas chat/ui-composer';
-import { useEndpoint, useToastMessageDispatch, useUser } from '@yas chat/ui-contexts';
+import { MessageFooterCallout, MessageFooterCalloutAction, MessageFooterCalloutContent } from '@yaschat/ui-composer';
+import { useEndpoint, useToastMessageDispatch, useUser } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

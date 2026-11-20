@@ -1,5 +1,5 @@
-import type { IRoom, ISubscription, IUser, ValueOf } from '@yas chat/core-typings';
-import { isRoomFederated, isDirectMessageRoom, isPublicRoom } from '@yas chat/core-typings';
+import type { IRoom, ISubscription, IUser, ValueOf } from '@yaschat/core-typings';
+import { isRoomFederated, isDirectMessageRoom, isPublicRoom } from '@yaschat/core-typings';
 
 import { RoomMemberActions, RoomSettingsEnum } from '../../../definition/IRoomTypeConfig';
 import type { RoomRoles } from '../../hooks/useRoomRolesQuery';

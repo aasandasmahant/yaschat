@@ -1,6 +1,6 @@
-import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yas chat/fuselage';
-import { useMediaQuery, useDebouncedValue } from '@yas chat/fuselage-hooks';
-import type { OptionProp } from '@yas chat/ui-client';
+import { Pagination, States, StatesIcon, StatesTitle, StatesActions, StatesAction, type TableColumnWidth } from '@yaschat/fuselage';
+import { useMediaQuery, useDebouncedValue } from '@yaschat/fuselage-hooks';
+import type { OptionProp } from '@yaschat/ui-client';
 import {
 	GenericTable,
 	GenericTableBody,
@@ -11,8 +11,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction, Icon } from '@yas chat/fuselage';
-import { CopyErrorReportAction } from '@yas chat/ui-client';
+import { States, StatesIcon, StatesTitle, StatesSubtitle, StatesActions, StatesAction, Icon } from '@yaschat/fuselage';
+import { CopyErrorReportAction } from '@yaschat/ui-client';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

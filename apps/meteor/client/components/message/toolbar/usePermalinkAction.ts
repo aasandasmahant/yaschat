@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { isE2EEMessage } from '@yas chat/core-typings';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { isE2EEMessage } from '@yaschat/core-typings';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

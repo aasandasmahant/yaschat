@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { usePermission, useRoomToolbox } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { usePermission, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useCallback, useState } from 'react';
 
 import TeamsInfo from './TeamsInfo';

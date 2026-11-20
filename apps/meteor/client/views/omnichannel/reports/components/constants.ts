@@ -1,4 +1,4 @@
-import { Palette } from '@yas chat/fuselage';
+import { Palette } from '@yaschat/fuselage';
 
 import type { Period } from '../../../../components/dashboards/periods';
 

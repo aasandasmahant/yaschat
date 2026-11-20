@@ -1,6 +1,6 @@
-import type { ISubscription } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useRouter, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { ISubscription } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useRouter, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { useMarkAsUnreadMutation } from '../../components/message/hooks/useMarkAsUnreadMutation';

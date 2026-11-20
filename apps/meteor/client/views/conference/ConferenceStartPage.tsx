@@ -1,4 +1,4 @@
-import { ConferencePreflight } from '@yas chat/ui-conference';
+import { ConferencePreflight } from '@yaschat/ui-conference';
 import { useTranslation } from 'react-i18next';
 
 import ConferencePageError from './ConferencePageError';

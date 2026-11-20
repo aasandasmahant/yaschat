@@ -1,7 +1,7 @@
 import { ResponsiveBar } from '@nivo/bar';
-import { Box, FlexContainer, FlexItem, IconButton, Margins, Skeleton } from '@yas chat/fuselage';
-import colors from '@yas chat/fuselage-tokens/dist/colors.json';
-import { formatDate } from '@yas chat/ui-client';
+import { Box, FlexContainer, FlexItem, IconButton, Margins, Skeleton } from '@yaschat/fuselage';
+import colors from '@yaschat/fuselage-tokens/dist/colors.json';
+import { formatDate } from '@yaschat/ui-client';
 import { format } from 'date-fns/format';
 import { subDays } from 'date-fns/subDays';
 import { useMemo } from 'react';

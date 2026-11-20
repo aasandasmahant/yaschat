@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 

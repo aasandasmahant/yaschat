@@ -1,5 +1,5 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { useConnectionStatus } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { useConnectionStatus } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { LegacyRoomManager } from '../../../lib/LegacyRoomManager';

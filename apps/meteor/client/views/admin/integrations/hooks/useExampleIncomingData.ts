@@ -1,5 +1,5 @@
-import type { INewIncomingIntegration } from '@yas chat/core-typings';
-import { useAbsoluteUrl } from '@yas chat/ui-contexts';
+import type { INewIncomingIntegration } from '@yaschat/core-typings';
+import { useAbsoluteUrl } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 type UseExampleDataParams = {

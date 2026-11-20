@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import type { ConnectionStatusContextValue } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import type { ConnectionStatusContextValue } from '@yaschat/ui-contexts';
 import type { Meta, StoryFn } from '@storybook/react';
 import { action } from 'storybook/actions';
 

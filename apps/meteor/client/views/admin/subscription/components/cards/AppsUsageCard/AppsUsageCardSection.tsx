@@ -1,4 +1,4 @@
-import { Box, ProgressBar } from '@yas chat/fuselage';
+import { Box, ProgressBar } from '@yaschat/fuselage';
 import { useId, type ReactNode } from 'react';
 
 export type AppsUsageCardSectionProps = {

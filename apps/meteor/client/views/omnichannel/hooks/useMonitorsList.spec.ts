@@ -1,5 +1,5 @@
-import type { ILivechatMonitor, Serialized } from '@yas chat/core-typings';
-import { MockedAppRootBuilder } from '@yas chat/mock-providers/dist/MockedAppRootBuilder';
+import type { ILivechatMonitor, Serialized } from '@yaschat/core-typings';
+import { MockedAppRootBuilder } from '@yaschat/mock-providers/dist/MockedAppRootBuilder';
 import { act, renderHook, waitFor } from '@testing-library/react';
 
 import { useMonitorsList } from './useMonitorsList';

@@ -1,13 +1,13 @@
-import type { ILivechatTrigger, ILivechatTriggerAction, Serialized } from '@yas chat/core-typings';
-import { FieldGroup, Button, ButtonGroup, Field, FieldLabel, FieldRow, FieldError, TextInput, ToggleSwitch } from '@yas chat/fuselage';
+import type { ILivechatTrigger, ILivechatTriggerAction, Serialized } from '@yaschat/core-typings';
+import { FieldGroup, Button, ButtonGroup, Field, FieldLabel, FieldRow, FieldError, TextInput, ToggleSwitch } from '@yaschat/fuselage';
 import {
 	ContextualbarScrollableContent,
 	ContextualbarTitle,
 	ContextualbarFooter,
 	ContextualbarHeader,
 	ContextualbarClose,
-} from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useId } from 'react';
 import { Controller, useFieldArray, useForm } from 'react-hook-form';

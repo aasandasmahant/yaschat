@@ -1,4 +1,4 @@
-import { AudioPlayer } from '@yas chat/fuselage';
+import { AudioPlayer } from '@yaschat/fuselage';
 
 import type { UrlPreviewMetadata } from './UrlPreviewMetadata';
 

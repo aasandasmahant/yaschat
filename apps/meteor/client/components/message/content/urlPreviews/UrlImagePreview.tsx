@@ -1,4 +1,4 @@
-import { Box, MessageGenericPreviewImage } from '@yas chat/fuselage';
+import { Box, MessageGenericPreviewImage } from '@yaschat/fuselage';
 
 import type { UrlPreviewMetadata } from './UrlPreviewMetadata';
 import { useOembedLayout } from '../../hooks/useOembedLayout';

@@ -1,4 +1,4 @@
-import { useCustomSound, useSetting, useUserSubscriptions } from '@yas chat/ui-contexts';
+import { useCustomSound, useSetting, useUserSubscriptions } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 const query = { t: 'l', ls: { $exists: false }, open: true };

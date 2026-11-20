@@ -1,6 +1,6 @@
-import { useBreakpoints } from '@yas chat/fuselage-hooks';
-import { useFeaturePreview } from '@yas chat/ui-client';
-import { LayoutContext, useRouter, useSetting } from '@yas chat/ui-contexts';
+import { useBreakpoints } from '@yaschat/fuselage-hooks';
+import { useFeaturePreview } from '@yaschat/ui-client';
+import { LayoutContext, useRouter, useSetting } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { useMemo, useState, useEffect } from 'react';
 

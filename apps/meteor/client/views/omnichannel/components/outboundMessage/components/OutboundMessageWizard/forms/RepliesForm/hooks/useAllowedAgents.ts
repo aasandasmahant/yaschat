@@ -1,4 +1,4 @@
-import type { Serialized, ILivechatDepartmentAgents, IUser } from '@yas chat/core-typings';
+import type { Serialized, ILivechatDepartmentAgents, IUser } from '@yaschat/core-typings';
 import { useMemo } from 'react';
 
 import { getAgentDerivedFromUser } from '../utils/getAgentDerivedFromUser';

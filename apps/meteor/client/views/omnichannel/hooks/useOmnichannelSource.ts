@@ -1,4 +1,4 @@
-import type { IOmnichannelSource } from '@yas chat/core-typings';
+import type { IOmnichannelSource } from '@yaschat/core-typings';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import type { ILogItem } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
+import type { ILogItem } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
 import DOMPurify from 'dompurify';
 
 import { useHighlightedCode } from '../../../../../hooks/useHighlightedCode';

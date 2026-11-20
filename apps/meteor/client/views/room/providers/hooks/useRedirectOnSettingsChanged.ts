@@ -1,5 +1,5 @@
-import type { ISubscription } from '@yas chat/core-typings';
-import { useRouter } from '@yas chat/ui-contexts';
+import type { ISubscription } from '@yaschat/core-typings';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { LegacyRoomManager } from '../../../../lib/LegacyRoomManager';

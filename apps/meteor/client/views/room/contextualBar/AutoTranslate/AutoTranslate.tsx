@@ -1,5 +1,5 @@
-import { Box, Callout, FieldGroup, Field, FieldLabel, FieldRow, ToggleSwitch, Select } from '@yas chat/fuselage';
-import type { SelectOption } from '@yas chat/fuselage';
+import { Box, Callout, FieldGroup, Field, FieldLabel, FieldRow, ToggleSwitch, Select } from '@yaschat/fuselage';
+import type { SelectOption } from '@yaschat/fuselage';
 import {
 	ContextualbarClose,
 	ContextualbarTitle,
@@ -7,7 +7,7 @@ import {
 	ContextualbarIcon,
 	ContextualbarContent,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useId } from 'react';
 import type { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';

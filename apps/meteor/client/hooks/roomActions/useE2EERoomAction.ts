@@ -1,8 +1,8 @@
-import { isRoomFederated } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { imperativeModal } from '@yas chat/ui-client';
-import { useSetting, usePermission, useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { isRoomFederated } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { imperativeModal } from '@yaschat/ui-client';
+import { useSetting, usePermission, useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

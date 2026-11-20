@@ -1,4 +1,4 @@
-import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yas chat/core-typings';
+import type { ILivechatDepartment, IOmnichannelCannedResponse } from '@yaschat/core-typings';
 import { useTranslation } from 'react-i18next';
 
 export const useScopeDict = (scope: IOmnichannelCannedResponse['scope'], departmentName: ILivechatDepartment['name'] | undefined) => {

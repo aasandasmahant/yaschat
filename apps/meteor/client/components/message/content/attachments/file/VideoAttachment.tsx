@@ -1,6 +1,6 @@
-import type { VideoAttachmentProps } from '@yas chat/core-typings';
-import { Box, MessageGenericPreview } from '@yas chat/fuselage';
-import { useMediaUrl } from '@yas chat/ui-contexts';
+import type { VideoAttachmentProps } from '@yaschat/core-typings';
+import { Box, MessageGenericPreview } from '@yaschat/fuselage';
+import { useMediaUrl } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { useReloadOnError } from './hooks/useReloadOnError';

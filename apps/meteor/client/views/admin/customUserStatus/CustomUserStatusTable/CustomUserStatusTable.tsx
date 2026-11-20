@@ -1,6 +1,6 @@
-import { Pagination } from '@yas chat/fuselage';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { escapeRegExp } from '@yas chat/tools';
+import { Pagination } from '@yaschat/fuselage';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { escapeRegExp } from '@yaschat/tools';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -10,8 +10,8 @@ import {
 	usePagination,
 	useSort,
 	GenericNoResults as GenericNoResult,
-} from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import type { MutableRefObject, ReactNode } from 'react';
 import { useState, useMemo, useEffect } from 'react';

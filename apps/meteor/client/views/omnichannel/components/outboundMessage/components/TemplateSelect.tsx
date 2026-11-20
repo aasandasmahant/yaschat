@@ -1,7 +1,7 @@
-import type { IOutboundProviderTemplate } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
-import { Option, OptionDescription, SelectFiltered } from '@yas chat/fuselage';
-import { useLanguages } from '@yas chat/ui-contexts';
+import type { IOutboundProviderTemplate } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Option, OptionDescription, SelectFiltered } from '@yaschat/fuselage';
+import { useLanguages } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import type { Key, ComponentProps } from 'react';
 

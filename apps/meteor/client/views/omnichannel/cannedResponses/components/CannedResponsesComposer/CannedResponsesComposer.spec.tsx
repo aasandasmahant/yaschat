@@ -1,17 +1,17 @@
-import { useUserPreference } from '@yas chat/ui-contexts';
-import { useEmojiPicker } from '@yas chat/ui-emoji-picker';
+import { useUserPreference } from '@yaschat/ui-contexts';
+import { useEmojiPicker } from '@yaschat/ui-emoji-picker';
 import { render, screen } from '@testing-library/react';
 
 import CannedResponsesComposer from './CannedResponsesComposer';
 import { emoji } from '../../../../../lib/emoji';
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useUserPreference: jest.fn(),
 }));
 
-jest.mock('@yas chat/ui-emoji-picker', () => ({
-	...jest.requireActual('@yas chat/ui-emoji-picker'),
+jest.mock('@yaschat/ui-emoji-picker', () => ({
+	...jest.requireActual('@yaschat/ui-emoji-picker'),
 	useEmojiPicker: jest.fn(),
 }));
 

@@ -1,6 +1,6 @@
-import { ComposerMarkup, ComposerMarkupContext } from '@yas chat/gazzodown-alt';
-import type { Options } from '@yas chat/message-parser';
-import { parse } from '@yas chat/message-parser';
+import { ComposerMarkup, ComposerMarkupContext } from '@yaschat/gazzodown-alt';
+import type { Options } from '@yaschat/message-parser';
+import { parse } from '@yaschat/message-parser';
 import {
 	MessageComposer,
 	MessageComposerAction,
@@ -9,7 +9,7 @@ import {
 	MessageComposerToolbarActions,
 	MessageComposerToolbarSubmit,
 	RichTextComposerInput,
-} from '@yas chat/ui-composer';
+} from '@yaschat/ui-composer';
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Mirrors the options RichTextMessageBox feeds the parser: emoticons, KaTeX and colors are all off

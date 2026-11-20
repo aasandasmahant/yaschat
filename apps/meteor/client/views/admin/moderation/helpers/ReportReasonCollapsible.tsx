@@ -1,5 +1,5 @@
-import { Box, Button } from '@yas chat/fuselage';
-import { useToggle } from '@yas chat/fuselage-hooks';
+import { Box, Button } from '@yaschat/fuselage';
+import { useToggle } from '@yaschat/fuselage-hooks';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
-import { AI_SEARCH_RESULTS_PAGE_SIZE, MAX_INTELLIGENT_SEARCH_RESULTS, parseSearchInput, toAISearchParams } from '@yas chat/ai-search';
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import type { AISearchResult } from '@yas chat/rest-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { AI_SEARCH_RESULTS_PAGE_SIZE, MAX_INTELLIGENT_SEARCH_RESULTS, parseSearchInput, toAISearchParams } from '@yaschat/ai-search';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import type { AISearchResult } from '@yaschat/rest-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 

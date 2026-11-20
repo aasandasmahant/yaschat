@@ -1,5 +1,5 @@
-import type { OptionType } from '@yas chat/fuselage';
-import { Options } from '@yas chat/fuselage';
+import type { OptionType } from '@yaschat/fuselage';
+import { Options } from '@yaschat/fuselage';
 import type { ComponentProps, Ref } from 'react';
 import { forwardRef, createContext, useContext } from 'react';
 

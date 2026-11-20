@@ -1,4 +1,4 @@
-import type { IRoom, ISubscription, IMessage } from '@yas chat/core-typings';
+import type { IRoom, ISubscription, IMessage } from '@yaschat/core-typings';
 
 import JumpToMessageAction from './actions/JumpToMessageAction';
 

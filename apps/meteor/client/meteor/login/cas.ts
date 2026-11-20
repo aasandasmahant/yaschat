@@ -1,4 +1,4 @@
-import { Random } from '@yas chat/random';
+import { Random } from '@yaschat/random';
 
 import { callLoginMethod, registerLoginWithMethod } from '../accounts';
 

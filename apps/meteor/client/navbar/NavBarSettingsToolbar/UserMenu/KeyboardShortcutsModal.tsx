@@ -1,5 +1,5 @@
-import { Box, Divider } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
+import { Box, Divider } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
 import { Fragment, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

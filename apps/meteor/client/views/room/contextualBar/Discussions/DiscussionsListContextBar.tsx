@@ -1,5 +1,5 @@
-import { useDebouncedValue } from '@yas chat/fuselage-hooks';
-import { useUserId, useRoomToolbox } from '@yas chat/ui-contexts';
+import { useDebouncedValue } from '@yaschat/fuselage-hooks';
+import { useUserId, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { ChangeEvent } from 'react';
 import { useCallback, useMemo, useState } from 'react';
 

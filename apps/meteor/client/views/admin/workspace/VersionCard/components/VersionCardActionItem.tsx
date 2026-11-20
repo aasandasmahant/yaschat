@@ -1,5 +1,5 @@
-import { FramedIcon, Stack, Text } from '@yas chat/fuselage';
-import type { Keys } from '@yas chat/icons';
+import { FramedIcon, Stack, Text } from '@yaschat/fuselage';
+import type { Keys } from '@yaschat/icons';
 import type { ReactNode } from 'react';
 
 export type VersionActionItem = {

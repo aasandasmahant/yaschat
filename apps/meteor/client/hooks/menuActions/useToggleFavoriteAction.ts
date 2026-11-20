@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useEndpoint, useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useEndpoint, useToastMessageDispatch } from '@yaschat/ui-contexts';
 
 export const useToggleFavoriteAction = ({ rid, isFavorite }: { rid: IRoom['_id']; isFavorite: boolean }) => {
 	const toggleFavorite = useEndpoint('POST', '/v1/rooms.favorite');

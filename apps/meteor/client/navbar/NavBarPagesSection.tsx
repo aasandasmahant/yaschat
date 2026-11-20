@@ -1,5 +1,5 @@
-import { NavBarGroup, NavBarSection } from '@yas chat/fuselage';
-import { useLayout } from '@yas chat/ui-contexts';
+import { NavBarGroup, NavBarSection } from '@yaschat/fuselage';
+import { useLayout } from '@yaschat/ui-contexts';
 
 import NavBarPagesGroup from './NavBarPagesGroup';
 import SidebarToggler from '../components/SidebarToggler';

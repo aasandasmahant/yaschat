@@ -1,7 +1,7 @@
-import { Box } from '@yas chat/fuselage';
-import { useResizeObserver } from '@yas chat/fuselage-hooks';
-import { VirtualizedScrollbars, useMergedRefsV2 } from '@yas chat/ui-client';
-import { useUserId } from '@yas chat/ui-contexts';
+import { Box } from '@yaschat/fuselage';
+import { useResizeObserver } from '@yaschat/fuselage-hooks';
+import { VirtualizedScrollbars, useMergedRefsV2 } from '@yaschat/ui-client';
+import { useUserId } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { GroupedVirtuoso } from 'react-virtuoso';

@@ -1,4 +1,4 @@
-import { useRouter, useToastMessageDispatch, useSearchParameter } from '@yas chat/ui-contexts';
+import { useRouter, useToastMessageDispatch, useSearchParameter } from '@yaschat/ui-contexts';
 import { useEffect, useRef } from 'react';
 
 import { buildSamlDeepLinkURL } from '../../lib/buildAuthDeeplinkURL';

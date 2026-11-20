@@ -1,4 +1,4 @@
-import { useMethod } from '@yas chat/ui-contexts';
+import { useMethod } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 export const useMessageSearchProviderQuery = () => {

@@ -2,7 +2,7 @@ import { lazy } from 'react';
 
 import { createRouteGroup } from '../../lib/createRouteGroup';
 
-declare module '@yas chat/ui-contexts' {
+declare module '@yaschat/ui-contexts' {
 	interface IRouterPaths {
 		'account-index': {
 			pathname: '/account';
@@ -72,10 +72,10 @@ registerAccountRoute('/omnichannel', {
 
 registerAccountRoute('/feature-preview', {
 	name: 'feature-preview',
-	component: lazy(() => import('@yas chat/ui-account').then(({ FeaturePreviewPage }) => ({ default: FeaturePreviewPage }))),
+	component: lazy(() => import('@yaschat/ui-account').then(({ FeaturePreviewPage }) => ({ default: FeaturePreviewPage }))),
 });
 
 registerAccountRoute('/accessibility-and-appearance', {
 	name: 'accessibility-and-appearance',
-	component: lazy(() => import('@yas chat/ui-account').then(({ AccessibilityPage }) => ({ default: AccessibilityPage }))),
+	component: lazy(() => import('@yaschat/ui-account').then(({ AccessibilityPage }) => ({ default: AccessibilityPage }))),
 });

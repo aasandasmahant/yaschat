@@ -1,4 +1,4 @@
-import { escapeRegExp } from '@yas chat/tools';
+import { escapeRegExp } from '@yaschat/tools';
 
 const checkHighlightedWordsInUrls = (msg: string, urlRegex: RegExp) => msg.match(urlRegex);
 

@@ -1,9 +1,9 @@
 import { Document, Font, Image, Page, pdf, StyleSheet, Text, View } from '@react-pdf/renderer';
-import type { IMessage, MessageAttachmentDefault } from '@yas chat/core-typings';
-import { MessageTypes } from '@yas chat/message-types';
-import { escapeHTML } from '@yas chat/tools';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { useSetting, useToastMessageDispatch, useAbsoluteUrl } from '@yas chat/ui-contexts';
+import type { IMessage, MessageAttachmentDefault } from '@yaschat/core-typings';
+import { MessageTypes } from '@yaschat/message-types';
+import { escapeHTML } from '@yaschat/tools';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { useSetting, useToastMessageDispatch, useAbsoluteUrl } from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

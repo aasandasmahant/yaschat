@@ -1,5 +1,5 @@
-import type { IRoom, IUser, IUpload } from '@yas chat/core-typings';
-import { useSetting, usePermission } from '@yas chat/ui-contexts';
+import type { IRoom, IUser, IUpload } from '@yaschat/core-typings';
+import { useSetting, usePermission } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { getDifference, MINUTES } from '../lib/getDifference';

@@ -1,8 +1,8 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import type { Icon } from '@yas chat/fuselage';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useEmbeddedLayout } from '@yas chat/ui-client';
-import { useLayoutHiddenActions } from '@yas chat/ui-contexts';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import type { Icon } from '@yaschat/fuselage';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useEmbeddedLayout } from '@yaschat/ui-client';
+import { useLayoutHiddenActions } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
 

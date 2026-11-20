@@ -1,5 +1,5 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { escapeHTML } from '@yas chat/tools';
+import type { IMessage } from '@yaschat/core-typings';
+import { escapeHTML } from '@yaschat/tools';
 import type { TFunction } from 'i18next';
 
 import { shortnameToUnicode } from '../../../../lib/emoji-native/shortnameToUnicode';

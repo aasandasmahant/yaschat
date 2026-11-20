@@ -1,6 +1,6 @@
-import type { IOmnichannelSource } from '@yas chat/core-typings';
-import { UserStatus, isOmnichannelSourceFromApp } from '@yas chat/core-typings';
-import type { IconProps } from '@yas chat/fuselage';
+import type { IOmnichannelSource } from '@yaschat/core-typings';
+import { UserStatus, isOmnichannelSourceFromApp } from '@yaschat/core-typings';
+import type { IconProps } from '@yaschat/fuselage';
 
 import { OmnichannelAppSourceRoomIcon } from './OmnichannelAppSourceRoomIcon';
 import { OmnichannelCoreSourceRoomIcon } from './OmnichannelCoreSourceRoomIcon';

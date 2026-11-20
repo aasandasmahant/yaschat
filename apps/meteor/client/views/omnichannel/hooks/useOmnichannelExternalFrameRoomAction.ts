@@ -1,5 +1,5 @@
-import { useSetting } from '@yas chat/ui-contexts';
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import { useSetting } from '@yaschat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 import { lazy, useMemo } from 'react';
 
 const ExternalFrameContainer = lazy(() => import('../ExternalFrameContainer'));

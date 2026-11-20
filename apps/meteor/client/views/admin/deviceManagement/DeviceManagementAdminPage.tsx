@@ -1,5 +1,5 @@
-import { ContextualbarDialog, Page, PageHeader, PageContent } from '@yas chat/ui-client';
-import { useRouteParameter, useRouter } from '@yas chat/ui-contexts';
+import { ContextualbarDialog, Page, PageHeader, PageContent } from '@yaschat/ui-client';
+import { useRouteParameter, useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import DeviceManagementAdminTable from './DeviceManagementAdminTable';

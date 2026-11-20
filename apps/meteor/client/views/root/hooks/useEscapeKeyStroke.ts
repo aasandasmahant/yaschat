@@ -1,5 +1,5 @@
-import { GenericModal, imperativeModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { GenericModal, imperativeModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

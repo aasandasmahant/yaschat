@@ -1,7 +1,7 @@
-import type { IOmnichannelServiceLevelAgreements, Serialized } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
-import { Field, FieldLabel, FieldRow, Select } from '@yas chat/fuselage';
-import { useHasLicenseModule } from '@yas chat/ui-client';
+import type { IOmnichannelServiceLevelAgreements, Serialized } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
+import { Field, FieldLabel, FieldRow, Select } from '@yaschat/fuselage';
+import { useHasLicenseModule } from '@yaschat/ui-client';
 import { useId, useMemo } from 'react';
 
 export type SlaPoliciesSelectProps = {

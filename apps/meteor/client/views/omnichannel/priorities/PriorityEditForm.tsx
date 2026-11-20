@@ -1,7 +1,7 @@
-import type { ILivechatPriority, Serialized } from '@yas chat/core-typings';
-import { Field, FieldError, FieldLabel, FieldRow, TextInput, Button, ButtonGroup } from '@yas chat/fuselage';
-import { ContextualbarFooter, ContextualbarScrollableContent } from '@yas chat/ui-client';
-import type { TranslationKey } from '@yas chat/ui-contexts';
+import type { ILivechatPriority, Serialized } from '@yaschat/core-typings';
+import { Field, FieldError, FieldLabel, FieldRow, TextInput, Button, ButtonGroup } from '@yaschat/fuselage';
+import { ContextualbarFooter, ContextualbarScrollableContent } from '@yaschat/ui-client';
+import type { TranslationKey } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

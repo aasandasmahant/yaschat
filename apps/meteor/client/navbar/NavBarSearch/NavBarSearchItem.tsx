@@ -1,4 +1,4 @@
-import { SidebarItem, SidebarItemAvatarWrapper, SidebarItemTitle } from '@yas chat/fuselage';
+import { SidebarItem, SidebarItemAvatarWrapper, SidebarItemTitle } from '@yaschat/fuselage';
 import type { HTMLAttributes, ReactNode } from 'react';
 
 import { useSearchOptionProps } from './hooks/useSearchActiveOption';

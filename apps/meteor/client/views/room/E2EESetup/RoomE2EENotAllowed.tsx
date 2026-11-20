@@ -8,10 +8,10 @@ import {
 	StatesLink,
 	StatesSubtitle,
 	StatesTitle,
-} from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
-import { links } from '@yas chat/ui-client';
-import { useRouter } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
+import { links } from '@yaschat/ui-client';
+import { useRouter } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 const DOCS_URL = links.go.e2eeGuide;

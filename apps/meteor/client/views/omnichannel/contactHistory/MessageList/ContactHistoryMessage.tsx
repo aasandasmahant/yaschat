@@ -1,4 +1,4 @@
-import { isQuoteAttachment, type IMessage, type MessageAttachment } from '@yas chat/core-typings';
+import { isQuoteAttachment, type IMessage, type MessageAttachment } from '@yaschat/core-typings';
 import {
 	Message as MessageTemplate,
 	MessageLeftContainer,
@@ -15,10 +15,10 @@ import {
 	MessageSystemBody,
 	MessageSystemTimestamp,
 	Bubble,
-} from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useFormatTime, useUserDisplayName } from '@yas chat/ui-client';
-import { useUserCard } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useFormatTime, useUserDisplayName } from '@yaschat/ui-client';
+import { useUserCard } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

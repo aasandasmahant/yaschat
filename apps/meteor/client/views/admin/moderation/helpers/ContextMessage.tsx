@@ -1,5 +1,5 @@
-import type { IMessage, MessageReport, MessageAttachment } from '@yas chat/core-typings';
-import { isE2EEMessage, isQuoteAttachment } from '@yas chat/core-typings';
+import type { IMessage, MessageReport, MessageAttachment } from '@yaschat/core-typings';
+import { isE2EEMessage, isQuoteAttachment } from '@yaschat/core-typings';
 import {
 	Message,
 	MessageDivider,
@@ -14,10 +14,10 @@ import {
 	MessageToolbarItem,
 	MessageToolbarWrapper,
 	MessageUsername,
-} from '@yas chat/fuselage';
-import { UserAvatar } from '@yas chat/ui-avatar';
-import { useFormatTime, useUserDisplayName, useFormatDateAndTime } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { UserAvatar } from '@yaschat/ui-avatar';
+import { useFormatTime, useUserDisplayName, useFormatDateAndTime } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ReportReasonCollapsible from './ReportReasonCollapsible';

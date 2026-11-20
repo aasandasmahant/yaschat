@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import { useState } from 'react';
 
 import GenericPreview from './GenericPreview';

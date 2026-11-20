@@ -1,8 +1,8 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Text, useStyle } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import type { ILivechatContactWithManagerData } from '@yas chat/rest-typings';
-import { GenericTableCell, GenericTableRow } from '@yas chat/ui-client';
+import { css } from '@yaschat/css-in-js';
+import { Box, Text, useStyle } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import type { ILivechatContactWithManagerData } from '@yaschat/rest-typings';
+import { GenericTableCell, GenericTableRow } from '@yaschat/ui-client';
 
 import ContactItemMenu from './ContactItemMenu';
 import { OmnichannelRoomIcon } from '../../../../components/RoomIcon/OmnichannelRoomIcon';

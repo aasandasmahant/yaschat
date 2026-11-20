@@ -1,5 +1,5 @@
-import type { IIncomingIntegration, Serialized } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
+import type { IIncomingIntegration, Serialized } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
 import {
 	FieldError,
 	IconButton,
@@ -16,9 +16,9 @@ import {
 	FieldLabel,
 	FieldRow,
 	FieldHint,
-} from '@yas chat/fuselage';
-import { useClipboardWithToast } from '@yas chat/ui-client';
-import { useAbsoluteUrl } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useClipboardWithToast } from '@yaschat/ui-client';
+import { useAbsoluteUrl } from '@yaschat/ui-contexts';
 import DOMPurify from 'dompurify';
 import { useId, useMemo } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';

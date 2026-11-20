@@ -1,5 +1,5 @@
-import type { ISetting } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { ISetting } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -19,12 +19,12 @@ const settingStructure = {
 
 const dispatchMock = jest.fn();
 
-jest.mock('@yas chat/ui-contexts', () => ({
-	...jest.requireActual('@yas chat/ui-contexts'),
+jest.mock('@yaschat/ui-contexts', () => ({
+	...jest.requireActual('@yaschat/ui-contexts'),
 	useSettingsDispatch: () => dispatchMock,
 }));
-jest.mock('@yas chat/core-typings', () => ({
-	...jest.requireActual('@yas chat/core-typings'),
+jest.mock('@yaschat/core-typings', () => ({
+	...jest.requireActual('@yaschat/core-typings'),
 	isSetting: jest.fn().mockReturnValue(true),
 }));
 

@@ -1,5 +1,5 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { ConnectionStatusContext } from '@yas chat/ui-contexts';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { ConnectionStatusContext } from '@yaschat/ui-contexts';
 import { render } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { useContext } from 'react';

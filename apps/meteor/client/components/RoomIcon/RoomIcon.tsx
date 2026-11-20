@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { Icon } from '@yas chat/fuselage';
+import type { IRoom } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { Icon } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { isValidElement } from 'react';
 

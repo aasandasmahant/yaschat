@@ -1,5 +1,5 @@
-import { css } from '@yas chat/css-in-js';
-import { Box, Icon, Palette } from '@yas chat/fuselage';
+import { css } from '@yaschat/css-in-js';
+import { Box, Icon, Palette } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import ImageBox from './ImageBox';

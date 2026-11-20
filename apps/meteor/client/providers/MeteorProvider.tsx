@@ -1,4 +1,4 @@
-import { ImageGalleryContext, MarkdownTextContext, ModalProvider, TooltipProvider } from '@yas chat/ui-client';
+import { ImageGalleryContext, MarkdownTextContext, ModalProvider, TooltipProvider } from '@yaschat/ui-client';
 import type { ReactNode } from 'react';
 
 import ActionManagerProvider from './ActionManagerProvider';

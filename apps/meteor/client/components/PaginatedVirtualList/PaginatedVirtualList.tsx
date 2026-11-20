@@ -1,5 +1,5 @@
-import { useDebouncedCallback } from '@yas chat/fuselage-hooks';
-import { CustomVirtuaScrollbars } from '@yas chat/ui-client';
+import { useDebouncedCallback } from '@yaschat/fuselage-hooks';
+import { CustomVirtuaScrollbars } from '@yaschat/ui-client';
 import type { UseInfiniteQueryResult } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useCallback, useLayoutEffect, useRef } from 'react';

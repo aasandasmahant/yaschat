@@ -1,12 +1,12 @@
-import type { MessageAttachmentBase } from '@yas chat/core-typings';
+import type { MessageAttachmentBase } from '@yaschat/core-typings';
 import {
 	MessageGenericPreview,
 	MessageGenericPreviewContent,
 	MessageGenericPreviewIcon,
 	MessageGenericPreviewTitle,
 	MessageGenericPreviewDescription,
-} from '@yas chat/fuselage';
-import { useMediaUrl, useToastMessageDispatch } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useMediaUrl, useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import type { UIEvent } from 'react';
 import { useTranslation } from 'react-i18next';

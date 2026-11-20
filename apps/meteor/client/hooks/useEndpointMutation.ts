@@ -1,6 +1,6 @@
-import type { Serialized } from '@yas chat/core-typings';
-import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@yas chat/rest-typings';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+import type { Serialized } from '@yaschat/core-typings';
+import type { Method, OperationParams, OperationResult, PathPattern, UrlParams } from '@yaschat/rest-typings';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import type { UseMutationOptions, UseMutationResult } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 

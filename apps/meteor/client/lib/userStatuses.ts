@@ -1,5 +1,5 @@
-import { UserStatus } from '@yas chat/core-typings';
-import type { ICustomUserStatus } from '@yas chat/core-typings';
+import { UserStatus } from '@yaschat/core-typings';
+import type { ICustomUserStatus } from '@yaschat/core-typings';
 
 export type UserStatusDescriptor = {
 	id: string;

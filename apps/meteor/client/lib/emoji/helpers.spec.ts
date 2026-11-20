@@ -1,4 +1,4 @@
-import { CUSTOM_CATEGORY, getEmojisBySearchTerm, isLoadMore } from '@yas chat/ui-emoji-picker';
+import { CUSTOM_CATEGORY, getEmojisBySearchTerm, isLoadMore } from '@yaschat/ui-emoji-picker';
 
 import { createEmojiList, updateRecent, replaceEmojiInRecent } from './helpers';
 import { emoji } from './lib';

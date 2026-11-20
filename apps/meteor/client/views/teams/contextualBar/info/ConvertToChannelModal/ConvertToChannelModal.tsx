@@ -1,6 +1,6 @@
-import type { IRoom, Serialized } from '@yas chat/core-typings';
-import { GenericModalSkeleton } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IRoom, Serialized } from '@yaschat/core-typings';
+import { GenericModalSkeleton } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import BaseConvertToChannelModal from './BaseConvertToChannelModal';

@@ -1,6 +1,6 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { Box } from '@yas chat/fuselage';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IMessage } from '@yaschat/core-typings';
+import { Box } from '@yaschat/fuselage';
+import { useSetting } from '@yaschat/ui-contexts';
 
 import ReactionUserTag from './ReactionUserTag';
 import Emoji from '../../../../components/Emoji';

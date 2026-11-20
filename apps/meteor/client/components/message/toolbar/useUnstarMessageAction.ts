@@ -1,6 +1,6 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { useSetting, useUser } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { useSetting, useUser } from '@yaschat/ui-contexts';
 
 import type { MessageActionConfig } from '../../../lib/MessageAction';
 import { useUnstarMessageMutation } from '../hooks/useUnstarMessageMutation';

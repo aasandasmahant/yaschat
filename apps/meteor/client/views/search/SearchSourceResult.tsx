@@ -1,5 +1,5 @@
-import { MAX_SOURCE_MESSAGE_LENGTH } from '@yas chat/ai-search';
-import type { IRoom } from '@yas chat/core-typings';
+import { MAX_SOURCE_MESSAGE_LENGTH } from '@yaschat/ai-search';
+import type { IRoom } from '@yaschat/core-typings';
 import {
 	Box,
 	Icon,
@@ -14,10 +14,10 @@ import {
 	MessageTimestamp,
 	MessageUsername,
 	MessageNameContainer,
-} from '@yas chat/fuselage';
-import type { AISearchResult } from '@yas chat/rest-typings';
-import { MessageAvatar } from '@yas chat/ui-avatar';
-import { useUserPreference, useLayout } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import type { AISearchResult } from '@yaschat/rest-typings';
+import { MessageAvatar } from '@yaschat/ui-avatar';
+import { useUserPreference, useLayout } from '@yaschat/ui-contexts';
 import type { ComponentProps, ReactElement } from 'react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';

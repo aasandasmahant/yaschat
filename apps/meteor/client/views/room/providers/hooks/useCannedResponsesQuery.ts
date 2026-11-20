@@ -1,6 +1,6 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isOmnichannelRoom } from '@yas chat/core-typings';
-import { useEndpoint, usePermission, useSetting, useStream, useUserId } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { isOmnichannelRoom } from '@yaschat/core-typings';
+import { useEndpoint, usePermission, useSetting, useStream, useUserId } from '@yaschat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 

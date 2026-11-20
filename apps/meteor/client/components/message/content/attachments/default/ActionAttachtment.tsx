@@ -1,5 +1,5 @@
-import type { MessageAttachmentAction } from '@yas chat/core-typings';
-import { Box, Button, ButtonGroup } from '@yas chat/fuselage';
+import type { MessageAttachmentAction } from '@yaschat/core-typings';
+import { Box, Button, ButtonGroup } from '@yaschat/fuselage';
 
 import ActionAttachmentButton from './ActionAttachmentButton';
 import { useExternalLink } from '../../../../../hooks/useExternalLink';

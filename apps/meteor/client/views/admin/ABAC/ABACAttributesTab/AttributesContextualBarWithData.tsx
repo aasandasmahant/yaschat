@@ -1,5 +1,5 @@
-import { ContextualbarSkeletonBody } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { ContextualbarSkeletonBody } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import AttributesContextualBar from './AttributesContextualBar';

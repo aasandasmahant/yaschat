@@ -1,6 +1,6 @@
-import type { IUserInRole, Serialized } from '@yas chat/core-typings';
-import { Pagination, type TableColumnWidth } from '@yas chat/fuselage';
-import type { usePagination } from '@yas chat/ui-client';
+import type { IUserInRole, Serialized } from '@yaschat/core-typings';
+import { Pagination, type TableColumnWidth } from '@yaschat/fuselage';
+import type { usePagination } from '@yaschat/ui-client';
 import {
 	GenericTable,
 	GenericTableHeader,
@@ -9,7 +9,7 @@ import {
 	GenericTableLoadingTable,
 	GenericNoResults,
 	GenericError,
-} from '@yas chat/ui-client';
+} from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 import UsersInRoleTableRow from './UsersInRoleTableRow';

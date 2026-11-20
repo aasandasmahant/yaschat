@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@yas chat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
+import { isDiscussion, isPrivateRoom, isRoomFederated, isRoomXMPPFederated } from '@yaschat/core-typings';
 
 import { useIsAbacEnforcementOn } from './useIsAbacEnforcementOn';
 import { useRoomAbacInfo } from './useRoomAbacInfo';

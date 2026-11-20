@@ -1,7 +1,7 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { Box, MessageDivider, Throbber } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
-import { MessageTypes } from '@yas chat/message-types';
+import type { IMessage } from '@yaschat/core-typings';
+import { Box, MessageDivider, Throbber } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
+import { MessageTypes } from '@yaschat/message-types';
 import {
 	VirtualizedScrollbars,
 	ContextualbarContent,
@@ -11,8 +11,8 @@ import {
 	ContextualbarClose,
 	ContextualbarEmptyContent,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useUserPreference, useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useUserPreference, useRoomToolbox } from '@yaschat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useCallback } from 'react';

@@ -1,6 +1,6 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { HoverCardPopover, useHoverCard } from '@yas chat/ui-client';
-import { useRoomToolbox, UserCardContext } from '@yas chat/ui-contexts';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { HoverCardPopover, useHoverCard } from '@yaschat/ui-client';
+import { useRoomToolbox, UserCardContext } from '@yaschat/ui-contexts';
 import type { ReactNode } from 'react';
 import { lazy, useMemo } from 'react';
 

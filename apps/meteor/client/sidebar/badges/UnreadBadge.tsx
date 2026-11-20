@@ -1,4 +1,4 @@
-import { Badge } from '@yas chat/fuselage';
+import { Badge } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 export type UnreadBadgeProps = {

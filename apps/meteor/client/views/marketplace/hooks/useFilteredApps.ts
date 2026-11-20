@@ -1,4 +1,4 @@
-import type { PaginatedResult } from '@yas chat/rest-typings';
+import type { PaginatedResult } from '@yaschat/rest-typings';
 
 import { useApps } from './useApps';
 import { filterAppsByCategories } from '../helpers/filterAppsByCategories';

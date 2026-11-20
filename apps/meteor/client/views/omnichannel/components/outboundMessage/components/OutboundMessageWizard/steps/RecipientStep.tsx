@@ -1,5 +1,5 @@
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useWizardContext, WizardActions, WizardNextButton } from '@yas chat/ui-client';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useWizardContext, WizardActions, WizardNextButton } from '@yaschat/ui-client';
 
 import type { RecipientFormData, RecipientFormSubmitPayload } from '../forms/RecipientForm';
 import RecipientForm from '../forms/RecipientForm';

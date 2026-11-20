@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Field, FieldLabel, FieldRow, FieldError, Icon } from '@yas chat/fuselage';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Field, FieldLabel, FieldRow, FieldError, Icon } from '@yaschat/fuselage';
 import type { Dispatch, SetStateAction } from 'react';
 import type { UseFormReturn } from 'react-hook-form';
 import { useController } from 'react-hook-form';

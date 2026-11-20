@@ -1,4 +1,4 @@
-import { useUser } from '@yas chat/ui-contexts';
+import { useUser } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

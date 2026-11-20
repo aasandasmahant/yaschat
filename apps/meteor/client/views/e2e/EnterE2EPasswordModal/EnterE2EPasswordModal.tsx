@@ -1,6 +1,6 @@
-import { Box, PasswordInput, Field, FieldGroup, FieldRow, FieldError, FieldLink, Stack } from '@yas chat/fuselage';
-import { GenericModal } from '@yas chat/ui-client';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { Box, PasswordInput, Field, FieldGroup, FieldRow, FieldError, FieldLink, Stack } from '@yaschat/fuselage';
+import { GenericModal } from '@yaschat/ui-client';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useEffect, useId, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

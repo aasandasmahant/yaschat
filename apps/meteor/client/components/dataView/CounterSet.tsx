@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@yas chat/fuselage';
+import { Grid, GridItem } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 import Counter from './Counter';

@@ -13,7 +13,7 @@ const AuditPage = lazy(() => import('../views/audit/AuditPage'));
 const AuditLogPage = lazy(() => import('../views/audit/AuditLogPage'));
 const SecurityLogsPage = lazy(() => import('../views/audit/SecurityLogsPage'));
 
-declare module '@yas chat/ui-contexts' {
+declare module '@yaschat/ui-contexts' {
 	interface IRouterPaths {
 		'audit-home': {
 			pathname: '/audit';

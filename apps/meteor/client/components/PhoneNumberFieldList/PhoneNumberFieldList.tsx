@@ -1,7 +1,7 @@
-import type { IUserPhoneNumber } from '@yas chat/core-typings';
-import { MAX_USER_PHONES } from '@yas chat/core-typings';
-import { Box, Button, Callout } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IUserPhoneNumber } from '@yaschat/core-typings';
+import { MAX_USER_PHONES } from '@yaschat/core-typings';
+import { Box, Button, Callout } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import { useEffect, useId, useRef } from 'react';
 import { useVisuallyHidden } from 'react-aria';
 import type { Control } from 'react-hook-form';

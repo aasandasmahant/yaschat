@@ -1,4 +1,4 @@
-import type { IEmailInboxPayload } from '@yas chat/core-typings';
+import type { IEmailInboxPayload } from '@yaschat/core-typings';
 import {
 	Accordion,
 	AccordionItem,
@@ -16,11 +16,11 @@ import {
 	FieldRow,
 	FieldError,
 	FieldHint,
-} from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { validateEmail } from '@yas chat/tools';
-import { GenericModal, PageScrollableContentWithShadow } from '@yas chat/ui-client';
-import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { validateEmail } from '@yaschat/tools';
+import { GenericModal, PageScrollableContentWithShadow } from '@yaschat/ui-client';
+import { useSetModal, useToastMessageDispatch, useRoute, useEndpoint } from '@yaschat/ui-contexts';
 import { useId, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

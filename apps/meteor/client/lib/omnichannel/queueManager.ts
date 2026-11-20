@@ -4,7 +4,7 @@ import {
 	type ILivechatInquiryRecord,
 	type IOmnichannelAgent,
 	type Serialized,
-} from '@yas chat/core-typings';
+} from '@yaschat/core-typings';
 
 import { useLivechatInquiryStore } from '../../hooks/useLivechatInquiryStore';
 import { sdk } from '../SDKClient';

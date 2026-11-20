@@ -1,11 +1,11 @@
-import type { CallHistoryItem, IInternalMediaCallHistoryItem, IMediaCall, Serialized } from '@yas chat/core-typings';
+import type { CallHistoryItem, IInternalMediaCallHistoryItem, IMediaCall, Serialized } from '@yaschat/core-typings';
 import {
 	CallHistoryContextualBar,
 	useWidgetExternalControls,
 	usePeekMediaSessionState,
 	type CallHistoryExternalContact,
 	type CallHistoryUnknownContact,
-} from '@yas chat/ui-voip';
+} from '@yaschat/ui-voip';
 import { useMemo } from 'react';
 
 type ExternalCallEndpointData = Serialized<{

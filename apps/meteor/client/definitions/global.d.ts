@@ -1,4 +1,4 @@
-import type { IYasChatDesktop, IVideoCallWindow } from '@yas chat/desktop-api';
+import type { IYasChatDesktop, IVideoCallWindow } from '@yaschat/desktop-api';
 
 declare global {
 	interface Window {

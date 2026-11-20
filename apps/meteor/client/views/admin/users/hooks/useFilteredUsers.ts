@@ -1,7 +1,7 @@
-import type { UsersListStatusParamsGET } from '@yas chat/rest-typings';
-import type { useSort } from '@yas chat/ui-client';
-import { usePaginatedQuery, usePagination } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { UsersListStatusParamsGET } from '@yaschat/rest-typings';
+import type { useSort } from '@yaschat/ui-client';
+import { usePaginatedQuery, usePagination } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 
 import { usersQueryKeys } from '../../../../lib/queryKeys';

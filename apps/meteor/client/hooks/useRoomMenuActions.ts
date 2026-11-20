@@ -1,6 +1,6 @@
-import type { RoomType } from '@yas chat/core-typings';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { usePermission, useSetting, useUserSubscription } from '@yas chat/ui-contexts';
+import type { RoomType } from '@yaschat/core-typings';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { usePermission, useSetting, useUserSubscription } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

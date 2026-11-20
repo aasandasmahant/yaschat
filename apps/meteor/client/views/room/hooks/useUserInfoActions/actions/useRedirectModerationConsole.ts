@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { usePermission, useRoute } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { usePermission, useRoute } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import type { UserInfoAction, UserInfoActionType } from '../useUserInfoActions';

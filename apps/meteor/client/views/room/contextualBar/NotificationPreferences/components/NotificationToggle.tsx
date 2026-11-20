@@ -1,4 +1,4 @@
-import { Field, FieldLabel, FieldDescription, FieldGroup, ToggleSwitch, FieldRow } from '@yas chat/fuselage';
+import { Field, FieldLabel, FieldDescription, FieldGroup, ToggleSwitch, FieldRow } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { memo, useId } from 'react';
 

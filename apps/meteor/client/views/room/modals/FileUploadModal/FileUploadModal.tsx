@@ -8,7 +8,7 @@ import {
 	ModalContent,
 	ModalFooter,
 	ModalFooterControllers,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import {
 	TextInput,
 	TextAreaInput,
@@ -18,7 +18,7 @@ import {
 	FieldLabel,
 	FieldGroup,
 	FieldDescription,
-} from '@yas chat/fuselage-forms';
+} from '@yaschat/fuselage-forms';
 import type { ComponentProps } from 'react';
 import { memo, useCallback, useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';

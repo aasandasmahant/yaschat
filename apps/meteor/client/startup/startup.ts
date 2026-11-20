@@ -1,4 +1,4 @@
-import type { UserStatus } from '@yas chat/core-typings';
+import type { UserStatus } from '@yaschat/core-typings';
 
 import 'highlight.js/styles/github.css';
 import { sdk } from '../lib/SDKClient';

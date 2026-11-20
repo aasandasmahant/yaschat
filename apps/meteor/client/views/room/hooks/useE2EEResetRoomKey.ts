@@ -1,5 +1,5 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import type { UseMutationOptions, UseMutationResult } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 

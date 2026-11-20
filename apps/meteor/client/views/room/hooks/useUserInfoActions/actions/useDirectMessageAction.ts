@@ -1,5 +1,5 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { useGoToDirectMessage } from '@yas chat/ui-client';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { useGoToDirectMessage } from '@yaschat/ui-client';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

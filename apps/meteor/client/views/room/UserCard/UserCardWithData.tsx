@@ -1,9 +1,9 @@
-import { getUserDisplayName } from '@yas chat/core-typings';
-import type { IRoom } from '@yas chat/core-typings';
-import { IconButton } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { GenericMenu, UserCard, UserCardAction, UserCardRole, UserCardSkeleton } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import { getUserDisplayName } from '@yaschat/core-typings';
+import type { IRoom } from '@yaschat/core-typings';
+import { IconButton } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { GenericMenu, UserCard, UserCardAction, UserCardRole, UserCardSkeleton } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { IRole, IPermission } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import type { IRole, IPermission } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 
 export const useChangeRole = ({
 	onGrant,

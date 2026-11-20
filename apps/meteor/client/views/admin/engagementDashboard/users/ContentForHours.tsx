@@ -1,7 +1,7 @@
 import { ResponsiveBar } from '@nivo/bar';
-import { Box, Button, Chevron, Skeleton, Tooltip } from '@yas chat/fuselage';
-import { useBreakpoints } from '@yas chat/fuselage-hooks';
-import colors from '@yas chat/fuselage-tokens/dist/colors.json';
+import { Box, Button, Chevron, Skeleton, Tooltip } from '@yaschat/fuselage';
+import { useBreakpoints } from '@yaschat/fuselage-hooks';
+import colors from '@yaschat/fuselage-tokens/dist/colors.json';
 import { format } from 'date-fns/format';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

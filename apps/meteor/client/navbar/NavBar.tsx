@@ -1,5 +1,5 @@
-import { NavBar as NavBarComponent } from '@yas chat/fuselage';
-import { useLayout } from '@yas chat/ui-contexts';
+import { NavBar as NavBarComponent } from '@yaschat/fuselage';
+import { useLayout } from '@yaschat/ui-contexts';
 
 import NavBarControlsSection from './NavBarControls/NavBarControlsSection';
 import NavBarNavigation from './NavBarNavigation';

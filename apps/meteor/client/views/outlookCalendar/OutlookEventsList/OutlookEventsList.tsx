@@ -1,5 +1,5 @@
-import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, ButtonGroup, Button, Throbber } from '@yas chat/fuselage';
-import { useMergedRefs, useResizeObserver } from '@yas chat/fuselage-hooks';
+import { Box, States, StatesIcon, StatesTitle, StatesSubtitle, ButtonGroup, Button, Throbber } from '@yaschat/fuselage';
+import { useMergedRefs, useResizeObserver } from '@yaschat/fuselage-hooks';
 import {
 	VirtualizedScrollbars,
 	ContextualbarHeader,
@@ -9,8 +9,8 @@ import {
 	ContextualbarContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useUser } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useUser } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso } from 'react-virtuoso';
 

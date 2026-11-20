@@ -1,5 +1,5 @@
-import { Field, FieldGroup, FieldLabel, FieldRow, TextInput } from '@yas chat/fuselage';
-import { Page, PageHeader, PageScrollableContent } from '@yas chat/ui-client';
+import { Field, FieldGroup, FieldLabel, FieldRow, TextInput } from '@yaschat/fuselage';
+import { Page, PageHeader, PageScrollableContent } from '@yaschat/ui-client';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ContentColumn from './ContentColumn';

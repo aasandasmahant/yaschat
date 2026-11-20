@@ -1,4 +1,4 @@
-import { useToastMessageDispatch } from '@yas chat/ui-contexts';
+import { useToastMessageDispatch } from '@yaschat/ui-contexts';
 import { useCallback } from 'react';
 
 import { usePersistCategoriesMutation } from './usePersistCategoriesMutation';

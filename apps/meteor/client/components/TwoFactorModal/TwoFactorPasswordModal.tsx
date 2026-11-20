@@ -1,6 +1,6 @@
-import { Box } from '@yas chat/fuselage';
-import { PasswordInput, FieldGroup, Field, FieldLabel, FieldRow, FieldError } from '@yas chat/fuselage-forms';
-import { GenericModal } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { PasswordInput, FieldGroup, Field, FieldLabel, FieldRow, FieldError } from '@yaschat/fuselage-forms';
+import { GenericModal } from '@yaschat/ui-client';
 import { useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

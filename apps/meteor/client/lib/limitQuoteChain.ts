@@ -1,5 +1,5 @@
-import { isQuoteAttachment } from '@yas chat/core-typings';
-import type { IMessage, MessageAttachment, AtLeast } from '@yas chat/core-typings';
+import { isQuoteAttachment } from '@yaschat/core-typings';
+import type { IMessage, MessageAttachment, AtLeast } from '@yaschat/core-typings';
 
 // Observation:
 // Currently, if the limit is 0, one quote is still allowed.

@@ -1,4 +1,4 @@
-import { AccordionItem, FieldGroup, Skeleton, Text } from '@yas chat/fuselage';
+import { AccordionItem, FieldGroup, Skeleton, Text } from '@yaschat/fuselage';
 
 import SettingSkeleton from '../Setting/SettingSkeleton';
 

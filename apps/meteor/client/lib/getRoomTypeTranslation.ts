@@ -6,7 +6,7 @@ import {
 	isPublicTeamRoom,
 	isPrivateDiscussion,
 	isPrivateRoom,
-} from '@yas chat/core-typings';
+} from '@yaschat/core-typings';
 
 import { t } from '../../lib/i18n';
 

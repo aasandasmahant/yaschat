@@ -1,10 +1,10 @@
-import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yas chat/core-typings';
-import { useUserPreference } from '@yas chat/ui-contexts';
+import { SIDEBAR_SYSTEM_GROUP_KEYS } from '@yaschat/core-typings';
+import { useUserPreference } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 
 import { useSidebarSectionsOrder } from './useSidebarSectionsOrder';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	useUserPreference: jest.fn(),
 }));
 

@@ -1,5 +1,5 @@
-import { Box, Skeleton } from '@yas chat/fuselage';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import { Box, Skeleton } from '@yaschat/fuselage';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

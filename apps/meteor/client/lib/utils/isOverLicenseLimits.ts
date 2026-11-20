@@ -1,4 +1,4 @@
-import type { LicenseLimitKind } from '@yas chat/core-typings';
+import type { LicenseLimitKind } from '@yaschat/core-typings';
 
 type Limits = Record<
 	LicenseLimitKind,

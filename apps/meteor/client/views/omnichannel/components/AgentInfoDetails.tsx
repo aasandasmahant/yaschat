@@ -1,4 +1,4 @@
-import { Box } from '@yas chat/fuselage';
+import { Box } from '@yaschat/fuselage';
 import type { ReactNode, ComponentProps } from 'react';
 
 import * as UserStatus from '../../../components/UserStatus';

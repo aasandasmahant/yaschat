@@ -1,4 +1,4 @@
-import type { SubscriptionWithRoom } from '@yas chat/ui-contexts';
+import type { SubscriptionWithRoom } from '@yaschat/ui-contexts';
 
 import { FAVORITES_TARGET } from '../categories/hooks/useUserSidebarCategories';
 

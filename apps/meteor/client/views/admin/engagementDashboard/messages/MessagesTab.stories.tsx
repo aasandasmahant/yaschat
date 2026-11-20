@@ -1,4 +1,4 @@
-import { Margins } from '@yas chat/fuselage';
+import { Margins } from '@yaschat/fuselage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import MessagesTab from './MessagesTab';

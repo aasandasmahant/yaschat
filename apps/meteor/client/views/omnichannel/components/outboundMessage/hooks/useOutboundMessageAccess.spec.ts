@@ -1,12 +1,12 @@
-import { useHasLicenseModule } from '@yas chat/ui-client';
-import { usePermission } from '@yas chat/ui-contexts';
+import { useHasLicenseModule } from '@yaschat/ui-client';
+import { usePermission } from '@yaschat/ui-contexts';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { renderHook } from '@testing-library/react';
 
 import { useOutboundMessageAccess } from './useOutboundMessageAccess';
 import { useOmnichannelEnabled } from '../../../hooks/useOmnichannelEnabled';
 
-jest.mock('@yas chat/ui-contexts', () => ({
+jest.mock('@yaschat/ui-contexts', () => ({
 	usePermission: jest.fn(),
 }));
 
@@ -14,8 +14,8 @@ jest.mock('../../../hooks/useOmnichannelEnabled', () => ({
 	useOmnichannelEnabled: jest.fn(),
 }));
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	useHasLicenseModule: jest.fn(),
 }));
 

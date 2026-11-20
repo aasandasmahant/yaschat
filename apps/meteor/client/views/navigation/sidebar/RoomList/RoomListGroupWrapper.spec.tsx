@@ -1,4 +1,4 @@
-import { SidebarCollapseGroup } from '@yas chat/fuselage';
+import { SidebarCollapseGroup } from '@yaschat/fuselage';
 import { render, screen, within } from '@testing-library/react';
 
 import RoomListGroupWrapper from './RoomListGroupWrapper';

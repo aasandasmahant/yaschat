@@ -1,4 +1,4 @@
-import { Box, Field, FieldLabel, FieldRow, FieldError } from '@yas chat/fuselage';
+import { Box, Field, FieldLabel, FieldRow, FieldError } from '@yaschat/fuselage';
 import type { UseFormReturn } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

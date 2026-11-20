@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated, isRoomXMPPHostedMuc } from '@yas chat/core-typings';
-import { Field, FieldError, FieldLabel, Button, ButtonGroup, FieldGroup } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
+import type { IRoom } from '@yaschat/core-typings';
+import { isRoomFederated, isRoomNativeFederated, isRoomXMPPHostedMuc } from '@yaschat/core-typings';
+import { Field, FieldError, FieldLabel, Button, ButtonGroup, FieldGroup } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
 import {
 	ContextualbarHeader,
 	ContextualbarBack,
@@ -10,8 +10,8 @@ import {
 	ContextualbarScrollableContent,
 	ContextualbarFooter,
 	ContextualbarDialog,
-} from '@yas chat/ui-client';
-import { useToastMessageDispatch, useSetModal, useEndpoint, useRoomToolbox } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useToastMessageDispatch, useSetModal, useEndpoint, useRoomToolbox } from '@yaschat/ui-contexts';
 import { useId } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

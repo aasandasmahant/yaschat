@@ -1,4 +1,4 @@
-import { Emitter } from '@yas chat/emitter';
+import { Emitter } from '@yaschat/emitter';
 import DOMPurify from 'dompurify';
 
 import { sdk } from '../../../../lib/SDKClient';

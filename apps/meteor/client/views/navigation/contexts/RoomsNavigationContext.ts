@@ -1,8 +1,8 @@
-import { type ISubscription, type ILivechatInquiryRecord, type IRoom, isTeamRoom, isDirectMessageRoom } from '@yas chat/core-typings';
-import { useStableCallback, useLocalStorage } from '@yas chat/fuselage-hooks';
-import type { Keys as IconName } from '@yas chat/icons';
-import { isTruthy } from '@yas chat/tools';
-import type { SubscriptionWithRoom, TranslationKey } from '@yas chat/ui-contexts';
+import { type ISubscription, type ILivechatInquiryRecord, type IRoom, isTeamRoom, isDirectMessageRoom } from '@yaschat/core-typings';
+import { useStableCallback, useLocalStorage } from '@yaschat/fuselage-hooks';
+import type { Keys as IconName } from '@yaschat/icons';
+import { isTruthy } from '@yaschat/tools';
+import type { SubscriptionWithRoom, TranslationKey } from '@yaschat/ui-contexts';
 import { createContext, useCallback, useContext, useEffect, useMemo } from 'react';
 
 import { useCollapsedGroups } from '../hooks/useCollapsedGroups';

@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { MessageComposerSkeleton } from '@yas chat/ui-composer';
+import { Box } from '@yaschat/fuselage';
+import { MessageComposerSkeleton } from '@yaschat/ui-composer';
 
 const ComposerSkeleton = () => {
 	return (

@@ -1,4 +1,4 @@
-import { Button, Text } from '@yas chat/fuselage';
+import { Button, Text } from '@yaschat/fuselage';
 import { useTranslation } from 'react-i18next';
 
 import SecuritySection from './layout/SecuritySection';

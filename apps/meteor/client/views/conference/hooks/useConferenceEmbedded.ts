@@ -1,6 +1,6 @@
-import { isInVideoConference } from '@yas chat/core-typings';
-import { useUserDisplayName } from '@yas chat/ui-client';
-import type { CallPreferences, ConferenceChatAccess } from '@yas chat/ui-conference';
+import { isInVideoConference } from '@yaschat/core-typings';
+import { useUserDisplayName } from '@yaschat/ui-client';
+import type { CallPreferences, ConferenceChatAccess } from '@yaschat/ui-conference';
 import {
 	useConnectionStatus,
 	useEndpoint,
@@ -9,8 +9,8 @@ import {
 	useToastMessageDispatch,
 	useUser,
 	useUserId,
-} from '@yas chat/ui-contexts';
-import { useVideoConfWindowEnabled, useVideoConferenceInfo } from '@yas chat/ui-video-conf';
+} from '@yaschat/ui-contexts';
+import { useVideoConfWindowEnabled, useVideoConferenceInfo } from '@yaschat/ui-video-conf';
 import { skipToken, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, useState } from 'react';
 

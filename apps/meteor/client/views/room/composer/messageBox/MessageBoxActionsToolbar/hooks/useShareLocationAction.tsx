@@ -1,7 +1,7 @@
-import type { IMessage, IRoom } from '@yas chat/core-typings';
-import { isRoomFederated } from '@yas chat/core-typings';
-import type { GenericMenuItemProps } from '@yas chat/ui-client';
-import { useSetting, useSetModal } from '@yas chat/ui-contexts';
+import type { IMessage, IRoom } from '@yaschat/core-typings';
+import { isRoomFederated } from '@yaschat/core-typings';
+import type { GenericMenuItemProps } from '@yaschat/ui-client';
+import { useSetting, useSetModal } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import ShareLocationModal from '../../../../ShareLocation/ShareLocationModal';

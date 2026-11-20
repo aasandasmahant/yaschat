@@ -1,9 +1,9 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Emitter } from '@yas chat/emitter';
-import { useLocalStorage } from '@yas chat/fuselage-hooks';
-import { createPredicateFromFilter } from '@yas chat/mongo-adapter';
-import type { FindOptions, SubscriptionWithRoom } from '@yas chat/ui-contexts';
-import { UserContext, useRouteParameter, useSearchParameter } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { Emitter } from '@yaschat/emitter';
+import { useLocalStorage } from '@yaschat/fuselage-hooks';
+import { createPredicateFromFilter } from '@yaschat/mongo-adapter';
+import type { FindOptions, SubscriptionWithRoom } from '@yaschat/ui-contexts';
+import { UserContext, useRouteParameter, useSearchParameter } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import type { Filter, ObjectId } from 'mongodb';
 import type { ContextType, ReactNode } from 'react';

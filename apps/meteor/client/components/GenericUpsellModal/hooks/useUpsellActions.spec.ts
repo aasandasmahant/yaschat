@@ -1,13 +1,13 @@
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { useIsEnterprise } from '@yas chat/ui-client';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { useIsEnterprise } from '@yaschat/ui-client';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { renderHook, waitFor } from '@testing-library/react';
 
 import { useUpsellActions } from './useUpsellActions';
 import { createFakeLicenseInfo } from '../../../../tests/mocks/data';
 
-jest.mock('@yas chat/ui-client', () => ({
-	...jest.requireActual('@yas chat/ui-client'),
+jest.mock('@yaschat/ui-client', () => ({
+	...jest.requireActual('@yaschat/ui-client'),
 	useIsEnterprise: jest.fn(),
 }));
 
@@ -18,7 +18,7 @@ const appRoot = mockAppRoot()
 
 describe('useUpsellActions hook', () => {
 	beforeEach(() => {
-		(useIsEnterprise as jest.Mock).mockImplementation(jest.requireActual('@yas chat/ui-client').useIsEnterprise);
+		(useIsEnterprise as jest.Mock).mockImplementation(jest.requireActual('@yaschat/ui-client').useIsEnterprise);
 	});
 
 	afterAll(() => {

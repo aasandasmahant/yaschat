@@ -1,5 +1,5 @@
-import type { SlashCommandCallbackParams } from '@yas chat/core-typings';
-import { clientCallbacks } from '@yas chat/ui-client';
+import type { SlashCommandCallbackParams } from '@yaschat/core-typings';
+import { clientCallbacks } from '@yaschat/ui-client';
 
 import { sdk } from '../../lib/SDKClient';
 import { hasPermission } from '../../lib/authorization';

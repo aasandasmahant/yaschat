@@ -1,8 +1,8 @@
-import type { IRoom, IUser } from '@yas chat/core-typings';
-import { isRoomFederated, isRoomNativeFederated } from '@yas chat/core-typings';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { escapeHTML } from '@yas chat/tools';
-import { GenericModal } from '@yas chat/ui-client';
+import type { IRoom, IUser } from '@yaschat/core-typings';
+import { isRoomFederated, isRoomNativeFederated } from '@yaschat/core-typings';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { escapeHTML } from '@yaschat/tools';
+import { GenericModal } from '@yaschat/ui-client';
 import {
 	useTranslation,
 	usePermission,
@@ -12,7 +12,7 @@ import {
 	useUser,
 	useToastMessageDispatch,
 	useEndpoint,
-} from '@yas chat/ui-contexts';
+} from '@yaschat/ui-contexts';
 import { useMutation } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
 

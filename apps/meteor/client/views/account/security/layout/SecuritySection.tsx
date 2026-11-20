@@ -1,4 +1,4 @@
-import { Stack, Text } from '@yas chat/fuselage';
+import { Stack, Text } from '@yaschat/fuselage';
 import type { ReactNode } from 'react';
 
 type SecuritySectionProps = {

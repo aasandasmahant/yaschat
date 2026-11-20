@@ -1,7 +1,7 @@
-import type { MessageQuoteAttachment, IMessage } from '@yas chat/core-typings';
-import { Box, Text } from '@yas chat/fuselage';
-import { useUserDisplayName, GenericModal } from '@yas chat/ui-client';
-import { useUserAvatarPath } from '@yas chat/ui-contexts';
+import type { MessageQuoteAttachment, IMessage } from '@yaschat/core-typings';
+import { Box, Text } from '@yaschat/fuselage';
+import { useUserDisplayName, GenericModal } from '@yaschat/ui-client';
+import { useUserAvatarPath } from '@yaschat/ui-contexts';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

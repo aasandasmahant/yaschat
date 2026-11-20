@@ -1,6 +1,6 @@
-import type { IEditedMessage } from '@yas chat/core-typings';
-import { isEditedMessage } from '@yas chat/core-typings';
-import { useStream } from '@yas chat/ui-contexts';
+import type { IEditedMessage } from '@yaschat/core-typings';
+import { isEditedMessage } from '@yaschat/core-typings';
+import { useStream } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { Messages, Subscriptions } from '../../../../stores';

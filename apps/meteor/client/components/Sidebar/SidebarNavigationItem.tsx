@@ -1,5 +1,5 @@
-import { ItemMeta, SidebarItem, SidebarItemIcon, SidebarItemTitle, Tag } from '@yas chat/fuselage';
-import type { Keys as IconName } from '@yas chat/icons';
+import { ItemMeta, SidebarItem, SidebarItemIcon, SidebarItemTitle, Tag } from '@yaschat/fuselage';
+import type { Keys as IconName } from '@yaschat/icons';
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 

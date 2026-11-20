@@ -1,5 +1,5 @@
-import type { AbacMembershipGroup } from '@yas chat/core-typings';
-import { useUserId } from '@yas chat/ui-contexts';
+import type { AbacMembershipGroup } from '@yaschat/core-typings';
+import { useUserId } from '@yaschat/ui-contexts';
 import { useEffect, useMemo } from 'react';
 
 import { useRoomMembershipPreviewPages } from './useRoomMembershipPreviewPages';

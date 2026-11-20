@@ -1,7 +1,7 @@
-import type { IRoom } from '@yas chat/core-typings';
-import { Box, Divider, Tag } from '@yas chat/fuselage';
-import { InfoPanelField, InfoPanelLabel } from '@yas chat/ui-client';
-import { useSetting } from '@yas chat/ui-contexts';
+import type { IRoom } from '@yaschat/core-typings';
+import { Box, Divider, Tag } from '@yaschat/fuselage';
+import { InfoPanelField, InfoPanelLabel } from '@yaschat/ui-client';
+import { useSetting } from '@yaschat/ui-contexts';
 import { useTranslation } from 'react-i18next';
 
 import { RoomIcon } from '../../../../../../components/RoomIcon';

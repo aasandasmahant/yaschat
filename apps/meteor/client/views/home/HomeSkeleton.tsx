@@ -1,5 +1,5 @@
-import { Box } from '@yas chat/fuselage';
-import { ListSkeleton, Page } from '@yas chat/ui-client';
+import { Box } from '@yaschat/fuselage';
+import { ListSkeleton, Page } from '@yaschat/ui-client';
 
 import { RoomSkeleton } from '../room';
 import HeaderSkeleton from '../room/Header/HeaderSkeleton';

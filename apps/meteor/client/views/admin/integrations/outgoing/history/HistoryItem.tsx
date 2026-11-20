@@ -1,8 +1,8 @@
-import type { IIntegrationHistory, Serialized } from '@yas chat/core-typings';
-import { Button, Icon, Box, AccordionItem, Field, FieldGroup, FieldLabel, FieldRow, Stack } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { useFormatDateAndTime } from '@yas chat/ui-client';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { IIntegrationHistory, Serialized } from '@yaschat/core-typings';
+import { Button, Icon, Box, AccordionItem, Field, FieldGroup, FieldLabel, FieldRow, Stack } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { useFormatDateAndTime } from '@yaschat/ui-client';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import DOMPurify from 'dompurify';
 import type { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';

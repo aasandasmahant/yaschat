@@ -1,5 +1,5 @@
-import type { IconButton } from '@yas chat/fuselage';
-import { Button } from '@yas chat/fuselage';
+import type { IconButton } from '@yaschat/fuselage';
+import { Button } from '@yaschat/fuselage';
 import { forwardRef, type ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 

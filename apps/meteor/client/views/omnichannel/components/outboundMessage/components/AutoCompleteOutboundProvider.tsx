@@ -1,5 +1,5 @@
-import type { ILivechatContact, Serialized } from '@yas chat/core-typings';
-import { Box, Option, OptionDescription, PaginatedSelectFiltered } from '@yas chat/fuselage';
+import type { ILivechatContact, Serialized } from '@yaschat/core-typings';
+import { Box, Option, OptionDescription, PaginatedSelectFiltered } from '@yaschat/fuselage';
 import type { ComponentProps } from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

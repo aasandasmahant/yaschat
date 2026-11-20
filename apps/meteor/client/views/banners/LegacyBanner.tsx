@@ -1,4 +1,4 @@
-import { Banner, Icon } from '@yas chat/fuselage';
+import { Banner, Icon } from '@yaschat/fuselage';
 import DOMPurify from 'dompurify';
 import { useCallback, useEffect } from 'react';
 

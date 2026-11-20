@@ -1,5 +1,5 @@
-import type { IUser } from '@yas chat/core-typings';
-import { useUserPresence } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { useUserPresence } from '@yaschat/ui-contexts';
 import { memo } from 'react';
 
 import UserStatusText from './UserStatusText';

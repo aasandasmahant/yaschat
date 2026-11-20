@@ -1,5 +1,5 @@
-import type { AppliedFilter } from '@yas chat/ai-search';
-import { Box, Button, IconButton } from '@yas chat/fuselage';
+import type { AppliedFilter } from '@yaschat/ai-search';
+import { Box, Button, IconButton } from '@yaschat/fuselage';
 import type { ReactElement } from 'react';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';

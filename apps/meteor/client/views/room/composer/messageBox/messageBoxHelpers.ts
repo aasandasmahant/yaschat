@@ -1,4 +1,4 @@
-import { sanitizeUrl } from '@yas chat/gazzodown-alt';
+import { sanitizeUrl } from '@yaschat/gazzodown-alt';
 import type { ClipboardEvent, MouseEvent } from 'react';
 
 import { getImageExtensionFromMime } from '../../../../../lib/getImageExtensionFromMime';

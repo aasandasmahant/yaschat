@@ -1,4 +1,4 @@
-import { ActionManagerContext } from '@yas chat/ui-contexts';
+import { ActionManagerContext } from '@yaschat/ui-contexts';
 import { useContext } from 'react';
 
 export const useUiKitActionManager = () => {

@@ -1,6 +1,6 @@
-import type { SearchFilterSuggestion } from '@yas chat/ai-search';
-import { Icon } from '@yas chat/fuselage';
-import { useUserRoom } from '@yas chat/ui-contexts';
+import type { SearchFilterSuggestion } from '@yaschat/ai-search';
+import { Icon } from '@yaschat/fuselage';
+import { useUserRoom } from '@yaschat/ui-contexts';
 import type { ReactElement } from 'react';
 
 import { RoomIcon } from '../../components/RoomIcon';

@@ -1,5 +1,5 @@
-import type { ILivechatCustomField, Serialized } from '@yas chat/core-typings';
-import type { SelectOption } from '@yas chat/fuselage';
+import type { ILivechatCustomField, Serialized } from '@yaschat/core-typings';
+import type { SelectOption } from '@yaschat/fuselage';
 import {
 	FieldError,
 	Button,
@@ -12,15 +12,15 @@ import {
 	TextInput,
 	ToggleSwitch,
 	Box,
-} from '@yas chat/fuselage';
+} from '@yaschat/fuselage';
 import {
 	ContextualbarTitle,
 	ContextualbarHeader,
 	ContextualbarClose,
 	ContextualbarFooter,
 	ContextualbarScrollableContent,
-} from '@yas chat/ui-client';
-import { useToastMessageDispatch, useEndpoint } from '@yas chat/ui-contexts';
+} from '@yaschat/ui-client';
+import { useToastMessageDispatch, useEndpoint } from '@yaschat/ui-contexts';
 import { useQueryClient } from '@tanstack/react-query';
 import { useId, useMemo } from 'react';
 import { FormProvider, useForm, Controller } from 'react-hook-form';

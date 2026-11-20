@@ -1,11 +1,11 @@
-import { Emitter } from '@yas chat/emitter';
+import { Emitter } from '@yaschat/emitter';
 import type { ReactNode } from 'react';
 
 import { preloadedLazy } from './preloadedLazy';
 
 const ConnectionStatusBar = preloadedLazy(() => import('../components/connectionStatus/ConnectionStatusBar'));
 const BannerRegion = preloadedLazy(() => import('../views/banners/BannerRegion'));
-const ModalRegion = preloadedLazy(() => import('@yas chat/ui-client').then(({ ModalRegion }) => ({ default: ModalRegion })));
+const ModalRegion = preloadedLazy(() => import('@yaschat/ui-client').then(({ ModalRegion }) => ({ default: ModalRegion })));
 const ActionManagerBusyState = preloadedLazy(() => import('../components/ActionManagerBusyState'));
 const AppLayoutThemeWrapper = preloadedLazy(() => import('../components/AppLayoutThemeWrapper'));
 const CloudAnnouncementsRegion = preloadedLazy(() => import('../views/cloud/CloudAnnouncementsRegion'));

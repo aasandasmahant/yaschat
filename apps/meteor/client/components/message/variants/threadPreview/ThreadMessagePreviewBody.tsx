@@ -1,7 +1,7 @@
-import type { IMessage } from '@yas chat/core-typings';
-import { isQuoteAttachment, isE2EEMessage } from '@yas chat/core-typings';
-import { PreviewMarkup } from '@yas chat/gazzodown';
-import type { Root } from '@yas chat/message-parser';
+import type { IMessage } from '@yaschat/core-typings';
+import { isQuoteAttachment, isE2EEMessage } from '@yaschat/core-typings';
+import { PreviewMarkup } from '@yaschat/gazzodown';
+import type { Root } from '@yaschat/message-parser';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

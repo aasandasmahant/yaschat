@@ -1,4 +1,4 @@
-import type { RoomToolboxActionConfig } from '@yas chat/ui-contexts';
+import type { RoomToolboxActionConfig } from '@yaschat/ui-contexts';
 
 import { useChatForwardQuickAction } from './hooks/quickActions/useChatForwardQuickAction';
 import { useCloseChatQuickAction } from './hooks/quickActions/useCloseChatQuickAction';

@@ -1,5 +1,5 @@
-import type { IUser, LicenseModule, Serialized } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
+import type { IUser, LicenseModule, Serialized } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

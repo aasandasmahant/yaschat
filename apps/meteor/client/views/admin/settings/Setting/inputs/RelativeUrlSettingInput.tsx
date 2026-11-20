@@ -1,5 +1,5 @@
-import { Field, FieldHint, FieldLabel, FieldRow, UrlInput } from '@yas chat/fuselage';
-import { useAbsoluteUrl } from '@yas chat/ui-contexts';
+import { Field, FieldHint, FieldLabel, FieldRow, UrlInput } from '@yaschat/fuselage';
+import { useAbsoluteUrl } from '@yaschat/ui-contexts';
 import type { ChangeEventHandler } from 'react';
 
 import ResetSettingButton from '../ResetSettingButton';

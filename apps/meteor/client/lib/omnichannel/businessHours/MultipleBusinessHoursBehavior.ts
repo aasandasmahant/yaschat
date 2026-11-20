@@ -1,5 +1,5 @@
-import type { ILivechatBusinessHour } from '@yas chat/core-typings';
-import { LivechatBusinessHourTypes } from '@yas chat/core-typings';
+import type { ILivechatBusinessHour } from '@yaschat/core-typings';
+import { LivechatBusinessHourTypes } from '@yaschat/core-typings';
 
 import type { IBusinessHourBehavior } from './IBusinessHourBehavior';
 

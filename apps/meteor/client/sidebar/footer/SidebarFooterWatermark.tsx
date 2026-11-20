@@ -1,5 +1,5 @@
-import { Box, SidebarFooterContent as FooterContent } from '@yas chat/fuselage';
-import { links, useLicense, useLicenseName } from '@yas chat/ui-client';
+import { Box, SidebarFooterContent as FooterContent } from '@yaschat/fuselage';
+import { links, useLicense, useLicenseName } from '@yaschat/ui-client';
 import { useTranslation } from 'react-i18next';
 
 export const SidebarFooterWatermark = () => {

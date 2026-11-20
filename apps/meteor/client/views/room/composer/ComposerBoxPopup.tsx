@@ -8,10 +8,10 @@ import {
 	ItemSkeleton,
 	ItemTitle,
 	PopoverSurface,
-} from '@yas chat/fuselage';
-import { useContentBoxSize } from '@yas chat/fuselage-hooks';
-import { ITEM_MEDIA_SIZE } from '@yas chat/ui-avatar';
-import { CustomScrollbars } from '@yas chat/ui-client';
+} from '@yaschat/fuselage';
+import { useContentBoxSize } from '@yaschat/fuselage-hooks';
+import { ITEM_MEDIA_SIZE } from '@yaschat/ui-avatar';
+import { CustomScrollbars } from '@yaschat/ui-client';
 import type { UseQueryResult } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { useEffect, memo, useMemo, useRef, useId } from 'react';

@@ -1,4 +1,4 @@
-import type { IMessage, ISubscription } from '@yas chat/core-typings';
+import type { IMessage, ISubscription } from '@yaschat/core-typings';
 
 const MAX_OPEN_NOTIFICATIONS = 50;
 

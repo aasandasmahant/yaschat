@@ -1,6 +1,6 @@
-import type { IUser } from '@yas chat/core-typings';
-import { mockAppRoot } from '@yas chat/mock-providers';
-import { UserContext } from '@yas chat/ui-contexts';
+import type { IUser } from '@yaschat/core-typings';
+import { mockAppRoot } from '@yaschat/mock-providers';
+import { UserContext } from '@yaschat/ui-contexts';
 import { renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { useContext } from 'react';

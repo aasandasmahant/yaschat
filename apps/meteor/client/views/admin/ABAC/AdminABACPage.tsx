@@ -1,7 +1,7 @@
-import { Box, Button, ButtonGroup, Callout } from '@yas chat/fuselage';
-import { useStableCallback } from '@yas chat/fuselage-hooks';
-import { ContextualbarDialog, links, Page, PageContent, PageHeader } from '@yas chat/ui-client';
-import { useSetting, useRouteParameter, useRouter } from '@yas chat/ui-contexts';
+import { Box, Button, ButtonGroup, Callout } from '@yaschat/fuselage';
+import { useStableCallback } from '@yaschat/fuselage-hooks';
+import { ContextualbarDialog, links, Page, PageContent, PageHeader } from '@yaschat/ui-client';
+import { useSetting, useRouteParameter, useRouter } from '@yaschat/ui-contexts';
 import { Trans, useTranslation } from 'react-i18next';
 
 import AttributesContextualBar from './ABACAttributesTab/AttributesContextualBar';

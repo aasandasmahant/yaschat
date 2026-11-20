@@ -1,5 +1,5 @@
-import { UserStatus } from '@yas chat/core-typings';
-import { useStreamAll } from '@yas chat/ui-contexts';
+import { UserStatus } from '@yaschat/core-typings';
+import { useStreamAll } from '@yaschat/ui-contexts';
 import { useEffect } from 'react';
 
 import { Presence } from '../lib/presence';

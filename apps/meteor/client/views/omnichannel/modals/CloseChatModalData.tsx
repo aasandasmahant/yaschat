@@ -1,5 +1,5 @@
-import type { ILivechatDepartment } from '@yas chat/core-typings';
-import { useEndpoint } from '@yas chat/ui-contexts';
+import type { ILivechatDepartment } from '@yaschat/core-typings';
+import { useEndpoint } from '@yaschat/ui-contexts';
 import { useQuery } from '@tanstack/react-query';
 
 import CloseChatModal from './CloseChatModal';
