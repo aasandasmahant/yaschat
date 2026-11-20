@@ -29,7 +29,7 @@ export type DocumentTitleWrapperProps = {
 };
 
 const DocumentTitleWrapper = ({ children }: DocumentTitleWrapperProps) => {
-	useDocumentTitle(useSetting('Site_Name', ''), false);
+	useDocumentTitle(useSetting('Site_Name', 'YAS CHAT'), false);
 	const { title, key } = useDocumentTitle(useUnreadMessages(), false);
 
 	const refocusRef = useRouteTitleFocus();
