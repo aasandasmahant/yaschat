@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export type YasChatTab = 'Home' | 'Chats' | 'Community' | 'Discover' | 'Profile';
 
@@ -10,8 +10,25 @@ const TABS: { key: YasChatTab; label: string; route: string }[] = [
   { key: 'Profile', label: 'Profile', route: '/account/profile' },
 ];
 
+const resolveTabFromPath = (pathname: string): YasChatTab => {
+  if (pathname.startsWith('/chat')) return 'Chats';
+  if (pathname.startsWith('/directory/channels')) return 'Community';
+  if (pathname.startsWith('/directory')) return 'Discover';
+  if (pathname.startsWith('/account')) return 'Profile';
+  return 'Home';
+};
+
 export const YasChatNavBar: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<YasChatTab>('Home');
+  const [activeTab, setActiveTab] = useState<YasChatTab>(() =>
+    typeof window !== 'undefined' ? resolveTabFromPath(window.location.pathname) : 'Home'
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const syncTab = () => setActiveTab(resolveTabFromPath(window.location.pathname));
+    window.addEventListener('popstate', syncTab);
+    return () => window.removeEventListener('popstate', syncTab);
+  }, []);
 
   const handleSelect = (tab: YasChatTab, route: string) => {
     setActiveTab(tab);

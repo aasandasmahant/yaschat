@@ -1,3 +1,4 @@
+import YasChatHomeBanner from './YasChatHomeBanner';
 import YasChatNavBar from './YasChatNavBar';
 import { useSetting } from '@yaschat/ui-contexts';
 
@@ -14,6 +15,7 @@ const HomePage = () => {
 	return (
     <>
       <YasChatNavBar />
+      <YasChatHomeBanner />
       <DefaultHomePage />
     </>
   );
