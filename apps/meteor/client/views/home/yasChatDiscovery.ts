@@ -231,3 +231,70 @@ export const pickUniqueBrandByTier = (
 
 	return result;
 };
+
+export interface AdminFeedConfig {
+	enabled: boolean;
+	rssUrls: string[];
+	apiUrl: string;
+	sourceLabel: string;
+}
+
+const ADMIN_FEED_STORAGE_KEY = 'yaschat_admin_feed_config_v1';
+
+export const getDefaultAdminFeedConfig = (): AdminFeedConfig => ({
+	enabled: false,
+	rssUrls: [],
+	apiUrl: '',
+	sourceLabel: 'AdminFeed',
+});
+
+export const loadAdminFeedConfig = (): AdminFeedConfig => {
+	const fallback = getDefaultAdminFeedConfig();
+	try {
+		if (typeof window !== 'undefined' && window.localStorage) {
+			const raw = window.localStorage.getItem(ADMIN_FEED_STORAGE_KEY);
+			if (raw) {
+				const parsed = JSON.parse(raw) as Partial<AdminFeedConfig>;
+				return {
+					enabled: Boolean(parsed.enabled),
+					rssUrls: Array.isArray(parsed.rssUrls)
+						? parsed.rssUrls.map((u) => String(u).trim()).filter(Boolean)
+						: [],
+					apiUrl: typeof parsed.apiUrl === 'string' ? parsed.apiUrl.trim() : '',
+					sourceLabel:
+						typeof parsed.sourceLabel === 'string' && parsed.sourceLabel.trim()
+							? parsed.sourceLabel.trim()
+							: 'AdminFeed',
+				};
+			}
+		}
+	} catch {
+		// Safe fallback when storage is unavailable
+	}
+	return fallback;
+};
+
+export const saveAdminFeedConfig = (config: AdminFeedConfig): boolean => {
+	try {
+		if (typeof window !== 'undefined' && window.localStorage) {
+			window.localStorage.setItem(
+				ADMIN_FEED_STORAGE_KEY,
+				JSON.stringify({
+					enabled: Boolean(config.enabled),
+					rssUrls: Array.isArray(config.rssUrls)
+						? config.rssUrls.map((u) => String(u).trim()).filter(Boolean)
+						: [],
+					apiUrl: typeof config.apiUrl === 'string' ? config.apiUrl.trim() : '',
+					sourceLabel:
+						typeof config.sourceLabel === 'string' && config.sourceLabel.trim()
+							? config.sourceLabel.trim()
+							: 'AdminFeed',
+				}),
+			);
+			return true;
+		}
+	} catch {
+		// Safe fallback when storage is unavailable
+	}
+	return false;
+};
