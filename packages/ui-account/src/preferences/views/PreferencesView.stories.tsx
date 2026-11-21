@@ -108,7 +108,7 @@ const meta = {
 					"Set how long (in seconds) the app waits before marking you as away when you're not active. Minimum: 60 seconds",
 				'Language': 'Language',
 				'Localization': 'Localization',
-				'Master_volume': 'Master volume',
+				'Master_volume': ' volume',
 				'Master_volume_hint': 'Controls the volume for all sounds coming from your workspace',
 				'Mentions': 'Mentions',
 				'Message_TimeFormat': 'Time format',
