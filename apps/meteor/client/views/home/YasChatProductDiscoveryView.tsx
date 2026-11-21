@@ -6,6 +6,8 @@ import {
 	pickUniqueBrandByTier,
 	PriceTier,
 	YasChatDiscoveryItem,
+	buildUnlimitedDiscoveryItems,
+	createViewerSessionSeed,
 } from './yasChatDiscovery';
 import { getSampleTenThousandMobiles } from './yasChatSampleData';
 
@@ -139,6 +141,8 @@ export const YasChatProductDiscoveryView: React.FC<YasChatProductDiscoveryViewPr
 }) => {
 	const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 	const [activeBudget, setActiveBudget] = useState<number>(defaultBudget);
+	const [viewerSessionSeed] = useState<number>(() => createViewerSessionSeed());
+	const [unlimitedRound, setUnlimitedRound] = useState<number>(0);
 	const [usedBrands, setUsedBrands] = useState<Set<string>>(() => new Set());
 	const [historyStack, setHistoryStack] = useState<Record<PriceTier, YasChatDiscoveryItem | null>[]>([]);
 	const [cardImageIndexes, setCardImageIndexes] = useState<Record<PriceTier, number>>({
@@ -236,6 +240,9 @@ export const YasChatProductDiscoveryView: React.FC<YasChatProductDiscoveryViewPr
 	const handleNextAll = () => {
 		setHistoryStack((prev) => [...prev, currentSet]);
 		const nextUsed = new Set(usedBrands);
+		const nextRound = unlimitedRound + 1;
+		setUnlimitedRound(nextRound);
+		const extraUnlimited = buildUnlimitedDiscoveryItems(query, activeBudget, nextRound + viewerSessionSeed);
 		TIER_ORDER.forEach((tier) => {
 			const item = currentSet[tier];
 			if (item) {
