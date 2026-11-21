@@ -140,6 +140,7 @@ export const YasChatProductDiscoveryView: React.FC<YasChatProductDiscoveryViewPr
 	defaultBudget = 10000,
 }) => {
 	const YASCHAT_STORY_CIRCLES = [{ label: 'Your Story', query: 'community story', ring: '#ec4899' },{ label: 'Global', query: 'global trends', ring: '#2563eb' },{ label: 'Products', query: 'trending products', ring: '#f59e0b' },{ label: 'Community', query: 'community discussion', ring: '#10b981' },{ label: 'More', query: 'all guides', ring: '#8b5cf6' }];
+const [activeNav, setActiveNav] = useState('Home');
 const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 	const [activeBudget, setActiveBudget] = useState<number>(defaultBudget);
 	const [viewerSessionSeed] = useState<number>(() => createViewerSessionSeed());
