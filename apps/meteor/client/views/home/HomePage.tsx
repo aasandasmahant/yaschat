@@ -4,12 +4,13 @@ import { useSetting } from '@yaschat/ui-contexts';
 
 import CustomHomePage from './CustomHomePage';
 import DefaultHomePage from './DefaultHomePage';
+import { YasChatHomeDiscoverySection } from './YasChatHomeDiscoverySection';
 
 const HomePage = () => {
 	const customOnly = useSetting('Layout_Custom_Body_Only');
 
 	if (customOnly) {
-		return <CustomHomePage />;
+		return (<><CustomHomePage /><YasChatHomeDiscoverySection /></>);
 	}
 
 	return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <YasChatNavBar />
       <YasChatHomeBanner />
       <DefaultHomePage />
+			<YasChatHomeDiscoverySection />
     </>
   );
 };
