@@ -428,6 +428,8 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 									>
 										◀ Prev Img
 									</button>
+        <div style={{ marginTop: "8px", fontSize: "12px" }}><div><strong>{item.title}</strong>{item.price ? " — " + item.price : ""}</div><div>Pros: {item.pros || "Good value"} | Cons: {item.cons || "Check details"}</div>{item.shopUrl ? <a href={item.shopUrl} target="_blank" rel="noreferrer">Shop Now</a> : null}</div>
+									</button>
 									<span style={{ fontSize: '12px' }}>
 										Image {imgIdx + 1} / {item.images.length} (टच करके फुल-स्क्रीन)
 									</span>
