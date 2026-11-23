@@ -185,7 +185,12 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 		};
 		window.history.pushState({ yaschatPhotoModal: true }, '');
 		window.addEventListener('popstate', handlePopState);
-		return () => {
+		return (
+    <>{
+      /* YasChat Top Header Start */
+    }
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", marginBottom: "12px", borderRadius: "10px", backgroundColor: "rgba(15, 23, 42, 0.88)", border: "1px solid rgba(148, 163, 184, 0.45)", color: "#F8FAFC" }}><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", borderRadius: "999px", backgroundColor: "#FFFFFF", color: "#0F172A", fontSize: "15px" }}>🐟</span><strong style={{ fontSize: "15px", letterSpacing: "0.6px", color: "#FFFFFF" }}>YAS CHAT</strong></div><span style={{ fontSize: "11px", padding: "3px 8px", borderRadius: "999px", backgroundColor: "rgba(255, 255, 255, 0.14)", color: "#F8FAFC", border: "1px solid rgba(255, 255, 255, 0.28)" }}>Header Ready</span></div>
+    ) => {
 			window.removeEventListener('popstate', handlePopState);
 		};
 	}, [fullscreenModal]);
@@ -632,3 +637,5 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 		</div>
 	);
 };
+
+    </>
