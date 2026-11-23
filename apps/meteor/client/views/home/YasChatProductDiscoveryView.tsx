@@ -377,7 +377,8 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 					const imgIdx = cardImageIndexes[tier] || 0;
 					const currentImg = item.images[imgIdx] || item.images[0];
 
-					return (
+					const __q = (typeof window !== "undefined" && window.document) ? (((document.querySelector("input[placeholder="Search product..."]") as HTMLInputElement | null)?.value || "").trim().toLowerCase()) : ""; const __tier = (typeof window !== "undefined" && window.localStorage) ? (window.localStorage.getItem("yaschat_price_tier") || "All") : "All"; void __q; void __tier;
+	return (
 						<div
 							key={`${tier}-${item.id}`}
 							style={{
