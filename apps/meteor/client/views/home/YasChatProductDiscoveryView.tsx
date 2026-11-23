@@ -377,7 +377,7 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 					const imgIdx = cardImageIndexes[tier] || 0;
 					const currentImg = item.images[imgIdx] || item.images[0];
 
-					const __q = (typeof window !== "undefined" && window.document) ? (((document.querySelector("input[placeholder="Search product..."]") as HTMLInputElement | null)?.value || "").trim().toLowerCase()) : ""; const __tier = (typeof window !== "undefined" && window.localStorage) ? (window.localStorage.getItem("yaschat_price_tier") || "All") : "All"; void __q; void __tier;
+					const __q = (typeof window !== "undefined" && window.document) ? (((document.querySelector("input[placeholder="Search product..."]") as HTMLInputElement | null)?.value || "").trim().toLowerCase()) : ""; const __tier = (typeof window !== "undefined" && window.localStorage) ? (window.localStorage.getItem("yaschat_price_tier") || "All") : "All"; void __q; void __tier; const __matchItem = (label: string, itemTier = "All") => { const t = String(__tier || ""); const q = String(__q || ""); const okTier = t === "" || t === "All" || String(itemTier).toLowerCase() === t.toLowerCase(); const okQ = q === "" || String(label || "").toLowerCase().includes(q); return okTier && okQ; }; void __matchItem;
 	return (
 						<div
 							key={`${tier}-${item.id}`}
