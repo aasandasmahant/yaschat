@@ -186,6 +186,9 @@ const [query, setQuery] = useState(`${defaultBudget} mobile phone`);
 		window.history.pushState({ yaschatPhotoModal: true }, '');
 		window.addEventListener('popstate', handlePopState);
 		return (
+  const [yasUsername, setYasUsername] = React.useState<string>("aasan_das");
+  const [usernameInput, setUsernameInput] = React.useState<string>("aasan_das");
+  const [usernameStatus, setUsernameStatus] = React.useState<string>("Active handle: @aasan_das");
   const [activeMenu39Item, setActiveMenu39Item] = React.useState<string>("Email Address");
   const [activeFooterTab, setActiveFooterTab] = React.useState<"Home" | "Chats" | "Community" | "Discover" | "Profile">("Home");
   const footerItems: Array<{ id: "Home" | "Chats" | "Community" | "Discover" | "Profile"; icon: string; label: string; note: string }> = [{ id: "Home", icon: "🏠", label: "Home", note: "Home active" }, { id: "Chats", icon: "💬", label: "Chats", note: "Chats active" }, { id: "Community", icon: "👥", label: "Community", note: "Community active" }, { id: "Discover", icon: "🔍", label: "Discover", note: "Discover active" }, { id: "Profile", icon: "👤", label: "Profile", note: "Profile active" }];
